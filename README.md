@@ -37,8 +37,9 @@ without any paid service.
 
 ## Install
 
-**AnkiWeb (recommended):** Tools → Add-ons → Get Add-ons → paste the
-add-on code from the AnkiWeb listing → restart Anki.
+**AnkiWeb (recommended):** Tools → Add-ons → Get Add-ons → paste
+`720072719` → restart Anki. Listing:
+<https://ankiweb.net/shared/info/720072719>.
 
 **From source:**
 
