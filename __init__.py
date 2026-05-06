@@ -69,7 +69,6 @@ from .pearls import _reviewer
 _LEGACY_KEY_MAP = {
     "ankipearls_enableHighlights": "enableHighlights",
     "ankipearls_highlightColor":   "highlightColor",
-    "ankipearls_autoSearch":       "autoSearch",
     "ankidate_uptodateHomeUrl":    "uptodateHomeUrl",
     "ankidate_keepaliveMins":      "uptodateKeepaliveIntervalMinutes",
 }

@@ -5,6 +5,38 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-05-06
+
+Pre-publication content + UX cleanup.
+
+### Removed
+
+- **Per-card NCBI auto-search.** The previous flow made three
+  sequential PubMed E-utilities round trips (esearch + esummary +
+  efetch) every time a card was shown, taking 1–4 seconds and showing
+  a "SEARCHING STATPEARLS…" stub the whole time. The article-list
+  section in the side panel is now fed exclusively by instant
+  local-database matches (StatPearls and DrugBank entries already
+  detected on the card). When there are no local matches, the list
+  section is hidden entirely. Popup highlighting and click-to-open-
+  article in the webview are unaffected and remain instant. Removes
+  the `autoSearch` and `maxResults` config keys.
+
+### Fixed
+
+- `Settings…` dialog no longer crashes on open (`_Qt` undefined-name
+  bug introduced when the Qt import was scoped into `_qt_imports()`).
+
+### Changed
+
+- Deduplicated the bundled term databases: 9 silently-overwritten
+  acronym entries and 9 silently-overwritten drug entries removed,
+  keeping the longer/more curated definition in each pair.
+- `manifest.json` `min_point_version` bumped from 49 → 50 (Qt6 was
+  Anki's default from 2.1.50, matching the addon's `tested_on_qt5:
+  false`). Legacy AnkiPearls / UpToAnki / AnkiDate side-loaded
+  installs are now declared in `conflicts` so Anki disables them.
+
 ## [1.0.0] - 2026-05-05
 
 First public AnkiWeb release. Unifies the previous AnkiPearls and
@@ -65,6 +97,17 @@ AnkiDate addons into a single package and adds a third AI-chat module.
 
 ### Removed
 
+- **Per-card NCBI auto-search.** The previous version made three
+  sequential PubMed E-utilities round trips (esearch + esummary +
+  efetch) every time a card was shown, taking 1–4 seconds and showing
+  a "SEARCHING STATPEARLS…" stub the whole time. The article-list
+  section in the side panel is now fed exclusively by instant
+  local-database matches (StatPearls and DrugBank entries already
+  detected on the card). When there are no local matches, the
+  list section is hidden — no empty stub, no spinner. Popup
+  highlighting and click-to-open-article in the webview are
+  unaffected and remain instant. Removes the `autoSearch` and
+  `maxResults` config keys.
 - "Copy current card" 📋 button in the chat dock (the same flow is
   now `Ctrl+Shift+P`, freeing the slot for "Open externally").
 - Dead `QTWEBENGINE_CHROMIUM_FLAGS` env-var assignment at module load

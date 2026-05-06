@@ -29,8 +29,6 @@ _DEFAULTS = {
     "enableHighlightsOnQuestions": True,
     "enableArticleViewer": True,
     "highlightColor": "#0fcad4",
-    "autoSearch": True,
-    "maxResults": 8,
 
     # User-defined popup terms.  String containing a JSON array of
     # objects {title, summary, url, case_sensitive?}.  Merged into

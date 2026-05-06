@@ -6,9 +6,11 @@ highlighting in the reviewer:
 
 - **StatPearls + DrugBank popups and side panel** — hover-to-reveal
   tooltips on medical terms in the reviewer, click to open the full
-  article in a docked side panel. Auto-searches StatPearls via NCBI's
-  public E-utilities API. DrugBank pages load in the same dock for
-  drug-name highlights.
+  article in a docked side panel. DrugBank pages load in the same
+  dock for drug-name highlights. Local term databases (acronyms,
+  conditions, drugs) provide instant popup content with no network
+  call; clicking through loads the StatPearls or DrugBank article
+  directly into the dock.
 - **UpToDate authenticated browser dock** — separate side panel with a
   persistent named profile, so you log in to your institution's UpToDate
   subscription once and stay logged in across Anki restarts. Activity-

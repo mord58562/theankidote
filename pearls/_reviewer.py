@@ -14,13 +14,12 @@ Two-phase highlighting:
 import json
 import re
 from html.parser import HTMLParser
-from typing import Any, Tuple
+from typing import Any
 
 from aqt import mw, gui_hooks
 
 from .. import _config, _log
 from . import _acronyms, _drugs, _conditions
-from ._searcher import _STOPWORDS
 
 
 # ── User-defined custom terms ─────────────────────────────────────────
@@ -93,7 +92,20 @@ def set_panel(panel) -> None:
 
 
 # ── card text extraction ──────────────────────────────────────────────────────
-# `_STOPWORDS` is imported from _searcher to keep the list in one place.
+
+_STOPWORDS = frozenset({
+    "what","is","are","the","a","an","of","for","in","on","at","to",
+    "with","how","why","when","where","which","who","be","was","were",
+    "has","have","had","do","does","did","will","would","could","should",
+    "can","this","that","these","those","and","or","but","not","if",
+    "then","than","so","as","it","its","he","she","they","we","you",
+    "from","by","about","used","most","common","first","line","versus",
+    "describe","explain","define","name","list","cause","causes",
+    "mechanism","treatment","management","diagnosis","patient",
+    "occurs","following","associated","often","seen","found","also",
+    "their","your","more","less","such","each","over","under","type",
+    "types","class","classes","drug","drugs","agent","agents",
+})
 
 
 class _Stripper(HTMLParser):
@@ -108,8 +120,6 @@ class _Stripper(HTMLParser):
 
 _WS_RE      = re.compile(r"\s+")
 _TAG_RE     = re.compile(r"<[^>]+>")
-_WORD4_RE   = re.compile(r"\b[A-Za-z]{4,}\b")
-_TITLE_WORD = re.compile(r"\b[A-Za-z][A-Za-z\-]{4,}\b")
 # Matches any sp-mark span we previously injected - used for self-healing.
 _SP_MARK_RE = re.compile(r'<span class="sp-mark"[^>]*>(.*?)</span>', re.DOTALL)
 
@@ -144,28 +154,6 @@ def _card_text(card) -> str:
     except Exception:
         pass
     return text
-
-
-def _card_query(card) -> Tuple[str, str]:
-    try:
-        note = card.note()
-        tag_words = []
-        for tag in note.tags:
-            words = tag.replace("::", " ").replace("_", " ").replace("-", " ").split()
-            tag_words.extend(
-                w for w in words
-                if len(w) >= 4 and w.lower() not in _STOPWORDS and w.isalpha()
-            )
-        if len(tag_words) >= 2:
-            return " ".join(tag_words[:8]), note.guid
-        combined = _card_text(card)
-        words = [
-            w for w in _WORD4_RE.findall(combined)
-            if w.lower() not in _STOPWORDS
-        ][:8]
-        return " ".join(words), note.guid
-    except Exception:
-        return "", ""
 
 
 def _term_search_url(term: str) -> str:
@@ -341,73 +329,6 @@ def _custom_term_matches(card) -> list:
     return out
 
 
-def _upgrade_acronym_urls(acronyms: list, cached: list) -> None:
-    """Replace search URLs in acronym terms with direct NBK article URLs
-    when the expansion fuzzy-matches a cached article title."""
-    if not acronyms or not cached:
-        return
-    for acr in acronyms:
-        exp = (acr.get("_expansion") or "").lower()
-        if not exp:
-            continue
-        for r in cached:
-            title = (r.get("title") or "").lower()
-            url   = r.get("url") or ""
-            if not title or not url:
-                continue
-            if exp == title or exp in title or title in exp:
-                acr["url"] = url
-                break
-
-
-def _upgrade_condition_urls(conditions: list, cached: list) -> None:
-    """Replace StatPearls search URLs in condition terms with direct NBK
-    article URLs when a cached article title matches the condition name.
-    Only upgrades terms that are still using a search URL (i.e. conditions
-    without a hardcoded NBK ID in _conditions.py)."""
-    if not conditions or not cached:
-        return
-    for cond in conditions:
-        if "?term=" not in (cond.get("url") or ""):
-            continue  # already a direct NBK URL - leave as-is
-        name = cond.get("title", "").lower()
-        if not name:
-            continue
-        for r in cached:
-            title = (r.get("title") or "").lower()
-            url   = r.get("url") or ""
-            if not title or not url:
-                continue
-            if name == title or name in title or title in name:
-                cond["url"] = url
-                break
-
-
-def _expand_results(results: list) -> list:
-    """For each result, emit highlight terms covering both the full title and
-    each significant word inside it.  All terms link to that result's URL and
-    carry its summary so the tooltip can show real context."""
-    out = []
-    seen = set()
-    for r in results:
-        title   = (r.get("title") or "").strip()
-        url     = r.get("url") or ""
-        summary = r.get("summary") or ""
-        if not title or not url:
-            continue
-        if title.lower() not in seen and len(title) >= 4:
-            seen.add(title.lower())
-            out.append({"title": title, "url": url, "summary": summary})
-        for w in _TITLE_WORD.findall(title):
-            lw = w.lower()
-            if lw in _STOPWORDS or lw in seen:
-                continue
-            seen.add(lw)
-            out.append({"title": w, "url": url, "summary": summary,
-                        "_article": title})
-    return out
-
-
 # ── Phase 1: synchronous HTML injection via card_will_show ────────────────────
 
 _HIGHLIGHT_CSS_TPL = (
@@ -573,10 +494,8 @@ def _inject_highlights(html: str, results: list, color: str) -> str:
 
 def _on_card_will_show(html: str, card, kind: str) -> str:
     """Phase 1: inject highlights synchronously before card renders.
-    Highlights two sources:
-      • Cached article-title matches (from previous searches) - link to article
-      • Significant words extracted from the card itself - link to StatPearls search
-    """
+    Sourced from the bundled term databases (acronyms, drugs, conditions)
+    plus user-defined custom terms - all instant, no network call."""
     if kind not in ("reviewQuestion", "reviewAnswer"):
         return html
     if not _config.get("enableHighlights"):
@@ -586,16 +505,11 @@ def _on_card_will_show(html: str, card, kind: str) -> str:
     if _panel_ref is None:
         return html
     try:
-        guid       = card.note().guid
-        cached     = _panel_ref._searcher.cached(guid) or []
-        terms      = _expand_results(cached)
         acronyms   = _acronym_terms(card)
-        _upgrade_acronym_urls(acronyms, cached)
         drugs      = _drug_terms(card)
         conditions = _condition_terms(card)
-        _upgrade_condition_urls(conditions, cached)
         custom     = _custom_term_matches(card)
-        all_terms  = terms + acronyms + drugs + conditions + custom
+        all_terms  = acronyms + drugs + conditions + custom
         if not all_terms:
             return html
         color = _config.get("highlightColor") or "#0fcad4"
@@ -614,44 +528,6 @@ def _on_webview_will_set_content(web_content: Any, context: Any) -> None:
     web_content.body += f'<script src="{_SCRIPT_URL}"></script>\n'
 
 
-def _mark_in_reviewer(results: list) -> None:
-    """Phase 2: mark the live DOM when async results first arrive."""
-    try:
-        reviewer = mw.reviewer
-        if reviewer is None or reviewer.web is None:
-            return
-        if not _on_answer and not _config.get("enableHighlightsOnQuestions"):
-            return
-
-        color = _config.get("highlightColor") or "#0fcad4"
-        title_terms = _expand_results(results or [])
-        acro_terms  = _acronym_terms(_current_card) if _current_card else []
-        _upgrade_acronym_urls(acro_terms, results or [])
-        drug_terms  = _drug_terms(_current_card) if _current_card else []
-        cond_terms  = _condition_terms(_current_card) if _current_card else []
-        _upgrade_condition_urls(cond_terms, results or [])
-        custom_terms = _custom_term_matches(_current_card) if _current_card else []
-        all_terms   = title_terms + acro_terms + drug_terms + cond_terms + custom_terms
-        if not all_terms:
-            return
-        # marker.js expects {title, url, summary, article?, case_sensitive?,
-        # source, utd?} where utd is a list of {label, url} chip dicts.
-        terms = [{
-            "title":          t["title"],
-            "url":            t["url"],
-            "summary":        t.get("summary", ""),
-            "article":        t.get("_article", t["title"]),
-            "case_sensitive": bool(t.get("case_sensitive")),
-            "source":         t.get("source", "statpearls"),
-            "utd":            t.get("utd") or [],
-        } for t in all_terms]
-        t_json = json.dumps(terms)
-        c_json = json.dumps(color)
-        # marker.js is already loaded via <script src> in webview_will_set_content.
-        js = "if(window.spAddon)spAddon.mark(" + t_json + "," + c_json + ");"
-        reviewer.web.eval(js)
-    except Exception as exc:
-        _log.error("mark error", exc)
 
 
 def _clear_in_reviewer() -> None:
@@ -734,41 +610,16 @@ def _on_show_question(card) -> None:
     if _panel_ref is None:
         return
 
-    # Feed instant local-database results to the sidebar before the network
-    # search completes - gives immediate article suggestions with zero latency.
-    if _config.get("autoSearch") and card_changed:
-        local = _local_results_for_card(card)
-        if local:
-            _panel_ref._apply_local_results(local)
-
-    if not _config.get("autoSearch"):
-        return
-
-    query, guid = _card_query(card)
-    if query:
-        _panel_ref.auto_search(query, guid)
+    # Feed instant local-database matches to the sidebar's article list.
+    # Empty list hides the list section entirely (no "searching..." stub).
+    if card_changed:
+        _panel_ref.apply_local_results(_local_results_for_card(card))
 
 
 def _on_show_answer(card) -> None:
     global _on_answer, _current_card
     _on_answer = True
     _current_card = card
-
-    if not _config.get("enableHighlights"):
-        return
-
-    query, guid = _card_query(card)
-    if not query:
-        return
-
-    if _panel_ref is not None:
-        _panel_ref.auto_search(query, guid)
-
-
-def on_results_available(results: list) -> None:
-    """Called by the panel when NCBI search completes (async phase 2)."""
-    if _config.get("enableHighlights"):
-        _mark_in_reviewer(results)
 
 
 # ── register hooks ────────────────────────────────────────────────────────────

@@ -17,8 +17,6 @@ JSON, but both are supported.
 | `enableHighlightsOnQuestions` | bool | `true` | Highlight on the question side, not just the answer. |
 | `enableArticleViewer` | bool | `true` | If true, popup clicks open the side panel; if false, they open the user's external browser. |
 | `highlightColor` | hex string | `"#0fcad4"` | Underline colour for highlighted terms. |
-| `autoSearch` | bool | `true` | Automatically run a StatPearls search when each card is shown. |
-| `maxResults` | int | `8` | Maximum article results returned per card. |
 | `customTerms` | string (JSON) / null | `null` | User-defined popup terms — see "Custom popup terms" below. |
 
 ### Custom popup terms

@@ -28,8 +28,7 @@ except (ImportError, AttributeError):
     _USER_ROLE  = Qt.UserRole
     _NO_HSCROLL = Qt.ScrollBarAlwaysOff
 
-from . import _config, _webengine, _log
-from .pearls._searcher import StatPearlsSearcher
+from . import _webengine, _log
 
 # New profile name (was "ankipearls" in the old standalone addon) so
 # cookies and cache don't leak between versions.
@@ -229,11 +228,6 @@ class _ResultsSection(QWidget):
 
         self.hide()
 
-    def show_searching(self):
-        self._hdr.setText("SEARCHING STATPEARLS…")
-        self._list.clear()
-        self.show()
-
     def show_results(self, results: list):
         self._results = results
         self._list.clear()
@@ -250,14 +244,6 @@ class _ResultsSection(QWidget):
         row_h  = self._list.sizeHintForRow(0) if self._list.count() > 0 else 26
         height = min(n * row_h + 4, 185)
         self._list.setFixedHeight(height)
-        self.show()
-
-    def show_error(self, msg: str):
-        self._hdr.setText("SEARCH ERROR")
-        self._list.clear()
-        item = QListWidgetItem(f"  {msg[:70]}")
-        self._list.addItem(item)
-        self._list.setFixedHeight(32)
         self.show()
 
     def _on_click(self, item: QListWidgetItem):
@@ -278,7 +264,6 @@ class StatPearlsPanel(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        self._last_req_id  = -1
         self._last_results: list = []
         self._auto_loaded  = False
         self._show_articles = False  # only true when opened via toolbar button
@@ -354,12 +339,6 @@ class StatPearlsPanel(QWidget):
         self._view.urlChanged.connect(self._on_url_changed)
         self._view.loadFinished.connect(self._on_load_finished)
 
-        # ── searcher ──────────────────────────────────────────────────────
-        self._searcher = StatPearlsSearcher(self)
-        self._searcher.search_started.connect(self._on_search_started)
-        self._searcher.results_ready.connect(self._on_results)
-        self._searcher.search_failed.connect(self._on_search_failed)
-
         self._view.load(QUrl(_AP_HOME))
 
     def sizeHint(self):  # type: ignore[override]
@@ -375,19 +354,18 @@ class StatPearlsPanel(QWidget):
         self._show_articles = True
         if self._last_results:
             self._results.show_results(self._last_results)
-        elif _config.get("autoSearch"):
-            self._results.show_searching()
 
-    def _apply_local_results(self, results: list) -> None:
-        """Show instantly-generated local-database results while the network
-        search is still in flight.  Shown only when the article list is visible;
-        NCBI results will replace these when they arrive."""
-        if not results:
-            return
-        # Store as the current result set so the list section can display them.
+    def apply_local_results(self, results: list) -> None:
+        """Sidebar's article list is fed by instant local-database matches
+        (StatPearls + DrugBank entries detected on the current card).  No
+        network search is performed - the popups already cover term lookup,
+        and the webview loads articles directly when a popup is clicked."""
         self._last_results = results
         if self._show_articles:
-            self._results.show_results(results)
+            if results:
+                self._results.show_results(results)
+            else:
+                self._results.hide()
 
     def reset_for_new_card(self) -> None:
         """Called when toolbar button is pressed on a different card.
@@ -397,31 +375,12 @@ class StatPearlsPanel(QWidget):
         self._view.load(QUrl(_AP_HOME))
         if self._last_results:
             self._results.show_results(self._last_results)
-        elif _config.get("autoSearch"):
-            self._results.show_searching()
 
     def hide_article_list(self) -> None:
         """Called when user opens the panel via popup click - list stays out
         of the way so the article body fills the pane."""
         self._show_articles = False
         self._results.hide()
-
-    def _on_search_started(self) -> None:
-        if self._show_articles:
-            self._results.show_searching()
-
-    def _on_search_failed(self, msg: str) -> None:
-        if self._show_articles:
-            self._results.show_error(msg)
-
-    def auto_search(self, query: str, note_guid: str = "") -> None:
-        if not _config.get("autoSearch"):
-            return
-        cached = self._searcher.cached(note_guid)
-        if cached is not None:
-            self._apply_results(cached, self._last_req_id + 1)
-            return
-        self._searcher.search(query, note_guid)
 
     def load_url(self, url: str) -> None:
         self._auto_loaded = True
@@ -487,29 +446,3 @@ class StatPearlsPanel(QWidget):
         except Exception:
             pass
 
-    def _on_results(self, results: list, req_id: int):
-        # Strict-less so the same req_id can emit twice - first with titles
-        # only (fast), then with summaries filled in after efetch completes.
-        if req_id < self._last_req_id:
-            return
-        self._apply_results(results, req_id)
-
-    def _apply_results(self, results: list, req_id: int):
-        self._last_req_id  = req_id
-        self._last_results = results
-
-        if self._show_articles:
-            self._results.show_results(results)
-
-        try:
-            from .pearls import _reviewer
-            _reviewer.on_results_available(results)
-        except Exception:
-            pass
-
-        current = self._view.url().toString()
-        if (self._show_articles and results and not self._auto_loaded
-                and current in ("", "about:blank", _AP_HOME,
-                                "https://www.ncbi.nlm.nih.gov/books/NBK430685/")):
-            self._auto_loaded = True
-            self.load_url(results[0]["url"])
