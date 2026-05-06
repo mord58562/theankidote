@@ -49,6 +49,53 @@ _AP_HOME      = "https://www.ncbi.nlm.nih.gov/books/NBK430685/"
 # The MutationObserver watches body subtree but throttles to one
 # hideBanners() call per 250 ms so a busy SPA route change doesn't
 # thrash the page.
+# Focuses the "Search this book" input on NCBI Bookshelf pages so the
+# user can start typing immediately when the side panel is opened via
+# the toolbar button.  No-op on any page that doesn't expose that
+# button (DrugBank monographs, individual chapter pages, etc.).
+#
+# Strategy: find a button or submit-input whose visible text/value is
+# exactly "Search this book", then focus the closest text input in the
+# same form (preferred) or the nearest preceding text-input sibling.
+_FOCUS_SEARCH_JS = r"""
+(function() {
+    function findInput() {
+        var nodes = document.querySelectorAll(
+            'button, input[type="submit"], input[type="button"]'
+        );
+        for (var i = 0; i < nodes.length; i++) {
+            var b = nodes[i];
+            var label = (b.value || b.textContent || '').trim().toLowerCase();
+            if (label !== 'search this book') continue;
+            var form = b.form || (b.closest && b.closest('form'));
+            if (form) {
+                var input = form.querySelector(
+                    'input[type="text"], input[type="search"], input:not([type])'
+                );
+                if (input) return input;
+            }
+            var sib = b.previousElementSibling;
+            while (sib) {
+                if (sib.tagName === 'INPUT' &&
+                    (sib.type === 'text' || sib.type === 'search' || !sib.type)) {
+                    return sib;
+                }
+                sib = sib.previousElementSibling;
+            }
+            return null;
+        }
+        return null;
+    }
+    try {
+        var inp = findInput();
+        if (inp) {
+            inp.focus();
+            try { inp.select(); } catch(e) {}
+        }
+    } catch(e) {}
+})();
+"""
+
 _DRUGBANK_BANNER_JS = r"""
 (function() {
     var SELECTORS = [
@@ -354,6 +401,13 @@ class StatPearlsPanel(QWidget):
         self._show_articles = True
         if self._last_results:
             self._results.show_results(self._last_results)
+        # Page is already loaded (no loadFinished event coming); fire the
+        # focus JS synchronously.  No-op if the current page isn't a NCBI
+        # bookshelf landing with a "Search this book" button.
+        try:
+            self._page.runJavaScript(_FOCUS_SEARCH_JS)
+        except Exception:
+            pass
 
     def apply_local_results(self, results: list) -> None:
         """Sidebar's article list is fed by instant local-database matches
@@ -441,8 +495,14 @@ class StatPearlsPanel(QWidget):
         except Exception:
             pass
         try:
-            if "drugbank.com" in self._view.url().host():
+            host = self._view.url().host()
+            if "drugbank.com" in host:
                 self._page.runJavaScript(_DRUGBANK_BANNER_JS)
+            if "ncbi.nlm.nih.gov" in host:
+                # Auto-focus the "Search this book" input on the StatPearls
+                # home page so the user can start typing immediately.  No-op
+                # on chapter / non-book pages where the button isn't present.
+                self._page.runJavaScript(_FOCUS_SEARCH_JS)
         except Exception:
             pass
 

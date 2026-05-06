@@ -5,6 +5,16 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-05-06
+
+### Changed
+
+- StatPearls side panel auto-focuses the "Search this book" input on
+  NCBI Bookshelf landing pages whenever it loads or is reopened via
+  the toolbar button. Means you can hit the toolbar shortcut and
+  immediately start typing a query without first clicking into the
+  text field. No-op on chapter pages or non-bookshelf URLs.
+
 ## [1.0.1] - 2026-05-06
 
 Pre-publication content + UX cleanup.
