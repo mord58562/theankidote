@@ -1,0 +1,24 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Anki addon runtime artefacts (managed by Anki, not source)
+meta.json
+user_files/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Build artefacts
+*.ankiaddon
+build/
+dist/
+
+# Tooling state
+.claude/

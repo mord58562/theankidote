@@ -1,0 +1,15 @@
+{
+    "name": "The AnkiDote",
+    "package": "theankidote",
+    "author": "mord58562",
+    "version": "1.0.0",
+    "human_version": "1.0.0",
+    "description": "Unified medical-reference sidebar for Anki: StatPearls + DrugBank highlighting and popups, an UpToDate institutional-SSO browser dock, and a bring-your-own-account AI chat dock (Claude / ChatGPT / Gemini / Copilot / Perplexity / DeepSeek / Grok / Duck.ai). Free and open source - the StatPearls and DrugBank features work without any paid service; UpToDate features are optional and require your own UTD subscription or institutional access.",
+    "homepage": "https://github.com/mord58562/theankidote",
+    "license": "GPL-3.0-or-later",
+    "min_point_version": 50,
+    "max_point_version": 0,
+    "tested_on_qt6": true,
+    "tested_on_qt5": false,
+    "conflicts": ["ankipearls", "uptoanki", "ankidate"]
+}

@@ -1,0 +1,100 @@
+# Changelog
+
+All notable changes to The AnkiDote.
+
+The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
+this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.0.0] - 2026-05-05
+
+First public AnkiWeb release. Unifies the previous AnkiPearls and
+AnkiDate addons into a single package and adds a third AI-chat module.
+
+### Added
+
+- AI chat side dock (Claude / ChatGPT / Gemini / Copilot / Perplexity /
+  DeepSeek / Grok / Duck.ai) with one-click provider switching and an
+  overflow `▾` menu when more than five providers are configured.
+- "Open externally" `↗` button in every dock header — opens the
+  current page in the user's system browser, the escape hatch for
+  passkey sign-in, video DRM, and other features that embedded
+  webviews can't trigger.
+- Send-selection-to-chat keyboard shortcut (`Ctrl+Shift+P`).
+- Custom popup terms (`customTerms` config key) — user-defined JSON
+  array of `{title, summary, url}` merged into the reviewer's
+  highlight set alongside the bundled term databases.
+- "Run setup again…" Tools menu entry to retrigger the welcome dialog.
+- "Help / FAQ (open online)" Tools menu entry pointing at the README.
+- Toolbar button order Settings drag-list (chat ↔ UpToDate).
+- Save-without-restart checkbox in Settings.
+- Optional dock-state persistence (`rememberDockState`) — reopen the
+  same docks at the next Anki launch.
+- Verbose debug logging gated by the `debug` config flag.
+- Renderer-crash auto-recovery for the chat and StatPearls docks
+  (UpToDate dock already had this).
+- Legacy AnkiPearls / AnkiDate config-key migration on first launch
+  after upgrade.
+- Cross-source acronym → condition unification (e.g. "MI" expands to
+  "Myocardial infarction" with the full condition summary).
+- British / American spelling normalisation in the acronym → condition
+  resolver so "Acute lymphoblastic Leukemia" matches the British
+  "Leukaemia" canonical entry.
+
+### Changed
+
+- **Cloudflare bypass**: replaced the previous heavy stealth JS stack
+  (navigator.webdriver delete, sec-ch-ua headers, fake PluginArray,
+  Function.prototype.toString proxy, etc.) with a minimal AT V2-style
+  profile setup — `ForcePersistentCookies` + standard QtWebEngine
+  attributes. The stealth tricks were tripping Cloudflare's tamper
+  detection; the minimal profile clears Turnstile cleanly.
+- Default UpToDate home URL changed from the NSW/Vic Health HCN proxy
+  to the public `https://www.uptodate.com/contents/search` so non-AU
+  users get a working default. NSW/Vic Health and other institutions
+  with a custom SP-initiated URL set theirs in Settings.
+- Settings dialog split into per-module group boxes for readability;
+  added "Other" group with `rememberDockState` and `debug` toggles.
+- Toolbar redraws coalesce to one per event-loop tick instead of one
+  per call site.
+- Favicon disk writes throttled to one save per provider per minute.
+- Config cache switched from a 2 s TTL to invalidate-on-write — O(1)
+  reads after first load.
+- DrugBank banner-hider tightened to a fixed selector list with a
+  250 ms-debounced MutationObserver. The previous full-DOM
+  `querySelectorAll('*')` sweep is gone.
+
+### Removed
+
+- "Copy current card" 📋 button in the chat dock (the same flow is
+  now `Ctrl+Shift+P`, freeing the slot for "Open externally").
+- Dead `QTWEBENGINE_CHROMIUM_FLAGS` env-var assignment at module load
+  (no-op because Anki's QApplication has already been constructed by
+  the time addons load).
+- Stealth JS injection module — see "Changed → Cloudflare bypass".
+
+### Fixed
+
+- Toolbar button order now actually reorders chat ↔ UpToDate. Prior
+  versions read `toolbarOrder` from config but both modules used the
+  same fallback `links.append()` path so the configured order was
+  ignored.
+- "Save & restart Anki" no longer crashes Anki or loses pending
+  changes — switched from `mw.app.exit(0)` (which bypasses
+  `unloadProfile`) to `mw.unloadProfileAndExit()`.
+- Settings button label now actually relaunches Anki rather than just
+  quitting.
+
+### Security
+
+- Replaced ad-hoc `try / except: pass` blocks with a centralised
+  logging shim that writes to stderr at WARN/ERROR level. Users can
+  enable `debug: true` for full tracebacks when filing bug reports.
+- pycmd `tad_open:` URL handler now logs cross-origin navigations to
+  unrecognised hosts at debug level (still allowed, http/https only,
+  but auditable).
+
+### Known limitations
+
+- Passkey / Touch ID sign-in does not trigger inside QtWebEngine on
+  macOS (platform-authenticator entitlement restriction). Workaround
+  documented in Settings and README.
