@@ -4,12 +4,16 @@
 """
 TheAnkiDote.uptodate - UpToDate dock with persistent institutional SSO.
 
-Default home URL is the HCN proxy used by NSW Health and Vic Health ONLY.
-Any other institution (including other Australian state health services
-that do not subscribe via HCN, OpenAthens institutions, Shibboleth
-institutions, or direct/personal UpToDate accounts) MUST set their own
-SP-initiated UpToDate entry URL via the `uptodateHomeUrl` config key
-before the dock will connect successfully.
+Default home URL is the public UpToDate search page
+(https://www.uptodate.com/contents/search).  This works directly for
+personal subscribers and for OpenAthens / Shibboleth users whose
+institution recognises the user from existing session cookies.
+
+Australian state-health users (HCN proxy) and any institution with a
+custom SP-initiated entry URL MUST set `uptodateHomeUrl` to their own
+URL - see config.md for examples.  Loading the public UTD page when
+your live cookies are scoped to a proxy domain (e.g. .hcn.com.au) will
+look "signed out" because the cookies don't follow.
 
 Design:
 
@@ -23,9 +27,10 @@ Design:
     server redirects to an SSO/login page the session has expired and the
     dock is shown automatically for re-authentication.
 
-  * Default (NSW Health and Vic Health) - home URL is HCN's SP-initiated
-    entry point.  Do NOT use bookmarked SSO URLs - stale jsessionids cause
-    405 errors; always enter via the HCN proxy.
+  * Australian state-health (HCN proxy) - set `uptodateHomeUrl` to
+    https://www.uptodate.com.acs.hcn.com.au/contents/search.  Do NOT use
+    bookmarked SSO URLs - stale jsessionids cause 405 errors; always
+    enter via the HCN proxy host.
 
   * Every other institution - change `uptodateHomeUrl` in the add-on config
     to your institution's SP-initiated UpToDate URL (see config.md for
@@ -80,9 +85,9 @@ PROFILE_NAME       = "theankidote-uptodate"  # named profile → persistent cook
                                               # legacy session is decoupled)
 
 # URL fragments that indicate an SSO/login redirect (session expiry).
-# Covers NSW Health Oracle AM, OpenAthens, Shibboleth, and generic patterns.
+# Covers Australian state-health Oracle AM, OpenAthens, Shibboleth, and generic patterns.
 _SSO_PATTERNS = (
-    "spzsso.cit.health.nsw.gov.au",  # NSW Health Oracle AM
+    "spzsso.cit.health.nsw.gov.au",  # Australian state-health Oracle AM
     "oaam_server",                    # Oracle Access Manager (generic)
     "openathens.net",                 # OpenAthens
     "/Shibboleth.sso/",              # Shibboleth SP
@@ -265,6 +270,9 @@ class UpToDateBrowser(QWidget):
         self._btn_reload   = self._nav_btn("↺", self.view.reload,   "Reload")
         self._btn_home     = self._nav_btn("⌂",
                                 lambda: self.view.load(QUrl(_home_url())), "Home")
+        self._btn_clear    = self._nav_btn("⎚", self._clear_session,
+                                "Clear UTD session and reload "
+                                "(use if stuck on a login / SSO error)")
         self._btn_external = self._nav_btn("↗", self._open_externally,
                                 "Open current page in system browser")
         self._btn_close    = self._nav_btn("✕", toggle_dock,        "Close sidebar")
@@ -279,6 +287,7 @@ class UpToDateBrowser(QWidget):
         h_lay.addWidget(self._btn_reload)
         h_lay.addWidget(self._btn_home)
         h_lay.addStretch(1)
+        h_lay.addWidget(self._btn_clear)
         h_lay.addWidget(self._btn_external)
         h_lay.addWidget(self._btn_close)
 
@@ -382,6 +391,59 @@ class UpToDateBrowser(QWidget):
                 openLink(url)
         except Exception as exc:
             _log.error("UTD open externally", exc)
+
+    # ------------------------------------------------------------------
+    # Session reset
+    # ------------------------------------------------------------------
+
+    def _clear_session(self):
+        """Wipe cookies, HTTP cache, and web storage on the UTD profile,
+        then reload the home URL.  Recovery path for wedged SSO/login
+        states (e.g. Oracle Access Manager 'System error', stale
+        OpenAthens/Shibboleth jsessionids, expired HCN proxy tokens)
+        where the existing session cookie is invalid but the server
+        won't return a clean redirect.
+
+        Confirms first because it forces a re-login.  Local state only
+        - does not log the user out at the institutional IdP."""
+        try:
+            from aqt.utils import askUser
+            if not askUser(
+                "Clear the UpToDate session and reload?\n\n"
+                "This deletes the dock's saved cookies and cache for "
+                "UpToDate / your institutional proxy, then loads the "
+                "home URL fresh. You will need to log in again.\n\n"
+                "Use this if you're stuck on a login or SSO error page.",
+                defaultno=True,
+                title="Clear UTD session",
+            ):
+                return
+        except Exception:
+            pass
+
+        try:
+            self.profile.cookieStore().deleteAllCookies()
+        except Exception as exc:
+            _log.error("UTD clear cookies", exc)
+        try:
+            self.profile.clearHttpCache()
+        except Exception as exc:
+            _log.error("UTD clear cache", exc)
+        # localStorage / sessionStorage are scoped per-origin and Qt has
+        # no public API to wipe them across all origins; the JS below
+        # clears whatever the current page has, which is enough to break
+        # an Oracle AM "System error" stuck on a stale token.
+        try:
+            self.page.runJavaScript(
+                "try { localStorage.clear(); sessionStorage.clear(); } "
+                "catch (e) {}"
+            )
+        except Exception:
+            pass
+        try:
+            self.view.load(QUrl(_home_url()))
+        except Exception as exc:
+            _log.error("UTD reload after clear", exc)
 
     # ------------------------------------------------------------------
     # Renderer crash recovery
@@ -533,7 +595,7 @@ def _hide_dock(*_args):
 # session cookie - so long as the user runs Anki at least every few hours
 # they will never need to log in again.
 #
-# If the ping is redirected to the NSW Health SSO page, the session has
+# If the ping is redirected to an SSO/login page, the session has
 # expired.  The dock is shown automatically and the visible browser is
 # navigated to the login entry point so the user can re-authenticate
 # immediately.
@@ -648,7 +710,7 @@ _QUESTION_PREFIX_RE = re.compile(
 def _utd_search_base() -> str:
     """Return the bare UpToDate search path to append ?search= to.
 
-    For NSW Health (HCN proxy) and direct UTD URLs the home_url IS the
+    For HCN-proxy and direct UTD URLs the home_url IS the
     search endpoint, so we use it (stripping any pre-existing query string).
     For redirect-style home URLs (OpenAthens, Shibboleth, etc.) cookies are
     already set on www.uptodate.com after first login, so we search there
@@ -749,7 +811,7 @@ def _add_toolbar_link(links: list, toolbar: Toolbar) -> None:
         f'href=# onclick="return pycmd(\'{TOGGLE_CMD}\')">'
         f'{_toolbar_label()}</a>'
     )
-    # Position relative to chat's link if already inserted (defensive —
+    # Position relative to chat's link if already inserted (defensive  - 
     # UTD's hook normally fires first so chat won't be present yet, but
     # if hook order ever changes this still does the right thing).
     order = _config.get("toolbarOrder") or ["chat", "uptodate"]

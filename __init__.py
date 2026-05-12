@@ -636,6 +636,18 @@ def _setup() -> None:
 # Each `_build_*_group` returns the QGroupBox plus any control widgets
 # the saver needs to read after the dialog is accepted.
 
+def _is_addon_installed(addon_id: str) -> bool:
+    try:
+        return addon_id in {str(a) for a in mw.addonManager.allAddons()}
+    except Exception:
+        try:
+            import os
+            base = mw.addonManager.addonsFolder()
+            return os.path.isdir(os.path.join(base, addon_id))
+        except Exception:
+            return False
+
+
 def _qt_imports():
     try:
         from PyQt6.QtCore import Qt as _Qt
@@ -665,18 +677,215 @@ def _build_modules_group(_w, first_run: bool):
     utd_sc    = _config.get("shortcutToggleUptodate") or "Ctrl+Shift+U"
     chat_sc   = _config.get("shortcutToggleChat") or "Ctrl+Shift+A"
 
-    box = _w["QGroupBox"]("Modules")
-    lay = _w["QVBoxLayout"](box)
-    pearls_cb = _w["QCheckBox"](f"StatPearls + DrugBank popups ({pearls_sc})")
-    pearls_cb.setChecked(pearls_default)
-    utd_cb = _w["QCheckBox"](f"UpToDate sidebar ({utd_sc})")
-    utd_cb.setChecked(utd_default)
-    chat_cb = _w["QCheckBox"](f"AI chat sidebar ({chat_sc})")
-    chat_cb.setChecked(chat_default)
-    lay.addWidget(pearls_cb)
-    lay.addWidget(utd_cb)
-    lay.addWidget(chat_cb)
+    box = _w["QGroupBox"]("")
+    box.setFlat(True)
+    box.setStyleSheet("QGroupBox{border:0;margin:0;padding:0;}")
+    outer = _w["QVBoxLayout"](box)
+    outer.setContentsMargins(0, 0, 0, 0)
+    outer.setSpacing(8)
+
+    pill_css = (
+        "QLabel{"
+        f"color:{_theme.MUTED};"
+        "font-family:'SF Mono','Menlo','Consolas',monospace;"
+        "font-size:10px;"
+        f"border:1px solid {_theme.TEAL_BORDER};"
+        "border-radius:3px;"
+        "padding:1px 5px;"
+        "}"
+    )
+    card_css = (
+        "QFrame#moduleCard{"
+        f"border:1px solid {_theme.TEAL_BORDER};"
+        "border-radius:5px;"
+        "padding:7px 9px;"
+        "}"
+        "QCheckBox#moduleTitle{font-size:13px;font-weight:600;}"
+        f"QLabel#moduleDesc{{color:{_theme.MUTED};font-size:11px;line-height:140%;}}"
+    )
+
+    def _make_card(title: str, shortcut: str, desc: str, checked: bool):
+        card = _w["QFrame"]()
+        card.setObjectName("moduleCard")
+        card.setStyleSheet(card_css)
+        cl = _w["QVBoxLayout"](card)
+        cl.setContentsMargins(0, 0, 0, 0)
+        cl.setSpacing(3)
+
+        row = _w["QHBoxLayout"]()
+        row.setContentsMargins(0, 0, 0, 0)
+        row.setSpacing(6)
+        cb = _w["QCheckBox"](title)
+        cb.setObjectName("moduleTitle")
+        cb.setChecked(checked)
+        row.addWidget(cb, 1)
+        pill = _w["QLabel"](shortcut)
+        pill.setStyleSheet(pill_css)
+        row.addWidget(pill, 0)
+        cl.addLayout(row)
+
+        d = _w["QLabel"](desc)
+        d.setObjectName("moduleDesc")
+        d.setWordWrap(True)
+        d.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
+        cl.addWidget(d)
+
+        return card, cb
+
+    pearls_desc = (
+        "Hover-or-click popups on every flashcard for thousands of conditions, "
+        "drugs, and clinical abbreviations. Pulls one-line summaries from "
+        "StatPearls (free, NCBI) and DrugBank (free monograph pages). Click a "
+        "popup to open the full article in the side panel."
+    )
+    utd_desc = (
+        "Side panel that opens UpToDate inside Anki (subscription / institutional "
+        "access required). Configurable home URL for institutional SSO. Optional "
+        "- leave unticked if you don't have UTD access."
+    )
+    chat_desc = (
+        "Side panel for Claude / ChatGPT / Gemini / Copilot / Perplexity / "
+        "DeepSeek / Grok / Duck.ai. Bring-your-own-account - cookies persist "
+        "between sessions. No API key required. Use it to ask follow-up "
+        "questions about the card you're reviewing."
+    )
+
+    pearls_card, pearls_cb = _make_card(
+        "StatPearls + DrugBank popups", pearls_sc, pearls_desc, pearls_default
+    )
+    utd_card, utd_cb = _make_card(
+        "UpToDate sidebar", utd_sc, utd_desc, utd_default
+    )
+    chat_card, chat_cb = _make_card(
+        "AI chat sidebar", chat_sc, chat_desc, chat_default
+    )
+    outer.addWidget(pearls_card)
+    outer.addWidget(utd_card)
+    outer.addWidget(chat_card)
     return box, pearls_cb, utd_cb, chat_cb
+
+
+def _build_recommendations_group(_w, first_run: bool):
+    """Returns a QGroupBox or None.
+
+    Cards are only rendered for addons the user does NOT already have
+    installed - companion tools they already use add no information to
+    this dialog. If both are installed, returns None so the caller can
+    skip the section entirely (no empty header, no blank space)."""
+    fsrs_installed = _is_addon_installed("759844606")
+    io_installed   = _is_addon_installed("1374772155")
+    if fsrs_installed and io_installed:
+        return None
+
+    box = _w["QGroupBox"]("")
+    box.setFlat(True)
+    box.setStyleSheet("QGroupBox{border:0;margin:0;padding:0;}")
+    outer = _w["QVBoxLayout"](box)
+    outer.setContentsMargins(0, 0, 0, 0)
+    outer.setSpacing(6)
+
+    header = _w["QLabel"]("RECOMMENDED COMPANION ADDONS")
+    header.setStyleSheet(
+        f"color:{_theme.MUTED};font-size:10px;font-weight:600;"
+        "letter-spacing:1px;padding-top:2px;"
+    )
+    outer.addWidget(header)
+
+    card_css = (
+        "QFrame#recCard{"
+        f"border:1px solid {_theme.TEAL_BORDER};"
+        "border-radius:5px;"
+        "padding:7px 9px;"
+        "}"
+        "QLabel#recTitle{font-size:13px;font-weight:600;}"
+        f"QLabel#recDesc{{color:{_theme.MUTED};font-size:11px;line-height:140%;}}"
+    )
+    install_pill_css = (
+        "QPushButton#installPill{"
+        f"color:{_theme.TEAL};"
+        "background:transparent;"
+        f"border:1px solid {_theme.TEAL_BORDER};"
+        "border-radius:3px;"
+        "padding:1px 8px;"
+        "font-family:'SF Mono','Menlo','Consolas',monospace;"
+        "font-size:10px;"
+        "}"
+        "QPushButton#installPill:hover{"
+        f"background:{_theme.TEAL_DIM};"
+        "}"
+    )
+    installed_pill_css = (
+        "QLabel#installedPill{"
+        f"color:{_theme.MUTED};"
+        "background:transparent;"
+        "border:1px solid transparent;"
+        "border-radius:3px;"
+        "padding:1px 8px;"
+        "font-family:'SF Mono','Menlo','Consolas',monospace;"
+        "font-size:10px;"
+        "}"
+    )
+
+    def _make_card(title: str, desc: str, url: str):
+        card = _w["QFrame"]()
+        card.setObjectName("recCard")
+        card.setStyleSheet(card_css)
+        cl = _w["QVBoxLayout"](card)
+        cl.setContentsMargins(0, 0, 0, 0)
+        cl.setSpacing(3)
+
+        row = _w["QHBoxLayout"]()
+        row.setContentsMargins(0, 0, 0, 0)
+        row.setSpacing(6)
+        title_lbl = _w["QLabel"](title)
+        title_lbl.setObjectName("recTitle")
+        row.addWidget(title_lbl, 1)
+
+        pill = _w["QPushButton"]("Install")
+        pill.setObjectName("installPill")
+        pill.setStyleSheet(install_pill_css)
+        try:
+            pill.setCursor(_w["_Qt"].CursorShape.PointingHandCursor)
+        except AttributeError:
+            pill.setCursor(_w["_Qt"].PointingHandCursor)
+        pill.setFlat(True)
+        pill.clicked.connect(lambda _checked=False, u=url: openLink(u))
+        row.addWidget(pill, 0)
+        cl.addLayout(row)
+
+        d = _w["QLabel"](desc)
+        d.setObjectName("recDesc")
+        d.setWordWrap(True)
+        d.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
+        cl.addWidget(d)
+
+        return card
+
+    fsrs_desc = (
+        "Companion to Anki's built-in FSRS scheduler. Auto-reschedules cards "
+        "after retention changes, batches optimisation across decks, surfaces "
+        "FSRS stats, and exposes a few quality-of-life shortcuts. Strongly "
+        "recommended once you've enabled FSRS - it's how you keep the "
+        "scheduler humming without manually re-running the optimiser per deck."
+    )
+    io_desc = (
+        "Click and drag rectangles over an image to hide regions and turn "
+        "them into flashcards - the bread-and-butter visual-recall tool for "
+        "anatomy, radiology, ECGs, histology, and any image-heavy material. "
+        "Far more efficient than retyping labelled-diagram cards by hand."
+    )
+
+    if not fsrs_installed:
+        outer.addWidget(_make_card(
+            "FSRS Helper", fsrs_desc,
+            "https://ankiweb.net/shared/info/759844606",
+        ))
+    if not io_installed:
+        outer.addWidget(_make_card(
+            "Image Occlusion", io_desc,
+            "https://ankiweb.net/shared/info/1374772155",
+        ))
+    return box
 
 
 def _build_pearls_group(_w):
@@ -716,7 +925,7 @@ def _build_utd_group(_w):
     explainer = _w["QLabel"](
         "Institution home URL.  Defaults to the public UpToDate search "
         "page; subscribers will be redirected to their institution's SSO "
-        "automatically.  NSW Health / Vic Health users (HCN proxy) and "
+        "automatically.  Australian state-health users (HCN proxy) and "
         "OpenAthens / Shibboleth users may want to set their direct entry "
         "URL here - see config.md for examples."
     )
@@ -829,8 +1038,12 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     dlg.setWindowTitle("The AnkiDote - welcome" if first_run
                        else "The AnkiDote - settings")
     dlg.setMinimumWidth(620)
-    dlg.setMinimumHeight(560)
-    dlg.resize(640, 720)
+    if first_run:
+        dlg.setMinimumHeight(420)
+        dlg.resize(640, 540)
+    else:
+        dlg.setMinimumHeight(560)
+        dlg.resize(640, 720)
 
     # Outer layout: header text, scroll area (containing all the
     # group boxes), then a fixed footer with the buttons.  The scroll
@@ -860,7 +1073,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     scroll_body = _w["QWidget"]()
     lay = _w["QVBoxLayout"](scroll_body)
     lay.setContentsMargins(0, 0, 8, 0)
-    lay.setSpacing(14)
+    lay.setSpacing(10 if first_run else 14)
     scroll.setWidget(scroll_body)
     outer.addWidget(scroll, 1)
 
@@ -873,13 +1086,26 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     save_without_restart = False
 
     if first_run:
+        recs_box = _build_recommendations_group(_w, first_run)
+        if recs_box is not None:
+            lay.addWidget(recs_box)
+
+        # Compact institution-URL field so users can set the right
+        # SP-initiated entry on first launch (or when re-running setup
+        # after a session expires).  Without this, Australian state-health and
+        # other non-default institutions would silently land on the
+        # public UTD page with no way to fix it from the welcome flow.
+        utd_box, utd_url_edit = _build_utd_group(_w)
+        lay.addWidget(utd_box)
+
         outro = _w["QLabel"](
             "Manage these and per-module options anytime via "
             "Tools > The AnkiDote."
         )
         outro.setWordWrap(True)
-        outro.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
+        outro.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;padding-top:2px;")
         lay.addWidget(outro)
+        lay.addStretch(1)
     else:
         pearls_box, pearls_qcb, articleview_cb, custom_terms_edit = _build_pearls_group(_w)
         lay.addWidget(pearls_box)
@@ -926,6 +1152,10 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     _config.set_value("enableHighlights", pearls_cb.isChecked())
     _config.set_value("enableUpToDate",   utd_cb.isChecked())
     _config.set_value("enableChat",       chat_cb.isChecked())
+
+    if first_run and utd_url_edit is not None:
+        text = utd_url_edit.text().strip() or None
+        _config.set_value("uptodateHomeUrl", text)
 
     if not first_run:
         if pearls_qcb is not None:

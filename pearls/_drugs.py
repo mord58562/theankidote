@@ -2245,14 +2245,18 @@ _DRUGBANK_IDS: dict = {
 # fmt: on
 
 
+DRUGBANK_FREE_ACCOUNT_URL = "https://go.drugbank.com/public_users/sign_up"
+
+
 def _drugbank_url(entry: dict) -> str:
-    """DrugBank direct page when we have an accession ID (no account required
-    for basic viewing); DailyMed search as fallback for unmapped drugs."""
+    # DrugBank monograph pages are viewable without an account; the unearth
+    # search endpoint is sometimes gated - users can sign up for a free
+    # DrugBank account in their own browser session if they hit a wall.
     db_id = _DRUGBANK_IDS.get((entry.get("generic") or "").lower())
     if db_id:
         return f"https://go.drugbank.com/drugs/{db_id}"
     name = entry.get("generic") or ""
-    return f"https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query={quote_plus(name)}"
+    return f"https://go.drugbank.com/unearth/q?searcher=drugs&query={quote_plus(name)}"
 
 
 # ── Build lookup tables and master regexes ────────────────────────────────────

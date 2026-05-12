@@ -42,7 +42,7 @@ _DEFAULTS = {
     "enableUpToDate": True,
     # Default home URL is the public UpToDate search page; subscribers
     # are redirected to their institution's SSO automatically on first
-    # visit, then cookies persist.  NSW/Vic Health users behind the
+    # visit, then cookies persist.  Australian state-health users behind the
     # HCN proxy or any institution with a custom SP-initiated entry
     # URL should set their direct entry point in Settings.
     "uptodateHomeUrl": "https://www.uptodate.com/contents/search",

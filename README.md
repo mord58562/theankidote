@@ -2,21 +2,60 @@
 
 A unified medical-reference sidebar for Anki. Free and open source under
 GPL-3.0. Three independently-toggleable side docks plus inline term
-highlighting in the reviewer:
+highlighting in the reviewer.
 
-- **StatPearls + DrugBank popups and side panel** — hover-to-reveal
+## What's new in 1.1.0
+
+- **Preclinical / basic-science popups (~340 entries).** Hover-popups
+  now cover the foundational vocabulary clinical cards quietly assume
+  you remember: cardiac, respiratory, renal, GI, endocrine, neuro, and
+  haematology physiology; biochemistry pathways (glycolysis, TCA, ETC,
+  urea cycle, fatty-acid oxidation, ketogenesis); microbiology (key
+  pathogens, resistance mechanisms); immunology (T-cell subsets,
+  hypersensitivity types, complement); pathology (cell injury,
+  necrosis types, neoplasia basics); pharmacology (PK, receptor
+  families); plus anatomy landmarks, embryology, genetics, histology,
+  and biostatistics (sens/spec, LR+/LR-, NNT, RR, OR, etc.). Each
+  popup is a 1-3 sentence plain-English summary that links to
+  Wikipedia for further reading. Standalone, fully free, no UpToDate
+  required.
+- **Eponym + abbreviation aliases** for 200+ existing conditions so the
+  highlighter catches both forms (Wegener / GPA, Hashimoto / chronic
+  lymphocytic thyroiditis, Reiter / reactive arthritis, STEMI /
+  NSTEMI, HFrEF, COPD, etc.).
+- **Welcome dialog redesign** with per-module descriptions and a
+  Recommended companion addons section (FSRS Helper, Image Occlusion)
+  that auto-hides cards for addons you already have.
+- **StatPearls dock:** confusing NCBI Bookshelf top search strip hidden;
+  per-book "Search this book" field auto-focused; home button now
+  toggles between StatPearls and DrugBank as the default.
+- **AI chat dock:** only the active provider renders inline; everything
+  else lives in a single dropdown next to it. Subtle Dr House quote
+  appears in the dock header on every 10-20th open.
+- **Removed:** back/forward arrows in the chat dock (rarely useful);
+  DailyMed fallback (DrugBank-only now).
+
+Three independently-toggleable side docks plus inline term highlighting
+in the reviewer:
+
+- **StatPearls + DrugBank popups and side panel** - hover-to-reveal
   tooltips on medical terms in the reviewer, click to open the full
-  article in a docked side panel. DrugBank pages load in the same
-  dock for drug-name highlights. Local term databases (acronyms,
-  conditions, drugs) provide instant popup content with no network
-  call; clicking through loads the StatPearls or DrugBank article
-  directly into the dock.
-- **UpToDate authenticated browser dock** — separate side panel with a
+  article in a docked side panel. Bundled local term databases cover
+  ~940 clinical conditions (with eponym and abbreviation aliases for
+  the renamed ones), ~1180 drugs, ~420 multi-meaning clinical
+  abbreviations, and ~340 preclinical / basic-science concepts
+  (physiology, biochemistry, microbiology, immunology, pathology,
+  pharmacology, anatomy, biostatistics). Popups link out to
+  StatPearls, DrugBank, or Wikipedia depending on the source; the
+  side panel can be set to either StatPearls or DrugBank as the home
+  page. All popup content is local and instant - no network call to
+  show a popup.
+- **UpToDate authenticated browser dock** - separate side panel with a
   persistent named profile, so you log in to your institution's UpToDate
   subscription once and stay logged in across Anki restarts. Activity-
   gated session keepalive only refreshes the cookie while you're using
   Anki, never in the background.
-- **AI chat dock** — bring-your-own-account embedded webview pointed at
+- **AI chat dock** - bring-your-own-account embedded webview pointed at
   your existing Claude / ChatGPT / Gemini / Copilot / Perplexity /
   DeepSeek / Grok / Duck.ai session. No API keys, no programmatic chat
   scraping. One-click provider switching with cookies persisted per
@@ -31,7 +70,7 @@ your own subscription (personal or institutional). The add-on never
 includes UpToDate content, only opens links in your existing UTD session.
 
 If you don't have UpToDate access, untick "UpToDate sidebar" on the
-first-run dialog — every UTD control disappears so you never see a button
+first-run dialog - every UTD control disappears so you never see a button
 you can't use. StatPearls, DrugBank, and the AI chat dock all work fully
 without any paid service.
 
@@ -54,9 +93,11 @@ Then restart Anki.
 
 ## First run
 
-A welcome dialog asks which of the three modules you want enabled. You
-can re-trigger this any time via **Tools → The AnkiDote → Run setup
-again…**.
+A welcome dialog asks which of the three modules you want enabled and
+checks for two recommended companion addons (FSRS Helper, Image
+Occlusion) - install pills appear only for addons you don't already
+have. You can re-trigger the dialog any time via
+**Tools → The AnkiDote → Run setup again…**.
 
 If you keep UpToDate enabled, the dock will open automatically pointed
 at the UpToDate sign-in page so you can complete institutional SSO
@@ -71,22 +112,25 @@ popup terms.
 
 Highlights:
 
-- `enableUpToDate`, `enableHighlights`, `enableChat` — module master
+- `enableUpToDate`, `enableHighlights`, `enableChat` - module master
   toggles. Restart Anki for full effect.
-- `uptodateHomeUrl` — defaults to the public UpToDate search page.
+- `uptodateHomeUrl` - defaults to the public UpToDate search page.
   Subscribers will be redirected to their institution's SSO automatically
-  on first visit. NSW/Vic Health users behind the HCN proxy and any
+  on first visit. Australian state-health users behind the HCN proxy and any
   institution with a custom SP-initiated URL should set their direct
   entry point in Settings; see `config.md` for examples.
-- `chatCustomProviderUrl` — adds a 9th "Custom" button pointing at a
+- `chatCustomProviderUrl` - adds a 9th "Custom" button pointing at a
   self-hosted endpoint (OpenWebUI / LibreChat / llama.cpp etc).
-- `customTerms` — a JSON array of `{title, summary, url, case_sensitive?}`
+- `customTerms` - a JSON array of `{title, summary, url, case_sensitive?}`
   user-defined popup terms merged into reviewer highlighting alongside
   the bundled StatPearls / DrugBank / acronyms / conditions sets.
-- `toolbarOrder` — drag the chat ↔ UpToDate buttons in Settings to
+- `toolbarOrder` - drag the chat ↔ UpToDate buttons in Settings to
   swap their order in the top toolbar.
-- `rememberDockState` — reopen the same docks at next launch.
-- `debug` — verbose logging to stderr for bug-report diagnosis.
+- `pearlsHomePage` - `"statpearls"` (default) or `"drugbank"`; sets
+  which page the side panel's Home button loads. Toggleable inline
+  from the home button's dropdown.
+- `rememberDockState` - reopen the same docks at next launch.
+- `debug` - verbose logging to stderr for bug-report diagnosis.
 
 ### Default keyboard shortcuts
 
@@ -98,7 +142,7 @@ Highlights:
 | Search selection in UpToDate | `Ctrl+Shift+L` |
 | Send selection to AI chat    | `Ctrl+Shift+P` |
 
-On macOS, Anki maps `Ctrl` to `⌘` automatically — the bindings show as
+On macOS, Anki maps `Ctrl` to `⌘` automatically - the bindings show as
 `⌘⇧S` etc. You can override every shortcut in `config.md`.
 
 If any of these clash with another addon you use or with an Anki default
@@ -112,23 +156,23 @@ Set any one to an empty string to disable it.
 
 Per-source statements:
 
-- **StatPearls / NCBI Bookshelf** — public NIH database, accessed via
+- **StatPearls / NCBI Bookshelf** - public NIH database, accessed via
   NCBI's documented public E-utilities API (esearch / esummary / efetch).
   The add-on identifies itself in the User-Agent and stays well within
   NCBI's rate-limit guidance (one debounced search per card view).
-- **DrugBank** — pages load in the addon's webview using your personal
+- **DrugBank** - pages load in the addon's webview using your personal
   free-tier session. No content scraping, no API keys, no automation
   beyond a small CSS rule that hides their login-upsell banner. If you
   prefer not to hide that banner, click any DrugBank link from a popup
   to open it in your system browser.
-- **UpToDate** — webview-only access through your own institutional or
+- **UpToDate** - webview-only access through your own institutional or
   personal subscription. No programmatic content extraction, no
   credential storage by the addon itself. The activity-gated keepalive
   only fires when you've used Anki within the last 2× the configured
   interval (default 40 minutes), so leaving Anki open overnight does
   NOT make background UTD requests.
 - **AI chat (Claude / ChatGPT / Gemini / Copilot / Perplexity / DeepSeek /
-  Grok / Duck.ai)** — embedded webview hosting your own logged-in chat
+  Grok / Duck.ai)** - embedded webview hosting your own logged-in chat
   session. No API keys, no programmatic message submission, no chat
   scraping. The "send selection to chat" shortcut writes the selection
   to your system clipboard and opens the dock; you paste manually.
@@ -142,7 +186,7 @@ Per-source statements:
 - **Passkey / Touch ID sign-in won't trigger inside an embedded
   webview.** macOS restricts the platform authenticator to entitled
   apps (Safari, Chrome.app); QtWebEngine isn't entitled. Sign in with
-  password + 2FA — the named-profile cookie store keeps you signed in
+  password + 2FA - the named-profile cookie store keeps you signed in
   across restarts.
 - **WebUSB / WebAuthn hardware keys** likewise generally don't work in
   embedded webviews. Use the "Open externally" `↗` button in any dock
@@ -154,7 +198,7 @@ Per-source statements:
 
 Please open an issue at
 <https://github.com/mord58562/theankidote/issues>. For repro details,
-flip `debug: true` in the addon config first — the addon then writes
+flip `debug: true` in the addon config first - the addon then writes
 full tracebacks to stderr (visible in the Anki debug console:
 `Help → Debug Console`).
 

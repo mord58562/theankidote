@@ -8,8 +8,10 @@ try:
     from PyQt6.QtCore import Qt, QUrl, QSize, pyqtSignal
     from PyQt6.QtWidgets import (
         QHBoxLayout, QLabel, QListWidget, QListWidgetItem,
-        QPushButton, QVBoxLayout, QWidget,
+        QMenu, QPushButton, QToolButton, QVBoxLayout, QWidget,
     )
+    from PyQt6.QtGui import QAction
+    _TB_POPUP = QToolButton.ToolButtonPopupMode.MenuButtonPopup
     from PyQt6.QtWebEngineWidgets import QWebEngineView
     from PyQt6.QtWebEngineCore import (
         QWebEnginePage, QWebEngineProfile, QWebEngineSettings,
@@ -19,21 +21,23 @@ try:
 except (ImportError, AttributeError):
     from PyQt5.QtCore import Qt, QUrl, QSize, pyqtSignal
     from PyQt5.QtWidgets import (
-        QHBoxLayout, QLabel, QListWidget, QListWidgetItem,
-        QPushButton, QVBoxLayout, QWidget,
+        QAction, QHBoxLayout, QLabel, QListWidget, QListWidgetItem,
+        QMenu, QPushButton, QToolButton, QVBoxLayout, QWidget,
     )
+    _TB_POPUP = QToolButton.MenuButtonPopup
     from PyQt5.QtWebEngineWidgets import (
         QWebEngineView, QWebEnginePage, QWebEngineProfile, QWebEngineSettings,
     )
     _USER_ROLE  = Qt.UserRole
     _NO_HSCROLL = Qt.ScrollBarAlwaysOff
 
-from . import _webengine, _log
+from . import _webengine, _log, _config
 
 # New profile name (was "ankipearls" in the old standalone addon) so
 # cookies and cache don't leak between versions.
-_PROFILE_NAME = "theankidote-pearls"
-_AP_HOME      = "https://www.ncbi.nlm.nih.gov/books/NBK430685/"
+_PROFILE_NAME  = "theankidote-pearls"
+_AP_HOME       = "https://www.ncbi.nlm.nih.gov/books/NBK430685/"
+_DRUGBANK_HOME = "https://go.drugbank.com/"
 
 # JavaScript injected into every DrugBank page after load.
 #
@@ -138,6 +142,71 @@ _DRUGBANK_BANNER_JS = r"""
 """
 
 
+_HIDE_BOOKSHELF_BAR_JS = r"""
+(function() {
+    function hideTopBar() {
+        try {
+            // Common NCBI Bookshelf top-search selectors.
+            var candidates = [
+                '.bookshelf_search',
+                '#shared-page > .nav-bar',
+                '.search-bar',
+                '#search-bar',
+                '#bsf_search',
+                'form[name="ePathobj_search"]',
+                'form[name="EntrezForm"]',
+                '.bk_search',
+                '.bk-srch',
+                '#nlm-ncbi',
+                '#universal_header_search',
+                '.universal_header_search'
+            ];
+            candidates.forEach(function(sel) {
+                document.querySelectorAll(sel).forEach(function(el) {
+                    el.style.setProperty('display', 'none', 'important');
+                });
+            });
+            // Fallback: look for a leading container whose text starts with
+            // "Bookshelf" and contains a select element for "Books".
+            var labels = document.querySelectorAll('label, span, div');
+            for (var i = 0; i < labels.length && i < 400; i++) {
+                var el = labels[i];
+                var txt = (el.textContent || '').trim();
+                if (txt === 'Bookshelf' || /^Bookshelf\b/.test(txt)) {
+                    // Walk up to the smallest container that includes a select
+                    // (Books dropdown) AND a text input.
+                    var p = el;
+                    for (var depth = 0; depth < 6 && p; depth++) {
+                        if (p.querySelector && p.querySelector('select') &&
+                            p.querySelector('input[type="text"], input[type="search"]')) {
+                            p.style.setProperty('display', 'none', 'important');
+                            break;
+                        }
+                        p = p.parentElement;
+                    }
+                }
+            }
+        } catch (e) {}
+    }
+    hideTopBar();
+    var pending = false;
+    var observer = new MutationObserver(function() {
+        if (pending) return;
+        pending = true;
+        setTimeout(function() {
+            pending = false;
+            hideTopBar();
+        }, 300);
+    });
+    try {
+        observer.observe(document.body || document.documentElement, {
+            childList: true, subtree: true
+        });
+    } catch (e) {}
+})();
+"""
+
+
 def _night_mode() -> bool:
     try:
         from aqt.theme import theme_manager
@@ -186,11 +255,16 @@ _NAV_BTN_QSS = (
 )
 
 _HOME_BTN_QSS = (
-    "QPushButton{"
+    "QToolButton{"
         f"background:transparent;color:{_TEAL};"
-        "border:none;border-radius:4px;font-size:17px;font-weight:bold;}"
-    "QPushButton:hover{"
+        "border:none;border-radius:4px;font-size:17px;font-weight:bold;"
+        "padding-right:14px;}"
+    "QToolButton:hover{"
         f"background:{_TEAL_DIM};color:{_TEAL};}}"
+    "QToolButton::menu-button{"
+        "background:transparent;border:none;width:12px;}"
+    "QToolButton::menu-arrow{"
+        f"image:none;}}"
 )
 
 _CLOSE_BTN_QSS = (
@@ -330,12 +404,28 @@ class StatPearlsPanel(QWidget):
         self._btn_back     = _nav_btn(header, "‹", "Back")
         self._btn_forward  = _nav_btn(header, "›", "Forward")
         self._btn_reload   = _nav_btn(header, "↺", "Reload")
-        self._btn_home     = _nav_btn(header, "⌂", "StatPearls home", 28)
+        self._btn_home     = QToolButton(header)
+        self._btn_home.setText("⌂")
+        self._btn_home.setFixedSize(40, 28)
+        self._btn_home.setPopupMode(_TB_POPUP)
+        self._btn_home.setStyleSheet(_HOME_BTN_QSS)
+        self._home_menu = QMenu(self._btn_home)
+        self._act_home_statpearls = QAction("StatPearls home", self._btn_home)
+        self._act_home_drugbank   = QAction("DrugBank home",   self._btn_home)
+        self._act_home_statpearls.setCheckable(True)
+        self._act_home_drugbank.setCheckable(True)
+        self._act_home_statpearls.triggered.connect(
+            lambda: self._set_home_choice("statpearls"))
+        self._act_home_drugbank.triggered.connect(
+            lambda: self._set_home_choice("drugbank"))
+        self._home_menu.addAction(self._act_home_statpearls)
+        self._home_menu.addAction(self._act_home_drugbank)
+        self._btn_home.setMenu(self._home_menu)
+        self._refresh_home_ui()
         self._btn_external = _nav_btn(header, "↗",
             "Open current page in system browser", 28)
         self._btn_back.setEnabled(False)
         self._btn_forward.setEnabled(False)
-        self._btn_home.setStyleSheet(_HOME_BTN_QSS)
 
         self._btn_close = _nav_btn(header, "✕", "Close sidebar")
         self._btn_close.setStyleSheet(_CLOSE_BTN_QSS)
@@ -386,7 +476,7 @@ class StatPearlsPanel(QWidget):
         self._view.urlChanged.connect(self._on_url_changed)
         self._view.loadFinished.connect(self._on_load_finished)
 
-        self._view.load(QUrl(_AP_HOME))
+        self._view.load(QUrl(self._current_home_url()))
 
     def sizeHint(self):  # type: ignore[override]
         # Default dock width chosen so NCBI book pages fit without horizontal
@@ -406,6 +496,7 @@ class StatPearlsPanel(QWidget):
         # bookshelf landing with a "Search this book" button.
         try:
             self._page.runJavaScript(_FOCUS_SEARCH_JS)
+            self._page.runJavaScript(_HIDE_BOOKSHELF_BAR_JS)
         except Exception:
             pass
 
@@ -426,7 +517,7 @@ class StatPearlsPanel(QWidget):
         Navigates the webview to the StatPearls homepage and shows the list."""
         self._show_articles = True
         self._auto_loaded = False
-        self._view.load(QUrl(_AP_HOME))
+        self._view.load(QUrl(self._current_home_url()))
         if self._last_results:
             self._results.show_results(self._last_results)
 
@@ -445,9 +536,36 @@ class StatPearlsPanel(QWidget):
 
     # ── private ───────────────────────────────────────────────────────────
 
+    def _current_home_choice(self) -> str:
+        try:
+            v = _config.get("pearlsHomePage")
+        except Exception:
+            v = None
+        return "drugbank" if v == "drugbank" else "statpearls"
+
+    def _current_home_url(self) -> str:
+        return _DRUGBANK_HOME if self._current_home_choice() == "drugbank" else _AP_HOME
+
+    def _current_home_label(self) -> str:
+        return "DrugBank" if self._current_home_choice() == "drugbank" else "StatPearls"
+
+    def _refresh_home_ui(self) -> None:
+        choice = self._current_home_choice()
+        self._act_home_statpearls.setChecked(choice == "statpearls")
+        self._act_home_drugbank.setChecked(choice == "drugbank")
+        self._btn_home.setToolTip(f"Home ({self._current_home_label()})")
+
+    def _set_home_choice(self, choice: str) -> None:
+        try:
+            _config.set_value("pearlsHomePage", choice)
+        except Exception as exc:
+            _log.error("pearls set home choice", exc)
+        self._refresh_home_ui()
+        self._go_home()
+
     def _go_home(self):
         self._auto_loaded = False
-        self._view.load(QUrl(_AP_HOME))
+        self._view.load(QUrl(self._current_home_url()))
 
     def _open_externally(self):
         try:
@@ -473,7 +591,7 @@ class StatPearlsPanel(QWidget):
     def _recover_after_crash(self):
         url = getattr(self, "_crash_url", None)
         blank = {"about:blank", "", "chrome-error://chromewebdata/"}
-        target = url if url and url not in blank else _AP_HOME
+        target = url if url and url not in blank else self._current_home_url()
         try:
             self._view.load(QUrl(target))
         except Exception as exc:
@@ -503,6 +621,7 @@ class StatPearlsPanel(QWidget):
                 # home page so the user can start typing immediately.  No-op
                 # on chapter / non-book pages where the button isn't present.
                 self._page.runJavaScript(_FOCUS_SEARCH_JS)
+                self._page.runJavaScript(_HIDE_BOOKSHELF_BAR_JS)
         except Exception:
             pass
 

@@ -32,6 +32,11 @@ zip -r "$OUT" . \
     -x "*.pyc" \
     -x ".vscode/*" \
     -x ".idea/*" \
+    -x ".pytest_cache/*" \
+    -x ".claude/*" \
+    -x ".theankidote-rollback/*" \
+    -x "theankidote-publishing-instructions.txt" \
+    -x "MIGRATION.md" \
     > /dev/null
 
 echo "Built: $OUT ($(du -h "$OUT" | cut -f1))"

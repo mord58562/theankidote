@@ -19,7 +19,7 @@ from typing import Any
 from aqt import mw, gui_hooks
 
 from .. import _config, _log
-from . import _acronyms, _drugs, _conditions
+from . import _acronyms, _drugs, _conditions, _preclinical
 
 
 # ── User-defined custom terms ─────────────────────────────────────────
@@ -310,6 +310,26 @@ def _condition_terms(card) -> list:
     return out
 
 
+def _preclinical_terms(card) -> list:
+    """Resolve preclinical / basic-science terms in card text. Standalone
+    library, fully free, no UpToDate dependency. Links to Wikipedia for
+    further reading on click."""
+    text = _card_text(card)
+    if not text:
+        return []
+    out = []
+    for it in _preclinical.resolve(text):
+        out.append({
+            "title":          it["name"],
+            "_article":       it["name"],
+            "url":            it["url"],
+            "summary":        it["summary"],
+            "source":         "preclinical",
+            "case_sensitive": False,
+        })
+    return out
+
+
 def _custom_term_matches(card) -> list:
     """User-defined popup terms.  Match by case-sensitive substring
     when `case_sensitive` is True, else case-insensitive whole-word."""
@@ -505,11 +525,12 @@ def _on_card_will_show(html: str, card, kind: str) -> str:
     if _panel_ref is None:
         return html
     try:
-        acronyms   = _acronym_terms(card)
-        drugs      = _drug_terms(card)
-        conditions = _condition_terms(card)
-        custom     = _custom_term_matches(card)
-        all_terms  = acronyms + drugs + conditions + custom
+        acronyms    = _acronym_terms(card)
+        drugs       = _drug_terms(card)
+        conditions  = _condition_terms(card)
+        preclinical = _preclinical_terms(card)
+        custom      = _custom_term_matches(card)
+        all_terms   = acronyms + drugs + conditions + preclinical + custom
         if not all_terms:
             return html
         color = _config.get("highlightColor") or "#0fcad4"

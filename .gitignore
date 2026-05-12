@@ -22,3 +22,7 @@ dist/
 
 # Tooling state
 .claude/
+
+# Local-only publishing notes (working-tree only, never ship)
+theankidote-publishing-instructions.txt
+*-publishing-instructions.txt

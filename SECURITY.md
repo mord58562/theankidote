@@ -40,9 +40,9 @@ The AnkiDote is an Anki desktop addon. Threats we treat as in-scope:
 Out of scope:
 
 - Vulnerabilities in Anki itself, in QtWebEngine / Chromium, or in
-  PyQt — please report those upstream.
+  PyQt - please report those upstream.
 - Vulnerabilities in third-party services whose web UIs the addon
-  embeds (Claude.ai, OpenAI, etc) — report those to the relevant
+  embeds (Claude.ai, OpenAI, etc) - report those to the relevant
   vendor.
 - Issues that require physical access to the user's machine (cookies
   stored at rest are documented as plaintext, in line with every
@@ -74,5 +74,5 @@ The addon's defensive posture, for context:
   `~/Library/Application Support/Anki2/QtWebEngine/<profile>/` (macOS),
   `%APPDATA%\Anki2\QtWebEngine\<profile>\` (Windows), or
   `$XDG_DATA_HOME/Anki2/QtWebEngine/<profile>/` (Linux). These are NOT
-  encrypted at rest — same as every desktop browser. If you share the
+  encrypted at rest - same as every desktop browser. If you share the
   machine with someone you don't trust, set up a separate OS account.

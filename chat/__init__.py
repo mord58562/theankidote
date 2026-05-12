@@ -41,6 +41,7 @@ Convenience features (all manual user actions, no automation):
 import os
 import time
 import base64
+import random
 
 from aqt import mw, gui_hooks
 from aqt.toolbar import Toolbar
@@ -50,7 +51,7 @@ try:
     from PyQt6.QtGui import QAction, QKeySequence, QGuiApplication, QIcon
     from PyQt6.QtWidgets import (
         QDockWidget, QHBoxLayout, QVBoxLayout, QWidget, QPushButton,
-        QApplication, QDialog,
+        QApplication, QDialog, QLabel,
     )
     from PyQt6.QtWebEngineWidgets import QWebEngineView
     from PyQt6.QtWebEngineCore import (
@@ -60,11 +61,12 @@ except ImportError:
     from aqt.qt import (
         QDockWidget, QHBoxLayout, QVBoxLayout, QWidget, QPushButton,
         QAction, QKeySequence, Qt, QUrl, QTimer, QGuiApplication,
-        QObject, QEvent, QApplication, QSize, QIcon, QDialog,
+        QObject, QEvent, QApplication, QSize, QIcon, QDialog, QLabel,
         QWebEngineView, QWebEnginePage, QWebEngineProfile, QWebEngineSettings,
     )
 
 from .. import _config, _theme, _webengine, _log
+from .._easter_eggs import _QUOTES as _HOUSE_QUOTES
 
 # ── Constants ─────────────────────────────────────────────────────────────
 
@@ -208,6 +210,7 @@ def _cached_favicon_b64(label: str):
 # top-level _theme module.  Aliased to local names so existing references
 # elsewhere in this file keep working.
 _NAVY        = _theme.NAVY
+_NAVY_LIGHT  = _theme.NAVY_LIGHT
 _TEAL        = _theme.TEAL
 _TEAL_DIM    = _theme.TEAL_DIM
 _TEAL_BORDER = _theme.TEAL_BORDER
@@ -251,6 +254,7 @@ _dock    = None   # QDockWidget, lazily created
 _browser = None   # ChatBrowser widget, lazily created
 _dock_visible = False  # tracked flag (Qt async show/hide workaround)
 _key_filter = None  # ShortcutOverride event filter, installed once
+_CHAT_OPEN_QUOTE_PERIOD = None  # rolled once per Anki session in [10,20]
 
 
 # ── Key-event filter ──────────────────────────────────────────────────────
@@ -424,61 +428,39 @@ class ChatBrowser(QWidget):
         h_lay.setContentsMargins(6, 0, 6, 0)
         h_lay.setSpacing(3)
 
-        self._btn_back    = self._nav_btn("‹", self.view.back,    "Back",    24)
-        self._btn_forward = self._nav_btn("›", self.view.forward, "Forward", 24)
-        self._btn_back.setEnabled(False)
-        self._btn_forward.setEnabled(False)
+        # Provider quick-switch row: only the currently-selected provider
+        # renders as an inline icon button; every other provider lives in
+        # the `▾` overflow menu.  Kept on instance attributes so
+        # `_refresh_inline_provider_button` can re-derive icon + tooltip
+        # in place when the user switches providers.
+        self._btn_active = QPushButton()
+        self._btn_active.setFixedSize(28, 28)
+        self._btn_active.setStyleSheet(_provider_btn_qss())
+        h_lay.addWidget(self._btn_active)
 
-        h_lay.addWidget(self._btn_back)
-        h_lay.addWidget(self._btn_forward)
+        self._btn_more = QPushButton("▾")
+        self._btn_more.setFixedSize(22, 28)
+        self._btn_more.setToolTip("More providers")
+        self._btn_more.setStyleSheet(_provider_btn_qss())
+        self._btn_more.clicked.connect(self._open_overflow_menu)
+        h_lay.addWidget(self._btn_more)
 
-        # Provider quick-switch buttons - icon only.  Each shows the
-        # provider's brand mark; tooltip identifies it.  Up to the
-        # first MAX_INLINE providers render in-line; the remainder
-        # collapse into a `▾` overflow menu so a busy header stays
-        # compact even when the user has 8+ providers configured.
-        providers = list(self._providers())
-        MAX_INLINE = 5
-        inline = providers[:MAX_INLINE]
-        overflow = providers[MAX_INLINE:]
-        for label, url in inline:
-            btn = QPushButton()
-            btn.setFixedSize(28, 28)
-            btn.setToolTip(f"Switch to {label}")
-            icon = self._provider_icon(label)
-            if icon is not None:
-                btn.setIcon(icon)
-                btn.setIconSize(QSize(20, 20))
-            else:
-                btn.setText(label[:1])
-            btn.clicked.connect(
-                lambda _=False, u=url: self.switch_provider(u)
-            )
-            btn.setStyleSheet(_provider_btn_qss())
-            h_lay.addWidget(btn)
-        if overflow:
-            self._btn_more = QPushButton("▾")
-            self._btn_more.setFixedSize(22, 28)
-            self._btn_more.setToolTip("More providers")
-            self._btn_more.setStyleSheet(_provider_btn_qss())
+        self._refresh_inline_provider_button()
 
-            def _open_overflow():
-                try:
-                    from PyQt6.QtWidgets import QMenu
-                except (ImportError, AttributeError):
-                    from PyQt5.QtWidgets import QMenu
-                menu = QMenu(self._btn_more)
-                for label, url in overflow:
-                    act = menu.addAction(label)
-                    act.triggered.connect(
-                        lambda _=False, u=url: self.switch_provider(u)
-                    )
-                menu.exec(
-                    self._btn_more.mapToGlobal(self._btn_more.rect().bottomLeft())
-                )
-            self._btn_more.clicked.connect(_open_overflow)
-            h_lay.addWidget(self._btn_more)
+        h_lay.addStretch(1)
 
+        # House-quote label - empty unless this dock-open's rarity roll
+        # picks a quote turn (see `toggle_dock`).  Word-wrap off so it
+        # elides at the layout edge rather than pushing the right-side
+        # buttons off-screen.
+        self._house_label = QLabel("")
+        self._house_label.setStyleSheet(
+            f"QLabel {{ color: {_NAVY_LIGHT}; font-style: italic;"
+            f" font-size: 11px; padding: 0 6px; background: transparent; }}"
+        )
+        self._house_label.setMaximumWidth(360)
+        self._house_label.setWordWrap(False)
+        h_lay.addWidget(self._house_label)
         h_lay.addStretch(1)
 
         # Open the current page in the user's default system browser.
@@ -498,8 +480,11 @@ class ChatBrowser(QWidget):
         self._btn_close = self._nav_btn("✕", toggle_dock, "Close", 26)
         h_lay.addWidget(self._btn_close)
 
-        self.view.urlChanged.connect(self._update_nav)
-        self.view.loadFinished.connect(self._update_nav)
+        # URL changes refresh the inline provider button (icon + tooltip)
+        # so it always reflects whatever site the webview is showing,
+        # including navigation triggered from within the page itself.
+        self.view.urlChanged.connect(lambda _u: self._refresh_inline_provider_button())
+        self.view.loadFinished.connect(lambda _ok: self._refresh_inline_provider_button())
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
@@ -575,6 +560,7 @@ class ChatBrowser(QWidget):
             _config.set_value("chatLastUrl", url)
         except Exception as exc:
             _log.error("chatLastUrl persist", exc)
+        self._refresh_inline_provider_button()
         _request_toolbar_redraw()
 
     def _open_externally(self):
@@ -651,13 +637,69 @@ class ChatBrowser(QWidget):
             pass
         return None
 
-    def _update_nav(self, *_):
+    def _active_provider_label(self) -> str:
+        """Current provider derived from the live webview URL, falling
+        back to the persisted `chatLastUrl` if the view hasn't loaded
+        yet."""
         try:
-            h = self.page.history()
-            self._btn_back.setEnabled(h.canGoBack())
-            self._btn_forward.setEnabled(h.canGoForward())
+            current = self.view.url().toString()
         except Exception:
-            pass
+            current = ""
+        if current and current not in ("about:blank",):
+            return _provider_for_url(current)
+        return _provider_for_url(_config.get("chatLastUrl") or _home_url())
+
+    def _refresh_inline_provider_button(self):
+        """Update the single inline provider button's icon + tooltip to
+        match the active provider."""
+        try:
+            label = self._active_provider_label()
+            icon = self._provider_icon(label)
+            if icon is not None:
+                self._btn_active.setIcon(icon)
+                self._btn_active.setIconSize(QSize(20, 20))
+                self._btn_active.setText("")
+            else:
+                self._btn_active.setIcon(QIcon())
+                self._btn_active.setText(label[:1])
+            self._btn_active.setToolTip(f"Reload {label}")
+            # Re-wire click to reload the active provider's URL.
+            try:
+                self._btn_active.clicked.disconnect()
+            except Exception:
+                pass
+            target_url = None
+            for p_label, p_url in self._providers():
+                if p_label == label:
+                    target_url = p_url
+                    break
+            if target_url is None:
+                target_url = _last_or_home_url()
+            self._btn_active.clicked.connect(
+                lambda _=False, u=target_url: self.switch_provider(u)
+            )
+        except Exception as exc:
+            _log.error("refresh inline provider button", exc)
+
+    def _open_overflow_menu(self):
+        """Build and exec the overflow menu containing every provider
+        except the currently-active one."""
+        try:
+            from PyQt6.QtWidgets import QMenu
+        except (ImportError, AttributeError):
+            from PyQt5.QtWidgets import QMenu
+        active = self._active_provider_label()
+        menu = QMenu(self._btn_more)
+        for label, url in self._providers():
+            if label == active:
+                continue
+            act = menu.addAction(label)
+            act.triggered.connect(
+                lambda _=False, u=url: self.switch_provider(u)
+            )
+        menu.exec(
+            self._btn_more.mapToGlobal(self._btn_more.rect().bottomLeft())
+        )
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────
@@ -743,11 +785,36 @@ def toggle_dock():
                 _dock.show()
         except Exception as exc:
             _log.error("chat dock area enforcement", exc)
+        _roll_house_quote()
     try:
         _config.set_value("dockState_chat", _dock_visible)
     except Exception:
         pass
     _request_toolbar_redraw()
+
+
+def _roll_house_quote():
+    """Increment the persisted chat-open counter and, on a 1-in-N hit
+    (N picked once per session in [10,20]), display a single House
+    quote in the dock header.  Clears the label otherwise so a quote
+    from a prior open never lingers."""
+    global _CHAT_OPEN_QUOTE_PERIOD
+    if _browser is None or not hasattr(_browser, "_house_label"):
+        return
+    try:
+        n = int(_config.get("chatOpenCount") or 0) + 1
+        _config.set_value("chatOpenCount", n)
+    except Exception:
+        n = 0
+    if _CHAT_OPEN_QUOTE_PERIOD is None:
+        _CHAT_OPEN_QUOTE_PERIOD = random.randint(10, 20)
+    try:
+        if n > 0 and n % _CHAT_OPEN_QUOTE_PERIOD == 0 and _HOUSE_QUOTES:
+            _browser._house_label.setText(random.choice(_HOUSE_QUOTES))
+        else:
+            _browser._house_label.setText("")
+    except Exception as exc:
+        _log.error("house quote display", exc)
 
 
 def toggle_dock_show_only():
@@ -880,7 +947,7 @@ def _current_provider_label() -> str:
 # Toolbar fallback insert index used only when UTD's link is absent
 # (UTD module disabled).  When UTD is present we ignore this entirely
 # and position the chat link relative to UTD's actual location in the
-# `links` list — see `_add_toolbar_link` below.  This is necessary
+# `links` list - see `_add_toolbar_link` below.  This is necessary
 # because both chat and UTD use the same base index (6) which is past
 # the end of Anki's default 5-item link list, so a plain `insert(6, x)`
 # would fall through to `append` and the configured order would never
@@ -904,7 +971,7 @@ def _add_toolbar_link(links: list, toolbar: Toolbar) -> None:
     # Hooks fire in registration order (UTD before chat in our setup),
     # so by the time we run UTD's <a id="theankidote-utd-toolbar-link">
     # is already in `links`.  We use that as our anchor instead of a
-    # base index — see TOOLBAR_LINK_BASE comment for the reason.
+    # base index - see TOOLBAR_LINK_BASE comment for the reason.
     order = _config.get("toolbarOrder") or ["chat", "uptodate"]
     chat_first = (
         "chat" in order and "uptodate" in order
