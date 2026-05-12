@@ -925,7 +925,7 @@ def _build_utd_group(_w):
     explainer = _w["QLabel"](
         "Institution home URL.  Defaults to the public UpToDate search "
         "page; subscribers will be redirected to their institution's SSO "
-        "automatically.  Australian state-health users (HCN proxy) and "
+        "automatically.  NSW Health / Vic Health users (HCN proxy) and "
         "OpenAthens / Shibboleth users may want to set their direct entry "
         "URL here - see config.md for examples."
     )
@@ -1092,7 +1092,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
 
         # Compact institution-URL field so users can set the right
         # SP-initiated entry on first launch (or when re-running setup
-        # after a session expires).  Without this, Australian state-health and
+        # after a session expires).  Without this, NSW/Vic Health and
         # other non-default institutions would silently land on the
         # public UTD page with no way to fix it from the welcome flow.
         utd_box, utd_url_edit = _build_utd_group(_w)

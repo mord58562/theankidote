@@ -116,7 +116,7 @@ Highlights:
   toggles. Restart Anki for full effect.
 - `uptodateHomeUrl` - defaults to the public UpToDate search page.
   Subscribers will be redirected to their institution's SSO automatically
-  on first visit. Australian state-health users behind the HCN proxy and any
+  on first visit. NSW/Vic Health users behind the HCN proxy and any
   institution with a custom SP-initiated URL should set their direct
   entry point in Settings; see `config.md` for examples.
 - `chatCustomProviderUrl` - adds a 9th "Custom" button pointing at a

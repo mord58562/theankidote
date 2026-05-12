@@ -65,7 +65,7 @@ this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Fixed
 
 - First-run / "Run setup again…" dialog now exposes the institution
-  URL field so HCN-proxy (Australian state-health) and other custom-
+  URL field so HCN-proxy (NSW Health, Vic Health) and other custom-
   entry users can set `uptodateHomeUrl` from the welcome flow. Previous
   behaviour: re-running setup just reloaded the configured URL, which
   for non-default institutions was the public UTD page - leaving the
@@ -161,9 +161,9 @@ AnkiDate addons into a single package and adds a third AI-chat module.
   profile setup - `ForcePersistentCookies` + standard QtWebEngine
   attributes. The stealth tricks were tripping Cloudflare's tamper
   detection; the minimal profile clears Turnstile cleanly.
-- Default UpToDate home URL changed from the Australian state-health HCN proxy
+- Default UpToDate home URL changed from the NSW/Vic Health HCN proxy
   to the public `https://www.uptodate.com/contents/search` so non-AU
-  users get a working default. Australian state-health and other institutions
+  users get a working default. NSW/Vic Health and other institutions
   with a custom SP-initiated URL set theirs in Settings.
 - Settings dialog split into per-module group boxes for readability;
   added "Other" group with `rememberDockState` and `debug` toggles.

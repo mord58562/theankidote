@@ -9,7 +9,7 @@ Default home URL is the public UpToDate search page
 personal subscribers and for OpenAthens / Shibboleth users whose
 institution recognises the user from existing session cookies.
 
-Australian state-health users (HCN proxy) and any institution with a
+NSW Health and Vic Health users (HCN proxy) and any institution with a
 custom SP-initiated entry URL MUST set `uptodateHomeUrl` to their own
 URL - see config.md for examples.  Loading the public UTD page when
 your live cookies are scoped to a proxy domain (e.g. .hcn.com.au) will
@@ -27,7 +27,7 @@ Design:
     server redirects to an SSO/login page the session has expired and the
     dock is shown automatically for re-authentication.
 
-  * Australian state-health (HCN proxy) - set `uptodateHomeUrl` to
+  * NSW/Vic Health (HCN proxy) - set `uptodateHomeUrl` to
     https://www.uptodate.com.acs.hcn.com.au/contents/search.  Do NOT use
     bookmarked SSO URLs - stale jsessionids cause 405 errors; always
     enter via the HCN proxy host.
@@ -85,9 +85,9 @@ PROFILE_NAME       = "theankidote-uptodate"  # named profile → persistent cook
                                               # legacy session is decoupled)
 
 # URL fragments that indicate an SSO/login redirect (session expiry).
-# Covers Australian state-health Oracle AM, OpenAthens, Shibboleth, and generic patterns.
+# Covers NSW Health Oracle AM, OpenAthens, Shibboleth, and generic patterns.
 _SSO_PATTERNS = (
-    "spzsso.cit.health.nsw.gov.au",  # Australian state-health Oracle AM
+    "spzsso.cit.health.nsw.gov.au",  # NSW Health Oracle AM
     "oaam_server",                    # Oracle Access Manager (generic)
     "openathens.net",                 # OpenAthens
     "/Shibboleth.sso/",              # Shibboleth SP
@@ -595,7 +595,7 @@ def _hide_dock(*_args):
 # session cookie - so long as the user runs Anki at least every few hours
 # they will never need to log in again.
 #
-# If the ping is redirected to an SSO/login page, the session has
+# If the ping is redirected to the NSW Health SSO page, the session has
 # expired.  The dock is shown automatically and the visible browser is
 # navigated to the login entry point so the user can re-authenticate
 # immediately.
@@ -710,7 +710,7 @@ _QUESTION_PREFIX_RE = re.compile(
 def _utd_search_base() -> str:
     """Return the bare UpToDate search path to append ?search= to.
 
-    For HCN-proxy and direct UTD URLs the home_url IS the
+    For NSW Health (HCN proxy) and direct UTD URLs the home_url IS the
     search endpoint, so we use it (stripping any pre-existing query string).
     For redirect-style home URLs (OpenAthens, Shibboleth, etc.) cookies are
     already set on www.uptodate.com after first login, so we search there

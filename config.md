@@ -59,7 +59,7 @@ caches.
 | Key | Type | Default | Description |
 | --- | --- | --- | --- |
 | `enableUpToDate` | bool | `true` | Master toggle. False hides the toolbar button and skips the keepalive timer. |
-| `uptodateHomeUrl` | string | `"https://www.uptodate.com/contents/search"` | Your institution's SP-initiated UpToDate entry point. The default works for direct subscribers and OpenAthens / Shibboleth users - they're redirected to their institution's SSO automatically on first visit. Australian state-health users behind the HCN proxy and any institution with a non-default entry URL should change this; see examples below. |
+| `uptodateHomeUrl` | string | `"https://www.uptodate.com/contents/search"` | Your institution's SP-initiated UpToDate entry point. The default works for direct subscribers and OpenAthens / Shibboleth users - they're redirected to their institution's SSO automatically on first visit. NSW/Vic Health users behind the HCN proxy and any institution with a non-default entry URL should change this; see examples below. |
 | `uptodateAutoSearchCard` | bool | `true` | When the UTD dock is open and a new card question is shown, automatically search UpToDate for the card's front field. |
 | `uptodateKeepaliveIntervalMinutes` | int (≥5) | `20` | How often to refresh the UTD session cookie *while the user is actively using Anki*. The keepalive only fires if the reviewer or dock has been touched within `2 × interval` minutes - when Anki sits idle no programmatic UTD requests are made. |
 
@@ -75,7 +75,7 @@ caches.
 Most institutional logins recognise the user from their existing
 session cookies and skip straight past SSO on subsequent loads.
 
-**Australian state-health (HCN proxy):**
+**NSW Health and Vic Health (HCN proxy):**
 
 ```json
 {"uptodateHomeUrl": "https://www.uptodate.com.acs.hcn.com.au/contents/search"}
