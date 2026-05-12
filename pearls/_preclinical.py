@@ -2122,7 +2122,17 @@ for _t in PRECLINICAL_TERMS:
     for _k in _keys:
         _LOOKUP[_k.lower()] = _t
 
-_NAMES = sorted(set(_NAMES), key=len, reverse=True)
+# Case-insensitive dedup (matching is case-insensitive at runtime, so two
+# entries differing only in case are the same term).
+_seen_ci: set = set()
+_uniq: list = []
+for _name in _NAMES:
+    _lk = _name.lower()
+    if _lk in _seen_ci:
+        continue
+    _seen_ci.add(_lk)
+    _uniq.append(_name)
+_NAMES = sorted(_uniq, key=len, reverse=True)
 _PRECLINICAL_RE = (
     _re.compile(r"\b(?:" + "|".join(_re.escape(n) for n in _NAMES) + r")\b",
                 _re.IGNORECASE)

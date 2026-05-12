@@ -770,11 +770,11 @@ def _build_recommendations_group(_w, first_run: bool):
 
     Cards are only rendered for addons the user does NOT already have
     installed - companion tools they already use add no information to
-    this dialog. If both are installed, returns None so the caller can
-    skip the section entirely (no empty header, no blank space)."""
-    fsrs_installed = _is_addon_installed("759844606")
-    io_installed   = _is_addon_installed("1374772155")
-    if fsrs_installed and io_installed:
+    this dialog. If the recommendation is already installed, returns
+    None so the caller can skip the section entirely (no empty header,
+    no blank space)."""
+    io_installed = _is_addon_installed("1374772155")
+    if io_installed:
         return None
 
     box = _w["QGroupBox"]("")
@@ -861,13 +861,6 @@ def _build_recommendations_group(_w, first_run: bool):
 
         return card
 
-    fsrs_desc = (
-        "Companion to Anki's built-in FSRS scheduler. Auto-reschedules cards "
-        "after retention changes, batches optimisation across decks, surfaces "
-        "FSRS stats, and exposes a few quality-of-life shortcuts. Strongly "
-        "recommended once you've enabled FSRS - it's how you keep the "
-        "scheduler humming without manually re-running the optimiser per deck."
-    )
     io_desc = (
         "Click and drag rectangles over an image to hide regions and turn "
         "them into flashcards - the bread-and-butter visual-recall tool for "
@@ -875,16 +868,10 @@ def _build_recommendations_group(_w, first_run: bool):
         "Far more efficient than retyping labelled-diagram cards by hand."
     )
 
-    if not fsrs_installed:
-        outer.addWidget(_make_card(
-            "FSRS Helper", fsrs_desc,
-            "https://ankiweb.net/shared/info/759844606",
-        ))
-    if not io_installed:
-        outer.addWidget(_make_card(
-            "Image Occlusion", io_desc,
-            "https://ankiweb.net/shared/info/1374772155",
-        ))
+    outer.addWidget(_make_card(
+        "Image Occlusion", io_desc,
+        "https://ankiweb.net/shared/info/1374772155",
+    ))
     return box
 
 

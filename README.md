@@ -24,8 +24,8 @@ highlighting in the reviewer.
   lymphocytic thyroiditis, Reiter / reactive arthritis, STEMI /
   NSTEMI, HFrEF, COPD, etc.).
 - **Welcome dialog redesign** with per-module descriptions and a
-  Recommended companion addons section (FSRS Helper, Image Occlusion)
-  that auto-hides cards for addons you already have.
+  Recommended companion addon section (Image Occlusion) that auto-hides
+  the card if you already have it installed.
 - **StatPearls dock:** confusing NCBI Bookshelf top search strip hidden;
   per-book "Search this book" field auto-focused; home button now
   toggles between StatPearls and DrugBank as the default.
@@ -94,9 +94,9 @@ Then restart Anki.
 ## First run
 
 A welcome dialog asks which of the three modules you want enabled and
-checks for two recommended companion addons (FSRS Helper, Image
-Occlusion) - install pills appear only for addons you don't already
-have. You can re-trigger the dialog any time via
+checks for one recommended companion addon (Image Occlusion) - the
+install pill appears only if you don't already have it. You can
+re-trigger the dialog any time via
 **Tools → The AnkiDote → Run setup again…**.
 
 If you keep UpToDate enabled, the dock will open automatically pointed

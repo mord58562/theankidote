@@ -5,6 +5,21 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-05-12
+
+### Changed
+
+- Welcome dialog now recommends only Image Occlusion. The FSRS Helper
+  recommendation has been removed; the rest of the dialog is unchanged.
+
+### Fixed
+
+- Capitalisation variants of the same term no longer appear as separate
+  synonyms. Aliases that differ from the canonical name only in case
+  have been pruned (10 conditions, 6 drugs), and the lookup builders now
+  case-insensitively dedup names at load time so future entries can't
+  reintroduce the issue.
+
 ## [1.1.0] - 2026-05-12
 
 ### Added
@@ -14,9 +29,9 @@ this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   pharmacology, anatomy, histology, embryology, genetics, and
   biostatistics. Popups link to Wikipedia for further reading.
   Fully free, no UpToDate dependency.
-- First-run welcome dialog: recommends two companion AnkiWeb addons
-  (FSRS Helper 759844606, Image Occlusion 1374772155) with detection
-  of whether they are already installed.
+- First-run welcome dialog: recommends one companion AnkiWeb addon
+  (Image Occlusion 1374772155) with detection of whether it is
+  already installed.
 - Eponym and abbreviation aliases for 226 existing conditions (Wegener /
   GPA, Hashimoto / chronic lymphocytic thyroiditis, Reiter / reactive
   arthritis, STEMI / NSTEMI / MI, HFrEF / heart failure, COPD, etc.)
