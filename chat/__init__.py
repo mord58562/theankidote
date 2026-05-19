@@ -592,15 +592,22 @@ class ChatBrowser(QWidget):
             _request_toolbar_redraw()
 
     def switch_provider(self, url: str):
-        """Provider button click: load the URL AND persist it as the
-        user's last-selected provider so the choice survives restarts.
+        """Provider button click: load the URL AND make this provider
+        the user's new default.
 
-        No-ops if the user is already on this provider's URL - clicking
-        the same button used to reload and lose chat state.
+        Persists both:
+          * `chatLastUrl` - so the dock reopens to the same provider
+            after Anki restarts.
+          * `chatHomeUrl` - so this is the default home URL going
+            forward (matters if `chatLastUrl` is ever cleared, or for
+            a fresh profile that imports the user's config).
 
-        Order matters: persist `chatLastUrl` and repaint the toolbar
-        BEFORE `self.load(url)`.  The toolbar button's icon is derived
-        from `chatLastUrl`; redrawing synchronously here guarantees the
+        No-ops if the user is already on this provider's entry URL -
+        clicking the same button used to reload and lose chat state.
+
+        Order matters: persist config and repaint the toolbar BEFORE
+        `self.load(url)`.  The toolbar button's icon is derived from
+        `chatLastUrl`; redrawing synchronously here guarantees the
         new provider's logo replaces the old one before Qt yields to
         the page load (which can otherwise stall the next event-loop
         tick and make the icon look slow to update).
@@ -617,6 +624,10 @@ class ChatBrowser(QWidget):
             _config.set_value("chatLastUrl", url)
         except Exception as exc:
             _log.error("chatLastUrl persist", exc)
+        try:
+            _config.set_value("chatHomeUrl", url)
+        except Exception as exc:
+            _log.error("chatHomeUrl persist", exc)
         self._refresh_inline_provider_button(target_label)
         _redraw_toolbar_now()
         self.load(url)

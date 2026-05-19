@@ -5,6 +5,16 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.5] - 2026-05-19
+
+### Changed
+
+- Picking a provider from the inline button or `▾` overflow menu now
+  also persists it as `chatHomeUrl` (the default home URL), not just
+  `chatLastUrl` (the last-session URL). Net effect: the LLM you
+  selected stays the default going forward even if `chatLastUrl` is
+  ever cleared.
+
 ## [1.1.4] - 2026-05-19
 
 ### Fixed
