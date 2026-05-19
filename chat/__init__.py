@@ -775,7 +775,14 @@ def _dock_area():
 
 def _request_toolbar_redraw() -> None:
     """Throttled toolbar redraw via the top-level helper, with a
-    plain redraw fallback if the helper isn't reachable yet."""
+    plain redraw fallback if the helper isn't reachable yet.  Also
+    patches the chat icon directly via JS - see `_patch_toolbar_chat_icon`
+    for why we can't rely on `mw.toolbar.redraw()` alone to repaint
+    inline `<img>` data URIs on every Anki point release."""
+    try:
+        _patch_toolbar_chat_icon(_current_provider_label())
+    except Exception:
+        pass
     try:
         from .. import request_toolbar_redraw
         request_toolbar_redraw()
@@ -786,15 +793,36 @@ def _request_toolbar_redraw() -> None:
             _log.error("toolbar.redraw fallback", exc)
 
 
-def _redraw_toolbar_now() -> None:
-    """Synchronous, throttle-bypassing toolbar redraw.  Used for direct
-    user actions (provider switch via inline / overflow button) where
-    perceived latency between the click and the new icon must be zero.
+def _patch_toolbar_chat_icon(label: str) -> None:
+    """Replace the chat toolbar link's inner HTML in-place via JS.
 
-    The throttled path is fine for high-frequency events (favicon
-    saves, repeated URL changes during page load) - but for an explicit
-    one-shot click we want the toolbar HTML rebuilt in the same call
-    stack so the new icon paints before Qt yields to the page load."""
+    `mw.toolbar.redraw()` rebuilds via the `top_toolbar_did_init_links`
+    hook in theory, but in practice on some Anki point releases the
+    redraw path only re-evals `_centerLinks()` against a stale links
+    list and the inline `<img>` never repaints.  Targeting the link by
+    its stable id from JS is bulletproof: the HTML we inject is the
+    same string `_add_toolbar_link` would have produced, so a later
+    real redraw is idempotent."""
+    try:
+        inner = _icon_html_for(label).replace("\\", "\\\\").replace("`", "\\`")
+        js = (
+            "(function(){var a=document.getElementById("
+            "'theankidote-chat-toolbar-link');if(a){a.innerHTML=`"
+            + inner + "`;}})();"
+        )
+        mw.toolbar.web.eval(js)
+    except Exception as exc:
+        _log.error("toolbar chat icon JS patch", exc)
+
+
+def _redraw_toolbar_now() -> None:
+    """Synchronous toolbar update for direct user actions (provider
+    switch via inline / overflow button).  We do a direct DOM patch
+    of the chat link's icon *and* schedule a normal toolbar redraw so
+    any other toolbar state (UTD label, pearls crown visibility) also
+    refreshes."""
+    label = _current_provider_label()
+    _patch_toolbar_chat_icon(label)
     try:
         mw.toolbar.redraw()
     except Exception as exc:

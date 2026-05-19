@@ -5,6 +5,19 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.3] - 2026-05-19
+
+### Fixed
+
+- Top-toolbar AI chat icon now repaints reliably on every provider
+  switch. The 1.1.2 fix relied on `mw.toolbar.redraw()` re-firing the
+  `top_toolbar_did_init_links` hook with the fresh `chatLastUrl`; on
+  the Anki release Rob is running, the redraw path doesn't actually
+  repaint inline base64 `<img>` data URIs, so the old provider's logo
+  stuck. We now also patch the link element's `innerHTML` directly
+  by id from JS, which is invariant to whatever the surrounding
+  redraw mechanism is doing.
+
 ## [1.1.2] - 2026-05-19
 
 ### Fixed
