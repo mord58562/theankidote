@@ -5,6 +5,17 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 2026-05-19
+
+### Fixed
+
+- Top-toolbar AI chat button now repaints its provider logo
+  synchronously when the user picks a different LLM from the inline
+  or overflow provider switcher. Previously the icon could lag a tick
+  behind the click while the new page started loading. The toolbar
+  also re-syncs when an in-page navigation crosses a provider
+  boundary (e.g. an OAuth bounce back to the host site).
+
 ## [1.1.1] - 2026-05-12
 
 ### Changed

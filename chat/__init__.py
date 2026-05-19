@@ -483,7 +483,10 @@ class ChatBrowser(QWidget):
         # URL changes refresh the inline provider button (icon + tooltip)
         # so it always reflects whatever site the webview is showing,
         # including navigation triggered from within the page itself.
-        self.view.urlChanged.connect(lambda _u: self._refresh_inline_provider_button())
+        # `_on_url_changed` also keeps the top-toolbar button in sync
+        # whenever a navigation crosses provider boundaries (e.g. an
+        # in-page OAuth bounce or a manually-typed URL).
+        self.view.urlChanged.connect(self._on_url_changed)
         self.view.loadFinished.connect(lambda _ok: self._refresh_inline_provider_button())
 
         layout = QVBoxLayout(self)
@@ -527,6 +530,30 @@ class ChatBrowser(QWidget):
     def load(self, url: str):
         self.view.load(QUrl(url))
 
+    def _on_url_changed(self, q_url):
+        """Refresh the inline provider button on every URL change, and
+        if the navigation crossed a provider boundary (e.g. ChatGPT ->
+        Claude via an in-page link), persist the new URL as
+        `chatLastUrl` and redraw the top toolbar so its icon stays in
+        sync with what the user is actually looking at."""
+        try:
+            new_url = q_url.toString()
+        except Exception:
+            new_url = ""
+        new_label = _provider_for_url(new_url) if new_url else self._active_provider_label()
+        self._refresh_inline_provider_button(new_label)
+        try:
+            last_url = _config.get("chatLastUrl") or ""
+        except Exception:
+            last_url = ""
+        last_label = _provider_for_url(last_url) if last_url else ""
+        if new_url and new_label and new_label != last_label:
+            try:
+                _config.set_value("chatLastUrl", new_url)
+            except Exception as exc:
+                _log.error("chatLastUrl persist (url change)", exc)
+            _redraw_toolbar_now()
+
     def _on_icon_changed(self, qicon):
         """Cache the favicon for whichever provider the webview is
         currently displaying.  Triggers a toolbar redraw so the new
@@ -547,21 +574,29 @@ class ChatBrowser(QWidget):
 
         No-ops if the user is already on this provider's URL - clicking
         the same button used to reload and lose chat state.
+
+        Order matters: persist `chatLastUrl` and repaint the toolbar
+        BEFORE `self.load(url)`.  The toolbar button's icon is derived
+        from `chatLastUrl`; redrawing synchronously here guarantees the
+        new provider's logo replaces the old one before Qt yields to
+        the page load (which can otherwise stall the next event-loop
+        tick and make the icon look slow to update).
         """
         try:
             current = self.view.url().toString()
         except Exception:
             current = ""
-        if current and _provider_for_url(current) == _provider_for_url(url) \
+        target_label = _provider_for_url(url)
+        if current and _provider_for_url(current) == target_label \
                 and current.split("?")[0].rstrip("/") == url.split("?")[0].rstrip("/"):
             return
-        self.load(url)
         try:
             _config.set_value("chatLastUrl", url)
         except Exception as exc:
             _log.error("chatLastUrl persist", exc)
-        self._refresh_inline_provider_button()
-        _request_toolbar_redraw()
+        self._refresh_inline_provider_button(target_label)
+        _redraw_toolbar_now()
+        self.load(url)
 
     def _open_externally(self):
         """Open the current page in the system browser.  Useful when
@@ -649,11 +684,17 @@ class ChatBrowser(QWidget):
             return _provider_for_url(current)
         return _provider_for_url(_config.get("chatLastUrl") or _home_url())
 
-    def _refresh_inline_provider_button(self):
+    def _refresh_inline_provider_button(self, label: str = ""):
         """Update the single inline provider button's icon + tooltip to
-        match the active provider."""
+        match the active provider.
+
+        `label` overrides the derived-from-URL label.  Used by
+        `switch_provider` so the button repaints to the target provider
+        immediately, without waiting for `QWebEngineView.load()` to
+        propagate to `view.url()` (which is async)."""
         try:
-            label = self._active_provider_label()
+            if not label:
+                label = self._active_provider_label()
             icon = self._provider_icon(label)
             if icon is not None:
                 self._btn_active.setIcon(icon)
@@ -743,6 +784,21 @@ def _request_toolbar_redraw() -> None:
             mw.toolbar.redraw()
         except Exception as exc:
             _log.error("toolbar.redraw fallback", exc)
+
+
+def _redraw_toolbar_now() -> None:
+    """Synchronous, throttle-bypassing toolbar redraw.  Used for direct
+    user actions (provider switch via inline / overflow button) where
+    perceived latency between the click and the new icon must be zero.
+
+    The throttled path is fine for high-frequency events (favicon
+    saves, repeated URL changes during page load) - but for an explicit
+    one-shot click we want the toolbar HTML rebuilt in the same call
+    stack so the new icon paints before Qt yields to the page load."""
+    try:
+        mw.toolbar.redraw()
+    except Exception as exc:
+        _log.error("toolbar.redraw (sync)", exc)
 
 
 # ── Dock toggle (lazy) ────────────────────────────────────────────────────

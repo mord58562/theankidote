@@ -4,6 +4,19 @@ A unified medical-reference sidebar for Anki. Free and open source under
 GPL-3.0. Three independently-toggleable side docks plus inline term
 highlighting in the reviewer.
 
+## What's new in 1.1.2
+
+- **Snappier toolbar provider icon.** The top-toolbar AI chat button
+  now repaints its logo the instant you switch LLM in the dock, instead
+  of waiting for the new page to start loading. The icon also catches
+  up automatically when an in-page navigation crosses provider
+  boundaries (e.g. an OAuth bounce back to the host site).
+
+## What's new in 1.1.1
+
+- Welcome dialog tidy-up and case-insensitive synonym dedup. See
+  CHANGELOG for full notes.
+
 ## What's new in 1.1.0
 
 - **Preclinical / basic-science popups (~340 entries).** Hover-popups
