@@ -5,6 +5,30 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.4] - 2026-05-19
+
+### Fixed
+
+- AI chat dock no longer slows down provider loads. Previously the
+  `urlChanged` handler treated every intermediate URL (about:blank,
+  CSP redirects, internal SPA routes) as a fake provider crossing -
+  because `_provider_for_url` defaulted to "Claude" for any
+  unrecognised URL - and fired a meta.json fsync + full toolbar HTML
+  rebuild + JS injection on every flap. We now use an `_explicit_`
+  provider matcher that returns `None` for opaque schemes and
+  unknown hosts, and gate all side effects on an explicit match.
+
+### Changed
+
+- Addon no longer has a baked-in Claude preference. The default home
+  URL and the fallback provider label are now derived from the first
+  entry in the user's in-app provider order (`chatProviders` config
+  if set, else `DEFAULT_PROVIDERS`). The bundled order still has
+  Claude first; reorder `DEFAULT_PROVIDERS` and the default follows.
+  `chatHomeUrl` default is now `null` (meaning "use the first provider
+  in order"); existing users with `https://claude.ai/new` saved
+  explicitly are unaffected.
+
 ## [1.1.3] - 2026-05-19
 
 ### Fixed

@@ -114,7 +114,7 @@ to `false` in config and restart.
 | Key | Type | Default | Description |
 | --- | --- | --- | --- |
 | `enableChat` | bool | `true` | Master toggle. False hides the toolbar button and shortcut. |
-| `chatHomeUrl` | string | `"https://claude.ai/new"` | URL the chat dock loads on a fresh install. After the user clicks any provider button, `chatLastUrl` (below) overrides this. |
+| `chatHomeUrl` | string / null | `null` | URL the chat dock loads on a fresh install. `null` resolves to the first entry in the user's preferred provider order (`chatProviders` if set, else `DEFAULT_PROVIDERS`). After the user clicks any provider button, `chatLastUrl` (below) overrides this. |
 | `chatLastUrl` | string / null | `null` | Internal: the user's last-selected provider URL. Persisted across restarts so the dock reopens to the same provider. |
 | `chatOpenCount` | int | `0` | Internal: number of times the chat dock has been opened. Used by the easter-egg that surfaces a quiet Dr House quote in the dock header every 10-20 opens. |
 | `chatProviders` | list of `[label, url]` / null | `null` | Override the built-in provider list. `null` uses the bundled set (Claude, Perplexity, ChatGPT, Gemini, Copilot, DeepSeek, Grok, Duck). When more than five providers are configured the surplus collapses into a `▾` overflow menu. |

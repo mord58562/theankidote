@@ -72,7 +72,12 @@ from .._easter_eggs import _QUOTES as _HOUSE_QUOTES
 
 TOGGLE_CMD   = "theankidote_chat_toggle"
 PROFILE_NAME = "theankidote-chat"
-CHAT_HOME    = "https://claude.ai/new"
+# Default home URL when the user hasn't configured one.  Derived from
+# the first entry in `DEFAULT_PROVIDERS` rather than hardcoded, so the
+# addon has no built-in preference for any specific provider beyond
+# the in-app ordering itself: change the order and the default
+# follows.  Resolved lazily via `_default_home_url()` because
+# `DEFAULT_PROVIDERS` is defined further down the module.
 
 # UA spoofing, sec-ch-ua headers, persistent cookies, and stealth JS
 # all live in the shared `_webengine` module - see ChatBrowser.__init__.
@@ -535,35 +540,53 @@ class ChatBrowser(QWidget):
         if the navigation crossed a provider boundary (e.g. ChatGPT ->
         Claude via an in-page link), persist the new URL as
         `chatLastUrl` and redraw the top toolbar so its icon stays in
-        sync with what the user is actually looking at."""
+        sync with what the user is actually looking at.
+
+        Side effects (config write + toolbar redraw) are gated on the
+        new URL host *explicitly* mapping to a known provider.  Without
+        that gate, every intermediate URL during a page load (about:
+        blank, CSP redirect, internal SPA route) would fall back to
+        the default Claude label, register as a fake provider
+        crossing, and trigger a meta.json fsync + full toolbar HTML
+        rebuild + JS injection.  That thrash was visible as multi-
+        second dock-open latency on slow networks."""
         try:
             new_url = q_url.toString()
         except Exception:
             new_url = ""
-        new_label = _provider_for_url(new_url) if new_url else self._active_provider_label()
-        self._refresh_inline_provider_button(new_label)
+        explicit_new = _explicit_provider_for_url(new_url)
+        if explicit_new is not None:
+            self._refresh_inline_provider_button(explicit_new)
+        if explicit_new is None:
+            return
         try:
             last_url = _config.get("chatLastUrl") or ""
         except Exception:
             last_url = ""
-        last_label = _provider_for_url(last_url) if last_url else ""
-        if new_url and new_label and new_label != last_label:
-            try:
-                _config.set_value("chatLastUrl", new_url)
-            except Exception as exc:
-                _log.error("chatLastUrl persist (url change)", exc)
-            _redraw_toolbar_now()
+        last_label_explicit = _explicit_provider_for_url(last_url)
+        if last_label_explicit == explicit_new:
+            return
+        try:
+            _config.set_value("chatLastUrl", new_url)
+        except Exception as exc:
+            _log.error("chatLastUrl persist (url change)", exc)
+        _redraw_toolbar_now()
 
     def _on_icon_changed(self, qicon):
         """Cache the favicon for whichever provider the webview is
         currently displaying.  Triggers a toolbar redraw so the new
-        cached icon replaces the SVG fallback immediately."""
+        cached icon replaces the SVG fallback immediately.
+
+        Skips when the URL doesn't explicitly map to a known provider,
+        so we never write e.g. a Cloudflare challenge favicon as
+        Claude.png just because the fallback label happens to be
+        Claude."""
         try:
             current_url = self.view.url().toString()
         except Exception:
             return
-        label = _provider_for_url(current_url)
-        if label == "Claude" and "claude.ai" not in current_url.lower():
+        label = _explicit_provider_for_url(current_url)
+        if label is None:
             return
         if _save_favicon(label, qicon):
             _request_toolbar_redraw()
@@ -675,13 +698,18 @@ class ChatBrowser(QWidget):
     def _active_provider_label(self) -> str:
         """Current provider derived from the live webview URL, falling
         back to the persisted `chatLastUrl` if the view hasn't loaded
-        yet."""
+        yet (or is on an opaque scheme like about:/data:/blob:).
+
+        Uses the *explicit* helper so intermediate URLs during a page
+        load (CSP redirect, internal SPA route) don't briefly flip the
+        inline button to a wrong provider's logo."""
         try:
             current = self.view.url().toString()
         except Exception:
             current = ""
-        if current and current not in ("about:blank",):
-            return _provider_for_url(current)
+        explicit = _explicit_provider_for_url(current) if current else None
+        if explicit is not None:
+            return explicit
         return _provider_for_url(_config.get("chatLastUrl") or _home_url())
 
     def _refresh_inline_provider_button(self, label: str = ""):
@@ -752,9 +780,24 @@ def _validated(url: str, fallback: str) -> str:
     return fallback
 
 
+def _default_home_url() -> str:
+    """The URL of the first entry in the user's preferred provider
+    order - either `chatProviders` from config or `DEFAULT_PROVIDERS`.
+    Used when `chatHomeUrl` is unset."""
+    cfg = _config.get("chatProviders")
+    if isinstance(cfg, list):
+        for entry in cfg:
+            if isinstance(entry, (list, tuple)) and len(entry) == 2:
+                url = str(entry[1])
+                if url:
+                    return url
+    return DEFAULT_PROVIDERS[0][1]
+
+
 def _home_url() -> str:
-    """Configured chat home URL or the built-in default (Claude)."""
-    return _validated(_config.get("chatHomeUrl") or "", CHAT_HOME)
+    """Configured chat home URL or, if unset, the first provider in
+    the in-app order."""
+    return _validated(_config.get("chatHomeUrl") or "", _default_home_url())
 
 
 def _last_or_home_url() -> str:
@@ -960,29 +1003,50 @@ def _provider_btn_qss() -> str:
     )
 
 
-def _provider_for_url(url: str) -> str:
-    """Match the URL to a known provider label by host substring."""
+_PROVIDER_HOSTS = (
+    ("Claude", "claude.ai"),
+    ("Perplexity", "perplexity.ai"),
+    ("ChatGPT", "openai.com"),
+    ("ChatGPT", "chatgpt.com"),
+    ("Gemini", "gemini.google.com"),
+    ("Copilot", "copilot.microsoft.com"),
+    ("DeepSeek", "deepseek.com"),
+    ("Grok", "grok.com"),
+    ("Duck", "duck.ai"),
+    ("Duck", "duckduckgo.com"),
+)
+
+
+def _explicit_provider_for_url(url: str) -> "str | None":
+    """Match URL to a known provider label.  Returns None for empty,
+    blank, opaque (about:/data:/blob:/chrome://) or otherwise
+    unrecognised URLs.
+
+    This is the host-derived truth; `_provider_for_url` wraps it with
+    a Claude fallback for callers that need a non-None label (e.g.
+    rendering the toolbar icon at startup before any navigation)."""
     if not url:
-        return "Claude"
+        return None
     u = url.lower()
-    for label, host in (
-        ("Claude", "claude.ai"),
-        ("Perplexity", "perplexity.ai"),
-        ("ChatGPT", "openai.com"),
-        ("ChatGPT", "chatgpt.com"),
-        ("Gemini", "gemini.google.com"),
-        ("Copilot", "copilot.microsoft.com"),
-        ("DeepSeek", "deepseek.com"),
-        ("Grok", "grok.com"),
-        ("Duck", "duck.ai"),
-        ("Duck", "duckduckgo.com"),
-    ):
+    if u.startswith(("about:", "data:", "blob:", "chrome:", "qrc:", "file:")):
+        return None
+    for label, host in _PROVIDER_HOSTS:
         if host in u:
             return label
     custom = _config.get("chatCustomProviderUrl")
-    if isinstance(custom, str) and url.startswith(custom):
+    if isinstance(custom, str) and custom and url.startswith(custom):
         return "Custom"
-    return "Claude"
+    return None
+
+
+def _provider_for_url(url: str) -> str:
+    """Match the URL to a known provider label by host substring.
+    Falls back to the first provider in the in-app order for URLs
+    that don't match any known provider, so startup-time callers
+    (which need an icon to draw before any navigation has happened)
+    always get a sensible label without baking in a Claude-specific
+    bias."""
+    return _explicit_provider_for_url(url) or DEFAULT_PROVIDERS[0][0]
 
 
 def _icon_html_for(label: str) -> str:

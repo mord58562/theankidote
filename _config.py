@@ -51,7 +51,11 @@ _DEFAULTS = {
 
     # ── AI chat sidebar ─────────────────────────────────────────────
     "enableChat": True,
-    "chatHomeUrl": "https://claude.ai/new",
+    # `null` = use the first entry in the user's preferred provider
+    # order (`chatProviders` if set, else the built-in
+    # `DEFAULT_PROVIDERS` list).  The addon has no hardcoded preference
+    # for any specific provider beyond the in-app ordering itself.
+    "chatHomeUrl": None,
     "chatLastUrl": None,
     "chatProviders": None,
     "chatAdblockEnabled": True,
