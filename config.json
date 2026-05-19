@@ -11,7 +11,7 @@
     "uptodateAutoSearchCard": true,
     "uptodateKeepaliveIntervalMinutes": 20,
     "enableChat": true,
-    "chatHomeUrl": "https://claude.ai/new",
+    "chatHomeUrl": null,
     "chatLastUrl": null,
     "chatProviders": null,
     "chatAdblockEnabled": true,
