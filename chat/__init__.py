@@ -66,7 +66,7 @@ except ImportError:
     )
 
 from .. import _config, _theme, _webengine, _log
-from .._easter_eggs import _QUOTES as _HOUSE_QUOTES
+from .._extras import _QUOTES as _HOUSE_QUOTES
 
 # ── Constants ─────────────────────────────────────────────────────────────
 

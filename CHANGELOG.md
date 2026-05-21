@@ -5,6 +5,12 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.6] - 2026-05-22
+
+### Changed
+
+- Minor visual polish.
+
 ## [1.1.5] - 2026-05-19
 
 ### Changed

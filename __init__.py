@@ -59,7 +59,7 @@ except (ImportError, AttributeError):
     _NO_DOCK    = QDockWidget.NoDockWidgetFeatures
     _RIGHT_AREA = Qt.RightDockWidgetArea
 
-from . import _config, _theme, _dock_layout, _log, _easter_eggs
+from . import _config, _theme, _dock_layout, _log, _extras
 from .pearls import _reviewer
 
 # One-shot legacy config-key migration.  AnkiPearls + AnkiDate users
@@ -601,7 +601,7 @@ def _setup() -> None:
     submenu.addAction(rerun_action)
 
     _reviewer.register_hooks()
-    _easter_eggs.register()
+    _extras.register()
 
     if _config.get("enableUpToDate") is not False:
         try:

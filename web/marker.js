@@ -137,24 +137,22 @@
           "border-color:rgba(10,155,163,.65);}" +
         /* Rare cosmetic variants - deliberately over-the-top. */
         ".box.golden{" +
-          /* Two identical waves back-to-back so a 0%->100% scroll over a
-           * 200%-wide background loops perfectly seamlessly.  Each half
-           * is a symmetric cream → pale → warm-gold → pale → cream wave
-           * with seven stops so the colour transitions are gentle.  The
-           * trough is warm gold rather than dark brown to avoid a harsh
-           * contrast cliff. */
+          /* Seamless wave palette tonally locked to the A to E project's
+           * gold pill (gold-1 #ffd770, gold-2 #d9a020, gold-bd #c9941c,
+           * gold-ink #2a1d05) so the two pieces of work read as the same
+           * gold system.  Same 200%-wide loop technique as before. */
           "background:linear-gradient(110deg," +
-            "#fff7c2 0%,#fce6a8 8%,#f9d77e 17%,#f0bf42 25%,#f9d77e 33%,#fce6a8 42%,#fff7c2 50%," +
-            "#fff7c2 50%,#fce6a8 58%,#f9d77e 67%,#f0bf42 75%,#f9d77e 83%,#fce6a8 92%,#fff7c2 100%);" +
+            "#fff5d4 0%,#ffe5a0 8%,#ffd770 17%,#e6b840 25%,#d9a020 33%,#e6b840 42%,#ffd770 50%," +
+            "#ffd770 50%,#e6b840 58%,#d9a020 67%,#e6b840 75%,#ffd770 83%,#ffe5a0 92%,#fff5d4 100%);" +
           "background-size:200% 100%;background-repeat:no-repeat;" +
-          "border:2px solid #ffd24d;color:#3b2900;" +
-          "box-shadow:0 0 0 2px rgba(255,255,255,.7)," +
-                     "0 0 26px rgba(255,180,0,.85)," +
-                     "0 0 60px rgba(255,215,0,.55);" +
+          "border:2px solid #c9941c;color:#2a1d05;" +
+          "box-shadow:0 0 0 2px rgba(255,246,210,.7)," +
+                     "0 0 26px rgba(217,160,32,.85)," +
+                     "0 0 60px rgba(255,215,112,.55);" +
           "animation:_tadGoldSweep 7s linear infinite;}" +
-        ".box.golden .label,.box.golden .cat{color:#3b2900;}" +
-        ".box.golden .summary{color:#3b2900;opacity:1;}" +
-        ".box.golden .title{color:#1a1100;text-shadow:0 1px 0 rgba(255,255,255,.4);}" +
+        ".box.golden .label,.box.golden .cat{color:#2a1d05;}" +
+        ".box.golden .summary{color:#2a1d05;opacity:1;}" +
+        ".box.golden .title{color:#1a1100;text-shadow:0 1px 0 rgba(255,248,220,.45);}" +
         ".box.golden .open{background:rgba(0,0,0,.18);border-color:rgba(0,0,0,.45);color:#1a1100;}" +
         ".box.golden .open:hover{background:rgba(0,0,0,.3);}" +
         ".box.diamond{" +
