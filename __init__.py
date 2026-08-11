@@ -406,8 +406,12 @@ def _on_js_message(handled, message: str, context):
             except Exception as exc:
                 _log.error("uptodate open_url_in_dock", exc)
         if _pearls_panel is not None and _config.get("enableArticleViewer"):
-            _pearls_panel.load_url(url)
+            # Show first, then load.  Loading into a hidden dock hands the
+            # renderer a 0x0 viewport, and the page can finish loading with
+            # nothing composited - the panel then appears blank until it is
+            # manually reloaded.
             show_pearls_dock()
+            _pearls_panel.load_url(url)
         else:
             try:
                 openLink(url)

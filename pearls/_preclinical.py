@@ -548,12 +548,7 @@ PRECLINICAL_TERMS = [
         "category": "physiology",
         "summary": "Carries pain, temperature, and crude touch. First-order neuron synapses in dorsal horn, second-order decussates within a few segments and ascends to VPL thalamus. Anterolateral cord lesions produce contralateral pain and temperature loss.",
     },
-    {
-        "name": "Corticospinal tract",
-        "aliases": ["CST", "Pyramidal tract"],
-        "category": "physiology",
-        "summary": "Main descending motor pathway. About 85 percent of fibres decussate at the medulla (lateral CST), 15 percent remain ipsilateral (anterior CST). Lesions above the decussation cause contralateral weakness.",
-    },
+    {"name": "Corticospinal tract", "aliases": ["Pyramidal tract"], "category": "physiology", "summary": "Main descending motor pathway. About 85 percent of fibres decussate at the medulla (lateral CST), 15 percent remain ipsilateral (anterior CST). Lesions above the decussation cause contralateral weakness."},
 
     # ───────────────────────── PHYSIOLOGY: HAEMATOLOGY ─────────────────────────
     {
@@ -648,12 +643,7 @@ PRECLINICAL_TERMS = [
         "category": "biochemistry",
         "summary": "Synthesis of glycogen from glucose-6-phosphate via UDP-glucose. Glycogen synthase forms alpha-1,4 bonds; branching enzyme creates alpha-1,6 branches. Stimulated by insulin.",
     },
-    {
-        "name": "Glycogenolysis",
-        "aliases": [],
-        "category": "biochemistry",
-        "summary": "Breakdown of glycogen to glucose-1-phosphate by glycogen phosphorylase, then to glucose-6-phosphate. Liver releases free glucose (via G6Pase); muscle uses it locally. Stimulated by glucagon (liver) and epinephrine (both).",
-    },
+    {"name": "Glycogenolysis", "category": "biochemistry", "summary": "Breakdown of glycogen to glucose-1-phosphate by glycogen phosphorylase, then to glucose-6-phosphate. Liver releases free glucose (via G6Pase); muscle uses it locally. Stimulated by glucagon (liver) and adrenaline (both)."},
     {
         "name": "Fatty acid oxidation",
         "aliases": ["Beta oxidation"],
@@ -1046,12 +1036,7 @@ PRECLINICAL_TERMS = [
         "category": "microbiology",
         "summary": "Bacteria: Neisseria gonorrhoeae, Chlamydia trachomatis, Treponema pallidum, Haemophilus ducreyi. Viruses: HIV, HSV, HPV, hepatitis B. Protozoa: Trichomonas. Parasites: Phthirus pubis.",
     },
-    {
-        "name": "Mycobacterium tuberculosis",
-        "aliases": ["TB", "Mtb"],
-        "category": "microbiology",
-        "summary": "Acid-fast, aerobic, slow-growing rod. Inhaled, contained in granulomas. Latent infection in about a quarter of the world. Treatment: RIPE (rifampin, isoniazid, pyrazinamide, ethambutol) intensive phase then continuation.",
-    },
+    {"name": "Mycobacterium tuberculosis", "aliases": ["TB", "Mtb"], "category": "microbiology", "summary": "Acid-fast, aerobic, slow-growing rod. Inhaled, contained in granulomas. Latent infection in about a quarter of the world. Treatment: RIPE (rifampicin, isoniazid, pyrazinamide, ethambutol) intensive phase then continuation."},
     {
         "name": "Candida species",
         "aliases": [],
@@ -1064,18 +1049,8 @@ PRECLINICAL_TERMS = [
         "category": "microbiology",
         "summary": "Septate, acute-angle branching mould. Causes invasive aspergillosis in neutropenic patients, ABPA in asthma and cystic fibrosis, and aspergilloma in pre-existing cavities. Treated with voriconazole, isavuconazole, or amphotericin.",
     },
-    {
-        "name": "Pneumocystis jirovecii",
-        "aliases": ["PJP", "PCP"],
-        "category": "microbiology",
-        "summary": "Atypical fungus causing pneumonia in HIV (CD4 below 200) and other immunosuppressed patients. Bilateral interstitial infiltrates and severe hypoxaemia. Treated with high-dose cotrimoxazole, plus steroids if PaO2 below 70 mmHg.",
-    },
-    {
-        "name": "Plasmodium species",
-        "aliases": ["Malaria"],
-        "category": "microbiology",
-        "summary": "Protozoa transmitted by female Anopheles mosquitoes. P. falciparum causes severe disease; P. vivax and ovale have dormant liver hypnozoites requiring primaquine. Cyclical fevers, haemolytic anaemia, splenomegaly.",
-    },
+    {"name": "Pneumocystis jirovecii", "category": "microbiology", "summary": "Atypical fungus causing pneumonia in HIV (CD4 below 200) and other immunosuppressed patients. Bilateral interstitial infiltrates and severe hypoxaemia. Treated with high-dose cotrimoxazole, plus steroids if PaO2 below 70 mmHg."},
+    {"name": "Plasmodium species", "category": "microbiology", "summary": "Protozoa transmitted by female Anopheles mosquitoes. P. falciparum causes severe disease; P. vivax and ovale have dormant liver hypnozoites requiring primaquine. Cyclical fevers, haemolytic anaemia, splenomegaly."},
     {
         "name": "Influenza virus",
         "aliases": [],
@@ -1308,12 +1283,7 @@ PRECLINICAL_TERMS = [
         "category": "pathology",
         "summary": "Iron-dependent regulated cell death from lipid peroxidation. Inhibited by GPX4 and glutathione. Implicated in neurodegeneration, ischaemia-reperfusion, and cancer therapy responses.",
     },
-    {
-        "name": "Acute inflammation",
-        "aliases": [],
-        "category": "pathology",
-        "summary": "Rapid response (minutes to days) with vasodilation, increased permeability, and neutrophil emigration. Cardinal signs: rubor, tumor, calor, dolor, functio laesa. Mediated by histamine, bradykinin, prostaglandins, leukotrienes, chemokines.",
-    },
+    {"name": "Acute inflammation", "category": "pathology", "summary": "Rapid response (minutes to days) with vasodilation, increased permeability, and neutrophil emigration. Cardinal signs: rubor, tumour, calor, dolor, functio laesa. Mediated by histamine, bradykinin, prostaglandins, leukotrienes, chemokines."},
     {
         "name": "Chronic inflammation",
         "aliases": [],
@@ -1434,12 +1404,7 @@ PRECLINICAL_TERMS = [
         "category": "pathology",
         "summary": "Reactive oxygen species (superoxide, H2O2, hydroxyl radical) damage lipids, proteins, and DNA. Generated by mitochondria, neutrophils, ionising radiation, reperfusion. Defences: superoxide dismutase, catalase, glutathione, vitamins C and E.",
     },
-    {
-        "name": "Edema mechanisms",
-        "aliases": [],
-        "category": "pathology",
-        "summary": "Causes per Starling: increased hydrostatic pressure (heart failure, venous obstruction), decreased oncotic pressure (nephrotic syndrome, liver disease, malnutrition), lymphatic obstruction (filariasis, postsurgical), increased capillary permeability (inflammation), sodium retention.",
-    },
+    {"name": "Oedema mechanisms", "aliases": ["Edema mechanisms"], "category": "pathology", "summary": "Causes per Starling: increased hydrostatic pressure (heart failure, venous obstruction), decreased oncotic pressure (nephrotic syndrome, liver disease, malnutrition), lymphatic obstruction (filariasis, postsurgical), increased capillary permeability (inflammation), sodium retention."},
     {
         "name": "Shock classification",
         "aliases": [],

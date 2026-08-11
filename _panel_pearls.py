@@ -33,6 +33,11 @@ except (ImportError, AttributeError):
 
 from . import _webengine, _log, _config
 
+try:
+    from PyQt6.QtCore import QTimer
+except (ImportError, AttributeError):
+    from PyQt5.QtCore import QTimer
+
 # New profile name (was "ankipearls" in the old standalone addon) so
 # cookies and cache don't leak between versions.
 _PROFILE_NAME  = "theankidote-pearls"
@@ -528,8 +533,34 @@ class StatPearlsPanel(QWidget):
         self._results.hide()
 
     def load_url(self, url: str) -> None:
+        """Navigate the panel webview.
+
+        Two failure modes made this blank out in practice, both fixed here:
+
+        1. A load already in flight (the home page fired from __init__, or a
+           previous article) is cancelled by the new one.  The cancelled
+           navigation emits loadFinished(ok=False) and QtWebEngine parks the
+           view on chrome-error://chromewebdata/, which paints as an empty
+           grey rectangle.  Stopping first makes the handover explicit.
+        2. Loading into a dock that is still hidden gives the renderer a 0x0
+           viewport; the page can finish loading with nothing composited and
+           stay blank after the dock appears.  Deferring by one event-loop
+           tick lets the show + layout land first.
+        """
         self._auto_loaded = True
-        self._view.load(QUrl(url))
+        self._pending_url = url
+        self._load_retries = 0
+        try:
+            self._view.stop()
+        except Exception:
+            pass
+        QTimer.singleShot(0, lambda: self._do_load(url))
+
+    def _do_load(self, url: str) -> None:
+        try:
+            self._view.load(QUrl(url))
+        except Exception as exc:
+            _log.error(f"pearls load {url[:60]!r}", exc)
 
     def get_last_results(self) -> list:
         return self._last_results
@@ -582,10 +613,6 @@ class StatPearlsPanel(QWidget):
             self._crash_url = self._view.url().toString()
         except Exception:
             self._crash_url = None
-        try:
-            from PyQt6.QtCore import QTimer
-        except (ImportError, AttributeError):
-            from PyQt5.QtCore import QTimer
         QTimer.singleShot(1500, self._recover_after_crash)
 
     def _recover_after_crash(self):
@@ -597,6 +624,41 @@ class StatPearlsPanel(QWidget):
         except Exception as exc:
             _log.error("pearls post-crash reload", exc)
 
+    def _show_load_error(self, url: str) -> None:
+        """Replace the blank grey rectangle with something actionable."""
+        safe = (url or "").replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
+        self._page.setHtml(
+            "<html><body style=\"margin:0;background:#162d45;color:#eaf3f8;"
+            "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
+            "padding:34px 30px;line-height:1.6;\">"
+            "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
+            "Couldn\u2019t load this page</div>"
+            "<div style=\"opacity:.85;\">The request failed twice. NCBI rate-limits "
+            "rapid requests, so waiting a moment and retrying usually works.</div>"
+            f"<div style=\"margin-top:18px;\"><a href=\"{safe}\" style=\"color:#5dd5df;\">"
+            "Try again</a></div>"
+            f"<div style=\"margin-top:22px;font-size:12px;opacity:.55;"
+            f"word-break:break-all;\">{safe}</div>"
+            "</body></html>",
+            QUrl(url or "about:blank"),
+        )
+
+    def showEvent(self, ev):  # type: ignore[override]
+        """A page that finished loading while the dock was hidden can come
+        back composited-empty.  Reload if we surfaced onto a blank page."""
+        try:
+            super().showEvent(ev)
+        except Exception:
+            pass
+        try:
+            cur = self._view.url().toString()
+            if cur in ("", "about:blank") or cur.startswith("chrome-error"):
+                target = getattr(self, "_pending_url", "") or self._current_home_url()
+                self._load_retries = 0
+                QTimer.singleShot(0, lambda: self._do_load(target))
+        except Exception:
+            pass
+
     def _on_url_changed(self, url: QUrl):
         try:
             history = self._page.history()
@@ -606,6 +668,23 @@ class StatPearlsPanel(QWidget):
             pass
 
     def _on_load_finished(self, _ok: bool):
+        # A failed navigation leaves the view on chrome-error://chromewebdata/,
+        # which renders as a blank grey panel with no indication of what went
+        # wrong.  Retry once (NCBI throttles bursts of requests, and the retry
+        # almost always succeeds), then fall back to a readable message.
+        try:
+            cur = self._view.url().toString()
+        except Exception:
+            cur = ""
+        if not _ok or cur.startswith("chrome-error"):
+            target = getattr(self, "_pending_url", "") or self._current_home_url()
+            if getattr(self, "_load_retries", 0) < 1:
+                self._load_retries = getattr(self, "_load_retries", 0) + 1
+                _log.debug(f"pearls load failed, retrying: {target[:80]!r}")
+                QTimer.singleShot(900, lambda: self._do_load(target))
+            else:
+                self._show_load_error(target)
+            return
         try:
             history = self._page.history()
             self._btn_back.setEnabled(history.canGoBack())

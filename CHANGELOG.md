@@ -5,6 +5,47 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2] - 2026-08-11
+
+### Fixed
+
+- **Around 10% of the condition library was unreachable.** 111 condition
+  names appeared more than once, and because lookups resolve to the
+  first match, the earliest (and almost always briefest) version was the
+  one shown while the detailed rewrite sat unused. Duplicates are now
+  merged, keeping the fullest summary and the combined aliases of every
+  copy. For the 93 conditions affected this raises the displayed detail
+  roughly threefold — breast cancer, infective endocarditis, lung
+  cancer, syphilis and ankylosing spondylitis among them.
+- Australian spellings now match. Terms such as `haemophilia`,
+  `hyponatraemia`, `coeliac disease`, `transient ischaemic attack` and
+  `ischaemic colitis` are recognised in cards, and popup titles display
+  the Australian form rather than the American one.
+- `CoA` no longer highlights as coarctation of the aorta on
+  biochemistry cards, where it means coenzyme A.
+
+- **StatPearls panel no longer opens blank.** Two causes, both fixed:
+  clicking "Open article" loaded the page before showing the dock, so the
+  renderer was handed a zero-size viewport and could finish loading with
+  nothing drawn; and a failed or superseded navigation left the view
+  parked on Chromium's internal error page, which paints as an empty grey
+  rectangle. Loads now start after the dock is visible, an in-flight load
+  is stopped before a new one begins, a failure retries once, and a
+  second failure shows a readable message with a retry link instead of
+  nothing. Surfacing the panel onto a blank page also triggers a reload.
+
+### Changed
+
+- Drug and condition text follows Australian conventions: INN/Australian
+  generic names (adrenaline, salbutamol, ciclosporin, rifampicin,
+  indometacin, pethidine, mesalazine and others), SI units in place of
+  `mEq/L`, and "boxed warning" in place of the US-specific phrasing.
+  Claims of US regulatory approval are labelled as such rather than
+  presented as though they applied locally.
+- 15 drugs listed twice under both their American and Australian names
+  are now single entries carrying both, so brand names and summaries no
+  longer split across two records.
+
 ## [1.1.7] - 2026-08-11
 
 ### Fixed
