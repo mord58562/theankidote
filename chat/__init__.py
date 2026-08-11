@@ -221,6 +221,7 @@ _TEAL_DIM    = _theme.TEAL_DIM
 _TEAL_BORDER = _theme.TEAL_BORDER
 _HEADER_TXT  = _theme.HEADER_TXT
 _MUTED       = _theme.MUTED
+_QUOTE_TXT   = getattr(_theme, "QUOTE_TXT", _theme.HEADER_TXT)
 
 # CSS-only adblock for chat sites.  Hides the most common upsell/banner
 # selectors with `!important`.  Pure CSS, no filter list, no network
@@ -259,7 +260,18 @@ _dock    = None   # QDockWidget, lazily created
 _browser = None   # ChatBrowser widget, lazily created
 _dock_visible = False  # tracked flag (Qt async show/hide workaround)
 _key_filter = None  # ShortcutOverride event filter, installed once
-_CHAT_OPEN_QUOTE_PERIOD = None  # rolled once per Anki session in [10,20]
+
+# House-quote easter egg.  Flat per-open probability rather than a
+# modulo hit on a per-session period: with a re-rolled period the true
+# rate varied ~2x between sessions (N=10 fires twice as often as N=20)
+# and a counter parked just past a multiple could go a long stretch
+# with nothing, so the advertised rarity wasn't the delivered rarity.
+# 1/15 matches the midpoint of the old [10,20] range.
+_QUOTE_CHANCE = 1.0 / 15.0
+# Opens before the egg can fire at all - keeps it feeling earned rather
+# than greeting a brand-new user on their first dock open.
+_QUOTE_FLOOR = 5
+_LAST_QUOTE = None  # avoid repeating the same quote back-to-back
 
 
 # ── Key-event filter ──────────────────────────────────────────────────────
@@ -460,11 +472,18 @@ class ChatBrowser(QWidget):
         # buttons off-screen.
         self._house_label = QLabel("")
         self._house_label.setStyleSheet(
-            f"QLabel {{ color: {_NAVY_LIGHT}; font-style: italic;"
-            f" font-size: 11px; padding: 0 6px; background: transparent; }}"
+            f"QLabel {{ color: {_QUOTE_TXT}; font-style: italic;"
+            f" font-size: 12px; font-weight: 500; letter-spacing: .2px;"
+            f" padding: 3px 9px; border-radius: 9px;"
+            f" background: {_TEAL_DIM};"
+            f" border: 1px solid {_TEAL_BORDER}; }}"
         )
         self._house_label.setMaximumWidth(360)
         self._house_label.setWordWrap(False)
+        # The label now carries its own background + border, so an empty
+        # string would leave a bare pill sitting in the header.  Start
+        # hidden; `_roll_house_quote` toggles visibility with the text.
+        self._house_label.setVisible(False)
         h_lay.addWidget(self._house_label)
         h_lay.addStretch(1)
 
@@ -931,12 +950,52 @@ def toggle_dock():
     _request_toolbar_redraw()
 
 
+def _set_house_quote(label, text: str) -> None:
+    """Set (or clear) the header quote.  QLabel doesn't elide on its
+    own, so long quotes are elided to the label's max width by hand and
+    the full text is kept on the tooltip.  Visibility follows the text
+    so the styled pill never renders empty."""
+    try:
+        if not text:
+            label.setText("")
+            label.setToolTip("")
+            label.setVisible(False)
+            return
+        shown = text
+        try:
+            from aqt.qt import QFontMetrics, Qt
+            # 360 px cap minus horizontal padding (9 px) + border (1 px)
+            # on each side, with a little slack so the pill never sits
+            # flush against the buttons either side of it.
+            avail = max(80, label.maximumWidth() - 26)
+            shown = QFontMetrics(label.font()).elidedText(
+                text, Qt.TextElideMode.ElideRight, avail
+            )
+        except Exception:
+            pass
+        label.setText(shown)
+        label.setToolTip(text if shown != text else "")
+        label.setVisible(True)
+    except Exception as exc:
+        _log.error("house quote label", exc)
+
+
+def _pick_quote():
+    """Choose a quote, avoiding an immediate repeat of the last one so
+    two consecutive hits never show the same line.  With only a handful
+    of quotes, sampling with replacement repeats far more often than
+    intuition suggests."""
+    global _LAST_QUOTE
+    pool = [q for q in _HOUSE_QUOTES if q != _LAST_QUOTE] or list(_HOUSE_QUOTES)
+    _LAST_QUOTE = random.choice(pool)
+    return _LAST_QUOTE
+
+
 def _roll_house_quote():
-    """Increment the persisted chat-open counter and, on a 1-in-N hit
-    (N picked once per session in [10,20]), display a single House
-    quote in the dock header.  Clears the label otherwise so a quote
-    from a prior open never lingers."""
-    global _CHAT_OPEN_QUOTE_PERIOD
+    """Increment the persisted chat-open counter and, on an independent
+    `_QUOTE_CHANCE` roll (once past `_QUOTE_FLOOR` opens), display a
+    single House quote in the dock header.  Clears the label otherwise
+    so a quote from a prior open never lingers."""
     if _browser is None or not hasattr(_browser, "_house_label"):
         return
     try:
@@ -944,13 +1003,11 @@ def _roll_house_quote():
         _config.set_value("chatOpenCount", n)
     except Exception:
         n = 0
-    if _CHAT_OPEN_QUOTE_PERIOD is None:
-        _CHAT_OPEN_QUOTE_PERIOD = random.randint(10, 20)
     try:
-        if n > 0 and n % _CHAT_OPEN_QUOTE_PERIOD == 0 and _HOUSE_QUOTES:
-            _browser._house_label.setText(random.choice(_HOUSE_QUOTES))
+        if n > _QUOTE_FLOOR and _HOUSE_QUOTES and random.random() < _QUOTE_CHANCE:
+            _set_house_quote(_browser._house_label, _pick_quote())
         else:
-            _browser._house_label.setText("")
+            _set_house_quote(_browser._house_label, "")
     except Exception as exc:
         _log.error("house quote display", exc)
 

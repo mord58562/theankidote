@@ -36,6 +36,10 @@ if DARK:
     BODY_TXT    = "#eaf3f8"
     MUTED       = "rgba(232,244,248,.45)"
     BG_BOX      = "#162d45"
+    # Legible-but-understated text for chrome that sits directly on
+    # NAVY.  NAVY_LIGHT is a *surface* colour, not a text colour - using
+    # it for type on a NAVY header gives ~1.4:1 contrast, i.e. invisible.
+    QUOTE_TXT   = "#9fd8e8"
 else:
     NAVY        = "#e8f2f8"
     NAVY_LIGHT  = "#cfe0ec"
@@ -46,3 +50,4 @@ else:
     BODY_TXT    = "#1a2c3e"
     MUTED       = "rgba(26,44,62,.5)"
     BG_BOX      = "#ffffff"
+    QUOTE_TXT   = "#2e5570"

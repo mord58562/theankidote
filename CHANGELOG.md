@@ -5,6 +5,23 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.7] - 2026-08-11
+
+### Fixed
+
+- Term popups no longer run off the bottom of the screen. A popup now
+  measures itself against the available space and opens above the term
+  when there isn't room below; if neither side fits, it clamps to the
+  roomier side and scrolls internally. Horizontal clamping now uses the
+  popup's real width instead of a hard-coded one.
+- Popup styling stays stable while you read: hovering away and back, or
+  flipping to the answer side, no longer re-rolls a popup's appearance.
+  It's now settled once per card and resets on the next card.
+
+### Changed
+
+- Minor visual polish.
+
 ## [1.1.6] - 2026-05-22
 
 ### Changed

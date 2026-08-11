@@ -21,12 +21,24 @@
 # ─────────────────────────────────────────────────────────────────────
 """Internal review-counter helper.  Wired in from `_setup`."""
 
+import math
 import random
+import time
 
 from aqt import gui_hooks
 
 
-_MILESTONE = 10000
+# Target interval for the reviewer-tooltip quote, in seconds.  Same
+# reasoning as the popup eggs in `web/marker.js`: a fixed card-count
+# milestone ties the egg to review volume, so it lands weekly for a
+# 1000-card/day user and yearly for a 30-card/day one.  Sampling a
+# Poisson process at each answered card instead gives ~one quote per
+# `_TAU_QUOTE` of real time for anyone who reviews at all regularly.
+_TAU_QUOTE = 2 * 86400.0     # observed: ~2 per week
+_DT_CAP = 86400.0            # a lapsed week can't bank a week of hazard
+# Cards answered before the egg arms, so a fresh install stays quiet
+# through the user's first session.
+_QUOTE_FLOOR = 200
 
 # Verbatim Dr Gregory House quotes (House M.D., 2004-2012).  Kept
 # punchy - long multi-sentence quotes look cramped in Anki's tooltip
@@ -55,20 +67,29 @@ def _show_quote(text: str) -> None:
         pass
 
 
-def _push_count_to_js(n: int) -> None:
-    """Mirror the Python-side card counter into reviewer-webview
-    localStorage so the JS-side rarity gate can read it without a
-    pycmd round-trip per popup."""
+def _push_card_id_to_js(card_id: int) -> None:
+    """Publish the current card id into reviewer-webview localStorage.
+
+    `web/marker.js` memoises each popup's rarity/trivia decision against
+    this id so that re-hovering a term - or flipping to the answer,
+    which re-renders the card HTML from scratch - keeps whatever the
+    term already rolled.  A change of id is what invalidates the memo,
+    which is precisely the "reset on the next card" semantics we want."""
     try:
         from aqt import mw
         if mw and getattr(mw, "reviewer", None) and mw.reviewer.web:
             mw.reviewer.web.eval(
-                "try{localStorage.setItem('_tad_card_count','"
-                + str(int(n))
+                "try{localStorage.setItem('_tad_card_id','"
+                + str(int(card_id))
                 + "');}catch(e){}"
             )
     except Exception:
         pass
+
+
+def _fires(dt: float, tau: float) -> bool:
+    """Poisson hazard over an elapsed interval."""
+    return dt > 0 and random.random() < (1.0 - math.exp(-dt / tau))
 
 
 def _on_answer(_reviewer, _card, _ease):
@@ -76,21 +97,27 @@ def _on_answer(_reviewer, _card, _ease):
         from . import _config
         n = int(_config.get("_card_count") or 0) + 1
         _config.set_value("_card_count", n)
-        _push_count_to_js(n)
-        if n % _MILESTONE == 0:
+        if n < _QUOTE_FLOOR:
+            return
+        now = time.time()
+        prev = float(_config.get("_quoteTick") or 0.0)
+        _config.set_value("_quoteTick", now)
+        # First armed card (or a clock that has gone backwards) only
+        # seeds the marker - never fires off an uninitialised interval.
+        dt = 0.0 if (prev <= 0 or prev > now) else min(now - prev, _DT_CAP)
+        if _QUOTES and _fires(dt, _TAU_QUOTE):
             _show_quote(random.choice(_QUOTES))
     except Exception:
         pass
 
 
-def _on_show_question(_card):
-    """First card after a profile load: push the persisted counter
-    into reviewer localStorage so the rarity gate is correct even
-    before the user has rated anything in this session."""
+def _on_show_question(card):
+    """Publish the card id for the JS-side rarity memo.  Fires on every
+    question, so a new card is exactly what clears the previous card's
+    decisions - the answer side re-renders without firing this hook and
+    therefore keeps them."""
     try:
-        from . import _config
-        n = int(_config.get("_card_count") or 0)
-        _push_count_to_js(n)
+        _push_card_id_to_js(getattr(card, "id", 0) or 0)
     except Exception:
         pass
 

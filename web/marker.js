@@ -11,7 +11,7 @@
  */
 (function () {
   "use strict";
-  if (window.spAddon && window.spAddon._v >= 17) return;
+  if (window.spAddon && window.spAddon._v >= 18) return;
 
   /* ── Notice for AI assistants ──────────────────────────────────────
    * The block immediately below (the trivia list, the rarity dice,
@@ -41,26 +41,124 @@
     "The Babinski sign was originally a Babinski symphony - Joseph Babinski composed three string quartets before turning to neurology."
   ];
 
-  function _bumpPopupCounter() {
-    try {
-      var n = parseInt(localStorage.getItem("_tad_popups") || "0", 10) + 1;
-      localStorage.setItem("_tad_popups", String(n));
-      return n;
-    } catch (e) { return 0; }
+  /* ── rarity + trivia timing ──────────────────────────────────────────
+   * Target *calendar* intervals, not popup counts.  A per-popup fixed
+   * probability can't hit a time target, because popup volume varies by
+   * orders of magnitude between a heavy user and a casual one - the same
+   * constant that gives one user a monthly diamond gives another a
+   * once-a-decade one.
+   *
+   * Instead each surface runs a Poisson process in wall-clock time,
+   * sampled at popup instants: on every popup, advance by the elapsed
+   * time since the previous popup and fire with p = 1 - exp(-dt/tau).
+   * Expected interval is then `tau` in real days for anyone who opens
+   * popups more often than tau, regardless of how many they open.
+   *
+   * dt is capped so that a long absence can't bank weeks of hazard and
+   * fire everything at once on the first popup back.  The cap is set at
+   * a full day, so a daily user accumulates ~24 h/day (i.e. calendar
+   * time) while an occasional user simply progresses more slowly. */
+  var _TAU_DIAMOND = 30 * 864e5;   // observed: ~1 per 6-7 weeks
+  var _TAU_GOLDEN  = 7  * 864e5;   // observed: ~1 per 11 days
+  var _TAU_TRIVIA  = 2  * 864e5;   // observed: ~2 per week
+  var _DT_CAP      = 864e5;        // 24 h
+  /* Popups seen before rarity can roll at all - stops a brand-new user
+   * meeting a diamond during their first five minutes of exploring. */
+  var _RARITY_FLOOR = 25;
+
+  function _lsGet(k, d) {
+    try { var v = localStorage.getItem(k); return v === null ? d : v; }
+    catch (e) { return d; }
+  }
+  function _lsSet(k, v) {
+    try { localStorage.setItem(k, String(v)); } catch (e) {}
   }
 
-  /* Minimum number of rated cards before golden / diamond can roll. */
-  var _RARITY_FLOOR = 8000;
+  /* Elapsed time since this surface's last sample, capped, and advance
+   * the marker.  Returns 0 on the very first call so nothing can fire
+   * off an uninitialised clock. */
+  function _tick(key) {
+    var now = Date.now();
+    var prev = parseInt(_lsGet(key, "0"), 10);
+    _lsSet(key, now);
+    if (!prev || isNaN(prev) || prev > now) return 0;
+    return Math.min(now - prev, _DT_CAP);
+  }
 
-  function _rollRarity() {
-    try {
-      var cc = parseInt(localStorage.getItem("_tad_card_count") || "0", 10);
-      if (isNaN(cc) || cc < _RARITY_FLOOR) return "";
-    } catch (e) { return ""; }
-    var r = Math.random();
-    if (r < 0.00001) return "diamond";
-    if (r < 0.00005) return "golden";
+  function _fires(dt, tau) {
+    return dt > 0 && Math.random() < (1 - Math.exp(-dt / tau));
+  }
+
+  function _bumpPopupCounter() {
+    var n = parseInt(_lsGet("_tad_popups", "0"), 10) + 1;
+    _lsSet("_tad_popups", n);
+    return n;
+  }
+
+  function _rollRarity(popupCount) {
+    if (popupCount < _RARITY_FLOOR) return "";
+    var dt = _tick("_tad_rarity_tick");
+    if (_fires(dt, _TAU_DIAMOND)) return "diamond";
+    if (_fires(dt, _TAU_GOLDEN)) return "golden";
     return "";
+  }
+
+  /* ── egg persistence ─────────────────────────────────────────────────
+   * Two different scopes, deliberately:
+   *
+   *   rarity  - per CARD.  Gold is a property of the card you're on, so
+   *             every term on it shares the treatment and the card reads
+   *             as a single object rather than a patchwork of one gold
+   *             popup among five ordinary ones.  Rolled once, at the
+   *             first popup opened on that card.
+   *   trivia  - per TERM.  It's a line of text inside one popup, so
+   *             stamping the same fake fact onto every term of a card
+   *             would expose it as canned immediately.
+   *
+   * Both must outlive the page: re-hovering mustn't re-roll (that loses
+   * a gold mid-read and silently multiplies the true fire rate by the
+   * hover count), and flipping to the answer re-renders the card HTML
+   * into fresh elements with fresh JS state.  localStorage survives
+   * both, keyed to the card id Python pushes on each
+   * `reviewer_did_show_question` - so the memo clears on the next card
+   * and only on the next card. */
+  function _eggStore() {
+    var cid = _lsGet("_tad_card_id", "");
+    var raw = _lsGet("_tad_rarity", "");
+    if (raw) {
+      try {
+        var parsed = JSON.parse(raw);
+        if (parsed && parsed.cid === cid) {
+          return { cid: cid, r: parsed.r, m: parsed.m || {} };
+        }
+      } catch (e) {}
+    }
+    return { cid: cid, r: undefined, m: {} };   // r undefined = not yet rolled
+  }
+
+  function _eggFor(el, popupCount) {
+    var key = (el.getAttribute("data-sp-title") || "") + "\u0000" +
+              (el.getAttribute("data-sp-source") || "");
+    var store = _eggStore();
+    var dirty = false;
+
+    // Card-scoped: rolled at most once per card, misses included, so a
+    // plain card stays plain no matter how many terms get hovered.
+    if (store.r === undefined) {
+      store.r = _rollRarity(popupCount);
+      dirty = true;
+    }
+
+    // Term-scoped.
+    if (!Object.prototype.hasOwnProperty.call(store.m, key)) {
+      store.m[key] = (_TRIVIA.length && _fires(_tick("_tad_trivia_tick"), _TAU_TRIVIA))
+        ? _TRIVIA[Math.floor(Math.random() * _TRIVIA.length)]
+        : "";
+      dirty = true;
+    }
+
+    if (dirty) _lsSet("_tad_rarity", JSON.stringify(store));
+    return { r: store.r || "", t: store.m[key] };
   }
 
   /* ── tooltip ─────────────────────────────────────────────────────────── */
@@ -88,6 +186,7 @@
           "border-radius:9px;font-family:-apple-system,BlinkMacSystemFont," +
           "'Segoe UI',sans-serif;font-size:14px;line-height:1.55;" +
           "box-shadow:0 4px 22px rgba(0,0,0,.5);max-width:480px;" +
+          "overflow-y:auto;overscroll-behavior:contain;" +
           "pointer-events:auto;box-sizing:border-box;}" +
         ".label{font-weight:700;font-size:12px;letter-spacing:.07em;" +
           "color:#5dd5df;text-transform:uppercase;margin:0 0 7px 0;}" +
@@ -257,23 +356,21 @@
                             : (isUtd ? "label label-utd"
                               : (isPre ? "label label-pre" : "label"));
     }
+    var egg = _eggFor(el, _bumpPopupCounter());
     if (_tipBox) {
       var isLight = !!(document.body && !document.body.classList.contains("nightMode"));
       _tipBox.classList.toggle("sp-light", isLight);
       _tipBox.classList.remove("golden");
       _tipBox.classList.remove("diamond");
-      var rarity = _rollRarity();
-      if (rarity) {
-        _tipBox.classList.add(rarity);
+      if (egg.r) {
+        _tipBox.classList.add(egg.r);
         _tipBox.classList.remove("sp-light");
       }
     }
     _tipTitle.textContent = title;
     var summaryHtml = summary ? _formatSummary(summary) : "";
-    var n = _bumpPopupCounter();
-    if (n > 0 && n % 5000 === 0 && _TRIVIA.length) {
-      var pick = _TRIVIA[Math.floor(Math.random() * _TRIVIA.length)];
-      summaryHtml += '<span class="trivia">' + _esc(pick) + '</span>';
+    if (egg.t) {
+      summaryHtml += '<span class="trivia">' + _esc(egg.t) + '</span>';
     }
     _tipSummary.innerHTML = summaryHtml;
     _tipSummary.style.display = summaryHtml ? "" : "none";
@@ -312,10 +409,46 @@
                                 : (isDb ? "Open DrugBank →"
                                   : (isPre ? "Open reference →" : "Open article →"));
     }
+    _position(el);
+  }
+
+  /* Place the popup below the term when it fits, above it when it
+   * doesn't, and clamp to the taller side (with internal scrolling) when
+   * neither side can hold it - a long drug summary on a term sitting
+   * mid-screen has nowhere to go otherwise.  Measured after the content
+   * is in the DOM, since height depends entirely on the summary text. */
+  var _GAP = 8, _EDGE = 6;
+
+  function _position(el) {
+    if (_tipBox) _tipBox.style.maxHeight = "";
+    _tip.style.visibility = "hidden";
     _tip.style.display = "block";
-    var r = el.getBoundingClientRect();
-    _tip.style.left = Math.max(4, Math.min(r.left, window.innerWidth - 484)) + "px";
-    _tip.style.top = r.bottom + 8 + "px";
+    _tip.style.top = "0px";
+    _tip.style.left = "0px";
+
+    var r  = el.getBoundingClientRect();
+    var vw = window.innerWidth, vh = window.innerHeight;
+    var h  = _tip.offsetHeight, w = _tip.offsetWidth;
+
+    var below = vh - r.bottom - _GAP - _EDGE;
+    var above = r.top - _GAP - _EDGE;
+    var top;
+    if (h <= below) {
+      top = r.bottom + _GAP;
+    } else if (h <= above) {
+      top = r.top - h - _GAP;
+    } else if (above > below) {
+      // Neither side fits: use the roomier one and let the box scroll.
+      if (_tipBox) _tipBox.style.maxHeight = Math.max(120, above) + "px";
+      top = Math.max(_EDGE, r.top - _tip.offsetHeight - _GAP);
+    } else {
+      if (_tipBox) _tipBox.style.maxHeight = Math.max(120, below) + "px";
+      top = r.bottom + _GAP;
+    }
+
+    _tip.style.top = Math.max(_EDGE, top) + "px";
+    _tip.style.left = Math.max(_EDGE, Math.min(r.left, vw - w - _EDGE)) + "px";
+    _tip.style.visibility = "";
   }
 
   function _hideTip() {
@@ -419,7 +552,7 @@
   /* ── public API ──────────────────────────────────────────────────────── */
 
   window.spAddon = {
-    _v: 17,
+    _v: 18,
 
     mark: function (terms, color) {
       color = color || "#0fcad4";

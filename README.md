@@ -44,7 +44,7 @@ highlighting in the reviewer.
   toggles between StatPearls and DrugBank as the default.
 - **AI chat dock:** only the active provider renders inline; everything
   else lives in a single dropdown next to it. Subtle Dr House quote
-  appears in the dock header on every 10-20th open.
+  occasionally appears in the dock header.
 - **Removed:** back/forward arrows in the chat dock (rarely useful);
   DailyMed fallback (DrugBank-only now).
 
