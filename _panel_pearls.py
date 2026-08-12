@@ -509,6 +509,18 @@ class StatPearlsPanel(QWidget):
         except Exception as exc:
             _log.error("pearls renderProcessTerminated connect", exc)
 
+        # Navigation tracing.  The blank-panel reports so far have had no
+        # message of any kind, which rules out both the load-failure and
+        # renderer-crash paths - so the page is "loading fine" and still
+        # showing nothing.  Record the whole sequence to a file the user
+        # can send back, including what the DOM actually contains.
+        try:
+            self._view.loadStarted.connect(
+                lambda: _log.diag(f"loadStarted url={self._view.url().toString()[:120]!r}")
+            )
+        except Exception:
+            pass
+
         # ── results section ───────────────────────────────────────────────
         self._results = _ResultsSection(self)
         self._results.article_selected.connect(self.load_url)
@@ -607,23 +619,84 @@ class StatPearlsPanel(QWidget):
             self._pending_term = term
             try:
                 from .pearls import _ncbi
-                hit = _ncbi.cached_url(term)
-                if not hit:
+                site = "db" if "drugbank" in url.lower() else "sp"
+                hit = _ncbi.cached_url(f"{site}:{term}")
+                if not hit and site == "sp":
                     acc = _ncbi.cached(term)
                     hit = _ncbi.article_url(acc) if acc else None
                 if hit:
                     url = hit
                     self._pending_url = hit
+                elif "ncbi.nlm.nih.gov" in url.lower():
+                    # Nothing cached: resolve the chapter before
+                    # navigating.  Landing on the in-book search results
+                    # page is not an acceptable fallback - NCBI only
+                    # redirects to the chapter when a search has exactly
+                    # one hit, and the multi-hit results page does not
+                    # render in this webview at all.
+                    #
+                    # Strictly gated on the target being NCBI: the
+                    # resolver searches StatPearls, so running it for a
+                    # DrugBank link sends drug popups to a StatPearls
+                    # chapter instead of the drug page.
+                    self._resolve_then_load(term, url, section)
+                    return
             except Exception as exc:
-                _log.debug(f"cache lookup failed for {term!r}: {exc}")
+                _log.diag(f"cache lookup failed for {term!r}: {exc}")
         try:
             self._view.stop()
         except Exception:
             pass
+        self._load_queued = True
         QTimer.singleShot(0, lambda: self._do_load(url))
 
-    def _do_load(self, url: str) -> None:
+    def _resolve_then_load(self, term: str, fallback: str, section: str) -> None:
+        """Look the term up on NCBI, then load the chapter it resolves to.
+
+        Runs off the UI thread, so the panel shows a short placeholder
+        rather than freezing or flashing a page we know renders blank.
+        Any failure falls back to the original search URL, which is no
+        worse than the previous behaviour."""
+        self._pending_section = section
+        self._show_resolving(term)
+        _log.diag(f"resolving {term!r}")
+
+        from .pearls import _ncbi as _ncbi_mod
+
+        def done(acc):
+            try:
+                if acc:
+                    target = _ncbi_mod.article_url(acc)
+                    _log.diag(f"resolved {term!r} -> {acc}")
+                else:
+                    target = fallback
+                    _log.diag(f"unresolved {term!r}; falling back to search")
+                self._pending_url = target
+                self._load_retries = 0
+                self._do_load(target)
+            except Exception as exc:
+                _log.error("resolve_then_load", exc)
+
         try:
+            _ncbi_mod.resolve_async(term, done)
+        except Exception as exc:
+            _log.diag(f"resolve_async unavailable: {exc}")
+            done(None)
+
+    def _show_resolving(self, term: str) -> None:
+        safe = (term or "").replace("&", "&amp;").replace("<", "&lt;")
+        self._page.setHtml(
+            "<html><body style=\"margin:0;background:#162d45;color:#eaf3f8;"
+            "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
+            "padding:34px 30px;line-height:1.6;\">"
+            f"<div style=\"opacity:.75;\">Finding the StatPearls chapter for "
+            f"<b>{safe}</b>\u2026</div></body></html>"
+        )
+
+    def _do_load(self, url: str) -> None:
+        self._load_queued = False
+        try:
+            _log.diag(f"_do_load {url[:120]!r}")
             self._view.load(QUrl(url))
         except Exception as exc:
             _log.error(f"pearls load {url[:60]!r}", exc)
@@ -674,11 +747,25 @@ class StatPearlsPanel(QWidget):
             _log.error("pearls open externally", exc)
 
     def _on_render_crash(self, status, exit_code):
-        _log.warn(f"pearls renderer terminated (status={status}, exit={exit_code})")
+        """The renderer process died.  Qt leaves the view painted blank,
+        which is indistinguishable from an empty page - the panel just
+        goes grey with no explanation.  Report it, and bound the retries
+        so a page that reliably kills the renderer shows a message
+        instead of flashing content at the reader forever."""
         try:
             self._crash_url = self._view.url().toString()
         except Exception:
             self._crash_url = None
+        n = getattr(self, "_crash_count", 0) + 1
+        self._crash_count = n
+        _log.diag(f"RENDERER TERMINATED status={status} exit={exit_code} attempt={n}")
+        _log.warn(
+            f"renderer terminated (status={status}, exit={exit_code}, "
+            f"attempt={n}, url={(self._crash_url or '')[:120]!r})"
+        )
+        if n > 2:
+            self._show_crash_error(status, exit_code)
+            return
         QTimer.singleShot(1500, self._recover_after_crash)
 
     def _recover_after_crash(self):
@@ -689,6 +776,29 @@ class StatPearlsPanel(QWidget):
             self._view.load(QUrl(target))
         except Exception as exc:
             _log.error("pearls post-crash reload", exc)
+
+    def _show_crash_error(self, status, exit_code) -> None:
+        url = (getattr(self, "_crash_url", "") or "").replace("&", "&amp;")
+        url = url.replace("<", "&lt;").replace('"', "&quot;")
+        self._page.setHtml(
+            "<html><body style=\"margin:0;background:#162d45;color:#eaf3f8;"
+            "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
+            "padding:34px 30px;line-height:1.6;\">"
+            "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
+            "This page kept crashing the browser engine</div>"
+            "<div style=\"opacity:.85;\">The embedded renderer stopped three "
+            "times in a row on this page, so reloading has been given up on. "
+            "Opening it in your normal browser will work.</div>"
+            f"<div style=\"margin-top:18px;\"><a href=\"{url}\" "
+            "style=\"color:#5dd5df;\">Open in browser</a></div>"
+            f"<div style=\"margin-top:22px;font-size:12px;opacity:.55;\">"
+            f"Renderer exit status {status}, code {exit_code}. Please include "
+            f"this line if you report the problem.</div>"
+            f"<div style=\"margin-top:10px;font-size:12px;opacity:.45;"
+            f"word-break:break-all;\">{url}</div>"
+            "</body></html>",
+            QUrl(getattr(self, "_crash_url", "") or "about:blank"),
+        )
 
     # ── search-page auto-resolve ─────────────────────────────────────
     # 47% of drugs and 100% of conditions have no direct article/drug ID,
@@ -742,25 +852,40 @@ class StatPearlsPanel(QWidget):
         if not term:
             return
         low = url.lower()
-        is_search = ("unearth/q?" in low) or ("/books/n/statpearls/?term=" in low)
+        # NCBI redirects the in-book search URL to the book's own
+        # accession with the query preserved
+        # (/books/n/statpearls/?term=X -> /books/NBK430685/?term=X), so
+        # matching only the pre-redirect form missed every real case.
+        is_search = (
+            "unearth/q?" in low
+            or "/books/n/statpearls/?term=" in low
+            or ("/books/nbk" in low and "term=" in low)
+        )
         if not is_search:
             return
         try:
+            _log.diag(f"autojump attempt term={term!r}")
             self._page.runJavaScript(self._AUTOJUMP_JS % json.dumps(term))
         except Exception as exc:
-            _log.debug(f"autojump failed: {exc}")
+            _log.diag(f"autojump failed: {exc}")
 
     def _cache_resolved(self, url: str) -> None:
         """Remember a canonical article/drug URL reached from a search."""
         term = getattr(self, "_pending_term", "") or ""
         if not term:
             return
+        # A search-results URL carries a query string and resolves to the
+        # book root, not the chapter - caching it would pin the term to
+        # the StatPearls landing page forever.
+        if "?" in url:
+            return
         m = re.search(r"/books/(NBK\d+)", url) or re.search(r"/drugs/(DB\d+)", url)
         if not m:
             return
+        site = "db" if "drugbank" in url.lower() else "sp"
         try:
             from .pearls import _ncbi
-            _ncbi.remember_url(term, url)
+            _ncbi.remember_url(f"{site}:{term}", url)
             self._pending_term = ""
         except Exception as exc:
             _log.debug(f"cache resolved url failed: {exc}")
@@ -869,6 +994,12 @@ class StatPearlsPanel(QWidget):
         except Exception:
             pass
         try:
+            # A load queued by `load_url` is about to run; starting a
+            # second one here would cancel it, and the cancellation
+            # surfaces as a failed navigation.  This is exactly the
+            # "Open article" path, which shows the dock and then loads.
+            if getattr(self, "_load_queued", False):
+                return
             cur = self._view.url().toString()
             if cur in ("", "about:blank") or cur.startswith("chrome-error"):
                 target = getattr(self, "_pending_url", "") or self._current_home_url()
@@ -879,6 +1010,10 @@ class StatPearlsPanel(QWidget):
 
     def _on_url_changed(self, url: QUrl):
         try:
+            _log.diag(f"urlChanged {url.toString()[:120]!r}")
+        except Exception:
+            pass
+        try:
             self._cache_resolved(url.toString())
         except Exception:
             pass
@@ -888,6 +1023,47 @@ class StatPearlsPanel(QWidget):
             self._btn_forward.setEnabled(history.canGoForward())
         except Exception:
             pass
+
+    def _force_repaint(self) -> None:
+        """Work around the view staying blank after a completed load.
+
+        The page is fully loaded and laid out (the DOM probe reports a
+        populated body and the correct title) but nothing is composited,
+        so the panel shows an empty rectangle.  Qt has no "repaint now"
+        that reliably reaches the web content, but a zoom round-trip
+        forces a relayout plus a fresh composite, and is invisible to
+        the reader at these magnitudes.
+        """
+        try:
+            z = self._view.zoomFactor()
+            self._view.setZoomFactor(z * 1.0001)
+            QTimer.singleShot(0, lambda: self._restore_zoom(z))
+        except Exception as exc:
+            _log.diag(f"repaint nudge failed: {exc}")
+
+    def _restore_zoom(self, z: float) -> None:
+        try:
+            self._view.setZoomFactor(z)
+            self._view.update()
+        except Exception:
+            pass
+
+    def _probe_dom(self, tag: str) -> None:
+        """Report what the page actually rendered.  A successful load
+        that leaves an empty body is the case none of the existing error
+        paths cover, and it is indistinguishable from a crash on screen."""
+        try:
+            self._page.runJavaScript(
+                "(function(){try{return JSON.stringify({"
+                "url:location.href,"
+                "title:document.title||'',"
+                "bodyLen:(document.body?document.body.innerHTML.length:-1),"
+                "text:(document.body?document.body.innerText.slice(0,120):'')"
+                "});}catch(e){return 'probe error: '+e;}})()",
+                lambda r, t=tag: _log.diag(f"{t} dom={r}"),
+            )
+        except Exception as exc:
+            _log.diag(f"{tag} probe failed: {exc}")
 
     def _on_load_finished(self, _ok: bool):
         # A failed navigation leaves the view on chrome-error://chromewebdata/,
@@ -902,11 +1078,26 @@ class StatPearlsPanel(QWidget):
             target = getattr(self, "_pending_url", "") or self._current_home_url()
             if getattr(self, "_load_retries", 0) < 1:
                 self._load_retries = getattr(self, "_load_retries", 0) + 1
-                _log.debug(f"pearls load failed, retrying: {target[:80]!r}")
+                _log.warn(f"load failed (ok={_ok}, url={cur[:100]!r}); retrying")
                 QTimer.singleShot(900, lambda: self._do_load(target))
             else:
                 self._show_load_error(target)
             return
+        self._crash_count = 0
+        _log.diag(f"loadFinished ok={_ok} url={cur[:120]!r}")
+        try:
+            vs = self._view.size()
+            cs = self._page.contentsSize()
+            _log.diag(
+                f"geometry view={vs.width()}x{vs.height()} "
+                f"visible={self._view.isVisible()} "
+                f"contents={int(cs.width())}x{int(cs.height())} "
+                f"zoom={self._view.zoomFactor():.2f}"
+            )
+        except Exception as exc:
+            _log.diag(f"geometry probe failed: {exc}")
+        self._probe_dom("afterLoad")
+        self._force_repaint()
         try:
             self._maybe_autojump(cur)
         except Exception:

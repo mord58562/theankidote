@@ -62,3 +62,39 @@ def error(context: str, exc: Optional[BaseException] = None) -> None:
     print(f"{_TAG} ERROR: {context}: {exc}", file=sys.stderr)
     if _debug_enabled():
         traceback.print_exc(file=sys.stderr)
+
+
+# ── diagnostic file log ──────────────────────────────────────────────
+# stderr is effectively invisible in a bundled Anki.app (it goes to the
+# system console, not Help > Debug Console), so anything a user needs to
+# send back has to land in a file they can actually open.
+_DIAG_PATH = None
+
+
+def diag_path() -> str:
+    global _DIAG_PATH
+    if _DIAG_PATH is None:
+        import os
+        base = os.path.dirname(os.path.abspath(__file__))
+        d = os.path.join(base, "user_files")
+        try:
+            os.makedirs(d, exist_ok=True)
+        except Exception:
+            pass
+        _DIAG_PATH = os.path.join(d, "diagnostic.log")
+    return _DIAG_PATH
+
+
+def diag(msg: str) -> None:
+    """Append a timestamped line to user_files/diagnostic.log.
+
+    Always on: it is a handful of lines per article opened, and the
+    whole point is that it is there *before* the user knows they need
+    it.  Failures here are swallowed - diagnostics must never be the
+    thing that breaks the feature."""
+    try:
+        import time
+        with open(diag_path(), "a", encoding="utf-8") as fh:
+            fh.write(f"{time.strftime('%H:%M:%S')} {msg}\n")
+    except Exception:
+        pass

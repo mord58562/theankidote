@@ -5,6 +5,125 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.2] - 2026-08-12
+
+### Added
+
+- 92 more conditions link directly to their article, covering entries
+  filed under a synonym rather than the name used here - acoustic
+  neuroma under vestibular schwannoma, chilblains under pernio,
+  age-related hearing loss under presbycusis. 639 of 828 conditions now
+  open their article in one step.
+
+### Changed
+
+- Where a matching article covers a different entity, a broader class or
+  a narrower subtype than the term as taught, no link is used and the
+  search is shown instead. Reading the wrong chapter unaware is worse
+  than an extra click, and nothing on the page would signal the swap.
+
+## [1.3.1] - 2026-08-12
+
+### Added
+
+- 46 further conditions now link directly to their StatPearls chapter.
+  These are entries whose article is filed under the American spelling -
+  hyponatraemia, coeliac disease, subarachnoid haemorrhage, transient
+  ischaemic attack and similar - which previously found nothing. 547 of
+  828 conditions now open their article in one step.
+
+## [1.3] - 2026-08-12
+
+### Added
+
+- 501 conditions now carry a direct StatPearls link, so "Open article"
+  opens the chapter immediately with no lookup and no network delay.
+
+### Fixed
+
+- Chapter links are only used where the article genuinely is the
+  condition. Terms that matched a narrower article - "Stroke" matching
+  "Heat Stroke", "Sepsis" matching "Neonatal Sepsis", "Hypertension"
+  matching "Portal Hypertension" - now fall back to a search instead,
+  since the opened page gives no sign that it is the wrong one.
+- Links remembered by earlier versions are discarded on upgrade. Those
+  could point at an unrelated article, and there is no way to tell which
+  ones, so they are all rebuilt.
+
+## [1.2.7] - 2026-08-12
+
+### Fixed
+
+- Chapter lookup could open an unrelated article. NCBI indexes
+  StatPearls by section rather than by chapter, so a search returned
+  headings like "Morphology" and the add-on followed them to whichever
+  chapter they belonged to. Lookups now match on chapter titles, and a
+  term whose chapter cannot be identified confidently falls back to a
+  search rather than opening something that only looks plausible.
+
+## [1.2.6] - 2026-08-12
+
+### Fixed
+
+- **Drug popups opened StatPearls pages instead of DrugBank.** The
+  chapter lookup added in 1.2.5 was being applied to every popup rather
+  than only StatPearls ones, so clicking through from a drug searched
+  StatPearls for the drug name and opened whatever it found. Drug links
+  behave as they did before 1.2.5 again.
+- Remembered links are now kept separately for drugs and conditions, so
+  a drug and a condition sharing a name cannot overwrite each other.
+
+## [1.2.5] - 2026-08-12
+
+### Fixed
+
+- **"Open article" now goes to the article.** It was landing on
+  StatPearls' in-book search results, which only redirects onward when a
+  search happens to have exactly one hit - so common terms with several
+  matching chapters stopped there, and that results page does not
+  display in the panel at all. The term is now looked up on NCBI first
+  and the chapter opened directly.
+- Lookups prefer the current chapter over retired ones, which NCBI keeps
+  in its index and which carry an out-of-date warning.
+
+## [1.2.4] - 2026-08-12
+
+### Fixed
+
+- The article panel could finish loading a page and still show nothing.
+  The page itself was fine - correct address, correct title, full
+  content - but was never drawn, leaving an empty rectangle. The panel
+  now forces the view to redraw once a page has loaded.
+- NCBI redirects its in-book search address to the book's own page with
+  the search preserved, which the add-on did not recognise. As a result
+  a search never resolved to the chapter, and the search results page
+  itself risked being remembered as though it were the article.
+
+## [1.2.3] - 2026-08-12
+
+### Added
+
+- A diagnostic log at `user_files/diagnostic.log`, reachable from
+  Tools > The AnkiDote > Show diagnostic log. It records every
+  navigation the article panel makes and what the loaded page actually
+  contained, which is the information needed to work out why a panel
+  came up empty.
+
+## [1.2.2] - 2026-08-12
+
+### Fixed
+
+- The article panel could go blank with no explanation. When the
+  embedded browser engine's renderer process stops, Qt leaves the view
+  painted empty, which looks identical to a page that simply loaded
+  nothing. The panel now reports what happened, stops reloading after
+  three consecutive failures instead of retrying indefinitely, and
+  offers to open the page in your normal browser.
+- Showing the dock and loading a page in the same action could start two
+  navigations, with the second cancelling the first and the cancellation
+  being reported as a load failure. This affected the "Open article"
+  path specifically.
+
 ## [1.2.1] - 2026-08-12
 
 ### Fixed

@@ -50,6 +50,7 @@ _MIN_GAP = 0.4
 _net_lock = threading.Lock()
 _last_call = [0.0]
 
+_CACHE_VERSION = 2   # bump to discard caches built by an older resolver
 _cache: dict = {}
 _cache_loaded = False
 _cache_dirty = False
@@ -69,7 +70,15 @@ def _load_cache() -> None:
         with open(_CACHE_PATH, "r", encoding="utf-8") as fh:
             data = json.load(fh)
         if isinstance(data, dict):
-            _cache = {k: v for k, v in data.items() if isinstance(v, str)}
+            if int(data.get("__version", 0)) != _CACHE_VERSION:
+                # Entries from before the chapter-title fix can point at
+                # an unrelated article; there is no way to tell which,
+                # so discard the lot rather than keep serving them.
+                _log.diag("nbk cache from an older resolver - discarding")
+                _cache = {}
+                return
+            _cache = {k: v for k, v in data.items()
+                      if isinstance(v, str) and k != "__version"}
     except FileNotFoundError:
         _cache = {}
     except Exception as exc:
@@ -85,7 +94,8 @@ def _save_cache() -> None:
         os.makedirs(os.path.dirname(_CACHE_PATH), exist_ok=True)
         tmp = _CACHE_PATH + ".tmp"
         with open(tmp, "w", encoding="utf-8") as fh:
-            json.dump(_cache, fh, ensure_ascii=False, indent=0, sort_keys=True)
+            json.dump(dict(_cache, __version=_CACHE_VERSION), fh,
+                  ensure_ascii=False, indent=0, sort_keys=True)
         os.replace(tmp, _CACHE_PATH)
         _cache_dirty = False
     except Exception as exc:
@@ -128,33 +138,76 @@ def _get(url: str) -> str:
 def _resolve_blocking(term: str) -> "str | None":
     """ESearch the books database for the StatPearls chapter, then
     ESummary the top hit for its NBK accession.  Returns e.g. 'NBK430685'."""
-    q = quote_plus(f'"{term}" AND statpearls[book]')
+    # Search titles only, and resolve to the parent chapter.  NCBI's book
+    # index is section-level: an unrestricted search returns records whose
+    # own title is a heading such as "Morphology", belonging to a chapter
+    # that may have nothing to do with the term.
+    q = quote_plus(f'"{term}"[Title] AND statpearls[book]')
     try:
-        raw = _get(f"{_EUTILS}esearch.fcgi?db=books&retmode=json&retmax=1&term={q}")
+        raw = _get(f"{_EUTILS}esearch.fcgi?db=books&retmode=json&retmax=20&term={q}")
         ids = (json.loads(raw).get("esearchresult") or {}).get("idlist") or []
     except Exception as exc:
-        _log.debug(f"nbk esearch failed for {term!r}: {exc}")
+        _log.diag(f"esearch failed for {term!r}: {exc}")
         return None
     if not ids:
+        _log.diag(f"esearch: no chapter titled {term!r}")
         return None
     try:
-        raw = _get(f"{_EUTILS}esummary.fcgi?db=books&retmode=json&id={ids[0]}")
+        raw = _get(f"{_EUTILS}esummary.fcgi?db=books&retmode=json&id={','.join(ids[:20])}")
         result = json.loads(raw).get("result") or {}
-        doc = result.get(ids[0]) or {}
     except Exception as exc:
-        _log.debug(f"nbk esummary failed for {term!r}: {exc}")
+        _log.diag(f"esummary failed for {term!r}: {exc}")
         return None
-    # The accession lives under different keys across Bookshelf record
-    # shapes; take the first NBK-looking value rather than guessing one.
-    for k in ("ancestortitle", "bookaccession", "accession", "reportnumber", "uid"):
-        v = doc.get(k)
-        if isinstance(v, str) and re.fullmatch(r"NBK\d+", v.strip()):
-            return v.strip()
-    for v in doc.values():
-        if isinstance(v, str):
-            m = re.fullmatch(r"NBK\d+", v.strip())
-            if m:
-                return v.strip()
+
+    best = None
+    for i in ids[:20]:
+        doc = result.get(i)
+        if not isinstance(doc, dict):
+            continue
+        acc = (doc.get("chapteraccessionid") or doc.get("accessionid") or "").strip()
+        if not re.fullmatch(r"NBK\d+", acc):
+            continue
+        info = doc.get("bookinfo") or ""
+        m = re.search(r'type="chapter"[^>]*>\s*<Title>(.*?)</Title>', info)
+        ctitle = m.group(1) if m else (doc.get("title") or "" if doc.get("rtype") == "chapter" else "")
+        sc = _score(ctitle, term)
+        if sc is None:
+            continue
+        if best is None or sc < best[0]:
+            best = (sc, acc, ctitle)
+    if best is None:
+        _log.diag(f"no chapter title matched {term!r}")
+        return None
+    _log.diag(f"resolved {term!r} -> {best[1]} {best[2]!r}")
+    return best[1]
+
+
+_NORM_RE = re.compile(r"[^a-z0-9 ]+")
+
+
+def _norm(t: str) -> str:
+    return _NORM_RE.sub(" ", str(t or "").lower()).replace("  ", " ").strip()
+
+
+def _score(chapter_title: str, term: str):
+    """Lower is better; None rejects.
+
+    Only a title that *is* the condition is accepted, optionally with a
+    trailing synonym in brackets.  Looser matching produced links that
+    looked right and were not - "Stroke" resolving to "Heat Stroke",
+    "Sepsis" to "Neonatal Sepsis", "Hypertension" to "Portal
+    Hypertension".  Nothing on the opened page signals the mismatch, so
+    a search page is the safer failure.
+    """
+    ct, t = _norm(chapter_title), _norm(term)
+    if not ct or not t:
+        return None
+    if "archiv" in ct:
+        return None
+    if ct == t:
+        return (0, len(ct))
+    if re.match(r"^\s*" + re.escape(term) + r"\s*\(", chapter_title or "", re.I):
+        return (1, len(ct))
     return None
 
 

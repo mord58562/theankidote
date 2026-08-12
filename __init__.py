@@ -636,6 +636,10 @@ def _setup() -> None:
     rerun_action.triggered.connect(_force_first_run)
     submenu.addAction(rerun_action)
 
+    log_action = QAction("Show diagnostic log...", mw)
+    log_action.triggered.connect(_reveal_diagnostic_log)
+    submenu.addAction(log_action)
+
     _reviewer.register_hooks()
     _extras.register()
 
@@ -1303,6 +1307,33 @@ def _relaunch_anki() -> None:
             showInfo("Settings saved.  Please restart Anki manually.")
         except Exception:
             pass
+
+
+def _reveal_diagnostic_log() -> None:
+    """Open the diagnostic log in Finder.  Asking a user to hunt for a
+    file inside an addon folder is a good way to get no bug report."""
+    try:
+        # `mw` and `os` are module-level imports; re-importing them here
+        # would rebind them as function locals for this whole body.
+        from aqt.utils import showInfo, tooltip
+        import os as _os
+        import subprocess as _sp
+        path = _log.diag_path()
+        if not _os.path.exists(path):
+            with open(path, "a", encoding="utf-8"):
+                pass
+        try:
+            if _sys.platform == "darwin":
+                _sp.Popen(["open", "-R", path])
+            elif _sys.platform.startswith("win"):
+                _sp.Popen(["explorer", "/select,", path])
+            else:
+                _sp.Popen(["xdg-open", _os.path.dirname(path)])
+            tooltip("Revealed diagnostic.log")
+        except Exception:
+            showInfo(f"Diagnostic log:\n\n{path}")
+    except Exception as exc:
+        _log.error("reveal diagnostic log", exc)
 
 
 def _on_theme_change() -> None:
