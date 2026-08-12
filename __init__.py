@@ -243,7 +243,10 @@ def _term_for_url(url: str) -> str:
     need to thread the term separately through the JS bridge.  Returns
     "" for URLs that are already canonical - nothing to resolve."""
     try:
-        from urllib.parse import urlparse, parse_qs, unquote_plus
+        # Only the names not already imported at module scope are pulled
+        # in here - importing `urlparse` again would shadow the global
+        # for this whole function.
+        from urllib.parse import parse_qs, unquote_plus
         q = parse_qs(urlparse(url).query)
         for key in ("term", "query"):
             if q.get(key):
@@ -432,8 +435,10 @@ def _on_js_message(handled, message: str, context):
             # instruction to this add-on, not part of the target URL.
             section = ""
             if "#tad-sec=" in url:
+                # `unquote` is imported at module scope; re-importing it
+                # here would rebind it as a function local and make the
+                # earlier call on this path an unbound-local error.
                 url, _, raw = url.partition("#tad-sec=")
-                from urllib.parse import unquote
                 section = unquote(raw)
             # Pass the term so the panel can use (and populate) the
             # resolved-URL cache instead of leaving the reader on a

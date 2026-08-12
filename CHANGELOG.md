@@ -5,6 +5,18 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1] - 2026-08-12
+
+### Fixed
+
+- **"Open article" crashed instead of opening anything.** A redundant
+  local import shadowed the module-level `unquote`, which made the name
+  local to the whole function and turned the earlier call on that path
+  into an `UnboundLocalError`. Every article click failed with a
+  traceback, so nothing added in 1.2 - the article resolver, the section
+  jump, the DrugBank auto-jump - could run at all. A check for this class
+  of shadowing has been added to the test suite.
+
 ## [1.2] - 2026-08-11
 
 ### Fixed
