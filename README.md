@@ -4,6 +4,55 @@ A unified medical-reference sidebar for Anki. Free and open source under
 GPL-3.0. Three independently-toggleable side docks plus inline term
 highlighting in the reviewer.
 
+## What's new in 1.3
+
+**Opening articles actually works.** "Open article" used to land on
+StatPearls' in-book search results, which only forwards you to the
+chapter when a search happens to have exactly one hit. Common terms with
+several matching chapters stopped there, and that results page doesn't
+render in the panel at all. 639 of 828 conditions now carry a direct
+link and open in one step; the rest fall back to a search. Links are
+only used where the article genuinely is the condition, so a term that
+matches a different entity, a broader class, or a narrower subtype gets
+no link - reading the wrong chapter unaware is worse than an extra
+click.
+
+**The article panel no longer opens blank.** Loads start only once the
+panel is visible, an in-flight load is stopped before a new one begins,
+a failed load retries once, and a second failure shows a readable
+message rather than an empty rectangle. A page that loads but isn't
+drawn is now redrawn, and if the browser engine's renderer stops the
+panel says so and offers to open the page in your normal browser.
+
+**Australian conventions throughout.** `haemophilia`, `hyponatraemia`,
+`coeliac disease` and `transient ischaemic attack` are now recognised in
+cards and displayed in Australian form, with American spellings still
+matching as synonyms. Drug text uses INN and Australian generic names
+(adrenaline, salbutamol, ciclosporin, rifampicin, indometacin,
+pethidine, mesalazine), SI units, and labels US regulatory claims as US.
+
+**The condition library was around 10% unreachable.** 111 names appeared
+more than once and lookups resolved to the first match, so the briefest
+version showed while the fuller rewrite sat unused - breast cancer,
+infective endocarditis, lung cancer, syphilis and ankylosing spondylitis
+among the worst affected. Duplicates are merged, keeping the richest
+summary and the combined aliases.
+
+**Popups.** They no longer run off the bottom of the screen: a popup
+measures the space available and opens above the term when there's no
+room below. Section labels (`Sx`, `Ix`, `Mx`) are clickable and open the
+article at the matching section. A popup's appearance is settled once
+per card and survives hovering away and back, and the flip to the answer
+side.
+
+**The add-on follows Anki's light/dark switch mid-session** instead of
+keeping whatever theme it started with.
+
+See `CHANGELOG.md` for the full history.
+
+Three independently-toggleable side docks plus inline term
+highlighting in the reviewer.
+
 ## What's new in 1.1.2
 
 - **Snappier toolbar provider icon.** The top-toolbar AI chat button
@@ -54,8 +103,8 @@ in the reviewer:
 - **StatPearls + DrugBank popups and side panel** - hover-to-reveal
   tooltips on medical terms in the reviewer, click to open the full
   article in a docked side panel. Bundled local term databases cover
-  ~940 clinical conditions (with eponym and abbreviation aliases for
-  the renamed ones), ~1180 drugs, ~420 multi-meaning clinical
+  ~830 clinical conditions (with eponym and abbreviation aliases for
+  the renamed ones), ~1170 drugs, ~420 multi-meaning clinical
   abbreviations, and ~340 preclinical / basic-science concepts
   (physiology, biochemistry, microbiology, immunology, pathology,
   pharmacology, anatomy, biostatistics). Popups link out to
@@ -143,7 +192,8 @@ Highlights:
   which page the side panel's Home button loads. Toggleable inline
   from the home button's dropdown.
 - `rememberDockState` - reopen the same docks at next launch.
-- `debug` - verbose logging to stderr for bug-report diagnosis.
+- `debug` - extra logging for bug-report diagnosis. The article
+  panel's diagnostic log is always written; see Reporting bugs.
 
 ### Default keyboard shortcuts
 
@@ -204,16 +254,19 @@ Per-source statements:
 - **WebUSB / WebAuthn hardware keys** likewise generally don't work in
   embedded webviews. Use the "Open externally" `↗` button in any dock
   header to finish the task in your real browser.
-- **Renderer crashes** are auto-recovered after ~1.5 s by reloading the
-  last URL. If a dock stays blank for longer, close and reopen it.
+- **Renderer crashes** are auto-recovered by reloading the last URL,
+  up to three consecutive times. Past that the panel shows a message
+  with a link to open the page in your normal browser, rather than
+  reloading a page that reliably kills the renderer.
 
 ## Reporting bugs
 
 Please open an issue at
-<https://github.com/mord58562/theankidote/issues>. For repro details,
-flip `debug: true` in the addon config first - the addon then writes
-full tracebacks to stderr (visible in the Anki debug console:
-`Help → Debug Console`).
+<https://github.com/mord58562/theankidote/issues>. The add-on keeps a
+diagnostic log of what the article panel is doing - open it via
+**Tools → The AnkiDote → Show diagnostic log** and attach the relevant
+lines. For full tracebacks as well, set `debug: true` in the addon
+config before reproducing.
 
 Redact any patient data before sharing screenshots or card exports.
 See `SECURITY.md` for the security disclosure process.
