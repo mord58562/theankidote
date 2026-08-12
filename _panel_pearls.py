@@ -31,6 +31,9 @@ except (ImportError, AttributeError):
     _USER_ROLE  = Qt.UserRole
     _NO_HSCROLL = Qt.ScrollBarAlwaysOff
 
+import json
+import re
+
 from . import _webengine, _log, _config
 
 try:
@@ -249,38 +252,64 @@ _ITEM_TXT    = "#1a3a5c"   # always dark - results list always has a light bg
 # Compact flat nav button - stylesheet built once and reused.
 # ──────────────────────────────────────────────────────────────────────────
 
-_NAV_BTN_QSS = (
-    "QPushButton{"
-        f"background:transparent;color:{_HEADER_TXT};border:none;"
-        "border-radius:4px;font-size:14px;font-weight:bold;}"
-    "QPushButton:hover{"
-        f"background:{_TEAL_DIM};color:{_TEAL};}}"
-    "QPushButton:disabled{"
-        f"color:{_MUTED};}}"
-)
+def _rebind_theme() -> None:
+    """Re-read the palette after Anki switches light/dark mid-session.
 
-_HOME_BTN_QSS = (
-    "QToolButton{"
-        f"background:transparent;color:{_TEAL};"
-        "border:none;border-radius:4px;font-size:17px;font-weight:bold;"
-        "padding-right:14px;}"
-    "QToolButton:hover{"
-        f"background:{_TEAL_DIM};color:{_TEAL};}}"
-    "QToolButton::menu-button{"
-        "background:transparent;border:none;width:12px;}"
-    "QToolButton::menu-arrow{"
-        f"image:none;}}"
-)
+    The module captures `_theme.*` into local constants at import for
+    cheap f-string interpolation, and the QSS strings below bake those
+    values in.  Both have to be rebuilt, and every live widget restyled
+    (see `PearlsPanel.apply_theme`), or the panel keeps the palette it
+    was born with.
+    """
+    g = globals()
+    g["_NAVY"] = _theme.NAVY
+    g["_NAVY_LIGHT"] = _theme.NAVY_LIGHT
+    g["_TEAL"] = _theme.TEAL
+    g["_TEAL_DIM"] = _theme.TEAL_DIM
+    g["_TEAL_BORDER"] = _theme.TEAL_BORDER
+    g["_HEADER_TXT"] = _theme.HEADER_TXT
+    g["_BODY_TXT"] = _theme.BODY_TXT
+    g["_MUTED"] = _theme.MUTED
+    g["_BG_BOX"] = _theme.BG_BOX
+    _rebuild_qss()
 
-_CLOSE_BTN_QSS = (
-    "QPushButton{"
-        f"background:transparent;color:{_HEADER_TXT};"
-        "border:none;border-radius:4px;font-size:13px;font-weight:900;}"
-    "QPushButton:hover{"
-        "background:rgba(220,50,50,.18);color:#ff7070;}"
-    "QPushButton:pressed{"
-        "background:rgba(220,50,50,.32);}"
-)
+
+def _rebuild_qss() -> None:
+    """(Re)build the button stylesheets from the current palette."""
+    g = globals()
+    g["_NAV_BTN_QSS"] = (
+        "QPushButton{"
+            f"background:transparent;color:{_HEADER_TXT};border:none;"
+            "border-radius:4px;font-size:14px;font-weight:bold;}"
+        "QPushButton:hover{"
+            f"background:{_TEAL_DIM};color:{_TEAL};}}"
+        "QPushButton:disabled{"
+            f"color:{_MUTED};}}"
+    )
+    g["_HOME_BTN_QSS"] = (
+        "QToolButton{"
+            f"background:transparent;color:{_TEAL};"
+            "border:none;border-radius:4px;font-size:17px;font-weight:bold;"
+            "padding-right:14px;}"
+        "QToolButton:hover{"
+            f"background:{_TEAL_DIM};color:{_TEAL};}}"
+        "QToolButton::menu-button{"
+            "background:transparent;border:none;width:12px;}"
+        "QToolButton::menu-arrow{"
+            f"image:none;}}"
+    )
+    g["_CLOSE_BTN_QSS"] = (
+        "QPushButton{"
+            f"background:transparent;color:{_HEADER_TXT};"
+            "border:none;border-radius:4px;font-size:13px;font-weight:900;}"
+        "QPushButton:hover{"
+            "background:rgba(220,50,50,.18);color:#ff7070;}"
+        "QPushButton:pressed{"
+            "background:rgba(220,50,50,.32);}"
+    )
+
+
+_rebuild_qss()
 
 
 def _nav_btn(parent: QWidget, text: str, tip: str, w: int = 26) -> QPushButton:
@@ -307,22 +336,36 @@ class _ResultsSection(QWidget):
         lay.setSpacing(0)
 
         self._hdr = QLabel("RELEVANT ARTICLES")
-        self._hdr.setStyleSheet(f"""
-            QLabel {{
-                background: {_NAVY_LIGHT};
-                color: {_TEAL};
-                font-size: 9px;
-                font-weight: bold;
-                letter-spacing: .08em;
-                padding: 5px 10px;
-                border-top: 1px solid {_TEAL_BORDER};
-                border-bottom: 1px solid {_TEAL_BORDER};
-            }}
-        """)
+        self._style_header()
         lay.addWidget(self._hdr)
 
         self._list = QListWidget()
         self._list.setHorizontalScrollBarPolicy(_NO_HSCROLL)
+        self._style_list()
+
+        self._list.setMaximumHeight(185)
+        # itemClicked covers mouse; itemActivated also catches keyboard
+        # Enter / double-click, so the list is fully keyboard-navigable
+        # (↑/↓ to move, Enter to load) once focused.
+        self._list.itemClicked.connect(self._on_click)
+        self._list.itemActivated.connect(self._on_click)
+        lay.addWidget(self._list)
+
+        self.hide()
+
+    def apply_theme(self) -> None:
+        """Re-apply every stylesheet this widget owns after a palette
+        rebuild.  Row widgets carry inline colours, so they are rebuilt
+        from the retained result list rather than restyled in place."""
+        try:
+            self._style_header()
+            self._style_list()
+            if getattr(self, "_results", None):
+                self.set_results(list(self._results))
+        except Exception as exc:
+            _log.error("results apply_theme", exc)
+
+    def _style_list(self) -> None:
         self._list.setStyleSheet(f"""
             QListWidget {{
                 background: {_RESULT_BG};
@@ -344,15 +387,20 @@ class _ResultsSection(QWidget):
                 color: #0d2137;
             }}
         """)
-        self._list.setMaximumHeight(185)
-        # itemClicked covers mouse; itemActivated also catches keyboard
-        # Enter / double-click, so the list is fully keyboard-navigable
-        # (↑/↓ to move, Enter to load) once focused.
-        self._list.itemClicked.connect(self._on_click)
-        self._list.itemActivated.connect(self._on_click)
-        lay.addWidget(self._list)
 
-        self.hide()
+    def _style_header(self) -> None:
+        self._hdr.setStyleSheet(f"""
+            QLabel {{
+                background: {_NAVY_LIGHT};
+                color: {_TEAL};
+                font-size: 9px;
+                font-weight: bold;
+                letter-spacing: .08em;
+                padding: 5px 10px;
+                border-top: 1px solid {_TEAL_BORDER};
+                border-bottom: 1px solid {_TEAL_BORDER};
+            }}
+        """)
 
     def show_results(self, results: list):
         self._results = results
@@ -401,6 +449,7 @@ class StatPearlsPanel(QWidget):
         # ── nav header ────────────────────────────────────────────────────
         header = QWidget()
         header.setFixedHeight(40)
+        self._header = header
         header.setStyleSheet(f"background: {_NAVY};")
         h_lay = QHBoxLayout(header)
         h_lay.setContentsMargins(8, 0, 8, 0)
@@ -532,7 +581,7 @@ class StatPearlsPanel(QWidget):
         self._show_articles = False
         self._results.hide()
 
-    def load_url(self, url: str) -> None:
+    def load_url(self, url: str, term: str = "", section: str = "") -> None:
         """Navigate the panel webview.
 
         Two failure modes made this blank out in practice, both fixed here:
@@ -549,7 +598,24 @@ class StatPearlsPanel(QWidget):
         """
         self._auto_loaded = True
         self._pending_url = url
+        self._pending_section = section
         self._load_retries = 0
+        # A term we have resolved before goes straight to the article or
+        # drug page; nothing else in this method needs to know how the
+        # URL was obtained.
+        if term:
+            self._pending_term = term
+            try:
+                from .pearls import _ncbi
+                hit = _ncbi.cached_url(term)
+                if not hit:
+                    acc = _ncbi.cached(term)
+                    hit = _ncbi.article_url(acc) if acc else None
+                if hit:
+                    url = hit
+                    self._pending_url = hit
+            except Exception as exc:
+                _log.debug(f"cache lookup failed for {term!r}: {exc}")
         try:
             self._view.stop()
         except Exception:
@@ -624,6 +690,132 @@ class StatPearlsPanel(QWidget):
         except Exception as exc:
             _log.error("pearls post-crash reload", exc)
 
+    # ── search-page auto-resolve ─────────────────────────────────────
+    # 47% of drugs and 100% of conditions have no direct article/drug ID,
+    # so "Open article" lands on a search results page and the reader has
+    # to click again.  Rather than shipping thousands of hand-collected
+    # IDs that rot, let each site resolve its own term: when a search
+    # page finishes loading, look for a single unambiguous exact match
+    # and follow it.  The resulting canonical URL is cached by
+    # `_on_url_changed`, so it only ever happens once per term.
+    _AUTOJUMP_JS = r"""
+    (function () {
+      try {
+        var q = %s;
+        if (!q) return;
+        var norm = function (t) {
+          return String(t || "").toLowerCase()
+            .replace(/\s+/g, " ").replace(/[^a-z0-9 +/-]/g, "").trim();
+        };
+        var want = norm(q);
+        var links = document.querySelectorAll(
+          'a[href*="/drugs/DB"], a[href*="/books/NBK"]');
+        var exact = [], prefix = [];
+        for (var i = 0; i < links.length; i++) {
+          var a = links[i];
+          var t = norm(a.textContent);
+          if (!t) continue;
+          if (t === want) exact.push(a.href);
+          else if (t.indexOf(want + " ") === 0) prefix.push(a.href);
+        }
+        // Strict matches are considered first.  Treating a prefix match
+        // as equal turns a clean hit into an ambiguous one - searching
+        // "apixaban" also returns "Apixaban and rivaroxaban comparison",
+        // and lumping them together means neither wins.
+        var uniq = function (arr) {
+          return arr.filter(function (h, i) { return arr.indexOf(h) === i; });
+        };
+        var e = uniq(exact);
+        if (e.length === 1) { window.location.href = e[0]; return; }
+        // Several equally-exact hits means the search page really is the
+        // right answer; leave the reader on it.
+        if (e.length === 0) {
+          var p = uniq(prefix);
+          if (p.length === 1) window.location.href = p[0];
+        }
+      } catch (e) {}
+    })();
+    """
+
+    def _maybe_autojump(self, url: str) -> None:
+        term = getattr(self, "_pending_term", "") or ""
+        if not term:
+            return
+        low = url.lower()
+        is_search = ("unearth/q?" in low) or ("/books/n/statpearls/?term=" in low)
+        if not is_search:
+            return
+        try:
+            self._page.runJavaScript(self._AUTOJUMP_JS % json.dumps(term))
+        except Exception as exc:
+            _log.debug(f"autojump failed: {exc}")
+
+    def _cache_resolved(self, url: str) -> None:
+        """Remember a canonical article/drug URL reached from a search."""
+        term = getattr(self, "_pending_term", "") or ""
+        if not term:
+            return
+        m = re.search(r"/books/(NBK\d+)", url) or re.search(r"/drugs/(DB\d+)", url)
+        if not m:
+            return
+        try:
+            from .pearls import _ncbi
+            _ncbi.remember_url(term, url)
+            self._pending_term = ""
+        except Exception as exc:
+            _log.debug(f"cache resolved url failed: {exc}")
+
+    # StatPearls chapters run to several screens, so landing at the top
+    # when the reader clicked "Mx" still leaves them hunting.  Anchor IDs
+    # are per-chapter and not derivable, so match on heading text
+    # instead - the chapter headings are a fixed vocabulary.
+    _SCROLL_JS = r"""
+    (function () {
+      try {
+        var wants = %s;
+        if (!wants || !wants.length) return;
+        var norm = function (t) {
+          return String(t || "").toLowerCase().replace(/\s+/g, " ").trim();
+        };
+        var heads = document.querySelectorAll("h1,h2,h3,h4");
+        for (var w = 0; w < wants.length; w++) {
+          var want = norm(wants[w]);
+          for (var i = 0; i < heads.length; i++) {
+            var t = norm(heads[i].textContent);
+            if (t === want || t.indexOf(want) === 0) {
+              heads[i].scrollIntoView({block: "start"});
+              // Nudge up so the heading is not flush against the top of
+              // the viewport, which reads as a cut-off page.
+              window.scrollBy(0, -12);
+              return;
+            }
+          }
+        }
+      } catch (e) {}
+    })();
+    """
+
+    def _maybe_scroll_to_section(self, url: str) -> None:
+        section = getattr(self, "_pending_section", "") or ""
+        if not section:
+            return
+        low = url.lower()
+        if "/books/nbk" not in low and "go.drugbank.com/drugs/" not in low:
+            return          # still on a search page; wait for the real one
+        try:
+            from .pearls import _ncbi
+            wants = _ncbi.headings_for(section)
+        except Exception:
+            wants = []
+        if not wants:
+            self._pending_section = ""
+            return
+        try:
+            self._page.runJavaScript(self._SCROLL_JS % json.dumps(wants))
+        except Exception as exc:
+            _log.debug(f"section scroll failed: {exc}")
+        self._pending_section = ""
+
     def _show_load_error(self, url: str) -> None:
         """Replace the blank grey rectangle with something actionable."""
         safe = (url or "").replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
@@ -643,6 +835,32 @@ class StatPearlsPanel(QWidget):
             QUrl(url or "about:blank"),
         )
 
+    def apply_theme(self) -> None:
+        """Restyle the whole panel after Anki switches light/dark.
+
+        Anki emits `theme_did_change` on a manual toggle and on an OS
+        appearance change when following the system setting; without
+        this the panel keeps whichever palette it was constructed with
+        until Anki restarts.
+        """
+        try:
+            _rebind_theme()
+            if getattr(self, "_header", None) is not None:
+                self._header.setStyleSheet(f"background: {_NAVY};")
+            for btn, qss in (
+                (getattr(self, "_btn_back", None), _NAV_BTN_QSS),
+                (getattr(self, "_btn_forward", None), _NAV_BTN_QSS),
+                (getattr(self, "_btn_reload", None), _NAV_BTN_QSS),
+                (getattr(self, "_btn_home", None), _HOME_BTN_QSS),
+                (getattr(self, "_btn_close", None), _CLOSE_BTN_QSS),
+            ):
+                if btn is not None:
+                    btn.setStyleSheet(qss)
+            if getattr(self, "_results", None) is not None:
+                self._results.apply_theme()
+        except Exception as exc:
+            _log.error("pearls apply_theme", exc)
+
     def showEvent(self, ev):  # type: ignore[override]
         """A page that finished loading while the dock was hidden can come
         back composited-empty.  Reload if we surfaced onto a blank page."""
@@ -660,6 +878,10 @@ class StatPearlsPanel(QWidget):
             pass
 
     def _on_url_changed(self, url: QUrl):
+        try:
+            self._cache_resolved(url.toString())
+        except Exception:
+            pass
         try:
             history = self._page.history()
             self._btn_back.setEnabled(history.canGoBack())
@@ -685,6 +907,14 @@ class StatPearlsPanel(QWidget):
             else:
                 self._show_load_error(target)
             return
+        try:
+            self._maybe_autojump(cur)
+        except Exception:
+            pass
+        try:
+            self._maybe_scroll_to_section(cur)
+        except Exception:
+            pass
         try:
             history = self._page.history()
             self._btn_back.setEnabled(history.canGoBack())

@@ -236,6 +236,23 @@ def toggle_pearls_dock() -> None:
     request_toolbar_redraw()
 
 
+def _term_for_url(url: str) -> str:
+    """Recover the search term from a fallback search URL.
+
+    Both fallbacks encode the term as a query parameter, so there is no
+    need to thread the term separately through the JS bridge.  Returns
+    "" for URLs that are already canonical - nothing to resolve."""
+    try:
+        from urllib.parse import urlparse, parse_qs, unquote_plus
+        q = parse_qs(urlparse(url).query)
+        for key in ("term", "query"):
+            if q.get(key):
+                return unquote_plus(q[key][0])
+    except Exception:
+        pass
+    return ""
+
+
 def show_pearls_dock() -> None:
     global _pearls_dock_visible
     if _pearls_dock and not _pearls_dock_visible:
@@ -411,7 +428,17 @@ def _on_js_message(handled, message: str, context):
             # nothing composited - the panel then appears blank until it is
             # manually reloaded.
             show_pearls_dock()
-            _pearls_panel.load_url(url)
+            # Strip our own fragment before navigating: it is an
+            # instruction to this add-on, not part of the target URL.
+            section = ""
+            if "#tad-sec=" in url:
+                url, _, raw = url.partition("#tad-sec=")
+                from urllib.parse import unquote
+                section = unquote(raw)
+            # Pass the term so the panel can use (and populate) the
+            # resolved-URL cache instead of leaving the reader on a
+            # search results page.
+            _pearls_panel.load_url(url, term=_term_for_url(url), section=section)
         else:
             try:
                 openLink(url)
@@ -1271,6 +1298,49 @@ def _relaunch_anki() -> None:
             showInfo("Settings saved.  Please restart Anki manually.")
         except Exception:
             pass
+
+
+def _on_theme_change() -> None:
+    """Follow Anki's light/dark switch mid-session.
+
+    The palette is computed once at import, so without this the docks
+    keep the theme they were built with until Anki restarts.  The
+    reviewer popup already re-checks `body.nightMode` each time it
+    opens, so only the Qt side needs rebuilding.
+    """
+    try:
+        if not _theme.refresh():
+            return
+    except Exception as exc:
+        _log.error("theme refresh", exc)
+        return
+    panels = [_pearls_panel]
+    # The UpToDate and chat docks own their own module-level browser
+    # objects; reach them through their modules rather than duplicating
+    # the state here.
+    for name in ("uptodate", "chat"):
+        try:
+            import importlib
+            mod = importlib.import_module(f"{__name__}.{name}")
+            panels.append(getattr(mod, "_browser", None))
+        except Exception:
+            pass
+    for panel in panels:
+        try:
+            if panel is not None and hasattr(panel, "apply_theme"):
+                panel.apply_theme()
+        except Exception as exc:
+            _log.error("panel apply_theme", exc)
+    try:
+        request_toolbar_redraw()
+    except Exception:
+        pass
+
+
+try:
+    gui_hooks.theme_did_change.append(_on_theme_change)
+except Exception as exc:  # older Anki without the hook
+    _log.debug(f"theme_did_change hook unavailable: {exc}")
 
 
 gui_hooks.main_window_did_init.append(_setup)

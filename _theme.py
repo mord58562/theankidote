@@ -24,30 +24,42 @@ def night_mode() -> bool:
         return True
 
 
-DARK = night_mode()
+_PALETTES = {}
 
-if DARK:
-    NAVY        = "#0d2137"
-    NAVY_LIGHT  = "#1a3a5c"
-    TEAL        = "#0fcad4"
-    TEAL_DIM    = "rgba(15,202,212,.12)"
-    TEAL_BORDER = "rgba(15,202,212,.35)"
-    HEADER_TXT  = "#e8f4f8"
-    BODY_TXT    = "#eaf3f8"
-    MUTED       = "rgba(232,244,248,.45)"
-    BG_BOX      = "#162d45"
-    # Legible-but-understated text for chrome that sits directly on
-    # NAVY.  NAVY_LIGHT is a *surface* colour, not a text colour - using
-    # it for type on a NAVY header gives ~1.4:1 contrast, i.e. invisible.
-    QUOTE_TXT   = "#9fd8e8"
-else:
-    NAVY        = "#e8f2f8"
-    NAVY_LIGHT  = "#cfe0ec"
-    TEAL        = "#0a9ba3"
-    TEAL_DIM    = "rgba(10,155,163,.1)"
-    TEAL_BORDER = "rgba(10,155,163,.3)"
-    HEADER_TXT  = "#1a2c3e"
-    BODY_TXT    = "#1a2c3e"
-    MUTED       = "rgba(26,44,62,.5)"
-    BG_BOX      = "#ffffff"
-    QUOTE_TXT   = "#2e5570"
+
+def _build(dark: bool) -> dict:
+    """Palette for one mode.  Kept as a function so the theme can be
+    rebuilt when Anki switches mode mid-session; module constants are
+    then rebound in place, so callers that captured `_theme.NAVY` at
+    import time still read the current value."""
+    if dark:
+        return dict(
+            NAVY="#0d2137", NAVY_LIGHT="#1a3a5c", TEAL="#0fcad4",
+            TEAL_DIM="rgba(15,202,212,.12)", TEAL_BORDER="rgba(15,202,212,.35)",
+            HEADER_TXT="#e8f4f8", BODY_TXT="#eaf3f8",
+            MUTED="rgba(232,244,248,.45)", BG_BOX="#162d45",
+            QUOTE_TXT="#9fd8e8",
+        )
+    return dict(
+        NAVY="#e8f2f8", NAVY_LIGHT="#cfe0ec", TEAL="#0b7f89",
+        TEAL_DIM="rgba(11,127,137,.10)", TEAL_BORDER="rgba(11,127,137,.30)",
+        HEADER_TXT="#123047", BODY_TXT="#1a2c3e",
+        MUTED="rgba(26,44,62,.5)", BG_BOX="#ffffff",
+        QUOTE_TXT="#2e5570",
+    )
+
+
+def refresh() -> bool:
+    """Recompute the palette from Anki's current theme.  Returns True if
+    the mode actually changed, so callers can skip needless restyling."""
+    global DARK
+    dark = night_mode()
+    changed = dark != DARK
+    DARK = dark
+    for k, v in _build(dark).items():
+        globals()[k] = v
+    return changed
+
+
+DARK = night_mode()
+refresh()

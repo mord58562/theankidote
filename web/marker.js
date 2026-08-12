@@ -195,7 +195,10 @@
         ".label-pre{color:#9aa9ff;}" +
         ".title{font-size:17px;font-weight:600;margin:0 0 9px 0;}" +
         ".summary{font-size:14px;opacity:.88;line-height:1.6;margin:0;}" +
-        ".cat{color:#5dd5df;font-weight:700;font-size:12px;}" +
+        ".cat{color:#5dd5df;font-weight:700;font-size:12px;" +
+          "cursor:pointer;border-bottom:1px dotted rgba(93,213,223,.45);}" +
+        ".cat:hover{color:#8fe9f1;border-bottom-color:#8fe9f1;}" +
+        ".box.golden .cat,.box.diamond .cat{color:inherit;opacity:.85;}" +
         ".utd{margin-top:12px;padding-top:10px;" +
           "border-top:1px solid rgba(255,255,255,.09);}" +
         ".utd-label{font-weight:700;font-size:10px;letter-spacing:.07em;" +
@@ -311,6 +314,23 @@
     _tipBox      = _tipRoot.querySelector("#bx");
     _tipUtd      = _tipRoot.querySelector("#u");
     _tipUtdChips = _tipRoot.querySelector("#uc");
+
+    // Section labels open the article scrolled to the matching section.
+    // Delegated from the summary container because the labels are
+    // rebuilt on every popup, so per-span listeners would leak.
+    if (_tipSummary) {
+      _tipSummary.addEventListener("click", function (e) {
+        var t = e.target;
+        if (!t || !t.getAttribute) return;
+        var sec = t.getAttribute("data-sec");
+        if (!sec) return;
+        e.stopPropagation();
+        if (_tipUrl && typeof pycmd !== "undefined") {
+          pycmd("tad_open:" + _tipUrl + "#tad-sec=" + encodeURIComponent(sec));
+        }
+        _hideTip();
+      });
+    }
 
     // "Open article" button fires pycmd to load the article in the sidebar.
     _tipOpenBtn = _tipRoot.querySelector("#o");
@@ -459,7 +479,14 @@
 
   function _formatSummary(raw) {
     var s = _esc(raw);
-    s = s.replace(_SECTION_RE, '$1<br><span class="cat">$2</span>');
+    // The label is carried on a data attribute rather than recovered from
+    // the text node later, so trailing punctuation and the <br> can change
+    // freely without breaking the click target.
+    s = s.replace(_SECTION_RE, function (m, punct, label) {
+      var key = String(label).replace(/[:\s]+$/, "");
+      return punct + '<br><span class="cat" data-sec="' + _esc(key) + '">' +
+             label + "</span>";
+    });
     return s;
   }
 

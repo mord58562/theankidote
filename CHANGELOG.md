@@ -9,39 +9,63 @@ this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 
-- **Around 10% of the condition library was unreachable.** 111 condition
-  names appeared more than once, and because lookups resolve to the
-  first match, the earliest (and almost always briefest) version was the
-  one shown while the detailed rewrite sat unused. Duplicates are now
-  merged, keeping the fullest summary and the combined aliases of every
-  copy. For the 93 conditions affected this raises the displayed detail
-  roughly threefold — breast cancer, infective endocarditis, lung
-  cancer, syphilis and ankylosing spondylitis among them.
-- Australian spellings now match. Terms such as `haemophilia`,
+- **The StatPearls panel no longer opens blank.** Two separate causes,
+  both most visible when using "Open article" from a popup. Clicking it
+  started the page load before showing the dock, so the renderer was
+  handed a zero-size viewport and could finish loading with nothing
+  drawn; and a failed or superseded navigation left the view parked on
+  Chromium's internal error page, which paints as an empty grey
+  rectangle with no message. Loads now begin only once the dock is
+  visible, an in-flight load is stopped before a new one starts, a
+  failed load retries once, and a second failure shows a readable
+  message with a retry link instead of nothing at all. Surfacing the
+  panel onto a blank page also triggers a reload.
+- **Roughly 10% of the condition library was unreachable.** 111
+  condition names appeared more than once, and because lookups resolve
+  to the first match, the earliest and almost always briefest version
+  was the one shown while the fuller rewrite sat unused. Duplicates are
+  now merged, keeping the richest summary and the combined aliases of
+  every copy. Breast cancer, infective endocarditis, lung cancer,
+  syphilis and ankylosing spondylitis were among the worst affected.
+- **Australian spellings now match.** Terms such as `haemophilia`,
   `hyponatraemia`, `coeliac disease`, `transient ischaemic attack` and
   `ischaemic colitis` are recognised in cards, and popup titles display
-  the Australian form rather than the American one.
+  the Australian form rather than the American one. American spellings
+  are retained as aliases, so cards written either way still match.
 - `CoA` no longer highlights as coarctation of the aorta on
   biochemistry cards, where it means coenzyme A.
+- Epidural/extradural haematoma and the two gastro-oesophageal reflux
+  entries were duplicate records of the same entity under different
+  names, and are now single entries.
 
-- **StatPearls panel no longer opens blank.** Two causes, both fixed:
-  clicking "Open article" loaded the page before showing the dock, so the
-  renderer was handed a zero-size viewport and could finish loading with
-  nothing drawn; and a failed or superseded navigation left the view
-  parked on Chromium's internal error page, which paints as an empty grey
-  rectangle. Loads now start after the dock is visible, an in-flight load
-  is stopped before a new one begins, a failure retries once, and a
-  second failure shows a readable message with a retry link instead of
-  nothing. Surfacing the panel onto a blank page also triggers a reload.
+- **"Open article" now opens the article.** Every condition and 47% of
+  drugs had no direct link, so the button loaded a search results page
+  and left you to click again — which is most of why the sidebar was
+  worth skipping. The panel now resolves the term to the real chapter or
+  drug page, via NCBI's E-utilities for StatPearls and by following an
+  unambiguous exact match for DrugBank, and caches the result so it only
+  ever happens once per term. Ambiguous searches still show the results
+  page, since that genuinely is the right answer there.
+- **Section labels in a popup are now clickable.** Clicking `Mx`, `Ix`,
+  `Sx` and the rest opens the article scrolled to the matching StatPearls
+  section (Treatment / Management, Evaluation, History and Physical…),
+  so the popup covers the summary and one click reaches the detail.
+- Part of the popup stylesheet was silently discarded. A missing string
+  concatenation left JavaScript's automatic semicolon insertion to split
+  the declaration, dropping every rule after it — the UpToDate chips,
+  section labels and rarity styling were unstyled as a result.
+- **The add-on follows Anki's theme when it changes mid-session.**
+  Previously the palette was fixed when Anki started, so switching
+  light/dark left the docks on the old colours until restart.
 
 ### Changed
 
-- Drug and condition text follows Australian conventions: INN/Australian
-  generic names (adrenaline, salbutamol, ciclosporin, rifampicin,
-  indometacin, pethidine, mesalazine and others), SI units in place of
-  `mEq/L`, and "boxed warning" in place of the US-specific phrasing.
-  Claims of US regulatory approval are labelled as such rather than
-  presented as though they applied locally.
+- Drug and condition text follows Australian conventions: INN and
+  Australian generic names (adrenaline, salbutamol, ciclosporin,
+  rifampicin, indometacin, pethidine, mesalazine and others), SI units
+  in place of `mEq/L`, and "boxed warning" in place of the US-specific
+  phrasing. Claims of US regulatory approval are now labelled as US
+  rather than presented as though they applied locally.
 - 15 drugs listed twice under both their American and Australian names
   are now single entries carrying both, so brand names and summaries no
   longer split across two records.
