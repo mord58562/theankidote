@@ -5,6 +5,89 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.2] - 2026-08-14
+
+### Added
+
+- **StatPearls and DrugBank follow Anki into dark mode.** Uses
+  Chromium's own auto-dark rendering pass rather than an injected
+  stylesheet, so figures and structure diagrams survive intact. Needs
+  Qt 6.7 or newer; on older builds the pages render light as before.
+- **The article list can be dismissed.** A small close button on the
+  RELEVANT ARTICLES header hides it for the current card. It is a guess
+  at what is relevant and not always a good one, and closing the whole
+  sidebar was previously the only way out of its way. The next card
+  brings it back, as does the toolbar button.
+- **A web inspector for the sidebars**, alongside the diagnostic log
+  under Tools > The AnkiDote once diagnostics are unlocked. Qt reads
+  `QTWEBENGINE_REMOTE_DEBUGGING` when Anki starts, so it cannot be
+  switched on for the session you are already in - the entry offers to
+  relaunch Anki with it set, and warns first: the port drives every
+  webview in the process, signed-in UpToDate and chat sessions
+  included. Nothing is persisted, so the next normal restart turns it
+  back off.
+- **Restore defaults, on the Shortcuts tab.** A blank field is
+  ambiguous - deliberately disabled, or lost to a bad write? - and
+  there was no route back to a working binding. Two actions sharing a
+  binding is now flagged too.
+
+### Changed
+
+- **The article list is ranked and capped.** It was every match on the
+  card in whatever order the resolvers found them, conditions first and
+  drugs after - so on a card about calcium pyrophosphate deposition
+  disease, "gout" (mentioned once, as a contrast) sat above the disease
+  the card is actually about. Entries are now scored on whether the term
+  appears in the card's first field, how often it appears, how early,
+  and how specific it is, then trimmed to `maxResults` (default 8).
+- **Clicking the site you are already on no longer reloads.** Switching
+  to DrugBank from a DrugBank monograph cost a Cloudflare round trip
+  and discarded the page you were reading.
+- **A loading bar sits under the sidebar header.** Reaching DrugBank
+  goes through Cloudflare's challenge and can take several seconds,
+  during which nothing on screen changed - so the switch read as broken
+  and got clicked again, restarting the navigation.
+- **Header icons are optically matched.** The glyphs come from
+  different Unicode blocks and were all set at one font size, so the
+  guillemet arrows rendered tiny beside the reload and home icons.
+  Back and forward are now proper arrows, sized per glyph.
+
+### Fixed
+
+- **Shortcuts now fire wherever focus is.** Every binding was created
+  with Qt's default `WindowShortcut` context, which only fires when the
+  active window is the one the shortcut is parented to - so a binding
+  was dead whenever focus sat in the reviewer's webview or a genuine
+  top-level window like Browse was in front. That is the whole reason
+  the diagnostics chord appeared to do nothing. All bindings are now
+  `ApplicationShortcut`, which is what a global shortcut is supposed to
+  mean and what they were all documented as doing.
+- **The diagnostics chord is configurable** via `shortcutDiagnostics`,
+  so another add-on claiming `Ctrl+Alt+Shift+D` no longer leaves it
+  unreachable. Setting `diagnosticsUnlocked` to `true` by hand is
+  documented as the fallback.
+- **DrugBank search no longer throws you back into StatPearls.** A
+  failed navigation retried `_pending_url` - the target of the last
+  popup "Open article" click, which persists until the next one. So any
+  in-page navigation that failed, a DrugBank search most visibly,
+  retried whatever StatPearls chapter had last been opened and landed
+  the reader on it. Failed loads now retry the URL Chromium was
+  actually asked for, and the popup intent is cleared once satisfied or
+  when you navigate yourself. The same stale state could also send the
+  search-page auto-jump hunting for a StatPearls term inside DrugBank's
+  results; it is now scoped to the site the popup pointed at.
+- **Switching theme no longer reports an error.** `_ResultsSection`
+  called `set_results`, which does not exist - the method is
+  `show_results`. The restyle aborted at that point every time.
+- **The welcome dialog sizes to its contents.** It was fixed at
+  520x460, leaving a third of the pane empty with the Continue button
+  marooned at the bottom - which reads as content that failed to load.
+- **Settings text no longer clips.** Indented descriptions used
+  contents margins, which narrow a label's text without changing the
+  height it reports to the layout, so the second line was painted under
+  the widget below. Descriptions are short single lines now, and the
+  long explanatory paragraphs have moved to tooltips.
+
 ## [1.4.1] - 2026-08-14
 
 ### Added

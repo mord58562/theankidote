@@ -919,6 +919,34 @@ def open_url_in_dock(url: str) -> bool:
 # Shortcuts
 # ---------------------------------------------------------------------------
 
+def _make_shortcut(seq: str, slot, label: str = ""):
+    """QShortcut with `ApplicationShortcut` context.
+
+    The default `WindowShortcut` context only fires when the active
+    window is the one the shortcut is parented to, so a binding died
+    the moment focus sat in the reviewer's QWebEngineView or the user
+    had Browse open. See the same helper in the top-level package.
+    """
+    try:
+        from PyQt6.QtGui import QShortcut
+    except (ImportError, AttributeError):
+        from PyQt5.QtWidgets import QShortcut
+    try:
+        sc = QShortcut(QKeySequence(seq), mw)
+        try:
+            sc.setContext(Qt.ShortcutContext.ApplicationShortcut)
+        except (AttributeError, TypeError):
+            try:
+                sc.setContext(Qt.ApplicationShortcut)
+            except Exception:
+                pass
+        sc.activated.connect(slot)
+        return sc
+    except Exception as exc:
+        _log.error(f"bind {label or seq}", exc)
+        return None
+
+
 def rebind_shortcuts() -> None:
     """(Re)create the UpToDate key bindings from the current config.
 
@@ -929,11 +957,6 @@ def rebind_shortcuts() -> None:
     invent a chord they will never press.
     """
     global _toggle_sc, _search_sc
-    try:
-        from PyQt6.QtGui import QShortcut
-    except (ImportError, AttributeError):
-        from PyQt5.QtWidgets import QShortcut
-
     for sc in (_toggle_sc, _search_sc):
         try:
             if sc is not None:
@@ -948,21 +971,15 @@ def rebind_shortcuts() -> None:
     if toggle_seq is None:
         toggle_seq = "Ctrl+Shift+U"
     if toggle_seq:
-        try:
-            _toggle_sc = QShortcut(QKeySequence(toggle_seq), mw)
-            _toggle_sc.activated.connect(toggle_dock)
-        except Exception as exc:
-            _log.error("uptodate toggle shortcut", exc)
+        _toggle_sc = _make_shortcut(toggle_seq, toggle_dock,
+                                    "shortcutToggleUptodate")
 
     search_seq = _config.get("shortcutSearchSelection")
     if search_seq is None:
         search_seq = "Ctrl+Shift+L"
     if search_seq:
-        try:
-            _search_sc = QShortcut(QKeySequence(search_seq), mw)
-            _search_sc.activated.connect(_search_selection)
-        except Exception as exc:
-            _log.error("uptodate search shortcut", exc)
+        _search_sc = _make_shortcut(search_seq, _search_selection,
+                                    "shortcutSearchSelection")
 
 
 # ---------------------------------------------------------------------------

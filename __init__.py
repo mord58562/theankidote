@@ -39,6 +39,7 @@ and CHANGELOG.md for the per-version release notes.
 # Cloudflare without any flag tweaks.
 
 import base64 as _b64
+import os as _os_mod
 import sys as _sys
 from urllib.parse import unquote, urlparse
 
@@ -151,10 +152,11 @@ _pearls_panel = None
 _DEFAULT_SEND_SEL = "Ctrl+Shift+K"
 _DEFAULT_SEND_CARD = "Ctrl+Shift+J"
 _LEGACY_SEND_SEL = "Ctrl+Shift+P"
+_DEFAULT_DIAG_SEQ = "Ctrl+Alt+Shift+D"
 # Read from manifest.json so there is one place to bump.  Used only to
 # decide whether an install has already seen a given release's one-time
 # notices - see `_maybe_show_upgrade_notice`.
-_ADDON_VERSION = "1.4.1"
+_ADDON_VERSION = "1.4.2"
 # QShortcut objects are owned by Python; without a reference they are
 # collected and the binding silently stops working.
 _shortcut_refs: list = []
@@ -647,6 +649,39 @@ gui_hooks.webview_did_receive_js_message.append(_on_js_message)
 
 # ── Shortcut (re)binding ──────────────────────────────────────────────────
 
+def _make_shortcut(seq: str, slot, label: str = ""):
+    """Create a QShortcut that fires wherever focus happens to be.
+
+    The default context is `WindowShortcut`, which only fires when the
+    active window is the one the shortcut is parented to.  During review
+    the focused widget is a QWebEngineView, and Anki opens genuine
+    top-level windows (Browse, Stats, the add-on manager) that are not
+    children of `mw` - in both cases a window-context shortcut is simply
+    dead.  `ApplicationShortcut` fires regardless, which is what a
+    global binding is supposed to mean and what every one of these is
+    documented as doing.
+    """
+    try:
+        from PyQt6.QtGui import QShortcut
+    except (ImportError, AttributeError):
+        from PyQt5.QtWidgets import QShortcut
+    try:
+        sc = QShortcut(QKeySequence(seq), mw)
+        try:
+            sc.setContext(Qt.ShortcutContext.ApplicationShortcut)
+        except (AttributeError, TypeError):
+            # PyQt5 spells the enum unscoped.
+            try:
+                sc.setContext(Qt.ApplicationShortcut)
+            except Exception:
+                pass
+        sc.activated.connect(slot)
+        return sc
+    except Exception as exc:
+        _log.error(f"bind {label or seq}", exc)
+        return None
+
+
 def _rebind_shortcuts() -> None:
     """Build every user-editable binding from the current config.
 
@@ -661,11 +696,6 @@ def _rebind_shortcuts() -> None:
     packaged default when a key is missing entirely, so the `is None`
     checks below distinguish "not set" from "deliberately cleared".
     """
-    try:
-        from PyQt6.QtGui import QShortcut
-    except (ImportError, AttributeError):
-        from PyQt5.QtWidgets import QShortcut
-
     for sc in _shortcut_refs:
         try:
             sc.setEnabled(False)
@@ -686,12 +716,9 @@ def _rebind_shortcuts() -> None:
             seq = default
         if not seq:
             continue
-        try:
-            sc = QShortcut(QKeySequence(seq), mw)
-            sc.activated.connect(slot)
+        sc = _make_shortcut(seq, slot, key)
+        if sc is not None:
             _shortcut_refs.append(sc)
-        except Exception as exc:
-            _log.error(f"bind {key}", exc)
 
     # The UpToDate and chat bindings live in their subpackages so they
     # aren't created for a user who has those modules switched off.
@@ -732,17 +759,20 @@ def _setup() -> None:
     # Settings can re-apply them without a restart.
     _rebind_shortcuts()
 
-    try:
-        from PyQt6.QtGui import QShortcut
-    except (ImportError, AttributeError):
-        from PyQt5.QtWidgets import QShortcut
-
-    # Undocumented diagnostics toggle.  Deliberately an awkward chord so
-    # it cannot be hit by accident and does not collide with anything.
-    # Not user-editable, so it sits outside the rebind cycle.
+    # Diagnostics toggle.  Deliberately an awkward chord so it cannot be
+    # hit by accident, and kept out of the Shortcuts tab so it stays
+    # undiscoverable - but read from config all the same, because a
+    # hardcoded chord that another add-on has already claimed leaves no
+    # way in at all.  Setting `diagnosticsUnlocked` to true by hand is
+    # the documented fallback.
     global _diag_shortcut
-    _diag_shortcut = QShortcut(QKeySequence("Ctrl+Alt+Shift+D"), mw)
-    _diag_shortcut.activated.connect(_unlock_diagnostics)
+    diag_seq = _config.get("shortcutDiagnostics")
+    if diag_seq is None:
+        diag_seq = _DEFAULT_DIAG_SEQ
+    if diag_seq:
+        _diag_shortcut = _make_shortcut(
+            diag_seq, _unlock_diagnostics, "shortcutDiagnostics")
+        _log.debug(f"diagnostics chord bound to {diag_seq!r}")
 
     # Tools menu submenu.
     try:
@@ -867,7 +897,7 @@ def _qt_imports():
     return locals()
 
 
-def _caption(_w, text: str):
+def _caption(_w, text: str, wrap: bool = False):
     """Small secondary-colour note.
 
     Uses the palette's disabled text role rather than a hard-coded
@@ -875,7 +905,12 @@ def _caption(_w, text: str):
     add-on having an opinion about it.
     """
     lab = _w["QLabel"](text)
-    lab.setWordWrap(True)
+    # Word wrap off by default. A wrapped QLabel in a QVBoxLayout reports
+    # the height of one line while painting two, so the second line was
+    # being clipped by the widget below it - which is what made the
+    # module descriptions look broken. Captions are written short enough
+    # to fit instead; the few that genuinely need wrapping opt in.
+    lab.setWordWrap(bool(wrap))
     try:
         from aqt.qt import QPalette
         pal = lab.palette()
@@ -912,14 +947,13 @@ def _build_modules_group(_w, first_run: bool):
         cb.setChecked(checked)
         lay.addWidget(cb)
         note = _caption(_w, desc)
-        note.setContentsMargins(20, 0, 0, 4)
+        note.setIndent(18)
         lay.addWidget(note)
         return cb
 
     pearls_cb = _row(
         "Reference popups and sidebar",
-        "Highlights conditions and drugs on your cards, with StatPearls "
-        "and DrugBank in a side panel.", pearls_default)
+        "StatPearls and DrugBank lookups on your cards.", pearls_default)
     utd_cb = _row(
         "UpToDate sidebar",
         "Requires your own subscription.", utd_default)
@@ -962,7 +996,7 @@ def _build_recommendations_group(_w, first_run: bool):
     lay.setSpacing(6)
     lay.addWidget(_caption(
         _w, "Image Occlusion Enhanced - hide parts of a diagram to make "
-            "image cards. Pairs well with the reference popups."))
+            "image cards. Pairs well with the reference popups.", wrap=True))
     btn = _w["QPushButton"]("Install Image Occlusion Enhanced")
     btn.clicked.connect(lambda: _install_addon("1374772155", btn))
     lay.addWidget(btn)
@@ -1011,7 +1045,7 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
 
     lay.addWidget(_caption(
         _w, "Words to highlight on your cards in addition to the built-in "
-            "databases. Clicking one opens the link you give it."))
+            "databases. Clicking one opens the link you give it.", wrap=True))
 
     table = _w["QTableWidget"](0, 4)
     table.setHorizontalHeaderLabels(["Term", "Summary", "Link", "Match case"])
@@ -1069,7 +1103,7 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
 
     lay.addWidget(_caption(
         _w, "Links must start with http:// or https://. Rows missing a term "
-            "or a link are discarded when you save."))
+            "or a link are discarded when you save.", wrap=True))
 
     btns = _w["QDialogButtonBox"](
         _w["QDialogButtonBox"].StandardButton.Ok
@@ -1161,17 +1195,16 @@ def _build_pearls_group(_w):
 def _build_utd_group(_w):
     box = _w["QGroupBox"]("UpToDate")
     lay = _w["QVBoxLayout"](box)
-    explainer = _w["QLabel"](
-        "Institution home URL.  Defaults to the public UpToDate search "
-        "page; subscribers will be redirected to their institution's SSO "
-        "automatically.  NSW Health / Vic Health users (HCN proxy) and "
-        "OpenAthens / Shibboleth users may want to set their direct entry "
-        "URL here - see config.md for examples."
-    )
-    explainer.setWordWrap(True)
-    lay.addWidget(explainer)
+    lay.addWidget(_caption(_w, "Institution home URL. Leave blank for the "
+                               "public search page."))
     utd_url_edit = _w["QLineEdit"](_config.get("uptodateHomeUrl") or "")
     utd_url_edit.setPlaceholderText("https://www.uptodate.com/contents/search")
+    utd_url_edit.setToolTip(
+        "Subscribers are redirected to their institution's SSO "
+        "automatically.\nNSW Health / Vic Health (HCN proxy), OpenAthens "
+        "and Shibboleth\nusers can set a direct entry URL here - see "
+        "config.md for examples."
+    )
     lay.addWidget(utd_url_edit)
     return box, utd_url_edit
 
@@ -1186,25 +1219,23 @@ def _build_chat_group(_w):
         "Paste straight into the chat box when you send a selection or card")
     autopaste_cb.setChecked(_config.get("chatAutoPaste") is not False)
     lay.addWidget(autopaste_cb)
-    lay.addWidget(_caption(
-        _w, "Uncheck to copy to the clipboard only. Nothing is ever sent - "
-            "you still press Enter yourself."))
-    cu_label = _w["QLabel"](
-        "Optional custom provider URL (self-hosted OpenWebUI / "
-        "LibreChat / llama.cpp).  Adds a 'Custom' button to the dock."
-    )
-    cu_label.setWordWrap(True)
-    lay.addWidget(cu_label)
+    autopaste_cb.setToolTip(
+        "Uncheck to copy to the clipboard only.\n"
+        "Nothing is ever sent - you always press Enter yourself.")
+    lay.addWidget(_caption(_w, "Custom provider URL (optional)."))
     chat_url_edit = _w["QLineEdit"](_config.get("chatCustomProviderUrl") or "")
     chat_url_edit.setPlaceholderText("https://my-self-hosted-llm.example.com/")
+    chat_url_edit.setToolTip(
+        "Self-hosted OpenWebUI / LibreChat / llama.cpp.\n"
+        "Adds a 'Custom' button to the dock.")
     lay.addWidget(chat_url_edit)
-    passkey_note = _w["QLabel"](
-        "Note: passkey / Touch ID sign-in won't trigger inside an "
-        "embedded webview (a macOS limitation that affects every Anki "
-        "sidebar addon).  Use password + 2FA - cookies persist, so you "
-        "only need to sign in once per provider."
-    )
-    passkey_note.setWordWrap(True)
+    passkey_note = _caption(
+        _w, "Passkey / Touch ID sign-in won't work in an embedded webview.",
+        wrap=True)
+    passkey_note.setToolTip(
+        "A macOS limitation affecting every Anki sidebar add-on.\n"
+        "Use password + 2FA - cookies persist, so you sign in once "
+        "per provider.")
     lay.addWidget(passkey_note)
     return box, adblock_cb, chat_url_edit, autopaste_cb
 
@@ -1215,13 +1246,11 @@ def _build_order_group(_w):
     lay = _w["QVBoxLayout"](box)
     lay.setContentsMargins(8, 4, 8, 6)
     lay.setSpacing(4)
-    hint = _w["QLabel"]("Drag to reorder the chat and UpToDate toolbar buttons.")
-    hint.setWordWrap(True)
-    lay.addWidget(hint)
+    lay.addWidget(_caption(_w, "Drag to reorder."))
     lst = _w["QListWidget"]()
     lst.setDragDropMode(_w["QAbstractItemView"].DragDropMode.InternalMove)
     lst.setSelectionMode(_w["QAbstractItemView"].SelectionMode.SingleSelection)
-    lst.setFixedHeight(56)
+    lst.setFixedHeight(60)
 
     labels = {"chat": "AI chat", "uptodate": "UpToDate"}
     cur_order = _config.get("toolbarOrder") or ["chat", "uptodate"]
@@ -1271,7 +1300,48 @@ def _build_shortcuts_group(_w):
         form.addRow(label, seq)
         edits[key] = seq
     form.addRow("", _caption(_w, "Click a field and press the keys you want. "
-                                 "Leave one empty to turn it off."))
+                                 "Leave one empty to turn it off.", wrap=True))
+
+    # A blank field is ambiguous - deliberately disabled, or lost to a
+    # bad write? There was no way back to a working binding short of
+    # remembering what the default had been, so give people the door.
+    reset = _w["QPushButton"]("Restore defaults")
+
+    def _restore():
+        for k, dflt, _lbl in _SHORTCUT_FIELDS:
+            try:
+                edits[k].setKeySequence(_w["QKeySequence"](dflt))
+            except Exception:
+                pass
+    reset.clicked.connect(_restore)
+    form.addRow("", reset)
+
+    clash = _caption(_w, "", wrap=True)
+
+    def _check_clashes():
+        seen: dict = {}
+        dupes = set()
+        for k, _dflt, lbl in _SHORTCUT_FIELDS:
+            try:
+                seq = edits[k].keySequence().toString()
+            except Exception:
+                continue
+            if not seq:
+                continue
+            if seq in seen:
+                dupes.add(seq)
+            seen[seq] = lbl
+        clash.setText(
+            "" if not dupes else
+            "Two actions share " + ", ".join(sorted(dupes)) +
+            " - only one will fire.")
+    for k, _dflt, _lbl in _SHORTCUT_FIELDS:
+        try:
+            edits[k].keySequenceChanged.connect(lambda *_: _check_clashes())
+        except Exception:
+            pass
+    _check_clashes()
+    form.addRow("", clash)
     return box, edits
 
 
@@ -1305,7 +1375,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
 
     dlg = QDialog(mw)
     dlg.setWindowTitle("The AnkiDote")
-    dlg.resize(560, 460)
+    dlg.resize(560, 560)
     outer = _w["QVBoxLayout"](dlg)
 
     tabs = _w["QTabWidget"]()
@@ -1399,12 +1469,10 @@ def _first_run_dialog(_w) -> bool:
     QDialog = _w["QDialog"]
     dlg = QDialog(mw)
     dlg.setWindowTitle("The AnkiDote")
-    dlg.resize(520, 460)
+    dlg.setMinimumWidth(480)
     outer = _w["QVBoxLayout"](dlg)
 
-    intro = _w["QLabel"]("Three reference modules. Untick anything you "
-                         "don't want - you can change this later.")
-    intro.setWordWrap(True)
+    intro = _w["QLabel"]("Untick anything you don't want.")
     outer.addWidget(intro)
 
     modules_box, pearls_cb, utd_cb, chat_cb = _build_modules_group(_w, True)
@@ -1416,12 +1484,19 @@ def _first_run_dialog(_w) -> bool:
 
     utd_box, utd_url_edit = _build_utd_group(_w)
     outer.addWidget(utd_box)
-    outer.addStretch(1)
 
     btns = _w["QDialogButtonBox"](_w["QDialogButtonBox"].StandardButton.Ok)
     btns.button(_w["QDialogButtonBox"].StandardButton.Ok).setText("Continue")
     btns.accepted.connect(dlg.accept)
     outer.addWidget(btns)
+
+    # Size to what is actually in it.  A fixed 520x460 left a third of
+    # the pane empty below the last group with the Continue button
+    # marooned at the bottom, which read as content failing to load.
+    try:
+        dlg.adjustSize()
+    except Exception:
+        pass
 
     if dlg.exec() != QDialog.DialogCode.Accepted:
         return False
@@ -1432,9 +1507,49 @@ def _first_run_dialog(_w) -> bool:
     return True
 
 
-def _relaunch_anki() -> None:
-    """Spawn a fresh Anki instance and trigger Anki's own clean
-    shutdown for the current one.
+# ── Web inspector ─────────────────────────────────────────────────────────
+#
+# QtWebEngine reads QTWEBENGINE_REMOTE_DEBUGGING once, when QApplication
+# is constructed.  An add-on is imported well after that, so there is no
+# way to switch DevTools on for the session you are already in - setting
+# the variable from here does nothing at all, which is a worse outcome
+# than saying so.
+#
+# The only honest route is to hand it to a *new* process, so this
+# relaunches Anki with the variable set.  It lives for that session
+# only: nothing is persisted, so a normal restart puts it back off.
+# That default matters, because the port drives every webview in the
+# process - including your authenticated UpToDate and AI chat sessions -
+# and anything else on the machine can connect to it.
+
+_INSPECTOR_ENV = "QTWEBENGINE_REMOTE_DEBUGGING"
+
+
+def _inspector_port() -> int:
+    """The port DevTools is listening on, or 0 if it isn't.
+
+    Read from the environment rather than config: the environment is
+    the thing that is actually true about this process, and config
+    would go stale the moment someone restarts Anki normally.
+    """
+    try:
+        raw = (_os_mod.environ.get(_INSPECTOR_ENV) or "").strip()
+        port = int(raw.rsplit(":", 1)[-1]) if raw else 0
+        return port if 0 < port < 65536 else 0
+    except Exception:
+        return 0
+
+
+def _configured_inspector_port() -> int:
+    try:
+        port = int(_config.get("webInspectorPort") or 9222)
+    except Exception:
+        port = 9222
+    return port if 1024 < port < 65536 else 9222
+
+
+def _relaunch_anki(env_extra: "dict | None" = None) -> None:
+    """Spawn a fresh Anki instance and cleanly shut this one down.
 
     `mw.app.exit(0)` bypasses `unloadProfile`, which is the path that
     saves the collection, flushes pending addon-config writes, and
@@ -1445,10 +1560,14 @@ def _relaunch_anki() -> None:
     way, then call `mw.unloadProfileAndExit()` (Anki's official close
     path) on the next event-loop tick.
 
-    On macOS we relaunch via `open -n <Anki.app>` so launchd spawns a
-    fresh instance even though the old one is winding down.  On
-    Windows / Linux we re-exec detached so the child survives the
-    parent's exit.
+    Two spawn strategies, and the choice is forced. Normally macOS goes
+    through `open -n <Anki.app>` so launchd starts a fresh instance even
+    though the old one is winding down. But `open` hands the process to
+    launchd, which does not carry our environment across - so when
+    `env_extra` is set we exec the bundle's binary directly instead.
+    That is fine here precisely because we are not asking
+    LaunchServices for anything: there is no "already running" check to
+    defeat when you exec the binary yourself.
 
     `sys.executable` may be the bundled python on Linux or the Anki
     binary on macOS / Windows; falling back to `sys.argv[0]` covers
@@ -1463,9 +1582,16 @@ def _relaunch_anki() -> None:
     exe = _sys.executable
     if not exe and _sys.argv:
         exe = _sys.argv[0]
+
+    env = None
+    if env_extra:
+        env = dict(_os_mod.environ)
+        env.update({k: str(v) for k, v in env_extra.items()})
+
     relaunched = False
     try:
-        if _sys.platform == "darwin" and exe and "/Contents/MacOS/" in exe:
+        if (_sys.platform == "darwin" and exe
+                and "/Contents/MacOS/" in exe and not env_extra):
             app_path = exe.split("/Contents/MacOS/")[0]
             _subprocess.Popen(
                 ["/usr/bin/open", "-n", app_path],
@@ -1477,11 +1603,16 @@ def _relaunch_anki() -> None:
         elif _sys.platform == "win32" and exe:
             DETACHED_PROCESS = 0x00000008
             _subprocess.Popen(
-                [exe], creationflags=DETACHED_PROCESS, close_fds=True
+                [exe], creationflags=DETACHED_PROCESS, close_fds=True, env=env
             )
             relaunched = True
         elif exe:
-            _subprocess.Popen([exe], start_new_session=True, close_fds=True)
+            _subprocess.Popen(
+                [exe], start_new_session=True, close_fds=True, env=env,
+                stdin=_subprocess.DEVNULL,
+                stdout=_subprocess.DEVNULL,
+                stderr=_subprocess.DEVNULL,
+            )
             relaunched = True
     except Exception as exc:
         _log.error("relaunch spawn", exc)
@@ -1507,13 +1638,56 @@ def _relaunch_anki() -> None:
     if not relaunched:
         try:
             from aqt.utils import showInfo
-            showInfo("Settings saved.  Please restart Anki manually.")
+            showInfo("Please restart Anki manually.")
         except Exception:
             pass
 
 
+def _open_web_inspector() -> None:
+    """Open DevTools for the add-on's webviews, restarting if needed."""
+    try:
+        port = _inspector_port()
+        if port:
+            openLink(f"http://127.0.0.1:{port}")
+            try:
+                from aqt.utils import tooltip
+                tooltip("Pick a target: the StatPearls, UpToDate or chat "
+                        "webview.", period=3500)
+            except Exception:
+                pass
+            return
+
+        want = _configured_inspector_port()
+        from aqt.qt import QMessageBox
+        box = QMessageBox(mw)
+        box.setWindowTitle("The AnkiDote")
+        box.setIcon(QMessageBox.Icon.Warning)
+        box.setText("Restart Anki with the web inspector enabled?")
+        box.setInformativeText(
+            f"Qt reads this setting once, when Anki starts, so it cannot be "
+            f"switched on for the session you are already in.\n\n"
+            f"Anki will close and reopen with DevTools listening on port "
+            f"{want}. Anything else running on this machine can connect to "
+            f"that port and drive every webview in Anki - including your "
+            f"signed-in UpToDate and AI chat sessions. Nothing is saved, so "
+            f"the next normal restart turns it back off.\n\n"
+            f"Unsaved work in other windows will be closed."
+        )
+        go = box.addButton("Restart with inspector",
+                           QMessageBox.ButtonRole.AcceptRole)
+        box.addButton(QMessageBox.StandardButton.Cancel)
+        box.setDefaultButton(QMessageBox.StandardButton.Cancel)
+        box.exec()
+        if box.clickedButton() is go:
+            _log.diag(f"relaunching with {_INSPECTOR_ENV}={want}")
+            _relaunch_anki({_INSPECTOR_ENV: want})
+    except Exception as exc:
+        _log.error("open web inspector", exc)
+
+
 _tad_submenu = None
 _diag_action = None
+_inspector_action = None
 
 
 def _add_diagnostics_action() -> None:
@@ -1527,6 +1701,14 @@ def _add_diagnostics_action() -> None:
         _diag_action.triggered.connect(_reveal_diagnostic_log)
         _tad_submenu.addSeparator()
         _tad_submenu.addAction(_diag_action)
+
+        global _inspector_action
+        port = _inspector_port()
+        _inspector_action = _QAction(
+            f"Web inspector (port {port})..." if port
+            else "Web inspector (needs restart)...", mw)
+        _inspector_action.triggered.connect(_open_web_inspector)
+        _tad_submenu.addAction(_inspector_action)
     except Exception as exc:
         _log.error("add diagnostics action", exc)
 
@@ -1537,6 +1719,7 @@ def _unlock_diagnostics() -> None:
     Not documented and not discoverable: the log is a developer tool and
     an extra menu item nobody uses is clutter for everyone else.
     """
+    global _diag_action, _inspector_action
     try:
         on = not bool(_config.get("diagnosticsUnlocked"))
         _config.set_value("diagnosticsUnlocked", on)
@@ -1546,11 +1729,13 @@ def _unlock_diagnostics() -> None:
             _add_diagnostics_action()
             tooltip("Diagnostics on - Tools > The AnkiDote.", period=2500)
         else:
-            if _diag_action is not None:
-                try:
-                    _tad_submenu.removeAction(_diag_action)
-                except Exception:
-                    pass
+            for act in (_diag_action, _inspector_action):
+                if act is not None:
+                    try:
+                        _tad_submenu.removeAction(act)
+                    except Exception:
+                        pass
+            _diag_action = _inspector_action = None
             tooltip("Diagnostics off.", period=1800)
     except Exception as exc:
         _log.error("unlock diagnostics", exc)

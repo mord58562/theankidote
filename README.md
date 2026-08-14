@@ -254,6 +254,28 @@ Per-source statements:
   per-profile directory under `~/Library/Application Support/Anki2/
   QtWebEngine/`. Nothing leaves your machine that you didn't initiate.
 
+## Sidebar behaviour
+
+The StatPearls / DrugBank pills show which site you are on and switch to
+the other one; clicking the site you are already browsing does nothing
+rather than reloading it. When Anki is in dark mode both sites render
+dark, using Chromium's own auto-dark pass (Qt 6.7+).
+
+The RELEVANT ARTICLES list is generated from terms detected on the
+current card. It can be wrong, so it has a close button - dismissing it
+hides it for that card only.
+
+## Debugging
+
+`Ctrl+Alt+Shift+D` (`⌘⌥⇧D` on macOS) toggles verbose logging and adds
+**Show diagnostic log** and **Web inspector** under Tools > The
+AnkiDote. If another add-on has claimed that chord, change
+`shortcutDiagnostics` in the config, or just set `diagnosticsUnlocked`
+to `true` there directly. The inspector needs Anki to restart, because Qt reads the
+remote-debugging setting once at startup; the entry handles that and
+warns you first, since the port can drive every webview in the process.
+It is never persisted - a normal restart leaves it off.
+
 ## Known limitations
 
 - **Passkey / Touch ID sign-in won't trigger inside an embedded

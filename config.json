@@ -38,5 +38,7 @@
     "sendShortcutMigrated": false,
     "diagnosticsUnlocked": false,
     "chatAutoPaste": true,
-    "lastSeenVersion": null
+    "lastSeenVersion": null,
+    "webInspectorPort": 9222,
+    "shortcutDiagnostics": "Ctrl+Alt+Shift+D"
 }

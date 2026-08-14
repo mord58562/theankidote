@@ -1121,6 +1121,34 @@ def deliver_to_composer(text: str, on_done=None) -> None:
             on_done(False)
 
 
+def _make_shortcut(seq: str, slot, label: str = ""):
+    """QShortcut with `ApplicationShortcut` context.
+
+    The default `WindowShortcut` context only fires when the active
+    window is the one the shortcut is parented to, so a binding died
+    the moment focus sat in the reviewer's QWebEngineView or the user
+    had Browse open. See the same helper in the top-level package.
+    """
+    try:
+        from PyQt6.QtGui import QShortcut
+    except (ImportError, AttributeError):
+        from PyQt5.QtWidgets import QShortcut
+    try:
+        sc = QShortcut(QKeySequence(seq), mw)
+        try:
+            sc.setContext(Qt.ShortcutContext.ApplicationShortcut)
+        except (AttributeError, TypeError):
+            try:
+                sc.setContext(Qt.ApplicationShortcut)
+            except Exception:
+                pass
+        sc.activated.connect(slot)
+        return sc
+    except Exception as exc:
+        _log.error(f"bind {label or seq}", exc)
+        return None
+
+
 def rebind_shortcut() -> None:
     """Re-apply `shortcutToggleChat` without restarting Anki.
 
@@ -1129,10 +1157,6 @@ def rebind_shortcut() -> None:
     preferences window feel broken.
     """
     global _shortcut_holder
-    try:
-        from PyQt6.QtGui import QShortcut
-    except (ImportError, AttributeError):
-        from PyQt5.QtWidgets import QShortcut
     try:
         if _shortcut_holder is not None:
             _shortcut_holder.setEnabled(False)
@@ -1144,11 +1168,7 @@ def rebind_shortcut() -> None:
     seq = _config.get("shortcutToggleChat") or "Ctrl+Shift+A"
     if not seq:
         return
-    try:
-        _shortcut_holder = QShortcut(QKeySequence(seq), mw)
-        _shortcut_holder.activated.connect(toggle_dock)
-    except Exception as exc:
-        _log.error("chat rebind shortcut", exc)
+    _shortcut_holder = _make_shortcut(seq, toggle_dock, "shortcutToggleChat")
 
 
 def _close_dock(*_):
@@ -1354,13 +1374,6 @@ def _setup():
     Tools-menu entry) - keeps the menu clean while preserving the
     binding."""
     try:
-        try:
-            from PyQt6.QtGui import QShortcut
-        except (ImportError, AttributeError):
-            from PyQt5.QtWidgets import QShortcut
-        seq = _config.get("shortcutToggleChat") or "Ctrl+Shift+A"
-        global _shortcut_holder
-        _shortcut_holder = QShortcut(QKeySequence(seq), mw)
-        _shortcut_holder.activated.connect(toggle_dock)
+        rebind_shortcut()
     except Exception as exc:
         print(f"[TheAnkiDote.chat] setup error: {exc}")

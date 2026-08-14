@@ -18,6 +18,7 @@ JSON, but both are supported.
 | `pearlsHomePage` | string | `"statpearls"` | Which page the side panel's Home button loads. Accepts `"statpearls"` or `"drugbank"`. Toggleable from the dock's home-button dropdown. |
 | `enableArticleViewer` | bool | `true` | If true, popup clicks open the side panel; if false, they open the user's external browser. |
 | `highlightColor` | hex string | `"#0fcad4"` | Underline colour for highlighted terms. |
+| `maxResults` | int | `8` | How many entries the sidebar's article list shows, best-ranked first. `0` removes the cap. |
 | `customTerms` | string (JSON) / null | `null` | User-defined popup terms - see "Custom popup terms" below. |
 
 ### Custom popup terms
@@ -182,4 +183,7 @@ manually if you want to, but you usually don't need to.
 | `firstRunDone` | bool | `false` | Set to `true` after the welcome dialog has been completed. Toggle it back to `false` (or use Tools → The AnkiDote → "Run setup again…") to re-trigger the dialog. |
 | `tourSeen` | bool | `false` | Legacy flag from when the welcome dialog and the post-install tour were separate. Retained for forward-compatibility but no longer used. |
 | `lastSeenVersion` | string / null | `null` | Human version of the last release this install ran. Drives one-time upgrade notices; not intended for manual editing. |
+| `webInspectorPort` | int | `9222` | Port DevTools binds to when Anki is relaunched with the web inspector on (Tools > The AnkiDote, once diagnostics are unlocked). Read only at that relaunch; the inspector is never persisted, so a normal restart leaves it off. |
+| `shortcutDiagnostics` | string | `"Ctrl+Alt+Shift+D"` | Toggles verbose logging and the diagnostics entries in Tools > The AnkiDote. Not shown in the Shortcuts tab. Clear it to disable, or change it if another add-on has claimed the chord. |
+| `diagnosticsUnlocked` | bool | `false` | Whether the diagnostics entries are shown. Set to `true` by hand if the chord above is unavailable. |
 | `dockState_pearls` / `dockState_uptodate` / `dockState_chat` | bool | `false` | Last-seen visibility of each dock. Only consulted when `rememberDockState` is `true`. |

@@ -8,7 +8,7 @@ try:
     from PyQt6.QtCore import Qt, QUrl, QSize, pyqtSignal
     from PyQt6.QtWidgets import (
         QHBoxLayout, QLabel, QListWidget, QListWidgetItem,
-        QMenu, QPushButton, QVBoxLayout, QWidget,
+        QMenu, QProgressBar, QPushButton, QVBoxLayout, QWidget,
     )
     from PyQt6.QtGui import QAction
     from PyQt6.QtWebEngineWidgets import QWebEngineView
@@ -21,7 +21,7 @@ except (ImportError, AttributeError):
     from PyQt5.QtCore import Qt, QUrl, QSize, pyqtSignal
     from PyQt5.QtWidgets import (
         QAction, QHBoxLayout, QLabel, QListWidget, QListWidgetItem,
-        QMenu, QPushButton, QVBoxLayout, QWidget,
+        QMenu, QProgressBar, QPushButton, QVBoxLayout, QWidget,
     )
     from PyQt5.QtWebEngineWidgets import (
         QWebEngineView, QWebEnginePage, QWebEngineProfile, QWebEngineSettings,
@@ -283,7 +283,7 @@ def _rebuild_qss() -> None:
     g["_NAV_BTN_QSS"] = (
         "QPushButton{"
             f"background:transparent;color:{_HEADER_TXT};border:none;"
-            "border-radius:4px;font-size:14px;font-weight:bold;}"
+            "border-radius:4px;}"
         "QPushButton:hover{"
             f"background:{_TEAL_DIM};color:{_TEAL};}}"
         "QPushButton:disabled{"
@@ -292,7 +292,7 @@ def _rebuild_qss() -> None:
     g["_CLOSE_BTN_QSS"] = (
         "QPushButton{"
             f"background:transparent;color:{_HEADER_TXT};"
-            "border:none;border-radius:4px;font-size:13px;font-weight:900;}"
+            "border:none;border-radius:4px;}"
         "QPushButton:hover{"
             "background:rgba(220,50,50,.18);color:#ff7070;}"
         "QPushButton:pressed{"
@@ -303,12 +303,43 @@ def _rebuild_qss() -> None:
 _rebuild_qss()
 
 
+# Optical sizes for the header glyphs.  These come from different
+# Unicode blocks with different design metrics, so a single font-size
+# renders them at visibly different weights - the guillemets came out
+# tiny next to the arrows, and the house sat heavier than both.  Sizing
+# each glyph individually is the only way to get them to read as one
+# set; the QSS below deliberately omits font-size so these win.
+_GLYPH_PX = {
+    "\u2190": 15,  # back
+    "\u2192": 15,  # forward
+    "\u21bb": 16,  # reload
+    "\u2302": 15,  # home
+    "\u2197": 14,  # open externally
+    "\u2715": 12,  # close
+}
+
+
 def _nav_btn(parent: QWidget, text: str, tip: str, w: int = 26) -> QPushButton:
     b = QPushButton(text, parent)
     b.setFixedSize(w, 28)
     b.setToolTip(tip)
     b.setStyleSheet(_NAV_BTN_QSS)
+    _size_glyph(b, text)
     return b
+
+
+def _size_glyph(btn: QPushButton, text: str) -> None:
+    """Apply the per-glyph optical size from `_GLYPH_PX`."""
+    px = _GLYPH_PX.get(text)
+    if not px:
+        return
+    try:
+        f = btn.font()
+        f.setPixelSize(px)
+        f.setBold(True)
+        btn.setFont(f)
+    except Exception:
+        pass
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -317,6 +348,7 @@ def _nav_btn(parent: QWidget, text: str, tip: str, w: int = 26) -> QPushButton:
 
 class _ResultsSection(QWidget):
     article_selected = pyqtSignal(str)
+    dismissed = pyqtSignal()
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -326,9 +358,29 @@ class _ResultsSection(QWidget):
         lay.setContentsMargins(0, 0, 0, 0)
         lay.setSpacing(0)
 
+        # Header row: title on the left, dismiss on the right.  The list
+        # is a guess at what is relevant on the current card and it is
+        # not always a good one, so it needs a way out that isn't
+        # closing the whole sidebar.  It comes back on the next card, or
+        # immediately via the toolbar button.
+        self._hdr_row = QWidget(self)
+        hdr_lay = QHBoxLayout(self._hdr_row)
+        hdr_lay.setContentsMargins(0, 0, 0, 0)
+        hdr_lay.setSpacing(0)
+
         self._hdr = QLabel("RELEVANT ARTICLES")
+        hdr_lay.addWidget(self._hdr, 1)
+
+        self._btn_dismiss = QPushButton("\u2715", self._hdr_row)
+        self._btn_dismiss.setFixedSize(22, 22)
+        self._btn_dismiss.setCursor(Qt.CursorShape.PointingHandCursor)
+        self._btn_dismiss.setToolTip("Hide this list for now")
+        self._btn_dismiss.clicked.connect(self._on_dismiss)
+        _size_glyph(self._btn_dismiss, "\u2715")
+        hdr_lay.addWidget(self._btn_dismiss)
+
         self._style_header()
-        lay.addWidget(self._hdr)
+        lay.addWidget(self._hdr_row)
 
         self._list = QListWidget()
         self._list.setHorizontalScrollBarPolicy(_NO_HSCROLL)
@@ -346,13 +398,18 @@ class _ResultsSection(QWidget):
 
     def apply_theme(self) -> None:
         """Re-apply every stylesheet this widget owns after a palette
-        rebuild.  Row widgets carry inline colours, so they are rebuilt
-        from the retained result list rather than restyled in place."""
+        rebuild.
+
+        Item colours come from the list-level stylesheet, so restyling
+        is enough - but the header text and row heights are rebuilt from
+        the retained results anyway, since the section may be hidden and
+        must not be shown by a restyle.
+        """
         try:
             self._style_header()
             self._style_list()
-            if getattr(self, "_results", None):
-                self.set_results(list(self._results))
+            if self._results and self.isVisible():
+                self.show_results(list(self._results))
         except Exception as exc:
             _log.error("results apply_theme", exc)
 
@@ -379,17 +436,36 @@ class _ResultsSection(QWidget):
             }}
         """)
 
+    def _on_dismiss(self) -> None:
+        self.hide()
+        self.dismissed.emit()
+
     def _style_header(self) -> None:
+        self._hdr_row.setStyleSheet(f"""
+            QWidget {{
+                background: {_NAVY_LIGHT};
+                border-top: 1px solid {_TEAL_BORDER};
+                border-bottom: 1px solid {_TEAL_BORDER};
+            }}
+        """)
+        self._btn_dismiss.setStyleSheet(f"""
+            QPushButton {{
+                background: transparent;
+                color: {_MUTED};
+                border: none;
+                margin-right: 6px;
+            }}
+            QPushButton:hover {{ color: {_TEAL}; }}
+        """)
         self._hdr.setStyleSheet(f"""
             QLabel {{
-                background: {_NAVY_LIGHT};
+                background: transparent;
                 color: {_TEAL};
                 font-size: 9px;
                 font-weight: bold;
                 letter-spacing: .08em;
                 padding: 5px 10px;
-                border-top: 1px solid {_TEAL_BORDER};
-                border-bottom: 1px solid {_TEAL_BORDER};
+                border: none;
             }}
         """)
 
@@ -432,6 +508,10 @@ class StatPearlsPanel(QWidget):
         self._last_results: list = []
         self._auto_loaded  = False
         self._show_articles = False  # only true when opened via toolbar button
+        # Set when the user dismisses the article list.  Scoped to the
+        # current card so the next card gets a fresh list, and cleared
+        # by the toolbar button so re-opening the panel brings it back.
+        self._articles_dismissed = False
 
         outer = QVBoxLayout(self)
         outer.setContentsMargins(0, 0, 0, 0)
@@ -446,9 +526,9 @@ class StatPearlsPanel(QWidget):
         h_lay.setContentsMargins(8, 0, 8, 0)
         h_lay.setSpacing(2)
 
-        self._btn_back     = _nav_btn(header, "‹", "Back")
-        self._btn_forward  = _nav_btn(header, "›", "Forward")
-        self._btn_reload   = _nav_btn(header, "↺", "Reload")
+        self._btn_back     = _nav_btn(header, "←", "Back")
+        self._btn_forward  = _nav_btn(header, "→", "Forward")
+        self._btn_reload   = _nav_btn(header, "↻", "Reload")
         self._btn_home     = _nav_btn(header, "⌂", "Home")
         self._btn_home.clicked.connect(self._go_home)
 
@@ -495,6 +575,20 @@ class StatPearlsPanel(QWidget):
         h_lay.addWidget(self._btn_close)
         outer.addWidget(header)
 
+        # ── loading bar (flush under the header) ──────────────────────────
+        # Switching to DrugBank goes through Cloudflare's challenge and
+        # can take seconds. Nothing on screen changed while that ran, so
+        # the switch read as broken and got clicked again - which starts
+        # the whole navigation over. A progress bar doesn't make it
+        # faster but it does make it legibly in-progress.
+        self._progress = QProgressBar(self)
+        self._progress.setFixedHeight(2)
+        self._progress.setTextVisible(False)
+        self._progress.setRange(0, 100)
+        self._progress.hide()
+        self._style_progress()
+        outer.addWidget(self._progress)
+
         # ── webview ───────────────────────────────────────────────────────
         self._profile = QWebEngineProfile(_PROFILE_NAME, self)
         # Cloudflare bypass (Chrome UA, sec-ch-ua headers, stealth JS, etc.).
@@ -504,6 +598,9 @@ class StatPearlsPanel(QWidget):
         self._page = QWebEnginePage(self._profile, self)
         self._view = QWebEngineView(self)
         self._view.setPage(self._page)
+        # Render StatPearls and DrugBank dark when Anki is dark, using
+        # Chromium's own auto-dark pass - see _webengine.set_dark_mode.
+        _webengine.set_dark_mode(self._page, _DARK)
 
         # Renderer crash recovery - same pattern as the UTD dock.
         try:
@@ -526,6 +623,7 @@ class StatPearlsPanel(QWidget):
         # ── results section ───────────────────────────────────────────────
         self._results = _ResultsSection(self)
         self._results.article_selected.connect(self.load_url)
+        self._results.dismissed.connect(self._on_results_dismissed)
 
         outer.addWidget(self._results)
         outer.addWidget(self._view, 1)
@@ -543,6 +641,10 @@ class StatPearlsPanel(QWidget):
         self._btn_external.clicked.connect(self._open_externally)
         self._view.urlChanged.connect(self._on_url_changed)
         self._view.loadFinished.connect(self._on_load_finished)
+        self._view.loadStarted.connect(
+            lambda: (self._progress.setValue(0), self._progress.show()))
+        self._view.loadProgress.connect(self._progress.setValue)
+        self._view.loadFinished.connect(lambda _ok: self._progress.hide())
 
         self._view.load(QUrl(self._current_home_url()))
 
@@ -557,6 +659,7 @@ class StatPearlsPanel(QWidget):
         """Called when user opens the panel via the toolbar button (same card).
         Shows the article-list; leaves the webview on whatever page is loaded."""
         self._show_articles = True
+        self._articles_dismissed = False
         if self._last_results:
             self._results.show_results(self._last_results)
         # Page is already loaded (no loadFinished event coming); fire the
@@ -574,6 +677,9 @@ class StatPearlsPanel(QWidget):
         network search is performed - the popups already cover term lookup,
         and the webview loads articles directly when a popup is clicked."""
         self._last_results = results
+        # A new card's results arrive here, so this is where a dismissal
+        # scoped to the previous card expires.
+        self._articles_dismissed = False
         if self._show_articles:
             if results:
                 self._results.show_results(results)
@@ -584,6 +690,7 @@ class StatPearlsPanel(QWidget):
         """Called when toolbar button is pressed on a different card.
         Navigates the webview to the StatPearls homepage and shows the list."""
         self._show_articles = True
+        self._articles_dismissed = False
         self._auto_loaded = False
         self._view.load(QUrl(self._current_home_url()))
         if self._last_results:
@@ -594,6 +701,16 @@ class StatPearlsPanel(QWidget):
         of the way so the article body fills the pane."""
         self._show_articles = False
         self._results.hide()
+
+    def _on_results_dismissed(self) -> None:
+        """User hid the article list from its own header.
+
+        Kept separate from `hide_article_list` (which is the popup-click
+        path) so the two intents stay distinguishable: this one is a
+        judgement about the list's usefulness on this card, and it
+        should not survive to the next one."""
+        self._articles_dismissed = True
+        self._show_articles = False
 
     def load_url(self, url: str, term: str = "", section: str = "") -> None:
         """Navigate the panel webview.
@@ -721,6 +838,12 @@ class StatPearlsPanel(QWidget):
     def _current_home_label(self) -> str:
         return "DrugBank" if self._current_home_choice() == "drugbank" else "StatPearls"
 
+    def _style_progress(self) -> None:
+        self._progress.setStyleSheet(
+            "QProgressBar { border: none; background: transparent; }"
+            f"QProgressBar::chunk {{ background: {_TEAL}; }}"
+        )
+
     def _style_segment(self) -> None:
         """Pill pair sharing one outline, active half filled."""
         base = (
@@ -753,10 +876,35 @@ class StatPearlsPanel(QWidget):
         except Exception as exc:
             _log.error("pearls set site", exc)
         self._refresh_home_ui()
+        # Already browsing that site? Record the preference and stay put.
+        # Reloading DrugBank's home over a DrugBank monograph costs a
+        # Cloudflare round trip and throws away the page you were
+        # reading, which is not what clicking the pill you are already
+        # on should do.
+        try:
+            cur = self._view.url().toString().lower()
+        except Exception:
+            cur = ""
+        on_db = "drugbank.com" in cur
+        if cur and ((choice == "drugbank") == on_db):
+            self._clear_pending()
+            return
         self._go_home()
+
+    def _clear_pending(self) -> None:
+        """Drop the popup-click intent.
+
+        Set by `load_url` and consumed by the resolve / autojump / scroll
+        handlers.  Any navigation the user drives themselves - home, a
+        site switch, a search on the site - is a different intent, and
+        leaving the old one in place makes those handlers act on it."""
+        self._pending_url = ""
+        self._pending_term = ""
+        self._pending_section = ""
 
     def _go_home(self):
         self._auto_loaded = False
+        self._clear_pending()
         self._view.load(QUrl(self._current_home_url()))
 
     def _open_externally(self):
@@ -877,6 +1025,13 @@ class StatPearlsPanel(QWidget):
         if not term:
             return
         low = url.lower()
+        # The pending term belongs to whichever site the popup pointed
+        # at.  A DrugBank search page also matches the search patterns
+        # below, so without this a leftover StatPearls term would drive
+        # a jump inside DrugBank's results.
+        want_db = "drugbank" in (getattr(self, "_pending_url", "") or "").lower()
+        if want_db != ("drugbank.com" in low):
+            return
         # NCBI redirects the in-book search URL to the book's own
         # accession with the query preserved
         # (/books/n/statpearls/?term=X -> /books/NBK430685/?term=X), so
@@ -1002,14 +1157,23 @@ class StatPearlsPanel(QWidget):
                 (getattr(self, "_btn_forward", None), _NAV_BTN_QSS),
                 (getattr(self, "_btn_reload", None), _NAV_BTN_QSS),
                 (getattr(self, "_btn_home", None), _NAV_BTN_QSS),
+                (getattr(self, "_btn_external", None), _NAV_BTN_QSS),
                 (getattr(self, "_btn_close", None), _CLOSE_BTN_QSS),
             ):
                 if btn is not None:
                     btn.setStyleSheet(qss)
+                    _size_glyph(btn, btn.text())
             if getattr(self, "_btn_sp", None) is not None:
                 self._style_segment()
+            if getattr(self, "_progress", None) is not None:
+                self._style_progress()
             if getattr(self, "_results", None) is not None:
                 self._results.apply_theme()
+            # Follow Anki into dark mode without a reload: the attribute
+            # applies to the live page, and Blink repaints on the next
+            # frame.
+            if getattr(self, "_page", None) is not None:
+                _webengine.set_dark_mode(self._page, _DARK)
         except Exception as exc:
             _log.error("pearls apply_theme", exc)
 
@@ -1102,7 +1266,23 @@ class StatPearlsPanel(QWidget):
         except Exception:
             cur = ""
         if not _ok or cur.startswith("chrome-error"):
-            target = getattr(self, "_pending_url", "") or self._current_home_url()
+            # Retry what actually failed.  `_pending_url` is only set by
+            # `load_url` (the popup "Open article" path) and survives
+            # until the next one, so using it here meant a failed
+            # in-page navigation - a DrugBank search, most visibly -
+            # retried whatever StatPearls chapter had last been opened
+            # and dumped the reader back on it.  `requestedUrl` is the
+            # URL Chromium was asked for, and is still correct on the
+            # chrome-error page.
+            requested = ""
+            try:
+                requested = self._page.requestedUrl().toString()
+            except Exception:
+                pass
+            if requested.startswith("chrome-error") or requested == "about:blank":
+                requested = ""
+            target = requested or getattr(self, "_pending_url", "") \
+                or self._current_home_url()
             # A navigation that was superseded - the home page still
             # loading when the user clicks a link, which is the common
             # case - reports ok=False for the abandoned one.  That is
@@ -1124,6 +1304,11 @@ class StatPearlsPanel(QWidget):
                 self._show_load_error(target)
             return
         self._crash_count = 0
+        # The intent that `load_url` recorded has now been satisfied.
+        # Leaving it set turns it into a stale fallback for every later
+        # navigation the user makes themselves.
+        if cur and not cur.startswith("chrome-error"):
+            self._pending_url = ""
         _log.diag(f"loadFinished ok={_ok} url={cur[:120]!r}")
         try:
             vs = self._view.size()

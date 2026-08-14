@@ -570,9 +570,66 @@ def _clear_in_reviewer() -> None:
 
 # ── reviewer hooks ────────────────────────────────────────────────────────────
 
+def _first_field_text(card) -> str:
+    """The card's opening field, lowercased.
+
+    On essentially every note type this is the subject line - the thing
+    the card is *about* - so a term appearing there is categorically
+    more relevant than one mentioned in passing further down."""
+    try:
+        vals = [v for v in card.note().values() if v.strip()]
+        return _strip_html(vals[0]).lower() if vals else ""
+    except Exception:
+        return ""
+
+
+def _rank_results(card, items: list) -> list:
+    """Order the sidebar's article list by how central each term is.
+
+    The list used to be every match on the card in the order the
+    resolvers happened to find them, conditions first and drugs after.
+    On a card about calcium pyrophosphate deposition disease that put
+    "gout" - mentioned once, as a contrast - above the disease the card
+    is actually about, and buried the drug the card is teaching under
+    every condition named anywhere in the text.
+
+    Four signals, in rough order of how much they matter:
+      * the term appears in the first field (the card's subject);
+      * how many times it appears at all;
+      * how early the first mention is;
+      * how specific the term is, since a long name is a narrower claim
+        about the card's content than a short one.
+    """
+    text = (_card_text(card) or "").lower()
+    head = _first_field_text(card)
+    if not text:
+        return items
+    for it in items:
+        name = (it.get("_term") or it.get("title") or "").lower()
+        if not name:
+            it["_score"] = 0.0
+            continue
+        count = text.count(name)
+        pos = text.find(name)
+        score = 0.0
+        if name in head:
+            score += 100.0
+        score += min(count, 6) * 8.0
+        if pos >= 0:
+            score += max(0.0, 20.0 - pos / 40.0)
+        score += min(len(name), 40) / 4.0
+        it["_score"] = score
+    items.sort(key=lambda r: -r.get("_score", 0.0))
+    return items
+
+
 def _local_results_for_card(card) -> list:
-    """Build instant sidebar results from the local conditions/drugs databases.
-    Returns a list of result dicts in the same format as NCBI search results."""
+    """Build the sidebar's article list from the local databases.
+
+    Ranked by `_rank_results` and capped at `maxResults`, because an
+    unbounded list scrolls and a scrolling list of guesses is worse than
+    a short one: the reader stops reading it either way, and the short
+    one at least stays out of the way."""
     results = []
     seen: set = set()
     for t in _condition_terms(card):
@@ -582,6 +639,7 @@ def _local_results_for_card(card) -> list:
             results.append({
                 "id":      f"local_cond_{t['title']}",
                 "title":   t["title"],
+                "_term":   t["title"],
                 "url":     t["url"],
                 "summary": t.get("summary", ""),
             })
@@ -591,10 +649,20 @@ def _local_results_for_card(card) -> list:
             seen.add(key)
             results.append({
                 "id":      f"local_drug_{t['title']}",
+                # Kept separate from `_term` so the " - drug" label does
+                # not end up in the text we score against the card.
                 "title":   t["title"] + " - drug",
+                "_term":   t["title"],
                 "url":     t["url"],
                 "summary": t.get("summary", ""),
             })
+    _rank_results(card, results)
+    try:
+        cap = int(_config.get("maxResults") or 8)
+    except Exception:
+        cap = 8
+    if cap > 0:
+        results = results[:cap]
     return results
 
 

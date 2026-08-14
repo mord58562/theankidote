@@ -87,6 +87,33 @@ def apply_to_profile(profile: "QWebEngineProfile") -> None:
     # Cloudflare lets through.
 
 
+def set_dark_mode(page_or_profile, dark: bool) -> bool:
+    """Turn Chromium's own auto-dark rendering on or off.
+
+    `ForceDarkMode` is a QtWebEngine attribute (Qt 6.7+) that enables
+    Blink's built-in auto-dark-mode pass - the same one Chrome ships
+    behind its "Auto Dark Mode for Web Contents" flag. Blink inverts
+    the page at the render stage with proper handling for images and
+    already-dark elements.
+
+    This is deliberately the whole implementation. The alternative -
+    injecting a stylesheet with `filter: invert()` or hand-written
+    overrides per site - breaks on every StatPearls figure and every
+    DrugBank structure diagram, and needs re-tuning whenever either
+    site changes its markup. If the attribute isn't available (Qt
+    below 6.7), this returns False and the caller leaves the page
+    alone rather than falling back to something worse.
+    """
+    try:
+        attr = getattr(QWebEngineSettings.WebAttribute, "ForceDarkMode", None)
+        if attr is None:
+            return False
+        page_or_profile.settings().setAttribute(attr, bool(dark))
+        return True
+    except Exception:
+        return False
+
+
 def inject_stealth(profile: "QWebEngineProfile") -> None:  # pragma: no cover
     """Kept as a no-op for backwards compatibility with callers that
     still expect this symbol.  Stealth JS is no longer used - see

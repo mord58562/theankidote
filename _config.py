@@ -38,6 +38,11 @@ _DEFAULTS = {
     # and caches.
     "customTerms": None,
 
+    # How many entries the sidebar's article list shows. The list is
+    # ranked by how central each term is to the card, so the cap trims
+    # the weakest guesses rather than an arbitrary tail. 0 = no cap.
+    "maxResults": 8,
+
     # ── UpToDate sidebar ────────────────────────────────────────────
     "enableUpToDate": True,
     # Default home URL is the public UpToDate search page; subscribers
@@ -74,7 +79,18 @@ _DEFAULTS = {
     "shortcutSendSelectionToChat": "Ctrl+Shift+K",
     "shortcutSendCardToChat": "Ctrl+Shift+J",
     "sendShortcutMigrated": False,
+    # Toggles verbose logging plus the diagnostics entries in the Tools
+    # submenu. Kept out of the Shortcuts tab on purpose - it is a
+    # developer control - but configurable, because a hardcoded chord
+    # another add-on has claimed leaves no way in. Set
+    # `diagnosticsUnlocked` to true by hand if the chord is unavailable.
+    "shortcutDiagnostics": "Ctrl+Alt+Shift+D",
     "diagnosticsUnlocked": False,
+    # Port DevTools listens on when Anki is relaunched with the web
+    # inspector enabled. Only ever read at the moment of that relaunch -
+    # the inspector itself is never persisted, so a normal restart
+    # leaves it off.
+    "webInspectorPort": 9222,
     "dockSide": "right",
     "minWidth": 400,
 
