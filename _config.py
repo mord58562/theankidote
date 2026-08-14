@@ -60,6 +60,11 @@ _DEFAULTS = {
     "chatProviders": None,
     "chatAdblockEnabled": True,
     "chatCustomProviderUrl": None,
+    # Put the copied text straight into the provider's message box when
+    # a send-to-chat shortcut fires, rather than leaving it on the
+    # clipboard for the user to paste.  Nothing is submitted either
+    # way - see chat/_compose.py.
+    "chatAutoPaste": True,
 
     # ── UI ──────────────────────────────────────────────────────────
     "shortcutTogglePearls":        "Ctrl+Shift+S",
@@ -90,6 +95,11 @@ _DEFAULTS = {
     # Internal first-run flags.
     "firstRunDone": False,
     "tourSeen": False,
+    # Human version of the last release this install has actually run.
+    # `null` means either a fresh install or an upgrade from a version
+    # predating the key (i.e. anything below 1.4.1); the two are told
+    # apart by `firstRunDone`.  Drives the one-time upgrade notice.
+    "lastSeenVersion": None,
 }
 
 

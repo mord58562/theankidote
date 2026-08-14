@@ -5,6 +5,44 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.1] - 2026-08-14
+
+### Added
+
+- **Sent text now lands in the chat box.** `Ctrl+Shift+K` and
+  `Ctrl+Shift+J` previously stopped at the clipboard and asked you to
+  paste. They now open the dock, focus the provider's message box and
+  paste for you. Nothing is submitted - the text sits in the box for
+  you to read, edit and send. Turn it off under Settings > Services >
+  AI chat if you would rather only the clipboard were touched.
+- **Custom popup terms have a proper editor.** Settings > General >
+  Custom terms opens a table with Add and Remove, replacing the raw
+  JSON textarea where one missing comma silently disabled every custom
+  term with no feedback anywhere.
+
+### Changed
+
+- **Shortcut changes apply immediately.** Bindings were only read at
+  launch, so changing one in Settings appeared to do nothing until the
+  next restart - unhelpful, given the usual reason to change a shortcut
+  is a clash you want gone now.
+- **The Reference tab has been folded into General.** Two checkboxes
+  and a button did not justify a tab, and it read as a peer of Services
+  and Shortcuts when it belongs with the module switches above it.
+- **The 1.4 upgrade notice now reaches everyone upgrading from below
+  1.4.** It was shown only to users still sitting on `Ctrl+Shift+P`, so
+  anyone who had already rebound that key by hand never heard that
+  shortcuts had become editable or that a whole-card shortcut existed.
+  Installs now record which version they last ran.
+
+### Fixed
+
+- **Switching Anki's theme restyles all three sidebars.** The
+  StatPearls panel raised `NameError: name '_theme' is not defined` on
+  the first line of its restyle, so nothing after it ran; the UpToDate
+  and AI chat docks had no restyle path at all and kept whichever theme
+  they were built with until Anki restarted.
+
 ## [1.4] - 2026-08-14
 
 ### Added
@@ -24,17 +62,21 @@ this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- **Settings has been rebuilt to look and behave like Anki's own
+  Preferences.** Tabbed rather than one long scroll, native controls
+  throughout instead of custom-coloured cards and pills, and changes
+  written when you close the window rather than gated behind a Save
+  button. Shortcuts are edited by clicking the field and pressing the
+  keys.
 - **The send-to-chat shortcut is now `Ctrl+Shift+K`**, because
   `Ctrl+Shift+P` is Anki's own Switch Profile binding and could bounce
   you to the profile picker mid-review. Existing users are asked once
   whether to move to the new default or keep what they have.
-- **Saving settings no longer restarts Anki by default.** The Save
-  button was labelled "Save & restart Anki", with a checkbox you had to
-  tick to avoid quitting mid-session. It now just saves; if something
-  you changed genuinely needs a restart you are asked, and told what
-  needs it and that everything else is already live.
-- Settings opens on the settings rather than on a paragraph describing
-  the settings.
+- **Settings no longer restarts Anki.** The Save button was labelled
+  "Save & restart Anki", with a checkbox you had to tick to avoid
+  quitting mid-session. Anki's own convention is followed instead: a
+  quiet note that some settings need a restart, and you restart when it
+  suits you.
 
 ### Fixed
 

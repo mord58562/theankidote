@@ -115,6 +115,8 @@ _browser                   = None   # UpToDateBrowser
 _keepalive_page            = None   # hidden QWebEnginePage for background session refresh
 _keepalive_timer           = None   # QTimer driving the keepalive
 _lifecycle_hooks_registered = False  # guard: addons_dialog + profile_will_close hooks
+_toggle_sc                 = None   # QShortcut for shortcutToggleUptodate
+_search_sc                 = None   # QShortcut for shortcutSearchSelection
 
 # Last time the user interacted with Anki (reviewer card shown, dock toggled,
 # selection search). Used to gate the keepalive: we only refresh the UpToDate
@@ -172,6 +174,37 @@ _TEAL_DIM     = _theme.TEAL_DIM
 _TEAL_BORDER  = _theme.TEAL_BORDER
 _HEADER_TXT   = _theme.HEADER_TXT
 _MUTED        = _theme.MUTED
+
+
+def _rebind_theme() -> None:
+    """Re-read the palette after Anki switches light/dark mid-session.
+
+    The aliases above are captured once at import so stylesheet
+    f-strings stay cheap; they must be rebound before any QSS is
+    regenerated or `apply_theme` reapplies the colours it already had.
+    """
+    g = globals()
+    g["_NAVY"]        = _theme.NAVY
+    g["_TEAL"]        = _theme.TEAL
+    g["_TEAL_DIM"]    = _theme.TEAL_DIM
+    g["_TEAL_BORDER"] = _theme.TEAL_BORDER
+    g["_HEADER_TXT"]  = _theme.HEADER_TXT
+    g["_MUTED"]       = _theme.MUTED
+
+
+def _nav_btn_qss() -> str:
+    """Flat ghost-button style for the navy header.  Generated on demand
+    so a theme switch can rebuild it."""
+    return (
+        "QPushButton {"
+        " background: transparent;"
+        f" color: {_HEADER_TXT};"
+        " border: none; border-radius: 4px;"
+        " font-size: 15px; font-weight: bold; }"
+        "QPushButton:hover {"
+        f" background: {_TEAL_DIM}; color: {_TEAL}; }}"
+        f"QPushButton:disabled {{ color: {_MUTED}; }}"
+    )
 
 # ---------------------------------------------------------------------------
 # Web page classes
@@ -261,6 +294,7 @@ class UpToDateBrowser(QWidget):
         header = QWidget()
         header.setFixedHeight(44)
         header.setStyleSheet(f"QWidget {{ background: {_NAVY}; }}")
+        self._header = header
         h_lay = QHBoxLayout(header)
         h_lay.setContentsMargins(6, 0, 6, 0)
         h_lay.setSpacing(4)
@@ -351,24 +385,33 @@ class UpToDateBrowser(QWidget):
         btn.setFixedSize(26, 30)
         btn.setToolTip(tip)
         btn.clicked.connect(callback)
-        btn.setStyleSheet(f"""
-            QPushButton {{
-                background: transparent;
-                color: {_HEADER_TXT};
-                border: none;
-                border-radius: 4px;
-                font-size: 15px;
-                font-weight: bold;
-            }}
-            QPushButton:hover {{
-                background: {_TEAL_DIM};
-                color: {_TEAL};
-            }}
-            QPushButton:disabled {{
-                color: {_MUTED};
-            }}
-        """)
+        btn.setStyleSheet(_nav_btn_qss())
         return btn
+
+    def apply_theme(self) -> None:
+        """Restyle the dock header after Anki switches light/dark.
+
+        Like the chat dock, this browser baked the palette into its
+        stylesheets at construction and had no way to rebuild them, so
+        the UpToDate sidebar kept its original theme until Anki was
+        restarted.  The webview needs nothing - UpToDate themes itself.
+        """
+        try:
+            _rebind_theme()
+            if getattr(self, "_header", None) is not None:
+                self._header.setStyleSheet(f"QWidget {{ background: {_NAVY}; }}")
+            for name in ("_btn_back", "_btn_forward", "_btn_reload", "_btn_home",
+                         "_btn_clear", "_btn_external", "_btn_close"):
+                btn = getattr(self, name, None)
+                if btn is not None:
+                    btn.setStyleSheet(_nav_btn_qss())
+            if getattr(self, "progress_bar", None) is not None:
+                self.progress_bar.setStyleSheet(
+                    "QProgressBar { border: none; background: transparent; }"
+                    f"QProgressBar::chunk {{ background: {_TEAL}; }}"
+                )
+        except Exception as exc:
+            _log.error("uptodate apply_theme", exc)
 
     def _update_nav_state(self, *_):
         """Enable/disable back and forward buttons based on page history."""
@@ -873,6 +916,56 @@ def open_url_in_dock(url: str) -> bool:
 
 
 # ---------------------------------------------------------------------------
+# Shortcuts
+# ---------------------------------------------------------------------------
+
+def rebind_shortcuts() -> None:
+    """(Re)create the UpToDate key bindings from the current config.
+
+    Called once at setup and again whenever Settings closes, so a
+    changed binding takes effect immediately instead of at the next
+    launch.  An empty string in config disables that binding, which is
+    how a user resolves a clash with another add-on without having to
+    invent a chord they will never press.
+    """
+    global _toggle_sc, _search_sc
+    try:
+        from PyQt6.QtGui import QShortcut
+    except (ImportError, AttributeError):
+        from PyQt5.QtWidgets import QShortcut
+
+    for sc in (_toggle_sc, _search_sc):
+        try:
+            if sc is not None:
+                sc.setEnabled(False)
+                sc.setParent(None)
+                sc.deleteLater()
+        except Exception:
+            pass
+    _toggle_sc = _search_sc = None
+
+    toggle_seq = _config.get("shortcutToggleUptodate")
+    if toggle_seq is None:
+        toggle_seq = "Ctrl+Shift+U"
+    if toggle_seq:
+        try:
+            _toggle_sc = QShortcut(QKeySequence(toggle_seq), mw)
+            _toggle_sc.activated.connect(toggle_dock)
+        except Exception as exc:
+            _log.error("uptodate toggle shortcut", exc)
+
+    search_seq = _config.get("shortcutSearchSelection")
+    if search_seq is None:
+        search_seq = "Ctrl+Shift+L"
+    if search_seq:
+        try:
+            _search_sc = QShortcut(QKeySequence(search_seq), mw)
+            _search_sc.activated.connect(_search_selection)
+        except Exception as exc:
+            _log.error("uptodate search shortcut", exc)
+
+
+# ---------------------------------------------------------------------------
 # Setup - runs after the main window is ready
 # ---------------------------------------------------------------------------
 
@@ -894,21 +987,11 @@ def _setup():
     mw.addDockWidget(_dock_area(), _dock)
     _dock.hide()
 
-    # Toggle shortcut - QShortcut bound to mw so the binding works
-    # without cluttering the Tools menu.  Functionality is identical
-    # to a QAction; only the menu entry is removed.
-    try:
-        from PyQt6.QtGui import QShortcut
-    except (ImportError, AttributeError):
-        from PyQt5.QtWidgets import QShortcut
-    toggle_seq = _config.get("shortcutToggleUptodate") or "Ctrl+Shift+U"
-    _toggle_sc = QShortcut(QKeySequence(toggle_seq), mw)
-    _toggle_sc.activated.connect(toggle_dock)
-
-    # Selected-text search shortcut - same QShortcut treatment.
-    search_seq = _config.get("shortcutSearchSelection") or "Ctrl+Shift+L"
-    _search_sc = QShortcut(QKeySequence(search_seq), mw)
-    _search_sc.activated.connect(_search_selection)
+    # Toggle and selection-search shortcuts - QShortcuts bound to mw so
+    # the bindings work without cluttering the Tools menu.  Built by
+    # `rebind_shortcuts()` so Settings can re-apply them mid-session
+    # rather than making the user restart to change a key.
+    rebind_shortcuts()
 
     # Background session keepalive
     _start_keepalive()

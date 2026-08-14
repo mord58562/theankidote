@@ -34,8 +34,11 @@ with these fields:
 | `case_sensitive` | no | If `true`, only exact-case matches highlight. |
 | `source` | no | Free-form source label shown in the popup; defaults to `"custom"`. |
 
-Example (paste this into the **Settings → StatPearls + DrugBank →
-Custom popup terms** field, or directly into config JSON):
+Most people should use **Settings → General → Custom terms…**, which
+edits these entries as a table and cannot produce invalid JSON. Fields
+the table doesn't show (`article`, `source`) are preserved for any row
+that already has them. The raw form below still works if you would
+rather edit the config directly:
 
 ```json
 [
@@ -120,6 +123,7 @@ to `false` in config and restart.
 | `_card_count` | int | `0` | Internal: number of cards answered since the addon was installed. |
 | `_quoteTick` | float | `0` | Internal: timestamp marker used to pace an occasional reviewer tooltip. |
 | `chatProviders` | list of `[label, url]` / null | `null` | Override the built-in provider list. `null` uses the bundled set (Claude, Perplexity, ChatGPT, Gemini, Copilot, DeepSeek, Grok, Duck). When more than five providers are configured the surplus collapses into a `▾` overflow menu. |
+| `chatAutoPaste` | bool | `true` | When a send-to-chat shortcut fires, focus the provider's message box and paste the text into it rather than leaving it on the clipboard. Never submits - you still press Enter. Falls back to clipboard-only if the composer can't be found. |
 | `chatAdblockEnabled` | bool | `true` | Inject a small CSS-only rule that hides upgrade-banner / paywall selectors on chat sites. Pure CSS, no filter list, no network calls. |
 | `chatCustomProviderUrl` | string / null | `null` | Optional 9th provider button pointing at a self-hosted endpoint (OpenWebUI, LibreChat, llama.cpp web UI, etc.). |
 
@@ -177,4 +181,5 @@ manually if you want to, but you usually don't need to.
 | --- | --- | --- | --- |
 | `firstRunDone` | bool | `false` | Set to `true` after the welcome dialog has been completed. Toggle it back to `false` (or use Tools → The AnkiDote → "Run setup again…") to re-trigger the dialog. |
 | `tourSeen` | bool | `false` | Legacy flag from when the welcome dialog and the post-install tour were separate. Retained for forward-compatibility but no longer used. |
+| `lastSeenVersion` | string / null | `null` | Human version of the last release this install ran. Drives one-time upgrade notices; not intended for manual editing. |
 | `dockState_pearls` / `dockState_uptodate` / `dockState_chat` | bool | `false` | Last-seen visibility of each dock. Only consulted when `rememberDockState` is `true`. |

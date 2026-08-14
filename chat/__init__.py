@@ -223,6 +223,52 @@ _HEADER_TXT  = _theme.HEADER_TXT
 _MUTED       = _theme.MUTED
 _QUOTE_TXT   = getattr(_theme, "QUOTE_TXT", _theme.HEADER_TXT)
 
+
+def _rebind_theme() -> None:
+    """Re-read the palette after Anki switches light/dark mid-session.
+
+    The aliases above are captured once at import so the stylesheet
+    f-strings stay cheap; they have to be rebound before any QSS is
+    regenerated, or `apply_theme` faithfully reapplies the old colours.
+    """
+    g = globals()
+    g["_NAVY"]        = _theme.NAVY
+    g["_NAVY_LIGHT"]  = _theme.NAVY_LIGHT
+    g["_TEAL"]        = _theme.TEAL
+    g["_TEAL_DIM"]    = _theme.TEAL_DIM
+    g["_TEAL_BORDER"] = _theme.TEAL_BORDER
+    g["_HEADER_TXT"]  = _theme.HEADER_TXT
+    g["_MUTED"]       = _theme.MUTED
+    g["_QUOTE_TXT"]   = getattr(_theme, "QUOTE_TXT", _theme.HEADER_TXT)
+
+
+def _nav_btn_qss() -> str:
+    """Stylesheet for the header's text nav buttons (open externally,
+    close).  Built on demand rather than baked in at widget creation so
+    a theme switch can regenerate it."""
+    return (
+        "QPushButton {"
+        " background: transparent;"
+        f" color: {_HEADER_TXT};"
+        " border: none; border-radius: 4px;"
+        " font-size: 12px; font-weight: 600; padding: 0 6px; }"
+        "QPushButton:hover {"
+        f" background: {_TEAL_DIM}; color: {_TEAL}; }}"
+        f"QPushButton:disabled {{ color: {_MUTED}; }}"
+    )
+
+
+def _house_label_qss() -> str:
+    """Stylesheet for the header's House-quote pill."""
+    return (
+        "QLabel {"
+        f" color: {_QUOTE_TXT}; font-style: italic;"
+        " font-size: 12px; font-weight: 500; letter-spacing: .2px;"
+        " padding: 3px 9px; border-radius: 9px;"
+        f" background: {_TEAL_DIM};"
+        f" border: 1px solid {_TEAL_BORDER}; }}"
+    )
+
 # CSS-only adblock for chat sites.  Hides the most common upsell/banner
 # selectors with `!important`.  Pure CSS, no filter list, no network
 # calls; injected once per page load via a QWebEngineScript installed on
@@ -260,6 +306,7 @@ _dock    = None   # QDockWidget, lazily created
 _browser = None   # ChatBrowser widget, lazily created
 _dock_visible = False  # tracked flag (Qt async show/hide workaround)
 _key_filter = None  # ShortcutOverride event filter, installed once
+_shortcut_holder = None  # QShortcut for shortcutToggleChat; rebindable
 
 # House-quote easter egg.  Flat per-open probability rather than a
 # modulo hit on a per-session period: with a re-rolled period the true
@@ -441,6 +488,7 @@ class ChatBrowser(QWidget):
         header = QWidget()
         header.setFixedHeight(40)
         header.setStyleSheet(f"QWidget {{ background: {_NAVY}; }}")
+        self._header = header
         h_lay = QHBoxLayout(header)
         h_lay.setContentsMargins(6, 0, 6, 0)
         h_lay.setSpacing(3)
@@ -471,13 +519,7 @@ class ChatBrowser(QWidget):
         # elides at the layout edge rather than pushing the right-side
         # buttons off-screen.
         self._house_label = QLabel("")
-        self._house_label.setStyleSheet(
-            f"QLabel {{ color: {_QUOTE_TXT}; font-style: italic;"
-            f" font-size: 12px; font-weight: 500; letter-spacing: .2px;"
-            f" padding: 3px 9px; border-radius: 9px;"
-            f" background: {_TEAL_DIM};"
-            f" border: 1px solid {_TEAL_BORDER}; }}"
-        )
+        self._house_label.setStyleSheet(_house_label_qss())
         self._house_label.setMaximumWidth(360)
         self._house_label.setWordWrap(False)
         # The label now carries its own background + border, so an empty
@@ -692,23 +734,37 @@ class ChatBrowser(QWidget):
             btn.setFixedHeight(28)
         btn.setToolTip(tip)
         btn.clicked.connect(callback)
-        btn.setStyleSheet(f"""
-            QPushButton {{
-                background: transparent;
-                color: {_HEADER_TXT};
-                border: none;
-                border-radius: 4px;
-                font-size: 12px;
-                font-weight: 600;
-                padding: 0 6px;
-            }}
-            QPushButton:hover {{
-                background: {_TEAL_DIM};
-                color: {_TEAL};
-            }}
-            QPushButton:disabled {{ color: {_MUTED}; }}
-        """)
+        btn.setStyleSheet(_nav_btn_qss())
         return btn
+
+    def apply_theme(self) -> None:
+        """Restyle the dock header after Anki switches light/dark.
+
+        The palette is captured into module constants at import and
+        baked into stylesheet strings, so without this the chat dock
+        keeps whichever theme it was built with until Anki restarts.
+        The StatPearls panel has had this since theme switching was
+        added; the chat dock never did, which is why it was the one
+        sidebar that ignored the switch.  The webview itself needs
+        nothing - the provider's own site handles its theme.
+        """
+        try:
+            _rebind_theme()
+            if getattr(self, "_header", None) is not None:
+                self._header.setStyleSheet(f"QWidget {{ background: {_NAVY}; }}")
+            for name in ("_btn_active", "_btn_more"):
+                btn = getattr(self, name, None)
+                if btn is not None:
+                    btn.setStyleSheet(_provider_btn_qss())
+            for name in ("_btn_external", "_btn_close"):
+                btn = getattr(self, name, None)
+                if btn is not None:
+                    btn.setStyleSheet(_nav_btn_qss())
+            lab = getattr(self, "_house_label", None)
+            if lab is not None:
+                lab.setStyleSheet(_house_label_qss())
+        except Exception as exc:
+            _log.error("chat apply_theme", exc)
 
     def _provider_icon(self, label: str):
         """Return a QIcon for the provider button - cached favicon if
@@ -1028,6 +1084,71 @@ def toggle_dock_show_only():
     except Exception:
         pass
     _request_toolbar_redraw()
+
+
+def deliver_to_composer(text: str, on_done=None) -> None:
+    """Show the dock, focus the provider's message box, and paste `text`.
+
+    Called by the send-to-chat shortcuts once the text is already on the
+    clipboard.  Everything past that point is best-effort: if the
+    provider has redesigned its composer, or the page hasn't finished
+    loading inside the retry window, the caller falls back to telling
+    the user to paste - which is exactly what the add-on did before.
+
+    `chatAutoPaste` turns the whole thing off for anyone who would
+    rather the clipboard stayed the only thing touched.
+    """
+    toggle_dock_show_only()
+    if _config.get("chatAutoPaste") is False:
+        if on_done is not None:
+            on_done(False)
+        return
+    if _browser is None:
+        if on_done is not None:
+            on_done(False)
+        return
+    try:
+        if _dock is not None:
+            _dock.raise_()
+    except Exception:
+        pass
+    try:
+        from ._compose import paste_into_composer
+        paste_into_composer(_browser, text, on_done)
+    except Exception as exc:
+        _log.error("deliver to composer", exc)
+        if on_done is not None:
+            on_done(False)
+
+
+def rebind_shortcut() -> None:
+    """Re-apply `shortcutToggleChat` without restarting Anki.
+
+    Settings writes shortcut changes on close; leaving the old binding
+    live until the next launch is the kind of thing that makes a
+    preferences window feel broken.
+    """
+    global _shortcut_holder
+    try:
+        from PyQt6.QtGui import QShortcut
+    except (ImportError, AttributeError):
+        from PyQt5.QtWidgets import QShortcut
+    try:
+        if _shortcut_holder is not None:
+            _shortcut_holder.setEnabled(False)
+            _shortcut_holder.setParent(None)
+            _shortcut_holder.deleteLater()
+    except Exception:
+        pass
+    _shortcut_holder = None
+    seq = _config.get("shortcutToggleChat") or "Ctrl+Shift+A"
+    if not seq:
+        return
+    try:
+        _shortcut_holder = QShortcut(QKeySequence(seq), mw)
+        _shortcut_holder.activated.connect(toggle_dock)
+    except Exception as exc:
+        _log.error("chat rebind shortcut", exc)
 
 
 def _close_dock(*_):

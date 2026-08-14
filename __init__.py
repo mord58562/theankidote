@@ -151,9 +151,14 @@ _pearls_panel = None
 _DEFAULT_SEND_SEL = "Ctrl+Shift+K"
 _DEFAULT_SEND_CARD = "Ctrl+Shift+J"
 _LEGACY_SEND_SEL = "Ctrl+Shift+P"
+# Read from manifest.json so there is one place to bump.  Used only to
+# decide whether an install has already seen a given release's one-time
+# notices - see `_maybe_show_upgrade_notice`.
+_ADDON_VERSION = "1.4.1"
 # QShortcut objects are owned by Python; without a reference they are
 # collected and the binding silently stops working.
 _shortcut_refs: list = []
+_diag_shortcut = None  # fixed chord, never rebound
 _last_opened_card_id: "int | None" = None
 # Explicit visibility flag - Qt's show()/hide() are async, so QDockWidget.
 # isVisible() reports stale state for ~one event-loop tick after a toggle.
@@ -471,13 +476,18 @@ def _on_js_message(handled, message: str, context):
 # message submission, in keeping with the addon's no-API-call policy.
 
 def _push_to_chat(text: str, what: str) -> None:
-    """Copy `text`, open the chat dock, and tell the user it is ready.
+    """Copy `text`, open the chat dock, focus the message box, paste.
 
-    The add-on deliberately stops at the clipboard rather than typing
-    into the provider's composer: filling another site's input box is
-    the kind of automation the chat providers' terms are written to
-    prohibit, and it would break the moment any of the eight redesign
-    their page.  One paste is a small price for that.
+    The clipboard write happens first and unconditionally, because it is
+    the one step that cannot fail: everything after it - finding the
+    composer on whichever of the eight providers is loaded, waiting for
+    a cold webview to finish loading, getting the paste to land in a
+    rich-text editor - is best-effort. When any of it doesn't work the
+    user is left exactly where they were before 1.4.1, with the text on
+    the clipboard and a tooltip saying so.
+
+    Nothing is submitted. The text lands in the box; the user reads it,
+    edits it, and presses Enter.
     """
     text = (text or "").strip()
     if not text:
@@ -495,18 +505,27 @@ def _push_to_chat(text: str, what: str) -> None:
         QGuiApplication.clipboard().setText(text)
     except Exception as exc:
         _log.error("clipboard write", exc)
+
+    n = len(text)
+    size = f"{n} chars" if n < 1000 else f"{n // 1000}k chars"
+
+    def _report(pasted: bool) -> None:
+        try:
+            from aqt.utils import tooltip
+            if pasted:
+                tooltip(f"{what} pasted into the chat ({size}).", period=1600)
+            else:
+                tooltip(f"{what} copied ({size}). Paste into the chat.",
+                        period=1800)
+        except Exception:
+            pass
+
     try:
         from . import chat as _chat_mod
-        _chat_mod.toggle_dock_show_only()
+        _chat_mod.deliver_to_composer(text, _report)
     except Exception as exc:
         _log.error("send-to-chat: open dock", exc)
-    try:
-        from aqt.utils import tooltip
-        n = len(text)
-        size = f"{n} chars" if n < 1000 else f"{n // 1000}k chars"
-        tooltip(f"{what} copied ({size}). Paste into the chat.", period=1800)
-    except Exception:
-        pass
+        _report(False)
 
 
 def _send_selection_to_chat() -> None:
@@ -626,6 +645,67 @@ gui_hooks.top_toolbar_did_init_links.append(_add_pearls_toolbar_link)
 gui_hooks.webview_did_receive_js_message.append(_on_js_message)
 
 
+# ── Shortcut (re)binding ──────────────────────────────────────────────────
+
+def _rebind_shortcuts() -> None:
+    """Build every user-editable binding from the current config.
+
+    Called at setup and again whenever Settings closes.  Before 1.4.1
+    the bindings were created once at launch, so changing one in
+    Settings did nothing until the next restart - which reads as the
+    setting not working rather than as a deferred one, since the whole
+    point of changing a shortcut is usually that the old one clashes
+    with something right now.
+
+    An empty string disables a binding.  `_config.get` falls back to the
+    packaged default when a key is missing entirely, so the `is None`
+    checks below distinguish "not set" from "deliberately cleared".
+    """
+    try:
+        from PyQt6.QtGui import QShortcut
+    except (ImportError, AttributeError):
+        from PyQt5.QtWidgets import QShortcut
+
+    for sc in _shortcut_refs:
+        try:
+            sc.setEnabled(False)
+            sc.setParent(None)
+            sc.deleteLater()
+        except Exception:
+            pass
+    _shortcut_refs.clear()
+
+    bindings = (
+        ("shortcutTogglePearls",        "Ctrl+Shift+S",     toggle_pearls_dock),
+        ("shortcutSendSelectionToChat", _DEFAULT_SEND_SEL,  _send_selection_to_chat),
+        ("shortcutSendCardToChat",      _DEFAULT_SEND_CARD, _send_card_to_chat),
+    )
+    for key, default, slot in bindings:
+        seq = _config.get(key)
+        if seq is None:
+            seq = default
+        if not seq:
+            continue
+        try:
+            sc = QShortcut(QKeySequence(seq), mw)
+            sc.activated.connect(slot)
+            _shortcut_refs.append(sc)
+        except Exception as exc:
+            _log.error(f"bind {key}", exc)
+
+    # The UpToDate and chat bindings live in their subpackages so they
+    # aren't created for a user who has those modules switched off.
+    # Reach them only if the module has actually been loaded.
+    for name, fn in (("uptodate", "rebind_shortcuts"), ("chat", "rebind_shortcut")):
+        mod = _sys.modules.get(f"{__name__}.{name}")
+        if mod is None:
+            continue
+        try:
+            getattr(mod, fn)()
+        except Exception as exc:
+            _log.error(f"{name} rebind", exc)
+
+
 # ── Setup (after main window ready) ───────────────────────────────────────
 
 def _setup() -> None:
@@ -647,35 +727,22 @@ def _setup() -> None:
     mw.addDockWidget(_RIGHT_AREA, _pearls_dock)
     _pearls_dock.hide()
 
-    # Pearls keyboard shortcut.  Anchored to mw so it fires whenever
-    # the main window has focus.
-    shortcut = _config.get("shortcutTogglePearls") or "Ctrl+Shift+S"
+    # Keyboard shortcuts.  Anchored to mw so they fire whenever the
+    # main window has focus, and built through `_rebind_shortcuts` so
+    # Settings can re-apply them without a restart.
+    _rebind_shortcuts()
+
     try:
         from PyQt6.QtGui import QShortcut
     except (ImportError, AttributeError):
         from PyQt5.QtWidgets import QShortcut
-    _pearls_shortcut = QShortcut(QKeySequence(shortcut), mw)
-    _pearls_shortcut.activated.connect(toggle_pearls_dock)
-
-    # Send-selection-to-chat.  Ctrl+Shift+P was the old default and is
-    # Anki's own Switch Profile shortcut, so it is now Ctrl+Shift+K.
-    send_seq = _config.get("shortcutSendSelectionToChat") or _DEFAULT_SEND_SEL
-    if send_seq:
-        sc = QShortcut(QKeySequence(send_seq), mw)
-        sc.activated.connect(_send_selection_to_chat)
-        _shortcut_refs.append(sc)
 
     # Undocumented diagnostics toggle.  Deliberately an awkward chord so
     # it cannot be hit by accident and does not collide with anything.
-    sc = QShortcut(QKeySequence("Ctrl+Alt+Shift+D"), mw)
-    sc.activated.connect(_unlock_diagnostics)
-    _shortcut_refs.append(sc)
-
-    card_seq = _config.get("shortcutSendCardToChat") or _DEFAULT_SEND_CARD
-    if card_seq:
-        sc = QShortcut(QKeySequence(card_seq), mw)
-        sc.activated.connect(_send_card_to_chat)
-        _shortcut_refs.append(sc)
+    # Not user-editable, so it sits outside the rebind cycle.
+    global _diag_shortcut
+    _diag_shortcut = QShortcut(QKeySequence("Ctrl+Alt+Shift+D"), mw)
+    _diag_shortcut.activated.connect(_unlock_diagnostics)
 
     # Tools menu submenu.
     try:
@@ -727,9 +794,9 @@ def _setup() -> None:
     # stacking two modal windows on a fresh install.
     try:
         from aqt.qt import QTimer as _QTimer
-        _QTimer.singleShot(1200, _maybe_migrate_send_shortcut)
+        _QTimer.singleShot(1200, _maybe_show_upgrade_notice)
     except Exception as exc:
-        _log.error("schedule shortcut migration", exc)
+        _log.error("schedule upgrade notice", exc)
 
     if _config.get("enableUpToDate") is not False:
         try:
@@ -784,6 +851,7 @@ def _qt_imports():
             QLabel, QFrame, QLineEdit, QGroupBox, QPushButton, QPlainTextEdit,
             QListWidget, QListWidgetItem, QAbstractItemView,
             QScrollArea, QWidget, QGridLayout, QKeySequenceEdit, QTabWidget,
+            QFormLayout, QTableWidget, QTableWidgetItem, QHeaderView,
         )
         from PyQt6.QtGui import QKeySequence
     except (ImportError, AttributeError):
@@ -793,220 +861,266 @@ def _qt_imports():
             QLabel, QFrame, QLineEdit, QGroupBox, QPushButton, QPlainTextEdit,
             QListWidget, QListWidgetItem, QAbstractItemView,
             QScrollArea, QWidget, QGridLayout, QKeySequenceEdit, QTabWidget,
+            QFormLayout, QTableWidget, QTableWidgetItem, QHeaderView,
         )
         from PyQt5.QtGui import QKeySequence
     return locals()
 
 
+def _caption(_w, text: str):
+    """Small secondary-colour note.
+
+    Uses the palette's disabled text role rather than a hard-coded
+    colour so it follows the system theme, light or dark, without the
+    add-on having an opinion about it.
+    """
+    lab = _w["QLabel"](text)
+    lab.setWordWrap(True)
+    try:
+        from aqt.qt import QPalette
+        pal = lab.palette()
+        pal.setColor(QPalette.ColorRole.WindowText,
+                     pal.color(QPalette.ColorGroup.Disabled,
+                               QPalette.ColorRole.WindowText))
+        lab.setPalette(pal)
+    except Exception:
+        pass
+    f = lab.font()
+    f.setPointSizeF(max(9.0, f.pointSizeF() - 1.5))
+    lab.setFont(f)
+    return lab
+
+
 def _build_modules_group(_w, first_run: bool):
+    """Module on/off switches.
+
+    Deliberately three plain checkboxes.  They previously sat in
+    bordered cards with monospace shortcut pills and a paragraph of
+    description each, which made three booleans occupy most of the
+    dialog and looked nothing like anything else in Anki.
+    """
     pearls_default = True if first_run else (_config.get("enableHighlights") is not False)
     utd_default    = True if first_run else (_config.get("enableUpToDate") is not False)
     chat_default   = True if first_run else (_config.get("enableChat") is not False)
 
-    pearls_sc = _config.get("shortcutTogglePearls") or "Ctrl+Shift+S"
-    utd_sc    = _config.get("shortcutToggleUptodate") or "Ctrl+Shift+U"
-    chat_sc   = _config.get("shortcutToggleChat") or "Ctrl+Shift+A"
+    box = _w["QGroupBox"]("Modules")
+    lay = _w["QVBoxLayout"](box)
+    lay.setSpacing(6)
 
-    box = _w["QGroupBox"]("")
-    box.setFlat(True)
-    box.setStyleSheet("QGroupBox{border:0;margin:0;padding:0;}")
-    outer = _w["QVBoxLayout"](box)
-    outer.setContentsMargins(0, 0, 0, 0)
-    outer.setSpacing(8)
-
-    pill_css = (
-        "QLabel{"
-        f"color:{_theme.MUTED};"
-        "font-family:'SF Mono','Menlo','Consolas',monospace;"
-        "font-size:10px;"
-        f"border:1px solid {_theme.TEAL_BORDER};"
-        "border-radius:3px;"
-        "padding:1px 5px;"
-        "}"
-    )
-    card_css = (
-        "QFrame#moduleCard{"
-        f"border:1px solid {_theme.TEAL_BORDER};"
-        "border-radius:5px;"
-        "padding:7px 9px;"
-        "}"
-        "QCheckBox#moduleTitle{font-size:13px;font-weight:600;}"
-        f"QLabel#moduleDesc{{color:{_theme.MUTED};font-size:11px;line-height:140%;}}"
-    )
-
-    def _make_card(title: str, shortcut: str, desc: str, checked: bool):
-        card = _w["QFrame"]()
-        card.setObjectName("moduleCard")
-        card.setStyleSheet(card_css)
-        cl = _w["QVBoxLayout"](card)
-        cl.setContentsMargins(0, 0, 0, 0)
-        cl.setSpacing(3)
-
-        row = _w["QHBoxLayout"]()
-        row.setContentsMargins(0, 0, 0, 0)
-        row.setSpacing(6)
+    def _row(title, desc, checked):
         cb = _w["QCheckBox"](title)
-        cb.setObjectName("moduleTitle")
         cb.setChecked(checked)
-        row.addWidget(cb, 1)
-        pill = _w["QLabel"](shortcut)
-        pill.setStyleSheet(pill_css)
-        row.addWidget(pill, 0)
-        cl.addLayout(row)
+        lay.addWidget(cb)
+        note = _caption(_w, desc)
+        note.setContentsMargins(20, 0, 0, 4)
+        lay.addWidget(note)
+        return cb
 
-        d = _w["QLabel"](desc)
-        d.setObjectName("moduleDesc")
-        d.setWordWrap(True)
-        d.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
-        cl.addWidget(d)
-
-        return card, cb
-
-    pearls_desc = (
-        "Hover-or-click popups on every flashcard for thousands of conditions, "
-        "drugs, and clinical abbreviations. Pulls one-line summaries from "
-        "StatPearls (free, NCBI) and DrugBank (free monograph pages). Click a "
-        "popup to open the full article in the side panel."
-    )
-    utd_desc = (
-        "Side panel that opens UpToDate inside Anki (subscription / institutional "
-        "access required). Configurable home URL for institutional SSO. Optional "
-        "- leave unticked if you don't have UTD access."
-    )
-    chat_desc = (
-        "Side panel for Claude / ChatGPT / Gemini / Copilot / Perplexity / "
-        "DeepSeek / Grok / Duck.ai. Bring-your-own-account - cookies persist "
-        "between sessions. No API key required. Use it to ask follow-up "
-        "questions about the card you're reviewing."
-    )
-
-    pearls_card, pearls_cb = _make_card(
-        "StatPearls + DrugBank popups", pearls_sc, pearls_desc, pearls_default
-    )
-    utd_card, utd_cb = _make_card(
-        "UpToDate sidebar", utd_sc, utd_desc, utd_default
-    )
-    chat_card, chat_cb = _make_card(
-        "AI chat sidebar", chat_sc, chat_desc, chat_default
-    )
-    outer.addWidget(pearls_card)
-    outer.addWidget(utd_card)
-    outer.addWidget(chat_card)
+    pearls_cb = _row(
+        "Reference popups and sidebar",
+        "Highlights conditions and drugs on your cards, with StatPearls "
+        "and DrugBank in a side panel.", pearls_default)
+    utd_cb = _row(
+        "UpToDate sidebar",
+        "Requires your own subscription.", utd_default)
+    chat_cb = _row(
+        "AI chat sidebar",
+        "Uses your existing chat session. No API key needed.", chat_default)
     return box, pearls_cb, utd_cb, chat_cb
 
 
-def _build_recommendations_group(_w, first_run: bool):
-    """Returns a QGroupBox or None.
+def _install_addon(addon_id: str, btn=None) -> None:
+    """Open the add-on's AnkiWeb page.
 
-    Cards are only rendered for addons the user does NOT already have
-    installed - companion tools they already use add no information to
-    this dialog. If the recommendation is already installed, returns
-    None so the caller can skip the section entirely (no empty header,
-    no blank space)."""
-    io_installed = _is_addon_installed("1374772155")
-    if io_installed:
+    Deliberately not an in-place download: installing another author's
+    add-on silently on someone's behalf is not ours to do, and the
+    AnkiWeb page is where the code, reviews and permissions are.
+    """
+    try:
+        # openLink is imported at module scope; re-importing here would
+        # rebind it as a function local.
+        openLink(f"https://ankiweb.net/shared/info/{addon_id}")
+        if btn is not None:
+            btn.setEnabled(False)
+            btn.setText("Opened in your browser")
+    except Exception as exc:
+        _log.error("open addon page", exc)
+
+
+def _build_recommendations_group(_w, first_run: bool):
+    """One optional companion add-on, shown only if it isn't installed.
+
+    A plain group box with a button: it used to be an outlined card with
+    an uppercase letter-spaced header and a pill-shaped install button,
+    none of which resembles anything else in Anki.
+    """
+    if _is_addon_installed("1374772155"):
         return None
 
-    box = _w["QGroupBox"]("")
-    box.setFlat(True)
-    box.setStyleSheet("QGroupBox{border:0;margin:0;padding:0;}")
-    outer = _w["QVBoxLayout"](box)
-    outer.setContentsMargins(0, 0, 0, 0)
-    outer.setSpacing(6)
-
-    header = _w["QLabel"]("RECOMMENDED COMPANION ADDONS")
-    header.setStyleSheet(
-        f"color:{_theme.MUTED};font-size:10px;font-weight:600;"
-        "letter-spacing:1px;padding-top:2px;"
-    )
-    outer.addWidget(header)
-
-    card_css = (
-        "QFrame#recCard{"
-        f"border:1px solid {_theme.TEAL_BORDER};"
-        "border-radius:5px;"
-        "padding:7px 9px;"
-        "}"
-        "QLabel#recTitle{font-size:13px;font-weight:600;}"
-        f"QLabel#recDesc{{color:{_theme.MUTED};font-size:11px;line-height:140%;}}"
-    )
-    install_pill_css = (
-        "QPushButton#installPill{"
-        f"color:{_theme.TEAL};"
-        "background:transparent;"
-        f"border:1px solid {_theme.TEAL_BORDER};"
-        "border-radius:3px;"
-        "padding:1px 8px;"
-        "font-family:'SF Mono','Menlo','Consolas',monospace;"
-        "font-size:10px;"
-        "}"
-        "QPushButton#installPill:hover{"
-        f"background:{_theme.TEAL_DIM};"
-        "}"
-    )
-    installed_pill_css = (
-        "QLabel#installedPill{"
-        f"color:{_theme.MUTED};"
-        "background:transparent;"
-        "border:1px solid transparent;"
-        "border-radius:3px;"
-        "padding:1px 8px;"
-        "font-family:'SF Mono','Menlo','Consolas',monospace;"
-        "font-size:10px;"
-        "}"
-    )
-
-    def _make_card(title: str, desc: str, url: str):
-        card = _w["QFrame"]()
-        card.setObjectName("recCard")
-        card.setStyleSheet(card_css)
-        cl = _w["QVBoxLayout"](card)
-        cl.setContentsMargins(0, 0, 0, 0)
-        cl.setSpacing(3)
-
-        row = _w["QHBoxLayout"]()
-        row.setContentsMargins(0, 0, 0, 0)
-        row.setSpacing(6)
-        title_lbl = _w["QLabel"](title)
-        title_lbl.setObjectName("recTitle")
-        row.addWidget(title_lbl, 1)
-
-        pill = _w["QPushButton"]("Install")
-        pill.setObjectName("installPill")
-        pill.setStyleSheet(install_pill_css)
-        try:
-            pill.setCursor(_w["_Qt"].CursorShape.PointingHandCursor)
-        except AttributeError:
-            pill.setCursor(_w["_Qt"].PointingHandCursor)
-        pill.setFlat(True)
-        pill.clicked.connect(lambda _checked=False, u=url: openLink(u))
-        row.addWidget(pill, 0)
-        cl.addLayout(row)
-
-        d = _w["QLabel"](desc)
-        d.setObjectName("recDesc")
-        d.setWordWrap(True)
-        d.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
-        cl.addWidget(d)
-
-        return card
-
-    io_desc = (
-        "Click and drag rectangles over an image to hide regions and turn "
-        "them into flashcards - the bread-and-butter visual-recall tool for "
-        "anatomy, radiology, ECGs, histology, and any image-heavy material. "
-        "Far more efficient than retyping labelled-diagram cards by hand."
-    )
-
-    outer.addWidget(_make_card(
-        "Image Occlusion", io_desc,
-        "https://ankiweb.net/shared/info/1374772155",
-    ))
+    box = _w["QGroupBox"]("Suggested add-on")
+    lay = _w["QVBoxLayout"](box)
+    lay.setSpacing(6)
+    lay.addWidget(_caption(
+        _w, "Image Occlusion Enhanced - hide parts of a diagram to make "
+            "image cards. Pairs well with the reference popups."))
+    btn = _w["QPushButton"]("Install Image Occlusion Enhanced")
+    btn.clicked.connect(lambda: _install_addon("1374772155", btn))
+    lay.addWidget(btn)
     return box
 
 
+def _parse_custom_terms(raw) -> list:
+    """Config string -> list of dicts, tolerating anything malformed.
+
+    Hand-edited JSON in a text box is guaranteed to be broken sooner or
+    later, and the reviewer already ignores entries it can't use.  The
+    editor takes the same view: unparseable input yields an empty table
+    rather than an error, and the original string is left untouched
+    unless the user actually saves.
+    """
+    if not raw or not isinstance(raw, str):
+        return []
+    try:
+        import json as _json
+        parsed = _json.loads(raw)
+    except Exception:
+        return []
+    if not isinstance(parsed, list):
+        return []
+    return [e for e in parsed if isinstance(e, dict)]
+
+
+def _custom_terms_dialog(parent, raw) -> "str | None":
+    """Add/remove editor for `customTerms`.  Returns the new JSON string,
+    or None if the user cancelled.
+
+    This was a raw JSON textarea until 1.4.1 - a developer control
+    wearing a preferences UI, where a missing comma silently disabled
+    every custom term with no feedback anywhere.  A table can't produce
+    invalid JSON, and the fields it can't represent (`article`,
+    `source`) are carried through per row rather than dropped, so
+    anyone who hand-wrote a richer config doesn't lose it by opening
+    this window once.
+    """
+    _w = _qt_imports()
+    Qt_ = _w["_Qt"]
+    dlg = _w["QDialog"](parent)
+    dlg.setWindowTitle("Custom Terms")
+    dlg.resize(560, 340)
+    lay = _w["QVBoxLayout"](dlg)
+
+    lay.addWidget(_caption(
+        _w, "Words to highlight on your cards in addition to the built-in "
+            "databases. Clicking one opens the link you give it."))
+
+    table = _w["QTableWidget"](0, 4)
+    table.setHorizontalHeaderLabels(["Term", "Summary", "Link", "Match case"])
+    table.verticalHeader().setVisible(False)
+    table.setSelectionBehavior(_w["QAbstractItemView"].SelectionBehavior.SelectRows)
+    try:
+        hdr = table.horizontalHeader()
+        RM = _w["QHeaderView"].ResizeMode
+        hdr.setSectionResizeMode(0, RM.ResizeToContents)
+        hdr.setSectionResizeMode(1, RM.Stretch)
+        hdr.setSectionResizeMode(2, RM.Stretch)
+        hdr.setSectionResizeMode(3, RM.ResizeToContents)
+    except Exception:
+        pass
+    lay.addWidget(table, 1)
+
+    def _add_row(entry: dict) -> None:
+        r = table.rowCount()
+        table.insertRow(r)
+        for col, key in enumerate(("title", "summary", "url")):
+            it = _w["QTableWidgetItem"](str(entry.get(key) or ""))
+            if col == 0:
+                # Stash the whole original entry so fields this table
+                # doesn't show survive a round trip.
+                it.setData(Qt_.ItemDataRole.UserRole, entry)
+            table.setItem(r, col, it)
+        chk = _w["QTableWidgetItem"]()
+        chk.setFlags(Qt_.ItemFlag.ItemIsUserCheckable | Qt_.ItemFlag.ItemIsEnabled
+                     | Qt_.ItemFlag.ItemIsSelectable)
+        chk.setCheckState(Qt_.CheckState.Checked if entry.get("case_sensitive")
+                          else Qt_.CheckState.Unchecked)
+        table.setItem(r, 3, chk)
+
+    for entry in _parse_custom_terms(raw):
+        _add_row(entry)
+
+    row_btns = _w["QHBoxLayout"]()
+    add_btn = _w["QPushButton"]("Add")
+    del_btn = _w["QPushButton"]("Remove")
+    add_btn.clicked.connect(lambda: (_add_row({}),
+                                     table.setCurrentCell(table.rowCount() - 1, 0),
+                                     table.editItem(table.item(table.rowCount() - 1, 0))))
+
+    def _remove():
+        rows = sorted({i.row() for i in table.selectedIndexes()}, reverse=True)
+        if not rows and table.currentRow() >= 0:
+            rows = [table.currentRow()]
+        for r in rows:
+            table.removeRow(r)
+    del_btn.clicked.connect(_remove)
+    row_btns.addWidget(add_btn)
+    row_btns.addWidget(del_btn)
+    row_btns.addStretch(1)
+    lay.addLayout(row_btns)
+
+    lay.addWidget(_caption(
+        _w, "Links must start with http:// or https://. Rows missing a term "
+            "or a link are discarded when you save."))
+
+    btns = _w["QDialogButtonBox"](
+        _w["QDialogButtonBox"].StandardButton.Ok
+        | _w["QDialogButtonBox"].StandardButton.Cancel)
+    btns.accepted.connect(dlg.accept)
+    btns.rejected.connect(dlg.reject)
+    lay.addWidget(btns)
+
+    if not dlg.exec():
+        return None
+
+    out = []
+    for r in range(table.rowCount()):
+        base = {}
+        first = table.item(r, 0)
+        if first is not None:
+            stashed = first.data(Qt_.ItemDataRole.UserRole)
+            if isinstance(stashed, dict):
+                base = dict(stashed)
+        def _cell(c):
+            it = table.item(r, c)
+            return (it.text() if it is not None else "").strip()
+        title, summary, url = _cell(0), _cell(1), _cell(2)
+        if not title or not url:
+            continue
+        if not (url.startswith("http://") or url.startswith("https://")):
+            continue
+        base.update({"title": title, "summary": summary, "url": url})
+        chk = table.item(r, 3)
+        base["case_sensitive"] = bool(
+            chk is not None and chk.checkState() == Qt_.CheckState.Checked)
+        if not base["case_sensitive"]:
+            base.pop("case_sensitive", None)
+        out.append(base)
+
+    if not out:
+        return ""
+    import json as _json
+    return _json.dumps(out, ensure_ascii=False, indent=2)
+
+
 def _build_pearls_group(_w):
-    box = _w["QGroupBox"]("StatPearls + DrugBank")
+    """Reference-popup settings.
+
+    Lives on the General tab as of 1.4.1.  It had a tab to itself, which
+    held two checkboxes and a JSON box - not enough to justify a tab,
+    and it read as a peer of Services and Shortcuts when it is really
+    part of the same "how does the add-on behave" bucket as the module
+    switches sitting directly above it.
+    """
+    box = _w["QGroupBox"]("Reference popups")
     lay = _w["QVBoxLayout"](box)
     pearls_qcb = _w["QCheckBox"]("Highlight terms on the question side too")
     pearls_qcb.setChecked(_config.get("enableHighlightsOnQuestions") is not False)
@@ -1016,24 +1130,32 @@ def _build_pearls_group(_w):
     )
     articleview_cb.setChecked(_config.get("enableArticleViewer") is not False)
     lay.addWidget(articleview_cb)
-    # Custom popup terms - free-form JSON the user can edit.  Stored
-    # under `customTerms` and merged into reviewer term resolution.
-    hint = _w["QLabel"](
-        "Custom popup terms (JSON): list of {\"title\": \"...\", "
-        "\"summary\": \"...\", \"url\": \"https://...\"}.  Leave blank for none."
-    )
-    hint.setWordWrap(True)
-    hint.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
-    lay.addWidget(hint)
-    custom_terms_edit = _w["QPlainTextEdit"]()
-    custom_terms_edit.setPlainText(_config.get("customTerms") or "")
-    custom_terms_edit.setFixedHeight(100)
-    custom_terms_edit.setStyleSheet(
-        "QPlainTextEdit{font-family:monospace;font-size:11px;"
-        f"border:1px solid {_theme.TEAL_BORDER};border-radius:3px;}}"
-    )
-    lay.addWidget(custom_terms_edit)
-    return box, pearls_qcb, articleview_cb, custom_terms_edit
+
+    # Held in a mutable box so the button can update it without the
+    # caller needing a widget handle to read back on close.
+    state = {"raw": _config.get("customTerms") or ""}
+    row = _w["QHBoxLayout"]()
+    btn = _w["QPushButton"]("Custom terms...")
+    count_lab = _caption(_w, "")
+
+    def _refresh_count():
+        n = len(_parse_custom_terms(state["raw"]))
+        count_lab.setText("None set" if not n else
+                          ("1 term" if n == 1 else f"{n} terms"))
+
+    def _edit():
+        new = _custom_terms_dialog(btn.window(), state["raw"])
+        if new is not None:
+            state["raw"] = new
+            _refresh_count()
+
+    btn.clicked.connect(_edit)
+    _refresh_count()
+    row.addWidget(btn)
+    row.addWidget(count_lab)
+    row.addStretch(1)
+    lay.addLayout(row)
+    return box, pearls_qcb, articleview_cb, state
 
 
 def _build_utd_group(_w):
@@ -1047,7 +1169,6 @@ def _build_utd_group(_w):
         "URL here - see config.md for examples."
     )
     explainer.setWordWrap(True)
-    explainer.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
     lay.addWidget(explainer)
     utd_url_edit = _w["QLineEdit"](_config.get("uptodateHomeUrl") or "")
     utd_url_edit.setPlaceholderText("https://www.uptodate.com/contents/search")
@@ -1061,12 +1182,18 @@ def _build_chat_group(_w):
     adblock_cb = _w["QCheckBox"]("Hide ad/upsell banners on chat sites (CSS-only)")
     adblock_cb.setChecked(_config.get("chatAdblockEnabled") is not False)
     lay.addWidget(adblock_cb)
+    autopaste_cb = _w["QCheckBox"](
+        "Paste straight into the chat box when you send a selection or card")
+    autopaste_cb.setChecked(_config.get("chatAutoPaste") is not False)
+    lay.addWidget(autopaste_cb)
+    lay.addWidget(_caption(
+        _w, "Uncheck to copy to the clipboard only. Nothing is ever sent - "
+            "you still press Enter yourself."))
     cu_label = _w["QLabel"](
         "Optional custom provider URL (self-hosted OpenWebUI / "
         "LibreChat / llama.cpp).  Adds a 'Custom' button to the dock."
     )
     cu_label.setWordWrap(True)
-    cu_label.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
     lay.addWidget(cu_label)
     chat_url_edit = _w["QLineEdit"](_config.get("chatCustomProviderUrl") or "")
     chat_url_edit.setPlaceholderText("https://my-self-hosted-llm.example.com/")
@@ -1078,12 +1205,8 @@ def _build_chat_group(_w):
         "only need to sign in once per provider."
     )
     passkey_note.setWordWrap(True)
-    passkey_note.setStyleSheet(
-        f"color:{_theme.MUTED};font-size:10px;font-style:italic;"
-        "padding-top:4px;"
-    )
     lay.addWidget(passkey_note)
-    return box, adblock_cb, chat_url_edit
+    return box, adblock_cb, chat_url_edit, autopaste_cb
 
 
 def _build_order_group(_w):
@@ -1093,18 +1216,13 @@ def _build_order_group(_w):
     lay.setContentsMargins(8, 4, 8, 6)
     lay.setSpacing(4)
     hint = _w["QLabel"]("Drag to reorder the chat and UpToDate toolbar buttons.")
-    hint.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
     hint.setWordWrap(True)
     lay.addWidget(hint)
     lst = _w["QListWidget"]()
     lst.setDragDropMode(_w["QAbstractItemView"].DragDropMode.InternalMove)
     lst.setSelectionMode(_w["QAbstractItemView"].SelectionMode.SingleSelection)
     lst.setFixedHeight(56)
-    lst.setStyleSheet(
-        "QListWidget{border:1px solid " + _theme.TEAL_BORDER
-        + ";border-radius:4px;font-size:12px;}"
-        "QListWidget::item{padding:4px 8px;}"
-    )
+
     labels = {"chat": "AI chat", "uptodate": "UpToDate"}
     cur_order = _config.get("toolbarOrder") or ["chat", "uptodate"]
     seen: set = set()
@@ -1134,33 +1252,26 @@ _SHORTCUT_FIELDS = [
 
 
 def _build_shortcuts_group(_w):
-    """Editable key bindings.
-
-    These were documented as config-file-only, which meant the one thing
-    users most often need to change - a clash with another add-on - was
-    the one thing they had to hand-edit JSON for.
-    """
-    box = _w["QGroupBox"]("Keyboard shortcuts")
-    grid = _w["QGridLayout"](box)
-    grid.setContentsMargins(12, 10, 12, 10)
-    grid.setHorizontalSpacing(12)
-    grid.setVerticalSpacing(6)
+    """Editable key bindings in a plain form layout."""
+    box = _w["QGroupBox"]("Shortcuts")
+    form = _w["QFormLayout"](box)
+    try:
+        form.setLabelAlignment(_w["_Qt"].AlignmentFlag.AlignRight
+                               | _w["_Qt"].AlignmentFlag.AlignVCenter)
+        form.setRowWrapPolicy(_w["QFormLayout"].RowWrapPolicy.DontWrapRows)
+    except Exception:
+        pass
     edits = {}
-    for row, (key, default, label) in enumerate(_SHORTCUT_FIELDS):
-        lab = _w["QLabel"](label)
+    for key, default, label in _SHORTCUT_FIELDS:
         seq = _w["QKeySequenceEdit"]()
         try:
             seq.setKeySequence(_w["QKeySequence"](_config.get(key) or default))
         except Exception:
             pass
-        seq.setToolTip("Click, then press the keys. Clear the field to disable.")
-        grid.addWidget(lab, row, 0)
-        grid.addWidget(seq, row, 1)
+        form.addRow(label, seq)
         edits[key] = seq
-    hint = _w["QLabel"]("Shortcut changes take effect after a restart.")
-    hint.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
-    grid.addWidget(hint, len(_SHORTCUT_FIELDS), 0, 1, 2)
-    grid.setColumnStretch(1, 1)
+    form.addRow("", _caption(_w, "Click a field and press the keys you want. "
+                                 "Leave one empty to turn it off."))
     return box, edits
 
 
@@ -1177,211 +1288,147 @@ def _build_misc_group(_w):
 
 
 def _open_settings_dialog(first_run: bool = False) -> bool:
-    """Unified settings dialog.
+    """Settings.
 
-    First-run mode shows just the module checkboxes for a fast first
-    decision.  Post-install mode adds the deeper per-module options
-    plus the toolbar-order drag list and the new misc group.
-
-    Returns True on Save, False on Cancel."""
+    Two very different jobs, so two shapes.  First run is a single
+    short pane - pick your modules and go.  Afterwards it is a tabbed
+    preferences window laid out the way Anki's own Preferences is:
+    native widgets, no custom colours, grouped boxes, and changes that
+    are written when you close rather than gated behind a Save button.
+    """
     _w = _qt_imports()
     QDialog = _w["QDialog"]
     Qt_ = _w["_Qt"]
 
+    if first_run:
+        return _first_run_dialog(_w)
+
     dlg = QDialog(mw)
-    dlg.setWindowTitle("The AnkiDote - welcome" if first_run
-                       else "The AnkiDote - settings")
-    dlg.setMinimumWidth(620)
-    if first_run:
-        dlg.setMinimumHeight(420)
-        dlg.resize(640, 540)
-    else:
-        dlg.setMinimumHeight(560)
-        dlg.resize(640, 720)
-
-    # Outer layout: header text, scroll area (containing all the
-    # group boxes), then a fixed footer with the buttons.  The scroll
-    # area lets every group box breathe at full size while the dialog
-    # itself stays at a comfortable on-screen height.
+    dlg.setWindowTitle("The AnkiDote")
+    dlg.resize(560, 460)
     outer = _w["QVBoxLayout"](dlg)
-    outer.setContentsMargins(20, 18, 20, 14)
-    outer.setSpacing(10)
 
-    # No explanatory preamble on the settings screen: it described the
-    # dialog's own contents, which the user can already see, and pushed
-    # the actual controls below the fold.
-    if first_run:
-        intro = _w["QLabel"](
-            "Three reference modules. Untick anything you don't want - "
-            "you can change this later."
-        )
-        intro.setWordWrap(True)
-        intro.setStyleSheet(f"color:{_theme.MUTED};font-size:12px;")
-        outer.addWidget(intro)
+    tabs = _w["QTabWidget"]()
+    outer.addWidget(tabs, 1)
 
-    scroll = _w["QScrollArea"]()
-    scroll.setWidgetResizable(True)
-    scroll.setFrameShape(_w["QFrame"].Shape.NoFrame)
-    scroll.setHorizontalScrollBarPolicy(Qt_.ScrollBarPolicy.ScrollBarAlwaysOff)
-    scroll_body = _w["QWidget"]()
-    lay = _w["QVBoxLayout"](scroll_body)
-    lay.setContentsMargins(0, 0, 8, 0)
-    lay.setSpacing(10 if first_run else 14)
-    scroll.setWidget(scroll_body)
-    outer.addWidget(scroll, 1)
-
-    modules_box, pearls_cb, utd_cb, chat_cb = _build_modules_group(_w, first_run)
-    lay.addWidget(modules_box)
-
-    pearls_qcb = articleview_cb = utd_url_edit = chat_url_edit = None
-    adblock_cb = toolbar_order_list = remember_cb = debug_cb = None
-    shortcut_edits = {}
-    custom_terms_edit = None
-    save_without_restart = False
-
-    if first_run:
-        recs_box = _build_recommendations_group(_w, first_run)
-        if recs_box is not None:
-            lay.addWidget(recs_box)
-
-        # Compact institution-URL field so users can set the right
-        # SP-initiated entry on first launch (or when re-running setup
-        # after a session expires).  Without this, NSW/Vic Health and
-        # other non-default institutions would silently land on the
-        # public UTD page with no way to fix it from the welcome flow.
-        utd_box, utd_url_edit = _build_utd_group(_w)
-        lay.addWidget(utd_box)
-
+    def _tab(*boxes):
+        page = _w["QWidget"]()
+        lay = _w["QVBoxLayout"](page)
+        for b in boxes:
+            lay.addWidget(b)
         lay.addStretch(1)
-    else:
-        pearls_box, pearls_qcb, articleview_cb, custom_terms_edit = _build_pearls_group(_w)
-        lay.addWidget(pearls_box)
-        utd_box, utd_url_edit = _build_utd_group(_w)
-        lay.addWidget(utd_box)
-        chat_box, adblock_cb, chat_url_edit = _build_chat_group(_w)
-        lay.addWidget(chat_box)
-        order_box, toolbar_order_list = _build_order_group(_w)
-        lay.addWidget(order_box)
-        shortcuts_box, shortcut_edits = _build_shortcuts_group(_w)
-        lay.addWidget(shortcuts_box)
-        misc_box, remember_cb, debug_cb = _build_misc_group(_w)
-        lay.addWidget(misc_box)
+        return page
 
-        lay.addStretch(1)
+    modules_box, pearls_cb, utd_cb, chat_cb = _build_modules_group(_w, False)
+    pearls_box, pearls_qcb, articleview_cb, terms_state = _build_pearls_group(_w)
+    order_box, toolbar_order_list = _build_order_group(_w)
+    misc_box, remember_cb, _ = _build_misc_group(_w)
+    tabs.addTab(_tab(modules_box, pearls_box, order_box, misc_box), "General")
 
-    # Fixed footer outside the scroll area: the save-without-restart
-    # checkbox and the OK/Cancel buttons stay on-screen no matter how
-    # far down the user has scrolled.
-    # Which settings were live when the dialog opened.  Only a change to
-    # one of these needs Anki restarted; everything else applies at once.
-    # Previously the user had to tick "Save without restarting now" to
-    # AVOID a relaunch, so the default action was to quit their app
-    # mid-session regardless of what they had changed.
-    _restart_keys = ("enableHighlights", "enableUpToDate", "enableChat")
-    before = {k: _config.get(k) for k in _restart_keys}
-    before_shortcuts = {k: (_config.get(k) or d)
-                        for k, d, _ in _SHORTCUT_FIELDS}
+    utd_box, utd_url_edit = _build_utd_group(_w)
+    chat_box, adblock_cb, chat_url_edit, autopaste_cb = _build_chat_group(_w)
+    tabs.addTab(_tab(utd_box, chat_box), "Services")
 
-    btns = _w["QDialogButtonBox"](
-        _w["QDialogButtonBox"].StandardButton.Save
-        | _w["QDialogButtonBox"].StandardButton.Cancel
-    )
-    save_btn = btns.button(_w["QDialogButtonBox"].StandardButton.Save)
-    save_btn.setText("Continue" if first_run else "Save")
-    btns.accepted.connect(dlg.accept)
+    shortcuts_box, shortcut_edits = _build_shortcuts_group(_w)
+    tabs.addTab(_tab(shortcuts_box), "Shortcuts")
+
+    # Anki states this once, quietly, and lets people restart when it
+    # suits them - rather than a modal asking permission to quit their
+    # app the moment they change a checkbox.
+    footer = _caption(_w, "Some settings take effect after you restart Anki.")
+    try:
+        footer.setAlignment(Qt_.AlignmentFlag.AlignCenter)
+    except Exception:
+        pass
+    outer.addWidget(footer)
+
+    btns = _w["QDialogButtonBox"](_w["QDialogButtonBox"].StandardButton.Close)
     btns.rejected.connect(dlg.reject)
+    btns.accepted.connect(dlg.accept)
+    outer.addWidget(btns)
+
+    dlg.exec()
+
+    # Written on close.  There is no Cancel: a preferences window that
+    # can be abandoned needs a Save button, and a Save button on a
+    # window of checkboxes is the thing that made this confusing.
+    _config.set_value("enableHighlights", pearls_cb.isChecked())
+    _config.set_value("enableUpToDate",   utd_cb.isChecked())
+    _config.set_value("enableChat",       chat_cb.isChecked())
+    _config.set_value("enableHighlightsOnQuestions", pearls_qcb.isChecked())
+    _config.set_value("enableArticleViewer", articleview_cb.isChecked())
+    _config.set_value("uptodateHomeUrl", utd_url_edit.text().strip() or None)
+    _config.set_value("chatCustomProviderUrl", chat_url_edit.text().strip() or None)
+    _config.set_value("chatAdblockEnabled", adblock_cb.isChecked())
+    _config.set_value("chatAutoPaste", autopaste_cb.isChecked())
+    _config.set_value("customTerms", terms_state["raw"].strip() or None)
+    _config.set_value("rememberDockState", remember_cb.isChecked())
+
+    order = []
+    for i in range(toolbar_order_list.count()):
+        key = toolbar_order_list.item(i).data(Qt_.ItemDataRole.UserRole)
+        if key:
+            order.append(key)
+    if order:
+        _config.set_value("toolbarOrder", order)
+
+    for key, seq in shortcut_edits.items():
+        try:
+            _config.set_value(key, seq.keySequence().toString() or "")
+        except Exception as exc:
+            _log.error(f"save shortcut {key}", exc)
+
+    # Apply the bindings now.  Until 1.4.1 they were only read at
+    # launch, so a shortcut changed here appeared not to work at all
+    # until the next restart - and the usual reason to change one is a
+    # clash you want gone immediately.
+    try:
+        _rebind_shortcuts()
+    except Exception as exc:
+        _log.error("rebind shortcuts after settings", exc)
+
+    try:
+        request_toolbar_redraw()
+    except Exception:
+        pass
+    return True
+
+
+def _first_run_dialog(_w) -> bool:
+    """Welcome pane: which modules, and the UpToDate entry point."""
+    QDialog = _w["QDialog"]
+    dlg = QDialog(mw)
+    dlg.setWindowTitle("The AnkiDote")
+    dlg.resize(520, 460)
+    outer = _w["QVBoxLayout"](dlg)
+
+    intro = _w["QLabel"]("Three reference modules. Untick anything you "
+                         "don't want - you can change this later.")
+    intro.setWordWrap(True)
+    outer.addWidget(intro)
+
+    modules_box, pearls_cb, utd_cb, chat_cb = _build_modules_group(_w, True)
+    outer.addWidget(modules_box)
+
+    recs_box = _build_recommendations_group(_w, True)
+    if recs_box is not None:
+        outer.addWidget(recs_box)
+
+    utd_box, utd_url_edit = _build_utd_group(_w)
+    outer.addWidget(utd_box)
+    outer.addStretch(1)
+
+    btns = _w["QDialogButtonBox"](_w["QDialogButtonBox"].StandardButton.Ok)
+    btns.button(_w["QDialogButtonBox"].StandardButton.Ok).setText("Continue")
+    btns.accepted.connect(dlg.accept)
     outer.addWidget(btns)
 
     if dlg.exec() != QDialog.DialogCode.Accepted:
         return False
-
     _config.set_value("enableHighlights", pearls_cb.isChecked())
     _config.set_value("enableUpToDate",   utd_cb.isChecked())
     _config.set_value("enableChat",       chat_cb.isChecked())
-
-    if first_run and utd_url_edit is not None:
-        text = utd_url_edit.text().strip() or None
-        _config.set_value("uptodateHomeUrl", text)
-
-    if not first_run:
-        if pearls_qcb is not None:
-            _config.set_value("enableHighlightsOnQuestions", pearls_qcb.isChecked())
-        if articleview_cb is not None:
-            _config.set_value("enableArticleViewer", articleview_cb.isChecked())
-        if utd_url_edit is not None:
-            text = utd_url_edit.text().strip() or None
-            _config.set_value("uptodateHomeUrl", text)
-        if chat_url_edit is not None:
-            text = chat_url_edit.text().strip() or None
-            _config.set_value("chatCustomProviderUrl", text)
-        if adblock_cb is not None:
-            _config.set_value("chatAdblockEnabled", adblock_cb.isChecked())
-        if custom_terms_edit is not None:
-            _config.set_value("customTerms",
-                              custom_terms_edit.toPlainText().strip() or None)
-        if toolbar_order_list is not None:
-            new_order = []
-            for i in range(toolbar_order_list.count()):
-                key = toolbar_order_list.item(i).data(Qt_.ItemDataRole.UserRole)
-                if key:
-                    new_order.append(key)
-            if new_order:
-                _config.set_value("toolbarOrder", new_order)
-        if remember_cb is not None:
-            _config.set_value("rememberDockState", remember_cb.isChecked())
-        if debug_cb is not None:
-            _config.set_value("debug", debug_cb.isChecked())
-        for key, seq in (shortcut_edits or {}).items():
-            try:
-                _config.set_value(key, seq.keySequence().toString() or "")
-            except Exception as exc:
-                _log.error(f"save shortcut {key}", exc)
-
-    if first_run:
-        return True
-
-    # Restart only if something that needs it actually changed, and only
-    # with the user's agreement.
-    changed = [k for k in _restart_keys if _config.get(k) != before[k]]
-    shortcut_changed = any(
-        (_config.get(k) or d) != before_shortcuts[k]
-        for k, d, _ in _SHORTCUT_FIELDS
-    )
-    if not changed and not shortcut_changed:
-        try:
-            from aqt.utils import tooltip
-            tooltip("Settings saved.", period=1600)
-        except Exception:
-            pass
-        return True
-
-    what = []
-    if changed:
-        what.append("Enabling or disabling a module")
-    if shortcut_changed:
-        what.append("Changing a shortcut")
-    try:
-        from aqt.qt import QMessageBox
-        box = QMessageBox(mw)
-        box.setWindowTitle("The AnkiDote")
-        box.setIcon(QMessageBox.Icon.Question)
-        box.setText("Restart Anki to finish?")
-        box.setInformativeText(
-            f"{' and '.join(what)} takes effect after a restart. "
-            f"Everything else you changed is already active.\n\n"
-            f"Anki will reopen automatically."
-        )
-        later = box.addButton("Later", QMessageBox.ButtonRole.RejectRole)
-        now = box.addButton("Restart now", QMessageBox.ButtonRole.AcceptRole)
-        box.setDefaultButton(now)
-        box.exec()
-        if box.clickedButton() is now:
-            _relaunch_anki()
-        else:
-            from aqt.utils import tooltip
-            tooltip("Saved. Restart when convenient.", period=2200)
-    except Exception as exc:
-        _log.error("restart prompt", exc)
+    _config.set_value("uptodateHomeUrl", utd_url_edit.text().strip() or None)
     return True
 
 
@@ -1536,55 +1583,125 @@ def _reveal_diagnostic_log() -> None:
         _log.error("reveal diagnostic log", exc)
 
 
-def _maybe_migrate_send_shortcut() -> None:
-    """Offer to move the send-to-chat shortcut off Ctrl+Shift+P.
+def _version_tuple(v) -> tuple:
+    """Loose "1.4.1" -> (1, 4, 1) for ordering. Anything unparseable
+    sorts as (0,), i.e. older than every real release."""
+    if not isinstance(v, str):
+        return (0,)
+    parts = []
+    for chunk in v.strip().split("."):
+        digits = "".join(c for c in chunk if c.isdigit())
+        if not digits:
+            break
+        parts.append(int(digits))
+    return tuple(parts) or (0,)
 
-    That binding is Anki's own Switch Profile, so on some builds the
-    shortcut either did nothing or bounced the user to the profile
-    picker mid-review.  Existing users have it saved explicitly, so
-    changing the default alone would not move them - but silently
-    rebinding someone's muscle memory is worse than asking once.
+
+def _maybe_show_upgrade_notice() -> None:
+    """One-time notice for anyone arriving from a version below 1.4.
+
+    1.4 changed a shortcut people had in their fingers: send-to-chat
+    moved off Ctrl+Shift+P, which is Anki's own Switch Profile binding
+    and could bounce you to the profile picker mid-review. It also
+    added a second shortcut and made all of them editable.
+
+    The 1.4.0 implementation keyed the prompt purely off whether the
+    user was still sitting on Ctrl+Shift+P, and silently marked itself
+    done for everyone else - so anyone who had already rebound that key
+    by hand never heard about either change. Version tracking replaces
+    that: `lastSeenVersion` says which release this install has
+    actually run, so upgrade notices can be aimed at a version range
+    instead of inferred from one config value.
+
+    Three states have to be told apart, and none of them should see a
+    dialog except the third:
+      * fresh install - `firstRunDone` is still False, and the welcome
+        pane is enough on its own;
+      * already ran 1.4.0 - `lastSeenVersion` is absent (1.4.0 predates
+        the key) but `sendShortcutMigrated` is True, because 1.4.0 set
+        that flag on every path including the silent one;
+      * upgrading from below 1.4 - neither is true.
     """
     try:
-        if _config.get("sendShortcutMigrated"):
-            return
-        current = _config.get("shortcutSendSelectionToChat")
-        # Only prompt people actually sitting on the clashing binding.
-        if (current or "").replace(" ", "").lower() != _LEGACY_SEND_SEL.replace(" ", "").lower():
+        seen = _config.get("lastSeenVersion")
+
+        def _stamp() -> None:
+            _config.set_value("lastSeenVersion", _ADDON_VERSION)
             _config.set_value("sendShortcutMigrated", True)
+
+        if not _config.get("firstRunDone"):
+            _stamp()
             return
+        if seen is not None and _version_tuple(seen) >= (1, 4):
+            _config.set_value("lastSeenVersion", _ADDON_VERSION)
+            return
+        if seen is None and _config.get("sendShortcutMigrated"):
+            _stamp()
+            return
+
+        current = (_config.get("shortcutSendSelectionToChat") or "")
+        on_legacy = (current.replace(" ", "").lower()
+                     == _LEGACY_SEND_SEL.replace(" ", "").lower())
 
         from aqt.qt import QMessageBox
         box = QMessageBox(mw)
         box.setWindowTitle("The AnkiDote")
-        box.setIcon(QMessageBox.Icon.Question)
-        box.setText("Change the send-to-chat shortcut?")
-        box.setInformativeText(
-            f"Your shortcut for sending a selection to the AI chat is "
-            f"{_LEGACY_SEND_SEL}, which is also Anki's own Switch Profile "
-            f"shortcut. The new default is {_DEFAULT_SEND_SEL}.\n\n"
-            f"There is also a new shortcut, {_DEFAULT_SEND_CARD}, that "
-            f"sends the whole visible card.\n\n"
-            f"Either can be rebound in Tools > Add-ons > The AnkiDote > "
-            f"Config."
-        )
-        keep = box.addButton(f"Keep {_LEGACY_SEND_SEL}", QMessageBox.ButtonRole.RejectRole)
-        change = box.addButton(f"Use {_DEFAULT_SEND_SEL}", QMessageBox.ButtonRole.AcceptRole)
-        box.setDefaultButton(change)
-        box.exec()
+        box.setIcon(QMessageBox.Icon.Question if on_legacy
+                    else QMessageBox.Icon.Information)
 
-        if box.clickedButton() is change:
-            _config.set_value("shortcutSendSelectionToChat", _DEFAULT_SEND_SEL)
-            try:
-                from aqt.utils import tooltip
-                tooltip(f"Send-to-chat is now {_DEFAULT_SEND_SEL}. "
-                        f"Restart Anki to apply.", period=4000)
-            except Exception:
-                pass
-        _config.set_value("sendShortcutMigrated", True)
+        if on_legacy:
+            box.setText("Change the send-to-chat shortcut?")
+            box.setInformativeText(
+                f"Your shortcut for sending a selection to the AI chat is "
+                f"{_LEGACY_SEND_SEL}, which is also Anki's own Switch "
+                f"Profile shortcut. The new default is {_DEFAULT_SEND_SEL}."
+                f"\n\n{_DEFAULT_SEND_CARD} sends the whole visible card, and "
+                f"both now land straight in the chat box rather than only on "
+                f"the clipboard."
+                f"\n\nEvery shortcut is editable under Tools > The AnkiDote > "
+                f"Settings > Shortcuts."
+            )
+            keep = box.addButton(f"Keep {_LEGACY_SEND_SEL}",
+                                 QMessageBox.ButtonRole.RejectRole)
+            change = box.addButton(f"Use {_DEFAULT_SEND_SEL}",
+                                   QMessageBox.ButtonRole.AcceptRole)
+            box.setDefaultButton(change)
+            box.exec()
+            if box.clickedButton() is change:
+                _config.set_value("shortcutSendSelectionToChat", _DEFAULT_SEND_SEL)
+                _rebind_shortcuts()
+                try:
+                    from aqt.utils import tooltip
+                    tooltip(f"Send-to-chat is now {_DEFAULT_SEND_SEL}.",
+                            period=3000)
+                except Exception:
+                    pass
+        else:
+            box.setText("What's new in The AnkiDote")
+            box.setInformativeText(
+                f"Send a selection ({_DEFAULT_SEND_SEL}) or the whole visible "
+                f"card ({_DEFAULT_SEND_CARD}) to the AI chat - the text now "
+                f"goes straight into the message box instead of stopping at "
+                f"the clipboard. Nothing is sent until you press Enter."
+                f"\n\nThe sidebar header has a StatPearls / DrugBank switch, "
+                f"and Settings has been rebuilt around Anki's own Preferences "
+                f"with every shortcut editable."
+                f"\n\nYour existing shortcuts have been left exactly as they "
+                f"are."
+            )
+            opener = box.addButton("Open settings",
+                                   QMessageBox.ButtonRole.AcceptRole)
+            box.addButton(QMessageBox.StandardButton.Ok)
+            box.setDefaultButton(QMessageBox.StandardButton.Ok)
+            box.exec()
+            if box.clickedButton() is opener:
+                _open_settings_dialog()
+
+        _stamp()
     except Exception as exc:
-        _log.error("send shortcut migration", exc)
+        _log.error("upgrade notice", exc)
         try:
+            _config.set_value("lastSeenVersion", _ADDON_VERSION)
             _config.set_value("sendShortcutMigrated", True)
         except Exception:
             pass

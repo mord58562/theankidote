@@ -32,7 +32,7 @@ except (ImportError, AttributeError):
 import json
 import re
 
-from . import _webengine, _log, _config
+from . import _webengine, _log, _config, _theme
 
 try:
     from PyQt6.QtCore import QTimer
@@ -258,8 +258,13 @@ def _rebind_theme() -> None:
     values in.  Both have to be rebuilt, and every live widget restyled
     (see `PearlsPanel.apply_theme`), or the panel keeps the palette it
     was born with.
+
+    `_theme` went un-imported until 1.4.1, so every line below raised
+    NameError and the whole restyle aborted on the first statement -
+    which is why switching Anki's theme left the panel untouched.
     """
     g = globals()
+    g["_DARK"] = _theme.DARK
     g["_NAVY"] = _theme.NAVY
     g["_NAVY_LIGHT"] = _theme.NAVY_LIGHT
     g["_TEAL"] = _theme.TEAL

@@ -121,9 +121,11 @@ in the reviewer:
   your existing Claude / ChatGPT / Gemini / Copilot / Perplexity /
   DeepSeek / Grok / Duck.ai session. No API keys, no programmatic chat
   scraping. One-click provider switching with cookies persisted per
-  provider so you can stay logged into all of them. Ctrl+Shift+K
-  copies the reviewer's current text selection to the clipboard and
-  opens the chat dock so you can paste straight into the prompt.
+  provider so you can stay logged into all of them. Ctrl+Shift+K sends
+  the reviewer's current text selection and Ctrl+Shift+J sends the
+  whole visible card: the dock opens, the provider's message box is
+  focused, and the text is pasted into it. Nothing is submitted - you
+  read it, edit it and press Enter yourself.
 
 ## Cost & access
 
@@ -207,7 +209,10 @@ Highlights:
 | Send whole card to AI chat   | `Ctrl+Shift+J` |
 
 On macOS, Anki maps `Ctrl` to `⌘` automatically - the bindings show as
-`⌘⇧S` etc. Every shortcut is editable in Tools > The AnkiDote > Settings.
+`⌘⇧S` etc. Every shortcut is editable in Tools > The AnkiDote >
+Settings > Shortcuts: click a field, press the keys you want, and the
+new binding takes effect as soon as you close the window. Clear a field
+to disable that shortcut entirely.
 
 If any of these clash with another addon you use or with an Anki default
 that matters to you (e.g. some Anki builds reserve `Ctrl+Shift+A` for the
@@ -239,8 +244,11 @@ Per-source statements:
 - **AI chat (Claude / ChatGPT / Gemini / Copilot / Perplexity / DeepSeek /
   Grok / Duck.ai)** - embedded webview hosting your own logged-in chat
   session. No API keys, no programmatic message submission, no chat
-  scraping. The "send selection to chat" shortcut writes the selection
-  to your system clipboard and opens the dock; you paste manually.
+  scraping. The send-to-chat shortcuts copy to your system clipboard,
+  then focus the provider's message box and paste - the same two steps
+  you would do by hand, and nothing more. The message is never sent;
+  that is always your keystroke. Set `chatAutoPaste` to `false` for
+  clipboard-only behaviour.
 - **No telemetry. No remote config. No cloud sync.** Settings live in
   Anki's normal addon-config JSON. Cookies and cache live in QtWebEngine's
   per-profile directory under `~/Library/Application Support/Anki2/
