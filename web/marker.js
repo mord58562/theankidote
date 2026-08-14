@@ -165,6 +165,11 @@
 
   var _tip = null;       // host element placed in document.body
   var _tipRoot = null;   // shadow root - fully isolated from card CSS
+  // Which mark the visible popup belongs to.  Hover intent needs to
+  // tell "back on the source term" apart from "over a different term",
+  // and re-showing for the same mark on every mouseover event also
+  // re-rolls the easter-egg counter.
+  var _tipAnchor = null;
   var _tipTitle = null, _tipSummary = null, _tipOpenBtn = null, _tipUrl = "",
       _tipLabel = null, _tipBox = null,
       _tipUtd = null, _tipUtdChips = null;
@@ -361,6 +366,7 @@
   function _showTip(el) {
     _ensureTip();
     _cancelHide();
+    _tipAnchor = el;
     var title   = el.getAttribute("data-sp-title")   || "";
     var summary = el.getAttribute("data-sp-summary") || "";
     _tipUrl = el.getAttribute("data-sp-url") || "";
@@ -473,6 +479,7 @@
 
   function _hideTip() {
     if (_tip) _tip.style.display = "none";
+    _tipAnchor = null;
   }
 
   var _SECTION_RE = /([;.])\s+((?:Sx|Mx|Tx|Rx|Dx|SE|CI|MOA|Signs|Triggers|Risk|Causes|Aetiology|Etiology|Types|Subtypes|Features|Complications|Investigations|Pathophysiology|Management|Treatment|Prognosis|Epidemiology|Note|Classification|Staging|Presentation|Diagnosis|Associations|Genetics|Phases|Examination|Workup|Variants|Differential|Criteria|Indications|Contraindications):\s)/g;
@@ -505,10 +512,108 @@
   // Shadow DOM events retarget to the host element, so _tip === node is O(1).
   function _inTip(node) { return _tip !== null && node === _tip; }
 
+  // ── Hover intent ──────────────────────────────────────────────────
+  //
+  // Marks are dense: on a management card there is very often another
+  // underlined term sitting in the gap between the term you hovered and
+  // the popup that opened for it.  Moving the pointer toward the popup
+  // crosses that term, which swapped the popup out from under you - the
+  // one place the popup must not move is on the way to itself.
+  //
+  // Two guards, cheap and independent of layout:
+  //
+  //   1. A corridor test.  While a popup is open, the pointer's last
+  //      movement is checked against the triangle formed by where it
+  //      just was and the near edge of the popup.  Inside that triangle
+  //      the pointer is heading for the popup, whatever it happens to
+  //      pass over, so other marks are ignored.
+  //   2. A dwell.  Outside the corridor, a different mark still has to
+  //      hold the pointer briefly before it takes over, so a term
+  //      brushed in passing doesn't win.
+  //
+  // The corridor expires so a pointer parked mid-flight eventually
+  // yields, and neither guard applies when no popup is open - the first
+  // hover is always instant.
+
+  var _AIM_GRACE_MS = 600;   // longest a corridor claim can hold
+  var _DWELL_MS     = 70;    // rest needed on a new mark to take over
+
+  var _px = 0, _py = 0;      // previous pointer position
+  var _aimUntil = 0;         // corridor claim expiry
+  var _dwellTimer = null;
+
+  document.addEventListener("mousemove", function (e) {
+    _px = e.clientX;
+    _py = e.clientY;
+  }, true);
+
+  function _sign(ax, ay, bx, by, cx, cy) {
+    return (ax - cx) * (by - cy) - (bx - cx) * (ay - cy);
+  }
+
+  function _inTriangle(x, y, ax, ay, bx, by, cx, cy) {
+    var d1 = _sign(x, y, ax, ay, bx, by);
+    var d2 = _sign(x, y, bx, by, cx, cy);
+    var d3 = _sign(x, y, cx, cy, ax, ay);
+    var neg = (d1 < 0) || (d2 < 0) || (d3 < 0);
+    var pos = (d1 > 0) || (d2 > 0) || (d3 > 0);
+    return !(neg && pos);
+  }
+
+  function _aimingAtTip(x, y) {
+    if (!_tip || _tip.style.display === "none") return false;
+    var r = _tip.getBoundingClientRect();
+    if (!r.width || !r.height) return false;
+    var p = 8;   // pad, so clipping the popup's corner still counts
+    var x1, y1, x2, y2;
+    if (x <= r.left)        { x1 = r.left  - p; y1 = r.top - p;
+                              x2 = r.left  - p; y2 = r.bottom + p; }
+    else if (x >= r.right)  { x1 = r.right + p; y1 = r.top - p;
+                              x2 = r.right + p; y2 = r.bottom + p; }
+    else if (y <= r.top)    { x1 = r.left  - p; y1 = r.top - p;
+                              x2 = r.right + p; y2 = r.top - p; }
+    else                    { x1 = r.left  - p; y1 = r.bottom + p;
+                              x2 = r.right + p; y2 = r.bottom + p; }
+    return _inTriangle(x, y, _px, _py, x1, y1, x2, y2);
+  }
+
+  function _cancelDwell() {
+    if (_dwellTimer) { clearTimeout(_dwellTimer); _dwellTimer = null; }
+  }
+
   document.addEventListener("mouseover", function (e) {
-    if (_inTip(e.target)) { _cancelHide(); return; }
+    if (_inTip(e.target)) { _cancelHide(); _cancelDwell(); return; }
     var m = _closest(e.target, "sp-mark");
-    if (m) _showTip(m);
+    if (!m) return;
+
+    // Re-entering the mark the popup already belongs to: keep it, and
+    // drop any corridor claim since we are back at the source.
+    if (m === _tipAnchor) { _cancelHide(); _cancelDwell(); _aimUntil = 0; return; }
+
+    // Nothing open, or the open one has no anchor: show immediately.
+    if (!_tipAnchor || !_tip || _tip.style.display === "none") {
+      _cancelDwell();
+      _showTip(m);
+      return;
+    }
+
+    var now = Date.now();
+    if (_aimingAtTip(e.clientX, e.clientY)) {
+      if (!_aimUntil) _aimUntil = now + _AIM_GRACE_MS;
+      if (now < _aimUntil) { _cancelHide(); _cancelDwell(); return; }
+    } else {
+      _aimUntil = 0;
+    }
+
+    _cancelDwell();
+    _dwellTimer = setTimeout(function () {
+      _dwellTimer = null;
+      // Still the mark under the pointer? `:hover` answers that without
+      // us having to track the pointer against every mark's box.
+      try {
+        if (m.matches(":hover")) _showTip(m);
+      } catch (err) { _showTip(m); }
+    }, _DWELL_MS);
   });
 
   document.addEventListener("mouseout", function (e) {
@@ -517,6 +622,7 @@
     // Don't hide if we're moving into another mark or into the tooltip.
     if (_closest(e.relatedTarget, "sp-mark")) return;
     if (_inTip(e.relatedTarget)) return;
+    _cancelDwell();
     _scheduleHide();
   });
 

@@ -9,6 +9,34 @@ this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 
+- **The House quote no longer announces itself.** It sat in a filled,
+  outlined teal chip at 10.4:1 contrast - which is how you style a
+  control, so an easter egg was demanding attention every time it
+  fired, most obviously in dark mode. It is plain italic text now, at a
+  contrast that clears AA and goes no further: legible when you look at
+  the header, invisible when you are using it.
+- **A popup no longer swaps when you move toward it.** Marks are dense,
+  so there is very often another underlined term sitting in the gap
+  between the term you hovered and the popup that opened for it -
+  crossing it on the way replaced the popup, which is the one place it
+  must not move. Two guards now: while a popup is open, the pointer's
+  last movement is tested against the triangle formed by where it just
+  was and the near edge of the popup, and inside that corridor other
+  marks are ignored; outside it, a different mark has to hold the
+  pointer for 70 ms before taking over. The corridor expires after
+  600 ms so a parked pointer yields, and neither guard applies when
+  nothing is open, so the first hover stays instant.
+- **The StatPearls / DrugBank pills follow the page.** They rendered
+  the `pearlsHomePage` preference, which is only what the Home button
+  will do next - so opening a drug from a popup left "StatPearls" lit
+  with a DrugBank page on screen. They now show which site is loaded;
+  the preference still changes only when you click a pill.
+- **The article list header no longer draws boxes around its own
+  contents.** A bare `QWidget { ... }` rule set on the header row also
+  matches every child - QLabel and QPushButton are both QWidgets - so
+  the background and borders were painted around the title and the
+  dismiss button as well as the row itself.
+
 - **DrugBank search works.** Qt's `ErrorPageEnabled` was throwing away
   the one thing that made the request succeed. Cloudflare's managed
   challenge is an HTTP 403 whose *body* is the interstitial that runs

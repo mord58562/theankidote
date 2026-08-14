@@ -38,14 +38,19 @@ def _build(dark: bool) -> dict:
             TEAL_DIM="rgba(15,202,212,.12)", TEAL_BORDER="rgba(15,202,212,.35)",
             HEADER_TXT="#e8f4f8", BODY_TXT="#eaf3f8",
             MUTED="rgba(232,244,248,.45)", BG_BOX="#162d45",
-            QUOTE_TXT="#9fd8e8",
+            # Deliberately close to the AA floor rather than as far
+            # above it as possible: this is an easter egg, and at
+            # 10.4:1 in a pill it read as a UI element announcing
+            # itself. 4.8:1 is legible when you look at it and recedes
+            # when you don't.
+            QUOTE_TXT="#5f92a4",
         )
     return dict(
         NAVY="#e8f2f8", NAVY_LIGHT="#cfe0ec", TEAL="#0b7f89",
         TEAL_DIM="rgba(11,127,137,.10)", TEAL_BORDER="rgba(11,127,137,.30)",
         HEADER_TXT="#123047", BODY_TXT="#1a2c3e",
         MUTED="rgba(26,44,62,.5)", BG_BOX="#ffffff",
-        QUOTE_TXT="#2e5570",
+        QUOTE_TXT="#4a7186",  # 4.6:1 on the light header
     )
 
 

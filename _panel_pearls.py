@@ -364,6 +364,11 @@ class _ResultsSection(QWidget):
         # closing the whole sidebar.  It comes back on the next card, or
         # immediately via the toolbar button.
         self._hdr_row = QWidget(self)
+        # Named, because a bare `QWidget { ... }` rule set on a parent
+        # also matches every child widget - QLabel and QPushButton are
+        # both QWidgets - so the background and borders were being drawn
+        # around the title and the dismiss button as well as the row.
+        self._hdr_row.setObjectName("tadResultsHdr")
         hdr_lay = QHBoxLayout(self._hdr_row)
         hdr_lay.setContentsMargins(0, 0, 0, 0)
         hdr_lay.setSpacing(0)
@@ -442,7 +447,7 @@ class _ResultsSection(QWidget):
 
     def _style_header(self) -> None:
         self._hdr_row.setStyleSheet(f"""
-            QWidget {{
+            QWidget#tadResultsHdr {{
                 background: {_NAVY_LIGHT};
                 border-top: 1px solid {_TEAL_BORDER};
                 border-bottom: 1px solid {_TEAL_BORDER};
@@ -865,8 +870,28 @@ class StatPearlsPanel(QWidget):
             base + "QPushButton{border-top-right-radius:11px;"
                    "border-bottom-right-radius:11px;}")
 
-    def _refresh_home_ui(self) -> None:
+    def _refresh_home_ui(self, url: str = "") -> None:
+        """Point the pills at whichever site is actually loaded.
+
+        They used to render the `pearlsHomePage` preference, which is
+        only what the Home button will do next - so opening a DrugBank
+        drug from a popup left "StatPearls" lit while a DrugBank page
+        was on screen. The pills are the panel's most visible piece of
+        state and they were showing the wrong thing whenever the two
+        disagreed. The preference itself is untouched here; it changes
+        only when the user clicks a pill.
+        """
         choice = self._current_home_choice()
+        if not url:
+            try:
+                url = self._view.url().toString()
+            except Exception:
+                url = ""
+        low = (url or "").lower()
+        if "drugbank.com" in low:
+            choice = "drugbank"
+        elif "ncbi.nlm.nih.gov" in low:
+            choice = "statpearls"
         self._btn_sp.setChecked(choice == "statpearls")
         self._btn_db.setChecked(choice == "drugbank")
         self._btn_home.setToolTip(f"Home ({self._current_home_label()})")
@@ -881,7 +906,12 @@ class StatPearlsPanel(QWidget):
             _config.set_value("pearlsHomePage", choice)
         except Exception as exc:
             _log.error("pearls set site", exc)
-        self._refresh_home_ui()
+        # Light the pill for the site just chosen, not the one still on
+        # screen: now that the pills follow the loaded URL, refreshing
+        # from the current page would bounce the highlight straight back
+        # until the navigation lands. `_on_url_changed` takes over once
+        # it does.
+        self._refresh_home_ui(self._current_home_url())
         # Already browsing that site? Record the preference and stay put.
         # Reloading DrugBank's home over a DrugBank monograph costs a
         # Cloudflare round trip and throws away the page you were
@@ -1239,6 +1269,10 @@ class StatPearlsPanel(QWidget):
             pass
         try:
             self._cache_resolved(url.toString())
+        except Exception:
+            pass
+        try:
+            self._refresh_home_ui(url.toString())
         except Exception:
             pass
         try:

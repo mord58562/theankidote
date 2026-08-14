@@ -259,14 +259,21 @@ def _nav_btn_qss() -> str:
 
 
 def _house_label_qss() -> str:
-    """Stylesheet for the header's House-quote pill."""
+    """Stylesheet for the header's House quote.
+
+    The pill this used to sit in was a mistake in dark mode: a filled,
+    outlined chip in bright teal is how you style a control, so the
+    quote announced itself as a feature every time it fired. An easter
+    egg should be noticed by someone who is looking at the header, not
+    demand attention from someone using it. Plain italic text at a
+    contrast that clears AA and no further does that; the chrome is
+    gone entirely.
+    """
     return (
         "QLabel {"
         f" color: {_QUOTE_TXT}; font-style: italic;"
-        " font-size: 12px; font-weight: 500; letter-spacing: .2px;"
-        " padding: 3px 9px; border-radius: 9px;"
-        f" background: {_TEAL_DIM};"
-        f" border: 1px solid {_TEAL_BORDER}; }}"
+        " font-size: 12px; font-weight: 400; letter-spacing: .2px;"
+        " padding: 0 4px; background: transparent; border: none; }"
     )
 
 # CSS-only adblock for chat sites.  Hides the most common upsell/banner
