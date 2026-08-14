@@ -512,6 +512,9 @@ class StatPearlsPanel(QWidget):
         # current card so the next card gets a fresh list, and cleared
         # by the toolbar button so re-opening the panel brings it back.
         self._articles_dismissed = False
+        # How many times we have let a Cloudflare challenge keep going
+        # on the current navigation.
+        self._challenge_waits = 0
 
         outer = QVBoxLayout(self)
         outer.setContentsMargins(0, 0, 0, 0)
@@ -601,6 +604,9 @@ class StatPearlsPanel(QWidget):
         # Render StatPearls and DrugBank dark when Anki is dark, using
         # Chromium's own auto-dark pass - see _webengine.set_dark_mode.
         _webengine.set_dark_mode(self._page, _DARK)
+        # Let Cloudflare's challenge body through instead of having Qt
+        # swap it for an error page - see _webengine.disable_error_pages.
+        _webengine.disable_error_pages(self._page)
 
         # Renderer crash recovery - same pattern as the UTD dock.
         try:
@@ -1121,6 +1127,33 @@ class StatPearlsPanel(QWidget):
             _log.debug(f"section scroll failed: {exc}")
         self._pending_section = ""
 
+    def _show_challenge_error(self, url: str) -> None:
+        """Cloudflare's check never finished.
+
+        Distinct from the generic load error because the remedy is
+        different: retrying inside the webview will hit the same check,
+        whereas the system browser shares nothing with this profile and
+        usually passes first time. Once it does, the cookie is not
+        shared back - so the honest advice is to read it there."""
+        safe = (url or "").replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
+        self._page.setHtml(
+            "<html><body style=\"margin:0;background:#162d45;color:#eaf3f8;"
+            "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
+            "padding:34px 30px;line-height:1.6;\">"
+            "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
+            "DrugBank\u2019s bot check didn\u2019t finish</div>"
+            "<div style=\"opacity:.85;\">Cloudflare is still verifying this "
+            "request. It sometimes clears on a second attempt; if it "
+            "doesn\u2019t, opening the page in your normal browser will "
+            "work.</div>"
+            f"<div style=\"margin-top:18px;\"><a href=\"{safe}\" "
+            "style=\"color:#5dd5df;\">Try again</a></div>"
+            f"<div style=\"margin-top:22px;font-size:12px;opacity:.55;"
+            f"word-break:break-all;\">{safe}</div>"
+            "</body></html>",
+            QUrl(url or "about:blank"),
+        )
+
     def _show_load_error(self, url: str) -> None:
         """Replace the blank grey rectangle with something actionable."""
         safe = (url or "").replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
@@ -1256,60 +1289,139 @@ class StatPearlsPanel(QWidget):
         except Exception as exc:
             _log.diag(f"{tag} probe failed: {exc}")
 
-    def _on_load_finished(self, _ok: bool):
-        # A failed navigation leaves the view on chrome-error://chromewebdata/,
-        # which renders as a blank grey panel with no indication of what went
-        # wrong.  Retry once (NCBI throttles bursts of requests, and the retry
-        # almost always succeeds), then fall back to a readable message.
+    # What a failed navigation left behind.  `chrome-error` is Qt's own
+    # error page; a Cloudflare interstitial identifies itself by title
+    # and by the challenge container it injects.
+    _FAILED_PROBE_JS = r"""
+    (function () {
+      try {
+        var b = document.body;
+        var t = (document.title || "");
+        var txt = b ? (b.innerText || "") : "";
+        return JSON.stringify({
+          url: location.href,
+          title: t,
+          len: b ? b.innerHTML.length : 0,
+          challenge: /just a moment|checking your browser|attention required/i
+                       .test(t)
+                     || !!document.querySelector(
+                          "#challenge-running, #cf-challenge-running, "
+                          + "#challenge-form, .cf-browser-verification")
+        });
+      } catch (e) { return ""; }
+    })()
+    """
+
+    # How long to let a challenge work before giving up on it, and how
+    # often to look.  Cloudflare's managed check is normally done inside
+    # five seconds; the ceiling is generous because the alternative -
+    # navigating away - restarts the whole thing.
+    _CHALLENGE_MAX_WAITS = 8
+    _CHALLENGE_INTERVAL = 1200
+
+    def _probe_failed_load(self, cur: str) -> None:
         try:
-            cur = self._view.url().toString()
+            self._page.runJavaScript(
+                self._FAILED_PROBE_JS,
+                lambda r: self._judge_failed_load(r, cur))
+        except Exception as exc:
+            _log.diag(f"failed-load probe error: {exc}")
+            self._retry_or_give_up(cur)
+
+    def _judge_failed_load(self, raw, cur: str) -> None:
+        """Decide whether a failed navigation actually left us somewhere.
+
+        Three outcomes.  A challenge page is left alone and re-checked,
+        because it is mid-way through doing its job and any navigation
+        we start throws that work away.  A page with real content is
+        treated as loaded, since a non-200 status with a usable body is
+        the server talking to us, not a failure.  Anything else falls
+        through to the old retry-then-explain path.
+        """
+        info = {}
+        try:
+            info = json.loads(raw) if raw else {}
         except Exception:
-            cur = ""
-        if not _ok or cur.startswith("chrome-error"):
-            # Retry what actually failed.  `_pending_url` is only set by
-            # `load_url` (the popup "Open article" path) and survives
-            # until the next one, so using it here meant a failed
-            # in-page navigation - a DrugBank search, most visibly -
-            # retried whatever StatPearls chapter had last been opened
-            # and dumped the reader back on it.  `requestedUrl` is the
-            # URL Chromium was asked for, and is still correct on the
-            # chrome-error page.
-            requested = ""
-            try:
-                requested = self._page.requestedUrl().toString()
-            except Exception:
-                pass
-            if requested.startswith("chrome-error") or requested == "about:blank":
-                requested = ""
-            target = requested or getattr(self, "_pending_url", "") \
-                or self._current_home_url()
-            # A navigation that was superseded - the home page still
-            # loading when the user clicks a link, which is the common
-            # case - reports ok=False for the abandoned one.  That is
-            # normal, not a failure: something newer is already on its
-            # way, and retrying would fight it.
-            if getattr(self, "_load_queued", False):
-                _log.diag(f"load superseded (url={cur[:100]!r})")
+            info = {}
+        url = (info.get("url") or cur or "")
+        length = int(info.get("len") or 0)
+        _log.diag(f"failed-load probe: {info}")
+
+        if info.get("challenge"):
+            n = getattr(self, "_challenge_waits", 0)
+            if n < self._CHALLENGE_MAX_WAITS:
+                self._challenge_waits = n + 1
+                _log.diag(f"challenge in progress, waiting ({n + 1})")
+                QTimer.singleShot(
+                    self._CHALLENGE_INTERVAL,
+                    lambda: self._recheck_challenge(cur))
                 return
-            if getattr(self, "_load_retries", 0) < 1:
-                self._load_retries = getattr(self, "_load_retries", 0) + 1
-                # Recorded to the diagnostic file rather than stderr:
-                # Anki turns anything on stderr into a modal error report,
-                # and a retry that then succeeds is not something to
-                # interrupt the user for.
-                _log.diag(f"load failed (ok={_ok}, url={cur[:100]!r}); retrying")
-                QTimer.singleShot(900, lambda: self._do_load(target))
-            else:
-                _log.warn(f"load failed twice: {target[:100]!r}")
-                self._show_load_error(target)
+            _log.warn(f"challenge did not clear: {url[:100]!r}")
+            self._show_challenge_error(url)
             return
+
+        if length > 400 and not url.startswith(("chrome-error", "about:blank")):
+            # The body is real.  Treat this exactly like a good load.
+            _log.diag(f"non-200 with content, accepting: {url[:100]!r}")
+            self._crash_count = 0
+            self._pending_url = ""
+            self._finish_good_load(url)
+            return
+
+        self._retry_or_give_up(cur)
+
+    def _recheck_challenge(self, cur: str) -> None:
+        """Look again after letting the challenge run.
+
+        If it cleared, the page navigated itself and loadFinished has
+        already fired for the real page, so there is nothing to do."""
+        try:
+            now = self._view.url().toString()
+        except Exception:
+            now = cur
+        if now != cur and not now.startswith("chrome-error"):
+            _log.diag(f"challenge cleared -> {now[:100]!r}")
+            return
+        self._probe_failed_load(cur)
+
+    def _retry_or_give_up(self, cur: str) -> None:
+        requested = ""
+        try:
+            requested = self._page.requestedUrl().toString()
+        except Exception:
+            pass
+        if requested.startswith("chrome-error") or requested == "about:blank":
+            requested = ""
+        target = requested or getattr(self, "_pending_url", "") \
+            or self._current_home_url()
+        if getattr(self, "_load_retries", 0) < 1:
+            self._load_retries = getattr(self, "_load_retries", 0) + 1
+            # Recorded to the diagnostic file rather than stderr: Anki
+            # turns anything on stderr into a modal error report, and a
+            # retry that then succeeds is not something to interrupt
+            # the user for.
+            _log.diag(f"load failed (url={cur[:100]!r}); retrying {target[:100]!r}")
+            QTimer.singleShot(900, lambda: self._do_load(target))
+        else:
+            _log.warn(f"load failed twice: {target[:100]!r}")
+            self._show_load_error(target)
+
+    def _finish_good_load(self, cur: str) -> None:
+        """Everything that happens once a page is genuinely on screen.
+
+        Split out of `_on_load_finished` so the accept-a-non-200-with-
+        a-body path runs exactly the same steps: a Cloudflare-cleared
+        DrugBank page still needs the auto-jump, the section scroll and
+        the banner cleanup, and duplicating that list is how the two
+        paths drift apart.
+        """
         self._crash_count = 0
         # The intent that `load_url` recorded has now been satisfied.
         # Leaving it set turns it into a stale fallback for every later
         # navigation the user makes themselves.
         if cur and not cur.startswith("chrome-error"):
             self._pending_url = ""
-        _log.diag(f"loadFinished ok={_ok} url={cur[:120]!r}")
+        _log.diag(f"loadFinished url={cur[:120]!r}")
         try:
             vs = self._view.size()
             cs = self._page.contentsSize()
@@ -1349,4 +1461,32 @@ class StatPearlsPanel(QWidget):
                 self._page.runJavaScript(_HIDE_BOOKSHELF_BAR_JS)
         except Exception:
             pass
+
+    def _on_load_finished(self, _ok: bool):
+        # A failed navigation leaves the view on chrome-error://chromewebdata/,
+        # which renders as a blank grey panel with no indication of what went
+        # wrong.  Retry once (NCBI throttles bursts of requests, and the retry
+        # almost always succeeds), then fall back to a readable message.
+        try:
+            cur = self._view.url().toString()
+        except Exception:
+            cur = ""
+        if not _ok or cur.startswith("chrome-error"):
+            # A navigation that was superseded - the home page still
+            # loading when the user clicks a link, which is the common
+            # case - reports ok=False for the abandoned one.  That is
+            # normal, not a failure: something newer is already on its
+            # way, and retrying would fight it.
+            if getattr(self, "_load_queued", False):
+                _log.diag(f"load superseded (url={cur[:100]!r})")
+                return
+            # ok=False covers both "nothing arrived" and "the server
+            # answered with an error status", and those need opposite
+            # handling.  Cloudflare's challenge is an HTTP 403 whose
+            # body is the thing that has to run, so ask the page what
+            # it actually contains before calling this a failure.
+            self._challenge_waits = 0
+            self._probe_failed_load(cur)
+            return
+        self._finish_good_load(cur)
 

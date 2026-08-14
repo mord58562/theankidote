@@ -79,13 +79,6 @@ _DEFAULTS = {
     "shortcutSendSelectionToChat": "Ctrl+Shift+K",
     "shortcutSendCardToChat": "Ctrl+Shift+J",
     "sendShortcutMigrated": False,
-    # Toggles verbose logging plus the diagnostics entries in the Tools
-    # submenu. Kept out of the Shortcuts tab on purpose - it is a
-    # developer control - but configurable, because a hardcoded chord
-    # another add-on has claimed leaves no way in. Set
-    # `diagnosticsUnlocked` to true by hand if the chord is unavailable.
-    "shortcutDiagnostics": "Ctrl+Alt+Shift+D",
-    "diagnosticsUnlocked": False,
     # Port DevTools listens on when Anki is relaunched with the web
     # inspector enabled. Only ever read at the moment of that relaunch -
     # the inspector itself is never persisted, so a normal restart
@@ -104,8 +97,8 @@ _DEFAULTS = {
     "dockState_uptodate": False,
     "dockState_chat":     False,
 
-    # Verbose logging.  Off by default; users flip this to True when
-    # filing bug reports so we get full tracebacks.
+    # Verbose logging.  Off by default; flipped from Settings >
+    # Advanced when filing a bug report so we get full tracebacks.
     "debug": False,
 
     # Internal first-run flags.

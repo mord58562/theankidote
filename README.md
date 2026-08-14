@@ -267,11 +267,9 @@ hides it for that card only.
 
 ## Debugging
 
-`Ctrl+Alt+Shift+D` (`⌘⌥⇧D` on macOS) toggles verbose logging and adds
-**Show diagnostic log** and **Web inspector** under Tools > The
-AnkiDote. If another add-on has claimed that chord, change
-`shortcutDiagnostics` in the config, or just set `diagnosticsUnlocked`
-to `true` there directly. The inspector needs Anki to restart, because Qt reads the
+**Settings > Advanced** holds the developer controls: a verbose-logging
+switch, **Show log** (reveals the log file in your file manager), and
+**Web inspector**. The inspector needs Anki to restart, because Qt reads the
 remote-debugging setting once at startup; the entry handles that and
 warns you first, since the port can drive every webview in the process.
 It is never persisted - a normal restart leaves it off.

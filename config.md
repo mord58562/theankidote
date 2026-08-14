@@ -162,7 +162,6 @@ profile cookie store keeps you signed in across restarts.
 | `shortcutSendSelectionToChat` | string | `"Ctrl+Shift+K"` | Copy the current selection and open the chat dock. Was `Ctrl+Shift+P`, which is Anki's Switch Profile shortcut. |
 | `shortcutSendCardToChat` | string | `"Ctrl+Shift+J"` | Copy everything visible on the current card and open the chat dock. |
 | `sendShortcutMigrated` | bool | `false` | Internal: whether the one-time prompt about the changed send-to-chat shortcut has been shown. |
-| `diagnosticsUnlocked` | bool | `false` | Internal. |
 | `dockSide` | `"right"` / `"left"` | `"right"` | Which side all docks appear on. |
 | `minWidth` | int | `400` | Minimum dock width (pixels). |
 | `toolbarOrder` | list | `["chat", "uptodate"]` | Left-to-right display order of the chat and UpToDate toolbar buttons. Edited in Settings via a drag-list. The pearls crown sits separately at the toolbar's right edge. |
@@ -183,7 +182,5 @@ manually if you want to, but you usually don't need to.
 | `firstRunDone` | bool | `false` | Set to `true` after the welcome dialog has been completed. Toggle it back to `false` (or use Tools → The AnkiDote → "Run setup again…") to re-trigger the dialog. |
 | `tourSeen` | bool | `false` | Legacy flag from when the welcome dialog and the post-install tour were separate. Retained for forward-compatibility but no longer used. |
 | `lastSeenVersion` | string / null | `null` | Human version of the last release this install ran. Drives one-time upgrade notices; not intended for manual editing. |
-| `webInspectorPort` | int | `9222` | Port DevTools binds to when Anki is relaunched with the web inspector on (Tools > The AnkiDote, once diagnostics are unlocked). Read only at that relaunch; the inspector is never persisted, so a normal restart leaves it off. |
-| `shortcutDiagnostics` | string | `"Ctrl+Alt+Shift+D"` | Toggles verbose logging and the diagnostics entries in Tools > The AnkiDote. Not shown in the Shortcuts tab. Clear it to disable, or change it if another add-on has claimed the chord. |
-| `diagnosticsUnlocked` | bool | `false` | Whether the diagnostics entries are shown. Set to `true` by hand if the chord above is unavailable. |
+| `webInspectorPort` | int | `9222` | Port DevTools binds to when Anki is relaunched with the web inspector on (Settings > Advanced). Read only at that relaunch; the inspector is never persisted, so a normal restart leaves it off. |
 | `dockState_pearls` / `dockState_uptodate` / `dockState_chat` | bool | `false` | Last-seen visibility of each dock. Only consulted when `rememberDockState` is `true`. |

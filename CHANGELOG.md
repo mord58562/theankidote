@@ -5,6 +5,37 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.3] - 2026-08-14
+
+### Fixed
+
+- **DrugBank search works.** Qt's `ErrorPageEnabled` was throwing away
+  the one thing that made the request succeed. Cloudflare's managed
+  challenge is an HTTP 403 whose *body* is the interstitial that runs
+  the check and then redirects - and Qt, seeing a 403, discarded that
+  body and navigated to its own error page, so the challenge could
+  never run. Error pages are now off for the reference panel, and a
+  failed navigation asks the page what it actually contains before
+  calling it a failure: a challenge is left alone and re-checked for up
+  to ten seconds, a non-200 carrying a real body is treated as loaded,
+  and only a genuinely empty page retries. This is why the home page
+  loaded fine while every search failed - the home page returns 200.
+
+### Changed
+
+- **Diagnostics have moved to Settings > Advanced.** They were behind an
+  undocumented `Ctrl+Alt+Shift+D` chord, which was a bad trade twice
+  over: the chord competed with whatever else you have bound and had no
+  visible failure mode when it lost, and a control nobody can find is
+  not usable even when it does work. The tab holds a verbose-logging
+  switch, **Show log**, and **Web inspector**.
+
+### Removed
+
+- `shortcutDiagnostics` and `diagnosticsUnlocked`. Both existed only to
+  reach a hidden menu that no longer exists. Leftover values in an
+  existing config are ignored.
+
 ## [1.4.2] - 2026-08-14
 
 ### Added

@@ -36,9 +36,7 @@
     "tourSeen": false,
     "shortcutSendCardToChat": "Ctrl+Shift+J",
     "sendShortcutMigrated": false,
-    "diagnosticsUnlocked": false,
     "chatAutoPaste": true,
     "lastSeenVersion": null,
-    "webInspectorPort": 9222,
-    "shortcutDiagnostics": "Ctrl+Alt+Shift+D"
+    "webInspectorPort": 9222
 }

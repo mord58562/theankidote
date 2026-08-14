@@ -152,15 +152,13 @@ _pearls_panel = None
 _DEFAULT_SEND_SEL = "Ctrl+Shift+K"
 _DEFAULT_SEND_CARD = "Ctrl+Shift+J"
 _LEGACY_SEND_SEL = "Ctrl+Shift+P"
-_DEFAULT_DIAG_SEQ = "Ctrl+Alt+Shift+D"
 # Read from manifest.json so there is one place to bump.  Used only to
 # decide whether an install has already seen a given release's one-time
 # notices - see `_maybe_show_upgrade_notice`.
-_ADDON_VERSION = "1.4.2"
+_ADDON_VERSION = "1.4.3"
 # QShortcut objects are owned by Python; without a reference they are
 # collected and the binding silently stops working.
 _shortcut_refs: list = []
-_diag_shortcut = None  # fixed chord, never rebound
 _last_opened_card_id: "int | None" = None
 # Explicit visibility flag - Qt's show()/hide() are async, so QDockWidget.
 # isVisible() reports stale state for ~one event-loop tick after a toggle.
@@ -759,21 +757,6 @@ def _setup() -> None:
     # Settings can re-apply them without a restart.
     _rebind_shortcuts()
 
-    # Diagnostics toggle.  Deliberately an awkward chord so it cannot be
-    # hit by accident, and kept out of the Shortcuts tab so it stays
-    # undiscoverable - but read from config all the same, because a
-    # hardcoded chord that another add-on has already claimed leaves no
-    # way in at all.  Setting `diagnosticsUnlocked` to true by hand is
-    # the documented fallback.
-    global _diag_shortcut
-    diag_seq = _config.get("shortcutDiagnostics")
-    if diag_seq is None:
-        diag_seq = _DEFAULT_DIAG_SEQ
-    if diag_seq:
-        _diag_shortcut = _make_shortcut(
-            diag_seq, _unlock_diagnostics, "shortcutDiagnostics")
-        _log.debug(f"diagnostics chord bound to {diag_seq!r}")
-
     # Tools menu submenu.
     try:
         from PyQt6.QtWidgets import QMenu
@@ -809,13 +792,6 @@ def _setup() -> None:
     rerun_action = QAction("Run setup again...", mw)
     rerun_action.triggered.connect(_force_first_run)
     submenu.addAction(rerun_action)
-
-    # Diagnostics live behind _unlock_diagnostics; the entry is added to
-    # this submenu only once unlocked.
-    global _tad_submenu
-    _tad_submenu = submenu
-    if _config.get("diagnosticsUnlocked"):
-        _add_diagnostics_action()
 
     _reviewer.register_hooks()
     _extras.register()
@@ -1345,6 +1321,50 @@ def _build_shortcuts_group(_w):
     return box, edits
 
 
+def _build_advanced_group(_w):
+    """Developer controls, in the open.
+
+    These lived behind an undocumented `Ctrl+Alt+Shift+D` chord until
+    1.4.3, which was a bad trade twice over: the chord was competing
+    with whatever else the user has bound and had no visible failure
+    mode when it lost, and a control nobody can find is not usable even
+    when it works. A clearly-labelled Advanced tab costs one tab and
+    can't silently fail.
+    """
+    box = _w["QGroupBox"]("Diagnostics")
+    lay = _w["QVBoxLayout"](box)
+    lay.setSpacing(6)
+
+    debug_cb = _w["QCheckBox"]("Verbose logging")
+    debug_cb.setChecked(bool(_config.get("debug")))
+    debug_cb.setToolTip(
+        "Records navigation, term resolution and load failures to a log\n"
+        "file. Useful when reporting a problem; off costs nothing either "
+        "way.")
+    lay.addWidget(debug_cb)
+    lay.addWidget(_caption(_w, "Records what the add-on is doing, for bug "
+                               "reports.", wrap=True))
+
+    row = _w["QHBoxLayout"]()
+    log_btn = _w["QPushButton"]("Show log...")
+    log_btn.clicked.connect(_reveal_diagnostic_log)
+    row.addWidget(log_btn)
+
+    insp_btn = _w["QPushButton"]("Web inspector...")
+    insp_btn.clicked.connect(_open_web_inspector)
+    row.addWidget(insp_btn)
+    row.addStretch(1)
+    lay.addLayout(row)
+
+    port = _inspector_port()
+    lay.addWidget(_caption(
+        _w,
+        f"Inspector is running on port {port}." if port else
+        "Chrome DevTools for the three sidebars. Needs Anki to restart.",
+        wrap=True))
+    return box, debug_cb
+
+
 def _build_misc_group(_w):
     box = _w["QGroupBox"]("Other")
     lay = _w["QVBoxLayout"](box)
@@ -1353,7 +1373,6 @@ def _build_misc_group(_w):
     )
     remember_cb.setChecked(bool(_config.get("rememberDockState")))
     lay.addWidget(remember_cb)
-    # Diagnostics are deliberately not surfaced here; see _unlock_diagnostics.
     return box, remember_cb, None
 
 
@@ -1402,6 +1421,9 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     shortcuts_box, shortcut_edits = _build_shortcuts_group(_w)
     tabs.addTab(_tab(shortcuts_box), "Shortcuts")
 
+    advanced_box, debug_cb = _build_advanced_group(_w)
+    tabs.addTab(_tab(advanced_box), "Advanced")
+
     # Anki states this once, quietly, and lets people restart when it
     # suits them - rather than a modal asking permission to quit their
     # app the moment they change a checkbox.
@@ -1433,6 +1455,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     _config.set_value("chatAutoPaste", autopaste_cb.isChecked())
     _config.set_value("customTerms", terms_state["raw"].strip() or None)
     _config.set_value("rememberDockState", remember_cb.isChecked())
+    _config.set_value("debug", debug_cb.isChecked())
 
     order = []
     for i in range(toolbar_order_list.count()):
@@ -1683,62 +1706,6 @@ def _open_web_inspector() -> None:
             _relaunch_anki({_INSPECTOR_ENV: want})
     except Exception as exc:
         _log.error("open web inspector", exc)
-
-
-_tad_submenu = None
-_diag_action = None
-_inspector_action = None
-
-
-def _add_diagnostics_action() -> None:
-    """Put the diagnostics entry in the Tools submenu."""
-    global _diag_action
-    try:
-        if _tad_submenu is None or _diag_action is not None:
-            return
-        from aqt.qt import QAction as _QAction
-        _diag_action = _QAction("Show diagnostic log...", mw)
-        _diag_action.triggered.connect(_reveal_diagnostic_log)
-        _tad_submenu.addSeparator()
-        _tad_submenu.addAction(_diag_action)
-
-        global _inspector_action
-        port = _inspector_port()
-        _inspector_action = _QAction(
-            f"Web inspector (port {port})..." if port
-            else "Web inspector (needs restart)...", mw)
-        _inspector_action.triggered.connect(_open_web_inspector)
-        _tad_submenu.addAction(_inspector_action)
-    except Exception as exc:
-        _log.error("add diagnostics action", exc)
-
-
-def _unlock_diagnostics() -> None:
-    """Toggle the hidden diagnostics entry.
-
-    Not documented and not discoverable: the log is a developer tool and
-    an extra menu item nobody uses is clutter for everyone else.
-    """
-    global _diag_action, _inspector_action
-    try:
-        on = not bool(_config.get("diagnosticsUnlocked"))
-        _config.set_value("diagnosticsUnlocked", on)
-        _config.set_value("debug", on)
-        from aqt.utils import tooltip
-        if on:
-            _add_diagnostics_action()
-            tooltip("Diagnostics on - Tools > The AnkiDote.", period=2500)
-        else:
-            for act in (_diag_action, _inspector_action):
-                if act is not None:
-                    try:
-                        _tad_submenu.removeAction(act)
-                    except Exception:
-                        pass
-            _diag_action = _inspector_action = None
-            tooltip("Diagnostics off.", period=1800)
-    except Exception as exc:
-        _log.error("unlock diagnostics", exc)
 
 
 def _reveal_diagnostic_log() -> None:

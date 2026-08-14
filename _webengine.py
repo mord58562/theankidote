@@ -87,6 +87,34 @@ def apply_to_profile(profile: "QWebEngineProfile") -> None:
     # Cloudflare lets through.
 
 
+def disable_error_pages(page_or_profile) -> bool:
+    """Stop Qt replacing an HTTP error response with its own error page.
+
+    `ErrorPageEnabled` is on by default, and it does not distinguish a
+    network failure from a server that answered with a 4xx *and a body
+    that matters*.  Cloudflare's managed challenge is exactly that: an
+    HTTP 403 carrying the interstitial page whose JavaScript performs
+    the check and then redirects to the real content.  With error pages
+    on, Chromium throws that body away and navigates to
+    `chrome-error://chromewebdata/`, so the challenge can never run and
+    the request can never succeed - which is why DrugBank's search
+    endpoint failed every time while its home page loaded fine.
+
+    Turning this off means a genuine failure now leaves a blank page
+    rather than Chromium's error text, so the caller has to decide for
+    itself whether a failed load left anything usable behind - see
+    `StatPearlsPanel._judge_failed_load`.
+    """
+    try:
+        attr = getattr(QWebEngineSettings.WebAttribute, "ErrorPageEnabled", None)
+        if attr is None:
+            return False
+        page_or_profile.settings().setAttribute(attr, False)
+        return True
+    except Exception:
+        return False
+
+
 def set_dark_mode(page_or_profile, dark: bool) -> bool:
     """Turn Chromium's own auto-dark rendering on or off.
 
