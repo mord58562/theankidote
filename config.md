@@ -154,7 +154,10 @@ profile cookie store keeps you signed in across restarts.
 | `shortcutToggleUptodate` | string | `"Ctrl+Shift+U"` | Toggle the UTD dock. |
 | `shortcutToggleChat` | string | `"Ctrl+Shift+A"` | Toggle the AI chat dock. |
 | `shortcutSearchSelection` | string | `"Ctrl+Shift+L"` | Search the current selection in UpToDate. |
-| `shortcutSendSelectionToChat` | string | `"Ctrl+Shift+P"` | Copy the current selection and open the chat dock. |
+| `shortcutSendSelectionToChat` | string | `"Ctrl+Shift+K"` | Copy the current selection and open the chat dock. Was `Ctrl+Shift+P`, which is Anki's Switch Profile shortcut. |
+| `shortcutSendCardToChat` | string | `"Ctrl+Shift+J"` | Copy everything visible on the current card and open the chat dock. |
+| `sendShortcutMigrated` | bool | `false` | Internal: whether the one-time prompt about the changed send-to-chat shortcut has been shown. |
+| `diagnosticsUnlocked` | bool | `false` | Internal. |
 | `dockSide` | `"right"` / `"left"` | `"right"` | Which side all docks appear on. |
 | `minWidth` | int | `400` | Minimum dock width (pixels). |
 | `toolbarOrder` | list | `["chat", "uptodate"]` | Left-to-right display order of the chat and UpToDate toolbar buttons. Edited in Settings via a drag-list. The pearls crown sits separately at the toolbar's right edge. |

@@ -8,10 +8,9 @@ try:
     from PyQt6.QtCore import Qt, QUrl, QSize, pyqtSignal
     from PyQt6.QtWidgets import (
         QHBoxLayout, QLabel, QListWidget, QListWidgetItem,
-        QMenu, QPushButton, QToolButton, QVBoxLayout, QWidget,
+        QMenu, QPushButton, QVBoxLayout, QWidget,
     )
     from PyQt6.QtGui import QAction
-    _TB_POPUP = QToolButton.ToolButtonPopupMode.MenuButtonPopup
     from PyQt6.QtWebEngineWidgets import QWebEngineView
     from PyQt6.QtWebEngineCore import (
         QWebEnginePage, QWebEngineProfile, QWebEngineSettings,
@@ -22,9 +21,8 @@ except (ImportError, AttributeError):
     from PyQt5.QtCore import Qt, QUrl, QSize, pyqtSignal
     from PyQt5.QtWidgets import (
         QAction, QHBoxLayout, QLabel, QListWidget, QListWidgetItem,
-        QMenu, QPushButton, QToolButton, QVBoxLayout, QWidget,
+        QMenu, QPushButton, QVBoxLayout, QWidget,
     )
-    _TB_POPUP = QToolButton.MenuButtonPopup
     from PyQt5.QtWebEngineWidgets import (
         QWebEngineView, QWebEnginePage, QWebEngineProfile, QWebEngineSettings,
     )
@@ -286,18 +284,6 @@ def _rebuild_qss() -> None:
         "QPushButton:disabled{"
             f"color:{_MUTED};}}"
     )
-    g["_HOME_BTN_QSS"] = (
-        "QToolButton{"
-            f"background:transparent;color:{_TEAL};"
-            "border:none;border-radius:4px;font-size:17px;font-weight:bold;"
-            "padding-right:14px;}"
-        "QToolButton:hover{"
-            f"background:{_TEAL_DIM};color:{_TEAL};}}"
-        "QToolButton::menu-button{"
-            "background:transparent;border:none;width:12px;}"
-        "QToolButton::menu-arrow{"
-            f"image:none;}}"
-    )
     g["_CLOSE_BTN_QSS"] = (
         "QPushButton{"
             f"background:transparent;color:{_HEADER_TXT};"
@@ -458,24 +444,33 @@ class StatPearlsPanel(QWidget):
         self._btn_back     = _nav_btn(header, "‹", "Back")
         self._btn_forward  = _nav_btn(header, "›", "Forward")
         self._btn_reload   = _nav_btn(header, "↺", "Reload")
-        self._btn_home     = QToolButton(header)
-        self._btn_home.setText("⌂")
-        self._btn_home.setFixedSize(40, 28)
-        self._btn_home.setPopupMode(_TB_POPUP)
-        self._btn_home.setStyleSheet(_HOME_BTN_QSS)
-        self._home_menu = QMenu(self._btn_home)
-        self._act_home_statpearls = QAction("StatPearls home", self._btn_home)
-        self._act_home_drugbank   = QAction("DrugBank home",   self._btn_home)
-        self._act_home_statpearls.setCheckable(True)
-        self._act_home_drugbank.setCheckable(True)
-        self._act_home_statpearls.triggered.connect(
-            lambda: self._set_home_choice("statpearls"))
-        self._act_home_drugbank.triggered.connect(
-            lambda: self._set_home_choice("drugbank"))
-        self._home_menu.addAction(self._act_home_statpearls)
-        self._home_menu.addAction(self._act_home_drugbank)
-        self._btn_home.setMenu(self._home_menu)
+        self._btn_home     = _nav_btn(header, "⌂", "Home")
+        self._btn_home.clicked.connect(self._go_home)
+
+        # Segmented site switch.  Which site you are on is the single
+        # most important piece of state in this panel and it used to be
+        # invisible - buried in a dropdown hanging off the home button,
+        # so switching to DrugBank to run a search was undiscoverable.
+        # Now it is two pills that show where you are and move you.
+        self._seg = QWidget(header)
+        seg_lay = QHBoxLayout(self._seg)
+        seg_lay.setContentsMargins(0, 0, 0, 0)
+        seg_lay.setSpacing(0)
+        self._btn_sp = QPushButton("StatPearls", self._seg)
+        self._btn_db = QPushButton("DrugBank", self._seg)
+        for b in (self._btn_sp, self._btn_db):
+            b.setCursor(Qt.CursorShape.PointingHandCursor)
+            b.setFixedHeight(22)
+            b.setCheckable(True)
+        self._btn_sp.setToolTip("Search StatPearls")
+        self._btn_db.setToolTip("Search DrugBank")
+        self._btn_sp.clicked.connect(lambda: self._set_site("statpearls"))
+        self._btn_db.clicked.connect(lambda: self._set_site("drugbank"))
+        seg_lay.addWidget(self._btn_sp)
+        seg_lay.addWidget(self._btn_db)
+        self._style_segment()
         self._refresh_home_ui()
+
         self._btn_external = _nav_btn(header, "↗",
             "Open current page in system browser", 28)
         self._btn_back.setEnabled(False)
@@ -488,6 +483,8 @@ class StatPearlsPanel(QWidget):
         h_lay.addWidget(self._btn_forward)
         h_lay.addWidget(self._btn_reload)
         h_lay.addWidget(self._btn_home)
+        h_lay.addSpacing(8)
+        h_lay.addWidget(self._seg)
         h_lay.addStretch(1)
         h_lay.addWidget(self._btn_external)
         h_lay.addWidget(self._btn_close)
@@ -719,17 +716,37 @@ class StatPearlsPanel(QWidget):
     def _current_home_label(self) -> str:
         return "DrugBank" if self._current_home_choice() == "drugbank" else "StatPearls"
 
+    def _style_segment(self) -> None:
+        """Pill pair sharing one outline, active half filled."""
+        base = (
+            "QPushButton{border:1px solid %s;background:transparent;"
+            "color:%s;font-size:11px;font-weight:600;padding:0 11px;}"
+            "QPushButton:hover{background:%s;}"
+            "QPushButton:checked{background:%s;color:%s;}"
+        ) % (_TEAL_BORDER, _MUTED, _TEAL_DIM, _TEAL_DIM, _TEAL)
+        self._btn_sp.setStyleSheet(
+            base + "QPushButton{border-top-left-radius:11px;"
+                   "border-bottom-left-radius:11px;border-right:none;}")
+        self._btn_db.setStyleSheet(
+            base + "QPushButton{border-top-right-radius:11px;"
+                   "border-bottom-right-radius:11px;}")
+
     def _refresh_home_ui(self) -> None:
         choice = self._current_home_choice()
-        self._act_home_statpearls.setChecked(choice == "statpearls")
-        self._act_home_drugbank.setChecked(choice == "drugbank")
+        self._btn_sp.setChecked(choice == "statpearls")
+        self._btn_db.setChecked(choice == "drugbank")
         self._btn_home.setToolTip(f"Home ({self._current_home_label()})")
 
-    def _set_home_choice(self, choice: str) -> None:
+    def _set_site(self, choice: str) -> None:
+        """Switch site: navigate there now and make it the default.
+
+        Doing both is the point - previously the dropdown only changed
+        which page the home button would load *next* time, which is not
+        what anyone clicking "DrugBank" means."""
         try:
             _config.set_value("pearlsHomePage", choice)
         except Exception as exc:
-            _log.error("pearls set home choice", exc)
+            _log.error("pearls set site", exc)
         self._refresh_home_ui()
         self._go_home()
 
@@ -759,11 +776,14 @@ class StatPearlsPanel(QWidget):
         n = getattr(self, "_crash_count", 0) + 1
         self._crash_count = n
         _log.diag(f"RENDERER TERMINATED status={status} exit={exit_code} attempt={n}")
-        _log.warn(
-            f"renderer terminated (status={status}, exit={exit_code}, "
-            f"attempt={n}, url={(self._crash_url or '')[:120]!r})"
-        )
         if n > 2:
+            # Only the give-up case reaches stderr, since Anki surfaces
+            # that as a modal error report and a crash we recover from
+            # silently is not worth interrupting a review for.
+            _log.warn(
+                f"renderer terminated {n}x (status={status}, exit={exit_code}, "
+                f"url={(self._crash_url or '')[:120]!r})"
+            )
             self._show_crash_error(status, exit_code)
             return
         QTimer.singleShot(1500, self._recover_after_crash)
@@ -976,11 +996,13 @@ class StatPearlsPanel(QWidget):
                 (getattr(self, "_btn_back", None), _NAV_BTN_QSS),
                 (getattr(self, "_btn_forward", None), _NAV_BTN_QSS),
                 (getattr(self, "_btn_reload", None), _NAV_BTN_QSS),
-                (getattr(self, "_btn_home", None), _HOME_BTN_QSS),
+                (getattr(self, "_btn_home", None), _NAV_BTN_QSS),
                 (getattr(self, "_btn_close", None), _CLOSE_BTN_QSS),
             ):
                 if btn is not None:
                     btn.setStyleSheet(qss)
+            if getattr(self, "_btn_sp", None) is not None:
+                self._style_segment()
             if getattr(self, "_results", None) is not None:
                 self._results.apply_theme()
         except Exception as exc:
@@ -1076,11 +1098,24 @@ class StatPearlsPanel(QWidget):
             cur = ""
         if not _ok or cur.startswith("chrome-error"):
             target = getattr(self, "_pending_url", "") or self._current_home_url()
+            # A navigation that was superseded - the home page still
+            # loading when the user clicks a link, which is the common
+            # case - reports ok=False for the abandoned one.  That is
+            # normal, not a failure: something newer is already on its
+            # way, and retrying would fight it.
+            if getattr(self, "_load_queued", False):
+                _log.diag(f"load superseded (url={cur[:100]!r})")
+                return
             if getattr(self, "_load_retries", 0) < 1:
                 self._load_retries = getattr(self, "_load_retries", 0) + 1
-                _log.warn(f"load failed (ok={_ok}, url={cur[:100]!r}); retrying")
+                # Recorded to the diagnostic file rather than stderr:
+                # Anki turns anything on stderr into a modal error report,
+                # and a retry that then succeeds is not something to
+                # interrupt the user for.
+                _log.diag(f"load failed (ok={_ok}, url={cur[:100]!r}); retrying")
                 QTimer.singleShot(900, lambda: self._do_load(target))
             else:
+                _log.warn(f"load failed twice: {target[:100]!r}")
                 self._show_load_error(target)
             return
         self._crash_count = 0

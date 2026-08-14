@@ -121,7 +121,7 @@ in the reviewer:
   your existing Claude / ChatGPT / Gemini / Copilot / Perplexity /
   DeepSeek / Grok / Duck.ai session. No API keys, no programmatic chat
   scraping. One-click provider switching with cookies persisted per
-  provider so you can stay logged into all of them. Ctrl+Shift+P
+  provider so you can stay logged into all of them. Ctrl+Shift+K
   copies the reviewer's current text selection to the clipboard and
   opens the chat dock so you can paste straight into the prompt.
 
@@ -203,16 +203,18 @@ Highlights:
 | Toggle UpToDate              | `Ctrl+Shift+U` |
 | Toggle AI chat               | `Ctrl+Shift+A` |
 | Search selection in UpToDate | `Ctrl+Shift+L` |
-| Send selection to AI chat    | `Ctrl+Shift+P` |
+| Send selection to AI chat    | `Ctrl+Shift+K` |
+| Send whole card to AI chat   | `Ctrl+Shift+J` |
 
 On macOS, Anki maps `Ctrl` to `⌘` automatically - the bindings show as
-`⌘⇧S` etc. You can override every shortcut in `config.md`.
+`⌘⇧S` etc. Every shortcut is editable in Tools > The AnkiDote > Settings.
 
 If any of these clash with another addon you use or with an Anki default
 that matters to you (e.g. some Anki builds reserve `Ctrl+Shift+A` for the
 Add Cards dialog), set `shortcutTogglePearls`, `shortcutToggleUptodate`,
 `shortcutToggleChat`, `shortcutSearchSelection`, or
-`shortcutSendSelectionToChat` to your preferred binding in `config.md`.
+`shortcutSendSelectionToChat`, or `shortcutSendCardToChat` to your
+preferred binding in `config.md`.
 Set any one to an empty string to disable it.
 
 ## Privacy & Terms-of-Service posture

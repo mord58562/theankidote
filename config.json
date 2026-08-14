@@ -20,15 +20,21 @@
     "shortcutToggleUptodate": "Ctrl+Shift+U",
     "shortcutSearchSelection": "Ctrl+Shift+L",
     "shortcutToggleChat": "Ctrl+Shift+A",
-    "shortcutSendSelectionToChat": "Ctrl+Shift+P",
+    "shortcutSendSelectionToChat": "Ctrl+Shift+K",
     "dockSide": "right",
     "minWidth": 400,
-    "toolbarOrder": ["chat", "uptodate"],
+    "toolbarOrder": [
+        "chat",
+        "uptodate"
+    ],
     "rememberDockState": false,
     "dockState_pearls": false,
     "dockState_uptodate": false,
     "dockState_chat": false,
     "debug": false,
     "firstRunDone": false,
-    "tourSeen": false
+    "tourSeen": false,
+    "shortcutSendCardToChat": "Ctrl+Shift+J",
+    "sendShortcutMigrated": false,
+    "diagnosticsUnlocked": false
 }

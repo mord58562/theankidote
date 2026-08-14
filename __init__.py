@@ -146,6 +146,14 @@ _CROWN_ICON = (
 
 _pearls_dock: "QDockWidget | None" = None
 _pearls_panel = None
+# Ctrl+Shift+P is Anki's own Switch Profile binding, so it is no longer
+# the default here; Ctrl+Shift+K/J are free of documented Anki defaults.
+_DEFAULT_SEND_SEL = "Ctrl+Shift+K"
+_DEFAULT_SEND_CARD = "Ctrl+Shift+J"
+_LEGACY_SEND_SEL = "Ctrl+Shift+P"
+# QShortcut objects are owned by Python; without a reference they are
+# collected and the binding silently stops working.
+_shortcut_refs: list = []
 _last_opened_card_id: "int | None" = None
 # Explicit visibility flag - Qt's show()/hide() are async, so QDockWidget.
 # isVisible() reports stale state for ~one event-loop tick after a toggle.
@@ -462,49 +470,104 @@ def _on_js_message(handled, message: str, context):
 # straight into the AI input.  Pure clipboard write - no programmatic
 # message submission, in keeping with the addon's no-API-call policy.
 
+def _push_to_chat(text: str, what: str) -> None:
+    """Copy `text`, open the chat dock, and tell the user it is ready.
+
+    The add-on deliberately stops at the clipboard rather than typing
+    into the provider's composer: filling another site's input box is
+    the kind of automation the chat providers' terms are written to
+    prohibit, and it would break the moment any of the eight redesign
+    their page.  One paste is a small price for that.
+    """
+    text = (text or "").strip()
+    if not text:
+        try:
+            from aqt.utils import tooltip
+            tooltip("Nothing to send.", period=1500)
+        except Exception:
+            pass
+        return
+    try:
+        from PyQt6.QtGui import QGuiApplication
+    except (ImportError, AttributeError):
+        from PyQt5.QtGui import QGuiApplication
+    try:
+        QGuiApplication.clipboard().setText(text)
+    except Exception as exc:
+        _log.error("clipboard write", exc)
+    try:
+        from . import chat as _chat_mod
+        _chat_mod.toggle_dock_show_only()
+    except Exception as exc:
+        _log.error("send-to-chat: open dock", exc)
+    try:
+        from aqt.utils import tooltip
+        n = len(text)
+        size = f"{n} chars" if n < 1000 else f"{n // 1000}k chars"
+        tooltip(f"{what} copied ({size}). Paste into the chat.", period=1800)
+    except Exception:
+        pass
+
+
 def _send_selection_to_chat() -> None:
     if _config.get("enableChat") is False:
         return
-    try:
-        from . import chat as _chat_mod
-    except Exception as exc:
-        _log.error("send-to-chat: chat import", exc)
-        return
-
-    def _handle(text: str) -> None:
-        text = (text or "").strip()
-        if not text:
-            return
-        try:
-            try:
-                from PyQt6.QtGui import QGuiApplication
-            except (ImportError, AttributeError):
-                from PyQt5.QtGui import QGuiApplication
-            QGuiApplication.clipboard().setText(text)
-        except Exception as exc:
-            _log.error("clipboard write", exc)
-        try:
-            _chat_mod.toggle_dock_show_only()
-        except Exception as exc:
-            _log.error("send-to-chat: toggle_dock_show_only", exc)
-        try:
-            from aqt.utils import tooltip
-            tooltip("Selection copied. Paste into the chat.", period=1500)
-        except Exception:
-            pass
-
+    handle = lambda t: _push_to_chat(t, "Selection")
     try:
         if mw.state == "review" and mw.reviewer and mw.reviewer.web:
             mw.reviewer.web.page().runJavaScript(
-                "window.getSelection().toString()", _handle
+                "window.getSelection().toString()", handle
             )
             return
     except Exception as exc:
         _log.error("send-to-chat: reviewer JS", exc)
     try:
-        mw.web.page().runJavaScript("window.getSelection().toString()", _handle)
+        mw.web.page().runJavaScript("window.getSelection().toString()", handle)
     except Exception as exc:
         _log.error("send-to-chat: main JS", exc)
+
+
+# Read the card as displayed rather than from the note fields: what is
+# on screen is what the question is, cloze deletions resolved, hidden
+# fields excluded, and the answer only present once revealed.  Popup
+# and dock chrome injected by this add-on is stripped so the model does
+# not see the reference text as part of the card.
+_CARD_TEXT_JS = r"""
+(function () {
+  try {
+    var host = document.querySelector("#qa") || document.body;
+    if (!host) return "";
+    var clone = host.cloneNode(true);
+    var junk = clone.querySelectorAll(
+      "#tad-tip, .tad-tip, script, style, .replaybutton, #_tad_root");
+    for (var i = 0; i < junk.length; i++) { junk[i].remove(); }
+    var t = clone.innerText || clone.textContent || "";
+    return t.replace(/\u00a0/g, " ")
+            .replace(/[ \t]+\n/g, "\n")
+            .replace(/\n{3,}/g, "\n\n")
+            .trim();
+  } catch (e) { return ""; }
+})();
+"""
+
+
+def _send_card_to_chat() -> None:
+    """Copy everything currently visible on the card and open the chat."""
+    if _config.get("enableChat") is False:
+        return
+    if mw.state != "review" or not mw.reviewer or not mw.reviewer.web:
+        try:
+            from aqt.utils import tooltip
+            tooltip("No card is being shown.", period=1500)
+        except Exception:
+            pass
+        return
+    try:
+        mw.reviewer.web.page().runJavaScript(
+            _CARD_TEXT_JS, lambda t: _push_to_chat(t, "Card")
+        )
+    except Exception as exc:
+        _log.error("send-card-to-chat", exc)
 
 
 # ── First-run module-selection dialog ────────────────────────────────────
@@ -594,11 +657,25 @@ def _setup() -> None:
     _pearls_shortcut = QShortcut(QKeySequence(shortcut), mw)
     _pearls_shortcut.activated.connect(toggle_pearls_dock)
 
-    # Send-selection-to-chat shortcut.  Default Ctrl+Shift+P.
-    send_seq = _config.get("shortcutSendSelectionToChat") or "Ctrl+Shift+P"
+    # Send-selection-to-chat.  Ctrl+Shift+P was the old default and is
+    # Anki's own Switch Profile shortcut, so it is now Ctrl+Shift+K.
+    send_seq = _config.get("shortcutSendSelectionToChat") or _DEFAULT_SEND_SEL
     if send_seq:
-        _send_chat_shortcut = QShortcut(QKeySequence(send_seq), mw)
-        _send_chat_shortcut.activated.connect(_send_selection_to_chat)
+        sc = QShortcut(QKeySequence(send_seq), mw)
+        sc.activated.connect(_send_selection_to_chat)
+        _shortcut_refs.append(sc)
+
+    # Undocumented diagnostics toggle.  Deliberately an awkward chord so
+    # it cannot be hit by accident and does not collide with anything.
+    sc = QShortcut(QKeySequence("Ctrl+Alt+Shift+D"), mw)
+    sc.activated.connect(_unlock_diagnostics)
+    _shortcut_refs.append(sc)
+
+    card_seq = _config.get("shortcutSendCardToChat") or _DEFAULT_SEND_CARD
+    if card_seq:
+        sc = QShortcut(QKeySequence(card_seq), mw)
+        sc.activated.connect(_send_card_to_chat)
+        _shortcut_refs.append(sc)
 
     # Tools menu submenu.
     try:
@@ -636,12 +713,23 @@ def _setup() -> None:
     rerun_action.triggered.connect(_force_first_run)
     submenu.addAction(rerun_action)
 
-    log_action = QAction("Show diagnostic log...", mw)
-    log_action.triggered.connect(_reveal_diagnostic_log)
-    submenu.addAction(log_action)
+    # Diagnostics live behind _unlock_diagnostics; the entry is added to
+    # this submenu only once unlocked.
+    global _tad_submenu
+    _tad_submenu = submenu
+    if _config.get("diagnosticsUnlocked"):
+        _add_diagnostics_action()
 
     _reviewer.register_hooks()
     _extras.register()
+
+    # Deferred so it lands after the first-run dialog rather than
+    # stacking two modal windows on a fresh install.
+    try:
+        from aqt.qt import QTimer as _QTimer
+        _QTimer.singleShot(1200, _maybe_migrate_send_shortcut)
+    except Exception as exc:
+        _log.error("schedule shortcut migration", exc)
 
     if _config.get("enableUpToDate") is not False:
         try:
@@ -695,16 +783,18 @@ def _qt_imports():
             QDialog, QVBoxLayout, QHBoxLayout, QCheckBox, QDialogButtonBox,
             QLabel, QFrame, QLineEdit, QGroupBox, QPushButton, QPlainTextEdit,
             QListWidget, QListWidgetItem, QAbstractItemView,
-            QScrollArea, QWidget,
+            QScrollArea, QWidget, QGridLayout, QKeySequenceEdit, QTabWidget,
         )
+        from PyQt6.QtGui import QKeySequence
     except (ImportError, AttributeError):
         from PyQt5.QtCore import Qt as _Qt
         from PyQt5.QtWidgets import (
             QDialog, QVBoxLayout, QHBoxLayout, QCheckBox, QDialogButtonBox,
             QLabel, QFrame, QLineEdit, QGroupBox, QPushButton, QPlainTextEdit,
             QListWidget, QListWidgetItem, QAbstractItemView,
-            QScrollArea, QWidget,
+            QScrollArea, QWidget, QGridLayout, QKeySequenceEdit, QTabWidget,
         )
+        from PyQt5.QtGui import QKeySequence
     return locals()
 
 
@@ -1033,6 +1123,47 @@ def _build_order_group(_w):
     return box, lst
 
 
+_SHORTCUT_FIELDS = [
+    ("shortcutTogglePearls",       "Ctrl+Shift+S", "Toggle StatPearls / DrugBank"),
+    ("shortcutToggleUptodate",     "Ctrl+Shift+U", "Toggle UpToDate"),
+    ("shortcutToggleChat",         "Ctrl+Shift+A", "Toggle AI chat"),
+    ("shortcutSearchSelection",    "Ctrl+Shift+L", "Search selection in UpToDate"),
+    ("shortcutSendSelectionToChat", _DEFAULT_SEND_SEL,  "Send selection to AI chat"),
+    ("shortcutSendCardToChat",      _DEFAULT_SEND_CARD, "Send whole card to AI chat"),
+]
+
+
+def _build_shortcuts_group(_w):
+    """Editable key bindings.
+
+    These were documented as config-file-only, which meant the one thing
+    users most often need to change - a clash with another add-on - was
+    the one thing they had to hand-edit JSON for.
+    """
+    box = _w["QGroupBox"]("Keyboard shortcuts")
+    grid = _w["QGridLayout"](box)
+    grid.setContentsMargins(12, 10, 12, 10)
+    grid.setHorizontalSpacing(12)
+    grid.setVerticalSpacing(6)
+    edits = {}
+    for row, (key, default, label) in enumerate(_SHORTCUT_FIELDS):
+        lab = _w["QLabel"](label)
+        seq = _w["QKeySequenceEdit"]()
+        try:
+            seq.setKeySequence(_w["QKeySequence"](_config.get(key) or default))
+        except Exception:
+            pass
+        seq.setToolTip("Click, then press the keys. Clear the field to disable.")
+        grid.addWidget(lab, row, 0)
+        grid.addWidget(seq, row, 1)
+        edits[key] = seq
+    hint = _w["QLabel"]("Shortcut changes take effect after a restart.")
+    hint.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;")
+    grid.addWidget(hint, len(_SHORTCUT_FIELDS), 0, 1, 2)
+    grid.setColumnStretch(1, 1)
+    return box, edits
+
+
 def _build_misc_group(_w):
     box = _w["QGroupBox"]("Other")
     lay = _w["QVBoxLayout"](box)
@@ -1041,12 +1172,8 @@ def _build_misc_group(_w):
     )
     remember_cb.setChecked(bool(_config.get("rememberDockState")))
     lay.addWidget(remember_cb)
-    debug_cb = _w["QCheckBox"](
-        "Verbose debug logging (for bug reports)"
-    )
-    debug_cb.setChecked(bool(_config.get("debug")))
-    lay.addWidget(debug_cb)
-    return box, remember_cb, debug_cb
+    # Diagnostics are deliberately not surfaced here; see _unlock_diagnostics.
+    return box, remember_cb, None
 
 
 def _open_settings_dialog(first_run: bool = False) -> bool:
@@ -1080,18 +1207,17 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     outer.setContentsMargins(20, 18, 20, 14)
     outer.setSpacing(10)
 
-    intro_text = (
-        "Welcome.  Three reference modules - untick any you don't want."
-        if first_run else
-        "Quick module toggles are also available directly under "
-        "Tools > The AnkiDote.  Use this dialog for the deeper options "
-        "(institution URL, custom chat provider, custom popup terms, "
-        "highlight/popup behaviour, button order)."
-    )
-    intro = _w["QLabel"](intro_text)
-    intro.setWordWrap(True)
-    intro.setStyleSheet(f"color:{_theme.MUTED};font-size:12px;")
-    outer.addWidget(intro)
+    # No explanatory preamble on the settings screen: it described the
+    # dialog's own contents, which the user can already see, and pushed
+    # the actual controls below the fold.
+    if first_run:
+        intro = _w["QLabel"](
+            "Three reference modules. Untick anything you don't want - "
+            "you can change this later."
+        )
+        intro.setWordWrap(True)
+        intro.setStyleSheet(f"color:{_theme.MUTED};font-size:12px;")
+        outer.addWidget(intro)
 
     scroll = _w["QScrollArea"]()
     scroll.setWidgetResizable(True)
@@ -1109,6 +1235,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
 
     pearls_qcb = articleview_cb = utd_url_edit = chat_url_edit = None
     adblock_cb = toolbar_order_list = remember_cb = debug_cb = None
+    shortcut_edits = {}
     custom_terms_edit = None
     save_without_restart = False
 
@@ -1125,13 +1252,6 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
         utd_box, utd_url_edit = _build_utd_group(_w)
         lay.addWidget(utd_box)
 
-        outro = _w["QLabel"](
-            "Manage these and per-module options anytime via "
-            "Tools > The AnkiDote."
-        )
-        outro.setWordWrap(True)
-        outro.setStyleSheet(f"color:{_theme.MUTED};font-size:11px;padding-top:2px;")
-        lay.addWidget(outro)
         lay.addStretch(1)
     else:
         pearls_box, pearls_qcb, articleview_cb, custom_terms_edit = _build_pearls_group(_w)
@@ -1142,6 +1262,8 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
         lay.addWidget(chat_box)
         order_box, toolbar_order_list = _build_order_group(_w)
         lay.addWidget(order_box)
+        shortcuts_box, shortcut_edits = _build_shortcuts_group(_w)
+        lay.addWidget(shortcuts_box)
         misc_box, remember_cb, debug_cb = _build_misc_group(_w)
         lay.addWidget(misc_box)
 
@@ -1150,25 +1272,22 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     # Fixed footer outside the scroll area: the save-without-restart
     # checkbox and the OK/Cancel buttons stay on-screen no matter how
     # far down the user has scrolled.
-    skip_restart_cb = None
-    if not first_run:
-        sep = _w["QFrame"]()
-        sep.setFrameShape(_w["QFrame"].Shape.HLine)
-        sep.setStyleSheet(f"color:{_theme.TEAL_BORDER};")
-        outer.addWidget(sep)
-
-        skip_restart_cb = _w["QCheckBox"](
-            "Save without restarting now (apply some changes on next launch)"
-        )
-        skip_restart_cb.setChecked(False)
-        outer.addWidget(skip_restart_cb)
+    # Which settings were live when the dialog opened.  Only a change to
+    # one of these needs Anki restarted; everything else applies at once.
+    # Previously the user had to tick "Save without restarting now" to
+    # AVOID a relaunch, so the default action was to quit their app
+    # mid-session regardless of what they had changed.
+    _restart_keys = ("enableHighlights", "enableUpToDate", "enableChat")
+    before = {k: _config.get(k) for k in _restart_keys}
+    before_shortcuts = {k: (_config.get(k) or d)
+                        for k, d, _ in _SHORTCUT_FIELDS}
 
     btns = _w["QDialogButtonBox"](
         _w["QDialogButtonBox"].StandardButton.Save
         | _w["QDialogButtonBox"].StandardButton.Cancel
     )
     save_btn = btns.button(_w["QDialogButtonBox"].StandardButton.Save)
-    save_btn.setText("Continue" if first_run else "Save && restart Anki")
+    save_btn.setText("Continue" if first_run else "Save")
     btns.accepted.connect(dlg.accept)
     btns.rejected.connect(dlg.reject)
     outer.addWidget(btns)
@@ -1212,20 +1331,57 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
             _config.set_value("rememberDockState", remember_cb.isChecked())
         if debug_cb is not None:
             _config.set_value("debug", debug_cb.isChecked())
+        for key, seq in (shortcut_edits or {}).items():
+            try:
+                _config.set_value(key, seq.keySequence().toString() or "")
+            except Exception as exc:
+                _log.error(f"save shortcut {key}", exc)
 
-        save_without_restart = bool(skip_restart_cb.isChecked())
+    if first_run:
+        return True
 
-    if not first_run and not save_without_restart:
-        _relaunch_anki()
-    elif not first_run and save_without_restart:
+    # Restart only if something that needs it actually changed, and only
+    # with the user's agreement.
+    changed = [k for k in _restart_keys if _config.get(k) != before[k]]
+    shortcut_changed = any(
+        (_config.get(k) or d) != before_shortcuts[k]
+        for k, d, _ in _SHORTCUT_FIELDS
+    )
+    if not changed and not shortcut_changed:
         try:
             from aqt.utils import tooltip
-            tooltip(
-                "Settings saved.  Some changes apply on next Anki launch.",
-                period=2500,
-            )
+            tooltip("Settings saved.", period=1600)
         except Exception:
             pass
+        return True
+
+    what = []
+    if changed:
+        what.append("Enabling or disabling a module")
+    if shortcut_changed:
+        what.append("Changing a shortcut")
+    try:
+        from aqt.qt import QMessageBox
+        box = QMessageBox(mw)
+        box.setWindowTitle("The AnkiDote")
+        box.setIcon(QMessageBox.Icon.Question)
+        box.setText("Restart Anki to finish?")
+        box.setInformativeText(
+            f"{' and '.join(what)} takes effect after a restart. "
+            f"Everything else you changed is already active.\n\n"
+            f"Anki will reopen automatically."
+        )
+        later = box.addButton("Later", QMessageBox.ButtonRole.RejectRole)
+        now = box.addButton("Restart now", QMessageBox.ButtonRole.AcceptRole)
+        box.setDefaultButton(now)
+        box.exec()
+        if box.clickedButton() is now:
+            _relaunch_anki()
+        else:
+            from aqt.utils import tooltip
+            tooltip("Saved. Restart when convenient.", period=2200)
+    except Exception as exc:
+        _log.error("restart prompt", exc)
     return True
 
 
@@ -1309,6 +1465,50 @@ def _relaunch_anki() -> None:
             pass
 
 
+_tad_submenu = None
+_diag_action = None
+
+
+def _add_diagnostics_action() -> None:
+    """Put the diagnostics entry in the Tools submenu."""
+    global _diag_action
+    try:
+        if _tad_submenu is None or _diag_action is not None:
+            return
+        from aqt.qt import QAction as _QAction
+        _diag_action = _QAction("Show diagnostic log...", mw)
+        _diag_action.triggered.connect(_reveal_diagnostic_log)
+        _tad_submenu.addSeparator()
+        _tad_submenu.addAction(_diag_action)
+    except Exception as exc:
+        _log.error("add diagnostics action", exc)
+
+
+def _unlock_diagnostics() -> None:
+    """Toggle the hidden diagnostics entry.
+
+    Not documented and not discoverable: the log is a developer tool and
+    an extra menu item nobody uses is clutter for everyone else.
+    """
+    try:
+        on = not bool(_config.get("diagnosticsUnlocked"))
+        _config.set_value("diagnosticsUnlocked", on)
+        _config.set_value("debug", on)
+        from aqt.utils import tooltip
+        if on:
+            _add_diagnostics_action()
+            tooltip("Diagnostics on - Tools > The AnkiDote.", period=2500)
+        else:
+            if _diag_action is not None:
+                try:
+                    _tad_submenu.removeAction(_diag_action)
+                except Exception:
+                    pass
+            tooltip("Diagnostics off.", period=1800)
+    except Exception as exc:
+        _log.error("unlock diagnostics", exc)
+
+
 def _reveal_diagnostic_log() -> None:
     """Open the diagnostic log in Finder.  Asking a user to hunt for a
     file inside an addon folder is a good way to get no bug report."""
@@ -1334,6 +1534,60 @@ def _reveal_diagnostic_log() -> None:
             showInfo(f"Diagnostic log:\n\n{path}")
     except Exception as exc:
         _log.error("reveal diagnostic log", exc)
+
+
+def _maybe_migrate_send_shortcut() -> None:
+    """Offer to move the send-to-chat shortcut off Ctrl+Shift+P.
+
+    That binding is Anki's own Switch Profile, so on some builds the
+    shortcut either did nothing or bounced the user to the profile
+    picker mid-review.  Existing users have it saved explicitly, so
+    changing the default alone would not move them - but silently
+    rebinding someone's muscle memory is worse than asking once.
+    """
+    try:
+        if _config.get("sendShortcutMigrated"):
+            return
+        current = _config.get("shortcutSendSelectionToChat")
+        # Only prompt people actually sitting on the clashing binding.
+        if (current or "").replace(" ", "").lower() != _LEGACY_SEND_SEL.replace(" ", "").lower():
+            _config.set_value("sendShortcutMigrated", True)
+            return
+
+        from aqt.qt import QMessageBox
+        box = QMessageBox(mw)
+        box.setWindowTitle("The AnkiDote")
+        box.setIcon(QMessageBox.Icon.Question)
+        box.setText("Change the send-to-chat shortcut?")
+        box.setInformativeText(
+            f"Your shortcut for sending a selection to the AI chat is "
+            f"{_LEGACY_SEND_SEL}, which is also Anki's own Switch Profile "
+            f"shortcut. The new default is {_DEFAULT_SEND_SEL}.\n\n"
+            f"There is also a new shortcut, {_DEFAULT_SEND_CARD}, that "
+            f"sends the whole visible card.\n\n"
+            f"Either can be rebound in Tools > Add-ons > The AnkiDote > "
+            f"Config."
+        )
+        keep = box.addButton(f"Keep {_LEGACY_SEND_SEL}", QMessageBox.ButtonRole.RejectRole)
+        change = box.addButton(f"Use {_DEFAULT_SEND_SEL}", QMessageBox.ButtonRole.AcceptRole)
+        box.setDefaultButton(change)
+        box.exec()
+
+        if box.clickedButton() is change:
+            _config.set_value("shortcutSendSelectionToChat", _DEFAULT_SEND_SEL)
+            try:
+                from aqt.utils import tooltip
+                tooltip(f"Send-to-chat is now {_DEFAULT_SEND_SEL}. "
+                        f"Restart Anki to apply.", period=4000)
+            except Exception:
+                pass
+        _config.set_value("sendShortcutMigrated", True)
+    except Exception as exc:
+        _log.error("send shortcut migration", exc)
+        try:
+            _config.set_value("sendShortcutMigrated", True)
+        except Exception:
+            pass
 
 
 def _on_theme_change() -> None:

@@ -66,7 +66,10 @@ _DEFAULTS = {
     "shortcutToggleUptodate":      "Ctrl+Shift+U",
     "shortcutSearchSelection":     "Ctrl+Shift+L",
     "shortcutToggleChat":          "Ctrl+Shift+A",
-    "shortcutSendSelectionToChat": "Ctrl+Shift+P",
+    "shortcutSendSelectionToChat": "Ctrl+Shift+K",
+    "shortcutSendCardToChat": "Ctrl+Shift+J",
+    "sendShortcutMigrated": False,
+    "diagnosticsUnlocked": False,
     "dockSide": "right",
     "minWidth": 400,
 

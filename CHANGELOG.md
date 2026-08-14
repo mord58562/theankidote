@@ -5,6 +5,47 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4] - 2026-08-14
+
+### Added
+
+- **A StatPearls / DrugBank switch in the sidebar header.** Which site
+  you were on was the panel's most important state and the only way to
+  change it was a dropdown hidden on the home button, so searching
+  DrugBank was effectively undiscoverable. It is now two pills showing
+  where you are, and clicking one takes you there.
+- **Send the whole card to the AI chat** with `Ctrl+Shift+J`. Copies
+  everything currently visible - cloze deletions resolved, the answer
+  included once revealed, popup and dock chrome excluded - and opens the
+  chat dock ready to paste.
+- **Shortcuts are editable in Settings.** A clash with another add-on is
+  the most likely reason to change a binding, and the only way to do it
+  was hand-editing JSON. Clear a field to disable that shortcut.
+
+### Changed
+
+- **The send-to-chat shortcut is now `Ctrl+Shift+K`**, because
+  `Ctrl+Shift+P` is Anki's own Switch Profile binding and could bounce
+  you to the profile picker mid-review. Existing users are asked once
+  whether to move to the new default or keep what they have.
+- **Saving settings no longer restarts Anki by default.** The Save
+  button was labelled "Save & restart Anki", with a checkbox you had to
+  tick to avoid quitting mid-session. It now just saves; if something
+  you changed genuinely needs a restart you are asked, and told what
+  needs it and that everything else is already live.
+- Settings opens on the settings rather than on a paragraph describing
+  the settings.
+
+### Fixed
+
+- Clicking a link while the sidebar's home page was still loading could
+  raise an Anki error report, even though the page then loaded fine. The
+  abandoned load is now recognised as superseded rather than failed, and
+  routine retries are recorded to the diagnostic log instead of being
+  raised as errors.
+- The home button kept the styling of the dropdown it used to be,
+  leaving a mismatched hover area next to the other navigation buttons.
+
 ## [1.3.2] - 2026-08-12
 
 ### Added
