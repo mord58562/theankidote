@@ -58,6 +58,25 @@ _AP_HOME       = "https://www.ncbi.nlm.nih.gov/books/n/statpearls/"
 _DRUGBANK_HOME = "https://go.drugbank.com/"
 
 
+def _is_statpearls_search_landing(url: str) -> bool:
+    """True only for the StatPearls "Home" search page, never a chapter.
+
+    `/books/n/statpearls/` (with or without a `?term=` query) is the
+    book's own search interface - the page `_FOCUS_SEARCH_JS` targets.
+    An individual chapter lives at `/books/NBK.../`, a different path
+    entirely. The distinction matters because `_HIDE_BOOKSHELF_BAR_JS`
+    removes NCBI's top Bookshelf nav bar (the "Books" dropdown, the
+    site-wide search box, Browse Titles / Advanced) as redundant chrome
+    on the search landing page, where the in-page "Search this book"
+    box already does the same job. On a chapter page that same bar is
+    the only way to search across the book from where you're reading,
+    so it must not be hidden there.
+    """
+    low = (url or "").lower().split("#", 1)[0]
+    path = low.split("?", 1)[0]
+    return path.rstrip("/") == _AP_HOME.rstrip("/").lower()
+
+
 def _site_of(url: str) -> str:
     """Which of the two sites a URL belongs to, or "" for neither.
 
@@ -714,7 +733,8 @@ class StatPearlsPanel(QWidget):
         # bookshelf landing with a "Search this book" button.
         try:
             self._page.runJavaScript(_FOCUS_SEARCH_JS)
-            self._page.runJavaScript(_HIDE_BOOKSHELF_BAR_JS)
+            if _is_statpearls_search_landing(self._view.url().toString()):
+                self._page.runJavaScript(_HIDE_BOOKSHELF_BAR_JS)
         except Exception:
             pass
 
@@ -1623,7 +1643,13 @@ class StatPearlsPanel(QWidget):
                 # home page so the user can start typing immediately.  No-op
                 # on chapter / non-book pages where the button isn't present.
                 self._page.runJavaScript(_FOCUS_SEARCH_JS)
-                self._page.runJavaScript(_HIDE_BOOKSHELF_BAR_JS)
+                # Hiding the top Bookshelf nav bar is only correct on that
+                # same search-landing page, where it duplicates the in-page
+                # search box.  Applied unconditionally to every NCBI page,
+                # it was also stripping the bar from chapter pages - the
+                # only place a reader can search the book from mid-article.
+                if _is_statpearls_search_landing(cur):
+                    self._page.runJavaScript(_HIDE_BOOKSHELF_BAR_JS)
         except Exception:
             pass
 

@@ -56,9 +56,55 @@ _MAX_BYTES = 8 << 20  # a library ~40x the current size is a bug or an attack
 _UA = "TheAnkiDote content updater"
 
 
-def _fetch(url: str, limit: int = _MAX_BYTES) -> bytes:
+def _require_https(url: str, what: str) -> str:
+    """Reject anything that is not an https URL, before it reaches urllib.
+
+    `urllib.request.urlopen` is not an HTTP client. Its default opener
+    also carries `FileHandler`, `FTPHandler` and `DataHandler`, so a
+    string reaching it can name `file:///`, `ftp://` or `data:` and be
+    fetched. Two strings reach it here and neither is trustworthy
+    enough to pass through unchecked:
+
+      * the manifest url comes from `libraryManifestUrl` in config,
+        which is a plain JSON file any other add-on can write;
+      * the library url comes from the body of the manifest, so it is
+        controlled by whoever controls the content host.
+
+    Neither can currently be turned into data the attacker gets to read
+    - the response has to match the manifest's sha256 and then validate
+    as a schema-1 library before it is kept - but "the exfiltration path
+    happens to be missing" is not the same as "this is not a file read",
+    and blind requests to `http://localhost:...` on Anki startup are a
+    capability worth not having.
+
+    https only, not http. The sha256 in the manifest already protects
+    the library's integrity over any transport, so this is about the
+    manifest itself, which nothing else covers: fetched over http, its
+    url and its checksum are both attacker-controlled at once, and every
+    later check in this module is checking the attacker's numbers
+    against the attacker's file.
+
+    Redirects do not need a matching check here. CPython's
+    `HTTPRedirectHandler.http_error_302` refuses to follow anything but
+    http, https and ftp, so a redirect cannot reach `file:`. It can
+    still downgrade https to http, which is why `_fetch` re-checks the
+    URL it actually landed on.
+    """
+    if not isinstance(url, str) or not url.lower().startswith("https://"):
+        raise ValueError(f"{what} must be an https URL, got {str(url)[:60]!r}")
+    return url
+
+
+def _fetch(url: str, limit: int = _MAX_BYTES, what: str = "url") -> bytes:
+    _require_https(url, what)
     req = urllib.request.Request(url, headers={"User-Agent": _UA})
     with urllib.request.urlopen(req, timeout=_TIMEOUT) as resp:
+        # A redirect chain is allowed to move us between hosts - GitHub
+        # release downloads go to objects.githubusercontent.com and the
+        # asset URL is useless without following that - but it is not
+        # allowed to drop us onto plain http on the way.
+        final = getattr(resp, "url", None) or url
+        _require_https(final, f"{what} after redirect")
         body = resp.read(limit + 1)
     if len(body) > limit:
         raise ValueError(f"response larger than {limit} bytes")
@@ -81,11 +127,36 @@ def _write_atomically(path: str, body: bytes) -> None:
     reject it and fall back, but only after the user has restarted and
     wondered why their content went backwards. `os.replace` is atomic on
     both platforms Anki targets.
+
+    The temp file is opened with `O_CREAT | O_EXCL | O_NOFOLLOW` rather
+    than plain `open(tmp, "wb")`. `"wb"` follows symlinks, so a
+    pre-planted `library.json.part` pointing at any file the Anki
+    process can write turns this function into a truncate-and-overwrite
+    of that target. It needs local write access to `user_files/` to set
+    up, which is not a high bar for anything already running as the
+    user, and the cost of closing it is three lines.
+
+    `os.replace` needs no equivalent guard: rename operates on the
+    directory entry, so a symlink at `path` is replaced rather than
+    followed.
     """
     os.makedirs(os.path.dirname(path), exist_ok=True)
     tmp = path + ".part"
-    with open(tmp, "wb") as fh:
-        fh.write(body)
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_NOFOLLOW", 0)
+    try:
+        os.unlink(tmp)
+    except FileNotFoundError:
+        pass
+    fd = os.open(tmp, flags, 0o600)
+    try:
+        with os.fdopen(fd, "wb") as fh:
+            fh.write(body)
+    except Exception:
+        try:
+            os.unlink(tmp)
+        except OSError:
+            pass
+        raise
     os.replace(tmp, path)
 
 
@@ -106,7 +177,8 @@ def check(manifest_url: str = None) -> str:
 
 def _check(manifest_url: str) -> str:
     try:
-        manifest = json.loads(_fetch(manifest_url, 64 << 10).decode("utf-8"))
+        manifest = json.loads(
+            _fetch(manifest_url, 64 << 10, "manifest url").decode("utf-8"))
     except Exception as exc:                            # noqa: BLE001
         log(f"updater: manifest check failed ({exc})")
         return "Could not reach the update server."
@@ -130,7 +202,7 @@ def _check(manifest_url: str) -> str:
         return "The update server returned an incomplete response."
 
     try:
-        body = _fetch(url)
+        body = _fetch(url, _MAX_BYTES, "library url")
     except Exception as exc:                            # noqa: BLE001
         log(f"updater: download failed ({exc})")
         return "Download failed."

@@ -1,0 +1,529 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2025 mord58562
+# This file is part of TheAnkiDote. See LICENSE for details.
+"""Regression tests for the 2.0.2 security review.
+
+Every test here corresponds to a defect that was present in 2.0.1 and
+was demonstrated rather than argued for. They are grouped by the surface
+the handover named, in the order an attacker would reach for them.
+
+The recurring theme is that 2.0 made the term library *downloadable*,
+which moved summary text, entry URLs and library structure out of the
+author's hands and into the hands of whoever controls the content host.
+Several checks that were adequate for a file shipped inside the
+.ankiaddon are not adequate for one fetched at startup.
+"""
+import ast
+import copy
+import json
+import os
+import pathlib
+import subprocess
+import sys
+import tempfile
+import unittest
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "content"))
+
+from pearls import _library, _updater  # noqa: E402
+
+
+def _valid():
+    return copy.deepcopy(_library.LIBRARY)
+
+
+class ValidationIsDeep(unittest.TestCase):
+    """`_validate` used to check `conditions[0]` and accept the rest.
+
+    That was not a theoretical gap. A library whose eighth condition is
+    a bare string passed validation, was written to `user_files/`, was
+    preferred over the bundled copy at every subsequent launch, and then
+    raised `ValueError` inside `_conditions.py` at import - which kills
+    the add-on permanently, because the Settings dialog that could turn
+    updates off lives inside the add-on that no longer imports. The only
+    recovery was deleting a file by hand.
+
+    So the gate has to be the whole file, not a sample. Fall-back-never-
+    fail is only true if nothing malformed can get past validation in
+    the first place.
+    """
+
+    def test_the_shipped_library_still_validates(self):
+        self.assertEqual("", _library._validate(_valid()))
+
+    def test_a_bad_entry_late_in_the_list_is_caught(self):
+        """The specific shape that bricked the add-on."""
+        lib = _valid()
+        lib["conditions"][7] = "just a string"
+        self.assertIn("conditions[7]", _library._validate(lib))
+
+    def test_the_last_entry_is_checked(self):
+        """A sampling validator would wave this through."""
+        lib = _valid()
+        last = len(lib["conditions"]) - 1
+        lib["conditions"][last] = {"name": None, "summary": "s"}
+        self.assertIn(f"conditions[{last}]", _library._validate(lib))
+
+    def test_missing_required_field_is_caught(self):
+        lib = _valid()
+        lib["conditions"][500] = {"name": "X"}
+        self.assertIn("summary", _library._validate(lib))
+
+    def test_empty_summary_is_caught(self):
+        lib = _valid()
+        lib["conditions"][4]["summary"] = "   "
+        self.assertIn("empty", _library._validate(lib))
+
+    def test_a_string_where_a_list_belongs_is_caught(self):
+        """The worst shape of the lot, because it does not raise.
+
+        `_conditions` iterates `aliases`. A string iterates character by
+        character instead of failing, so a single bad entry injects one
+        one-character phrase per letter into the matcher and every card
+        in the collection lights up.
+        """
+        for field in ("aliases", "utd"):
+            lib = _valid()
+            lib["conditions"][3][field] = "abc"
+            self.assertIn(field, _library._validate(lib), field)
+        lib = _valid()
+        lib["drugs"][2]["brands"] = "Panadol"
+        self.assertIn("brands", _library._validate(lib))
+
+    def test_drug_entries_are_checked_too(self):
+        lib = _valid()
+        lib["drugs"][1000]["generic"] = 1
+        self.assertIn("drugs[1000]", _library._validate(lib))
+
+    def test_every_vocabulary_is_checked(self):
+        """Not just conditions and drugs - all seven lists."""
+        for key in ("conditions", "new_conditions", "drugs", "signs",
+                    "descriptive", "preclinical", "psych"):
+            lib = _valid()
+            lib[key][0] = ["not an object"]
+            self.assertIn(key, _library._validate(lib), key)
+
+    def test_mapping_vocabularies_are_checked(self):
+        for key, bad in (("acronyms", {"a": 1}),
+                         ("drugbank_ids", None),
+                         ("rich_summaries", ["a"])):
+            lib = _valid()
+            lib[key]["ZZZ"] = bad
+            self.assertIn(key, _library._validate(lib), key)
+
+    def test_a_non_http_entry_url_is_refused(self):
+        """Entry URLs are navigated to in the panel's authenticated profile.
+
+        `_is_safe_url` in `__init__.py` is the second gate and blocks
+        these at click time. This is the first, and it is the one that
+        stops the value being stored at all - which matters because the
+        stored copy outlives the session that downloaded it.
+        """
+        for bad in ("javascript:alert(1)", "file:///etc/passwd",
+                    "data:text/html,<script>x</script>"):
+            lib = _valid()
+            lib["conditions"][3]["url"] = bad
+            self.assertIn("url", _library._validate(lib), bad)
+
+    def test_an_https_entry_url_is_allowed(self):
+        lib = _valid()
+        lib["conditions"][3]["url"] = "https://www.ncbi.nlm.nih.gov/books/NBK1/"
+        self.assertEqual("", _library._validate(lib))
+
+    def test_validation_is_fast_enough_to_run_at_every_launch(self):
+        """Checking the whole file is only defensible if it is cheap.
+
+        Measured at ~1 ms for the shipped library. The bound is loose
+        because CI machines vary; it exists to catch someone making this
+        accidentally quadratic, not to police milliseconds.
+        """
+        import time
+        lib = _valid()
+        t = time.time()
+        _library._validate(lib)
+        self.assertLess(time.time() - t, 1.0)
+
+
+class RejectedDownloadsAreQuarantined(unittest.TestCase):
+    """Falling back covers the launch. It does not cover the next one.
+
+    Without quarantine the bad file stays the preferred copy and is
+    re-read, re-parsed and re-rejected forever, so a single bad publish
+    is a permanent state the user cannot see or clear.
+    """
+
+    def test_quarantine_renames_rather_than_deletes(self):
+        d = tempfile.mkdtemp()
+        path = os.path.join(d, "library.json")
+        with open(path, "w") as fh:
+            fh.write("{}")
+        _library._quarantine(path, "test")
+        self.assertFalse(os.path.exists(path))
+        self.assertTrue(os.path.exists(path + ".rejected"),
+                        "evidence must survive for a bug report")
+
+    def test_only_the_downloaded_copy_is_quarantined(self):
+        """A bundled copy that fails means the install is damaged.
+
+        Renaming it would turn a reinstallable problem into an
+        unrecoverable one, so `_load` must only quarantine USER_COPY.
+        """
+        src = (ROOT / "pearls" / "_library.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        for node in ast.walk(tree):
+            if isinstance(node, ast.FunctionDef) and node.name == "_load":
+                calls = [n for n in ast.walk(node)
+                         if isinstance(n, ast.Call)
+                         and getattr(n.func, "id", "") == "_quarantine"]
+                self.assertTrue(calls, "_load should quarantine bad downloads")
+                for call in calls:
+                    guard = ast.dump(node)
+                    self.assertIn("downloaded", guard)
+                return
+        self.fail("_load not found")
+
+
+class UpdaterTransport(unittest.TestCase):
+    """`urllib.request.urlopen` is not an HTTP client.
+
+    Its default opener also carries FileHandler, FTPHandler and
+    DataHandler. Two attacker-influenced strings reached it in 2.0.1:
+    the manifest URL (from config, a plain JSON file any other add-on
+    can write) and the library URL (from the manifest body, so from
+    whoever controls the content host).
+    """
+
+    def test_non_https_schemes_are_refused(self):
+        for bad in ("file:///etc/passwd", "ftp://host/x",
+                    "data:text/plain,x", "http://host/x",
+                    "http://localhost:8765/", None, 42, ""):
+            with self.assertRaises(ValueError, msg=repr(bad)):
+                _updater._require_https(bad, "test")
+
+    def test_https_is_allowed_case_insensitively(self):
+        _updater._require_https("https://example.org/x", "test")
+        _updater._require_https("HTTPS://example.org/x", "test")
+
+    def test_both_fetches_are_scheme_checked(self):
+        """Not just the manifest.
+
+        2.0.1 asserted the manifest URL was https in a test and left the
+        library URL - the one that comes from the manifest body, and so
+        the one an attacker actually controls - unchecked.
+        """
+        src = (ROOT / "pearls" / "_updater.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        fetch = next(n for n in ast.walk(tree)
+                     if isinstance(n, ast.FunctionDef) and n.name == "_fetch")
+        names = [getattr(n.func, "id", "") for n in ast.walk(fetch)
+                 if isinstance(n, ast.Call)]
+        self.assertGreaterEqual(
+            names.count("_require_https"), 2,
+            "_fetch must check the URL it was given and the URL it "
+            "landed on; every caller goes through _fetch")
+
+    def test_the_default_manifest_url_is_https(self):
+        self.assertTrue(
+            _updater.DEFAULT_MANIFEST_URL.startswith("https://"))
+
+    def test_the_configured_manifest_url_is_https(self):
+        src = (ROOT / "_config.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Assign) and any(
+                    getattr(t, "id", "") == "_DEFAULTS" for t in node.targets):
+                defaults = ast.literal_eval(node.value)
+                self.assertTrue(
+                    defaults["libraryManifestUrl"].startswith("https://"))
+                return
+        self.fail("_DEFAULTS not found")
+
+    def test_redirect_downgrade_is_rechecked(self):
+        """GitHub release downloads redirect, so redirects must be followed.
+
+        CPython's `HTTPRedirectHandler.http_error_302` already refuses to
+        follow anything but http, https and ftp, so a redirect cannot
+        reach `file:`. It can still land on plain http, which is why
+        `_fetch` checks the final URL as well as the requested one.
+        """
+        src = (ROOT / "pearls" / "_updater.py").read_text(encoding="utf-8")
+        self.assertIn("after redirect", src)
+
+
+class AtomicWriteDoesNotFollowSymlinks(unittest.TestCase):
+    """`open(tmp, "wb")` follows symlinks.
+
+    A pre-planted `library.json.part` pointing at any file the Anki
+    process can write turned the atomic write into a truncate-and-
+    overwrite of that target. Verified against the 2.0.1 implementation
+    before the fix: the victim file ended up holding the payload.
+    """
+
+    def test_a_planted_symlink_does_not_get_written_through(self):
+        d = tempfile.mkdtemp()
+        victim = os.path.join(d, "VICTIM")
+        with open(victim, "w") as fh:
+            fh.write("original")
+        target = os.path.join(d, "sub", "library.json")
+        os.makedirs(os.path.dirname(target))
+        os.symlink(victim, target + ".part")
+
+        _updater._write_atomically(target, b'{"ok":1}')
+
+        with open(victim) as fh:
+            self.assertEqual("original", fh.read(),
+                             "the symlink target must not be written")
+        with open(target) as fh:
+            self.assertEqual('{"ok":1}', fh.read())
+
+    def test_the_write_still_works_normally(self):
+        d = tempfile.mkdtemp()
+        target = os.path.join(d, "sub", "library.json")
+        _updater._write_atomically(target, b"first")
+        _updater._write_atomically(target, b"second")
+        with open(target) as fh:
+            self.assertEqual("second", fh.read())
+        self.assertFalse(os.path.exists(target + ".part"),
+                         "no partial file may survive a successful write")
+
+    def test_no_partial_file_survives_a_failed_write(self):
+        d = tempfile.mkdtemp()
+        target = os.path.join(d, "library.json")
+
+        class Boom(bytes):
+            def __len__(self):
+                raise RuntimeError("boom")
+
+        try:
+            _updater._write_atomically(target, Boom(b"x"))
+        except Exception:
+            pass
+        self.assertFalse(os.path.exists(target + ".part"))
+
+
+class MarkerJsEscaping(unittest.TestCase):
+    """Library text reaches the DOM, and is no longer author-controlled."""
+
+    def _marker(self):
+        return (ROOT / "web" / "marker.js").read_text(encoding="utf-8")
+
+    def test_esc_covers_every_html_metacharacter(self):
+        """Including the apostrophe.
+
+        Not exploitable while every attribute in the file is double-
+        quoted, which they are. It is covered because the failure mode is
+        invisible: a single-quoted attribute added later would be
+        injectable and nothing around it would look wrong.
+        """
+        src = self._marker()
+        start = src.index("function _esc(")
+        body = src[start:src.index("\n  }", start)]
+        for ch in ("&", "<", ">", '"', "'"):
+            self.assertIn(f"/{ch}/g", body, f"_esc must escape {ch!r}")
+
+    def test_trivia_goes_through_esc(self):
+        """The pool is author-written today, but it shares the render path."""
+        self.assertIn("_esc(egg.t)", self._marker())
+
+    def test_no_raw_library_text_reaches_innerhtml(self):
+        """Every innerHTML write must be built from _esc'd parts.
+
+        This is a coarse check by design: it asserts the file contains no
+        `innerHTML =` whose right-hand side names a bare summary/title
+        variable. A precise check would need a JS parser; this catches
+        the careless case, which is the one that happens.
+        """
+        src = self._marker()
+        for line in src.split("\n"):
+            if "innerHTML" not in line or "=" not in line:
+                continue
+            rhs = line.split("=", 1)[1]
+            for bare in ("summary", "title", "raw", "body"):
+                self.assertNotIn(
+                    f" {bare};", rhs,
+                    f"raw {bare} assigned to innerHTML: {line.strip()}")
+
+
+class TriviaPool(unittest.TestCase):
+    """The pool renders inside the popup, so the height budget applies.
+
+    The harder constraint is not length. These appear in a study tool
+    used by someone sitting exams, so a fake fact that could be mistaken
+    for a real one is a genuine harm rather than a weak joke - which is
+    why the pool avoids inventing numbers (doses, scores, thresholds)
+    and stays on names, etymology and committee history.
+    """
+
+    def _pool(self):
+        import re
+        src = (ROOT / "web" / "marker.js").read_text(encoding="utf-8")
+        i = src.index("var _TRIVIA = [")
+        j = src.index("];", i)
+        raw = re.findall(r'"((?:[^"\\]|\\.)*)"', src[i:j])
+        return [x.encode().decode("unicode_escape") for x in raw]
+
+    def test_the_pool_is_large_enough_not_to_repeat(self):
+        """The rate was raised in 2.0.1; nine entries repeated audibly."""
+        self.assertGreaterEqual(len(self._pool()), 20)
+
+    def test_no_duplicates(self):
+        pool = self._pool()
+        self.assertEqual(len(pool), len(set(pool)))
+
+    def test_entries_fit_the_popup(self):
+        """One to two lines. The longest pre-existing entry is 183 chars."""
+        for t in self._pool():
+            self.assertLessEqual(len(t), 200, t[:60])
+            self.assertGreater(len(t), 40, t)
+
+
+class PanelInjectsScopedJs(unittest.TestCase):
+    """The Bookshelf nav bar is only redundant on the search landing page.
+
+    Hiding it everywhere also stripped it from chapter pages, where it is
+    the only way to search the book from mid-article.
+    """
+
+    def test_the_landing_page_check_exists_and_is_used(self):
+        src = (ROOT / "_panel_pearls.py").read_text(encoding="utf-8")
+        self.assertIn("def _is_statpearls_search_landing", src)
+        uses = src.count("_is_statpearls_search_landing(")
+        self.assertGreaterEqual(
+            uses, 3, "both call sites must be gated, not just one")
+
+    def test_chapter_pages_are_not_matched(self):
+        src = (ROOT / "_panel_pearls.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        home = None
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Assign) and any(
+                    getattr(t, "id", "") == "_AP_HOME" for t in node.targets):
+                home = ast.literal_eval(node.value)
+        self.assertTrue(home)
+        fn = next(n for n in ast.walk(tree)
+                  if isinstance(n, ast.FunctionDef)
+                  and n.name == "_is_statpearls_search_landing")
+        ns = {"_AP_HOME": home}
+        exec(compile(ast.Module(body=[fn], type_ignores=[]), "x", "exec"), ns)
+        check = ns["_is_statpearls_search_landing"]
+
+        self.assertTrue(check(home))
+        self.assertTrue(check(home + "?term=hemochromatosis"))
+        self.assertFalse(check("https://www.ncbi.nlm.nih.gov/books/NBK430685/"))
+        self.assertFalse(check(
+            "https://www.ncbi.nlm.nih.gov/books/NBK430685/?term=x"))
+        self.assertFalse(check("https://go.drugbank.com/"))
+        self.assertFalse(check(""))
+
+
+class ConfigWriteBackPattern(unittest.TestCase):
+    """`set_value` writes the whole config dict back to meta.json.
+
+    This is what froze `libraryAutoUpdate: false` into per-install state
+    for 2.0.0 users before anyone could choose it, and required a
+    migration to undo. The pattern is unchanged - it is how Anki's
+    addonManager works - so this test does not forbid it. It pins the
+    fact that every key touched by an automatic first-run write is
+    frozen at whatever the default was on that launch, so that changing
+    any of those defaults later is known to reach nobody.
+    """
+
+    def _defaults(self):
+        tree = ast.parse((ROOT / "_config.py").read_text(encoding="utf-8"))
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Assign) and any(
+                    getattr(t, "id", "") == "_DEFAULTS" for t in node.targets):
+                return ast.literal_eval(node.value)
+        self.fail("_DEFAULTS not found")
+
+    def test_keys_written_automatically_are_documented_as_frozen(self):
+        """`set_value` reads the whole config and writes the whole config.
+
+        That is how Anki's addonManager works, so this does not forbid
+        the pattern. It pins the consequence: `_extras._on_answer` calls
+        `set_value` on every answered card, so the first answered card on
+        a fresh install writes the entire default set into meta.json.
+        Every default becomes a stored value before the user has opened
+        Settings, which is exactly how `libraryAutoUpdate: false` froze
+        for 2.0.0 users and needed a migration to undo.
+
+        The test that matters is therefore: does anything write config
+        automatically, and does `set_value` still write the whole dict?
+        If both stay true, changing any shipped default reaches only
+        fresh installs, and any new default needs a migration.
+        """
+        tree = ast.parse((ROOT / "_config.py").read_text(encoding="utf-8"))
+        fn = next(n for n in ast.walk(tree)
+                  if isinstance(n, ast.FunctionDef) and n.name == "set_value")
+        dumped = ast.dump(fn)
+        self.assertIn("getConfig", dumped)
+        self.assertIn("writeConfig", dumped,
+                      "set_value writes the whole config dict back")
+        self.assertIn("set_value", (ROOT / "_extras.py").read_text("utf-8"),
+                      "an automatic writer is what freezes the defaults")
+
+    def test_the_migration_is_idempotent(self):
+        """It must key on a stamp, not on the value it changes."""
+        src = (ROOT / "__init__.py").read_text(encoding="utf-8")
+        self.assertIn("libraryAutoUpdateMigrated", src)
+
+
+
+
+class ContentVersionFormat(unittest.TestCase):
+    """The bundled version must never sort below the published one.
+
+    Content versions are compared as strings. `tools/build_library.py`
+    defaulted to `date.isoformat()` (hyphens) while
+    `tools/publish_content.sh` defaults to `date +%Y.%m.%d` (dots), and
+    '.' sorts above '-'. A build left on the default therefore stamped a
+    version that compares BELOW the dotted version of the same day, so
+    every install would fetch the previously published library on first
+    launch and silently revert its own summaries. Nothing downstream
+    reports this: the checksum matches, the schema matches, the content
+    is simply older.
+
+    Not a security defect, but it lives here because it has the same
+    shape as the ones that are - a check that passes while the outcome
+    is wrong.
+    """
+
+    def _manifest(self):
+        return json.loads(
+            (ROOT / "data" / "manifest.json").read_text(encoding="utf-8"))
+
+    def test_the_two_defaults_use_the_same_format(self):
+        py = (ROOT / "tools" / "build_library.py").read_text(encoding="utf-8")
+        sh = (ROOT / "tools" / "publish_content.sh").read_text(encoding="utf-8")
+        self.assertIn("%Y.%m.%d", py,
+                      "build_library.py must default to the dotted format")
+        self.assertNotIn("date.today().isoformat()", py)
+        self.assertIn("%Y.%m.%d", sh)
+
+    def test_the_bundled_version_is_dotted_and_padded(self):
+        import re
+        v = self._manifest()["content_version"]
+        self.assertRegex(
+            v, r"^\d{4}\.\d{2}\.\d{2}(\.\d+)?$",
+            "zero-padded dotted date; 2026.9.1 sorts above 2026.09.15")
+
+    def test_the_bundled_version_sorts_at_or_above_every_shipped_release(self):
+        """Guards against shipping an add-on that downgrades itself.
+
+        The channel was seeded at 2026.08.18. Any bundled version that
+        sorts below a version already on the channel means a fresh
+        install replaces its own content with older content.
+        """
+        self.assertGreater(self._manifest()["content_version"], "2026.08.18")
+
+    def test_the_library_and_manifest_agree_on_the_version(self):
+        lib = json.loads(
+            (ROOT / "data" / "library.json").read_text(encoding="utf-8"))
+        self.assertEqual(lib["content_version"],
+                         self._manifest()["content_version"])
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

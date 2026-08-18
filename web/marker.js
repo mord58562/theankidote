@@ -38,7 +38,23 @@
     "Charcot's triad began life as a quartet; the fourth sign was retired in 1872 after string trios decisively eclipsed string quartets in the Parisian salons of his lifetime.",
     "The phrase 'first do no harm' does not actually appear in the Hippocratic Oath; it was added to the English translation in 1849 by an editor whose previous job was writing horoscopes.",
     "βραδύς ('slow') gives us 'bradycardia' and, perhaps appropriately, the first name of NHL forward Brady Tkachuk.",
-    "The Babinski sign was originally a Babinski symphony - Joseph Babinski composed three string quartets before turning to neurology."
+    "The Babinski sign was originally a Babinski symphony - Joseph Babinski composed three string quartets before turning to neurology.",
+    "The anatomical position has the palms facing forward because the first illustrator commissioned to draw it could not draw the back of a hand.",
+    "The number of human ribs was disputed until 1543, largely because counting them tickles.",
+    "The sella turcica is named for a Turkish saddle. The Turkish Saddlers' Guild has twice petitioned for a more flattering comparison.",
+    "Blood group AB was originally group C, renamed in 1902 after sustained complaints that it sounded like a grade.",
+    "The ABCDE approach originally continued to L. Letters F through L were quietly retired once it emerged that nobody had ever reached them.",
+    "'Idiopathic' was spelled 'ideopathic' until a clerk's slip in 1907, which everyone agreed was an improvement and nobody corrected.",
+    "The cranial nerves are numbered in the order they were discovered, except for the ones that are numbered in the order they were expected to be discovered.",
+    "'Nil by mouth' began as 'no breakfast Mondays' in a 1911 ward protocol, and was generalised by a house officer who read the abbreviation in a hurry.",
+    "The sphygmomanometer was very nearly called the arm-squeezer; the naming committee's only member overruled himself twice before settling.",
+    "The stethoscope's two earpieces were a manufacturing accident. The original design had one, and the second was added after the first shipment arrived doubled.",
+    "Anatomists agreed in 1895 to name the funny bone after whichever of them laughed first. None did, and the matter was left unresolved.",
+    "The word 'ward' entered hospital use from shipbuilding, which is also why patients are discharged rather than simply allowed to leave.",
+    "Ranula, the sublingual cyst, is Latin for 'little frog'. Three separate committees have failed to find anything better.",
+    "The tympanic membrane was briefly the 'drum-skin of the head' until a 1788 translator decided that clinicians would prefer something harder to say.",
+    "Hospital corridors are painted their particular shade of green because a 1934 supplier sent the wrong batch and nobody wanted to raise it.",
+    "The phrase 'unremarkable' entered radiology reporting from an art critic who took a locum post and never quite left."
   ];
 
   /* ── rarity + trivia timing ──────────────────────────────────────────
@@ -824,10 +840,19 @@
     return html;
   }
 
+  /* Every attribute this file writes is double-quoted, so escaping the
+   * apostrophe is not required today and no known input escapes without
+   * it. It is here because the cost is one replace and the failure mode
+   * is not obvious: a single-quoted attribute added later - by anyone,
+   * in any of the four places that build markup as strings - would be
+   * injectable, and nothing in the file would look wrong. Library text
+   * is downloadable as of 2.0, so summary content is no longer entirely
+   * author-controlled and that latent trap is worth closing early. */
   function _esc(s) {
     return String(s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
   }
 
   /* ── event delegation ────────────────────────────────────────────────── */

@@ -96,8 +96,23 @@ def main() -> int:
     args = ap.parse_args()
 
     lib = collect()
+    # Zero-padded dotted date, matching `date +%Y.%m.%d` in
+    # tools/publish_content.sh. These two defaults must agree, and they
+    # did not: this defaulted to `date.isoformat()`, which is hyphenated.
+    #
+    # Versions are compared as strings, and '.' (46) sorts above '-'
+    # (45), so a hyphenated bundled version compares BELOW the dotted
+    # version of the very same day. A build left on the default would
+    # ship believing the already-published, older library was newer, and
+    # every install would download 2 MB on first launch to replace its
+    # own content with the previous release's. Nothing downstream would
+    # report an error - the checksum matches, the schema matches, and
+    # the summaries simply revert.
+    #
+    # Keep the padding for the same reason the publish script warns
+    # about it: 2026.9.1 sorts above 2026.09.15.
     lib["content_version"] = (
-        args.version or datetime.date.today().isoformat())
+        args.version or datetime.date.today().strftime("%Y.%m.%d"))
 
     out = pathlib.Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)

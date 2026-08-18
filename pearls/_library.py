@@ -66,6 +66,95 @@ BUNDLED = os.path.join(_HERE, "data", "library.json")
 USER_COPY = os.path.join(_HERE, "user_files", "library.json")
 
 
+# Identity field per vocabulary list, and the fields every entry of that
+# list must carry as strings. Anything not named here is optional and
+# unconstrained, so content can add fields without a code release; what
+# is named here is what the consumers dereference without checking.
+_ENTRY_REQUIRED = {
+    "conditions":     ("name", "summary"),
+    "new_conditions": ("name", "summary"),
+    "drugs":          ("generic", "summary"),
+    "signs":          ("name", "summary"),
+    "descriptive":    ("name", "summary"),
+    "preclinical":    ("name", "summary"),
+    "psych":          ("name", "summary"),
+}
+
+# Optional fields whose type is still load-bearing: `_conditions` iterates
+# `aliases` and `utd`, `_drugs` iterates `brands`. A string where a list
+# belongs iterates character by character rather than raising, which is
+# the worst outcome - thousands of one-character phrases enter the
+# matcher and every card lights up.
+_ENTRY_LISTS = ("aliases", "utd", "brands")
+_ENTRY_STRS = ("nbk", "source", "category")
+
+# How many entries deep to check. The library is ~2,500 entries and this
+# runs at every launch and on every download, so the whole file is
+# checked rather than a sample: a poisoned entry at index 900 is exactly
+# what a sampling validator would wave through, and the cost measured on
+# the shipped library is under 10 ms.
+_MAX_URL_SCHEMES = ("http://", "https://")
+
+
+def _validate_entries(lib) -> str:
+    """Check every entry of every vocabulary, not just the first one.
+
+    The previous version spot-checked `conditions[0]` and accepted
+    everything after it. That was demonstrably not enough: a library in
+    which `conditions[7]` is a bare string passes, is written to
+    `user_files/`, is preferred over the bundled copy at every launch,
+    and then raises `ValueError` inside `_conditions.py` at import -
+    which kills the add-on permanently, because the Settings dialog that
+    could turn updates off lives in the add-on that no longer imports.
+    Recovery required deleting a file by hand.
+
+    So the gate is the whole file. Fall-back-never-fail only works if
+    the check is strict enough that anything reaching the consumers is
+    known-good.
+    """
+    for key, required in _ENTRY_REQUIRED.items():
+        for i, entry in enumerate(lib[key]):
+            if not isinstance(entry, dict):
+                return f"{key}[{i}] is {type(entry).__name__}, expected object"
+            for field in required:
+                val = entry.get(field)
+                if not isinstance(val, str):
+                    return (f"{key}[{i}].{field} is "
+                            f"{type(val).__name__}, expected string")
+                if not val.strip():
+                    return f"{key}[{i}].{field} is empty"
+            for field in _ENTRY_LISTS:
+                if field in entry and not isinstance(entry[field], list):
+                    return (f"{key}[{i}].{field} is "
+                            f"{type(entry[field]).__name__}, expected list")
+            for field in _ENTRY_STRS:
+                if field in entry and not isinstance(entry[field], str):
+                    return (f"{key}[{i}].{field} is "
+                            f"{type(entry[field]).__name__}, expected string")
+            # A url is navigated to in the authenticated panel profile, so
+            # a downloaded entry naming `javascript:` or `file:` must not
+            # reach the DOM at all. `_is_safe_url` in `__init__.py` is the
+            # second gate; this is the first, and it is the one that stops
+            # the value being stored rather than merely acted on.
+            url = entry.get("url")
+            if url is not None:
+                if not isinstance(url, str):
+                    return f"{key}[{i}].url is {type(url).__name__}"
+                if not url.lower().startswith(_MAX_URL_SCHEMES):
+                    return f"{key}[{i}].url is not http(s)"
+
+    for i, (k, v) in enumerate(lib["acronyms"].items()):
+        if not isinstance(k, str) or not isinstance(v, list) or not v:
+            return f"acronyms[{k!r}] is not a non-empty list"
+    for k, v in lib["drugbank_ids"].items():
+        if not isinstance(k, str) or not isinstance(v, str):
+            return f"drugbank_ids[{k!r}] is not a string"
+    for k, v in lib["rich_summaries"].items():
+        if not isinstance(k, str) or not isinstance(v, str):
+            return f"rich_summaries[{k!r}] is not a string"
+    return ""
+
+
 def _validate(lib) -> str:
     """Return "" if `lib` is a usable library, else why it is not."""
     if not isinstance(lib, dict):
@@ -80,18 +169,33 @@ def _validate(lib) -> str:
             return f"key {key!r} is {type(got).__name__}, expected {want.__name__}"
         if not got:
             return f"key {key!r} is empty"
-    # Spot-check the shape one level down. A file that is structurally
-    # JSON but semantically junk should be caught here, not by an
-    # AttributeError in the middle of building the matcher.
-    first = lib["conditions"][0]
-    if not isinstance(first, dict) or "name" not in first or "summary" not in first:
-        return "conditions entries lack 'name'/'summary'"
-    return ""
+    return _validate_entries(lib)
 
 
 def _read(path):
     with open(path, "r", encoding="utf-8") as fh:
         return json.load(fh)
+
+
+def _quarantine(path: str, why: str) -> None:
+    """Move a rejected downloaded copy aside instead of leaving it in place.
+
+    Falling back covers the current launch, but the bad file stays the
+    preferred copy and is re-read, re-parsed and re-rejected on every
+    launch after it. Renaming it means the failure happens once, the
+    evidence is kept for a bug report, and the next successful check can
+    write a clean file without contending with it.
+
+    Only ever applied to the downloaded copy. A bundled copy that fails
+    means the install itself is damaged, and renaming it would turn a
+    reinstallable problem into an unrecoverable one.
+    """
+    try:
+        dest = path + ".rejected"
+        os.replace(path, dest)
+        log(f"library: quarantined bad downloaded copy to {dest} ({why})")
+    except Exception as exc:                           # noqa: BLE001
+        log(f"library: could not quarantine {path} ({exc})")
 
 
 def _load():
@@ -102,10 +206,14 @@ def _load():
             lib = _read(path)
         except Exception as exc:                       # noqa: BLE001
             log(f"library: {label} copy unreadable ({exc}); falling back")
+            if label == "downloaded":
+                _quarantine(path, f"unreadable: {exc}")
             continue
         why = _validate(lib)
         if why:
             log(f"library: {label} copy rejected - {why}; falling back")
+            if label == "downloaded":
+                _quarantine(path, why)
             continue
         if label == "downloaded":
             log(f"library: using downloaded content "

@@ -934,14 +934,18 @@ def _build_modules_group(_w, first_run: bool):
         cb = _w["QCheckBox"](title)
         cb.setChecked(checked)
         lay.addWidget(cb)
-        note = _caption(_w, desc)
-        note.setIndent(18)
-        lay.addWidget(note)
+        # A row whose caption only restates its own checkbox is left
+        # bare rather than given an empty label, which would still take
+        # its spacing and leave a ragged gap under the one module that
+        # has nothing extra to say.
+        if desc:
+            note = _caption(_w, desc)
+            note.setIndent(18)
+            lay.addWidget(note)
         return cb
 
     pearls_cb = _row(
-        "Reference popups and sidebar",
-        "StatPearls and DrugBank lookups on your cards.", pearls_default)
+        "Reference popups and sidebar", "", pearls_default)
     utd_cb = _row(
         "UpToDate sidebar",
         "Requires your own subscription.", utd_default)
@@ -982,9 +986,6 @@ def _build_recommendations_group(_w, first_run: bool):
     box = _w["QGroupBox"]("Suggested add-on")
     lay = _w["QVBoxLayout"](box)
     lay.setSpacing(6)
-    lay.addWidget(_caption(
-        _w, "Image Occlusion Enhanced - hide parts of a diagram to make "
-            "image cards. Pairs well with the reference popups.", wrap=True))
     btn = _w["QPushButton"]("Install Image Occlusion Enhanced")
     btn.clicked.connect(lambda: _install_addon("1374772155", btn))
     lay.addWidget(btn)
@@ -1031,9 +1032,6 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
     dlg.resize(560, 340)
     lay = _w["QVBoxLayout"](dlg)
 
-    lay.addWidget(_caption(
-        _w, "Words to highlight on your cards in addition to the built-in "
-            "databases. Clicking one opens the link you give it.", wrap=True))
 
     table = _w["QTableWidget"](0, 4)
     table.setHorizontalHeaderLabels(["Term", "Summary", "Link", "Match case"])
@@ -1287,8 +1285,8 @@ def _build_shortcuts_group(_w):
             pass
         form.addRow(label, seq)
         edits[key] = seq
-    form.addRow("", _caption(_w, "Click a field and press the keys you want. "
-                                 "Leave one empty to turn it off.", wrap=True))
+    form.addRow("", _caption(_w, "Leave a field empty to turn it off.",
+                             wrap=True))
 
     # A blank field is ambiguous - deliberately disabled, or lost to a
     # bad write? There was no way back to a working binding short of
@@ -1354,8 +1352,6 @@ def _build_advanced_group(_w):
         "file. Useful when reporting a problem; off costs nothing either "
         "way.")
     lay.addWidget(debug_cb)
-    lay.addWidget(_caption(_w, "Records what the add-on is doing, for bug "
-                               "reports.", wrap=True))
 
     row = _w["QHBoxLayout"]()
     log_btn = _w["QPushButton"]("Show log...")
@@ -1372,7 +1368,7 @@ def _build_advanced_group(_w):
     lay.addWidget(_caption(
         _w,
         f"Inspector is running on port {port}." if port else
-        "Chrome DevTools for the three sidebars. Needs Anki to restart.",
+        "Needs Anki to restart.",
         wrap=True))
     return box, debug_cb
 
@@ -1407,9 +1403,7 @@ def _build_library_group(_w):
 
     lay.addWidget(_caption(
         _w,
-        f"Currently using content {version}. Updates are downloaded in "
-        f"the background, checked against a published checksum, and "
-        f"applied the next time Anki starts.",
+        f"Content {version}.",
         wrap=True))
 
     row = _w["QHBoxLayout"]()

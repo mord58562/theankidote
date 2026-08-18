@@ -5,6 +5,72 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2026-08-18
+
+### Security
+
+This release is the outcome of a full review of the code paths that 2.0
+introduced. Moving the reference database out of the add-on and onto a
+download channel changed what the add-on has to defend against: summary
+text, entry links and library structure are no longer written by the
+author alone. Four defects followed from that, all found by testing the
+shipped code rather than by reading it.
+
+- **A malformed downloaded library could disable the add-on
+  permanently.** Validation checked the first condition and accepted
+  everything after it, so a library whose eighth entry was malformed
+  passed, was saved, was preferred at every launch, and then failed at
+  import. The Settings switch that would have turned updates off lives
+  inside the add-on that no longer loaded, so the only way out was
+  deleting a file by hand. Every entry of every vocabulary is now
+  checked, and a rejected download is renamed aside instead of being
+  retried forever.
+- **Update URLs are now required to be HTTPS.** Neither the manifest
+  address nor the library address it names was checked, and the
+  underlying library will fetch `file://`, `ftp://` and `data:` as
+  readily as a web address. Both are now verified before the request,
+  and again after any redirect, so a redirect cannot quietly downgrade
+  the connection.
+- **Downloaded content can no longer carry a non-web link.** Entry links
+  open in the sidebar, which holds your signed-in sessions. Anything
+  that is not `http` or `https` is now rejected when the file is
+  validated, rather than only when the link is clicked.
+- **A saved download can no longer be diverted through a symlink.** The
+  temporary file used while saving is now opened in a way that refuses
+  to follow one.
+
+None of these are known to have been exploited, and all of them require
+control of the content host or local access to the add-on folder.
+
+### Added
+
+- **Fifteen more conditions rewritten**, chosen the same way as the last
+  batch - by how often each comes up in real use rather than by how
+  badly it overflowed. Lung cancer, lithium toxicity, miscarriage,
+  polycystic ovary syndrome, cystic fibrosis, pre-eclampsia, paracetamol
+  overdose, oesophageal varices, acute pancreatitis, diabetes insipidus,
+  phaeochromocytoma, hyperosmolar hyperglycaemic state, sickle cell
+  disease, bowel obstruction and nephrotic syndrome. Australian sources
+  throughout - eTG, AMH, PBS, RANZCOG, and the Poisons Information
+  Centre.
+- **A security test file**, thirty-three tests pinning each of the above
+  so none of them can quietly come back.
+
+### Fixed
+
+- **The StatPearls search bar came back on article pages.** The sidebar
+  hides NCBI's top search bar on the StatPearls landing page, where the
+  page's own search box does the same job. It was hiding it everywhere,
+  including on articles - which is the one place it is the only way to
+  search the book without going back first.
+
+### Changed
+
+- **Settings reads less like an explanation of itself.** Five captions
+  that restated their own control removed, three shortened. The ones
+  that state a rule you could not otherwise infer are kept.
+- More popup trivia, since the pool was small enough to repeat.
+
 ## [2.0.1] - 2026-08-18
 
 ### Fixed
