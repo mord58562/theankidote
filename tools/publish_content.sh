@@ -71,17 +71,42 @@ if git rev-parse "$TAG" >/dev/null 2>&1; then
   die "tag $TAG already exists. Content versions are compared as strings and must increase; pick a later version."
 fi
 
+# Is this the first publish? If no content tag exists on the remote,
+# there is nothing out there yet and the channel does not resolve at
+# all - clients log a failed check on every launch and there is no way
+# to tell a broken channel from an idle one.
+FIRST_PUBLISH=0
+if [ -z "$(git ls-remote --tags origin 'content-*' 2>/dev/null)" ]; then
+  FIRST_PUBLISH=1
+fi
+
 # The updater refuses anything not strictly greater than what the client
-# already has, so a version that sorts below the shipped one publishes
-# successfully and reaches nobody.
+# already has, so a version that sorts below or equal to the shipped one
+# publishes successfully and reaches nobody.
+#
+# That is exactly what you want for the first publish, though. Seeding
+# the channel with the content the add-on already bundles means the
+# manifest resolves, the asset URL is real, and the end-to-end path is
+# proved - while every client compares equal and downloads nothing. The
+# alternative, bumping the date to get past this check, would push 2 MB
+# of byte-identical content to every install for no reason.
 CURRENT="$(python3 -c 'import json;print(json.load(open("data/manifest.json"))["content_version"])' 2>/dev/null || echo "")"
 if [ -n "$CURRENT" ] && ! python3 -c "import sys;sys.exit(0 if '$VERSION' > '$CURRENT' else 1)"; then
-  die "version $VERSION does not sort after the current $CURRENT; clients would ignore it"
+  if [ "$FIRST_PUBLISH" = "1" ] && [ "$VERSION" = "$CURRENT" ]; then
+    say_seed=1
+  else
+    die "version $VERSION does not sort after the current $CURRENT; clients would ignore it.
+       Pass a later version, or edit content/ and rebuild first."
+  fi
 fi
 
 echo "repository      $SLUG"
 echo "branch          $BRANCH"
 echo "version         $VERSION  (current: ${CURRENT:-none})"
+if [ "${say_seed:-0}" = "1" ]; then
+  echo "MODE            seeding - same content the add-on bundles, so the"
+  echo "                channel resolves and no client downloads anything"
+fi
 echo "tag             $TAG"
 [ "$DRY_RUN" = "1" ] && echo "MODE            dry run - nothing will be pushed"
 
