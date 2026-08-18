@@ -84,6 +84,20 @@ _DEFAULTS = {
     # the inspector itself is never persisted, so a normal restart
     # leaves it off.
     "webInspectorPort": 9222,
+
+    # ── Term library updates ─────────────────────────────────────────
+    # On by default as of 2.0.1. 2.0.0 shipped this off and reachable
+    # only by hand-editing JSON, which is a channel with nobody on it -
+    # a corrected dose could be published and reach no one. Turning it
+    # off in Settings stops all content network activity.
+    "libraryAutoUpdate": True,
+    # One-time flip for installs that ran 2.0.0, where the false was
+    # frozen into meta.json before there was any way to choose. See
+    # `_migrate_library_auto_update`.
+    "libraryAutoUpdateMigrated": False,
+    "libraryManifestUrl":
+        "https://raw.githubusercontent.com/mord58562/theankidote"
+        "/main/data/manifest.json",
     "dockSide": "right",
     "minWidth": 400,
 

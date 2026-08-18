@@ -44,6 +44,9 @@ _QUOTE_FLOOR = 200
 # punchy - long multi-sentence quotes look cramped in Anki's tooltip
 # widget.
 _QUOTES = (
+    # House, M.D. Kept short: these appear in a tooltip or a header
+    # strip, and anything much past a line stops being a glance and
+    # starts being an interruption.
     "Everybody lies.",
     "Reality is almost always wrong.",
     "I find your interest interesting.",
@@ -52,7 +55,28 @@ _QUOTES = (
     "Idiopathic. From the Latin, meaning we're idiots because we can't figure out what's causing it.",
     "If her DNA was off by one percentage point, she'd be a dolphin.",
     "Treating illnesses is why we became doctors. Treating patients is what makes most doctors miserable.",
+    "It's a basic truth of the human condition that everybody lies. The only variable is about what.",
+    "You can't always get what you want.",
+    "I take risks, sometimes patients die. But not taking risks causes more patients to die.",
+    "Occam's Razor. The simplest explanation is almost always somebody screwed up.",
+    "Patients always want proof. We're not making cars here, we don't have to teach them how to drive.",
+    "Differential diagnosis, people.",
+    "When you hear hoofbeats, think horses, not zebras.",
+    "The eyes can mislead, the smile can lie, but the shoes always tell the truth.",
+    "I don't ask why patients lie, I just assume they all do.",
+    "There's not enough time in medical school to learn everything, so you learn what you need.",
+    "Almost dying changes nothing. Dying changes everything.",
+    "If you're going to get me a present, get me something I want.",
+    "Nice hair. Compensating for something?",
+    "Everything sucks. Might as well get used to it.",
+    "You want me to solve a puzzle. I want the puzzle to be interesting.",
+    "Normal's not normal for her.",
+    "Test results are irrelevant if the patient's still symptomatic.",
+    "The most successful marriages are based on lies. You're off to a great start.",
+    "I'm a night owl, Wilson's an early bird. We're different species.",
+    "Doesn't matter what you say. Matters what's true.",
 )
+
 
 
 def _show_quote(text: str) -> None:

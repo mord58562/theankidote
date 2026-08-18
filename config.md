@@ -172,6 +172,49 @@ On macOS, Anki maps `Ctrl` to `⌘` automatically - the bindings show
 as `⌘⇧S` etc. The macOS `Ctrl` modifier is reachable as `Meta` if
 you really want a macOS-specific binding distinct from `⌘`.
 
+## Term library updates
+
+The term database - every condition, drug, acronym and sign the popup
+knows - lives in `data/library.json` rather than inside the add-on's
+Python. That split means a corrected summary can reach you without a new
+AnkiWeb release, which matters most for the thing you would most want
+fixed quickly: a wrong dose or a stale guideline.
+
+**On by default as of 2.0.1.** 2.0.0 shipped this off and reachable only
+by hand-editing this file, which meant the channel existed and nobody
+was on it. For a clinical reference, a database quietly going stale is
+the worse failure, so the default flipped and the control moved into
+**Settings → General → Reference database**, where there is also a
+"Check now" button and the content version currently in use.
+
+Turning it off stops all content-related network activity. Nothing else
+about the add-on needs an internet connection.
+
+What happens with it on: at startup, on a background thread, the add-on
+fetches the small manifest at `libraryManifestUrl`. Only if that
+manifest advertises newer content built for a schema this version
+understands does it download the library, and what arrives is checked
+against the sha256 and byte count the manifest declares, then validated
+for structure, before it is kept. Anything that fails is discarded in
+favour of the copy you already have. The file lands in `user_files/`,
+which survives add-on upgrades, and takes effect at the next Anki
+launch rather than mid-session - the matcher is built once at import,
+and swapping the data under a running reviewer would leave the two
+disagreeing.
+
+Only reference text is downloaded. Nothing about your collection, your
+cards or your review history is sent anywhere. The request is a plain
+HTTPS GET, so the server sees what any web request shows it.
+
+Downloaded content is only ever parsed as JSON. It is never imported,
+executed or unpickled.
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `libraryAutoUpdate` | bool | `true` | Check for updated term content at startup. Off means the add-on makes no network request for content at all. Editable in Settings → General. |
+| `libraryManifestUrl` | string | GitHub raw URL | Where the version check is made. Point it at your own fork to control what your install receives. |
+| `libraryAutoUpdateMigrated` | bool | `false` | Internal. 2.0.0 froze `libraryAutoUpdate: false` into per-install state before there was any way to choose it, so 2.0.1 turns it on once and sets this flag. Turning updates off after that sticks. |
+
 ## Internal / managed flags
 
 These are flipped automatically by the addon. You can set them

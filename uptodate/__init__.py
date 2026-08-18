@@ -281,6 +281,12 @@ class UpToDateBrowser(QWidget):
         self.page = UpToDatePage(self.profile, self)
         self.view = QWebEngineView(self)
         self.view.setPage(self.page)
+        # UpToDate ships no dark theme of its own, so a dark Anki left a
+        # full-brightness white pane beside it. Chromium's auto-dark pass
+        # handles it - the same one used for StatPearls and DrugBank, and
+        # for the same reason: it understands images and already-dark
+        # elements, which an injected invert filter does not.
+        _webengine.set_dark_mode(self.page, _theme.DARK)
 
         # Renderer crash recovery - the WebEngine renderer is a separate OS
         # process that can be killed by memory pressure, GPU issues, etc.
@@ -405,6 +411,8 @@ class UpToDateBrowser(QWidget):
                 btn = getattr(self, name, None)
                 if btn is not None:
                     btn.setStyleSheet(_nav_btn_qss())
+            if getattr(self, "page", None) is not None:
+                _webengine.set_dark_mode(self.page, _theme.DARK)
             if getattr(self, "progress_bar", None) is not None:
                 self.progress_bar.setStyleSheet(
                     "QProgressBar { border: none; background: transparent; }"

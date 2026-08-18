@@ -140,10 +140,3 @@ def set_dark_mode(page_or_profile, dark: bool) -> bool:
         return True
     except Exception:
         return False
-
-
-def inject_stealth(profile: "QWebEngineProfile") -> None:  # pragma: no cover
-    """Kept as a no-op for backwards compatibility with callers that
-    still expect this symbol.  Stealth JS is no longer used - see
-    module docstring."""
-    return

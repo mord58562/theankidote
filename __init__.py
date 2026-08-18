@@ -152,10 +152,22 @@ _pearls_panel = None
 _DEFAULT_SEND_SEL = "Ctrl+Shift+K"
 _DEFAULT_SEND_CARD = "Ctrl+Shift+J"
 _LEGACY_SEND_SEL = "Ctrl+Shift+P"
-# Read from manifest.json so there is one place to bump.  Used only to
-# decide whether an install has already seen a given release's one-time
-# notices - see `_maybe_show_upgrade_notice`.
-_ADDON_VERSION = "1.4.3"
+# Actually read from manifest.json, rather than a hand-kept copy that
+# claims to be. The constant here said "2.0.0-preview11" for the whole
+# of preview 12 through 14, because nothing ever failed when it drifted:
+# it only feeds `_maybe_show_upgrade_notice`, so a stale value silently
+# mis-aims a one-time dialog instead of raising.
+def _read_addon_version() -> str:
+    try:
+        import json as _json
+        with open(_os_mod.path.join(_os_mod.path.dirname(_os_mod.path.abspath(__file__)),
+                               "manifest.json"), encoding="utf-8") as _fh:
+            return _json.load(_fh).get("version") or "0"
+    except Exception:
+        return "0"
+
+
+_ADDON_VERSION = _read_addon_version()
 # QShortcut objects are owned by Python; without a reference they are
 # collected and the binding silently stops working.
 _shortcut_refs: list = []
@@ -1365,6 +1377,78 @@ def _build_advanced_group(_w):
     return box, debug_cb
 
 
+def _build_library_group(_w):
+    """The reference-database update switch.
+
+    2.0.0 had this control, in the sense that a key existed in a JSON
+    file that a user would have to be told about to find. That is not a
+    control, and the practical result was a content channel with nobody
+    on it. A clinical reference that quietly goes stale is the worse
+    failure here, so this is a checkbox, on by default, next to
+    everything else about the term database.
+    """
+    box = _w["QGroupBox"]("Reference database")
+    lay = _w["QVBoxLayout"](box)
+    lay.setSpacing(6)
+
+    update_cb = _w["QCheckBox"]("Keep the reference database up to date")
+    update_cb.setChecked(bool(_config.get("libraryAutoUpdate")))
+    update_cb.setToolTip(
+        "Checks for corrected drug and condition summaries when Anki\n"
+        "starts. Only the reference text is downloaded - no cards, no\n"
+        "review history, nothing about your collection is sent.")
+    lay.addWidget(update_cb)
+
+    try:
+        from .pearls import _library
+        version = _library.CONTENT_VERSION
+    except Exception:
+        version = "unknown"
+
+    lay.addWidget(_caption(
+        _w,
+        f"Currently using content {version}. Updates are downloaded in "
+        f"the background, checked against a published checksum, and "
+        f"applied the next time Anki starts.",
+        wrap=True))
+
+    row = _w["QHBoxLayout"]()
+    check_btn = _w["QPushButton"]("Check now")
+    status = _caption(_w, "", wrap=True)
+
+    def _do_check():
+        check_btn.setEnabled(False)
+        status.setText("Checking...")
+
+        def _work():
+            from .pearls import _updater
+            return _updater.check(_config.get("libraryManifestUrl") or None)
+
+        def _done(fut):
+            try:
+                status.setText(fut.result())
+            except Exception as exc:
+                status.setText(f"Check failed: {exc}")
+            check_btn.setEnabled(True)
+
+        # On the UI thread this would freeze Anki for the length of a
+        # 2 MB download over whatever connection the user has.
+        try:
+            mw.taskman.run_in_background(_work, _done)
+        except Exception:
+            _done_val = _work()
+            status.setText(_done_val)
+            check_btn.setEnabled(True)
+
+    check_btn.clicked.connect(_do_check)
+    row.addWidget(check_btn)
+    row.addStretch(1)
+    lay.addLayout(row)
+    lay.addWidget(status)
+
+    return box, update_cb
+
+
 def _build_misc_group(_w):
     box = _w["QGroupBox"]("Other")
     lay = _w["QVBoxLayout"](box)
@@ -1411,8 +1495,10 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     modules_box, pearls_cb, utd_cb, chat_cb = _build_modules_group(_w, False)
     pearls_box, pearls_qcb, articleview_cb, terms_state = _build_pearls_group(_w)
     order_box, toolbar_order_list = _build_order_group(_w)
+    library_box, library_update_cb = _build_library_group(_w)
     misc_box, remember_cb, _ = _build_misc_group(_w)
-    tabs.addTab(_tab(modules_box, pearls_box, order_box, misc_box), "General")
+    tabs.addTab(_tab(modules_box, pearls_box, library_box, order_box,
+                     misc_box), "General")
 
     utd_box, utd_url_edit = _build_utd_group(_w)
     chat_box, adblock_cb, chat_url_edit, autopaste_cb = _build_chat_group(_w)
@@ -1456,6 +1542,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     _config.set_value("customTerms", terms_state["raw"].strip() or None)
     _config.set_value("rememberDockState", remember_cb.isChecked())
     _config.set_value("debug", debug_cb.isChecked())
+    _config.set_value("libraryAutoUpdate", library_update_cb.isChecked())
 
     order = []
     for i in range(toolbar_order_list.count()):
@@ -1784,8 +1871,12 @@ def _maybe_show_upgrade_notice() -> None:
         if not _config.get("firstRunDone"):
             _stamp()
             return
-        if seen is not None and _version_tuple(seen) >= (1, 4):
+        if seen is not None and _version_tuple(seen) >= (2, 0):
             _config.set_value("lastSeenVersion", _ADDON_VERSION)
+            return
+
+        if seen is not None and _version_tuple(seen) >= (1, 4):
+            _stamp()
             return
         if seen is None and _config.get("sendShortcutMigrated"):
             _stamp()
@@ -1902,4 +1993,56 @@ except Exception as exc:  # older Anki without the hook
     _log.debug(f"theme_did_change hook unavailable: {exc}")
 
 
-gui_hooks.main_window_did_init.append(_setup)
+def _migrate_library_auto_update() -> None:
+    """Turn content updates on once, for installs that never chose.
+
+    2.0.0 shipped `libraryAutoUpdate` false, and `_config.set_value`
+    writes the whole config dict back to meta.json - so the first time
+    any setting was touched, including the automatic `firstRunDone` and
+    `lastSeenVersion` stamps on first launch, the false was frozen into
+    per-install state. Changing the shipped default in config.json
+    therefore reaches nobody who has already run 2.0.0.
+
+    Once frozen, a false is indistinguishable from a deliberate choice.
+    It is safe to override here because 2.0.0 had no user interface for
+    this setting at all: the only way to have chosen false was to edit
+    JSON by hand, and anyone who did that will find the checkbox in
+    Settings. The flag makes it a one-time flip, so a user who turns it
+    off after 2.0.1 stays off.
+    """
+    try:
+        if _config.get("libraryAutoUpdateMigrated"):
+            return
+        _config.set_value("libraryAutoUpdate", True)
+        _config.set_value("libraryAutoUpdateMigrated", True)
+        _log.debug("libraryAutoUpdate defaulted on (one-time)")
+    except Exception as exc:
+        _log.error("libraryAutoUpdate migration", exc)
+
+
+def _check_for_library_update() -> None:
+    """Kick off the content update check, if the user has enabled it.
+
+    Opt-in, and deliberately so: a medical add-on that contacts a server
+    without being asked is a fair thing to be annoyed about. The check
+    itself runs on a daemon thread and never raises, so the worst case
+    here is that nothing happens.
+    """
+    try:
+        if not _config.get("libraryAutoUpdate"):
+            return
+        from .pearls import _updater
+        url = (_config.get("libraryManifestUrl")
+               or _updater.DEFAULT_MANIFEST_URL)
+        _updater.check_in_background(url)
+    except Exception as exc:                            # noqa: BLE001
+        _log.debug(f"library update check not started: {exc}")
+
+
+def _setup_and_check(*args, **kwargs):
+    _setup(*args, **kwargs)
+    _migrate_library_auto_update()
+    _check_for_library_update()
+
+
+gui_hooks.main_window_did_init.append(_setup_and_check)

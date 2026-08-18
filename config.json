@@ -38,5 +38,8 @@
     "sendShortcutMigrated": false,
     "chatAutoPaste": true,
     "lastSeenVersion": null,
-    "webInspectorPort": 9222
+    "webInspectorPort": 9222,
+    "libraryAutoUpdate": true,
+    "libraryManifestUrl": "https://raw.githubusercontent.com/mord58562/theankidote/main/data/manifest.json",
+    "libraryAutoUpdateMigrated": false
 }

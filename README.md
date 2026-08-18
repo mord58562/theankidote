@@ -1,317 +1,180 @@
 # The AnkiDote
 
-A unified medical-reference sidebar for Anki. Free and open source under
-GPL-3.0. Three independently-toggleable side docks plus inline term
-highlighting in the reviewer.
+A medical reference sidebar for Anki. It highlights the conditions,
+drugs and clinical vocabulary already written on your cards, explains
+them on hover, and puts StatPearls, DrugBank, UpToDate and an AI chat
+one keystroke away without leaving the reviewer.
 
-## What's new in 1.3
+Built for Australian medical students, so drug names, units and spelling
+follow Australian conventions and clinical content is checked against
+Australian guidance first.
 
-**Opening articles actually works.** "Open article" used to land on
-StatPearls' in-book search results, which only forwards you to the
-chapter when a search happens to have exactly one hit. Common terms with
-several matching chapters stopped there, and that results page doesn't
-render in the panel at all. 639 of 828 conditions now carry a direct
-link and open in one step; the rest fall back to a search. Links are
-only used where the article genuinely is the condition, so a term that
-matches a different entity, a broader class, or a narrower subtype gets
-no link - reading the wrong chapter unaware is worse than an extra
-click.
+---
 
-**The article panel no longer opens blank.** Loads start only once the
-panel is visible, an in-flight load is stopped before a new one begins,
-a failed load retries once, and a second failure shows a readable
-message rather than an empty rectangle. A page that loads but isn't
-drawn is now redrawn, and if the browser engine's renderer stops the
-panel says so and offers to open the page in your normal browser.
+## What it does
 
-**Australian conventions throughout.** `haemophilia`, `hyponatraemia`,
-`coeliac disease` and `transient ischaemic attack` are now recognised in
-cards and displayed in Australian form, with American spellings still
-matching as synonyms. Drug text uses INN and Australian generic names
-(adrenaline, salbutamol, ciclosporin, rifampicin, indometacin,
-pethidine, mesalazine), SI units, and labels US regulatory claims as US.
+### Reference popups
 
-**The condition library was around 10% unreachable.** 111 names appeared
-more than once and lookups resolved to the first match, so the briefest
-version showed while the fuller rewrite sat unused - breast cancer,
-infective endocarditis, lung cancer, syphilis and ankylosing spondylitis
-among the worst affected. Duplicates are merged, keeping the richest
-summary and the combined aliases.
+Terms on the current card are underlined. Hovering one shows a
+definition; clicking opens the full article in the side panel, or in
+your browser if you prefer.
 
-**Popups.** They no longer run off the bottom of the screen: a popup
-measures the space available and opens above the term when there's no
-room below. Section labels (`Sx`, `Ix`, `Mx`) are clickable and open the
-article at the matching section. A popup's appearance is settled once
-per card and survives hovering away and back, and the flip to the answer
-side.
+Six databases are matched:
 
-**The add-on follows Anki's light/dark switch mid-session** instead of
-keeping whatever theme it started with.
+| Database | Covers | Opens |
+|---|---|---|
+| Conditions | Diseases and syndromes | StatPearls, or UpToDate where mapped |
+| Drugs | Generic and brand names | DrugBank |
+| Preclinical | Basic-science concepts | Wikipedia |
+| Descriptive | Lesion morphology, symptom and lab vocabulary | Wikipedia |
+| Psychiatry | Mental state exam phenomenology | Wikipedia |
+| Signs | Examination and symptom vocabulary | Wikipedia |
 
-See `CHANGELOG.md` for the full history.
+The last one exists because the gap was the wrong way round. Cards were
+resolving *dermatomyositis* and not *poikiloderma*, *telangiectasia*,
+*myalgia* or *pathognomonic* — but a reader who already knows the
+disease name reads past it either way, and one who doesn't is usually
+stuck on the descriptive word, because it is the part of the sentence
+carrying the finding.
 
-Three independently-toggleable side docks plus inline term
-highlighting in the reviewer.
+You can add your own terms under **Settings → General → Custom terms**.
 
-## What's new in 1.1.2
+### The sidebar
 
-- **Snappier toolbar provider icon.** The top-toolbar AI chat button
-  now repaints its logo the instant you switch LLM in the dock, instead
-  of waiting for the new page to start loading. The icon also catches
-  up automatically when an in-page navigation crosses provider
-  boundaries (e.g. an OAuth bounce back to the host site).
+A dock on the right of the reviewer, with three modes:
 
-## What's new in 1.1.1
+- **StatPearls / DrugBank** — reference browsing, with pills to switch
+  between the two. Popup articles open here.
+- **UpToDate** — your own institutional subscription, signed into once
+  and remembered. Set your entry URL under Settings → Services if your
+  institution uses an SSO proxy.
+- **AI chat** — your existing browser session with Claude, ChatGPT,
+  Gemini, Copilot, Perplexity, DeepSeek, Grok or a self-hosted endpoint.
+  No API key, no account of ours, nothing is sent anywhere on its own.
 
-- Welcome dialog tidy-up and case-insensitive synonym dedup. See
-  CHANGELOG for full notes.
+`Ctrl+Shift+K` sends the current text selection to the chat and
+`Ctrl+Shift+J` sends the whole visible card: the dock opens, the message
+box is focused, and the text is pasted into it. **Nothing is submitted —
+pressing Enter is always your keystroke.**
 
-## What's new in 1.1.0
+### Relevant articles
 
-- **Preclinical / basic-science popups (~340 entries).** Hover-popups
-  now cover the foundational vocabulary clinical cards quietly assume
-  you remember: cardiac, respiratory, renal, GI, endocrine, neuro, and
-  haematology physiology; biochemistry pathways (glycolysis, TCA, ETC,
-  urea cycle, fatty-acid oxidation, ketogenesis); microbiology (key
-  pathogens, resistance mechanisms); immunology (T-cell subsets,
-  hypersensitivity types, complement); pathology (cell injury,
-  necrosis types, neoplasia basics); pharmacology (PK, receptor
-  families); plus anatomy landmarks, embryology, genetics, histology,
-  and biostatistics (sens/spec, LR+/LR-, NNT, RR, OR, etc.). Each
-  popup is a 1-3 sentence plain-English summary that links to
-  Wikipedia for further reading. Standalone, fully free, no UpToDate
-  required.
-- **Eponym + abbreviation aliases** for 200+ existing conditions so the
-  highlighter catches both forms (Wegener / GPA, Hashimoto / chronic
-  lymphocytic thyroiditis, Reiter / reactive arthritis, STEMI /
-  NSTEMI, HFrEF, COPD, etc.).
-- **Welcome dialog redesign** with per-module descriptions and a
-  Recommended companion addon section (Image Occlusion) that auto-hides
-  the card if you already have it installed.
-- **StatPearls dock:** confusing NCBI Bookshelf top search strip hidden;
-  per-book "Search this book" field auto-focused; home button now
-  toggles between StatPearls and DrugBank as the default.
-- **AI chat dock:** only the active provider renders inline; everything
-  else lives in a single dropdown next to it. Subtle Dr House quote
-  occasionally appears in the dock header.
-- **Removed:** back/forward arrows in the chat dock (rarely useful);
-  DailyMed fallback (DrugBank-only now).
+The sidebar lists articles matching terms found on the current card,
+ranked by how central each term is to it: whether it appears in the
+card's first field, how often, how early, and how specific it is. It is
+a guess, so it has a close button; dismissing it hides it for that card
+only.
 
-Three independently-toggleable side docks plus inline term highlighting
-in the reviewer:
-
-- **StatPearls + DrugBank popups and side panel** - hover-to-reveal
-  tooltips on medical terms in the reviewer, click to open the full
-  article in a docked side panel. Bundled local term databases cover
-  ~830 clinical conditions (with eponym and abbreviation aliases for
-  the renamed ones), ~1170 drugs, ~420 multi-meaning clinical
-  abbreviations, and ~340 preclinical / basic-science concepts
-  (physiology, biochemistry, microbiology, immunology, pathology,
-  pharmacology, anatomy, biostatistics). Popups link out to
-  StatPearls, DrugBank, or Wikipedia depending on the source; the
-  side panel can be set to either StatPearls or DrugBank as the home
-  page. All popup content is local and instant - no network call to
-  show a popup.
-- **UpToDate authenticated browser dock** - separate side panel with a
-  persistent named profile, so you log in to your institution's UpToDate
-  subscription once and stay logged in across Anki restarts. Activity-
-  gated session keepalive only refreshes the cookie while you're using
-  Anki, never in the background.
-- **AI chat dock** - bring-your-own-account embedded webview pointed at
-  your existing Claude / ChatGPT / Gemini / Copilot / Perplexity /
-  DeepSeek / Grok / Duck.ai session. No API keys, no programmatic chat
-  scraping. One-click provider switching with cookies persisted per
-  provider so you can stay logged into all of them. Ctrl+Shift+K sends
-  the reviewer's current text selection and Ctrl+Shift+J sends the
-  whole visible card: the dock opens, the provider's message box is
-  focused, and the text is pasted into it. Nothing is submitted - you
-  read it, edit it and press Enter yourself.
-
-## Cost & access
-
-The add-on is free. UpToDate is a paid third-party service that requires
-your own subscription (personal or institutional). The add-on never
-includes UpToDate content, only opens links in your existing UTD session.
-
-If you don't have UpToDate access, untick "UpToDate sidebar" on the
-first-run dialog - every UTD control disappears so you never see a button
-you can't use. StatPearls, DrugBank, and the AI chat dock all work fully
-without any paid service.
+---
 
 ## Install
 
-**AnkiWeb (recommended):** Tools → Add-ons → Get Add-ons → paste
-`720072719` → restart Anki. Listing:
-<https://ankiweb.net/shared/info/720072719>.
+From [AnkiWeb](https://ankiweb.net/shared/info/720072719), or download
+the `.ankiaddon` from
+[Releases](https://github.com/mord58562/theankidote/releases) and open
+it with Anki.
 
-**From source:**
+Requires Anki 25.02 or newer with Qt 6. Some features need newer Qt: the
+dark rendering of reference pages needs Qt 6.7+, and degrades to normal
+light pages below that.
 
-```
-cd "$HOME/Library/Application Support/Anki2/addons21"   # macOS
-# or %APPDATA%\Anki2\addons21\                           # Windows
-# or $XDG_DATA_HOME/Anki2/addons21/                      # Linux
-git clone https://github.com/mord58562/theankidote.git theankidote
-```
+---
 
-Then restart Anki.
+## Shortcuts
 
-## First run
-
-A welcome dialog asks which of the three modules you want enabled and
-checks for one recommended companion addon (Image Occlusion) - the
-install pill appears only if you don't already have it. You can
-re-trigger the dialog any time via
-**Tools → The AnkiDote → Run setup again…**.
-
-If you keep UpToDate enabled, the dock will open automatically pointed
-at the UpToDate sign-in page so you can complete institutional SSO
-straight away. The session cookie persists thereafter.
-
-## Configuration
-
-**Tools → The AnkiDote → Settings…** opens the full settings dialog.
-**Tools → The AnkiDote** also exposes quick module on/off toggles. See
-`config.md` for every config key, including the JSON format for custom
-popup terms.
-
-Highlights:
-
-- `enableUpToDate`, `enableHighlights`, `enableChat` - module master
-  toggles. Restart Anki for full effect.
-- `uptodateHomeUrl` - defaults to the public UpToDate search page.
-  Subscribers will be redirected to their institution's SSO automatically
-  on first visit. NSW/Vic Health users behind the HCN proxy and any
-  institution with a custom SP-initiated URL should set their direct
-  entry point in Settings; see `config.md` for examples.
-- `chatCustomProviderUrl` - adds a 9th "Custom" button pointing at a
-  self-hosted endpoint (OpenWebUI / LibreChat / llama.cpp etc).
-- `customTerms` - a JSON array of `{title, summary, url, case_sensitive?}`
-  user-defined popup terms merged into reviewer highlighting alongside
-  the bundled StatPearls / DrugBank / acronyms / conditions sets.
-- `toolbarOrder` - drag the chat ↔ UpToDate buttons in Settings to
-  swap their order in the top toolbar.
-- `pearlsHomePage` - `"statpearls"` (default) or `"drugbank"`; sets
-  which page the side panel's Home button loads. Toggleable inline
-  from the home button's dropdown.
-- `rememberDockState` - reopen the same docks at next launch.
-- `debug` - extra logging for bug-report diagnosis. The article
-  panel's diagnostic log is always written; see Reporting bugs.
-
-### Default keyboard shortcuts
-
-| Action                       | Shortcut       |
-| ---                          | ---            |
-| Toggle StatPearls/DrugBank   | `Ctrl+Shift+S` |
-| Toggle UpToDate              | `Ctrl+Shift+U` |
-| Toggle AI chat               | `Ctrl+Shift+A` |
+| Action | Default |
+|---|---|
+| Toggle StatPearls / DrugBank | `Ctrl+Shift+S` |
+| Toggle UpToDate | `Ctrl+Shift+U` |
+| Toggle AI chat | `Ctrl+Shift+A` |
 | Search selection in UpToDate | `Ctrl+Shift+L` |
-| Send selection to AI chat    | `Ctrl+Shift+K` |
-| Send whole card to AI chat   | `Ctrl+Shift+J` |
+| Send selection to AI chat | `Ctrl+Shift+K` |
+| Send whole card to AI chat | `Ctrl+Shift+J` |
 
-On macOS, Anki maps `Ctrl` to `⌘` automatically - the bindings show as
-`⌘⇧S` etc. Every shortcut is editable in Tools > The AnkiDote >
-Settings > Shortcuts: click a field, press the keys you want, and the
-new binding takes effect as soon as you close the window. Clear a field
-to disable that shortcut entirely.
+macOS maps `Ctrl` to `⌘`, so these appear as `⌘⇧S` and so on.
 
-If any of these clash with another addon you use or with an Anki default
-that matters to you (e.g. some Anki builds reserve `Ctrl+Shift+A` for the
-Add Cards dialog), set `shortcutTogglePearls`, `shortcutToggleUptodate`,
-`shortcutToggleChat`, `shortcutSearchSelection`, or
-`shortcutSendSelectionToChat`, or `shortcutSendCardToChat` to your
-preferred binding in `config.md`.
-Set any one to an empty string to disable it.
+All of them are editable under **Settings → Shortcuts**: click a field,
+press the keys you want, and the new binding applies as soon as you
+close the window. Clear a field to disable that shortcut. **Restore
+defaults** is there if you lose one, and clashing bindings are flagged.
 
-## Privacy & Terms-of-Service posture
+---
 
-Per-source statements:
+## Settings
 
-- **StatPearls / NCBI Bookshelf** - public NIH database, accessed via
-  NCBI's documented public E-utilities API (esearch / esummary / efetch).
-  The add-on identifies itself in the User-Agent and stays well within
-  NCBI's rate-limit guidance (one debounced search per card view).
-- **DrugBank** - pages load in the addon's webview using your personal
-  free-tier session. No content scraping, no API keys, no automation
-  beyond a small CSS rule that hides their login-upsell banner. If you
-  prefer not to hide that banner, click any DrugBank link from a popup
-  to open it in your system browser.
-- **UpToDate** - webview-only access through your own institutional or
-  personal subscription. No programmatic content extraction, no
-  credential storage by the addon itself. The activity-gated keepalive
-  only fires when you've used Anki within the last 2× the configured
-  interval (default 40 minutes), so leaving Anki open overnight does
-  NOT make background UTD requests.
-- **AI chat (Claude / ChatGPT / Gemini / Copilot / Perplexity / DeepSeek /
-  Grok / Duck.ai)** - embedded webview hosting your own logged-in chat
-  session. No API keys, no programmatic message submission, no chat
-  scraping. The send-to-chat shortcuts copy to your system clipboard,
-  then focus the provider's message box and paste - the same two steps
-  you would do by hand, and nothing more. The message is never sent;
-  that is always your keystroke. Set `chatAutoPaste` to `false` for
-  clipboard-only behaviour.
-- **No telemetry. No remote config. No cloud sync.** Settings live in
-  Anki's normal addon-config JSON. Cookies and cache live in QtWebEngine's
-  per-profile directory under `~/Library/Application Support/Anki2/
-  QtWebEngine/`. Nothing leaves your machine that you didn't initiate.
+**Tools → The AnkiDote → Settings**, in four tabs:
 
-## Sidebar behaviour
+- **General** — which modules are active, reference-popup behaviour,
+  custom terms, toolbar button order.
+- **Services** — UpToDate institution URL, AI chat provider and paste
+  behaviour.
+- **Shortcuts** — every binding, editable.
+- **Advanced** — verbose logging, the diagnostic log, and a web
+  inspector for the sidebar webviews.
 
-The StatPearls / DrugBank pills show which site you are on and switch to
-the other one; clicking the site you are already browsing does nothing
-rather than reloading it. When Anki is in dark mode both sites render
-dark, using Chromium's own auto-dark pass (Qt 6.7+).
+Everything writes on close, matching Anki's own Preferences. Every
+setting also has a config key; see [config.md](config.md).
 
-The RELEVANT ARTICLES list is generated from terms detected on the
-current card. It can be wrong, so it has a close button - dismissing it
-hides it for that card only.
+---
 
-## Debugging
+## Privacy
 
-**Settings > Advanced** holds the developer controls: a verbose-logging
-switch, **Show log** (reveals the log file in your file manager), and
-**Web inspector**. The inspector needs Anki to restart, because Qt reads the
-remote-debugging setting once at startup; the entry handles that and
-warns you first, since the port can drive every webview in the process.
-It is never persisted - a normal restart leaves it off.
+- **No telemetry.** Nothing is collected, and there is no server of ours
+  to collect it.
+- **No API keys.** The AI chat is your own browser session in an
+  embedded webview. Cookies persist so you sign in once per provider.
+- **No message submission.** The send-to-chat shortcuts copy, focus the
+  message box and paste. They never press Enter.
+- **Your collection stays local.** Card text is read to find terms and
+  is never transmitted anywhere.
+- **Network access** is limited to the sites you are browsing —
+  StatPearls, DrugBank, UpToDate and your chosen chat provider — plus
+  NCBI when resolving an article link.
+
+---
 
 ## Known limitations
 
-- **Passkey / Touch ID sign-in won't trigger inside an embedded
-  webview.** macOS restricts the platform authenticator to entitled
-  apps (Safari, Chrome.app); QtWebEngine isn't entitled. Sign in with
-  password + 2FA - the named-profile cookie store keeps you signed in
-  across restarts.
-- **WebUSB / WebAuthn hardware keys** likewise generally don't work in
-  embedded webviews. Use the "Open externally" `↗` button in any dock
-  header to finish the task in your real browser.
-- **Renderer crashes** are auto-recovered by reloading the last URL,
-  up to three consecutive times. Past that the panel shows a message
-  with a link to open the page in your normal browser, rather than
-  reloading a page that reliably kills the renderer.
+- **Passkey and Touch ID sign-in do not work** in an embedded webview.
+  This is a macOS restriction affecting every Anki sidebar add-on. Use a
+  password with 2FA; cookies persist, so it is once per provider.
+- **DrugBank sits behind Cloudflare.** A search may pause on a bot
+  check. The panel waits it out rather than interrupting it, but a check
+  that never clears has to be finished in your normal browser.
+- **UpToDate needs your own subscription.** The add-on provides no
+  content of its own.
+- **The article list is a guess.** It is ranked, not authoritative.
 
-## Reporting bugs
+---
 
-Please open an issue at
-<https://github.com/mord58562/theankidote/issues>. The add-on keeps a
-diagnostic log of what the article panel is doing - open it via
-**Tools → The AnkiDote → Show diagnostic log** and attach the relevant
-lines. For full tracebacks as well, set `debug: true` in the addon
-config before reproducing.
+## Contributing
 
-Redact any patient data before sharing screenshots or card exports.
-See `SECURITY.md` for the security disclosure process.
+Issues and pull requests:
+[github.com/mord58562/theankidote](https://github.com/mord58562/theankidote)
 
-## Disclaimer
+Bug reports are much easier to act on with a diagnostic log: turn on
+**Settings → Advanced → Verbose logging**, reproduce the problem, then
+use **Show log**.
 
-Educational / study tool only. The popup summaries are condensed
-mnemonics and **do not substitute for clinical judgement, current local
-guidelines, drug-information references, or the user's own scholarship**.
-No part of this software constitutes medical advice. Verify every
-clinical decision against authoritative primary sources and your
-institution's guidelines. Use at your own risk; the author and
-contributors accept no liability for clinical outcomes derived from
-the use of this add-on.
+Tests live in `tests/` and run with plain `python3` — no Anki required:
 
-## License
+```bash
+python3 tests/test_matcher.py       # term matching, incl. equivalence proof
+python3 tests/test_vocab.py         # database integrity and collisions
+python3 tests/test_safe_url.py
+python3 tests/test_toolbar_order.py
+python3 tests/test_acronym_normalise.py
+python3 tests/shadow_check.py       # import shadowing guard
+```
 
-GPL-3.0-or-later. See `LICENSE`.
+---
+
+## Licence
+
+GPL-3.0-or-later. See [LICENSE](LICENSE).
+
+Clinical content is compiled from public sources and is intended for
+study. It is not a clinical decision tool and carries no warranty —
+check current guidance before acting on anything you read here.
+
+Version history is in [CHANGELOG.md](CHANGELOG.md).

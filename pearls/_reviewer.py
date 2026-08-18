@@ -12,14 +12,17 @@ Two-phase highlighting:
     web.eval() injects the marker code into the live DOM.
 """
 import json
+import os
 import re
+import time
 from html.parser import HTMLParser
 from typing import Any
 
 from aqt import mw, gui_hooks
 
 from .. import _config, _log
-from . import _acronyms, _drugs, _conditions, _preclinical
+from . import (_acronyms, _drugs, _conditions, _preclinical,
+               _descriptive, _psych, _signs)
 
 
 # ── User-defined custom terms ─────────────────────────────────────────
@@ -76,7 +79,38 @@ except Exception:
     Reviewer = None  # type: ignore[assignment,misc]
 
 _ADDON_PKG  = __name__.split(".")[0]
-_SCRIPT_URL = f"/_addons/{_ADDON_PKG}/web/marker.js"
+
+
+def _marker_fingerprint() -> str:
+    """Short content hash of web/marker.js, used to bust the webview cache.
+
+    marker.js is delivered to the reviewer as `<script src=...>` from
+    Anki's media server, and that URL was byte-identical in every
+    release. QtWebEngine caches by URL, so an install that had already
+    fetched the file kept running its cached copy across upgrades - the
+    add-on's Python side updated, the JavaScript side did not. That is
+    why bullet rendering, added in preview 9, appeared not to work at
+    all: the logic, the data and the CSS were all correct, and the
+    reviewer was simply executing an older marker.js.
+
+    Hashing the file rather than the manifest version means the URL also
+    changes between builds of the same version, so editing marker.js
+    during development takes effect on the next card instead of after a
+    profile-wide cache clear.
+    """
+    try:
+        import hashlib
+        path = os.path.join(os.path.dirname(os.path.dirname(
+            os.path.abspath(__file__))), "web", "marker.js")
+        with open(path, "rb") as fh:
+            return hashlib.sha256(fh.read()).hexdigest()[:12]
+    except Exception:
+        # Never fatal: a timestamp still busts the cache, it just does so
+        # on every restart rather than only when the file changes.
+        return str(int(time.time()))
+
+
+_SCRIPT_URL = f"/_addons/{_ADDON_PKG}/web/marker.js?v={_marker_fingerprint()}"
 
 # ── module-level state ────────────────────────────────────────────────────────
 
@@ -318,7 +352,19 @@ def _preclinical_terms(card) -> list:
     if not text:
         return []
     out = []
-    for it in _preclinical.resolve(text):
+    # Several databases, one popup source. `_preclinical` holds
+    # basic-science concepts, `_descriptive` the vocabulary cards are
+    # written in (lesion morphology, symptom words, lab descriptors),
+    # and `_psych` the mental state exam. They resolve together because
+    # the reader has no reason to care which file a definition came
+    # from. Order settles collisions: the first database to claim a name
+    # keeps it, and `tests/test_vocab.py` asserts there are none.
+    for it in (list(_preclinical.resolve(text))
+               + list(_descriptive.resolve(text))
+               + list(_psych.resolve(text))
+               + list(_signs.resolve(text))):
+        if any(o["title"] == it["name"] for o in out):
+            continue
         out.append({
             "title":          it["name"],
             "_article":       it["name"],

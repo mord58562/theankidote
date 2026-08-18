@@ -200,9 +200,21 @@
         ".label-pre{color:#9aa9ff;}" +
         ".title{font-size:17px;font-weight:600;margin:0 0 9px 0;}" +
         ".summary{font-size:14px;opacity:.88;line-height:1.6;margin:0;}" +
-        ".cat{color:#5dd5df;font-weight:700;font-size:12px;" +
-          "cursor:pointer;border-bottom:1px dotted rgba(93,213,223,.45);}" +
-        ".cat:hover{color:#8fe9f1;border-bottom-color:#8fe9f1;}" +
+        ".lede{margin:0 0 2px 0;}" +
+        ".pts{margin:1px 0 0 0;padding:0 0 0 15px;list-style:none;" +
+          "line-height:1.4;}" +
+        ".pts li{position:relative;margin:0 0 1px 0;}" +
+        ".pts li:last-child{margin-bottom:0;}" +
+        ".pts li:before{content:\"\\2022\";position:absolute;left:-11px;" +
+          "opacity:.45;}" +
+        ".sec{margin-top:7px;}" +
+        ".secbody{margin-top:1px;}" +
+        ".cat{display:inline-block;margin-bottom:1px;" +
+          "text-transform:uppercase;letter-spacing:.06em;" +
+          "color:#5dd5df;font-weight:700;font-size:10.5px;}" +
+        ".cat-link{cursor:pointer;" +
+          "border-bottom:1px dotted rgba(93,213,223,.45);}" +
+        ".cat-link:hover{color:#8fe9f1;border-bottom-color:#8fe9f1;}" +
         ".box.golden .cat,.box.diamond .cat{color:inherit;opacity:.85;}" +
         ".utd{margin-top:12px;padding-top:10px;" +
           "border-top:1px solid rgba(255,255,255,.09);}" +
@@ -445,6 +457,16 @@
    * is in the DOM, since height depends entirely on the summary text. */
   var _GAP = 8, _EDGE = 6;
 
+  // Hard ceiling on popup height, independent of how much room the
+  // viewport happens to offer. Before this, `maxHeight` was only set
+  // when neither side fitted, so on a tall window a popup grew to
+  // whatever its content needed - and bullet rendering made the same
+  // summary noticeably taller than the paragraph it replaced (a mean of
+  // about 85px across the structured summaries, and over 300px for the
+  // worst). The popup is meant to orient and hand off to the article
+  // underneath; one that fills the screen competes with it.
+  var _MAX_H = 620;
+
   function _position(el) {
     if (_tipBox) _tipBox.style.maxHeight = "";
     _tip.style.visibility = "hidden";
@@ -458,17 +480,21 @@
 
     var below = vh - r.bottom - _GAP - _EDGE;
     var above = r.top - _GAP - _EDGE;
+    // Never taller than the cap, and never taller than the side we end
+    // up on. Applied in every branch, not just the overflow ones.
+    var room = Math.max(above, below);
+    var cap  = Math.min(_MAX_H, Math.max(120, room));
+    if (_tipBox) _tipBox.style.maxHeight = cap + "px";
+    if (h > cap) h = cap;
+
     var top;
     if (h <= below) {
       top = r.bottom + _GAP;
     } else if (h <= above) {
       top = r.top - h - _GAP;
     } else if (above > below) {
-      // Neither side fits: use the roomier one and let the box scroll.
-      if (_tipBox) _tipBox.style.maxHeight = Math.max(120, above) + "px";
-      top = Math.max(_EDGE, r.top - _tip.offsetHeight - _GAP);
+      top = Math.max(_EDGE, r.top - h - _GAP);
     } else {
-      if (_tipBox) _tipBox.style.maxHeight = Math.max(120, below) + "px";
       top = r.bottom + _GAP;
     }
 
@@ -482,19 +508,320 @@
     _tipAnchor = null;
   }
 
-  var _SECTION_RE = /([;.])\s+((?:Sx|Mx|Tx|Rx|Dx|SE|CI|MOA|Signs|Triggers|Risk|Causes|Aetiology|Etiology|Types|Subtypes|Features|Complications|Investigations|Pathophysiology|Management|Treatment|Prognosis|Epidemiology|Note|Classification|Staging|Presentation|Diagnosis|Associations|Genetics|Phases|Examination|Workup|Variants|Differential|Criteria|Indications|Contraindications):\s)/g;
+  // Labels that open a section of a summary.  Ordered longest-first
+  // where one is a prefix of another ("Adverse effects" before
+  // "Adverse") so the alternation can't match the shorter one and leave
+  // a stray word behind.
+  var _SECTION_LABELS = [
+    // Clinical shorthand
+    "Sx", "Mx", "Tx", "Rx", "Dx", "Ix", "Hx", "Px", "DDx", "SE", "CI",
+    "MOA", "PK", "PD",
+    // Disease-shaped sections
+    "Definition", "Epidemiology", "Aetiology", "Etiology", "Causes",
+    "Mechanism", "Mechanisms",
+    "Risk factors", "Risk", "Pathophysiology", "Pathology", "Classification",
+    "Types", "Subtypes", "Variants", "Staging", "Stages", "Phases",
+    "Clinical features", "Features", "Presentation", "Signs", "Symptoms",
+    "Examination", "Triggers", "Associations", "Genetics",
+    "Investigations", "Workup", "Diagnosis", "Criteria", "Screening",
+    "Differential", "Management", "Treatment", "Monitoring", "Follow-up",
+    "Complications", "Prognosis", "Secondary prevention", "Prevention",
+    "Red flags",
+    "Extra-articular", "Extrahepatic", "Extraintestinal",
+    // Drug-shaped sections
+    "Class", "Indications", "Contraindications", "Cautions", "Dose",
+    "Dosing", "Route", "Adverse effects", "Interactions", "Pregnancy",
+    "Breastfeeding", "Renal", "Hepatic", "Paediatric", "Elderly",
+    "Onset", "Duration", "Half-life", "Metabolism", "Excretion",
+    "Targets", "Uses", "PBS", "Australian notes",
+    // Catch-alls
+    "Note", "Notes", "Pearls", "Mnemonic", "Key point", "Exam tip"
+  ].sort(function (a, b) { return b.length - a.length; });
+
+  var _LABEL_ALT = _SECTION_LABELS.map(function (l) {
+    return l.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+  }).join("|");
+
+  // Canonical spelling for each label, looked up case-insensitively.
+  // Summaries are written by hand across several files and spell the
+  // abbreviations inconsistently - "Ddx:" and "DDx:" both occur - so
+  // matching is case-insensitive and the *canonical* form is what gets
+  // displayed. Before this, a case mismatch meant the label silently
+  // rendered as body text, which is how "Ddx:" ended up buried
+  // mid-paragraph inside the management section.
+  var _LABEL_CANON = {};
+  for (var _li = 0; _li < _SECTION_LABELS.length; _li++) {
+    _LABEL_CANON[_SECTION_LABELS[_li].toLowerCase()] = _SECTION_LABELS[_li];
+  }
+
+  // Labels that resolve to a real StatPearls heading, and so are worth
+  // rendering as a click target. Mirrors the keys of `SECTION_MAP` in
+  // pearls/_ncbi.py, which is what the click is ultimately looked up
+  // against; `tests/test_vocab.py` asserts the two stay in step.
+  //
+  // Before this, every label was clickable and 47% of them resolved to
+  // nothing, so the click quietly opened the article at the top - a
+  // control that looks live and does nothing, on nearly half the
+  // headings in the popup. Labels that are this add-on's own editorial
+  // synthesis rather than a section of the article ("Note", "Red
+  // flags") have no honest target and now render as plain headings.
+  var _SECTION_LINKABLE = {};
+  (function () {
+    var keys = [
+      "sx", "hx", "signs", "symptoms", "presentation", "examination",
+      "features", "clinical features",
+      "extra-articular", "extrahepatic", "extraintestinal",
+      "definition", "mechanism", "mechanisms", "pathophysiology",
+      "pathology", "phases",
+      "aetiology", "etiology", "causes", "risk", "risk factors",
+      "triggers", "associations", "genetics", "epidemiology",
+      "ix", "investigations", "workup", "dx", "diagnosis", "criteria",
+      "classification", "types", "subtypes", "variants", "staging",
+      "stages",
+      "screening",
+      "differential", "ddx",
+      "mx", "management", "treatment", "tx", "rx", "follow-up",
+      "monitoring", "prevention", "secondary prevention",
+      "complications", "prognosis", "px",
+      "se", "adverse effects", "ci", "contraindications", "cautions",
+      "interactions", "indications", "uses", "moa", "pk", "pd",
+      "dose", "dosing", "route", "metabolism", "half-life",
+      "pearls"
+    ];
+    for (var i = 0; i < keys.length; i++) _SECTION_LINKABLE[keys[i]] = true;
+  })();
+
+  function _isLinkable(label) {
+    var base = String(label || "").replace(/\s*\([^()]*\)\s*$/, "");
+    return _SECTION_LINKABLE[base.toLowerCase()] === true;
+  }
+
+  // A section opens at the start of the summary, or after a sentence
+  // break.  Both are needed: the old pattern required the punctuation,
+  // so a summary that led with a label rendered it as body text.
+  //
+  // The optional parenthetical lets a label carry a qualifier -
+  // "Sx (tetrad):", "Mx (acute):", "Ix (first-line):". These read
+  // naturally when writing and were silently not recognised, so the
+  // whole block collapsed back into the lede: the neuroleptic malignant
+  // syndrome popup put its entire tetrad and lab panel into the opening
+  // paragraph for exactly this reason.
+  var _SECTION_RE = new RegExp(
+    "(^|[;.]\\s+)((?:" + _LABEL_ALT + ")(?:\\s*\\([^()]{1,24}\\))?:\\s)", "gi");
+
+  /**
+   * Turn a flat summary string into labelled blocks.
+   *
+   * Summaries were rendered as one continuous paragraph with section
+   * labels inlined behind a <br>.  On a long entry - erythema nodosum
+   * runs to a dozen clauses - that is a wall: the information is all
+   * there and none of it is findable, which is the opposite of what a
+   * hover popup is for.
+   *
+   * The text before the first label becomes an unlabelled lede (the
+   * definition, almost always), and each label after it opens a block
+   * with the label on its own line above its body.  Entries with no
+   * labels at all still render as a single lede, so this is safe
+   * against the whole database before any of it is rewritten - the
+   * ones that already carry labels simply start reading better.
+   *
+   * The label keeps its `data-sec` attribute and `cat` class: it is a
+   * click target that jumps to the matching heading in the article, and
+   * that behaviour is unchanged.
+   */
+  // Append to the previous block when the label repeats rather than
+  // emitting a second identical heading. Summaries legitimately return
+  // to a heading - acute management, then long-term - and two "MX"
+  // headers stacked on one popup reads as a rendering fault rather than
+  // as two phases of the same thing.
+  function _push(parts, label, body) {
+    if (!body) return;
+    var last = parts.length ? parts[parts.length - 1] : null;
+    if (last && last.label === label) {
+      last.body = last.body.replace(/[.;\s]+$/, "") + ". " + body;
+      return;
+    }
+    parts.push({ label: label, body: body });
+  }
+
+  // Split a section body into its separate points.
+  //
+  // Sections like Causes and Ix are lists written as prose with
+  // semicolons, and rendering them as a paragraph makes several
+  // unrelated items share a line and wrap across lines - so the reader
+  // has to parse punctuation to find where one item ends and the next
+  // begins. Splitting them into bullets removes that work entirely.
+  //
+  // Only top-level semicolons count: "(autoimmune loss of intrinsic
+  // factor; ...)" is one item, not two. And a body is only bulleted if
+  // it yields three or more points, which keeps genuinely prose
+  // sections - Note, Pathophysiology - as paragraphs, where sentences
+  // build on each other and bullets would break the argument.
+  function _splitOn(body, sep) {
+    var parts = [], depth = 0, cur = "";
+    for (var i = 0; i < body.length; i++) {
+      var ch = body.charAt(i);
+      if (ch === "(" || ch === "[") depth++;
+      else if (ch === ")" || ch === "]") depth = Math.max(0, depth - 1);
+      if (ch === sep && depth === 0) { parts.push(cur); cur = ""; continue; }
+      cur += ch;
+    }
+    parts.push(cur);
+    var out = [];
+    for (var j = 0; j < parts.length; j++) {
+      var t = parts[j].replace(/^[\s,;]+|[\s.;]+$/g, "");
+      if (t) out.push(t);
+    }
+    return out;
+  }
+
+  // A point that opens with one of these is a continuation of the
+  // previous clause, not a list item: "started within 72 hr, shortens
+  // the course, and improves recovery" is one sentence with commas in
+  // it, and splitting it produces nonsense bullets. Their presence is
+  // the signal that the commas are grammatical rather than enumerative.
+  var _CONNECTIVE = /^(and|or|but|which|who|whereas|while|though|although|then|so|because|since|with|without|as|if|when|whereby|thereby|hence|thus)\b/i;
+
+  // A bulleted point costs a whole line however short it is, so a
+  // three-item list of two-word fragments spends ~60px to render what
+  // prose fits in one 22px line. Measured across the shipped library,
+  // bullet count - not character count - is what predicts whether a
+  // summary overflows the popup: the entries that fit carry a median of
+  // 4 bullets, the ones that scroll carry 10, at the same length. So
+  // bullets have to earn the space: four or more items, at least one of
+  // them substantial enough that a reader would actually scan for it.
+  var _MIN_POINTS  = 4;
+  var _MIN_LONGEST = 40;
+
+  function _worthBulleting(pts) {
+    if (pts.length < _MIN_POINTS) return false;
+    for (var i = 0; i < pts.length; i++) {
+      if (pts[i].length >= _MIN_LONGEST) return true;
+    }
+    return false;
+  }
+
+  function _looksEnumerated(pts) {
+    if (pts.length < _MIN_POINTS) return false;
+    for (var i = 0; i < pts.length; i++) {
+      var p = pts[i];
+      // A bare fragment ("azoles" split off "macrolides, azoles") and a
+      // continuation both mean the commas were not delimiting a list.
+      if (p.length < 3) return false;
+      if (_CONNECTIVE.test(p)) return false;
+    }
+    return true;
+  }
+
+  function _splitPoints(body) {
+    // Semicolons are the deliberate list separator and are trusted when
+    // present. Commas are only a fallback, because most summaries -
+    // every drug entry, among others - enumerate with commas and would
+    // otherwise never bullet at all.
+    var semi = _splitOn(body, ";");
+    if (semi.length > 1) return semi;
+    var comma = _splitOn(body, ",");
+    return _looksEnumerated(comma) ? comma : semi;
+  }
+
+  function _sentenceCase(t) {
+    if (!t) return t;
+    // Only lift the first character; the rest may legitimately begin
+    // with a lowercase drug or gene name.
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
+
+  function _renderBody(body) {
+    var pts = _splitPoints(body);
+    if (!_worthBulleting(pts)) {
+      return '<div class="secbody">' + _esc(_sentenceCase(body)) + "</div>";
+    }
+    var html = '<ul class="pts">';
+    for (var i = 0; i < pts.length; i++) {
+      html += "<li>" + _esc(_sentenceCase(pts[i])) + "</li>";
+    }
+    return html + "</ul>";
+  }
 
   function _formatSummary(raw) {
-    var s = _esc(raw);
-    // The label is carried on a data attribute rather than recovered from
-    // the text node later, so trailing punctuation and the <br> can change
-    // freely without breaking the click target.
-    s = s.replace(_SECTION_RE, function (m, punct, label) {
-      var key = String(label).replace(/[:\s]+$/, "");
-      return punct + '<br><span class="cat" data-sec="' + _esc(key) + '">' +
-             label + "</span>";
-    });
-    return s;
+    var text = String(raw || "").trim();
+    if (!text) return "";
+
+    var parts = [];        // [{label, body}], label null for the lede
+    var lastEnd = 0;
+    var pending = null;
+    var m;
+    _SECTION_RE.lastIndex = 0;
+    while ((m = _SECTION_RE.exec(text)) !== null) {
+      var lead = m[1] || "";
+      // Keep the punctuation that closed the previous section with it.
+      var cut = m.index + lead.length;
+      var chunk = text.slice(lastEnd, cut).trim();
+      if (pending === null) {
+        if (chunk) parts.push({ label: null, body: chunk });
+      } else {
+        _push(parts, pending, chunk);
+      }
+      var raw = m[2].replace(/[:\s]+$/, "");
+      // Split any qualifier off before canonicalising: "Sx (tetrad)"
+      // must still resolve to the registered label "Sx", both so the
+      // canonical spelling is displayed and so the heading stays a
+      // working jump target.
+      var qual = "";
+      var qm = raw.match(/^(.*?)\s*(\([^()]*\))$/);
+      if (qm) { raw = qm[1]; qual = " " + qm[2]; }
+      pending = (_LABEL_CANON[raw.toLowerCase()] || raw) + qual;
+      lastEnd = m.index + m[0].length;
+    }
+    var tail = text.slice(lastEnd).trim();
+    if (pending === null) {
+      if (tail) parts.push({ label: null, body: tail });
+    } else {
+      _push(parts, pending, tail);
+    }
+
+    // "Note" is this add-on's own aside - the thing worth saying once
+    // the clinical picture is laid out - so it reads last regardless of
+    // where it was written. In the shipped library it usually is not:
+    // 29 conditions and 21 drug entries put it immediately before "Red
+    // flags", which buries the safety-critical section under an aside.
+    //
+    // Reordering here rather than rewriting the summaries means it
+    // holds for downloaded content too, which is written by whoever
+    // published it and cannot be relied on to keep the convention.
+    // Section heights are unchanged by a reorder, so the popup height
+    // estimator in tests/test_vocab.py needs no matching change.
+    var _TRAILING = { "note": true, "notes": true };
+    var ordered = [], trailing = [];
+    for (var pi = 0; pi < parts.length; pi++) {
+      var lab = parts[pi].label;
+      var bare = lab === null ? "" :
+        String(lab).replace(/\s*\([^()]*\)\s*$/, "").toLowerCase();
+      (_TRAILING[bare] === true ? trailing : ordered).push(parts[pi]);
+    }
+    parts = ordered.concat(trailing);
+
+    var html = "";
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      if (p.label === null) {
+        html += '<div class="lede">' + _esc(p.body) + "</div>";
+      } else {
+        // Only labels with a real heading to jump to carry `data-sec`
+        // and the `cat-link` affordance; the rest are plain headings.
+        var linkable = _isLinkable(p.label);
+        // The jump is resolved against SECTION_MAP, which is keyed on
+        // the bare label, so any qualifier is stripped before it is
+        // sent - "Sx (tetrad)" must arrive as "Sx".
+        var secKey = p.label.replace(/\s*\([^()]*\)\s*$/, "");
+        html += '<div class="sec"><span class="cat' +
+                (linkable ? " cat-link" : "") + '"' +
+                (linkable ? ' data-sec="' + _esc(secKey) + '"' : "") +
+                ">" + _esc(p.label) + "</span>" +
+                _renderBody(p.body) + "</div>";
+      }
+    }
+    return html;
   }
 
   function _esc(s) {

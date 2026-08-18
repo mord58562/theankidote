@@ -5,6 +5,410 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] - 2026-08-18
+
+### Fixed
+
+- **Content updates had no way to turn them on.** 2.0.0 shipped the key
+  in a JSON config file and no interface anywhere, so the update
+  channel existed with nobody on it - a corrected dose could be
+  published and reach essentially no one. There is now a checkbox in
+  Settings > General > Reference database, with the content version in
+  use and a "Check now" button that runs off the UI thread.
+- **Content updates now default to on.** For a clinical reference, a
+  database that quietly goes stale is a worse failure than one that
+  fetches a checksummed, validated data file. Turning it off in
+  Settings stops all content network activity, as before.
+- **Installs that ran 2.0.0 are migrated once.** `_config.set_value`
+  writes the whole config back to meta.json, so the automatic
+  first-launch stamps froze `libraryAutoUpdate: false` into per-install
+  state before any user could have chosen it. Changing the shipped
+  default would not have reached them. 2.0.1 flips it on once and
+  records that it has; turning it off after that sticks.
+
+- **"Note" now renders last.** It is an aside, and 29 conditions and 21
+  drug entries wrote it immediately before "Red flags" - putting a
+  remark ahead of the safety-critical section. The popup moves it to
+  the end when rendering rather than relying on fifty summaries being
+  rewritten, so it holds for downloaded content too.
+
+### Removed
+
+- **The 2.0 upgrade popup.** A modal on first launch to announce
+  changes the release notes already cover.
+
+## [2.0.0] - 2026-08-18
+
+### Added
+
+- **The term library ships as data, and can update on its own.** Every
+  condition, drug, acronym and sign now lives in `data/library.json`
+  rather than inside the add-on's Python modules. Content and code are
+  no longer welded together, so a wrong dose or a stale guideline can be
+  corrected without an AnkiWeb release and a wait for everyone to
+  update. Opt in with `libraryAutoUpdate`; it is off by default and the
+  add-on never contacts the network for content until you turn it on.
+  Downloaded content is parsed as JSON, checked against a published
+  sha256, validated for schema and structure, and discarded in favour of
+  what you already have if any of that fails. It is never imported or
+  executed.
+- **A summary that would scroll now fails the build.** The height
+  estimator in the test suite only ever looked at the rewritten
+  summaries, the acronyms and the drugs - which is to say, everything
+  except the 774 conditions still carrying their original text, where
+  the length actually was. Lung cancer had been shipping at roughly
+  1,200px against a ceiling nominally set at 1,000. The estimator now
+  walks every summary the popup can render, and a second test pins the
+  over-cap backlog so it can only shrink.
+
+### Changed
+
+- **Short lists read as prose instead of bullets.** A bullet costs a
+  full line however little it contains, so a three-item list of two-word
+  fragments spent about 60px saying what fits on one 22px line. Lists
+  now bullet at four or more items with at least one of them
+  substantial. Nothing was rewritten to achieve this: the tallest
+  condition popup dropped from 1,208px to 995px, and 40 conditions and
+  29 drug entries came back under the cap on the rendering change alone.
+- **Fourteen high-traffic conditions rewritten.** Vasculitis, pleural
+  effusion, acute liver failure, septic arthritis, colorectal cancer,
+  anorexia nervosa, peptic ulcer disease, hypokalaemia, aortic
+  dissection, rhabdomyolysis, infective endocarditis, coeliac disease,
+  ankylosing spondylitis and serotonin syndrome. Chosen by how often
+  each appears across a real collection rather than by how badly each
+  overflowed - the tallest entries in the database turned out to be
+  conditions nobody had made a card about.
+
+### Fixed
+
+- **Eight popups were titled something other than what they described.**
+  An override keyed on an alias still merges, because the lookup is
+  keyed on every alias, but the popup takes its heading from the
+  canonical name. A summary written about community-acquired pneumonia
+  appeared under "Pneumonia", and one written about acute coronary
+  syndrome under "Myocardial infarction" - narrower than the heading
+  claimed, silently. All eight re-keyed, with a test so it cannot
+  recur.
+
+## [2.0.0-preview14] - superseded
+
+### Fixed
+
+- **Drug popups are now bulleted too.** Bullets only ever appeared where
+  a list was written with semicolons, and drug entries separate their
+  side effects and indications with commas, so none of them ever
+  bulleted. Roughly 990 drug popups now break their lists out. Commas
+  that are ordinary punctuation rather than list separators are left
+  alone, so a phrase like "caution with macrolides, azoles" stays as a
+  sentence.
+- **Headings with a qualifier work.** "Sx (tetrad):" was not recognised
+  as a heading at all, so everything under it fell back into the opening
+  paragraph. That is why the neuroleptic malignant syndrome popup showed
+  its tetrad and its whole lab panel as one block of text.
+- **Section headings on DrugBank jump correctly.** DrugBank names some
+  of its sections differently to StatPearls - "Indication" rather than
+  "Indications" - so those headings opened the page at the top.
+  Interactions, metabolism and half-life now have targets as well.
+
+### Changed
+
+- **Syphilis and neuroleptic malignant syndrome** rewritten. Syphilis
+  had its entire staging, from primary through congenital, in one
+  unbroken paragraph. Both now use Australian dosing: benzathine
+  benzylpenicillin 1.8 g rather than units.
+- **"Stages"** added as a heading.
+
+## [2.0.0-preview13] - unreleased
+
+### Fixed
+
+- **Popups no longer grow.** Bullet points take more vertical space than
+  the run-on sentence they replaced, and the popup had no height limit
+  except the edge of the window, so on a tall screen it simply got
+  bigger. It is now capped, and bullet spacing has been tightened to
+  give back most of what the bullets cost.
+- **Section headings jump more reliably.** The jump ran once, the
+  instant the page reported itself loaded, and did nothing if the
+  article had not finished laying out or if the page moved itself
+  afterwards. It now retries for a few seconds and confirms the heading
+  actually ended up in view. If it still cannot find the heading, the
+  log now records which headings the article really has.
+
+## [2.0.0-preview12] - unreleased
+
+### Fixed
+
+- **Changes to the popup take effect on upgrade.** The reviewer loaded
+  its popup script from an address that never varied between releases,
+  so a webview that had already cached the file kept running the old
+  copy indefinitely. Everything on the Python side updated and the
+  popup behaviour did not. This is why bullets, added in preview 9,
+  appeared to do nothing: they had been working all along and were
+  never reaching the screen. The address now changes whenever the
+  script does.
+- **Section headings jump to the right part of the article.** Nearly
+  half of them opened the article at the top instead - including
+  "Clinical features", the most common heading in the popup. Headings
+  that have no matching section in the article, such as "Note" and
+  "Red flags", are no longer drawn as though they can be clicked.
+- **Bell palsy and Raynaud phenomenon were each stored twice.** Which
+  version you saw depended on whether the card spelled the name with
+  an apostrophe, and the two versions differed in length and, for Bell
+  palsy, opened different articles - one of them the general facial
+  nerve palsy chapter rather than the Bell palsy one. Each is now a
+  single entry, reachable under either spelling, pointing at the
+  correct article.
+- **Switching to StatPearls from an unrelated page now works.** Any
+  page that was not DrugBank counted as StatPearls, so following a
+  reference out to PubMed and then clicking StatPearls did nothing at
+  all, while the StatPearls button appeared active.
+
+### Changed
+
+- **StatPearls opens on its search page instead of the full contents
+  listing.** Home was the alphabetical index of every chapter in
+  StatPearls, which is a very large page and was the whole reason
+  switching to StatPearls felt slower than switching to DrugBank. It
+  now opens the same in-book search used when a term has no direct
+  article, so both arrive in the same place.
+
+- **Acronym popups now use the same sections as everything else.** The
+  differential in the AKI popup was buried mid-paragraph, which was the
+  same problem section headings were introduced to solve. Twenty
+  acronyms also used headings the popup did not recognise, so they were
+  printed as ordinary text instead of headings: among others Serotonin
+  syndrome, DIC, ITP, OCD, ICU and SGLT2 inhibitors.
+- **Some acronym entries were written to overseas practice.** Systolic
+  blood pressure targets now follow the Heart Foundation, tuberculosis
+  treatment names the drugs in full and notes it is run through a state
+  TB service, glandular fever recommends EBV serology rather than a
+  heterophile antibody test, and stroke thrombolysis lists tenecteplase
+  alongside alteplase.
+
+### Added
+
+- **Horner syndrome** rewritten in the structured format, with the
+  lesion localised by order of neuron and the anhidrosis pattern that
+  distinguishes them.
+
+## [2.0.0-preview11] - unreleased
+
+### Fixed
+
+- **"Open article" works for conditions without a direct NBK
+  accession.** 189 conditions have none and fall back to an in-book
+  StatPearls search - which was built from the Australian spelling.
+  StatPearls is a US publication, so a search for "Iron deficiency
+  anaemia" could never match, and the popup opened a search page
+  guaranteed to be empty. Search queries are now translated to US
+  spelling; everything the reader sees stays Australian.
+- **Removed three fabricated NBK accessions** added in preview 8 for
+  febrile neutropenia, tumour lysis syndrome and SIADH. They were
+  plausible-looking but invented: NBK519494 is in fact "Anatomy, Bony
+  Pelvis and Lower Limb, Knee Lateral Meniscus". A wrong accession is
+  worse than none, because it opens the wrong article confidently.
+  These now fall back to search, which works. A test blocks unverified
+  accessions on new entries.
+
+## [2.0.0-preview10] - unreleased
+
+### Fixed
+
+- **Seven acronym definitions no longer subordinate Australian usage.**
+  "UK/AU term for CBC" makes the US name the real thing and the
+  Australian one a regional variant of it - which is backwards for an
+  add-on that is Australian-first. FBC, OGD, TLCO, USS, IDC and IVC are
+  now defined directly, with the US name as a closing aside where it
+  aids recognition. US acronym entries pointing at the Australian term
+  are correct and unchanged. `tests/test_vocab.py` guards the rule.
+- **The home glyph is bigger.** The house character is drawn small
+  within its em box in most system fonts, so at the same pixel size as
+  the arrows it read as a smaller icon.
+
+## [2.0.0-preview9] - unreleased
+
+### Changed
+
+- **List-like sections render as bullets.** Causes, investigations and
+  clinical features are lists written as prose with semicolons, and as a
+  paragraph several unrelated items shared a line and wrapped across
+  lines - so the reader had to parse punctuation to find where one item
+  ended and the next began. Sections yielding three or more points are
+  now bulleted, one per line. Semicolons inside brackets do not split,
+  and sections yielding fewer than three points stay as paragraphs,
+  which keeps genuinely prose sections - Note, Pathophysiology - intact
+  where sentences build on each other.
+- **Section bodies start with a capital.** They previously began
+  mid-sentence in lower case, because the label had been cut from the
+  front of the sentence.
+- **Length band tightened**: ceiling 1,200 from 1,400, with the median
+  now 1,086. Every override was trimmed.
+
+## [2.0.0-preview8] - unreleased
+
+### Added
+
+- **Topic 7 oncology and haematology** - 14 conditions: iron deficiency
+  and B12 deficiency, myeloma, Hodgkin and non-Hodgkin lymphoma, CLL,
+  AML, CML, ITP, DIC, febrile neutropenia, tumour lysis syndrome, spinal
+  cord compression, hypercalcaemia.
+- **Topic 3 neurology, endocrine and diabetes** - 15 conditions: stroke,
+  TIA, subarachnoid haemorrhage, epilepsy, multiple sclerosis, Parkinson
+  disease, myasthenia gravis, Guillain-Barre syndrome, DKA, type 2
+  diabetes, hypo- and hyperthyroidism, Addison disease, Cushing
+  syndrome, SIADH. 52 overrides in total.
+- **The override layer can contribute new conditions.** Febrile
+  neutropenia, tumour lysis syndrome and SIADH were absent from the base
+  database entirely, and a summary for a term that cannot be matched is
+  dead weight. `NEW_CONDITIONS` in `pearls/_rich.py` carries the whole
+  of a new entry - name, aliases, article link and summary - in one
+  place, merged before the matcher index is built.
+
+## [2.0.0-preview7] - unreleased
+
+### Fixed
+
+- **Section labels are matched case-insensitively.** The label list held
+  `DDx` while summaries write `Ddx:`, and the pattern had no `i` flag -
+  so the label silently rendered as body text, which is how a
+  differential ended up buried mid-paragraph inside the management
+  section of the stroke popup. Labels now match in any case and display
+  in a canonical form.
+- **A repeated label no longer emits a second heading.** Summaries
+  legitimately return to a heading - acute management, then long-term -
+  and two identical `MX` headers stacked on one popup read as a
+  rendering fault. Consecutive blocks with the same label are merged.
+
+### Added
+
+- **Topic 1 cardiovascular and respiratory** - 8 conditions: heart
+  failure, acute coronary syndrome, atrial fibrillation, COPD, asthma,
+  pulmonary embolism, community-acquired pneumonia, hypertension.
+  23 overrides now in total.
+- `Secondary prevention`, `Extra-articular`, `Extrahepatic` and
+  `Extraintestinal` as recognised section labels.
+
+### Changed
+
+- **Length budget raised to a 1,400 ceiling, target 900-1,200**, from
+  850. Preview 6 was slightly tighter than it needed to be.
+
+## [2.0.0-preview6] - unreleased
+
+### Changed
+
+- **Structured summaries cut back to glance size.** Preview 5 kept the
+  structure but blew the length budget - dermatomyositis ran to 2,337
+  characters. These popups are executive summaries whose job is to
+  orient you and hand off to the full StatPearls article underneath;
+  one long enough to scroll has stopped being a summary and started
+  competing with the thing it links to. Rewritten to a median of 864
+  characters, against a base median of 801, with the difference going
+  to section labels rather than content. A 1,000-character ceiling is
+  now enforced by `tests/test_vocab.py`.
+
+## [2.0.0-preview5] - unreleased
+
+### Added
+
+- **A structured-summary override layer** (`pearls/_rich.py`), with the
+  first 15 conditions rewritten - Topic 4 rheumatology and dermatology.
+  The base summaries were never thin (median 800 characters); they were
+  unstructured, one dense block with labels used inconsistently, which
+  is what makes a long popup unreadable. Rewrites follow the same
+  scaffold as the cards they sit beside: lede, then Epidemiology,
+  Causes, Pathophysiology, Clinical features, Investigations,
+  Differential, Management, with `Note:` for the discriminating fact and
+  `Red flags:` for anything time-critical. Dermatomyositis goes from 968
+  characters of prose to 2,337 in seven labelled sections.
+- **Override-layer tests.** Overrides apply by canonical name, so a typo
+  or a renamed condition silently does nothing - the popup keeps its old
+  summary and nothing errors. The tests assert every override lands, has
+  at least three sections, uses only labels the renderer knows, and uses
+  Australian spelling.
+
+## [2.0.0-preview4] - unreleased
+
+### Added
+
+- **A clinical signs database** (`pearls/_signs.py`), 56 entries across
+  respiratory, cardiovascular, gastrointestinal, neurological and renal
+  examination vocabulary. Same editorial line as the other vocabulary
+  files: define the term, then give the one discriminating fact that
+  makes it useful at the bedside. Orthopnoea explains why recumbency
+  raises preload; claudication contrasts vascular with neurogenic, where
+  relief needs flexion rather than merely stopping; spasticity contrasts
+  with rigidity on velocity-dependence.
+- **`Mechanism:` as a recognised section label** in the popup renderer.
+
+## [2.0.0-preview3] - unreleased
+
+### Added
+
+- **A psychiatric phenomenology database** (`pearls/_psych.py`), 53
+  entries covering the mental state exam - form of thought, mood and
+  affect, catatonia, delusions and passivity, perception, insight, and
+  the medication-related movement disorders. Descriptive psychopathology
+  is unusually unforgiving: the words are technical, they do not mean
+  what they mean in ordinary English, and the distinctions between them
+  are exactly what gets examined. Entries therefore name the term they
+  are most often confused with, because in phenomenology that pairing is
+  the definition - tangentiality only means something against
+  circumstantiality, an illusion only against a hallucination.
+- **`tests/test_vocab.py`.** The reviewer merges several databases into
+  one popup and the first to claim a name wins, so a duplicated name
+  means one entry is silently unreachable - the popup opens, it just
+  shows the wrong definition. The test asserts the databases are
+  disjoint, that entries are well-formed, that summaries use Australian
+  spelling, and that every section label is one the popup renderer
+  recognises. It caught four collisions on its first run.
+
+## [2.0.0-preview2] - unreleased
+
+### Added
+
+- **A descriptive-vocabulary database** (`pearls/_descriptive.py`), 55
+  entries covering lesion morphology, symptom words and laboratory
+  descriptors. The gap was the wrong way round: cards resolved
+  *dermatomyositis* but not *poikiloderma*, *telangiectasia*, *myalgia*
+  or *pathognomonic*, and a reader who knows the disease name reads past
+  it either way, while one who doesn't is stuck on the descriptive word.
+  The dermatomyositis card that previously highlighted none of them now
+  resolves fifteen.
+- **UpToDate follows Anki into dark mode.** It ships no dark theme of
+  its own, so a dark Anki left a full-brightness white pane beside it.
+- **Twenty more House quotes**, 8 to 28.
+
+### Changed
+
+- **The README describes the add-on** rather than recounting the 1.1 to
+  1.3 releases. Version history belongs in this file.
+
+## [2.0.0-preview1] - unreleased
+
+### Changed
+
+- **Term matching is ~30x faster.** The condition and drug databases
+  were each matched with a single regex of several thousand
+  alternatives. `re` has no alternation index, so it walked that list at
+  every position in the card: 17.2 ms per render, on every question and
+  every answer. `pearls/_matcher.py` replaces it with a first-word index
+  - 0.59 ms, and independent of database size, which matters given 2.0
+  expands them. `tests/test_matcher.py` diffs the new matcher against
+  the old patterns over the real databases and asserts they agree
+  exactly; that equivalence is the only thing that makes the swap safe.
+- **Popup summaries render as labelled sections.** They were one
+  continuous paragraph with section labels inlined behind a `<br>`. On a
+  long entry that is a wall - the information is all there and none of
+  it is findable, which is the opposite of what a hover popup is for.
+  The text before the first label becomes a lede and each label opens
+  its own block. Entries with no labels still render as a single lede,
+  so the whole database is safe before any of it is rewritten.
+
+### Removed
+
+- `_webengine.inject_stealth`, which nothing had called.
+
 ## [1.4.3] - 2026-08-14
 
 ### Fixed
@@ -52,17 +456,16 @@ this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - **Diagnostics have moved to Settings > Advanced.** They were behind an
-  undocumented `Ctrl+Alt+Shift+D` chord, which was a bad trade twice
-  over: the chord competed with whatever else you have bound and had no
-  visible failure mode when it lost, and a control nobody can find is
-  not usable even when it does work. The tab holds a verbose-logging
+  undocumented keyboard chord, which was a bad trade twice over: the
+  chord competed with whatever else you have bound and had no visible
+  failure mode when it lost, and a control nobody can find is not
+  usable even when it does work. The tab holds a verbose-logging
   switch, **Show log**, and **Web inspector**.
 
 ### Removed
 
-- `shortcutDiagnostics` and `diagnosticsUnlocked`. Both existed only to
-  reach a hidden menu that no longer exists. Leftover values in an
-  existing config are ignored.
+- Two configuration keys that existed only to reach a hidden menu that
+  no longer exists. Leftover values in an existing config are ignored.
 
 ## [1.4.2] - 2026-08-14
 
@@ -118,13 +521,11 @@ this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   active window is the one the shortcut is parented to - so a binding
   was dead whenever focus sat in the reviewer's webview or a genuine
   top-level window like Browse was in front. That is the whole reason
-  the diagnostics chord appeared to do nothing. All bindings are now
+  the diagnostics shortcut appeared to do nothing. All bindings are now
   `ApplicationShortcut`, which is what a global shortcut is supposed to
   mean and what they were all documented as doing.
-- **The diagnostics chord is configurable** via `shortcutDiagnostics`,
-  so another add-on claiming `Ctrl+Alt+Shift+D` no longer leaves it
-  unreachable. Setting `diagnosticsUnlocked` to `true` by hand is
-  documented as the fallback.
+- **The diagnostics shortcut is configurable**, so another add-on
+  claiming the same binding no longer leaves it unreachable.
 - **DrugBank search no longer throws you back into StatPearls.** A
   failed navigation retried `_pending_url` - the target of the last
   popup "Open article" click, which persists until the next one. So any

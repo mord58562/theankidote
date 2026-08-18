@@ -264,42 +264,126 @@ def resolve_async(term: str, on_done) -> None:
 # The popup's section labels are Australian/abbreviated; StatPearls uses
 # fixed US chapter headings.  Mapping them lets a click on "Mx" land on
 # the Treatment section rather than the top of a long chapter.
+# Popup section label -> candidate StatPearls headings, matched by text
+# against the article's own h1-h4 (see `_SCROLL_JS` in _panel_pearls.py),
+# longest-intent-first within each list. Prefix matching means
+# "Treatment" finds the real heading "Treatment / Management".
+#
+# StatPearls chapters are built from a fixed template, so the target set
+# is small and stable: Continuing Education Activity, Introduction,
+# Etiology, Epidemiology, Pathophysiology, Histopathology, History and
+# Physical, Evaluation, Treatment / Management, Differential Diagnosis,
+# Staging, Prognosis, Complications, Consultations, Deterrence and
+# Patient Education, Pearls and Other Issues, Enhancing Healthcare Team
+# Outcomes. Drug chapters add Mechanism of Action, Administration,
+# Adverse Effects, Contraindications, Monitoring, Toxicity.
+#
+# Every label registered in `_SECTION_LABELS` (web/marker.js) that has a
+# genuine counterpart above belongs here, because a label absent from
+# this map is a click that silently opens the article at the top. That
+# was the state of things through preview 11: "Clinical features",
+# "Note" and "Red flags" alone accounted for 124 of 138 dead clicks,
+# 47% of every section label rendered.
+#
+# Labels with no honest counterpart are deliberately absent - see
+# `_SECTION_LINKABLE` in web/marker.js, which reads this map's keys and
+# renders unmapped labels as plain headings rather than dead controls.
 SECTION_MAP = {
+    # ── history and examination ──
     "sx": ["History and Physical", "Clinical"],
+    "hx": ["History and Physical"],
     "signs": ["History and Physical"],
+    "symptoms": ["History and Physical"],
     "presentation": ["History and Physical"],
     "examination": ["History and Physical"],
     "features": ["History and Physical"],
+    "clinical features": ["History and Physical"],
+    # Organ-specific spillover sections are still the article's
+    # history-and-examination material.
+    "extra-articular": ["History and Physical"],
+    "extrahepatic": ["History and Physical"],
+    "extraintestinal": ["History and Physical"],
+    # ── definition and mechanism ──
+    "definition": ["Introduction"],
+    "mechanism": ["Pathophysiology", "Mechanism of Action"],
+    "mechanisms": ["Pathophysiology", "Mechanism of Action"],
+    "pathophysiology": ["Pathophysiology"],
+    "pathology": ["Histopathology", "Pathophysiology"],
+    "phases": ["Pathophysiology"],
+    # ── cause ──
+    "aetiology": ["Etiology"],
+    "etiology": ["Etiology"],
+    "causes": ["Etiology"],
+    "risk": ["Etiology", "Epidemiology"],
+    "risk factors": ["Etiology", "Epidemiology"],
+    "triggers": ["Etiology"],
+    "associations": ["Etiology"],
+    "genetics": ["Etiology"],
+    "epidemiology": ["Epidemiology"],
+    # ── investigation ──
     "ix": ["Evaluation", "Diagnosis"],
     "investigations": ["Evaluation", "Diagnosis"],
     "workup": ["Evaluation"],
     "dx": ["Evaluation", "Diagnosis"],
     "diagnosis": ["Evaluation", "Diagnosis"],
     "criteria": ["Evaluation"],
+    "classification": ["Evaluation"],
+    "types": ["Evaluation"],
+    "subtypes": ["Evaluation"],
+    "variants": ["Evaluation"],
+    "staging": ["Staging", "Evaluation"],
+    "stages": ["History and Physical", "Staging"],
+    "screening": ["Evaluation", "Deterrence and Patient Education"],
+    # ── differential ──
+    "differential": ["Differential Diagnosis"],
+    "ddx": ["Differential Diagnosis"],
+    # ── management ──
     "mx": ["Treatment", "Management"],
     "management": ["Treatment", "Management"],
     "treatment": ["Treatment", "Management"],
     "tx": ["Treatment", "Management"],
     "rx": ["Treatment", "Management"],
-    "aetiology": ["Etiology"],
-    "etiology": ["Etiology"],
-    "causes": ["Etiology"],
-    "risk": ["Etiology", "Epidemiology"],
-    "pathophysiology": ["Pathophysiology"],
-    "epidemiology": ["Epidemiology"],
+    "follow-up": ["Treatment", "Management"],
+    # Drug chapters carry a real Monitoring heading; disease chapters do
+    # not, so fall through to Treatment / Management there.
+    "monitoring": ["Monitoring", "Treatment", "Management"],
+    "prevention": ["Deterrence and Patient Education", "Etiology"],
+    "secondary prevention": ["Treatment", "Management",
+                             "Deterrence and Patient Education"],
+    # ── outcome ──
     "complications": ["Complications"],
     "prognosis": ["Prognosis"],
-    "staging": ["Staging", "Evaluation"],
-    "classification": ["Evaluation"],
-    "differential": ["Differential Diagnosis"],
+    "px": ["Prognosis"],
+    # ── drug-shaped ──
     "se": ["Adverse Effects", "Complications"],
+    "adverse effects": ["Adverse Effects", "Complications"],
     "ci": ["Contraindications"],
     "contraindications": ["Contraindications"],
-    "indications": ["Indications"],
+    "cautions": ["Contraindications", "Adverse Effects"],
+    # StatPearls has no interactions heading; DrugBank does.
+    "interactions": ["Interactions", "Adverse Effects"],
+    # DrugBank titles this section in the singular, StatPearls in the
+    # plural, and the same popup label has to reach both.
+    "indications": ["Indications", "Indication"],
+    "uses": ["Indications", "Indication"],
     "moa": ["Mechanism of Action"],
-    "genetics": ["Etiology"],
-    "types": ["Evaluation"],
-    "subtypes": ["Evaluation"],
+    "pk": ["Pharmacokinetics", "Absorption", "Mechanism of Action"],
+    "pd": ["Pharmacodynamics", "Mechanism of Action"],
+    "dose": ["Administration"],
+    "dosing": ["Administration"],
+    "route": ["Administration"],
+    "metabolism": ["Metabolism"],
+    "half-life": ["Half-life"],
+    # ── editorial ──
+    # "Pearls" has a genuine target; "Note", "Notes", "Red flags",
+    # "Mnemonic", "Key point", "Exam tip", "PBS" and "Australian notes"
+    # do not, and are intentionally left out. They are this add-on's own
+    # synthesis - a discriminating fact, a time-critical warning, an
+    # Australian prescribing note - drawn from across the article rather
+    # than from one heading, and "Pearls and Other Issues" is not even
+    # present in every chapter. Pointing them somewhere plausible would
+    # be the heading-level version of inventing an NBK accession.
+    "pearls": ["Pearls and Other Issues"],
 }
 
 

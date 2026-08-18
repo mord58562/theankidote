@@ -42,8 +42,41 @@ except (ImportError, AttributeError):
 # New profile name (was "ankipearls" in the old standalone addon) so
 # cookies and cache don't leak between versions.
 _PROFILE_NAME  = "theankidote-pearls"
-_AP_HOME       = "https://www.ncbi.nlm.nih.gov/books/NBK430685/"
+# StatPearls "home" is the book's own search interface, not the book's
+# table of contents. NBK430685 is the alphabetical index of every
+# chapter in StatPearls - many thousands of links in one document, and
+# far and away the heaviest page the site serves. Loading it was the
+# whole of the "DrugBank -> StatPearls is slow" asymmetry: DrugBank's
+# home is an ordinary landing page and StatPearls' was the entire index.
+#
+# `/books/n/statpearls/` with no `term` renders the same in-book search
+# interface the term-resolution fallback already targets, so Home and a
+# missing accession now land on one consistent surface. Browsing the
+# whole book from Home goes away, which is no loss: articles are reached
+# by clicking a term on a card, never by scrolling an A-Z list.
+_AP_HOME       = "https://www.ncbi.nlm.nih.gov/books/n/statpearls/"
 _DRUGBANK_HOME = "https://go.drugbank.com/"
+
+
+def _site_of(url: str) -> str:
+    """Which of the two sites a URL belongs to, or "" for neither.
+
+    Deliberately three-valued. The pill state and the site-switch
+    short-circuit both used to ask only whether the URL was DrugBank and
+    treat "no" as StatPearls, so any third destination counted as
+    StatPearls: clicking the StatPearls pill from one navigated nowhere
+    and left the wrong pill lit.
+
+    The StatPearls test includes the `/books` path because the bare host
+    is shared with the rest of NCBI - `pubmed.ncbi.nlm.nih.gov` is one
+    reference-follow away from any article and is not this site.
+    """
+    low = (url or "").lower()
+    if "drugbank.com" in low:
+        return "drugbank"
+    if "ncbi.nlm.nih.gov/books" in low:
+        return "statpearls"
+    return ""
 
 # JavaScript injected into every DrugBank page after load.
 #
@@ -313,7 +346,10 @@ _GLYPH_PX = {
     "\u2190": 15,  # back
     "\u2192": 15,  # forward
     "\u21bb": 16,  # reload
-    "\u2302": 15,  # home
+    # The house glyph is drawn small within its em box in most system
+    # fonts, so it needs a couple more pixels than the arrows to look
+    # like it belongs to the same set.
+    "\u2302": 18,  # home
     "\u2197": 14,  # open externally
     "\u2715": 12,  # close
 }
@@ -887,11 +923,12 @@ class StatPearlsPanel(QWidget):
                 url = self._view.url().toString()
             except Exception:
                 url = ""
-        low = (url or "").lower()
-        if "drugbank.com" in low:
-            choice = "drugbank"
-        elif "ncbi.nlm.nih.gov" in low:
-            choice = "statpearls"
+        # Only override the preference-derived default when the loaded
+        # page is recognisably one of the two sites; on anything else
+        # the pills keep showing what Home would do.
+        on_site = _site_of(url)
+        if on_site:
+            choice = on_site
         self._btn_sp.setChecked(choice == "statpearls")
         self._btn_db.setChecked(choice == "drugbank")
         self._btn_home.setToolTip(f"Home ({self._current_home_label()})")
@@ -921,8 +958,16 @@ class StatPearlsPanel(QWidget):
             cur = self._view.url().toString().lower()
         except Exception:
             cur = ""
-        on_db = "drugbank.com" in cur
-        if cur and ((choice == "drugbank") == on_db):
+        # Tri-state, not boolean. `"drugbank.com" in cur` being false was
+        # previously taken to mean "on StatPearls", so any third host -
+        # a PubMed reference followed out of an article, a search engine,
+        # a Cloudflare interstitial served from its own domain - counted
+        # as StatPearls. Clicking the StatPearls pill from one of those
+        # short-circuited and navigated nowhere, leaving the reader on an
+        # unrelated page with the StatPearls pill lit. Only stay put when
+        # the page on screen actually belongs to the site just chosen.
+        on_site = _site_of(cur)
+        if on_site and choice == on_site:
             self._clear_pending()
             return
         self._go_home()
@@ -1118,21 +1163,80 @@ class StatPearlsPanel(QWidget):
         var norm = function (t) {
           return String(t || "").toLowerCase().replace(/\s+/g, " ").trim();
         };
-        var heads = document.querySelectorAll("h1,h2,h3,h4");
-        for (var w = 0; w < wants.length; w++) {
-          var want = norm(wants[w]);
-          for (var i = 0; i < heads.length; i++) {
-            var t = norm(heads[i].textContent);
-            if (t === want || t.indexOf(want) === 0) {
-              heads[i].scrollIntoView({block: "start"});
-              // Nudge up so the heading is not flush against the top of
-              // the viewport, which reads as a cut-off page.
-              window.scrollBy(0, -12);
-              return;
+        // NCBI headings carry an inline "Go to:" navigation link whose
+        // text is part of the heading's textContent, so an exact match
+        // against the label alone never fires and a prefix match only
+        // fires when the label happens to come first. Strip anchors and
+        // compare on what is actually rendered as the heading.
+        var headText = function (el) {
+          var c = el.cloneNode(true);
+          var kill = c.querySelectorAll("a,sup,span.permalink");
+          for (var k = 0; k < kill.length; k++) {
+            var a = kill[k];
+            if (/^\s*(go to:?|permalink)/i.test(a.textContent || "")) {
+              a.parentNode.removeChild(a);
             }
           }
-        }
-      } catch (e) {}
+          return norm(c.textContent);
+        };
+        var find = function () {
+          var heads = document.querySelectorAll("h1,h2,h3,h4");
+          for (var w = 0; w < wants.length; w++) {
+            var want = norm(wants[w]);
+            for (var i = 0; i < heads.length; i++) {
+              var t = headText(heads[i]);
+              if (t === want || t.indexOf(want) === 0) return heads[i];
+            }
+          }
+          return null;
+        };
+        var go = function (el) {
+          // Prefer the browser's own anchor navigation when the heading
+          // or its section carries an id: it survives the late reflow
+          // and scroll restoration that made a bare scrollIntoView get
+          // undone a moment after it ran.
+          var id = el.id;
+          if (!id) {
+            var sec = el.closest ? el.closest("[id]") : null;
+            if (sec) id = sec.id;
+          }
+          if (id) {
+            try { location.replace("#" + id); } catch (e) {}
+          }
+          el.scrollIntoView({block: "start"});
+          window.scrollBy(0, -12);
+        };
+        var settled = 0;
+        var attempt = function (n) {
+          var el = find();
+          if (el) {
+            go(el);
+            // Confirm it took. The page can restore its own scroll
+            // position after load, so verify rather than assume.
+            var top = el.getBoundingClientRect().top;
+            if (top >= -4 && top <= 120) {
+              if (++settled >= 2) return;
+            } else {
+              settled = 0;
+            }
+          }
+          if (n < 8) setTimeout(function () { attempt(n + 1); }, 120 * (n + 1));
+        };
+        attempt(0);
+        // Report what the page actually offered, so a failure can be
+        // diagnosed from the log instead of guessed at. Returned
+        // synchronously from the first pass: if `heads` is empty the
+        // document had not rendered when loadFinished fired, and if it
+        // is populated but `matched` is false the wanted headings do not
+        // match this article's real ones - in which case the list below
+        // is exactly what SECTION_MAP needs to be reconciled against.
+        var all = document.querySelectorAll("h1,h2,h3,h4");
+        var names = [];
+        for (var j = 0; j < all.length && j < 40; j++) names.push(headText(all[j]));
+        return JSON.stringify({
+          wants: wants, matched: !!find(), heads: names
+        });
+      } catch (e) { return JSON.stringify({error: String(e)}); }
     })();
     """
 
@@ -1142,17 +1246,44 @@ class StatPearlsPanel(QWidget):
             return
         low = url.lower()
         if "/books/nbk" not in low and "go.drugbank.com/drugs/" not in low:
+            _log.diag(f"section scroll: waiting, not an article yet ({low[:80]!r})")
             return          # still on a search page; wait for the real one
         try:
             from .pearls import _ncbi
             wants = _ncbi.headings_for(section)
-        except Exception:
+        except Exception as exc:
+            _log.diag(f"section scroll: headings_for failed: {exc}")
             wants = []
         if not wants:
+            _log.diag(f"section scroll: no heading mapped for {section!r}")
             self._pending_section = ""
             return
+        _log.diag(f"section scroll: {section!r} -> {wants}")
+
+        def _report(result):
+            try:
+                info = json.loads(result) if result else {}
+            except Exception:
+                _log.diag(f"section scroll: unparsable result {result!r}")
+                return
+            if info.get("error"):
+                _log.diag(f"section scroll: js error {info['error']}")
+            elif info.get("matched"):
+                _log.diag("section scroll: heading matched")
+            else:
+                # The two failure modes look identical from the outside
+                # but need opposite fixes, so name which one it is.
+                heads = info.get("heads") or []
+                if not heads:
+                    _log.diag("section scroll: no headings in the document "
+                              "yet - the retry loop will keep trying")
+                else:
+                    _log.diag(f"section scroll: no match for {wants}; "
+                              f"article headings are {heads}")
+
         try:
-            self._page.runJavaScript(self._SCROLL_JS % json.dumps(wants))
+            self._page.runJavaScript(self._SCROLL_JS % json.dumps(wants),
+                                     _report)
         except Exception as exc:
             _log.debug(f"section scroll failed: {exc}")
         self._pending_section = ""
