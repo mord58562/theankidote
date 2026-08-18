@@ -239,23 +239,45 @@ class ShippedPackageContents(unittest.TestCase):
 class PublishingContract(unittest.TestCase):
     """What `tools/publish_content.sh` and the updater must agree on."""
 
-    def test_bundled_manifest_carries_no_url(self):
-        """The shipped manifest must not point anywhere.
+    def test_the_manifest_is_not_packaged(self):
+        """`data/manifest.json` is published, not shipped.
 
-        `data/manifest.json` travels inside the .ankiaddon, but it is
-        only ever read by the build; clients fetch the *published*
-        manifest from the branch. If the bundled copy carried a url it
-        would be a stale pointer shipped to every user, aimed at
-        whatever release happened to be current the day the add-on was
-        packaged.
+        An earlier version of this test asserted the opposite - that the
+        manifest on disk must carry no `url` - on the reasoning that a
+        URL inside the .ankiaddon would be a stale pointer. The reasoning
+        was right and the remedy was wrong: this file IS the published
+        manifest, `tools/publish_content.sh` builds it with `--url` and
+        commits it to the branch for clients to fetch, so forbidding the
+        url made publishing fail its own test gate.
+
+        Nothing in the running add-on opens it - `_library` reads
+        library.json, `_updater` fetches the manifest over HTTPS - so
+        the fix is to keep it out of the package instead.
         """
+        script = (ROOT / "build_ankiaddon.sh").read_text(encoding="utf-8")
+        self.assertIn(
+            'data/manifest.json', script,
+            "build_ankiaddon.sh must exclude data/manifest.json; it is "
+            "the published pointer, not add-on data")
+
+    def test_no_module_reads_the_bundled_manifest(self):
+        """The exclusion above is only safe while this holds."""
+        for path in list((ROOT / "pearls").glob("*.py")) + [ROOT / "__init__.py"]:
+            src = path.read_text(encoding="utf-8")
+            self.assertNotIn(
+                'data", "manifest.json"', src,
+                f"{path.name} opens the bundled manifest, which is not "
+                f"shipped - read library.json instead")
+
+    def test_a_published_manifest_names_an_https_url(self):
         man = json.loads(
             (pathlib.Path(_library.BUNDLED).parent / "manifest.json")
             .read_text(encoding="utf-8"))
-        self.assertNotIn(
-            "url", man,
-            "the bundled manifest names a download URL; pass --url only "
-            "when publishing, not when building for release")
+        if "url" in man:
+            self.assertTrue(
+                str(man["url"]).startswith("https://"),
+                f"manifest url is {man['url']!r}; content must travel "
+                f"over HTTPS or the checksum is the only integrity check")
 
     def test_updater_ignores_a_manifest_without_a_url(self):
         src = (ROOT / "pearls" / "_updater.py").read_text(encoding="utf-8")

@@ -10,9 +10,14 @@
 # __pycache__, .DS_Store, the build script itself, the build output,
 # and dotfiles.  AnkiWeb rejects uploads containing any of those.
 #
-# data/ IS packaged: it holds library.json, which is the entire term
-# database since the 2.0 split. Excluding it ships an add-on that
-# highlights nothing.
+# data/library.json IS packaged: it is the entire term database since
+# the 2.0 split. Excluding it ships an add-on that highlights nothing.
+#
+# data/manifest.json is NOT packaged. It exists to be published to the
+# branch, where the updater fetches it over HTTPS; nothing in the
+# running add-on ever opens it. Shipping it would put a download URL
+# inside every .ankiaddon pointing at whichever content release happened
+# to be current on packaging day.
 #
 # content/ and tools/ are NOT packaged: they are the authoring copy of
 # the vocabularies and the compiler that turns them into data/. Shipping
@@ -39,6 +44,7 @@ zip -r "$OUT" . \
     -x "*.ankiaddon" \
     -x "build_ankiaddon.sh" \
     -x "tests/*" \
+    -x "data/manifest.json" \
     -x "content/*" \
     -x "tools/*" \
     -x "*.pyc" \
