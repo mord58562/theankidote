@@ -525,5 +525,138 @@ class ContentVersionFormat(unittest.TestCase):
                          self._manifest()["content_version"])
 
 
+class AuthenticatedProfileNavigation(unittest.TestCase):
+    """A shared deck must not be able to steer the add-on's sessions.
+
+    `data-sp-url` is an ordinary HTML attribute, so anything that can
+    write card HTML can set it - which includes any deck downloaded from
+    AnkiWeb. Clicking a marked span navigates a QWebEngineProfile
+    holding live NCBI, DrugBank, UpToDate and chat sessions.
+
+    `SECURITY.md` named this in scope from the start, but the only
+    response was a debug-level log line: `_is_safe_url` checked the
+    scheme and allowed any host. Trust is now decided by provenance -
+    the hosts the add-on integrates with, plus the hosts the user has
+    themselves configured. Untrusted hosts open in the normal browser
+    instead, so a legitimate link still works without borrowing a
+    session.
+    """
+
+    def _fns(self):
+        src = (ROOT / "__init__.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        want = {"_host_of", "_user_configured_hosts", "_is_trusted_host"}
+        fns = [n for n in tree.body
+               if isinstance(n, ast.FunctionDef) and n.name in want]
+        self.assertEqual(len(fns), 3, "trust helpers missing from __init__")
+        known = [n for n in tree.body if isinstance(n, ast.Assign)
+                 and any(getattr(t, "id", "") == "_KNOWN_HOSTS"
+                         for t in n.targets)][0]
+        from urllib.parse import urlparse
+        cfg = {}
+
+        class _cfg:
+            @staticmethod
+            def get(k):
+                return cfg.get(k)
+
+        ns = {"urlparse": urlparse, "_config": _cfg}
+        exec(compile(ast.Module(body=[known] + fns, type_ignores=[]),
+                     "<trust>", "exec"), ns)
+        return ns["_is_trusted_host"], cfg
+
+    def test_integration_hosts_are_trusted(self):
+        trusted, _ = self._fns()
+        for url in ("https://www.ncbi.nlm.nih.gov/books/NBK1/",
+                    "https://go.drugbank.com/drugs/DB1",
+                    "https://www.uptodate.com/contents/x",
+                    "https://uptodate.com.acs.hcn.com.au/x"):
+            self.assertTrue(trusted(url), url)
+
+    def test_an_arbitrary_host_is_not_trusted(self):
+        trusted, _ = self._fns()
+        for url in ("https://evil.example/steal",
+                    "http://localhost:8765/",
+                    "https://192.168.1.1/",
+                    ""):
+            self.assertFalse(trusted(url), url)
+
+    def test_host_matching_is_anchored_on_a_dot_boundary(self):
+        """The original check was a bare `endswith`.
+
+        That accepts `notncbi.nlm.nih.gov` and `evil-drugbank.com`, which
+        an attacker can simply register. Matching must be on equality or
+        on a dot-delimited suffix.
+        """
+        trusted, _ = self._fns()
+        for url in ("https://notncbi.nlm.nih.gov/",
+                    "https://evilgo.drugbank.com.attacker.test/",
+                    "https://ncbi.nlm.nih.gov.evil.example/",
+                    "https://www.ncbi.nlm.nih.gov@evil.example/"):
+            self.assertFalse(trusted(url), url)
+
+    def test_subdomains_of_a_trusted_host_are_trusted(self):
+        trusted, _ = self._fns()
+        self.assertTrue(trusted("https://pmc.ncbi.nlm.nih.gov/x"))
+
+    def test_the_users_own_custom_term_hosts_are_trusted(self):
+        """This is why the allowlist cannot be a fixed list of domains.
+
+        The custom terms feature exists so the user can point it
+        anywhere. Deriving the allowlist from their own config keeps
+        that working while still excluding anything a card supplies.
+        """
+        trusted, cfg = self._fns()
+        cfg["customTerms"] = json.dumps(
+            [{"title": "Wiki", "url": "https://wiki.mydept.org/x"}])
+        self.assertTrue(trusted("https://wiki.mydept.org/anything"))
+        self.assertTrue(trusted("https://sub.wiki.mydept.org/x"))
+        self.assertFalse(trusted("https://wiki.mydept.org.evil.example/"))
+
+    def test_configured_provider_and_institution_hosts_are_trusted(self):
+        trusted, cfg = self._fns()
+        cfg["uptodateHomeUrl"] = "https://utd.myhospital.health.nsw.gov.au/"
+        cfg["chatCustomProviderUrl"] = "https://chat.internal/"
+        self.assertTrue(trusted("https://utd.myhospital.health.nsw.gov.au/x"))
+        self.assertTrue(trusted("https://chat.internal/z"))
+
+    def test_malformed_config_does_not_fail_open(self):
+        """Failing open would silently restore the old behaviour."""
+        trusted, cfg = self._fns()
+        for bad in ("{not json", "[]", json.dumps(["a string", 42, {"x": 1}])):
+            cfg["customTerms"] = bad
+            self.assertFalse(trusted("https://evil.example/"), bad)
+
+    def test_untrusted_urls_open_externally_rather_than_being_dropped(self):
+        """Silently dropping a working link would be a bug report.
+
+        The handler must call openLink for an untrusted host, and must
+        decide this before the UpToDate branch - that branch would
+        otherwise hand the URL the UTD profile.
+        """
+        src = (ROOT / "__init__.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        fn = next(n for n in ast.walk(tree)
+                  if isinstance(n, ast.FunctionDef) and n.name == "_on_js_message")
+        body = ast.dump(fn)
+        self.assertIn("_is_trusted_host", body)
+        guard = src.index("_is_trusted_host(url)")
+        utd = src.index('if "uptodate.com" in url:', guard - 4000)
+        self.assertLess(guard, utd,
+                        "the trust check must precede UpToDate routing")
+
+    def test_the_scheme_check_still_runs_first(self):
+        """Host trust does not replace `_is_safe_url`.
+
+        A `javascript:` URL has no hostname, so it would be untrusted and
+        handed to openLink - which is not where a javascript: URL should
+        go either. The scheme gate must remain ahead of it.
+        """
+        src = (ROOT / "__init__.py").read_text(encoding="utf-8")
+        self.assertLess(src.index("_is_safe_url(url)"),
+                        src.index("_is_trusted_host(url)"))
+
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

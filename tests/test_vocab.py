@@ -583,7 +583,7 @@ class PopupHeightBudget(unittest.TestCase):
     # The numbers only ever go down. Raising one to make a change pass
     # is the failure mode this exists to catch - the point is that a
     # summary added tomorrow cannot quietly join them.
-    OVER_CAP_BUDGET = {"conditions": 184, "drugs": 192, "acronyms": 0}
+    OVER_CAP_BUDGET = {"conditions": 170, "drugs": 192, "acronyms": 0}
 
     def test_over_cap_backlog_only_shrinks(self):
         over = {"conditions": 0, "drugs": 0, "acronyms": 0}

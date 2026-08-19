@@ -1827,6 +1827,294 @@ RICH_SUMMARIES = {
         "this a prothrombotic state, and renal vein thrombosis is the "
         "characteristic complication."
     ),
+
+    # ═══════ BATCH 3: ordered by measured deck frequency ════════════════
+    #
+    # Same method as batch 2, and the same two traps confirmed again.
+    # Exact phrases undercount: "ectopic pregnancy" returns 0 where
+    # the stem `ectopic` returns 13. And a combined OR query hides
+    # which term carried it - `"placenta praevia" OR abruption`
+    # returned 27, but praevia alone returns 0, so all 27 were
+    # abruption and Placenta praevia was correctly left out.
+    #
+    # Frequencies: abruption 27, aortic aneurysm 15, portal
+    # hypertension 15, ectopic 13, PAD 8, incontinence 8, the three
+    # headaches 8 combined, prostate cancer 7, ATN 5, osteomyelitis 4,
+    # subdural 3, chronic pancreatitis within pancreatitis 14.
+
+    "Abruption": (
+        "Premature separation of a normally sited placenta after 20 weeks, "
+        "and the obstetric emergency in which the visible blood loss "
+        "understates the real one. Causes: hypertension and pre-eclampsia, "
+        "trauma, smoking and cocaine, polyhydramnios with rapid "
+        "decompression, and previous abruption. Clinical features: constant "
+        "abdominal pain with a woody, tender uterus, dark vaginal bleeding, "
+        "and fetal compromise. Concealed abruption bleeds behind the "
+        "placenta with little or nothing revealed. Ix: this is a clinical "
+        "diagnosis - ultrasound cannot exclude it. FBC, coagulation "
+        "profile, fibrinogen, group and hold or crossmatch, Kleihauer, and "
+        "continuous CTG. Mx: resuscitate, give oxygen and large-bore "
+        "access, and deliver. Caesarean for fetal compromise or maternal "
+        "instability; vaginal birth may be appropriate after fetal death. "
+        "Anti-D for Rh-negative women. Corticosteroids if preterm and the "
+        "situation allows. Note: a falling fibrinogen is the earliest "
+        "marker of the consumptive coagulopathy abruption causes, and it "
+        "falls before the INR moves."
+    ),
+
+    "Aortic aneurysm": (
+        "Permanent dilatation of the aorta to more than 1.5 times its "
+        "normal diameter, most often infrarenal abdominal. Causes: "
+        "atherosclerotic degeneration with smoking as the strongest "
+        "modifiable risk; connective tissue disease (Marfan, vascular "
+        "Ehlers-Danlos) in younger patients; less often infection or "
+        "arteritis. Clinical features: usually silent and found "
+        "incidentally. A pulsatile expansile abdominal mass, back or flank "
+        "pain, or the triad of pain, hypotension and a pulsatile mass in "
+        "rupture. Ix: ultrasound for detection and surveillance; CT "
+        "angiography before repair and in suspected rupture if the patient "
+        "is stable. Mx: modify risk - stop smoking, treat blood pressure, "
+        "statin and antiplatelet. Surveillance by size, with elective "
+        "repair considered at about 55 mm for abdominal aneurysms, or "
+        "smaller if growing quickly, symptomatic, or in a woman. "
+        "Endovascular or open repair depending on anatomy and fitness. Red "
+        "flags: sudden severe back or abdominal pain with haemodynamic "
+        "compromise is rupture - straight to theatre, not to the scanner."
+    ),
+
+    "Portal hypertension": (
+        "A hepatic venous pressure gradient above 5 mmHg, becoming "
+        "clinically significant above 10 and the threshold for variceal "
+        "bleeding above 12. Causes: classified by site. Prehepatic is "
+        "portal vein thrombosis; hepatic is cirrhosis in most Australian "
+        "practice, also schistosomiasis and nodular regenerative "
+        "hyperplasia; posthepatic is Budd-Chiari or constrictive "
+        "pericarditis. Clinical features: the consequences rather than the "
+        "pressure - varices, ascites, splenomegaly with thrombocytopenia, "
+        "caput medusae, and hepatic encephalopathy from portosystemic "
+        "shunting. Ix: ultrasound with Doppler for flow direction and "
+        "portal vein patency; gastroscopy for varices; ascitic tap with a "
+        "serum-ascites albumin gradient of 11 g/L or more confirming portal "
+        "origin. Mx: treat the cause, non-selective beta-blockade to lower "
+        "the gradient, and manage each complication on its own terms. TIPS "
+        "for refractory ascites or bleeding. Note: thrombocytopenia here "
+        "reflects splenic sequestration, not marrow failure, and does not "
+        "need treating on its own."
+    ),
+
+    "Ectopic pregnancy": (
+        "Implantation outside the uterine cavity, most often ampullary "
+        "tubal, and the leading cause of first-trimester maternal death. "
+        "Causes: anything that damages tubal transport - previous ectopic, "
+        "pelvic inflammatory disease, tubal surgery, endometriosis, "
+        "smoking, and pregnancy with an intrauterine device in place. "
+        "Clinical features: amenorrhoea then unilateral pelvic pain and "
+        "bleeding at 6-8 weeks. Shoulder tip pain, syncope or peritonism "
+        "suggest rupture with haemoperitoneum. Ix: urine beta-hCG then "
+        "transvaginal ultrasound. Above the discriminatory zone of about "
+        "1,500 IU/L an empty uterus is ectopic until proven otherwise; "
+        "below it, serial hCG that fails to double in 48 hours points the "
+        "same way. Mx: methotrexate for a stable, unruptured, small ectopic "
+        "with a low hCG and no fetal cardiac activity, with hCG followed to "
+        "zero. Laparoscopic salpingectomy for rupture, instability, or "
+        "failed medical management. Anti-D if Rh-negative. Red flags: "
+        "haemodynamic instability means theatre, not another scan."
+    ),
+
+    "Peripheral arterial disease": (
+        "Atherosclerotic narrowing of the limb arteries, and a marker of "
+        "systemic vascular risk as much as a limb problem. Clinical "
+        "features: intermittent claudication, reproducible at a fixed "
+        "distance and relieved by rest. Progression gives rest pain "
+        "relieved by hanging the leg down, then ulceration and gangrene. "
+        "Signs are absent pulses, hair loss, cool shiny skin and delayed "
+        "capillary return. Ix: ankle-brachial index - below 0.9 is "
+        "diagnostic, above 1.4 suggests incompressible calcified vessels "
+        "and is unreliable, typically in diabetes or chronic kidney "
+        "disease. Duplex ultrasound, then CT or MR angiography before "
+        "intervention. Mx: supervised exercise therapy is first-line for "
+        "claudication and outperforms most expectations. Stop smoking, "
+        "antiplatelet, high-intensity statin, and tight glycaemic and blood "
+        "pressure control. Revascularisation for chronic limb-threatening "
+        "ischaemia or lifestyle-limiting symptoms that fail conservative "
+        "care. Note: beta-blockers are not contraindicated, despite the "
+        "persistent belief that they are."
+    ),
+
+    "Urinary incontinence": (
+        "Involuntary loss of urine, classified by mechanism because "
+        "treatment differs entirely between the types. Types: stress, from "
+        "urethral sphincter weakness; urgency, from detrusor overactivity; "
+        "mixed; overflow, from chronic retention; and functional, where "
+        "continence fails for reasons outside the urinary tract. Ix: "
+        "bladder diary, urinalysis to exclude infection, post-void "
+        "residual, and examination for prolapse or atrophy. Urodynamics "
+        "only before surgery or when the picture is unclear. Mx: pelvic "
+        "floor muscle training for at least three months is first-line for "
+        "stress incontinence. Bladder training for urgency, then an "
+        "antimuscarinic or mirabegron - prefer mirabegron in older "
+        "patients, since antimuscarinic anticholinergic load is associated "
+        "with cognitive decline. Topical oestrogen for genitourinary "
+        "syndrome of menopause. Surgery for stress incontinence that fails "
+        "conservative care. Note: treat constipation, review diuretics and "
+        "caffeine, and check for retention before escalating - reversible "
+        "contributors are common and easily missed."
+    ),
+
+    "Cluster headache": (
+        "The most severe of the trigeminal autonomic cephalalgias, and "
+        "distinctive enough that the history alone usually makes it. "
+        "Clinical features: strictly unilateral, excruciating orbital or "
+        "temporal pain lasting 15 to 180 minutes, once to eight times a "
+        "day, in bouts of weeks to months. Ipsilateral autonomic features - "
+        "lacrimation, conjunctival injection, rhinorrhoea, ptosis, miosis. "
+        "Patients are restless and pace, unlike migraine. Epidemiology: "
+        "more common in men, often with nocturnal attacks that wake at a "
+        "consistent hour, and alcohol triggers during a bout only. Ix: "
+        "clinical, but image with MRI at least once to exclude a pituitary "
+        "or posterior fossa lesion. Mx (acute attack): high-flow oxygen "
+        "12-15 L/min via a non-rebreather, or subcutaneous sumatriptan. "
+        "Oral triptans are too slow. Prevention: verapamil is first-line, "
+        "with ECG monitoring as the dose rises; a short prednisolone course "
+        "or greater occipital nerve block can bridge until it works."
+    ),
+
+    "Tension headache": (
+        "The commonest primary headache, and the one most often "
+        "over-investigated and under-managed. Clinical features: bilateral, "
+        "pressing or tightening, mild to moderate, not aggravated by "
+        "routine activity, without vomiting. Photophobia or phonophobia may "
+        "occur but not both. Pericranial tenderness is common. "
+        "Classification: episodic if fewer than 15 days a month, chronic if "
+        "15 or more for over three months. Ix: none if the history is "
+        "typical and examination normal. Mx: simple analgesia for "
+        "infrequent attacks, limited to fewer than 15 days a month. "
+        "Amitriptyline is the best-supported preventer for chronic tension "
+        "headache. Address sleep, posture, stress and neck pain, since "
+        "these do more work than the medication does. Note: the single most "
+        "useful question in a frequent headache is how many days a month "
+        "analgesia is taken - medication overuse converts episodic headache "
+        "into chronic daily headache and no preventer works until it is "
+        "withdrawn."
+    ),
+
+    "Medication overuse headache": (
+        "Headache on 15 or more days a month in someone with a pre-existing "
+        "primary headache who is regularly overusing acute treatment. Dx: "
+        "the thresholds are 10 days a month or more for triptans, opioids, "
+        "ergots and combination analgesics, and 15 days a month or more for "
+        "simple analgesics such as paracetamol and NSAIDs. Clinical "
+        "features: a headache that has crept from episodic to near-daily, "
+        "often present on waking, with the original headache type still "
+        "recognisable underneath. Ix: none beyond excluding a secondary "
+        "cause if red flags are present. The diagnosis is made on the drug "
+        "history. Mx: withdraw the overused medication, either abruptly or "
+        "by taper, with a clear warning that headache worsens for one to "
+        "two weeks first. Start a preventer at the same time. Review at "
+        "four to twelve weeks; most improve substantially. Note: opioids "
+        "and codeine-containing combinations are the worst offenders and "
+        "the hardest to withdraw, which is a reason not to start them for "
+        "headache at all."
+    ),
+
+    "Prostate cancer": (
+        "Adenocarcinoma of the prostate, usually peripheral zone, with a "
+        "natural history slow enough that overtreatment is a real harm. "
+        "Epidemiology: the commonest cancer in Australian men. Risk rises "
+        "with age, family history and African ancestry. Clinical features: "
+        "usually asymptomatic when localised. Lower urinary tract symptoms "
+        "more often reflect benign hyperplasia. Bone pain suggests "
+        "metastatic disease, which is characteristically sclerotic. Ix: PSA "
+        "with digital rectal examination, then multiparametric MRI before "
+        "biopsy, then transperineal biopsy. Grade with the ISUP grade "
+        "group. Stage with PSMA PET where indicated. Mx: active "
+        "surveillance for low-risk disease, which is the default rather "
+        "than a compromise. Radical prostatectomy or radiotherapy for "
+        "intermediate and high risk. Androgen deprivation for advanced "
+        "disease, with an androgen receptor pathway inhibitor or docetaxel "
+        "added up front in metastatic disease. Note: population PSA "
+        "screening is not recommended in Australia; the discussion is "
+        "individual and should cover overdiagnosis explicitly."
+    ),
+
+    "Acute tubular necrosis": (
+        "The commonest cause of intrinsic acute kidney injury in hospital, "
+        "from ischaemic or toxic damage to tubular epithelium. Causes: "
+        "ischaemic, following any sustained prerenal insult such as sepsis, "
+        "hypovolaemia or cardiac surgery; or toxic, from aminoglycosides, "
+        "contrast, cisplatin, or myoglobin in rhabdomyolysis. Clinical "
+        "features: an oliguric phase, then a polyuric recovery phase as "
+        "tubules regenerate before concentrating ability returns. Ix: "
+        "urinary sodium above 40 mmol/L and fractional excretion of sodium "
+        "above 2% distinguish it from prerenal injury, which conserves "
+        "sodium avidly. Urine microscopy shows muddy brown granular casts "
+        "and renal tubular epithelial cells. Mx: supportive. Restore "
+        "perfusion, stop the nephrotoxin, avoid further insults, and "
+        "dialyse for the usual indications. No agent shortens the course, "
+        "and loop diuretics do not - they manage fluid, nothing more. Note: "
+        "watch potassium and volume closely through the polyuric phase, "
+        "when losses can be litres a day."
+    ),
+
+    "Osteomyelitis": (
+        "Infection of bone, haematogenous in children and usually "
+        "contiguous or secondary to vascular insufficiency in adults. "
+        "Causes: Staphylococcus aureus dominates. Consider Salmonella in "
+        "sickle cell disease, Pseudomonas after a penetrating foot injury "
+        "through footwear, and polymicrobial flora in diabetic foot "
+        "infection. Clinical features: local pain, warmth and swelling with "
+        "fever in acute disease; a chronically discharging sinus or a "
+        "non-healing ulcer in chronic disease. In diabetic foot, a probe "
+        "reaching bone makes it likely. Ix: MRI is the imaging of choice "
+        "and is positive early; plain films lag by two weeks. Blood "
+        "cultures, CRP and ESR for monitoring. Bone biopsy for culture "
+        "before antibiotics wherever possible - swabs of a sinus mislead. "
+        "Mx: targeted antibiotics, typically intravenous initially, guided "
+        "by eTG and culture, with surgical debridement of dead bone or "
+        "infected hardware. Duration is weeks, not days. Note: "
+        "culture-directed therapy matters more here than almost anywhere, "
+        "because the course is long and relapse is common."
+    ),
+
+    "Subdural haematoma": (
+        "Bleeding between dura and arachnoid from torn bridging veins, "
+        "crossing suture lines and appearing crescentic on CT. "
+        "Epidemiology: acute after significant trauma; chronic in older "
+        "people, those on anticoagulants, and those with alcohol-related "
+        "brain atrophy, where the causative injury may be trivial or not "
+        "recalled. Clinical features: acute disease presents with impaired "
+        "consciousness after trauma. Chronic disease presents insidiously "
+        "with headache, confusion, gait disturbance or focal weakness, and "
+        "is a reversible mimic of dementia. Ix: non-contrast CT head. Acute "
+        "blood is hyperdense, chronic is hypodense, and subacute can be "
+        "isodense to brain - look for midline shift and effaced sulci "
+        "rather than the collection itself. Mx: reverse anticoagulation "
+        "urgently and discuss with neurosurgery. Surgical evacuation by "
+        "burr hole for symptomatic chronic collections, craniotomy for "
+        "acute ones. Small asymptomatic collections may be observed. Red "
+        "flags: falling GCS, anisocoria or a rising blood pressure with "
+        "bradycardia mean herniation and immediate escalation."
+    ),
+
+    "Chronic pancreatitis": (
+        "Irreversible fibrosis of the pancreas with progressive loss of "
+        "exocrine and eventually endocrine function. Causes: alcohol is the "
+        "commonest in Australia; also smoking, which is independently "
+        "causative, genetic variants, obstruction, and autoimmune "
+        "pancreatitis. Clinical features: recurrent or constant epigastric "
+        "pain radiating to the back, steatorrhoea and weight loss once "
+        "exocrine reserve falls below about 10%, and diabetes late. Ix: CT "
+        "or MRCP showing calcification, ductal dilatation and atrophy; "
+        "endoscopic ultrasound is most sensitive early. Faecal elastase for "
+        "exocrine insufficiency. Lipase is often normal, which surprises "
+        "people expecting it to be raised. Mx: stop alcohol and smoking - "
+        "both change the trajectory. Pancreatic enzyme replacement with "
+        "fat-soluble vitamins, structured analgesia, and screening for "
+        "diabetes and osteoporosis. Endoscopic or surgical drainage for "
+        "obstructing disease. Note: the diabetes here is type 3c - glucagon "
+        "is lost alongside insulin, so hypoglycaemia is a genuine hazard of "
+        "treatment."
+    ),
 }
 
 

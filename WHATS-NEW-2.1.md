@@ -8,13 +8,17 @@ in the middle of the screen. It turned out to be hiding it on article
 pages too — which is the one place it is the only way to search the book
 without navigating back first.
 
-## Fifteen more conditions rewritten
+## Twenty-nine more conditions rewritten
 
 Lung cancer, lithium toxicity, miscarriage, polycystic ovary syndrome,
 cystic fibrosis, pre-eclampsia, paracetamol overdose, oesophageal
 varices, acute pancreatitis, diabetes insipidus, phaeochromocytoma,
 hyperosmolar hyperglycaemic state, sickle cell disease, bowel
-obstruction and nephrotic syndrome.
+obstruction, nephrotic syndrome, abruption, aortic aneurysm, portal
+hypertension, ectopic pregnancy, peripheral arterial disease, urinary
+incontinence, cluster headache, tension headache, medication overuse
+headache, prostate cancer, acute tubular necrosis, osteomyelitis,
+subdural haematoma and chronic pancreatitis.
 
 Chosen the same way as the last batch: by how often each actually comes
 up, not by how badly each overflowed. Those two orderings keep
@@ -22,7 +26,7 @@ disagreeing. Breast cancer is the third tallest entry left in the
 database and comes up twice; lung cancer comes up fifty-two times. Acute
 appendicitis, also over the limit, does not come up at all.
 
-All fifteen now fit the popup without scrolling. Australian sources
+All twenty-nine now fit the popup without scrolling. Australian sources
 throughout — eTG, AMH, PBS, RANZCOG, and the Poisons Information Centre
 number where it matters.
 
@@ -51,6 +55,15 @@ loading, so the only way out was deleting a file by hand. The whole file
 is now checked, and a download that fails is set aside rather than
 retried forever.
 
+The other change you may notice: clicking a highlighted word only opens
+the sidebar for services The AnkiDote actually integrates with, or for
+sites you have pointed it at yourself in Settings. Anything else opens
+in your normal browser instead. The sidebar keeps you signed in to
+NCBI, DrugBank and UpToDate, and a highlighted word is set by an
+ordinary HTML attribute that any shared deck can write - so a deck
+could previously send that signed-in window anywhere. Your own custom
+terms are unaffected, whatever you have pointed them at.
+
 Also fixed: update addresses are now required to be secure ones, and
 rechecked if the server redirects; downloaded content can no longer
 carry a link that is not an ordinary web link; and saving a download can
@@ -62,8 +75,8 @@ is nothing you need to do beyond updating.
 
 ## Under the hood
 
-Thirty-three new tests, one for each of the above, so none of them come
-back quietly. The suite is 150 tests.
+Forty-six new tests, one for each of the above, so none of them come
+back quietly. The suite is 163 tests.
 
 ---
 

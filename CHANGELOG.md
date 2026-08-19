@@ -31,10 +31,26 @@ shipped code rather than by reading it.
   readily as a web address. Both are now verified before the request,
   and again after any redirect, so a redirect cannot quietly downgrade
   the connection.
-- **Downloaded content can no longer carry a non-web link.** Entry links
-  open in the sidebar, which holds your signed-in sessions. Anything
+- **Downloaded content can no longer carry a non-web link.** Anything
   that is not `http` or `https` is now rejected when the file is
-  validated, rather than only when the link is clicked.
+  validated, rather than only when the link is clicked. Defence in
+  depth rather than a live hole: no entry in the library carries a
+  link field at all, and every link the add-on builds has its scheme
+  and host hardcoded, so a hostile library cannot currently choose a
+  destination.
+- **A shared deck can no longer steer the sidebar's signed-in
+  sessions.** `data-sp-url` is an ordinary HTML attribute, so any deck
+  can set it, and clicking a marked word navigated a browser profile
+  holding live NCBI, DrugBank, UpToDate and chat sessions. Any address
+  was accepted; the only response to an unrecognised one was a debug
+  log line. `SECURITY.md` had listed this as in scope since 1.x.
+  Addresses are now trusted only if they belong to a service the
+  add-on integrates with or to a host set in Settings - a custom term,
+  the institution URL, a custom chat provider. Anything else opens in
+  the normal browser, where there is no session to borrow, so the link
+  still works. Host matching is also now anchored on a dot boundary;
+  the previous check was a bare suffix match that would have accepted
+  `notncbi.nlm.nih.gov`.
 - **A saved download can no longer be diverted through a symlink.** The
   temporary file used while saving is now opened in a way that refuses
   to follow one.
@@ -44,15 +60,23 @@ control of the content host or local access to the add-on folder.
 
 ### Added
 
-- **Fifteen more conditions rewritten**, chosen the same way as the last
-  batch - by how often each comes up in real use rather than by how
-  badly it overflowed. Lung cancer, lithium toxicity, miscarriage,
-  polycystic ovary syndrome, cystic fibrosis, pre-eclampsia, paracetamol
-  overdose, oesophageal varices, acute pancreatitis, diabetes insipidus,
-  phaeochromocytoma, hyperosmolar hyperglycaemic state, sickle cell
-  disease, bowel obstruction and nephrotic syndrome. Australian sources
-  throughout - eTG, AMH, PBS, RANZCOG, and the Poisons Information
-  Centre.
+- **Twenty-nine more conditions rewritten**, chosen the same way as the
+  last batch - by how often each comes up in real use rather than by how
+  badly it overflowed.
+
+  Lung cancer, lithium toxicity, miscarriage, polycystic ovary syndrome,
+  cystic fibrosis, pre-eclampsia, paracetamol overdose, oesophageal
+  varices, acute pancreatitis, diabetes insipidus, phaeochromocytoma,
+  hyperosmolar hyperglycaemic state, sickle cell disease, bowel
+  obstruction, nephrotic syndrome, abruption, aortic aneurysm, portal
+  hypertension, ectopic pregnancy, peripheral arterial disease, urinary
+  incontinence, cluster headache, tension headache, medication overuse
+  headache, prostate cancer, acute tubular necrosis, osteomyelitis,
+  subdural haematoma and chronic pancreatitis.
+
+  Australian sources throughout - eTG, AMH, PBS, RANZCOG, and the
+  Poisons Information Centre. The over-cap backlog falls from 199 to
+  170.
 - **A security test file**, thirty-three tests pinning each of the above
   so none of them can quietly come back.
 

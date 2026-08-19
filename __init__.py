@@ -418,16 +418,82 @@ def _is_safe_url(url: str) -> bool:
     return s.startswith("http://") or s.startswith("https://")
 
 
-def _log_unknown_host(url: str) -> None:
-    """Debug-audit hook: announce when a card link goes outside the
-    set of hosts we deliberately integrate with.  Only logs at the
-    `debug` config level so this is silent for normal users."""
+def _host_of(url: str) -> str:
     try:
-        host = urlparse(url).hostname or ""
+        return (urlparse(url).hostname or "").lower()
     except Exception:
-        host = ""
-    if host and not any(host.endswith(h) for h in _KNOWN_HOSTS):
-        _log.debug(f"opening unrecognised host '{host}' from card content")
+        return ""
+
+
+def _user_configured_hosts() -> set:
+    """Hosts the user has themselves pointed the add-on at.
+
+    Read fresh rather than cached: these come from Settings, and a host
+    the user added a minute ago should work without restarting Anki.
+    Each source is wrapped separately so one malformed value cannot
+    empty the whole set - failing open here would silently restore the
+    behaviour this function exists to replace.
+    """
+    hosts = set()
+
+    raw = _config.get("customTerms")
+    if raw and isinstance(raw, str):
+        try:
+            import json as _json
+            for entry in _json.loads(raw):
+                if isinstance(entry, dict):
+                    h = _host_of((entry.get("url") or "").strip())
+                    if h:
+                        hosts.add(h)
+        except Exception:
+            pass
+
+    for key in ("uptodateHomeUrl", "chatHomeUrl", "chatCustomProviderUrl"):
+        try:
+            h = _host_of(_config.get(key) or "")
+            if h:
+                hosts.add(h)
+        except Exception:
+            pass
+
+    return hosts
+
+
+def _is_trusted_host(url: str) -> bool:
+    """Is this a host we may load in the add-on's authenticated profile?
+
+    The dock's QWebEngineProfile holds live NCBI, DrugBank, UpToDate and
+    chat sessions. Loading an arbitrary host into it hands that host
+    whatever those sessions are worth, and `data-sp-url` is an ordinary
+    HTML attribute - anything that can write card HTML can set it, which
+    includes any shared deck downloaded from AnkiWeb. `SECURITY.md`
+    already names that as in scope; until now the only response was a
+    debug-level log line.
+
+    Trust is decided by provenance, not by a fixed list of "good"
+    domains, because there is no such list that survives contact with
+    the custom terms feature - the whole point of it is that Rob points
+    it wherever he likes. Two sources are trusted:
+
+      * `_KNOWN_HOSTS`, the services the add-on itself integrates with
+        and generates URLs for;
+      * whatever the user has put in Settings - custom term links, the
+        institution URL, a custom chat provider.
+
+    A card cannot add to either set. It can only ask for something
+    already in one of them, which is exactly the property wanted.
+
+    Untrusted is not the same as forbidden. The caller opens these in
+    the user's normal browser instead, where there is no add-on session
+    to borrow, so a legitimate link in a shared deck still works.
+    """
+    host = _host_of(url)
+    if not host:
+        return False
+    if any(host == h or host.endswith("." + h) for h in _KNOWN_HOSTS):
+        return True
+    return any(host == h or host.endswith("." + h)
+               for h in _user_configured_hosts())
 
 
 def _on_js_message(handled, message: str, context):
@@ -440,7 +506,21 @@ def _on_js_message(handled, message: str, context):
         if not _is_safe_url(url):
             _log.debug(f"dropped unsafe URL: {url[:80]!r}")
             return (True, None)
-        _log_unknown_host(url)
+        # A host we do not integrate with and the user has not configured
+        # goes to the normal browser, not into a dock holding live
+        # sessions. The link still works; it just does not get the
+        # cookies. Checked before any dock routing below, since the
+        # UpToDate branch would otherwise hand it the UTD profile.
+        if not _is_trusted_host(url):
+            _log.debug(
+                f"untrusted host {_host_of(url)!r} from card content - "
+                f"opening externally rather than in the add-on profile")
+            try:
+                openLink(url)
+            except Exception as exc:
+                _log.error(f"openLink {url[:60]!r}", exc)
+            return (True, None)
+
         # UpToDate URLs go to the UTD subpackage's authenticated dock.
         if "uptodate.com" in url:
             try:

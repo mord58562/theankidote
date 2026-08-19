@@ -66,8 +66,15 @@ notes once the patch ships on AnkiWeb.
 The addon's defensive posture, for context:
 
 - All deck-content URL navigations go through `_is_safe_url`
-  (http/https only). Cross-origin navigations to unrecognised hosts
-  are logged at debug level for audit.
+  (http/https only) and then `_is_trusted_host`. Only two kinds of host
+  may be loaded into an authenticated add-on profile: the services the
+  add-on integrates with, and hosts the user has themselves configured
+  (custom term links, the institution URL, a custom chat provider).
+  A card can ask for something already in one of those sets; it cannot
+  add to either. Anything else is handed to the system browser via
+  `openLink`, so the link still resolves but no add-on session travels
+  with it. Host comparison is anchored on equality or a dot-delimited
+  suffix - a bare `endswith` would accept `notncbi.nlm.nih.gov`.
 - The three webview profiles use named QWebEngineProfiles so cookies
   are scoped to the addon and never leak into Anki's main webview or
   any other addon's webviews.
