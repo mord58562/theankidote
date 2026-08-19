@@ -518,11 +518,25 @@ class ContentVersionFormat(unittest.TestCase):
         """
         self.assertGreater(self._manifest()["content_version"], "2026.08.18")
 
-    def test_the_library_and_manifest_agree_on_the_version(self):
+    def test_the_manifest_is_never_behind_the_library(self):
+        """Equal in a build; the manifest may be ahead in the repository.
+
+        `data/manifest.json` is the published channel pointer and only
+        `tools/publish_content.sh` moves it. Between a code push and the
+        next content publish the repository legitimately holds a
+        manifest naming a *later* content version than the bundled
+        `library.json` — that is the channel being ahead of the shipped
+        floor, which is the whole point of having a channel.
+
+        What must never happen is the manifest sorting *below* the
+        bundled library. That means a code push has dragged the pointer
+        backwards over a publish, and every client then reads a stale or
+        url-less manifest and silently stops updating.
+        """
         lib = json.loads(
             (ROOT / "data" / "library.json").read_text(encoding="utf-8"))
-        self.assertEqual(lib["content_version"],
-                         self._manifest()["content_version"])
+        self.assertGreaterEqual(self._manifest()["content_version"],
+                                lib["content_version"])
 
 
 class AuthenticatedProfileNavigation(unittest.TestCase):
@@ -655,6 +669,87 @@ class AuthenticatedProfileNavigation(unittest.TestCase):
         src = (ROOT / "__init__.py").read_text(encoding="utf-8")
         self.assertLess(src.index("_is_safe_url(url)"),
                         src.index("_is_trusted_host(url)"))
+
+
+
+class DrugNameCoverage(unittest.TestCase):
+    """A missing spelling is not a degraded popup, it is no popup.
+
+    Measured against 79 names an Australian student's cards actually
+    use, 23 resolved to nothing before this: `frusemide`, `cephalexin`,
+    `cephazolin`, `thyroxine`, `glyceryl trinitrate` and the rest. Those
+    words highlighted nothing at all, which is invisible in a way a
+    short summary is not - nothing appears, so nothing looks wrong.
+    """
+
+    def _drugs(self):
+        from pearls import _drugs
+        return _drugs
+
+    def test_australian_spellings_resolve(self):
+        d = self._drugs()
+        for word, expect in (("frusemide", "furosemide"),
+                             ("cephalexin", "cefalexin"),
+                             ("cephazolin", "cefazolin"),
+                             ("thyroxine", "levothyroxine"),
+                             ("amoxycillin", "amoxicillin"),
+                             ("indomethacin", "indometacin"),
+                             ("cholecalciferol", "colecalciferol"),
+                             ("sulphasalazine", "sulfasalazine"),
+                             ("glyceryl trinitrate", "glyceryl trinitrate"),
+                             ("valproate", "sodium valproate")):
+            names = [x["name"] for x in d.resolve(f"Gave {word} today.")]
+            self.assertIn(expect, names, word)
+
+    def test_aliases_are_case_insensitive(self):
+        """They are generics, not brands.
+
+        Routing them through the brand path would match `frusemide`
+        mid-sentence and miss `Frusemide` at the start of one.
+        """
+        d = self._drugs()
+        for word in ("frusemide", "Frusemide", "FRUSEMIDE"):
+            names = [x["name"] for x in d.resolve(f"{word} was given.")]
+            self.assertIn("furosemide", names, word)
+
+    def test_no_american_generic_is_displayed(self):
+        """The popup heading is the most visible place the rule applies."""
+        lib = json.loads(
+            (ROOT / "data" / "library.json").read_text(encoding="utf-8"))
+        generics = {d["generic"].lower() for d in lib["drugs"]}
+        for us in ("meperidine", "rifampin", "estradiol", "lidocaine",
+                   "nitroglycerin", "acetaminophen", "epinephrine",
+                   "albuterol"):
+            self.assertNotIn(us, generics,
+                             f"{us} is displayed as a popup heading")
+
+    def test_american_spellings_still_resolve_to_the_australian_name(self):
+        """Dropping the US entry must not drop US-written cards."""
+        d = self._drugs()
+        for word, expect in (("meperidine", "pethidine"),
+                             ("rifampin", "rifampicin"),
+                             ("estradiol", "oestradiol"),
+                             ("lidocaine", "lignocaine"),
+                             ("nitroglycerin", "glyceryl trinitrate")):
+            names = [x["name"] for x in d.resolve(f"Gave {word} today.")]
+            self.assertIn(expect, names, word)
+
+    def test_no_duplicate_generics(self):
+        lib = json.loads(
+            (ROOT / "data" / "library.json").read_text(encoding="utf-8"))
+        names = [d["generic"].lower() for d in lib["drugs"]]
+        dupes = {n for n in names if names.count(n) > 1}
+        self.assertFalse(dupes, f"duplicate drug entries: {dupes}")
+
+    def test_an_alias_on_an_unknown_generic_fails_the_build(self):
+        """Silent is the failure mode being prevented.
+
+        An alias keyed on a generic that does not exist simply never
+        matches, and nothing reports it. This caught `mercaptopurine`,
+        which turned out to be missing from the library entirely.
+        """
+        src = (ROOT / "tools" / "build_library.py").read_text(encoding="utf-8")
+        self.assertIn("would never match", src)
 
 
 

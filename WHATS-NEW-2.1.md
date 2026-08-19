@@ -8,7 +8,7 @@ in the middle of the screen. It turned out to be hiding it on article
 pages too — which is the one place it is the only way to search the book
 without navigating back first.
 
-## Twenty-nine more conditions rewritten
+## Forty-one more conditions rewritten
 
 Lung cancer, lithium toxicity, miscarriage, polycystic ovary syndrome,
 cystic fibrosis, pre-eclampsia, paracetamol overdose, oesophageal
@@ -18,7 +18,7 @@ obstruction, nephrotic syndrome, abruption, aortic aneurysm, portal
 hypertension, ectopic pregnancy, peripheral arterial disease, urinary
 incontinence, cluster headache, tension headache, medication overuse
 headache, prostate cancer, acute tubular necrosis, osteomyelitis,
-subdural haematoma and chronic pancreatitis.
+subdural haematoma, chronic pancreatitis, amenorrhoea, rheumatic heart disease, diverticular disease, cerebral venous sinus thrombosis, haemorrhoids, acute angle-closure glaucoma, osteomalacia, rickets, anal fissure, uveitis, Huntington disease and chronic fatigue syndrome.
 
 Chosen the same way as the last batch: by how often each actually comes
 up, not by how badly each overflowed. Those two orderings keep
@@ -26,9 +26,22 @@ disagreeing. Breast cancer is the third tallest entry left in the
 database and comes up twice; lung cancer comes up fifty-two times. Acute
 appendicitis, also over the limit, does not come up at all.
 
-All twenty-nine now fit the popup without scrolling. Australian sources
+All forty-one now fit the popup without scrolling. Australian sources
 throughout — eTG, AMH, PBS, RANZCOG, and the Poisons Information Centre
 number where it matters.
+
+## Australian drug names
+
+Twenty-three drug spellings that Australian cards routinely use matched
+nothing at all - `frusemide`, `cephalexin`, `cephazolin`, `thyroxine`,
+`glyceryl trinitrate`, `valproate` and others. No popup appeared, which
+is easy not to notice because there is nothing there to look wrong. All
+now highlight.
+
+Five drugs were also being shown under their American names, and were in
+fact stored twice, once under each. Pethidine, rifampicin, oestradiol,
+lignocaine and glyceryl trinitrate now display the Australian name;
+cards written the American way still work.
 
 ## Settings explains itself less
 
@@ -76,7 +89,7 @@ is nothing you need to do beyond updating.
 ## Under the hood
 
 Forty-six new tests, one for each of the above, so none of them come
-back quietly. The suite is 163 tests.
+back quietly. The suite is 169 tests.
 
 ---
 

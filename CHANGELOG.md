@@ -5,6 +5,44 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2026-08-19
+
+Released because `pearls/_drugs.py` changed after `v2.1.0` was tagged
+and pushed. That file is packaged, so the change could not ship under a
+version number already pointing at a different tree.
+
+### Fixed
+
+- **Drugs written the Australian way now highlight.** Measured against
+  79 names an Australian student's cards actually use, 23 matched
+  nothing at all: `frusemide`, `cephalexin`, `cephazolin`, `thyroxine`,
+  `amoxycillin`, `indomethacin`, `cholecalciferol`, `sulphasalazine`,
+  `valproate`, `glyceryl trinitrate` and others. Those words produced no
+  popup whatsoever, which is easy to miss precisely because nothing
+  appears. They are now recognised, case-insensitively, and the popup
+  shows the standard name.
+- **Five drugs were shown under their American name.** The popup
+  heading is the most visible place the Australian-first rule applies,
+  and pethidine, rifampicin, oestradiol and lignocaine were each
+  appearing as meperidine, rifampin, estradiol and lidocaine - in fact
+  each was in the database twice, once under each name, with whichever
+  matched first winning. The duplicates are merged, the Australian name
+  is shown, and cards written the American way still resolve.
+  Nitroglycerin, which had no Australian counterpart, is now glyceryl
+  trinitrate. Drug entries: 1,165 to 1,161.
+
+### Added
+
+- **Twelve more conditions rewritten**: amenorrhoea, rheumatic heart
+  disease, diverticular disease, cerebral venous sinus thrombosis,
+  haemorrhoids, acute angle-closure glaucoma, osteomalacia, rickets,
+  anal fissure, uveitis, Huntington disease and chronic fatigue
+  syndrome. The over-cap backlog falls from 170 to 158.
+- **The build now refuses an alias keyed to a drug that does not
+  exist.** Such an alias would simply never match, and nothing would
+  report it. It immediately caught one, which turned out to be a drug
+  missing from the database entirely.
+
 ## [2.1.0] - 2026-08-18
 
 ### Security

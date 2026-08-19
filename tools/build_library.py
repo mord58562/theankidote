@@ -67,12 +67,74 @@ def collect() -> dict:
     from pearls import _library
     conditions = _library.get("conditions")
 
+    # Merge the spelling-variant table into the drug entries. Done here
+    # rather than in `_drugs.py` so the aliases travel in library.json
+    # and reach existing installs over the content channel, instead of
+    # waiting for an AnkiWeb release.
+    #
+    # `aliases` is an additive field: schema stays 1, and a 2.0.x client
+    # that does not read it simply ignores it, so publishing this does
+    # not strand anyone.
+    #
+    # An alias keyed on a generic that is not in the library is a typo,
+    # and a silent one - the alias would simply never match and nothing
+    # would say so. Fail the build instead.
+    drugs = [dict(d) for d in _drugs._DRUGS]
+    by_generic = {d.get("generic", "").lower(): d for d in drugs}
+
+    # Fold each American duplicate into its Australian entry, keeping the
+    # US spelling as an alias so those cards still resolve. Done before
+    # the alias merge so DRUG_ALIASES can key on the surviving name.
+    for us, au in _rich.DRUG_US_MERGES.items():
+        us_e, au_e = by_generic.get(us.lower()), by_generic.get(au.lower())
+        if not au_e:
+            raise SystemExit(f"DRUG_US_MERGES target {au!r} is not in the library")
+        if not us_e:
+            continue
+        merged = list(au_e.get("aliases") or [])
+        if us not in merged:
+            merged.append(us)
+        for extra in us_e.get("aliases") or []:
+            if extra not in merged:
+                merged.append(extra)
+        au_e["aliases"] = merged
+        brands = list(au_e.get("brands") or [])
+        for b in us_e.get("brands") or []:
+            if b not in brands:
+                brands.append(b)
+        if brands:
+            au_e["brands"] = brands
+        drugs.remove(us_e)
+        del by_generic[us.lower()]
+
+    # Rename an American generic that has no Australian counterpart.
+    for us, au in _rich.DRUG_RENAMES.items():
+        e = by_generic.get(us.lower())
+        if not e:
+            continue
+        e["generic"] = au
+        e["aliases"] = list(e.get("aliases") or []) + [us]
+        by_generic[au.lower()] = e
+        del by_generic[us.lower()]
+    unknown = [g for g in _rich.DRUG_ALIASES if g.lower() not in by_generic]
+    if unknown:
+        raise SystemExit(
+            f"DRUG_ALIASES names {len(unknown)} generic(s) not in the "
+            f"library, so the aliases would never match: {unknown}")
+    for generic, aliases in _rich.DRUG_ALIASES.items():
+        entry = by_generic[generic.lower()]
+        merged = list(entry.get("aliases") or [])
+        for a in aliases:
+            if a.lower() != generic.lower() and a not in merged:
+                merged.append(a)
+        entry["aliases"] = merged
+
     return {
         "schema": SCHEMA,
         "conditions": conditions,
         "new_conditions": _rich.NEW_CONDITIONS,
         "rich_summaries": _rich.RICH_SUMMARIES,
-        "drugs": _drugs._DRUGS,
+        "drugs": drugs,
         "drugbank_ids": _drugs._DRUGBANK_IDS,
         "acronyms": {k: [list(c) for c in v]
                      for k, v in _acronyms._ACRONYMS.items()},

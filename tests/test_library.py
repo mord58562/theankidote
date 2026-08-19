@@ -87,20 +87,45 @@ class BundledCopyIsTheFloor(unittest.TestCase):
             self.assertEqual(_library._validate(json.load(fh)), "")
 
     def test_manifest_matches_the_bundled_library(self):
-        """The shipped manifest is what the updater compares against.
+        """The manifest may lead the bundled library, but never trail it.
 
-        If it drifts from the file beside it, every client either
-        re-downloads content it already has or refuses content it needs.
+        This originally asserted the two were identical, which was right
+        while `data/manifest.json` was a build artefact sitting beside
+        `library.json`. Since 2.0 it is the *published channel pointer*:
+        `tools/publish_content.sh` moves it, and between a code release
+        and the next content publish the repository legitimately holds a
+        manifest naming a later content version, with a different sha
+        and byte count, than the library bundled beside it. That is the
+        channel being ahead of the shipped floor, which is the point of
+        having a channel.
+
+        So the test splits. When the manifest describes the bundled
+        library, everything must agree exactly - a drift there means
+        every client either re-downloads content it already has or
+        refuses content it needs. When the manifest is ahead, only the
+        invariants that must hold regardless are checked.
+
+        What must never happen is the manifest sorting *below* the
+        bundled library: that means a code push has dragged the pointer
+        backwards over a publish, which silently stops updates for
+        everyone until the next publish.
         """
         blob = pathlib.Path(_library.BUNDLED).read_bytes()
         manifest = json.loads(
             (pathlib.Path(_library.BUNDLED).parent / "manifest.json")
             .read_text(encoding="utf-8"))
-        self.assertEqual(manifest["sha256"], hashlib.sha256(blob).hexdigest())
-        self.assertEqual(manifest["bytes"], len(blob))
+        bundled_version = json.loads(blob.decode("utf-8"))["content_version"]
+
         self.assertEqual(manifest["schema"], _library.SCHEMA)
-        self.assertEqual(manifest["content_version"],
-                         json.loads(blob.decode("utf-8"))["content_version"])
+        self.assertGreaterEqual(
+            manifest["content_version"], bundled_version,
+            "the published manifest has been dragged behind the bundled "
+            "library - a code push has overwritten a content publish")
+
+        if manifest["content_version"] == bundled_version:
+            self.assertEqual(manifest["sha256"],
+                             hashlib.sha256(blob).hexdigest())
+            self.assertEqual(manifest["bytes"], len(blob))
 
 
 class OverridesStaySeparateFromBaseText(unittest.TestCase):

@@ -63,6 +63,22 @@ for _d in _DRUGS:
     _g = _d.get("generic")
     if _g:
         _GENERIC_LOOKUP[_g.lower()] = _d
+    # Spelling variants go through the GENERIC path, not the brand path.
+    #
+    # They are not brands: `frusemide` is what NSW Health, the PBS and
+    # most Australian cards call furosemide, and `cephalexin` and
+    # `thyroxine` are the same story. Routing them through
+    # `_BRAND_LOOKUP` would match them case-sensitively, which is right
+    # for a capitalised trade name and wrong for a lower-case generic -
+    # `frusemide` mid-sentence would match and `Frusemide` at the start
+    # of one would not.
+    #
+    # `resolve` reports `d["generic"]`, so an aliased match still shows
+    # the INN spelling in the popup heading. The alias only affects what
+    # the matcher recognises, never what the user is shown.
+    for _a in _d.get("aliases", []) or []:
+        if isinstance(_a, str) and _a.strip():
+            _GENERIC_LOOKUP.setdefault(_a.lower(), _d)
     # A brand that case-insensitively matches the generic isn't a real brand -
     # skip it so the same word doesn't surface twice through the brand path.
     _g_lower = (_g or "").lower()

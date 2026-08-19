@@ -2115,7 +2115,357 @@ RICH_SUMMARIES = {
         "is lost alongside insulin, so hypoglycaemia is a genuine hazard of "
         "treatment."
     ),
+
+    # ═══════ BATCH 4: ordered by measured deck frequency ════════════════
+    #
+    # Weighted toward Medicine and Psychiatry (MEDI6101), which is the
+    # live rotation. Note the psych *vocabulary* needed nothing: all 53
+    # entries in `psych` are already under cap, as are signs,
+    # descriptive and preclinical. The psychiatric entries worth
+    # rewriting live in `conditions`.
+    #
+    # Frequencies: amenorrhoea 30, rheumatic heart disease 15,
+    # diverticular disease 13, CVST 12, haemorrhoids ~9, angle-closure
+    # ~8, osteomalacia/rickets 6, anal fissure 5, uveitis 4,
+    # Huntington 3, chronic fatigue syndrome within 3.
+
+    "Amenorrhoea": (
+        "Absence of menstruation. Primary means no menarche by 15 with "
+        "secondary sexual characteristics, or by 13 without them; secondary "
+        "means periods stopping for three cycles or six months. Causes: "
+        "exclude pregnancy first, every time. Then by compartment - "
+        "hypothalamic (functional, from energy deficit, excessive exercise "
+        "or stress), pituitary (prolactinoma, Sheehan), ovarian (PCOS, "
+        "premature ovarian insufficiency, Turner), or outflow tract "
+        "(Asherman, imperforate hymen, Mullerian agenesis). Ix: beta-hCG, "
+        "then FSH, LH, oestradiol, prolactin and TFTs. High FSH points to "
+        "the ovary, low or normal FSH to the hypothalamus or pituitary. Add "
+        "testosterone if virilised, karyotype in primary amenorrhoea, and "
+        "pelvic ultrasound for anatomy. Mx: treat the cause. Restore energy "
+        "balance in functional disease; oestrogen replacement in premature "
+        "ovarian insufficiency; dopamine agonist for prolactinoma. Note: "
+        "hypo-oestrogenism of any cause costs bone, so ask about duration "
+        "and consider DXA - this is the harm that outlasts the amenorrhoea "
+        "itself."
+    ),
+
+    "Rheumatic heart disease": (
+        "Chronic valve damage following acute rheumatic fever, and in "
+        "Australia a disease of profound inequity - rates among Aboriginal "
+        "and Torres Strait Islander people are among the highest reported "
+        "anywhere. Pathophysiology: molecular mimicry between group A "
+        "streptococcal M protein and cardiac tissue drives autoimmune "
+        "valvulitis. Clinical features: the mitral valve is affected most "
+        "often, then aortic. Mitral stenosis gives exertional dyspnoea, "
+        "atrial fibrillation and haemoptysis; regurgitation gives volume "
+        "overload and heart failure. Ix: echocardiography defines and "
+        "grades it, and detects subclinical disease in screening programs. "
+        "ECG, and ASOT or anti-DNase B if acute rheumatic fever is "
+        "suspected. Mx: secondary prophylaxis with benzathine "
+        "benzylpenicillin G every 28 days is the single most important "
+        "intervention and continues for years. Manage the valve lesion "
+        "medically, then repair or replace. Register the patient with the "
+        "state RHD control program. Note: acute rheumatic fever is "
+        "notifiable, and diagnosis uses the Australian criteria, which "
+        "differ from Jones in high-risk groups."
+    ),
+
+    "Diverticular disease": (
+        "Herniation of colonic mucosa through the muscular wall at points "
+        "where vasa recta penetrate, overwhelmingly sigmoid in Western "
+        "populations. Classification: diverticulosis is the anatomical "
+        "finding, diverticular disease is symptomatic, and diverticulitis "
+        "is inflammation of a diverticulum. Clinical features: most "
+        "diverticulosis is silent. Diverticulitis gives left iliac fossa "
+        "pain, fever and altered bowel habit. Painless brisk rectal "
+        "bleeding is the other presentation, from an eroded vas rectum. Ix: "
+        "CT abdomen with contrast for acute diverticulitis, staging by the "
+        "Hinchey classification. Colonoscopy is deferred six to eight weeks "
+        "after an episode to exclude a masked malignancy, and is avoided "
+        "acutely. Mx: uncomplicated diverticulitis in a well patient is "
+        "managed without antibiotics in current Australian guidance - "
+        "analgesia, fluids and review. Antibiotics for systemic upset, "
+        "immune suppression or comorbidity. Percutaneous drainage for an "
+        "abscess; surgery for perforation, obstruction or fistula. Note: "
+        "the old advice to avoid nuts and seeds has been disproven and "
+        "should not be repeated."
+    ),
+
+    "Cerebral venous sinus thrombosis": (
+        "Thrombosis of the dural sinuses or cortical veins, causing raised "
+        "intracranial pressure and venous infarction that does not respect "
+        "arterial territories. Causes: prothrombotic states, especially "
+        "pregnancy and the puerperium, combined oral contraceptive, "
+        "thrombophilia and malignancy; or local causes such as mastoiditis "
+        "or sinusitis. Clinical features: headache in most, often "
+        "progressive over days and worse lying flat. Then seizures, focal "
+        "deficits, papilloedema or encephalopathy. A young patient with a "
+        "new persistent headache and a seizure is the pattern to recognise. "
+        "Ix: CT or MR venography. Plain CT is normal in a large minority "
+        "and a negative D-dimer does not exclude it either. Mx: "
+        "anticoagulate with heparin even when there is haemorrhagic "
+        "infarction - the bleeding is venous and secondary to the clot. "
+        "Then oral anticoagulation for months. Treat seizures and raised "
+        "pressure; endovascular therapy or decompression for deterioration. "
+        "Note: investigate for an underlying thrombophilia and review "
+        "hormonal contraception afterwards."
+    ),
+
+    "Haemorrhoids": (
+        "Symptomatic enlargement and distal displacement of the normal anal "
+        "cushions, which are vascular structures contributing to continence "
+        "rather than varicose veins. Classification: internal haemorrhoids "
+        "arise above the dentate line and are graded I to IV by prolapse "
+        "and reducibility; external arise below it and are somatically "
+        "innervated, which is why they hurt and internal ones usually do "
+        "not. Clinical features: painless bright rectal bleeding on wiping "
+        "or coating the stool, pruritus, and a palpable lump. Severe acute "
+        "pain suggests thrombosis or a fissure instead. Ix: inspection, "
+        "digital rectal examination and proctoscopy. Investigate the colon "
+        "in anyone over 45, with iron deficiency, or with a change in bowel "
+        "habit - attributing bleeding to haemorrhoids without looking is "
+        "how bowel cancer is missed. Mx: fibre, fluid and avoiding "
+        "straining are the foundation. Topical preparations give symptom "
+        "relief only. Rubber band ligation for grades I to III; "
+        "haemorrhoidectomy for grade IV or failed banding. Note: a "
+        "thrombosed external haemorrhoid presenting within 72 hours can be "
+        "excised under local anaesthetic."
+    ),
+
+    "Acute angle-closure glaucoma": (
+        "Sudden obstruction of aqueous outflow at the trabecular meshwork "
+        "by apposition of the peripheral iris, and a true ophthalmic "
+        "emergency - vision is lost in hours. Epidemiology: hypermetropic "
+        "eyes, older patients, women, and East Asian ancestry. Precipitated "
+        "by dim light, and by anticholinergic, sympathomimetic and some "
+        "antidepressant drugs. Clinical features: severe unilateral eye "
+        "pain, blurred vision with haloes around lights, and a red eye. "
+        "Nausea and vomiting are prominent enough that this is mistaken for "
+        "an abdominal or neurological problem. The eye is hard, the cornea "
+        "hazy, and the pupil mid-dilated and unreactive. Ix: tonometry - "
+        "intraocular pressure is typically well above 40 mmHg. Gonioscopy "
+        "confirms the closed angle. Mx: discuss with ophthalmology "
+        "immediately. Lie the patient flat, give topical agents to lower "
+        "pressure and constrict the pupil, and acetazolamide systemically. "
+        "Definitive treatment is laser peripheral iridotomy, offered to the "
+        "fellow eye as well. Red flags: any red painful eye with reduced "
+        "vision needs a pressure measured before it is called "
+        "conjunctivitis."
+    ),
+
+    "Osteomalacia": (
+        "Defective mineralisation of osteoid in the mature skeleton, "
+        "producing soft bone with a normal or increased matrix volume. "
+        "Causes: vitamin D deficiency dominates - inadequate sun exposure, "
+        "covering dress, dark skin, malabsorption, and chronic kidney or "
+        "liver disease. Also hypophosphataemia from renal phosphate "
+        "wasting, and long-term anticonvulsants. Clinical features: diffuse "
+        "bone pain and proximal myopathy giving a waddling gait and "
+        "difficulty rising from a chair. Fractures, and pseudofractures "
+        "(Looser zones) on imaging. Ix: 25-hydroxyvitamin D, calcium, "
+        "phosphate, ALP and PTH. The characteristic pattern is low or "
+        "low-normal calcium and phosphate with raised ALP and secondary "
+        "hyperparathyroidism. Mx: colecalciferol replacement, with calcium "
+        "if dietary intake is poor, and correction of the underlying cause. "
+        "Recheck at three months. Phosphate and calcitriol where the defect "
+        "is renal phosphate wasting. Note: ALP rises before calcium falls, "
+        "so a normal calcium does not exclude it."
+    ),
+
+    "Rickets": (
+        "The childhood counterpart of osteomalacia: defective "
+        "mineralisation at the growth plate, so the deformity is of growing "
+        "bone rather than only of bone strength. Causes: nutritional "
+        "vitamin D deficiency is commonest, particularly in exclusively "
+        "breastfed infants without supplementation, with dark skin or "
+        "limited sun exposure. Also X-linked hypophosphataemic and vitamin "
+        "D-dependent forms. Clinical features: frontal bossing, rachitic "
+        "rosary, wrist and ankle widening, bowing of the legs once "
+        "weight-bearing, and delayed milestones. Hypocalcaemic seizures in "
+        "infancy. Ix: wrist radiograph showing metaphyseal cupping, "
+        "splaying and fraying, with the same biochemistry as osteomalacia. "
+        "Mx: colecalciferol with adequate dietary calcium, treating the "
+        "mother too if the infant is breastfed. Phosphate and calcitriol "
+        "for hypophosphataemic forms, or burosumab in selected cases. Note: "
+        "deformity in a young child largely remodels once biochemistry is "
+        "corrected."
+    ),
+
+    "Anal fissure": (
+        "A longitudinal tear in the anoderm distal to the dentate line, "
+        "over 90% in the posterior midline. Pathophysiology: hard stool "
+        "tears the anoderm, pain causes internal sphincter spasm, spasm "
+        "reduces perfusion, and the ischaemia prevents healing. Treatment "
+        "is aimed at breaking that cycle rather than at the tear. Clinical "
+        "features: severe tearing pain during defaecation persisting for up "
+        "to hours afterwards, with bright blood on the paper. A sentinel "
+        "skin tag marks chronicity. Ix: gentle inspection by parting the "
+        "buttocks is usually enough. Digital examination is often "
+        "intolerable acutely. A lateral or multiple fissure suggests Crohn "
+        "disease, tuberculosis, malignancy or HIV and warrants examination "
+        "under anaesthetic. Mx: fibre, fluid, stool softeners and warm "
+        "baths heal most acute fissures. Topical glyceryl trinitrate or "
+        "diltiazem relaxes the sphincter for chronic ones; headache limits "
+        "GTN. Botulinum toxin, then lateral internal sphincterotomy. Note: "
+        "sphincterotomy carries a real risk of incontinence, so counsel "
+        "explicitly, particularly in women who have given birth."
+    ),
+
+    "Uveitis": (
+        "Inflammation of the uveal tract, classified anatomically because "
+        "the site predicts both the associations and the risk. Types: "
+        "anterior (iritis) is commonest; intermediate, posterior and "
+        "panuveitis carry more risk to vision. Causes: about half are "
+        "idiopathic. Otherwise HLA-B27-associated disease, sarcoidosis, "
+        "juvenile idiopathic arthritis, or infection with herpes viruses, "
+        "toxoplasma or syphilis. Clinical features: anterior disease gives "
+        "a painful red eye with photophobia, blurred vision and a small "
+        "irregular pupil, with circumcorneal injection. Posterior disease "
+        "is painless with floaters and visual loss. Ix: slit lamp "
+        "examination showing cells and flare in the anterior chamber, with "
+        "targeted serology guided by the pattern. Mx: ophthalmology review. "
+        "Topical corticosteroid with a cycloplegic to relieve spasm and "
+        "prevent synechiae; systemic immunosuppression for severe or "
+        "posterior disease. Note: JIA-associated uveitis is typically "
+        "asymptomatic and white, which is why those children are screened "
+        "rather than waiting."
+    ),
+
+    "Huntington disease": (
+        "Autosomal dominant neurodegeneration from a CAG trinucleotide "
+        "expansion in HTT on chromosome 4, with striatal medium spiny "
+        "neurons lost first. Genetics: 40 or more repeats is fully "
+        "penetrant; 36 to 39 is reduced penetrance. Anticipation occurs, "
+        "and is more marked with paternal transmission because expansion "
+        "happens in spermatogenesis. Clinical features: the triad is "
+        "movement disorder, cognitive decline and psychiatric illness, and "
+        "the psychiatric features often come first. Chorea early, giving "
+        "way to bradykinesia, dystonia and rigidity later. Depression and a "
+        "substantially raised suicide risk throughout. Ix: genetic testing, "
+        "which in an asymptomatic person must follow formal predictive "
+        "testing protocols with counselling before and after. MRI shows "
+        "caudate atrophy. Mx: no disease-modifying therapy. Treat chorea if "
+        "it is disabling, treat depression and psychosis actively, and "
+        "involve a multidisciplinary team early for speech, swallow, "
+        "nutrition and advance care planning. Note: the psychiatric burden "
+        "is what most affects quality of life, and it is treatable even "
+        "though the disease is not."
+    ),
+
+    "Chronic fatigue syndrome": (
+        "Also myalgic encephalomyelitis. A disabling multisystem illness "
+        "defined by post-exertional malaise, not by fatigue alone. Dx: six "
+        "months or more of substantial reduction in function, with "
+        "post-exertional malaise, unrefreshing sleep, and either cognitive "
+        "impairment or orthostatic intolerance. Post-exertional malaise is "
+        "the required feature and distinguishes this from fatigue of other "
+        "causes. Ix: there is no confirmatory test. Investigate to exclude "
+        "mimics - FBC, EUC, LFT, TFT, coeliac serology, CRP, ferritin, "
+        "glucose, and vitamin D - and stop there rather than searching "
+        "indefinitely. Mx: symptom-focused and individualised. Activity "
+        "pacing within an energy envelope; treat sleep, pain and "
+        "orthostatic intolerance; manage comorbid mood disorder without "
+        "implying it is the cause. Graded exercise therapy is no longer "
+        "recommended as a curative treatment and can worsen post-exertional "
+        "malaise. Note: patients are commonly disbelieved before they are "
+        "diagnosed, and the therapeutic relationship depends on not "
+        "repeating that."
+    ),
 }
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# Australian and British spelling variants for drug generics.
+# ═══════════════════════════════════════════════════════════════════════
+#
+# Keyed by the INN generic already in the library; each value is a list
+# of other spellings the same drug is written under. `tools/build_library.py`
+# merges these into each drug entry as an `aliases` list, and
+# `pearls/_drugs.py` indexes them case-insensitively alongside the
+# generic. The popup still shows the INN spelling - an alias changes
+# what the matcher recognises, never what is displayed.
+#
+# This exists because a missing alias is not a degraded popup, it is NO
+# popup. Measured against 79 probes of names an Australian student's
+# cards actually use, 23 resolved to nothing: `frusemide` is what NSW
+# Health and the PBS call furosemide, `cephalexin` and `cephazolin` are
+# the universal Australian spellings, `thyroxine` is what every endocrine
+# card says, and `glyceryl trinitrate` is the Australian name for a drug
+# the library only knew as nitroglycerin. Those cards highlighted nothing
+# at all.
+#
+# Non-Australian forms (`norepinephrine`, `beclometasone`) are
+# deliberately NOT added. The house rule is Australian-first, and
+# accepting the US spelling silently would let it back in through the
+# matcher. `epinephrine` is left unmatched for the same reason -
+# `adrenaline` resolves correctly.
+
+DRUG_ALIASES = {
+    # Australian spellings in routine use
+    "furosemide":        ["frusemide"],
+    "cefalexin":         ["cephalexin"],
+    "cefazolin":         ["cephazolin", "cefazolin sodium"],
+    "levothyroxine":     ["thyroxine"],
+    "amoxicillin":       ["amoxycillin"],
+    "indometacin":       ["indomethacin"],
+    "colecalciferol":    ["cholecalciferol"],
+    "ciclosporin":       ["cyclosporin", "cyclosporine"],
+    "sulfasalazine":     ["sulphasalazine"],
+    "co-trimoxazole":    ["cotrimoxazole", "trimethoprim-sulfamethoxazole"],
+    "salbutamol":        ["albuterol"],
+
+    # Names the library holds only in one form
+    "sodium valproate":  ["valproate", "valproic acid"],
+    "glyceryl trinitrate": ["GTN"],
+
+    # Very common Australian brand written lower-case in practice, so the
+    # case-sensitive brand path misses it
+    "enoxaparin":        ["clexane"],
+}
+
+# ═══════════════════════════════════════════════════════════════════════
+# American generics displayed as popup headings.
+# ═══════════════════════════════════════════════════════════════════════
+#
+# The house rule is Australian-first, and these broke it at the most
+# visible point there is: the heading of the popup. Measured across the
+# 1,165 drug generics, five were the US form.
+#
+# Four of them duplicated an entry that already existed under the
+# Australian name, so the library was carrying the same drug twice with
+# two summaries and whichever matched first won. For those, the US entry
+# is dropped and its name kept as an alias, so a card written the
+# American way still resolves - it just displays the Australian name.
+#
+# `nitroglycerin` had no Australian counterpart at all, so it is renamed
+# rather than merged.
+#
+# Format: US form -> the Australian entry to fold it into, or None to
+# rename in place using DRUG_ALIASES for the old spelling.
+
+DRUG_US_MERGES = {
+    "meperidine": "pethidine",
+    "rifampin":   "rifampicin",
+    "estradiol":  "oestradiol",
+    "lidocaine":  "lignocaine",
+}
+
+DRUG_RENAMES = {
+    "nitroglycerin": "glyceryl trinitrate",
+}
+
+
+# Drugs absent from the library entirely, found by the same sweep. These
+# need adding as entries, not as aliases, and the build refuses an alias
+# keyed on a generic it cannot find - which is how `mercaptopurine` was
+# caught here rather than shipping as an alias that silently never fired.
+#
+#   mercaptopurine (and 6-mercaptopurine) - IBD and ALL maintenance
+#   dalteparin, tinzaparin                - LMWHs on the PBS
+#
+# Not added in this pass: adding a drug means writing its summary, and
+# these belong in a batch with the rest rather than bolted onto an alias
+# fix.
 
 
 # Fill the new entries' summaries from the table above, so the text is
