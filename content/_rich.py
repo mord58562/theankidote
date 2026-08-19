@@ -2421,6 +2421,31 @@ DRUG_ALIASES = {
     # Very common Australian brand written lower-case in practice, so the
     # case-sensitive brand path misses it
     "enoxaparin":        ["clexane"],
+
+    # ── Superseded Australian Approved Names, from the TGA's own list ──
+    #
+    # The 2.1.1 aliases were assembled by hand from names Rob's cards
+    # happened to use, which found eleven and missed eleven. This block
+    # is the remainder of the TGA "Updating medicine ingredient names"
+    # active-ingredient table, restricted to rows where the new name is
+    # already a generic in this library, so each is a pure alias with no
+    # summary to write:
+    #   tga.gov.au/updating-medicine-ingredient-names-list-affected-ingredients
+    #
+    # Textbooks, older lecture slides and hospital protocols still carry
+    # the left-hand form, so a card written from any of them matched
+    # nothing.
+    "trihexyphenidyl":   ["benzhexol"],
+    "flupentixol":       ["flupenthixol"],
+    "dexamfetamine":     ["dexamphetamine"],
+    "hydroxycarbamide":  ["hydroxyurea"],
+    "formoterol":        ["eformoterol"],
+    "glycopyrronium":    ["glycopyrrolate"],
+    "chlorphenamine":    ["chlorpheniramine"],
+    "colestyramine":     ["cholestyramine"],
+    "clomifene":         ["clomiphene"],
+    "ethinylestradiol":  ["ethinyloestradiol"],
+    "dactinomycin":      ["actinomycin D"],
 }
 
 # ═══════════════════════════════════════════════════════════════════════
@@ -2452,6 +2477,19 @@ DRUG_US_MERGES = {
 
 DRUG_RENAMES = {
     "nitroglycerin": "glyceryl trinitrate",
+
+    # `benztropine mesylate` -> `benzatropine mesilate` on the TGA list,
+    # so benzatropine is the Australian Approved Name and benztropine is
+    # the superseded US form. The library carried only the US form, so
+    # unlike the four merges above there is no duplicate to fold in and
+    # nothing is lost by renaming. The old spelling is kept as an alias
+    # by the rename machinery.
+    #
+    # This one is worth more than its size: benzatropine is the drug on
+    # every acute-dystonia and drug-induced-parkinsonism card, so the
+    # heading was showing the American name on exactly the material a
+    # psychiatry rotation runs on.
+    "benztropine": "benzatropine",
 }
 
 
