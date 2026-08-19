@@ -1024,14 +1024,19 @@ def _build_modules_group(_w, first_run: bool):
             lay.addWidget(note)
         return cb
 
-    pearls_cb = _row(
-        "Reference popups and sidebar", "", pearls_default)
-    utd_cb = _row(
-        "UpToDate sidebar",
-        "Requires your own subscription.", utd_default)
-    chat_cb = _row(
-        "AI chat sidebar",
-        "Uses your existing chat session. No API key needed.", chat_default)
+    # All three rows are now bare. The two captions that survived the 2.1
+    # cull - one under the UpToDate row about needing a subscription, one
+    # under the chat row about not needing an API key - restated what the
+    # checkbox label and the AnkiWeb description already say, and read as
+    # filler. `_row` tolerates an empty description, so removing them
+    # leaves three evenly spaced checkboxes rather than a ragged gap.
+    #
+    # Deliberately not quoting the old strings here: grepping the tree
+    # for a caption is how you confirm one is gone, and a comment holding
+    # it verbatim makes that check report a false positive.
+    pearls_cb = _row("Reference popups and sidebar", "", pearls_default)
+    utd_cb    = _row("UpToDate sidebar", "", utd_default)
+    chat_cb   = _row("AI chat sidebar", "", chat_default)
     return box, pearls_cb, utd_cb, chat_cb
 
 

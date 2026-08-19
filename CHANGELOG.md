@@ -5,6 +5,61 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.2] - 2026-08-19
+
+Released because `__init__.py` changed after `v2.1.1` was tagged and
+pushed. That file is packaged, so the change could not ship under a
+version number already pointing at a different tree.
+
+### Changed
+
+- **The two remaining captions under the Modules switches are gone.**
+  One noted that the UpToDate sidebar needs your own subscription, the
+  other that the chat sidebar needs no API key. Both restated the
+  checkbox label and the AnkiWeb description, so all three module rows
+  are now bare checkboxes. `_row` already tolerated an empty
+  description, so the spacing stays even.
+- **`benztropine` is renamed to `benzatropine`.** `benztropine mesylate`
+  became `benzatropine mesilate` on the TGA's list, so benzatropine is
+  the Australian Approved Name and the library held only the US form.
+  Unlike the four merges in 2.1.1 there was no duplicate to fold in, so
+  nothing is lost by renaming. It is the drug on every acute dystonia
+  and drug-induced parkinsonism card, so the heading was showing the
+  American name on exactly the material a psychiatry rotation runs on.
+  `benztropine` is kept as an alias.
+
+### Fixed
+
+- **Twelve more drug spellings that matched nothing.** 2.1.1's sweep
+  worked from names that happened to appear in a deck. This one works
+  from the TGA's own list of updated ingredient names, which has 22 rows
+  whose new name is already a generic in this library; 2.1.1 had caught
+  11 of them. The rest are now aliased: `benzhexol`, `flupenthixol`,
+  `dexamphetamine`, `hydroxyurea`, `eformoterol`, `glycopyrrolate`,
+  `chlorpheniramine`, `cholestyramine`, `clomiphene`,
+  `ethinyloestradiol`, `actinomycin D`.
+- **`push-*.sh` could publish a manifest naming no download.** The
+  manifest guard added in 2.1.0 restored the published pointer only when
+  the remote version sorted at or above the mirrored one. A local build
+  stamps a version with no `url`, so mirroring one that sorted *above*
+  the remote was waved through, and every client's next check would read
+  a newer content version with no address to fetch it from and silently
+  get nothing. The guard now keys on the `url` rather than the ordering:
+  a manifest without one is a build artefact and never reaches the
+  branch. The version comparison is kept for the case where both
+  manifests are genuine published pointers.
+- **`push-*.sh` no longer mirrors `data/` over a published one.** Fixing
+  the manifest guard above fixed only half the problem. `data/library.json`
+  is mirrored too, and it is the thing the manifest describes. Publishing
+  a content version from the clone and then mirroring a *different*
+  library stamped with that same version leaves the repository holding a
+  manifest and a library claiming the same content with different bytes,
+  which `test_manifest_matches_the_bundled_library` correctly refuses.
+  The rule underneath both halves is one rule: `data/` is not source, and
+  `tools/publish_content.sh` owns the pointer and the library alike. If
+  the repository's manifest carries a `url` and does not sort below the
+  library in the source zip, `data/` is now left entirely alone.
+
 ## [2.1.1] - 2026-08-19
 
 Released because `pearls/_drugs.py` changed after `v2.1.0` was tagged
