@@ -411,10 +411,42 @@ _KNOWN_HOSTS = (
 
 def _is_safe_url(url: str) -> bool:
     """Whitelist URL schemes accepted by the open-in-dock pycmd handler.
+
     Defensive against a malicious card embedding e.g. javascript: or
     file: URLs in a span's data-sp-url attribute - those would otherwise
-    be loaded into the QWebEngineView with the addon's profile."""
-    s = (url or "").strip().lower()
+    be loaded into the QWebEngineView with the addon's profile.
+
+    It also rejects any URL containing a backslash, and that is not
+    tidiness. `_is_trusted_host` decides using Python's `urlparse`, and
+    the URL is then loaded by Chromium, which follows the WHATWG URL
+    spec. The two disagree about `\\`: WHATWG treats it as `/` inside
+    the authority, `urlparse` treats it as an ordinary hostname
+    character. Measured against both parsers rather than reasoned about:
+
+        https://evil.com\\.ncbi.nlm.nih.gov/
+            urlparse  -> evil.com\\.ncbi.nlm.nih.gov   (endswith .ncbi... -> TRUSTED)
+            Chromium  -> evil.com
+
+        https://evil.com\\@ncbi.nlm.nih.gov/
+            urlparse  -> ncbi.nlm.nih.gov              (exact match -> TRUSTED)
+            Chromium  -> evil.com
+
+    Either one is a card-settable attribute that passes the provenance
+    check and then loads an attacker's host into the dock profile
+    holding live NCBI, DrugBank, UpToDate and chat sessions - which is
+    precisely the capability `_is_trusted_host` was written to remove.
+
+    Rejecting the character outright is the fix rather than teaching
+    `_host_of` about backslashes, because the real defect is deciding on
+    one parse and acting on another. No legitimate http(s) URL needs a
+    literal backslash; `%5C` still reaches a server that wants one.
+    Tab, CR and LF are dropped by browsers before parsing and are
+    refused here for the same reason.
+    """
+    s = (url or "").strip()
+    if any(c in s for c in ("\\", "\t", "\r", "\n")):
+        return False
+    s = s.lower()
     return s.startswith("http://") or s.startswith("https://")
 
 

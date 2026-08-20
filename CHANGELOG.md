@@ -5,6 +5,79 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.3] - 2026-08-19
+
+A security and robustness release from a full review of the codebase.
+No content changed, so nothing needs publishing over the content
+channel. Every defect below was reproduced against the shipped 2.1.2
+code before being fixed, and each has a regression test that fails
+against 2.1.2 and passes here.
+
+### Security
+
+- **A card could load an untrusted host into the authenticated dock.**
+  `_is_trusted_host` decides using Python's `urlparse`; the URL is then
+  loaded by Chromium, which follows the WHATWG URL spec. The two
+  disagree about a backslash in the authority - WHATWG treats it as `/`,
+  `urlparse` treats it as an ordinary hostname character - and that
+  disagreement is a complete bypass of the provenance check added in
+  2.1. Measured against both parsers:
+
+      https://evil.com\.ncbi.nlm.nih.gov/
+          urlparse -> evil.com\.ncbi.nlm.nih.gov   -> trusted
+          Chromium -> evil.com
+
+      https://evil.com\@ncbi.nlm.nih.gov/
+          urlparse -> ncbi.nlm.nih.gov             -> trusted
+          Chromium -> evil.com
+
+  `data-sp-url` is an ordinary HTML attribute, so either string in a
+  deck downloaded from AnkiWeb would have opened an attacker's host in
+  the profile holding live NCBI, DrugBank, UpToDate and chat sessions.
+  `_is_safe_url` now refuses backslashes and control characters
+  outright, because the defect is deciding on one parse and acting on
+  another rather than the particular character. Tab, CR and LF are
+  refused for the same reason: browsers strip them before parsing and
+  `urlparse` does not.
+
+- **Validation stopped one level short of where it mattered.** 2.1
+  taught `_validate` to check every entry of every vocabulary rather
+  than only the first. It checked that `aliases`, `brands` and `utd`
+  were lists, but never what was in them, and every consumer lowercases
+  those elements to build its lookup tables. Six poisoned shapes passed
+  the type-only check and four killed the import outright - which is the
+  identical permanent brick the 2.1 fix existed to prevent, because the
+  file validates, is written to `user_files/`, is preferred at every
+  launch, and the Settings switch that would disable updates lives in
+  the add-on that no longer imports. `pearls/_drugs.py` survived two of
+  them only because it happens to carry an `isinstance` guard that the
+  other six consumers do not, so the check belongs in the validator
+  where it covers all seven at once.
+
+- **`utd` was validated as the wrong shape entirely.** It is not a list
+  of strings; each element is a `[label, query]` pair and
+  `_conditions._primary_url` reaches into it as `utd[0][1]`. A dict, a
+  bare string, a non-string pair and a one-element pair all returned ""
+  from the shipped validator and then crashed `resolve()`, which runs on
+  every card shown. The symptom would have been a broken popup on every
+  card until the file was deleted by hand, not a single import failure.
+  Acronym candidates are now checked for their full three-element shape
+  for the same reason: `_acronyms` unpacks them positionally and
+  lowercases every context word.
+
+### Fixed
+
+- **Two concurrent update checks could leave a truncated library.**
+  `check_in_background` runs at launch and the "Check now" button in
+  Settings calls the same code, and both wrote through a fixed
+  `library.json.part`. One writer could unlink another's temp file,
+  create its own at the same name, and have the first writer's
+  `os.replace` rename that half-written file into place. `_validate`
+  catches it at the next launch and falls back, so nothing breaks, but
+  the user's content silently reverts with no error logged anywhere. The
+  temp name now carries the pid and thread id, so each writer only ever
+  renames a file it finished writing.
+
 ## [2.1.2] - 2026-08-19
 
 Released because `__init__.py` changed after `v2.1.1` was tagged and

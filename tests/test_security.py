@@ -18,6 +18,7 @@ import copy
 import json
 import os
 import pathlib
+import re
 import subprocess
 import sys
 import tempfile
@@ -751,6 +752,219 @@ class DrugNameCoverage(unittest.TestCase):
         src = (ROOT / "tools" / "build_library.py").read_text(encoding="utf-8")
         self.assertIn("would never match", src)
 
+
+
+class ValidationReachesInsideLists(unittest.TestCase):
+    """The 2.1 depth fix stopped one level short of where it mattered.
+
+    `_validate` was taught to check every entry of every vocabulary
+    rather than only the first. It checked that `aliases`, `brands` and
+    `utd` were lists - but not what was *in* them. Every consumer
+    lowercases those elements to build its lookup tables, so a single
+    `int` or `None` among them raises `AttributeError` at import, which
+    is the identical permanent brick the depth fix existed to prevent:
+    the file validates, is written to `user_files/`, is preferred at
+    every launch, and the Settings switch that would disable updates
+    lives in the add-on that no longer imports.
+
+    This was measured, not argued. Six poisoned shapes passed the
+    type-only check; four of them killed the import. `_drugs.py`
+    survived two of them only because it happens to carry an
+    `isinstance` guard that the other six consumers do not - so the fix
+    belongs in the validator, where it covers all seven at once.
+    """
+
+    def _reject(self, mutate, what):
+        lib = _valid()
+        mutate(lib)
+        why = _library._validate(lib)
+        self.assertTrue(why, f"{what} passed validation")
+        return why
+
+    def test_non_string_in_condition_aliases_is_rejected(self):
+        self._reject(lambda d: d["conditions"][7].__setitem__("aliases", ["ok", 5]),
+                     "an int in conditions[].aliases")
+        self._reject(lambda d: d["conditions"][8].__setitem__("aliases", [None]),
+                     "a None in conditions[].aliases")
+        self._reject(lambda d: d["conditions"][9].__setitem__("aliases", [["x"]]),
+                     "a nested list in conditions[].aliases")
+
+    def test_non_string_in_drug_brands_is_rejected(self):
+        self._reject(lambda d: d["drugs"][3].__setitem__("brands", [7]),
+                     "an int in drugs[].brands")
+        self._reject(lambda d: d["drugs"][4].__setitem__("aliases", [7]),
+                     "an int in drugs[].aliases")
+
+    def test_malformed_utd_pairs_are_rejected(self):
+        """`utd` is not a list of strings; it is [label, query] pairs, and
+        `_conditions._primary_url` reaches into it as `utd[0][1]`.
+
+        All four of these returned "" from the shipped validator and then
+        crashed `resolve()`, which runs on every card shown - so the
+        symptom is a broken popup on every card, not a single import
+        failure.
+        """
+        for val, what in (([{"a": 1}], "a dict"),
+                          (["x"], "a bare string"),
+                          ([[1, 2]], "a non-string pair"),
+                          ([["only"]], "a 1-element pair")):
+            self._reject(lambda d, v=val: d["conditions"][0].__setitem__("utd", v),
+                         f"{what} in conditions[].utd")
+
+    def test_wellformed_utd_pairs_are_accepted(self):
+        lib = _valid()
+        lib["conditions"][0]["utd"] = [["Adult Mx", "treatment of x"]]
+        self.assertEqual(_library._validate(lib), "")
+
+    def test_malformed_acronym_candidates_are_rejected(self):
+        first = list(_valid()["acronyms"])[0]
+        self._reject(lambda d: d["acronyms"].__setitem__(first, [3]),
+                     "a bare int as an acronym candidate")
+        self._reject(lambda d: d["acronyms"].__setitem__(first, [["a"]]),
+                     "a 1-element acronym candidate")
+        self._reject(lambda d: d["acronyms"].__setitem__(first, [[1, [], "d"]]),
+                     "a non-string acronym expansion")
+        self._reject(lambda d: d["acronyms"].__setitem__(first, [["e", [7], "d"]]),
+                     "a non-string acronym context word")
+
+    def test_the_shipped_library_still_passes(self):
+        """The check has to be strict without being wrong about real content."""
+        self.assertEqual(_library._validate(_valid()), "")
+
+
+class UrlParsingAgreesWithTheBrowser(unittest.TestCase):
+    """`_is_trusted_host` decided on one parse and Chromium loaded another.
+
+    Trust is computed with Python's `urlparse`; the URL is then handed
+    to a QWebEngineView, which follows the WHATWG URL spec. They
+    disagree about a backslash in the authority - WHATWG treats it as
+    `/`, `urlparse` treats it as a hostname character - and that
+    disagreement is a complete bypass of the provenance check, verified
+    against both parsers:
+
+        https://evil.com\\.ncbi.nlm.nih.gov/
+            urlparse -> evil.com\\.ncbi.nlm.nih.gov   -> TRUSTED
+            Chromium -> evil.com
+
+        https://evil.com\\@ncbi.nlm.nih.gov/
+            urlparse -> ncbi.nlm.nih.gov              -> TRUSTED
+            Chromium -> evil.com
+
+    `data-sp-url` is card-settable, so either string in a shared deck
+    loaded an attacker's host into the profile holding live NCBI,
+    DrugBank, UpToDate and chat sessions. `_is_safe_url` now refuses the
+    character outright, because the defect is acting on a different
+    parse than the one that was checked, not the specific character.
+    """
+
+    def _is_safe_url(self):
+        src = (ROOT / "__init__.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        fn = [n for n in tree.body
+              if isinstance(n, ast.FunctionDef) and n.name == "_is_safe_url"]
+        self.assertEqual(len(fn), 1, "_is_safe_url missing from __init__")
+        ns = {}
+        exec(compile(ast.Module(body=fn, type_ignores=[]), "<safe>", "exec"), ns)
+        return ns["_is_safe_url"]
+
+    def test_backslash_urls_are_refused(self):
+        safe = self._is_safe_url()
+        for url in ("https://evil.com\\.ncbi.nlm.nih.gov/",
+                    "https://evil.com\\@ncbi.nlm.nih.gov/",
+                    "https://evil.com\\/.go.drugbank.com/",
+                    "https://www.uptodate.com\\@evil.com/"):
+            self.assertFalse(safe(url), f"accepted {url!r}")
+
+    def test_control_characters_are_refused(self):
+        """Browsers strip tab, CR and LF before parsing; urlparse does not."""
+        safe = self._is_safe_url()
+        for url in ("https://evil.com\t@www.ncbi.nlm.nih.gov/",
+                    "https://www.ncbi.nlm.nih.gov\r\n.evil.com/",
+                    "https://evil.com\n@go.drugbank.com/"):
+            self.assertFalse(safe(url), f"accepted {url!r}")
+
+    def test_ordinary_urls_still_pass(self):
+        safe = self._is_safe_url()
+        for url in ("https://www.ncbi.nlm.nih.gov/books/NBK430685/",
+                    "https://go.drugbank.com/drugs/DB00945",
+                    "http://example.org/a?b=c#d",
+                    "  https://www.uptodate.com/contents/x  "):
+            self.assertTrue(safe(url), f"rejected {url!r}")
+
+    def test_the_two_parsers_now_agree_on_everything_accepted(self):
+        """The property, rather than the blocklist: anything `_is_safe_url`
+        accepts must give the same host under both parsing rules."""
+        from urllib.parse import urlparse
+        safe = self._is_safe_url()
+        cases = ["https://evil.com\\.ncbi.nlm.nih.gov/",
+                 "https://evil.com\\@ncbi.nlm.nih.gov/",
+                 "https://www.ncbi.nlm.nih.gov/books/NBK1/",
+                 "https://evil.com\t@www.ncbi.nlm.nih.gov/",
+                 "https://go.drugbank.com/drugs/DB1"]
+        for url in cases:
+            if not safe(url):
+                continue
+            # WHATWG splits the authority on the first of / \\ ? #; with
+            # backslashes and control characters refused, `urlparse` and
+            # that rule cannot diverge.
+            host = (urlparse(url).hostname or "")
+            rest = url.split("//", 1)[1]
+            authority = re.split(r"[/\\?#]", rest, 1)[0].rsplit("@", 1)[-1]
+            self.assertEqual(host, authority.lower().split(":")[0],
+                             f"parsers disagree on {url!r}")
+
+
+class ConcurrentDownloadsDoNotCorruptTheLibrary(unittest.TestCase):
+    """Two checks can run at once, and they shared one temp filename.
+
+    `check_in_background` fires at launch and the "Check now" button in
+    Settings calls the same code, so two writers are reachable. With a
+    fixed `library.json.part` the interleaving is:
+
+        A  os.open(tmp, O_EXCL)          -> inode 1
+        B  os.unlink(tmp)                -> A's directory entry removed
+        B  os.open(tmp, O_EXCL)          -> inode 2, starts writing
+        A  finishes, os.replace(tmp, ..) -> renames B's half-written file
+
+    leaving a truncated `library.json`. `_validate` catches it at the
+    next launch and falls back, so nothing breaks, but the user's
+    content silently reverts with no error anywhere. A per-writer temp
+    name removes the interleaving rather than narrowing it.
+    """
+
+    def test_temp_name_is_unique_per_writer(self):
+        src = (ROOT / "pearls" / "_updater.py").read_text(encoding="utf-8")
+        self.assertNotIn('tmp = path + ".part"', src,
+                         "the shared temp filename is back")
+        self.assertIn("os.getpid()", src)
+        self.assertIn("threading.get_ident()", src)
+
+    def test_concurrent_writers_leave_a_complete_file(self):
+        import threading as _t
+        with tempfile.TemporaryDirectory() as d:
+            target = os.path.join(d, "sub", "library.json")
+            payloads = [b"a" * 400_000, b"b" * 400_000]
+            errors = []
+
+            def w(body):
+                try:
+                    for _ in range(12):
+                        _updater._write_atomically(target, body)
+                except Exception as exc:                # noqa: BLE001
+                    errors.append(exc)
+
+            ts = [_t.Thread(target=w, args=(p,)) for p in payloads]
+            for t in ts:
+                t.start()
+            for t in ts:
+                t.join()
+            self.assertFalse(errors, f"writer raised: {errors}")
+            got = pathlib.Path(target).read_bytes()
+            self.assertIn(got, payloads,
+                          "library.json is neither writer's complete payload")
+            leftovers = [f for f in os.listdir(os.path.dirname(target))
+                         if f.endswith(".part")]
+            self.assertFalse(leftovers, f"temp files left behind: {leftovers}")
 
 
 if __name__ == "__main__":

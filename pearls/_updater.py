@@ -139,9 +139,26 @@ def _write_atomically(path: str, body: bytes) -> None:
     `os.replace` needs no equivalent guard: rename operates on the
     directory entry, so a symlink at `path` is replaced rather than
     followed.
+
+    The temp name carries the pid and thread id, and the previous fixed
+    `library.json.part` was a race. Two checks can run at once - one
+    started by `check_in_background` at launch, one by the "Check now"
+    button in Settings - and with a shared name the sequence is:
+
+        A  os.open(tmp, O_EXCL)          -> inode 1
+        B  os.unlink(tmp)                -> A's entry gone, A's fd fine
+        B  os.open(tmp, O_EXCL)          -> inode 2, starts writing
+        A  finishes, os.replace(tmp,...) -> renames *B's* half-written file
+
+    so `library.json` ends up truncated. `_validate` catches it at the
+    next launch and falls back, but the user sees their content revert
+    with no explanation. A unique name removes the interleaving instead
+    of narrowing it: each writer only ever renames a file it finished
+    writing, so the worst case is that the older of two complete and
+    valid libraries wins, which is harmless.
     """
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    tmp = path + ".part"
+    tmp = f"{path}.{os.getpid()}.{threading.get_ident():x}.part"
     flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_NOFOLLOW", 0)
     try:
         os.unlink(tmp)

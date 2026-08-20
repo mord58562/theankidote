@@ -85,7 +85,17 @@ _ENTRY_REQUIRED = {
 # belongs iterates character by character rather than raising, which is
 # the worst outcome - thousands of one-character phrases enter the
 # matcher and every card lights up.
-_ENTRY_LISTS = ("aliases", "utd", "brands")
+_ENTRY_STR_LISTS = ("aliases", "brands")
+
+# `utd` is not a list of strings. Each element is a [label, query] pair,
+# and `_conditions._primary_url` reaches straight into it as
+# `utd[0][1]`. Measured against the shipped validator: `[{"a": 1}]`,
+# `["x"]`, `[[1, 2]]` and `[["only"]]` all returned "" from `_validate`
+# and every one of them crashed `resolve()` - which runs on every card
+# shown, so that is a broken popup on every card until the file is
+# deleted by hand, not a one-off import failure.
+_ENTRY_PAIR_LISTS = ("utd",)
+
 _ENTRY_STRS = ("nbk", "source", "category")
 
 # How many entries deep to check. The library is ~2,500 entries and this
@@ -123,10 +133,47 @@ def _validate_entries(lib) -> str:
                             f"{type(val).__name__}, expected string")
                 if not val.strip():
                     return f"{key}[{i}].{field} is empty"
-            for field in _ENTRY_LISTS:
-                if field in entry and not isinstance(entry[field], list):
-                    return (f"{key}[{i}].{field} is "
-                            f"{type(entry[field]).__name__}, expected list")
+            for field in _ENTRY_PAIR_LISTS:
+                if field in entry:
+                    pairs = entry[field]
+                    if not isinstance(pairs, list):
+                        return (f"{key}[{i}].{field} is "
+                                f"{type(pairs).__name__}, expected list")
+                    for j, pair in enumerate(pairs):
+                        if not isinstance(pair, (list, tuple)) or len(pair) != 2:
+                            return (f"{key}[{i}].{field}[{j}] is not a "
+                                    f"2-element [label, query] pair")
+                        if not all(isinstance(x, str) for x in pair):
+                            return (f"{key}[{i}].{field}[{j}] holds a "
+                                    f"non-string")
+
+            for field in _ENTRY_STR_LISTS:
+                if field in entry:
+                    if not isinstance(entry[field], list):
+                        return (f"{key}[{i}].{field} is "
+                                f"{type(entry[field]).__name__}, expected list")
+                    # The type of the list is not the whole check. Every
+                    # consumer lowercases these elements to build its
+                    # lookup - `_conditions` does `[n] + list(aliases)`,
+                    # `_drugs` the same for `brands` - and an `int` or a
+                    # `None` among them raises `AttributeError` at
+                    # import. That is the identical brick described
+                    # above, one level deeper: the file validates, is
+                    # written to `user_files/`, is preferred at every
+                    # launch, and the add-on holding the switch that
+                    # would disable updates is the one that no longer
+                    # imports.
+                    #
+                    # Measured against the shipped library rather than
+                    # assumed: of six poisoned shapes that passed the
+                    # type-only check, four killed the import outright
+                    # and `_drugs.py` survived only because it happens
+                    # to carry an `isinstance` guard the other six
+                    # consumers do not. Guarding here fixes all seven.
+                    for j, item in enumerate(entry[field]):
+                        if not isinstance(item, str):
+                            return (f"{key}[{i}].{field}[{j}] is "
+                                    f"{type(item).__name__}, expected string")
             for field in _ENTRY_STRS:
                 if field in entry and not isinstance(entry[field], str):
                     return (f"{key}[{i}].{field} is "
@@ -143,9 +190,28 @@ def _validate_entries(lib) -> str:
                 if not url.lower().startswith(_MAX_URL_SCHEMES):
                     return f"{key}[{i}].url is not http(s)"
 
-    for i, (k, v) in enumerate(lib["acronyms"].items()):
+    # `_acronyms.py` does `[tuple(c) for c in v]` and then unpacks each
+    # as `(exp, ctx, desc)`, lowercasing every element of `ctx`. So the
+    # shape is load-bearing three levels down, and checking only that
+    # `v` is a non-empty list leaves `[[1, 2, 3]]` and `[["a"]]` both
+    # passing and both fatal at import.
+    for k, v in lib["acronyms"].items():
         if not isinstance(k, str) or not isinstance(v, list) or not v:
             return f"acronyms[{k!r}] is not a non-empty list"
+        for j, cand in enumerate(v):
+            if not isinstance(cand, (list, tuple)) or len(cand) != 3:
+                return (f"acronyms[{k!r}][{j}] is not a 3-element "
+                        f"expansion/context/description")
+            exp, ctx, desc = cand
+            if not isinstance(exp, str) or not isinstance(desc, str):
+                return f"acronyms[{k!r}][{j}] expansion/description is not a string"
+            if not isinstance(ctx, (list, tuple)):
+                return (f"acronyms[{k!r}][{j}] context is "
+                        f"{type(ctx).__name__}, expected list")
+            for w in ctx:
+                if not isinstance(w, str):
+                    return (f"acronyms[{k!r}][{j}] context holds a "
+                            f"{type(w).__name__}, expected strings")
     for k, v in lib["drugbank_ids"].items():
         if not isinstance(k, str) or not isinstance(v, str):
             return f"drugbank_ids[{k!r}] is not a string"

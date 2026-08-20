@@ -26,3 +26,7 @@ dist/
 # Local-only publishing notes (working-tree only, never ship)
 theankidote-publishing-instructions.txt
 *-publishing-instructions.txt
+
+# Review tooling, never part of a release
+.ruff_cache/
+.pytest_cache/
