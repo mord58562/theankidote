@@ -79,8 +79,15 @@ def collect() -> dict:
     # An alias keyed on a generic that is not in the library is a typo,
     # and a silent one - the alias would simply never match and nothing
     # would say so. Fail the build instead.
-    drugs = [dict(d) for d in _drugs._DRUGS]
+    # Same rule as the conditions above, and for the same reason: as of
+    # 2.2 `_drugs.py` merges `drug_summaries` over its entries at import,
+    # so `_drugs._DRUGS` is the *overridden* text. Compiling from that
+    # would write each override into the base permanently and make the
+    # next edit to `content/_rich.py` a silent no-op. Read the library as
+    # it sits on disk.
+    drugs = [dict(d) for d in _library.get("drugs")]
     by_generic = {d.get("generic", "").lower(): d for d in drugs}
+    drugbank_ids = dict(_drugs._DRUGBANK_IDS)
 
     # Fold each American duplicate into its Australian entry, keeping the
     # US spelling as an alias so those cards still resolve. Done before
@@ -107,15 +114,60 @@ def collect() -> dict:
         drugs.remove(us_e)
         del by_generic[us.lower()]
 
-    # Rename an American generic that has no Australian counterpart.
-    for us, au in _rich.DRUG_RENAMES.items():
-        e = by_generic.get(us.lower())
+    # Rename a generic to the name that should head the popup, keeping
+    # the old spelling as an alias so cards written the old way still
+    # resolve.
+    for old, new in _rich.DRUG_RENAMES.items():
+        # The accession carry-over sits OUTSIDE the "is this entry still
+        # here" guard on purpose. A rename applied in an earlier build is
+        # already baked into library.json, so the entry is no longer
+        # found under its old name and the loop below skips it - which is
+        # exactly how `nitroglycerin` kept DB00727 while every `glyceryl
+        # trinitrate` popup opened a search page from 2.1.1 to 2.2. The
+        # repair has to run on renames that already happened, not only on
+        # the one being applied now.
+        db_old = drugbank_ids.get(old.lower())
+        if db_old and not drugbank_ids.get(new.lower()):
+            drugbank_ids[new.lower()] = db_old
+        e = by_generic.get(old.lower())
         if not e:
             continue
-        e["generic"] = au
-        e["aliases"] = list(e.get("aliases") or []) + [us]
-        by_generic[au.lower()] = e
-        del by_generic[us.lower()]
+        e["generic"] = new
+        # Dedupe, and drop any alias that is now the generic itself. The
+        # 2.1.1 merge left `lignocaine` carrying `["lidocaine",
+        # "lignocaine"]`, so renaming it without this produces an entry
+        # aliased to its own heading twice.
+        seen, merged = {new.lower()}, []
+        for a in list(e.get("aliases") or []) + [old]:
+            if isinstance(a, str) and a.lower() not in seen:
+                seen.add(a.lower())
+                merged.append(a)
+        if merged:
+            e["aliases"] = merged
+        else:
+            e.pop("aliases", None)
+        # Carry the DrugBank accession across, or the rename silently
+        # downgrades the popup button from the drug's monograph to a
+        # search URL. Handled above, before the guard.
+        by_generic[new.lower()] = e
+        del by_generic[old.lower()]
+
+    # An alias identical to its own generic is a leftover from a merge or
+    # rename and does nothing but appear twice in the matcher's index.
+    # Swept across the whole vocabulary rather than only the entries
+    # touched this build, because the ones already in library.json were
+    # written by earlier releases.
+    for e in drugs:
+        gen = (e.get("generic") or "").lower()
+        kept, seen = [], {gen}
+        for a in e.get("aliases") or []:
+            if isinstance(a, str) and a.lower() not in seen:
+                seen.add(a.lower())
+                kept.append(a)
+        if kept:
+            e["aliases"] = kept
+        else:
+            e.pop("aliases", None)
     unknown = [g for g in _rich.DRUG_ALIASES if g.lower() not in by_generic]
     if unknown:
         raise SystemExit(
@@ -129,18 +181,68 @@ def collect() -> dict:
                 merged.append(a)
         entry["aliases"] = merged
 
+    # An override keyed on a generic that is not in the library fails the
+    # same way an alias does - silently. The text simply never reaches a
+    # popup and nothing says so. A rename is the likely cause: writing
+    # `DRUG_SUMMARIES["phenobarbitone"]` after renaming the entry to
+    # `phenobarbital` produces exactly this, and the summary that was
+    # meant to correct a wrong drug name would be the thing that never
+    # shipped.
+    # NEW_DRUGS is not appended to `drugs` - see the note in
+    # pearls/_drugs.py. It is registered here only so DRUG_SUMMARIES and
+    # DRUG_ALIASES may key on a new name without the guards below
+    # rejecting it as unknown.
+    new_drugs = [dict(d) for d in _rich.NEW_DRUGS]
+    for d in new_drugs:
+        d["summary"] = _rich.DRUG_SUMMARIES.get(d["generic"], d.get("summary", ""))
+        if not d["summary"].strip():
+            raise SystemExit(
+                f"NEW_DRUGS entry {d['generic']!r} has no summary; add one "
+                f"to DRUG_SUMMARIES keyed on that generic")
+        if d["generic"].lower() in by_generic:
+            raise SystemExit(
+                f"NEW_DRUGS entry {d['generic']!r} is already in the "
+                f"library; edit it through DRUG_SUMMARIES instead")
+        by_generic[d["generic"].lower()] = d
+
+    new_preclinical = [dict(t) for t in _rich.NEW_PRECLINICAL]
+    # From the library on disk, NOT from _preclinical.PRECLINICAL_TERMS.
+    # That module now merges the new entries at import, so checking
+    # against it would make every entry clash with itself on the second
+    # build - and emitting it below would bake them into the base list
+    # permanently. Same rule as the drugs above.
+    _pre_names = {t["name"].lower() for t in _library.get("preclinical")}
+    for t in new_preclinical:
+        if not (t.get("summary") or "").strip():
+            raise SystemExit(
+                f"NEW_PRECLINICAL entry {t['name']!r} has no summary")
+        if t["name"].lower() in _pre_names:
+            raise SystemExit(
+                f"NEW_PRECLINICAL entry {t['name']!r} is already in the "
+                f"library; two entries under one name means whichever "
+                f"indexes first wins")
+
+    orphaned = [g for g in _rich.DRUG_SUMMARIES if g.lower() not in by_generic]
+    if orphaned:
+        raise SystemExit(
+            f"DRUG_SUMMARIES names {len(orphaned)} generic(s) not in the "
+            f"library, so the text would never match: {orphaned}")
+
     return {
         "schema": SCHEMA,
         "conditions": conditions,
         "new_conditions": _rich.NEW_CONDITIONS,
         "rich_summaries": _rich.RICH_SUMMARIES,
         "drugs": drugs,
-        "drugbank_ids": _drugs._DRUGBANK_IDS,
+        "new_drugs": new_drugs,
+        "drug_summaries": _rich.DRUG_SUMMARIES,
+        "drugbank_ids": drugbank_ids,
         "acronyms": {k: [list(c) for c in v]
                      for k, v in _acronyms._ACRONYMS.items()},
         "signs": _signs.SIGN_TERMS,
         "descriptive": _descriptive.DESCRIPTIVE_TERMS,
-        "preclinical": _preclinical.PRECLINICAL_TERMS,
+        "preclinical": _library.get("preclinical"),
+        "new_preclinical": new_preclinical,
         "psych": _psych.PSYCH_TERMS,
     }
 

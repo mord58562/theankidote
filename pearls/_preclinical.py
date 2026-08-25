@@ -16,9 +16,24 @@ from . import _library
 
 PRECLINICAL_TERMS: list = _library.get("preclinical")
 
+# Terms absent from the base vocabulary, authored in content/_rich.py as
+# NEW_PRECLINICAL and compiled under their own key. Same seam and same
+# reasoning as `new_drugs` in `_drugs.py`: kept out of `preclinical`
+# because `tools/build_library.py` reads that list back as the base for
+# the next build, so an entry appended there could never be removed
+# again. Optional, since a library published before 2.2 has no such key.
+#
+# This is where drug CLASSES live, under the existing `pharmacology`
+# category. They are not drugs - `antibiotics` has no DrugBank monograph
+# and no generic name - and putting them here gets the right source
+# label and the Wikipedia fallback for free.
+_NEW: list = _library.get("new_preclinical", [])
+PRECLINICAL_TERMS = list(PRECLINICAL_TERMS) + [dict(t) for t in _NEW]
 
-import re as _re
+
 from urllib.parse import quote_plus as _quote_plus
+
+from . import _matcher
 
 
 _LOOKUP: dict = {}
@@ -41,11 +56,15 @@ for _name in _NAMES:
     _seen_ci.add(_lk)
     _uniq.append(_name)
 _NAMES = sorted(_uniq, key=len, reverse=True)
-_PRECLINICAL_RE = (
-    _re.compile(r"\b(?:" + "|".join(_re.escape(n) for n in _NAMES) + r")\b",
-                _re.IGNORECASE)
-    if _NAMES else None
-)
+
+# Matched by first-word index, not by an alternation over all 501 names.
+# This module was left behind when 2.1 moved conditions, drugs, signs,
+# descriptive and psych onto PhraseMatcher, so it kept paying
+# O(text x alternatives): 9.5ms of every card scan, more than the other
+# six vocabularies put together. Semantics are unchanged - PhraseMatcher
+# is case-insensitive, longest-wins and non-overlapping, which is
+# exactly what the sorted alternation with \b...\b was.
+_MATCHER = _matcher.PhraseMatcher(_NAMES) if _NAMES else None
 
 
 def _wikipedia_url(term: str) -> str:
@@ -53,12 +72,11 @@ def _wikipedia_url(term: str) -> str:
 
 
 def resolve(text: str) -> list:
-    if not text or _PRECLINICAL_RE is None:
+    if not text or _MATCHER is None:
         return []
     out = []
     seen: set = set()
-    for m in _PRECLINICAL_RE.finditer(text):
-        key = m.group(0).lower()
+    for _s, _e, key in _MATCHER.find(text):
         t = _LOOKUP.get(key)
         if t is None:
             continue

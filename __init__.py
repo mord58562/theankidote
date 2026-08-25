@@ -1141,17 +1141,23 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
     `source`) are carried through per row rather than dropped, so
     anyone who hand-wrote a richer config doesn't lose it by opening
     this window once.
+
+    `label` is the badge text shown on the popup ("CUSTOM" by default,
+    or whatever the user types here) - distinct from `source`, which is
+    the fixed internal category ("custom") the renderer uses to pick
+    the badge's colour.
     """
     _w = _qt_imports()
     Qt_ = _w["_Qt"]
     dlg = _w["QDialog"](parent)
     dlg.setWindowTitle("Custom Terms")
-    dlg.resize(560, 340)
+    dlg.resize(680, 340)
     lay = _w["QVBoxLayout"](dlg)
 
 
-    table = _w["QTableWidget"](0, 4)
-    table.setHorizontalHeaderLabels(["Term", "Summary", "Link", "Match case"])
+    table = _w["QTableWidget"](0, 5)
+    table.setHorizontalHeaderLabels(
+        ["Term", "Summary", "Link", "Label (optional)", "Match case"])
     table.verticalHeader().setVisible(False)
     table.setSelectionBehavior(_w["QAbstractItemView"].SelectionBehavior.SelectRows)
     try:
@@ -1161,6 +1167,7 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
         hdr.setSectionResizeMode(1, RM.Stretch)
         hdr.setSectionResizeMode(2, RM.Stretch)
         hdr.setSectionResizeMode(3, RM.ResizeToContents)
+        hdr.setSectionResizeMode(4, RM.ResizeToContents)
     except Exception:
         pass
     lay.addWidget(table, 1)
@@ -1168,7 +1175,7 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
     def _add_row(entry: dict) -> None:
         r = table.rowCount()
         table.insertRow(r)
-        for col, key in enumerate(("title", "summary", "url")):
+        for col, key in enumerate(("title", "summary", "url", "label")):
             it = _w["QTableWidgetItem"](str(entry.get(key) or ""))
             if col == 0:
                 # Stash the whole original entry so fields this table
@@ -1180,7 +1187,7 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
                      | Qt_.ItemFlag.ItemIsSelectable)
         chk.setCheckState(Qt_.CheckState.Checked if entry.get("case_sensitive")
                           else Qt_.CheckState.Unchecked)
-        table.setItem(r, 3, chk)
+        table.setItem(r, 4, chk)
 
     for entry in _parse_custom_terms(raw):
         _add_row(entry)
@@ -1206,7 +1213,11 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
 
     lay.addWidget(_caption(
         _w, "Links must start with http:// or https://. Rows missing a term "
-            "or a link are discarded when you save.", wrap=True))
+            "or a link are discarded when you save. The popup badges these "
+            "terms \u201cCUSTOM\u201d so they read as separate from "
+            "StatPearls and DrugBank results - leave Label blank to keep "
+            "that, or type your own (e.g. \u201cReddit\u201d, "
+            "\u201cLecture notes\u201d).", wrap=True))
 
     btns = _w["QDialogButtonBox"](
         _w["QDialogButtonBox"].StandardButton.Ok
@@ -1229,13 +1240,17 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
         def _cell(c):
             it = table.item(r, c)
             return (it.text() if it is not None else "").strip()
-        title, summary, url = _cell(0), _cell(1), _cell(2)
+        title, summary, url, label = _cell(0), _cell(1), _cell(2), _cell(3)
         if not title or not url:
             continue
         if not (url.startswith("http://") or url.startswith("https://")):
             continue
         base.update({"title": title, "summary": summary, "url": url})
-        chk = table.item(r, 3)
+        if label:
+            base["label"] = label
+        else:
+            base.pop("label", None)
+        chk = table.item(r, 4)
         base["case_sensitive"] = bool(
             chk is not None and chk.checkState() == Qt_.CheckState.Checked)
         if not base["case_sensitive"]:
@@ -1246,6 +1261,7 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
         return ""
     import json as _json
     return _json.dumps(out, ensure_ascii=False, indent=2)
+
 
 
 def _build_pearls_group(_w):
@@ -1340,6 +1356,43 @@ def _build_chat_group(_w):
         "Use password + 2FA - cookies persist, so you sign in once "
         "per provider.")
     lay.addWidget(passkey_note)
+
+    # The toolbar icon is a favicon captured from the provider's own
+    # page and preferred over the bundled brand logo. A capture that
+    # comes out wrong therefore wins every redraw, and before this
+    # button the only way back was deleting a PNG from inside the
+    # add-on folder.
+    icon_row = _w["QHBoxLayout"]()
+    icon_btn = _w["QPushButton"]("Reset provider icons")
+    icon_btn.setToolTip(
+        "Discard the favicons captured from each provider and fall back\n"
+        "to the bundled logos. They are re-captured next time you open\n"
+        "that provider.")
+
+    def _reset_icons():
+        try:
+            from .chat import clear_favicon_cache
+            n = clear_favicon_cache()
+        except Exception as exc:
+            _log.error("clear favicon cache", exc)
+            n = -1
+        try:
+            from aqt.utils import tooltip
+            if n < 0:
+                tooltip("Could not clear the icon cache.", period=1800)
+            elif n == 0:
+                tooltip("No cached icons to clear.", period=1500)
+            else:
+                tooltip(f"Cleared {n} cached icon{'s' if n != 1 else ''}.",
+                        period=1500)
+        except Exception:
+            pass
+        request_toolbar_redraw()
+
+    icon_btn.clicked.connect(_reset_icons)
+    icon_row.addWidget(icon_btn)
+    icon_row.addStretch(1)
+    lay.addLayout(icon_row)
     return box, adblock_cb, chat_url_edit, autopaste_cb
 
 

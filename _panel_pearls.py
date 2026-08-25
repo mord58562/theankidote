@@ -293,9 +293,34 @@ else:
     _HEADER_TXT  = "#1a2c3e"
     _MUTED       = "rgba(26,44,62,.5)"
 
-_RESULT_BG   = "#f0f8fb"
-_RESULT_BDR  = "#c5e3ed"
-_ITEM_TXT    = "#1a3a5c"   # always dark - results list always has a light bg
+def _rebuild_results_palette() -> None:
+    """(Re)build the RELEVANT ARTICLES list colours from the current
+    `_DARK` flag.  Split out from the module-level block above so
+    `_rebind_theme` can recompute it after Anki switches light/dark -
+    previously these five were hardcoded to the light palette regardless
+    of `_DARK`, so the list kept a white background even when the rest
+    of the panel went dark.
+    """
+    g = globals()
+    if _DARK:
+        g["_RESULT_BG"]        = "#122a41"
+        g["_RESULT_BDR"]       = "#1f3f5c"
+        g["_ITEM_TXT"]         = "#dceef5"
+        g["_RESULT_HOVER_BG"]  = "rgba(15,202,212,.16)"
+        g["_RESULT_HOVER_TXT"] = "#eaf6fa"
+        g["_RESULT_SEL_BG"]    = "rgba(15,202,212,.26)"
+        g["_RESULT_SEL_TXT"]   = "#eaf6fa"
+    else:
+        g["_RESULT_BG"]        = "#f0f8fb"
+        g["_RESULT_BDR"]       = "#c5e3ed"
+        g["_ITEM_TXT"]         = "#1a3a5c"
+        g["_RESULT_HOVER_BG"]  = "#daeef5"
+        g["_RESULT_HOVER_TXT"] = "#0d2137"
+        g["_RESULT_SEL_BG"]    = "#b8dce8"
+        g["_RESULT_SEL_TXT"]   = "#0d2137"
+
+
+_rebuild_results_palette()
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -327,6 +352,7 @@ def _rebind_theme() -> None:
     g["_MUTED"] = _theme.MUTED
     g["_BG_BOX"] = _theme.BG_BOX
     _rebuild_qss()
+    _rebuild_results_palette()
 
 
 def _rebuild_qss() -> None:
@@ -487,12 +513,12 @@ class _ResultsSection(QWidget):
                 border-bottom: 1px solid {_RESULT_BDR};
             }}
             QListWidget::item:hover {{
-                background: #daeef5;
-                color: #0d2137;
+                background: {_RESULT_HOVER_BG};
+                color: {_RESULT_HOVER_TXT};
             }}
             QListWidget::item:selected {{
-                background: #b8dce8;
-                color: #0d2137;
+                background: {_RESULT_SEL_BG};
+                color: {_RESULT_SEL_TXT};
             }}
         """)
 

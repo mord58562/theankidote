@@ -218,6 +218,78 @@ def _validate_entries(lib) -> str:
     for k, v in lib["rich_summaries"].items():
         if not isinstance(k, str) or not isinstance(v, str):
             return f"rich_summaries[{k!r}] is not a string"
+
+    # `drug_summaries` is optional, because it did not exist before 2.2
+    # and a library published before then is still a valid library. It
+    # is NOT in `_REQUIRED` for that reason - but when it is present it
+    # is dereferenced without checking, exactly like `rich_summaries`,
+    # so it gets the same treatment. Leaving an optional key
+    # unvalidated is how a poisoned download reaches `.strip()` on an
+    # int and bricks the add-on at import, which is the failure the
+    # whole validator exists to stop.
+    # `new_drugs` is optional for the same reason as `drug_summaries`,
+    # and load-bearing for a stronger one: its entries go straight into
+    # the matcher, so a bad shape here is a broken popup on every card
+    # rather than a one-off. Validated as a drugs list would be.
+    nd = lib.get("new_drugs")
+    if nd is not None:
+        if not isinstance(nd, list):
+            return f"key 'new_drugs' is {type(nd).__name__}, expected list"
+        for i, entry in enumerate(nd):
+            if not isinstance(entry, dict):
+                return (f"new_drugs[{i}] is {type(entry).__name__}, "
+                        f"expected object")
+            for field in ("generic", "summary"):
+                val = entry.get(field)
+                if not isinstance(val, str) or not val.strip():
+                    return f"new_drugs[{i}].{field} is not a non-empty string"
+            for field in _ENTRY_STR_LISTS:
+                if field in entry:
+                    vals = entry[field]
+                    if not isinstance(vals, list):
+                        return (f"new_drugs[{i}].{field} is "
+                                f"{type(vals).__name__}, expected list")
+                    for v in vals:
+                        if not isinstance(v, str):
+                            return (f"new_drugs[{i}].{field} holds a "
+                                    f"{type(v).__name__}, expected strings")
+
+    # Same contract as new_drugs, and load-bearing for the same reason:
+    # these go straight into the matcher.
+    npc = lib.get("new_preclinical")
+    if npc is not None:
+        if not isinstance(npc, list):
+            return (f"key 'new_preclinical' is {type(npc).__name__}, "
+                    f"expected list")
+        for i, entry in enumerate(npc):
+            if not isinstance(entry, dict):
+                return (f"new_preclinical[{i}] is {type(entry).__name__}, "
+                        f"expected object")
+            for field in ("name", "summary"):
+                val = entry.get(field)
+                if not isinstance(val, str) or not val.strip():
+                    return (f"new_preclinical[{i}].{field} is not a "
+                            f"non-empty string")
+            if "aliases" in entry:
+                vals = entry["aliases"]
+                if not isinstance(vals, list):
+                    return (f"new_preclinical[{i}].aliases is "
+                            f"{type(vals).__name__}, expected list")
+                for v in vals:
+                    if not isinstance(v, str):
+                        return (f"new_preclinical[{i}].aliases holds a "
+                                f"{type(v).__name__}, expected strings")
+
+    ds = lib.get("drug_summaries")
+    if ds is not None:
+        if not isinstance(ds, dict):
+            return (f"key 'drug_summaries' is {type(ds).__name__}, "
+                    f"expected object")
+        for k, v in ds.items():
+            if not isinstance(k, str) or not isinstance(v, str):
+                return f"drug_summaries[{k!r}] is not a string"
+            if not v.strip():
+                return f"drug_summaries[{k!r}] is empty"
     return ""
 
 
@@ -295,8 +367,25 @@ LIBRARY = _load()
 CONTENT_VERSION = LIBRARY.get("content_version", "unknown")
 
 
-def get(key):
-    """Fetch a vocabulary by name. Present because `_validate` has already
-    guaranteed the key exists and has the right type, so callers do not
-    need their own defensive default."""
-    return LIBRARY[key]
+_MISSING = object()
+
+
+def get(key, default=_MISSING):
+    """Fetch a vocabulary by name.
+
+    With no `default`, this raises on an absent key - which is right for
+    everything in `_REQUIRED`, because `_validate` has already
+    guaranteed those exist with the right type and callers should not
+    carry their own defensive default for something that cannot be
+    missing.
+
+    `default` exists for keys added after schema 1 was frozen. A client
+    can be handed a library published before the key existed, and the
+    published library is preferred over the bundled one, so "the key is
+    absent" is a normal state rather than corruption. Passing a default
+    is the caller saying so explicitly; it is not a licence to skip
+    validation, which still runs on the key when it is present.
+    """
+    if default is _MISSING:
+        return LIBRARY[key]
+    return LIBRARY.get(key, default)

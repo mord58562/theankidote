@@ -39,7 +39,6 @@ Convenience features (all manual user actions, no automation):
 """
 
 import os
-import time
 import base64
 import random
 
@@ -124,9 +123,18 @@ def _bundled_logo_path(label: str) -> str:
 # switch + every dock toggle + various other events).
 _BUNDLED_LOGO_CACHE: dict = {}
 
-# Throttle for favicon disk writes - keyed by provider label, value
-# is the monotonic timestamp of the last save.
-_FAVICON_SAVE_TS: dict = {}
+# Best capture written this session, keyed by provider label, value is
+# the shorter edge of the pixmap in px. Used to refuse a downgrade when
+# a later `iconChanged` in the same session carries a smaller icon.
+_FAVICON_BEST_PX: dict = {}
+
+# A page load emits several icons and the last is the good one, so the
+# write is debounced rather than throttled: each `iconChanged` restarts
+# the timer and only the icon that survives the quiet period is saved.
+_FAVICON_SETTLE_MS = 700
+# Anything smaller than this is an intermediate frame, not a favicon.
+_FAVICON_MIN_PX = 32
+_FAVICON_TARGET_PX = 64
 
 
 def _bundled_logo_b64(label: str):
@@ -173,30 +181,79 @@ def _favicon_path(label: str) -> str:
 def _save_favicon(label: str, qicon) -> bool:
     """Persist the QIcon to the cache dir.  Returns True if saved.
 
-    Throttled - QtWebEngine fires `iconChanged` repeatedly during a
-    page load (favicon, then preview-bitmap, then full-resolution),
-    each of which would trigger a fresh `pixmap.save()` and a toolbar
-    redraw without this guard.  We only save once per label per
-    minute since favicons rarely change.
+    The previous version threw away everything but the first icon of a
+    session.  QtWebEngine emits several during a page load - favicon,
+    then preview bitmap, then full resolution - and a 60-second
+    first-write-wins throttle keeps the worst of them.  `_FAVICON_SAVE_TS`
+    was module-level, so it was empty at every Anki launch and the first
+    icon after startup was written unconditionally; every better one
+    inside the next minute was dropped, and the page had long settled
+    before the window expired.  A bad frame captured that way stayed on
+    disk permanently, and `_toolbar_icon_html` prefers the cached PNG
+    over the bundled brand logo, so it won every toolbar redraw
+    thereafter.  The throttle existed to stop repeated toolbar redraws,
+    which is a real concern, but it was applied to the wrong thing.
+
+    Three guards now, none of them time-based:
+
+      * the caller debounces, so this only runs on the icon that
+        survives the quiet period at the end of a load;
+      * anything below `_FAVICON_MIN_PX` is an intermediate frame and is
+        refused outright rather than cached;
+      * a capture smaller than the best one already written this session
+        is refused, so a provider switch cannot downgrade the icon.
     """
     if qicon is None or qicon.isNull():
         return False
-    now = time.monotonic()
-    last = _FAVICON_SAVE_TS.get(label, 0.0)
-    if now - last < 60.0:
-        return False
     try:
-        os.makedirs(_FAVICONS_DIR, exist_ok=True)
-        pix = qicon.pixmap(64, 64)
+        try:
+            sizes = [s for s in qicon.availableSizes()
+                     if s.width() > 0 and s.height() > 0]
+        except Exception:
+            sizes = []
+        edge = max((min(s.width(), s.height()) for s in sizes), default=0)
+        want = max(_FAVICON_TARGET_PX, edge)
+        pix = qicon.pixmap(want, want)
         if pix.isNull():
             return False
+        got = min(pix.width(), pix.height())
+        if got < _FAVICON_MIN_PX:
+            return False
+        if got < _FAVICON_BEST_PX.get(label, 0):
+            return False
+        os.makedirs(_FAVICONS_DIR, exist_ok=True)
         ok = bool(pix.save(_favicon_path(label), "PNG"))
         if ok:
-            _FAVICON_SAVE_TS[label] = now
+            _FAVICON_BEST_PX[label] = got
         return ok
     except Exception as exc:
         _log.error(f"favicon save {label!r}", exc)
         return False
+
+
+def clear_favicon_cache() -> int:
+    """Delete every cached favicon and forget the per-session best.
+
+    The cache is preferred over the bundled brand logos, so a capture
+    that is wrong in a way no size check catches has no other way out
+    except deleting the file by hand from the add-on folder.  Returns
+    how many files were removed.
+    """
+    removed = 0
+    _FAVICON_BEST_PX.clear()
+    try:
+        names = os.listdir(_FAVICONS_DIR)
+    except OSError:
+        return 0
+    for name in names:
+        if not name.lower().endswith(".png"):
+            continue
+        try:
+            os.remove(os.path.join(_FAVICONS_DIR, name))
+            removed += 1
+        except OSError as exc:
+            _log.error(f"favicon remove {name!r}", exc)
+    return removed
 
 
 def _cached_favicon_b64(label: str):
@@ -475,8 +532,11 @@ class ChatBrowser(QWidget):
         self.view.setPage(self.page)
 
         # QtWebEngine downloads the page's favicon as part of normal
-        # page load.  Save it to the cache dir on first capture for each
-        # provider so the toolbar icon shows the actual brand logo.
+        # page load.  A load emits several icons, so the capture is
+        # debounced in `_on_icon_changed` and only the one that settles
+        # is written to the cache dir.
+        self._pending_favicon = None
+        self._favicon_token = 0
         try:
             self.page.iconChanged.connect(self._on_icon_changed)
         except Exception as exc:
@@ -527,7 +587,6 @@ class ChatBrowser(QWidget):
         # buttons off-screen.
         self._house_label = QLabel("")
         self._house_label.setStyleSheet(_house_label_qss())
-        self._house_label.setMaximumWidth(360)
         self._house_label.setWordWrap(False)
         # The label now carries its own background + border, so an empty
         # string would leave a bare pill sitting in the header.  Start
@@ -568,6 +627,17 @@ class ChatBrowser(QWidget):
         layout.addWidget(header)
         layout.addWidget(self.view)
         self.setMinimumWidth(_config.get("minWidth") or 400)
+
+    def resizeEvent(self, event) -> None:
+        super().resizeEvent(event)
+        try:
+            lab = getattr(self, "_house_label", None)
+            if lab is not None and lab.isVisible():
+                full = lab.property("houseQuoteFull") or ""
+                if full:
+                    _set_house_quote(lab, full)
+        except Exception as exc:
+            _log.error("chat resize house quote", exc)
 
         # Restore the user's last-selected provider URL across Anki
         # restarts.  Falls back to the configured chatHomeUrl (Claude
@@ -648,7 +718,15 @@ class ChatBrowser(QWidget):
         Skips when the URL doesn't explicitly map to a known provider,
         so we never write e.g. a Cloudflare challenge favicon as
         Claude.png just because the fallback label happens to be
-        Claude."""
+        Claude.
+
+        Debounced rather than throttled.  A load emits several icons and
+        the last one is the good one, so each signal replaces the
+        pending capture and restarts the timer; whatever is still
+        pending after `_FAVICON_SETTLE_MS` of quiet is what gets written.
+        The token guards against an earlier timer firing after a later
+        signal has already superseded it.
+        """
         try:
             current_url = self.view.url().toString()
         except Exception:
@@ -656,8 +734,26 @@ class ChatBrowser(QWidget):
         label = _explicit_provider_for_url(current_url)
         if label is None:
             return
-        if _save_favicon(label, qicon):
-            _request_toolbar_redraw()
+        self._pending_favicon = (label, qicon)
+        token = getattr(self, "_favicon_token", 0) + 1
+        self._favicon_token = token
+        QTimer.singleShot(
+            _FAVICON_SETTLE_MS, lambda: self._flush_favicon(token))
+
+    def _flush_favicon(self, token):
+        """Write the capture that survived the quiet period."""
+        if getattr(self, "_favicon_token", 0) != token:
+            return
+        pending = getattr(self, "_pending_favicon", None)
+        self._pending_favicon = None
+        if not pending:
+            return
+        label, qicon = pending
+        try:
+            if _save_favicon(label, qicon):
+                _request_toolbar_redraw()
+        except Exception as exc:
+            _log.error("favicon flush", exc)
 
     def switch_provider(self, url: str):
         """Provider button click: load the URL AND make this provider
@@ -1013,24 +1109,43 @@ def toggle_dock():
     _request_toolbar_redraw()
 
 
+# Fixed-width chrome sharing the header row with the quote label: the
+# provider (28) + overflow (22) + external (28) + close (26) buttons,
+# the 6 inter-widget gaps at `h_lay`'s 3px spacing, the 6+6px layout
+# margins, and some slack so the label never sits flush against a
+# button.  Used to size the quote against the header's *actual* current
+# width instead of a fixed cap, so widening the dock shows more of the
+# quote rather than always truncating at the same point.
+_HEADER_CHROME_PX = 28 + 22 + 28 + 26 + 6 * 3 + 12 + 20
+
+
+def _house_label_avail_width(label) -> int:
+    header = label.parentWidget()
+    w = header.width() if header is not None else 0
+    if w <= 0:
+        w = 360
+    return max(80, w - _HEADER_CHROME_PX)
+
+
 def _set_house_quote(label, text: str) -> None:
     """Set (or clear) the header quote.  QLabel doesn't elide on its
-    own, so long quotes are elided to the label's max width by hand and
-    the full text is kept on the tooltip.  Visibility follows the text
-    so the styled pill never renders empty."""
+    own, so long quotes are elided by hand against the header's current
+    width and the full text is kept on the tooltip and on the
+    `houseQuoteFull` property, so `ChatBrowser.resizeEvent` can re-elide
+    against the new width when the dock is resized.  Visibility follows
+    the text so the styled pill never renders empty."""
     try:
         if not text:
+            label.setProperty("houseQuoteFull", "")
             label.setText("")
             label.setToolTip("")
             label.setVisible(False)
             return
+        label.setProperty("houseQuoteFull", text)
         shown = text
         try:
             from aqt.qt import QFontMetrics, Qt
-            # 360 px cap minus horizontal padding (9 px) + border (1 px)
-            # on each side, with a little slack so the pill never sits
-            # flush against the buttons either side of it.
-            avail = max(80, label.maximumWidth() - 26)
+            avail = _house_label_avail_width(label)
             shown = QFontMetrics(label.font()).elidedText(
                 text, Qt.TextElideMode.ElideRight, avail
             )

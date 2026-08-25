@@ -32,11 +32,15 @@ merely similar:
   * both ends must fall on a `\\b` boundary, including the awkward case
     of a phrase that starts or ends with a non-word character.
 
-`verify_against_regex` exercises exactly those properties against the
-original pattern, and the test suite runs it over the real databases.
+Those properties were verified against the original alternation over
+every string in the shipped library before the alternations were
+deleted at 2.2. `verify_against_regex` went with them: it existed
+only for that comparison, and there is no longer a second
+implementation to compare against.
 """
 
 import re
+from operator import itemgetter
 
 # Tokens that can open a phrase. `\w` plus the intra-word punctuation
 # that appears in drug and condition names, so "beta-blocker" is found
@@ -48,6 +52,52 @@ _WORD_RE = re.compile(r"\w", re.UNICODE)
 
 def _is_word(ch: str) -> bool:
     return bool(ch) and _WORD_RE.match(ch) is not None
+
+
+# One card is scanned by eight matchers in a row - conditions, generics,
+# brands, acronyms, preclinical, descriptive, psych, signs - and each was
+# lower-casing and re-tokenising the same string. Tokenising dominates
+# `find`, so seven eighths of that work was thrown away. This is a
+# single-entry cache of the last text scanned, which is exactly the
+# access pattern: one card, eight consecutive lookups, then the next
+# card evicts it.
+#
+# Case-sensitive matchers cannot share the case-insensitive token list.
+# `str.lower()` is not length-preserving in Unicode - U+0130 lowercases
+# to two code points - so offsets taken from the lower-cased text do not
+# address the original. The two token lists are kept separately and both
+# are built lazily, so a card that only hits case-insensitive matchers
+# never tokenises twice.
+#
+# The cache is one tuple, replaced wholesale rather than field by field.
+# Rebinding a module global is atomic under the GIL, so a reader either
+# sees the whole previous entry or the whole new one, never a token list
+# belonging to a different text.
+_scan_cache: tuple = (None, None, None, None)
+
+
+def _scan(text: str, ci: bool):
+    """Return `(haystack, tokens)` for `text`, reusing the last scan.
+
+    `tokens` is a list of `(start, token)`. `haystack` is the string the
+    offsets address: the lower-cased text when `ci`, otherwise `text`.
+    """
+    global _scan_cache
+    key, low, ci_toks, cs_toks = _scan_cache
+    if key is not text and key != text:
+        key, low, ci_toks, cs_toks = text, None, None, None
+    if ci:
+        if ci_toks is None:
+            low = text.lower()
+            ci_toks = [(m.start(), m.group(0))
+                       for m in _TOKEN_RE.finditer(low)]
+            _scan_cache = (key, low, ci_toks, cs_toks)
+        return low, ci_toks
+    if cs_toks is None:
+        cs_toks = [(m.start(), m.group(0))
+                   for m in _TOKEN_RE.finditer(text)]
+        _scan_cache = (key, low, ci_toks, cs_toks)
+    return text, cs_toks
 
 
 class PhraseMatcher:
@@ -85,12 +135,22 @@ class PhraseMatcher:
                 # index is what lets the fast path assume a word start.
                 odd.append(p)
                 continue
-            by_first.setdefault(m.group(0), []).append(low)
+            # Length and terminal word-ness are properties of the phrase,
+            # not of the text, so they are computed once here rather than
+            # per candidate per position in `find`. That is what the
+            # closing-boundary test needs, and recomputing it in the loop
+            # was most of the loop's cost.
+            end_ch = low[-1]
+            by_first.setdefault(m.group(0), []).append(
+                (low, len(low), end_ch.isalnum() or end_ch == "_"))
 
         # Longest first within each bucket reproduces the alternation
-        # order the regex relied on.
-        for k in by_first:
-            by_first[k].sort(key=len, reverse=True)
+        # order the regex relied on. `itemgetter` rather than a lambda:
+        # the key is called once per element and this runs at import for
+        # every vocabulary, so the interpreter round trip is not free.
+        _by_len = itemgetter(1)
+        for bucket in by_first.values():
+            bucket.sort(key=_by_len, reverse=True)
 
         self._by_first = by_first
         self._max_len = max_len
@@ -116,31 +176,36 @@ class PhraseMatcher:
         out: list = []
         if not text:
             return out
-        low = text.lower() if self._ci else text
+        low, tokens = _scan(text, self._ci)
         n = len(low)
-        by_first = self._by_first
+        by_first_get = self._by_first.get
+        append = out.append
+        starts_with = low.startswith
         pos = 0
-        for tok in _TOKEN_RE.finditer(low):
-            start = tok.start()
+        for start, tok in tokens:
             if start < pos:
                 # Inside a phrase already matched; skip without re-testing.
                 continue
-            bucket = by_first.get(tok.group(0))
+            bucket = by_first_get(tok)
             if not bucket:
                 continue
-            for cand in bucket:
-                end = start + len(cand)
-                if end > n or low[start:end] != cand:
+            for cand, clen, ends_word in bucket:
+                end = start + clen
+                # `startswith` with an offset compares in place; slicing
+                # allocated a throwaway string for every candidate tried,
+                # and most candidates are tried only to be rejected.
+                if end > n or not starts_with(cand, start):
                     continue
                 # Closing `\b`: a boundary exists when the last character
                 # of the phrase and the next character of the text differ
-                # in word-ness. The opening boundary is free - `start` is
-                # a token start, so what precedes it is never a word
-                # character.
-                nxt = low[end] if end < n else ""
-                if _is_word(cand[-1]) == _is_word(nxt) and nxt:
-                    continue
-                out.append((start, end, cand))
+                # in word-ness. End of text is always a boundary. The
+                # opening boundary is free - `start` is a token start, so
+                # what precedes it is never a word character.
+                if end < n:
+                    nxt = low[end]
+                    if ends_word == (nxt.isalnum() or nxt == "_"):
+                        continue
+                append((start, end, cand))
                 pos = end
                 break
 
@@ -150,25 +215,3 @@ class PhraseMatcher:
                             m.group(0).lower() if self._ci else m.group(0)))
             out.sort()
         return out
-
-
-def verify_against_regex(matcher: "PhraseMatcher", pattern, texts) -> list:
-    """Return a list of disagreements between `matcher` and `pattern`.
-
-    `pattern` must have been built from the same phrase list with the
-    same case sensitivity, or the comparison is meaningless.
-
-    Used by the test suite rather than at runtime. An empty list means
-    the fast path is returning exactly what the regex returned, which is
-    the only claim that makes this a safe substitution.
-    """
-    problems = []
-    for text in texts:
-        ci = matcher._ci
-        want = [(m.start(), m.end(),
-                 m.group(0).lower() if ci else m.group(0))
-                for m in pattern.finditer(text)]
-        got = sorted(matcher.find(text))
-        if want != got:
-            problems.append({"text": text[:120], "regex": want, "matcher": got})
-    return problems

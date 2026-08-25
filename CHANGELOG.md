@@ -5,6 +5,199 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.1] - 2026-08-25
+
+### Fixed
+
+- **Acronym-to-condition popups repeated the expansion twice.** When
+  an acronym's expansion resolves to a known condition (`_acronym_to_
+  condition`), the popup title already reads "ACRONYM - full name",
+  but `_acronym_terms` also prefixed the body with "ACRONYM = full
+  name." before the condition's summary - restating what the title had
+  just said. Dropped the preface; the body now opens directly with the
+  condition's summary.
+
+## [2.3] - 2026-08-25
+
+A minor rather than a patch: the custom-terms popup badge is a
+user-visible change, not an internal fix.
+
+### Added
+
+- **Custom Terms popups now badge themselves "CUSTOM" instead of
+  "StatPearls".** `_showTip` in `web/marker.js` only recognised
+  `drugbank`, `uptodate` and `preclinical` as distinct sources;
+  everything else, including every `"custom"`-sourced term, rendered
+  with the StatPearls label and colour. Added an `isCustom` branch
+  with its own badge text, CSS class (`.label-custom`), and "Open
+  link →" button text in place of "Open article →".
+- **Custom Terms… has a new optional Label column.** Stored as
+  `label` in the `customTerms` JSON, threaded through
+  `_custom_terms()` → `_build_pattern()`'s lookup → the `data-sp-badge`
+  HTML attribute → the popup badge, falling back to "Custom" when
+  left blank. `config.md`'s `source` field description was corrected
+  to match what it actually does (an internal styling key, not a
+  free-form label as previously documented) and the new `label` field
+  documented in its place.
+- New badge colour (`#f291d6` dark / `#c9509e` light) distinct from
+  StatPearls' teal, DrugBank's amber, UpToDate's green and
+  Preclinical's indigo, contrast-checked against both the dark box
+  background and the light box's white background.
+
+## [2.2.2] - 2026-08-25
+
+### Fixed
+
+- **Custom Terms under four characters never highlighted, with no
+  error anywhere.** `_inject_highlights` in `pearls/_reviewer.py`
+  drops any case-insensitive term under 4 characters as noise-control,
+  so a common short word doesn't light up constantly through the
+  reviewer. That filter applied indiscriminately to every term source,
+  including user-typed entries from the Custom Terms table, silently
+  discarding anything short unless "Match case" was ticked. Custom
+  terms are now flagged `user_defined` at the source
+  (`_custom_terms()`) and exempted from the length filter regardless
+  of case sensitivity - a term the user typed in by hand is a
+  deliberate choice, not something to second-guess the way an
+  auto-resolved vocabulary match is.
+
+## [2.2.1] - 2026-08-25
+
+### Fixed
+
+- **The RELEVANT ARTICLES results list ignored Anki's theme.**
+  `_RESULT_BG`, `_RESULT_BDR`, `_ITEM_TXT` and the hover/selected
+  states in `_panel_pearls.py` were hardcoded to the light palette
+  regardless of `_DARK`, so the list kept a white background and navy
+  text under Anki dark mode while the rest of the panel went dark.
+  Split into `_rebuild_results_palette()` with proper dark variants and
+  wired into the existing `_rebind_theme()` path, so it now restyles in
+  step with the rest of the panel on a live theme switch.
+
+## [2.2] - 2026-08-20
+
+A minor rather than a patch, because two of the changes below are
+behavioural rather than internal: twelve terms can now match where they
+previously could not match at all, and the popup is allowed to be taller
+than any 2.1 release permitted.
+
+Two threads. **Popup height**: the 620px cap was set against an estimate
+that measured the summary text and nothing else, so it had never
+described what the popup actually rendered. Correcting the estimate and
+raising the cap are one change; either alone would have been wrong.
+**Performance**: profiling the card path found two vocabularies that
+were never migrated to the phrase matcher in 2.1 and had been paying an
+O(text x alternatives) regex ever since, which is 92% of the scan cost
+on its own.
+
+No content changed, so nothing needs publishing over the content
+channel.
+
+### Fixed
+
+- **The popup height estimate omitted every part of the popup that is
+  not summary text.** `PopupHeightBudget._estimate_px` started at 36px
+  of box padding and walked the summary. The `.box` it was modelling
+  also holds a source label (25.6px), a title (35.4px and it wraps), an
+  UpToDate chip row (71.1px when present) and a footer button (49.2px),
+  none of which were counted. Three smaller errors sat on top: body
+  lines were costed at `14 x 1.55` when `.summary` overrides
+  `line-height` to `1.6`, `.sec{margin-top:7px}` was never added, and
+  the `.cat` header row was 21px against a real strut of 22.4px.
+  Measured across all 2,429 entries the estimate was never closer than
+  114px, median 153px, worst 278px. The reported case was teriparatide,
+  which estimated 488px against a 620px cap and rendered a scrollbar;
+  it measures 650px under the corrected model.
+
+- **`_MAX_H` raised from 620px to 900px in `web/marker.js`.** 883
+  entries scrolled at 620, not the 350 the old estimate implied. A
+  scrollbar in a reference popup is worse than a taller popup, so the
+  cap moves rather than the content. 900 is where the return flattens:
+  203 entries still scroll and each further 40px buys about 50 more.
+  The cap is a permission, not a size - `_position` clamps to
+  `Math.max(120, room)` first, so a short window is still governed by
+  the room available.
+
+- **`OVER_CAP_BUDGET` reset to 122 conditions and 81 drugs.** It read
+  158 and 192 against the old estimate and the old cap. The backlog did
+  not change; it was being measured with a ruler that omitted 150px of
+  chrome.
+
+- **A bad favicon capture could become a provider's toolbar icon
+  permanently.** `_save_favicon` was throttled first-write-wins on a
+  60-second window held in a module-level dict, which is empty at every
+  Anki launch. QtWebEngine emits several icons per page load - favicon,
+  preview bitmap, full resolution - so the rule kept the first one
+  available and discarded every better one inside the next minute,
+  by which time the page had settled. `_toolbar_icon_html` prefers the
+  cached PNG over the bundled brand logo, so a bad frame won every
+  redraw from then on. The capture is now debounced, so the icon that
+  settles at the end of a load is the one written; captures below 32px
+  are refused as intermediate frames; and a smaller capture cannot
+  replace a larger one within a session.
+
+### Performance
+
+Measured against the shipped 2.1.3 tree on the same library, not
+estimated. Every change below was differential-tested against the 2.1.3
+implementation over every string in the library before being kept.
+
+- **Card scan 16.6ms to 1.25ms (92% faster).** That scan runs on the
+  question and again on the answer, so a card goes from about 33ms of
+  term matching to 2.5ms.
+
+- **`_preclinical` and `_acronyms` were never migrated to
+  `PhraseMatcher`.** 2.1 moved conditions, drugs, signs, descriptive and
+  psych off single alternation regexes onto a first-word index, because
+  an alternation is O(text x alternatives). These two were missed and
+  kept paying it: 9.4ms and 2.6ms per scan, together 73% of the total.
+  `preclinical` alone cost more than the other six vocabularies
+  combined.
+
+- **`PhraseMatcher.find` no longer allocates or calls a regex per
+  candidate.** Phrase length and terminal word-ness are properties of
+  the phrase, so they are computed once at build time rather than at
+  every position tried; the candidate comparison uses `startswith` with
+  an offset instead of slicing a throwaway string. `str.isalnum()`
+  replaces a `\w` regex match in the boundary test - verified equivalent
+  across all 1,114,112 Unicode code points, not assumed.
+
+- **One tokenisation shared across the eight matchers that scan a
+  card.** Tokenising dominates `find`, and each matcher was
+  re-tokenising the same text, so seven eighths of it was thrown away.
+  A single-entry cache holds the last text scanned, which is exactly the
+  access pattern. Case-sensitive matchers keep a separate token list
+  because `str.lower()` is not length-preserving in Unicode.
+
+- **Acronym context scoring only runs when there is a choice.** 401 of
+  420 acronyms have one candidate, so for 95% of hits the scorer
+  substring-searched the whole card for every context keyword in order
+  to pick the only option available.
+
+- **Startup 81ms to 40ms.** The three dead alternation regexes above
+  accounted for most of it; the rest is a cheaper matcher build.
+
+### Fixed
+
+- **Twelve preclinical terms could never be highlighted.** Their
+  canonical names begin or end with a non-word character - `LR+`, `LR-`,
+  `Compliance (respiratory)`, `Vitamin B12 (cobalamin)` and eight others
+  - and `\b` has no boundary to anchor to after `)` or `+`, so the
+  alternation regex could not match them under any input. `PhraseMatcher`
+  treats end-of-text as a boundary, so they now match where the term
+  ends the text or is followed immediately by a word character. They
+  still do not match before a space, which is `\b` semantics and is what
+  the five vocabularies migrated in 2.1 have always done; this brings
+  preclinical in line with them rather than inventing a new rule. Found
+  by differential-testing the migration rather than by reading the code.
+
+### Added
+
+- **"Reset provider icons" in Settings, under AI chat.** Discards the
+  captured favicons and falls back to the bundled logos. Previously the
+  only way out of a bad capture was deleting a PNG from inside the
+  add-on folder.
+
 ## [2.1.3] - 2026-08-19
 
 A security and robustness release from a full review of the codebase.

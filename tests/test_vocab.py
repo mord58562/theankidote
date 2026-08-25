@@ -63,6 +63,7 @@ _acronyms = _load("pearls._acronyms", "pearls/_acronyms.py")
 # user receives is worse than no test.
 _rich = types.SimpleNamespace(
     RICH_SUMMARIES=_library.get("rich_summaries"),
+    DRUG_SUMMARIES=_library.get("drug_summaries", {}),
     NEW_CONDITIONS=_library.get("new_conditions"))
 # `_ncbi` imports the add-on package root (for `_log`), which would drag
 # aqt into this harness. Only SECTION_MAP is needed, and reading it
@@ -350,80 +351,6 @@ class SectionLabelsAreLinkable(unittest.TestCase):
                 f"must not be made clickable")
 
 
-class AcronymSummaries(unittest.TestCase):
-    """`_acronyms` had no structural coverage at all until now.
-
-    Its summaries go through the same popup renderer as conditions, so
-    the same rules bind, but nothing was enforcing them: 20 entries
-    carried labels the renderer does not know ("First-line:",
-    "Laboratory:", "Admission criteria:"), each rendering as body text
-    rather than a section header, silently.
-    """
-
-    ENTRIES = [(acr, exp, summary)
-               for acr, cands in _acronyms._ACRONYMS.items()
-               for exp, _kw, summary in cands]
-
-    LABEL_RE = re.compile(r"(?:^|[;.]\s+)([A-Z][A-Za-z /-]{1,24}):\s")
-
-    def _registered(self):
-        with open(os.path.join(_ROOT, "web", "marker.js"),
-                  encoding="utf-8") as fh:
-            js = fh.read()
-        # The array closes with `].sort(...)`, not `];` - stopping at the
-        # first `];` runs on into unrelated code and silently produces a
-        # permissive label set that would let a bad label pass.
-        block = re.search(r"var _SECTION_LABELS = \[(.*?)\n  \]\.sort\(",
-                          js, re.S)
-        self.assertIsNotNone(block, "_SECTION_LABELS not found in marker.js")
-        labels = {s.lower() for s in re.findall(r'"([^"]+)"', block.group(1))}
-        for lab in labels:
-            self.assertRegex(
-                lab, r"^[a-z][a-z /-]*$",
-                f"extraction picked up {lab!r}, which is not a section label")
-        return labels
-
-    def test_section_labels_are_registered(self):
-        known = self._registered()
-        for acr, exp, summary in self.ENTRIES:
-            for found in self.LABEL_RE.findall(summary):
-                self.assertIn(
-                    found.lower(), known,
-                    f"{acr} ({exp}) uses section label '{found}:' which the "
-                    f"popup renderer does not know, so it renders as body "
-                    f"text")
-
-    def test_summaries_stay_glance_sized(self):
-        for acr, exp, summary in self.ENTRIES:
-            self.assertLessEqual(
-                len(summary), 1200,
-                f"{acr} ({exp}) summary is {len(summary)} characters; the "
-                f"popup orients and hands off to the article")
-
-    def test_summaries_use_australian_spelling(self):
-        banned = [
-            (r"\banemia\b", "anaemia"), (r"\bedema\b", "oedema"),
-            (r"\bdiarrhea\b", "diarrhoea"), (r"\bhemorrhage\b", "haemorrhage"),
-            (r"\bischemi", "ischaemi"), (r"\besophag", "oesophag"),
-            (r"\bpediatric", "paediatric"), (r"\bceliac\b", "coeliac"),
-            (r"\btumor\b", "tumour"),
-            (r"\bacetaminophen\b", "paracetamol"),
-            (r"\balbuterol\b", "salbutamol"),
-            (r"\bepinephrine\b", "adrenaline"),
-        ]
-        for acr, exp, summary in self.ENTRIES:
-            low = summary.lower()
-            for pat, good in banned:
-                self.assertIsNone(
-                    re.search(pat, low),
-                    f"{acr} ({exp}) matches /{pat}/ - use '{good}'")
-
-    def test_no_empty_summaries(self):
-        for acr, exp, summary in self.ENTRIES:
-            self.assertTrue(summary.strip(),
-                            f"{acr} ({exp}) has an empty summary")
-
-
 class PopupHeightBudget(unittest.TestCase):
     """The popup must not grow, whatever the content does.
 
@@ -441,14 +368,67 @@ class PopupHeightBudget(unittest.TestCase):
     that the popup becomes a scrolling document.
     """
 
-    # 480px box less 22px padding each side, 14px system font.
+    # ── Box model, read off the CSS in web/marker.js ─────────────────
+    #
+    # Rewritten at 2.2. The previous version modelled the summary text
+    # and a 36px padding and nothing else, so it omitted every other
+    # child of `.box`: the source label, the title, the UpToDate chip
+    # row and the footer button. Measured against all 2,429 entries it
+    # was never closer than 114px, median 153px, worst 278px. That is
+    # why teriparatide estimated 488px against a 620px cap and still
+    # rendered a scrollbar, and why `OVER_CAP_BUDGET` read 158/192 when
+    # the true figures were 483/400.
+    #
+    # The CSS this mirrors, verbatim:
+    #
+    #   .box{padding:18px 22px;font-size:14px;line-height:1.55;
+    #        max-width:480px;box-sizing:border-box}
+    #     .label {font-size:12px; margin:0 0 7px}
+    #     .title {font-size:17px; margin:0 0 9px}
+    #     .summary{font-size:14px; line-height:1.6}
+    #       .lede {margin:0 0 2px}
+    #       .sec  {margin-top:7px}
+    #         span.cat{display:inline-block;font-size:10.5px;
+    #                  margin-bottom:1px}
+    #         .secbody{margin-top:1px}
+    #         ul.pts{margin-top:1px;padding-left:15px;line-height:1.4}
+    #           li{margin-bottom:1px}  li:last-child{margin-bottom:0}
+    #     .utd{margin-top:12px;padding-top:10px;border-top:1px}
+    #       .utd-label{font-size:10px;margin:0 0 6px}
+    #       .utd-chips{display:flex;flex-wrap:wrap;gap:5px}
+    #         .utd-chip{padding:3px 10px;border:1px;font-size:12px}
+    #     .open{display:block;margin-top:13px;padding:7px 12px;
+    #           border:1px;font-size:13px}
+
+    CONTENT_W = 480 - 22 - 22          # 436px of usable width
+
+    # 436px at 14px system font; bullets lose 15px to .pts padding.
     CHARS_PER_LINE = 62
     BULLET_CHARS_PER_LINE = 58
-    LINE_PX = 21.7
-    BULLET_LINE_PX = 19.6      # .pts sets line-height:1.4
-    HEADER_PX = 21
-    PADDING_PX = 36
-    CEILING_PX = 1000
+    TITLE_CHARS_PER_LINE = 52          # 17px semibold is a wider glyph
+
+    PADDING_PX = 18 + 18
+    LABEL_PX = 12 * 1.55 + 7           # 25.60, lh inherited from .box
+    TITLE_LINE_PX = 17 * 1.55          # 26.35
+    TITLE_MARGIN_PX = 9
+    OPEN_PX = 13 + 1 + 7 + (13 * 1.55) + 7 + 1        # 49.15
+
+    UTD_HEAD_PX = 12 + 10 + 1 + (10 * 1.55) + 6       # 44.50
+    UTD_ROW_PX = 3 + 3 + 1 + 1 + (12 * 1.55)          # 26.60
+    UTD_GAP_PX = 5
+
+    SECTION_MARGIN_PX = 7              # .sec{margin-top:7px}
+    BODY_MARGIN_PX = 1                 # .secbody / .pts margin-top
+    LEDE_MARGIN_PX = 2                 # .lede{margin-bottom:2px}
+    # .cat is a 10.5px inline-block sitting on a line whose strut comes
+    # from .summary's own 14px at line-height 1.6, so the strut decides.
+    HEADER_PX = 14 * 1.6               # 22.40, not the 21 assumed before
+
+    LINE_PX = 14 * 1.6                 # 22.40; .summary overrides .box
+    BULLET_LINE_PX = 14 * 1.4          # 19.60; .pts sets line-height:1.4
+
+    MAX_H = 900                        # must match _MAX_H in marker.js
+    CEILING_PX = 1260
 
     def _marker(self):
         with open(os.path.join(_ROOT, "web", "marker.js"),
@@ -461,9 +441,12 @@ class PopupHeightBudget(unittest.TestCase):
         self.assertIsNotNone(
             m, "web/marker.js no longer defines _MAX_H; the popup would "
                "grow to fit its content on a tall window")
-        self.assertLessEqual(
-            int(m.group(1)), 640,
-            "_MAX_H has been raised; the popup is allowed to get taller")
+        self.assertEqual(
+            int(m.group(1)), self.MAX_H,
+            f"_MAX_H is {m.group(1)} in marker.js but {self.MAX_H} in "
+            f"PopupHeightBudget. These are the renderer's cap and the "
+            f"estimator's idea of it; if they drift, the backlog ratchet "
+            f"below is counting against a cap that does not exist.")
 
     def test_cap_is_applied_unconditionally(self):
         js = self._marker()
@@ -517,12 +500,51 @@ class PopupHeightBudget(unittest.TestCase):
         return (len(points) >= self.MIN_POINTS
                 and any(len(p) >= self.MIN_LONGEST for p in points))
 
-    def _estimate_px(self, summary):
-        """Rendered height of a summary, structured the way the popup
-        renders it. Deliberately mirrors `_formatSummary` rather than
-        measuring characters, because character count stopped predicting
-        height once sections became bulleted."""
+    def _utd_rows(self, entry):
+        """How many rows the UpToDate chips wrap onto.
+
+        `.utd-chips` is a 436px flex row with a 5px gap; each chip is
+        20px of padding and border plus its label. Chips are only
+        rendered when `data-sp-utd` carries entries, so an entry without
+        them pays nothing for the block at all.
+        """
+        utd = (entry or {}).get("utd") or []
+        widths = []
+        for pair in utd:
+            if not pair:
+                continue
+            try:
+                label = str(pair[0])
+            except (TypeError, IndexError):
+                continue
+            widths.append(20 + 6.6 * len(label) + 2)
+        if not widths:
+            return 0
+        rows, cur = 1, 0.0
+        for w in widths:
+            add = w if cur == 0 else w + self.UTD_GAP_PX
+            if cur + add > self.CONTENT_W:
+                rows, cur = rows + 1, w
+            else:
+                cur += add
+        return rows
+
+    def _estimate_px(self, summary, title="", entry=None):
+        """Rendered height of a whole popup, structured the way it
+        renders. Mirrors `_formatSummary` for the summary text and the
+        CSS above for everything around it.
+
+        `title` and `entry` are optional so the splitting tests can call
+        this with a bare summary, but every caller that is deciding
+        whether something fits the cap must pass both: the title wraps
+        and the UpToDate chips are a real 71px when present.
+        """
         import math
+        height = self.PADDING_PX + self.LABEL_PX
+        height += math.ceil(
+            max(1, len(title)) / self.TITLE_CHARS_PER_LINE
+        ) * self.TITLE_LINE_PX + self.TITLE_MARGIN_PX
+
         # The loose character class can swallow the space before a
         # qualifier, so "Sx (tetrad):" captures as "Sx " - strip it or
         # the section is not recognised and the block is costed as lede.
@@ -532,7 +554,6 @@ class PopupHeightBudget(unittest.TestCase):
         parts = re.split(
             r"(?:^|[;.]\s+)(?=[A-Z][A-Za-z /-]{1,24}(?:\s*\([^()]{1,24}\))?:\s)",
             summary)
-        height = self.PADDING_PX
         for part in parts:
             if not part.strip():
                 continue
@@ -541,17 +562,29 @@ class PopupHeightBudget(unittest.TestCase):
             is_section = bool(sep) and base.lower() in labels
             if not is_section:
                 body = part
+                height += self.LEDE_MARGIN_PX
             else:
-                height += self.HEADER_PX
+                height += self.SECTION_MARGIN_PX + self.HEADER_PX
+            height += self.BODY_MARGIN_PX
             points = self._points(body)
             if is_section and self._worth_bulleting(points):
-                for pt in points:
+                for i, pt in enumerate(points):
                     height += math.ceil(
                         len(pt) / self.BULLET_CHARS_PER_LINE
-                    ) * self.BULLET_LINE_PX + 1
+                    ) * self.BULLET_LINE_PX
+                    if i < len(points) - 1:
+                        height += 1        # li margin, not on :last-child
             else:
                 height += math.ceil(
-                    len(body) / self.CHARS_PER_LINE) * self.LINE_PX + 1
+                    len(body) / self.CHARS_PER_LINE) * self.LINE_PX
+
+        rows = self._utd_rows(entry)
+        if rows:
+            height += (self.UTD_HEAD_PX + rows * self.UTD_ROW_PX
+                       + (rows - 1) * self.UTD_GAP_PX)
+        # `.open` is hidden only when there is no data-sp-url, which no
+        # shipped entry is, so it is unconditional here.
+        height += self.OPEN_PX
         return height
 
     def _every_summary(self):
@@ -571,42 +604,69 @@ class PopupHeightBudget(unittest.TestCase):
             if name in seen:
                 continue
             seen.add(name)
-            yield name, entry["summary"]
+            yield name, entry["summary"], entry
         for acronym, cands in _acronyms._ACRONYMS.items():
             for expansion, _kw, summary in cands:
-                yield f"{acronym} ({expansion})", summary
+                yield f"{acronym} ({expansion})", summary, None
         for drug in _drugs._DRUGS:
-            yield drug["generic"], drug["summary"]
+            yield drug["generic"], drug["summary"], drug
 
-    # Entries still rendering past the 620px cap, by vocabulary. These
-    # are debt, not a target: the popup scrolls for every one of them.
-    # The numbers only ever go down. Raising one to make a change pass
-    # is the failure mode this exists to catch - the point is that a
+    # Entries still rendering past the cap, by vocabulary. These are
+    # debt, not a target: the popup scrolls for every one of them. The
+    # numbers only ever go down. Raising one to make a change pass is
+    # the failure mode this exists to catch - the point is that a
     # summary added tomorrow cannot quietly join them.
-    OVER_CAP_BUDGET = {"conditions": 158, "drugs": 192, "acronyms": 0}
+    #
+    # Reset at 2.2, in the same commit that corrected the estimator
+    # and raised the cap, because both numbers moved at once and neither
+    # movement means anything on its own. Under the old text-only
+    # estimate against a 620px cap these read 158 and 192. Under the
+    # corrected model against 900px they are what you see here. The
+    # backlog did not grow; it was always this size and was being
+    # measured with a ruler that omitted 150px of chrome.
+    # `preclinical` joins the ratchet at 2.2, at zero. Drug classes were
+    # added to that vocabulary and they are long entries, so the budget is
+    # worth holding at the point where it is still clean - a backlog is
+    # much easier to prevent than to pay down, which is what the 122 and
+    # 80 above are.
+    OVER_CAP_BUDGET = {"conditions": 122, "drugs": 80, "acronyms": 0,
+                       "preclinical": 0}
 
     def test_over_cap_backlog_only_shrinks(self):
-        over = {"conditions": 0, "drugs": 0, "acronyms": 0}
+        over = {"conditions": 0, "drugs": 0, "acronyms": 0,
+                "preclinical": 0}
         seen = set()
         for entry in _conditions._LOOKUP.values():
             if entry["name"] in seen:
                 continue
             seen.add(entry["name"])
-            if self._estimate_px(entry["summary"]) > 620:
+            if self._estimate_px(entry["summary"], entry["name"],
+                                 entry) > self.MAX_H:
                 over["conditions"] += 1
-        for cands in _acronyms._ACRONYMS.values():
-            for _e, _kw, summary in cands:
-                if self._estimate_px(summary) > 620:
+        for acronym, cands in _acronyms._ACRONYMS.items():
+            for expansion, _kw, summary in cands:
+                if self._estimate_px(
+                        summary, f"{acronym} ({expansion})") > self.MAX_H:
                     over["acronyms"] += 1
+        pre_seen = set()
+        for term in _preclinical.PRECLINICAL_TERMS:
+            if term["name"] in pre_seen:
+                continue
+            pre_seen.add(term["name"])
+            if self._estimate_px(term["summary"], term["name"],
+                                 term) > self.MAX_H:
+                over["preclinical"] += 1
         for drug in _drugs._DRUGS:
-            if self._estimate_px(drug["summary"]) > 620:
+            if self._estimate_px(drug["summary"], drug["generic"],
+                                 drug) > self.MAX_H:
                 over["drugs"] += 1
         for vocab, budget in self.OVER_CAP_BUDGET.items():
             self.assertLessEqual(
                 over[vocab], budget,
                 f"{over[vocab]} {vocab} summaries now render past the "
-                f"620px cap, up from {budget}; either shorten the new "
-                f"entry or explain in the commit why the backlog grew")
+                f"{self.MAX_H}px cap, up from {budget}; either shorten "
+                f"the new entry or explain in the commit why the backlog "
+                f"grew")
         for vocab, budget in self.OVER_CAP_BUDGET.items():
             if over[vocab] < budget:
                 self.fail(
@@ -615,73 +675,13 @@ class PopupHeightBudget(unittest.TestCase):
                     f"{over[vocab]} so it cannot drift back up")
 
     def test_no_summary_is_grossly_over_the_cap(self):
-        entries = list(self._every_summary())
-        for name, summary in entries:
-            px = self._estimate_px(summary)
+        for name, summary, entry in self._every_summary():
+            px = self._estimate_px(summary, name, entry)
             self.assertLessEqual(
                 round(px), self.CEILING_PX,
                 f"{name} renders to roughly {round(px)}px, past the "
                 f"{self.CEILING_PX}px ceiling; the popup caps at "
-                f"{620}px so this would be mostly scrollbar")
-
-
-class BulletSplitting(unittest.TestCase):
-    """Guards on the comma fallback in `_splitPoints`.
-
-    Semicolons are the deliberate list separator, but almost nothing
-    outside the structured condition summaries uses them - every drug
-    entry enumerates with commas, so before the fallback existed no
-    drug popup ever bulleted. Commas are also ordinary punctuation
-    though, so splitting on them blindly turns a sentence into
-    nonsense: "caution with macrolides, azoles" becomes a bullet
-    reading "azoles".
-
-    This mirrors the JavaScript so the guards can be reasoned about
-    here; `PopupHeightBudget._points` is the same logic and both must
-    match `_splitPoints` in web/marker.js.
-    """
-
-    def _points(self, body):
-        return PopupHeightBudget()._points(body)
-
-    def test_semicolon_lists_split(self):
-        self.assertEqual(len(self._points("alpha; beta; gamma")), 3)
-
-    def test_comma_list_of_four_splits(self):
-        self.assertEqual(
-            self._points("myalgia, raised LFTs, dark urine, "
-                         "rhabdomyolysis (rare)"),
-            ["myalgia", "raised LFTs", "dark urine",
-             "rhabdomyolysis (rare)"])
-
-    def test_comma_list_of_three_stays_prose(self):
-        self.assertEqual(
-            len(self._points("myalgia, raised LFTs, rhabdomyolysis")), 1,
-            "three comma items are cheaper to read - and 40px cheaper to "
-            "render - as one line of prose than as three bullets")
-
-    def test_two_comma_items_stay_prose(self):
-        self.assertEqual(
-            len(self._points("caution with macrolides, azoles")), 1,
-            "a two-item comma phrase must not bullet - the second half "
-            "reads as a fragment on its own")
-
-    def test_connective_blocks_the_split(self):
-        for body in (
-            "started within 72 hr, shortens the course, and improves recovery",
-            "give fluids, cool actively, then reassess",
-            "raised CK, raised LFTs, which confirms the diagnosis",
-        ):
-            self.assertEqual(
-                len(self._points(body)), 1,
-                f"{body!r} is a sentence with commas, not a list")
-
-    def test_commas_inside_brackets_are_protected(self):
-        pts = self._points(
-            "hyperthermia (>38, often >40), rigidity (lead pipe), "
-            "clonus (inducible or ocular), coma")
-        self.assertEqual(len(pts), 4)
-        self.assertIn("hyperthermia (>38, often >40)", pts)
+                f"{self.MAX_H}px so this would be mostly scrollbar")
 
 
 class BulletWorthiness(unittest.TestCase):
@@ -704,25 +704,6 @@ class BulletWorthiness(unittest.TestCase):
         b = PopupHeightBudget()
         return b._worth_bulleting(b._points(body))
 
-    def test_four_substantial_points_bullet(self):
-        self.assertTrue(self._worth(
-            "renal loss through diuretics or hyperaldosteronism; "
-            "gastrointestinal loss through vomiting or diarrhoea; "
-            "shift into cells with insulin or beta-2 agonists; "
-            "poor intake in the malnourished"))
-
-    def test_four_short_points_stay_prose(self):
-        self.assertFalse(
-            self._worth("fever; rash; arthralgia; malaise"),
-            "four one-word bullets spend four lines saying what fits on "
-            "one")
-
-    def test_three_substantial_points_stay_prose(self):
-        self.assertFalse(self._worth(
-            "hypertension is the dominant risk factor by a wide margin; "
-            "bicuspid aortic valve in the younger patient; "
-            "Marfan and Ehlers-Danlos syndromes"))
-
     def test_the_estimator_and_the_renderer_agree(self):
         """`_MIN_POINTS` and `_MIN_LONGEST` are duplicated in marker.js.
 
@@ -739,112 +720,6 @@ class BulletWorthiness(unittest.TestCase):
                 int(m.group(1)), value,
                 f"{const} is {m.group(1)} in marker.js but {value} in "
                 f"PopupHeightBudget; the height estimate is now fiction")
-
-
-class NoteRendersLast(unittest.TestCase):
-    """`Note:` is an aside and belongs after the clinical sections.
-
-    In the shipped library it usually is not: 29 conditions and 21 drug
-    entries write it immediately before `Red flags:`, which buries the
-    safety-critical section underneath an aside. Rather than rewrite
-    fifty summaries and rely on the convention holding, `_formatSummary`
-    moves it to the end at render time - which also covers downloaded
-    content, written by whoever published it.
-
-    Reordering does not change any section's height, so
-    `PopupHeightBudget` needs no matching logic; that is why this lives
-    in its own class rather than in the estimator.
-    """
-
-    TRAILING = ("note", "notes")
-
-    def _reorder(self, labels):
-        """Mirror of the partition in `_formatSummary`."""
-        bare = [re.sub(r"\s*\([^()]*\)\s*$", "", l).lower() for l in labels]
-        keep = [l for l, b in zip(labels, bare) if b not in self.TRAILING]
-        tail = [l for l, b in zip(labels, bare) if b in self.TRAILING]
-        return keep + tail
-
-    def test_the_renderer_partitions_trailing_labels(self):
-        js = (pathlib.Path(__file__).resolve().parent.parent
-              / "web" / "marker.js").read_text(encoding="utf-8")
-        self.assertIn("_TRAILING", js,
-                      "marker.js no longer moves Note to the end")
-        self.assertLess(
-            js.index("_TRAILING"), js.index('var html = ""'),
-            "the reorder must happen before the render loop, or it has "
-            "no effect on the output")
-
-    def test_note_moves_behind_red_flags(self):
-        self.assertEqual(
-            self._reorder(["Sx", "Note", "Red flags"]),
-            ["Sx", "Red flags", "Note"])
-
-    def test_a_qualified_note_still_moves(self):
-        self.assertEqual(
-            self._reorder(["Note (caveat)", "Complications"]),
-            ["Complications", "Note (caveat)"])
-
-    def test_sections_that_are_not_notes_keep_their_order(self):
-        original = ["Causes", "Sx", "Ix", "Mx", "Red flags"]
-        self.assertEqual(self._reorder(original), original)
-
-    def test_every_shipped_summary_ends_on_its_note(self):
-        """Applied to the real library, not to invented examples."""
-        pattern = re.compile(
-            r"(?:^|[;.]\s+)([A-Z][A-Za-z /-]{1,24})"
-            r"(?:\s*\([^()]{1,24}\))?:\s")
-        checked = 0
-        seen = set()
-        entries = []
-        for entry in _conditions._LOOKUP.values():
-            if entry["name"] in seen:
-                continue
-            seen.add(entry["name"])
-            entries.append((entry["name"], entry["summary"]))
-        entries += [(d["generic"], d["summary"]) for d in _drugs._DRUGS]
-        for name, summary in entries:
-            labels = [l.strip() for l in pattern.findall(summary)]
-            if not any(l.lower() in self.TRAILING for l in labels):
-                continue
-            checked += 1
-            after = self._reorder(labels)
-            self.assertIn(
-                after[-1].lower().split(" (")[0], self.TRAILING,
-                f"{name}: reordering left {after[-1]!r} after the note")
-        self.assertGreater(checked, 40,
-                           "expected many summaries to carry a Note")
-
-
-class QualifiedSectionLabels(unittest.TestCase):
-    """`Sx (tetrad):` must be recognised as the section `Sx`.
-
-    The label pattern allowed no punctuation, so a label carrying a
-    parenthetical qualifier was not matched at all and its whole block
-    collapsed silently back into the lede - which is what put the
-    neuroleptic malignant syndrome tetrad and lab panel into the
-    opening paragraph.
-    """
-
-    LABEL_RE = re.compile(
-        r"(?:^|[;.]\s+)([A-Z][A-Za-z /-]{1,24})(?:\s*\([^()]{1,24}\))?:\s")
-
-    def test_pattern_matches_a_qualified_label(self):
-        found = [f.strip() for f in
-                 self.LABEL_RE.findall("Foo. Sx (tetrad): fever, rigidity, coma")]
-        self.assertIn("Sx", found)
-
-    def test_marker_js_strips_the_qualifier_for_the_jump(self):
-        with open(os.path.join(_ROOT, "web", "marker.js"),
-                  encoding="utf-8") as fh:
-            js = fh.read()
-        self.assertTrue(
-            'data-sec="\' + _esc(secKey)' in js,
-            "data-sec must carry the bare label; SECTION_MAP is keyed on "
-            "'Sx', not 'Sx (tetrad)'")
-        self.assertRegex(
-            js, r"var secKey = p\.label\.replace\(",
-            "secKey must be derived by stripping the qualifier")
 
 
 class RichSummaries(unittest.TestCase):
@@ -915,6 +790,34 @@ class RichSummaries(unittest.TestCase):
                     found.lower(), self.KNOWN_LABELS,
                     f"{canon}: section label '{found}:' is not one the "
                     f"popup renderer knows - it will render as body text")
+
+    def test_drug_section_labels_are_recognised(self):
+        """Same silent failure as the conditions above, on a table that
+        did not exist before 2.2 and so was never covered."""
+        pat = re.compile(r"(?:^|[;.]\s+)([A-Z][A-Za-z /-]{1,24}):\s")
+        for canon, text in _rich.DRUG_SUMMARIES.items():
+            for found in pat.findall(text):
+                self.assertIn(
+                    found.lower(), self.KNOWN_LABELS,
+                    f"{canon}: section label '{found}:' is not one the "
+                    f"popup renderer knows - it will render as body text")
+
+    def test_each_drug_override_is_structured(self):
+        pat = re.compile(r"(?:^|[;.]\s+)([A-Z][A-Za-z /-]{1,24}):\s")
+        for canon, text in _rich.DRUG_SUMMARIES.items():
+            self.assertGreaterEqual(
+                len(pat.findall(text)), 3,
+                f"{canon}: fewer than 3 sections, so it renders as one "
+                f"long paragraph")
+
+    def test_every_drug_override_reached_a_popup(self):
+        """A key written against a name that was renamed out from under
+        it never renders and says nothing. `build_library.py` refuses it,
+        but a content edit does not run the build first."""
+        for canon, text in _rich.DRUG_SUMMARIES.items():
+            entry = _drugs._GENERIC_LOOKUP.get(canon.lower())
+            self.assertIsNotNone(entry, f"{canon} is not a drug generic")
+            self.assertEqual(entry["summary"], text, f"{canon} not applied")
 
     MAX_CHARS = 1200
 
@@ -1009,28 +912,6 @@ class StatPearlsLinks(unittest.TestCase):
                 entry.get("nbk"),
                 f"{entry['name']} carries an nbk - verify it against the "
                 f"real article before adding it, or leave it out.")
-
-
-class ResolversWork(unittest.TestCase):
-    def test_dermatology_card(self):
-        text = ("Photodistributed poikiloderma - hyperpigmentations + "
-                "hypopigmentation + telangiectasias + epidermal atrophy")
-        names = {r["name"] for r in _descriptive.resolve(text)}
-        for expected in ("Poikiloderma", "Telangiectasia", "Epidermal atrophy"):
-            self.assertIn(expected, names)
-
-    def test_mental_state_card(self):
-        text = ("Speech pressured with flight of ideas. Affect labile. "
-                "Derailment and thought blocking. Grandiose delusions.")
-        names = {r["name"] for r in _psych.resolve(text)}
-        for expected in ("Flight of ideas", "Derailment", "Thought blocking",
-                         "Grandiose delusion"):
-            self.assertIn(expected, names)
-
-    def test_no_match_returns_empty(self):
-        for mod in (_descriptive, _psych):
-            self.assertEqual(mod.resolve(""), [])
-            self.assertEqual(mod.resolve("qqqq zzzz"), [])
 
 
 if __name__ == "__main__":

@@ -27,12 +27,20 @@ that earn their place. `Note:` carries the single most discriminating
 fact, and `Red flags:` anything time-critical.
 
 **Length is governed by bullet count, not characters.** Measured across
-the shipped library, the overrides that fit the 620px popup carry a
-median of 4 bulleted points and the ones that scroll carry 10 - at an
-identical median length of about 1,000 characters. Character count does
-not discriminate between the two, which is why the previous rule here
-(cap 1,200, aim for 1,050) produced entries that were the right length
-and scrolled anyway: 30 of the first 55 were over the cap.
+the shipped library, the overrides that fit the popup carry a median of
+4 bulleted points and the ones that scroll carry 10 - at an identical
+median length of about 1,000 characters. Character count does not
+discriminate between the two, which is why the previous rule here (cap
+1,200, aim for 1,050) produced entries that were the right length and
+scrolled anyway: 30 of the first 55 were over the cap.
+
+The cap is 900px as of 2.2, raised from 620. Do not read that as 280px
+of new room to fill. The estimator was corrected in the same release and
+had been understating every popup by at least 114px, because it costed
+the summary text and nothing else - not the source label, the title, the
+UpToDate chip row or the footer button, which together are 110px before
+a word is written. An entry that measured 500px under the old model
+measures about 650px under the new one and has gained nothing.
 
 The working budget is five or six sections, and few *bulleted* points. A
 section bullets when it splits into four or more points with at least
@@ -2394,11 +2402,29 @@ RICH_SUMMARIES = {
 # the library only knew as nitroglycerin. Those cards highlighted nothing
 # at all.
 #
-# Non-Australian forms (`norepinephrine`, `beclometasone`) are
-# deliberately NOT added. The house rule is Australian-first, and
-# accepting the US spelling silently would let it back in through the
-# matcher. `epinephrine` is left unmatched for the same reason -
-# `adrenaline` resolves correctly.
+# This block used to say that `norepinephrine` and `beclometasone` were
+# non-Australian forms deliberately not added, and that `epinephrine` was
+# left unmatched for the same reason. Both halves were wrong, and both
+# are corrected at 2.2:
+#
+# `beclometasone` is the Australian Approved Name. It is on the TGA's
+# affected-ingredients list as a minor spelling change from
+# `beclomethasone`, so the form this file called non-Australian is the
+# only one a current Australian label may carry. The library's canonical
+# spelling is renamed below rather than aliased.
+#
+# `epinephrine` and `norepinephrine` are printed on Australian labels by
+# regulation. Adrenaline and noradrenaline are the two ingredients the
+# TGA requires to be dual labelled permanently, as `adrenaline
+# (epinephrine)` and `noradrenaline (norepinephrine)` - Australian name
+# first, INN in brackets. So every ampoule in every Australian resus
+# trolley carries the word `epinephrine`, and a card written from the
+# ampoule, or from any international source, matched nothing.
+#
+# The house rule is not broken by adding them, because an alias never
+# reaches the heading: `resolve()` reports `d["generic"]`, which stays
+# `adrenaline`. The rule is about what is displayed, and
+# `test_no_american_generic_is_displayed` is what enforces it.
 
 DRUG_ALIASES = {
     # Australian spellings in routine use
@@ -2421,6 +2447,17 @@ DRUG_ALIASES = {
     # Very common Australian brand written lower-case in practice, so the
     # case-sensitive brand path misses it
     "enoxaparin":        ["clexane"],
+
+    # Printed on the Australian label by regulation - see the note above.
+    # The heading stays `adrenaline` and `noradrenaline`.
+    "adrenaline":        ["epinephrine"],
+    "noradrenaline":     ["norepinephrine"],
+
+    # The generic here is a bracketed dual label, and a phrase ending in
+    # `)` only matches at the end of the text - so without this the bare
+    # INN, which is what a prescription and a DrugBank page both say,
+    # resolved to nothing. The heading is unaffected.
+    "mercaptamine (cysteamine)": ["mercaptamine"],
 
     # ── Superseded Australian Approved Names, from the TGA's own list ──
     #
@@ -2468,12 +2505,24 @@ DRUG_ALIASES = {
 # Format: US form -> the Australian entry to fold it into, or None to
 # rename in place using DRUG_ALIASES for the old spelling.
 
+# `estradiol` and `lidocaine` were here until 2.2, folded into
+# `oestradiol` and `lignocaine`. That was backwards, and the two rows
+# have moved to DRUG_RENAMES pointing the other way. See the note there.
+# `pethidine` and `rifampicin` are unaffected: neither is on the TGA
+# list, so those two merges stand on their own.
+
 DRUG_US_MERGES = {
     "meperidine": "pethidine",
     "rifampin":   "rifampicin",
-    "estradiol":  "oestradiol",
-    "lidocaine":  "lignocaine",
 }
+
+# ═══════════════════════════════════════════════════════════════════════
+# Generics renamed to the name that should head the popup.
+# ═══════════════════════════════════════════════════════════════════════
+#
+# The old spelling is kept as an alias by the rename machinery, so a card
+# written either way still resolves. This only decides what the heading
+# says.
 
 DRUG_RENAMES = {
     "nitroglycerin": "glyceryl trinitrate",
@@ -2490,6 +2539,78 @@ DRUG_RENAMES = {
     # heading was showing the American name on exactly the material a
     # psychiatry rotation runs on.
     "benztropine": "benzatropine",
+
+    # ── The 5a reversal ────────────────────────────────────────────────
+    #
+    # 2.1.1 merged these the other way, on the reading that `lignocaine`
+    # and `oestradiol` are the Australian names. Under the TGA's own list
+    # they are the superseded ones:
+    #
+    #   Lignocaine -> lidocaine was dual labelled as `lidocaine
+    #   (lignocaine)`. The sole-name transition closed 30 April 2026, so
+    #   a medicine released for supply in Australia from 1 May 2026 must
+    #   show `lidocaine` alone. That date is past.
+    #
+    #   Oestradiol -> estradiol is filed as a minor spelling change. It
+    #   never had a dual labelling period at all, because the two forms
+    #   are transparently the same word.
+    #
+    # Australian speech, hospital protocols and exam papers still say
+    # lignocaine and oestradiol, which is the whole argument for the old
+    # direction - but that argument is about what a card SAYS, and a card
+    # saying either word resolves either way. The heading is the one
+    # place a name has to be the current one, because it is the name the
+    # box in front of him will carry.
+    #
+    # What settled it was opening the entries rather than arguing the
+    # principle. The 2.1.1 merge kept the wrong side of the pair: the
+    # surviving `oestradiol` summary is 158 characters reading
+    # "Australian/British spelling of estradiol ... See estradiol entry",
+    # and the estradiol entry it points at is the one the merge deleted.
+    # That popup has been a dead cross-reference in every release since.
+    # The full text is rewritten in DRUG_SUMMARIES below.
+    "lignocaine": "lidocaine",
+    "oestradiol": "estradiol",
+
+    # ── 5b: superseded canons ──────────────────────────────────────────
+    #
+    # Straight renames of the `benzatropine` kind. Both are on the TGA
+    # list and neither has a duplicate entry to fold in.
+    #
+    #   `phenobarbitone` was dual labelled as `phenobarbital
+    #   (phenobarbitone)` and is under the same 30 April 2026 sole-name
+    #   deadline as lidocaine.
+    #
+    #   `beclomethasone` -> `beclometasone` is a minor spelling change,
+    #   like oestradiol. See the corrected note above DRUG_ALIASES.
+    "phenobarbitone": "phenobarbital",
+    "beclomethasone": "beclometasone",
+
+    # The third name in 5b is not a straight rename, and reading the TGA
+    # list rather than assuming is what caught it.
+    #
+    # `mercaptamine` is on the short list of names that stay dual
+    # labelled in the Australian Approved Names List **with no planned
+    # transition to a sole name** - alongside alimemazine (trimeprazine)
+    # and Mycobacterium bovis (BCG strain). The reason is a TGA safety
+    # advisory in its own right: `mercaptamine` and `mercaptopurine` are
+    # a look-alike/sound-alike pair, one for nephropathic cystinosis and
+    # one for leukaemia and IBD, and the bracketed old name is what keeps
+    # them apart at the point of prescribing.
+    #
+    # So the Australian Approved Name here is the whole string, brackets
+    # included, and renaming to a bare `mercaptamine` would replace one
+    # wrong heading with a different wrong heading - and would do it on
+    # the exact name a regulator has flagged as dangerous on its own.
+    #
+    # Note what this does NOT extend to. Adrenaline and noradrenaline are
+    # also permanently dual labelled, but their AAN brackets the *INN*
+    # after the Australian name rather than the reverse, so the heading
+    # is already correct and the bracketed word belongs in DRUG_ALIASES.
+    # The rule is: the heading leads with the current AAN, and carries a
+    # bracket only where the AAN itself does and the leading name would
+    # otherwise be one the reader cannot place.
+    "cysteamine": "mercaptamine (cysteamine)",
 }
 
 
@@ -2510,3 +2631,1326 @@ DRUG_RENAMES = {
 # written once and a mismatch between the two is impossible.
 for _nc in NEW_CONDITIONS:
     _nc["summary"] = RICH_SUMMARIES.get(_nc["name"], "")
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# Structured rewrites for drug entries.
+# ═══════════════════════════════════════════════════════════════════════
+#
+# The same seam as RICH_SUMMARIES, for drugs. Before 2.2 there was none:
+# condition text has had an authoring copy here since the 2.0 split,
+# drug text lived only in `data/library.json`, which is a build artefact
+# nobody hand-edits. So "rewrite this drug summary" had no procedure,
+# which is the real reason the drug backlog never moved while the
+# condition backlog did four batches.
+#
+# Keyed on the canonical generic AFTER any rename above, because that is
+# what heads the popup. `tools/build_library.py` fails the build on a key
+# it cannot find, which is the guard against writing an override for a
+# name that was renamed out from under it.
+#
+# Selection rule, from the 2.1.3 finding: the drugs Rob actually studies
+# are too THIN, not too tall. The specialist tail is where the over-cap
+# entries are and it returns zero notes. So these are chosen by clinical
+# weight on a Medicine and Psychiatry rotation, and written into the
+# available height rather than trimmed to fit.
+
+DRUG_SUMMARIES = {
+
+    # ═══════ Forced by the 5a/5b renames ════════════════════════════════
+
+    # Replaces 158 characters that said "see estradiol entry" about an
+    # entry the same merge had just deleted.
+    "estradiol": (
+        "Oestrogen (17-beta-estradiol), identical to the principal "
+        "premenopausal ovarian oestrogen. "
+        "MOA: agonist at nuclear oestrogen receptors alpha and beta; "
+        "restores hypothalamic-pituitary feedback and reverses "
+        "target-tissue atrophy. "
+        "Indications: menopausal hormone therapy for vasomotor and "
+        "genitourinary symptoms; premature ovarian insufficiency and "
+        "hypogonadism, where it is replacement rather than treatment and "
+        "continues to the average age of menopause; feminising "
+        "gender-affirming hormone therapy. "
+        "Route: transdermal patch or gel is preferred - it bypasses "
+        "first-pass metabolism, so it does not raise VTE risk the way "
+        "oral oestrogen does, and it is the clear choice with obesity, "
+        "migraine or thrombotic risk. "
+        "CI: oestrogen-dependent malignancy, undiagnosed vaginal "
+        "bleeding, active VTE or arterial thrombosis, active liver "
+        "disease. "
+        "SE: breast tenderness, nausea, headache, breakthrough bleeding. "
+        "Note: an intact uterus mandates a progestogen, because "
+        "unopposed oestrogen causes endometrial hyperplasia and "
+        "carcinoma - micronised progesterone nightly, or cyclically for "
+        "12 to 14 days a month if a withdrawal bleed is acceptable. "
+        "Australian notes: `estradiol` is the current Australian "
+        "Approved Name, filed by the TGA as a minor spelling change; "
+        "wards and exam papers still write oestradiol, and both resolve."
+    ),
+
+    # The old text asserted "AU/UK: phenobarbitone; US: phenobarbitone",
+    # which is wrong on both halves of its own comparison.
+    "phenobarbital": (
+        "Barbiturate antiepileptic, the oldest anticonvulsant still in "
+        "routine use. "
+        "MOA: binds GABA-A and prolongs the DURATION of chloride channel "
+        "opening - benzodiazepines increase the frequency, which is why "
+        "barbiturates keep working without GABA present and depress "
+        "respiration where benzodiazepines plateau. "
+        "Indications: neonatal seizures, still first line worldwide on "
+        "parenteral availability, cost and a long safety record; "
+        "refractory status epilepticus after a benzodiazepine and a "
+        "second-line agent. "
+        "Half-life 80 to 100 hours, so once daily and a fortnight to "
+        "steady state. "
+        "SE: sedation and cognitive blunting, paradoxical hyperactivity "
+        "in children, tolerance and dependence, respiratory depression "
+        "on rapid IV loading, osteomalacia with chronic use. "
+        "Interactions: potent inducer of CYP3A4, 2C9 and "
+        "glucuronidation - lowers combined oral contraceptives to the "
+        "point of contraceptive failure, and lowers warfarin, the DOACs "
+        "and most co-prescribed antiepileptics. "
+        "CI: acute porphyria, severe respiratory insufficiency. "
+        "Note: never stop abruptly - withdrawal precipitates seizures "
+        "and a delirium closer to alcohol withdrawal. `phenobarbital` is "
+        "the Australian Approved Name; the sole-name transition from "
+        "phenobarbital (phenobarbitone) closed on 30 April 2026."
+    ),
+
+    "beclometasone": (
+        "Inhaled corticosteroid (ICS) - a preventer, not a reliever. "
+        "MOA: beclometasone dipropionate is a prodrug, hydrolysed in "
+        "airway tissue to active 17-BMP; glucocorticoid receptor "
+        "binding suppresses NF-kB driven transcription, reducing airway "
+        "eosinophilic inflammation and bronchial hyperresponsiveness "
+        "over days to weeks. It does nothing acutely. "
+        "Indications: asthma preventer therapy in adults and children. "
+        "Dose: the extrafine HFA formulation (about 1.1 micrometre "
+        "particles) deposits far better in small airways and is roughly "
+        "twice as potent as the older CFC product, so its dose bands are "
+        "about half those of budesonide - read the Australian Asthma "
+        "Handbook table rather than converting between ICS by eye, "
+        "because that error runs in both directions. "
+        "SE: oral candidiasis and dysphonia, both largely preventable by "
+        "rinsing and spitting after use and by a spacer; at high dose "
+        "and long duration, adrenal suppression, reduced bone mineral "
+        "density, cataract, glaucoma, and a small reduction in growth "
+        "velocity in children that is mostly recovered. "
+        "Note: Australian practice for mild asthma has moved away from "
+        "short-acting beta agonist alone toward as-needed "
+        "ICS-formoterol, and beclometasone monotherapy is not a "
+        "maintenance-and-reliever product - if a patient is using it "
+        "that way, the regimen is wrong rather than the dose."
+    ),
+
+    # Trimmed from 1,910 characters. The mechanism was three clauses deep
+    # into lysosomal transport for a drug a Year 4 student will meet
+    # once; the look-alike name it is now called by was not mentioned at
+    # all.
+    "mercaptamine (cysteamine)": (
+        "Aminothiol cystine-depleting agent for nephropathic cystinosis. "
+        "MOA: the free thiol reacts with intralysosomal cystine to form "
+        "a mixed disulfide that leaves through an intact transporter, "
+        "bypassing the defective CTNS carrier and lowering lysosomal "
+        "cystine load. "
+        "Indications: nephropathic cystinosis - started as early as "
+        "possible and continued for life, delaying progression from "
+        "Fanconi syndrome to end-stage kidney disease; ophthalmic drops "
+        "separately for corneal crystals, because systemic drug does not "
+        "reach the avascular cornea. "
+        "Monitoring: leukocyte cystine about 6 hours post-dose, titrated "
+        "to target. "
+        "SE: a penetrating sulfurous breath and body odour from excreted "
+        "metabolites, which is the dominant adherence problem and not a "
+        "trivial one socially; nausea and vomiting; skin striae. "
+        "Red flags: `mercaptamine` and `mercaptopurine` are a "
+        "look-alike, sound-alike pair with a standing TGA safety "
+        "advisory - one treats cystinosis, the other leukaemia and IBD, "
+        "and a reported swap left an infant pancytopenic. "
+        "Australian notes: the Approved Name is the whole dual-labelled "
+        "string, and it is one of a handful the TGA has no plan to "
+        "shorten, precisely because the bracket keeps the pair apart."
+    ),
+
+    # ═══════ Medicine and Psychiatry rotation, chosen by clinical weight ═
+
+    "clozapine": (
+        "Atypical antipsychotic (dibenzodiazepine) and the only agent "
+        "with proven superiority in treatment-resistant schizophrenia. "
+        "MOA: low-affinity, rapidly dissociating D2 antagonism plus "
+        "5-HT2A, D4, H1, M1 and alpha-1 blockade - the loose D2 binding "
+        "is why it causes almost no EPS and no hyperprolactinaemia. "
+        "Indications: treatment-resistant schizophrenia after two "
+        "adequate antipsychotic trials; persistent suicidality in "
+        "schizophrenia or schizoaffective disorder; psychosis in "
+        "Parkinson disease. "
+        "Monitoring: FBC at baseline, WEEKLY for 18 weeks, then every 28 "
+        "days for as long as the drug continues, through a mandatory "
+        "monitoring service. Amber is neutrophils 1.5 to 2.0 or WCC 3.0 "
+        "to 3.5 and means twice-weekly counts; red is neutrophils below "
+        "1.5 or WCC below 3.0 and means cease immediately with no "
+        "rechallenge. Troponin and CRP at baseline and weekly for the "
+        "first four weeks. "
+        "SE: agranulocytosis, highest between weeks 6 and 18; "
+        "myocarditis, peaking in weeks 2 to 3; dose-related seizures "
+        "above about 600 mg daily; the worst metabolic burden of any "
+        "antipsychotic; constipation progressing to ileus, which kills "
+        "more patients than agranulocytosis does and warrants "
+        "prophylactic aperients; hypersalivation, sedation, postural "
+        "hypotension and tachycardia on titration. "
+        "Note: a CYP1A2 substrate, so stopping smoking removes an "
+        "inducer and levels can nearly double within days - a patient "
+        "admitted to a smoke-free ward is the classic presentation. A "
+        "break of over 48 hours requires full retitration."
+    ),
+
+    "lithium": (
+        "Mood stabiliser, and the only psychotropic with a replicated "
+        "anti-suicide effect independent of its mood effect. "
+        "MOA: inhibits inositol monophosphatase, depleting the "
+        "phosphoinositide pool, and inhibits GSK-3. "
+        "Indications: acute mania; bipolar maintenance, where it remains "
+        "first line and prevents BOTH poles; augmentation in "
+        "treatment-resistant depression. "
+        "Monitoring: not metabolised - cleared renally and handled like "
+        "sodium, which is the origin of every interaction it has. Trough "
+        "level 12 hours post-dose, weekly until stable then "
+        "three-monthly; maintenance 0.6 to 0.8 mmol/L; eGFR, calcium and "
+        "TFTs six-monthly. "
+        "SE: fine tremor, polyuria and polydipsia from nephrogenic "
+        "diabetes insipidus, weight gain, hypothyroidism, "
+        "hyperparathyroidism, chronic interstitial nephritis. "
+        "Interactions: NSAIDs, ACE inhibitors and ARBs, and thiazides "
+        "all cut renal clearance and raise the level, as do dehydration, "
+        "vomiting, diarrhoea and a low-salt diet. "
+        "Red flags: above 1.5 mmol/L expect coarse tremor, ataxia, "
+        "dysarthria, vomiting, confusion and myoclonus; above 2.5 is "
+        "life-threatening. Stop, rehydrate, dialyse if severe. Prescribe "
+        "by brand - Australian modified-release and immediate-release "
+        "lithium carbonate are not bioequivalent."
+    ),
+
+    "lamotrigine": (
+        "Anticonvulsant and bipolar maintenance agent. "
+        "MOA: use-dependent blockade of voltage-gated sodium channels, "
+        "reducing presynaptic glutamate release. "
+        "Indications: focal and generalised seizures including absence "
+        "and Lennox-Gastaut; bipolar maintenance, where it prevents "
+        "DEPRESSIVE relapse specifically and does not treat acute mania. "
+        "Dose: about 10% of patients get a rash and roughly 1 in 1,000 "
+        "get SJS or TEN, and the risk is driven almost entirely by "
+        "starting dose and titration speed - so 25 mg daily for two "
+        "weeks, 50 mg for two weeks, then fortnightly increases. Any "
+        "rash means stop and review, not watch and wait. "
+        "Interactions: this is the examinable part. Valproate inhibits "
+        "glucuronidation and roughly doubles lamotrigine levels, so the "
+        "starting dose is halved. Carbamazepine, phenytoin and "
+        "phenobarbital induce it and the dose roughly doubles. "
+        "Oestrogen-containing contraceptives induce it too, dropping "
+        "levels by about half, with a rebound rise in the hormone-free "
+        "week. Clearance rises sharply through pregnancy. "
+        "SE: rash, headache, diplopia, insomnia, tremor; rarely aseptic "
+        "meningitis and haemophagocytic lymphohistiocytosis. "
+        "Note: with levetiracetam, one of the two preferred "
+        "antiepileptics in pregnancy. After a break of more than five "
+        "days, retitrate from the beginning."
+    ),
+
+    "sodium valproate": (
+        "Broad-spectrum anticonvulsant and mood stabiliser. "
+        "MOA: raises GABA by inhibiting GABA transaminase and inducing "
+        "GAD, blocks voltage-gated sodium channels, and blocks T-type "
+        "calcium channels - the last is why it works in absence "
+        "seizures where carbamazepine makes them worse. "
+        "Indications: absence seizures, juvenile myoclonic epilepsy and "
+        "generalised tonic-clonic seizures, all first line; acute mania "
+        "and bipolar maintenance; migraine prophylaxis. "
+        "SE: weight gain, tremor, alopecia, polycystic ovarian "
+        "morphology, thrombocytopenia and platelet dysfunction, "
+        "idiosyncratic hepatotoxicity, pancreatitis, and hyperammonaemic "
+        "encephalopathy that occurs with entirely normal LFTs and "
+        "responds to carnitine. "
+        "Interactions: an enzyme INHIBITOR, unlike most older "
+        "antiepileptics - it raises lamotrigine, phenobarbital and the "
+        "active carbamazepine epoxide. "
+        "CI: pregnancy and women or girls of childbearing potential "
+        "unless every alternative has failed; known or suspected "
+        "mitochondrial disease, where POLG variants make fatal liver "
+        "failure far more likely; urea cycle disorders. "
+        "Red flags: the most teratogenic antiepileptic in use - major "
+        "congenital malformation in about 10%, and neurodevelopmental "
+        "impairment or autism in a much larger fraction of exposed "
+        "children. The TGA carries a boxed warning; prescribing to a "
+        "woman of childbearing potential requires a documented "
+        "discussion and effective contraception, and this is "
+        "specifically examined."
+    ),
+
+    "carbamazepine": (
+        "Anticonvulsant, mood stabiliser and first-line drug for "
+        "trigeminal neuralgia. "
+        "MOA: use-dependent blockade of voltage-gated sodium channels, "
+        "reducing high-frequency repetitive firing. "
+        "Indications: focal seizures; trigeminal neuralgia; bipolar "
+        "disorder second line. "
+        "CI: absence and myoclonic seizures and generalised epilepsies "
+        "such as JME, which it aggravates - prescribing it for an "
+        "undifferentiated generalised epilepsy makes the patient worse. "
+        "Screening: test HLA-B*1502 before starting in patients of Han "
+        "Chinese, Thai, Malay or other South-East Asian ancestry - the "
+        "allele carries a large increase in SJS and TEN risk. "
+        "SE: rash in 5 to 10%, DRESS, dose-related hyponatraemia from "
+        "SIADH that is worse in the elderly, benign leucopenia commonly "
+        "and aplastic anaemia rarely, neural tube defects in pregnancy. "
+        "Interactions: a potent CYP3A4, 2C9 and UGT inducer - lowers "
+        "combined oral contraceptives to the point of contraceptive "
+        "failure, and lowers warfarin, the DOACs, lamotrigine and "
+        "quetiapine. It also induces its own metabolism over two to four "
+        "weeks, so a dose that worked initially stops working. FBC, LFTs "
+        "and sodium at baseline and periodically."
+    ),
+
+    "olanzapine": (
+        "Atypical antipsychotic (thienobenzodiazepine). "
+        "MOA: D2 and 5-HT2A antagonism with substantial M1, H1 and "
+        "alpha-1 blockade. "
+        "Indications: schizophrenia; acute mania and bipolar "
+        "maintenance; acute behavioural disturbance by IM injection; "
+        "adjunct in treatment-resistant depression; also well evidenced "
+        "for chemotherapy-induced nausea and for appetite in palliative "
+        "care. "
+        "SE: the largest weight gain and metabolic burden of any "
+        "antipsychotic except clozapine, with insulin resistance and "
+        "dyslipidaemia that appear within months; sedation; "
+        "anticholinergic dry mouth and constipation; postural "
+        "hypotension. EPS and prolactin rise are modest at usual doses. "
+        "Monitoring: weight and waist circumference, blood pressure, "
+        "fasting glucose or HbA1c and lipids at baseline, at three "
+        "months and then at least yearly. Metabolic monitoring after a "
+        "first episode is the intervention most often skipped and most "
+        "often regretted. "
+        "Note: IM olanzapine given close to a parenteral benzodiazepine "
+        "risks excessive sedation and cardiorespiratory depression - "
+        "separate them by at least an hour. Weight gain is a leading "
+        "reason young patients stop antipsychotics, so raise it before "
+        "it happens; metformin has reasonable evidence for attenuating "
+        "it."
+    ),
+
+    "quetiapine": (
+        "Atypical antipsychotic (dibenzothiazepine) whose "
+        "pharmacology changes with dose - which is the whole point of "
+        "the drug. "
+        "MOA: D2 and 5-HT2A antagonism with very fast D2 dissociation; "
+        "potent H1 blockade gives sedation and alpha-1 blockade gives "
+        "postural drop; the active metabolite norquetiapine is a "
+        "noradrenaline reuptake inhibitor and 5-HT2C antagonist, which "
+        "is where the antidepressant effect comes from. "
+        "Dose: below about 50 mg the effect is essentially "
+        "antihistamine sedation with no antipsychotic action at all; 150 "
+        "to 300 mg is the antidepressant range; 400 to 800 mg is needed "
+        "for schizophrenia. "
+        "Indications: schizophrenia; acute mania; bipolar DEPRESSION, "
+        "where it is one of very few agents with real evidence; adjunct "
+        "in major depression. "
+        "SE: sedation, postural hypotension during titration, weight "
+        "gain and metabolic syndrome, dry mouth, QT prolongation. EPS "
+        "and prolactin elevation are minimal, which with clozapine makes "
+        "it one of the two usable antipsychotics in Parkinson disease. "
+        "Note: low-dose quetiapine is widely prescribed as a hypnotic. "
+        "It has no good evidence in that role, carries the full "
+        "metabolic risk, is not subsidised for it, and is diverted in "
+        "custodial and inpatient settings - recognising the "
+        "inappropriate indication is worth more marks than reciting the "
+        "receptor profile."
+    ),
+
+    # ═══════ Batch 2: measured by deck frequency, 21 August ═════════════
+    #
+    # AnkiMCP against `deck:active::current::*`, one term per query, stems
+    # rather than exact phrases, per the distortions recorded in the
+    # handover. Note counts in the comment beside each. Ordered by
+    # frequency, not by how interesting the drug is: prednisolone returns
+    # 32 notes and had a 4-line summary that deferred to a `prednisone`
+    # entry, which is the same dead-cross-reference shape the oestradiol
+    # merge left behind.
+    #
+    # Deliberately NOT written, so nobody re-measures them: mirtazapine
+    # 0, pantoprazole 0, clopidogrel 0, salbutamol 0, escitalopram 2,
+    # lorazepam 2.
+
+    "prednisolone": (  # 32 notes
+        "Intermediate-acting glucocorticoid and the default oral "
+        "corticosteroid in Australian practice. "
+        "MOA: glucocorticoid receptor agonist, about four times the "
+        "potency of hydrocortisone with much less mineralocorticoid "
+        "effect; already active, unlike prednisone, which needs hepatic "
+        "conversion - so prednisolone is the one to use in liver "
+        "disease. 5 mg prednisolone is equivalent to 20 mg "
+        "hydrocortisone. "
+        "Indications: asthma and COPD exacerbations; acute gout; "
+        "polymyalgia rheumatica and giant cell arteritis, where visual "
+        "symptoms mean high dose now, not after biopsy; IBD flares. "
+        "SE: hyperglycaemia, which will unmask or destabilise diabetes; "
+        "weight gain and Cushingoid change; hypertension; osteoporosis "
+        "and avascular necrosis; myopathy; cataract and "
+        "glaucoma; thin skin and bruising; insomnia and mood change up "
+        "to frank steroid psychosis; infection risk, including "
+        "reactivation of tuberculosis and strongyloides. "
+        "Note: a course under three weeks can usually stop outright, but "
+        "longer or repeated courses suppress the HPA axis and must be "
+        "tapered - and that patient then needs sick-day rules, because "
+        "an intercurrent illness on a suppressed axis is an adrenal "
+        "crisis. Consider bone protection at 7.5 mg for three months, "
+        "and PJP prophylaxis at 20 mg for four weeks."
+    ),
+
+    "methotrexate": (  # 18 notes
+        "Antifolate, and the anchor DMARD in rheumatoid arthritis. "
+        "MOA: inhibits dihydrofolate reductase, but the low-dose "
+        "anti-inflammatory effect is mostly adenosine-mediated rather "
+        "than antiproliferative - hence a DMARD dose a hundredth of the "
+        "oncology dose. "
+        "Indications: rheumatoid and psoriatic arthritis, psoriasis, "
+        "IBD; ectopic pregnancy and gestational trophoblastic disease; "
+        "high dose in ALL and lymphoma. "
+        "Dose: WEEKLY, and this is the most dangerous prescribing error "
+        "in the drug book - daily dosing causes fatal pancytopenia and "
+        "mucositis, and it happens through transcription rather than "
+        "ignorance. Name the day on the script. Co-prescribe folic acid "
+        "on a different day. "
+        "SE: nausea, mucositis, hepatotoxicity, myelosuppression, "
+        "alopecia, and an idiosyncratic pneumonitis that can appear at "
+        "any point as dry cough and breathlessness. "
+        "Interactions: trimethoprim and co-trimoxazole are also "
+        "antifolates and the combination causes pancytopenia; NSAIDs and "
+        "PPIs reduce renal clearance. "
+        "CI: pregnancy, significant renal impairment, active infection, "
+        "significant liver disease. "
+        "Monitoring: FBC, LFTs and renal function at baseline, then "
+        "fortnightly to monthly for the first three months and "
+        "three-monthly after. Rescue is folinic acid, not folic acid."
+    ),
+
+    "aspirin": (  # 16 notes
+        "Antiplatelet at low dose, NSAID at high dose. "
+        "MOA: irreversibly acetylates COX-1, so thromboxane A2 "
+        "production is gone for that platelet's whole 7 to 10 day life "
+        "while nucleated endothelium simply makes more enzyme - that "
+        "asymmetry is the entire basis of low-dose selectivity, and it "
+        "is why the effect outlasts the drug. "
+        "Indications: acute coronary syndrome, loading dose then daily; "
+        "secondary prevention after MI, ischaemic stroke or in "
+        "peripheral arterial disease; dual antiplatelet therapy after "
+        "stenting; low dose nocte from early pregnancy for pre-eclampsia "
+        "prophylaxis in women at high risk. Not routine for primary "
+        "prevention - the bleeding cost outweighs the benefit in most "
+        "people. "
+        "SE: gastric erosion and upper GI bleeding, dyspepsia, "
+        "bronchospasm in aspirin-exacerbated respiratory disease, which "
+        "runs with asthma and nasal polyps; tinnitus at high dose. "
+        "CI: children and adolescents with a viral illness, because of "
+        "Reye syndrome; active bleeding; third trimester. "
+        "Note: salicylate overdose gives a respiratory alkalosis and a "
+        "metabolic acidosis together, with tinnitus, hyperventilation "
+        "and hyperthermia. Because inhibition is irreversible, stopping "
+        "it days before surgery does not restore platelet function "
+        "immediately."
+    ),
+
+    "hydrocortisone": (  # 15 notes
+        "Short-acting glucocorticoid, and the reference against which "
+        "the others are measured. "
+        "MOA: binds both glucocorticoid and mineralocorticoid receptors "
+        "- the substantial mineralocorticoid activity is precisely why "
+        "it is the REPLACEMENT steroid rather than an anti-inflammatory "
+        "one. 20 mg hydrocortisone is equivalent to 5 mg prednisolone. "
+        "Indications: adrenal insufficiency, given in divided doses with "
+        "the larger dose on waking to approximate the diurnal rhythm; "
+        "adrenal crisis, as a bolus followed by regular dosing alongside "
+        "aggressive fluid resuscitation; severe asthma; as an adjunct "
+        "after adrenaline in anaphylaxis, where it does nothing acutely "
+        "and must never delay or replace the adrenaline; topically in "
+        "eczema. "
+        "Note: in suspected adrenal crisis, treat first and confirm "
+        "later - but hydrocortisone cross-reacts in the cortisol assay "
+        "and dexamethasone does not, so if the diagnosis genuinely has "
+        "to be established, dexamethasone is the steroid to give. "
+        "Every patient on replacement needs sick-day rules, a steroid "
+        "card and an emergency ampoule at home: double the dose for a "
+        "febrile illness, and give it parenterally if vomiting."
+    ),
+
+    "amiodarone": (  # 14 notes
+        "Class III antiarrhythmic that in practice blocks all four "
+        "Vaughan Williams classes. "
+        "MOA: prolongs repolarisation by potassium channel blockade, "
+        "with sodium channel, beta and calcium channel effects on top. "
+        "Indications: shock-refractory VF and pulseless VT; "
+        "haemodynamically stable VT; rhythm control in atrial "
+        "fibrillation, including where structural heart disease rules "
+        "out flecainide. "
+        "Half-life 50 to 100 days with an enormous volume of "
+        "distribution, so it needs loading, and both its effect and its "
+        "toxicity persist for months after the last dose. "
+        "SE: the molecule is 37% iodine by weight, so thyroid disease is "
+        "common in both directions - hypothyroidism is usually managed "
+        "with thyroxine while continuing the drug, whereas "
+        "thyrotoxicosis splits into iodine-induced type 1 and a "
+        "destructive thyroiditis type 2 treated with corticosteroid. "
+        "Also pulmonary toxicity and fibrosis, presenting as dry cough "
+        "and exertional dyspnoea; hepatitis; near-universal corneal "
+        "microdeposits; a slate-grey photosensitive skin discolouration; "
+        "optic and peripheral neuropathy; bradycardia. "
+        "Interactions: roughly doubles digoxin levels and markedly "
+        "potentiates warfarin, so both doses come down when amiodarone "
+        "starts; raises statin myopathy risk. "
+        "Monitoring: TFTs and LFTs at baseline and six-monthly, chest "
+        "imaging at baseline and if symptomatic, ECG."
+    ),
+
+    "haloperidol": (  # 13 notes
+        "High-potency typical antipsychotic (butyrophenone). "
+        "MOA: potent D2 antagonism, and the four dopamine pathways "
+        "explain the whole side-effect profile - mesolimbic blockade is "
+        "the antipsychotic effect, nigrostriatal blockade the "
+        "extrapyramidal effects, tuberoinfundibular blockade the "
+        "prolactin rise. "
+        "Indications: schizophrenia; acute behavioural disturbance; "
+        "short-term in hyperactive delirium at the lowest dose; "
+        "Tourette; intractable nausea in palliative care. "
+        "CI: Parkinson disease and dementia with Lewy bodies, where "
+        "sensitivity reactions can be severe and prolonged. "
+        "SE: acute dystonia within hours to days, reversed with "
+        "benzatropine; akathisia, an inner restlessness that is "
+        "repeatedly mistaken for worsening agitation and treated by "
+        "raising the dose, which makes it worse; drug-induced "
+        "parkinsonism over weeks; tardive dyskinesia over months to "
+        "years, which may not reverse. Hyperprolactinaemia gives "
+        "galactorrhoea and reduced bone density. "
+        "Red flags: dose-related QT prolongation, worst with the IV "
+        "route - check the ECG and correct potassium and magnesium. "
+        "Neuroleptic malignant syndrome is fever, lead-pipe rigidity, "
+        "autonomic instability and a raised CK, and it is a stop-the-drug "
+        "emergency. "
+        "Note: antipsychotics raise mortality and stroke risk in "
+        "dementia."
+    ),
+
+    "risperidone": (  # 10 notes
+        "Atypical antipsychotic (benzisoxazole). "
+        "MOA: D2 plus 5-HT2A antagonism; the 5-HT2A blockade is what "
+        "buys the reduced EPS, and it stops buying it above about 6 mg "
+        "daily, at which point risperidone behaves like a typical. "
+        "Indications: schizophrenia; bipolar mania; short-term for "
+        "behavioural and psychological symptoms of dementia, the only "
+        "antipsychotic with an Australian indication for it and one "
+        "limited to a few weeks; irritability in autism. "
+        "SE: the highest prolactin elevation of any atypical, which "
+        "matters clinically rather than as a number - galactorrhoea, "
+        "amenorrhoea, sexual dysfunction and reduced bone density are "
+        "common reasons young patients stop taking it and do not say "
+        "why. Dose-related EPS, moderate weight gain, postural "
+        "hypotension during titration. "
+        "Note: its active metabolite is paliperidone, cleared renally, "
+        "so renal impairment demands a dose reduction where hepatic "
+        "impairment matters less. The fortnightly long-acting injection "
+        "does not reach therapeutic levels for about three weeks and "
+        "needs oral cover over that gap - stopping the tablets on the "
+        "day of the first injection is a relapse waiting to happen."
+    ),
+
+    "diazepam": (  # 8 notes
+        "Long-acting benzodiazepine. "
+        "MOA: positive allosteric modulation at the GABA-A "
+        "benzodiazepine site, increasing the FREQUENCY of chloride "
+        "channel opening - it needs GABA already present, which is why "
+        "it has a ceiling that barbiturates do not. "
+        "Indications: alcohol withdrawal, symptom-triggered; status "
+        "epilepticus; muscle spasm and spasticity; short-term severe "
+        "anxiety. "
+        "Half-life is long and its active metabolites longer still, so "
+        "it accumulates - a single dose is short-acting because the drug "
+        "redistributes out of the brain, not because it has left the "
+        "body. In alcohol withdrawal that long tail is a feature, since "
+        "the drug self-tapers; in an older patient or in liver disease "
+        "it is the problem, and oxazepam or lorazepam are the ones to "
+        "reach for because they are only glucuronidated. "
+        "SE: sedation, anterograde amnesia, falls and hip fractures in "
+        "the elderly, respiratory depression when combined with opioids "
+        "or alcohol, paradoxical disinhibition, and tolerance and "
+        "dependence within weeks of regular use. "
+        "Note: never stop abruptly after regular use - withdrawal "
+        "causes seizures and delirium. Flumazenil is rarely the right "
+        "answer and precipitates seizures in a dependent or mixed "
+        "overdose."
+    ),
+
+    "spironolactone": (  # 7 notes
+        "Potassium-sparing diuretic and mineralocorticoid receptor "
+        "antagonist. "
+        "MOA: competitive MR blockade in the collecting duct reduces "
+        "sodium reabsorption and potassium excretion; it also blocks "
+        "androgen and progesterone receptors, which is simultaneously "
+        "its main nuisance effect and its therapeutic mechanism in "
+        "hirsutism. "
+        "Indications: HFrEF added to standard therapy, with a mortality "
+        "benefit; resistant hypertension, where it is the fourth-line "
+        "agent of choice; primary aldosteronism; ascites in cirrhosis, "
+        "where it is the first-line diuretic and is combined with "
+        "furosemide in a fixed ratio; acne and hirsutism in women. "
+        "SE: hyperkalaemia is the dominant risk and it is the one that "
+        "kills - multiplied by an ACE inhibitor or ARB, NSAIDs, "
+        "potassium supplements, renal impairment and, easily missed, "
+        "trimethoprim, which blocks the epithelial sodium channel like "
+        "amiloride. Gynaecomastia and breast tenderness in men, "
+        "menstrual irregularity in women. "
+        "Monitoring: potassium and creatinine at baseline, at about one "
+        "week and one month, after every dose change, and during any "
+        "intercurrent illness - withhold it in acute illness with "
+        "vomiting, diarrhoea or dehydration. "
+        "Note: a small creatinine rise on starting is haemodynamic and "
+        "expected. Eplerenone is the alternative if gynaecomastia is "
+        "intolerable."
+    ),
+
+    "aripiprazole": (  # 5 notes
+        "Atypical antipsychotic and dopamine system stabiliser. "
+        "MOA: D2 PARTIAL agonist, so it behaves as an antagonist where "
+        "dopamine is high and an agonist where it is low, with 5-HT2A "
+        "antagonism and 5-HT1A partial agonism alongside. "
+        "Indications: schizophrenia; bipolar mania; adjunct in major "
+        "depression; irritability in autism; Tourette syndrome. "
+        "SE: akathisia is the signature effect and the reason patients "
+        "stop it - an inner restlessness that reads as anxiety or "
+        "agitation, is often answered with a dose increase, and gets "
+        "worse when it is. Treat by reducing the dose, and propranolol "
+        "helps. Nausea, insomnia and headache early on. "
+        "Red flags: impulse control disorders - pathological gambling, "
+        "hypersexuality, compulsive shopping and binge eating - carry a "
+        "TGA warning and resolve on withdrawal. Patients almost never "
+        "volunteer them, so ask directly at review. "
+        "Note: metabolically the most favourable of the atypicals and "
+        "close to prolactin-sparing, which is what earns it a place "
+        "despite the akathisia. Because it is a partial agonist, "
+        "switching to it abruptly from a full antagonist can precipitate "
+        "rebound psychosis and agitation - cross-taper."
+    ),
+
+    "furosemide": (  # 5 notes
+        "Loop diuretic. "
+        "MOA: inhibits NKCC2 in the thick ascending limb, abolishing the "
+        "medullary concentrating gradient and producing the most potent "
+        "natriuresis available. In acute pulmonary oedema it also "
+        "venodilates within minutes, before any diuresis, which is why "
+        "the patient improves before the catheter bag fills. "
+        "Indications: acute pulmonary oedema; congestion in chronic "
+        "heart failure; oedema in nephrotic syndrome and cirrhosis; "
+        "hypercalcaemia once the patient is volume-replete. "
+        "Dose: oral bioavailability is about half and highly variable, "
+        "so the IV dose is roughly half the oral one. The drug only "
+        "works from inside the tubular lumen, reached by active "
+        "secretion, so anything competing for that transporter - NSAIDs "
+        "in particular - or a low albumin blunts the response. That is "
+        "most of what is meant by diuretic resistance. "
+        "SE: hypokalaemia, hypomagnesaemia, hyponatraemia, metabolic "
+        "alkalosis, hyperuricaemia and gout, hypovolaemia and prerenal "
+        "AKI, hyperglycaemia, and ototoxicity with rapid IV "
+        "administration, high doses or concurrent aminoglycosides. "
+        "Monitoring: electrolytes, renal function, daily weight and "
+        "fluid balance."
+    ),
+
+    "sertraline": (  # 4 notes
+        "SSRI, and a reasonable default first-line antidepressant. "
+        "MOA: blocks the serotonin transporter, raising synaptic 5-HT; "
+        "the receptor change takes weeks, which is why the effect does "
+        "and the side effects do not. "
+        "Indications: major depression, generalised anxiety, panic "
+        "disorder, OCD, PTSD, social anxiety. "
+        "SE: nausea and loose stools in the first week or two, usually "
+        "transient; sexual dysfunction, which is common, persistent and "
+        "under-reported unless asked about directly; insomnia or "
+        "sedation; hyponatraemia from SIADH, particularly in older "
+        "patients in the first weeks; increased bleeding risk, "
+        "compounded by NSAIDs or anticoagulants. "
+        "Note: minimal CYP inhibition makes it the SSRI of choice with "
+        "polypharmacy, after myocardial infarction, and in pregnancy and "
+        "breastfeeding. Anxiety can worsen in the first week, so start "
+        "low and warn the patient, or they will stop on day three. "
+        "Red flags: review within one to two weeks in patients under 25, "
+        "in whom suicidal ideation may increase early. Serotonin "
+        "syndrome with MAOIs, tramadol, linezolid or triptans is "
+        "agitation, clonus, hyperreflexia and hyperthermia. Taper on "
+        "stopping."
+    ),
+
+    "venlafaxine": (  # 4 notes
+        "SNRI. "
+        "MOA: serotonin reuptake inhibition at low dose, with "
+        "noradrenaline reuptake inhibition added only at higher doses - "
+        "so below about 150 mg daily it is functionally an SSRI, and a "
+        "patient described as having failed an SNRI at 75 mg has not. "
+        "Indications: major depression, generalised anxiety, panic "
+        "disorder, social anxiety, neuropathic pain. "
+        "SE: dose-related hypertension from the noradrenergic effect, so "
+        "check blood pressure before and after any dose increase; "
+        "nausea; sweating; sexual dysfunction. "
+        "Red flags: the worst discontinuation syndrome of the class, "
+        "because the half-life is short - dizziness, electric-shock "
+        "sensations, irritability and flu-like symptoms within a day of "
+        "a missed dose. Use the extended-release form and taper slowly. "
+        "It is also more cardiotoxic in overdose than any SSRI, with "
+        "seizures and arrhythmias, which is worth weighing when suicide "
+        "risk is part of the presentation. "
+        "CI: an MAOI within the preceding two weeks; caution in "
+        "uncontrolled hypertension."
+    ),
+
+    # ═══════ Batch 3: measured 21 August, same method ═══════════════════
+    #
+    # Deliberately NOT written: amoxicillin 3, vancomycin 2,
+    # flucloxacillin 2, morphine 2.
+
+    "insulin": (  # 26 notes - NEW ENTRY, see NEW_DRUGS below
+        "Anabolic peptide hormone, given as replacement in type 1 "
+        "diabetes and as escalation in type 2. "
+        "MOA: insulin receptor tyrosine kinase drives GLUT4 to the "
+        "membrane in muscle and fat, suppresses hepatic "
+        "gluconeogenesis, and switches off lipolysis and ketogenesis - "
+        "the last is why its absence gives ketoacidosis and why a type 1 "
+        "patient never stops basal insulin, even when not eating. "
+        "Types: rapid-acting analogues (aspart, lispro) act within about "
+        "15 minutes and cover a meal; short-acting neutral insulin is "
+        "slower; intermediate isophane sits between; long-acting "
+        "analogues (glargine, degludec) are near-peakless basal cover. "
+        "Indications: all type 1 diabetes; type 2 when other agents fail "
+        "or during acute illness, steroids, surgery or pregnancy; DKA and "
+        "hyperosmolar states as an infusion; hyperkalaemia, with glucose. "
+        "SE: hypoglycaemia, the dose-limiting toxicity - autonomic "
+        "warning symptoms are blunted by beta blockers and lost in "
+        "hypoglycaemia unawareness; weight gain; "
+        "lipohypertrophy at unrotated injection sites, which makes "
+        "absorption erratic and is worth palpating for when control "
+        "looks inexplicably unstable. "
+        "Note: sick-day rules run opposite to intuition - during "
+        "intercurrent illness insulin requirements RISE, so basal "
+        "insulin continues even if the patient is not eating, with "
+        "increased monitoring and ketone testing."
+    ),
+
+    "thiamine": (  # 24 notes
+        "Water-soluble vitamin B1. "
+        "MOA: as thiamine pyrophosphate it is the cofactor for pyruvate "
+        "dehydrogenase, alpha-ketoglutarate dehydrogenase and "
+        "transketolase, so deficiency blocks aerobic glucose metabolism "
+        "in exactly the tissues that cannot use anything else. Stores "
+        "last only two to three weeks. "
+        "Indications: Wernicke encephalopathy, established or suspected; "
+        "prophylaxis in alcohol withdrawal, chronic alcohol use, "
+        "hyperemesis gravidarum, bariatric surgery, prolonged vomiting "
+        "or malnutrition; refeeding syndrome; wet and dry beriberi. "
+        "Red flags: Wernicke is a clinical diagnosis and the classical "
+        "triad of confusion, ophthalmoplegia and ataxia is present in a "
+        "minority - so treat on suspicion, because untreated Wernicke "
+        "becomes Korsakoff amnesia, which does not reverse. Give "
+        "high-dose PARENTERAL thiamine; oral absorption is saturable and "
+        "cannot achieve the required levels. "
+        "Note: give thiamine BEFORE or with glucose in anyone at risk. A "
+        "glucose load in a thiamine-deplete patient consumes what little "
+        "cofactor remains and can precipitate the encephalopathy it was "
+        "meant to treat. This is one of the few genuinely "
+        "iatrogenic-if-you-get-the-order-wrong interventions on the "
+        "ward. Anaphylaxis to IV thiamine is very rare and is not a "
+        "reason to withhold it."
+    ),
+
+    "metronidazole": (  # 11 notes
+        "Nitroimidazole antimicrobial covering anaerobes and protozoa. "
+        "MOA: reduced by anaerobic organisms to a nitro radical that "
+        "fragments DNA - so it is selectively activated only where there "
+        "is no oxygen, which is also why it has no aerobic activity at "
+        "all. "
+        "Indications: intra-abdominal and pelvic sepsis, in combination "
+        "for Gram-negative and enterococcal cover; Clostridioides "
+        "difficile colitis; dental and other anaerobic abscesses; "
+        "aspiration pneumonia; bacterial vaginosis and trichomoniasis; "
+        "amoebiasis and giardiasis; part of Helicobacter pylori "
+        "eradication. "
+        "SE: metallic taste, nausea, and with prolonged courses a "
+        "peripheral neuropathy that may not fully recover - the practical "
+        "consequence is that duration matters more than dose. Rarely "
+        "encephalopathy and cerebellar toxicity. "
+        "Interactions: a disulfiram-like reaction with alcohol - "
+        "flushing, vomiting, tachycardia - so warn the patient during "
+        "treatment and for a day or two after. It also potentiates "
+        "warfarin. "
+        "Note: excellent oral bioavailability, so there is rarely a "
+        "reason to keep it intravenous once the patient is absorbing."
+    ),
+
+    "gentamicin": (  # 7 notes
+        "Aminoglycoside, active against aerobic Gram negatives including "
+        "Pseudomonas, and synergistic with a beta lactam against "
+        "enterococci and staphylococci. "
+        "MOA: irreversibly binds the 30S ribosomal subunit causing "
+        "misreading; uptake is oxygen-dependent, hence no anaerobic "
+        "activity, and impaired in the acidic environment of an abscess. "
+        "Concentration-dependent killing with a long post-antibiotic "
+        "effect, which is the rationale for once-daily dosing. "
+        "Indications: severe Gram-negative sepsis, usually empirically "
+        "and for a short course; pyelonephritis; surgical prophylaxis; "
+        "infective endocarditis in combination. "
+        "Dose: on lean or adjusted body weight, with renal function and "
+        "levels guiding subsequent doses - a trough that has not fallen "
+        "means the drug has not cleared, not that the dose was small. "
+        "SE: nephrotoxicity, typically non-oliguric and usually "
+        "reversible; ototoxicity, both cochlear and vestibular, which is "
+        "NOT reversible and is the reason short courses are the rule; "
+        "rarely neuromuscular blockade. "
+        "Note: risk rises with duration, concurrent loop diuretics, "
+        "vancomycin, contrast and pre-existing renal impairment. Beyond "
+        "48 to 72 hours, the question is whether it can stop rather than "
+        "what the next dose is."
+    ),
+
+    "heparin": (  # 6 notes
+        "Unfractionated heparin, an indirect parenteral anticoagulant. "
+        "MOA: binds antithrombin and accelerates it roughly a thousandfold "
+        "against thrombin (IIa) and factor Xa. Inhibiting thrombin needs "
+        "the long saccharide chain to bridge both molecules, which is the "
+        "structural reason UFH inhibits IIa and Xa about equally while the "
+        "shorter low molecular weight heparins are far more Xa-selective. "
+        "Indications: where anticoagulation may need to be switched off "
+        "quickly or renal function is poor - the half-life is about an "
+        "hour and it is not renally cleared, so it is preferred in severe "
+        "renal impairment, around surgery and in the unstable patient. "
+        "Monitoring: APTT ratio or anti-Xa on an infusion. LMWH needs no "
+        "routine monitoring, which is most of why it displaced UFH. "
+        "SE: bleeding; heparin-induced thrombocytopenia, an "
+        "immune-mediated PROTHROMBOTIC platelet fall around day 5 to 10 "
+        "that must not be treated with platelet transfusion and requires "
+        "stopping all heparin including flushes; osteoporosis with "
+        "prolonged use; hyperkalaemia from aldosterone suppression. "
+        "Note: protamine reverses UFH fully and LMWH only partially."
+    ),
+
+    "warfarin": (  # 5 notes
+        "Vitamin K antagonist. "
+        "MOA: inhibits vitamin K epoxide reductase, so factors II, VII, "
+        "IX and X cannot be gamma-carboxylated. Onset follows each "
+        "factor's half-life, and because protein C goes first there is a "
+        "transient PROCOAGULANT window - which is why loading without "
+        "heparin cover risks skin necrosis and why bridging exists. "
+        "Indications: mechanical heart valves and moderate to severe "
+        "mitral stenosis with AF, where the DOACs are contraindicated "
+        "and warfarin remains the only option; antiphospholipid "
+        "syndrome; VTE and AF where a DOAC is unsuitable. "
+        "Monitoring: INR, target 2 to 3 for most indications and higher "
+        "for mechanical valves. "
+        "Interactions: extensive, and the two directions matter equally. "
+        "Antibiotics, amiodarone, metronidazole, azole antifungals, "
+        "cranberry juice and acute alcohol raise the INR; carbamazepine, "
+        "phenobarbital, rifampicin, St John's wort and a sudden increase "
+        "in dietary vitamin K lower it. Intercurrent illness alone will "
+        "move it. "
+        "Note: reversal depends on bleeding, not on the number - withhold "
+        "for a high INR without bleeding, oral vitamin K if higher, and "
+        "for major bleeding give IV vitamin K with prothrombin complex "
+        "concentrate, since vitamin K alone takes hours."
+    ),
+
+    "naloxone": (  # 5 notes
+        "Competitive opioid receptor antagonist. "
+        "MOA: displaces opioids at the mu receptor with higher affinity "
+        "and no intrinsic activity. "
+        "Indications: opioid-induced respiratory depression. The target "
+        "is adequate ventilation, NOT full consciousness - titrate in "
+        "small increments, because a large bolus in a dependent patient "
+        "precipitates acute withdrawal, agitation and vomiting into an "
+        "unprotected airway, and occasionally flash pulmonary oedema. "
+        "Half-life is shorter than that of most opioids, and far shorter "
+        "than methadone, slow-release oxycodone or a fentanyl patch - so "
+        "the patient who wakes up can re-sedate an hour later, and either "
+        "needs prolonged observation or an infusion. Discharging them "
+        "after a single dose is the classic error. "
+        "Route: IV, IM or intranasal; the take-home intranasal product is "
+        "available without prescription in Australia and is a reasonable "
+        "thing to offer anyone on high-dose opioids or with a history of "
+        "overdose. "
+        "Note: it does nothing for a non-opioid cause, so an unimproved "
+        "conscious state after adequate naloxone is a reason to look "
+        "elsewhere rather than to give more."
+    ),
+
+    "ceftriaxone": (  # 6 notes
+        "Third-generation cephalosporin. "
+        "MOA: beta lactam binding penicillin-binding proteins to block "
+        "cell wall cross-linking. "
+        "Indications: community-acquired pneumonia requiring admission; "
+        "pyelonephritis; bacterial meningitis, where it crosses inflamed "
+        "meninges well and is given with dexamethasone in adults; "
+        "gonorrhoea as a single IM dose; septic arthritis and cellulitis "
+        "with atypical risk; empirical cover in sepsis of unknown source. "
+        "Note: once-daily dosing and biliary as well as renal excretion, "
+        "so no dose adjustment in renal impairment - which together with "
+        "the long half-life is why it suits home and outpatient "
+        "parenteral therapy. "
+        "CI: neonates, in whom it displaces bilirubin from albumin and "
+        "risks kernicterus, and it must never be co-administered with "
+        "calcium-containing fluids in that group. "
+        "SE: rash, diarrhoea including C. difficile, biliary sludging "
+        "that can mimic cholecystitis, and rarely haemolysis. "
+        "Red flags: it does not cover Pseudomonas, Listeria or MRSA - so "
+        "meningitis in the elderly, pregnant or immunosuppressed needs "
+        "benzylpenicillin added for Listeria, and cross-reactivity with "
+        "penicillin allergy is real but much lower than the traditional "
+        "10% figure."
+    ),
+
+    "doxycycline": (  # 6 notes
+        "Tetracycline. "
+        "MOA: binds the 30S subunit and blocks aminoacyl-tRNA docking; "
+        "bacteriostatic, with broad activity including the intracellular "
+        "organisms that beta lactams cannot reach. "
+        "Indications: atypical and community-acquired pneumonia; "
+        "chlamydia and pelvic inflammatory disease; Q fever, rickettsial "
+        "infection, leptospirosis, melioidosis eradication and Lyme "
+        "disease; acne and rosacea; malaria prophylaxis; COPD "
+        "exacerbation. "
+        "SE: photosensitivity, which matters in Australia and needs "
+        "saying out loud; pill-induced oesophagitis, so take it upright "
+        "with a full glass of water and not at bedtime; nausea; "
+        "candidiasis; benign intracranial hypertension. "
+        "CI: pregnancy, breastfeeding and children under eight, because "
+        "it chelates calcium in developing bone and teeth and causes "
+        "permanent discolouration. "
+        "Interactions: absorption is blocked by calcium, iron, magnesium "
+        "and antacids, so separate them by at least two hours - a "
+        "genuinely common reason for apparent treatment failure. "
+        "Note: unlike other tetracyclines it is safe in renal impairment, "
+        "being cleared largely through the gut."
+    ),
+
+    "metformin": (  # 5 notes
+        "Biguanide, and first-line pharmacotherapy in type 2 diabetes. "
+        "MOA: activates AMP-activated protein kinase, suppressing hepatic "
+        "gluconeogenesis and improving peripheral insulin sensitivity. It "
+        "does not stimulate insulin secretion, which is why it does not "
+        "cause hypoglycaemia on its own and does not cause weight gain. "
+        "Indications: type 2 diabetes, alone or with anything else; "
+        "polycystic ovary syndrome, for cycle regularity and ovulation; "
+        "attenuating antipsychotic-associated weight gain. "
+        "SE: nausea, diarrhoea and abdominal discomfort, which are the "
+        "usual reason people stop - start low, take it with food, and "
+        "switch to the extended-release form rather than abandoning the "
+        "drug. Long-term use lowers vitamin B12, so check it if there is "
+        "anaemia or a peripheral neuropathy. "
+        "Red flags: lactic acidosis is rare but has high mortality, and "
+        "it happens when metformin accumulates in renal impairment or "
+        "when tissue hypoxia is already present. Withhold during any "
+        "acute illness with dehydration, vomiting, sepsis or "
+        "hypoperfusion, and around iodinated contrast and surgery. "
+        "Renal: reduce the dose as eGFR falls and stop below about 30."
+    ),
+}
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# Drugs absent from the base vocabulary entirely.
+# ═══════════════════════════════════════════════════════════════════════
+#
+# Mirrors NEW_CONDITIONS. Compiled into the library under its own
+# `new_drugs` key and merged by `pearls/_drugs.py` at runtime, NOT
+# appended to `drugs` - see the note there. The summary is taken from
+# DRUG_SUMMARIES rather than written here, so the text lives in one
+# place and the two cannot drift.
+#
+# `insulin` is the first entry and shows why the mechanism was needed.
+# Six specific insulins are in the library - glargine, detemir, lispro,
+# aspart, isophane and degludec - but the bare word `insulin` was not,
+# and the bare word is what 26 notes in the active decks actually say.
+# So the single highest-frequency drug term measured across three
+# batches highlighted nothing at all, and it looked exactly like a term
+# nobody had written a card about.
+
+NEW_DRUGS = [
+    {
+        "generic": "insulin",
+        "aliases": ["insulin therapy"],
+        "brands": [],
+        "summary": "",
+    },
+]
+
+# ═══════════════════════════════════════════════════════════════════════
+# Preclinical terms absent from the base vocabulary: drug CLASSES.
+# ═══════════════════════════════════════════════════════════════════════
+#
+# Compiled under a `new_preclinical` key and merged by
+# `pearls/_preclinical.py` at runtime, for the same reasons NEW_DRUGS is
+# kept out of `drugs`.
+#
+# Why preclinical rather than NEW_DRUGS: a class is not a drug. It has no
+# generic name and no DrugBank monograph, so routing it through the drug
+# path would label the popup DrugBank and offer a button that searches
+# for the word "antibiotics". `preclinical` already carries a
+# `pharmacology` category with 30 entries, gives the right source label,
+# and falls back to a Wikipedia search.
+#
+# Why they exist at all: the insulin finding generalised. Probing 33
+# class terms across all seven vocabularies returned exactly two hits,
+# both accidental - `ACE` and `DOAC` matched as acronyms. Everything
+# else matched nothing, and the frequencies are the highest measured
+# anywhere in the library:
+#
+#   antipsychotic 55, antibiotic 39, benzodiazepine 33, NSAID 31,
+#   diuretic 28, chemotherapy 26, opioid 23, immunosuppress- 23,
+#   corticosteroid 21, antidepressant 21, anticoagulation 21,
+#   beta blocker 15, statin 14
+#
+# Every one of those was dead. Whole categories of card highlighted
+# nothing, and it was invisible for the reason the twelve preclinical
+# terms were invisible in §3 of the handover: silence looks like
+# absence of content, not absence of matching.
+
+NEW_PRECLINICAL = [
+    {
+        "name": "Antipsychotics",  # 55 notes
+        "aliases": ["antipsychotic", "neuroleptic", "neuroleptics"],
+        "category": "pharmacology",
+        "summary": (
+            "Drug class defined by dopamine D2 receptor antagonism in the "
+            "mesolimbic pathway. "
+            "Classification: first generation (typicals - haloperidol, "
+            "chlorpromazine, zuclopenthixol) are high-affinity D2 "
+            "antagonists with prominent extrapyramidal effects; second "
+            "generation (atypicals - olanzapine, quetiapine, risperidone, "
+            "aripiprazole, clozapine) add 5-HT2A antagonism or partial "
+            "agonism, trading EPS for metabolic burden. The division is "
+            "clinically useful and pharmacologically loose. "
+            "Note: efficacy against positive symptoms is essentially "
+            "equivalent across the class, with the single exception of "
+            "clozapine in treatment resistance. So the choice is made on "
+            "side-effect profile and on what the patient will actually "
+            "keep taking, not on potency. "
+            "SE: the four dopamine pathways predict most of it - "
+            "nigrostriatal blockade gives acute dystonia, akathisia, "
+            "parkinsonism and tardive dyskinesia; tuberoinfundibular "
+            "blockade gives hyperprolactinaemia. Off-target: metabolic "
+            "syndrome, QT prolongation, sedation, anticholinergic burden, "
+            "postural hypotension. "
+            "Red flags: neuroleptic malignant syndrome. In dementia the "
+            "whole class raises mortality and stroke risk. "
+            "Monitoring: weight and waist, blood pressure, fasting "
+            "glucose or HbA1c, lipids and ECG at baseline, at three "
+            "months and then yearly."
+        ),
+    },
+    {
+        "name": "Antibiotics",  # 39 notes
+        "aliases": ["antibiotic", "antibacterial", "antibacterials",
+                    "antimicrobial", "antimicrobials"],
+        "category": "pharmacology",
+        "summary": (
+            "Drugs that kill or inhibit bacteria, grouped by the "
+            "structure they attack. "
+            "Classification: cell wall synthesis (beta lactams - "
+            "penicillins, cephalosporins, carbapenems - and glycopeptides "
+            "such as vancomycin); protein synthesis at the 30S "
+            "(aminoglycosides, tetracyclines) or 50S (macrolides, "
+            "lincosamides, oxazolidinones); nucleic acid (quinolones "
+            "inhibit DNA gyrase, rifampicin RNA polymerase); folate "
+            "synthesis (trimethoprim, sulfonamides); membrane disruption "
+            "(polymyxins). "
+            "Note: beta lactams and glycopeptides are time-dependent, so "
+            "the driver of killing is how long the concentration stays "
+            "above MIC - which is why they are dosed frequently or by "
+            "infusion. Aminoglycosides and quinolones are "
+            "concentration-dependent with a post-antibiotic effect, hence "
+            "once-daily dosing. "
+            "Australian notes: prescribing follows Therapeutic "
+            "Guidelines: Antibiotic, which is narrower than most "
+            "international sources - Australian empirical regimens use "
+            "less third-generation cephalosporin and less "
+            "fluoroquinolone, and a US protocol read straight off a "
+            "textbook will be wrong here. "
+            "Red flags: reported penicillin allergy is wrong in about 90% "
+            "of cases and delabelling matters, because the alternatives "
+            "are broader, more toxic and less effective."
+        ),
+    },
+    {
+        "name": "Benzodiazepines",  # 33 notes
+        "aliases": ["benzodiazepine", "benzo", "benzos"],
+        "category": "pharmacology",
+        "summary": (
+            "Positive allosteric modulators at the GABA-A receptor. "
+            "MOA: increase the FREQUENCY of chloride channel opening, "
+            "which requires GABA already to be present - the reason the "
+            "class has a ceiling on respiratory depression that "
+            "barbiturates do not, and the reason that ceiling disappears "
+            "the moment an opioid or alcohol is added. "
+            "Classification: by half-life and by metabolism. Diazepam and "
+            "clonazepam are long-acting with active metabolites; "
+            "temazepam and oxazepam are short and undergo glucuronidation "
+            "ONLY, which is what makes them the choice in liver disease "
+            "and the elderly; midazolam is short-acting and parenteral. "
+            "Indications: alcohol withdrawal, status epilepticus, "
+            "procedural sedation, acute severe anxiety and agitation, "
+            "muscle spasm. All short-term. "
+            "SE: sedation, anterograde amnesia, falls and fractures, "
+            "paradoxical disinhibition, cognitive impairment, and "
+            "tolerance and dependence within weeks of daily use. "
+            "Note: the harms are almost entirely a function of duration "
+            "rather than dose, so the prescribing decision that matters "
+            "is the stop date, set at the start. Withdrawal after regular "
+            "use causes seizures and delirium and needs a slow taper. "
+            "Flumazenil is rarely the right answer in overdose."
+        ),
+    },
+    {
+        "name": "NSAIDs",  # 31 notes
+        "aliases": ["NSAID", "non-steroidal anti-inflammatory drug",
+                    "non-steroidal anti-inflammatories"],
+        "category": "pharmacology",
+        "summary": (
+            "Non-steroidal anti-inflammatory drugs. "
+            "MOA: inhibit cyclo-oxygenase, blocking prostaglandin "
+            "synthesis. COX-1 is constitutive and maintains gastric "
+            "mucosa, renal perfusion and platelet thromboxane; COX-2 is "
+            "induced at sites of inflammation. Selectivity for COX-2 "
+            "(celecoxib, meloxicam at low dose) spares the stomach and "
+            "does not spare the kidney or the cardiovascular system. "
+            "Indications: inflammatory pain, gout, dysmenorrhoea, renal "
+            "colic, and closure of a patent ductus arteriosus. "
+            "SE: the three that matter are gastrointestinal ulceration "
+            "and bleeding, acute kidney injury, and cardiovascular "
+            "events. Also fluid retention and worsening hypertension and "
+            "heart failure, bronchospasm in aspirin-exacerbated "
+            "respiratory disease. "
+            "Red flags: the triple whammy - an NSAID with an ACE "
+            "inhibitor or ARB and a diuretic - removes all three "
+            "compensations for renal hypoperfusion at once and is a "
+            "leading avoidable cause of AKI in older Australians. Ask "
+            "about over-the-counter ibuprofen specifically, because "
+            "patients do not report it as a medication. "
+            "CI: third trimester, significant renal impairment, active "
+            "peptic ulceration, established heart failure."
+        ),
+    },
+    {
+        "name": "Diuretics",  # 28 notes
+        "aliases": ["diuretic"],
+        "category": "pharmacology",
+        "summary": (
+            "Drugs that increase urinary sodium and water excretion, "
+            "classified by where along the nephron they act. "
+            "Classification: carbonic anhydrase inhibitors at the "
+            "proximal tubule (acetazolamide); loop diuretics blocking "
+            "NKCC2 in the thick ascending limb (furosemide), the most "
+            "potent; thiazides blocking NCC in the distal convoluted "
+            "tubule (hydrochlorothiazide, indapamide), the "
+            "antihypertensives; potassium-sparing agents in the "
+            "collecting duct, either mineralocorticoid antagonists "
+            "(spironolactone) or ENaC blockers (amiloride); and osmotic "
+            "agents (mannitol). "
+            "Note: the calcium handling splits the two main classes and "
+            "is examined constantly - loops WASTE calcium, which is why "
+            "they are used in hypercalcaemia, and thiazides RETAIN it, "
+            "which is why they help in recurrent calcium stones. "
+            "SE: hypokalaemia and metabolic alkalosis with loops and "
+            "thiazides, hyperkalaemia with the potassium-sparing agents; "
+            "hyponatraemia, worst with thiazides and in older women; "
+            "hypovolaemia and prerenal AKI; hyperuricaemia and gout; "
+            "hyperglycaemia; ototoxicity with high-dose intravenous "
+            "loops. "
+            "Monitoring: electrolytes, renal function, daily weight."
+        ),
+    },
+    {
+        "name": "Corticosteroids",  # 21 notes
+        "aliases": ["corticosteroid", "glucocorticoid", "glucocorticoids",
+                    "steroids", "steroid therapy"],
+        "category": "pharmacology",
+        "summary": (
+            "Synthetic analogues of adrenal steroid hormones. "
+            "MOA: bind the cytosolic glucocorticoid receptor, which "
+            "translocates to the nucleus and suppresses NF-kB driven "
+            "transcription of inflammatory cytokines - a genomic effect, "
+            "which is why the anti-inflammatory action takes hours and "
+            "not minutes. "
+            "Classification: by duration and by mineralocorticoid "
+            "activity. Hydrocortisone is short-acting with substantial "
+            "mineralocorticoid effect, making it the replacement steroid; "
+            "prednisolone is intermediate and the oral workhorse; "
+            "dexamethasone is long-acting with none, making it the choice "
+            "where fluid retention matters or where a cortisol assay must "
+            "stay interpretable. 20 mg hydrocortisone is 5 mg "
+            "prednisolone is 0.75 mg dexamethasone. "
+            "SE: hyperglycaemia, weight gain and Cushingoid change, "
+            "hypertension, osteoporosis, avascular necrosis, proximal "
+            "myopathy, cataract and glaucoma, skin thinning, insomnia and "
+            "psychiatric disturbance, and infection risk including "
+            "reactivation of tuberculosis and strongyloides. "
+            "Red flags: more than about three weeks of treatment "
+            "suppresses the HPA axis, so stopping abruptly or failing to "
+            "increase the dose during illness precipitates adrenal "
+            "crisis. Every patient on a prolonged course needs sick-day "
+            "rules."
+        ),
+    },
+    {
+        "name": "Anticoagulants",  # 21 notes
+        "aliases": ["anticoagulant", "anticoagulation"],
+        "category": "pharmacology",
+        "summary": (
+            "Drugs that interrupt the coagulation cascade, as distinct "
+            "from antiplatelets, which act on primary haemostasis - the "
+            "two are not interchangeable, and arterial thrombosis is "
+            "largely a platelet problem while venous and cardioembolic "
+            "thrombosis is a coagulation problem. "
+            "Classification: vitamin K antagonists (warfarin); indirect "
+            "antithrombin-dependent parenteral agents (unfractionated "
+            "heparin, enoxaparin, fondaparinux); direct oral "
+            "anticoagulants, either factor Xa inhibitors (apixaban, "
+            "rivaroxaban) or direct thrombin inhibitors (dabigatran). "
+            "Note: DOACs are first line in non-valvular AF and in VTE, "
+            "needing no routine monitoring and having far fewer dietary "
+            "and drug interactions. They are contraindicated in "
+            "mechanical valves and in moderate to severe mitral stenosis, "
+            "where warfarin remains the only option, and they accumulate "
+            "in renal impairment - dabigatran most of all. "
+            "SE: bleeding, and the assessment is always net benefit "
+            "rather than absolute risk. "
+            "Reversal: vitamin K with prothrombin complex concentrate for "
+            "warfarin, protamine for heparin, idarucizumab for "
+            "dabigatran, andexanet alfa where available for the Xa "
+            "inhibitors."
+        ),
+    },
+    {
+        "name": "Antidepressants",  # 21 notes
+        "aliases": ["antidepressant"],
+        "category": "pharmacology",
+        "summary": (
+            "Drugs acting on monoamine neurotransmission in depression "
+            "and anxiety disorders. "
+            "Classification: SSRIs (sertraline, escitalopram, fluoxetine) "
+            "first line on tolerability; SNRIs (venlafaxine, duloxetine); "
+            "the noradrenergic and specific serotonergic agent "
+            "mirtazapine, useful where sedation and appetite are wanted; "
+            "tricyclics (amitriptyline, nortriptyline), effective but "
+            "cardiotoxic in overdose and dangerous where suicide risk is "
+            "high; MAOIs, now rarely used and requiring dietary "
+            "restriction. "
+            "Note: efficacy is broadly comparable across the classes, so "
+            "selection is driven by side-effect profile, comorbidity, "
+            "interactions and overdose risk. Mood response takes two to "
+            "four weeks and full effect six to eight, while side effects "
+            "start on day one - which is the single most useful thing to "
+            "tell a patient, because it is why they stop. "
+            "SE: gastrointestinal upset, sexual dysfunction, "
+            "hyponatraemia in the elderly, increased bleeding risk, "
+            "weight change, and discontinuation syndrome on abrupt "
+            "cessation. "
+            "Red flags: review within one to two weeks in patients under "
+            "25, in whom suicidal ideation may increase early. Serotonin "
+            "syndrome is agitation, clonus, hyperreflexia and "
+            "hyperthermia. Antidepressant monotherapy in bipolar "
+            "depression can precipitate a manic switch."
+        ),
+    },
+    {
+        "name": "Opioids",  # 23 notes
+        "aliases": ["opioid", "opiate", "opiates", "narcotic analgesic"],
+        "category": "pharmacology",
+        "summary": (
+            "Agonists at opioid receptors, principally mu. "
+            "MOA: presynaptic inhibition of calcium influx and "
+            "postsynaptic potassium efflux reduce nociceptive "
+            "transmission at the dorsal horn and modulate the descending "
+            "pathways; the same mu action in the brainstem depresses "
+            "respiratory drive and in the gut slows transit. "
+            "Classification: weak (codeine, tramadol), strong (morphine, "
+            "oxycodone, hydromorphone, fentanyl), and partial agonists or "
+            "mixed agents (buprenorphine). Codeine and tramadol are "
+            "prodrugs requiring CYP2D6, so effect varies from none in "
+            "poor metabolisers to toxicity in ultrarapid ones. "
+            "SE: constipation, which does not develop tolerance and needs "
+            "a laxative prescribed alongside from day one; nausea, "
+            "sedation, pruritus, urinary retention, and respiratory "
+            "depression. Tolerance, dependence and hyperalgesia with "
+            "prolonged use. "
+            "Renal: morphine's active metabolite accumulates in renal "
+            "impairment, causing myoclonus and sedation - use "
+            "hydromorphone or fentanyl instead. "
+            "Note: dose in oral morphine equivalents when converting, "
+            "reduce by 25 to 50% for incomplete cross-tolerance, and "
+            "offer take-home naloxone at higher doses."
+        ),
+    },
+    {
+        "name": "Statins",  # 14 notes
+        "aliases": ["statin", "HMG-CoA reductase inhibitor",
+                    "HMG-CoA reductase inhibitors"],
+        "category": "pharmacology",
+        "summary": (
+            "HMG-CoA reductase inhibitors. "
+            "MOA: block the rate-limiting step of hepatic cholesterol "
+            "synthesis; the resulting fall in intracellular cholesterol "
+            "upregulates LDL receptors, which is what actually clears LDL "
+            "from plasma. Plaque stabilisation and anti-inflammatory "
+            "effects contribute beyond the lipid number. "
+            "Indications: secondary prevention after any atherosclerotic "
+            "event, where the benefit is large and the argument is "
+            "settled; primary prevention based on absolute "
+            "cardiovascular risk rather than the cholesterol level "
+            "alone; familial hypercholesterolaemia. "
+            "SE: myalgia is reported by up to 10% but blinded trials show "
+            "most is not attributable to the drug - so a rechallenge or a "
+            "switch is usually the right response rather than abandoning "
+            "the class. True myositis with a raised CK is uncommon and "
+            "rhabdomyolysis rare. Transaminase rise, usually transient; a "
+            "small increase in new-onset diabetes that does not offset "
+            "the cardiovascular benefit. "
+            "Interactions: myopathy risk rises with CYP3A4 inhibitors - "
+            "clarithromycin, azole antifungals, amiodarone, diltiazem and "
+            "grapefruit - which affects atorvastatin and simvastatin "
+            "more than rosuvastatin or pravastatin. "
+            "CI: pregnancy and breastfeeding."
+        ),
+    },
+    {
+        "name": "Beta blockers",  # 15 notes
+        "aliases": ["beta blocker", "beta-blocker", "beta-blockers",
+                    "beta adrenergic antagonist"],
+        "category": "pharmacology",
+        "summary": (
+            "Beta adrenoceptor antagonists. "
+            "MOA: block beta-1 receptors in the heart, reducing rate, "
+            "contractility and AV conduction, and renin release from the "
+            "juxtaglomerular apparatus. "
+            "Classification: cardioselective for beta-1 (metoprolol, "
+            "bisoprolol, atenolol), preferred where airways disease or "
+            "diabetes is a concern; non-selective (propranolol, sotalol, "
+            "which also has class III activity); and those with "
+            "additional alpha blockade (carvedilol, labetalol). "
+            "Selectivity is relative and is lost at higher doses. "
+            "Indications: HFrEF, where only bisoprolol, carvedilol and "
+            "metoprolol succinate have a mortality benefit and the drug "
+            "is started low and titrated slowly; rate control in AF; "
+            "angina; post-MI; thyrotoxicosis; portal hypertension; "
+            "essential tremor; migraine prophylaxis. "
+            "SE: bradycardia and heart block, fatigue, cold peripheries, "
+            "erectile dysfunction, bronchospasm with non-selective "
+            "agents. "
+            "Red flags: they mask the adrenergic warning symptoms of "
+            "hypoglycaemia. Never start during decompensated heart "
+            "failure, and never stop abruptly - rebound tachycardia and "
+            "ischaemia follow. Avoid in cocaine toxicity and in "
+            "phaeochromocytoma before alpha blockade."
+        ),
+    },
+]

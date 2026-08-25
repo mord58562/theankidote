@@ -159,13 +159,18 @@ use **Show log**.
 Tests live in `tests/` and run with plain `python3` — no Anki required:
 
 ```bash
-python3 tests/test_matcher.py       # term matching, incl. equivalence proof
-python3 tests/test_vocab.py         # database integrity and collisions
-python3 tests/test_safe_url.py
+python3 tests/test_security.py      # untrusted content, updater, URL trust
+python3 tests/test_vocab.py         # database integrity, popup height budget
+python3 tests/test_library.py       # library validation, publishing contract
 python3 tests/test_toolbar_order.py
-python3 tests/test_acronym_normalise.py
-python3 tests/shadow_check.py       # import shadowing guard
 ```
+
+The suite is deliberately small and covers one thing: defects that do
+not announce themselves. A broken phrase matcher is obvious on the next
+card; a summary that quietly joins the scrolling backlog, an override
+baked into its own base text, or a URL that Python and Chromium parse
+differently are not. Tests that restated the implementation were removed
+at 2.2.
 
 ---
 

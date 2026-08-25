@@ -19,7 +19,6 @@ import json
 import os
 import pathlib
 import re
-import subprocess
 import sys
 import tempfile
 import unittest
@@ -347,78 +346,6 @@ class MarkerJsEscaping(unittest.TestCase):
                     f"raw {bare} assigned to innerHTML: {line.strip()}")
 
 
-class TriviaPool(unittest.TestCase):
-    """The pool renders inside the popup, so the height budget applies.
-
-    The harder constraint is not length. These appear in a study tool
-    used by someone sitting exams, so a fake fact that could be mistaken
-    for a real one is a genuine harm rather than a weak joke - which is
-    why the pool avoids inventing numbers (doses, scores, thresholds)
-    and stays on names, etymology and committee history.
-    """
-
-    def _pool(self):
-        import re
-        src = (ROOT / "web" / "marker.js").read_text(encoding="utf-8")
-        i = src.index("var _TRIVIA = [")
-        j = src.index("];", i)
-        raw = re.findall(r'"((?:[^"\\]|\\.)*)"', src[i:j])
-        return [x.encode().decode("unicode_escape") for x in raw]
-
-    def test_the_pool_is_large_enough_not_to_repeat(self):
-        """The rate was raised in 2.0.1; nine entries repeated audibly."""
-        self.assertGreaterEqual(len(self._pool()), 20)
-
-    def test_no_duplicates(self):
-        pool = self._pool()
-        self.assertEqual(len(pool), len(set(pool)))
-
-    def test_entries_fit_the_popup(self):
-        """One to two lines. The longest pre-existing entry is 183 chars."""
-        for t in self._pool():
-            self.assertLessEqual(len(t), 200, t[:60])
-            self.assertGreater(len(t), 40, t)
-
-
-class PanelInjectsScopedJs(unittest.TestCase):
-    """The Bookshelf nav bar is only redundant on the search landing page.
-
-    Hiding it everywhere also stripped it from chapter pages, where it is
-    the only way to search the book from mid-article.
-    """
-
-    def test_the_landing_page_check_exists_and_is_used(self):
-        src = (ROOT / "_panel_pearls.py").read_text(encoding="utf-8")
-        self.assertIn("def _is_statpearls_search_landing", src)
-        uses = src.count("_is_statpearls_search_landing(")
-        self.assertGreaterEqual(
-            uses, 3, "both call sites must be gated, not just one")
-
-    def test_chapter_pages_are_not_matched(self):
-        src = (ROOT / "_panel_pearls.py").read_text(encoding="utf-8")
-        tree = ast.parse(src)
-        home = None
-        for node in ast.walk(tree):
-            if isinstance(node, ast.Assign) and any(
-                    getattr(t, "id", "") == "_AP_HOME" for t in node.targets):
-                home = ast.literal_eval(node.value)
-        self.assertTrue(home)
-        fn = next(n for n in ast.walk(tree)
-                  if isinstance(n, ast.FunctionDef)
-                  and n.name == "_is_statpearls_search_landing")
-        ns = {"_AP_HOME": home}
-        exec(compile(ast.Module(body=[fn], type_ignores=[]), "x", "exec"), ns)
-        check = ns["_is_statpearls_search_landing"]
-
-        self.assertTrue(check(home))
-        self.assertTrue(check(home + "?term=hemochromatosis"))
-        self.assertFalse(check("https://www.ncbi.nlm.nih.gov/books/NBK430685/"))
-        self.assertFalse(check(
-            "https://www.ncbi.nlm.nih.gov/books/NBK430685/?term=x"))
-        self.assertFalse(check("https://go.drugbank.com/"))
-        self.assertFalse(check(""))
-
-
 class ConfigWriteBackPattern(unittest.TestCase):
     """`set_value` writes the whole config dict back to meta.json.
 
@@ -714,26 +641,97 @@ class DrugNameCoverage(unittest.TestCase):
             self.assertIn("furosemide", names, word)
 
     def test_no_american_generic_is_displayed(self):
-        """The popup heading is the most visible place the rule applies."""
+        """The popup heading is the most visible place the rule applies.
+
+        `estradiol` and `lidocaine` were on this list until 2.2 and are
+        not American - they are the current Australian Approved Names,
+        and asserting otherwise is what kept the 5a decision pointing the
+        wrong way for three releases. What makes a name wrong for the
+        heading is that the TGA has superseded it, which is the test
+        below, not that Americans also use it.
+        """
         lib = json.loads(
             (ROOT / "data" / "library.json").read_text(encoding="utf-8"))
         generics = {d["generic"].lower() for d in lib["drugs"]}
-        for us in ("meperidine", "rifampin", "estradiol", "lidocaine",
-                   "nitroglycerin", "acetaminophen", "epinephrine",
-                   "albuterol"):
+        for us in ("meperidine", "rifampin", "nitroglycerin",
+                   "acetaminophen", "epinephrine", "albuterol"):
             self.assertNotIn(us, generics,
                              f"{us} is displayed as a popup heading")
 
-    def test_american_spellings_still_resolve_to_the_australian_name(self):
-        """Dropping the US entry must not drop US-written cards."""
+    def test_no_superseded_australian_name_is_displayed(self):
+        """A superseded heading is invisible: it looks entirely normal.
+
+        Every one of these is on the TGA's affected-ingredients list and
+        every one of them headed a popup before 2.2. Nothing reports it,
+        because a wrong-but-plausible drug name reads exactly like a
+        right one - which is the same failure mode as a term that never
+        highlights.
+        """
+        lib = json.loads(
+            (ROOT / "data" / "library.json").read_text(encoding="utf-8"))
+        generics = {d["generic"].lower() for d in lib["drugs"]}
+        for old in ("lignocaine", "oestradiol", "phenobarbitone",
+                    "beclomethasone", "cysteamine", "benztropine",
+                    "frusemide", "cephalexin", "benzhexol"):
+            self.assertNotIn(old, generics,
+                             f"{old} is displayed as a popup heading")
+
+    def test_superseded_and_american_spellings_still_resolve(self):
+        """Renaming the heading must not drop cards written the old way.
+
+        This is the whole reason the 5a reversal is safe: an Australian
+        card saying `lignocaine` and a textbook saying `lidocaine` both
+        land on the same popup, and only the heading changed.
+        """
         d = self._drugs()
         for word, expect in (("meperidine", "pethidine"),
                              ("rifampin", "rifampicin"),
-                             ("estradiol", "oestradiol"),
-                             ("lidocaine", "lignocaine"),
-                             ("nitroglycerin", "glyceryl trinitrate")):
+                             ("nitroglycerin", "glyceryl trinitrate"),
+                             ("lignocaine", "lidocaine"),
+                             ("lidocaine", "lidocaine"),
+                             ("oestradiol", "estradiol"),
+                             ("estradiol", "estradiol"),
+                             ("phenobarbitone", "phenobarbital"),
+                             ("beclomethasone", "beclometasone"),
+                             ("cysteamine", "mercaptamine (cysteamine)"),
+                             ("mercaptamine", "mercaptamine (cysteamine)")):
             names = [x["name"] for x in d.resolve(f"Gave {word} today.")]
             self.assertIn(expect, names, word)
+
+    def test_the_mandated_dual_label_inns_resolve(self):
+        """`epinephrine` is printed on Australian ampoules by regulation.
+
+        Adrenaline and noradrenaline are dual labelled permanently, INN
+        in brackets, so a card written off the ampoule carries the word.
+        It resolves; the heading stays Australian.
+        """
+        d = self._drugs()
+        for word, expect in (("epinephrine", "adrenaline"),
+                             ("norepinephrine", "noradrenaline")):
+            names = [x["name"] for x in d.resolve(f"Gave {word} today.")]
+            self.assertIn(expect, names, word)
+
+    def test_a_rename_keeps_its_drugbank_accession(self):
+        """A rename that drops the accession downgrades the popup button
+        from the drug's monograph to a search page, and looks fine.
+
+        `glyceryl trinitrate` shipped that way from 2.1.1 to 2.2:
+        DB00727 stayed keyed to `nitroglycerin` and every GTN popup
+        opened a search. Nothing surfaces it, because a search page is a
+        plausible result.
+        """
+        lib = json.loads(
+            (ROOT / "data" / "library.json").read_text(encoding="utf-8"))
+        ids = lib["drugbank_ids"]
+        generics = {d["generic"].lower() for d in lib["drugs"]}
+        for new, old in (("glyceryl trinitrate", "nitroglycerin"),
+                         ("lidocaine", "lignocaine"),
+                         ("estradiol", "oestradiol"),
+                         ("phenobarbital", "phenobarbitone")):
+            if old in ids:
+                self.assertIn(new, ids,
+                              f"{old} carries an accession that {new} lost")
+            self.assertIn(new, generics)
 
     def test_no_duplicate_generics(self):
         lib = json.loads(

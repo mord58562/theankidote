@@ -68,7 +68,9 @@ def _custom_terms() -> list:
             "url": url,
             "summary": (entry.get("summary") or "").strip(),
             "source": entry.get("source") or "custom",
+            "label": (entry.get("label") or "").strip(),
             "case_sensitive": bool(entry.get("case_sensitive")),
+            "user_defined": True,
         })
     _custom_terms_cache = out
     return out
@@ -242,9 +244,9 @@ def _acronym_to_condition(expansion: str):
 
     Used to give acronym popups a richer body: instead of the acronym's
     own short description we render the matched condition's full
-    summary (Sx / Ix / Mx / Ddx) with a small 'ACRONYM = full name.'
-    preface so the link between the abbreviation and the condition is
-    explicit.
+    summary (Sx / Ix / Mx / Ddx). The popup title already reads
+    'ACRONYM - full name', so the body starts straight into the
+    condition rather than restating the expansion a second time.
 
     Spelling-tolerant: tries direct lookup first, then a normalised
     form swapping American spelling to British (the canonical form used
@@ -269,10 +271,11 @@ def _acronym_terms(card) -> list:
 
     Smart enrichment: if the acronym's expansion matches a known condition
     (e.g. MI -> 'Myocardial infarction'), the popup shows the CONDITION's
-    full summary instead of the acronym's short description, with a small
-    'MI = Myocardial infarction.' preface so the user sees why this popup
-    appeared.  Falls back to the acronym's own description when no
-    matching condition exists (lab-value / instrument acronyms etc.)."""
+    full summary instead of the acronym's short description. The title
+    ('MI - Myocardial infarction') already carries the expansion, so the
+    body doesn't restate it. Falls back to the acronym's own description
+    when no matching condition exists (lab-value / instrument acronyms
+    etc.)."""
     text = _card_text(card)
     if not text:
         return []
@@ -280,14 +283,12 @@ def _acronym_terms(card) -> list:
     for it in _acronyms.resolve(text):
         cond = _acronym_to_condition(it["expansion"])
         if cond is not None:
-            preface = f"{it['acronym']} = {cond['name']}."
-            body = cond.get("summary", "") or ""
             out.append({
                 "title":      it["acronym"],
                 "_article":   f'{it["acronym"]} - {cond["name"]}',
                 "_expansion": it["expansion"],
                 "url":        _conditions._url_for(cond),
-                "summary":    f"{preface} {body}".strip(),
+                "summary":    (cond.get("summary", "") or "").strip(),
                 "source":     "statpearls",
                 "case_sensitive": True,
             })
@@ -451,6 +452,7 @@ def _build_pattern(terms: list):
             "article": _esc_attr(t.get("_article") or title),
             "summary": _esc_attr(t.get("summary") or ""),
             "source":  t.get("source") or "statpearls",
+            "badge":   _esc_attr(t.get("label") or ""),
             "utd":     _esc_attr(json.dumps(t.get("utd") or [],
                                             separators=(",", ":"))),
         }
@@ -468,6 +470,7 @@ def _build_pattern(terms: list):
                 "article": _esc_attr(t.get("_article") or title),
                 "summary": _esc_attr(t.get("summary") or ""),
                 "source":  t.get("source") or "statpearls",
+                "badge":   _esc_attr(t.get("label") or ""),
                 "utd":     _esc_attr(json.dumps(t.get("utd") or [],
                                                 separators=(",", ":"))),
             }
@@ -493,9 +496,17 @@ def _inject_highlights(html: str, results: list, color: str) -> str:
     # if there are none - avoids running the regex on every card).
     if 'class="sp-mark"' in html:
         html = _strip_sp_marks(html)
+    # A term under 4 characters matched case-insensitively is noise -
+    # "hi", "is", "an" would light up constantly. Case-sensitive terms
+    # are exempt because the casing itself is discriminating (acronyms:
+    # "PE" won't match "pe" in prose). User-defined custom terms are
+    # exempt too: the user typed this one in deliberately, so silently
+    # dropping it because it happens to be short is worse than the
+    # noise the filter exists to prevent.
     terms = [r for r in results
              if r.get("title")
-             and (len(r["title"]) >= 4 or r.get("case_sensitive"))]
+             and (len(r["title"]) >= 4 or r.get("case_sensitive")
+                  or r.get("user_defined"))]
     if not terms:
         return html
 
@@ -516,6 +527,7 @@ def _inject_highlights(html: str, results: list, color: str) -> str:
                     f'data-sp-title="{t["article"]}" '
                     f'data-sp-summary="{t["summary"]}" '
                     f'data-sp-source="{t.get("source", "statpearls")}" '
+                    f'data-sp-badge="{t.get("badge", "")}" '
                     f'data-sp-utd="{t.get("utd", "[]")}">{word}</span>')
         return rx.sub(_span, text)
 

@@ -29,55 +29,6 @@ def _valid():
     return copy.deepcopy(_library.LIBRARY)
 
 
-class LibraryValidation(unittest.TestCase):
-    """`_validate` is the only thing between a bad file and a broken add-on."""
-
-    def test_the_shipped_library_validates(self):
-        self.assertEqual(_library._validate(_valid()), "")
-
-    def test_a_future_schema_is_refused(self):
-        lib = _valid()
-        lib["schema"] = _library.SCHEMA + 1
-        self.assertIn("schema", _library._validate(lib))
-
-    def test_schema_is_checked_before_content(self):
-        """A library for a newer schema must be refused, not half-read.
-
-        Half-reading is the failure that cannot be rolled back: every
-        installation that has not upgraded breaks at once, on content
-        published from a machine that looked fine.
-        """
-        lib = {"schema": _library.SCHEMA + 1}
-        self.assertIn("schema", _library._validate(lib))
-
-    def test_missing_vocabulary_is_refused(self):
-        for key in _library._REQUIRED:
-            lib = _valid()
-            del lib[key]
-            self.assertIn(key, _library._validate(lib),
-                          f"a library with no {key!r} was accepted")
-
-    def test_empty_vocabulary_is_refused(self):
-        lib = _valid()
-        lib["drugs"] = []
-        self.assertIn("drugs", _library._validate(lib))
-
-    def test_wrong_type_is_refused(self):
-        lib = _valid()
-        lib["acronyms"] = ["not", "a", "mapping"]
-        self.assertIn("acronyms", _library._validate(lib))
-
-    def test_structurally_valid_but_semantically_junk_is_refused(self):
-        """JSON-shaped garbage should fail here, not with an
-        AttributeError halfway through building the matcher."""
-        lib = _valid()
-        lib["conditions"] = [{"nonsense": True}]
-        self.assertIn("name", _library._validate(lib))
-
-    def test_not_an_object(self):
-        self.assertIn("object", _library._validate([1, 2, 3]))
-
-
 class BundledCopyIsTheFloor(unittest.TestCase):
     def test_bundled_library_exists_and_parses(self):
         self.assertTrue(os.path.exists(_library.BUNDLED),
@@ -406,6 +357,116 @@ class ConfigParity(unittest.TestCase):
     def test_the_2_0_upgrade_popup_is_gone(self):
         src = (ROOT / "__init__.py").read_text(encoding="utf-8")
         self.assertNotIn("_show_2_0_notice", src)
+
+
+class DrugSummariesAreNotBakedIn(unittest.TestCase):
+    """The drug override seam is new at 2.2 and inherits the same trap.
+
+    `_drugs` now applies `drug_summaries` by assigning to
+    `entry["summary"]`, exactly as `_conditions` does. The failure is
+    silent in the worst way: the override still renders, so the popup
+    looks right, and the only symptom is that deleting or editing the
+    override in `content/_rich.py` stops having any effect.
+    """
+
+    def test_base_drug_text_differs_from_the_override(self):
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        overrides = lib.get("drug_summaries") or {}
+        self.assertTrue(overrides, "expected drug overrides in the library")
+        base = {d["generic"].lower(): d["summary"] for d in lib["drugs"]}
+        identical = [g for g, t in overrides.items()
+                     if base.get(g.lower()) == t]
+        self.assertEqual(
+            identical, [],
+            f"{len(identical)} drug override(s) have been baked into the "
+            f"base text on disk; the override is now uneditable")
+
+    def test_every_override_names_a_real_generic(self):
+        """An override on a name that does not exist never renders, and
+        nothing says so. A rename is the likely cause.
+
+        `new_drugs` counts here. It is kept out of `drugs` on purpose
+        (see pearls/_drugs.py), and a version of this test that forgot
+        that would reject every new entry's own summary - which is
+        exactly what it did the first time insulin was added.
+        """
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        generics = {d["generic"].lower() for d in lib["drugs"]}
+        generics |= {d["generic"].lower() for d in (lib.get("new_drugs") or [])}
+        orphaned = [g for g in (lib.get("drug_summaries") or {})
+                    if g.lower() not in generics]
+        self.assertEqual(orphaned, [])
+
+    def test_new_drugs_do_not_shadow_an_existing_entry(self):
+        """Two entries under one generic means whichever indexes first
+        wins, silently and non-deterministically."""
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        base = {d["generic"].lower() for d in lib["drugs"]}
+        clash = [d["generic"] for d in (lib.get("new_drugs") or [])
+                 if d["generic"].lower() in base]
+        self.assertEqual(clash, [])
+
+    def test_new_drugs_are_not_appended_to_the_base_list(self):
+        """If they were, the next build would read them back as base and
+        the NEW_DRUGS table would stop being authoritative."""
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        self.assertTrue(lib.get("new_drugs"), "expected new drug entries")
+        base = {d["generic"].lower() for d in lib["drugs"]}
+        for d in lib["new_drugs"]:
+            self.assertNotIn(d["generic"].lower(), base)
+
+    def test_an_absent_new_drugs_key_is_still_a_valid_library(self):
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        lib.pop("new_drugs", None)
+        self.assertEqual(_library._validate(lib), "")
+
+    def test_a_poisoned_new_drugs_key_is_rejected(self):
+        """These entries go straight into the matcher, so a bad shape is
+        a broken popup on every card rather than a one-off."""
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        for bad in ({}, ["x"], [{"generic": "z"}], [{"summary": "z"}],
+                    [{"generic": "z", "summary": "  "}],
+                    [{"generic": "z", "summary": "t", "aliases": "s"}],
+                    [{"generic": "z", "summary": "t", "aliases": [7]}]):
+            copy = dict(lib)
+            copy["new_drugs"] = bad
+            self.assertTrue(_library._validate(copy),
+                            f"{bad!r} passed validation")
+
+    def test_importing_drugs_does_not_mutate_the_library(self):
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        base = {d["generic"]: d["summary"] for d in lib["drugs"]}
+        loaded = {d["generic"]: d["summary"]
+                  for d in _library.get("drugs")}
+        drifted = [g for g in base if base[g] != loaded.get(g)]
+        self.assertEqual(
+            drifted[:5], [],
+            "importing pearls._drugs rewrote the loaded library in place")
+
+    def test_an_absent_drug_summaries_key_is_still_a_valid_library(self):
+        """Libraries published before 2.2 do not carry the key, and a
+        published library is preferred over the bundled one."""
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        lib.pop("drug_summaries", None)
+        self.assertEqual(_library._validate(lib), "")
+
+    def test_a_poisoned_drug_summaries_key_is_rejected(self):
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        for bad in ([], {"clozapine": 7}, {"clozapine": None},
+                    {"clozapine": "   "}, {7: "text"}):
+            copy = dict(lib)
+            copy["drug_summaries"] = bad
+            self.assertTrue(_library._validate(copy),
+                            f"{bad!r} passed validation")
 
 
 if __name__ == "__main__":

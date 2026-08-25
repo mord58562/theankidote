@@ -214,6 +214,7 @@
         ".label-db{color:#f4b942;}" +
         ".label-utd{color:#5dca7f;}" +
         ".label-pre{color:#9aa9ff;}" +
+        ".label-custom{color:#f291d6;}" +
         ".title{font-size:17px;font-weight:600;margin:0 0 9px 0;}" +
         ".summary{font-size:14px;opacity:.88;line-height:1.6;margin:0;}" +
         ".lede{margin:0 0 2px 0;}" +
@@ -258,6 +259,7 @@
         ".box.sp-light .label.label-db{color:#c07400;}" +
         ".box.sp-light .label.label-utd{color:#2c8a4f;}" +
         ".box.sp-light .label.label-pre{color:#3a4fa8;}" +
+        ".box.sp-light .label.label-custom{color:#c9509e;}" +
         ".box.sp-light .summary{opacity:.92;}" +
         ".box.sp-light .cat{color:#0a9ba3;}" +
         ".box.sp-light .utd{border-top-color:rgba(0,0,0,.09);}" +
@@ -399,16 +401,20 @@
     var summary = el.getAttribute("data-sp-summary") || "";
     _tipUrl = el.getAttribute("data-sp-url") || "";
     var source = el.getAttribute("data-sp-source") || "statpearls";
-    var isDb   = source === "drugbank";
-    var isUtd  = source === "uptodate";
-    var isPre  = source === "preclinical";
+    var badge  = el.getAttribute("data-sp-badge")  || "";
+    var isDb     = source === "drugbank";
+    var isUtd    = source === "uptodate";
+    var isPre    = source === "preclinical";
+    var isCustom = source === "custom";
     if (_tipLabel) {
       _tipLabel.textContent = isDb ? "DrugBank"
                             : (isUtd ? "UpToDate"
-                              : (isPre ? "Preclinical" : "StatPearls"));
+                              : (isPre ? "Preclinical"
+                                : (isCustom ? (badge || "Custom") : "StatPearls")));
       _tipLabel.className   = isDb ? "label label-db"
                             : (isUtd ? "label label-utd"
-                              : (isPre ? "label label-pre" : "label"));
+                              : (isPre ? "label label-pre"
+                                : (isCustom ? "label label-custom" : "label")));
     }
     var egg = _eggFor(el, _bumpPopupCounter());
     if (_tipBox) {
@@ -461,7 +467,8 @@
       _tipOpenBtn.style.display = _tipUrl ? "block" : "none";
       _tipOpenBtn.textContent   = isUtd ? "Open UpToDate →"
                                 : (isDb ? "Open DrugBank →"
-                                  : (isPre ? "Open reference →" : "Open article →"));
+                                  : (isPre ? "Open reference →"
+                                    : (isCustom ? "Open link →" : "Open article →")));
     }
     _position(el);
   }
@@ -479,9 +486,24 @@
   // whatever its content needed - and bullet rendering made the same
   // summary noticeably taller than the paragraph it replaced (a mean of
   // about 85px across the structured summaries, and over 300px for the
-  // worst). The popup is meant to orient and hand off to the article
-  // underneath; one that fills the screen competes with it.
-  var _MAX_H = 620;
+  // worst).
+  //
+  // Raised from 620 to 900 at 2.2. The original 620 was chosen against
+  // a height estimate that modelled the summary text and nothing else -
+  // not the source label, the title, the UpToDate chip row or the footer
+  // button - and so understated every popup by 114px at the very least,
+  // 153px at the median. Measured across all 2,429 entries under a box
+  // model taken from the CSS above, 883 of them scrolled at 620 where
+  // the estimate said 350 did. A scrollbar in a reference popup is worse
+  // than a taller popup, so the cap moves rather than the content.
+  //
+  // 900 is where the return flattens: it leaves 203 entries scrolling
+  // (8%), and each further 40px buys only ~50 more. It is also a
+  // permission rather than a size. `_position` clamps to
+  // `Math.max(120, room)` first, so the popup can only use the cap when
+  // the viewport actually offers it, and on a short window the room
+  // clamp still decides.
+  var _MAX_H = 900;
 
   function _position(el) {
     if (_tipBox) _tipBox.style.maxHeight = "";
@@ -1018,6 +1040,7 @@
                '" data-sp-title="' + _esc(t.article || t.title) +
                '" data-sp-summary="' + _esc(t.summary || "") +
                '" data-sp-source="' + _esc(t.source || "") +
+               '" data-sp-badge="' + _esc(t.badge || "") +
                '" data-sp-utd="' + _esc(utdAttr) + '">' + m + "</span>";
       });
       var wrap = document.createElement("span");

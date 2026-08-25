@@ -26,7 +26,6 @@ are covered by `_acronyms.py` and drugs by `_drugs.py`.
 
 from . import _library
 
-import re
 from urllib.parse import quote_plus
 
 from . import _matcher
@@ -193,13 +192,9 @@ for _n in _NAMES:
 # Sort longest first so the regex prefers fuller matches over substrings.
 _NAMES = sorted(_uniq, key=len, reverse=True)
 # Matched by first-word index rather than a several-thousand-alternative
-# regex; see pearls/_matcher.py for why and for the equivalence proof.
-# The pattern is kept because the test suite diffs the two.
-_CONDITION_RE = (
-    re.compile(r"\b(?:" + "|".join(re.escape(n) for n in _NAMES) + r")\b",
-               re.IGNORECASE)
-    if _NAMES else None
-)
+# regex; see pearls/_matcher.py for why. The alternation was kept
+# alongside it until 2.2 so a test could diff the two; compiling 826
+# alternatives cost 18ms of every launch to build an object nothing read.
 _CONDITION_MATCHER = _matcher.PhraseMatcher(_NAMES) if _NAMES else None
 
 

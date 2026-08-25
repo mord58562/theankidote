@@ -17,9 +17,6 @@ avoid false positives.
 """
 
 from . import _library
-
-import re
-
 from . import _matcher
 from urllib.parse import quote_plus
 
@@ -27,7 +24,17 @@ from urllib.parse import quote_plus
 # authoring copy of this vocabulary lives in content/, and is
 # compiled rather than imported so content can ship without a
 # new add-on release.
-_DRUGS: list = _library.get("drugs")
+#
+# Copied entry by entry, and the copy is not optional. `_DRUG_SUMMARIES`
+# below rewrites `summary` in place, and `tools/build_library.py` reads
+# the drug list back out of the library to recompile it. Without the
+# copy those are the same dict objects, so the first rebuild after an
+# override is written bakes the override in as the base text - and from
+# then on, deleting the override from `content/_rich.py` changes
+# nothing, because the text it was replacing is gone. This is the
+# identical trap `_conditions.py` documents at `[dict(c) for c in ...]`;
+# it was found there and it applies here for the same reason.
+_DRUGS: list = [dict(d) for d in _library.get("drugs")]
 
 
 # ── DrugBank direct URLs ──────────────────────────────────────────────────────
@@ -52,6 +59,61 @@ def _drugbank_url(entry: dict) -> str:
         return f"https://go.drugbank.com/drugs/{db_id}"
     name = entry.get("generic") or ""
     return f"https://go.drugbank.com/unearth/q?searcher=drugs&query={quote_plus(name)}"
+
+
+# Drugs absent from the base vocabulary entirely, authored in
+# content/_rich.py as NEW_DRUGS and compiled into the library under its
+# own key. Mirrors `new_conditions` and exists for the same reason: the
+# base vocabulary is a fixed corpus and there has to be a way to add to
+# it over the content channel rather than only over an AnkiWeb release.
+#
+# Kept out of `drugs` deliberately. `tools/build_library.py` reads
+# `drugs` back out of the library as the base for the next build, so an
+# entry appended there becomes permanent - removing it from NEW_DRUGS
+# afterwards would do nothing. A separate key means the list stays
+# authoritative in both directions.
+#
+# Merged before the index is built, so a new name is matchable like any
+# other. Optional, because a library published before 2.2 does not carry
+# it.
+_NEW_DRUGS: list = _library.get("new_drugs", [])
+_DRUGS = _DRUGS + [dict(d) for d in _NEW_DRUGS]
+
+
+# ── Structured rewrites, merged over the entries above ───────────────────────
+#
+# The drug vocabulary had no authoring copy at all before 2.2. Condition
+# text has lived in `content/_rich.py` since the 2.0 split and reaches
+# installs over the content channel; drug text lived only in
+# `data/library.json`, which is a build artefact nobody hand-edits, so
+# "rewrite this drug summary" had no procedure. That is why the drug
+# backlog never moved while the condition backlog did.
+#
+# This is the same seam as `rich_summaries`, deliberately: authored in
+# `content/_rich.py`, compiled into the library, applied at runtime
+# rather than baked in at build time, keyed on the canonical generic.
+#
+# Keyed on the generic only, never an alias. `resolve()` titles the
+# popup from `d["generic"]`, so an override keyed on an alias would
+# merge and then render under a heading it was not written for - the
+# same rule `_conditions.py` records for canonical names.
+#
+# Optional key: a library published before 2.2 does not carry it, and a
+# published library is preferred over the bundled one, so its absence is
+# a normal state.
+_DRUG_SUMMARIES: dict = _library.get("drug_summaries", {})
+
+_SUMMARIES_APPLIED: set = set()
+_BY_GENERIC: dict = {}
+for _d in _DRUGS:
+    _g0 = _d.get("generic")
+    if _g0:
+        _BY_GENERIC.setdefault(_g0.lower(), _d)
+for _canon, _text in _DRUG_SUMMARIES.items():
+    _entry = _BY_GENERIC.get(_canon.lower())
+    if _entry is not None and _text:
+        _entry["summary"] = _text
+        _SUMMARIES_APPLIED.add(_canon)
 
 
 # ── Build lookup tables and master regexes ────────────────────────────────────
@@ -88,30 +150,15 @@ for _d in _DRUGS:
         _BRAND_LOOKUP[_b] = _d
 
 
-def _compile_alternation(words):
-    """Build a regex that matches any of `words` as whole words.  Sort
-    longest-first so multi-word names take precedence over their components."""
-    if not words:
-        return None
-    sorted_words = sorted(words, key=len, reverse=True)
-    return re.compile(r"\b(?:" + "|".join(re.escape(w) for w in sorted_words) + r")\b")
-
-
-# Generic names: case-insensitive
-_GENERIC_RE = re.compile(
-    r"\b(?:" + "|".join(re.escape(g) for g in
-                        sorted(_GENERIC_LOOKUP, key=len, reverse=True)) + r")\b",
-    re.IGNORECASE,
-) if _GENERIC_LOOKUP else None
-
-# Brand names: case-sensitive (brand names are capitalised; lower-case noise
-# words could otherwise false-positive)
-_BRAND_RE = _compile_alternation(list(_BRAND_LOOKUP)) if _BRAND_LOOKUP else None
-
-# First-word-indexed equivalents of the two patterns above. See
-# pearls/_matcher.py: the alternations are O(text x alternatives) and
-# these are O(text), which is what lets the database keep growing. The
-# regexes stay for the equivalence test in tests/test_matcher.py.
+# Matched by first-word index rather than by a single alternation over
+# every name. See pearls/_matcher.py: an alternation is
+# O(text x alternatives) and this is O(text), which is what lets the
+# database keep growing.
+#
+# The alternations themselves were kept until 2.2 purely so a test
+# could diff the two matchers against each other. Compiling them cost
+# 27ms of every Anki launch (1,161 generics and 1,651 brands) to build
+# two objects nothing ever read.
 _GENERIC_MATCHER = (_matcher.PhraseMatcher(list(_GENERIC_LOOKUP))
                     if _GENERIC_LOOKUP else None)
 _BRAND_MATCHER = (_matcher.PhraseMatcher(list(_BRAND_LOOKUP), case_sensitive=True)

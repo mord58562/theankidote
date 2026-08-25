@@ -33,7 +33,8 @@ with these fields:
 | `url` | yes | Article URL opened when the popup is clicked (must be http/https). |
 | `article` | no | Display title for the popup header - defaults to `title`. |
 | `case_sensitive` | no | If `true`, only exact-case matches highlight. |
-| `source` | no | Free-form source label shown in the popup; defaults to `"custom"`. |
+| `source` | no | Internal category the popup's styling keys off. Leave unset - entries from the table are always `"custom"`. Only `"statpearls"`, `"drugbank"`, `"uptodate"`, `"preclinical"` and `"custom"` have defined colours; anything else renders as StatPearls. |
+| `label` | no | The badge text shown on the popup for a `"custom"`-sourced entry, e.g. `"Reddit"` or `"Lecture notes"`. Defaults to `"Custom"` when unset. Has no effect on non-`"custom"` sources. |
 
 Most people should use **Settings → General → Custom terms…**, which
 edits these entries as a table and cannot produce invalid JSON. Fields
@@ -120,7 +121,7 @@ to `false` in config and restart.
 | `enableChat` | bool | `true` | Master toggle. False hides the toolbar button and shortcut. |
 | `chatHomeUrl` | string / null | `null` | URL the chat dock loads on a fresh install. `null` resolves to the first entry in the user's preferred provider order (`chatProviders` if set, else `DEFAULT_PROVIDERS`). After the user clicks any provider button, `chatLastUrl` (below) overrides this. |
 | `chatLastUrl` | string / null | `null` | Internal: the user's last-selected provider URL. Persisted across restarts so the dock reopens to the same provider. |
-| `chatOpenCount` | int | `0` | Internal: number of times the chat dock has been opened. Used by the easter-egg that surfaces a quiet Dr House quote in the dock header on rare opens. |
+| `chatOpenCount` | int | `0` | Internal: number of times the chat dock has been opened. |
 | `_card_count` | int | `0` | Internal: number of cards answered since the addon was installed. |
 | `_quoteTick` | float | `0` | Internal: timestamp marker used to pace an occasional reviewer tooltip. |
 | `chatProviders` | list of `[label, url]` / null | `null` | Override the built-in provider list. `null` uses the bundled set (Claude, Perplexity, ChatGPT, Gemini, Copilot, DeepSeek, Grok, Duck). When more than five providers are configured the surplus collapses into a `▾` overflow menu. |
