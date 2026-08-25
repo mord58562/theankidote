@@ -2379,6 +2379,237 @@ RICH_SUMMARIES = {
         "diagnosed, and the therapeutic relationship depends on not "
         "repeating that."
     ),
+
+    # ═══════ BATCH 5: ordered by measured deck frequency ════════════════
+    #
+    # Ranked by direct scan of every note in the live Anki collection
+    # (~/Library/Application Support/Anki2/User 1/collection.anki2),
+    # word-boundary counting each condition name and every alias across
+    # all fields with HTML and cloze markers stripped. Restricted to
+    # conditions with no rich override yet.
+    #
+    # Frequencies for this batch: MDD 207, schizophrenia 102, meningitis
+    # 95, delirium 89, sepsis 87, HIV 77, syncope 62, AKI 57,
+    # hypoglycaemia 54, gestational diabetes 52.
+
+    "Major depressive disorder": (
+        "Persistent low mood or anhedonia with functional impairment for "
+        "at least two weeks. Dx: five or more of nine DSM-5 symptoms with "
+        "mood or anhedonia among them, near-daily for two weeks and causing "
+        "dysfunction; SIGECAPS covers the rest - sleep, interest, guilt, "
+        "energy, concentration, appetite, psychomotor and suicidality. "
+        "Screen with PHQ-9. Ix: no test confirms the diagnosis; investigate "
+        "to exclude organic mimics with TFT, FBC and ferritin, B12 and "
+        "folate, EUC, glucose, and a targeted drug and alcohol history. "
+        "Mx: mild disease responds to CBT, behavioural activation or "
+        "interpersonal therapy alone; moderate to severe adds an "
+        "antidepressant, SSRI first line in Australia (sertraline, "
+        "escitalopram), with SNRI or mirtazapine as second choice. Review "
+        "at 2 weeks for tolerability and 4 to 6 for response, then switch "
+        "class or augment if inadequate. ECT for melancholia, psychotic "
+        "features, catatonia or urgent suicide risk. Note: assess suicide "
+        "risk at every visit and document specifically, not just at the "
+        "first; Australian guidance is the RANZCP mood disorders CPG."
+    ),
+
+    "Schizophrenia": (
+        "Chronic psychotic disorder with continuous illness for at least "
+        "six months and active-phase symptoms for at least one month. "
+        "Dx: two or more of delusions, hallucinations, disorganised speech, "
+        "grossly disorganised or catatonic behaviour, and negative "
+        "symptoms - at least one from the first three. Onset typically late "
+        "teens to mid twenties in males, later in females. Ix: no "
+        "confirmatory test; exclude organic causes with FBC, EUC, LFT, TFT, "
+        "calcium, B12, urine drug screen, HIV and syphilis serology, and "
+        "MRI brain in atypical or late-onset presentation. Mx: "
+        "second-generation antipsychotic first line - risperidone, "
+        "olanzapine, aripiprazole, paliperidone; long-acting injectables "
+        "improve adherence and are offered early rather than after multiple "
+        "relapses. Clozapine for treatment resistance (inadequate response "
+        "to two adequate trials), with mandatory neutrophil monitoring and "
+        "clinical review for myocarditis. CBT for psychosis, family "
+        "intervention and vocational support are core, not optional. Note: "
+        "physical health mortality gap is about 15 years, largely "
+        "cardiometabolic, so metabolic monitoring is part of the treatment "
+        "plan from the first script."
+    ),
+
+    "Meningitis": (
+        "Inflammation of the meninges, usually infective. Causes: bacterial "
+        "in adults is most often Streptococcus pneumoniae and Neisseria "
+        "meningitidis, with Listeria in the very young, over-50s, pregnant "
+        "or immunocompromised; viral is commonly enterovirus; consider TB "
+        "and cryptococcus in chronic or immunocompromised presentations. "
+        "Clinical features: fever, neck stiffness and altered mental state "
+        "is the classic triad but is present in only about 40%; headache "
+        "and photophobia are more sensitive; a non-blanching petechial rash "
+        "suggests meningococcaemia. Kernig and Brudzinski are specific but "
+        "not sensitive. Ix: blood cultures then lumbar puncture without "
+        "delay; CT before LP only if focal deficit, GCS below 12, seizure, "
+        "immunocompromise, or papilloedema. Mx: give empiric ceftriaxone 2g "
+        "IV plus dexamethasone 10mg IV before or with the first antibiotic "
+        "dose; add benzylpenicillin or amoxicillin if Listeria risk; add "
+        "vancomycin if resistant pneumococcus is plausible. Notify public "
+        "health and offer household contact prophylaxis for meningococcus. "
+        "Red flags: purpuric rash, shock or reduced GCS - treat before "
+        "imaging."
+    ),
+
+    "Delirium": (
+        "Acute fluctuating disturbance of attention and awareness with "
+        "cognitive change, developing over hours to days and caused by "
+        "another medical condition. Types: hyperactive (agitated, "
+        "hallucinating), hypoactive (withdrawn, quiet - the more common "
+        "and the more missed), or mixed. Causes: PINCH ME - Pain, "
+        "Infection, Nutrition, Constipation and dehydration, Hypoxia, "
+        "Medication (anticholinergics, opioids, benzodiazepines, steroids, "
+        "polypharmacy), Environment change, and Electrolyte or metabolic "
+        "derangement. Alcohol and benzodiazepine withdrawal are specific "
+        "traps. Ix: bedside screen (4AT or CAM), then FBC, EUC, calcium, "
+        "glucose, LFT, TFT, urinalysis, CXR, ECG, blood cultures if febrile; "
+        "CT brain and LP only for focal signs, unexplained fever with "
+        "headache, or no other cause found. Mx: treat the underlying cause. "
+        "Reorientate, restore sleep-wake, correct sensory impairment, "
+        "mobilise, and avoid restraint. Antipsychotics (haloperidol or "
+        "olanzapine) only for severe distress or safety, at the lowest "
+        "dose and shortest duration; benzodiazepines only in alcohol or "
+        "benzodiazepine withdrawal. Note: independently associated with "
+        "mortality, longer admission and new dementia, so prevention is "
+        "treatment."
+    ),
+
+    "Sepsis": (
+        "Life-threatening organ dysfunction from a dysregulated host "
+        "response to infection. Septic shock is sepsis with lactate over "
+        "2 mmol/L and vasopressor need to keep MAP at least 65 mmHg "
+        "despite fluid resuscitation. Ix: lactate, blood cultures before "
+        "antibiotics where possible, FBC, EUC, LFT, coagulation, VBG, "
+        "urinalysis and cultures from any plausible source (urine, sputum, "
+        "wound, line, CSF); imaging directed by source. Mx: Hour-1 sepsis "
+        "bundle - measure lactate, take cultures, give broad-spectrum IV "
+        "antibiotics, start 30 mL/kg crystalloid if hypotensive or lactate "
+        "over 4, and start vasopressors (noradrenaline first line) if MAP "
+        "stays under 65 after fluids. Source control - drain, remove or "
+        "debride - within hours where relevant. Reassess fluid status "
+        "dynamically after the initial bolus rather than repeating it "
+        "blindly. DDx: pancreatitis, major trauma or burns can mimic SIRS "
+        "without infection; anaphylaxis and adrenal crisis look septic "
+        "briefly. Red flags: lactate over 4, GCS drop, oliguria, mottling "
+        "or a rising vasopressor requirement mean escalate now, not after "
+        "the next set of bloods."
+    ),
+
+    "HIV": (
+        "Retroviral infection depleting CD4 T cells; untreated it "
+        "progresses through acute seroconversion, chronic asymptomatic "
+        "and AIDS (CD4 under 200 or an AIDS-defining illness). Clinical "
+        "features: seroconversion 2 to 4 weeks after exposure looks like "
+        "flu with fever, pharyngitis, lymphadenopathy, maculopapular rash "
+        "and oral ulcers; the chronic phase is asymptomatic for years. "
+        "Ix: fourth-generation combined HIV antigen and antibody assay is "
+        "the screen; positives are confirmed with a differentiation assay "
+        "and quantified with viral load. Baseline CD4, genotype, HBV and "
+        "HCV serology, syphilis, STI screen and vaccine status. Mx: start "
+        "antiretroviral therapy at diagnosis regardless of CD4 - integrase "
+        "inhibitor plus two NRTIs (bictegravir with tenofovir alafenamide "
+        "and emtricitabine is a standard fixed-dose combination). Target "
+        "undetectable viral load, which also prevents sexual transmission "
+        "(U=U). Offer PrEP to HIV-negative people at ongoing risk. "
+        "Notifiable in every Australian jurisdiction. Note: opportunistic "
+        "infection prophylaxis follows CD4 - cotrimoxazole under 200 for "
+        "PCP, azithromycin under 50 for MAC."
+    ),
+
+    "Syncope": (
+        "Transient loss of consciousness from global cerebral "
+        "hypoperfusion, with spontaneous complete recovery. Types: reflex "
+        "or vasovagal is commonest (prodrome of nausea, sweating and "
+        "warmth, triggered by prolonged standing, pain or emotion); "
+        "orthostatic (drop of at least 20/10 mmHg on standing, from volume "
+        "depletion, autonomic failure or drugs); and cardiac (arrhythmia "
+        "or structural such as aortic stenosis, HCM or pulmonary "
+        "embolism). Cardiac syncope has no or brief prodrome, often on "
+        "exertion or supine, and carries the mortality. Ix: 12-lead ECG "
+        "on everyone; lying and standing blood pressure; echo if murmur, "
+        "exertional syncope or abnormal ECG; ambulatory monitoring or an "
+        "implantable loop recorder for recurrent unexplained events. "
+        "Bloods only where the history suggests cause. Mx: reassure and "
+        "educate for reflex syncope - trigger avoidance, counter-pressure "
+        "manoeuvres, adequate salt and fluid; treat the cause for "
+        "orthostatic and cardiac; admit any cardiac or high-risk "
+        "presentation. Note: driving restrictions under Austroads apply "
+        "and depend on the type - a single reflex event is not the same "
+        "as cardiac or recurrent, and the patient carries the reporting "
+        "obligation."
+    ),
+
+    "Acute kidney injury": (
+        "Rapid decline in renal function defined by KDIGO as a serum "
+        "creatinine rise of at least 26 micromol/L in 48 hours, a rise to "
+        "at least 1.5 times baseline within 7 days, or urine output under "
+        "0.5 mL/kg/h for 6 hours. Causes: pre-renal from volume depletion, "
+        "sepsis, heart failure or hepatorenal syndrome; intrinsic from "
+        "acute tubular necrosis (ischaemic or nephrotoxic), acute "
+        "interstitial nephritis (drug rash and eosinophiluria), or "
+        "glomerulonephritis (haematuria and proteinuria); post-renal from "
+        "obstruction at any level. Ix: EUC, FBC, urinalysis and "
+        "microscopy, FENa if oliguric (under 1% pre-renal, over 2% ATN), "
+        "renal ultrasound to exclude obstruction and assess size; "
+        "immunology (ANA, ANCA, complement) and myeloma screen where "
+        "intrinsic disease is plausible. Mx: treat the cause - resuscitate "
+        "with crystalloid, remove nephrotoxins (NSAIDs, ACE inhibitors, "
+        "aminoglycosides, contrast where possible), relieve obstruction, "
+        "treat sepsis. Dialysis for AEIOU - refractory Acidosis, "
+        "Electrolytes (especially hyperkalaemia), Ingestion, refractory "
+        "fluid Overload, Uraemic complications. Note: an AKI episode is a "
+        "risk factor for future CKD, so follow up creatinine after "
+        "discharge."
+    ),
+
+    "Hypoglycaemia": (
+        "Blood glucose under 3.9 mmol/L with Whipple triad - low glucose, "
+        "consistent symptoms, and resolution with correction. Causes: in "
+        "diabetes, insulin or sulfonylurea excess relative to intake or "
+        "activity, or renal failure prolonging drug half-life; without "
+        "diabetes, alcohol, sepsis, adrenal or pituitary insufficiency, "
+        "severe liver disease, or insulinoma. Clinical features: autonomic "
+        "warning (sweating, tremor, palpitations, hunger) then "
+        "neuroglycopenia (confusion, slurred speech, focal deficit, "
+        "seizure, coma). Hypoglycaemia unawareness develops with recurrent "
+        "lows and is a major driver of severe episodes. Mx: conscious and "
+        "able to swallow - 15g fast-acting oral carbohydrate (jelly beans "
+        "or juice), retest in 15 minutes, repeat if still low, then a "
+        "longer-acting snack. Impaired consciousness or unable to "
+        "swallow - IV 10% dextrose 100 mL, or IM glucagon 1 mg if no IV "
+        "access; recheck at 10 minutes. Investigate a first episode "
+        "without diabetes with a 72-hour fast measuring paired glucose, "
+        "insulin, C-peptide and beta-hydroxybutyrate. Note: sulfonylurea "
+        "hypoglycaemia recurs for many hours, so these patients need "
+        "admission and an octreotide infusion, not a single dextrose "
+        "bolus and discharge."
+    ),
+
+    "Gestational diabetes": (
+        "Glucose intolerance first recognised in pregnancy, distinct from "
+        "pre-existing diabetes and resolving after delivery in most. "
+        "Pathophysiology: placental hormones (human placental lactogen, "
+        "progesterone, cortisol, growth hormone) drive insulin resistance "
+        "from mid-pregnancy; GDM is the failure of beta cells to keep up. "
+        "Risk factors: BMI over 30, previous GDM, previous macrosomia over "
+        "4.5 kg, South Asian, Middle Eastern or Aboriginal ethnicity, "
+        "first-degree relative with type 2 diabetes, PCOS, and maternal "
+        "age over 40. Ix: universal 75g OGTT at 24 to 28 weeks; diagnostic "
+        "under ADIPS if fasting is at least 5.1, 1-hour at least 10.0, or "
+        "2-hour at least 8.5 mmol/L. Earlier testing in high risk. Mx: "
+        "dietitian-led carbohydrate management and monitored exercise "
+        "first; self-monitor fasting and 1-hour post-meal glucose "
+        "targeting under 5.0 fasting and under 7.4 post-prandial. Add "
+        "insulin (or metformin where insulin is not acceptable) if "
+        "targets are not met within one to two weeks. Serial growth "
+        "ultrasound. Note: repeat OGTT at 6 to 12 weeks postpartum; 50% "
+        "develop type 2 diabetes within 10 years, so annual glucose "
+        "review continues indefinitely."
+    ),
 }
 
 
