@@ -5,6 +5,86 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2] - 2026-08-27
+
+The next AnkiWeb release after 2.1.1. Consolidates the internal 2.1.2,
+2.1.3, 2.2.1, 2.2.2, 2.3 and 2.3.1 iterations - none of which was ever
+pushed to AnkiWeb - into a single 2.2 release, and adds about 130 new
+condition summaries authored since 2.1.1.
+
+See WHATS-NEW-2.2.md for the user-facing summary. The interim
+WHATS-NEW-2.1.2.md through WHATS-NEW-2.3.1.md files remain in the tree
+as internal notes and are reflected in the corresponding sections of
+2.2.
+
+### Added
+
+- ~130 new rich condition summaries (see content/_rich.py; ordered by
+  measured card-mention frequency in the author's Anki collection).
+- Custom Terms popups badge as CUSTOM in a distinct hue with an
+  optional per-term Label; "Open link →" button copy replaces "Open
+  article →" for custom sources.
+- Twelve reference terms with bracket or plus-sign in the name that
+  could never be matched are now recognised where the term ends a
+  field (bracket-tail matching in the index rule).
+- Drug class name matching: antipsychotics, antibiotics,
+  benzodiazepines, NSAIDs, diuretics, opioids, corticosteroids,
+  antidepressants, anticoagulants, beta blockers, statins.
+- Twelve additional Australian drug aliases from the TGA updated
+  ingredient names list; benztropine renamed to benzatropine.
+
+### Changed
+
+- Card scan time reduced from ~33ms to ~2.5ms per card by finishing
+  the 2.1 index migration for the two vocabularies missed at the
+  time.
+- Popup height cap raised from 620px to 900px; the internal height
+  estimator was rewritten to include label, title, UpToDate chip row
+  and footer button, dropping the over-cap backlog from 883 to 203
+  entries.
+- Provider icons in the AI chat toolbar now keep the icon a page
+  settles on rather than the first one it sends; Settings > AI chat
+  > Reset provider icons discards captures and falls back to bundled
+  logos.
+- Thirty-four drug summaries rewritten with structured Label sections
+  matching the condition entries; insulin as a plain term, and drug
+  class overviews added.
+- Five drug headings renamed to the current TGA approved name:
+  lignocaine to lidocaine, oestradiol to estradiol, phenobarbitone to
+  phenobarbital, beclomethasone to beclometasone, cysteamine to
+  mercaptamine (cysteamine). All prior spellings continue to match.
+- Settings dialog: three module switches now plain checkboxes;
+  redundant captions removed.
+
+### Fixed
+
+- **Security:** a URL-normalisation mismatch between the origin check
+  and the browser could let a shared deck route the sidebar to
+  arbitrary pages with the logged-in NCBI, DrugBank, UpToDate and AI
+  chat sessions attached. Closed.
+- Corrupt content download could pass validation, be preferred at
+  launch, and prevent the add-on loading; validation is now strict.
+- Concurrent content check (auto plus manual "Check now") could leave
+  a half-written database on disk; serialised.
+- Custom terms under 4 characters with "Match case" unticked were
+  silently dropped by the short-term filter; custom terms are now
+  exempt from that filter.
+- AI chat panel RELEVANT ARTICLES list ignored the dark-mode flag
+  (five hardcoded light-mode colours); now follows Anki's theme
+  including on live switch.
+- Acronym-to-condition popups repeated the expansion in the body
+  after the title; body now opens directly with the summary.
+- Glyceryl trinitrate popup button opened a DrugBank search instead
+  of the monograph because the DrugBank reference was left behind at
+  the 2.1.1 rename; fixed, and this class of mistake now fails the
+  build.
+- Clozapine entry carried the US haematological monitoring schedule
+  and self-contradicted on the myocarditis window; both fixed.
+- Oestradiol entry (single line pointing at a deleted estradiol
+  entry, broken since 2.1.1) rewritten.
+- epinephrine and norepinephrine now resolve to the adrenaline and
+  noradrenaline entries (Australian ampoules print both names).
+
 ## [2.3.1] - 2026-08-25
 
 ### Fixed
