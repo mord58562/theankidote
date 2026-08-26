@@ -59,4 +59,6 @@ zip -r "$OUT" . \
 
 echo "Built: $OUT ($(du -h "$OUT" | cut -f1))"
 echo
-echo "Upload at: https://ankiweb.net/shared/upload"
+echo "Update the existing listing at:"
+echo "  https://ankiweb.net/shared/info/720072719"
+echo "New-addon submissions only: https://ankiweb.net/shared/upload"
