@@ -260,23 +260,20 @@ def main() -> int:
     args = ap.parse_args()
 
     lib = collect()
-    # Zero-padded dotted date, matching `date +%Y.%m.%d` in
-    # tools/publish_content.sh. These two defaults must agree, and they
-    # did not: this defaulted to `date.isoformat()`, which is hyphenated.
+    # Zero-padded d.m.y dotted date, matching `date +%d.%m.%Y` in
+    # tools/publish_content.sh. These two defaults must agree.
     #
-    # Versions are compared as strings, and '.' (46) sorts above '-'
-    # (45), so a hyphenated bundled version compares BELOW the dotted
-    # version of the very same day. A build left on the default would
-    # ship believing the already-published, older library was newer, and
-    # every install would download 2 MB on first launch to replace its
-    # own content with the previous release's. Nothing downstream would
-    # report an error - the checksum matches, the schema matches, and
-    # the summaries simply revert.
+    # Versions are compared as strings by the client (see `_newer` in
+    # pearls/_updater.py). Under d.m.y this sorts chronologically WITHIN
+    # a calendar month but not ACROSS month or year rollovers. The
+    # in-tree client parses both d.m.y[.N] and y.m.d[.N] as (year,
+    # month, day, counter) tuples so mid-history transition is safe;
+    # anything installed from an AnkiWeb push before that update lands
+    # will need a bump before the next month rollover.
     #
-    # Keep the padding for the same reason the publish script warns
-    # about it: 2026.9.1 sorts above 2026.09.15.
+    # Keep the padding: 1.9.2026 sorts above 15.09.2026 as strings.
     lib["content_version"] = (
-        args.version or datetime.date.today().strftime("%Y.%m.%d"))
+        args.version or datetime.date.today().strftime("%d.%m.%Y"))
 
     out = pathlib.Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)

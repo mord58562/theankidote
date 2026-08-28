@@ -403,19 +403,13 @@ class ConfigWriteBackPattern(unittest.TestCase):
 class ContentVersionFormat(unittest.TestCase):
     """The bundled version must never sort below the published one.
 
-    Content versions are compared as strings. `tools/build_library.py`
-    defaulted to `date.isoformat()` (hyphens) while
-    `tools/publish_content.sh` defaults to `date +%Y.%m.%d` (dots), and
-    '.' sorts above '-'. A build left on the default therefore stamped a
-    version that compares BELOW the dotted version of the same day, so
-    every install would fetch the previously published library on first
-    launch and silently revert its own summaries. Nothing downstream
-    reports this: the checksum matches, the schema matches, the content
-    is simply older.
+    Content versions are compared as strings (or, in the current
+    client, parsed as a date tuple with a same-day counter).
 
-    Not a security defect, but it lives here because it has the same
-    shape as the ones that are - a check that passes while the outcome
-    is wrong.
+    Historically both defaults were `%Y.%m.%d`. From 2026-08-28 both
+    default to `%d.%m.%Y` (Australian) with a per-day counter that
+    resets at local midnight; the sort-order guard parses either shape
+    into a tuple so mid-history transition is safe.
     """
 
     def _manifest(self):
@@ -425,17 +419,19 @@ class ContentVersionFormat(unittest.TestCase):
     def test_the_two_defaults_use_the_same_format(self):
         py = (ROOT / "tools" / "build_library.py").read_text(encoding="utf-8")
         sh = (ROOT / "tools" / "publish_content.sh").read_text(encoding="utf-8")
-        self.assertIn("%Y.%m.%d", py,
-                      "build_library.py must default to the dotted format")
+        self.assertIn("%d.%m.%Y", py,
+                      "build_library.py must default to the d.m.y format")
         self.assertNotIn("date.today().isoformat()", py)
-        self.assertIn("%Y.%m.%d", sh)
+        self.assertIn("%d.%m.%Y", sh)
 
     def test_the_bundled_version_is_dotted_and_padded(self):
         import re
         v = self._manifest()["content_version"]
         self.assertRegex(
-            v, r"^\d{4}\.\d{2}\.\d{2}(\.\d+)?$",
-            "zero-padded dotted date; 2026.9.1 sorts above 2026.09.15")
+            v,
+            r"^(?:\d{4}\.\d{2}\.\d{2}|\d{2}\.\d{2}\.\d{4})(\.\d+)?$",
+            "zero-padded dotted date in either y.m.d or d.m.y; "
+            "1.9.2026 sorts above 15.09.2026 as strings")
 
     def test_the_bundled_version_sorts_at_or_above_every_shipped_release(self):
         """Guards against shipping an add-on that downgrades itself.
