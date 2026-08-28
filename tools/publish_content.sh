@@ -5,9 +5,18 @@
 #
 # Publish a new term library without touching AnkiWeb.
 #
-#   bash tools/publish_content.sh                 # today's date as version
-#   bash tools/publish_content.sh 2026.09.01      # explicit version
+#   bash tools/publish_content.sh                 # today's date, auto-numbered
+#   bash tools/publish_content.sh 28.08.2026      # explicit version
 #   DRY_RUN=1 bash tools/publish_content.sh       # build and check, push nothing
+#
+# Version format is d.m.y (Australian). The first publish on a given
+# calendar day is unsuffixed (28.08.2026); each subsequent same-day
+# publish appends an incremented counter (28.08.2026.1, 28.08.2026.2,
+# ...). The counter resets at local midnight.
+#
+# The pre-2026-08-28 tags used y.m.d.N and started their counter at 1
+# on the first publish of the day; the new script accepts both formats
+# in the sort-order check so a mid-history transition is safe.
 #
 # What gets published where, and why they are split:
 #
@@ -34,9 +43,40 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-VERSION="${1:-$(date +%Y.%m.%d)}"
-TAG="content-${VERSION}"
 DRY_RUN="${DRY_RUN:-0}"
+
+# ── version selection ──────────────────────────────────────────────
+#
+# d.m.y with a per-day counter that starts at 1 for the SECOND publish
+# of the day, not the first. So the first publish today is `28.08.2026`
+# (no suffix), the second is `28.08.2026.1`, the third `28.08.2026.2`.
+#
+# The counter is derived from the existing tag list so a restart or a
+# publish from a different clone still finds the right next number
+# rather than colliding.
+
+TODAY_DMY="$(date +%d.%m.%Y)"
+
+if [ -n "${1:-}" ]; then
+  VERSION="$1"
+else
+  # Find how many tags already exist for today's date. The tag prefix is
+  # `content-<TODAY_DMY>` and the suffix is either empty (the first
+  # publish) or `.N` for the (N+1)th publish.
+  EXISTING=$(git ls-remote --tags origin "content-${TODAY_DMY}*" 2>/dev/null \
+             | awk -F'refs/tags/' '{print $2}' | sort -u)
+  N=0
+  for t in $EXISTING; do
+    N=$((N + 1))
+  done
+  if [ "$N" = "0" ]; then
+    VERSION="$TODAY_DMY"
+  else
+    VERSION="${TODAY_DMY}.${N}"
+  fi
+fi
+
+TAG="content-${VERSION}"
 
 die() { echo "error: $*" >&2; exit 1; }
 step() { printf '\n\033[1m==> %s\033[0m\n' "$*"; }
@@ -91,12 +131,44 @@ fi
 # alternative, bumping the date to get past this check, would push 2 MB
 # of byte-identical content to every install for no reason.
 CURRENT="$(python3 -c 'import json;print(json.load(open("data/manifest.json"))["content_version"])' 2>/dev/null || echo "")"
-if [ -n "$CURRENT" ] && ! python3 -c "import sys;sys.exit(0 if '$VERSION' > '$CURRENT' else 1)"; then
-  if [ "$FIRST_PUBLISH" = "1" ] && [ "$VERSION" = "$CURRENT" ]; then
-    say_seed=1
-  else
-    die "version $VERSION does not sort after the current $CURRENT; clients would ignore it.
+
+# Parse both y.m.d[.N] (legacy, pre-2026-08-28) and d.m.y[.N] (current)
+# into a comparable (year, month, day, counter) tuple. y.m.d is
+# distinguished from d.m.y by the length of the first component - years
+# are 4 digits, days are 2. Anything else falls back to string compare
+# so a hand-set version still gets a sanity check.
+if [ -n "$CURRENT" ]; then
+  ORDER_OK=$(python3 - "$VERSION" "$CURRENT" <<'PY'
+import sys
+def parse(v):
+    parts = v.split(".")
+    if not parts: return None
+    counter = 0
+    if len(parts) == 4:
+        counter = int(parts[3]); parts = parts[:3]
+    if len(parts) != 3: return None
+    a, b, c = parts
+    if len(a) == 4:
+        y, m, d = int(a), int(b), int(c)
+    elif len(c) == 4:
+        d, m, y = int(a), int(b), int(c)
+    else:
+        return None
+    return (y, m, d, counter)
+new, cur = parse(sys.argv[1]), parse(sys.argv[2])
+if new is None or cur is None:
+    print("1" if sys.argv[1] > sys.argv[2] else "0")
+else:
+    print("1" if new > cur else "0")
+PY
+)
+  if [ "$ORDER_OK" != "1" ]; then
+    if [ "$FIRST_PUBLISH" = "1" ] && [ "$VERSION" = "$CURRENT" ]; then
+      say_seed=1
+    else
+      die "version $VERSION does not sort after the current $CURRENT; clients would ignore it.
        Pass a later version, or edit content/ and rebuild first."
+    fi
   fi
 fi
 
