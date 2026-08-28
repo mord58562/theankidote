@@ -5,6 +5,37 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.1] - 2026-08-28
+
+Patch on top of 2.2.
+
+### Fixed
+
+- **Content-channel updates keep applying across a month boundary.**
+  `_newer` in `pearls/_updater.py` compared version stamps as raw
+  text, which was correct for the historical `YYYY.MM.DD` format but
+  breaks under the `DD.MM.YYYY` format the publish channel switched
+  to on 2026-08-28 - `01.09.2026` sorts below `31.08.2026` as text.
+  The check now parses either shape into a `(year, month, day,
+  counter)` tuple and compares that. Unparseable inputs fall back to
+  the old text compare and, if that is also not-greater, are treated
+  as not-newer.
+
+### Changed (dev tooling, not shipped in the add-on)
+
+- `tools/publish_content.sh` now defaults to `date +%d.%m.%Y` and
+  appends `.N` only for the second and subsequent publishes of the
+  same calendar day, resetting the counter at local midnight. The
+  prior convention always started the counter at `.1` on the first
+  publish of the day, which carried no information.
+- `tools/build_library.py` default flipped from `%Y.%m.%d` to
+  `%d.%m.%Y` so the two tools stay in lockstep.
+- Sort-order check in the publish script parses both the new
+  `d.m.y[.N]` and legacy `y.m.d[.N]` formats, so a mid-history
+  transition is safe.
+- `test_security.py` `ContentVersionFormat` tests accept either
+  format.
+
 ## [2.2] - 2026-08-27
 
 The next AnkiWeb release after 2.1.1. Consolidates the internal 2.1.2,

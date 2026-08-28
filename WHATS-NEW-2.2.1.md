@@ -1,19 +1,25 @@
 # What's new in The AnkiDote 2.2.1
 
-A small release on top of 2.2, fixing one thing.
+Bug fixes only.
 
-## The AI chat dark mode reached the results list too
+## Content updates keep applying across a month boundary
 
-Every StatPearls / DrugBank result in the RELEVANT ARTICLES list kept a
-white background and navy text no matter what theme Anki was running -
-five colours were hardcoded to the light palette and never read the
-dark flag at all. Switching Anki to dark mode restyled the rest of the
-sidebar and left that one list looking like a hole punched through it.
+The check that decides whether the reference library on the update
+channel is newer than the copy you already have was a raw text
+compare. That was correct when new releases were stamped
+`YYYY.MM.DD`, but the channel format changed on 2026-08-28 to
+`DD.MM.YYYY` and the text compare gets that shape right within a
+month and wrong across a month rollover (`01.09.2026` sorts below
+`31.08.2026` as text). Under 2.2 that would have silently stopped
+content updates from applying at midnight on the first of any month
+under the new format.
 
-It now follows Anki's theme the same way the rest of the panel does,
-including on a live switch mid-session.
+2.2.1 parses either shape into a real date and compares that, so the
+channel keeps working through month and year boundaries without a
+further update.
 
 ---
 
-**Upgrading:** nothing to do. Your settings, shortcuts and dock layout
-carry over untouched, and the reference database is unchanged.
+**Upgrading:** nothing to do. Your settings, shortcuts and dock
+layout carry over untouched. The reference database keeps updating
+itself in the background as before.
