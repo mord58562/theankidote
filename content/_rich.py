@@ -131,6 +131,56 @@ NEW_CONDITIONS = [
                              "pathogenesis clinical features and diagnosis"]],
         "summary": "",
     },
+    {
+        "name": "Blue-ringed octopus envenoming",
+        "aliases": ["Blue-ringed octopus bite", "Hapalochlaena envenoming"],
+        "utd": [["Overview", "marine envenomations from octopus stings"]],
+        "summary": "",
+    },
+    {
+        "name": "Box jellyfish envenoming",
+        "aliases": ["Box jellyfish sting", "Chironex fleckeri envenoming",
+                    "Chironex sting"],
+        "utd": [["Overview", "jellyfish stings"]],
+        "summary": "",
+    },
+    {
+        "name": "Redback spider bite",
+        "aliases": ["Redback spider envenoming", "Latrodectism",
+                    "Latrodectus hasselti envenoming",
+                    "Widow spider bite"],
+        "utd": [["Overview", "widow spider bites"]],
+        "summary": "",
+    },
+    {
+        "name": "Funnel-web spider bite",
+        "aliases": ["Sydney funnel-web spider bite", "Atrax envenoming",
+                    "Hadronyche envenoming",
+                    "Australian funnel-web spider envenoming"],
+        "utd": [["Overview", "australian funnel web spider bites"]],
+        "summary": "",
+    },
+    {
+        "name": "Ciguatera",
+        "aliases": ["Ciguatera fish poisoning", "Ciguatoxin poisoning"],
+        "utd": [["Overview", "ciguatera fish poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiac arrest",
+        "aliases": ["Sudden cardiac arrest", "Advanced life support",
+                    "ALS algorithm", "Pulseless arrest"],
+        "utd": [["Overview", "advanced cardiac life support acls in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Contact dermatitis",
+        "aliases": ["Irritant contact dermatitis",
+                    "Allergic contact dermatitis",
+                    "Occupational contact dermatitis"],
+        "utd": [["Overview", "irritant contact dermatitis in adults"]],
+        "summary": "",
+    },
 ]
 
 
@@ -14384,6 +14434,223 @@ RICH_SUMMARIES = {
         "amoxicillin for a pharyngitis that turns out to be EBV is the "
         "classic teaching case for the pause before empirical "
         "antibiotics."
+    ),
+
+    # ═══════ BATCH 45: Australian venomous animals + ophthalmic + ALS + contact ══
+
+    "Blue-ringed octopus envenoming": (
+        "Sting by Hapalochlaena spp. (small, iridescent-ring octopus of "
+        "Australian and Indo-Pacific rock pools) delivering tetrodotoxin "
+        "in the saliva. Epidemiology: rare but frequently fatal without "
+        "ventilation; most cases in curious children handling one in a "
+        "shallow pool. Clinical features: painless bite (often "
+        "unnoticed); onset 5-30 minutes with perioral numbness, "
+        "paraesthesia, dysphagia, then a descending flaccid paralysis "
+        "with respiratory failure; consciousness preserved throughout, "
+        "the patient can hear but cannot move or breathe. Ix: clinical; "
+        "no assay is useful in real time. Mx: pressure-immobilisation "
+        "bandage plus splint; call 000 and prepare to bag-mask ventilate "
+        "before paralysis is complete; intubate and mechanically "
+        "ventilate; supportive care in ICU. No antivenom exists. Toxin "
+        "clears in 4-10 hours with intact ventilation. Note: always talk "
+        "to the patient during resuscitation - they are awake and "
+        "terrified even when unable to blink."
+    ),
+
+    "Box jellyfish envenoming": (
+        "Sting by Chironex fleckeri, the multi-tentacled cubozoan of "
+        "tropical northern Australia; one of the most rapidly lethal "
+        "venoms in the world. Epidemiology: coastal Queensland, NT and "
+        "northern WA in the wet season (October to May); death can follow "
+        "within minutes of extensive stings. Clinical features: immediate "
+        "severe burning pain along the tentacle marks (whip-like linear "
+        "frosted-ladder pattern); local necrosis and scarring; large "
+        "stings cause cardiovascular collapse, dysrhythmia, cardiac "
+        "arrest and pulmonary oedema within minutes. Ix: clinical; ECG "
+        "and troponin if envenoming; cardiac monitoring for at least 6 "
+        "hours after significant stings. Mx: retrieve victim from water "
+        "safely; douse the stung area with vinegar for at least 30 "
+        "seconds (inactivates undischarged nematocysts - do not use fresh "
+        "water or rub); resuscitation as needed; IV opioid; box jellyfish "
+        "antivenom for cardiovascular instability, arrest, or extensive "
+        "stings; compression bandages are no longer recommended. Note: "
+        "any collapse on a tropical beach is Chironex until proven "
+        "otherwise - vinegar first, then CPR."
+    ),
+
+    "Redback spider bite": (
+        "Envenoming by Latrodectus hasselti; the commonest significant "
+        "spider bite in Australia. Epidemiology: found nationwide in "
+        "sheltered dry places (sheds, outdoor toilets, garden furniture); "
+        "female is the venomous one; children and workers "
+        "over-represented. Clinical features: immediate sharp pain "
+        "escalating over 30-60 minutes; local sweating, piloerection and "
+        "erythema at the site; systemic latrodectism - regional then "
+        "generalised pain, sweating, hypertension, nausea, vomiting, "
+        "restlessness; abdominal pain can mimic acute abdomen; children "
+        "may have priapism. Symptoms last hours to days. Ix: clinical; "
+        "observe minimum 2 hours; ECG if chest pain. Mx: no "
+        "pressure-immobilisation (allows venom to spread; not indicated "
+        "for redback). Ice pack, oral analgesia and reassurance for mild "
+        "cases. IV opioid for severe pain. Antivenom (equine, 1 vial IV) "
+        "for severe unrelenting pain or systemic features; benefit over "
+        "placebo is modest so decision is clinical. Note: any painful "
+        "bite on a rural Australian backside is redback until proven "
+        "otherwise."
+    ),
+
+    "Funnel-web spider bite": (
+        "Envenoming by Atrax and Hadronyche spp; the Sydney funnel-web "
+        "(A. robustus) is most dangerous. Epidemiology: eastern "
+        "Australia, especially the Sydney basin; male more toxic; peak "
+        "in warm humid weather; historically fatal within hours before "
+        "antivenom. Clinical features: severe local pain; within "
+        "minutes to two hours an autonomic storm - sweating, salivation, "
+        "lacrimation, piloerection, hypertension, fasciculation - then "
+        "hypotension, dysrhythmia, pulmonary oedema, coma, cardiac "
+        "arrest; delta-atracotoxin opens sodium channels. Ix: clinical; "
+        "ECG and cardiac monitor; gas and lactate. Mx: "
+        "pressure-immobilisation bandage and splint over the whole "
+        "limb; transfer urgently; funnel-web antivenom (rabbit-derived) "
+        "as many vials as needed until symptoms reverse; airway "
+        "support; ICU. Antivenom has abolished mortality when given in "
+        "time. Note: the family is easily identified - large, black, "
+        "glossy, fangs held vertically - do not delay antivenom waiting "
+        "for species confirmation."
+    ),
+
+    "Ciguatera": (
+        "Foodborne poisoning from ciguatoxins produced by the "
+        "dinoflagellate Gambierdiscus, concentrated up the reef food "
+        "chain into large tropical predatory fish. Epidemiology: "
+        "commonest fish-borne poisoning worldwide; in Australia the "
+        "hotspots are the Great Barrier Reef and Torres Strait; cooking, "
+        "freezing and salting do not destroy the toxin. Implicated fish "
+        "include coral trout, red bass, chinaman fish, moray eel, "
+        "barracuda and Spanish mackerel. Clinical features: onset 1-24 "
+        "hours after eating; GI - nausea, vomiting, cramping, diarrhoea "
+        "(first day); then neurological - perioral and limb paraesthesia, "
+        "cold allodynia (cold objects burn), pruritus, weakness, ataxia, "
+        "myalgia; cardiovascular - bradycardia and hypotension. Symptoms "
+        "can last weeks to months and recur with alcohol, exercise or "
+        "repeat exposure. Ix: clinical; report to public health for "
+        "outbreak investigation. Mx: supportive - IV fluids, antiemetics, "
+        "atropine for bradycardia; IV mannitol early for severe "
+        "neurological symptoms is traditional but of uncertain benefit; "
+        "avoid fish, alcohol, nuts and caffeine for at least 6 months. "
+        "Note: cold allodynia after a reef fish meal is ciguatera until "
+        "proven otherwise."
+    ),
+
+    "Cardiac arrest": (
+        "Cessation of effective cardiac output; the algorithm branches "
+        "on rhythm. Causes: 4 Hs and 4 Ts - Hypoxia, Hypovolaemia, "
+        "Hypo/hyperkalaemia and metabolic, Hypothermia; Tension "
+        "pneumothorax, Tamponade, Toxins, Thromboembolism (coronary or "
+        "pulmonary). Clinical features: unresponsive, no normal "
+        "breathing, no central pulse. Ix: cardiac monitor and "
+        "defibrillator pads are the diagnostic kit; POCUS during rhythm "
+        "checks for reversible causes. Mx: high-quality CPR at "
+        "100-120/min, 5-6 cm depth, minimal interruptions; 30:2 if "
+        "unsecured airway, continuous once intubated. Shockable (VF, "
+        "pulseless VT) - immediate defibrillation, resume CPR, "
+        "adrenaline 1 mg IV after the second shock then every 4 min, "
+        "amiodarone 300 mg after the third shock. Non-shockable (PEA, "
+        "asystole) - adrenaline 1 mg IV every 4 min, no shocks, address "
+        "reversible causes. Once return of circulation is achieved, "
+        "target temperature 32-36 degC, avoid hyperoxia, and refer for "
+        "coronary angiography if cardiac cause suspected. Note: "
+        "witnessed shockable arrest with early "
+        "bystander CPR and defibrillation has better than 50% survival "
+        "- everything else falls off steeply."
+    ),
+
+    "Central retinal artery occlusion": (
+        "Sudden painless monocular vision loss from embolic or "
+        "atherosclerotic occlusion of the central retinal artery; a "
+        "stroke of the eye. Epidemiology: older adults with vascular risk "
+        "factors; carotid atherosclerosis and cardiac embolic source "
+        "dominate; giant cell arteritis in those over 50. Clinical "
+        "features: sudden painless loss of vision in one eye, seconds to "
+        "minutes, dense central scotoma or no-light-perception; RAPD; "
+        "pale retina with a cherry-red spot at the macula (the intact "
+        "choroidal supply shows through the thin fovea). Ix: urgent "
+        "same-day work-up as a stroke - carotid Doppler, echocardiogram, "
+        "ECG, ESR/CRP for GCA, MRI brain; consider fluorescein "
+        "angiography. Mx: presentation under 4.5 hours - refer for "
+        "possible thrombolysis at a stroke centre; ocular massage, "
+        "acetazolamide, timolol and anterior chamber paracentesis are "
+        "traditional but of limited benefit; treat GCA empirically with "
+        "high-dose prednisolone while awaiting biopsy; secondary "
+        "prevention as for any stroke. Note: monocular vision loss is a "
+        "stroke code - the workup is not different because it is the eye."
+    ),
+
+    "Central retinal vein occlusion": (
+        "Thrombotic occlusion of the central retinal vein producing "
+        "sudden painless monocular vision loss with widespread retinal "
+        "haemorrhage. Epidemiology: over 50; hypertension, diabetes, "
+        "glaucoma, hyperviscosity, thrombophilia; younger patients need a "
+        "thrombophilia and inflammatory work-up. Types: non-ischaemic "
+        "(better acuity, better prognosis) and ischaemic (poorer acuity, "
+        "risk of neovascular glaucoma). Clinical features: sudden "
+        "painless blurred vision, usually less dramatic than CRAO; "
+        "fundoscopy shows the classic 'blood-and-thunder' fundus - flame "
+        "haemorrhages in all four quadrants, dilated tortuous veins, "
+        "cotton-wool spots, disc oedema. Ix: OCT for macular oedema; "
+        "fluorescein angiography distinguishes ischaemic from "
+        "non-ischaemic (large areas of capillary non-perfusion mean "
+        "ischaemic); BP, glucose, lipids, FBC, ESR; thrombophilia screen "
+        "if under 50. Mx: control systemic risk factors; intravitreal "
+        "anti-VEGF (aflibercept, ranibizumab) for macular oedema is "
+        "first-line; laser panretinal photocoagulation for "
+        "neovascularisation. Note: 'blood-and-thunder' fundus is CRVO - "
+        "refer within a week."
+    ),
+
+    "Diabetic retinopathy": (
+        "Microvascular retinal injury from chronic hyperglycaemia; the "
+        "leading cause of working-age blindness in Australia. "
+        "Epidemiology: prevalence rises with duration - present in "
+        "one-third of type 2 diabetics at diagnosis and nearly all type 1 "
+        "diabetics after 20 years. Stages: non-proliferative (NPDR - "
+        "microaneurysms, dot-blot haemorrhages, hard exudates, "
+        "cotton-wool spots, venous beading) grades from mild to severe; "
+        "proliferative (PDR - new vessels at disc or elsewhere, vitreous "
+        "haemorrhage risk, tractional retinal detachment); diabetic "
+        "macular oedema is a separate axis and can occur at any stage. "
+        "Ix: dilated fundoscopy or retinal photography annually from "
+        "diagnosis in type 2 and from 5 years post-diagnosis in type 1; "
+        "OCT for macular oedema; fluorescein angiography for ischaemia "
+        "mapping. Mx: tight glycaemic (HbA1c under 7%), BP (under 140/90) "
+        "and lipid control slow progression; intravitreal anti-VEGF for "
+        "clinically significant macular oedema; pan-retinal "
+        "photocoagulation for PDR; vitrectomy for non-clearing vitreous "
+        "haemorrhage or tractional detachment. Note: rapid glucose "
+        "lowering can transiently worsen retinopathy - warn the patient "
+        "and screen at three months."
+    ),
+
+    "Contact dermatitis": (
+        "Inflammatory dermatosis from direct skin exposure to an "
+        "irritant or allergen. Types: irritant (80%, non-immunological, "
+        "dose-dependent - soaps, detergents, solvents, wet work) and "
+        "allergic (type IV, sensitisation then recurrent flares on "
+        "re-exposure - nickel, fragrances, preservatives, rubber "
+        "accelerators, hair dyes). Clinical features: itchy erythematous "
+        "vesicular or scaly plaques limited to areas of contact; sharp "
+        "geometric borders suggest external cause; hands, face and "
+        "eyelids common; occupational history often diagnostic "
+        "(hairdressers, healthcare, mechanics, cleaners). Ix: history "
+        "and pattern; patch testing (Australian baseline series) if "
+        "allergic contact suspected and cause unclear; not skin prick or "
+        "IgE (wrong hypersensitivity type). Mx: identify and avoid the "
+        "trigger; barrier gloves and emollients for hands; topical "
+        "corticosteroid (potency to site) for flares; short oral "
+        "prednisolone for severe acute allergic contact; treat secondary "
+        "bacterial infection. Note: a rash that vanishes on holiday and "
+        "returns at work is occupational contact dermatitis - "
+        "notifiable, and worth a workplace ergonomic review."
     ),
 
 }
