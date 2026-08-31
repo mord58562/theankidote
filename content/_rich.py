@@ -230,6 +230,27 @@ NEW_CONDITIONS = [
                              "heat stroke in adults"]],
         "summary": "",
     },
+    {
+        "name": "Erectile dysfunction",
+        "aliases": ["Impotence", "ED"],
+        "utd": [["Overview", "epidemiology and etiologies of male sexual "
+                             "dysfunction"]],
+        "summary": "",
+    },
+    {
+        "name": "Roseola infantum",
+        "aliases": ["Roseola", "Exanthem subitum", "Sixth disease",
+                    "HHV-6 infection"],
+        "utd": [["Overview", "roseola infantum exanthem subitum"]],
+        "summary": "",
+    },
+    {
+        "name": "Hand foot and mouth disease",
+        "aliases": ["HFMD", "Hand-foot-and-mouth disease",
+                    "Coxsackie A16 infection"],
+        "utd": [["Overview", "hand foot and mouth disease and herpangina"]],
+        "summary": "",
+    },
 ]
 
 
@@ -14913,6 +14934,204 @@ RICH_SUMMARIES = {
         "mid-day exertion. Note: any confusion, seizure or core "
         "temperature over 40 degC has crossed into heat stroke - "
         "treatment escalates and mortality does too."
+    ),
+
+    # ═══════ BATCH 47: MND + ENT + hepatology + andrology + shoulder + peds ID + derm + Legionella ══
+
+    "Meniere disease": (
+        "Idiopathic endolymphatic hydrops causing episodic vertigo, "
+        "hearing loss, tinnitus and aural fullness. Epidemiology: adults "
+        "40-60, women slightly more; unilateral at onset then bilateral "
+        "in a third over 10 years. Clinical features: attacks last 20 "
+        "minutes to 24 hours with rotational vertigo, low-frequency SNHL, "
+        "tinnitus and ear fullness; between attacks the patient may be "
+        "well early on but progressive hearing loss develops; drop "
+        "attacks (Tumarkin) in late disease. Ix: audiometry - fluctuating "
+        "low-frequency SNHL early, progressive later; MRI to exclude "
+        "vestibular schwannoma. Mx: acute attack - vestibular sedative "
+        "(prochlorperazine, promethazine) and antiemetic. Prevention - "
+        "low-salt diet (under 2 g sodium), reduce caffeine and alcohol; "
+        "thiazide; betahistine (evidence weak but widely used in "
+        "Australia). Refractory - intratympanic steroid, then "
+        "intratympanic gentamicin (ablates vestibular function, risks "
+        "hearing loss); endolymphatic sac decompression rarely. Note: "
+        "sudden severe unilateral SNHL is sudden sensorineural hearing "
+        "loss until audiometry says otherwise - refer within 48 hours for "
+        "high-dose steroid, not attributed to Meniere."
+    ),
+
+    "Non-alcoholic fatty liver disease": (
+        "Hepatic steatosis without significant alcohol intake; commonest "
+        "chronic liver disease in Australia (renamed MASLD "
+        "internationally); progresses from steatosis through "
+        "steatohepatitis (NASH/MASH) to fibrosis, cirrhosis and HCC. "
+        "Epidemiology: 25-30% of "
+        "adults; obesity, type 2 diabetes, dyslipidaemia, metabolic "
+        "syndrome, PCOS. Clinical features: usually asymptomatic; "
+        "fatigue, RUQ discomfort; hepatomegaly. Ix: mild transaminitis "
+        "(ALT>AST usually, reverse in cirrhosis); ultrasound shows fatty "
+        "infiltration; exclude viral hepatitis, autoimmune, "
+        "haemochromatosis, Wilson, alcohol. Stage fibrosis with FIB-4 or "
+        "NAFLD fibrosis score then FibroScan; biopsy only if diagnosis "
+        "unclear. Mx: 7-10% weight loss reverses steatosis and reduces "
+        "fibrosis; Mediterranean diet, exercise, alcohol abstinence; "
+        "treat metabolic risks aggressively (statin, GLP-1, SGLT2); "
+        "resmetirom for biopsy-proven NASH with fibrosis (limited PBS "
+        "access). Note: isolated raised ALT with metabolic risk factors "
+        "is NAFLD - stage fibrosis, do not just reassure."
+    ),
+
+    "Erectile dysfunction": (
+        "Persistent inability to achieve or maintain an erection "
+        "sufficient for sexual performance; a marker of vascular and "
+        "psychological health. Epidemiology: 40% of men over 40; often "
+        "the first sign of atherosclerosis, preceding cardiovascular "
+        "events by 2-5 years. Causes: vasculogenic (commonest, shares "
+        "risk factors with CAD); neurogenic (spinal injury, MS, diabetic "
+        "autonomic, post-prostatectomy); endocrine (hypogonadism, "
+        "hyperprolactinaemia); psychogenic (situational, performance "
+        "anxiety, depression); drugs (antihypertensives, SSRIs, opioids, "
+        "finasteride, spironolactone). Ix: history distinguishes organic "
+        "from psychogenic (loss of nocturnal or morning erections "
+        "suggests organic); morning testosterone, prolactin, LH; HbA1c, "
+        "lipids, BP; PSA if considering testosterone. Mx: address risk "
+        "factors and lifestyle; PDE5 inhibitor (sildenafil, tadalafil) "
+        "first-line; second-line vacuum device, intracavernosal "
+        "alprostadil, penile implant; testosterone only if biochemically "
+        "hypogonadal. Note: new-onset ED at any age warrants full "
+        "cardiovascular risk assessment - screening opportunity, not just "
+        "a sexual complaint."
+    ),
+
+    "Rotator cuff tear": (
+        "Full- or partial-thickness tear of one or more of the four "
+        "rotator cuff tendons (supraspinatus commonest, then "
+        "infraspinatus, subscapularis, teres minor). Epidemiology: "
+        "over-50s (degenerative, attritional); younger patients only with "
+        "significant trauma; smoking, diabetes, occupational overhead "
+        "work. Clinical features: shoulder pain (lateral, worse at night, "
+        "radiates to deltoid), weakness on abduction and external "
+        "rotation, painful arc between 60-120 degrees; Jobe (empty can) "
+        "for supraspinatus, external rotation resistance for "
+        "infraspinatus, belly-press or Gerber lift-off for subscapularis; "
+        "drop-arm sign in massive tears. Ix: X-ray for OA and calcific "
+        "tendinopathy; ultrasound is first-line in Australia; MRI for "
+        "surgical planning. Mx: conservative first for degenerative tears "
+        "- analgesia, physiotherapy for cuff and periscapular muscles, "
+        "subacromial steroid injection for relief; surgical repair "
+        "(arthroscopic) for acute traumatic tears in active patients, or "
+        "failed conservative with retracted tendon at risk of atrophy. "
+        "Note: fatty infiltration of the muscle predicts poor surgical "
+        "outcome - refer earlier in the younger patient with a traumatic "
+        "tear."
+    ),
+
+    "Roseola infantum": (
+        "Common childhood exanthem from HHV-6 (rarely HHV-7); also called "
+        "sixth disease and exanthem subitum. Epidemiology: 6 months to 2 "
+        "years; almost all children infected by age 3; year-round. "
+        "Clinical features: sudden high fever (up to 40 degC) for 3-5 "
+        "days in a well-appearing child (classic picture is a child less "
+        "unwell than the temperature suggests), then defervescence "
+        "coincides with a blanching maculopapular rash on the trunk "
+        "spreading to limbs and face, lasting 1-2 days. Febrile seizures "
+        "occur in up to 15% during the febrile phase and can be the "
+        "presenting feature; posterior cervical and occipital "
+        "lymphadenopathy; Nagayama spots (ulcers on soft palate and "
+        "uvula). Ix: clinical. Mx: supportive - paracetamol, fluids, "
+        "reassurance; the rash signals resolution, not worsening; explain "
+        "febrile seizure recurrence risk and safety-net for red flags "
+        "(persistent fever, non-blanching rash, altered behaviour). Note: "
+        "high-fever-then-rash-when-well is roseola - parents return "
+        "worried about the rash but the child is by then already better."
+    ),
+
+    "Hand foot and mouth disease": (
+        "Common childhood viral illness from enteroviruses, most often "
+        "Coxsackie A16; Coxsackie A6 causes more severe atypical "
+        "outbreaks; enterovirus 71 has neurological complications. "
+        "Epidemiology: children under 5; summer and autumn peaks; "
+        "nurseries and childcare; contagious by faecal-oral, respiratory "
+        "droplets and vesicle fluid. Clinical features: brief prodrome "
+        "with low-grade fever, malaise and sore throat; painful oral "
+        "vesicles and ulcers on tongue, palate and buccal mucosa; "
+        "maculopapular then vesicular rash on palms, soles and buttocks "
+        "(nappy area in infants); resolves in 7-10 days. Coxsackie A6 "
+        "gives more extensive perioral, peri-nasal and limb rash with "
+        "onychomadesis weeks later. Ix: clinical; PCR only if severe or "
+        "encephalitic. Mx: supportive - paracetamol, fluids, cold soft "
+        "diet; safety-net for dehydration; exclude from childcare until "
+        "vesicles crust or child is well. Complications rare - "
+        "dehydration from poor oral intake, aseptic meningitis, "
+        "cardiopulmonary failure (EV71). Note: painful oral ulcers "
+        "stopping oral intake is a common admission reason - low "
+        "threshold for IV fluids in the small child."
+    ),
+
+    "Tinea": (
+        "Superficial dermatophyte infection of skin (corporis), scalp "
+        "(capitis), feet (pedis), groin (cruris), nails "
+        "(unguium/onychomycosis) or beard (barbae). Epidemiology: tinea "
+        "pedis commonest adult; tinea capitis in prepubertal children; "
+        "humidity, occlusive footwear, gyms, contact sport, "
+        "immunosuppression. Clinical features: annular scaly plaques with "
+        "raised active edge and central clearing (ringworm); tinea pedis "
+        "- macerated interdigital scale, moccasin distribution, or acute "
+        "vesicles; tinea capitis - scaly patches with alopecia and broken "
+        "hair stubs, kerion (boggy inflammatory mass); tinea unguium - "
+        "yellow, thickened, subungual debris. Ix: skin scraping or nail "
+        "clippings for microscopy (KOH) and culture; Wood lamp green "
+        "fluorescence in Microsporum capitis. Mx: topical azole or "
+        "terbinafine 2-4 weeks for skin; oral terbinafine or griseofulvin "
+        "for capitis (topicals do not penetrate hair shaft) and for "
+        "extensive disease; oral terbinafine 6 weeks fingernails, 12 "
+        "weeks toenails, with LFT check. Treat family and pets in tinea "
+        "capitis. Note: presumed 'eczema' that fails topical steroid or "
+        "has an asymmetric active edge is tinea - always scrape before "
+        "steroids."
+    ),
+
+    "Bowen's disease": (
+        "Squamous cell carcinoma in situ; full-thickness intra-epithelial "
+        "dysplasia becoming invasive SCC in 3-5% if untreated. "
+        "Epidemiology: elderly, sun-exposed lower limbs of women and "
+        "head/neck of men; also anal, genital and periungual; risks "
+        "include cumulative UV, immunosuppression (transplant patients "
+        "over-represented), arsenic, HPV (anogenital), radiotherapy. "
+        "Clinical features: slowly enlarging solitary erythematous scaly "
+        "patch with a well-defined but irregular border; may be crusted "
+        "or fissured; asymptomatic or mildly itchy; often mistaken for "
+        "eczema, psoriasis or tinea, so biopsy asymmetric solitary "
+        "lesions. Ix: dermoscopy (dotted vessels, scaly surface); shave "
+        "or punch biopsy. Mx: cryotherapy for small solitary lesions; "
+        "topical 5-FU or imiquimod for larger patches; photodynamic "
+        "therapy on the lower leg; curettage and cautery; excision for "
+        "uncertain diagnosis or thick lesions; radiotherapy for elderly "
+        "or large fields. Follow-up for recurrence. Note: solitary "
+        "erythematous scaly plaque on a sun-exposed limb that has not "
+        "responded to steroid is Bowen until biopsy proves otherwise."
+    ),
+
+    "Legionnaire's disease": (
+        "Severe atypical pneumonia from Legionella pneumophila and L. "
+        "longbeachae (potting-mix organism, prevalent in Australia); "
+        "intracellular Gram-negative growing in warm water. "
+        "Epidemiology: cooling towers, spas, showers, hospital water "
+        "(pneumophila); potting mix, compost (longbeachae, unique "
+        "Australian); men over 50, smokers, immunosuppression, "
+        "diabetes. Clinical features: high fever, rigors, dry then "
+        "productive cough, dyspnoea, pleuritic pain; hyponatraemia is "
+        "the classic clue; relative bradycardia; confusion; GI "
+        "symptoms (diarrhoea, vomiting) prominent; hepatitis; "
+        "multilobar consolidation on CXR. Ix: urinary antigen "
+        "(pneumophila serogroup 1 only, misses longbeachae); sputum "
+        "PCR and culture on buffered charcoal yeast extract; notify "
+        "public health. Mx: azithromycin or respiratory "
+        "fluoroquinolone (moxifloxacin, levofloxacin) 7-14 days; "
+        "longer if immunocompromised; beta-lactams do not work. Note: "
+        "severe CAP with hyponatraemia, diarrhoea and confusion in a "
+        "gardener or after cooling-tower exposure needs empirical "
+        "Legionella cover."
     ),
 
 }
