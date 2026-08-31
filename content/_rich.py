@@ -86,6 +86,51 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "tumor lysis syndrome prevention and treatment"]],
         "summary": "",
     },
+    {
+        "name": "Renal colic",
+        "aliases": ["Ureteric colic", "Ureteral colic", "Kidney stone pain"],
+        "utd": [["Overview", "diagnosis and acute management of suspected "
+                             "nephrolithiasis in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Testicular cancer",
+        "aliases": ["Testis cancer", "Germ cell tumour of testis",
+                    "Seminoma", "Non-seminomatous germ cell tumour"],
+        "utd": [["Overview", "clinical manifestations diagnosis and staging "
+                             "of testicular germ cell tumors"]],
+        "summary": "",
+    },
+    {
+        "name": "Snake bite",
+        "aliases": ["Snakebite", "Snake envenoming",
+                    "Australian snake envenoming"],
+        "utd": [["Overview", "snakebites worldwide clinical manifestations "
+                             "and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Melioidosis",
+        "aliases": ["Burkholderia pseudomallei infection", "Whitmore disease"],
+        "utd": [["Overview", "melioidosis epidemiology clinical manifestations "
+                             "and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Irukandji syndrome",
+        "aliases": ["Irukandji jellyfish sting", "Carukia barnesi envenoming"],
+        "utd": [["Overview", "jellyfish stings"]],
+        "summary": "",
+    },
+    {
+        "name": "Intracerebral haemorrhage",
+        "aliases": ["Intracerebral hemorrhage", "ICH",
+                    "Spontaneous intracerebral haemorrhage",
+                    "Haemorrhagic stroke", "Hemorrhagic stroke"],
+        "utd": [["Overview", "spontaneous intracerebral hemorrhage "
+                             "pathogenesis clinical features and diagnosis"]],
+        "summary": "",
+    },
 ]
 
 
@@ -14126,6 +14171,221 @@ RICH_SUMMARIES = {
         "effusion needs urgent respiratory referral and dust-diseases "
         "scheme referral."
     ),
+    # ═══════ BATCH 44: Australian Y4 emergencies + common gaps ══════
+
+    "Testicular torsion": (
+        "Twisting of the spermatic cord obstructing venous then arterial "
+        "flow; a surgical emergency with a 6-hour salvage window. "
+        "Epidemiology: peaks at puberty (12-18) and in the neonatal "
+        "period; bell-clapper anomaly (horizontal lie of the testis) is "
+        "the predisposing factor. Clinical features: sudden severe "
+        "unilateral scrotal pain, often on waking or after minor trauma; "
+        "nausea and vomiting; testis high-riding with transverse lie, "
+        "tender; absent cremasteric reflex; Prehn sign negative (pain not "
+        "relieved by elevation). Ix: clinical diagnosis - do not delay "
+        "for imaging in a classical presentation. Colour Doppler shows "
+        "absent intratesticular flow only when the diagnosis is doubtful "
+        "and imaging is immediately available. Mx: urgent surgical "
+        "exploration with bilateral orchidopexy (the contralateral testis "
+        "carries the same anomaly). Manual detorsion (open-book, rotate "
+        "lateral) is a bridge to theatre only. Salvage ~90% under 6 "
+        "hours, near zero after 24. Red flags: an acute scrotum in a boy "
+        "or young man is torsion until surgery proves otherwise - Doppler "
+        "and epididymitis can wait, the theatre cannot."
+    ),
+
+    "Benign paroxysmal positional vertigo": (
+        "Detached otoconia in the semicircular canals (posterior canal in "
+        "90%) generating brief rotational vertigo with head movement. "
+        "Epidemiology: the commonest peripheral vertigo; women, over 50. "
+        "Clinical features: rotatory vertigo lasting under a minute, "
+        "triggered by rolling in bed, looking up, or bending; no hearing "
+        "loss or tinnitus; nausea common. Diagnosis: Dix-Hallpike is "
+        "positive for posterior canal - fatigable upbeat torsional "
+        "nystagmus after a 5-10 second latency; supine roll test for "
+        "horizontal canal - geotropic or apogeotropic nystagmus. Ix: none "
+        "if classic; MRI only if central features (persistent, "
+        "non-fatigable, vertical nystagmus, other cranial signs). Mx: "
+        "Epley manoeuvre for posterior canal resolves 80% in one session; "
+        "Semont if Dix-Hallpike not tolerated; barbecue roll for "
+        "horizontal canal. Home Brandt-Daroff exercises if recurrent. "
+        "Vestibular suppressants (prochlorperazine, betahistine) delay "
+        "recovery and are not indicated. Red flags: continuous vertigo, "
+        "unilateral hearing loss, or any brainstem sign - image and "
+        "refer, this is not BPPV."
+    ),
+
+    "Renal colic": (
+        "Acute severe flank pain from a calculus obstructing the ureter. "
+        "Epidemiology: 10% lifetime risk, men more than women, peak "
+        "30-50; recurs in half within 10 years. Types by stone "
+        "composition: calcium oxalate (80%), calcium phosphate, uric acid "
+        "(radiolucent), struvite (infection stones, staghorn), cystine. "
+        "Clinical features: sudden severe loin-to-groin colicky pain, "
+        "restless (unlike peritonism), nausea, vomiting, haematuria "
+        "(visible or microscopic); pyrexia and rigors mean infected "
+        "obstructed system - a urological emergency. Ix: urinalysis "
+        "(blood, leukocytes, nitrites), beta-hCG in women, FBC, EUC, "
+        "calcium, urate; low-dose non-contrast CT KUB is the imaging "
+        "standard. Mx: parenteral NSAID (ketorolac, diclofenac) is "
+        "first-line analgesia and outperforms opioids; antiemetic; IV "
+        "fluid to maintain output. Stones under 5 mm usually pass; 5-10 "
+        "mm - tamsulosin as medical expulsive therapy; over 10 mm or "
+        "unresolving - urology referral for ESWL, ureteroscopy or PCNL. "
+        "Red flags: fever plus obstruction needs emergency decompression "
+        "(nephrostomy or JJ stent) - not the stone extraction."
+    ),
+
+    "Basal cell carcinoma": (
+        "Slow-growing keratinocyte cancer of the basal layer; commonest "
+        "human cancer, with Australia the world's highest incidence. "
+        "Local destruction is the risk, metastasis is rare. Risk "
+        "factors: cumulative UV, fair skin (Fitzpatrick I-II), age, "
+        "immunosuppression, radiotherapy, arsenic, Gorlin. Clinical "
+        "features: pearly rolled edge with telangiectasia on sun-"
+        "exposed skin (face, neck, ears); may ulcerate (rodent ulcer). "
+        "Subtypes: nodular (commonest), superficial (scaly plaque on "
+        "trunk), morphoeic (scar-like, higher recurrence), pigmented, "
+        "basosquamous. Ix: dermoscopy (arborising vessels, blue-grey "
+        "ovoid nests); shave, punch or excisional biopsy. Mx: 3-5 mm "
+        "excision first-line; Mohs for H-zone of face, morphoeic, or "
+        "recurrent; topical imiquimod or 5-FU for superficial trunk "
+        "lesions; vismodegib for locally advanced or metastatic. "
+        "Prevention: sun-protective clothing, SPF 50+, annual skin "
+        "checks. Note: any non-healing lesion on Australian sun-exposed "
+        "skin is skin cancer until biopsy says otherwise."
+    ),
+
+    "Testicular cancer": (
+        "Commonest solid malignancy in men 15-35; germ cell tumours "
+        "account for 95%. Risk factors: cryptorchidism (even after "
+        "orchidopexy), family history, prior contralateral tumour, "
+        "Klinefelter, intratubular germ cell neoplasia. Types: seminoma "
+        "(peak 30-40, radio- and chemo-sensitive) and non-seminomatous "
+        "(embryonal, yolk sac, choriocarcinoma, teratoma; peak 20-30). "
+        "Clinical features: painless firm testicular lump on self-exam; "
+        "10% present with metastatic symptoms (back pain, "
+        "supraclavicular node, dyspnoea from lung mets); gynaecomastia "
+        "if hCG-secreting. Ix: scrotal ultrasound; markers AFP "
+        "(elevated in NSGCT, never in pure seminoma), beta-hCG, LDH; CT "
+        "CAP for staging. Never biopsy through the scrotum. Mx: radical "
+        "inguinal orchidectomy is diagnostic and therapeutic; sperm "
+        "banking first; stage I seminoma - surveillance or single-dose "
+        "carboplatin; advanced - BEP chemotherapy (bleomycin, etoposide, "
+        "cisplatin), curative even with mets. Note: cure exceeds 95% "
+        "overall - the exam point is offering fertility preservation "
+        "before any therapy."
+    ),
+
+    "Snake bite": (
+        "Australia has 20 species capable of killing a human; brown "
+        "(Pseudonaja) causes most deaths, followed by tiger, taipan, "
+        "death adder, black snake and sea snake. Envenoming produces some "
+        "combination of coagulopathy (VICC - venom-induced consumptive "
+        "coagulopathy), neurotoxicity, myotoxicity and acute kidney "
+        "injury; brown snake gives isolated VICC and collapse. Clinical "
+        "features: bite may be painless with minimal marks; early - "
+        "headache, vomiting, collapse, abdominal pain; then bleeding, "
+        "ptosis and bulbar palsy, generalised weakness, dark urine "
+        "(rhabdomyolysis or haemoglobinuria). Ix: FBC, coagulation (INR, "
+        "APTT, fibrinogen, D-dimer), EUC, CK, urinalysis at 0, 1, 6, 12 "
+        "h; snake venom detection kit on the bite-site swab (guides "
+        "antivenom choice, not diagnosis). Mx: pressure-immobilisation "
+        "bandage over the bite and the whole limb, splint, do not wash "
+        "the site; transfer to a hospital with antivenom; monovalent "
+        "antivenom by species; polyvalent if remote and species unknown; "
+        "premedication not routine; ICU for airway and coagulopathy. "
+        "Note: absence of visible bite or clotting does not exclude "
+        "envenoming - the 12-hour repeat coags are not optional."
+    ),
+
+    "Melioidosis": (
+        "Infection with Burkholderia pseudomallei, a saprophyte of wet "
+        "tropical soil; the Top End (Darwin) is a global hotspot with "
+        "annual wet-season outbreaks. Transmission by percutaneous "
+        "inoculation, inhalation or ingestion; person-to-person spread "
+        "negligible. Risk factors: diabetes (over half of cases), "
+        "hazardous alcohol, chronic lung disease, chronic kidney disease, "
+        "immunosuppression, Indigenous ethnicity in endemic areas. "
+        "Clinical features: protean - community-acquired pneumonia "
+        "(commonest), septicaemia with multi-organ abscesses (liver, "
+        "spleen, prostate), skin ulcer, prostatic abscess, "
+        "encephalomyelitis, parotitis in children; can reactivate years "
+        "after exposure. Ix: culture is diagnostic - blood, sputum, "
+        "urine, throat, ulcer swab (alert the lab; Ashdown medium); CT "
+        "chest and abdomen or MRI CNS for occult abscesses. Mx: intensive "
+        "phase - IV meropenem or ceftazidime for at least 2 weeks (longer "
+        "for deep-seated disease); eradication phase - oral "
+        "trimethoprim-sulfamethoxazole for 3-6 months. Note: a returning "
+        "diabetic traveller from the tropics with sepsis or pneumonia - "
+        "culture for melioidosis and start meropenem empirically."
+    ),
+
+    "Irukandji syndrome": (
+        "Delayed severe envenoming after a jellyfish sting on the "
+        "tropical Australian coast, classically from Carukia barnesi (a "
+        "1-2 cm carybdeid) but other cubozoans do it too. Epidemiology: "
+        "north Queensland from November to May; stinger nets do not "
+        "exclude Irukandji. Clinical features: trivial initial sting with "
+        "minimal skin marks, then a 20-30 minute latent period, then "
+        "severe generalised pain (low back, abdomen, chest, limbs), "
+        "catecholamine excess (hypertension, tachycardia, sweating, "
+        "restlessness), vomiting, sense of impending doom; late - "
+        "cardiogenic pulmonary oedema and Takotsubo-pattern "
+        "cardiomyopathy. Ix: clinical; troponin and ECG for cardiac "
+        "involvement, CXR if breathless. Mx: douse the sting site with "
+        "vinegar (inactivates undischarged nematocysts); IV opioid "
+        "titrated to pain (large doses often needed); magnesium sulfate "
+        "infusion for severe hypertension and pain; treat pulmonary "
+        "oedema with GTN and diuresis. Note: any suspected Irukandji gets "
+        "observed at least 6 hours - cardiac complications declare "
+        "themselves late."
+    ),
+
+    "Intracerebral haemorrhage": (
+        "Non-traumatic bleeding into brain parenchyma; 15% of strokes but "
+        "twice the 30-day mortality of ischaemic stroke. Causes: "
+        "hypertension (deep bleeds in basal ganglia, thalamus, pons, "
+        "cerebellum) is commonest; cerebral amyloid angiopathy (lobar "
+        "bleeds in elderly); vascular malformation (AVM, cavernoma); "
+        "anticoagulation; tumour bleed; sympathomimetics. Clinical "
+        "features: sudden focal deficit with early headache, vomiting "
+        "and depressed consciousness; seizures more common than in "
+        "ischaemic stroke; deficit worsens over minutes to hours "
+        "(versus maximal at onset for ischaemic). Ix: non-contrast CT is "
+        "definitive; CTA if under 55, lobar, or a spot sign; MRI later "
+        "for underlying cause. Mx: airway and neurological monitoring; "
+        "reverse anticoagulation urgently (vitamin K plus prothrombinex "
+        "for warfarin, idarucizumab for dabigatran, andexanet or "
+        "prothrombinex for Xa inhibitors); lower BP to systolic 140 in "
+        "the first hour (INTERACT-2); neurosurgery for cerebellar bleed "
+        "over 3 cm or brainstem compression; supportive for most "
+        "supratentorial bleeds. Note: never assume a stroke is "
+        "ischaemic before CT - thrombolysis into a haemorrhage is "
+        "catastrophic."
+    ),
+
+    "Mononucleosis": (
+        "Primary EBV infection, usually in adolescence; spread by saliva "
+        "(the 'kissing disease'). Epidemiology: 90% of adults have "
+        "serological evidence of past EBV. Clinical features: prodrome of "
+        "malaise and fever, then severe exudative tonsillopharyngitis, "
+        "tender cervical lymphadenopathy (posterior chain "
+        "characteristic), splenomegaly (50%), hepatitis, palatal "
+        "petechiae; a morbilliform rash follows amoxicillin in 90% and is "
+        "not a true drug allergy. Ix: FBC (atypical lymphocytosis over "
+        "10%), LFT (mild transaminitis common), monospot (heterophile "
+        "antibody, negative in early illness and in children under 4), "
+        "EBV-specific serology (VCA IgM in acute, VCA IgG and EBNA in "
+        "past infection). Mx: supportive - fluids, paracetamol, NSAID; "
+        "corticosteroids only for airway compromise from tonsillar "
+        "hypertrophy or haemolytic anaemia; avoid contact sport for 4-6 "
+        "weeks because of splenic rupture risk. Note: prescribing "
+        "amoxicillin for a pharyngitis that turns out to be EBV is the "
+        "classic teaching case for the pause before empirical "
+        "antibiotics."
+    ),
+
 }
 
 
