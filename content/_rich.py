@@ -13182,29 +13182,6 @@ RICH_SUMMARIES = {
         "drug started 4-28 days earlier - stop and transfer."
     ),
 
-    "Wolff-Parkinson-White syndrome": (
-        "Congenital accessory pathway (bundle of Kent) bypassing the AV "
-        "node; ECG shows delta wave and short PR; can drive "
-        "tachyarrhythmias. Epidemiology: prevalence 0.1-0.3%; usually "
-        "structurally normal heart; Ebstein anomaly and HCM raise risk; "
-        "SCD 0.1-0.4%/year. Clinical features: palpitations from AVRT "
-        "(orthodromic narrow-complex most common); AF conducting "
-        "rapidly down the accessory pathway is the dangerous rhythm - "
-        "broad-complex irregularly irregular over 200/min risks VF; "
-        "many asymptomatic incidental findings. Ix: ECG (delta wave, PR "
-        "under 120 ms, wide QRS); Holter for symptoms; exercise ECG "
-        "(loss of pre-excitation suggests low-risk pathway); EP study "
-        "for risk stratification. Mx: acute AVRT - vagal manoeuvres, IV "
-        "adenosine or verapamil; AF with pre-excitation - IV "
-        "procainamide or ibutilide; DC cardioversion if unstable; AVOID "
-        "AV nodal blockers (adenosine, verapamil, digoxin, beta "
-        "blocker) in pre-excited AF - shunt conduction down the "
-        "accessory pathway and precipitate VF; catheter ablation "
-        "first-line definitive with over 95% success. Note: delta wave "
-        "plus irregular broad-complex tachycardia - no AV nodal "
-        "blocker; procainamide or DC shock."
-    ),
-
     "Duchenne muscular dystrophy": (
         "X-linked dystrophin deficiency; commonest severe childhood "
         "muscular dystrophy at 1 in 3500 male births. Genetics: DMD "
