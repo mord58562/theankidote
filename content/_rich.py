@@ -496,6 +496,71 @@ NEW_CONDITIONS = [
                              "and pathogenesis"]],
         "summary": "",
     },
+
+    # ── Batch 56: emergency, psych, paeds gaps ──
+    {
+        "name": "Ventricular fibrillation",
+        "aliases": ["VF", "V-fib", "Vfib"],
+        "utd": [["Overview", "cardiac arrest and cardiopulmonary "
+                             "resuscitation in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Antisocial personality disorder",
+        "aliases": ["ASPD", "Sociopathy", "Dissocial personality disorder"],
+        "utd": [["Overview", "antisocial personality disorder "
+                             "epidemiology clinical features assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Postpartum psychosis",
+        "aliases": ["Puerperal psychosis", "Postnatal psychosis"],
+        "utd": [["Overview", "postpartum psychosis epidemiology "
+                             "clinical features diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Encopresis",
+        "aliases": ["Functional faecal incontinence",
+                    "Faecal incontinence in children"],
+        "utd": [["Overview", "chronic functional constipation "
+                             "and fecal incontinence in infants children"]],
+        "summary": "",
+    },
+    {
+        "name": "Failure to thrive",
+        "aliases": ["Faltering growth", "Poor weight gain",
+                    "Growth faltering"],
+        "utd": [["Overview", "poor weight gain in children under 2"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervical insufficiency",
+        "aliases": ["Cervical incompetence", "Incompetent cervix"],
+        "utd": [["Overview", "cervical insufficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Precocious puberty",
+        "aliases": ["Early puberty", "Central precocious puberty"],
+        "utd": [["Overview", "definition etiology and evaluation of "
+                             "precocious puberty"]],
+        "summary": "",
+    },
+    {
+        "name": "Delayed puberty",
+        "aliases": ["Pubertal delay", "Constitutional delay of "
+                    "growth and puberty"],
+        "utd": [["Overview", "approach to the boy with delayed puberty"]],
+        "summary": "",
+    },
+    {
+        "name": "Global developmental delay",
+        "aliases": ["Developmental delay", "GDD"],
+        "utd": [["Overview", "developmental delay and intellectual "
+                             "disability in children evaluation"]],
+        "summary": "",
+    },
 ]
 
 
@@ -17080,6 +17145,206 @@ RICH_SUMMARIES = {
         "guanfacine) first-line; antipsychotics (aripiprazole, "
         "risperidone) second-line. DBS for severe refractory adults. "
         "Note: most tics improve after puberty."
+    ),
+
+    # ═══════ BATCH 56: emergency, psych and paediatric gaps ═══════
+
+    "Ventricular fibrillation": (
+        "Disorganised ventricular activity producing no cardiac "
+        "output - commonest initial rhythm in out-of-hospital cardiac "
+        "arrest. "
+        "Aetiology: acute ischaemia (STEMI), scar re-entry after "
+        "prior MI, cardiomyopathy, long QT, Brugada, hypokalaemia, "
+        "hypomagnesaemia, cocaine, electrocution, commotio cordis. "
+        "Clinical features: sudden collapse, no pulse; ECG chaotic "
+        "irregular waveforms with no discernible QRS. "
+        "Mx: high-quality CPR (100 to 120 per minute), immediate "
+        "defibrillation biphasic 200 J unsynchronised - each minute "
+        "of delay reduces survival ~10%; ANZCOR - adrenaline 1 mg "
+        "IV every 3 to 5 minutes after second shock, amiodarone "
+        "300 mg IV after third shock; identify 4 Hs and 4 Ts; "
+        "post-ROSC targeted temperature 32 to 36 degrees for 24 "
+        "hours, urgent angiography if ischaemic. "
+        "Prevention: ICD for survivors and primary prevention "
+        "(LVEF under 35%)."
+    ),
+
+    "Antisocial personality disorder": (
+        "Pervasive pattern of disregard for and violation of others' "
+        "rights from age 15, diagnosed from age 18 with prior "
+        "conduct disorder. Prevalence 1 to 4%; male 3:1; over-"
+        "represented in prisons and substance-use populations. "
+        "Aetiology: gene-environment interaction - childhood "
+        "maltreatment, low SES, parental antisocial traits, "
+        "callous-unemotional temperament, prenatal alcohol. "
+        "Clinical features (DSM-5): three or more of - failure to "
+        "conform to social norms, deceitfulness, impulsivity, "
+        "aggressiveness, reckless disregard for safety, "
+        "irresponsibility, lack of remorse. Comorbid substance use, "
+        "depression, ADHD, other personality disorders. "
+        "Ix: careful history including collateral and forensic; "
+        "PCL-R for psychopathy. Rule out mania, psychosis, TBI. "
+        "Mx: limited evidence base - CBT approaches (schema therapy, "
+        "mentalisation-based therapy), substance-use programs, "
+        "contingency management. Medication for comorbid only - no "
+        "drug specifically effective. Manage risk to self and others."
+    ),
+
+    "Postpartum psychosis": (
+        "Acute psychotic illness in the weeks after childbirth - "
+        "psychiatric emergency, risk of suicide and infanticide. "
+        "Rare (1 to 2 per 1000 births) but 100x more likely in "
+        "bipolar or prior postpartum psychosis. "
+        "Risk factors: personal or family history of bipolar or "
+        "postpartum psychosis, primiparity, sleep deprivation, "
+        "cessation of mood-stabilising medication in pregnancy. "
+        "Clinical features: rapid onset days to weeks postpartum "
+        "with mood lability, insomnia, confusion, delusions (often "
+        "about the baby), hallucinations, disorganised thinking; "
+        "waxing and waning is characteristic. "
+        "Ix: urgent psychiatric assessment; exclude organic - FBC, "
+        "EUC, LFT, TFT, calcium, glucose, urine drug screen, CT "
+        "head if focal signs; exclude sepsis, encephalitis. "
+        "Mx: admit to mother-and-baby unit if available - never "
+        "leave alone with the infant; antipsychotic (olanzapine, "
+        "quetiapine), lithium for mood stabilisation; ECT highly "
+        "effective and safe with breastfeeding. Recurrence risk 30 "
+        "to 50% - prophylactic lithium from delivery reduces this."
+    ),
+
+    "Encopresis": (
+        "Repeated involuntary passage of faeces in inappropriate "
+        "places in a child aged at least 4 years. Prevalence 1 to "
+        "3% of school-age; male predominance 3:1. "
+        "Types: retentive (over 80%) - chronic constipation with "
+        "overflow incontinence, distended rectum, palpable faecal "
+        "mass; non-retentive (rare) - normal stool passage in "
+        "abnormal places without constipation. "
+        "Aetiology: painful defecation (fissure, hard stool), toilet "
+        "avoidance, low fibre, coercive toileting; secondary causes "
+        "rare (Hirschsprung, spinal cord lesions, cow's milk protein "
+        "allergy, hypothyroidism). "
+        "Ix: clinical history and abdominal examination; abdominal "
+        "X-ray for faecal loading; TSH, calcium if secondary cause "
+        "suspected. "
+        "Mx: retentive - disimpaction (macrogol PEG 3350 escalating "
+        "over 3 to 5 days, or oral senna if PEG fails), then long-"
+        "term maintenance PEG plus behavioural toileting program "
+        "(scheduled sits after meals, reward chart); duration months "
+        "to years. Non-retentive - behavioural therapy. "
+        "Note: never dismiss as 'lazy' - encopresis is medical."
+    ),
+
+    "Failure to thrive": (
+        "Suboptimal weight gain in a young child (under 2), now "
+        "often 'faltering growth' in Australia. Not a diagnosis but "
+        "a sign - the workup is for cause. "
+        "Definition: weight below 3rd centile, dropping 2+ major "
+        "centile lines, or under 80% of expected for height. "
+        "Causes: inadequate intake (breastfeeding difficulties, "
+        "formula errors, neglect, oral aversion, cleft palate - "
+        "commonest); increased losses (vomiting, GORD, malabsorption "
+        "from coeliac, CF, CMPA); increased requirements (congenital "
+        "heart disease, chronic infection, hyperthyroidism, "
+        "malignancy); genetic/syndromic. "
+        "Ix: detailed feeding, developmental and social history; "
+        "growth chart trending; examination for dysmorphic features "
+        "and cardiac; targeted - FBC, iron studies, EUC, LFT, TFT, "
+        "coeliac serology, urine, stool, sweat test, chromosomes if "
+        "syndromic features. "
+        "Mx: address the cause; involve dietitian, speech pathology, "
+        "social work; high-energy supplements; admission for weight "
+        "gain under supervision if severe or psychosocial concerns. "
+        "Note: consider child protection notification if neglect."
+    ),
+
+    "Cervical insufficiency": (
+        "Inability of the cervix to retain a pregnancy in the second "
+        "trimester without contractions or bleeding - causes painless "
+        "mid-trimester loss or extreme preterm birth. "
+        "Risk factors: prior second-trimester loss, prior preterm "
+        "birth under 34 weeks, previous cervical surgery (LLETZ, "
+        "cone biopsy), Mullerian anomaly, multiple pregnancy, "
+        "Ehlers-Danlos, DES exposure. "
+        "Clinical features: painless cervical dilatation with "
+        "prolapsed membranes at 14 to 24 weeks, mild pelvic pressure "
+        "or discharge; often asymptomatic, found on TVUS screening. "
+        "Ix: transvaginal ultrasound - short cervix under 25 mm at "
+        "16 to 24 weeks is the screening threshold in high-risk "
+        "women. "
+        "Mx: history-indicated cerclage at 12 to 14 weeks if three "
+        "or more prior second-trimester losses; ultrasound-indicated "
+        "cerclage if short cervix plus prior preterm birth; rescue "
+        "cerclage for painless dilatation with visible membranes "
+        "before 24 weeks. Vaginal progesterone reduces preterm birth "
+        "in short cervix without prior loss. Bed rest does not help."
+    ),
+
+    "Precocious puberty": (
+        "Onset of secondary sexual characteristics before age 8 in "
+        "girls or 9 in boys. "
+        "Types: central (gonadotropin-dependent, HPG axis activation "
+        "- idiopathic in over 90% of girls but only 40% of boys; "
+        "the rest CNS tumours, hydrocephalus, radiation, hamartoma); "
+        "peripheral (gonadotropin-independent - McCune-Albright, "
+        "CAH, adrenal or gonadal tumour, exogenous hormone). "
+        "Clinical features: breast development in girls, testicular "
+        "enlargement over 4 mL in boys, pubic and axillary hair, "
+        "growth acceleration, advanced bone age. Isolated premature "
+        "adrenarche or thelarche often benign but worked up. "
+        "Ix: bone age X-ray (advanced), basal LH/FSH, oestradiol or "
+        "testosterone; GnRH stimulation test if unclear (pubertal LH "
+        "response confirms central); MRI brain (all central boys; "
+        "central girls if under 6 or focal signs); pelvic ultrasound "
+        "in girls; adrenal androgens; TSH. "
+        "Mx: central - GnRH agonist (leuprorelin, triptorelin) to "
+        "suppress the axis and preserve adult height; peripheral - "
+        "treat the underlying cause. Paediatric endocrinology led."
+    ),
+
+    "Delayed puberty": (
+        "Absence of secondary sexual characteristics by age 13 in "
+        "girls or 14 in boys - 2 SD above the population mean. "
+        "Types: constitutional delay of growth and puberty (CDGP, "
+        "commonest, familial, self-resolves); hypogonadotropic "
+        "hypogonadism (low LH/FSH - Kallmann, pituitary tumour, "
+        "chronic illness, anorexia, over-exercise); hypergonadotropic "
+        "hypogonadism (high LH/FSH from primary gonadal failure - "
+        "Turner, Klinefelter, chemo/radiation). "
+        "Clinical features: absent breast development in girls, "
+        "testicular volume under 4 mL in boys, short stature relative "
+        "to genetic potential, delayed bone age. Family history "
+        "supports CDGP. "
+        "Ix: bone age (delayed), LH, FSH, sex steroids, TFT, "
+        "prolactin, IGF-1, karyotype for hypergonadotropic; MRI "
+        "pituitary if low gonadotropins; coeliac and IBD screen. "
+        "Mx: CDGP - reassurance, short course low-dose sex steroid "
+        "(testosterone in boys, low-dose oestradiol in girls) if "
+        "psychological impact. Permanent hypogonadism - lifelong "
+        "sex hormone replacement titrated by paediatric then adult "
+        "endocrinology; fertility counselling."
+    ),
+
+    "Global developmental delay": (
+        "Delay (at least 2 SD below the mean) in two or more "
+        "developmental domains in a child under 5. Over 5, the "
+        "term is intellectual disability. "
+        "Aetiology: genetic (Down, Fragile X, chromosomal, single-"
+        "gene, mitochondrial); prenatal (TORCH, fetal alcohol, "
+        "teratogen); perinatal (birth asphyxia, kernicterus, IVH); "
+        "postnatal (meningitis, TBI, hypothyroidism, lead, "
+        "psychosocial deprivation). No cause found in 20 to 30%. "
+        "Clinical features: missed milestones; feeding, sleep and "
+        "behavioural difficulties; dysmorphic features; regression "
+        "is a red flag for neurodegenerative disease. "
+        "Ix: developmental assessment; hearing and vision testing; "
+        "FBC, iron, TFT, EUC, calcium, CK; chromosomal microarray "
+        "first-line, Fragile X, targeted panels; metabolic screen "
+        "if regression; MRI brain if focal or regression; EEG if "
+        "seizures. "
+        "Mx: early intervention (physio, OT, speech therapy) is "
+        "high-yield; NDIS support; treat underlying cause where "
+        "possible; genetic counselling."
     ),
 
     # ═══════ BATCH 55: remaining priority-gaps + common derm/psych ═══════
