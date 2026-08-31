@@ -15665,6 +15665,117 @@ RICH_SUMMARIES = {
         "abscess - image."
     ),
 
+    # ═══════ BATCH 50a: AmE variants pointing to BrE rich summaries (fixes coverage gap for cards using US spelling) ══
+
+    "Placenta previa": (
+        "Placenta implanted in the lower uterine segment, covering or "
+        "reaching the internal cervical os. Classification: placenta "
+        "praevia covers the os; low-lying is within 2 cm but not "
+        "covering. Risk factors: previous caesarean (risk rises with "
+        "each), previous praevia, previous uterine surgery, multiple "
+        "pregnancy, advanced maternal age, smoking, and assisted "
+        "reproduction. Clinical features: painless bright-red vaginal "
+        "bleeding in the second or third trimester, often without "
+        "warning; uterus soft and non-tender, fetus usually stable; "
+        "malpresentation is common. Ix: transvaginal ultrasound is safe "
+        "and the reference standard; low-lying placentae at the 18 to 20 "
+        "week scan are re-imaged at 32 weeks. Never perform a digital "
+        "vaginal examination until praevia is excluded. Mx: expectant if "
+        "stable and preterm; admit for significant bleeds, "
+        "corticosteroids between 24 and 34 weeks, anti-D if Rh-negative, "
+        "group and hold or crossmatch on presentation. Elective caesarean "
+        "at 36 to 37 weeks for persistent praevia. Note: consider "
+        "placenta accreta spectrum in any praevia over a previous "
+        "caesarean scar - MRI and multidisciplinary planning."
+    ),
+
+    "Preeclampsia": (
+        "New hypertension after 20 weeks with evidence of maternal organ "
+        "dysfunction or uteroplacental insufficiency. Proteinuria is "
+        "supportive but no longer required. Pathophysiology: failed "
+        "spiral artery remodelling gives placental ischaemia and release "
+        "of antiangiogenic factors, producing systemic endothelial "
+        "dysfunction. Clinical features: headache, visual disturbance, "
+        "epigastric or right upper quadrant pain, oedema, hyperreflexia; "
+        "severe features are BP >=160/110, rising creatinine, "
+        "transaminases >=2x normal, platelets under 100, pulmonary "
+        "oedema, or neurological symptoms. Ix: BP, urine "
+        "protein-creatinine ratio, FBC, EUC, LFT, urate, and fetal "
+        "assessment with CTG and growth ultrasound. Mx: the only cure is "
+        "delivery. Treat severe hypertension with labetalol, nifedipine "
+        "or hydralazine; magnesium sulfate for seizure prophylaxis and "
+        "treatment; corticosteroids for fetal lung maturity before 34 "
+        "weeks. Timing of birth balances maternal deterioration against "
+        "prematurity. Note: aspirin from 12 weeks reduces recurrence in "
+        "women at high risk, and calcium supplementation helps where "
+        "dietary intake is low. Red flags: HELLP, eclampsia, abruption "
+        "and pulmonary oedema."
+    ),
+
+    "Transient tachypnea of the newborn": (
+        "Delayed clearance of fetal lung fluid producing tachypnoea in "
+        "the term or late-preterm infant; commonest cause of respiratory "
+        "distress at term. Risk factors: elective caesarean without "
+        "labour (labour drives sodium channels reabsorbing lung fluid), "
+        "macrosomia, maternal diabetes and asthma, male, precipitous "
+        "labour. Clinical features: onset within 2 hours of birth with "
+        "tachypnoea, mild grunting and recession; typically resolves "
+        "within 24-72 hours; a well but tachypnoeic term baby is the "
+        "classic picture. Ix: CXR shows perihilar streaking and "
+        "hyperinflation; septic screen if any doubt (early GBS sepsis "
+        "mimics TTN). Mx: supportive - thermoregulation and IV fluids if "
+        "feeding not established; low-flow oxygen or nasal CPAP for "
+        "significant work of breathing; empirical benzylpenicillin plus "
+        "gentamicin until sepsis excluded; observe until RR under 60 and "
+        "feeding well. Note: any term baby still needing oxygen or "
+        "worsening at 24 hours is not TTN - re-image and think RDS, "
+        "pneumonia or persistent pulmonary hypertension."
+    ),
+
+    "Pheochromocytoma": (
+        "Catecholamine-secreting tumour of adrenal chromaffin cells; the "
+        "extra-adrenal counterpart is a paraganglioma. Epidemiology: the "
+        "old rule of 10s (10% extra-adrenal, bilateral, malignant, in "
+        "children) is still taught, but the familial fraction is now ~40% "
+        "with expanded panels, so all patients are offered genetic "
+        "testing - SDHx, VHL, RET, NF1. Clinical features: the classic "
+        "triad is episodic headache, sweating and palpitations on a "
+        "background of hypertension, though presentation is often just "
+        "resistant or paroxysmal hypertension. Ix: plasma free "
+        "metanephrines or 24-hour urinary metanephrines, taken supine "
+        "after 30 minutes rest. Locate with CT or MRI once biochemistry "
+        "is positive, then functional imaging. Mx: alpha blockade with "
+        "phenoxybenzamine or prazosin for 10-14 days first, adding a "
+        "beta-blocker only afterwards, then surgical resection with an "
+        "experienced anaesthetic team. Note: beta blockade before alpha "
+        "blockade leaves unopposed alpha stimulation and can precipitate "
+        "hypertensive crisis - the sequence is the exam point and the "
+        "clinical one. Red flags: crisis can be triggered by anaesthesia, "
+        "contrast or abdominal palpation."
+    ),
+
+    "Peripheral artery disease": (
+        "Atherosclerotic narrowing of the limb arteries, and a marker of "
+        "systemic vascular risk as much as a limb problem. Clinical "
+        "features: intermittent claudication (reproducible, fixed "
+        "distance, relieved by rest), progressing to rest pain (relieved "
+        "by dependency), ulceration and gangrene; absent pulses, hair "
+        "loss, cool shiny skin, delayed capillary return. Aortoiliac "
+        "disease gives Leriche (claudication, absent femoral pulses, "
+        "erectile dysfunction). Acute limb ischaemia - 6 Ps (pain, "
+        "pallor, pulselessness, paraesthesia, paralysis, poikilothermia) "
+        "- is a surgical emergency. Ix: ABPI below 0.9 diagnostic; above "
+        "1.4 unreliable (incompressible calcified vessels, diabetes, "
+        "CKD); duplex, then CT or MR angiography before intervention. Mx: "
+        "supervised exercise is first-line for claudication; stop "
+        "smoking, antiplatelet, high-intensity statin, tight glycaemic "
+        "and BP control; cilostazol for refractory claudication. "
+        "Revascularise chronic limb-threatening ischaemia or "
+        "lifestyle-limiting symptoms failing conservative care. Note: "
+        "beta-blockers are not contraindicated, despite the persistent "
+        "myth."
+    ),
+
 }
 
 
