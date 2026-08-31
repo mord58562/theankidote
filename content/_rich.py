@@ -251,6 +251,56 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "hand foot and mouth disease and herpangina"]],
         "summary": "",
     },
+    {
+        "name": "Corneal abrasion",
+        "aliases": ["Corneal epithelial defect",
+                    "Traumatic corneal abrasion"],
+        "utd": [["Overview", "corneal abrasions and corneal foreign bodies "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Orthostatic hypotension",
+        "aliases": ["Postural hypotension", "Orthostatic intolerance"],
+        "utd": [["Overview", "mechanisms causes and evaluation of "
+                             "orthostatic hypotension"]],
+        "summary": "",
+    },
+    {
+        "name": "Transient synovitis of hip",
+        "aliases": ["Irritable hip", "Toxic synovitis"],
+        "utd": [["Overview", "transient synovitis nonspecific synovitis "
+                             "of the hip in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Gilbert syndrome",
+        "aliases": ["Gilbert's syndrome", "UGT1A1 deficiency",
+                    "Constitutional hyperbilirubinaemia"],
+        "utd": [["Overview", "gilbert syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Bartholin abscess",
+        "aliases": ["Bartholin gland abscess",
+                    "Bartholin gland infection"],
+        "utd": [["Overview", "bartholin gland masses diagnosis and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Digoxin toxicity",
+        "aliases": ["Digoxin poisoning", "Digitalis toxicity"],
+        "utd": [["Overview", "cardiac arrhythmias due to digoxin toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Salicylate overdose",
+        "aliases": ["Salicylate poisoning", "Aspirin overdose",
+                    "Aspirin poisoning"],
+        "utd": [["Overview", "salicylate aspirin poisoning in adults"]],
+        "summary": "",
+    },
 ]
 
 
@@ -15132,6 +15182,220 @@ RICH_SUMMARIES = {
         "severe CAP with hyponatraemia, diarrhoea and confusion in a "
         "gardener or after cooling-tower exposure needs empirical "
         "Legionella cover."
+    ),
+
+    # ═══════ BATCH 48: ophtho + AMD + orthostatic + tox + peds hip + biliary + PMB gaps ══
+
+    "Corneal abrasion": (
+        "Epithelial disruption of the cornea from trauma, foreign "
+        "body or contact lens injury. Epidemiology: contact lens wear, "
+        "fingernail scratch (infants), plant matter, grinding or "
+        "welding without eye protection. Clinical features: sudden "
+        "severe eye pain, photophobia, tearing, foreign-body "
+        "sensation, blepharospasm; blurred vision if central. Ix: "
+        "visual acuity both eyes; slit-lamp with fluorescein stain "
+        "shows the defect fluorescing green under cobalt blue; evert "
+        "upper lid for subtarsal foreign body; Seidel test if "
+        "perforation suspected. Mx: remove foreign body; topical "
+        "anaesthetic once for examination only (never dispense - "
+        "delays healing); topical antibiotic (chloramphenicol) 4-6 "
+        "hourly for 3-5 days; oral analgesia; cycloplegic "
+        "(homatropine) for ciliary spasm; do not patch (Cochrane "
+        "evidence against). Contact-lens wearers need Pseudomonas "
+        "cover (ciprofloxacin drops) and no lens wear until "
+        "re-epithelialised. Note: white infiltrate at the defect "
+        "edge, hypopyon or worsening vision is bacterial keratitis - "
+        "same-day ophthalmology."
+    ),
+
+    "Macular degeneration": (
+        "Age-related degeneration of the central retina; leading cause of "
+        "central vision loss in Australians over 50. Types: dry (80-90%, "
+        "gradual drusen and geographic atrophy) and wet (10-20%, "
+        "choroidal neovascularisation with sudden distortion and "
+        "haemorrhage). Risk factors: age, smoking (doubles risk), family "
+        "history, hypertension, obesity, fair skin. Clinical features: "
+        "central distortion (metamorphopsia - straight lines wavy on "
+        "Amsler grid), gradual central scotoma, reduced acuity, "
+        "difficulty reading and recognising faces; peripheral vision "
+        "preserved. Ix: acuity and Amsler; fundoscopy shows drusen (dry) "
+        "or fluid/haemorrhage/CNV (wet); OCT is the imaging standard; "
+        "fluorescein angiography for CNV mapping. Mx: dry - AREDS2 "
+        "vitamins slow progression in intermediate disease; smoking "
+        "cessation; low-vision aids (Vision Australia). Wet - urgent "
+        "intravitreal anti-VEGF (aflibercept, ranibizumab, faricimab) "
+        "monthly loading then treat-and-extend. Note: any new distortion "
+        "or scotoma in an older patient with drusen is wet AMD until "
+        "same-week OCT proves otherwise."
+    ),
+
+    "Orthostatic hypotension": (
+        "Sustained BP fall on standing - at least 20/10 mmHg within 3 "
+        "minutes - producing hypoperfusion symptoms. Causes: volume "
+        "depletion; autonomic failure (diabetic autonomic neuropathy, "
+        "Parkinson, MSA, amyloidosis, spinal injury); drugs "
+        "(alpha-blockers, antihypertensives, tricyclics, "
+        "antipsychotics, nitrates); adrenal insufficiency; "
+        "postprandial in the elderly. Clinical features: "
+        "lightheadedness, blurred vision, syncope, unsteadiness, "
+        "occipital 'coat-hanger' ache; worse on rising in the morning, "
+        "after meals, in heat. Ix: bedside orthostatic BP at 1 and 3 "
+        "minutes; EUC, FBC, glucose, TSH, 9 am cortisol; ECG; "
+        "medication review; tilt-table if autonomic failure suspected. "
+        "Mx: address reversibles - review meds, replace volume; "
+        "conservative - rise slowly, cross legs and clench muscles, "
+        "compression stockings, adequate salt (10 g/day) and 2-3 L "
+        "fluid, small frequent meals, avoid alcohol; second-line "
+        "fludrocortisone, midodrine, droxidopa. Note: in the elderly "
+        "with recurrent falls, always check lying and standing BP - "
+        "commonest overlooked diagnosis."
+    ),
+
+    "Transient synovitis of hip": (
+        "Self-limiting inflammatory hip effusion in a child, commonly "
+        "post-viral; commonest cause of atraumatic hip pain at 3-8 years. "
+        "Also called 'irritable hip'. Epidemiology: boys twice as often "
+        "as girls; peak 3-8; often follows URTI or gastro by 1-2 weeks. "
+        "Clinical features: acute hip or groin pain and limp, sometimes "
+        "referred to knee; low-grade or no fever; child looks well; "
+        "restricted internal rotation and abduction; usually can "
+        "weight-bear (painfully). Ix: critical task is excluding septic "
+        "arthritis - Kocher criteria (fever >38.5, non-weight-bearing, "
+        "ESR >40, WCC >12,000; any 3 give >90% probability); FBC, CRP, "
+        "ESR; hip ultrasound shows effusion; X-ray to exclude SUFE and "
+        "Perthes. Aspiration for cell count and culture if any doubt. Mx: "
+        "rest, NSAIDs, weight-bearing as tolerated; resolves in 1-2 "
+        "weeks; safety-net for worsening pain, fever or "
+        "non-weight-bearing. Note: any child under 3 with a limp, any "
+        "fever >38.5, or any worsening course is septic arthritis until "
+        "aspiration says otherwise - low threshold for admission."
+    ),
+
+    "Cholangiocarcinoma": (
+        "Adenocarcinoma of the biliary tree; classified by location into "
+        "intrahepatic, perihilar (Klatskin, ~50%) and distal. "
+        "Epidemiology: over 65, rising incidence; strong association with "
+        "primary sclerosing cholangitis (10-15% lifetime risk), "
+        "hepatolithiasis, liver flukes, choledochal cysts, hepatitis B "
+        "and C, NAFLD, obesity. Clinical features: painless obstructive "
+        "jaundice (Courvoisier gallbladder in distal), pruritus, pale "
+        "stools, dark urine, weight loss; cholangitis if obstruction "
+        "infected. Ix: cholestatic LFTs (raised ALP, GGT, bilirubin); CA "
+        "19-9 raised in ~85% (not specific); MRI/MRCP for anatomy; ERCP "
+        "with brushings; EUS-guided biopsy for distal; CT chest/abdo for "
+        "staging. Mx: MDT at hepatobiliary centre; surgical resection "
+        "(hemihepatectomy for intrahepatic, Whipple for distal) is the "
+        "only cure - possible in ~30%; biliary stenting for palliation; "
+        "gemcitabine plus cisplatin for unresectable; durvalumab added "
+        "first-line since TOPAZ-1. Note: painless jaundice with "
+        "cholestatic LFTs and weight loss is cholangio or pancreatic head "
+        "cancer until imaging says otherwise."
+    ),
+
+    "Gilbert syndrome": (
+        "Common inherited defect in bilirubin conjugation from reduced "
+        "UGT1A1 activity; harmless but a frequent trigger of unnecessary "
+        "hepatic work-up. Epidemiology: 5-10% of Caucasians; autosomal "
+        "recessive (TA repeat in UGT1A1 promoter); usually manifests "
+        "after puberty; men more than women. Clinical features: mild "
+        "fluctuating unconjugated hyperbilirubinaemia (usually under 60 "
+        "micromol/L) with jaundice provoked by fasting, illness, "
+        "dehydration, alcohol, menstruation or exercise; otherwise "
+        "asymptomatic; no hepatomegaly, no dark urine (unconjugated is "
+        "not water-soluble). Ix: isolated raised unconjugated bilirubin "
+        "with normal LFTs, FBC, reticulocytes and haptoglobin (excludes "
+        "haemolysis); UGT1A1 genotyping confirmatory but rarely needed. "
+        "Mx: reassurance - it is a diagnosis, not a disease; avoid known "
+        "triggers when possible; warn about drug interactions - reduced "
+        "clearance of irinotecan, atazanavir, indinavir. Note: an "
+        "incidental raised bilirubin with everything else normal in a "
+        "well young adult is Gilbert - do not chase it with imaging."
+    ),
+
+    "Bartholin abscess": (
+        "Acute infection of a Bartholin gland or cyst at the vulvar "
+        "vestibule (4 and 8 o'clock positions). Epidemiology: 2% of "
+        "women; reproductive age; polymicrobial (skin flora plus enteric "
+        "organisms); gonorrhoea and chlamydia increasingly rare but check "
+        "in sexually active. Clinical features: rapidly enlarging painful "
+        "unilateral vulvar swelling, dyspareunia, difficulty walking or "
+        "sitting; fluctuant tender mass; systemic features uncommon "
+        "unless immunocompromised; simple Bartholin cyst is painless and "
+        "chronic. Ix: clinical; STI screen if risk factors; consider "
+        "biopsy in the post-menopausal woman (vulvar carcinoma "
+        "occasionally presents as apparent Bartholin mass). Mx: incision "
+        "and drainage with Word catheter (small balloon catheter left in "
+        "for 4-6 weeks to allow tract epithelialisation and prevent "
+        "recurrence) is standard; sitz baths after; antibiotics only if "
+        "surrounding cellulitis, systemic features, immunocompromise or "
+        "MRSA. Recurrent - marsupialisation or gland excision. Note: any "
+        "vulvar mass in a woman over 40 needs biopsy at drainage."
+    ),
+
+    "Digoxin toxicity": (
+        "Narrow therapeutic index cardiac glycoside; toxicity common "
+        "in the elderly with impaired renal function or new drug "
+        "interactions. Triggers: renal impairment; hypokalaemia, "
+        "hypomagnesaemia, hypercalcaemia; interacting drugs "
+        "(amiodarone, verapamil, spironolactone, macrolides, "
+        "itraconazole). Clinical features: anorexia, nausea, vomiting, "
+        "abdominal pain; confusion, lethargy; xanthopsia (yellow-green "
+        "vision) and halos; arrhythmias - bradycardia, AV block, "
+        "atrial tachycardia with AV block ('regularised AF'), "
+        "ventricular ectopy, bidirectional VT. Ix: digoxin level (6+ "
+        "h post-dose), K (hyperkalaemia in acute overdose is poor "
+        "prognostic), Mg, EUC, ECG. Mx: stop digoxin; correct "
+        "electrolytes (replace K, avoid Ca in acute overdose - stone "
+        "heart risk); atropine for bradycardia; DigiFab for "
+        "life-threatening arrhythmia, K >5, ingestion >10 mg adult or "
+        ">4 mg child, level >15 nmol/L, or ongoing haemodynamic "
+        "compromise; call PIC 13 11 26. Note: nausea and yellow "
+        "vision in an elderly patient on digoxin is toxicity - check "
+        "level and stop."
+    ),
+
+    "POTS": (
+        "Chronic autonomic disorder defined by sustained HR rise on "
+        "standing of at least 30/min (or 40/min in adolescents) within 10 "
+        "minutes, without orthostatic hypotension. Epidemiology: young "
+        "women (5:1); onset often after viral illness, pregnancy or "
+        "surgery; overlap with hypermobility (EDS type 3), MCAS and CFS; "
+        "incidence risen post-COVID. Clinical features: lightheadedness, "
+        "palpitations, tremor, blurred vision, brain fog, fatigue, "
+        "exercise intolerance, headache; worse on standing, in heat, "
+        "after meals; often misdiagnosed as anxiety. Ix: active stand "
+        "test at 1, 3, 5 and 10 minutes measuring HR and BP; tilt-table "
+        "if uncertain; screen for reversibles - FBC, iron, EUC, TSH, "
+        "glucose, morning cortisol, ECG. Mx: non-pharmacological "
+        "first-line - graded reclined exercise (start with rowing or "
+        "swimming), 3 L fluid and 10 g salt daily, compression garments, "
+        "avoid sudden postural change; second-line - beta-blocker "
+        "(propranolol), ivabradine, fludrocortisone, midodrine. Note: "
+        "hyperadrenergic form (BP rises on standing) responds to "
+        "beta-blocker; neuropathic form gets salt, water, exercise."
+    ),
+
+    "Salicylate overdose": (
+        "Aspirin, methyl salicylate (oil of wintergreen, extremely toxic "
+        "- 5 mL kills a toddler) or bismuth subsalicylate. "
+        "Pathophysiology: uncouples oxidative phosphorylation "
+        "(hyperthermia); stimulates medullary respiratory centre "
+        "(respiratory alkalosis); anaerobic metabolism (lactic and "
+        "ketoacidosis). Clinical features: early - tinnitus, deafness, "
+        "nausea, vomiting, sweating, tachypnoea; later - fever, "
+        "agitation, confusion, seizures, coma, pulmonary and cerebral "
+        "oedema; classic gas is mixed respiratory alkalosis and metabolic "
+        "acidosis with wide anion gap. Ix: salicylate at 4 h and repeat "
+        "(delayed absorption with enteric-coated); gas, EUC, glucose, "
+        "lactate, ketones, paracetamol level, ECG; call PIC 13 11 26. Mx: "
+        "activated charcoal if within 1 h and airway safe; IV fluids; "
+        "sodium bicarbonate to alkalinise urine to pH 7.5-8; potassium "
+        "replacement; glucose if any neurological symptoms regardless of "
+        "level; haemodialysis for level >7.2 mmol/L (chronic) or >5.4 "
+        "(acute), renal failure, altered mental status, seizures or "
+        "pulmonary oedema. Note: never intubate a salicylate-toxic "
+        "patient without matching their respiratory rate - loss of "
+        "compensatory hyperventilation drops pH and kills."
     ),
 
 }
