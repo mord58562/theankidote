@@ -350,6 +350,152 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "pterygium"]],
         "summary": "",
     },
+
+    # ── Batch 52: obstetric/gynae/paeds gaps from lapse-weighted AnkiMCP scan ──
+    {
+        "name": "Antepartum haemorrhage",
+        "aliases": ["APH", "Antepartum hemorrhage",
+                    "Bleeding in late pregnancy",
+                    "Third-trimester bleeding"],
+        "utd": [["Overview", "overview of the etiology and evaluation of "
+                             "vaginal bleeding in pregnant women"]],
+        "summary": "",
+    },
+    {
+        "name": "Intrauterine growth restriction",
+        "aliases": ["IUGR", "Fetal growth restriction", "FGR",
+                    "Foetal growth restriction",
+                    "Small for gestational age"],
+        "utd": [["Overview", "fetal growth restriction evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Meningococcal disease",
+        "aliases": ["Invasive meningococcal disease", "IMD",
+                    "Meningococcaemia", "Meningococcemia",
+                    "Neisseria meningitidis infection",
+                    "Meningococcal sepsis"],
+        "utd": [["Overview", "clinical manifestations of meningococcal "
+                             "infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Vasa praevia",
+        "aliases": ["Vasa previa"],
+        "utd": [["Overview", "velamentous umbilical cord insertion and "
+                             "vasa previa"]],
+        "summary": "",
+    },
+    {
+        "name": "Chorioamnionitis",
+        "aliases": ["Intraamniotic infection", "Triple I",
+                    "Intraamniotic infection and inflammation"],
+        "utd": [["Overview", "intraamniotic infection clinical features "
+                             "diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Rhesus isoimmunisation",
+        "aliases": ["Rhesus alloimmunisation", "Rh isoimmunization",
+                    "Rh alloimmunization", "RhD isoimmunisation",
+                    "Anti-D prophylaxis", "Rh sensitisation"],
+        "utd": [["Overview", "prevention of rhd alloimmunization in "
+                             "pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Endometrial hyperplasia",
+        "aliases": ["Endometrial intraepithelial neoplasia", "EIN",
+                    "Atypical endometrial hyperplasia"],
+        "utd": [["Overview", "classification and diagnosis of endometrial "
+                             "hyperplasia"]],
+        "summary": "",
+    },
+    {
+        "name": "Asherman syndrome",
+        "aliases": ["Ashermann syndrome", "Ashermann's syndrome",
+                    "Asherman's syndrome", "Intrauterine adhesions",
+                    "Intrauterine synechiae"],
+        "utd": [["Overview", "intrauterine adhesions clinical manifestation "
+                             "and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Erythema infectiosum",
+        "aliases": ["Fifth disease", "Slapped cheek disease",
+                    "Slapped cheek syndrome", "Parvovirus B19 infection",
+                    "Parvovirus B19"],
+        "utd": [["Overview", "clinical manifestations and diagnosis of "
+                             "parvovirus b19 infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Coarctation of the aorta",
+        "aliases": ["Aortic coarctation", "CoA"],
+        "utd": [["Overview", "clinical manifestations and diagnosis of "
+                             "coarctation of the aorta"]],
+        "summary": "",
+    },
+    {
+        "name": "Malrotation with midgut volvulus",
+        "aliases": ["Midgut volvulus", "Intestinal malrotation",
+                    "Malrotation of the intestine",
+                    "Neonatal midgut volvulus"],
+        "utd": [["Overview", "intestinal malrotation in children"]],
+        "summary": "",
+    },
+
+    # ── Batch 53: priority-gaps doc + remaining Y4 exam-classic gaps ──
+    {
+        "name": "Postpartum endometritis",
+        "aliases": ["Puerperal endometritis", "Postnatal endometritis",
+                    "Endometritis postpartum"],
+        "utd": [["Overview", "postpartum endometritis"]],
+        "summary": "",
+    },
+    {
+        "name": "Preterm prelabour rupture of membranes",
+        "aliases": ["PPROM", "Preterm premature rupture of membranes",
+                    "Preterm PROM"],
+        "utd": [["Overview", "preterm prelabor rupture of membranes "
+                             "clinical manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Human papillomavirus infection",
+        "aliases": ["HPV", "Human papillomavirus", "HPV infection",
+                    "Genital HPV"],
+        "utd": [["Overview", "human papillomavirus infections "
+                             "epidemiology and disease associations"]],
+        "summary": "",
+    },
+    {
+        "name": "Microangiopathic haemolytic anaemia",
+        "aliases": ["MAHA", "Microangiopathic hemolytic anemia",
+                    "Thrombotic microangiopathy"],
+        "utd": [["Overview", "diagnostic approach to suspected thrombotic "
+                             "microangiopathy in adults"]],
+        "summary": "",
+    },
+
+    # ── Batch 54: Med-heavy Y4 exam gaps + Gyn/Paeds ──
+    {
+        "name": "Alcohol withdrawal",
+        "aliases": ["Alcohol withdrawal syndrome", "Ethanol withdrawal",
+                    "Delirium tremens", "DTs",
+                    "Alcohol withdrawal delirium"],
+        "utd": [["Overview", "management of moderate and severe alcohol "
+                             "withdrawal syndromes"]],
+        "summary": "",
+    },
+    {
+        "name": "Cholelithiasis",
+        "aliases": ["Gallstones", "Biliary colic", "Gallbladder stones",
+                    "Symptomatic gallstones"],
+        "utd": [["Overview", "gallstones epidemiology risk factors "
+                             "and pathogenesis"]],
+        "summary": "",
+    },
 ]
 
 
@@ -16210,6 +16356,1142 @@ RICH_SUMMARIES = {
         "(levetiracetam preferred). Usually reversible over days to "
         "weeks. Note: hypertension plus seizures plus cortical visual "
         "disturbance needs urgent MRI - CT can miss PRES."
+    ),
+
+    # ═══════ BATCH 52: obstetric/gynae/paeds gaps (lapse-weighted) ═══════
+    #
+    # Selected via AnkiMCP scan of unsuspended notes with lapses>=2 in
+    # Rob's live collection: the topics below have real lapse signal
+    # (4-19 lapses each) and no existing rich summary. Med topics with
+    # higher lapse counts (PE 27, sepsis 25, asthma 15, ACS 14, AKI 14,
+    # DKA 6) were checked and all already have rich summaries - Rob's
+    # Med lapses are retention problems, not popup-coverage gaps.
+
+    "Antepartum haemorrhage": (
+        "Any vaginal bleeding after 20 weeks and before labour - about "
+        "3 to 5% of pregnancies, and a leading cause of maternal and "
+        "perinatal morbidity. "
+        "Causes: placental abruption and placenta praevia each account "
+        "for around one third; the remainder are local causes (cervical "
+        "ectropion, polyp, cervicitis, cancer), vasa praevia, uterine "
+        "rupture, and unexplained. "
+        "Ix: assess maternal haemodynamics first; large-bore IV access, "
+        "FBC, coagulation and fibrinogen, group and crossmatch, "
+        "Kleihauer if Rh-negative; CTG for fetal wellbeing; "
+        "transabdominal then transvaginal ultrasound to localise the "
+        "placenta - never digital vaginal examination before praevia is "
+        "excluded; speculum after exclusion identifies local causes. "
+        "Mx: resuscitate with warmed crystalloid and blood products via "
+        "massive-transfusion protocol; category 1 caesarean for major "
+        "haemorrhage or fetal compromise; corticosteroids between 24 "
+        "and 34 weeks; anti-D 625 IU IM if Rh-negative and titrate with "
+        "Kleihauer; magnesium sulfate for neuroprotection under 30 "
+        "weeks. Note: bleeding may be concealed in abruption - normal "
+        "external loss does not exclude major haemorrhage. Red flags: "
+        "maternal shock, non-reassuring CTG, hard tender uterus, "
+        "coagulopathy - call obstetric team early."
+    ),
+
+    "Intrauterine growth restriction": (
+        "Failure of a fetus to reach its genetically determined growth "
+        "potential, distinct from constitutionally small-for-gestational-"
+        "age. Estimated fetal weight or abdominal circumference below "
+        "the tenth centile with abnormal Doppler or growth velocity, or "
+        "any fetus below the third centile. "
+        "Types: early-onset (before 32 weeks, usually placental "
+        "insufficiency, severe and progressive); late-onset (after 32 "
+        "weeks, subtler, higher stillbirth risk per week); symmetric "
+        "(global, early insult - aneuploidy, congenital infection) or "
+        "asymmetric (head-sparing, placental). "
+        "Risk factors: hypertensive disorders, pre-existing renal or "
+        "cardiac disease, antiphospholipid syndrome, smoking, alcohol, "
+        "drug use, previous FGR, multiple pregnancy, congenital "
+        "infection (CMV, toxoplasma, rubella), aneuploidy. "
+        "Ix: serial growth ultrasound at 2 to 3 week intervals with "
+        "umbilical artery Doppler; middle cerebral artery Doppler and "
+        "cerebroplacental ratio for late-onset; amniotic fluid volume; "
+        "ductus venosus Doppler in severe early disease; TORCH and "
+        "karyotype where indicated. "
+        "Mx: obstetric team-led surveillance, aspirin 150 mg from 12 "
+        "weeks in high-risk future pregnancies, timed delivery balancing "
+        "prematurity against ongoing intrauterine risk - typically by "
+        "37 weeks for FGR alone, earlier for absent or reversed "
+        "end-diastolic flow. Note: FGR is the leading modifiable risk "
+        "factor for stillbirth in Australia. Red flags: absent or "
+        "reversed umbilical artery end-diastolic flow, abnormal ductus "
+        "venosus a-wave, oligohydramnios - imminent delivery."
+    ),
+
+    "Meningococcal disease": (
+        "Invasive infection with Neisseria meningitidis - a gram-"
+        "negative diplococcus - producing meningitis, meningococcal "
+        "septicaemia, or both. Notifiable in Australia, with an "
+        "attack peak in children under 5 and a second in adolescents. "
+        "Serogroups: B and W account for most Australian cases; "
+        "quadrivalent (ACWY) is on the National Immunisation Program "
+        "at 12 months and 14 to 16 years, and MenB is funded for "
+        "Aboriginal and Torres Strait Islander children and for those "
+        "with functional or anatomical asplenia, complement deficiency "
+        "or on eculizumab. "
+        "Clinical features: fever, headache, vomiting, photophobia and "
+        "neck stiffness for meningitis; non-blanching purpuric or "
+        "petechial rash progressing over hours; septic shock with "
+        "hypotension, oliguria, cool peripheries; late signs of "
+        "purpura fulminans, DIC and multi-organ failure. Infants may "
+        "have only fever, poor feeding, high-pitched cry and a bulging "
+        "fontanelle. "
+        "Ix: do not delay antibiotics - blood cultures and meningococcal "
+        "PCR from blood, FBC, coagulation, lactate, EUC, procalcitonin; "
+        "lumbar puncture only after stabilisation and if no signs of "
+        "raised ICP or coagulopathy - CSF for gram stain, PCR, cell "
+        "count, protein, glucose. "
+        "Mx: immediate ceftriaxone 2 g IV (child 50 mg/kg) - give in "
+        "primary care before transfer if suspected; fluid resuscitation, "
+        "vasopressors, ICU support; dexamethasone for meningitis in "
+        "children over 3 months; notify public health same day; "
+        "chemoprophylaxis (ciprofloxacin single dose or rifampicin) "
+        "for close contacts within 24 hours. "
+        "Red flags: purpuric rash, altered conscious state, shock - "
+        "one call to the retrieval service, one dose of ceftriaxone, "
+        "and move."
+    ),
+
+    "Vasa praevia": (
+        "Fetal vessels running through the membranes across or within "
+        "2 cm of the internal cervical os, unsupported by placenta or "
+        "cord. Rupture at membrane rupture causes rapid fetal "
+        "exsanguination - the blood loss is fetal, not maternal. "
+        "Risk factors: velamentous cord insertion, bilobed or "
+        "succenturiate placenta, low-lying placenta or placenta "
+        "praevia in the second trimester (even if resolved), IVF "
+        "pregnancy, multiple pregnancy. "
+        "Clinical features: painless bright-red vaginal bleeding at or "
+        "just after spontaneous or artificial membrane rupture, with "
+        "acute fetal bradycardia or a sinusoidal CTG trace - the "
+        "combination that distinguishes it from placenta praevia "
+        "(maternal blood, fetus usually stable) and abruption (painful, "
+        "tender uterus). "
+        "Ix: antenatal diagnosis by transvaginal ultrasound with colour "
+        "Doppler - vessels seen crossing the internal os. RANZCOG "
+        "recommends targeted assessment of cord insertion at the 18 to "
+        "20 week morphology scan and rescreening any second-trimester "
+        "low placenta at 32 weeks. Apt test on vaginal blood "
+        "confirms fetal origin but must not delay delivery. "
+        "Mx: elective caesarean at 34 to 36 weeks with corticosteroids; "
+        "admission from 32 weeks for closer surveillance. If diagnosed "
+        "intrapartum with bleeding or fetal compromise, category 1 "
+        "caesarean. Note: fetal mortality without antenatal diagnosis is "
+        "over 50%; with diagnosis and elective delivery, over 95% "
+        "survive."
+    ),
+
+    "Chorioamnionitis": (
+        "Ascending polymicrobial infection of the amniotic cavity, "
+        "fetal membranes, placenta and decidua - now termed "
+        "intraamniotic infection or triple I. Complicates 1 to 4% of "
+        "term pregnancies and up to 40 to 70% of preterm labour. "
+        "Aetiology: ascending genital tract organisms - group B "
+        "streptococcus, E. coli, anaerobes, Ureaplasma, Mycoplasma. "
+        "Risk factors: prolonged rupture of membranes, prolonged "
+        "labour, multiple vaginal examinations, GBS colonisation, "
+        "bacterial vaginosis, internal fetal monitoring, meconium-"
+        "stained liquor. "
+        "Clinical features: maternal fever above 38 degrees plus one "
+        "of fetal tachycardia over 160, maternal tachycardia over 100, "
+        "uterine tenderness, purulent or foul-smelling amniotic fluid, "
+        "or maternal leucocytosis - the ACOG triple I criteria. "
+        "Ix: FBC, CRP, blood cultures, high vaginal swab and GBS "
+        "status; CTG for fetal tachycardia; amniocentesis rarely used "
+        "clinically. "
+        "Mx: broad-spectrum IV antibiotics on suspicion - eTG for "
+        "Australia is ampicillin plus gentamicin, adding metronidazole "
+        "or clindamycin if caesarean; delivery is definitive - do not "
+        "wait for temperature to settle before proceeding; continue "
+        "antibiotics until 24 to 48 hours afebrile postpartum; alert "
+        "paediatrics for the newborn (sepsis workup, IV antibiotics). "
+        "Complications: maternal sepsis, postpartum haemorrhage from "
+        "uterine atony, endometritis; fetal or neonatal sepsis, "
+        "meningitis, cerebral palsy after preterm exposure. Red flags: "
+        "maternal shock or non-reassuring CTG - immediate delivery."
+    ),
+
+    "Rhesus isoimmunisation": (
+        "Maternal anti-D IgG produced when an Rh(D)-negative woman is "
+        "exposed to Rh(D)-positive fetal red cells; crosses the "
+        "placenta in a subsequent pregnancy and causes haemolytic "
+        "disease of the fetus and newborn. "
+        "Sensitising events: any antepartum bleed, abdominal trauma, "
+        "external cephalic version, chorionic villus sampling, "
+        "amniocentesis, ectopic pregnancy, miscarriage or termination "
+        "after 12 weeks (or any surgical evacuation), delivery, "
+        "manual removal of placenta. "
+        "Screening: maternal blood group and antibody screen at "
+        "booking and at 28 weeks. If antibodies are detected, "
+        "quantify titre and refer to maternal-fetal medicine. "
+        "Prevention: routine antenatal anti-D immunoglobulin 625 IU "
+        "IM at 28 and 34 weeks in every non-sensitised Rh(D)-negative "
+        "woman (NBA/NHMRC guideline); 625 IU within 72 hours of any "
+        "sensitising event after 12 weeks, with Kleihauer to titrate "
+        "further doses for large fetomaternal haemorrhage (add 125 IU "
+        "per additional mL of fetal blood); 250 IU under 12 weeks for "
+        "sensitising events. Cord blood group at delivery - give "
+        "postpartum 625 IU if baby is Rh(D)-positive. "
+        "Mx of sensitised pregnancy: serial maternal titres, middle "
+        "cerebral artery peak systolic velocity from 18 weeks (PSV "
+        "over 1.5 MoM predicts fetal anaemia), intrauterine transfusion "
+        "by fetal medicine, timed delivery around 37 weeks with "
+        "neonatology on standby. Note: anti-D does not treat an "
+        "existing antibody - once sensitised, it is fetal medicine "
+        "territory. Red flags: hydrops on ultrasound, elevated MCA PSV."
+    ),
+
+    "Endometrial hyperplasia": (
+        "Proliferation of endometrial glands relative to stroma driven "
+        "by unopposed oestrogen exposure - a precursor to endometrioid "
+        "endometrial carcinoma. "
+        "Classification: WHO 2014 groups into hyperplasia without "
+        "atypia (progression to cancer under 5% over 20 years) and "
+        "atypical hyperplasia / endometrial intraepithelial neoplasia "
+        "(EIN) - progression 20 to 50%, with concurrent cancer found "
+        "at hysterectomy in up to 40%. "
+        "Risk factors: obesity (adipose aromatisation of androgens), "
+        "PCOS with anovulation, nulliparity, late menopause, "
+        "tamoxifen, oestrogen-only HRT in a woman with a uterus, "
+        "granulosa cell tumour, Lynch syndrome, type 2 diabetes. "
+        "Clinical features: abnormal uterine bleeding - "
+        "postmenopausal bleeding, heavy or intermenstrual bleeding "
+        "in perimenopause, or oligomenorrhoea with breakthrough "
+        "bleeding in younger anovulatory women. "
+        "Ix: transvaginal ultrasound - endometrial thickness over 4 mm "
+        "in postmenopausal bleeding triggers sampling; Pipelle "
+        "endometrial biopsy first-line; hysteroscopy with directed "
+        "biopsy if Pipelle non-diagnostic, focal lesion, or persistent "
+        "bleeding despite negative Pipelle. "
+        "Mx: hyperplasia without atypia - progestogen (levonorgestrel-"
+        "releasing IUD preferred, or oral medroxyprogesterone) with "
+        "repeat biopsy at 6 months, minimum 6 months treatment; "
+        "atypical hyperplasia / EIN - total hysterectomy with bilateral "
+        "salpingo-oophorectomy in postmenopausal women; LNG-IUD with "
+        "close surveillance if fertility desired and after MDT "
+        "discussion. Note: any postmenopausal bleeding needs "
+        "endometrial assessment - do not attribute to atrophy without "
+        "excluding hyperplasia and cancer."
+    ),
+
+    "Asherman syndrome": (
+        "Intrauterine adhesions or synechiae obliterating the uterine "
+        "cavity, causing menstrual disturbance, infertility, or "
+        "recurrent pregnancy loss. "
+        "Aetiology: overwhelmingly iatrogenic - most commonly dilation "
+        "and curettage for retained products of conception or "
+        "miscarriage (pregnancy-related endometrium is uniquely "
+        "vulnerable), postpartum curettage, repeated D&C, myomectomy, "
+        "caesarean section, endometrial ablation. Infective causes "
+        "include tuberculous endometritis (rare in Australia) and "
+        "severe puerperal or post-surgical endometritis. "
+        "Clinical features: secondary amenorrhoea or hypomenorrhoea "
+        "with cyclical pelvic pain (haematometra from outflow "
+        "obstruction), infertility, recurrent miscarriage, abnormal "
+        "placentation in a subsequent pregnancy. Progestogen challenge "
+        "typically fails to induce a withdrawal bleed despite normal "
+        "hormonal axis. "
+        "Ix: hysteroscopy is the reference standard and permits "
+        "concurrent treatment; hysterosalpingography or saline "
+        "infusion sonography also demonstrate filling defects; TVUS is "
+        "insensitive. Hormonal profile (FSH, LH, oestradiol, "
+        "progesterone) is normal and helps exclude ovarian causes of "
+        "secondary amenorrhoea. "
+        "Mx: hysteroscopic adhesiolysis under general anaesthetic by a "
+        "gynaecologist experienced in the procedure; postoperative "
+        "measures to prevent reformation (intrauterine balloon or IUD, "
+        "oestrogen therapy) though evidence is mixed; second-look "
+        "hysteroscopy at 6 to 8 weeks. Note: prevention is the best "
+        "management - minimise curettage, use medical or expectant "
+        "management for miscarriage where safe, and use sharp curette "
+        "sparingly."
+    ),
+
+    "Erythema infectiosum": (
+        "Parvovirus B19 infection producing the childhood exanthem "
+        "known as fifth disease or slapped-cheek syndrome. "
+        "Aetiology: parvovirus B19, a single-stranded DNA virus that "
+        "infects erythroid progenitor cells via the P antigen. Spread "
+        "by respiratory droplets and vertical transmission. "
+        "Clinical features by host: healthy child - low-grade fever "
+        "and coryza, followed a week later by the classic bright-red "
+        "'slapped cheek' malar rash sparing the nasolabial fold, then "
+        "a lacy reticular rash on the trunk and limbs; the child is "
+        "no longer infectious by the time the rash appears. Adults, "
+        "especially women, get symmetric small-joint arthralgia or "
+        "polyarthritis mimicking rheumatoid arthritis. In sickle cell "
+        "and other chronic haemolytic anaemias, transient aplastic "
+        "crisis (sudden severe anaemia, reticulocytopenia). In "
+        "immunocompromised patients, chronic pure red cell aplasia. "
+        "In pregnancy, transplacental infection can cause fetal "
+        "anaemia, non-immune hydrops fetalis and fetal death - highest "
+        "risk before 20 weeks. "
+        "Ix: usually clinical in the healthy child. Parvovirus IgM and "
+        "IgG serology confirms recent infection; PCR for "
+        "immunocompromised or fetal monitoring. FBC and reticulocytes "
+        "if aplastic crisis suspected. "
+        "Mx: supportive for the child and for adult arthralgia; "
+        "transfusion for aplastic crisis; IVIG for chronic infection "
+        "in immunocompromised. Pregnant women with confirmed infection "
+        "need serial ultrasound and MCA peak systolic velocity for 12 "
+        "weeks watching for hydrops, with intrauterine transfusion if "
+        "detected. Note: exclude infected children from school is "
+        "pointless - the rash marks the end of infectivity. Pregnant "
+        "healthcare workers with recent household exposure need "
+        "serology and specialist advice."
+    ),
+
+    "Coarctation of the aorta": (
+        "Congenital narrowing of the aorta, typically at the "
+        "insertion of the ductus arteriosus just distal to the left "
+        "subclavian artery - a duct-dependent lesion in the neonate. "
+        "Associations: bicuspid aortic valve (over 50%), Turner "
+        "syndrome, VSD, PDA, mitral valve abnormalities, berry "
+        "aneurysms of the circle of Willis. "
+        "Clinical features by age: neonate presenting after ductal "
+        "closure with shock, tachypnoea, poor feeding and absent "
+        "femoral pulses - a picture indistinguishable from sepsis. "
+        "Older child or young adult - upper-limb hypertension, "
+        "radiofemoral delay, weak or absent femoral pulses, "
+        "differential cyanosis, systolic murmur best heard between the "
+        "scapulae, headaches, epistaxis, leg claudication on exertion. "
+        "Ix: four-limb blood pressure showing a right-arm to leg "
+        "gradient over 20 mmHg; echocardiogram is the reference "
+        "standard and shows the coarctation site plus associated "
+        "lesions; CXR - rib notching from intercostal collaterals "
+        "(after age 5) and the '3 sign' on the aortic knuckle; CT or "
+        "MR angiography for anatomy and surgical planning; ECG shows "
+        "left ventricular hypertrophy. "
+        "Mx: prostaglandin E1 infusion in the shocked neonate to "
+        "reopen the ductus and buy time for definitive repair by "
+        "surgical resection with end-to-end anastomosis or balloon "
+        "angioplasty with stenting in older children and adults; "
+        "aggressive control of upper-limb hypertension pre- and "
+        "postoperatively. Lifelong cardiology follow-up for recoarctation, "
+        "aortic aneurysm, persistent hypertension and endocarditis "
+        "prophylaxis considerations. Red flags: shocked neonate with "
+        "absent femoral pulses - start prostaglandin before waiting "
+        "for the echo."
+    ),
+
+    "Malrotation with midgut volvulus": (
+        "Congenital failure of normal 270-degree counterclockwise "
+        "midgut rotation during embryogenesis, leaving the small bowel "
+        "on a narrow mesenteric pedicle that can twist around the "
+        "superior mesenteric artery axis - a surgical emergency. "
+        "Epidemiology: presents in the first month of life in 60%, "
+        "the first year in 80%; associated with heterotaxy syndromes, "
+        "gastroschisis, exomphalos, congenital diaphragmatic hernia "
+        "and duodenal atresia. "
+        "Clinical features: sudden onset bilious vomiting in a "
+        "previously well infant is midgut volvulus until proven "
+        "otherwise. Progressive abdominal distension and tenderness, "
+        "bloody stool (mucosal ischaemia), and eventual shock as the "
+        "midgut infarcts. Older children may have chronic "
+        "intermittent abdominal pain and vomiting without acute "
+        "volvulus. "
+        "Ix: upper GI contrast series is the reference standard - "
+        "duodenojejunal flexure to the right of midline, "
+        "'corkscrew' contrast pattern of a twisted duodenum, or "
+        "'bird beak' obstruction; abdominal ultrasound shows "
+        "inversion of the SMA/SMV relationship (SMV to the left of "
+        "SMA) and the 'whirlpool sign'; plain film is often normal "
+        "or shows a paucity of distal bowel gas. Do not delay theatre "
+        "for imaging in a shocked infant with bilious vomiting. "
+        "Mx: aggressive resuscitation with warmed fluids, nasogastric "
+        "decompression, broad-spectrum antibiotics, urgent surgical "
+        "referral for Ladd procedure - counterclockwise detorsion, "
+        "division of Ladd bands, widening of the mesenteric base, "
+        "appendicectomy, and placing bowel in non-rotated position. "
+        "Resect frankly necrotic bowel; a second-look laparotomy at "
+        "24 to 48 hours preserves borderline segments. "
+        "Red flags: bilious vomiting in an infant means volvulus until "
+        "proven otherwise - refer to paediatric surgery same phone call, "
+        "same hour. Green vomit is never benign."
+    ),
+
+    # ═══════ BATCH 53: priority-gaps doc + remaining Y4-exam gaps ═══════
+    #
+    # From ~/theankidote/docs/priority-gaps-2026-08-31.md (Y4 exam-
+    # classic conditions Rob has 1-2 mentions of in his cards, no rich
+    # summary yet) plus the postpartum endometritis / PPROM / HPV / MAHA
+    # umbrella slots that surfaced during the batch 52 review. Nine
+    # weeks to end-of-year exam across Med/OBGYN/Paeds/Psych, so
+    # coverage breadth matters more than raw lapse count for the
+    # long-tail conditions here.
+
+    "Postpartum endometritis": (
+        "Bacterial infection of the endometrium in the days following "
+        "delivery - the commonest source of puerperal fever, "
+        "complicating 1 to 3% of vaginal births and up to 27% of "
+        "unprepared caesareans. "
+        "Aetiology: polymicrobial ascending infection from vaginal "
+        "flora - group B strep, anaerobes (Bacteroides, "
+        "Peptostreptococcus), Gardnerella, Escherichia coli, "
+        "Ureaplasma, Mycoplasma; late-onset (over 7 days) more often "
+        "Chlamydia trachomatis. "
+        "Risk factors: caesarean section (dominant risk, especially "
+        "unplanned in labour), chorioamnionitis, prolonged rupture of "
+        "membranes, prolonged labour, multiple vaginal examinations, "
+        "GBS colonisation, bacterial vaginosis, retained products of "
+        "conception, manual removal of placenta, low socioeconomic "
+        "status, anaemia. "
+        "Clinical features: fever above 38 degrees on two occasions at "
+        "least 6 hours apart after the first 24 hours postpartum, "
+        "uterine or adnexal tenderness, malodorous lochia, "
+        "subinvolution of the uterus; can present with septic shock. "
+        "Ix: FBC, CRP, blood cultures, high vaginal swab, MSU, group "
+        "and hold; pelvic ultrasound if retained products suspected or "
+        "poor response at 48 hours; consider CT if abscess or septic "
+        "pelvic thrombophlebitis. "
+        "Mx: broad-spectrum IV antibiotics on suspicion - eTG for "
+        "Australia is ampicillin plus gentamicin plus metronidazole "
+        "(or clindamycin plus gentamicin if penicillin-allergic); "
+        "switch to oral amoxicillin-clavulanate once afebrile 48 "
+        "hours, total 14 days; evacuate retained products if present; "
+        "resuscitate for shock. Continue breastfeeding on all these "
+        "agents. Note: fever in the first 24 hours is more often "
+        "atelectasis, DVT or drug reaction than endometritis. Red "
+        "flags: septic shock, poor response after 48 hours (think "
+        "abscess, retained products, resistant organism or septic "
+        "pelvic thrombophlebitis)."
+    ),
+
+    "Preterm prelabour rupture of membranes": (
+        "Rupture of the fetal membranes before 37 weeks and before "
+        "onset of labour - complicates about 3% of pregnancies and "
+        "accounts for a third of preterm births. "
+        "Aetiology and risk factors: intrauterine infection is the "
+        "dominant driver; other risks are previous PPROM, cervical "
+        "insufficiency, short cervix on TVUS, antepartum haemorrhage, "
+        "multiple pregnancy, polyhydramnios, smoking, low BMI, "
+        "connective tissue disease, amniocentesis. "
+        "Clinical features: sudden gush or persistent trickle of clear "
+        "or blood-stained fluid per vaginum; sterile speculum shows "
+        "pooling in the posterior fornix. Do not perform a digital "
+        "examination unless labour is imminent - infection risk. "
+        "Ix: sterile speculum for pooling; nitrazine or ferning tests "
+        "have poor accuracy; commercial swab tests (AmniSure PAMG-1, "
+        "Actim PROM IGFBP-1) where sterile speculum is equivocal; "
+        "ultrasound for oligohydramnios and fetal wellbeing; CTG; "
+        "high vaginal swab and MSU; FBC, CRP; GBS status. "
+        "Mx: admit, betamethasone 11.4 mg IM two doses 24 hours apart "
+        "between 24 and 34+6 weeks (single rescue course to 34+6 if "
+        "delivery imminent), magnesium sulfate for neuroprotection "
+        "under 30 weeks, erythromycin 250 mg QID for 10 days (RANZCOG "
+        "and the ORACLE-I trial - do NOT use co-amoxiclav, associated "
+        "with neonatal necrotising enterocolitis), inpatient "
+        "surveillance for chorioamnionitis (obs, CTG, WCC, CRP); "
+        "expectant management to 37 weeks unless infection, abruption "
+        "or non-reassuring CTG; delivery at 34 to 37 weeks after "
+        "individualised MDT discussion. Continuous CTG in labour and "
+        "intrapartum GBS prophylaxis. Note: latency to delivery is "
+        "typically days to a few weeks; earlier gestation at rupture, "
+        "longer latency. Red flags: maternal fever, uterine "
+        "tenderness, fetal tachycardia or offensive discharge - "
+        "chorioamnionitis and immediate delivery."
+    ),
+
+    "Human papillomavirus infection": (
+        "Double-stranded DNA virus infecting basal keratinocytes of "
+        "squamous epithelium - the commonest sexually transmitted "
+        "infection worldwide, and the cause of cervical, anal, "
+        "vulvovaginal, penile and oropharyngeal cancer plus anogenital "
+        "warts. "
+        "Types: over 200 identified; high-risk oncogenic types 16 and "
+        "18 cause about 70% of cervical cancer and most HPV-related "
+        "head and neck cancer; types 6 and 11 cause 90% of anogenital "
+        "warts and juvenile-onset laryngeal papillomatosis; other "
+        "high-risk types (31, 33, 45, 52, 58) cause most of the "
+        "remainder. "
+        "Clinical features: most infections are transient and "
+        "asymptomatic; persistent high-risk infection causes cervical "
+        "dysplasia (LSIL, HSIL) then invasive cancer over 10 to 20 "
+        "years; anogenital warts (Condylomata acuminata) - flesh-"
+        "coloured cauliflower papules; recurrent respiratory "
+        "papillomatosis in the child of an infected mother. "
+        "Screening in Australia: renewed Cervical Screening Program "
+        "(December 2017) uses HPV PCR on a self-collected or clinician-"
+        "collected cervical sample every 5 years from age 25 to 74, "
+        "with reflex liquid-based cytology if oncogenic HPV detected. "
+        "Mx: no treatment eradicates HPV itself - manage the lesion. "
+        "Warts - podophyllotoxin, imiquimod, cryotherapy, "
+        "electrocautery or excision; recurrence 30 to 50% regardless. "
+        "Dysplasia - colposcopy and LLETZ for HSIL. Cancer - as per "
+        "site-specific protocols. "
+        "Prevention: nonavalent Gardasil 9 (types 6, 11, 16, 18, 31, "
+        "33, 45, 52, 58) is on the National Immunisation Program at "
+        "school year 7 (about age 12 to 13) as a single dose since "
+        "February 2023; funded catch-up to age 25. Condoms reduce but "
+        "do not eliminate transmission. Note: vaccination is "
+        "prophylactic, not therapeutic - already-infected women should "
+        "still be vaccinated for coverage of other types. Aboriginal "
+        "and Torres Strait Islander women have twice the cervical "
+        "cancer incidence - screening reminders matter."
+    ),
+
+    "Follicular lymphoma": (
+        "Indolent B-cell non-Hodgkin lymphoma arising from germinal-"
+        "centre B cells, characterised by the t(14;18) translocation "
+        "and BCL2 over-expression. Second commonest NHL after "
+        "diffuse large B-cell lymphoma; median age 60. "
+        "Clinical features: painless, waxing-and-waning lymphadenopathy "
+        "over months to years; most patients present with advanced "
+        "(stage III/IV) disease, marrow involvement common, "
+        "extranodal involvement uncommon. B symptoms (weight loss, "
+        "fever, drenching sweats) are unusual in low-grade disease "
+        "and if present raise concern for transformation. "
+        "Ix: excisional lymph node biopsy is the reference standard - "
+        "core biopsy is often inadequate; histology grades 1 to 3A "
+        "(indolent) and 3B (behaves like DLBCL); "
+        "immunohistochemistry CD20+, CD10+, BCL6+, BCL2+; FISH for "
+        "t(14;18). Staging PET-CT, bone marrow biopsy, FBC, LDH, "
+        "beta-2 microglobulin, EUC, LFT, hepatitis B and C, HIV "
+        "serology, echocardiogram before anthracycline. FLIPI score "
+        "prognosticates on age, stage, Hb, LDH and nodal areas. "
+        "Mx: watch-and-wait for asymptomatic low-tumour-burden "
+        "disease (GELF criteria - many patients never need treatment); "
+        "rituximab monotherapy for symptomatic low-burden; "
+        "rituximab-bendamustine or R-CHOP for high tumour burden; "
+        "involved-site radiotherapy for stage I; rituximab maintenance "
+        "for responders. Relapsed disease - obinutuzumab-based, "
+        "lenalidomide, tazemetostat (EZH2 inhibitor) or CAR-T. "
+        "Prognosis: median overall survival now over 20 years; a "
+        "subset transforms into aggressive DLBCL (about 2% per year, "
+        "cumulative 30% over 15 years) and has a much worse "
+        "prognosis. Note: not a curable disease in most cases - the "
+        "goal is durable remission with a good quality of life."
+    ),
+
+    "Biliary atresia": (
+        "Progressive obliterative cholangiopathy of the extrahepatic "
+        "biliary tree presenting in the neonate - the leading cause "
+        "of childhood liver transplant. "
+        "Aetiology: unknown; likely a heterogeneous group with "
+        "perinatal insults (viral, immunological) or embryological "
+        "malformation. Associated with biliary atresia splenic "
+        "malformation syndrome (BASM) - polysplenia, situs inversus, "
+        "cardiac defects. "
+        "Clinical features: term infant with jaundice persisting or "
+        "recurring beyond 14 days (21 days if breastfed and "
+        "preterm), pale acholic stools, dark urine, hepatomegaly. "
+        "Otherwise well and thriving initially - a critical trap "
+        "because the window to a good outcome is narrow. "
+        "Ix: any infant with jaundice beyond 14 days needs a split "
+        "bilirubin - a conjugated fraction above 17 micromol/L or "
+        "over 20% of total is pathological cholestasis and mandates "
+        "urgent paediatric hepatology referral. Investigations: LFT "
+        "with GGT (usually very high), coagulation, TORCH screen, "
+        "alpha-1 antitrypsin, urine reducing substances and organic "
+        "acids, thyroid function, sweat test; abdominal ultrasound "
+        "(triangular cord sign, absent or abnormal gallbladder); "
+        "HIDA scan (no excretion into bowel); intraoperative "
+        "cholangiogram is definitive; liver biopsy shows ductular "
+        "proliferation and bile plugs. "
+        "Mx: Kasser hepatoportoenterostomy (Kasai procedure) as early "
+        "as possible - success falls with age at surgery, with best "
+        "outcomes under 60 days and progressively worse after 90 "
+        "days. Even successful Kasai patients often ultimately need "
+        "liver transplant. Post-Kasai management: fat-soluble "
+        "vitamins (ADEK), prophylactic antibiotics for cholangitis, "
+        "MCT-enriched formula, ursodeoxycholic acid. Note: any "
+        "jaundiced infant at 2 weeks - check a split bilirubin. "
+        "Australian NHMRC and RACP guidance is explicit that this "
+        "cannot wait. Red flags: acholic stools plus persistent "
+        "jaundice - refer to a paediatric hepatology unit today, not "
+        "in a week."
+    ),
+
+    "Cryptococcosis": (
+        "Invasive infection with encapsulated yeast Cryptococcus - "
+        "predominantly Cryptococcus neoformans in "
+        "immunocompromised hosts, Cryptococcus gattii in "
+        "immunocompetent hosts across northern Australia. "
+        "Epidemiology: neoformans is worldwide, found in pigeon "
+        "droppings, and causes disease almost exclusively in "
+        "immunocompromised patients - HIV with CD4 under 100, "
+        "transplant recipients, high-dose corticosteroids, "
+        "haematological malignancy. C. gattii is endemic to red gum "
+        "and river red gum trees in northern and eastern Australia "
+        "and infects previously healthy people, with a longer "
+        "incubation and higher rate of pulmonary and cerebral "
+        "cryptococcomas. "
+        "Clinical features: cryptococcal meningitis is the dominant "
+        "presentation - subacute headache over weeks, low-grade fever, "
+        "vomiting, altered conscious state, cranial nerve palsies "
+        "(especially VI from raised ICP); meningism is often absent. "
+        "Pulmonary disease - cough, dyspnoea, chest pain, "
+        "consolidation or nodules on CXR. Cutaneous lesions "
+        "(molluscum-like papules) in disseminated disease. "
+        "Ix: lumbar puncture with opening pressure (often very high - "
+        "over 25 cm H2O), India ink stain, cryptococcal antigen "
+        "(CrAg) in CSF and serum (highly sensitive and specific), "
+        "fungal culture; CT brain before LP to exclude space-occupying "
+        "cryptococcoma; imaging of lungs; CD4 count and HIV serology "
+        "if not known. "
+        "Mx: induction with liposomal amphotericin B plus flucytosine "
+        "for at least 2 weeks, consolidation with fluconazole 400 to "
+        "800 mg daily for 8 weeks, maintenance fluconazole 200 mg "
+        "daily for at least 12 months in HIV until CD4 recovery. "
+        "Aggressive management of raised ICP with therapeutic LPs "
+        "daily or shunt - this drives short-term mortality more than "
+        "the fungus itself. Delay antiretroviral therapy 4 to 6 weeks "
+        "in HIV to reduce IRIS. Note: cryptococcal meningitis is a "
+        "medical emergency; mortality remains 15 to 30% even with "
+        "optimal treatment. Red flags: opening pressure over 25 cm "
+        "H2O, altered mental state, cranial nerve deficit."
+    ),
+
+    "Duodenal atresia": (
+        "Congenital complete obstruction of the duodenal lumen from "
+        "failed recanalisation during weeks 8 to 10 of fetal "
+        "development, occurring in about 1 in 5000 live births. "
+        "Associations: Down syndrome in about 30% of cases (any "
+        "prenatal duodenal atresia mandates karyotype offer), other "
+        "cardiac defects, VACTERL, annular pancreas, malrotation, "
+        "biliary atresia, oesophageal atresia. "
+        "Clinical features: bilious vomiting in the first day of life "
+        "(non-bilious if the atresia is above the ampulla of Vater); "
+        "distended epigastrium with a scaphoid lower abdomen; failure "
+        "to pass meconium. May be diagnosed prenatally on obstetric "
+        "ultrasound showing polyhydramnios and the classic 'double "
+        "bubble' of a distended stomach and proximal duodenum. "
+        "Ix: plain abdominal X-ray shows the pathognomonic 'double "
+        "bubble' with no distal gas (differentiates from malrotation "
+        "with volvulus, which usually has some distal gas); upper GI "
+        "contrast series confirms the level of obstruction and "
+        "excludes malrotation if any distal gas is present. Echo, "
+        "renal ultrasound and karyotype for associated anomalies. "
+        "Mx: preoperative decompression via nasogastric tube, IV "
+        "fluid and electrolyte correction, antibiotics; definitive "
+        "surgery is duodenoduodenostomy (diamond-shape anastomosis) "
+        "usually within the first days of life. Postoperative feeding "
+        "advances over days to weeks as duodenal motility recovers. "
+        "Prognosis: excellent for isolated duodenal atresia with "
+        "modern surgery; overall outcome dominated by associated "
+        "cardiac and syndromic problems. Note: bilious vomiting in any "
+        "neonate is malrotation with volvulus until proven otherwise "
+        "- the differentiation is by abdominal X-ray and upper GI "
+        "series, and the two are not always distinguishable "
+        "clinically. Red flags: any neonatal bilious vomit - "
+        "surgical review, same hour."
+    ),
+
+    "Rabies": (
+        "Fatal encephalitis caused by neurotropic RNA lyssaviruses of "
+        "the family Rhabdoviridae. Rabies virus itself is not endemic "
+        "in Australia, but Australian bat lyssavirus (ABLV) is "
+        "endemic in all Australian bat species and behaves "
+        "clinically identically. "
+        "Epidemiology: worldwide, 60 000 human deaths per year, "
+        "mostly children in Asia and Africa from dog bites. In "
+        "Australia, three human deaths from ABLV since discovery in "
+        "1996, all after bat contact and none after post-exposure "
+        "prophylaxis. Any wild land mammal in an enzootic country and "
+        "any bat in Australia is potentially infected. "
+        "Clinical features: incubation weeks to months (rarely years) "
+        "depending on inoculum and site (shorter for face and hand). "
+        "Prodrome of fever, malaise and paraesthesia at the wound "
+        "site progresses to encephalitis - hydrophobia (painful "
+        "pharyngeal spasm at attempted drinking), aerophobia, "
+        "hypersalivation, agitation alternating with lucidity - or "
+        "the less common paralytic form. Once symptomatic, over 99% "
+        "die within days despite intensive care. "
+        "Post-exposure prophylaxis (immediate for any potential "
+        "exposure - discussion by phone with public health while the "
+        "patient waits): thorough wound irrigation with soap and "
+        "running water for at least 15 minutes, virucidal antiseptic; "
+        "human rabies immunoglobulin 20 IU/kg infiltrated around the "
+        "wound (as much as anatomically possible, remainder IM at a "
+        "site distant from the vaccine); rabies vaccine on days 0, 3, "
+        "7 and 14 (5 doses to day 28 for immunosuppressed); tetanus "
+        "as required; antibiotics if wound infected. Previously "
+        "vaccinated patients need vaccine on days 0 and 3 only, no "
+        "immunoglobulin. "
+        "Pre-exposure vaccination: recommended for bat handlers, vets "
+        "working with wildlife, travellers to enzootic areas doing "
+        "extended rural work. Note: assume every Australian bat is "
+        "infected. Any bat scratch, bite or saliva contact needs PEP "
+        "regardless of the bat's apparent health; the bat cannot be "
+        "'cleared' without being killed and tested. Red flags: any "
+        "possible exposure - do not wait, do not observe the animal, "
+        "start PEP the same day."
+    ),
+
+    "Warm autoimmune haemolytic anaemia": (
+        "Autoimmune haemolysis mediated by IgG autoantibodies that "
+        "bind red cell antigens optimally at 37 degrees, causing "
+        "extravascular haemolysis in the spleen. Commonest form of "
+        "autoimmune haemolytic anaemia. "
+        "Aetiology: primary (idiopathic) in about half; secondary to "
+        "lymphoproliferative disease (CLL, non-Hodgkin lymphoma), "
+        "SLE and other connective tissue disease, common variable "
+        "immunodeficiency, drugs (methyldopa, penicillins, "
+        "cephalosporins, fludarabine, checkpoint inhibitors), "
+        "infection (rare in warm-type - cold agglutinins dominate "
+        "post-infection). "
+        "Clinical features: fatigue, dyspnoea, jaundice, dark urine "
+        "if intravascular haemolysis, splenomegaly, features of the "
+        "underlying disease. Onset over days to weeks; can be severe "
+        "and life-threatening. "
+        "Ix: FBC and blood film - anaemia with spherocytes, "
+        "polychromasia, elevated reticulocytes; unconjugated "
+        "hyperbilirubinaemia, elevated LDH, low haptoglobin; direct "
+        "antiglobulin test (DAT / direct Coombs) positive - IgG "
+        "positive with or without C3d, warm-type; workup for "
+        "secondary cause: CT chest/abdomen/pelvis, flow cytometry, "
+        "ANA, immunoglobulins, HIV, hepatitis B and C. "
+        "Mx: transfuse for symptomatic severe anaemia even if "
+        "crossmatch difficult - discuss with transfusion medicine, "
+        "use ABO/Rh-matched and least-incompatible units. Prednisolone "
+        "1 mg/kg oral daily is first-line and usually rapidly "
+        "effective; taper over months. Second-line - rituximab (often "
+        "used earlier now given side-effect profile), splenectomy "
+        "(pneumococcal, meningococcal, Hib vaccination first); "
+        "third-line - azathioprine, mycophenolate, cyclophosphamide. "
+        "Folate 5 mg daily during active haemolysis. Treat any "
+        "identified secondary cause. Thromboprophylaxis with "
+        "prophylactic LMWH during active haemolysis - WAIHA carries "
+        "a real venous thromboembolism risk. Note: pre-transfusion "
+        "steroids blunt cross-match reactivity - do not delay steroid "
+        "start waiting for blood; the DAT stays positive for months "
+        "regardless."
+    ),
+
+    "Body dysmorphic disorder": (
+        "Obsessive-compulsive spectrum disorder characterised by "
+        "preoccupation with a perceived defect in physical appearance "
+        "that is either not observable or slight to others. "
+        "Epidemiology: prevalence 1 to 2% in the community, higher "
+        "in cosmetic and dermatology clinics (7 to 15%); equal sex "
+        "distribution; onset typically adolescence; high suicidality "
+        "(lifetime attempt around 25%). "
+        "Clinical features: preoccupation with one or more perceived "
+        "flaws - most often skin, hair, nose, muscle build (muscle "
+        "dysmorphia subtype in men); repetitive behaviours (mirror "
+        "checking, excessive grooming, skin picking, comparing "
+        "appearance to others, seeking reassurance) or mental acts "
+        "(comparing to others) at least an hour daily; marked "
+        "impairment (social avoidance, occupational, missed school); "
+        "insight is often poor and may reach delusional intensity - "
+        "specify with good, fair, poor, absent/delusional insight. "
+        "Frequently comorbid with major depression, social anxiety, "
+        "OCD and substance use. "
+        "Ix: DSM-5 criteria; screen with a question like 'Do you "
+        "worry a lot about how you look and wish you could think "
+        "about it less?'; validated tools include BDDQ and Yale-Brown "
+        "OCD-BDD modification. Rule out an eating disorder if weight "
+        "or shape is the concern, gender dysphoria, and true "
+        "disfigurement. "
+        "Mx: high-dose SSRI (fluoxetine 60 to 80 mg, escitalopram 30 "
+        "to 40 mg, sertraline 200 mg, paroxetine 60 mg) - higher "
+        "doses than for depression, minimum 12 to 16 week trial; "
+        "clomipramine as alternative; CBT with exposure and response "
+        "prevention targeting mirror rituals and avoidance is first-"
+        "line psychological therapy. Antipsychotic augmentation "
+        "sometimes needed for delusional-level insight - not "
+        "monotherapy. Never provide cosmetic or dermatological "
+        "treatment for the perceived defect - it does not help and "
+        "may worsen the illness. Refer to psychiatry. Note: patients "
+        "rarely disclose spontaneously; ask about appearance-related "
+        "distress in any adolescent with depression, social phobia or "
+        "self-harm."
+    ),
+
+    "Microangiopathic haemolytic anaemia": (
+        "Intravascular haemolysis caused by mechanical fragmentation "
+        "of red cells passing through small vessels partially "
+        "occluded by fibrin strands or platelet thrombi - a "
+        "morphological diagnosis, not a single disease. "
+        "Differential: the classic causes are TTP (ADAMTS13 activity "
+        "under 10%, mostly adults, neurological features prominent), "
+        "atypical haemolytic uraemic syndrome (complement dysregulation, "
+        "renal-dominant), typical HUS in children (Shiga-toxin E. "
+        "coli after bloody diarrhoea), DIC (coagulopathy dominant), "
+        "HELLP syndrome (pre-eclampsia in third trimester), "
+        "malignant hypertension, mechanical valves and prosthetic "
+        "surfaces, catastrophic antiphospholipid syndrome, drug-"
+        "induced (quinine, gemcitabine, calcineurin inhibitors, "
+        "ticlopidine), disseminated malignancy. "
+        "Clinical features common to all: anaemia, jaundice, dark "
+        "urine, purpura; end-organ features differ by cause - "
+        "neurological (TTP), renal (HUS/aHUS), coagulopathy (DIC), "
+        "hypertension (malignant HTN, HELLP). "
+        "Ix: FBC and blood film - schistocytes (fragmented red "
+        "cells) are the defining finding, elevated reticulocytes, "
+        "thrombocytopenia in the true thrombotic microangiopathies; "
+        "unconjugated hyperbilirubinaemia, elevated LDH, low or "
+        "absent haptoglobin, negative direct antiglobulin test "
+        "(differentiates from autoimmune haemolytic anaemia); "
+        "coagulation profile (normal or slightly deranged in TTP/HUS, "
+        "grossly abnormal in DIC); EUC, urine microscopy, LFT, "
+        "troponin; ADAMTS13 activity (send before plasma exchange - "
+        "do not wait for the result); complement studies for aHUS; "
+        "stool PCR for Shiga toxin in bloody diarrhoea; pregnancy test. "
+        "Mx: treatment is by underlying cause. TTP - immediate plasma "
+        "exchange, high-dose steroid, caplacizumab, rituximab; STEC-HUS "
+        "in children - supportive with early renal replacement; aHUS - "
+        "eculizumab; HELLP - delivery; DIC - treat the driver plus "
+        "component replacement; malignant hypertension - controlled BP "
+        "reduction. Transfuse platelets only for major bleeding or "
+        "procedure - platelet transfusion in TTP can worsen thrombosis. "
+        "Note: MAHA plus thrombocytopenia in an adult with any "
+        "neurological, renal or cardiac signs is TTP until proven "
+        "otherwise - plasma exchange is time-critical."
+    ),
+
+    # ═══════ BATCH 54: Med-heavy Y4 exam gaps + Gyn/Paeds ═══════
+    #
+    # Rob is on Medicine now, exams across Med/OBGYN/Paeds/Psych in 9
+    # weeks. Coverage scan of 60 common Y4 Med topics against RICH_SUMMARIES
+    # found 44 already covered - the batch below fills the remainder that
+    # matter for the exam plus a couple of Gyn/Paeds items from the
+    # priority-gaps doc.
+
+    "Alcohol withdrawal": (
+        "Autonomic and neurological hyperactivity syndrome from acute "
+        "cessation or reduction of chronic heavy alcohol use, "
+        "reflecting unopposed glutamatergic excitation after GABA-A "
+        "downregulation. "
+        "Timeline: minor symptoms (tremor, anxiety, sweating, "
+        "insomnia, nausea) 6 to 12 hours after last drink; alcoholic "
+        "hallucinosis (visual, auditory or tactile, sensorium clear) "
+        "at 12 to 24 hours; withdrawal seizures - generalised tonic-"
+        "clonic - at 24 to 48 hours; delirium tremens at 48 to 72 "
+        "hours (confusion, disorientation, agitation, gross tremor, "
+        "autonomic storm, fever, visual hallucinations) with "
+        "mortality 5 to 15% untreated, under 5% treated. "
+        "Risk factors for severe withdrawal: prior withdrawal "
+        "seizures or DT, high tolerance, older age, comorbid medical "
+        "illness, malnutrition, sustained heavy intake. "
+        "Ix: FBC, EUC, LFT, magnesium, phosphate, glucose, coags, "
+        "CK, BAL; consider CT head if new confusion, seizure, focal "
+        "signs or trauma; septic screen; assess for pancreatitis, "
+        "GI bleed, subdural haematoma - each mimics or complicates "
+        "withdrawal. Prediction of Alcohol Withdrawal Severity Scale "
+        "(PAWSS) at admission triages inpatient vs ambulatory. "
+        "Mx: symptom-triggered benzodiazepine dosing using the CIWA-"
+        "Ar scale is the gold standard - diazepam 10 to 20 mg oral "
+        "every 1 to 2 hours until CIWA under 10, then taper; use "
+        "oxazepam 15 to 30 mg or lorazepam 1 to 2 mg (no active "
+        "metabolites) if significant liver disease. Fixed-schedule "
+        "dosing acceptable if monitoring is limited. IV thiamine "
+        "300 mg TDS for 3 to 5 days (Australian pabrinex not "
+        "routinely used - IV thiamine ampoules only) before any "
+        "carbohydrate to prevent Wernicke; multivitamins; correct "
+        "magnesium, phosphate, potassium. Delirium tremens - ICU, "
+        "high-dose IV diazepam titrated to sedation, propofol or "
+        "dexmedetomidine adjunct, physical restraint only briefly, "
+        "manage hyperthermia, avoid antipsychotics as first-line "
+        "(lower seizure threshold). Note: never treat alcohol "
+        "withdrawal seizure prophylactically with phenytoin - "
+        "benzodiazepines only. Red flags: hallucinations, high CIWA "
+        "on presentation, first witnessed seizure, temperature over "
+        "38.5, autonomic instability - DT is imminent, admit and "
+        "monitor closely."
+    ),
+
+    "Cholelithiasis": (
+        "Concretions in the gallbladder - about 20% of Australian "
+        "adults have gallstones, most asymptomatic and never causing "
+        "problems. "
+        "Types by composition: cholesterol stones (about 80%, "
+        "yellow, radiolucent, associated with obesity, female sex, "
+        "pregnancy, oestrogen, rapid weight loss, Crohn disease); "
+        "pigment stones - black (haemolysis, cirrhosis, cystic "
+        "fibrosis) or brown (biliary infection, biliary strictures). "
+        "Risk factors: the 5 Fs (female, forty, fertile, fat, fair) "
+        "as classic triage but overstated; also family history, "
+        "Aboriginal and Torres Strait Islander heritage, diabetes, "
+        "ileal disease or resection, TPN, ceftriaxone. "
+        "Clinical features: 80% remain asymptomatic. Biliary colic - "
+        "post-prandial (often after fatty meal) right upper quadrant "
+        "or epigastric pain radiating to right shoulder or scapula, "
+        "constant (not colicky despite the name), lasting 30 minutes "
+        "to a few hours, associated with nausea and vomiting, no "
+        "fever, no jaundice; between attacks the patient is well. "
+        "Complications shift the diagnosis: acute cholecystitis "
+        "(persistent RUQ pain, fever, Murphy sign), choledocholithiasis "
+        "(pain and jaundice), ascending cholangitis (Charcot triad), "
+        "gallstone pancreatitis, gallstone ileus. "
+        "Ix: transabdominal ultrasound is first-line and shows stones "
+        "in over 95% (acoustic shadow, mobile with position); LFT for "
+        "duct involvement (raised bilirubin, ALP, GGT suggests CBD "
+        "stone); if CBD stone suspected on labs or dilated CBD on US, "
+        "MRCP or endoscopic ultrasound; ERCP is diagnostic and "
+        "therapeutic for CBD stones. "
+        "Mx: asymptomatic gallstones - no treatment; exceptions are "
+        "porcelain gallbladder (cancer risk), stones over 3 cm, "
+        "sickle cell disease, some pre-transplant patients. "
+        "Symptomatic biliary colic - elective laparoscopic "
+        "cholecystectomy within 6 to 12 weeks. Acute cholecystitis - "
+        "early laparoscopic cholecystectomy within 72 hours plus IV "
+        "antibiotics; percutaneous cholecystostomy if unfit. CBD "
+        "stones - ERCP with sphincterotomy plus stone extraction, "
+        "followed by cholecystectomy on the same admission. Note: "
+        "any RUQ pain with fever and jaundice is cholangitis until "
+        "proven otherwise - broad-spectrum antibiotics and biliary "
+        "decompression."
+    ),
+
+    "Spinal stenosis": (
+        "Narrowing of the spinal canal, lateral recesses or "
+        "neuroforamina, most often in the lumbar spine, producing "
+        "neurogenic claudication. Lumbar spinal stenosis is a leading "
+        "cause of back-related disability in the over-65s. "
+        "Aetiology: degenerative in almost all - facet joint "
+        "hypertrophy, ligamentum flavum thickening, disc bulging, "
+        "spondylolisthesis. Congenital narrowing (achondroplasia, "
+        "short pedicles) predisposes. Rarer causes - Paget disease, "
+        "epidural lipomatosis, tumour, prior surgery. "
+        "Clinical features: neurogenic claudication - bilateral leg "
+        "pain, heaviness, numbness or weakness on standing and "
+        "walking, relieved by sitting or forward flexion (shopping-"
+        "trolley sign - patient leans on trolley for symptom relief); "
+        "back pain often mild relative to leg symptoms; symptoms "
+        "worse walking downhill (extension) than uphill (flexion) - "
+        "the opposite of vascular claudication; sensory examination "
+        "often normal at rest, deficit appears after provocative "
+        "walking; preserved pedal pulses distinguish from vascular. "
+        "Cervical stenosis presents with myelopathy - hand clumsiness, "
+        "gait disturbance, hyperreflexia below the level, Hoffmann "
+        "sign, spastic legs. "
+        "Ix: MRI is the reference standard; CT myelography if MRI "
+        "contraindicated; plain films add spondylolisthesis and "
+        "alignment. Distinguish from vascular claudication (ABPI, "
+        "arterial duplex), diabetic neuropathy, radiculopathy from "
+        "focal disc, hip osteoarthritis. "
+        "Mx: conservative first-line - analgesia, physiotherapy "
+        "targeting flexion-based exercises and core strengthening, "
+        "epidural corticosteroid injection has modest short-term "
+        "benefit for radicular pain; weight loss; walking aids. "
+        "Surgery (decompressive laminectomy plus fusion if "
+        "spondylolisthesis) for progressive neurology, unbearable "
+        "symptoms despite conservative measures, or bladder or bowel "
+        "involvement - outcomes best with imaging-symptom "
+        "concordance and less impressive at extremes of age or "
+        "multilevel disease. Note: differentiate carefully from "
+        "vascular claudication - the two often coexist in the same "
+        "elderly patient. Red flags: bladder retention, saddle "
+        "anaesthesia, bilateral sciatica, progressive weakness - "
+        "cauda equina requires same-day MRI."
+    ),
+
+    "Spinal epidural abscess": (
+        "Suppurative collection in the epidural space of the spinal "
+        "canal - a neurosurgical emergency because delayed treatment "
+        "produces permanent paraplegia or death. Rising incidence "
+        "with IV drug use, spinal instrumentation and ageing "
+        "population. "
+        "Aetiology and risk factors: haematogenous (skin, urinary "
+        "tract, endocarditis) or direct extension (vertebral "
+        "osteomyelitis, discitis, epidural catheter, spinal surgery); "
+        "Staphylococcus aureus in over 60% (MRSA common), followed by "
+        "streptococci, gram-negatives (E. coli), and tuberculosis "
+        "(Pott disease with cold abscess). Risk: IV drug use, "
+        "diabetes, immunosuppression, indwelling vascular access, "
+        "recent spinal procedure, endocarditis, chronic renal "
+        "failure. "
+        "Clinical features: classical triad of fever, back pain and "
+        "neurology present in fewer than 20% at presentation - "
+        "reliance on the triad delays diagnosis. Sequence: severe "
+        "focal back pain and fever (days), then radicular pain, then "
+        "motor weakness, sensory level, bowel/bladder dysfunction, "
+        "and paralysis (once neurology develops it can progress over "
+        "hours). "
+        "Ix: MRI whole spine with contrast is the reference standard "
+        "and must be obtained same day when suspected - CT myelogram "
+        "if MRI contraindicated; FBC, CRP, ESR (very high in almost "
+        "all), blood cultures before antibiotics, urine culture, "
+        "echocardiogram to exclude endocarditis; CT-guided or "
+        "surgical aspirate for culture (do not delay antibiotics "
+        "waiting for a sample if the patient is deteriorating). "
+        "Mx: neurosurgical review immediately; empirical antibiotics "
+        "on suspicion after blood cultures - vancomycin plus "
+        "ceftriaxone (add antipseudomonal cover if immunocompromised "
+        "or post-procedural), narrowed on cultures for 6 to 8 weeks "
+        "total; urgent surgical decompression and drainage for "
+        "neurology, spinal instability or failed medical treatment; "
+        "small abscess without neurology may be treated with "
+        "antibiotics alone under close monitoring - deterioration "
+        "warrants immediate theatre. Neurological outcome is "
+        "determined more by degree of deficit at intervention than "
+        "by any other factor. Note: any back pain plus fever plus "
+        "elevated CRP is an abscess until MRI excludes it - "
+        "especially in IV drug users, diabetics or after recent "
+        "instrumentation. Red flags: any neurological deficit - "
+        "MRI now, not tomorrow."
+    ),
+
+    "Parapneumonic effusion": (
+        "Exudative pleural effusion adjacent to a pneumonia, "
+        "complicating around 40% of hospitalised community-acquired "
+        "pneumonia. Divided by Light and later British Thoracic "
+        "Society criteria into uncomplicated (free-flowing, sterile), "
+        "complicated (bacterial invasion, low pH, low glucose, may "
+        "loculate) and empyema (frank pus). "
+        "Aetiology: as for the underlying pneumonia. Streptococcus "
+        "pneumoniae, Staphylococcus aureus (higher rate of empyema), "
+        "anaerobes (aspiration, poor dentition), gram-negatives, "
+        "Klebsiella; TB in the immunocompromised or high-prevalence "
+        "background. "
+        "Clinical features: pneumonia not resolving on antibiotics, "
+        "persistent or spiking fever, pleuritic chest pain, dullness "
+        "to percussion, decreased breath sounds and reduced tactile "
+        "fremitus over the effusion, bronchial breathing above. "
+        "Ix: CXR PA and lateral - blunted costophrenic angle if "
+        "over 200 mL; ultrasound is more sensitive, identifies "
+        "loculations and guides drainage - preferred bedside imaging; "
+        "CT chest with contrast for planning drainage or if empyema "
+        "suspected; diagnostic thoracentesis in any effusion over "
+        "10 mm on lateral decubitus that complicates pneumonia - "
+        "pH (below 7.2 indicates complicated), glucose (below 2.2 "
+        "mmol/L), LDH, protein, gram stain, culture, cytology if any "
+        "malignancy suspicion. "
+        "Mx: uncomplicated - antibiotics targeting the pneumonia, "
+        "no drainage. Complicated (pH under 7.2, positive gram stain "
+        "or culture, glucose under 2.2, or frank pus) - intercostal "
+        "drain (typically 14 to 16 French with ultrasound guidance) "
+        "plus antibiotics for 2 to 6 weeks total; intrapleural "
+        "fibrinolytics (alteplase plus DNase - MIST-2 protocol) for "
+        "poorly draining loculated collections. Video-assisted "
+        "thoracoscopic surgery (VATS) for failed drainage, extensive "
+        "loculation or organised empyema; decortication for chronic "
+        "trapped lung. Broaden antibiotic cover to include anaerobes "
+        "when parapneumonic (piperacillin-tazobactam or ceftriaxone "
+        "plus metronidazole; add vancomycin if MRSA risk). Note: any "
+        "pneumonia not settling by day 3 to 5 needs an ultrasound - "
+        "delay in drainage predicts empyema and thoracotomy."
+    ),
+
+    "Cardiorenal syndrome": (
+        "Bidirectional disorder in which dysfunction of one of the "
+        "heart or kidneys drives dysfunction in the other; commonest "
+        "on medical wards as acute or worsening renal failure in the "
+        "setting of acute decompensated heart failure. "
+        "Classification (Ronco): type 1 acute cardiorenal (acute "
+        "cardiac dysfunction causing AKI - ADHF, cardiogenic shock, "
+        "acute MI); type 2 chronic cardiorenal (chronic HF causing "
+        "CKD); type 3 acute renocardiac (AKI causing acute cardiac "
+        "dysfunction - fluid overload, uraemic pericarditis, "
+        "electrolyte derangement); type 4 chronic renocardiac (CKD "
+        "causing cardiac dysfunction - LVH, uraemic cardiomyopathy, "
+        "accelerated atherosclerosis); type 5 secondary (sepsis, SLE, "
+        "amyloid, diabetes affecting both). "
+        "Pathophysiology: elevated central venous pressure impairs "
+        "renal venous drainage; low cardiac output reduces renal "
+        "perfusion; neurohormonal activation (RAAS, sympathetic, "
+        "vasopressin) drives sodium retention and further congestion; "
+        "diuretic resistance emerges from tubular hypertrophy and "
+        "prolonged use. "
+        "Clinical features: worsening dyspnoea, weight gain, "
+        "peripheral oedema, orthopnoea, elevated JVP, and a rising "
+        "creatinine or falling urine output; often on background of "
+        "diuretic therapy that seems to have stopped working. "
+        "Ix: EUC, BNP or NT-proBNP, troponin, FBC, urine sodium and "
+        "creatinine (FeNa often equivocal in HF), urinalysis for "
+        "casts and protein, ECG, chest radiograph, echocardiogram, "
+        "consider POCUS for lung B-lines and IVC. "
+        "Mx: identify the driver and treat the dominant problem - "
+        "in type 1, decongest aggressively despite modest creatinine "
+        "rise (small increases from decongestion are prognostically "
+        "neutral). IV loop diuretic (furosemide 2.5x the oral dose, "
+        "infusion for resistance), add thiazide (metolazone or "
+        "chlorthalidone) for sequential blockade, consider "
+        "acetazolamide (ADVOR trial); ultrafiltration if diuretic-"
+        "resistant and truly congested. Optimise guideline-directed "
+        "HF therapy - ACEi/ARB/ARNI (tolerate mild AKI, monitor "
+        "potassium), MRA, beta-blocker (do not start in acute "
+        "decompensation), SGLT2 inhibitor (DAPA-HF, EMPEROR-Reduced - "
+        "safe down to eGFR 20). Avoid NSAIDs, contrast, aminoglycosides. "
+        "Note: rising creatinine during aggressive diuresis in a "
+        "clinically congested patient is not a reason to stop - it "
+        "predicts a better outcome than persistent congestion."
+    ),
+
+    "Uterine polyp": (
+        "Focal outgrowth of endometrial glands and stroma projecting "
+        "into the uterine cavity - benign in the vast majority. "
+        "Aetiology and risk factors: unopposed oestrogen exposure - "
+        "obesity, tamoxifen, HRT; hypertension; age; endometrial "
+        "hyperplasia; some Lynch syndrome families. "
+        "Clinical features: abnormal uterine bleeding is the classic "
+        "presentation - intermenstrual bleeding, heavy menstrual "
+        "bleeding, postcoital bleeding, or postmenopausal bleeding. "
+        "May be asymptomatic and found incidentally on imaging. Can "
+        "prolapse through the cervix. Association with infertility. "
+        "Malignant transformation risk 1 to 5% overall, higher in "
+        "postmenopausal women, symptomatic polyps, size over 15 mm, "
+        "tamoxifen use, and Lynch syndrome. "
+        "Ix: transvaginal ultrasound - focal endometrial thickening "
+        "or a hyperechoic focus in the cavity; saline-infusion "
+        "sonohysterography (SIS) delineates polyp from thickened "
+        "endometrium; hysteroscopy is diagnostic and therapeutic; "
+        "Pipelle biopsy has poor sensitivity for focal lesions (miss "
+        "rate around 25% - do not rely on it in postmenopausal "
+        "bleeding). "
+        "Mx: symptomatic polyps - hysteroscopic polypectomy with "
+        "histology of the specimen; asymptomatic premenopausal small "
+        "polyps under 10 mm may be observed as spontaneous "
+        "regression occurs. Postmenopausal polyps - remove regardless "
+        "of symptoms given higher malignancy risk. Tamoxifen-"
+        "associated polyps - remove if symptomatic; hysteroscopic "
+        "surveillance if asymptomatic. Fertility patients - remove "
+        "before ART; small studies suggest improved pregnancy rates. "
+        "Note: never dismiss postmenopausal bleeding as 'atrophy' - "
+        "TVUS is the minimum workup and any thickened endometrium or "
+        "focal lesion needs hysteroscopy plus biopsy. Endometrial "
+        "hyperplasia and cancer can coexist with polyps."
+    ),
+
+    "Tourette syndrome": (
+        "Neurodevelopmental disorder characterised by multiple motor "
+        "tics and at least one vocal tic present for over one year "
+        "with onset before age 18 - a heterogeneous condition on the "
+        "same spectrum as chronic tic disorder and transient tic "
+        "disorder. "
+        "Epidemiology: onset typically 4 to 7 years, peak severity "
+        "10 to 12 years, most improve or resolve by early adulthood; "
+        "male predominance 3 to 4:1; prevalence around 0.3 to 1% of "
+        "school-age children. "
+        "Aetiology: strongly heritable, polygenic; dysfunction of "
+        "cortico-striato-thalamo-cortical circuits; dopaminergic "
+        "hyperactivity in the basal ganglia. Rare post-streptococcal "
+        "PANDAS phenotype is contested. "
+        "Clinical features: motor tics range from simple (eye "
+        "blinking, head jerks, shoulder shrugs) to complex "
+        "(gestures, jumping, echopraxia, copropraxia); vocal tics "
+        "include sniffing, throat clearing, grunting, echolalia and, "
+        "in about 10%, coprolalia. Tics wax and wane, are suppressible "
+        "at cost, are worsened by stress, fatigue, excitement, and "
+        "may be preceded by a premonitory urge relieved by the tic. "
+        "Coexisting ADHD (up to 60%), OCD (up to 50%), anxiety, "
+        "learning disability, and disruptive behaviour drive most of "
+        "the functional impairment - not the tics themselves. "
+        "Ix: clinical diagnosis by DSM-5 criteria - no laboratory "
+        "confirmation. Screen for the comorbidities that determine "
+        "management; consider EEG if paroxysmal and stereotyped "
+        "movements to rule out seizures; MRI only for atypical "
+        "features or focal neurology. "
+        "Mx: psychoeducation of family, teachers and the child - "
+        "most tics are mild and do not warrant medication; treat "
+        "the most impairing comorbidity first (methylphenidate is "
+        "not contraindicated in TS despite historical concern, and "
+        "usually improves both ADHD and tic-related disability). "
+        "Behavioural therapy - Comprehensive Behavioural Intervention "
+        "for Tics (CBIT) with habit reversal is first-line for "
+        "problematic tics from age 8. Pharmacological options if "
+        "significant impairment: alpha-2 agonists (clonidine, "
+        "guanfacine) first-line; tetrabenazine or antipsychotics "
+        "(aripiprazole, risperidone, haloperidol) second-line "
+        "given side-effect profile. Deep brain stimulation for "
+        "severe treatment-refractory adult cases. Note: reassurance "
+        "that most tics improve after puberty is powerful and "
+        "correct."
     ),
 
 }
