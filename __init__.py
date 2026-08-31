@@ -1066,7 +1066,7 @@ def _build_modules_group(_w, first_run: bool):
     # Deliberately not quoting the old strings here: grepping the tree
     # for a caption is how you confirm one is gone, and a comment holding
     # it verbatim makes that check report a false positive.
-    pearls_cb = _row("Reference popups and sidebar", "", pearls_default)
+    pearls_cb = _row("Reference popups", "", pearls_default)
     utd_cb    = _row("UpToDate sidebar", "", utd_default)
     chat_cb   = _row("AI chat sidebar", "", chat_default)
     return box, pearls_cb, utd_cb, chat_cb
@@ -1275,13 +1275,12 @@ def _build_pearls_group(_w):
     """
     box = _w["QGroupBox"]("Reference popups")
     lay = _w["QVBoxLayout"](box)
-    pearls_qcb = _w["QCheckBox"]("Highlight terms on the question side too")
+    pearls_qcb = _w["QCheckBox"]("Also highlight on question side")
     pearls_qcb.setChecked(_config.get("enableHighlightsOnQuestions") is not False)
     lay.addWidget(pearls_qcb)
-    articleview_cb = _w["QCheckBox"](
-        "Open clicked popups in the side panel (uncheck to use external browser)"
-    )
+    articleview_cb = _w["QCheckBox"]("Open in side panel")
     articleview_cb.setChecked(_config.get("enableArticleViewer") is not False)
+    articleview_cb.setToolTip("Off: open the source in your default browser.")
     lay.addWidget(articleview_cb)
 
     # Held in a mutable box so the button can update it without the
@@ -1557,12 +1556,11 @@ def _build_library_group(_w):
     lay = _w["QVBoxLayout"](box)
     lay.setSpacing(6)
 
-    update_cb = _w["QCheckBox"]("Keep the reference database up to date")
+    update_cb = _w["QCheckBox"]("Check for updates on launch")
     update_cb.setChecked(bool(_config.get("libraryAutoUpdate")))
     update_cb.setToolTip(
-        "Checks for corrected drug and condition summaries when Anki\n"
-        "starts. Only the reference text is downloaded - no cards, no\n"
-        "review history, nothing about your collection is sent.")
+        "Downloads corrected drug and condition summaries only. "
+        "Nothing about your collection is sent.")
     lay.addWidget(update_cb)
 
     try:
@@ -1571,10 +1569,7 @@ def _build_library_group(_w):
     except Exception:
         version = "unknown"
 
-    lay.addWidget(_caption(
-        _w,
-        f"Content {version}.",
-        wrap=True))
+    lay.addWidget(_caption(_w, f"Version {version}"))
 
     row = _w["QHBoxLayout"]()
     check_btn = _w["QPushButton"]("Check now")

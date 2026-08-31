@@ -260,7 +260,7 @@ def _check(manifest_url: str) -> str:
     remote = manifest.get("content_version")
     if not _newer(remote, _library.CONTENT_VERSION):
         log(f"updater: content {_library.CONTENT_VERSION} is current")
-        return f"Up to date (content {_library.CONTENT_VERSION})."
+        return "Up to date."
 
     url = manifest.get("url")
     want = manifest.get("sha256")
@@ -301,7 +301,7 @@ def _check(manifest_url: str) -> str:
         return "Could not save the downloaded content."
 
     log(f"updater: content {remote} downloaded; active at next restart")
-    return f"Updated to content {remote}. Restart Anki to use it."
+    return f"Downloaded {remote}. Restart Anki to apply."
 
 
 def check_in_background(manifest_url: str = DEFAULT_MANIFEST_URL) -> None:
