@@ -181,6 +181,55 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "irritant contact dermatitis in adults"]],
         "summary": "",
     },
+    {
+        "name": "Ross River virus infection",
+        "aliases": ["Ross River virus", "Ross River fever",
+                    "Epidemic polyarthritis (Australian)"],
+        "utd": [["Overview", "ross river virus infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Hendra virus infection",
+        "aliases": ["Hendra virus", "Hendra encephalitis"],
+        "utd": [["Overview", "hendra and nipah virus infections"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic non-cancer pain",
+        "aliases": ["Chronic pain", "Persistent pain",
+                    "Chronic non-malignant pain"],
+        "utd": [["Overview", "evaluation of chronic non cancer pain in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Achilles tendinopathy",
+        "aliases": ["Achilles tendinitis", "Achilles tendinosis",
+                    "Achilles tendon rupture"],
+        "utd": [["Overview", "achilles tendinopathy and tendon rupture"]],
+        "summary": "",
+    },
+    {
+        "name": "Postmenopausal bleeding",
+        "aliases": ["Postmenopausal vaginal bleeding", "PMB"],
+        "utd": [["Overview", "approach to the patient with postmenopausal "
+                             "uterine bleeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Burns",
+        "aliases": ["Burn injury", "Thermal burn",
+                    "Chemical burn", "Electrical burn"],
+        "utd": [["Overview", "emergency care of moderate and severe "
+                             "thermal burns in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Heat exhaustion",
+        "aliases": ["Heat illness", "Heat cramps"],
+        "utd": [["Overview", "severe nonexertional hyperthermia classic "
+                             "heat stroke in adults"]],
+        "summary": "",
+    },
 ]
 
 
@@ -14651,6 +14700,219 @@ RICH_SUMMARIES = {
         "bacterial infection. Note: a rash that vanishes on holiday and "
         "returns at work is occupational contact dermatitis - "
         "notifiable, and worth a workplace ergonomic review."
+    ),
+
+    # ═══════ BATCH 46: Australian arboviruses + MSK + burns/heat + PMB + erysipelas ══
+
+    "Ross River virus infection": (
+        "Australian alphavirus arbovirus spread by Aedes and Culex "
+        "mosquitoes with kangaroos, wallabies and horses as reservoir. "
+        "Epidemiology: nationally notifiable and the commonest arboviral "
+        "disease in Australia; peaks in late summer and autumn, "
+        "especially after wet weather in coastal Queensland, northern "
+        "NSW, NT and WA; no person-to-person spread. Clinical features: "
+        "acute self-limiting illness with fever, symmetric peripheral "
+        "polyarthritis (wrists, ankles, MCPs, knees), rash "
+        "(maculopapular, trunk and limbs), myalgia and profound fatigue; "
+        "joint symptoms are the dominant complaint and can persist for "
+        "months. Ix: serology - IgM confirms recent infection, "
+        "seroconversion of IgG on paired samples is definitive; PCR early "
+        "in illness. Notify public health. Mx: supportive - NSAIDs, "
+        "paracetamol, graded exercise; reassurance that the joint pain "
+        "will resolve, though the timeline may be long; DMARDs and "
+        "steroids not indicated. Prevention: mosquito avoidance (DEET or "
+        "picaridin repellent, screens, long sleeves at dusk); no vaccine. "
+        "Note: symmetric polyarthritis plus rash in Australia is Ross "
+        "River until serology proves otherwise - do not start "
+        "rheumatology work-up first."
+    ),
+
+    "Hendra virus infection": (
+        "Rare but often fatal zoonosis in Queensland and northern NSW; "
+        "reservoir is the flying fox (Pteropus spp.), horses are the "
+        "amplifying host, humans infected by close contact with sick "
+        "horses. Epidemiology: sporadic outbreaks since 1994; all human "
+        "cases so far in vets, horse trainers and stable staff; no "
+        "human-to-human spread documented. Clinical features: 5-21 day "
+        "incubation; influenza-like prodrome, then rapid progression to "
+        "pneumonitis or encephalitis with focal signs, seizures, coma; "
+        "case fatality ~60%. Ix: notify public health immediately; PCR "
+        "on respiratory secretions, blood and CSF; serology; only in a "
+        "PC4 laboratory. Mx: barrier isolation and negative-pressure "
+        "room; supportive; ribavirin has been used empirically without "
+        "strong evidence; contacts get monitored and offered ribavirin "
+        "prophylaxis. Prevention: horse vaccine (Equivac HeV) is "
+        "licensed in Australia; PPE around any sick horse. Note: any "
+        "vet or horse handler with unexplained encephalitis in endemic "
+        "areas needs Hendra work-up and isolation up front."
+    ),
+
+    "Chronic non-cancer pain": (
+        "Pain beyond expected healing (usually over 3 months) without "
+        "identifiable ongoing tissue damage; a nervous-system disorder as "
+        "much as a peripheral one. Epidemiology: one in five Australian "
+        "adults; leading cause of disability; opioid prescribing peaked "
+        "~2015 and is now under active de-escalation. Classification: "
+        "nociceptive, neuropathic, nociplastic (central sensitisation - "
+        "fibromyalgia, IBS, non-specific back pain) or mixed. Clinical "
+        "features: pain out of proportion to imaging; sleep disturbance; "
+        "mood disorder in over 50%; catastrophising, fear-avoidance, "
+        "deconditioning. Ix: focused history and examination for red "
+        "flags and treatable contributors; imaging only if likely to "
+        "change management. Mx: biopsychosocial - graded exercise, CBT, "
+        "sleep hygiene, mood treatment; simple analgesics; topical NSAIDs "
+        "or capsaicin; TCA or SNRI for neuropathic pain; gabapentinoids "
+        "second-line and monitored for misuse. Opioids offer minimal "
+        "long-term benefit and cause harm - taper existing prescriptions "
+        "with the patient, not to them. Note: escalate function goals, "
+        "not milligrams."
+    ),
+
+    "Achilles tendinopathy": (
+        "Overuse degenerative disorder of the Achilles tendon; "
+        "insertional (calcaneus) and mid-portion (2-6 cm above) have "
+        "different management. Epidemiology: runners, jumping athletes, "
+        "sudden load increase; fluoroquinolones and systemic steroids "
+        "raise risk of tendinopathy and rupture. Clinical features: "
+        "gradual posterior heel pain worse with activity and after rest "
+        "('start-up pain'); tender thickened tendon; pain on single-leg "
+        "heel raise; sudden calf pain with palpable gap and positive "
+        "Simmond (Thompson) test - calf squeeze does not plantarflex "
+        "the foot - is rupture until proven otherwise. Ix: clinical; "
+        "ultrasound or MRI for atypical presentation. Mx: relative "
+        "rest, load modification, eccentric heel-drop protocol "
+        "(Alfredson) for mid-portion; heel raises for insertional; "
+        "shockwave if refractory; avoid steroid injection; surgery only "
+        "after 6-12 months of failed conservative care. Ruptured tendon "
+        "gets urgent orthopaedic referral - conservative in low-demand, "
+        "surgical in athletes. Note: fluoroquinolones plus steroids in "
+        "an older patient is the classic Achilles rupture setup."
+    ),
+
+    "Adhesive capsulitis": (
+        "Painful global restriction of glenohumeral movement from "
+        "capsular fibrosis; the classic 'frozen shoulder'. Epidemiology: "
+        "women 40-60; diabetes (up to 5x risk, longer course), thyroid "
+        "disease, prolonged immobilisation, breast surgery. Phases: "
+        "freezing (painful, 2-9 months), frozen (stiff, less painful, "
+        "4-12 months), thawing (gradual recovery over 1-3 years). "
+        "Clinical features: insidious shoulder pain then loss of both "
+        "active AND passive range in all planes (unlike rotator cuff, "
+        "where passive is preserved); external rotation lost first; "
+        "hand-behind-back and combing hair become impossible. Ix: "
+        "clinical; X-ray to exclude arthritis; MRI only if diagnosis "
+        "unclear or surgery considered. Mx: education, analgesia, "
+        "physiotherapy within pain tolerance; intra-articular steroid "
+        "injection accelerates recovery in the freezing phase; capsular "
+        "hydrodilatation for stubborn cases; manipulation under "
+        "anaesthesia or arthroscopic release beyond 12 months. Note: "
+        "loss of passive range distinguishes frozen shoulder from "
+        "rotator cuff - examine both actively and passively."
+    ),
+
+    "Plantar fasciitis": (
+        "Overuse enthesopathy of the plantar fascia at its calcaneal "
+        "origin; commonest cause of adult heel pain. Epidemiology: 40-60 "
+        "year olds; runners, obesity, prolonged standing, pes planus or "
+        "cavus, tight Achilles, unsupportive footwear. Clinical features: "
+        "sharp inferomedial heel pain worst with the first steps in the "
+        "morning or after rest ('post-static dyskinesia'); improves with "
+        "walking then returns after prolonged activity; point tenderness "
+        "at the medial calcaneal tubercle; passive toe dorsiflexion "
+        "reproduces pain (windlass test). Ix: clinical; ultrasound shows "
+        "plantar fascia over 4 mm if diagnosis uncertain; heel spurs on "
+        "X-ray are incidental. Mx: activity modification, calf and "
+        "plantar fascia stretching, cushioned or supportive footwear, "
+        "silicone heel cups or orthotics, NSAIDs, weight loss; night "
+        "splint if refractory; steroid injection provides short-term "
+        "relief but risks fat pad atrophy and fascial rupture; shockwave "
+        "second-line. 80-90% resolve within a year. Note: pain continuing "
+        "through the day rather than easing with walking, or radiating - "
+        "think tarsal tunnel or calcaneal stress fracture."
+    ),
+
+    "Erysipelas": (
+        "Superficial dermal and lymphatic bacterial infection, almost "
+        "always beta-haemolytic Streptococcus (S. pyogenes); "
+        "distinguished from cellulitis by depth, sharp border and rapid "
+        "onset. Epidemiology: extremes of age; lymphoedema, venous "
+        "insufficiency, obesity, tinea pedis (portal of entry), "
+        "previous erysipelas. Clinical features: acute fever and rigors; "
+        "bright red, well-demarcated, raised, warm, tender plaque with "
+        "sharply advancing border; lower limb most common, face second "
+        "(butterfly pattern); lymphangitic streaking and regional "
+        "lymphadenopathy. Ix: clinical; FBC, CRP; blood cultures if "
+        "systemically unwell; treat tinea pedis to remove portal. Mx: "
+        "elevate the limb; oral phenoxymethylpenicillin or amoxicillin "
+        "5-10 days for mild; IV benzylpenicillin or ceftriaxone if "
+        "systemic or extensive; add anti-staphylococcal cover only if "
+        "atypical. Long-term penicillin V prophylaxis for recurrent "
+        "episodes. Note: sharply demarcated raised red plaque with "
+        "fever is erysipelas and needs beta-lactam - cellulitis has a "
+        "hazier border and is often staph as well."
+    ),
+
+    "Postmenopausal bleeding": (
+        "Any vaginal bleeding after 12 months of amenorrhoea in a woman "
+        "not on HRT, or unscheduled bleeding on continuous HRT. Always "
+        "investigated - endometrial cancer must be excluded. "
+        "Epidemiology: affects 4-11% of postmenopausal women; 10% have "
+        "endometrial cancer, another 10% hyperplasia. Causes: atrophic "
+        "vaginitis or endometrium (~60%); polyp; hyperplasia (with or "
+        "without atypia); endometrial or cervical cancer; HRT; "
+        "anticoagulation; less often ovarian or vulvar cancer. Ix: "
+        "transvaginal ultrasound measures endometrial thickness (under "
+        "4 mm has NPV over 99%); pipelle biopsy if endometrium >=4 mm, "
+        "focal thickening, recurrent bleeding, or high-risk history "
+        "(tamoxifen, obesity, Lynch, PCOS, unopposed oestrogen); "
+        "hysteroscopy and D&C if pipelle inadequate. Speculum for "
+        "cervical or vaginal cause. Mx: treat cause; topical oestrogen "
+        "for atrophy; refer confirmed atypical hyperplasia or cancer to "
+        "gynae-onc. Note: postmenopausal bleeding is cancer until "
+        "endometrial sampling says otherwise."
+    ),
+
+    "Burns": (
+        "Thermal, chemical, electrical or radiation injury to skin and "
+        "sometimes deeper structures. Classification (by depth): "
+        "superficial epidermal (erythema only, no blister); superficial "
+        "partial-thickness (blistering, painful, blanches, moist pink "
+        "base); deep partial-thickness (mottled, less painful, poor "
+        "capillary refill); full-thickness (leathery white or charred, "
+        "painless); fourth-degree (into muscle or bone). Extent by "
+        "Wallace rule of nines or Lund-Browder chart (paediatrics). Ix: "
+        "primary and secondary survey; carboxyhaemoglobin and arterial "
+        "gas for enclosed-space fires; ECG for electrical burns. Mx: stop "
+        "the burning (cool water 20 min within 3 h, not ice); analgesia; "
+        "tetanus; Parkland formula (4 mL x kg x %TBSA of Hartmann's over "
+        "24 h, half in first 8 h) for adults over 20% TBSA burn; airway "
+        "assessment early if facial or inhalational; escharotomy for "
+        "circumferential deep burns; refer to burns unit if >10% TBSA "
+        "(>5% in children), face, hands, feet, perineum, joints, full "
+        "thickness, or electrical/chemical. Cling film dressing for "
+        "transport. Note: cooling should never delay resuscitation, but "
+        "even delayed cooling within 3 hours reduces scarring."
+    ),
+
+    "Heat exhaustion": (
+        "Volume-depletion and salt-loss illness from prolonged heat "
+        "exposure with intact thermoregulation; the step before heat "
+        "stroke. Epidemiology: hot humid conditions, exercise, extremes "
+        "of age, diuretics, anticholinergics, beta-blockers; Australian "
+        "outback and urban heatwave are the typical scenarios. Clinical "
+        "features: core temperature usually under 40 degC; heavy "
+        "sweating, flushed skin; headache, nausea, vomiting, cramps, "
+        "dizziness, syncope; tachycardia and orthostatic hypotension; "
+        "mental status normal or only mildly impaired (distinguishes "
+        "from heat stroke). Ix: core (rectal) temperature; EUC, glucose, "
+        "CK for rhabdomyolysis. Mx: move to cool environment, remove "
+        "clothing, active cooling (fanning with skin misting, cold packs "
+        "to axilla, groin, neck); oral electrolyte solution if "
+        "tolerated, otherwise IV normal saline; monitor for progression. "
+        "Prevention: acclimatisation over 1-2 weeks, hydration, avoid "
+        "mid-day exertion. Note: any confusion, seizure or core "
+        "temperature over 40 degC has crossed into heat stroke - "
+        "treatment escalates and mortality does too."
     ),
 
 }
