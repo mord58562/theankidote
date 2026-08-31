@@ -301,6 +301,55 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "salicylate aspirin poisoning in adults"]],
         "summary": "",
     },
+    {
+        "name": "Cocaine toxicity",
+        "aliases": ["Cocaine overdose", "Cocaine poisoning",
+                    "Crack cocaine toxicity"],
+        "utd": [["Overview", "cocaine acute intoxication"]],
+        "summary": "",
+    },
+    {
+        "name": "Warfarin overdose",
+        "aliases": ["Warfarin toxicity", "Elevated INR on warfarin",
+                    "Warfarin bleeding"],
+        "utd": [["Overview", "management of warfarin associated bleeding "
+                             "or supratherapeutic inr"]],
+        "summary": "",
+    },
+    {
+        "name": "Iron overdose",
+        "aliases": ["Iron poisoning", "Ferrous sulfate overdose",
+                    "Paediatric iron ingestion"],
+        "utd": [["Overview", "acute iron poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Osgood-Schlatter disease",
+        "aliases": ["Osgood-Schlatter", "Tibial tuberosity apophysitis",
+                    "Osgood Schlatter disease"],
+        "utd": [["Overview", "osgood schlatter disease and other traction "
+                             "apophysitis syndromes"]],
+        "summary": "",
+    },
+    {
+        "name": "Alcoholic hepatitis",
+        "aliases": ["Alcohol-related hepatitis", "Alcoholic steatohepatitis"],
+        "utd": [["Overview", "management of alcohol associated hepatitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Priapism",
+        "aliases": ["Ischaemic priapism", "Low-flow priapism",
+                    "High-flow priapism", "Non-ischaemic priapism"],
+        "utd": [["Overview", "priapism evaluation and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Pterygium",
+        "aliases": ["Surfer's eye", "Pterygium of cornea"],
+        "utd": [["Overview", "pterygium"]],
+        "summary": "",
+    },
 ]
 
 
@@ -15396,6 +15445,224 @@ RICH_SUMMARIES = {
         "pulmonary oedema. Note: never intubate a salicylate-toxic "
         "patient without matching their respiratory rate - loss of "
         "compensatory hyperventilation drops pH and kills."
+    ),
+
+    # ═══════ BATCH 49: toxicology + endo emergency + peds ortho + hepatology + urology + ophtho + colorectal ══
+
+    "Opioid overdose": (
+        "Life-threatening depression of consciousness and respiration "
+        "from mu-opioid agonism; a leading cause of preventable death in "
+        "Australians 20-50. Epidemiology: heroin, pharmaceutical opioids "
+        "(oxycodone, morphine, fentanyl patches), methadone; "
+        "fentanyl-contaminated stimulants an emerging cause; risk highest "
+        "post-release from prison, post-detox, or after a break in "
+        "tolerance. Clinical features: classic triad of pinpoint pupils, "
+        "respiratory depression (rate under 12, shallow) and reduced "
+        "consciousness; hypoxia, bradycardia, hypotension; needle tracks, "
+        "fentanyl patch; pupils not pinpoint if concurrent stimulants, "
+        "hypoxia (dilate) or clonidine. Ix: pulse oximetry, gas, glucose, "
+        "ECG, paracetamol level. Mx: airway and ventilation first "
+        "(bag-mask); IV naloxone 0.1-0.4 mg titrated to respiratory rate "
+        "not consciousness (avoids precipitated withdrawal); IM or "
+        "intranasal if no IV access; infusion (2/3 of the effective bolus "
+        "per hour) for long-acting opioids (methadone, sustained-release "
+        "oxycodone, fentanyl patches); observe 6 hours after last dose. "
+        "Note: naloxone is short-acting - the patient who wakes on "
+        "naloxone will re-arrest without observation."
+    ),
+
+    "Cocaine toxicity": (
+        "Sympathomimetic and sodium-channel blocking toxicity from "
+        "cocaine hydrochloride (snorted, IV) or crack (smoked). "
+        "Epidemiology: highest use in the 20s and 30s; often co-ingested "
+        "with alcohol (cocaethylene, more cardiotoxic than either) or "
+        "heroin ('speedball'). Clinical features: euphoria, agitation, "
+        "mydriasis, hypertension, tachycardia, hyperthermia, sweating, "
+        "chest pain (vasospasm/MI), palpitations (SVT, VT), seizures, "
+        "stroke (ischaemic or haemorrhagic), aortic dissection, "
+        "mesenteric ischaemia, rhabdomyolysis, AKI; 'wide-complex "
+        "tachycardia in a young sweaty patient' is the exam picture. Ix: "
+        "ECG (wide QRS from sodium blockade, ischaemia), troponin, CK, "
+        "EUC, gas, urine drug screen, beta-hCG; CT brain if focal "
+        "deficit. Mx: benzodiazepines are the cornerstone - control "
+        "agitation, reduce catecholamine surge, lower BP; IV fluids, "
+        "active cooling; sodium bicarbonate for QRS widening; nitrates or "
+        "phentolamine for hypertension; PCI for STEMI; AVOID "
+        "beta-blockers (unopposed alpha causes hypertensive crisis). "
+        "Note: chest pain in a young cocaine user - ECG, troponin, "
+        "benzos, aspirin, GTN; never a beta-blocker."
+    ),
+
+    "Warfarin overdose": (
+        "Excessive vitamin K antagonism from intentional overdose, "
+        "medication error, drug interaction (antibiotics, amiodarone, "
+        "statins, fluconazole) or dietary change. Clinical features: "
+        "often asymptomatic - the diagnosis is a high INR on routine "
+        "monitoring; bleeding is the presentation to worry about - "
+        "epistaxis, haematuria, easy bruising, GI bleed, intracranial "
+        "haemorrhage, retroperitoneal haemorrhage; occult bleeding with a "
+        "fall in Hb. Ix: INR, APTT, FBC, EUC, group and hold; CT brain if "
+        "any neurological features. Mx: gradient by INR and bleeding: INR "
+        "4.5-10 without bleeding - omit dose, reduce maintenance, recheck "
+        "24-48 h; INR over 10 without bleeding - oral vitamin K 1-5 mg; "
+        "any significant bleeding regardless of INR - IV vitamin K 5-10 "
+        "mg plus prothrombinex 25-50 IU/kg (FFP only if prothrombinex "
+        "unavailable, less effective); life-threatening bleeding - "
+        "prothrombinex 50 IU/kg plus IV vitamin K, activate massive "
+        "transfusion protocol. Note: an unexpectedly high INR is a "
+        "prescribing puzzle - always look for a new antibiotic or "
+        "interaction."
+    ),
+
+    "Iron overdose": (
+        "Ingestion of elemental iron from pharmaceutical iron tablets "
+        "(prenatal supplements high content) or paediatric chewables. "
+        "Epidemiology: children under 6 (accidental), pregnancy "
+        "(deliberate). Thresholds by elemental iron: under 20 mg/kg "
+        "minimal, 20-60 mg/kg moderate, over 60 mg/kg severe. Phases: "
+        "0-6 h - GI (vomiting, haematemesis, diarrhoea, abdominal "
+        "pain); 6-24 h - latent quiescent (dangerous; the patient "
+        "looks better before getting much worse); 12-48 h - shock, "
+        "metabolic acidosis, coagulopathy, hepatic and renal failure; "
+        "2-5 days - hepatic necrosis; 4-6 weeks - gastric outlet "
+        "obstruction from scarring. Ix: serum iron at 4 and 6 h; gas, "
+        "EUC, LFT, coags, glucose, lactate; AXR (iron tablets "
+        "radio-opaque); call PIC 13 11 26. Mx: charcoal does NOT bind "
+        "iron; whole-bowel irrigation with PEG for pill fragments or "
+        "ingestion over 60 mg/kg; IV deferoxamine (15 mg/kg/h) for "
+        "iron over 90 micromol/L, systemic toxicity, or acidosis. "
+        "Note: the deceptive latent phase is why iron ingestion needs "
+        "24 h observation."
+    ),
+
+    "Myxoedema coma": (
+        "Decompensated severe hypothyroidism with reduced consciousness; "
+        "mortality 30-60% despite treatment. Epidemiology: elderly women "
+        "in winter with untreated or non-adherent hypothyroidism; "
+        "precipitants include cold exposure, infection, MI, stroke, "
+        "sedatives, surgery. Clinical features: reduced conscious state, "
+        "hypothermia (often under 32 degC), bradycardia, hypotension, "
+        "hypoventilation with CO2 retention, hyponatraemia, "
+        "hypoglycaemia; puffy face, dry skin, delayed reflex relaxation, "
+        "non-pitting oedema; may have pericardial or pleural effusion. "
+        "Ix: TSH markedly raised, free T4 low; cortisol and ACTH "
+        "(co-existing adrenal insufficiency common - MUST replace steroid "
+        "before thyroxine or precipitate crisis); FBC, EUC, glucose, gas; "
+        "septic screen. Mx: ICU; IV hydrocortisone 100 mg 6-hourly BEFORE "
+        "thyroid hormone; IV levothyroxine 200-400 microg loading then "
+        "50-100 microg daily; passive rewarming; treat precipitant. Note: "
+        "hypothermic bradycardic hyponatraemic hypotensive elderly is "
+        "myxoedema coma - steroid first."
+    ),
+
+    "Osgood-Schlatter disease": (
+        "Traction apophysitis of the tibial tuberosity from repeated "
+        "quadriceps pull on the immature ossification centre. "
+        "Epidemiology: active adolescents 10-15 (girls slightly earlier, "
+        "boys often more severe); jumping, sprinting and kicking sports "
+        "(basketball, soccer, gymnastics); bilateral in ~30%. Clinical "
+        "features: activity-related anterior knee pain, worse on running, "
+        "jumping, stairs and kneeling; localised swelling and tenderness "
+        "over the tibial tuberosity; often a visible bony prominence; "
+        "pain reproduced by resisted knee extension; no effusion or "
+        "instability. Ix: clinical diagnosis; X-ray only if atypical "
+        "(fragmentation of the tuberosity may be seen but is not "
+        "required); MRI reserved for uncertain diagnosis. Mx: reassurance "
+        "that this is self-limiting - the pain resolves when the growth "
+        "plate fuses (usually 12-24 months); relative rest, ice after "
+        "activity, NSAIDs for flares; quadriceps and hamstring "
+        "stretching; patellar tendon strap for pain relief during sport; "
+        "avoid steroid injection (risk of tendon rupture or growth plate "
+        "injury). Note: rare cases have persistent unfused ossicle into "
+        "adulthood needing surgical excision."
+    ),
+
+    "Alcoholic hepatitis": (
+        "Acute liver inflammation from heavy alcohol use, usually on a "
+        "background of chronic liver disease. Epidemiology: heavy "
+        "drinking (over 100 g/day for weeks); women more susceptible than "
+        "men at any given intake; coexisting hepatitis C worsens outcome. "
+        "Clinical features: rapid-onset jaundice, tender hepatomegaly, "
+        "fever, anorexia, weight loss, malnutrition, ascites, hepatic "
+        "encephalopathy; may present with variceal bleed, SBP or "
+        "hepatorenal syndrome. Ix: LFT with AST > ALT (both usually under "
+        "300 IU/L; higher suggests other cause), AST/ALT ratio over 2; "
+        "raised GGT, bilirubin, INR, leucocytosis; hyponatraemia, low "
+        "albumin; low platelets. Severity by Maddrey Discriminant "
+        "Function (over 32 = severe) or MELD (over 20). Exclude viral, "
+        "autoimmune, haemochromatosis, Wilson, ischaemic. Mx: complete "
+        "alcohol abstinence, thiamine and multivitamin (before glucose), "
+        "aggressive nutritional support (35 kcal/kg/day, 1.5 g/kg "
+        "protein); prednisolone 40 mg for severe disease without "
+        "infection (Lille score at day 7 predicts response, stop if "
+        "non-responder); transplant assessment in selected patients. "
+        "Note: give thiamine before glucose - always."
+    ),
+
+    "Priapism": (
+        "Prolonged unwanted erection over 4 hours without sexual "
+        "arousal; emergency because ischaemic priapism damages "
+        "cavernosal tissue after 24 hours. Types: ischaemic (low-flow, "
+        "painful, rigid) - venous outflow obstruction, urgent; "
+        "non-ischaemic (high-flow, painless, partially rigid) - "
+        "arterial fistula usually post-trauma, less urgent. Causes: "
+        "sickle cell disease (commonest overall, especially children); "
+        "PDE5 inhibitors, intracavernosal injections; antipsychotics "
+        "(trazodone, chlorpromazine); cocaine; spinal cord injury; "
+        "leukaemic infiltration. Ix: corporal aspirate gas "
+        "(ischaemic: dark, pH <7.25, PO2 <30; non-ischaemic: bright "
+        "red, normal gas); sickle/leukaemia work-up; duplex or MRI "
+        "for non-ischaemic. Mx: ischaemic - aspirate both corpora, "
+        "intracavernosal phenylephrine 200 microg every 5 min up to 1 "
+        "mg; if failed, surgical shunt within 24 h; treat sickle "
+        "crisis with hydration, oxygen, exchange transfusion. "
+        "Non-ischaemic often resolves; embolisation if not. Note: "
+        "any erection over 4 hours needs urology on the phone - the "
+        "clock to permanent impotence is running."
+    ),
+
+    "Pterygium": (
+        "Fibrovascular growth of conjunctiva onto the cornea; benign but "
+        "vision-threatening if it reaches the visual axis. Epidemiology: "
+        "10-15% of Australians (world's highest prevalence); tropical "
+        "latitudes, outdoor occupations (fishermen, farmers, surfers - "
+        "'surfer's eye'), male; cumulative UV, wind and dust drive it. "
+        "Clinical features: wedge-shaped fleshy growth from nasal or "
+        "temporal conjunctiva encroaching on the cornea; irritation, "
+        "redness, foreign-body sensation; astigmatism from corneal "
+        "distortion; reduced acuity if it obscures the visual axis. Ix: "
+        "clinical; slit-lamp; keratometry if astigmatism. Distinguish "
+        "from pingueculum (yellow conjunctival deposit, does not cross "
+        "onto cornea). Mx: conservative - lubricants, cold compresses, "
+        "topical NSAID or short steroid for flares, sunglasses and hat "
+        "prevent progression. Surgical excision with conjunctival "
+        "autograft for visual axis involvement, symptomatic astigmatism, "
+        "chronic irritation, or cosmesis. Recurrence 5-10% with "
+        "autograft, over 50% with bare-sclera (now abandoned). Note: any "
+        "Australian outdoor worker with a pterygium needs UV counselling "
+        "for the OTHER eye."
+    ),
+
+    "Perianal abscess": (
+        "Acute infection of anal glands with pus in the perianal "
+        "space; the acute phase of the disease chronically producing "
+        "fistula-in-ano. Epidemiology: men 2:1; peak 20-60; diabetes, "
+        "Crohn, immunosuppression, IV drug use. Types: perianal "
+        "(commonest, superficial), ischiorectal (deeper, systemic "
+        "features), intersphincteric (deep), supralevator (rare, may "
+        "mimic acute abdomen). Clinical features: constant throbbing "
+        "perianal pain worse on sitting and defaecation; tender "
+        "fluctuant mass on inspection or PR; fever if ischiorectal; "
+        "deep abscesses may present with vague pelvic pain and no "
+        "external signs. Ix: examination for superficial; MRI or "
+        "endoanal US for deep or complex; screen for diabetes; assess "
+        "for Crohn if recurrent. Mx: incision and drainage under "
+        "anaesthesia is definitive; antibiotics alone will not clear "
+        "pus; break down loculations, packing left in, do NOT close "
+        "primarily. Antibiotics only if cellulitis, systemic features, "
+        "immunocompromise or valvular disease. Note: normal external "
+        "examination with severe pain plus fever is a supralevator "
+        "abscess - image."
     ),
 
 }
