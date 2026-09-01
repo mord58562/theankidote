@@ -1,0 +1,59 @@
+Total RICH keys parsed from source: 720
+
+=== DUPLICATE KEYS (0) ===
+
+rich_summaries in built library: 686
+
+=== BANNED TOKENS ===
+  canonical: clean
+  ATSI: clean
+  em-dash: clean
+  md-bold: clean
+
+=== AU SPELLING VIOLATIONS ===
+
+=== LENGTH OVERRUNS (>1200) ===
+  Total: 0
+
+=== HEIGHT OVERRUNS (>900px) ===
+  Conditions over 900px: 300 (ratchet allows 79)
+   1223  Fournier gangrene
+   1223  Fournier gangrene
+   1223  Fournier gangrene
+   1223  Fournier gangrene
+   1223  Fournier gangrene
+   1192  Lichen sclerosus
+   1192  Lichen sclerosus
+   1192  Lichen sclerosus
+   1192  Lichen sclerosus
+   1192  Lichen sclerosus
+   1192  Lichen sclerosus
+   1164  Spontaneous coronary artery dissection
+   1164  Spontaneous coronary artery dissection
+   1164  Spontaneous coronary artery dissection
+   1152  Diffuse axonal injury
+
+=== SUSPECT SECTION LABELS ===
+
+=== POSSIBLE STALE DATE MARKERS ===
+  Atherosclerosis: '2023' -> 'gham-based score in 2023).Mx: lifestyle first - Medite'
+  Chronic non-cancer pain: '2015' -> 'prescribing peaked ~2015 and is now under active de-es'
+  Ehlers-Danlos syndrome: '2017' -> ' 13 subtypes in the 2017 classification. Common featur'
+  Endometrial hyperplasia: '2014' -> 'Classification: WHO 2014 - hyperplasia without atypia '
+  Human papillomavirus infection: '2023' -> 'ngle dose since Feb 2023; funded catch-up to age 25.'
+  Male infertility: '2021' -> 'en analyses per WHO 2021 - count at least 16 million/m'
+  Primary biliary cholangitis: '2015' -> 'iliary cirrhosis in 2015). Middle-aged women (10:1). A'
+  Severe combined immunodeficiency: '2023' -> 'l in Australia from 2023); lymphocyte subsets; immunog'
+  Silicosis: '2024' -> 'Australia from July 2024 after a surge in accelerated '
+
+=== ALIAS-COLLISION SCAN ===
+  Rich keys not matching a canonical condition name: 0
+
+=== SUMMARY ===
+Total rich entries: 686
+Duplicates: 0
+AU spelling flags: (see above)
+Length >1200: 0
+Height >900px: 300 (ratchet 79)
+Suspect labels: 0
+Alias-collisions: 0
