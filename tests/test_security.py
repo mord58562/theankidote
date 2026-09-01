@@ -436,11 +436,32 @@ class ContentVersionFormat(unittest.TestCase):
     def test_the_bundled_version_sorts_at_or_above_every_shipped_release(self):
         """Guards against shipping an add-on that downgrades itself.
 
-        The channel was seeded at 2026.08.18. Any bundled version that
-        sorts below a version already on the channel means a fresh
+        The channel was seeded at 2026.08.18 (y.m.d). Any bundled version
+        that sorts below a version already on the channel means a fresh
         install replaces its own content with older content.
+
+        Naive string compare works within a single format but fails
+        across the y.m.d -> d.m.y transition (2026-08-28) - "01.09.2026"
+        would sort below "2026.08.18" as strings. Parse both to a
+        (y, m, d, counter) tuple, matching the publish script's guard.
         """
-        self.assertGreater(self._manifest()["content_version"], "2026.08.18")
+        def parse(v):
+            parts = v.split(".")
+            counter = 0
+            if len(parts) == 4:
+                counter = int(parts[3]); parts = parts[:3]
+            if len(parts) != 3:
+                return None
+            a, b, c = parts
+            if len(a) == 4:
+                y, m, d = int(a), int(b), int(c)
+            elif len(c) == 4:
+                d, m, y = int(a), int(b), int(c)
+            else:
+                return None
+            return (y, m, d, counter)
+        self.assertGreater(
+            parse(self._manifest()["content_version"]), parse("2026.08.18"))
 
     def test_the_manifest_is_never_behind_the_library(self):
         """Equal in a build; the manifest may be ahead in the repository.
