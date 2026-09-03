@@ -1152,6 +1152,276 @@ NEW_CONDITIONS = [
                              "comorbidity"]],
         "summary": "",
     },
+    {
+        "name": "Rectal prolapse",
+        "aliases": ["Rectal procidentia"],
+        "utd": [["Overview", "rectal prolapse clinical manifestations evaluation "
+                             "and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Ischiorectal abscess",
+        "aliases": ["Ischiorectal fossa abscess"],
+        "utd": [["Overview", "perianal and perirectal abscess clinical "
+                             "manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Boxer fracture",
+        "aliases": ["Fifth metacarpal neck fracture"],
+        "utd": [["Overview", "metacarpal shaft and neck fractures clinical "
+                             "presentation and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Smith fracture",
+        "aliases": ["Reverse Colles fracture", "Smith's fracture"],
+        "utd": [["Overview", "distal radius fractures in adults clinical "
+                             "presentation and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Bennett fracture",
+        "aliases": ["Bennett's fracture"],
+        "utd": [["Overview", "thumb fractures in adults clinical presentation "
+                             "and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Morton neuroma",
+        "aliases": ["Morton's neuroma", "Morton metatarsalgia"],
+        "utd": [["Overview", "morton neuroma epidemiology clinical presentation "
+                             "diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Hallux valgus",
+        "aliases": ["Bunion"],
+        "utd": [["Overview", "hallux valgus deformity in adults clinical "
+                             "features diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Hammer toe",
+        "aliases": ["Hammertoe deformity"],
+        "utd": [["Overview", "lesser toe deformities in adults clinical features "
+                             "and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Ganglion cyst",
+        "aliases": ["Wrist ganglion"],
+        "utd": [["Overview", "ganglion cysts of the wrist and hand clinical "
+                             "features and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Baker cyst",
+        "aliases": ["Popliteal cyst", "Baker's cyst"],
+        "utd": [["Overview", "popliteal baker cysts clinical manifestations and "
+                             "diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Fibroadenoma",
+        "aliases": ["Breast fibroadenoma"],
+        "utd": [["Overview", "fibroadenomas of the breast clinical features and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Galactorrhoea",
+        "aliases": ["Galactorrhea"],
+        "utd": [["Overview", "clinical presentation and evaluation of "
+                             "galactorrhea in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Nipple discharge",
+        "aliases": [],
+        "utd": [["Overview", "nipple discharge clinical features evaluation and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervical polyp",
+        "aliases": ["Endocervical polyp"],
+        "utd": [["Overview", "cervical polyps benign lesions of the cervix"]],
+        "summary": "",
+    },
+    {
+        "name": "Group B streptococcus colonisation",
+        "aliases": ["GBS colonisation", "GBS carriage"],
+        "utd": [["Overview", "prevention of early onset group B streptococcal "
+                             "disease in neonates"]],
+        "summary": "",
+    },
+    {
+        "name": "Febrile seizure",
+        "aliases": ["Febrile convulsion"],
+        "utd": [["Overview", "clinical features and evaluation of febrile "
+                             "seizures in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Onychomycosis",
+        "aliases": ["Tinea unguium", "Fungal nail infection"],
+        "utd": [["Overview", "onychomycosis epidemiology clinical manifestations "
+                             "and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Pyogenic granuloma",
+        "aliases": ["Lobular capillary haemangioma"],
+        "utd": [["Overview", "pyogenic granuloma lobular capillary hemangioma "
+                             "clinical features and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Perioral dermatitis",
+        "aliases": ["Periorificial dermatitis"],
+        "utd": [["Overview", "perioral periorificial dermatitis clinical "
+                             "features diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic otitis media",
+        "aliases": ["Chronic suppurative otitis media", "CSOM"],
+        "utd": [["Overview", "chronic otitis media with or without cholesteatoma "
+                             "in adults clinical features"]],
+        "summary": "",
+    },
+    {
+        "name": "Sialadenitis",
+        "aliases": ["Bacterial parotitis"],
+        "utd": [["Overview", "suppurative parotitis in adults clinical features "
+                             "and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Herpes zoster ophthalmicus",
+        "aliases": ["HZO", "Ophthalmic shingles"],
+        "utd": [["Overview", "herpes zoster ophthalmicus clinical features and "
+                             "diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Blepharitis",
+        "aliases": [],
+        "utd": [["Overview", "blepharitis clinical features diagnosis and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Chalazion",
+        "aliases": ["Meibomian cyst"],
+        "utd": [["Overview", "eyelid lesions chalazion and hordeolum clinical "
+                             "features and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Hordeolum",
+        "aliases": ["Stye"],
+        "utd": [["Overview", "hordeolum stye clinical features and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Dacryocystitis",
+        "aliases": ["Lacrimal sac infection"],
+        "utd": [["Overview", "dacryocystitis clinical features diagnosis and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Subconjunctival haemorrhage",
+        "aliases": ["Subconjunctival hemorrhage"],
+        "utd": [["Overview", "subconjunctival hemorrhage clinical features and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Anal fistula",
+        "aliases": ["Fistula-in-ano", "Fistula in ano"],
+        "utd": [["Overview", "operative management of anorectal fistula"]],
+        "summary": "",
+    },
+    {
+        "name": "Hydrocele",
+        "aliases": ["Hydrocoele"],
+        "utd": [["Overview", "nonacute scrotal conditions in adults hydrocele "
+                             "and varicocele"]],
+        "summary": "",
+    },
+    {
+        "name": "Spermatocele",
+        "aliases": ["Epididymal cyst"],
+        "utd": [["Overview", "nonacute scrotal conditions in adults spermatocele "
+                             "epididymal cyst"]],
+        "summary": "",
+    },
+    {
+        "name": "Torsion of the appendix testis",
+        "aliases": ["Torsion of the hydatid of Morgagni", "Appendix testis torsion"],
+        "utd": [["Overview", "causes of scrotal pain in children and adolescents "
+                             "torsion of the appendix testis"]],
+        "summary": "",
+    },
+    {
+        "name": "Adrenal insufficiency",
+        "aliases": ["Adrenocortical insufficiency"],
+        "utd": [["Overview", "clinical manifestations of adrenal insufficiency "
+                             "in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Pituitary apoplexy",
+        "aliases": [],
+        "utd": [["Overview", "pituitary apoplexy clinical manifestations "
+                             "diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Sheehan syndrome",
+        "aliases": ["Postpartum hypopituitarism"],
+        "utd": [["Overview", "sheehan syndrome clinical features diagnosis and "
+                             "treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Gallstone ileus",
+        "aliases": [],
+        "utd": [["Overview", "gallstone ileus clinical features diagnosis and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Mirizzi syndrome",
+        "aliases": [],
+        "utd": [["Overview", "mirizzi syndrome clinical features diagnosis and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Gastric outlet obstruction",
+        "aliases": ["Pyloric outlet obstruction"],
+        "utd": [["Overview", "gastric outlet obstruction in adults clinical "
+                             "features diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Peptic ulcer bleeding",
+        "aliases": ["Bleeding peptic ulcer"],
+        "utd": [["Overview", "approach to acute upper gastrointestinal bleeding "
+                             "in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Pseudomembranous colitis",
+        "aliases": ["Clostridioides difficile colitis", "C difficile infection"],
+        "utd": [["Overview", "clostridioides difficile infection in adults "
+                             "treatment"]],
+        "summary": "",
+    },
 ]
 
 
@@ -25452,6 +25722,730 @@ RICH_SUMMARIES = {
         "Stage 1 pressure injury; offload immediately."
     ),
 
+        "Rectal prolapse": (
+        "Full-thickness protrusion of the rectal wall through the "
+        "anus, with concentric mucosal rings distinguishing it from "
+        "prolapsed haemorrhoids. Aetiology: chronic straining, "
+        "multiparity, pelvic floor weakness, connective tissue "
+        "disorders and neurological disease. Clinical features: "
+        "reducible or persistent extrusion, mucus discharge, faecal "
+        "incontinence and tenesmus. Ix: clinical inspection with "
+        "Valsalva, defaecating proctography or dynamic MRI to "
+        "characterise. Colonoscopy to exclude polyp or mass acting as "
+        "a lead point. Mx: manual reduction with topical sugar for "
+        "oedematous prolapse. Fibre and stool softeners. Surgery is "
+        "the definitive treatment - abdominal rectopexy for fit "
+        "patients, perineal procedures (Delorme or Altemeier) for "
+        "frail. Note: a solitary rectal ulcer with prolapse suggests "
+        "internal intussusception - proctography confirms."
+    ),
+    "Ischiorectal abscess": (
+        "Anorectal abscess occupying the ischiorectal fossa, lateral "
+        "to the external sphincter. Aetiology: cryptoglandular "
+        "infection spreading through the intersphincteric plane. Risk "
+        "from diabetes, Crohn disease, immunosuppression and prior "
+        "anal surgery. Clinical features: throbbing perianal pain, "
+        "tender fluctuant buttock swelling, fever and difficulty "
+        "sitting. Systemic sepsis suggests spread to the deep "
+        "postanal space or Fournier gangrene. Ix: clinical diagnosis. "
+        "MRI or endoanal ultrasound if complex, horseshoe or "
+        "recurrent. Mx: prompt incision and drainage under "
+        "anaesthesia with cruciate or elliptical incision. "
+        "Antibiotics only if cellulitis, immunocompromise or systemic "
+        "sepsis. Examine for a fistula at follow-up. Note: severe "
+        "pain with minimal external signs points to a deep space - "
+        "image before dismissing."
+    ),
+    "Boxer fracture": (
+        "Fracture of the fifth metacarpal neck, typically from a "
+        "clenched-fist strike. Aetiology: axial load on a flexed MCP "
+        "joint. Clinical features: dorsal swelling over the fifth "
+        "knuckle, loss of the knuckle contour, apex-dorsal angulation "
+        "and rotational deformity on making a fist. Ix: plain "
+        "radiographs with PA, lateral and oblique views measure "
+        "angulation and check for rotation. Mx: closed reduction if "
+        "angulation exceeds 40 degrees or any rotational deformity. "
+        "Ulnar gutter splint with MCP in 70-90 degrees flexion for "
+        "3-4 weeks. Operative fixation for rotation, open fractures "
+        "or intra-articular involvement. Examine the skin for a fight "
+        "bite over the MCP - human oral flora seeds septic arthritis. "
+        "Note: any wound over the knuckle from a punch is a fight "
+        "bite until proven otherwise - washout and IV "
+        "amoxicillin-clavulanate."
+    ),
+    "Smith fracture": (
+        "Distal radius fracture with volar displacement of the distal "
+        "fragment, the reverse of a Colles fracture. Aetiology: fall "
+        "on the dorsum of a flexed wrist, direct blow, or high-energy "
+        "trauma in the young. Osteoporosis in the elderly. Clinical "
+        "features: garden spade deformity, volar wrist swelling and "
+        "tenderness, restricted movement. Median nerve signs warrant "
+        "urgent decompression. Ix: PA and lateral wrist radiographs "
+        "demonstrate volar angulation and displacement. CT for "
+        "intra-articular extension. Mx: closed reduction with "
+        "traction and dorsal pressure, above-elbow cast in "
+        "supination. Smith fractures are unstable so most need ORIF "
+        "with a volar plate. Early hand therapy. Note: volar tilt on "
+        "a distal radius film is Smith, not Colles - operative "
+        "fixation is the default, not conservative."
+    ),
+    "Bennett fracture": (
+        "Intra-articular fracture-dislocation at the base of the "
+        "first metacarpal, with a small volar-ulnar fragment held by "
+        "the anterior oblique ligament while the shaft subluxes "
+        "radially under abductor pollicis longus pull. Aetiology: "
+        "axial force on a partially flexed thumb, typically from a "
+        "punch or fall. Clinical features: pain and swelling at the "
+        "thumb base, reduced pinch grip and thumb adduction weakness. "
+        "Ix: dedicated thumb radiographs including a true AP (Robert "
+        "view). Mx: reduction is easy but holding it is not - closed "
+        "reduction with percutaneous K-wire fixation for minimally "
+        "displaced, ORIF for larger fragments or persistent "
+        "subluxation. Thumb spica for 4-6 weeks after fixation. Note: "
+        "a Rolando fracture is the T- or Y-shaped comminuted version "
+        "- worse prognosis and always operative."
+    ),
+    "Morton neuroma": (
+        "Perineural fibrosis of a common plantar digital nerve, most "
+        "often in the third webspace, causing forefoot pain. "
+        "Aetiology: chronic compression from narrow footwear and high "
+        "heels, more common in women in their fifth decade. Clinical "
+        "features: burning or electric-shock pain radiating to "
+        "adjacent toes, worse walking and relieved by removing the "
+        "shoe. Mulder click on lateral squeeze with plantar pressure "
+        "is diagnostic. Ix: clinical diagnosis; ultrasound or MRI "
+        "where diagnosis is unclear or before injection. Mx: wide "
+        "toe-box footwear, metatarsal dome pads or orthoses. "
+        "Corticosteroid or alcohol injection under ultrasound for "
+        "persistent symptoms. Neurectomy or nerve decompression for "
+        "refractory cases. Note: pain reproduced by squeezing the "
+        "metatarsals with a palpable click is Morton neuroma - image "
+        "only when the injection is planned."
+    ),
+    "Hallux valgus": (
+        "Lateral deviation of the great toe at the first "
+        "metatarsophalangeal joint with medial prominence of the "
+        "metatarsal head (bunion). Aetiology: genetic predisposition, "
+        "female sex, ligamentous laxity and narrow high-heeled "
+        "footwear. Clinical features: painful medial eminence, "
+        "overlapping second toe, callus over the bunion, and forefoot "
+        "pain on weight bearing. Ix: weight-bearing AP and lateral "
+        "radiographs measure hallux valgus and intermetatarsal "
+        "angles. Mx: wide toe-box shoes, bunion pads and orthoses. "
+        "NSAIDs for flares. Surgery (scarf, chevron or Lapidus "
+        "osteotomy) is reserved for pain refractory to conservative "
+        "care, not for cosmesis alone - PBS orthopaedic referral for "
+        "functional impairment. Note: painless bunions do not need "
+        "surgery - recurrence rates are high in the pain-free "
+        "patient."
+    ),
+    "Hammer toe": (
+        "Fixed flexion at the proximal interphalangeal joint of a "
+        "lesser toe, usually the second. Aetiology: intrinsic muscle "
+        "imbalance, hallux valgus crowding, ill-fitting footwear, "
+        "diabetes and rheumatoid arthritis. Clinical features: dorsal "
+        "PIP callus from shoe friction, plantar callus under the "
+        "metatarsal head, and pain on ambulation. Distinguish from "
+        "claw toe (MTP and DIP also flexed) and mallet toe (DIP "
+        "only). Ix: clinical. Weight-bearing radiographs assess "
+        "concurrent hallux valgus and MTP subluxation. Mx: "
+        "extra-depth shoes and silicone sleeves for flexible "
+        "deformity. Diabetic foot review for ulceration risk. "
+        "Surgical correction (arthroplasty or arthrodesis) once rigid "
+        "and painful. Note: check pedal pulses and sensation before "
+        "any toe surgery in the diabetic - vascular workup precedes "
+        "elective correction."
+    ),
+    "Ganglion cyst": (
+        "Benign mucin-filled cystic swelling arising from a joint "
+        "capsule or tendon sheath, most commonly on the dorsal wrist. "
+        "Aetiology: synovial herniation or mucoid degeneration; more "
+        "common in women aged 20-40. Clinical features: firm, "
+        "well-circumscribed, transilluminable swelling. Volar wrist "
+        "ganglia lie near the radial artery. Occult ganglia can cause "
+        "unexplained wrist pain. Ix: clinical diagnosis. Ultrasound "
+        "confirms cystic nature and delineates neurovascular "
+        "relations. MRI reserved for occult ganglia or diagnostic "
+        "uncertainty. Mx: reassurance - most resolve spontaneously "
+        "within a year. Aspiration relieves symptoms but recurrence "
+        "is common. Excision for painful, recurrent or "
+        "nerve-compressing ganglia. Never strike with a book - the "
+        "historic method carries fracture risk. Note: "
+        "transillumination distinguishes a ganglion from a solid "
+        "tumour at the bedside."
+    ),
+    "Baker cyst": (
+        "Popliteal fossa cyst formed by fluid distending the "
+        "gastrocnemius-semimembranosus bursa, communicating with the "
+        "knee joint. Aetiology: any intra-articular pathology raising "
+        "knee effusion pressure - osteoarthritis, meniscal tear, "
+        "rheumatoid or crystal arthritis. Clinical features: "
+        "posterior knee fullness, discomfort on full flexion, and "
+        "Foucher sign (cyst hardens on extension). Rupture causes "
+        "acute calf pain and swelling mimicking DVT. Ix: ultrasound "
+        "is first-line, confirming a cystic mass and excluding DVT "
+        "concurrently. MRI identifies the intra-articular driver. Mx: "
+        "treat the underlying joint disease. Intra-articular "
+        "corticosteroid for inflammatory drivers. Aspiration and "
+        "steroid injection for large symptomatic cysts. Surgery "
+        "rarely needed. Note: sudden calf pain with a knee effusion "
+        "is a ruptured Baker cyst - image before starting "
+        "anticoagulation."
+    ),
+    "Fibroadenoma": (
+        "Benign fibroepithelial breast lesion, the most common breast "
+        "mass in women under 30. Aetiology: oestrogen-driven "
+        "proliferation of stromal and epithelial elements. Clinical "
+        "features: smooth, firm, mobile (breast mouse), painless "
+        "lump, typically 1-3 cm. Multiple in up to 15%. Growth in "
+        "pregnancy and lactation is common; sudden rapid growth "
+        "raises concern for phyllodes tumour. Ix: triple assessment - "
+        "clinical exam, ultrasound (well-defined homogeneous "
+        "hypoechoic mass wider than tall) and core biopsy for lesions "
+        "over 2 cm or over age 25. Mammography added over 35. Mx: "
+        "reassurance and monitoring for typical small lesions. "
+        "Excision if greater than 3 cm, symptomatic, growing or "
+        "atypical on biopsy. Note: a rapidly enlarging fibroadenoma "
+        "in a woman over 35 is phyllodes until biopsy proves "
+        "otherwise - refer for excision."
+    ),
+    "Galactorrhoea": (
+        "Non-puerperal milky nipple discharge, usually bilateral and "
+        "multiductal. Aetiology: hyperprolactinaemia from pituitary "
+        "adenoma, primary hypothyroidism, chronic renal or hepatic "
+        "disease, or dopamine antagonists (antipsychotics, "
+        "metoclopramide, methyldopa, verapamil). Chest wall "
+        "stimulation and stress also drive prolactin release. "
+        "Clinical features: spontaneous or expressible milky "
+        "discharge with amenorrhoea or infertility if prolactin is "
+        "high. Ix: pregnancy test, prolactin, TSH, U&E, LFTs. MRI "
+        "pituitary if prolactin over 1000 mU/L or persistent after "
+        "drug review. Mx: treat the cause - stop offending drugs, "
+        "replace thyroxine. Prolactinoma responds to cabergoline "
+        "(PBS-listed) as first-line with surgery reserved for "
+        "macroadenoma failing medical therapy. Note: bloody or "
+        "unilateral single-duct discharge is not galactorrhoea - it "
+        "is a duct pathology and needs imaging."
+    ),
+    "Nipple discharge": (
+        "Spontaneous or expressed fluid from the nipple, categorised "
+        "as physiological (bilateral, multiductal, milky, provoked) "
+        "or pathological (unilateral, uniductal, spontaneous, bloody "
+        "or serous). Aetiology: physiological from lactation, "
+        "pregnancy or stimulation. Pathological causes include "
+        "intraductal papilloma, duct ectasia, DCIS and invasive "
+        "carcinoma. Clinical features: assess colour, laterality, "
+        "duct number and whether spontaneous. Palpate for a mass and "
+        "inspect for skin change. Ix: bilateral milky discharge - "
+        "prolactin and TSH. Unilateral or bloody - mammography and "
+        "ultrasound, MRI or ductography for occult lesions, and core "
+        "biopsy of any mass. Mx: reassure physiological discharge. "
+        "Refer suspicious discharge for microdochectomy or total duct "
+        "excision. Note: spontaneous, unilateral, single-duct bloody "
+        "discharge with normal imaging still needs surgical "
+        "exploration - the commonest cause is a papilloma missed on "
+        "scan."
+    ),
+    "Cervical polyp": (
+        "Benign focal overgrowth of endocervical stroma protruding "
+        "through the external os, common in multiparous women aged "
+        "40-50. Aetiology: chronic inflammation and hormonal "
+        "influence. Clinical features: often asymptomatic and "
+        "incidental. May cause intermenstrual, postcoital or "
+        "postmenopausal bleeding and vaginal discharge. Speculum "
+        "shows a pedunculated red lesion at the cervical os. Ix: "
+        "speculum examination is diagnostic. Cervical screening "
+        "(self-collect or clinician) if not up-to-date. Transvaginal "
+        "ultrasound if postmenopausal to exclude endometrial "
+        "pathology. Mx: outpatient removal by grasping the pedicle "
+        "with polyp forceps and twisting - histology is mandatory. "
+        "Larger or broad-based polyps go for hysteroscopic removal. "
+        "Note: malignancy in a cervical polyp is under 1% but any "
+        "postmenopausal bleeding still needs endometrial assessment."
+    ),
+    "Group B streptococcus colonisation": (
+        "Maternal vaginal or rectal carriage of Streptococcus "
+        "agalactiae, the leading cause of early-onset neonatal "
+        "sepsis. Aetiology: colonisation in 15-25% of pregnant women; "
+        "transmission to the neonate during labour. Clinical "
+        "features: asymptomatic in the mother. Neonatal early-onset "
+        "disease presents in the first week with sepsis, pneumonia or "
+        "meningitis. Ix: universal screening at 35-37 weeks with "
+        "vaginal-rectal swab (RANZCOG-endorsed universal or "
+        "risk-based approaches both accepted in Australia). Risk "
+        "factors alone trigger prophylaxis where screening is not "
+        "routine. Mx: intrapartum IV benzylpenicillin 3 g loading "
+        "then 1.8 g 4-hourly until delivery; clindamycin for severe "
+        "penicillin allergy (or cefazolin for non-severe). "
+        "Prophylaxis is not given before caesarean with intact "
+        "membranes and no labour. Note: prior GBS-affected infant or "
+        "GBS bacteriuria this pregnancy means treat, no swab needed."
+    ),
+    "Febrile seizure": (
+        "Generalised seizure in a child aged 6 months to 5 years "
+        "associated with fever above 38 degrees without CNS infection "
+        "or metabolic cause. Aetiology: genetic susceptibility with "
+        "rapid temperature rise, often viral. Clinical features: "
+        "simple - generalised, under 15 minutes, single in 24 hours "
+        "with rapid recovery. Complex - focal, prolonged, or "
+        "recurring within 24 hours. Ix: identify the source of fever. "
+        "LP if meningism, complex features, under 12 months or "
+        "incomplete vaccination. Neuroimaging and EEG only for "
+        "complex or recurrent. Mx: reassurance and antipyretics for "
+        "comfort - paracetamol does not prevent recurrence. Buccal "
+        "midazolam for seizures beyond 5 minutes. Educate on recovery "
+        "position and when to call an ambulance. Note: 30% recur but "
+        "febrile seizures alone do not cause epilepsy or brain damage "
+        "- the long-term risk is small."
+    ),
+    "Onychomycosis": (
+        "Fungal nail infection, most often by Trichophyton rubrum. "
+        "Aetiology: dermatophytes (up to 90%), Candida or "
+        "non-dermatophyte moulds. Risk factors: age, tinea pedis, "
+        "diabetes, peripheral vascular disease, immunosuppression and "
+        "communal showering. Clinical features: distal subungual "
+        "yellow-brown discolouration, subungual hyperkeratosis, "
+        "onycholysis and nail thickening. Great toenail most "
+        "affected. Ix: nail clipping with subungual scrapings for "
+        "microscopy and fungal culture - confirm before starting oral "
+        "antifungals. Mx: mild distal disease responds to topical "
+        "amorolfine or ciclopirox. Extensive disease needs oral "
+        "terbinafine 250 mg daily for 6 weeks (fingernails) or 12 "
+        "weeks (toenails), with baseline LFTs. Note: never start oral "
+        "antifungals on clinical impression alone - psoriasis and "
+        "lichen planus mimic nail changes and confirmation avoids "
+        "months of futile therapy."
+    ),
+    "Pyogenic granuloma": (
+        "Rapidly growing benign vascular lesion of skin or mucosa, a "
+        "misnomer since it is neither pyogenic nor granulomatous. "
+        "Aetiology: reactive proliferation of capillaries following "
+        "minor trauma, hormonal change (pregnancy - epulis "
+        "gravidarum) or drugs (retinoids, indinavir). Clinical "
+        "features: solitary, friable, bright red pedunculated papule "
+        "that bleeds profusely with minimal trauma. Common on "
+        "fingers, lips, gingiva and face. Ix: clinical diagnosis. "
+        "Excision biopsy is diagnostic and therapeutic - always send "
+        "for histology to exclude amelanotic melanoma. Mx: shave or "
+        "excisional biopsy with base curettage and electrocautery. "
+        "Recurrence rate is significant; pregnancy-related lesions "
+        "may involute post partum. Note: any lesion described as a "
+        "pyogenic granuloma in an adult must go to histology - "
+        "amelanotic melanoma and Kaposi sarcoma both mimic."
+    ),
+    "Perioral dermatitis": (
+        "Papulopustular facial eruption sparing a clear rim around "
+        "the vermilion border, seen mainly in young women. Aetiology: "
+        "topical corticosteroid exposure (including inhaled or "
+        "nasal), fluoridated toothpaste, heavy cosmetics and skin "
+        "occlusion. Clinical features: erythematous micropapules and "
+        "pustules on chin, nasolabial folds and lateral eyelids with "
+        "characteristic sparing of the vermilion border. Burning "
+        "rather than itch. Ix: clinical diagnosis. Consider bacterial "
+        "swab if secondary infection. Mx: zero-therapy first - stop "
+        "all topical steroids (warn of rebound flare), simplify skin "
+        "care, switch to non-fluoride toothpaste. Topical "
+        "metronidazole or erythromycin for mild cases. Oral "
+        "doxycycline 50-100 mg daily for 6-8 weeks for "
+        "moderate-severe disease. Note: any face rash treated with "
+        "steroids that keeps returning is perioral dermatitis - the "
+        "fix is stopping the steroid, not stronger steroid."
+    ),
+    "Chronic otitis media": (
+        "Persistent middle ear inflammation with tympanic membrane "
+        "perforation or otorrhoea beyond 6 weeks, subclassified as "
+        "mucosal (safe) or squamous (cholesteatoma - unsafe). "
+        "Aetiology: unresolved acute otitis media, eustachian tube "
+        "dysfunction and repeated infection. Higher prevalence in "
+        "Aboriginal and Torres Strait Islander children. Clinical "
+        "features: intermittent painless otorrhoea, conductive "
+        "hearing loss and central perforation on otoscopy. Attic "
+        "retraction with keratin debris suggests cholesteatoma. Ix: "
+        "otoscopy and audiometry. CT temporal bones if suspected "
+        "cholesteatoma or intracranial complication. Mx: aural toilet "
+        "and topical ciprofloxacin drops for active discharge. Refer "
+        "ENT for tympanoplasty of dry perforation, or mastoidectomy "
+        "for cholesteatoma. Note: attic retraction pocket with debris "
+        "is cholesteatoma until proven otherwise - refer even without "
+        "discharge."
+    ),
+    "Sialadenitis": (
+        "Acute or chronic inflammation of a salivary gland, most "
+        "commonly the parotid or submandibular. Aetiology: acute is "
+        "usually Staphylococcus aureus in dehydrated postoperative or "
+        "elderly patients, or ductal obstruction by a stone. Chronic "
+        "or recurrent from Sjogren syndrome, IgG4 disease, "
+        "sarcoidosis or radiation. Viral causes include mumps and "
+        "HIV. Clinical features: painful glandular swelling worse "
+        "with eating, erythema and purulent discharge from the duct "
+        "on gland massage. Systemic sepsis in severe bacterial cases. "
+        "Ix: pus swab and culture, ultrasound to identify a stone or "
+        "abscess. Bloods for autoimmune serology in chronic disease. "
+        "Mx: hydration, warm compresses, sialogogues (lemon drops) "
+        "and gland massage. Oral flucloxacillin (or "
+        "di/flucloxacillin) for bacterial infection. Drain abscess. "
+        "Treat the underlying autoimmune cause. Note: acute "
+        "suppurative parotitis in a dehydrated elderly patient is the "
+        "classic postoperative diagnosis - rehydrate and start "
+        "antistaphylococcal cover."
+    ),
+    "Herpes zoster ophthalmicus": (
+        "Reactivation of varicella zoster virus in the ophthalmic "
+        "division of the trigeminal nerve, with a 50-70% risk of "
+        "ocular involvement. Aetiology: age over 50 and "
+        "immunosuppression. Clinical features: prodrome of dermatomal "
+        "pain, then unilateral vesicular rash from forehead to "
+        "eyelid, sparing the midline. Hutchinson sign (vesicle on the "
+        "nose tip) predicts globe involvement. Eye involvement ranges "
+        "across conjunctivitis, keratitis, uveitis, raised IOP, "
+        "retinitis and cranial nerve palsies. Ix: clinical diagnosis. "
+        "Slit-lamp "
+        "with fluorescein for dendritic keratitis. HIV testing in "
+        "younger patients. Mx: oral valaciclovir 1 g TDS for 7 days "
+        "started within 72 hours reduces ocular complications. "
+        "Same-day ophthalmology review. Topical steroids only under "
+        "ophthalmology direction. Amitriptyline or gabapentin for "
+        "postherpetic neuralgia. Zoster vaccine (Shingrix on the NIP "
+        "over 65 and immunocompromised 50+) prevents recurrence. "
+        "Note: Hutchinson sign predicts sight-threatening involvement "
+        "- urgent slit-lamp is mandatory."
+    ),
+    "Blepharitis": (
+        "Chronic inflammation of the eyelid margins, subclassified as "
+        "anterior (staphylococcal or seborrhoeic) or posterior "
+        "(meibomian gland dysfunction). Aetiology: bacterial "
+        "colonisation, seborrhoeic dermatitis, rosacea and Demodex "
+        "mite. Clinical features: gritty burning eyes worse on "
+        "waking, crusted lashes, erythematous lid margins, "
+        "telangiectasia and inspissated meibomian orifices. "
+        "Frequently bilateral with secondary dry eye. Ix: clinical "
+        "diagnosis. Slit-lamp examination confirms meibomian "
+        "involvement. Consider biopsy for unilateral or atypical "
+        "disease to exclude sebaceous carcinoma. Mx: warm compresses "
+        "and lid hygiene twice daily are the cornerstone. Topical "
+        "chloramphenicol ointment for staphylococcal disease. Oral "
+        "doxycycline 50 mg daily for 6-12 weeks for meibomian or "
+        "rosacea-associated blepharitis. Artificial tears for "
+        "symptomatic dryness. Note: unilateral chronic blepharitis "
+        "unresponsive to hygiene needs biopsy - sebaceous carcinoma "
+        "masquerades."
+    ),
+    "Chalazion": (
+        "Sterile lipogranulomatous inflammation of an obstructed "
+        "meibomian gland. Aetiology: retention of meibomian "
+        "secretions, often on a background of blepharitis, rosacea or "
+        "seborrhoeic dermatitis. Clinical features: painless, firm, "
+        "well-demarcated eyelid nodule away from the lid margin, "
+        "developing over weeks. Distinguish from hordeolum (acute, "
+        "tender, at the lid margin). Large chalazia can cause "
+        "astigmatism or ptosis. Ix: clinical diagnosis. Biopsy for "
+        "recurrent or atypical lesions to exclude sebaceous cell "
+        "carcinoma. Mx: warm compresses and lid massage for 4-6 weeks "
+        "resolves most. Incision and curettage from the tarsal "
+        "surface for persistent lesions. Intralesional triamcinolone "
+        "is an alternative. Treat underlying blepharitis to prevent "
+        "recurrence. Note: a recurrent chalazion at the same site in "
+        "an older patient warrants biopsy - sebaceous carcinoma of "
+        "the tarsal plate mimics."
+    ),
+    "Hordeolum": (
+        "Acute focal infection of an eyelid gland, external (stye - "
+        "gland of Zeis or Moll at a lash follicle) or internal "
+        "(meibomian gland within the tarsal plate). Aetiology: "
+        "Staphylococcus aureus in most cases, on a background of "
+        "blepharitis. Clinical features: acutely painful, tender, "
+        "erythematous nodule at the lid margin, may point externally "
+        "or through the tarsal conjunctiva. Preseptal cellulitis "
+        "suggests spread. Ix: clinical diagnosis. Distinguish from "
+        "chalazion (non-tender, chronic). Mx: warm compresses 4 times "
+        "a day and lid hygiene resolve most within a week. Topical "
+        "chloramphenicol ointment for surrounding cellulitis. Oral "
+        "di/flucloxacillin if preseptal cellulitis. Incision and "
+        "drainage for pointing lesions that do not resolve. Never "
+        "squeeze - risk of spread and scarring. Note: persistent lid "
+        "swelling despite treatment is chalazion or, in an older "
+        "patient, sebaceous carcinoma - biopsy the recurrent lesion."
+    ),
+    "Dacryocystitis": (
+        "Infection of the lacrimal sac secondary to nasolacrimal duct "
+        "obstruction. Aetiology: acquired obstruction from age, "
+        "chronic dacryocystitis, trauma or tumour. Congenital form "
+        "presents in neonates from imperforate valve of Hasner. "
+        "Pathogens include S aureus, streptococci and, in the young, "
+        "Haemophilus. Clinical features: painful erythematous "
+        "swelling below the medial canthus, epiphora and mucopurulent "
+        "discharge from the punctum on sac pressure. Fever and "
+        "preseptal cellulitis in severe cases. Ix: clinical "
+        "diagnosis. Swab discharge for culture. CT if orbital "
+        "cellulitis suspected. Mx: warm compresses, sac massage and "
+        "oral di/flucloxacillin or amoxicillin-clavulanate. Admit for "
+        "IV antibiotics if systemic or orbital signs. Refer for "
+        "dacryocystorhinostomy once acute infection settles - "
+        "definitive treatment. Neonatal duct obstruction usually "
+        "resolves by 12 months with massage. Note: acute "
+        "dacryocystitis can seed orbital cellulitis - low threshold "
+        "for CT and IV antibiotics in unwell patients."
+    ),
+    "Subconjunctival haemorrhage": (
+        "Bright red flat area of blood beneath the conjunctiva from a "
+        "ruptured subconjunctival vessel. Aetiology: Valsalva "
+        "(coughing, sneezing, vomiting, straining), trauma, "
+        "hypertension, anticoagulation, contact lens use and "
+        "idiopathic. Clinical features: painless, sharply demarcated "
+        "red patch, normal vision, no photophobia and no discharge. "
+        "If bilateral or recurrent, consider bleeding diathesis. Ix: "
+        "clinical diagnosis. Check BP; INR if on warfarin. Consider "
+        "platelets, coags and review of anticoagulation for recurrent "
+        "or spontaneous haemorrhage. Trauma requires slit-lamp "
+        "examination to exclude globe rupture. Mx: reassurance - "
+        "resolves in 1-2 weeks without treatment. Lubricating drops "
+        "for surface irritation. Address any bleeding diathesis, "
+        "hypertension or anticoagulant issue. Note: circumferential "
+        "subconjunctival haemorrhage after blunt trauma is a ruptured "
+        "globe until CT and ophthalmology exclude it - do not press "
+        "on the eye."
+    ),
+    "Anal fistula": (
+        "Abnormal epithelialised tract between the anal canal and "
+        "perianal skin, usually following an anorectal abscess. "
+        "Aetiology: cryptoglandular infection (90%), Crohn disease, "
+        "tuberculosis, radiation and malignancy. Classified by Parks "
+        "into intersphincteric, transsphincteric, suprasphincteric "
+        "and extrasphincteric. Clinical features: persistent perianal "
+        "discharge, intermittent pain and skin excoriation. External "
+        "opening as a nodule or granulation tissue. Goodsall rule "
+        "predicts internal opening location. Ix: examination under "
+        "anaesthesia with probing is the reference standard. MRI "
+        "pelvis for complex or Crohn-related disease. Colonoscopy to "
+        "exclude IBD in atypical presentations. Mx: simple low "
+        "fistula - fistulotomy. Complex or high fistula - seton "
+        "(loose or cutting), LIFT procedure, or advancement flap to "
+        "preserve sphincter function. Crohn-related - infliximab plus "
+        "seton drainage. Note: fistulotomy above the puborectalis "
+        "risks incontinence - reserve it for low tracts and refer "
+        "complex disease to colorectal surgery."
+    ),
+    "Hydrocele": (
+        "Serous fluid collection between the parietal and visceral "
+        "layers of the tunica vaginalis. Aetiology: congenital "
+        "(patent processus vaginalis, presenting in infancy) or "
+        "acquired (idiopathic, secondary to trauma, "
+        "epididymo-orchitis, torsion or tumour). Clinical features: "
+        "painless scrotal swelling that transilluminates and it is "
+        "possible to get above; testis palpable within. Communicating "
+        "hydroceles in children vary in size through the day. Ix: "
+        "transillumination at bedside. Scrotal ultrasound if the "
+        "testis is impalpable, sudden onset, or in the young adult to "
+        "exclude underlying tumour. Mx: infant congenital hydrocele - "
+        "observe to age 2 as most resolve; herniotomy if persists. "
+        "Adult idiopathic hydrocele - reassure small asymptomatic "
+        "collections. Aspiration and sclerotherapy or Jaboulay "
+        "procedure for large symptomatic hydroceles. Address "
+        "underlying cause when secondary. Note: any new hydrocele in "
+        "a young adult needs ultrasound to exclude underlying "
+        "testicular tumour."
+    ),
+    "Spermatocele": (
+        "Benign cystic dilatation of an efferent ductule of the head "
+        "of epididymis containing spermatozoa. Aetiology: obstruction "
+        "of the efferent ducts. Often incidental, more common with "
+        "age. Clinical features: painless smooth cystic swelling "
+        "superior and posterior to the testis, separate from the "
+        "testis on palpation, transilluminates. Ix: scrotal "
+        "ultrasound confirms an anechoic cyst of the epididymal head, "
+        "distinct from the testis. Mx: reassurance for small, "
+        "asymptomatic lesions - most need no intervention. "
+        "Spermatocelectomy for large or painful cysts, with a "
+        "discussion of postoperative infertility risk on the operated "
+        "side. Note: distinguish from hydrocele (surrounds the "
+        "testis) - the spermatocele sits above the testis and is "
+        "separately palpable, and this bedside finding avoids an "
+        "unnecessary tumour workup."
+    ),
+    "Torsion of the appendix testis": (
+        "Twisting of a Mullerian duct remnant (the hydatid of "
+        "Morgagni) at the upper pole of the testis, the commonest "
+        "cause of acute scrotum in prepubertal boys. Aetiology: "
+        "pedunculated remnant prone to torsion, peak age 7-12 years. "
+        "Clinical features: gradual-onset localised upper pole "
+        "scrotal pain, blue dot sign visible through thin scrotal "
+        "skin, testis normal in lie and cremasteric reflex preserved. "
+        "Ix: differentiate from testicular torsion urgently - Doppler "
+        "ultrasound shows normal testicular perfusion with an "
+        "avascular paratesticular nodule. Any diagnostic doubt goes "
+        "to surgical exploration. Mx: conservative - simple analgesia "
+        "and rest resolves within a week as the appendix infarcts and "
+        "shrinks. Surgical excision if severe pain or diagnosis "
+        "unclear. Note: the blue dot sign with a normal-lying testis "
+        "is torsion of the appendix testis - but ultrasound within an "
+        "hour is mandatory when torsion cannot be excluded "
+        "clinically."
+    ),
+    "Adrenal insufficiency": (
+        "Failure of adrenal cortisol production, primary (Addison, "
+        "adrenal destruction) or secondary (pituitary or hypothalamic "
+        "failure, chronic exogenous steroid use). Aetiology: primary "
+        "- autoimmune adrenalitis (80%), TB, adrenal haemorrhage, "
+        "metastasis. Secondary - abrupt steroid withdrawal, pituitary "
+        "tumour or surgery. Clinical features: fatigue, weight loss, "
+        "postural hypotension, hyperpigmentation (primary only), "
+        "hyponatraemia, hyperkalaemia (primary), and hypoglycaemia. "
+        "Adrenal crisis presents with shock, vomiting and confusion. "
+        "Ix: 9 am cortisol under 100 nmol/L confirms; over 500 "
+        "excludes. ACTH stimulation (Synacthen) test for equivocal. "
+        "High ACTH indicates primary; low is secondary. Renin and "
+        "aldosterone. Mx: hydrocortisone 15-25 mg daily in divided "
+        "doses plus fludrocortisone 0.05-0.2 mg daily for primary. "
+        "Double the dose during illness. Emergency IV hydrocortisone "
+        "100 mg for crisis with fluid resuscitation. Medic-alert "
+        "bracelet and sick-day rules education. Note: hyponatraemia "
+        "with hyperkalaemia in a shocked patient is Addisonian crisis "
+        "- give hydrocortisone before cortisol result."
+    ),
+    "Pituitary apoplexy": (
+        "Sudden haemorrhage or infarction of the pituitary gland, "
+        "usually within a pre-existing adenoma. Aetiology: bleeding "
+        "or infarction of a macroadenoma; precipitants include "
+        "hypertension, anticoagulation, pregnancy (Sheehan syndrome "
+        "in postpartum), major surgery and dynamic pituitary testing. "
+        "Clinical features: sudden thunderclap headache, visual field "
+        "defect (bitemporal hemianopia), ophthalmoplegia from "
+        "cavernous sinus compression, altered consciousness. Adrenal "
+        "crisis from acute ACTH loss can dominate. Ix: urgent MRI "
+        "pituitary with contrast confirms haemorrhage or infarct. "
+        "Full pituitary hormone panel and electrolytes. Mx: immediate "
+        "IV hydrocortisone 100 mg 6-hourly, fluid resuscitation and "
+        "correction of electrolytes. Urgent neurosurgical review for "
+        "transsphenoidal decompression if visual or neurological "
+        "deterioration. Long-term hormone replacement is usually "
+        "required. Note: any sudden headache with new visual field "
+        "loss needs an urgent MRI pituitary and IV steroid before the "
+        "neurosurgical decision."
+    ),
+    "Sheehan syndrome": (
+        "Postpartum hypopituitarism due to ischaemic necrosis of the "
+        "pituitary following severe obstetric haemorrhage. Aetiology: "
+        "the pregnant pituitary is enlarged and vulnerable to "
+        "hypotension; massive PPH triggers infarction. Rarer with "
+        "modern obstetric care. Clinical features: acute presentation "
+        "with hypotension, failure to lactate and secondary "
+        "amenorrhoea. Chronic disease develops months to years later "
+        "with fatigue, weight loss, cold intolerance, loss of pubic "
+        "and axillary hair, low libido and central hypothyroidism. "
+        "Ix: pituitary hormone panel (low FSH, LH, TSH, ACTH, GH, "
+        "prolactin), corresponding target hormones (T4, cortisol, "
+        "oestradiol). MRI pituitary shows an empty sella. Mx: replace "
+        "deficient hormones - hydrocortisone first, then thyroxine "
+        "(never before steroids as it precipitates crisis), "
+        "oestrogen-progesterone, growth hormone if severe deficiency. "
+        "Sick-day rules and Medic-alert bracelet. Note: failure to "
+        "lactate after severe PPH is Sheehan syndrome until proven "
+        "otherwise - test the axis before the deficiency causes "
+        "crisis."
+    ),
+    "Gallstone ileus": (
+        "Mechanical small bowel obstruction from a large gallstone "
+        "eroding through a cholecystoenteric fistula (usually "
+        "cholecystoduodenal), an uncommon complication of chronic "
+        "cholelithiasis. Aetiology: chronic gallstone inflammation "
+        "erodes into the adjacent bowel, allowing a stone over 2.5 cm "
+        "to lodge at the ileocaecal valve. Elderly women "
+        "overrepresented. Clinical features: crampy abdominal pain, "
+        "distension, vomiting and obstipation - often with a tumbling "
+        "pattern as the stone migrates. Ix: CT abdomen is the "
+        "investigation of choice, showing Rigler triad (pneumobilia, "
+        "small bowel obstruction and an ectopic gallstone). Mx: fluid "
+        "resuscitation, NG decompression, then laparotomy for "
+        "enterolithotomy - remove the stone through an enterotomy "
+        "proximal to the impaction. Fistula takedown is usually "
+        "deferred due to comorbidity. Note: pneumobilia plus small "
+        "bowel obstruction in an elderly patient with a stone in the "
+        "RLQ is Rigler triad - operate for enterolithotomy."
+    ),
+    "Mirizzi syndrome": (
+        "Extrinsic compression of the common hepatic duct by an "
+        "impacted stone in the cystic duct or gallbladder neck, "
+        "causing obstructive jaundice. Aetiology: chronic "
+        "cholelithiasis with a stone in the Hartmann pouch. "
+        "Classified I-V by degree of erosion into the CBD (Csendes). "
+        "Clinical features: obstructive jaundice, right upper "
+        "quadrant pain, fever and features of cholangitis. Weight "
+        "loss can suggest malignancy. Ix: LFTs show cholestatic "
+        "pattern. Ultrasound reveals dilated CBD proximally and a "
+        "shrunken gallbladder. MRCP delineates the anatomy; ERCP is "
+        "diagnostic and therapeutic with stent placement to relieve "
+        "jaundice. Mx: preoperative biliary decompression with ERCP "
+        "stent. Definitive surgical management depends on type - "
+        "simple cholecystectomy for Csendes I, partial "
+        "cholecystectomy with T-tube for higher grades, "
+        "hepaticojejunostomy for extensive erosion. Note: obstructive "
+        "jaundice with a gallstone on imaging is not automatically "
+        "choledocholithiasis - Mirizzi changes the operation."
+    ),
+    "Gastric outlet obstruction": (
+        "Mechanical obstruction at the pylorus or proximal duodenum "
+        "preventing gastric emptying. Aetiology: adults - malignancy "
+        "(gastric or pancreatic head, now the commonest cause), "
+        "chronic peptic ulcer scarring, gastric volvulus. Infants - "
+        "hypertrophic pyloric stenosis. Clinical features: "
+        "postprandial epigastric fullness, nausea, non-bilious "
+        "vomiting of undigested food, weight loss and succussion "
+        "splash 3 hours post meal. Metabolic alkalosis with "
+        "hypochloraemia and hypokalaemia from vomiting. Ix: bloods "
+        "for electrolyte disturbance. CT abdomen identifies the level "
+        "and cause. Gastroscopy for diagnosis, biopsy and stent "
+        "placement in malignant disease. Mx: NG decompression, IV "
+        "fluid with potassium and chloride replacement, PPI for "
+        "peptic disease. Definitive - endoscopic balloon dilatation "
+        "for benign disease, self-expanding metal stent or surgical "
+        "gastrojejunostomy for malignant. Note: hypochloraemic "
+        "hypokalaemic metabolic alkalosis with weight loss is gastric "
+        "outlet obstruction - CT and endoscopy chase the malignancy."
+    ),
+    "Peptic ulcer bleeding": (
+        "Upper GI haemorrhage from a duodenal or gastric ulcer, the "
+        "commonest cause of non-variceal upper GI bleeding. "
+        "Aetiology: H pylori, NSAIDs, aspirin, corticosteroids, "
+        "anticoagulants and physiological stress. Clinical features: "
+        "melaena, haematemesis or coffee-ground vomit, epigastric "
+        "pain and features of hypovolaemic shock in massive bleeds. "
+        "Silent presentation with iron-deficiency anaemia is common "
+        "in the elderly. Ix: Glasgow-Blatchford score for triage; "
+        "Rockall score for prognosis. FBC, coagulation, cross-match. "
+        "Urgent gastroscopy within 24 hours (within 6-12 hours if "
+        "unstable) identifies the lesion and stratifies risk by "
+        "Forrest classification. Mx: resuscitate to permissive "
+        "hypotension (target SBP 90-100 pre-endoscopy). IV PPI "
+        "infusion. Endoscopic haemostasis with two modalities for "
+        "high-risk lesions (adrenaline plus clipping or thermal). "
+        "Post-endoscopy PPI and H pylori eradication. IR embolisation "
+        "or surgery for endoscopic failures. Note: melaena plus "
+        "haemodynamic instability needs resuscitation and endoscopy "
+        "in the same shift - do not send the unstable patient home."
+    ),
+    "Pseudomembranous colitis": (
+        "Colitis caused by toxin-producing Clostridioides difficile, "
+        "typically after antibiotic disruption of colonic flora. "
+        "Aetiology: broad-spectrum antibiotic exposure (clindamycin, "
+        "cephalosporins, fluoroquinolones), hospitalisation, PPI use "
+        "and age over 65. Hypervirulent NAP1/BI/027 strain causes "
+        "severe disease. Clinical features: watery diarrhoea (rarely "
+        "bloody), lower abdominal cramping, fever and leukocytosis. "
+        "Severe disease with toxic megacolon carries high mortality. "
+        "Ix: stool nucleic acid amplification for toxin B gene, "
+        "confirmed by enzyme immunoassay for free toxin (two-step "
+        "algorithm minimises false positives). Colonoscopy shows "
+        "pseudomembranes but is rarely needed. Severity by WBC, "
+        "creatinine and albumin. Mx: stop the precipitating "
+        "antibiotic. First episode non-severe - oral vancomycin 125 "
+        "mg QID for 10 days or fidaxomicin. Severe - oral vancomycin "
+        "plus IV metronidazole. Recurrent disease - vancomycin taper "
+        "or faecal microbiota transplantation. Isolate with contact "
+        "precautions and soap-and-water hand washing (alcohol does "
+        "not kill spores). Note: metronidazole is no longer "
+        "first-line in Australia - oral vancomycin for even the first "
+        "episode."
+    ),
 
 }
 
