@@ -1216,8 +1216,8 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
             "or a link are discarded when you save. The popup badges these "
             "terms \u201cCUSTOM\u201d so they read as separate from "
             "StatPearls and DrugBank results - leave Label blank to keep "
-            "that, or type your own (e.g. \u201cReddit\u201d, "
-            "\u201cLecture notes\u201d).", wrap=True))
+            "that, or type your own (e.g. \u201cLecture notes\u201d, "
+            "\u201cUpToDate\u201d).", wrap=True))
 
     btns = _w["QDialogButtonBox"](
         _w["QDialogButtonBox"].StandardButton.Ok

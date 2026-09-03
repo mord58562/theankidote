@@ -17,8 +17,8 @@ button says "Open link →" instead, for the same reason.
 
 Each custom term can also carry its own label instead of the generic
 one. **Custom terms…** has a new optional **Label** column - leave it
-blank and the badge reads "CUSTOM", or type your own ("Reddit",
-"Lecture notes", whatever the source actually is).
+blank and the badge reads "CUSTOM", or type your own ("Lecture notes",
+"UpToDate", whatever the source actually is).
 
 The badge colour is a fresh hue not used anywhere else in the popup,
 tuned separately for light and dark mode so it holds up in both.

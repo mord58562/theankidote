@@ -34,7 +34,7 @@ with these fields:
 | `article` | no | Display title for the popup header - defaults to `title`. |
 | `case_sensitive` | no | If `true`, only exact-case matches highlight. |
 | `source` | no | Internal category the popup's styling keys off. Leave unset - entries from the table are always `"custom"`. Only `"statpearls"`, `"drugbank"`, `"uptodate"`, `"preclinical"` and `"custom"` have defined colours; anything else renders as StatPearls. |
-| `label` | no | The badge text shown on the popup for a `"custom"`-sourced entry, e.g. `"Reddit"` or `"Lecture notes"`. Defaults to `"Custom"` when unset. Has no effect on non-`"custom"` sources. |
+| `label` | no | The badge text shown on the popup for a `"custom"`-sourced entry, e.g. `"Lecture notes"` or `"AMH"`. Defaults to `"Custom"` when unset. Has no effect on non-`"custom"` sources. |
 
 Most people should use **Settings → General → Custom terms…**, which
 edits these entries as a table and cannot produce invalid JSON. Fields
