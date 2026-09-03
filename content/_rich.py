@@ -561,6 +561,184 @@ NEW_CONDITIONS = [
                              "disability in children evaluation"]],
         "summary": "",
     },
+    {
+        "name": "Agoraphobia",
+        "aliases": [],
+        "utd": [["Overview", "agoraphobia in adults epidemiology "
+                             "clinical presentation and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Persistent depressive disorder",
+        "aliases": ["Dysthymia", "Dysthymic disorder"],
+        "utd": [["Overview", "unipolar depression in adults assessment "
+                             "and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Bipolar I disorder",
+        "aliases": ["Bipolar 1 disorder"],
+        "utd": [["Overview", "bipolar disorder in adults clinical "
+                             "features"]],
+        "summary": "",
+    },
+    {
+        "name": "Mild cognitive impairment",
+        "aliases": ["MCI"],
+        "utd": [["Overview", "mild cognitive impairment epidemiology "
+                             "pathology and clinical features"]],
+        "summary": "",
+    },
+    {
+        "name": "Traumatic brain injury",
+        "aliases": ["TBI", "Head injury"],
+        "utd": [["Overview", "acute mild traumatic brain injury "
+                             "concussion in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Cytomegalovirus infection",
+        "aliases": ["CMV infection"],
+        "utd": [["Overview", "epidemiology clinical manifestations and "
+                             "treatment of cytomegalovirus infection in "
+                             "immunocompetent adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Sickle cell crisis",
+        "aliases": ["Vaso-occlusive crisis", "Sickle cell pain crisis"],
+        "utd": [["Overview", "acute vaso-occlusive pain management in "
+                             "sickle cell disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Aspiration pneumonia",
+        "aliases": ["Aspiration pneumonitis"],
+        "utd": [["Overview", "aspiration pneumonia in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Bipolar II disorder",
+        "aliases": ["Bipolar 2 disorder"],
+        "utd": [["Overview", "bipolar disorder in adults clinical "
+                             "features"]],
+        "summary": "",
+    },
+    {
+        "name": "Cyclothymic disorder",
+        "aliases": ["Cyclothymia"],
+        "utd": [["Overview", "cyclothymic disorder epidemiology "
+                             "pathogenesis and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Specific phobia",
+        "aliases": ["Simple phobia"],
+        "utd": [["Overview", "specific phobia in adults epidemiology "
+                             "clinical manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Multinodular goitre",
+        "aliases": ["Multinodular goiter", "Nontoxic multinodular "
+                    "goitre", "Nontoxic multinodular goiter"],
+        "utd": [["Overview", "clinical presentation and evaluation of "
+                             "nontoxic diffuse and nodular goiter in "
+                             "adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Toxic multinodular goitre",
+        "aliases": ["Toxic multinodular goiter", "Plummer disease"],
+        "utd": [["Overview", "diagnosis of hyperthyroidism"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroid nodule",
+        "aliases": ["Solitary thyroid nodule"],
+        "utd": [["Overview", "diagnostic approach to and treatment of "
+                             "thyroid nodules"]],
+        "summary": "",
+    },
+    {
+        "name": "Secondary hypertension",
+        "aliases": ["Secondary causes of hypertension"],
+        "utd": [["Overview", "evaluation of secondary hypertension"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypertensive urgency",
+        "aliases": [],
+        "utd": [["Overview", "management of severe asymptomatic "
+                             "hypertension hypertensive urgencies in "
+                             "adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Familial hypercholesterolaemia",
+        "aliases": ["Familial hypercholesterolemia", "FH"],
+        "utd": [["Overview", "familial hypercholesterolemia in adults "
+                             "overview"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypertriglyceridaemia",
+        "aliases": ["Hypertriglyceridemia"],
+        "utd": [["Overview", "hypertriglyceridemia in adults "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Valvular heart disease",
+        "aliases": ["VHD"],
+        "utd": [["Overview", "overview of the management of valvular "
+                             "heart disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute chest syndrome",
+        "aliases": ["ACS in sickle cell disease"],
+        "utd": [["Overview", "acute chest syndrome in adults with sickle "
+                             "cell disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Transfusion reaction",
+        "aliases": ["Acute transfusion reaction",
+                    "Haemolytic transfusion reaction",
+                    "Hemolytic transfusion reaction"],
+        "utd": [["Overview", "approach to the patient with a suspected "
+                             "acute transfusion reaction"]],
+        "summary": "",
+    },
+    {
+        "name": "Neurogenic shock",
+        "aliases": [],
+        "utd": [["Overview", "acute traumatic spinal cord injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypovolaemic shock",
+        "aliases": ["Hypovolemic shock", "Haemorrhagic shock",
+                    "Hemorrhagic shock"],
+        "utd": [["Overview", "evaluation of and initial approach to the "
+                             "adult patient with undifferentiated "
+                             "hypotension and shock"]],
+        "summary": "",
+    },
+    {
+        "name": "Overflow incontinence",
+        "aliases": [],
+        "utd": [["Overview", "urinary incontinence in men"]],
+        "summary": "",
+    },
+    {
+        "name": "Cubital tunnel syndrome",
+        "aliases": ["Ulnar nerve entrapment at the elbow",
+                    "Ulnar neuropathy at the elbow"],
+        "utd": [["Overview", "ulnar neuropathy at the elbow and wrist"]],
+        "summary": "",
+    },
 ]
 
 

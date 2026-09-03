@@ -80,6 +80,17 @@ _ENTRY_REQUIRED = {
     "psych":          ("name", "summary"),
 }
 
+# (list, field) pairs where the field must exist as a string but is
+# allowed to be empty. Empty new_conditions summaries let content ship
+# a new topic as a stub (name plus StatPearls link) so the article is
+# reachable from the sidebar immediately; the rich text follows in a
+# later content update. marker.js hides the summary block when it is
+# empty, so the popup still renders cleanly with just the title, badge
+# and article link.
+_ENTRY_EMPTY_OK = {
+    ("new_conditions", "summary"),
+}
+
 # Optional fields whose type is still load-bearing: `_conditions` iterates
 # `aliases` and `utd`, `_drugs` iterates `brands`. A string where a list
 # belongs iterates character by character rather than raising, which is
@@ -131,7 +142,7 @@ def _validate_entries(lib) -> str:
                 if not isinstance(val, str):
                     return (f"{key}[{i}].{field} is "
                             f"{type(val).__name__}, expected string")
-                if not val.strip():
+                if not val.strip() and (key, field) not in _ENTRY_EMPTY_OK:
                     return f"{key}[{i}].{field} is empty"
             for field in _ENTRY_PAIR_LISTS:
                 if field in entry:

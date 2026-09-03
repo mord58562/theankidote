@@ -25,6 +25,16 @@ Popups render a handful of prefixed section labels ("Aetiology:",
 following content bulleted. "Grading:" and "Sites:" now render the
 same way instead of running through as body text.
 
+## New topic popups can arrive between add-on releases
+
+Popups for topics that were not in the original term library used to
+need a full add-on release before they would highlight and link at
+all. New topics can now ship through the content channel as stubs
+(name plus StatPearls link) and the sidebar will pick them up on the
+next Anki launch; the rich summary text follows in a later content
+update. This is transparent - you keep seeing the popups you already
+had, plus new ones as they land.
+
 ---
 
 **Upgrading:** nothing to do. Your settings carry over untouched.
