@@ -784,6 +784,77 @@ NEW_CONDITIONS = [
                              "age patients terminology and etiology"]],
         "summary": "",
     },
+    {
+        "name": "Post-herpetic neuralgia",
+        "aliases": ["PHN", "Postherpetic neuralgia"],
+        "utd": [["Overview", "postherpetic neuralgia epidemiology "
+                             "clinical manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Endophthalmitis",
+        "aliases": [],
+        "utd": [["Overview", "treatment of bacterial endophthalmitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Otosclerosis",
+        "aliases": [],
+        "utd": [["Overview", "clinical features and diagnosis of "
+                             "otosclerosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Sudden sensorineural hearing loss",
+        "aliases": ["SSNHL", "Idiopathic sudden sensorineural "
+                    "hearing loss"],
+        "utd": [["Overview", "sudden sensorineural hearing loss in "
+                             "adults evaluation and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Boerhaave syndrome",
+        "aliases": ["Spontaneous oesophageal rupture",
+                    "Spontaneous esophageal rupture"],
+        "utd": [["Overview", "boerhaave syndrome effort rupture of the "
+                             "esophagus"]],
+        "summary": "",
+    },
+    {
+        "name": "Gastroparesis",
+        "aliases": ["Delayed gastric emptying"],
+        "utd": [["Overview", "gastroparesis etiology clinical "
+                             "manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Zenker diverticulum",
+        "aliases": ["Pharyngeal pouch"],
+        "utd": [["Overview", "zenker's pharyngoesophageal diverticulum"]],
+        "summary": "",
+    },
+    {
+        "name": "Portal vein thrombosis",
+        "aliases": ["PVT"],
+        "utd": [["Overview", "acute portal vein thrombosis in adults "
+                             "clinical manifestations diagnosis and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Paraphimosis",
+        "aliases": [],
+        "utd": [["Overview", "paraphimosis reduction and adjunctive "
+                             "procedures"]],
+        "summary": "",
+    },
+    {
+        "name": "Bacterial vaginosis",
+        "aliases": ["BV"],
+        "utd": [["Overview", "bacterial vaginosis clinical "
+                             "manifestations and diagnosis"]],
+        "summary": "",
+    },
 ]
 
 
