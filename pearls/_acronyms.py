@@ -9,8 +9,43 @@ acronym appears in a card, every candidate is scored by how many of its
 context keywords also appear in the card text; the highest scorer wins
 (ties broken by listing order - most common expansion first).
 """
+import re
+
 from . import _library
 from . import _matcher
+
+
+# Acronyms that overlap with Roman numerals. On their own, "IV" means
+# intravenous - but "Rome IV", "DSM-IV", "grade IV", "cranial nerve IV"
+# and dozens of similar patterns are Roman numerals, not the drug route.
+# Suppress the acronym when the immediately-preceding token is a known
+# classifier so the popup doesn't misfire in those contexts.
+_ROMAN_ACRONYMS = frozenset({
+    "II", "III", "IV", "VI", "VII", "VIII", "IX", "XI", "XII",
+})
+_ROMAN_CLASSIFIERS = frozenset({
+    "rome", "dsm", "icd", "type", "class", "grade", "stage", "phase",
+    "chapter", "factor", "figure", "level", "generation", "gen",
+    "cranial", "nerve", "cn", "world", "war", "period", "line",
+    "nyha", "mrc", "killip", "asa", "figo", "raiu",
+    "los", "angeles", "salter", "salter-harris",
+    "haemophilia", "hemophilia",
+})
+
+
+def _prev_token_lower(text: str, start: int) -> str:
+    """The word immediately before `start`, lowercased.
+
+    Skips trailing whitespace and hyphens so both 'Rome IV' and 'DSM-IV'
+    resolve to 'rome' / 'dsm'. Returns '' when at start of string.
+    """
+    left = text[max(0, start - 40):start]
+    # Strip trailing separator characters (whitespace, hyphens, en/em dashes).
+    left = re.sub(r"[-\s‐-―]+$", "", left)
+    if not left:
+        return ""
+    m = re.search(r"[A-Za-z][A-Za-z-]*$", left)
+    return m.group(0).lower() if m else ""
 
 
 # (expansion, context_keywords, brief description for tooltip)
@@ -52,7 +87,19 @@ def resolve(card_text: str) -> list:
     is an actual choice, and `card_text.lower()` is deferred until then
     rather than computed for every card whether or not it is used.
     """
-    found = {k for _s, _e, k in _MATCHER.find(card_text)}
+    matches = _MATCHER.find(card_text)
+    if not matches:
+        return []
+    # Suppress Roman-numeral false positives: if every occurrence of a
+    # numeral acronym sits after a classifier (Rome, DSM, type, grade,
+    # cranial nerve, etc.), it isn't the drug route - drop the whole
+    # acronym from the results.
+    found: set = set()
+    for start, _end, k in matches:
+        if k in _ROMAN_ACRONYMS:
+            if _prev_token_lower(card_text, start) in _ROMAN_CLASSIFIERS:
+                continue
+        found.add(k)
     if not found:
         return []
     text_lower = None

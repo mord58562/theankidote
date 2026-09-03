@@ -857,6 +857,51 @@ class RichSummaries(unittest.TestCase):
                                   f"{canon} matches /{pat}/ - use '{good}'")
 
 
+class AcronymRomanNumeralContext(unittest.TestCase):
+    """Roman-numeral acronyms (IV, II, III, IX, XII, ...) must not fire
+    when the preceding word is a known classifier - "Rome IV", "DSM-IV",
+    "type IV", "grade IV", "cranial nerve IV", "NYHA IV", "factor IX".
+    Rob flagged 'Rome IV' rendering an intravenous popup on the Chronic
+    constipation card.
+    """
+
+    def _hits(self, text, acronym):
+        return any(r["acronym"] == acronym for r in _acronyms.resolve(text))
+
+    def test_classifier_context_suppresses_roman_acronym(self):
+        cases = [
+            ("Rome IV criteria for functional constipation", "IV"),
+            ("DSM-IV mood disorder", "IV"),
+            ("grade IV astrocytoma", "IV"),
+            ("stage IV cancer", "IV"),
+            ("type IV hypersensitivity reaction", "IV"),
+            ("cranial nerve IV palsy causes diplopia", "IV"),
+            ("NYHA IV heart failure", "IV"),
+            ("Killip class IV", "IV"),
+            ("phase IV post-marketing trial", "IV"),
+            ("factor IX deficiency is haemophilia B", "IX"),
+            ("class II antiarrhythmic", "II"),
+        ]
+        for text, acronym in cases:
+            self.assertFalse(
+                self._hits(text, acronym),
+                f"{acronym!r} resolved in {text!r} - classifier context "
+                f"should have suppressed it")
+
+    def test_genuine_intravenous_still_resolves(self):
+        cases = [
+            "give IV fluids and reassess",
+            "IV antibiotics stat",
+            "start IV heparin infusion",
+            "Rome IV criteria; then IV fluids for dehydration",
+        ]
+        for text in cases:
+            self.assertTrue(
+                self._hits(text, "IV"),
+                f"IV did not resolve in {text!r} - the classifier filter "
+                f"should not suppress genuine intravenous references")
+
+
 class AustralianFirst(unittest.TestCase):
     """The add-on is Australian-first, which is a claim about framing as
     well as spelling.
