@@ -629,7 +629,7 @@ class PopupHeightBudget(unittest.TestCase):
     # worth holding at the point where it is still clean - a backlog is
     # much easier to prevent than to pay down, which is what the 122 and
     # 80 above are.
-    OVER_CAP_BUDGET = {"conditions": 31, "drugs": 80, "acronyms": 0,
+    OVER_CAP_BUDGET = {"conditions": 30, "drugs": 80, "acronyms": 0,
                        "preclinical": 0}
 
     def test_over_cap_backlog_only_shrinks(self):
