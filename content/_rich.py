@@ -23584,6 +23584,77 @@ RICH_SUMMARIES = {
         "incontinence; catheterise and image for hydronephrosis."
     ),
 
+    "Hypertriglyceridaemia": (
+        "Elevated fasting triglycerides. Mild-moderate (1.7 to 5.6 "
+        "mmol/L) raises CVD risk; severe (over 5.6) risks acute "
+        "pancreatitis; over 11 is very high. Aetiology: primary from "
+        "familial combined hyperlipidaemia, familial "
+        "hypertriglyceridaemia or familial chylomicronaemia. "
+        "Secondary to obesity, uncontrolled diabetes, alcohol, "
+        "hypothyroidism, nephrotic syndrome or CKD; also oestrogen, "
+        "steroids and antipsychotics. Clinical features: usually "
+        "asymptomatic. Very high levels (over 11) cause eruptive "
+        "xanthomas, lipaemia retinalis, hepatosplenomegaly and acute "
+        "pancreatitis; lab often reports lipaemic serum. Ix: fasting "
+        "lipids. HbA1c, TSH, urinalysis, EUC and LFTs for secondary "
+        "causes. Genetic panel for severe or early-onset; lipase if "
+        "abdominal pain. Mx: treat secondary causes. Start "
+        "high-intensity statin for CVD risk. Icosapent ethyl reduces "
+        "events in high-risk statin-treated patients per REDUCE-IT. "
+        "Fibrate for TG over 5.6 to prevent pancreatitis. Low-fat "
+        "diet and IV insulin for hospitalised severe. Note: TG over "
+        "11 - urgent pancreatitis prevention; treat secondary causes "
+        "and start fibrate."
+    ),
+
+    "Transfusion reaction": (
+        "Adverse reaction to blood product transfusion - acute "
+        "(within 24 h) or delayed. Ranges from mild allergic to fatal "
+        "ABO haemolysis and TRALI. Aetiology: acute haemolytic from "
+        "ABO mismatch (clerical error is the leading preventable "
+        "cause). Febrile non-haemolytic from antibodies to donor "
+        "leukocytes. Anaphylactic from plasma proteins. TRALI from "
+        "anti-leukocyte antibodies. TACO from volume overload. "
+        "Clinical features: acute haemolytic gives fever, chills, "
+        "back pain, dark urine and hypotension. Anaphylaxis gives "
+        "urticaria, wheeze and hypotension. TRALI gives hypoxic "
+        "respiratory failure within 6 h. TACO gives dyspnoea and "
+        "raised BP within 6 h. Ix: STOP transfusion immediately and "
+        "keep line open with saline. Check patient and unit ID for "
+        "clerical error. Return the unit with fresh blood samples for "
+        "DAT and repeat cross-match; urinalysis for haemoglobinuria; "
+        "CXR if respiratory. Mx: acute haemolytic gets IV fluids and "
+        "vasopressors. Anaphylaxis adrenaline. TRALI lung-protective "
+        "ventilation. TACO diuretic and slower future rate. Report to "
+        "lab and haemovigilance. Note: fever and hypotension during "
+        "transfusion - stop, check ID, treat as acute haemolytic "
+        "until proven otherwise."
+    ),
+
+    "Hypovolaemic shock": (
+        "Circulatory shock from inadequate intravascular volume - "
+        "haemorrhagic (blood loss) or non-haemorrhagic (fluid loss). "
+        "Recognised by inadequate perfusion despite compensatory "
+        "tachycardia and vasoconstriction. Aetiology: haemorrhagic "
+        "from trauma, GI bleed, ruptured AAA or PPH. Non-haemorrhagic "
+        "from severe GI losses, burns or third-space sequestration. "
+        "Clinical features: ATLS Class I (under 15% loss) has normal "
+        "vitals. Class II (15-30%) is tachycardia and narrow pulse "
+        "pressure. Class III (30-40%) is hypotension and confusion. "
+        "Class IV (over 40%) is obtunded and anuric. Ix: source hunt "
+        "from history and exam. FBC, group and cross-match, coag, "
+        "U/E, lactate and ABG. FAST and CT for trauma; "
+        "source-specific imaging as appropriate. Mx: large-bore IV "
+        "access with warmed crystalloid then balanced blood products "
+        "(1:1:1 PRBC:FFP:platelets) for haemorrhagic. TXA within 3 h "
+        "of trauma. Source control by surgery, endoscopy or IR. "
+        "Vasopressors only if fluid-refractory. Permissive "
+        "hypotension in penetrating trauma until surgical control. "
+        "Note: tachycardia plus narrow pulse pressure in trauma - "
+        "Class II shock; group-and-hold and activate massive "
+        "transfusion if bleeding continues."
+    ),
+
 
 }
 
