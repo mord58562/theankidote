@@ -739,6 +739,51 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "ulnar neuropathy at the elbow and wrist"]],
         "summary": "",
     },
+    {
+        "name": "Helicobacter pylori infection",
+        "aliases": ["H pylori infection", "H. pylori", "H pylori",
+                    "Helicobacter pylori"],
+        "utd": [["Overview", "indications and diagnostic tests for "
+                             "helicobacter pylori infection in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Coronary artery disease",
+        "aliases": ["CAD", "Coronary heart disease", "CHD"],
+        "utd": [["Overview", "overview of the treatment of stable "
+                             "ischemic heart disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Recurrent pregnancy loss",
+        "aliases": ["Recurrent miscarriage",
+                    "Recurrent spontaneous abortion"],
+        "utd": [["Overview", "recurrent pregnancy loss evaluation and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Gastritis",
+        "aliases": ["Chronic gastritis", "Atrophic gastritis"],
+        "utd": [["Overview", "classification and diagnosis of gastritis "
+                             "and gastropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Dysmenorrhoea",
+        "aliases": ["Dysmenorrhea", "Primary dysmenorrhoea",
+                    "Secondary dysmenorrhoea"],
+        "utd": [["Overview", "dysmenorrhea in adult women clinical "
+                             "features and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Menorrhagia",
+        "aliases": ["Heavy menstrual bleeding", "HMB"],
+        "utd": [["Overview", "abnormal uterine bleeding in reproductive "
+                             "age patients terminology and etiology"]],
+        "summary": "",
+    },
 ]
 
 
