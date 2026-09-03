@@ -855,6 +855,24 @@ NEW_CONDITIONS = [
                              "manifestations and diagnosis"]],
         "summary": "",
     },
+    {
+        "name": "Preseptal cellulitis",
+        "aliases": ["Periorbital cellulitis"],
+        "utd": [["Overview", "preseptal cellulitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Sialolithiasis",
+        "aliases": ["Salivary duct stone", "Salivary calculus"],
+        "utd": [["Overview", "salivary gland stones"]],
+        "summary": "",
+    },
+    {
+        "name": "May-Thurner syndrome",
+        "aliases": ["Iliac vein compression syndrome"],
+        "utd": [["Overview", "may-thurner syndrome"]],
+        "summary": "",
+    },
 ]
 
 
