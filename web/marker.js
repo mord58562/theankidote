@@ -558,7 +558,7 @@
     "Definition", "Epidemiology", "Aetiology", "Etiology", "Causes",
     "Mechanism", "Mechanisms",
     "Risk factors", "Risk", "Pathophysiology", "Pathology", "Classification",
-    "Types", "Subtypes", "Variants", "Staging", "Grading", "Stages", "Phases",
+    "Types", "Subtypes", "Variants", "Staging", "Grading", "Stages", "Phases", "Sites",
     "Clinical features", "Features", "Presentation", "Signs", "Symptoms",
     "Examination", "Triggers", "Associations", "Genetics",
     "Investigations", "Workup", "Diagnosis", "Criteria", "Screening",
