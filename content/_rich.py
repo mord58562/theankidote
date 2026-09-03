@@ -935,6 +935,79 @@ NEW_CONDITIONS = [
                              "treatment of radiation proctitis"]],
         "summary": "",
     },
+    {
+        "name": "Phimosis",
+        "aliases": [],
+        "utd": [["Overview", "care of the uncircumcised penis in "
+                             "infants and children"]],
+        "summary": "",
+    },
+    {
+        "name": "Genital herpes",
+        "aliases": ["Herpes genitalis", "HSV genital infection"],
+        "utd": [["Overview", "epidemiology clinical manifestations and "
+                             "diagnosis of genital herpes simplex virus "
+                             "infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Genital warts",
+        "aliases": ["Anogenital warts", "Condylomata acuminata"],
+        "utd": [["Overview", "condylomata acuminata anogenital warts "
+                             "management of external condylomata "
+                             "acuminata in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Aortoenteric fistula",
+        "aliases": ["Secondary aortoenteric fistula",
+                    "Primary aortoenteric fistula"],
+        "utd": [["Overview", "aortoenteric fistula"]],
+        "summary": "",
+    },
+    {
+        "name": "Diffuse oesophageal spasm",
+        "aliases": ["Diffuse esophageal spasm",
+                    "Distal esophageal spasm"],
+        "utd": [["Overview", "major disorders of esophageal peristalsis "
+                             "distal esophageal spasm and "
+                             "hypercontractile esophagus"]],
+        "summary": "",
+    },
+    {
+        "name": "Median arcuate ligament syndrome",
+        "aliases": ["MALS", "Celiac artery compression syndrome",
+                    "Dunbar syndrome"],
+        "utd": [["Overview", "median arcuate ligament syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Basilar artery occlusion",
+        "aliases": ["Top of the basilar syndrome"],
+        "utd": [["Overview", "posterior circulation cerebrovascular "
+                             "syndromes"]],
+        "summary": "",
+    },
+    {
+        "name": "Splenic infarct",
+        "aliases": ["Splenic infarction"],
+        "utd": [["Overview", "atraumatic splenic infarction in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Tropical sprue",
+        "aliases": [],
+        "utd": [["Overview", "tropical sprue"]],
+        "summary": "",
+    },
+    {
+        "name": "Ureteric stricture",
+        "aliases": ["Ureteral stricture"],
+        "utd": [["Overview", "diagnostic evaluation and management of "
+                             "ureteral obstruction and stricture in "
+                             "adults"]],
+        "summary": "",
+    },
 ]
 
 
