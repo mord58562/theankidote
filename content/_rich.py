@@ -25381,6 +25381,77 @@ RICH_SUMMARIES = {
         "explain positively, refer for physio and CBT."
     ),
 
+    "DRESS syndrome": (
+        "Severe delayed drug hypersensitivity with rash, eosinophilia "
+        "and multi-organ involvement - typically 2 to 8 weeks after "
+        "starting the culprit drug. Mortality up to 10%. Aetiology: "
+        "commonest triggers are aromatic anticonvulsants, "
+        "allopurinol, sulfonamides and vancomycin; HLA-B*5801 "
+        "(allopurinol) and HLA-B*1502 (carbamazepine in Asian "
+        "populations) predispose; HHV-6 reactivation common. Clinical "
+        "features: fever, morbilliform rash progressing to "
+        "erythroderma with facial oedema and lymphadenopathy, plus "
+        "organ involvement (hepatitis in 80%, nephritis, pneumonitis, "
+        "myocarditis); eosinophilia and atypical lymphocytes; "
+        "autoimmune sequelae months later. Ix: RegiSCAR score for "
+        "probability; FBC (eosinophilia), LFTs and EUC; anti-nuclear "
+        "antibody; HHV-6/EBV PCR; review medications started in prior "
+        "8 weeks. Mx: STOP the culprit drug and never rechallenge. "
+        "Supportive care with hydration; systemic corticosteroids "
+        "(prednisolone 1 mg/kg) for severe organ involvement, tapered "
+        "over 3 to 6 months to prevent relapse. Long-term monitoring "
+        "for autoimmune sequelae. Note: fever plus rash plus "
+        "eosinophilia plus deranged LFTs weeks after new drug - "
+        "DRESS; stop drug, prednisolone."
+    ),
+
+    "Diabetic foot ulcer": (
+        "Full-thickness ulcer on the foot of a diabetic patient - "
+        "combination of peripheral neuropathy, peripheral vascular "
+        "disease and immunosuppression. Leading cause of "
+        "non-traumatic amputation. Aetiology: sensory neuropathy "
+        "allows unnoticed trauma; motor neuropathy causes foot "
+        "deformity and abnormal pressure loading; autonomic "
+        "neuropathy dries skin; PAD impairs healing. Clinical "
+        "features: neuropathic ulcer at plantar pressure points with "
+        "surrounding callus, painless and warm. Ischaemic ulcer at "
+        "toe tips or lateral malleolus is painful with poor pulses. "
+        "Infection presents with erythema, purulence and systemic "
+        "features. Ix: probe to bone (positive suggests "
+        "osteomyelitis); ABI plus toe pressures for vascular "
+        "assessment; MRI for osteomyelitis; deep wound swab; HbA1c, "
+        "CRP, ESR. Mx: MDT foot clinic. Offload with total-contact "
+        "cast, debride callus and necrotic tissue, revascularise "
+        "ischaemic disease and give broad-spectrum antibiotics if "
+        "infected. Optimise glycaemia and educate foot care; "
+        "amputation for irremediable. Note: painless plantar ulcer "
+        "with callus in a diabetic - neuropathic ulcer; offload, "
+        "debride, refer MDT foot clinic."
+    ),
+
+    "Pressure injury": (
+        "Localised skin and soft-tissue damage over a bony prominence "
+        "from prolonged pressure - preventable hospital-acquired "
+        "injury. Aetiology: sustained pressure, shear and friction "
+        "over bony prominences (sacrum, heels, ischial tuberosities, "
+        "trochanters) plus risk factors of immobility, incontinence, "
+        "poor nutrition and sensory loss. Braden scale predicts risk. "
+        "Clinical features: NPUAP staging - Stage 1 non-blanchable "
+        "erythema, Stage 2 partial-thickness loss, Stage 3 "
+        "full-thickness with fat, Stage 4 exposed bone or muscle. "
+        "Unstageable if slough obscures depth; deep tissue injury "
+        "shows purple discolouration. Ix: clinical staging with size "
+        "and photograph; nutritional screen; MRI or bone probe if "
+        "osteomyelitis suspected; culture only if clinical infection. "
+        "Mx: relieve pressure with 2-hourly turning and "
+        "pressure-redistributing surface. Optimise nutrition. Wound "
+        "care matched to stage; antibiotics only if infected; "
+        "surgical flap for deep or non-healing. Prevention with "
+        "Braden risk score, skin care and mobility. Note: "
+        "non-blanchable erythema over sacrum in an immobile patient - "
+        "Stage 1 pressure injury; offload immediately."
+    ),
+
 
 }
 
