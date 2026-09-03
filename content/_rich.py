@@ -873,6 +873,68 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "may-thurner syndrome"]],
         "summary": "",
     },
+    {
+        "name": "Trichomoniasis",
+        "aliases": ["Trichomonas vaginalis infection"],
+        "utd": [["Overview", "trichomoniasis clinical manifestations "
+                             "and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Small intestinal bacterial overgrowth",
+        "aliases": ["SIBO"],
+        "utd": [["Overview", "small intestinal bacterial overgrowth "
+                             "clinical manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Whipple disease",
+        "aliases": ["Tropheryma whipplei infection"],
+        "utd": [["Overview", "whipple disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Angiodysplasia",
+        "aliases": ["Colonic angiodysplasia", "Vascular ectasia of "
+                    "the colon"],
+        "utd": [["Overview", "angiodysplasia of the gastrointestinal "
+                             "tract"]],
+        "summary": "",
+    },
+    {
+        "name": "Splenic rupture",
+        "aliases": ["Traumatic splenic rupture",
+                    "Spontaneous splenic rupture"],
+        "utd": [["Overview", "management of splenic injury in the adult "
+                             "trauma patient"]],
+        "summary": "",
+    },
+    {
+        "name": "Vitreous haemorrhage",
+        "aliases": ["Vitreous hemorrhage"],
+        "utd": [["Overview", "retinal detachment"]],
+        "summary": "",
+    },
+    {
+        "name": "Balanitis",
+        "aliases": ["Balanoposthitis", "Zoon balanitis"],
+        "utd": [["Overview", "balanitis in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Peyronie disease",
+        "aliases": [],
+        "utd": [["Overview", "peyronie's disease diagnosis and medical "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Radiation proctitis",
+        "aliases": ["Radiation proctopathy"],
+        "utd": [["Overview", "clinical manifestations diagnosis and "
+                             "treatment of radiation proctitis"]],
+        "summary": "",
+    },
 ]
 
 
