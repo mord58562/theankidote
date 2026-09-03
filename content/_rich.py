@@ -24084,6 +24084,77 @@ RICH_SUMMARIES = {
         "paraphimosis; reduce urgently."
     ),
 
+    "Boerhaave syndrome": (
+        "Spontaneous full-thickness rupture of the oesophagus from "
+        "sudden increase in intraluminal pressure - usually against a "
+        "closed cricopharyngeus during forceful vomiting. Distal left "
+        "posterolateral tear typical. Aetiology: forceful vomiting is "
+        "the classical trigger (alcohol binge, bulimia, hyperemesis); "
+        "weightlifting, childbirth or seizure can precipitate. "
+        "Mortality over 50% if diagnosis delayed beyond 24 hours. "
+        "Clinical features: Mackler triad of vomiting, chest pain and "
+        "subcutaneous emphysema (present in under half); severe "
+        "retrosternal or epigastric pain radiating to back or "
+        "shoulder plus dyspnoea; rapid progression to sepsis and "
+        "mediastinitis with Hamman crunch on auscultation. Ix: CT "
+        "chest with oral water-soluble contrast is the investigation "
+        "of choice; CXR shows mediastinal air or left "
+        "hydropneumothorax. Endoscopy risks worsening the tear. Mx: "
+        "NBM plus IV broad-spectrum antibiotics "
+        "(piperacillin-tazobactam) plus antifungal, and urgent "
+        "surgical repair within 24 h. Endoscopic stent for selected "
+        "small early leaks; conservative only for contained stable. "
+        "Note: chest pain after forceful vomiting plus subcut "
+        "emphysema - Boerhaave; CT contrast plus surgical review."
+    ),
+
+    "Gastroparesis": (
+        "Delayed gastric emptying without mechanical obstruction - "
+        "affects up to 5% of type 1 diabetics and rarer in type 2. "
+        "Distressing and hard to treat. Aetiology: diabetic autonomic "
+        "neuropathy is commonest. Other causes include post-surgical "
+        "(vagotomy, fundoplication), medications (opioids, GLP-1 "
+        "agonists), idiopathic, systemic sclerosis and Parkinson "
+        "disease. Clinical features: early satiety, postprandial "
+        "fullness, nausea and vomiting of undigested food hours after "
+        "meals, with bloating, epigastric pain and weight loss. "
+        "Erratic glycaemia in diabetics; bezoars can form. Ix: 4-hour "
+        "gastric emptying scintigraphy is gold standard (retention "
+        "over 10% at 4 h confirms); exclude mechanical obstruction "
+        "with OGD; HbA1c, TFTs and medication review; wireless "
+        "motility capsule alternative. Mx: small frequent low-fat, "
+        "low-fibre meals; optimise glycaemic control and stop "
+        "offending drugs. Prokinetics - metoclopramide (max 5 days) "
+        "or domperidone (QT prolongation); erythromycin short-term. "
+        "Jejunal feeding or gastric stimulation for refractory. Note: "
+        "diabetic with early satiety plus vomiting of undigested food "
+        "- gastroparesis; scintigraphy and start prokinetics."
+    ),
+
+    "Bacterial vaginosis": (
+        "Polymicrobial vaginal dysbiosis with loss of protective "
+        "lactobacilli and overgrowth of anaerobes - commonest cause "
+        "of abnormal vaginal discharge in reproductive-age women. Not "
+        "classified as an STI though sexual activity is a risk "
+        "factor. Aetiology: overgrowth of Gardnerella vaginalis, "
+        "Prevotella and Atopobium; risk factors include new or "
+        "multiple sexual partners, douching, IUD and smoking. "
+        "Clinical features: thin homogeneous grey-white discharge "
+        "with fishy odour especially after intercourse; vulvovaginal "
+        "irritation uncommon (unlike candidiasis or trichomoniasis); "
+        "half asymptomatic. Pregnancy complications include preterm "
+        "labour and PPROM. Ix: Amsel criteria (3 of 4 - thin "
+        "discharge, pH over 4.5, positive whiff test, clue cells on "
+        "saline microscopy); Nugent Gram-stain score is the gold "
+        "standard; NAAT increasingly used. Test for gonorrhoea and "
+        "chlamydia. Mx: metronidazole 400 mg PO BD for 7 days or 2 g "
+        "stat, or intravaginal metronidazole/clindamycin; recurrence "
+        "in 30% within 3 months. Treat symptomatic pregnant women; "
+        "partner treatment does not prevent recurrence; avoid "
+        "douching. Note: thin grey discharge plus fishy odour plus "
+        "clue cells - BV; oral or intravaginal metronidazole."
+    ),
+
 
 }
 
