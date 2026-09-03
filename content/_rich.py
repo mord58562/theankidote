@@ -23700,6 +23700,53 @@ RICH_SUMMARIES = {
         "transfusion if bleeding continues."
     ),
 
+    "Helicobacter pylori infection": (
+        "Gram-negative spiral bacterium colonising gastric mucosa - "
+        "commonest chronic bacterial infection worldwide. Causes "
+        "peptic ulcer, gastric MALT lymphoma and gastric "
+        "adenocarcinoma. Aetiology: faecal-oral or oral-oral "
+        "transmission usually in childhood; higher prevalence with "
+        "lower socioeconomic status; urease neutralises gastric acid "
+        "to colonise mucous layer. Clinical features: most colonised "
+        "are asymptomatic. Can cause chronic gastritis, dyspepsia, "
+        "duodenal or gastric ulcer (duodenal 4:1), iron-deficiency "
+        "anaemia, ITP or B12 deficiency. Long-term risk of gastric "
+        "adenocarcinoma and MALT lymphoma. Ix: urea breath test or "
+        "stool antigen (stop PPI 2 weeks and antibiotics 4 weeks "
+        "prior). Endoscopy with rapid urease test plus histology when "
+        "scoping for another reason; serology cannot distinguish "
+        "current from past. Mx: eradication - triple therapy "
+        "(esomeprazole plus amoxicillin plus clarithromycin BD for 14 "
+        "days) or bismuth-based quadruple in "
+        "high-clarithromycin-resistance areas. Recheck urea breath "
+        "test at 4 to 8 weeks. Note: dyspepsia plus iron-deficiency "
+        "anaemia - test for H pylori; eradicate with triple therapy."
+    ),
+
+    "Coronary artery disease": (
+        "Atherosclerotic narrowing of the coronary arteries - leading "
+        "cause of death in Australia. Spectrum from asymptomatic "
+        "through stable angina and ACS to sudden cardiac death. "
+        "Aetiology: modifiable risks are hypertension, dyslipidaemia, "
+        "smoking, diabetes and obesity; non-modifiable are age, male "
+        "sex, family history of premature CAD, and ethnicity (South "
+        "Asian, Aboriginal and Torres Strait Islander). Clinical "
+        "features: stable angina is exertional retrosternal "
+        "discomfort relieved by rest or GTN within minutes. Anginal "
+        "equivalents include exertional dyspnoea, jaw or arm pain and "
+        "fatigue (especially in women, elderly and diabetics); silent "
+        "ischaemia in diabetes. Ix: Australian CVD Risk calculator; "
+        "resting ECG; exercise ECG, stress echo or CTCA for "
+        "non-invasive assessment; invasive angiogram for high-risk or "
+        "refractory. Mx: aggressive risk-factor modification (smoking "
+        "cessation, BP under 130/80, LDL under 1.8 in established "
+        "CAD, HbA1c target, Mediterranean diet, exercise). "
+        "Antiplatelet, high-intensity statin, ACE inhibitor and "
+        "beta-blocker post-MI. Revascularise (PCI or CABG) suitable "
+        "anatomy. Note: exertional chest pain plus reduced exercise "
+        "tolerance - CAD workup; treat modifiable risk."
+    ),
+
 
 }
 
