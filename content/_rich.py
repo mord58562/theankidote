@@ -1082,6 +1082,76 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "acute lumbosacral radiculopathy"]],
         "summary": "",
     },
+    {
+        "name": "DRESS syndrome",
+        "aliases": ["DRESS", "Drug reaction with eosinophilia "
+                    "and systemic symptoms"],
+        "utd": [["Overview", "drug reaction with eosinophilia and "
+                             "systemic symptoms dress"]],
+        "summary": "",
+    },
+    {
+        "name": "Migraine with aura",
+        "aliases": ["Classic migraine"],
+        "utd": [["Overview", "acute treatment of migraine in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Diabetic foot ulcer",
+        "aliases": ["Diabetic foot infection"],
+        "utd": [["Overview", "management of diabetic foot ulcers"]],
+        "summary": "",
+    },
+    {
+        "name": "Venous ulcer",
+        "aliases": ["Venous leg ulcer", "Stasis ulcer"],
+        "utd": [["Overview", "medical management of lower extremity "
+                             "chronic venous disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Pressure injury",
+        "aliases": ["Pressure ulcer", "Bedsore", "Decubitus ulcer"],
+        "utd": [["Overview", "clinical staging and management of "
+                             "pressure-induced skin and soft tissue "
+                             "injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic urticaria",
+        "aliases": ["Chronic spontaneous urticaria", "Chronic hives"],
+        "utd": [["Overview", "chronic spontaneous urticaria treatment "
+                             "of refractory symptoms"]],
+        "summary": "",
+    },
+    {
+        "name": "Molluscum contagiosum",
+        "aliases": [],
+        "utd": [["Overview", "molluscum contagiosum"]],
+        "summary": "",
+    },
+    {
+        "name": "Head lice",
+        "aliases": ["Pediculosis capitis"],
+        "utd": [["Overview", "pediculosis capitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Illness anxiety disorder",
+        "aliases": ["Hypochondriasis"],
+        "utd": [["Overview", "illness anxiety disorder epidemiology "
+                             "clinical presentation assessment and "
+                             "diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Functional neurological disorder",
+        "aliases": ["FND"],
+        "utd": [["Overview", "functional neurologic disorder in adults "
+                             "clinical features assessment and "
+                             "comorbidity"]],
+        "summary": "",
+    },
 ]
 
 
