@@ -23538,6 +23538,52 @@ RICH_SUMMARIES = {
         "motor signs."
     ),
 
+    "Acute chest syndrome": (
+        "Sickle cell complication - new pulmonary infiltrate plus "
+        "fever or respiratory symptoms. Leading cause of death in "
+        "adults with sickle cell disease. Aetiology: pulmonary "
+        "microvascular vaso-occlusion from HbS polymerisation, often "
+        "precipitated by infection (typical or atypical), pulmonary "
+        "fat embolism from marrow infarction or perioperative "
+        "atelectasis; children usually infection-driven, adults "
+        "pain-driven. Clinical features: fever, cough, chest pain, "
+        "dyspnoea and hypoxia with new segmental or lobar infiltrate "
+        "on CXR; rapid progression to respiratory failure common. Ix: "
+        "CXR (may lag 24-48 h behind clinical signs); FBC and "
+        "reticulocytes; blood and sputum cultures; ABG; HbS%. Mx: "
+        "admit; O2 for SpO2 over 94%; empirical ceftriaxone plus "
+        "azithromycin; opioid analgesia carefully (sedation worsens "
+        "ACS); incentive spirometry every 2 h to prevent further "
+        "atelectasis and maintenance IV fluids. Simple transfusion "
+        "for moderate, urgent exchange for severe or deteriorating. "
+        "Note: sickle cell patient with fever plus hypoxia plus new "
+        "infiltrate - ACS; exchange transfusion for severe."
+    ),
+
+    "Overflow incontinence": (
+        "Continuous or intermittent urine leakage from chronic "
+        "retention - bladder overfilled beyond compensatory capacity "
+        "with paradoxical leakage. Post-void residual over 300 mL is "
+        "typical. Aetiology: outlet obstruction (BPH in men, urethral "
+        "stricture, prolapse, impaction) or detrusor underactivity "
+        "(diabetic neuropathy, cauda equina, MS, anticholinergic "
+        "medication). Clinical features: dribbling incontinence with "
+        "poor stream, hesitancy, straining and incomplete emptying, "
+        "plus recurrent UTIs and palpable bladder; upper tract "
+        "overflow can cause hydronephrosis and obstructive AKI. Ix: "
+        "post-void residual by bladder scan (over 300 mL diagnostic); "
+        "urinalysis; U/E for AKI; renal ultrasound for "
+        "hydronephrosis; urodynamics to differentiate obstruction "
+        "from underactive detrusor. Mx: acute retention - urgent "
+        "catheterisation, monitor for post-obstructive diuresis. "
+        "Chronic - treat cause (TURP or medical alpha-blocker plus "
+        "5-alpha reductase inhibitor for BPH; dilate stricture; "
+        "prolapse repair). Detrusor underactivity - intermittent "
+        "self-catheterisation and avoid anticholinergics. Note: "
+        "dribbling plus palpable bladder plus rising Cr - overflow "
+        "incontinence; catheterise and image for hydronephrosis."
+    ),
+
 
 }
 
