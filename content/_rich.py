@@ -24173,6 +24173,76 @@ RICH_SUMMARIES = {
         "clue cells - BV; oral or intravaginal metronidazole."
     ),
 
+    "Preseptal cellulitis": (
+        "Infection of soft tissue anterior to the orbital septum "
+        "(eyelid) - distinct from orbital cellulitis which extends "
+        "posterior to the septum and threatens vision. Aetiology: "
+        "spread from adjacent structures (sinusitis, skin injury, "
+        "insect bite, hordeolum, dacryocystitis); Staphylococcus "
+        "aureus and Streptococcus pneumoniae commonest; H influenzae "
+        "less common since vaccination. Clinical features: red, "
+        "swollen and tender periorbital tissue with normal visual "
+        "acuity, no pain on eye movement, no proptosis and no "
+        "ophthalmoplegia. Absence of orbital features distinguishes "
+        "from orbital cellulitis. Ix: clinical if features clear; CT "
+        "orbits and sinuses with contrast if red flags (proptosis, "
+        "painful eye movement, reduced vision, RAPD or systemic "
+        "toxicity). Mx: outpatient oral amoxicillin-clavulanate or "
+        "cephalexin for mild in adults; admit for IV in children or "
+        "if severe; cover MRSA if risk; treat sinusitis; "
+        "ophthalmology if any orbital sign. Note: swollen red eyelid "
+        "with normal vision and eye movement - preseptal cellulitis; "
+        "CT and admit if any orbital sign."
+    ),
+
+    "Sialolithiasis": (
+        "Calculi within the salivary ducts - 80% in submandibular "
+        "gland (Wharton duct is longer, travels uphill, and alkaline "
+        "calcium-rich saliva favours stones), 20% parotid, rare "
+        "sublingual. Aetiology: reduced salivary flow (dehydration, "
+        "anticholinergics, radiotherapy), Sjogren and gout raise "
+        "risk. Calcium-phosphate predominates in submandibular, "
+        "calcium-oxalate in parotid; middle-aged men most affected. "
+        "Clinical features: colicky pain and swelling of the affected "
+        "gland precipitated by meals ('mealtime syndrome') - "
+        "postprandial 20-minute swelling then resolution; palpable "
+        "stone in the duct or floor of mouth; secondary sialadenitis "
+        "if obstruction persists. Ix: bimanual palpation of the duct; "
+        "plain radiograph (80% submandibular stones radio-opaque, "
+        "only 40% parotid); ultrasound first-line imaging; "
+        "sialography or CT for stones missed by ultrasound. Mx: "
+        "conservative first - hydration, warm compress, sialogogues "
+        "(sour lozenges), massage and NSAIDs; small distal stones may "
+        "pass. Definitive - transoral removal for distal, "
+        "sialendoscopy for proximal, ESWL or gland excision for "
+        "refractory. Note: painful gland that flares at meals - "
+        "sialolithiasis; ultrasound and refer for sialendoscopy."
+    ),
+
+    "May-Thurner syndrome": (
+        "Iliac vein compression syndrome - compression of the left "
+        "common iliac vein between the overlying right common iliac "
+        "artery and the lumbar vertebra, causing venous outflow "
+        "obstruction and iliofemoral DVT. Aetiology: anatomical "
+        "compression is present in most asymptomatic adults; "
+        "symptomatic disease predominates in women aged 20 to 40; "
+        "chronic pulsatile trauma from the artery causes intimal "
+        "spurs. Clinical features: unilateral left leg swelling, pain "
+        "and heaviness with venous claudication and chronic venous "
+        "insufficiency; presents as unprovoked iliofemoral DVT in a "
+        "young woman or as post-thrombotic syndrome; sometimes "
+        "recurrent left DVT despite anticoagulation. Ix: duplex "
+        "ultrasound may miss iliac vein; CT or MR venography or IVUS "
+        "(gold standard) shows extrinsic compression and intraluminal "
+        "spur; catheter venography with pressure measurements. Mx: "
+        "acute DVT gets anticoagulation plus catheter-directed "
+        "thrombolysis or pharmacomechanical thrombectomy; iliac vein "
+        "stenting relieves compression and reduces post-thrombotic "
+        "syndrome; long-term anticoagulation individualised. Note: "
+        "young woman with left iliofemoral DVT - May-Thurner; MR "
+        "venography plus IVUS, stent the compression."
+    ),
+
 
 }
 
