@@ -332,6 +332,7 @@ SECTION_MAP = {
     "subtypes": ["Evaluation"],
     "variants": ["Evaluation"],
     "staging": ["Staging", "Evaluation"],
+    "grading": ["Staging", "Evaluation"],
     "stages": ["History and Physical", "Staging"],
     "screening": ["Evaluation", "Deterrence and Patient Education"],
     # ── differential ──

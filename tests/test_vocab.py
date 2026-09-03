@@ -629,7 +629,7 @@ class PopupHeightBudget(unittest.TestCase):
     # worth holding at the point where it is still clean - a backlog is
     # much easier to prevent than to pay down, which is what the 122 and
     # 80 above are.
-    OVER_CAP_BUDGET = {"conditions": 71, "drugs": 80, "acronyms": 0,
+    OVER_CAP_BUDGET = {"conditions": 61, "drugs": 80, "acronyms": 0,
                        "preclinical": 0}
 
     def test_over_cap_backlog_only_shrinks(self):
@@ -731,7 +731,7 @@ class RichSummaries(unittest.TestCase):
         "definition", "epidemiology", "aetiology", "etiology", "causes",
         "mechanism", "mechanisms", "risk factors", "risk", "pathophysiology",
         "pathology", "classification", "types", "subtypes", "variants",
-        "staging", "stages", "phases", "clinical features", "features", "presentation",
+        "staging", "grading", "stages", "phases", "clinical features", "features", "presentation",
         "signs", "symptoms", "examination", "triggers", "associations",
         "genetics", "investigations", "workup", "diagnosis", "criteria",
         "screening", "differential", "management", "treatment", "monitoring",
