@@ -23468,6 +23468,76 @@ RICH_SUMMARIES = {
         "IV therapy."
     ),
 
+    "Valvular heart disease": (
+        "Structural or functional valve abnormality causing stenosis, "
+        "regurgitation or both. AS and MR commonest in developed "
+        "countries; rheumatic disease dominates worldwide. Aetiology: "
+        "degenerative calcification (elderly AS and MR), rheumatic "
+        "(MS and mixed AV disease), congenital (bicuspid aortic "
+        "valve), infective endocarditis, connective tissue disease "
+        "(Marfan), post-MI papillary rupture and radiation. Clinical "
+        "features: AS gives dyspnoea, angina and syncope with an "
+        "ejection systolic murmur to the carotids. MR gives "
+        "pansystolic murmur to axilla. AR gives early diastolic "
+        "murmur plus wide pulse pressure. MS gives loud S1, opening "
+        "snap and diastolic rumble. Ix: TTE is the workhorse; TOE if "
+        "TTE inadequate or endocarditis suspected; ECG, CXR, BNP; "
+        "cardiac cath and CTCA before surgery. Mx: monitor "
+        "mild-moderate; refer for intervention on symptoms or severe "
+        "with LV dysfunction. AS gets SAVR or TAVI; MR gets primary "
+        "repair over replacement; MS gets percutaneous mitral "
+        "commissurotomy. Anticoagulate AF in MS. Endocarditis "
+        "prophylaxis for prosthetic valves. Note: exertional syncope "
+        "plus ejection systolic murmur to carotids in elderly - "
+        "severe AS; TTE and refer for TAVI."
+    ),
+
+    "Neurogenic shock": (
+        "Distributive shock from spinal cord injury above T6 - loss "
+        "of sympathetic tone with unopposed vagal activity causes "
+        "hypotension and bradycardia. Distinct from spinal shock "
+        "(transient areflexia). Aetiology: high spinal cord injury "
+        "(usually cervical), traumatic or from epidural anaesthesia "
+        "or cord infarction; sympathetic outflow from T1-L2 disrupted "
+        "so peripheral vasodilation goes unopposed. Clinical "
+        "features: hypotension with bradycardia (unlike other shocks "
+        "which are tachycardic), warm dry flushed skin, "
+        "poikilothermia and priapism; deficit level matches injury "
+        "level; may last days to weeks. Ix: full trauma assessment; "
+        "cervical and thoracic MRI or CT; blood gas and lactate; ECG; "
+        "exclude coexisting haemorrhagic shock; C-spine "
+        "immobilisation. Mx: cautious crystalloid resuscitation "
+        "(avoid pulmonary oedema); noradrenaline or phenylephrine for "
+        "vasopressor support; atropine or transcutaneous pacing for "
+        "symptomatic bradycardia; DVT prophylaxis; early "
+        "neurosurgery. Target MAP over 85 for cord perfusion for 7 "
+        "days. Note: hypotension with bradycardia after cervical "
+        "trauma - neurogenic shock; vasopressors and MAP over 85."
+    ),
+
+    "Cubital tunnel syndrome": (
+        "Ulnar nerve compression at the elbow within the cubital "
+        "tunnel - second commonest upper-limb entrapment after carpal "
+        "tunnel. Aetiology: prolonged elbow flexion (leaning, "
+        "sleeping flexed), previous elbow fracture, arthritis, "
+        "ganglion, ulnar nerve subluxation over the medial "
+        "epicondyle, or repetitive occupational flexion. Clinical "
+        "features: paraesthesia and numbness of the little finger and "
+        "ulnar half of ring finger, worse at night or with elbow "
+        "flexion; intrinsic hand weakness with ulnar claw; positive "
+        "Froment sign; positive Tinel at the elbow. Ix: clinical; "
+        "nerve conduction studies confirm slowing across the elbow "
+        "(over 10 m/s reduction) and localise the lesion; MRI or "
+        "ultrasound for space-occupying lesion if atypical. Mx: "
+        "activity modification (avoid elbow flexion over 90 degrees, "
+        "elbow padding, night splint in extension); NSAIDs; surgical "
+        "decompression (in situ release, subcutaneous or submuscular "
+        "transposition) for persistent symptoms or motor weakness. "
+        "Note: little-finger numbness plus intrinsic hand weakness - "
+        "cubital tunnel; NCS confirms, refer for decompression if "
+        "motor signs."
+    ),
+
 
 }
 
