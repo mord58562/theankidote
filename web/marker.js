@@ -427,6 +427,12 @@
         _tipBox.classList.remove("sp-light");
       }
     }
+    // Drug generic names arrive lowercase ("desmopressin"); capitalise the
+    // first letter so titles read consistently with condition entries.
+    // Preserve all-caps acronyms (AMPK, ADH etc.) unchanged.
+    if (title && title.charAt(0) >= "a" && title.charAt(0) <= "z") {
+      title = title.charAt(0).toUpperCase() + title.slice(1);
+    }
     _tipTitle.textContent = title;
     var summaryHtml = summary ? _formatSummary(summary) : "";
     if (egg.t) {
