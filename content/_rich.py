@@ -1422,6 +1422,233 @@ NEW_CONDITIONS = [
                              "treatment"]],
         "summary": "",
     },
+    {
+        "name": "Chikungunya",
+        "aliases": [
+            "Chikungunya fever", "Chikungunya virus infection", "CHIKV"
+        ],
+        "utd": [["Overview", "chikungunya fever epidemiology clinical "
+                             "manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Zika virus infection",
+        "aliases": ["Zika virus disease", "Zika"],
+        "utd": [["Overview", "zika virus infection an overview"]],
+        "summary": "",
+    },
+    {
+        "name": "Onchocerciasis",
+        "aliases": ["River blindness", "Onchocerca volvulus infection"],
+        "utd": [["Overview", "onchocerciasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Beta blocker overdose",
+        "aliases": [
+            "Beta blocker toxicity", "Beta blocker poisoning",
+            "Propranolol overdose"
+        ],
+        "utd": [["Overview", "beta blocker poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Calcium channel blocker overdose",
+        "aliases": [
+            "Calcium channel blocker toxicity",
+            "Calcium channel blocker poisoning","Verapamil overdose"
+        ],
+        "utd": [["Overview", "calcium channel blocker poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Postoperative delirium",
+        "aliases": ["Postop delirium", "Post-surgical delirium"],
+        "utd": [["Overview", "postoperative delirium in adults risk factors "
+                             "and mitigation"]],
+        "summary": "",
+    },
+    {
+        "name": "Wound dehiscence",
+        "aliases": [
+            "Surgical wound dehiscence", "Abdominal wound dehiscence",
+            "Burst abdomen"
+        ],
+        "utd": [["Overview", "complications of abdominal surgical incisions"]],
+        "summary": "",
+    },
+    {
+        "name": "Anastomotic leak",
+        "aliases": ["Anastomotic dehiscence", "Bowel anastomotic leak"],
+        "utd": [["Overview", "management of anastomotic leak after "
+                             "colorectal surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Perforated tympanic membrane",
+        "aliases": [
+            "Tympanic membrane perforation", "Ruptured eardrum",
+            "TM perforation"
+        ],
+        "utd": [["Overview", "tympanic membrane perforation"]],
+        "summary": "",
+    },
+    {
+        "name": "Adjustment disorder",
+        "aliases": [
+            "Adjustment reaction", "Adjustment disorder with depressed mood"
+        ],
+        "utd": [["Overview", "adjustment disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Murray Valley encephalitis",
+        "aliases": ["MVE", "Murray Valley encephalitis virus infection"],
+        "utd": [["Overview", "arthropod borne encephalitides"]],
+        "summary": "",
+    },
+    {
+        "name": "Barmah Forest virus infection",
+        "aliases": ["Barmah Forest virus disease", "BFV infection"],
+        "utd": [["Overview", "arboviruses causing arthritis"]],
+        "summary": "",
+    },
+    {
+        "name": "Australian bat lyssavirus infection",
+        "aliases": ["ABLV infection", "Bat lyssavirus"],
+        "utd": [["Overview", "rabies epidemiology clinical manifestations "
+                             "and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Chagas disease",
+        "aliases": ["American trypanosomiasis", "Trypanosoma cruzi infection"],
+        "utd": [["Overview", "chagas disease chronic clinical "
+                             "manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Ascariasis",
+        "aliases": ["Ascaris lumbricoides infection", "Roundworm infection"],
+        "utd": [["Overview", "ascariasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Hookworm infection",
+        "aliases": [
+            "Ancylostomiasis", "Necatoriasis",
+            "Ancylostoma duodenale infection"
+        ],
+        "utd": [["Overview", "hookworm infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Brown snake envenoming",
+        "aliases": ["Pseudonaja envenoming", "Brown snake bite"],
+        "utd": [["Overview", "snakebites worldwide clinical manifestations "
+                             "and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Ethylene glycol poisoning",
+        "aliases": ["Ethylene glycol toxicity", "Antifreeze poisoning"],
+        "utd": [["Overview", "ethylene glycol and methanol poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Ectropion",
+        "aliases": ["Eyelid ectropion", "Lower eyelid ectropion"],
+        "utd": [["Overview", "overview of eyelid disorders"]],
+        "summary": "",
+    },
+    {
+        "name": "Entropion",
+        "aliases": ["Eyelid entropion", "Lower eyelid entropion"],
+        "utd": [["Overview", "entropion"]],
+        "summary": "",
+    },
+    {
+        "name": "Pinguecula",
+        "aliases": ["Pingueculum", "Pingueculitis"],
+        "utd": [["Overview", "pinguecula and pterygium"]],
+        "summary": "",
+    },
+    {
+        "name": "Choroidal melanoma",
+        "aliases": ["Uveal melanoma", "Ocular melanoma"],
+        "utd": [["Overview", "initial management of uveal and conjunctival "
+                             "melanomas"]],
+        "summary": "",
+    },
+    {
+        "name": "Cerumen impaction",
+        "aliases": ["Ear wax impaction", "Impacted cerumen"],
+        "utd": [["Overview", "cerumen"]],
+        "summary": "",
+    },
+    {
+        "name": "Auricular haematoma",
+        "aliases": [
+            "Auricular hematoma", "Pinna haematoma", "Cauliflower ear"
+        ],
+        "utd": [["Overview", "assessment and management of auricular "
+                             "hematoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulmonary sequestration",
+        "aliases": [
+            "Bronchopulmonary sequestration", "Intralobar sequestration",
+            "Extralobar sequestration"
+        ],
+        "utd": [["Overview", "congenital pulmonary airway malformation and "
+                             "pulmonary sequestration"]],
+        "summary": "",
+    },
+    {
+        "name": "Prinzmetal angina",
+        "aliases": [
+            "Vasospastic angina", "Variant angina", "Coronary artery spasm"
+        ],
+        "utd": [["Overview", "vasospastic angina"]],
+        "summary": "",
+    },
+    {
+        "name": "Interstitial cystitis",
+        "aliases": [
+            "Bladder pain syndrome",
+            "Interstitial cystitis bladder pain syndrome","IC BPS"
+        ],
+        "utd": [["Overview", "interstitial cystitis bladder pain syndrome "
+                             "clinical features and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Contrast induced nephropathy",
+        "aliases": [
+            "Contrast induced acute kidney injury", "Contrast induced AKI",
+            "Contrast associated AKI"
+        ],
+        "utd": [["Overview", "prevention of contrast associated acute "
+                             "kidney injury related to angiography"]],
+        "summary": "",
+    },
+    {
+        "name": "Empty sella syndrome",
+        "aliases": ["Empty sella", "Primary empty sella syndrome"],
+        "utd": [["Overview", "causes of hypopituitarism"]],
+        "summary": "",
+    },
+    {
+        "name": "Cradle cap",
+        "aliases": [
+            "Infantile seborrhoeic dermatitis",
+            "Infantile seborrheic dermatitis"
+        ],
+        "utd": [["Overview", "cradle cap and seborrheic dermatitis in "
+                             "infants"]],
+        "summary": "",
+    },
 ]
 
 
@@ -26447,6 +26674,575 @@ RICH_SUMMARIES = {
         "episode."
     ),
 
+    "Chikungunya": (
+        "Mosquito-borne alphavirus (Aedes aegypti and Aedes "
+        "albopictus) causing acute febrile polyarthritis, endemic in "
+        "Africa, South Asia and the Americas with sporadic Australian "
+        "imports. Clinical features: abrupt fever with bilateral "
+        "symmetric small joint pain that is often incapacitating, "
+        "plus a maculopapular rash on the trunk. Arthralgia can "
+        "persist for months and mimic rheumatoid disease. Ix: paired "
+        "serology, or RT-PCR within the first week; exclude dengue "
+        "and Zika, which share the vector and geography. Mx: "
+        "supportive with paracetamol and fluids. Avoid NSAIDs and "
+        "aspirin until dengue is excluded because of the bleeding "
+        "risk. Notifiable in Australia. Note: fever with striking "
+        "symmetric small joint pain in a returned traveller is "
+        "chikungunya until proven otherwise."
+    ),
+    "Zika virus infection": (
+        "Flavivirus spread by Aedes mosquitoes and by sexual contact, "
+        "with sporadic outbreaks in the Pacific and Americas. "
+        "Clinical features: mild febrile illness with a pruritic "
+        "maculopapular rash, non-purulent conjunctivitis and "
+        "arthralgia. Around 80% of infections are asymptomatic. "
+        "Guillain-Barre syndrome follows a minority of cases. In "
+        "pregnancy the virus crosses the placenta and causes "
+        "congenital Zika syndrome with microcephaly, cerebral "
+        "calcifications and ocular abnormalities. Ix: RT-PCR in serum "
+        "or urine in the first two weeks, then IgM serology; "
+        "cross-reacts with dengue so paired testing is needed. Mx: "
+        "supportive. Avoid pregnancy for at least 3 months after male "
+        "exposure and 2 months after female exposure per Australian "
+        "guidance, and use condoms in the interim. Notifiable. Note: "
+        "rash plus conjunctivitis in a returned traveller flags Zika; "
+        "pregnancy exposure needs specialist review."
+    ),
+    "Onchocerciasis": (
+        "Filarial infection with Onchocerca volvulus, transmitted by "
+        "the blackfly along fast-flowing rivers in sub-Saharan Africa "
+        "and pockets of Latin America. Also known as river blindness. "
+        "Clinical features: chronic pruritic dermatitis with "
+        "lichenification and pigment change, subcutaneous nodules "
+        "over bony prominences, and progressive keratitis with optic "
+        "atrophy leading to irreversible blindness. Ix: skin snip "
+        "microscopy for microfilariae, slit lamp for corneal "
+        "microfilariae, and PCR when microscopy is negative. Serology "
+        "supports the diagnosis in travellers. Mx: ivermectin single "
+        "dose repeated 6-monthly for the reproductive life of the "
+        "adult worm (up to 15 years). Exclude Loa loa co-infection "
+        "first because high loads cause encephalopathy after "
+        "ivermectin. Doxycycline 6 weeks targets the Wolbachia "
+        "endosymbiont and sterilises adult worms. Note: itchy skin "
+        "plus vision loss in a returned African traveller is "
+        "onchocerciasis."
+    ),
+    "Beta blocker overdose": (
+        "Bradycardia, hypotension and shock from beta adrenergic "
+        "blockade. Propranolol also causes sodium channel blockade "
+        "with QRS widening and seizures, and sotalol prolongs QT with "
+        "torsades. Clinical features: bradycardia unresponsive to "
+        "atropine, hypotension, bronchospasm and altered conscious "
+        "state. Hypoglycaemia occurs in children. Ix: ECG for rate, "
+        "QRS width and QT, paired paracetamol level, BSL, VBG and "
+        "electrolytes. Mx: airway support, IV crystalloid, atropine "
+        "and adrenaline infusion. High-dose insulin euglycaemia (1 "
+        "unit/kg bolus then 1 unit/kg/hr) is the specific inotrope "
+        "for cardiogenic shock. Add IV glucagon 5-10 mg and consider "
+        "intralipid for lipophilic agents such as propranolol. Sodium "
+        "bicarbonate for widened QRS. Discuss with Poisons "
+        "Information (13 11 26). Note: bradycardic hypotensive "
+        "patient not responding to atropine needs early high-dose "
+        "insulin, not more fluid."
+    ),
+    "Calcium channel blocker overdose": (
+        "Dihydropyridine (amlodipine) causes reflex tachycardia with "
+        "profound vasodilatory shock. Non-dihydropyridines "
+        "(verapamil, diltiazem) cause bradycardia, AV block and "
+        "cardiogenic shock. All produce hyperglycaemia from "
+        "pancreatic beta cell blockade, a useful clue. Clinical "
+        "features: hypotension, altered rate, altered mental state "
+        "and lactic acidosis. Verapamil ingestion of more than 10 "
+        "tablets in an adult is potentially lethal. Ix: ECG for rate "
+        "and blocks, BSL (hyperglycaemia supports the diagnosis), VBG "
+        "and paracetamol level. Mx: crystalloid, calcium gluconate 30 "
+        "mL of 10% IV, atropine for bradycardia and adrenaline or "
+        "noradrenaline. High-dose insulin euglycaemia is first line "
+        "for cardiogenic shock (1 unit/kg bolus then 1 unit/kg/hr "
+        "titrated), with dextrose to keep BSL 5-10. Intralipid rescue "
+        "if refractory. Poisons on 13 11 26. Note: hyperglycaemic "
+        "bradycardic shock after tablet ingestion is calcium channel "
+        "blocker toxicity."
+    ),
+    "Postoperative delirium": (
+        "Acute confusional state within 5 days of surgery, most "
+        "common after hip fracture, cardiac and major abdominal "
+        "surgery in older patients. Independent predictor of "
+        "prolonged stay and mortality. Aetiology: baseline cognitive "
+        "impairment, polypharmacy (especially opioids, "
+        "benzodiazepines and anticholinergics), sepsis, hypoxia, "
+        "uncontrolled pain, urinary retention and metabolic upset. "
+        "Clinical features: acute fluctuating disturbance in "
+        "attention and awareness. Hypoactive form is easily missed. "
+        "Use the 4AT or CAM to screen. Ix: bedside cognitive tool, "
+        "then targeted workup with FBC, EUC, CMP, glucose, "
+        "urinalysis, ECG and cultures if febrile. Review the "
+        "medication chart. Mx: treat the trigger, reorient, ensure "
+        "glasses and hearing aids, mobilise and normalise sleep. "
+        "Reserve low-dose haloperidol for severe distress or safety "
+        "risk. Note: hypoactive delirium looks like depression - "
+        "screen every postoperative older patient."
+    ),
+    "Wound dehiscence": (
+        "Partial or full-thickness separation of a surgical wound, "
+        "usually 5-8 days after laparotomy. Full-thickness abdominal "
+        "dehiscence with bowel evisceration is a surgical emergency. "
+        "Aetiology: technical failure, raised intra-abdominal "
+        "pressure (cough, ileus, obesity), poor tissue healing "
+        "(malnutrition, steroids, diabetes, chemo), and wound "
+        "infection. Clinical features: sudden serosanguinous "
+        "discharge (the 'pink fluid sign') precedes visible "
+        "dehiscence in most cases. Look for bulging, pain and a "
+        "palpable defect. Ix: clinical diagnosis. FBC and CRP to "
+        "gauge sepsis, wound swab if infected, and CT if occult "
+        "collection is suspected. Mx: cover eviscerated bowel with "
+        "saline-soaked gauze, resuscitate, analgesia and urgent "
+        "return to theatre for closure. Partial dehiscence without "
+        "evisceration is packed and often managed with negative "
+        "pressure therapy. Note: pink serosanguinous ooze from an "
+        "abdominal wound day five is impending dehiscence - review "
+        "before it opens."
+    ),
+    "Anastomotic leak": (
+        "Failure of a surgical anastomosis with leakage of luminal "
+        "contents. Most common and most morbid after low anterior "
+        "resection and oesophagectomy, and a leading cause of "
+        "postoperative mortality. Aetiology: tension, poor perfusion, "
+        "sepsis, malnutrition and steroids. Rectal joins below the "
+        "peritoneal reflection are highest risk. Clinical features: "
+        "usually days 5-7 with fever, tachycardia, ileus, faeculent "
+        "drain output or worsening abdominal pain. New AF after "
+        "colorectal surgery is a leak until proven otherwise. Ix: CT "
+        "with rectal contrast for colorectal joins, water-soluble "
+        "contrast swallow for oesophageal joins, FBC, CRP, lactate "
+        "and blood cultures. Mx: resuscitate, broad-spectrum "
+        "antibiotics and early surgical review. Contained leaks may "
+        "be drained; free leaks need theatre with washout, "
+        "defunctioning stoma or takedown. Note: unexplained "
+        "tachycardia or new AF after bowel surgery is a leak until CT "
+        "proves otherwise."
+    ),
+    "Perforated tympanic membrane": (
+        "Full-thickness discontinuity of the eardrum. Most heal "
+        "spontaneously within a month. Aetiology: acute otitis media "
+        "(most common in children), blast injury, direct trauma from "
+        "cotton buds, barotrauma from diving or slaps, and lightning "
+        "strike. Clinical features: sudden otalgia followed by relief "
+        "with ottorhoea in AOM, or immediate pain and hearing loss "
+        "after trauma. Otoscopy shows a defect, often with a rim of "
+        "blood. Ix: pneumatic otoscopy and tuning fork tests. "
+        "Audiometry if hearing loss persists. CT temporal bone if "
+        "ossicular injury or vertigo suggests inner ear involvement. "
+        "Mx: keep the ear dry, avoid water and swimming, and review "
+        "at 4-6 weeks. Topical antibiotics only if infected (avoid "
+        "ototoxic aminoglycosides). Refer to ENT if not healed by 3 "
+        "months for myringoplasty. Urgent ENT review for vertigo, "
+        "sensorineural loss or facial weakness. Note: vertigo or SNHL "
+        "after ear trauma means inner ear injury and needs urgent "
+        "ENT."
+    ),
+    "Adjustment disorder": (
+        "Emotional or behavioural symptoms in response to an "
+        "identifiable stressor, appearing within 3 months and "
+        "resolving within 6 months of the stressor ending. Distress "
+        "is out of proportion to the stressor and impairs function. "
+        "Aetiology: recent life event such as bereavement, "
+        "relationship breakdown, job loss, diagnosis of serious "
+        "illness or migration. Prior mood disorder and limited "
+        "supports increase risk. Clinical features: depressed mood, "
+        "anxiety or disturbance of conduct that does not meet "
+        "criteria for depression, anxiety disorder or PTSD. Suicidal "
+        "thoughts occur, particularly in adolescents. Ix: clinical "
+        "diagnosis. Screen with PHQ-9 and K10 to exclude major "
+        "depression, and ask directly about suicide. Mx: structured "
+        "problem-solving, brief supportive counselling or CBT is "
+        "first line. Reserve short-term benzodiazepines for severe "
+        "anxiety. Antidepressants are not indicated unless the "
+        "picture evolves into major depression. Note: the stressor is "
+        "identifiable and the symptoms don't meet a full disorder "
+        "threshold - that is the diagnosis."
+    ),
+    "Murray Valley encephalitis": (
+        "Rare mosquito-borne flavivirus in northern Australia, "
+        "notable for high case fatality (about 20%) and lasting "
+        "neurological deficits in survivors. Reservoir is water "
+        "birds, vector is Culex annulirostris. Clinical features: "
+        "prodromal fever, headache and nausea for a few days, then "
+        "encephalitis with confusion, seizures, cranial neuropathies "
+        "and flaccid paralysis. Ix: MRI shows bilateral thalamic and "
+        "brainstem signal change, CSF has lymphocytic pleocytosis, "
+        "and serology (IgM in CSF or serum) confirms; RT-PCR early. "
+        "Exclude Japanese encephalitis, Kunjin and herpes simplex. "
+        "Mx: supportive in ICU with airway support, seizure control "
+        "and management of raised ICP. No specific antiviral. "
+        "Notifiable to public health. Note: encephalitis in a "
+        "northern Australian summer with bilateral thalamic MRI "
+        "signal points to Murray Valley."
+    ),
+    "Barmah Forest virus infection": (
+        "Australian mosquito-borne alphavirus similar to Ross River "
+        "virus, with year-round transmission in coastal Queensland "
+        "and NSW. Clinical features: fever, arthralgia and a florid "
+        "vesicular or maculopapular rash that is often more prominent "
+        "than in Ross River virus. Symmetric small joint pain "
+        "typically resolves within 6 months but can be prolonged. Ix: "
+        "serology (IgM plus rising IgG). RT-PCR early. Exclude Ross "
+        "River virus, dengue and chikungunya. Notifiable. Mx: "
+        "supportive with paracetamol, NSAIDs and rest. No specific "
+        "antiviral. Mosquito avoidance for household contacts. Note: "
+        "rash-dominant epidemic polyarthritis in coastal Australia is "
+        "Barmah Forest until serology sorts it from Ross River virus."
+    ),
+    "Australian bat lyssavirus infection": (
+        "Rabies-related lyssavirus carried by Australian bats (flying "
+        "foxes and microbats). Any bat bite or scratch in Australia "
+        "is treated as a potential exposure - three human cases, all "
+        "fatal. Clinical features: after 2-8 weeks (occasionally "
+        "years) an indistinguishable rabies illness develops with "
+        "paraesthesiae at the wound site, hydrophobia, agitation, "
+        "ascending paralysis and death. Ix: post-exposure the "
+        "diagnosis is clinical. Antemortem confirmation is by RT-PCR "
+        "on saliva or CSF and skin biopsy immunofluorescence. Do NOT "
+        "delay prophylaxis for testing. Mx: post-exposure prophylaxis "
+        "within hours - wash the wound with soap and water for 15 "
+        "minutes, irrigate with virucide, give human rabies "
+        "immunoglobulin infiltrated around the wound plus a 4-dose "
+        "rabies vaccine course (day 0, 3, 7, 14). Once symptomatic, "
+        "care is palliative. Notifiable. Note: every bat contact in "
+        "Australia gets rabies PEP - assume lyssavirus until proven "
+        "otherwise."
+    ),
+    "Chagas disease": (
+        "Chronic infection with Trypanosoma cruzi, transmitted by the "
+        "triatomine bug in Latin America and increasingly by blood "
+        "transfusion and vertical spread outside endemic areas. "
+        "Clinical features: acute phase is often subclinical or a "
+        "mild febrile illness with Romana sign (unilateral "
+        "periorbital swelling from bug-bite conjunctival "
+        "inoculation). Chronic phase (decades later) causes dilated "
+        "cardiomyopathy with conduction disease, apical aneurysm, "
+        "mega-oesophagus and megacolon. Ix: acute - blood microscopy "
+        "or PCR. Chronic - two different serologies. Screen at-risk "
+        "migrants; screen donors in Australia. Mx: benznidazole or "
+        "nifurtimox for acute infection, reactivation in "
+        "immunocompromise, and early chronic disease. Treat "
+        "cardiomyopathy along standard heart failure lines with "
+        "amiodarone or ICD for arrhythmia risk. Note: a Latin "
+        "American migrant with unexplained conduction disease or "
+        "cardiomyopathy needs Chagas serology."
+    ),
+    "Ascariasis": (
+        "Human roundworm infection with Ascaris lumbricoides, the "
+        "most prevalent helminth globally, transmitted by faecal-oral "
+        "ingestion of eggs. Clinical features: often asymptomatic. "
+        "Larval migration through the lungs produces Loeffler "
+        "syndrome (transient cough, wheeze and eosinophilic "
+        "infiltrates). Adult worms in the gut cause vague abdominal "
+        "pain and, with heavy burden, small bowel obstruction, "
+        "biliary or pancreatic duct obstruction and appendicitis. "
+        "Children may pass worms in stool or vomit. Ix: stool "
+        "microscopy for eggs. Eosinophilia during migratory phase. "
+        "Imaging shows worms as tubular filling defects. Mx: "
+        "albendazole 400 mg single dose or mebendazole 100 mg BD for "
+        "3 days, per eTG. Treat obstruction surgically or "
+        "endoscopically. Public health measures target sanitation. "
+        "Note: eosinophilic pneumonia in a returned traveller from a "
+        "tropical region is Loeffler until Ascaris and Strongyloides "
+        "are excluded."
+    ),
+    "Hookworm infection": (
+        "Intestinal nematode infection (Ancylostoma duodenale and "
+        "Necator americanus) from larval penetration of skin, mostly "
+        "the feet. Leading global cause of iron deficiency anaemia. "
+        "Clinical features: pruritic 'ground itch' rash at entry, "
+        "then Loeffler-type pulmonary symptoms during migration, and "
+        "finally chronic epigastric pain with iron deficiency anaemia "
+        "and protein-losing enteropathy from adult worms attached in "
+        "the small bowel. Ix: stool microscopy for eggs. Eosinophilia "
+        "is prominent. FBC and iron studies confirm the anaemia. Mx: "
+        "albendazole 400 mg single dose (repeat in 2 weeks for heavy "
+        "load), or mebendazole. Iron replacement. Sanitation and "
+        "shoe-wearing are the prevention. Presumptive empirical "
+        "treatment is standard for at-risk migrants and returned "
+        "travellers with unexplained eosinophilia. Note: iron "
+        "deficiency anaemia with eosinophilia in a person from an "
+        "endemic area is hookworm."
+    ),
+    "Brown snake envenoming": (
+        "Envenoming by Pseudonaja species, the leading cause of snake "
+        "bite deaths in Australia. Venom causes venom-induced "
+        "consumptive coagulopathy, occasional thrombotic "
+        "microangiopathy and, rarely, myotoxicity or neurotoxicity. "
+        "Clinical features: brief syncope or seizure at the bite "
+        "scene is common. Local signs are minimal (no swelling or "
+        "necrosis). Bleeding from gums or the venepuncture site, "
+        "nausea and collapse follow. Ix: coagulation profile (INR, "
+        "aPTT, fibrinogen, D-dimer), FBC, CK, EUC and urine for "
+        "haemoglobinuria at 0, 1, 6 and 12 hours. Snake venom "
+        "detection kit on the bite site swab (not blood) is "
+        "unreliable and does not decide antivenom. Mx: pressure "
+        "immobilisation bandage in situ until resuscitation area is "
+        "ready. Give brown snake antivenom for systemic envenoming "
+        "(coagulopathy or collapse). Fresh frozen plasma once "
+        "antivenom is given for VICC. Discuss with Poisons on 13 11 "
+        "26. Note: sudden collapse in an Australian outback setting "
+        "with minimal local signs is brown snake until coagulation "
+        "says otherwise."
+    ),
+    "Ethylene glycol poisoning": (
+        "Antifreeze ingestion producing high anion gap metabolic "
+        "acidosis, acute kidney injury from calcium oxalate crystal "
+        "deposition and, late, cranial neuropathies. Clinical "
+        "features: initial ethanol-like intoxication, then 6-12 hours "
+        "later a wide anion gap acidosis with Kussmaul breathing, "
+        "tachycardia and hypocalcaemia. AKI develops within 24-72 "
+        "hours. Ix: ABG for high anion gap acidosis and raised "
+        "osmolar gap, EUC and calcium, urinalysis (calcium oxalate "
+        "crystals and fluorescence under Wood lamp if "
+        "fluorescein-containing product), and serum ethylene glycol "
+        "level if available. Mx: fomepizole 15 mg/kg IV loading (or "
+        "ethanol infusion if fomepizole unavailable) blocks alcohol "
+        "dehydrogenase. Cofactors thiamine and pyridoxine shunt "
+        "metabolism away from oxalate. Haemodialysis for severe "
+        "acidosis (pH under 7.25), rising creatinine or high level. "
+        "Contact Poisons 13 11 26. Note: high anion gap plus high "
+        "osmolar gap after 'drinking something odd' is toxic alcohol "
+        "until proven otherwise."
+    ),
+    "Ectropion": (
+        "Outward turning of the lower eyelid margin exposing the "
+        "conjunctiva. Common in the elderly. Aetiology: involutional "
+        "laxity is most common. Cicatricial (scarring from burns, "
+        "trauma, chronic dermatitis or actinic damage), paralytic "
+        "(facial nerve palsy) and mechanical (tumour) causes also "
+        "occur. Clinical features: epiphora (tearing), chronic "
+        "conjunctival irritation, exposure keratitis and cosmetic "
+        "disturbance. The eyelid punctum is displaced away from the "
+        "globe. Ix: clinical diagnosis. Snap test and distraction "
+        "test grade eyelid laxity. Look for underlying facial nerve "
+        "weakness or cicatricial change. Mx: ocular lubricants and "
+        "taping at night for mild disease. Treat exposure keratitis "
+        "with intensive lubrication. Surgical correction (lateral "
+        "tarsal strip for involutional, skin graft for cicatricial) "
+        "by ophthalmology for symptomatic or corneal-threatening "
+        "disease. Note: watering eye with a punctum turned outward is "
+        "ectropion, not blocked tear duct."
+    ),
+    "Entropion": (
+        "Inward turning of the lower eyelid margin so eyelashes "
+        "abrade the cornea. Involutional entropion is common in "
+        "elderly people. Aetiology: involutional (laxity of "
+        "retractors), cicatricial (trachoma, ocular pemphigoid, "
+        "Stevens-Johnson, chemical burn), spastic (following ocular "
+        "irritation) and congenital. Clinical features: foreign body "
+        "sensation, red eye, trichiasis with corneal abrasion or "
+        "ulceration, tearing and photophobia. Ix: slit lamp "
+        "examination for corneal staining. Consider the underlying "
+        "cause in cicatricial cases. Mx: temporary taping of the "
+        "eyelid outward and lubricants protect the cornea. Surgical "
+        "repair (Wies procedure or everting sutures) is definitive. "
+        "In cicatricial disease treat the underlying cause first. "
+        "Note: red painful eye with lashes rubbing the cornea in an "
+        "elderly person is entropion - tape it out before it "
+        "ulcerates."
+    ),
+    "Pinguecula": (
+        "Yellowish elastotic degeneration of the bulbar conjunctiva "
+        "adjacent to (but not crossing) the limbus, usually nasally. "
+        "Aetiology: chronic UV exposure, wind and dust. Common in "
+        "Australia. Clinical features: yellow-white raised "
+        "conjunctival lesion at 3 or 9 o'clock. Usually asymptomatic, "
+        "occasionally inflamed (pingueculitis) with redness and "
+        "grittiness. Ix: clinical diagnosis with slit lamp; "
+        "distinguish from pterygium (which encroaches on the cornea). "
+        "Mx: lubricants and sun protection with wraparound "
+        "sunglasses. Topical NSAID or short-course topical steroid "
+        "for symptomatic pingueculitis. Excision only for cosmetic "
+        "reasons or if progressing. Note: yellow bump on the sclera "
+        "that stops at the limbus is a pinguecula - if it crosses "
+        "onto the cornea it is a pterygium."
+    ),
+    "Choroidal melanoma": (
+        "Primary malignancy of uveal melanocytes and the most common "
+        "primary intraocular tumour in adults. Aetiology: light iris "
+        "colour, fair skin, oculodermal melanocytosis (Ota naevus) "
+        "and BAP1 germline mutation. UV exposure has a weaker role "
+        "than in cutaneous melanoma. Clinical features: painless "
+        "blurred vision, photopsia, floaters or visual field loss. "
+        "Many are asymptomatic and found on routine fundoscopy as a "
+        "pigmented choroidal mass with overlying subretinal fluid. "
+        "Metastasises haematogenously to liver in about half of "
+        "cases. Ix: dilated fundoscopy, B-scan ultrasound (high "
+        "internal reflectivity), fluorescein angiography and OCT. "
+        "Systemic staging includes liver imaging. Genetic testing "
+        "(monosomy 3, BAP1) stratifies metastatic risk. Mx: plaque "
+        "brachytherapy, proton beam radiotherapy or enucleation "
+        "depending on size. Small tumours may be observed. Metastatic "
+        "disease is treated with immunotherapy or tebentafusp "
+        "(HLA-A*02:01 positive). Note: pigmented fundus lesion with "
+        "subretinal fluid needs urgent ocular oncology - not just "
+        "observation."
+    ),
+    "Cerumen impaction": (
+        "Symptomatic accumulation of ear wax occluding the external "
+        "auditory canal. Aetiology: narrow or hairy canals, hearing "
+        "aid use, use of cotton buds pushing wax deeper, and "
+        "age-related drier wax. Clinical features: conductive hearing "
+        "loss, aural fullness, itch, tinnitus and reflex cough. "
+        "Otoscopy shows wax obstructing the view of the drum. Ix: "
+        "otoscopy alone. Audiometry only if hearing loss persists "
+        "after removal. Mx: cerumenolytic drops (docusate or sodium "
+        "bicarbonate 5%) for 3-5 days, then irrigation with body "
+        "temperature water using an ear syringe or electronic "
+        "irrigator. Manual removal with curette or microsuction for "
+        "adherent wax, tympanic membrane perforation or grommets. Do "
+        "not irrigate a perforated drum or a mastoid cavity. Note: "
+        "hearing loss with wax visible on otoscopy - remove it before "
+        "ordering audiogram or considering hearing aids."
+    ),
+    "Auricular haematoma": (
+        "Collection of blood between the auricular perichondrium and "
+        "cartilage, usually after blunt trauma in contact sports "
+        "(rugby, wrestling, boxing). Left untreated it organises and "
+        "becomes fibrotic, producing 'cauliflower ear'. Clinical "
+        "features: painful, tense, fluctuant swelling of the pinna "
+        "with loss of normal contour. Ear may appear purple. Ix: "
+        "clinical diagnosis. Consider imaging if head injury or "
+        "temporal bone fracture is suspected. Mx: drain within 7 days "
+        "by needle aspiration or incision and drainage under sterile "
+        "conditions, followed by a pressure dressing (bolster sutures "
+        "or plaster mould) held for 5-7 days to prevent "
+        "re-accumulation. Antibiotics if signs of infection or "
+        "delayed presentation. Refer to ENT if recurrent or complex. "
+        "Note: any post-scrum ear swelling gets drained the same day "
+        "- delay is what causes cauliflower ear."
+    ),
+    "Pulmonary sequestration": (
+        "Congenital malformation of non-functioning lung tissue "
+        "supplied by an anomalous systemic artery (usually from the "
+        "descending aorta) and without communication with the "
+        "tracheobronchial tree. Aetiology: intralobar (within normal "
+        "visceral pleura, presenting in older children and adults) or "
+        "extralobar (with its own pleura, presenting in infancy, "
+        "often with other anomalies). Clinical features: recurrent "
+        "infection in the same pulmonary region (usually left lower "
+        "lobe), haemoptysis, or an incidental mass on imaging. "
+        "Extralobar type may be found antenatally. Ix: CT with "
+        "contrast or MRA shows the systemic feeding artery, which is "
+        "diagnostic. Chest X-ray may show a posterior basal mass or "
+        "persistent consolidation. Mx: surgical resection (lobectomy "
+        "or segmentectomy) for recurrent infection or haemoptysis. "
+        "Ligate the anomalous artery first to avoid catastrophic "
+        "bleeding. Small asymptomatic extralobar lesions may be "
+        "observed. Note: recurrent same-lobe pneumonia in a young "
+        "adult needs CT with contrast to find the systemic artery."
+    ),
+    "Prinzmetal angina": (
+        "Coronary artery vasospasm causing transient transmural "
+        "ischaemia at rest, with ST elevation on ECG. Also called "
+        "vasospastic or variant angina. Aetiology: smoking is the "
+        "strongest modifiable risk. Cocaine and amphetamines are "
+        "potent triggers. Endothelial dysfunction and autonomic "
+        "imbalance underlie idiopathic cases. More common in Japanese "
+        "and Korean populations. Clinical features: recurrent chest "
+        "pain at rest, often between midnight and early morning, "
+        "lasting 5-15 minutes and relieved by nitrates. Younger "
+        "patients, fewer traditional CVD risks. Can precipitate MI, "
+        "arrhythmia and sudden death. Ix: ECG during pain shows "
+        "transient ST elevation resolving with symptoms. Coronary "
+        "angiography excludes fixed stenosis; provocation with "
+        "ergonovine or acetylcholine confirms spasm in specialist "
+        "centres. Holter monitor helps if intermittent. Mx: calcium "
+        "channel blocker (diltiazem or amlodipine) is first line, "
+        "adding a long-acting nitrate. Stop smoking, cocaine and "
+        "amphetamines. Avoid non-selective beta blockers which worsen "
+        "spasm. Note: ST elevation at rest that comes and goes with "
+        "the pain in a young smoker is Prinzmetal, not STEMI."
+    ),
+    "Interstitial cystitis": (
+        "Chronic bladder pain syndrome with urinary frequency and "
+        "urgency in the absence of infection or other identifiable "
+        "cause. Predominantly affects women aged 30-50. Aetiology: "
+        "uncertain. Deficient glycosaminoglycan lining, mast cell "
+        "activation, neurogenic inflammation and pelvic floor "
+        "dysfunction all proposed. Often co-occurs with fibromyalgia, "
+        "IBS and endometriosis. Clinical features: bladder pain "
+        "worsened by filling and relieved by voiding, urinary "
+        "frequency (often over 10 per day), nocturia, urgency, "
+        "dyspareunia and negative cultures. Ix: urinalysis and "
+        "culture to exclude infection. Bladder diary. Cystoscopy "
+        "under anaesthesia may show Hunner lesions (pathognomonic) or "
+        "glomerulations after hydrodistension. Rule out bladder "
+        "cancer with cystoscopy in smokers and haematuria. Mx: staged "
+        "- bladder retraining, pelvic floor physiotherapy and dietary "
+        "trigger avoidance (caffeine, alcohol, acidic foods) first. "
+        "Oral amitriptyline or pentosan polysulfate, intravesical "
+        "DMSO, then cystoscopic Hunner lesion treatment or "
+        "neuromodulation for refractory cases. Note: frequency and "
+        "pain relieved by voiding with sterile urine is interstitial "
+        "cystitis, not recurrent UTI."
+    ),
+    "Contrast induced nephropathy": (
+        "Acute kidney injury within 48-72 hours of iodinated contrast "
+        "administration, defined as a rise in creatinine of 25% or 44 "
+        "micromol/L above baseline. Usually reversible within 2 "
+        "weeks. Increasingly recognised as overestimated compared to "
+        "the underlying critical illness, but still relevant in "
+        "at-risk patients. Aetiology: pre-existing renal impairment "
+        "(eGFR under 45), diabetes, dehydration, heart failure, high "
+        "contrast volume, and concurrent nephrotoxins (NSAIDs, ACEi, "
+        "aminoglycosides). Clinical features: usually asymptomatic "
+        "rise in creatinine. Rarely oliguria and volume overload. Ix: "
+        "baseline and 48-72 hour creatinine. Urinalysis is typically "
+        "bland. Mx: prevention is the intervention - identify at-risk "
+        "patients, use minimum contrast volume, and give IV isotonic "
+        "saline before and after the study (1 mL/kg/hr for 6-12 hours "
+        "either side). Withhold metformin and NSAIDs peri-procedure. "
+        "N-acetylcysteine and bicarbonate are not routinely "
+        "recommended. Manage established AKI supportively. Note: eGFR "
+        "under 45 plus contrast plus dehydration is the recipe - fix "
+        "the fluid status before booking the scan."
+    ),
+    "Empty sella syndrome": (
+        "Herniation of subarachnoid space into the sella turcica, "
+        "flattening the pituitary gland against the sellar floor. "
+        "Aetiology: primary (congenital incomplete diaphragma sellae, "
+        "often with obesity and hypertension in middle-aged women) or "
+        "secondary (after pituitary surgery, radiotherapy, apoplexy, "
+        "or infarction of a Sheehan). Clinical features: often "
+        "incidental on imaging. Can present with headache, visual "
+        "disturbance from optic chiasm traction, or partial "
+        "hypopituitarism (typically growth hormone and gonadotrophin "
+        "deficiency first). CSF rhinorrhoea occurs rarely. Ix: MRI "
+        "pituitary is the study, showing CSF-filled sella. Full "
+        "anterior pituitary panel (morning cortisol, TSH, free T4, "
+        "prolactin, LH, FSH, testosterone or oestradiol, IGF-1) and "
+        "formal visual fields. Mx: hormone replacement for any "
+        "deficient axes. Surgical repair only if CSF leak or visual "
+        "compromise. Reassurance for incidental primary empty sella "
+        "with intact function. Note: incidental 'empty sella' on MRI "
+        "still needs a pituitary hormone panel - one axis is often "
+        "quietly failing."
+    ),
+    "Cradle cap": (
+        "Infantile seborrhoeic dermatitis, common in the first 3 "
+        "months of life and usually self-limiting by 6-12 months. "
+        "Aetiology: linked to maternal androgen stimulation of "
+        "neonatal sebaceous glands and Malassezia colonisation. "
+        "Clinical features: yellow greasy scale on the scalp, "
+        "sometimes extending to the eyebrows, ears and nappy area. "
+        "Non-pruritic and does not disturb the baby. Distinguish from "
+        "atopic dermatitis (which is itchy and involves the face and "
+        "flexures) and tinea capitis (which has hair loss and "
+        "inflammation). Ix: clinical diagnosis. Mx: soften scale with "
+        "baby oil or emulsifying ointment for 15 minutes, then wash "
+        "with mild baby shampoo and brush gently. Ketoconazole 2% "
+        "shampoo or a short course of 1% hydrocortisone for more "
+        "extensive or persistent disease. Reassure - it resolves "
+        "spontaneously and does not scar. Note: greasy yellow scalp "
+        "scale in a happy well baby is cradle cap - reassure and "
+        "moisturise before medicating."
+    ),
 }
 
 
