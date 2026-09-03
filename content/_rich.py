@@ -1008,6 +1008,80 @@ NEW_CONDITIONS = [
                              "adults"]],
         "summary": "",
     },
+    {
+        "name": "Cervical intraepithelial neoplasia",
+        "aliases": ["CIN"],
+        "utd": [["Overview", "cervical intraepithelial neoplasia "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Nutcracker syndrome",
+        "aliases": ["Left renal vein entrapment syndrome"],
+        "utd": [["Overview", "renal vein entrapment nutcracker "
+                             "syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Ischaemic hepatitis",
+        "aliases": ["Ischemic hepatitis", "Shock liver",
+                    "Hypoxic hepatitis"],
+        "utd": [["Overview", "ischemic hepatitis shock liver"]],
+        "summary": "",
+    },
+    {
+        "name": "Renal papillary necrosis",
+        "aliases": ["Papillary necrosis"],
+        "utd": [["Overview", "renal papillary necrosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Central diabetes insipidus",
+        "aliases": ["Central DI", "Neurogenic diabetes insipidus"],
+        "utd": [["Overview", "clinical manifestations and causes of "
+                             "central diabetes insipidus"]],
+        "summary": "",
+    },
+    {
+        "name": "Adrenal incidentaloma",
+        "aliases": [],
+        "utd": [["Overview", "evaluation and management of the adrenal "
+                             "incidentaloma"]],
+        "summary": "",
+    },
+    {
+        "name": "Subclinical hypothyroidism",
+        "aliases": [],
+        "utd": [["Overview", "subclinical hypothyroidism in "
+                             "nonpregnant adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Subclinical hyperthyroidism",
+        "aliases": [],
+        "utd": [["Overview", "subclinical hyperthyroidism in "
+                             "nonpregnant adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Toxic hepatitis",
+        "aliases": ["Toxin-induced hepatitis"],
+        "utd": [["Overview", "drug-induced liver injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Vertebrobasilar insufficiency",
+        "aliases": ["VBI", "Posterior circulation TIA"],
+        "utd": [["Overview", "posterior circulation cerebrovascular "
+                             "syndromes"]],
+        "summary": "",
+    },
+    {
+        "name": "Conus medullaris syndrome",
+        "aliases": [],
+        "utd": [["Overview", "acute lumbosacral radiculopathy"]],
+        "summary": "",
+    },
 ]
 
 
