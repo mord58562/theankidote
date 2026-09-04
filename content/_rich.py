@@ -2009,6 +2009,222 @@ NEW_CONDITIONS = [
         "utd": [["Overview", 'absolute cardiovascular risk assessment Australia calculator']],
         "summary": "",
     },
+    {
+        "name": 'Acute mastoiditis',
+        "aliases": ['Mastoiditis'],
+        "utd": [["Overview", 'acute mastoiditis children treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Keratoconus',
+        "aliases": [],
+        "utd": [["Overview", 'keratoconus diagnosis management']],
+        "summary": "",
+    },
+    {
+        "name": 'Laryngomalacia',
+        "aliases": [],
+        "utd": [["Overview", 'laryngomalacia infant stridor']],
+        "summary": "",
+    },
+    {
+        "name": 'Salicylate toxicity',
+        "aliases": ['Aspirin overdose', 'Aspirin toxicity'],
+        "utd": [["Overview", 'salicylate aspirin poisoning management']],
+        "summary": "",
+    },
+    {
+        "name": 'Urethral stricture',
+        "aliases": [],
+        "utd": [["Overview", 'urethral stricture disease management']],
+        "summary": "",
+    },
+    {
+        "name": 'Vocal cord nodules',
+        "aliases": ['Vocal fold nodules', "Singer's nodules"],
+        "utd": [["Overview", 'vocal cord nodules diagnosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Keratoacanthoma',
+        "aliases": [],
+        "utd": [["Overview", 'keratoacanthoma diagnosis management']],
+        "summary": "",
+    },
+    {
+        "name": 'Tinea capitis',
+        "aliases": ['Scalp ringworm'],
+        "utd": [["Overview", 'tinea capitis treatment children']],
+        "summary": "",
+    },
+    {
+        "name": 'Erythema ab igne',
+        "aliases": ['Toasted skin syndrome'],
+        "utd": [["Overview", 'erythema ab igne']],
+        "summary": "",
+    },
+    {
+        "name": 'Perichondritis',
+        "aliases": ['Auricular perichondritis'],
+        "utd": [["Overview", 'auricular perichondritis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Globus pharyngeus',
+        "aliases": ['Globus sensation'],
+        "utd": [["Overview", 'globus pharyngeus evaluation']],
+        "summary": "",
+    },
+    {
+        "name": 'Laryngeal papillomatosis',
+        "aliases": ['Recurrent respiratory papillomatosis'],
+        "utd": [["Overview", 'recurrent respiratory papillomatosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Dacryoadenitis',
+        "aliases": [],
+        "utd": [["Overview", 'dacryoadenitis diagnosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Retinitis pigmentosa',
+        "aliases": [],
+        "utd": [["Overview", 'retinitis pigmentosa management']],
+        "summary": "",
+    },
+    {
+        "name": 'Hyphema',
+        "aliases": ['Traumatic hyphema'],
+        "utd": [["Overview", 'hyphema management emergency']],
+        "summary": "",
+    },
+    {
+        "name": 'Episcleritis',
+        "aliases": [],
+        "utd": [["Overview", 'episcleritis diagnosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Urethritis',
+        "aliases": [],
+        "utd": [["Overview", 'urethritis diagnosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Neurogenic bladder',
+        "aliases": ['Neurogenic bladder dysfunction'],
+        "utd": [["Overview", 'neurogenic bladder management']],
+        "summary": "",
+    },
+    {
+        "name": 'Wilms tumour',
+        "aliases": ['Nephroblastoma', 'Wilms tumor'],
+        "utd": [["Overview", 'Wilms tumor treatment children']],
+        "summary": "",
+    },
+    {
+        "name": 'Lymphogranuloma venereum',
+        "aliases": ['LGV'],
+        "utd": [["Overview", 'lymphogranuloma venereum treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Meralgia paraesthetica',
+        "aliases": ['Meralgia paresthetica'],
+        "utd": [["Overview", 'meralgia paresthetica diagnosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Piriformis syndrome',
+        "aliases": [],
+        "utd": [["Overview", 'piriformis syndrome diagnosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Tarsal tunnel syndrome',
+        "aliases": [],
+        "utd": [["Overview", 'tarsal tunnel syndrome diagnosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Spondylolisthesis',
+        "aliases": [],
+        "utd": [["Overview", 'spondylolisthesis management']],
+        "summary": "",
+    },
+    {
+        "name": 'Factitious disorder',
+        "aliases": ['Munchausen syndrome'],
+        "utd": [["Overview", 'factitious disorder diagnosis']],
+        "summary": "",
+    },
+    {
+        "name": 'Conversion disorder',
+        "aliases": ['Functional neurological symptom disorder', 'FND'],
+        "utd": [["Overview", 'functional neurological disorder treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Hand-foot-mouth disease',
+        "aliases": ['HFMD'],
+        "utd": [["Overview", 'hand foot mouth disease treatment children']],
+        "summary": "",
+    },
+    {
+        "name": 'Threadworm',
+        "aliases": ['Pinworm', 'Enterobius vermicularis'],
+        "utd": [["Overview", 'threadworm pinworm treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Talipes equinovarus',
+        "aliases": ['Clubfoot', 'Congenital talipes equinovarus'],
+        "utd": [["Overview", 'clubfoot Ponseti method treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Uterine rupture',
+        "aliases": [],
+        "utd": [["Overview", 'uterine rupture emergency management']],
+        "summary": "",
+    },
+    {
+        "name": 'Premature ovarian insufficiency',
+        "aliases": ['POI', 'Premature ovarian failure'],
+        "utd": [["Overview", 'premature ovarian insufficiency management']],
+        "summary": "",
+    },
+    {
+        "name": 'Scarlet fever',
+        "aliases": ['Scarlatina'],
+        "utd": [["Overview", 'scarlet fever treatment children']],
+        "summary": "",
+    },
+    {
+        "name": 'Cat scratch disease',
+        "aliases": ['Bartonellosis', 'Cat scratch fever'],
+        "utd": [["Overview", 'cat scratch disease treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Giardiasis',
+        "aliases": ['Giardia infection'],
+        "utd": [["Overview", 'giardiasis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Cyanide poisoning',
+        "aliases": ['Cyanide toxicity'],
+        "utd": [["Overview", 'cyanide poisoning antidote treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Drowning',
+        "aliases": ['Near drowning', 'Submersion injury'],
+        "utd": [["Overview", 'drowning management resuscitation']],
+        "summary": "",
+    },
 ]
 
 
@@ -28748,6 +28964,593 @@ RICH_SUMMARIES = {
         "individual lipid or BP levels, shared decision-making at "
         "intermediate risk. Note: recalculate every 2 years if low, "
         "yearly if intermediate."
+    ),
+    "Acute mastoiditis": (
+        "Suppurative spread of acute otitis media into the mastoid "
+        "air cells, most often in young children. Aetiology: "
+        "Streptococcus pneumoniae, Streptococcus pyogenes and "
+        "Staphylococcus aureus, following inadequately treated or "
+        "recurrent otitis media. Clinical features: postauricular "
+        "erythema, swelling and tenderness with the pinna pushed "
+        "forward and down, fever and otorrhoea. Ix: clinical "
+        "diagnosis; CT temporal bone if intracranial extension, "
+        "coalescence or complication is suspected. Mx: IV antibiotics "
+        "(per eTG - ceftriaxone or similar) and ENT referral; "
+        "myringotomy or cortical mastoidectomy for coalescent disease "
+        "or abscess. Note: think of it whenever otitis media fails to "
+        "settle with a tender, protruding ear."
+    ),
+    "Keratoconus": (
+        "Progressive corneal ectasia with thinning and conical "
+        "bulging, usually starting in adolescence. Aetiology: "
+        "associated with chronic eye rubbing, atopy, Down syndrome "
+        "and connective tissue disorders. Clinical features: "
+        "progressive myopia and irregular astigmatism, monocular "
+        "diplopia and glare, Munson sign (V-shaped lower lid on "
+        "downgaze) in advanced disease. Ix: corneal topography shows "
+        "inferior steepening; slit lamp may show Fleischer ring and "
+        "Vogt striae. Mx: spectacles or rigid contact lenses early; "
+        "corneal cross-linking to halt progression once documented; "
+        "corneal transplant for advanced disease. Note: eye rubbing "
+        "is the modifiable risk factor worth asking about and "
+        "counselling against."
+    ),
+    "Laryngomalacia": (
+        "Congenital softening of the supraglottic laryngeal "
+        "cartilage, the commonest cause of stridor in infants. "
+        "Aetiology: immature cartilage causing the epiglottis and "
+        "arytenoids to collapse inward on inspiration. Clinical "
+        "features: inspiratory stridor from the first weeks of life, "
+        "worse supine, feeding and crying, better prone; usually well "
+        "otherwise. Ix: clinical diagnosis; flexible nasendoscopy "
+        "confirms if feeding difficulty, failure to thrive or apnoea "
+        "are present. Mx: reassurance and observation, most resolve "
+        "by 12-24 months; supraglottoplasty reserved for severe "
+        "obstruction, failure to thrive or apnoeic episodes. Note: "
+        "red flags for referral are biphasic stridor, feeding "
+        "difficulty or growth faltering, not stridor alone."
+    ),
+    "Salicylate toxicity": (
+        "Aspirin overdose causing a mixed acid-base disturbance and "
+        "direct metabolic toxicity. Aetiology: deliberate "
+        "self-poisoning or, in children, accidental ingestion; "
+        "chronic toxicity from therapeutic use is under-recognised in "
+        "the elderly. Clinical features: tinnitus, hyperventilation, "
+        "nausea, sweating and confusion; early respiratory alkalosis "
+        "(direct respiratory centre stimulation) followed by a "
+        "superimposed metabolic acidosis. Ix: serum salicylate level, "
+        "ABG, electrolytes and glucose; repeat levels as absorption "
+        "can be delayed. Mx: activated charcoal if early, IV fluids, "
+        "urinary alkalinisation with sodium bicarbonate to enhance "
+        "elimination, haemodialysis for severe toxicity, altered "
+        "mental state or renal impairment. Note: never intubate "
+        "without senior input - losing hyperventilation precipitates "
+        "acidaemia and can be fatal."
+    ),
+    "Urethral stricture": (
+        "Narrowing of the urethral lumen from scar tissue, causing "
+        "progressive obstructive voiding. Aetiology: iatrogenic "
+        "(catheterisation, TURP), trauma (straddle injury, pelvic "
+        "fracture), infection (gonococcal urethritis) or idiopathic. "
+        "Clinical features: weak or split stream, straining, "
+        "incomplete emptying, recurrent UTI or urinary retention. Ix: "
+        "uroflowmetry shows a plateaued flow curve; retrograde "
+        "urethrogram or cystoscopy defines the site and length. Mx: "
+        "urethral dilatation or optical urethrotomy for short "
+        "strictures, urethroplasty for longer or recurrent disease; "
+        "suprapubic catheter if in acute retention and urethral "
+        "access fails. Note: recurrent stricture after dilatation "
+        "should prompt referral for definitive urethroplasty rather "
+        "than repeated dilatation."
+    ),
+    "Vocal cord nodules": (
+        "Benign bilateral mucosal thickenings at the junction of the "
+        "anterior and middle thirds of the vocal folds, from chronic "
+        "voice misuse. Aetiology: repetitive phonotrauma - shouting, "
+        "singing or occupational voice overuse (teachers, singers). "
+        "Clinical features: gradual hoarseness, vocal fatigue and a "
+        "breathy or rough voice quality, worse with prolonged use. "
+        "Ix: flexible nasendoscopy or videostroboscopy shows "
+        "symmetric opposing nodules with an hourglass glottic gap. "
+        "Mx: voice therapy with a speech pathologist is first line "
+        "and resolves most cases; surgical excision reserved for "
+        "persistent nodules after adequate therapy. Note: any "
+        "unilateral or persistent lesion despite therapy needs biopsy "
+        "to exclude malignancy, especially in smokers."
+    ),
+    "Keratoacanthoma": (
+        "Rapidly growing, dome-shaped squamoproliferative skin lesion "
+        "with a central keratin plug, on sun-exposed skin. Aetiology: "
+        "UV exposure, older age and immunosuppression; regarded as a "
+        "well-differentiated variant of squamous cell carcinoma "
+        "rather than a distinct benign entity. Clinical features: "
+        "grows over weeks to a firm, crateriform nodule several "
+        "centimetres wide, then may spontaneously involute over "
+        "months leaving a scar. Ix: excision biopsy for histology - "
+        "cannot be reliably distinguished from SCC on clinical "
+        "grounds alone. Mx: complete surgical excision is standard "
+        "given the overlap with SCC; observation alone is not "
+        "recommended. Note: never diagnose by appearance alone - "
+        "treat as SCC until histology proves otherwise."
+    ),
+    "Tinea capitis": (
+        "Dermatophyte infection of the scalp and hair shafts, mainly "
+        "in pre-pubertal children. Aetiology: Trichophyton and "
+        "Microsporum species, spread by fomites and close contact, "
+        "common in overcrowded settings. Clinical features: scaly "
+        "patches of hair loss with broken hairs, black dot pattern, "
+        "or a boggy inflamed kerion with regional lymphadenopathy. "
+        "Ix: clinical diagnosis; microscopy and culture of hair "
+        "samples confirms the organism and guides duration. Mx: oral "
+        "griseofulvin or terbinafine, since topical agents do not "
+        "penetrate the hair follicle; treat close contacts and check "
+        "fomites (combs, hats, bedding). Note: a kerion needs oral "
+        "antifungals plus consideration of a short course of oral "
+        "steroid to reduce scarring alopecia."
+    ),
+    "Erythema ab igne": (
+        "Reticulated hyperpigmented skin change from chronic exposure "
+        "to low-grade heat, such as a heat pack or laptop. Aetiology: "
+        "repeated heat exposure below the threshold for burns, "
+        "classically from hot water bottles used for chronic pain. "
+        "Clinical features: net-like reddish-brown pigmentation over "
+        "the exposed site, usually asymptomatic; can become "
+        "persistent after years of exposure. Ix: clinical diagnosis; "
+        "biopsy only if longstanding, since chronic lesions carry a "
+        "small risk of squamous cell carcinoma. Mx: remove the heat "
+        "source; pigmentation usually fades over months, though "
+        "longstanding cases can be permanent. Note: always ask what "
+        "the patient uses the heat source for - it often reveals "
+        "undertreated chronic pain."
+    ),
+    "Perichondritis": (
+        "Infection of the auricular cartilage perichondrium, a "
+        "vision-and-hearing-preserving emergency for the ear. "
+        "Aetiology: Pseudomonas aeruginosa is classic, following ear "
+        "piercing (especially high cartilage piercings), trauma or "
+        "burns. Clinical features: painful, erythematous, swollen "
+        "pinna sparing the lobule (which has no cartilage); "
+        "fluctuance suggests progression to chondritis with abscess. "
+        "Ix: clinical diagnosis; wound swab if discharge present. Mx: "
+        "anti-pseudomonal oral or IV antibiotics (eTG - ciprofloxacin "
+        "covers Pseudomonas well) and urgent ENT review; surgical "
+        "drainage if abscess present. Note: untreated disease causes "
+        "cartilage necrosis and the permanent cauliflower ear "
+        "deformity - treat early and aggressively."
+    ),
+    "Globus pharyngeus": (
+        "Persistent sensation of a lump in the throat without "
+        "dysphagia, a diagnosis of exclusion. Aetiology: associated "
+        "with laryngopharyngeal reflux, muscle tension in the pharynx "
+        "and anxiety, though often no cause is found. Clinical "
+        "features: intermittent non-painful lump sensation, improved "
+        "by eating and worse with dry swallowing; no true dysphagia, "
+        "weight loss or odynophagia. Ix: examination and flexible "
+        "nasendoscopy to exclude a structural or mucosal lesion; red "
+        "flags mandate further imaging or referral for possible "
+        "malignancy. Mx: reassurance once red flags excluded, trial "
+        "of anti-reflux measures, address contributing anxiety. Note: "
+        "true dysphagia, odynophagia, weight loss or a neck mass are "
+        "never globus and need urgent ENT work-up."
+    ),
+    "Laryngeal papillomatosis": (
+        "Recurrent benign papillomas of the larynx from HPV "
+        "infection, with a juvenile and an adult form. Aetiology: HPV "
+        "types 6 and 11; juvenile form acquired perinatally from "
+        "maternal genital warts, adult form from oral-genital "
+        "transmission. Clinical features: progressive hoarseness, and "
+        "in children, stridor or respiratory distress as papillomas "
+        "obstruct the airway. Ix: flexible or direct laryngoscopy "
+        "with biopsy confirms diagnosis and HPV typing. Mx: repeated "
+        "microlaryngoscopic debulking (laser or microdebrider) since "
+        "recurrence is the rule; adjuvant therapy for aggressive "
+        "disease; HPV vaccination reduces incidence. Note: recurrence "
+        "is expected, not a treatment failure - counsel families on "
+        "the need for ongoing surveillance."
+    ),
+    "Dacryoadenitis": (
+        "Inflammation of the lacrimal gland, acute or chronic. "
+        "Aetiology: acute is usually viral (mumps, EBV, adenovirus) "
+        "in children or bacterial in adults; chronic suggests "
+        "sarcoidosis, IgG4-related disease or lymphoma. Clinical "
+        "features: pain, swelling and erythema over the superolateral "
+        "orbit with an S-shaped ptosis of the upper lid; may have "
+        "reduced tear production. Ix: clinical diagnosis for acute "
+        "viral disease; imaging (CT or MRI orbit) and biopsy if "
+        "chronic, bilateral or unresponsive to treatment. Mx: "
+        "supportive for viral cases; antibiotics for suspected "
+        "bacterial infection; treat the underlying systemic cause "
+        "when chronic. Note: bilateral, painless, chronic swelling "
+        "should prompt work-up for sarcoidosis or IgG4-related "
+        "disease, not repeat antibiotics."
+    ),
+    "Retinitis pigmentosa": (
+        "Inherited group of progressive photoreceptor degenerations "
+        "affecting rods before cones. Aetiology: autosomal dominant, "
+        "recessive or X-linked mutations in genes encoding "
+        "photoreceptor and pigment epithelium proteins. Clinical "
+        "features: night blindness from childhood or adolescence, "
+        "progressive peripheral visual field loss (tunnel vision), "
+        "later central vision loss. Ix: fundoscopy shows bone-spicule "
+        "pigmentation, attenuated vessels and optic disc pallor; "
+        "electroretinogram shows reduced rod then cone responses; "
+        "genetic testing guides counselling. Mx: no cure; vitamin A "
+        "palmitate may slow progression in some forms, low-vision "
+        "aids and genetic counselling, gene therapy available for "
+        "specific mutations. Note: consider it in any child or young "
+        "adult presenting with unexplained night blindness."
+    ),
+    "Hyphema": (
+        "Blood in the anterior chamber of the eye, an ophthalmic "
+        "emergency because of the risk of raised intraocular "
+        "pressure. Aetiology: blunt or penetrating ocular trauma is "
+        "the usual cause; spontaneous hyphema suggests a bleeding "
+        "diathesis or neovascularisation. Clinical features: visible "
+        "blood layering in the anterior chamber, pain, photophobia "
+        "and reduced vision; a total (eight-ball) hyphema is high "
+        "risk. Ix: slit lamp examination, intraocular pressure "
+        "measurement, CT orbit if globe rupture or orbital fracture "
+        "is suspected. Mx: urgent ophthalmology referral, head "
+        "elevation, eye shield, avoid NSAIDs and anticoagulants where "
+        "possible, topical cycloplegics and steroids; surgery for "
+        "uncontrolled pressure or corneal blood staining. Note: "
+        "rebleeding at day 2-5 is the feared complication and the "
+        "reason for early ophthalmic follow-up."
+    ),
+    "Episcleritis": (
+        "Self-limiting inflammation of the episclera, the thin "
+        "vascular layer between conjunctiva and sclera. Aetiology: "
+        "usually idiopathic; a minority linked to inflammatory bowel "
+        "disease, rheumatoid arthritis or gout. Clinical features: "
+        "sectoral or diffuse redness with mild discomfort or "
+        "grittiness, no significant pain, photophobia or visual loss. "
+        "Ix: clinical diagnosis; phenylephrine drops blanch "
+        "episcleral vessels (scleritis vessels do not blanch), which "
+        "distinguishes it from the more serious scleritis. Mx: "
+        "reassurance, lubricants, topical NSAIDs or mild steroids for "
+        "symptomatic relief; usually resolves in 1-2 weeks. Note: "
+        "significant pain, especially waking the patient at night, "
+        "points to scleritis instead and needs urgent review."
+    ),
+    "Urethritis": (
+        "Inflammation of the urethra, usually sexually transmitted. "
+        "Aetiology: gonococcal or non-gonococcal, the latter most "
+        "often chlamydia, with Mycoplasma genitalium and Trichomonas "
+        "also implicated. Clinical features: dysuria and urethral "
+        "discharge (purulent in gonococcal, clear or mucoid in "
+        "non-gonococcal), may be asymptomatic, especially in women. "
+        "Ix: first-pass urine or urethral swab NAAT for chlamydia and "
+        "gonorrhoea, microscopy and culture if gonococcal suspected "
+        "for resistance testing. Mx: per eTG - ceftriaxone for "
+        "gonococcal, doxycycline for chlamydial; treat partners and "
+        "screen for other STIs including HIV and syphilis; abstain "
+        "until treatment complete. Note: always treat presumptively "
+        "for both organisms while awaiting results if gonorrhoea is "
+        "suspected clinically."
+    ),
+    "Neurogenic bladder": (
+        "Bladder dysfunction from disrupted neurological control of "
+        "storage or voiding. Aetiology: suprapontine lesions (stroke, "
+        "Parkinson disease) give an overactive bladder; spinal cord "
+        "lesions above the sacral cord give detrusor-sphincter "
+        "dyssynergia; sacral or peripheral nerve lesions (diabetes, "
+        "cauda equina) give an underactive, overflowing bladder. "
+        "Clinical features: urgency and incontinence, or retention "
+        "with overflow, recurrent UTIs, renal impairment if "
+        "high-pressure voiding is unrecognised. Ix: bladder diary, "
+        "post-void residual, urodynamics to define the pattern; renal "
+        "ultrasound and creatinine to screen for upper tract damage. "
+        "Mx: clean intermittent self-catheterisation is preferred "
+        "over indwelling catheters where feasible, anticholinergics "
+        "or beta-3 agonists for overactivity, treat the underlying "
+        "neurological cause. Note: the goal is protecting the upper "
+        "tracts, not just continence - unrecognised high detrusor "
+        "pressures cause silent renal damage."
+    ),
+    "Wilms tumour": (
+        "Nephroblastoma, the commonest childhood renal malignancy, "
+        "usually presenting under 5 years. Aetiology: mutations in "
+        "WT1 and related genes; associated with WAGR syndrome, "
+        "Denys-Drash syndrome and certain congenital overgrowth "
+        "syndromes. "
+        "Clinical features: asymptomatic abdominal mass found on "
+        "bathing or examination, occasionally with haematuria, "
+        "hypertension or abdominal pain. Ix: abdominal ultrasound "
+        "first, CT or MRI abdomen and chest for staging; avoid biopsy "
+        "before imaging as it can seed tumour. Mx: nephrectomy with "
+        "chemotherapy (per paediatric oncology protocol), "
+        "radiotherapy for advanced or unfavourable histology; "
+        "excellent prognosis overall. Note: never palpate an "
+        "abdominal mass repeatedly in a child - gentle single "
+        "examination only, to avoid tumour rupture."
+    ),
+    "Lymphogranuloma venereum": (
+        "Sexually transmitted infection from invasive Chlamydia "
+        "trachomatis serovars L1-L3, causing regional lymphadenitis. "
+        "Aetiology: more common in men who have sex with men; "
+        "increasing incidence reported in Australia and other "
+        "high-income countries. Clinical features: transient painless "
+        "genital ulcer, followed weeks later by painful unilateral "
+        "inguinal or femoral lymphadenopathy (buboes); proctitis with "
+        "rectal pain, discharge and tenesmus in receptive anal "
+        "intercourse. Ix: NAAT for chlamydia with LGV-specific "
+        "genotyping from ulcer, bubo or rectal swab; screen for other "
+        "STIs including HIV. Mx: per eTG - doxycycline for 21 days "
+        "(longer than standard chlamydia treatment); treat and screen "
+        "partners. Note: consider LGV in anyone with proctitis and "
+        "inguinal lymphadenopathy, not just genital ulcer disease."
+    ),
+    "Meralgia paraesthetica": (
+        "Entrapment of the lateral femoral cutaneous nerve as it "
+        "passes under the inguinal ligament. Aetiology: obesity, "
+        "pregnancy, tight clothing or belts, prolonged standing, or "
+        "after pelvic surgery or trauma. Clinical features: burning, "
+        "tingling or numbness over the anterolateral thigh, purely "
+        "sensory with no motor weakness or reflex change. Ix: "
+        "clinical diagnosis based on the sensory distribution; nerve "
+        "conduction studies if diagnosis uncertain. Mx: weight loss, "
+        "loosen tight clothing or belts, avoid prolonged hip "
+        "extension; NSAIDs or local anaesthetic and steroid injection "
+        "for persistent symptoms; surgical decompression rarely "
+        "needed. Note: the purely sensory pattern with normal "
+        "strength and reflexes is what separates it from an L2/L3 "
+        "radiculopathy."
+    ),
+    "Piriformis syndrome": (
+        "Sciatic nerve compression by the piriformis muscle in the "
+        "buttock, a controversial but recognised cause of buttock and "
+        "leg pain. Aetiology: piriformis spasm or hypertrophy from "
+        "prolonged sitting, trauma or anatomical variation where the "
+        "sciatic nerve passes through the muscle. Clinical features: "
+        "deep buttock pain radiating down the posterior thigh, worse "
+        "with sitting, climbing stairs or internal rotation of the "
+        "hip; tenderness over the sciatic notch. Ix: clinical "
+        "diagnosis of exclusion; MRI lumbar spine and hip to exclude "
+        "disc disease or hip pathology mimicking it. Mx: stretching "
+        "and physiotherapy, activity modification, NSAIDs; local "
+        "anaesthetic and steroid or botulinum toxin injection for "
+        "refractory cases. Note: always exclude lumbar disc pathology "
+        "first - the clinical overlap with sciatica is considerable."
+    ),
+    "Tarsal tunnel syndrome": (
+        "Entrapment neuropathy of the posterior tibial nerve as it "
+        "passes behind the medial malleolus. Aetiology: "
+        "space-occupying lesions (ganglion, varicosities), flat feet, "
+        "tenosynovitis, trauma or oedema from systemic disease. "
+        "Clinical features: burning pain, tingling or numbness of the "
+        "sole and toes, worse with standing or walking, positive "
+        "Tinel sign over the tarsal tunnel. Ix: clinical diagnosis; "
+        "nerve conduction studies confirm; MRI if a space-occupying "
+        "lesion is suspected. Mx: orthotics and activity "
+        "modification, NSAIDs, steroid injection; surgical "
+        "decompression for refractory symptoms or an identified mass "
+        "lesion. Note: distinguish from plantar fasciitis - fasciitis "
+        "is worse with first steps in the morning, tarsal tunnel is a "
+        "burning, neuropathic pain that worsens through the day."
+    ),
+    "Spondylolisthesis": (
+        "Anterior slippage of one vertebral body relative to the one "
+        "below, most often at L4/5 or L5/S1. Aetiology: isthmic (pars "
+        "interarticularis defect, common in adolescent athletes) or "
+        "degenerative (facet joint degeneration in older adults). "
+        "Clinical features: low back pain worse with extension, may "
+        "have radicular leg pain or neurogenic claudication if nerve "
+        "roots are compressed; a palpable step may be felt. Ix: "
+        "lateral lumbar X-ray grades the slip (Meyerding grade I-V); "
+        "MRI if neurological symptoms or before considering surgery. "
+        "Mx: activity modification, physiotherapy and core "
+        "strengthening for most; surgical fusion for progressive "
+        "slip, high-grade disease or persistent neurological deficit. "
+        "Note: isthmic spondylolisthesis in a young athlete with "
+        "extension-worsened pain should raise suspicion of a stress "
+        "fracture (spondylolysis)."
+    ),
+    "Factitious disorder": (
+        "Deliberate falsification or induction of physical or "
+        "psychological symptoms, without external incentive, to "
+        "assume the sick role. Aetiology: linked to early trauma, "
+        "personality disturbance and a need for care or attention; "
+        "distinguished from malingering, which is motivated by "
+        "external gain. Clinical features: inconsistent or "
+        "implausible symptoms, extensive investigation-seeking, "
+        "multiple hospital presentations, evidence of self-induced "
+        "injury or tampering with results. Ix: diagnosis of exclusion "
+        "after thorough medical work-up; collateral history and "
+        "review of prior records is often revealing. Mx: avoid "
+        "confrontation early, involve psychiatry, focus on the "
+        "therapeutic relationship rather than proving deception; "
+        "minimise unnecessary investigation and iatrogenic harm. "
+        "Note: factitious disorder imposed on another (previously "
+        "Munchausen by proxy) is a child protection emergency, not "
+        "just a psychiatric diagnosis."
+    ),
+    "Conversion disorder": (
+        "Neurological symptoms (functional neurological symptom "
+        "disorder) that are incompatible with recognised disease, "
+        "causing genuine distress and disability. Aetiology: often "
+        "follows psychological stress or trauma, though a clear "
+        "precipitant is not required for diagnosis; symptoms are not "
+        "consciously produced. Clinical features: weakness, sensory "
+        "loss, non-epileptic seizures or gait disturbance; positive "
+        "signs on examination (Hoover sign, tremor entrainment) "
+        "support the diagnosis rather than relying on exclusion "
+        "alone. Ix: thorough neurological examination for positive "
+        "supportive signs; investigations to exclude organic disease "
+        "as clinically indicated, not exhaustively. Mx: explain the "
+        "diagnosis as real and treatable, not imagined; physiotherapy "
+        "and psychological therapy (often CBT), multidisciplinary "
+        "rehabilitation. Note: this is a diagnosis made on positive "
+        "clinical signs, not simply a label applied when tests are "
+        "normal."
+    ),
+    "Hand-foot-mouth disease": (
+        "Common self-limiting childhood viral exanthem affecting the "
+        "hands, feet and mouth. Aetiology: coxsackievirus A16 and "
+        "enterovirus 71, spread by faecal-oral and respiratory "
+        "droplet routes; outbreaks common in childcare settings. "
+        "Clinical features: painful oral ulcers followed by vesicular "
+        "papules on the palms, soles and buttocks, mild fever and "
+        "reduced oral intake from mouth pain. Ix: clinical diagnosis; "
+        "no routine investigation needed in typical cases. Mx: "
+        "supportive - analgesia, hydration, exclusion from childcare "
+        "until vesicles have dried per local health guidance. Note: "
+        "enterovirus 71 strains carry a small risk of neurological "
+        "complications - persistent lethargy, myoclonic jerks or "
+        "ataxia should prompt urgent review."
+    ),
+    "Threadworm": (
+        "Enterobius vermicularis infection, the commonest helminth "
+        "infection in children in Australia. Aetiology: faecal-oral "
+        "transmission and autoinoculation from scratching, with eggs "
+        "surviving on fomites, bedding and under fingernails for up "
+        "to 2 weeks. Clinical features: perianal itch, worse at night "
+        "as female worms migrate to lay eggs; can cause "
+        "vulvovaginitis in girls; often asymptomatic. Ix: clinical "
+        "diagnosis; sticky tape test over the perianal skin first "
+        "thing in the morning if confirmation is needed. Mx: single "
+        "dose mebendazole or pyrantel, repeated after 2 weeks; treat "
+        "the whole household simultaneously, wash bedding and cut "
+        "fingernails to reduce reinfection. Note: reinfection is "
+        "common without treating and hygiene-counselling the entire "
+        "household, not just the symptomatic child."
+    ),
+    "Talipes equinovarus": (
+        "Congenital clubfoot - fixed inward and downward positioning "
+        "of the foot, present at birth. Aetiology: multifactorial, "
+        "with genetic and intrauterine positional factors; bilateral "
+        "in about half of cases; associated syndromes should be "
+        "excluded. Clinical features: rigid foot in equinus (pointed "
+        "down), varus (inward heel) and adduction, not passively "
+        "correctable to neutral, distinguishing it from positional "
+        "talipes. Ix: clinical diagnosis at birth; examine the hips "
+        "and spine for associated anomalies. Mx: Ponseti method - "
+        "serial casting and manipulation from the first weeks of "
+        "life, usually with a percutaneous Achilles tenotomy, "
+        "followed by bracing to prevent relapse. Note: start "
+        "treatment as early as possible - outcomes with the Ponseti "
+        "method are excellent when begun in the neonatal period."
+    ),
+    "Uterine rupture": (
+        "Full-thickness tear of the uterine wall during pregnancy or "
+        "labour, an obstetric emergency. Aetiology: previous "
+        "caesarean section scar is the leading risk factor, "
+        "especially with a classical incision; also uterine trauma, "
+        "grand multiparity and obstructed labour. Clinical features: "
+        "sudden severe abdominal pain, cessation of contractions, "
+        "fetal heart rate abnormality (often the first sign), vaginal "
+        "bleeding, maternal tachycardia and shock. Ix: clinical "
+        "diagnosis in the acute setting; do not delay delivery for "
+        "imaging if rupture is suspected. Mx: emergency caesarean "
+        "delivery, resuscitation and repair or hysterectomy depending "
+        "on the extent of damage; discuss mode of delivery in future "
+        "pregnancies. Note: any acute fetal heart rate abnormality in "
+        "a woman labouring with a previous caesarean scar is uterine "
+        "rupture until excluded."
+    ),
+    "Premature ovarian insufficiency": (
+        "Loss of ovarian function before age 40, with amenorrhoea and "
+        "elevated gonadotrophins. Aetiology: idiopathic in most "
+        "cases; also autoimmune oophoritis, chromosomal (Turner "
+        "syndrome, fragile X premutation), chemotherapy or "
+        "radiotherapy, and surgical oophorectomy. Clinical features: "
+        "oligomenorrhoea or amenorrhoea, menopausal symptoms (hot "
+        "flushes, vaginal dryness) in a woman under 40, subfertility. "
+        "Ix: elevated FSH on two occasions a month apart with low "
+        "oestradiol, karyotype and fragile X testing, autoimmune "
+        "screen and adrenal antibodies. Mx: hormone replacement "
+        "therapy until the average age of menopause to protect bone "
+        "and cardiovascular health, fertility counselling (donor "
+        "oocyte if pregnancy desired), bone density monitoring. Note: "
+        "this is not simply early menopause counselling - untreated "
+        "it carries real cardiovascular and osteoporosis risk that "
+        "HRT specifically addresses."
+    ),
+    "Scarlet fever": (
+        "Toxin-mediated exanthem from group A Streptococcus, usually "
+        "accompanying streptococcal pharyngitis. Aetiology: "
+        "erythrogenic exotoxin-producing strains of Streptococcus "
+        "pyogenes, mainly affecting children aged 5-15. Clinical "
+        "features: fever and sore throat, followed by a fine "
+        "sandpaper-like rash sparing the palms, soles and perioral "
+        "area, strawberry tongue, flushed cheeks with circumoral "
+        "pallor. Ix: throat swab culture or rapid antigen test "
+        "confirms group A Streptococcus. Mx: penicillin (or "
+        "amoxicillin) is first line, exclude from school or childcare "
+        "until 24 hours of antibiotics completed. Note: treatment "
+        "mainly prevents suppurative complications and rheumatic "
+        "fever, particularly relevant where rheumatic fever remains "
+        "prevalent in Aboriginal and Torres Strait Islander "
+        "communities."
+    ),
+    "Cat scratch disease": (
+        "Regional lymphadenitis following a cat scratch or bite, "
+        "caused by Bartonella henselae. Aetiology: transmitted by "
+        "kittens more often than adult cats, via scratch, bite or "
+        "flea contact with cat saliva. Clinical features: a papule at "
+        "the inoculation site followed 1-3 weeks later by tender "
+        "regional lymphadenopathy, low-grade fever and malaise; "
+        "usually self-limiting. Ix: clinical diagnosis with a history "
+        "of cat contact; Bartonella serology or PCR of lymph node "
+        "aspirate if atypical or in an immunocompromised host. Mx: "
+        "supportive for typical mild disease, resolves over weeks to "
+        "months; azithromycin for significant lymphadenopathy or "
+        "systemic symptoms. Note: consider disseminated disease "
+        "(hepatosplenic, encephalitis) in immunocompromised patients, "
+        "who need more aggressive treatment."
+    ),
+    "Giardiasis": (
+        "Protozoal small bowel infection with Giardia lamblia, a "
+        "common cause of prolonged travellers' diarrhoea. Aetiology: "
+        "faecal-oral transmission via contaminated water or food; "
+        "higher risk with overseas travel, childcare attendance and "
+        "unfiltered water sources. Clinical features: watery, "
+        "foul-smelling diarrhoea, bloating, flatulence and abdominal "
+        "cramps, lasting weeks if untreated; malabsorption and weight "
+        "loss with chronic infection. Ix: stool microscopy for cysts "
+        "and trophozoites, or stool antigen or PCR testing, which is "
+        "more sensitive. Mx: per eTG - metronidazole or tinidazole; "
+        "consider retesting and a second course if symptoms persist. "
+        "Note: think of giardiasis in prolonged non-bloody diarrhoea "
+        "after travel or in returning backpackers - it does not cause "
+        "fever or blood in the stool."
+    ),
+    "Cyanide poisoning": (
+        "Cellular asphyxiant poisoning that blocks mitochondrial "
+        "oxidative phosphorylation, causing rapid cardiovascular "
+        "collapse. Aetiology: house fire smoke inhalation (combustion "
+        "of synthetic materials) is the commonest presentation; also "
+        "industrial exposure, prolonged sodium nitroprusside infusion "
+        "and deliberate poisoning. Clinical features: rapid onset "
+        "headache, confusion, hypertension then hypotension and "
+        "bradycardia, seizures and cardiac arrest; classic bitter "
+        "almond smell is unreliable and not universally detected. Ix: "
+        "elevated lactate and a high anion gap are strong indirect "
+        "clues, since cyanide levels are not available acutely; "
+        "consider it in smoke inhalation with disproportionate lactic "
+        "acidosis. Mx: 100% oxygen and hydroxocobalamin as first-line "
+        "antidote, sodium thiosulfate as an adjunct; do not wait for "
+        "confirmation to treat suspected cases. Note: suspect cyanide "
+        "toxicity in any smoke-inhalation patient with severe lactic "
+        "acidosis out of proportion to carboxyhaemoglobin level."
+    ),
+    "Drowning": (
+        "Respiratory impairment from submersion or immersion in "
+        "liquid, a leading cause of unintentional death, particularly "
+        "in young children. Aetiology: unsupervised access to water "
+        "(pools, open water) in children, alcohol involvement in "
+        "adolescents and adults, and medical events (seizure, "
+        "cardiac) preceding submersion. Clinical features: ranges "
+        "from mild cough and tachypnoea to hypoxic respiratory "
+        "failure, pulmonary oedema, cardiac arrest and hypothermia in "
+        "cold water immersion. Ix: pulse oximetry and ABG for "
+        "hypoxia, chest X-ray for aspiration or oedema, core "
+        "temperature; ECG if cardiac cause suspected. Mx: rescue "
+        "breaths before compressions given the hypoxic mechanism, "
+        "supplemental oxygen, observe for at least 4-6 hours even if "
+        "initially well, since pulmonary oedema can be delayed; treat "
+        "hypothermia and hypoxic complications. Note: even an "
+        "asymptomatic-appearing child after submersion warrants a "
+        "period of observation - deterioration can be delayed."
     ),
 }
 
