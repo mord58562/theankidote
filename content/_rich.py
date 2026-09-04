@@ -2459,6 +2459,204 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "electrical injury"]],
         "summary": "",
     },
+    {
+        "name": "Dry eye disease",
+        "aliases": ["keratoconjunctivitis sicca", "dry eyes"],
+        "utd": [["Overview", "dry eye disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Blowout fracture",
+        "aliases": ["orbital floor fracture"],
+        "utd": [["Overview", "orbital floor fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Chemical eye injury",
+        "aliases": ["chemical burn eye", "ocular chemical burn"],
+        "utd": [["Overview", "chemical eye injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Amblyopia",
+        "aliases": ["lazy eye"],
+        "utd": [["Overview", "amblyopia in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Leukocoria",
+        "aliases": ["white pupillary reflex"],
+        "utd": [["Overview", "evaluation of leukocoria"]],
+        "summary": "",
+    },
+    {
+        "name": "Retinoblastoma",
+        "aliases": [],
+        "utd": [["Overview", "retinoblastoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Strabismus",
+        "aliases": ["squint"],
+        "utd": [["Overview", "strabismus in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute sinusitis",
+        "aliases": ["acute rhinosinusitis"],
+        "utd": [["Overview", "acute sinusitis in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Tonsillitis",
+        "aliases": ["acute tonsillitis"],
+        "utd": [["Overview", "tonsillitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Choanal atresia",
+        "aliases": [],
+        "utd": [["Overview", "choanal atresia"]],
+        "summary": "",
+    },
+    {
+        "name": "Branchial cleft cyst",
+        "aliases": ["branchial cyst"],
+        "utd": [["Overview", "branchial cleft anomalies"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroglossal duct cyst",
+        "aliases": [],
+        "utd": [["Overview", "thyroglossal duct cyst"]],
+        "summary": "",
+    },
+    {
+        "name": "Paronychia",
+        "aliases": [],
+        "utd": [["Overview", "paronychia"]],
+        "summary": "",
+    },
+    {
+        "name": "Intertrigo",
+        "aliases": [],
+        "utd": [["Overview", "intertrigo"]],
+        "summary": "",
+    },
+    {
+        "name": "Fixed drug eruption",
+        "aliases": [],
+        "utd": [["Overview", "fixed drug eruption"]],
+        "summary": "",
+    },
+    {
+        "name": "Horseshoe kidney",
+        "aliases": ["renal fusion anomaly"],
+        "utd": [["Overview", "horseshoe kidney"]],
+        "summary": "",
+    },
+    {
+        "name": "Vesicoureteral reflux",
+        "aliases": ["vesicoureteric reflux", "VUR"],
+        "utd": [["Overview", "vesicoureteral reflux"]],
+        "summary": "",
+    },
+    {
+        "name": "Epispadias",
+        "aliases": [],
+        "utd": [["Overview", "epispadias"]],
+        "summary": "",
+    },
+    {
+        "name": "Faecal incontinence",
+        "aliases": ["fecal incontinence", "bowel incontinence"],
+        "utd": [["Overview", "fecal incontinence in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Vocal cord dysfunction",
+        "aliases": ["paradoxical vocal fold movement"],
+        "utd": [["Overview", "vocal cord dysfunction"]],
+        "summary": "",
+    },
+    {
+        "name": "Olecranon bursitis",
+        "aliases": ["student's elbow"],
+        "utd": [["Overview", "olecranon bursitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Stress fracture",
+        "aliases": [],
+        "utd": [["Overview", "stress fractures"]],
+        "summary": "",
+    },
+    {
+        "name": "Clavicle fracture",
+        "aliases": ["collarbone fracture"],
+        "utd": [["Overview", "clavicle fractures"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervical radiculopathy",
+        "aliases": [],
+        "utd": [["Overview", "cervical radiculopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Umbilical hernia",
+        "aliases": [],
+        "utd": [["Overview", "umbilical hernia"]],
+        "summary": "",
+    },
+    {
+        "name": "Congenital diaphragmatic hernia",
+        "aliases": [],
+        "utd": [["Overview", "congenital diaphragmatic hernia"]],
+        "summary": "",
+    },
+    {
+        "name": "Cleft lip and palate",
+        "aliases": ["cleft lip", "cleft palate"],
+        "utd": [["Overview", "cleft lip and palate"]],
+        "summary": "",
+    },
+    {
+        "name": "Torticollis",
+        "aliases": ["wry neck", "congenital muscular torticollis"],
+        "utd": [["Overview", "torticollis in infants"]],
+        "summary": "",
+    },
+    {
+        "name": "Infantile colic",
+        "aliases": ["colic in babies"],
+        "utd": [["Overview", "infantile colic"]],
+        "summary": "",
+    },
+    {
+        "name": "Premature rupture of membranes",
+        "aliases": ["PROM", "prelabour rupture of membranes"],
+        "utd": [["Overview", "prelabor rupture of membranes at term"]],
+        "summary": "",
+    },
+    {
+        "name": "Retained placenta",
+        "aliases": [],
+        "utd": [["Overview", "retained placenta"]],
+        "summary": "",
+    },
+    {
+        "name": "Breast abscess",
+        "aliases": ["lactational breast abscess"],
+        "utd": [["Overview", "lactational breast abscess"]],
+        "summary": "",
+    },
+    {
+        "name": "Premenstrual syndrome",
+        "aliases": ["PMS"],
+        "utd": [["Overview", "premenstrual syndrome"]],
+        "summary": "",
+    },
 ]
 
 
@@ -30529,6 +30727,730 @@ RICH_SUMMARIES = {
         "skin burn is often far smaller than the true extent of deep "
         "tissue and muscle injury, so examination findings alone can "
         "be misleading."
+    ),
+    "Dry eye disease": (
+        "Chronic disorder of the tear film causing ocular surface "
+        "discomfort and, if severe, damage to the surface itself. "
+        "Aetiology: reduced aqueous production (Sjogren syndrome, "
+        "ageing) or increased evaporation (meibomian gland "
+        "dysfunction, blepharitis, screen use), often mixed. Clinical "
+        "features: gritty or burning eyes, foreign body sensation, "
+        "fluctuating vision and paradoxical watering as reflex "
+        "tearing overwhelms an unstable film. Ix: clinical diagnosis "
+        "supported by tear break-up time and Schirmer testing; slit "
+        "lamp with fluorescein looks for punctate staining and rules "
+        "out a corneal cause. Mx: lubricant drops first line, warm "
+        "compresses and lid hygiene for meibomian gland disease, and "
+        "topical anti-inflammatories (cyclosporine, short-course "
+        "steroid) for refractory cases; punctal plugs if drops alone "
+        "fail. Note: unilateral or acutely painful dry eye is not dry "
+        "eye disease until keratitis and a foreign body have been "
+        "excluded."
+    ),
+    "Blowout fracture": (
+        "Fracture of the orbital floor or medial wall from blunt "
+        "trauma that raises intraorbital pressure faster than the "
+        "thin bone can absorb it. Aetiology: a direct blow from a "
+        "fist, ball or airbag, transmitting force through the globe "
+        "rather than fracturing the thicker orbital rim. Clinical "
+        "features: periorbital bruising and swelling, diplopia on "
+        "upgaze from inferior rectus entrapment, enophthalmos, and "
+        "infraorbital nerve numbness over the cheek and upper lip. "
+        "Ix: CT orbit is diagnostic, showing the fracture and any "
+        "herniated fat or muscle into the maxillary sinus; forced "
+        "duction testing helps confirm entrapment. Mx: most are "
+        "managed conservatively with ice, analgesia and nasal "
+        "precautions; urgent surgical repair is reserved for "
+        "entrapment with a non-resolving oculocardiac reflex, a large "
+        "floor defect, or significant enophthalmos. Note: a child "
+        "with a trapdoor fracture can have a white, quiet eye and "
+        "minimal bruising despite true muscle entrapment - this is a "
+        "surgical emergency, not a reassuring sign."
+    ),
+    "Chemical eye injury": (
+        "Ocular surface damage from acid or alkali exposure, and a "
+        "true ophthalmic emergency where treatment starts before any "
+        "history is taken. Aetiology: household cleaning products, "
+        "industrial chemicals and cement (alkali) or car battery acid "
+        "(acid) are typical agents; alkali penetrates deeper and "
+        "faster because it saponifies cell membranes, while acid "
+        "tends to coagulate tissue and limit its own spread. Clinical "
+        "features: pain, blepharospasm and conjunctival injection, "
+        "with a pale limbus in severe injury signalling ischaemia and "
+        "a poor prognosis. Ix: none before treatment; pH testing of "
+        "the fornices and slit lamp examination follow irrigation, "
+        "not precede it. Mx: immediate copious irrigation with saline "
+        "or Hartmann's for at least 30 minutes, checking pH every few "
+        "minutes until it stabilises near 7.4, then removal of "
+        "particulate matter, cycloplegia, topical antibiotics and "
+        "urgent ophthalmology review. Note: irrigate first and ask "
+        "questions later - visual acuity and identifying the agent "
+        "can both wait until the eye is neutralised."
+    ),
+    "Amblyopia": (
+        "Reduced best-corrected vision in an otherwise structurally "
+        "normal eye from disrupted visual development in early "
+        "childhood, and the leading cause of preventable childhood "
+        "vision loss. Aetiology: strabismic (misalignment suppresses "
+        "one image), refractive (anisometropia or high bilateral "
+        "refractive error blurs the developing image) or "
+        "deprivational (cataract, ptosis or corneal opacity blocks "
+        "input) - deprivational is least common but most severe. "
+        "Clinical features: often asymptomatic to the child, picked "
+        "up on vision screening as a difference in acuity between "
+        "eyes, or on cover testing as a preferred fixing eye. Ix: "
+        "cycloplegic refraction and cover test; any red flag finding "
+        "(leukocoria, a fixed eye, absent red reflex) needs urgent "
+        "ophthalmology, not routine screening pathways. Mx: correct "
+        "the underlying cause first, then patching or atropine "
+        "penalisation of the stronger eye to force use of the weaker "
+        "one. Note: the visual cortex has a closing window - "
+        "treatment after about age seven has sharply diminishing "
+        "returns, so early screening is the whole game."
+    ),
+    "Leukocoria": (
+        "A white pupillary reflex replacing the normal red reflex, "
+        "and a sign that always mandates same-day ophthalmology "
+        "referral in a child. Aetiology: retinoblastoma is the "
+        "diagnosis every clinician must exclude first, but congenital "
+        "cataract, persistent fetal vasculature, retinopathy of "
+        "prematurity and Coats disease are more common causes "
+        "overall. Clinical features: noticed by a parent in flash "
+        "photography, on the red reflex test at routine checks, or "
+        "incidentally; it may be constant or only apparent at certain "
+        "gaze angles. Ix: red reflex testing at every newborn and "
+        "infant check; urgent dilated fundoscopy and ocular "
+        "ultrasound or MRI in a child with a positive finding, since "
+        "the cause cannot be assumed from appearance alone. Mx: "
+        "directed entirely at the underlying diagnosis - cataract "
+        "extraction, laser or chemotherapy for retinoblastoma, or "
+        "treatment of retinopathy of prematurity. Note: a normal red "
+        "reflex on one occasion does not exclude an evolving tumour - "
+        "any parental report of an abnormal photograph flash deserves "
+        "review even if the in-clinic test looks reassuring."
+    ),
+    "Retinoblastoma": (
+        "The most common primary intraocular malignancy of childhood, "
+        "arising from immature retinal cells, usually before age "
+        "five. Aetiology: biallelic inactivation of the RB1 tumour "
+        "suppressor gene, either as a heritable germline mutation "
+        "(bilateral or multifocal disease, earlier onset) or a "
+        "sporadic somatic mutation (unilateral, later onset). "
+        "Clinical features: leukocoria is the most common presenting "
+        "sign, followed by strabismus; advanced disease can present "
+        "with a red painful eye from secondary glaucoma, or orbital "
+        "and systemic spread if diagnosis is delayed. Ix: dilated "
+        "fundoscopy under anaesthesia, ocular ultrasound and MRI to "
+        "stage intraocular and extraocular extent; genetic testing "
+        "for RB1 in bilateral or family-history-positive cases. Mx: "
+        "options range from chemotherapy and focal laser or "
+        "cryotherapy for eye-preserving treatment, to enucleation for "
+        "advanced unilateral disease; germline carriers need lifelong "
+        "surveillance for second malignancies. Note: survival exceeds "
+        "95% in high-income settings with early referral - the "
+        "emergency is the time from parental concern to specialist "
+        "review, not the biology."
+    ),
+    "Strabismus": (
+        "Misalignment of the visual axes so the eyes do not point at "
+        "the same target together, described by the direction of the "
+        "deviated eye - esotropia, exotropia, hypertropia or "
+        "hypotropia. Aetiology: most childhood cases are idiopathic "
+        "or accommodative (uncorrected hyperopia drives excess "
+        "convergence); acquired strabismus in an older child or adult "
+        "raises concern for a cranial nerve palsy, raised "
+        "intracranial pressure or an orbital mass. Clinical features: "
+        "visible misalignment, asymmetric corneal light reflex, "
+        "abnormal cover-uncover test, and diplopia if onset is after "
+        "the visual system has matured. Ix: cover test and "
+        "cycloplegic refraction in all cases; new-onset strabismus in "
+        "an adult or a child with other neurological signs needs "
+        "urgent neuroimaging. Mx: correct refractive error first, "
+        "then patching for associated amblyopia, and surgical or "
+        "botulinum toxin realignment of the extraocular muscles for "
+        "persistent deviation. Note: a young infant's eyes can wander "
+        "intermittently for a few months - true strabismus is a "
+        "constant or worsening deviation, not something that will "
+        "simply be outgrown."
+    ),
+    "Acute sinusitis": (
+        "Inflammation of one or more paranasal sinuses lasting under "
+        "four weeks, usually following a viral upper respiratory "
+        "infection. Aetiology: viral in the great majority; bacterial "
+        "superinfection (Streptococcus pneumoniae, Haemophilus "
+        "influenzae) is suggested by symptoms persisting beyond ten "
+        "days, biphasic worsening after initial improvement, or high "
+        "fever with purulent discharge for three to four consecutive "
+        "days. Clinical features: facial pain or pressure worse on "
+        "bending forward, purulent nasal discharge, nasal obstruction "
+        "and reduced sense of smell; tooth pain suggests maxillary "
+        "sinus involvement. Ix: clinical diagnosis - imaging is "
+        "reserved for suspected complications or recurrent disease "
+        "being worked up for chronic sinusitis. Mx: analgesia, "
+        "intranasal saline and corticosteroid spray for all; "
+        "antibiotics per eTG only when bacterial criteria are met, "
+        "typically amoxicillin first line. Note: symptoms under ten "
+        "days without the biphasic pattern are viral - reflex "
+        "antibiotic prescribing here is exactly the overuse eTG is "
+        "trying to stop."
+    ),
+    "Tonsillitis": (
+        "Acute inflammation of the palatine tonsils, most often viral "
+        "but the presentation clinicians are trained to separate from "
+        "group A streptococcal pharyngitis. Aetiology: adenovirus, "
+        "rhinovirus and EBV account for most cases; Streptococcus "
+        "pyogenes causes a minority but is the target of treatment "
+        "because of its complications. Clinical features: sore "
+        "throat, odynophagia, fever and tonsillar exudate; the Centor "
+        "criteria estimate streptococcal likelihood but do not "
+        "replace testing where available. Ix: throat swab or rapid "
+        "antigen test where accessible; clinical diagnosis is "
+        "acceptable per eTG in low-risk adults. Mx: analgesia and "
+        "hydration for viral disease; phenoxymethylpenicillin for "
+        "confirmed or high-probability streptococcal infection, "
+        "mainly to prevent suppurative complications and, in at-risk "
+        "Aboriginal and Torres Strait Islander communities, acute "
+        "rheumatic fever. Note: trismus, uvular deviation and a "
+        "muffled voice signal peritonsillar abscess, not simple "
+        "tonsillitis, and need urgent ENT assessment."
+    ),
+    "Choanal atresia": (
+        "Congenital narrowing or complete blockage of the posterior "
+        "nasal passage by bony or membranous tissue, present from "
+        "birth. Aetiology: failure of the bucconasal membrane to "
+        "resorb during fetal development; roughly half of affected "
+        "infants have an associated anomaly, most classically as part "
+        "of CHARGE syndrome. Clinical features: bilateral atresia "
+        "presents as respiratory distress at birth that paradoxically "
+        "improves with crying, since neonates are obligate nasal "
+        "breathers; unilateral disease may go unnoticed for months, "
+        "presenting later as persistent unilateral nasal discharge. "
+        "Ix: failure to pass a nasogastric catheter through the "
+        "nostril raises suspicion; CT of the nasal cavity confirms "
+        "the diagnosis and characterises bony versus membranous "
+        "obstruction. Mx: an oral airway or McGovern nipple "
+        "stabilises bilateral cases while surgical correction is "
+        "arranged; unilateral disease is repaired electively. Note: "
+        "any neonate in respiratory distress that settles with crying "
+        "and worsens at rest has choanal atresia until proven "
+        "otherwise - the pattern is close to pathognomonic."
+    ),
+    "Branchial cleft cyst": (
+        "Congenital neck mass arising from incomplete obliteration of "
+        "the branchial apparatus during embryonic development, most "
+        "often from the second cleft. Aetiology: persistence of "
+        "epithelial remnants that later fill with fluid or keratin "
+        "debris, sometimes not becoming apparent until an upper "
+        "respiratory infection triggers enlargement. Clinical "
+        "features: a smooth, fluctuant, painless mass anterior to the "
+        "sternocleidomastoid in a child or young adult, occasionally "
+        "with a sinus tract draining to the skin or pharynx; sudden "
+        "painful enlargement suggests infection. Ix: ultrasound or "
+        "CT/MRI defines the cyst and its tract; fine needle "
+        "aspiration can be diagnostic but is used cautiously given "
+        "the differential includes malignant nodal disease in an "
+        "older patient. Mx: definitive treatment is complete surgical "
+        "excision including any tract, since incomplete removal "
+        "predisposes to recurrence; acute infection is treated with "
+        "antibiotics before elective surgery. Note: a new lateral "
+        "neck mass in an adult over 40 is a metastatic node from a "
+        "mucosal primary until proven otherwise - branchial cleft "
+        "cyst is a diagnosis of youth."
+    ),
+    "Thyroglossal duct cyst": (
+        "The most common congenital neck mass in children, arising "
+        "from a remnant of the thyroglossal duct that traces the "
+        "thyroid gland's embryological descent from the tongue base "
+        "to its final position. Aetiology: failure of the duct to "
+        "fully involute after the thyroid completes its descent, "
+        "leaving an epithelial-lined tract that can cyst at any point "
+        "along the midline. Clinical features: a smooth, painless "
+        "midline neck mass that characteristically elevates with "
+        "tongue protrusion or swallowing, most often just below the "
+        "hyoid bone; infection or a draining sinus can follow minor "
+        "trauma or a respiratory infection. Ix: ultrasound confirms "
+        "the cystic nature and, critically, checks that normal "
+        "thyroid tissue exists in its usual location, since the cyst "
+        "can rarely be the patient's only functioning thyroid tissue. "
+        "Mx: the Sistrunk procedure, excising the cyst, tract and "
+        "central hyoid bone, is standard, as excision without the "
+        "hyoid segment carries a high recurrence rate. Note: "
+        "confirming a normal orthotopic thyroid on ultrasound before "
+        "surgery is not optional - removing an ectopic thyroid "
+        "mistaken for a cyst leaves the patient hypothyroid."
+    ),
+    "Paronychia": (
+        "Infection of the nail fold, classified as acute or chronic "
+        "by duration and by a different underlying mechanism. "
+        "Aetiology: acute paronychia usually follows minor trauma "
+        "with Staphylococcus aureus or Streptococcus species; chronic "
+        "paronychia reflects repeated irritant exposure that allows "
+        "Candida and bacteria to colonise a disrupted seal, common in "
+        "people whose hands are wet for much of the day. Clinical "
+        "features: acute disease is painful, red and swollen at the "
+        "nail fold, often with a visible pus collection; chronic "
+        "paronychia is less painful, with a boggy, thickened nail "
+        "fold and nail plate changes over weeks to months. Ix: "
+        "clinical diagnosis; swab if incision and drainage is "
+        "performed or if it fails to respond to first-line treatment. "
+        "Mx: acute disease with a collection needs incision and "
+        "drainage plus oral antibiotics covering staphylococcus if "
+        "cellulitis extends beyond the fold; chronic paronychia is "
+        "managed by avoiding the precipitant, keeping the area dry, "
+        "and topical steroid or antifungal rather than antibiotics. "
+        "Note: repeated antibiotic courses for chronic paronychia are "
+        "a common miss - the driver is irritant dermatitis, not "
+        "bacteria."
+    ),
+    "Intertrigo": (
+        "Inflammatory dermatosis of skin fold surfaces from friction, "
+        "moisture and heat, frequently complicated by secondary "
+        "infection. Aetiology: opposing skin surfaces trap warmth and "
+        "sweat under the axillae, groin, inframammary and abdominal "
+        "folds, breaking down the barrier and favouring Candida and, "
+        "less often, bacteria; obesity, diabetes and incontinence are "
+        "major risk factors. Clinical features: erythematous, "
+        "macerated skin confined to the fold with a sharply "
+        "demarcated edge; satellite pustules beyond the main margin "
+        "point to candidal superinfection, while a foul odour and "
+        "yellow crust suggest bacterial involvement. Ix: clinical "
+        "diagnosis; skin scraping for microscopy if the picture is "
+        "atypical or unresponsive to treatment. Mx: keep the area dry "
+        "with barrier cream and absorbent powder, topical imidazole "
+        "for confirmed or suspected candidal infection, and a short "
+        "course of a mild topical steroid combination if inflammation "
+        "is marked. Note: intertrigo in a fold that will not settle "
+        "should prompt a biopsy - inverse psoriasis and, in an older "
+        "adult, extramammary Paget disease can mimic it closely."
+    ),
+    "Fixed drug eruption": (
+        "A cutaneous drug reaction that recurs at the exact same skin "
+        "site each time the causative agent is taken, one of the few "
+        "dermatology diagnoses where the history alone is often "
+        "sufficient. Aetiology: commonly implicated agents include "
+        "NSAIDs, tetracyclines, sulfonamides and paracetamol; a "
+        "memory T cell response is thought to persist locally at the "
+        "affected site between exposures. Clinical features: a "
+        "solitary, sharply demarcated, round to oval dusky red or "
+        "violaceous plaque, sometimes blistering, most often on the "
+        "lips, genitals or extremities, appearing within hours of "
+        "re-exposure and resolving with residual grey-brown "
+        "pigmentation. Ix: clinical diagnosis supported by a temporal "
+        "relationship to a specific drug; patch testing at the "
+        "previously affected site can confirm the culprit if the "
+        "history is unclear. Mx: stop the causative drug and avoid it "
+        "long term; topical steroids ease acute inflammation, and the "
+        "lesion fades over days to weeks leaving pigmentation that "
+        "can persist for months. Note: pigmented patches accumulating "
+        "at the same site over repeated exposures distinguish this "
+        "from almost any other drug rash."
+    ),
+    "Horseshoe kidney": (
+        "The most common renal fusion anomaly, in which the lower "
+        "poles of both kidneys join across the midline, usually "
+        "connected by an isthmus of functioning tissue or fibrous "
+        "band. Aetiology: abnormal migration of the metanephric "
+        "kidneys during fetal ascent, when the developing isthmus "
+        "catches under the inferior mesenteric artery and prevents "
+        "the kidneys rotating and rising to their normal position. "
+        "Clinical features: usually asymptomatic and found "
+        "incidentally; when symptomatic it presents with recurrent "
+        "urinary tract infection, stone formation or intermittent "
+        "flank pain, all related to abnormal drainage from a "
+        "malrotated, low-lying collecting system. Ix: ultrasound or "
+        "CT often shows the mass crossing the midline anterior to the "
+        "great vessels; it is also an incidental finding on imaging "
+        "done for unrelated indications. Mx: no treatment for the "
+        "anomaly itself; complications are managed as they arise, "
+        "with surgery reserved for symptomatic obstruction. Note: it "
+        "carries an increased risk of Wilms tumour in children and of "
+        "injury during abdominal aortic surgery, since the isthmus "
+        "crosses the great vessels."
+    ),
+    "Vesicoureteral reflux": (
+        "Retrograde flow of urine from the bladder up the ureter and, "
+        "in higher grades, into the renal pelvis, predisposing to "
+        "recurrent pyelonephritis and renal scarring in children. "
+        "Aetiology: primary reflux reflects a congenitally short or "
+        "abnormally angled ureterovesical junction that fails to act "
+        "as a one-way valve; secondary reflux follows bladder outlet "
+        "obstruction or neurogenic bladder raising intravesical "
+        "pressure. Clinical features: often identified after a first "
+        "febrile urinary tract infection in an infant or young child; "
+        "higher grades carry a greater risk of scarring and "
+        "hypertension if recurrent infection goes uncontrolled. Ix: "
+        "renal and bladder ultrasound after a febrile UTI, with a "
+        "micturating cystourethrogram to grade reflux if indicated; "
+        "DMSA scan assesses existing scarring. Mx: low-grade reflux "
+        "is often observed, since most resolves spontaneously with "
+        "growth; prophylactic antibiotics are used selectively, and "
+        "surgical correction is reserved for high-grade or "
+        "breakthrough infection. Note: reflux itself is harmless - it "
+        "is the infection reaching the kidney that causes scarring, "
+        "so management targets infection prevention over the anatomy."
+    ),
+    "Epispadias": (
+        "A rare congenital anomaly in which the urethral meatus opens "
+        "on the dorsal surface of the penis instead of at the tip, "
+        "part of the same spectrum of disorders as bladder exstrophy. "
+        "Aetiology: failure of normal genital tubercle development "
+        "during weeks four to six of gestation, with the urogenital "
+        "sinus opening in an abnormally dorsal position; severity "
+        "ranges from a glanular defect to complete epispadias with "
+        "urinary incontinence from an incompetent bladder neck. "
+        "Clinical features: a dorsally displaced meatus, dorsal "
+        "chordee, and a widened, flattened glans; continence depends "
+        "on severity, as complete epispadias usually involves the "
+        "bladder neck sphincter mechanism. Ix: clinical examination "
+        "defines the anatomy; renal and bladder ultrasound assesses "
+        "for associated upper tract or exstrophy findings. Mx: staged "
+        "surgical reconstruction addresses the chordee and urethra "
+        "first, with bladder neck reconstruction for continence if "
+        "needed later, individualised by a paediatric urology team. "
+        "Note: it is far less common than hypospadias and often "
+        "signals a more significant pelvic floor and bladder neck "
+        "abnormality rather than an isolated cosmetic anomaly."
+    ),
+    "Faecal incontinence": (
+        "Involuntary loss of bowel control, ranging from occasional "
+        "soiling to complete loss of stool control, and a symptom "
+        "patients are often too embarrassed to volunteer without "
+        "direct questioning. Aetiology: anal sphincter injury "
+        "(obstetric trauma is the leading cause in women), pudendal "
+        "neuropathy, faecal impaction with overflow, and severe "
+        "diarrhoeal illness or inflammatory bowel disease all "
+        "contribute. Clinical features: urge incontinence suggests "
+        "sphincter weakness or an overactive rectum, while passive "
+        "leakage without warning points more to neuropathy or "
+        "impaction. Ix: digital rectal examination assesses resting "
+        "and squeeze tone; anorectal manometry, endoanal ultrasound "
+        "for sphincter defects, and colonoscopy if bowel disease is "
+        "suspected. Mx: treat reversible causes first, then dietary "
+        "fibre and loperamide for stool consistency, pelvic floor "
+        "physiotherapy and biofeedback, with sacral nerve stimulation "
+        "or sphincter repair for refractory cases. Note: always "
+        "disimpact and exclude overflow before assuming a continence "
+        "problem is primary - antidiarrhoeals given for presumed "
+        "diarrhoea make overflow incontinence worse."
+    ),
+    "Vocal cord dysfunction": (
+        "Paradoxical adduction of the vocal cords during inspiration "
+        "that mimics asthma, and a frequently missed cause of "
+        "episodic breathlessness that does not respond to "
+        "bronchodilators. Aetiology: often triggered by exercise, "
+        "strong odours, reflux or psychological stress; more common "
+        "in young women and athletes, and coexists with true asthma "
+        "often enough that the two are not mutually exclusive. "
+        "Clinical features: sudden-onset dyspnoea and stridor "
+        "localised to the throat rather than the chest, throat "
+        "tightness, and a rapid response to reassurance or breathing "
+        "techniques that would be atypical for a genuine asthma "
+        "flare. Ix: laryngoscopy during a symptomatic episode showing "
+        "paradoxical cord adduction is the gold standard; spirometry "
+        "can show a truncated inspiratory loop, and it should be "
+        "considered whenever asthma treatment responses do not add "
+        "up. Mx: speech pathology-directed breathing retraining is "
+        "first line, addressing reflux if present and treating any "
+        "coexisting anxiety. Note: a rising inhaled corticosteroid "
+        "dose that keeps failing to control 'asthma' should trigger a "
+        "rethink of the diagnosis, not another step up the ladder."
+    ),
+    "Olecranon bursitis": (
+        "Inflammation and fluid accumulation within the olecranon "
+        "bursa overlying the point of the elbow, either from repeated "
+        "minor trauma or infection. Aetiology: aseptic bursitis "
+        "follows chronic pressure or friction or an underlying "
+        "crystal arthropathy such as gout; septic bursitis follows "
+        "direct inoculation through a skin break, most often "
+        "Staphylococcus aureus. Clinical features: a fluctuant, "
+        "well-defined swelling over the olecranon; aseptic bursitis "
+        "is minimally tender with a full, painless range of elbow "
+        "flexion, while septic bursitis is markedly tender, warm, "
+        "erythematous and often accompanied by fever. Ix: clinical "
+        "diagnosis in classic aseptic cases; aspiration for cell "
+        "count, gram stain, culture and crystal analysis whenever "
+        "septic bursitis or gout is a possibility, since the two can "
+        "look identical on inspection alone. Mx: aseptic bursitis "
+        "responds to activity modification, padding and NSAIDs, with "
+        "aspiration for symptomatic relief if tense; septic bursitis "
+        "needs antibiotics and often surgical drainage. Note: "
+        "preserved active range of motion through the elbow joint, "
+        "despite a large swollen bursa, is what separates bursitis "
+        "from septic arthritis of the joint."
+    ),
+    "Stress fracture": (
+        "An overuse injury in which repetitive submaximal loading "
+        "outpaces bone's capacity to remodel, producing a "
+        "microfracture rather than a single traumatic break. "
+        "Aetiology: rapidly increased training load, poor "
+        "biomechanics or footwear, and low energy availability form "
+        "the classic triad; the tibia, metatarsals and femoral neck "
+        "are the most consequential sites. Clinical features: "
+        "gradually worsening, activity-related pain that initially "
+        "resolves with rest and eventually persists even at rest, "
+        "with localised bony tenderness; a femoral neck stress "
+        "fracture can present as vague groin or hip pain out of "
+        "proportion to examination findings. Ix: plain radiographs "
+        "are often normal early, so MRI is the investigation of "
+        "choice when suspicion is high; bone scan is an alternative "
+        "where MRI is unavailable. Mx: activity modification or "
+        "non-weight-bearing rest depending on site, addressing "
+        "training load and any nutritional or menstrual disturbance, "
+        "with surgical fixation for high-risk sites like the tension "
+        "side of the femoral neck. Note: a tension-side femoral neck "
+        "stress fracture is unstable and needs urgent orthopaedic "
+        "referral - missing it risks a completed fracture with "
+        "avascular necrosis."
+    ),
+    "Clavicle fracture": (
+        "One of the most common fractures in both children and active "
+        "adults, typically from a fall onto the shoulder or "
+        "outstretched hand. Aetiology: direct impact to the shoulder "
+        "during a fall, sporting collision or, in neonates, birth "
+        "trauma; the middle third fractures in the large majority of "
+        "cases because it is the thinnest segment and the point where "
+        "two ossification centres meet. Clinical features: pain, "
+        "swelling and deformity over the clavicle, with the patient "
+        "supporting the affected arm and the shoulder often drooping "
+        "forward and down. Ix: plain shoulder or clavicle radiograph "
+        "confirms the fracture and its displacement; associated rib, "
+        "lung or neurovascular injury should be excluded clinically "
+        "in high-energy trauma. Mx: most middle-third fractures, even "
+        "displaced ones, heal well with a sling and analgesia; "
+        "surgical fixation is reserved for significant shortening or "
+        "displacement, open fractures, or neurovascular compromise, "
+        "and lateral-third fractures with ligament disruption often "
+        "need fixation. Note: check for a normal radial pulse and "
+        "sensation before and after any reduction attempt - the "
+        "subclavian vessels lie directly beneath a displaced "
+        "fragment."
+    ),
+    "Cervical radiculopathy": (
+        "Nerve root dysfunction in the neck causing pain, weakness or "
+        "sensory change in a dermatomal or myotomal distribution down "
+        "the arm. Aetiology: acute disc herniation in younger "
+        "patients, and osteophytic foraminal narrowing from cervical "
+        "spondylosis in older patients, both compress or irritate the "
+        "exiting nerve root, most often at C6 or C7. Clinical "
+        "features: neck pain radiating into the arm following the "
+        "affected root's distribution, weakness in the corresponding "
+        "myotome, reduced reflexes, and reproduction of arm symptoms "
+        "with neck extension and rotation towards the affected side. "
+        "Ix: clinical diagnosis in most cases; MRI is reserved for "
+        "red flags, progressive neurological deficit, or symptoms "
+        "failing to settle with conservative care over four to six "
+        "weeks. Mx: most cases improve with analgesia, activity "
+        "modification and physiotherapy without surgery; epidural "
+        "corticosteroid injection or surgical decompression is "
+        "considered for persistent radicular pain or progressive "
+        "weakness. Note: bilateral symptoms, gait disturbance or "
+        "bladder and bowel change point to myelopathy from cord "
+        "compression, not simple radiculopathy, and change the "
+        "urgency completely."
+    ),
+    "Umbilical hernia": (
+        "A protrusion of abdominal contents through the umbilical "
+        "ring, common in infants and also seen in adults with raised "
+        "intra-abdominal pressure. Aetiology: in infants it reflects "
+        "incomplete closure of the umbilical ring after the cord "
+        "separates; in adults it follows pregnancy, obesity, ascites "
+        "or a chronic cough that stretches a naturally weak point in "
+        "the abdominal wall. Clinical features: a soft, reducible "
+        "bulge at the umbilicus, more prominent with crying in "
+        "infants or straining in adults; sudden pain, irreducibility "
+        "or overlying skin changes suggest incarceration or "
+        "strangulation. Ix: clinical diagnosis; ultrasound can "
+        "confirm content and defect size if the examination is "
+        "equivocal or incarceration is suspected. Mx: most infant "
+        "umbilical hernias close spontaneously by age four to five "
+        "and are simply observed; adult hernias, and any infant "
+        "hernia still present beyond school age or larger than about "
+        "1.5cm, are usually repaired electively, with emergency "
+        "repair for incarceration or strangulation. Note: a tense, "
+        "tender, irreducible umbilical hernia with overlying erythema "
+        "is a surgical emergency regardless of the patient's age."
+    ),
+    "Congenital diaphragmatic hernia": (
+        "A developmental defect in the diaphragm allowing abdominal "
+        "viscera into the thoracic cavity, causing pulmonary "
+        "hypoplasia that dominates the clinical picture more than the "
+        "hernia itself. Aetiology: failure of the pleuroperitoneal "
+        "membrane to close during early gestation, most commonly on "
+        "the left; compression of the developing lung on the affected "
+        "side, and often the contralateral lung too, drives the "
+        "severity of outcome. Clinical features: severe respiratory "
+        "distress at birth, a scaphoid abdomen, absent breath sounds "
+        "on the affected side, and bowel sounds audible in the chest; "
+        "many cases are now identified on antenatal ultrasound. Ix: "
+        "antenatal ultrasound with lung-to-head ratio to estimate "
+        "severity and plan delivery; postnatal chest X-ray confirms "
+        "bowel loops in the thorax. Mx: delivery at a tertiary centre "
+        "with immediate intubation, avoiding bag-mask ventilation as "
+        "it distends bowel in the chest, gentle ventilation to limit "
+        "barotrauma, and surgical repair once stabilised, not as an "
+        "emergency. Note: survival now tracks with the degree of "
+        "pulmonary hypoplasia far more closely than with surgical "
+        "timing - stabilising the lungs comes before fixing the "
+        "anatomy."
+    ),
+    "Cleft lip and palate": (
+        "The most common congenital craniofacial anomaly, occurring "
+        "as isolated cleft lip, isolated cleft palate, or both "
+        "together, from failure of facial processes to fuse in early "
+        "gestation. Aetiology: multifactorial, with genetic "
+        "predisposition interacting with maternal smoking, alcohol "
+        "and folate deficiency; it can be isolated or part of a wider "
+        "syndrome. Clinical features: a visible lip defect is usually "
+        "obvious at birth or on antenatal ultrasound; isolated cleft "
+        "palate can be missed without a deliberate oral examination, "
+        "and both increase risk of feeding difficulty, recurrent "
+        "otitis media and later speech disturbance. Ix: antenatal "
+        "ultrasound often detects lip clefts; postnatal examination "
+        "including palpation of the palate is needed to detect a "
+        "submucous cleft, which can look normal on inspection. Mx: "
+        "specialist feeding support from birth, surgical lip repair "
+        "around three months and palate repair around twelve months, "
+        "with ongoing multidisciplinary input through childhood. "
+        "Note: a submucous cleft palate can present later as chronic "
+        "middle ear effusion or nasal speech rather than at birth - "
+        "easy to miss if the palate is not specifically examined."
+    ),
+    "Torticollis": (
+        "A fixed or intermittent tilt and rotation of the head from "
+        "asymmetric neck muscle tone or, less often, structural bony "
+        "abnormality. Aetiology: congenital muscular torticollis "
+        "follows intrauterine positioning or birth trauma causing "
+        "fibrosis and shortening of the sternocleidomastoid; acquired "
+        "causes in children include atlantoaxial rotatory subluxation "
+        "after minor trauma or infection, and in any age group, "
+        "dystonia or a posterior fossa lesion. Clinical features: the "
+        "head tilts towards and rotates away from the affected "
+        "sternocleidomastoid in the congenital form, sometimes with a "
+        "palpable fibrous mass in the muscle; acute painful "
+        "torticollis after infection or trauma needs a broader "
+        "workup. Ix: clinical diagnosis in typical congenital cases; "
+        "cervical spine imaging is warranted for acute onset after "
+        "trauma or associated neurological signs. Mx: congenital "
+        "muscular torticollis is treated with stretching "
+        "physiotherapy started early, which resolves the great "
+        "majority of cases; refractory cases occasionally need "
+        "surgical release. Note: new torticollis with fever, headache "
+        "or neurological signs is a red flag for posterior fossa "
+        "tumour or infection, not a stretching referral."
+    ),
+    "Infantile colic": (
+        "Excessive, otherwise unexplained crying in an infant that is "
+        "intensely distressing for parents but resolves spontaneously "
+        "and carries no long-term harm. Aetiology: poorly understood. "
+        "Likely contributors are gut immaturity and dysregulated "
+        "feeding and settling patterns layered on normal "
+        "developmental crying that peaks around six weeks. It is a "
+        "diagnosis of exclusion rather than a specific gut pathology "
+        "despite the name. Clinical features: evening paroxysms of "
+        "crying in an otherwise thriving well infant, classically the "
+        "rule of three - crying more than three hours a day for more "
+        "than three days a week for over three weeks in an infant "
+        "under three months. Ix: history and examination confirming "
+        "normal growth and a well infant; investigations are reserved "
+        "for red flags suggesting an organic cause instead. Mx: "
+        "parental reassurance and support are central, since no "
+        "treatment reliably shortens the course. A trial change to "
+        "feeding technique can be considered but over-the-counter "
+        "remedies lack good evidence. Note: colic peaks around six "
+        "weeks and resolves by three to four months - crying still "
+        "inconsolable well past this age needs re-evaluation, not a "
+        "colic label."
+    ),
+    "Premature rupture of membranes": (
+        "Rupture of the fetal membranes before the onset of labour, "
+        "categorised by gestation as term or preterm, since the "
+        "risk-benefit balance of expectant management differs sharply "
+        "between them. Aetiology: at term it is often physiological; "
+        "preterm rupture is associated with subclinical "
+        "chorioamnionitis, prior preterm birth and smoking. Clinical "
+        "features: a sudden gush or persistent trickle of clear fluid "
+        "from the vagina, sometimes hard to distinguish from urinary "
+        "leakage in later pregnancy. Ix: sterile speculum examination "
+        "looking for pooling, with nitrazine or fern testing if the "
+        "diagnosis is unclear; digital vaginal examination is avoided "
+        "until labour is established, as it increases infection risk. "
+        "Mx: term rupture is usually managed with induction if labour "
+        "does not start within 24 hours, per NSW Health and eTG "
+        "guidance; preterm rupture before 34 weeks is managed "
+        "expectantly with antenatal corticosteroids, prophylactic "
+        "antibiotics and close monitoring, balancing prematurity "
+        "against infection risk. Note: fever, uterine tenderness or "
+        "fetal tachycardia after rupture signal chorioamnionitis and "
+        "mean expectant management stops - delivery is then indicated "
+        "regardless of gestation."
+    ),
+    "Retained placenta": (
+        "Failure to deliver the placenta within 30 minutes of a "
+        "vaginal birth with active management, or 60 minutes with "
+        "physiological management, and a major contributor to "
+        "postpartum haemorrhage. Aetiology: inadequate uterine "
+        "contraction is the most common cause; a trapped placenta "
+        "behind a closed cervix, or placenta accreta spectrum where "
+        "it has abnormally invaded the uterine wall, can also prevent "
+        "separation entirely. Clinical features: ongoing bleeding "
+        "with an incompletely delivered placenta, or a boggy, poorly "
+        "contracted uterus; heavy bleeding here is an obstetric "
+        "emergency. Ix: clinical assessment of the placenta for "
+        "completeness once delivered; ultrasound can distinguish "
+        "retained fragments from an empty uterus, and antenatal "
+        "imaging flags accreta spectrum risk with placenta praevia "
+        "and prior caesarean. Mx: controlled cord traction and "
+        "uterotonics first, then manual removal under anaesthesia if "
+        "it fails to separate, with resuscitation activated early if "
+        "bleeding is significant; accreta spectrum often needs "
+        "hysterectomy. Note: never pull hard on the cord to hasten "
+        "delivery - uterine inversion from forceful traction is rare "
+        "but catastrophic."
+    ),
+    "Breast abscess": (
+        "A localised collection of pus within breast tissue, most "
+        "often complicating mastitis in a breastfeeding woman. "
+        "Aetiology: Staphylococcus aureus ascending through a cracked "
+        "or damaged nipple, usually following inadequately treated "
+        "lactational mastitis from poor milk drainage; "
+        "non-lactational abscesses occur too, often linked to "
+        "smoking, and periareolar abscesses can recur if an "
+        "underlying fistula is not addressed. Clinical features: a "
+        "tender, fluctuant, erythematous breast mass with overlying "
+        "warmth, often with fever, distinguished from simple mastitis "
+        "by the palpable fluctuant collection. Ix: ultrasound "
+        "confirms the collection and guides aspiration; pus should be "
+        "sent for culture, particularly in recurrent or "
+        "non-lactational cases. Mx: ultrasound-guided needle "
+        "aspiration with antibiotics is first line for most "
+        "abscesses, with incision and drainage reserved for large or "
+        "multiloculated collections; breastfeeding should continue on "
+        "the affected side where possible, as it aids drainage rather "
+        "than worsening infection. Note: advice to stop breastfeeding "
+        "because of mastitis or abscess is outdated - continued "
+        "feeding or expressing is part of the treatment."
+    ),
+    "Premenstrual syndrome": (
+        "Cyclical physical and emotional symptoms occurring in the "
+        "luteal phase of the menstrual cycle and resolving with "
+        "menstruation, distinguished from premenstrual dysphoric "
+        "disorder by severity and functional impact. Aetiology: not a "
+        "hormone excess or deficiency but an abnormal brain "
+        "sensitivity to normal cyclical hormone fluctuation, with "
+        "serotonergic pathways implicated in the mood component. "
+        "Clinical features: bloating, breast tenderness, irritability "
+        "and fatigue in the one to two weeks before menses, with a "
+        "symptom-free follicular phase; that window separates it from "
+        "an underlying mood disorder that happens to fluctuate. Ix: a "
+        "prospective symptom diary across at least two cycles is the "
+        "key diagnostic tool, since retrospective recall "
+        "overestimates severity. Mx: lifestyle measures and simple "
+        "analgesia for mild symptoms; the combined oral contraceptive "
+        "pill or an SSRI, taken continuously or in the luteal phase "
+        "only, for symptoms unresponsive to lifestyle measures. Note: "
+        "symptoms persisting through the follicular phase are not "
+        "premenstrual syndrome, however severe - that pattern points "
+        "to an independent mood disorder needing its own workup."
     ),
 }
 
