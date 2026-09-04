@@ -2225,6 +2225,240 @@ NEW_CONDITIONS = [
         "utd": [["Overview", 'drowning management resuscitation']],
         "summary": "",
     },
+    {
+        "name": "Nelson syndrome",
+        "aliases": ["Nelson tumour"],
+        "utd": [["Overview", "Nelson syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Riedel thyroiditis",
+        "aliases": ["Riedel struma", "invasive fibrous thyroiditis"],
+        "utd": [["Overview", "Riedel thyroiditis"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulmonary alveolar proteinosis",
+        "aliases": ["PAP"],
+        "utd": [["Overview", "pulmonary alveolar proteinosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Cryoglobulinaemia",
+        "aliases": ["cryoglobulinemia", "cryoglobulinaemic vasculitis"],
+        "utd": [["Overview", "cryoglobulinemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Antithrombin deficiency",
+        "aliases": ["antithrombin III deficiency"],
+        "utd": [["Overview", "antithrombin deficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Ruptured abdominal aortic aneurysm",
+        "aliases": ["ruptured AAA"],
+        "utd": [["Overview", "ruptured abdominal aortic aneurysm"]],
+        "summary": "",
+    },
+    {
+        "name": "Dressler syndrome",
+        "aliases": ["postmyocardial infarction syndrome", "post-MI pericarditis"],
+        "utd": [["Overview", "Dressler syndrome postmyocardial infarction pericarditis"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiac myxoma",
+        "aliases": ["atrial myxoma"],
+        "utd": [["Overview", "cardiac myxoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Kallmann syndrome",
+        "aliases": ["hypogonadotropic hypogonadism with anosmia"],
+        "utd": [["Overview", "Kallmann syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Androgen insensitivity syndrome",
+        "aliases": ["testicular feminisation", "AIS"],
+        "utd": [["Overview", "androgen insensitivity syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Hashimoto encephalopathy",
+        "aliases": ["steroid-responsive encephalopathy associated with autoimmune thyroiditis", "SREAT"],
+        "utd": [["Overview", "Hashimoto encephalopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Crigler-Najjar syndrome",
+        "aliases": ["Crigler Najjar"],
+        "utd": [["Overview", "Crigler Najjar syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Japanese encephalitis",
+        "aliases": ["JE virus infection"],
+        "utd": [["Overview", "Japanese encephalitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Barmah Forest virus",
+        "aliases": ["Barmah Forest fever"],
+        "utd": [["Overview", "Barmah Forest virus infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Progressive multifocal leukoencephalopathy",
+        "aliases": ["PML"],
+        "utd": [["Overview", "progressive multifocal leukoencephalopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Paraneoplastic syndrome",
+        "aliases": ["paraneoplastic phenomenon"],
+        "utd": [["Overview", "paraneoplastic syndromes overview"]],
+        "summary": "",
+    },
+    {
+        "name": "Malignant spinal cord compression",
+        "aliases": ["metastatic spinal cord compression", "MSCC"],
+        "utd": [["Overview", "malignant spinal cord compression"]],
+        "summary": "",
+    },
+    {
+        "name": "Graft versus host disease",
+        "aliases": ["GVHD"],
+        "utd": [["Overview", "graft versus host disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Li-Fraumeni syndrome",
+        "aliases": ["TP53 cancer syndrome"],
+        "utd": [["Overview", "Li Fraumeni syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Factitious disorder imposed on another",
+        "aliases": ["Munchausen syndrome by proxy", "fabricated illness by carer"],
+        "utd": [["Overview", "factitious disorder imposed on another"]],
+        "summary": "",
+    },
+    {
+        "name": "Erotomania",
+        "aliases": ["de Clerambault syndrome"],
+        "utd": [["Overview", "erotomania delusional disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Othello syndrome",
+        "aliases": ["delusional jealousy"],
+        "utd": [["Overview", "Othello syndrome delusional jealousy"]],
+        "summary": "",
+    },
+    {
+        "name": "Ganser syndrome",
+        "aliases": ["syndrome of approximate answers"],
+        "utd": [["Overview", "Ganser syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Angelman syndrome",
+        "aliases": ["happy puppet syndrome"],
+        "utd": [["Overview", "Angelman syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Rett syndrome",
+        "aliases": ["MECP2 disorder"],
+        "utd": [["Overview", "Rett syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Noonan syndrome",
+        "aliases": [],
+        "utd": [["Overview", "Noonan syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Fitz-Hugh-Curtis syndrome",
+        "aliases": ["perihepatitis"],
+        "utd": [["Overview", "Fitz Hugh Curtis syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Sundowning",
+        "aliases": ["sundown syndrome"],
+        "utd": [["Overview", "sundowning dementia"]],
+        "summary": "",
+    },
+    {
+        "name": "Elder abuse",
+        "aliases": ["elder mistreatment"],
+        "utd": [["Overview", "elder abuse mistreatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Awareness under anaesthesia",
+        "aliases": ["accidental awareness during general anaesthesia", "AAGA"],
+        "utd": [["Overview", "accidental awareness general anaesthesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Difficult airway",
+        "aliases": ["anticipated difficult intubation"],
+        "utd": [["Overview", "difficult airway management"]],
+        "summary": "",
+    },
+    {
+        "name": "Surgical site infection",
+        "aliases": ["SSI"],
+        "utd": [["Overview", "surgical site infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Incisional hernia",
+        "aliases": [],
+        "utd": [["Overview", "incisional hernia"]],
+        "summary": "",
+    },
+    {
+        "name": "Evisceration",
+        "aliases": ["wound dehiscence with evisceration"],
+        "utd": [["Overview", "wound dehiscence evisceration"]],
+        "summary": "",
+    },
+    {
+        "name": "Charcot foot",
+        "aliases": ["Charcot neuroarthropathy"],
+        "utd": [["Overview", "Charcot neuroarthropathy diabetic foot"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic venous insufficiency",
+        "aliases": ["venous stasis disease"],
+        "utd": [["Overview", "chronic venous insufficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Lymphoedema",
+        "aliases": ["lymphedema"],
+        "utd": [["Overview", "lymphedema"]],
+        "summary": "",
+    },
+    {
+        "name": "Frostbite",
+        "aliases": [],
+        "utd": [["Overview", "frostbite"]],
+        "summary": "",
+    },
+    {
+        "name": "Electrical injury",
+        "aliases": ["electrocution injury"],
+        "utd": [["Overview", "electrical injury"]],
+        "summary": "",
+    },
 ]
 
 
@@ -29551,6 +29785,750 @@ RICH_SUMMARIES = {
         "hypothermia and hypoxic complications. Note: even an "
         "asymptomatic-appearing child after submersion warrants a "
         "period of observation - deterioration can be delayed."
+    ),
+    "Nelson syndrome": (
+        "Rapid enlargement of an ACTH-secreting pituitary "
+        "corticotroph adenoma after bilateral adrenalectomy for "
+        "Cushing disease. Aetiology: loss of cortisol feedback "
+        "removes the normal brake on the tumour, and it progresses "
+        "unchecked, sometimes years after surgery. Clinical features: "
+        "skin hyperpigmentation from very high ACTH, headache, visual "
+        "field loss from chiasmal compression and mass effect. Ix: "
+        "ACTH level (markedly elevated), pituitary MRI showing tumour "
+        "growth, formal visual fields. Mx: transsphenoidal resection "
+        "first line, with radiotherapy or medical therapy "
+        "(cabergoine, temozolomide) for residual or aggressive "
+        "disease. Note: the reason bilateral adrenalectomy for "
+        "Cushing disease is now avoided where possible in favour of "
+        "pituitary-directed therapy."
+    ),
+    "Riedel thyroiditis": (
+        "Rare fibrosing thyroiditis in which normal thyroid "
+        "parenchyma is replaced by dense fibrous tissue that extends "
+        "beyond the capsule into adjacent neck structures. Aetiology: "
+        "thought to be an IgG4-related disease in many cases, often "
+        "occurring with other fibrosing conditions such as "
+        "retroperitoneal fibrosis. Clinical features: hard, fixed, "
+        "woody goitre, dysphagia, dyspnoea, hoarse voice from "
+        "tracheal or recurrent laryngeal nerve involvement. Ix: "
+        "thyroid function usually normal or hypothyroid, IgG4 level, "
+        "core biopsy to exclude anaplastic carcinoma (the key "
+        "differential). Mx: corticosteroids or tamoxifen for early "
+        "fibrosis, surgical decompression (isthmusectomy) if airway "
+        "or oesophageal compromise. Note: the stony-hard fixed goitre "
+        "mimics thyroid cancer clinically, so tissue diagnosis is "
+        "mandatory before assuming benign disease."
+    ),
+    "Pulmonary alveolar proteinosis": (
+        "Diffuse lung disease in which surfactant-derived "
+        "lipoproteinaceous material accumulates within alveoli, "
+        "impairing gas exchange. Aetiology: autoimmune form from "
+        "anti-GM-CSF antibodies impairing alveolar macrophage "
+        "clearance is most common; secondary forms follow "
+        "haematological malignancy, dust exposure or infection. "
+        "Clinical features: progressive dyspnoea and dry cough, "
+        "sometimes over months, with crackles or a surprisingly clear "
+        "chest for the degree of hypoxia. Ix: CT shows a crazy-paving "
+        "pattern, bronchoalveolar lavage returns milky fluid with "
+        "PAS-positive material, serum anti-GM-CSF antibody supports "
+        "the autoimmune form. Mx: whole-lung lavage remains standard "
+        "for significant disease, with inhaled or subcutaneous GM-CSF "
+        "as emerging therapy. Note: crazy-paving on CT is classic but "
+        "not specific; combine with BAL findings to confirm before "
+        "committing to lavage."
+    ),
+    "Cryoglobulinaemia": (
+        "Presence of immunoglobulins that reversibly precipitate in "
+        "the cold, causing vasculitis and hyperviscosity. Aetiology: "
+        "type I is monoclonal and linked to lymphoproliferative "
+        "disease, mixed types II and III are polyclonal and most "
+        "often driven by chronic hepatitis C, with autoimmune disease "
+        "a further cause. Clinical features: palpable purpura on the "
+        "lower limbs, arthralgia, peripheral neuropathy, "
+        "glomerulonephritis and Raynaud phenomenon in the mixed "
+        "types. Ix: serum cryoglobulins collected and transported "
+        "warm, low C4 with relatively preserved C3, hepatitis C "
+        "serology, rheumatoid factor often positive. Mx: treat the "
+        "underlying cause, direct-acting antivirals for hepatitis C, "
+        "rituximab or plasma exchange for severe vasculitis. Note: "
+        "samples must stay at body temperature en route to the lab or "
+        "cryoglobulins redissolve and the test falsely reads "
+        "negative."
+    ),
+    "Antithrombin deficiency": (
+        "Inherited or acquired deficiency of antithrombin, a key "
+        "natural anticoagulant that inhibits thrombin and factor Xa, "
+        "producing a hypercoagulable state. Aetiology: autosomal "
+        "dominant mutation in the SERPINC1 gene in the inherited "
+        "form; acquired deficiency follows nephrotic syndrome, liver "
+        "disease, DIC or heparin therapy. Clinical features: "
+        "recurrent unprovoked venous thromboembolism at a young age, "
+        "thrombosis at unusual sites, and notable heparin resistance "
+        "during treatment. Ix: antithrombin activity assay measured "
+        "well away from an acute clot or active anticoagulation, "
+        "which both lower levels transiently. Mx: standard "
+        "anticoagulation for acute clots, antithrombin concentrate "
+        "for heparin resistance or high-risk surgery, extended "
+        "anticoagulation after recurrent events. Note: heparin relies "
+        "on antithrombin to work, so unexplained heparin resistance "
+        "should prompt testing for this deficiency."
+    ),
+    "Ruptured abdominal aortic aneurysm": (
+        "Catastrophic rupture of a dilated infrarenal aorta into the "
+        "retroperitoneum or peritoneal cavity, a leading vascular "
+        "surgical emergency. Aetiology: atherosclerotic aneurysmal "
+        "degeneration, with smoking, hypertension and a family "
+        "history the strongest risk factors, more common in older "
+        "men. Clinical features: the classic triad of severe "
+        "abdominal or back pain, hypotension and a pulsatile "
+        "abdominal mass, though not always all present together. Ix: "
+        "bedside ultrasound is fastest in an unstable patient; CT "
+        "angiography if hemodynamically tolerable to plan repair. Mx: "
+        "immediate vascular surgery referral for emergency open or "
+        "endovascular repair, permissive hypotension en route, "
+        "activate the massive transfusion protocol. Note: any "
+        "unstable patient with a known or suspected AAA and abdominal "
+        "pain goes straight to theatre; imaging must never delay a "
+        "crashing patient."
+    ),
+    "Dressler syndrome": (
+        "Autoimmune pericarditis occurring weeks to months after "
+        "myocardial infarction, cardiac surgery or chest trauma. "
+        "Aetiology: an immune response against exposed myocardial "
+        "antigens released during injury, distinct from the early "
+        "peri-infarction pericarditis seen in the first days. "
+        "Clinical features: pleuritic chest pain relieved by sitting "
+        "forward, low-grade fever, pericardial rub, sometimes a "
+        "pleural effusion. Ix: ECG may show diffuse ST elevation, "
+        "echocardiogram to assess effusion size and for tamponade, "
+        "inflammatory markers are elevated. Mx: high-dose aspirin or "
+        "NSAIDs plus colchicine are first line post-MI (NSAIDs "
+        "otherwise avoided so soon after infarction), with "
+        "corticosteroids reserved for refractory cases. Note: "
+        "aspirin, not ibuprofen, is preferred in the post-infarct "
+        "window because other NSAIDs can impair scar formation and "
+        "increase reinfarction risk."
+    ),
+    "Cardiac myxoma": (
+        "Most common primary cardiac tumour, a benign gelatinous mass "
+        "arising from the endocardium, most often in the left atrium "
+        "attached to the fossa ovalis. Aetiology: usually sporadic; a "
+        "minority occur as part of Carney complex with skin "
+        "pigmentation and endocrine tumours. Clinical features: the "
+        "classic triad of embolic events, intracardiac obstruction "
+        "causing syncope or a positional mid-diastolic tumour plop, "
+        "and constitutional symptoms mimicking infective "
+        "endocarditis. Ix: transthoracic or transoesophageal "
+        "echocardiogram is diagnostic, showing a mobile pedunculated "
+        "mass, with histology confirming after excision. Mx: prompt "
+        "surgical resection is curative in most cases; recurrence is "
+        "rare but merits follow-up echocardiography. Note: think of "
+        "myxoma whenever a patient has unexplained systemic emboli, "
+        "fever and a murmur that changes with position."
+    ),
+    "Kallmann syndrome": (
+        "Congenital hypogonadotropic hypogonadism combined with "
+        "anosmia or hyposmia, caused by failed migration of GnRH "
+        "neurons and olfactory axons during development. Aetiology: "
+        "mutations in genes including KAL1 and FGFR1, inherited in "
+        "X-linked, autosomal dominant or recessive patterns, or "
+        "occurring sporadically. Clinical features: delayed or absent "
+        "puberty, absent or reduced sense of smell, cryptorchidism "
+        "and micropenis in affected males, sometimes cleft palate or "
+        "renal agenesis. Ix: low LH, FSH and sex steroids with a low "
+        "or normal GnRH response, formal smell testing, MRI showing "
+        "absent or hypoplastic olfactory bulbs, pituitary MRI to "
+        "exclude a mass. Mx: pulsatile GnRH or gonadotropin therapy "
+        "to induce puberty and fertility, sex steroid replacement "
+        "otherwise. Note: anosmia plus delayed puberty in a teenager "
+        "should trigger this diagnosis before assuming constitutional "
+        "delay."
+    ),
+    "Androgen insensitivity syndrome": (
+        "X-linked condition in which a 46,XY individual has androgen "
+        "receptor dysfunction, so tissues fail to respond to "
+        "testosterone despite normal or elevated levels. Aetiology: "
+        "mutation in the androgen receptor gene, complete or partial "
+        "forms producing a spectrum of phenotypes. Clinical features: "
+        "complete AIS presents as a phenotypically female infant or "
+        "adolescent with a blind-ending vagina, absent uterus, and "
+        "primary amenorrhoea with normal breast development but scant "
+        "pubic and axillary hair; partial AIS gives ambiguous "
+        "genitalia. Ix: 46,XY karyotype, elevated testosterone and "
+        "LH, pelvic ultrasound confirming absent uterus, androgen "
+        "receptor gene testing. Mx: multidisciplinary care, "
+        "gonadectomy timing individualised given malignancy risk, "
+        "oestrogen replacement and psychological support. Note: "
+        "intra-abdominal testes carry a small but real germ cell "
+        "tumour risk, so surveillance and shared decision-making "
+        "about gonadectomy timing matter."
+    ),
+    "Hashimoto encephalopathy": (
+        "Steroid-responsive encephalopathy associated with high "
+        "titres of antithyroid antibodies, occurring independently of "
+        "actual thyroid hormone status. Aetiology: presumed "
+        "autoimmune, though the precise mechanism linking antithyroid "
+        "antibodies to encephalopathy remains unclear; most patients "
+        "are euthyroid or only mildly dysfunctional. Clinical "
+        "features: relapsing encephalopathy with confusion, seizures, "
+        "myoclonus, tremor and psychiatric symptoms, sometimes with a "
+        "stroke-like relapsing course. Ix: elevated anti-thyroid "
+        "peroxidase or anti-thyroglobulin antibodies, EEG showing "
+        "diffuse slowing, MRI often normal, exclude other autoimmune "
+        "or infectious encephalitis. Mx: high-dose corticosteroids "
+        "produce a dramatic response in most patients, with "
+        "steroid-sparing agents for relapsing disease. Note: also "
+        "called steroid-responsive encephalopathy associated with "
+        "autoimmune thyroiditis, reflecting that thyroid function "
+        "itself is often normal."
+    ),
+    "Crigler-Najjar syndrome": (
+        "Inherited deficiency of UDP-glucuronosyltransferase causing "
+        "severe unconjugated hyperbilirubinaemia from birth. "
+        "Aetiology: autosomal recessive UGT1A1 mutations, type I from "
+        "complete enzyme absence and type II from partial deficiency. "
+        "Clinical features: marked jaundice from the neonatal period, "
+        "risk of kernicterus and irreversible neurological injury in "
+        "type I if untreated, milder jaundice in type II that "
+        "improves with phenobarbital. Ix: very high unconjugated "
+        "bilirubin with normal liver enzymes and normal haemolysis "
+        "screen, genetic testing confirms the subtype. Mx: type I "
+        "requires intensive phototherapy, plasmapheresis for crises, "
+        "and liver transplantation is often ultimately needed; type "
+        "II responds to phenobarbital which induces residual enzyme "
+        "activity. Note: phenobarbital responsiveness is the key "
+        "clinical test separating type II from the more severe type "
+        "I."
+    ),
+    "Japanese encephalitis": (
+        "Mosquito-borne flavivirus infection and a leading cause of "
+        "viral encephalitis across Asia and parts of the Torres "
+        "Strait and northern Australia. Aetiology: transmitted by "
+        "Culex mosquitoes with pigs and wading birds as amplifying "
+        "hosts; most infections are subclinical. Clinical features: "
+        "fever, headache and vomiting progressing in a minority to "
+        "encephalitis with altered consciousness, seizures and "
+        "parkinsonian movement disorder; survivors often have lasting "
+        "neurological deficits. Ix: JE-specific IgM in serum or CSF, "
+        "MRI often shows bilateral thalamic lesions, lumbar puncture "
+        "shows a lymphocytic pleocytosis. Mx: supportive care only, "
+        "no specific antiviral; vaccination is available and "
+        "recommended for travellers to endemic areas and for "
+        "residents of at-risk regions per the Australian NIP. Note: "
+        "bilateral thalamic involvement on MRI is a useful "
+        "pattern-recognition clue in a returned or northern "
+        "Australian traveller."
+    ),
+    "Barmah Forest virus": (
+        "Mosquito-borne alphavirus endemic to Australia causing an "
+        "acute polyarthritic illness similar to, though usually "
+        "milder than, Ross River virus disease. Aetiology: "
+        "transmitted by Aedes and Culex mosquitoes, with cases "
+        "concentrated in coastal Queensland, northern New South Wales "
+        "and Western Australia, peaking after wet-season flooding. "
+        "Clinical features: fever, arthralgia or arthritis affecting "
+        "small and large joints, myalgia and a maculopapular rash "
+        "that can be pruritic. Ix: serology showing Barmah "
+        "Forest-specific IgM, with PCR useful early in illness; "
+        "notifiable under Australian public health legislation. Mx: "
+        "supportive care with analgesia and NSAIDs, as there is no "
+        "specific antiviral or vaccine; symptoms usually resolve "
+        "within weeks though some have prolonged arthralgia. Note: "
+        "clinically overlaps with Ross River virus, so serology is "
+        "needed to distinguish them for notification and prognosis."
+    ),
+    "Progressive multifocal leukoencephalopathy": (
+        "Demyelinating disease of the central nervous system caused "
+        "by reactivation of JC virus in severely immunocompromised "
+        "patients. Aetiology: JC virus, latent in most adults, "
+        "reactivates when cell-mediated immunity is suppressed, "
+        "classically in advanced HIV, haematological malignancy or "
+        "with natalizumab and other immunomodulatory therapies. "
+        "Clinical features: subacute, progressive focal neurological "
+        "deficits including weakness, visual field loss, cognitive "
+        "decline and ataxia, without fever. Ix: MRI shows asymmetric, "
+        "non-enhancing white matter lesions sparing grey matter, CSF "
+        "JC virus PCR confirms diagnosis. Mx: no specific antiviral "
+        "therapy exists; management centres on reversing the "
+        "underlying immunosuppression, such as antiretroviral therapy "
+        "in HIV or stopping the causative biologic. Note: risk "
+        "stratification with JC virus antibody testing before and "
+        "during natalizumab therapy is standard practice to reduce "
+        "this risk."
+    ),
+    "Paraneoplastic syndrome": (
+        "Remote systemic effect of malignancy not caused by direct "
+        "tumour invasion or metastasis, often mediated by hormone "
+        "secretion or cross-reactive autoimmunity. Aetiology: tumours "
+        "secrete hormone-like substances (such as ACTH or PTHrP) or "
+        "trigger immune responses against antigens shared between the "
+        "tumour and normal tissue, particularly neurons. Clinical "
+        "features: wide-ranging depending on mechanism, including "
+        "hypercalcaemia, SIADH, Cushing syndrome, dermatomyositis, "
+        "and neurological syndromes like Lambert-Eaton myasthenic "
+        "syndrome or limbic encephalitis. Ix: directed by the "
+        "suspected syndrome, onconeural antibody panels for "
+        "neurological presentations, imaging to find the occult "
+        "primary. Mx: treat the underlying malignancy, which often "
+        "improves the paraneoplastic syndrome, plus symptom-directed "
+        "therapy or immunosuppression for antibody-mediated "
+        "syndromes. Note: a paraneoplastic syndrome can precede the "
+        "cancer diagnosis by months, so a positive antibody should "
+        "trigger a thorough tumour search."
+    ),
+    "Malignant spinal cord compression": (
+        "Oncological emergency in which tumour, most often vertebral "
+        "metastasis, compresses the spinal cord or cauda equina, "
+        "threatening permanent neurological loss. Aetiology: breast, "
+        "lung and prostate cancer and myeloma are the most common "
+        "causes, via direct extension from a vertebral body deposit. "
+        "Clinical features: back pain preceding neurological symptoms "
+        "by days to weeks, progressive limb weakness, sensory level, "
+        "and late bladder or bowel dysfunction. Ix: whole-spine MRI "
+        "within 24 hours is the investigation of choice given the "
+        "risk of multiple levels, urgent if any red flag is present. "
+        "Mx: immediate high-dose dexamethasone, urgent oncology and "
+        "spinal surgery referral for decompression or stabilisation, "
+        "radiotherapy for radiosensitive tumours. Note: outcome "
+        "depends heavily on neurological status at treatment onset, "
+        "so a patient still walking is a genuine emergency, not just "
+        "a strong recommendation for imaging."
+    ),
+    "Graft versus host disease": (
+        "Immune-mediated syndrome after allogeneic haematopoietic "
+        "stem cell transplantation in which donor T cells attack "
+        "recipient tissue. Aetiology: donor lymphocytes recognise "
+        "recipient histocompatibility antigens as foreign, risk "
+        "increased by HLA mismatch, unrelated donors and prior "
+        "infections. Clinical features: acute GVHD within 100 days "
+        "targets skin (maculopapular rash), gut (diarrhoea) and liver "
+        "(cholestatic jaundice); chronic GVHD resembles autoimmune "
+        "disease with skin sclerosis, dry eyes and mouth, and lung "
+        "involvement. Ix: clinical staging by organ involvement, skin "
+        "or gut biopsy to confirm, liver function tests. Mx: "
+        "corticosteroids remain first-line for both acute and chronic "
+        "disease, with calcineurin inhibitors, ruxolitinib or "
+        "extracorporeal photopheresis for steroid-refractory cases. "
+        "Note: some GVHD carries a beneficial graft-versus-leukaemia "
+        "effect, so treatment aims to control symptoms without "
+        "abolishing that protective effect entirely."
+    ),
+    "Li-Fraumeni syndrome": (
+        "Autosomal dominant cancer predisposition syndrome caused by "
+        "germline TP53 mutation, conferring a very high lifetime risk "
+        "of multiple cancers. Aetiology: loss of function of the p53 "
+        "tumour suppressor removes a key check on DNA damage response "
+        "and apoptosis. Clinical features: early-onset breast cancer, "
+        "sarcoma, brain tumours, adrenocortical carcinoma and "
+        "leukaemia, often multiple primary cancers in one person or "
+        "across a family over successive generations. Ix: germline "
+        "TP53 genetic testing when criteria are met, with whole-body "
+        "MRI surveillance protocols for confirmed carriers. Mx: "
+        "intensive cancer surveillance from childhood, genetic "
+        "counselling for the family, and avoidance of radiotherapy "
+        "where possible given radiation-induced secondary cancer "
+        "risk. Note: radiotherapy is used cautiously in confirmed "
+        "carriers because TP53-deficient tissue is especially prone "
+        "to radiation-induced malignancy."
+    ),
+    "Factitious disorder imposed on another": (
+        "Condition in which a caregiver, most often a parent, "
+        "fabricates, induces or exaggerates illness in a dependent to "
+        "gain attention or sympathy for themselves as carer. "
+        "Aetiology: thought to relate to the caregiver's own "
+        "psychological needs rather than material gain, "
+        "distinguishing it from malingering by proxy. Clinical "
+        "features: recurrent unexplained illness in a child that "
+        "resolves when separated from the caregiver, symptoms "
+        "inconsistent with investigation findings, a caregiver who "
+        "appears unusually knowledgeable or eager for procedures. Ix: "
+        "careful review of medical records for pattern recognition, "
+        "covert or overt observation in hospital where clinically and "
+        "legally justified, multidisciplinary child protection input. "
+        "Mx: immediate priority is child safety with mandatory "
+        "notification to child protection services, separation from "
+        "the caregiver, and psychiatric assessment of the caregiver. "
+        "Note: this diagnosis carries major medicolegal weight, so "
+        "document objectively and involve child protection and senior "
+        "colleagues early."
+    ),
+    "Erotomania": (
+        "Delusional disorder in which a person holds the fixed, false "
+        "belief that another person, often of higher social status, "
+        "is in love with them. Aetiology: occurs as a primary "
+        "delusional disorder or secondary to schizophrenia, bipolar "
+        "disorder or organic brain disease. Clinical features: "
+        "persistent conviction of requited love despite clear "
+        "rejection, reinterpreting the other person's neutral or "
+        "negative behaviour as secret encouragement, sometimes "
+        "escalating to stalking behaviour. Ix: primarily clinical, "
+        "mental state examination to identify the encapsulated "
+        "delusion, screen for other psychotic or mood symptoms and "
+        "organic causes. Mx: antipsychotic medication is first line, "
+        "with risk assessment for harassment or stalking behaviour "
+        "and involvement of protective services for the target where "
+        "needed. Note: also known as de Clerambault syndrome, and "
+        "carries genuine forensic risk to the object of the delusion, "
+        "not just to the patient."
+    ),
+    "Othello syndrome": (
+        "Delusional disorder characterised by a fixed, irrational "
+        "belief that one's partner is being unfaithful, despite an "
+        "absence of supporting evidence. Aetiology: occurs in primary "
+        "psychotic illness, alcohol use disorder, dementia and "
+        "Parkinson disease treated with dopaminergic therapy. "
+        "Clinical features: obsessive monitoring of the partner's "
+        "movements, phone and belongings, confrontational or "
+        "accusatory behaviour, and a real risk of violence towards "
+        "the partner. Ix: clinical assessment of mental state, "
+        "cognitive screening if dementia is suspected, review of "
+        "medications including dopamine agonists. Mx: treat the "
+        "underlying cause (antipsychotics for psychosis, dose "
+        "adjustment for dopaminergic drugs), with urgent safety "
+        "planning and risk assessment for the partner. Note: this "
+        "delusion carries a genuinely elevated risk of domestic "
+        "violence, so partner safety assessment is not optional."
+    ),
+    "Ganser syndrome": (
+        "Rare dissociative disorder marked by the giving of "
+        "approximate or absurd answers to simple questions, alongside "
+        "clouding of consciousness, classically described in "
+        "prisoners. Aetiology: considered a dissociative response to "
+        "acute severe stress, though some cases overlap with "
+        "factitious presentation or organic brain disease. Clinical "
+        "features: vorbeireden, or approximate answers that show the "
+        "question was understood (such as saying a horse has five "
+        "legs), hallucinations, and apparent clouding of "
+        "consciousness that resolves once the stressor passes. Ix: "
+        "primary a diagnosis of exclusion after ruling out organic "
+        "causes such as head injury, intoxication or an evolving "
+        "psychotic illness. Mx: supportive management, treatment of "
+        "the underlying stressor, psychiatric follow-up; symptoms "
+        "typically resolve once the individual is removed from the "
+        "precipitating stress. Note: approximate answers are the "
+        "pathognomonic feature, distinguishing it from frank "
+        "psychosis or dementia."
+    ),
+    "Angelman syndrome": (
+        "Neurodevelopmental disorder caused by loss of function of "
+        "the maternally inherited UBE3A gene on chromosome 15. "
+        "Aetiology: most commonly a deletion of the maternal 15q11-13 "
+        "region, with paternal uniparental disomy or imprinting "
+        "defects accounting for other cases; the paternal copy of the "
+        "same region deleted causes Prader-Willi syndrome instead. "
+        "Clinical features: severe developmental delay, absent or "
+        "minimal speech, a happy demeanour with frequent laughter and "
+        "hand-flapping, ataxic gait, and epilepsy in most affected "
+        "children. Ix: chromosomal microarray and methylation studies "
+        "of the 15q11-13 region confirm diagnosis. Mx: no cure; "
+        "management is supportive with early intervention therapies, "
+        "anti-seizure medication, and communication aids given "
+        "limited verbal speech. Note: the same chromosomal region "
+        "produces opposite phenotypes depending on whether the "
+        "deletion is maternal (Angelman) or paternal (Prader-Willi), "
+        "a classic genomic imprinting example."
+    ),
+    "Rett syndrome": (
+        "X-linked neurodevelopmental disorder, almost exclusively "
+        "affecting girls, caused by mutations in the MECP2 gene. "
+        "Aetiology: MECP2 mutation disrupts normal gene regulation in "
+        "neurons; usually sporadic rather than inherited, as the "
+        "mutation is typically lethal in males. Clinical features: "
+        "normal development for the first six to eighteen months "
+        "followed by regression, loss of purposeful hand use replaced "
+        "by repetitive hand-wringing movements, loss of speech, gait "
+        "abnormality and acquired microcephaly. Ix: MECP2 genetic "
+        "testing confirms diagnosis, though diagnosis remains "
+        "primarily clinical based on the characteristic regression "
+        "pattern. Mx: supportive multidisciplinary care including "
+        "physiotherapy, communication supports, seizure management "
+        "and monitoring for scoliosis and cardiac arrhythmia. Note: "
+        "the regression after apparently normal early development is "
+        "the key feature that separates Rett syndrome from other "
+        "causes of global developmental delay."
+    ),
+    "Noonan syndrome": (
+        "Autosomal dominant condition caused by mutations disrupting "
+        "the RAS-MAPK signalling pathway, producing a recognisable "
+        "pattern of congenital anomalies. Aetiology: most commonly "
+        "PTPN11 mutation, with several other RAS pathway genes "
+        "implicated, one of the RASopathy group of disorders. "
+        "Clinical features: short stature, characteristic facial "
+        "features (widely spaced eyes, low-set ears, webbed neck), "
+        "congenital heart disease especially pulmonary valve stenosis "
+        "and hypertrophic cardiomyopathy, and a bleeding tendency. "
+        "Ix: clinical diagnosis supported by echocardiogram and "
+        "genetic testing of RAS pathway genes, coagulation screen "
+        "given bleeding risk. Mx: multidisciplinary management of "
+        "cardiac disease, growth hormone therapy can improve final "
+        "height, developmental support as needed. Note: pulmonary "
+        "valve stenosis in a child with these facial features should "
+        "prompt consideration of Noonan syndrome rather than an "
+        "isolated cardiac defect."
+    ),
+    "Fitz-Hugh-Curtis syndrome": (
+        "Perihepatitis occurring as a complication of pelvic "
+        "inflammatory disease, in which infection spreads from the "
+        "fallopian tubes to the liver capsule. Aetiology: most often "
+        "Chlamydia trachomatis or Neisseria gonorrhoeae ascending "
+        "from the lower genital tract, reaching the liver surface via "
+        "the peritoneal cavity or lymphatics. Clinical features: "
+        "sharp right upper quadrant pain that can mimic "
+        "cholecystitis, often with concurrent or preceding pelvic "
+        "pain, fever and cervical motion tenderness on examination. "
+        "Ix: nucleic acid amplification testing for chlamydia and "
+        "gonorrhoea, pelvic ultrasound, and if imaged, violin-string "
+        "adhesions between the liver capsule and abdominal wall are "
+        "characteristic at laparoscopy. Mx: antibiotics per eTG for "
+        "pelvic inflammatory disease, treat sexual partners, "
+        "adhesiolysis rarely needed. Note: right upper quadrant pain "
+        "in a sexually active young woman should prompt a pelvic and "
+        "sexual health assessment alongside the hepatobiliary workup."
+    ),
+    "Sundowning": (
+        "Pattern of worsening confusion, agitation and behavioural "
+        "disturbance occurring in the late afternoon and evening in "
+        "patients with dementia. Aetiology: not fully understood, "
+        "proposed contributors include circadian rhythm disruption, "
+        "fatigue, reduced environmental cues at dusk, and unmet needs "
+        "such as pain or hunger. Clinical features: increased "
+        "agitation, wandering, disorientation and sometimes "
+        "aggression that emerges or worsens as daylight fades, "
+        "improving overnight or by morning. Ix: primarily clinical; "
+        "screen for and exclude reversible contributors such as "
+        "delirium, infection, pain, constipation and medication "
+        "effects before attributing symptoms to sundowning alone. Mx: "
+        "non-pharmacological strategies first, including consistent "
+        "routine, adequate lighting in the evening, minimising "
+        "daytime napping and reducing overstimulation; antipsychotics "
+        "reserved for severe distress or safety risk given their "
+        "harms in dementia. Note: always exclude delirium first, "
+        "since a new presentation that looks like sundowning may in "
+        "fact be an acute reversible illness."
+    ),
+    "Elder abuse": (
+        "Mistreatment of an older person by someone in a position of "
+        "trust, encompassing physical, psychological, financial and "
+        "sexual abuse and neglect. Aetiology: risk factors include "
+        "caregiver stress, social isolation, cognitive impairment in "
+        "the older person, and a history of family violence; "
+        "financial abuse by family members is the most commonly "
+        "reported form in Australia. Clinical features: unexplained "
+        "injuries inconsistent with the stated history, poor hygiene "
+        "or malnutrition, withdrawal or fearfulness around a "
+        "particular carer, and sudden changes in financial "
+        "circumstances. Ix: careful private interview separate from "
+        "the suspected abuser, thorough documentation of injuries "
+        "with photographs where consented, cognitive assessment to "
+        "gauge capacity. Mx: involve social work and, where the "
+        "person lacks capacity or is at immediate risk, escalate to "
+        "adult safeguarding services or police; mandatory reporting "
+        "obligations vary by Australian jurisdiction for aged care "
+        "settings. Note: an older adult with capacity has the right "
+        "to decline intervention, which makes documentation and "
+        "ongoing support, rather than forced action, central to "
+        "management."
+    ),
+    "Awareness under anaesthesia": (
+        "Rare but serious complication in which a patient has "
+        "explicit recall of intraoperative events despite intended "
+        "general anaesthesia. Aetiology: inadequate depth of "
+        "anaesthesia relative to surgical stimulus, equipment "
+        "malfunction, or deliberately lighter anaesthesia in "
+        "high-risk cases such as cardiac surgery, caesarean section "
+        "or major trauma with haemodynamic instability. Clinical "
+        "features: patients report hearing conversation, sensing "
+        "paralysis, or feeling pain during surgery, which can lead to "
+        "post-traumatic stress disorder afterward. Ix: structured "
+        "postoperative interview (the modified Brice questionnaire) "
+        "for patients at higher risk, processed EEG "
+        "depth-of-anaesthesia monitoring intraoperatively in selected "
+        "cases. Mx: acknowledge the patient's experience without "
+        "dismissing it, refer for psychological support, formal "
+        "incident reporting and root cause review. Note: believing "
+        "and validating the patient's account is the single most "
+        "important first step in management, since disbelief worsens "
+        "psychological harm."
+    ),
+    "Difficult airway": (
+        "Clinical scenario in which mask ventilation, tracheal "
+        "intubation or both are anticipated or found to be more "
+        "difficult than usual, a leading cause of anaesthetic "
+        "morbidity. Aetiology: anatomical features such as limited "
+        "mouth opening, reduced neck extension, high Mallampati "
+        "score, obesity and airway pathology from tumour, trauma or "
+        "infection. Clinical features: difficulty visualising the "
+        "larynx, multiple intubation attempts, or inability to "
+        "ventilate, which can rapidly progress to a "
+        "can't-intubate-can't-oxygenate emergency. Ix: preoperative "
+        "airway assessment including Mallampati score, thyromental "
+        "distance and neck mobility, review of prior anaesthetic "
+        "records. Mx: structured difficult airway algorithms (such as "
+        "ANZCA or DAS guidelines), videolaryngoscopy as first-line "
+        "rescue in many settings, with a clear plan for emergency "
+        "front-of-neck access if oxygenation fails. Note: a "
+        "documented difficult airway should be flagged clearly in the "
+        "patient's record for every future anaesthetic encounter."
+    ),
+    "Surgical site infection": (
+        "Infection occurring at or near a surgical incision within 30 "
+        "to 90 days of the operation, one of the most common "
+        "healthcare-associated infections. Aetiology: contamination "
+        "by skin flora or gut organisms at the time of surgery, with "
+        "risk increased by diabetes, obesity, smoking, prolonged "
+        "operative time and inadequate antibiotic prophylaxis timing. "
+        "Clinical features: wound erythema, warmth, purulent "
+        "discharge and dehiscence for superficial infection; fever "
+        "and systemic illness suggest deep or organ-space "
+        "involvement. Ix: wound swab or deep tissue culture if "
+        "collection is present, bloods and imaging (ultrasound or CT) "
+        "for suspected deep collections. Mx: source control by "
+        "opening and draining the wound is central, with antibiotics "
+        "per eTG guided by likely organisms and local resistance "
+        "patterns; deep or organ-space infection needs surgical "
+        "review. Note: appropriately timed preoperative antibiotic "
+        "prophylaxis, usually within 60 minutes of incision, remains "
+        "one of the most effective preventive measures."
+    ),
+    "Incisional hernia": (
+        "Protrusion of abdominal contents through a defect in the "
+        "musculofascial layer at the site of a previous surgical "
+        "incision. Aetiology: impaired wound healing from infection, "
+        "obesity, smoking, steroid use or poor surgical technique "
+        "weakens the closure, with risk rising after emergency or "
+        "midline laparotomy. Clinical features: a reducible bulge at "
+        "or near the scar that enlarges with straining or standing, "
+        "discomfort, and risk of incarceration or strangulation if "
+        "the defect is narrow. Ix: clinical examination usually "
+        "suffices; CT or ultrasound helps characterise size and "
+        "contents, especially in obese patients or before elective "
+        "repair. Mx: elective mesh repair for symptomatic or "
+        "enlarging hernias, watchful waiting for small asymptomatic "
+        "defects in low-risk patients, urgent surgery for "
+        "incarceration or strangulation. Note: smoking cessation and "
+        "weight optimisation before elective repair meaningfully "
+        "reduce recurrence risk."
+    ),
+    "Evisceration": (
+        "Complete disruption of a surgical wound with protrusion of "
+        "abdominal viscera through the open incision, a surgical "
+        "emergency. Aetiology: wound dehiscence progressing further, "
+        "risk factors include infection, malnutrition, raised "
+        "intra-abdominal pressure from coughing or straining, and "
+        "poor fascial closure technique. Clinical features: sudden "
+        "gush of serosanguinous fluid from the wound followed by "
+        "visible bowel or omentum outside the abdominal cavity, often "
+        "preceded by a sensation of something giving way. Ix: "
+        "primarily clinical recognition; assess for bowel viability "
+        "and contamination at the bedside while preparing for "
+        "theatre. Mx: cover exposed viscera with sterile "
+        "saline-soaked gauze, avoid attempts to reduce contents at "
+        "the bedside, urgent surgical return to theatre for washout "
+        "and re-closure. Note: this is a time-critical emergency "
+        "requiring immediate senior surgical involvement, not "
+        "ward-level management."
+    ),
+    "Charcot foot": (
+        "Progressive, non-infective destruction of foot bones and "
+        "joints occurring in patients with peripheral neuropathy, "
+        "most often from diabetes. Aetiology: repetitive unrecognised "
+        "microtrauma in an insensate foot combined with increased "
+        "blood flow from autonomic neuropathy drives bone resorption "
+        "and joint destabilisation. Clinical features: acute Charcot "
+        "presents with a warm, swollen, erythematous foot that can be "
+        "mistaken for cellulitis or gout, often with minimal pain "
+        "given the underlying neuropathy; chronic disease produces "
+        "characteristic midfoot collapse (rocker-bottom deformity). "
+        "Ix: plain X-ray may be normal early, MRI is more sensitive "
+        "for early bone marrow changes, temperature difference "
+        "between feet supports the diagnosis over infection. Mx: "
+        "strict offloading in a total contact cast is the cornerstone "
+        "of acute management, with surgical reconstruction for severe "
+        "deformity. Note: a hot, swollen diabetic foot without a "
+        "wound is Charcot until proven otherwise, and offloading "
+        "should start before imaging is finalised."
+    ),
+    "Chronic venous insufficiency": (
+        "Long-term impairment of venous return from the legs due to "
+        "valve incompetence or outflow obstruction, causing venous "
+        "hypertension. Aetiology: primary valve failure from vein "
+        "wall weakness, or secondary to previous deep vein thrombosis "
+        "(post-thrombotic syndrome), with prolonged standing and "
+        "obesity as contributing factors. Clinical features: leg "
+        "heaviness and aching that worsens through the day and "
+        "improves with elevation, varicose veins, ankle oedema, "
+        "hyperpigmentation and lipodermatosclerosis, progressing to "
+        "venous ulceration in severe disease. Ix: duplex ultrasound "
+        "to assess venous reflux and exclude obstruction, "
+        "ankle-brachial index before compression to exclude "
+        "significant arterial disease. Mx: graduated compression "
+        "stockings and leg elevation are first line, with endovenous "
+        "ablation or sclerotherapy for symptomatic superficial "
+        "reflux. Note: always check ankle-brachial index before "
+        "applying compression, as significant arterial disease is a "
+        "contraindication."
+    ),
+    "Lymphoedema": (
+        "Chronic swelling caused by impaired lymphatic drainage "
+        "leading to protein-rich fluid accumulation in the "
+        "interstitial space. Aetiology: primary lymphoedema from "
+        "congenital lymphatic dysplasia is rare; secondary "
+        "lymphoedema, far more common, follows cancer treatment "
+        "(lymph node dissection or radiotherapy), infection "
+        "(filariasis worldwide) or chronic venous disease. Clinical "
+        "features: progressive limb swelling, initially pitting and "
+        "reversible, becoming non-pitting and fibrotic over time, "
+        "with a positive Stemmer sign (inability to pinch a skin fold "
+        "at the base of the toes or fingers). Ix: mainly clinical; "
+        "lymphoscintigraphy or MR lymphangiography if diagnosis is "
+        "unclear or surgery is planned, exclude DVT and recurrent "
+        "malignancy as causes of new swelling. Mx: complete "
+        "decongestive therapy combining manual lymphatic drainage, "
+        "compression bandaging and exercise, with meticulous skin "
+        "care to prevent cellulitis. Note: cellulitis risk is "
+        "significantly increased in lymphoedematous limbs and should "
+        "be treated promptly and aggressively per eTG."
+    ),
+    "Frostbite": (
+        "Localised cold-induced tissue injury caused by freezing of "
+        "skin and underlying tissue, most affecting exposed or "
+        "peripheral areas. Aetiology: prolonged exposure to sub-zero "
+        "temperatures, worsened by wind chill, wet clothing, tight "
+        "footwear and impaired peripheral circulation. Clinical "
+        "features: affected skin is pale, hard and numb initially; on "
+        "rewarming it becomes red, painful and may blister, with "
+        "severity ranging from superficial injury to full-thickness "
+        "tissue loss and gangrene. Ix: clinical staging after "
+        "rewarming; angiography or bone scan can help delineate "
+        "tissue viability if amputation is being considered. Mx: "
+        "rapid rewarming in water at 37 to 39 degrees Celsius, avoid "
+        "rubbing the area or premature rewarming if refreezing risk "
+        "remains, analgesia, and delayed debridement as demarcation "
+        "of viable tissue can take weeks. Note: 'time is tissue but "
+        "patience is treatment' - surgical intervention is deferred "
+        "until clear demarcation unless infection intervenes."
+    ),
+    "Electrical injury": (
+        "Tissue and organ damage from electrical current passing "
+        "through the body, ranging from a minor burn to sudden "
+        "cardiac arrest. Aetiology: household low-voltage exposure "
+        "typically causes localised burns, while high-voltage "
+        "exposure (industrial or lightning) causes deep tissue "
+        "destruction, and alternating current is more likely than "
+        "direct current to induce ventricular fibrillation. Clinical "
+        "features: entry and exit burns that underestimate the extent "
+        "of deep tissue injury, cardiac arrhythmia, rhabdomyolysis, "
+        "and fractures from tetanic muscle contraction or a fall. Ix: "
+        "continuous cardiac monitoring and ECG given arrhythmia risk, "
+        "creatine kinase for rhabdomyolysis, urine myoglobin, imaging "
+        "as guided by mechanism and examination. Mx: ensure the power "
+        "source is isolated before touching the patient, cardiac "
+        "monitoring for at least four hours after significant "
+        "exposure, aggressive fluid resuscitation for rhabdomyolysis, "
+        "surgical review for compartment syndrome. Note: the visible "
+        "skin burn is often far smaller than the true extent of deep "
+        "tissue and muscle injury, so examination findings alone can "
+        "be misleading."
     ),
 }
 
