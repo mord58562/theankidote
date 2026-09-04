@@ -1871,6 +1871,144 @@ NEW_CONDITIONS = [
         "utd": [["Overview", 'premenstrual dysphoric disorder SSRI treatment']],
         "summary": "",
     },
+    {
+        "name": 'Latex allergy',
+        "aliases": ['Natural rubber latex allergy', 'NRL allergy'],
+        "utd": [["Overview", 'latex allergy IgE hypersensitivity healthcare']],
+        "summary": "",
+    },
+    {
+        "name": 'Coal worker pneumoconiosis',
+        "aliases": ['CWP', 'Black lung'],
+        "utd": [["Overview", 'coal worker pneumoconiosis black lung']],
+        "summary": "",
+    },
+    {
+        "name": 'Sick building syndrome',
+        "aliases": ['Indoor environmental illness'],
+        "utd": [["Overview", 'sick building syndrome indoor air quality']],
+        "summary": "",
+    },
+    {
+        "name": 'Dialysis disequilibrium',
+        "aliases": ['Disequilibrium syndrome', 'DDS'],
+        "utd": [["Overview", 'dialysis disequilibrium syndrome cerebral oedema']],
+        "summary": "",
+    },
+    {
+        "name": 'Arteriovenous fistula complications',
+        "aliases": ['AVF complications', 'Dialysis access complications'],
+        "utd": [["Overview", 'arteriovenous fistula complications steal thrombosis']],
+        "summary": "",
+    },
+    {
+        "name": 'Peritoneal dialysis peritonitis',
+        "aliases": ['PD peritonitis', 'CAPD peritonitis'],
+        "utd": [["Overview", 'peritoneal dialysis peritonitis diagnosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Dialysis amyloidosis',
+        "aliases": ['Beta-2 microglobulin amyloidosis', 'Haemodialysis amyloidosis'],
+        "utd": [["Overview", 'dialysis related amyloidosis beta-2 microglobulin']],
+        "summary": "",
+    },
+    {
+        "name": 'Alcohol withdrawal seizures',
+        "aliases": ['Rum fits', 'Alcohol withdrawal fits'],
+        "utd": [["Overview", 'alcohol withdrawal seizures benzodiazepine management']],
+        "summary": "",
+    },
+    {
+        "name": 'Cannabis hyperemesis syndrome',
+        "aliases": ['CHS', 'Cannabinoid hyperemesis'],
+        "utd": [["Overview", 'cannabinoid hyperemesis syndrome hot shower']],
+        "summary": "",
+    },
+    {
+        "name": 'GHB overdose',
+        "aliases": ['Gamma-hydroxybutyrate toxicity', 'Liquid ecstasy overdose'],
+        "utd": [["Overview", 'GHB overdose gamma hydroxybutyrate toxidrome']],
+        "summary": "",
+    },
+    {
+        "name": 'MDMA toxicity',
+        "aliases": ['Ecstasy toxicity', 'Molly overdose'],
+        "utd": [["Overview", 'MDMA toxicity hyperthermia hyponatraemia serotonin']],
+        "summary": "",
+    },
+    {
+        "name": 'Methamphetamine toxicity',
+        "aliases": ['Ice toxicity', 'Crystal meth toxicity'],
+        "utd": [["Overview", 'methamphetamine toxicity psychosis cardiovascular']],
+        "summary": "",
+    },
+    {
+        "name": 'Kratom toxicity',
+        "aliases": ['Mitragynine toxicity'],
+        "utd": [["Overview", 'kratom mitragynine toxicity dependence']],
+        "summary": "",
+    },
+    {
+        "name": 'Nitrous oxide misuse',
+        "aliases": ['Nangs', 'Whippits', 'Nitrous oxide abuse'],
+        "utd": [["Overview", 'nitrous oxide recreational misuse B12 myelopathy']],
+        "summary": "",
+    },
+    {
+        "name": 'School refusal',
+        "aliases": ['School avoidance', 'School phobia'],
+        "utd": [["Overview", 'school refusal anxiety adolescent management']],
+        "summary": "",
+    },
+    {
+        "name": 'Non-suicidal self-injury',
+        "aliases": ['NSSI', 'Self-harm without suicidal intent'],
+        "utd": [["Overview", 'non suicidal self injury adolescent assessment']],
+        "summary": "",
+    },
+    {
+        "name": 'Ehlers-Danlos hypermobile',
+        "aliases": [],
+        "utd": [["Overview", 'hypermobile Ehlers Danlos syndrome joint hypermobility']],
+        "summary": "",
+    },
+    {
+        "name": 'Sickle cell trait',
+        "aliases": ['HbAS', 'Heterozygous sickle cell'],
+        "utd": [["Overview", 'sickle cell trait complications exercise']],
+        "summary": "",
+    },
+    {
+        "name": 'Bowel cancer screening',
+        "aliases": ['NBCSP', 'Colorectal cancer screening', 'NBOCSP'],
+        "utd": [["Overview", 'bowel cancer screening Australia FOBT FIT']],
+        "summary": "",
+    },
+    {
+        "name": 'Cervical cancer screening',
+        "aliases": ['NCSP', 'HPV cervical screening', 'Cervical screening test'],
+        "utd": [["Overview", 'cervical cancer screening Australia HPV primary']],
+        "summary": "",
+    },
+    {
+        "name": 'Abdominal aortic aneurysm screening',
+        "aliases": ['AAA screening', 'Aortic ultrasound screening'],
+        "utd": [["Overview", 'abdominal aortic aneurysm screening ultrasound']],
+        "summary": "",
+    },
+    {
+        "name": 'Osteoporosis screening',
+        "aliases": ['DEXA screening', 'Bone density screening'],
+        "utd": [["Overview", 'osteoporosis screening DEXA fracture risk Australia']],
+        "summary": "",
+    },
+    {
+        "name": 'Absolute cardiovascular risk assessment',
+        "aliases": ['Absolute CVD risk', 'Australian CVD risk calculator', 'CVD risk assessment'],
+        "utd": [["Overview", 'absolute cardiovascular risk assessment Australia calculator']],
+        "summary": "",
+    },
 ]
 
 
@@ -28240,6 +28378,376 @@ RICH_SUMMARIES = {
         "days, given continuously or luteal-phase only. Combined oral "
         "contraceptive with drospirenone 24/4 is an alternative. "
         "Note: symptoms often worsen approaching menopause."
+    ),
+
+    "Latex allergy": (
+        "IgE-mediated hypersensitivity to natural rubber latex "
+        "proteins, distinct from irritant or type IV allergic contact "
+        "dermatitis to glove chemicals. Risk factors: healthcare "
+        "workers, spina bifida, multiple surgeries and atopy. "
+        "Fruit-latex cross-reactivity with banana, avocado, kiwi and "
+        "chestnut. Features: urticaria and angioedema on contact, "
+        "rhinoconjunctivitis or asthma with airborne powder, "
+        "anaphylaxis intraoperatively. Ix: skin prick or serum "
+        "latex-specific IgE. Mx: strict avoidance, latex-free theatre "
+        "and dental care, EpiPen script and ASCIA action plan. "
+        "MedicAlert bracelet. Notify anaesthetist preoperatively for "
+        "first-case scheduling in a latex-free environment. Note: "
+        "powdered gloves phased out in Australian hospitals, reducing "
+        "new sensitisation among staff."
+    ),
+    "Coal worker pneumoconiosis": (
+        "Fibrotic lung disease from chronic coal dust inhalation, "
+        "re-emerging in Queensland after decades of assumed control. "
+        "Simple CWP is nodular and often asymptomatic. Progressive "
+        "massive fibrosis (PMF) coalesces nodules >1 cm with dyspnoea "
+        "and cor pulmonale. Features: exertional dyspnoea, chronic "
+        "cough, black sputum (melanoptysis) and restrictive "
+        "spirometry. Ix: occupational history, CXR or HRCT showing "
+        "upper-zone nodules, ILO classification, spirometry. Mx: "
+        "remove from exposure, smoking cessation, pulmonary rehab, "
+        "treat co-existing COPD, workers compensation claim through "
+        "icare or Coal Services NSW. No disease-modifying therapy. "
+        "Note: Queensland reintroduced mandatory respiratory "
+        "surveillance in 2016 after cases resurfaced."
+    ),
+    "Sick building syndrome": (
+        "Non-specific symptoms linked temporally to time spent in a "
+        "particular building, resolving on leaving. A diagnosis of "
+        "exclusion after ruling out building-related illness "
+        "(Legionella, hypersensitivity pneumonitis, CO poisoning). "
+        "Features: headache, mucosal irritation, fatigue, difficulty "
+        "concentrating and dry cough, improving on weekends or leave. "
+        "Causes: poor ventilation, low humidity, VOCs from new "
+        "furnishings, mould and psychosocial stressors. Ix: exclude "
+        "organic disease and workplace air-quality assessment via "
+        "Safe Work Australia. Mx: improve HVAC and outdoor air "
+        "exchange, reduce indoor pollutants, address ergonomic and "
+        "psychosocial factors. Note: symptom clusters often track "
+        "workplace dissatisfaction as much as air quality."
+    ),
+    "Dialysis disequilibrium": (
+        "Acute neurological syndrome during or shortly after "
+        "haemodialysis, from rapid urea clearance creating an osmotic "
+        "gradient that drives water into brain cells (reverse-urea "
+        "effect). Highest risk on first dialysis session with very "
+        "high pre-dialysis urea, in children and elderly. Features: "
+        "headache, nausea, restlessness, blurred vision, tremor and "
+        "muscle cramps, progressing rarely to seizures, coma or "
+        "death. Ix: clinical diagnosis, exclude stroke, subdural "
+        "haematoma and hypoglycaemia. Mx: prevent by short "
+        "low-efficiency initial sessions with slow blood flow, "
+        "prophylactic mannitol or hypertonic saline in high-risk "
+        "starts. Stop or slow dialysis if symptoms develop. Note: "
+        "modern gradual initiation protocols have made severe cases "
+        "rare."
+    ),
+    "Arteriovenous fistula complications": (
+        "AV fistula is the preferred haemodialysis access "
+        "(radiocephalic or brachiocephalic) with lower infection and "
+        "thrombosis rates than grafts or tunnelled catheters. "
+        "Complications: thrombosis (loss of thrill or bruit), "
+        "stenosis at anastomosis or outflow, aneurysm and "
+        "pseudoaneurysm, infection, high-output cardiac failure and "
+        "steal syndrome causing distal hand ischaemia. Ix: duplex "
+        "ultrasound for stenosis or thrombus, fistulogram if "
+        "intervention planned. Mx: preserve access with no BP, "
+        "venepuncture or IV cannulation in that arm. Refer to "
+        "vascular or interventional nephrology urgently for lost "
+        "thrill. Fistuloplasty or surgical revision for stenosis. "
+        "Note: cover cannulation-site bleeding with firm pressure, "
+        "not a tourniquet."
+    ),
+    "Peritoneal dialysis peritonitis": (
+        "Most common serious complication of PD, presenting with "
+        "cloudy effluent and abdominal pain. Usually Gram-positive "
+        "skin flora (coagulase-negative staph, Staph aureus) from "
+        "touch contamination; Gram-negative or fungal peritonitis "
+        "suggests bowel source or catheter biofilm. Diagnosis needs "
+        "two of cloudy effluent, effluent WCC >100 with >50% "
+        "neutrophils and positive culture. Ix: effluent cell count, "
+        "Gram stain and culture, blood cultures if unwell. Mx: "
+        "intraperitoneal antibiotics per ISPD guidelines (usually "
+        "cefazolin plus gentamicin or ceftazidime), continue PD if "
+        "tolerated, remove catheter for fungal, refractory or "
+        "relapsing peritonitis. Note: every PD patient carries an "
+        "emergency antibiotic kit at home with a renal unit hotline."
+    ),
+    "Dialysis amyloidosis": (
+        "Beta-2 microglobulin amyloid deposition in patients on "
+        "long-term haemodialysis (usually >5-10 years), reflecting "
+        "inadequate clearance of this middle molecule by conventional "
+        "dialysers. Deposits target synovium, bone and tendon "
+        "sheaths. Features: carpal tunnel syndrome (often bilateral "
+        "and the presenting sign), shoulder pain and stiffness, "
+        "destructive spondyloarthropathy of cervical spine, "
+        "pathological fractures from bone cysts. Ix: clinical pattern "
+        "in long-term dialysis, MRI or biopsy showing amyloid with "
+        "anti-B2M staining. Mx: high-flux or haemodiafiltration "
+        "membranes improve clearance, carpal tunnel release for "
+        "symptomatic disease. Kidney transplantation is the only "
+        "definitive treatment. Note: incidence has fallen with modern "
+        "high-flux dialysis."
+    ),
+    "Alcohol withdrawal seizures": (
+        "Generalised tonic-clonic seizures 6-48 hours after last "
+        "drink in alcohol-dependent patients, from GABA "
+        "downregulation and glutamate upregulation during chronic "
+        "use. Usually single or brief flurry; status epilepticus "
+        "should prompt search for another cause. A marker of severe "
+        "withdrawal and predicts delirium tremens if untreated. Ix: "
+        "BSL, electrolytes (magnesium, phosphate), CT head if focal "
+        "signs, first seizure or head injury. Mx: IV or oral diazepam "
+        "per NSW Health withdrawal protocol titrated to CIWA-Ar, "
+        "thiamine 300 mg IV before glucose to prevent Wernicke, "
+        "correct hypomagnesaemia. Admit for symptom-triggered "
+        "benzodiazepines. Note: seizures occur even with detectable "
+        "blood alcohol if levels have dropped rapidly from baseline."
+    ),
+    "Cannabis hyperemesis syndrome": (
+        "Cyclical vomiting in chronic cannabis users, "
+        "characteristically relieved by hot showers or baths. Rising "
+        "prevalence with high-potency products. Phases: prodromal "
+        "(morning nausea, fear of vomiting), hyperemetic "
+        "(intractable vomiting, abdominal pain, compulsive bathing) "
+        "and recovery on cessation. Often misdiagnosed as cyclic "
+        "vomiting syndrome or gastroparesis for years. Ix: exclude "
+        "surgical abdomen, pregnancy, DKA, obstruction. Positive "
+        "urine cannabinoid supports but does not prove diagnosis. Mx: "
+        "IV fluids, topical capsaicin cream to abdomen, haloperidol "
+        "or droperidol for acute episodes (ondansetron often "
+        "ineffective), definitive treatment is sustained cannabis "
+        "cessation. Note: symptoms recur within days of resuming use, "
+        "which can be diagnostic."
+    ),
+    "GHB overdose": (
+        "Gamma-hydroxybutyrate, a GABA-B agonist used recreationally "
+        "and as a chemsex drug; narrow therapeutic index and steep "
+        "dose-response curve. Often co-ingested with alcohol or "
+        "stimulants. Features: rapid-onset deep coma with preserved "
+        "airway reflexes, bradycardia, hypothermia and myoclonic "
+        "jerks, then abrupt awakening within hours. Withdrawal in "
+        "dependent users mimics severe alcohol withdrawal with "
+        "agitation and seizures. Ix: not detected on routine drug "
+        "screens (narrow window, specific assay needed); clinical "
+        "diagnosis from history and rapid resolution. Mx: supportive "
+        "airway protection, avoid unnecessary intubation as recovery "
+        "is often rapid, treat withdrawal with high-dose "
+        "benzodiazepines and baclofen. Note: 1 mL dose difference can "
+        "separate euphoria from coma."
+    ),
+    "MDMA toxicity": (
+        "Serotonergic and sympathomimetic amphetamine derivative; "
+        "toxicity from serotonin syndrome, hyperthermia, "
+        "hyponatraemia and cardiovascular effects. Deaths at "
+        "Australian festivals usually involve heatstroke or water "
+        "intoxication rather than pure overdose. Features: agitation, "
+        "hyperthermia >39, tachycardia, hypertension, mydriasis, "
+        "trismus, hyperreflexia, clonus and seizures. SIADH with "
+        "dilutional hyponatraemia causes headache, confusion and "
+        "cerebral oedema. Ix: electrolytes and sodium, creatine "
+        "kinase for rhabdomyolysis, coagulation, ECG. Mx: active "
+        "cooling for hyperthermia, benzodiazepines for agitation, "
+        "cautious fluids given hyponatraemia risk, hypertonic saline "
+        "for severe hyponatraemia. Avoid antipyretics. Note: NSW "
+        "pill-testing trials show frequent adulteration with "
+        "cathinones and PMA."
+    ),
+    "Methamphetamine toxicity": (
+        "Long-acting sympathomimetic with high addictive potential; "
+        "acute toxicity, chronic organ damage and behavioural crises "
+        "are common ED presentations. Features: agitation, psychosis, "
+        "tachycardia, hypertension, chest pain from coronary spasm or "
+        "MI, hyperthermia, seizures and rhabdomyolysis. Chronic use "
+        "causes cardiomyopathy, stroke, dental erosion (meth mouth) "
+        "and psychosis persisting after abstinence. Ix: ECG and "
+        "troponin for chest pain, CK, electrolytes, CT head for focal "
+        "signs. Mx: benzodiazepines first-line for agitation and "
+        "blood pressure, active cooling, avoid beta-blockers alone "
+        "(unopposed alpha), refer to drug and alcohol services for "
+        "contingency management or residential rehab. Note: no "
+        "TGA-approved pharmacotherapy for dependence."
+    ),
+    "Kratom toxicity": (
+        "Mitragyna speciosa leaf, containing mitragynine acting as a "
+        "partial mu-opioid agonist at high doses and a stimulant at "
+        "low doses. Sold online in Australia as a supplement despite "
+        "being TGA Schedule 9 (prohibited). Features: low dose gives "
+        "stimulation and euphoria, high dose gives opioid effects "
+        "with sedation, respiratory depression, seizures and "
+        "hepatotoxicity. Dependence and withdrawal syndrome "
+        "resembling opioid withdrawal with rhinorrhoea, myalgia and "
+        "dysphoria. Ix: not on standard drug screens, LFTs for "
+        "hepatotoxicity, ECG for QT prolongation. Mx: supportive "
+        "care, naloxone partially reverses respiratory depression, "
+        "benzodiazepines for seizures, buprenorphine for withdrawal "
+        "management. Note: often co-ingested with other opioids, "
+        "increasing overdose risk."
+    ),
+    "Nitrous oxide misuse": (
+        "Recreational inhalation of N2O from cream chargers (nangs), "
+        "widely available and legal in Australia for culinary use. "
+        "Irreversibly oxidises cobalt in vitamin B12, causing "
+        "functional B12 deficiency with heavy use. Features: acute "
+        "euphoria, dissociation, hypoxia and asphyxiation. Chronic "
+        "use causes subacute combined degeneration of the cord with "
+        "paraesthesiae, ataxia, weakness and bladder dysfunction, "
+        "plus megaloblastic anaemia. Ix: serum B12 (may be normal), "
+        "homocysteine and methylmalonic acid (both raised), MRI cord "
+        "showing dorsal column T2 hyperintensity. Mx: cease use, "
+        "high-dose parenteral hydroxocobalamin, physiotherapy for "
+        "neurological deficits. Note: NSW and Vic have restricted "
+        "retail sales after a surge in young-adult neurological "
+        "cases."
+    ),
+    "School refusal": (
+        "Persistent difficulty attending school due to emotional "
+        "distress, distinct from truancy (which lacks anxiety and "
+        "often involves antisocial behaviour). Peaks at school "
+        "transitions (kindy, high school entry). Comorbid with "
+        "anxiety disorders, depression, autism spectrum and learning "
+        "difficulties. Features: somatic complaints on school "
+        "mornings (headache, abdominal pain) resolving by "
+        "mid-morning, tearfulness, clinging, and normal weekend "
+        "behaviour. Ix: developmental and mental health assessment, "
+        "screen for bullying, learning difficulty and family "
+        "stressors. Mx: early graded return coordinated between "
+        "family, school and GP or paediatrician, CBT for underlying "
+        "anxiety, treat comorbid depression. Avoid prolonged absence "
+        "which entrenches avoidance. Note: parental accommodation "
+        "predicts chronicity."
+    ),
+    "Non-suicidal self-injury": (
+        "Deliberate self-inflicted tissue damage without suicidal "
+        "intent, typically cutting, burning or hitting, used for "
+        "emotional regulation, self-punishment or communication. "
+        "Common in adolescents (10-15% lifetime prevalence). Distinct "
+        "from suicide attempts but a strong risk factor for future "
+        "suicide. Features: linear scars on forearms or thighs, "
+        "concealed by long sleeves, escalating frequency during "
+        "stress. Ix: mental state exam plus HEEADSSS for adolescents, "
+        "assessing intent (crucial to distinguish from suicide "
+        "attempt), function, method lethality and peer-group "
+        "contagion. Screen for depression, trauma and eating "
+        "disorders. Mx: "
+        "DBT-informed therapy is first-line, treat comorbid mental "
+        "illness, safety planning, engage family. Avoid coercive "
+        "no-harm contracts. Note: mandatory reporting if under 16 and "
+        "at risk of harm."
+    ),
+    "Ehlers-Danlos hypermobile": (
+        "Most common EDS subtype (hEDS), inherited connective tissue "
+        "disorder with no confirmed genetic marker, diagnosed on 2017 "
+        "international criteria. Features: generalised joint "
+        "hypermobility (Beighton score >=5 adults), recurrent "
+        "subluxations and dislocations, chronic musculoskeletal pain, "
+        "soft velvety skin with mild hyperextensibility, easy "
+        "bruising. Associated with POTS, dysautonomia, mast cell "
+        "activation and gastrointestinal dysmotility. Ix: clinical "
+        "diagnosis by criteria, exclude vascular EDS (COL3A1) which "
+        "needs cardiovascular surveillance. Mx: physiotherapy focused "
+        "on proximal stability and low-impact strengthening, pacing "
+        "for fatigue, treat comorbidities. No cure. Note: hEDS is not "
+        "life-threatening; vascular EDS is, and requires urgent "
+        "genetics referral."
+    ),
+    "Sickle cell trait": (
+        "Heterozygous HbAS, generally asymptomatic and not a disease. "
+        "Around 8% of West African ancestry populations carry it, "
+        "increasingly relevant in Australia given migration patterns. "
+        "Features: usually silent. Rare complications with extreme "
+        "hypoxia or dehydration: exertional rhabdomyolysis and sudden "
+        "death (military and athletic contexts), splenic infarction "
+        "at altitude, painless haematuria from renal papillary "
+        "necrosis, hyposthenuria (impaired urine concentration). Ix: "
+        "haemoglobin electrophoresis or HPLC. Confirm partner status "
+        "before pregnancy for genetic counselling. Mx: education on "
+        "hydration and altitude precautions, no treatment needed. "
+        "Antenatal partner testing to assess risk of sickle cell "
+        "disease in offspring. Note: not an indication to defer from "
+        "sport, but hydration matters."
+    ),
+    "Bowel cancer screening": (
+        "National Bowel Cancer Screening Program (NBCSP) mails free "
+        "immunochemical faecal occult blood test (iFOBT) biennially "
+        "to Australians aged 50-74. From July 2024, eligibility "
+        "extended to age 45 on request. Reduces bowel cancer "
+        "mortality by around 15-25% through early detection of "
+        "curable-stage cancer and adenoma removal. Ix: iFOBT every 2 "
+        "years; a positive result triggers colonoscopy within 30 days "
+        "per Cancer Council targets. Mx: higher-risk groups (family "
+        "history, IBD, polyposis syndromes) follow separate "
+        "surveillance colonoscopy schedules per NHMRC guidelines, not "
+        "iFOBT. Aboriginal and Torres Strait Islander participation "
+        "remains lower; targeted GP alternative-access pathways "
+        "improve uptake. Note: GPs can order replacement kits and "
+        "should discuss the test at 45th and 50th birthday health "
+        "assessments."
+    ),
+    "Cervical cancer screening": (
+        "National Cervical Screening Program replaced Pap smears with "
+        "primary HPV testing in December 2017. Five-yearly HPV test "
+        "for people with a cervix aged 25-74, or 2 years after first "
+        "sexual activity if later. Self-collection available to all "
+        "eligible participants since July 2022. HPV 16/18 positive "
+        "triggers direct colposcopy referral; other oncogenic HPV "
+        "types trigger reflex liquid-based cytology and 12-month "
+        "repeat if low-grade. Ix: HPV test on cervical or "
+        "self-collected vaginal swab. Mx: colposcopy for high-grade "
+        "or persistent oncogenic HPV, treat CIN2+ with LLETZ. "
+        "Aboriginal and Torres Strait Islander women have lower "
+        "screening uptake and higher mortality. Note: HPV vaccination "
+        "does not remove screening need."
+    ),
+    "Abdominal aortic aneurysm screening": (
+        "No national AAA screening program in Australia, unlike the "
+        "UK or US. RACGP Red Book suggests considering one-off "
+        "abdominal ultrasound in men aged 65-74 with cardiovascular "
+        "risk factors or smoking history; not universally funded. "
+        "Features: usually asymptomatic until rupture, occasionally "
+        "pulsatile mass or back pain. Rupture is catastrophic with "
+        "80% pre-hospital mortality. Ix: abdominal ultrasound "
+        "(sensitive and specific), CT angiogram for surgical "
+        "planning. Mx: aneurysms <5.5 cm monitored by serial "
+        "ultrasound (interval depends on size), aggressive "
+        "cardiovascular risk factor modification, smoking cessation "
+        "is critical. Elective repair (EVAR or open) at >=5.5 cm in "
+        "men or >=5.0 cm in women, or rapid expansion. Note: "
+        "opportunistic screening on incidental imaging is common."
+    ),
+    "Osteoporosis screening": (
+        "No population screening in Australia; case finding via risk "
+        "assessment. Indications for PBS-subsidised DEXA are age "
+        ">=70, prior minimal-trauma fracture, prolonged "
+        "corticosteroids (>=3 months of >=7.5 mg prednisolone) and "
+        "conditions causing secondary osteoporosis "
+        "(hyperparathyroidism, coeliac, hypogonadism). FRAX or Garvan "
+        "calculator estimates 10-year "
+        "fracture risk to guide treatment. Features: usually silent "
+        "until fragility fracture (wrist, vertebra, hip). Ix: DEXA "
+        "hip and lumbar spine, T-score <=-2.5 defines osteoporosis, "
+        "screen secondary causes (calcium, vitamin D, TSH, PTH, "
+        "coeliac serology, testosterone in men). Mx: calcium and "
+        "vitamin D, weight-bearing exercise, falls prevention, "
+        "bisphosphonate or denosumab. Note: repeat DEXA every 2 years "
+        "if treatment initiated."
+    ),
+    "Absolute cardiovascular risk assessment": (
+        "Australian CVD Risk Calculator (2023 update, "
+        "auscvdrisk.com.au) estimates 5-year risk of MI or stroke, "
+        "replacing older Framingham-based tool. Screening: recommended "
+        "for all adults aged 45-79 without established CVD (from 30 "
+        "in Aboriginal and Torres Strait Islander adults, or 35 with "
+        "diabetes). Ix: uses age, sex, smoking, SBP, total and HDL "
+        "cholesterol, diabetes, ECG LVH, atrial fibrillation, eGFR "
+        "and postcode-derived SEIFA, with coronary artery calcium, "
+        "CKD or family history as reclassifiers. Categories are low "
+        "(<5%), intermediate (5-10%) and high (>=10%). Mx: lifestyle "
+        "for all, "
+        "statin plus BP therapy for high risk regardless of "
+        "individual lipid or BP levels, shared decision-making at "
+        "intermediate risk. Note: recalculate every 2 years if low, "
+        "yearly if intermediate."
     ),
 }
 
