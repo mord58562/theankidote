@@ -1757,6 +1757,120 @@ NEW_CONDITIONS = [
         "utd": [['Overview', 'stress urinary incontinence women treatment']],
         "summary": "",
     },
+    {
+        "name": 'Opioid rotation',
+        "aliases": ['Opioid switching', 'Opioid conversion'],
+        "utd": [["Overview", 'opioid rotation equianalgesic conversion palliative']],
+        "summary": "",
+    },
+    {
+        "name": 'Terminal secretions',
+        "aliases": ['Death rattle', 'Retained upper airway secretions'],
+        "utd": [["Overview", 'terminal respiratory secretions end of life care']],
+        "summary": "",
+    },
+    {
+        "name": 'Cancer cachexia',
+        "aliases": ['Cachexia syndrome', 'Tumour cachexia'],
+        "utd": [["Overview", 'cancer cachexia anorexia weight loss management']],
+        "summary": "",
+    },
+    {
+        "name": 'End-of-life dyspnoea',
+        "aliases": ['Terminal dyspnoea', 'Dyspnoea in dying patients'],
+        "utd": [["Overview", 'dyspnoea end of life palliative care management']],
+        "summary": "",
+    },
+    {
+        "name": 'Breakthrough cancer pain',
+        "aliases": ['BTcP', 'Incident cancer pain'],
+        "utd": [["Overview", 'breakthrough cancer pain management rescue opioid']],
+        "summary": "",
+    },
+    {
+        "name": 'Postoperative nausea and vomiting',
+        "aliases": ['PONV', 'Post-op nausea'],
+        "utd": [["Overview", 'postoperative nausea vomiting prevention treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Difficult airway assessment',
+        "aliases": ['Difficult intubation prediction', 'Mallampati assessment'],
+        "utd": [["Overview", 'difficult airway assessment prediction anaesthesia']],
+        "summary": "",
+    },
+    {
+        "name": 'Local anaesthetic systemic toxicity',
+        "aliases": ['LAST', 'Local anesthetic toxicity'],
+        "utd": [["Overview", 'local anaesthetic systemic toxicity lipid emulsion rescue']],
+        "summary": "",
+    },
+    {
+        "name": 'Post-dural puncture headache',
+        "aliases": ['PDPH', 'Post lumbar puncture headache'],
+        "utd": [["Overview", 'postdural puncture headache epidural blood patch']],
+        "summary": "",
+    },
+    {
+        "name": 'Myeloproliferative neoplasms',
+        "aliases": ['MPN', 'Myeloproliferative disorders'],
+        "utd": [["Overview", 'myeloproliferative neoplasms polycythaemia essential thrombocythaemia myelofibrosis']],
+        "summary": "",
+    },
+    {
+        "name": 'Drug-induced thrombocytopenia',
+        "aliases": ['DITP', 'Drug-induced platelet destruction'],
+        "utd": [["Overview", 'drug induced thrombocytopenia mechanisms management']],
+        "summary": "",
+    },
+    {
+        "name": 'Dubin-Johnson syndrome',
+        "aliases": ['Dubin Johnson', 'Conjugated hyperbilirubinaemia hereditary'],
+        "utd": [["Overview", 'dubin johnson syndrome hereditary hyperbilirubinaemia']],
+        "summary": "",
+    },
+    {
+        "name": 'Rotor syndrome',
+        "aliases": ['Rotor hyperbilirubinaemia'],
+        "utd": [["Overview", 'rotor syndrome hereditary hyperbilirubinaemia diagnosis']],
+        "summary": "",
+    },
+    {
+        "name": 'Relative energy deficiency in sport',
+        "aliases": ['RED-S', 'Female athlete triad'],
+        "utd": [["Overview", 'relative energy deficiency sport female athlete triad']],
+        "summary": "",
+    },
+    {
+        "name": 'Tibial stress reaction',
+        "aliases": ['Shin splints continuum', 'Medial tibial stress syndrome'],
+        "utd": [["Overview", 'tibial stress reaction stress fracture runners']],
+        "summary": "",
+    },
+    {
+        "name": 'Iliotibial band syndrome',
+        "aliases": ['ITB syndrome', 'IT band friction'],
+        "utd": [["Overview", 'iliotibial band syndrome lateral knee pain runners']],
+        "summary": "",
+    },
+    {
+        "name": 'Sever disease',
+        "aliases": ['Calcaneal apophysitis'],
+        "utd": [["Overview", 'sever disease calcaneal apophysitis paediatric heel pain']],
+        "summary": "",
+    },
+    {
+        "name": 'Hirsutism',
+        "aliases": ['Female androgenic hair growth'],
+        "utd": [["Overview", 'hirsutism women workup PCOS management']],
+        "summary": "",
+    },
+    {
+        "name": 'Premenstrual dysphoric disorder',
+        "aliases": ['PMDD', 'Severe PMS'],
+        "utd": [["Overview", 'premenstrual dysphoric disorder SSRI treatment']],
+        "summary": "",
+    },
 ]
 
 
@@ -27690,6 +27804,442 @@ RICH_SUMMARIES = {
         "sling or urethral bulking if conservative measures fail. "
         "Note: pelvic floor training beats surgery for "
         "mild-to-moderate cases and always precedes it."
+    ),
+
+    "Opioid rotation": (
+        "Switching from one opioid to another to improve the "
+        "analgesia-to-toxicity ratio, most often when dose escalation "
+        "is limited by sedation, delirium, myoclonus, hyperalgesia or "
+        "intractable nausea. Aetiology: incomplete cross-tolerance "
+        "between mu agonists means the new drug is more potent at the "
+        "same equianalgesic dose than the table suggests, and the "
+        "previous accumulation of active metabolites "
+        "(morphine-6-glucuronide in renal impairment, normeperidine) "
+        "may be driving the toxicity being escaped. Mx: convert to "
+        "oral morphine equivalent daily dose, choose the new opioid, "
+        "then reduce by 25-50% for incomplete cross-tolerance and by "
+        "a further 25% if the patient is elderly, frail or in renal "
+        "or hepatic impairment. Methadone requires specialist "
+        "prescribing given its long and variable half-life and QT "
+        "effect. Provide breakthrough at one-sixth of the new "
+        "background dose and review within 24-48 hours. Note: eTG "
+        "Palliative Care lists the equianalgesic ratios and warns "
+        "that renal impairment favours fentanyl or buprenorphine over "
+        "morphine, oxycodone and codeine."
+    ),
+    "Terminal secretions": (
+        "Noisy upper-airway rattle in the dying patient from pooled "
+        "saliva and bronchial secretions the patient can no longer "
+        "clear, typically in the last 24-48 hours of life. Aetiology: "
+        "reduced conscious level abolishes the swallow and cough, so "
+        "oropharyngeal fluid moves with respiration. It is "
+        "distressing to families but there is no evidence the patient "
+        "experiences it. Mx: reposition on the side with the head "
+        "slightly elevated and stop clinically assisted hydration if "
+        "it is contributing. Antimuscarinics reduce further "
+        "production but do not clear existing secretions, so they "
+        "work best when started early - glycopyrronium 200-400 mcg "
+        "subcut (does not cross the blood-brain barrier, first-line), "
+        "hyoscine butylbromide 20 mg subcut, or hyoscine hydrobromide "
+        "400 mcg subcut if sedation is also wanted. Avoid deep "
+        "suctioning, which is traumatic and provokes more secretion. "
+        "Note: the most important intervention is explaining to the "
+        "family that the sound does not mean the patient is drowning "
+        "or in pain."
+    ),
+    "Cancer cachexia": (
+        "Multifactorial syndrome of ongoing loss of skeletal muscle "
+        "mass, with or without loss of fat, that cannot be fully "
+        "reversed by conventional nutritional support and leads to "
+        "progressive functional impairment. Aetiology: tumour and "
+        "host-derived cytokines (IL-1, IL-6, TNF-alpha) and tumour "
+        "factors drive systemic inflammation, insulin resistance, "
+        "lipolysis and proteolysis. Anorexia, early satiety and "
+        "treatment toxicity compound the deficit. Diagnosis: weight "
+        "loss over 5% in 6 months, or over 2% with BMI under 20 or "
+        "with sarcopenia. Stages are precachexia, cachexia and "
+        "refractory cachexia (life expectancy under 3 months). Mx: "
+        "address reversible contributors - pain, nausea, "
+        "constipation, depression, oral thrush, dysgeusia. Dietitian "
+        "review with high-energy, high-protein oral intake and "
+        "resistance exercise as tolerated. Progestogens (megestrol) "
+        "and low-dose corticosteroids improve appetite but not lean "
+        "mass and carry thromboembolic and adrenal risk. Note: in "
+        "refractory cachexia the goal shifts from reversal to symptom "
+        "relief and family support; forced feeding does not help."
+    ),
+    "End-of-life dyspnoea": (
+        "Distressing breathlessness in the dying patient, often out "
+        "of proportion to measurable hypoxia and worsened by anxiety, "
+        "secretions and positioning. Aetiology: primary disease (lung "
+        "cancer, COPD, heart failure, pulmonary embolism), effusion "
+        "or lymphangitis, anaemia, and central drivers such as "
+        "anxiety. Mx: address the reversible - drain a symptomatic "
+        "effusion, transfuse for symptomatic anaemia, treat infection "
+        "if consistent with goals of care. Non-drug measures come "
+        "first - cool air across the face from a fan, upright "
+        "positioning, calm environment, breathing techniques. "
+        "Low-dose oral or subcut morphine (2.5-5 mg) is the primary "
+        "drug for refractory dyspnoea per eTG Palliative Care; it "
+        "reduces the sensation without measurably depressing "
+        "respiration at these doses. Add a benzodiazepine (lorazepam "
+        "sublingual or midazolam subcut) if anxiety is prominent. "
+        "Oxygen only helps if the patient is hypoxic. Note: the fan "
+        "is one of the most effective and most underused "
+        "interventions in palliative care."
+    ),
+    "Breakthrough cancer pain": (
+        "Transient exacerbation of pain that occurs on a background "
+        "of otherwise controlled baseline pain in a patient on "
+        "regular opioid therapy. Types: incident (predictable, "
+        "movement or procedure-related), spontaneous (unpredictable) "
+        "and end-of-dose failure (pain returns before the next "
+        "scheduled dose is due, indicating an inadequate background "
+        "regimen rather than true breakthrough). Features: rapid "
+        "onset over minutes, moderate to severe intensity, median "
+        "duration around 30 minutes; several episodes per day is "
+        "typical. Mx: for end-of-dose failure, increase the "
+        "background opioid rather than adding more breakthroughs. For "
+        "true breakthrough, use a short-acting immediate-release "
+        "opioid at one-sixth of the total 24-hour oral morphine "
+        "equivalent, repeatable after the onset time (30-60 minutes "
+        "for oral, 15-30 for subcut). Reassess if more than three or "
+        "four doses per day are needed and titrate the background "
+        "upwards. Address the trigger for incident pain - pre-emptive "
+        "dosing before predictable movement, radiotherapy for a "
+        "painful bony metastasis. Note: transmucosal fentanyl "
+        "products are not PBS-listed for this indication in Australia "
+        "and are rarely first-line."
+    ),
+    "Postoperative nausea and vomiting": (
+        "Nausea, retching or vomiting within 24 hours of anaesthesia, "
+        "occurring in roughly a third of unselected patients and more "
+        "in those with risk factors. Risk factors: Apfel score counts "
+        "female sex, non-smoker, history of PONV or motion sickness, "
+        "and postoperative opioid use - each adds roughly 20% to the "
+        "baseline risk. Volatile agents, nitrous oxide, long surgery, "
+        "laparoscopy and gynaecological, ENT or eye surgery add "
+        "further risk. Prevention: multimodal prophylaxis matched to "
+        "risk. Options include ondansetron 4 mg IV at induction, "
+        "dexamethasone 4-8 mg IV at induction, droperidol 0.625 mg, "
+        "and total intravenous anaesthesia with propofol avoiding "
+        "volatiles and nitrous oxide. Combine agents from different "
+        "classes for high-risk patients. Mx: use a rescue antiemetic "
+        "from a class not used for prophylaxis. Address dehydration, "
+        "pain and gastric distension. Consider a nasogastric tube if "
+        "gastric outlet is obstructed. Note: dexamethasone doubles as "
+        "an analgesic adjunct and is cheap; single doses do not "
+        "meaningfully affect wound healing or glycaemia."
+    ),
+    "Difficult airway assessment": (
+        "Bedside prediction of the airway that will be hard to mask "
+        "ventilate, intubate or place a supraglottic device in. No "
+        "single test is sensitive; the value is in combining them. "
+        "Features: LEMON captures intubation - Look externally, "
+        "Evaluate 3-3-2 (interincisor, mentohyoid and hyoid-thyroid "
+        "finger-breadths), Mallampati class, Obstruction, and Neck "
+        "mobility. Mask-ventilation predictors are captured by MOANS "
+        "(Mask seal, Obesity or Obstruction, Age over 55, No teeth, "
+        "Stiff lungs). Red flags: stridor, voice change, drooling, "
+        "previous difficult intubation documented, radiotherapy to "
+        "the neck, restricted mouth opening under 3 cm, thyromental "
+        "distance under 6 cm. Mx: if a difficult airway is "
+        "anticipated, plan an awake fibreoptic or videolaryngoscopic "
+        "intubation with the patient breathing spontaneously, call "
+        "for skilled help early, ramp the obese patient and "
+        "preoxygenate for 3 minutes. Follow the ANZCA and DAS "
+        "unanticipated difficult intubation algorithm to "
+        "front-of-neck access if cannot intubate cannot oxygenate."
+    ),
+    "Local anaesthetic systemic toxicity": (
+        "Life-threatening reaction to inadvertent intravascular "
+        "injection or systemic absorption of local anaesthetic, most "
+        "often bupivacaine, ropivacaine or lignocaine. Aetiology: "
+        "sodium-channel blockade in cardiac and neural tissue. "
+        "Bupivacaine is the most cardiotoxic because it binds sodium "
+        "channels avidly and dissociates slowly in diastole. Risk is "
+        "dose-related and amplified by vascular injection site and "
+        "pregnancy. Features: onset usually within minutes. Prodrome "
+        "of perioral numbness, tinnitus, metallic taste and agitation "
+        "progresses to seizures then CVS collapse (bradycardia, broad "
+        "complex arrhythmias, asystole). Bupivacaine may cause "
+        "cardiac arrest with no CNS warning. Mx: stop injection, call "
+        "for help, ABC with 100% oxygen and control seizures with a "
+        "benzodiazepine. Give 20% lipid emulsion 1.5 mL/kg bolus then "
+        "0.25 mL/kg/min infusion, repeat bolus twice for persistent "
+        "collapse and double the infusion rate to a maximum 12 mL/kg. "
+        "Prolonged CPR is worthwhile - recovery after 45 minutes is "
+        "described. Avoid vasopressin, calcium channel blockers and "
+        "beta blockers; use small adrenaline doses under 1 mcg/kg."
+    ),
+    "Post-dural puncture headache": (
+        "Positional headache after dural puncture, from CSF leak that "
+        "lowers intracranial pressure and produces traction on "
+        "pain-sensitive structures. Risk factors: young age, female "
+        "sex, pregnancy, low BMI, and larger cutting-tip needles. "
+        "Pencil-point (Sprotte, Whitacre) needles reduce incidence "
+        "relative to Quincke. Features: onset within 5 days, "
+        "bilateral frontal or occipital headache worsening within 15 "
+        "minutes of sitting or standing and improving within 15 "
+        "minutes of lying down. Neck stiffness, tinnitus and nausea "
+        "are common. Resolves spontaneously in most within a week. "
+        "Red flags: fever, focal deficit, seizure, altered mental "
+        "state or a headache that becomes non-positional warrant "
+        "urgent imaging to exclude subdural haematoma, cerebral "
+        "venous sinus thrombosis or meningitis. Mx: bed rest as "
+        "tolerated, oral hydration, simple analgesia and caffeine "
+        "300-500 mg give modest relief. Definitive treatment is an "
+        "epidural blood patch (15-20 mL autologous blood into the "
+        "epidural space) for severe or persistent headache beyond "
+        "24-48 hours, typically resolving within an hour with 70-90% "
+        "success at first attempt."
+    ),
+    "Myeloproliferative neoplasms": (
+        "Clonal haematopoietic stem cell disorders producing "
+        "overproduction of mature myeloid lineages, driven in most "
+        "cases by JAK-STAT pathway mutations. Types: polycythaemia "
+        "vera (raised red cells, JAK2 V617F in over 95%), essential "
+        "thrombocythaemia (raised platelets, JAK2, CALR or MPL) and "
+        "primary myelofibrosis (marrow fibrosis with cytopenias and "
+        "splenomegaly). CML with BCR-ABL fusion is considered "
+        "separately. Features: often incidental on FBC. Thrombosis "
+        "(arterial and venous including splanchnic), aquagenic "
+        "pruritus after a hot shower in PV, erythromelalgia in ET, "
+        "and constitutional symptoms with splenomegaly in "
+        "myelofibrosis. Ix: FBC and film, JAK2 V617F first then CALR "
+        "or MPL if negative, BCR-ABL excludes CML, low erythropoietin "
+        "supports PV and bone marrow biopsy grades reticulin fibrosis. "
+        "Mx: PV needs venesection to haematocrit under 0.45 plus "
+        "low-dose aspirin, adding hydroxyurea if high-risk. ET uses "
+        "aspirin with hydroxyurea for high-risk disease. Myelofibrosis "
+        "responds to ruxolitinib for symptoms and splenomegaly, with "
+        "allogeneic transplant the only cure. Note: transformation to "
+        "AML is the feared long-term complication."
+    ),
+    "Drug-induced thrombocytopenia": (
+        "Isolated fall in platelet count temporally related to a "
+        "drug, with recovery on withdrawal. Aetiology: immune "
+        "mechanisms involve drug-dependent antibodies that bind "
+        "platelets only in the presence of the drug - classic "
+        "offenders are heparin, quinine, sulfonamides, vancomycin and "
+        "glycoprotein IIb/IIIa inhibitors. Non-immune marrow "
+        "suppression occurs with chemotherapy, linezolid and "
+        "valproate. Features: platelet count typically falls 5-10 "
+        "days after starting a new drug, or within hours on "
+        "re-exposure. Bleeding at counts under 20-30, though HIT "
+        "paradoxically causes thrombosis. Diagnosis: temporal "
+        "association, exclusion of other causes (ITP, TTP, DIC, "
+        "sepsis, EDTA pseudothrombocytopenia) and recovery on "
+        "withdrawal. For HIT calculate the 4T score and send anti-PF4 "
+        "ELISA with confirmatory functional assay. Mx: stop the "
+        "suspected drug and structurally related agents. Platelet "
+        "transfusion for active bleeding or count under 10. For HIT, "
+        "stop all heparin including flushes and start a non-heparin "
+        "anticoagulant (danaparoid, argatroban or fondaparinux). Do "
+        "not transfuse platelets in HIT unless bleeding. Note: "
+        "recovery is usually within 1-2 weeks."
+    ),
+    "Dubin-Johnson syndrome": (
+        "Rare autosomal recessive benign conjugated "
+        "hyperbilirubinaemia from impaired hepatic excretion of "
+        "conjugated bilirubin into bile. Aetiology: mutations in "
+        "ABCC2 encoding the MRP2 canalicular transporter. Bilirubin "
+        "is conjugated normally but cannot be pumped into the "
+        "canaliculus, so it refluxes to plasma. Features: mild "
+        "fluctuating jaundice from adolescence, often precipitated by "
+        "pregnancy, oral contraceptives or intercurrent illness. No "
+        "pruritus, hepatomegaly or functional liver impairment. "
+        "Diagnosis: predominantly conjugated hyperbilirubinaemia "
+        "(usually under 100 micromol/L) with normal transaminases, "
+        "ALP and coagulation. Urinary coproporphyrin total is normal "
+        "but the isomer I fraction is markedly raised (over 80%, "
+        "versus about 25% normally) - a specific pattern. Liver "
+        "biopsy shows dark pigment in centrilobular hepatocytes but "
+        "is rarely needed. Mx: reassurance. No treatment or "
+        "restriction is required and life expectancy is normal. Note: "
+        "distinguish from Rotor syndrome, which lacks pigmented liver "
+        "and has raised total urinary coproporphyrin; and from "
+        "biliary obstruction, in which ALP and GGT are raised."
+    ),
+    "Rotor syndrome": (
+        "Rare autosomal recessive benign conjugated "
+        "hyperbilirubinaemia from impaired hepatic uptake and storage "
+        "of bilirubin. Aetiology: biallelic mutations in both SLCO1B1 "
+        "and SLCO1B3 encoding the OATP1B1 and OATP1B3 sinusoidal "
+        "uptake transporters. Conjugated bilirubin taken up by "
+        "hepatocytes leaks back to plasma rather than being retained "
+        "or excreted. Features: mild fluctuating jaundice from "
+        "childhood, usually noticed in adolescence, with no pruritus, "
+        "hepatomegaly or systemic upset. Diagnosis: predominantly "
+        "conjugated hyperbilirubinaemia (usually under 100 "
+        "micromol/L) with normal transaminases, ALP, GGT and "
+        "coagulation. Total urinary coproporphyrin excretion is "
+        "raised (about two to five times normal) but the isomer I "
+        "fraction is only mildly increased (around 65%). HIDA scan "
+        "shows poor hepatic uptake with normal biliary excretion. "
+        "Liver biopsy is normal - no pigment deposition, in contrast "
+        "with Dubin-Johnson. Mx: reassurance. Life expectancy is "
+        "normal and no treatment is required. Note: the same OATP1B "
+        "transporters take up statins, methotrexate and rifampicin, "
+        "so drug clearance is reduced and toxicity risk is raised. "
+        "Awareness prevents a workup for cholestatic liver disease."
+    ),
+    "Relative energy deficiency in sport": (
+        "Syndrome of impaired physiological function from mismatch "
+        "between energy intake and training expenditure. Broader than "
+        "the older female athlete triad and applicable to both sexes. "
+        "Aetiology: chronic low energy availability (intake minus "
+        "exercise expenditure divided by lean body mass) under 30 "
+        "kcal/kg lean mass/day. May be intentional in weight-class or "
+        "aesthetic sports or inadvertent from high loads. Features: "
+        "menstrual disturbance in females, reduced testosterone in "
+        "males, stress fractures and low bone mineral density, immune "
+        "suppression, mood disturbance and impaired training "
+        "response. Ix: menstrual history and pregnancy test, FSH, LH, "
+        "oestradiol or testosterone, TFTs, iron studies, vitamin D "
+        "and DEXA in prolonged amenorrhoea or stress fracture. Screen "
+        "for eating disorders. Mx: multidisciplinary - sports "
+        "physician, dietitian, psychologist. Increase energy "
+        "availability by 300-600 kcal/day by raising intake, "
+        "targeting above 45 kcal/kg lean mass/day. Return of menses "
+        "is the primary marker of recovery. Combined oral "
+        "contraceptive masks recovery and does not protect bone. "
+        "Note: bone loss may be only partly reversible."
+    ),
+    "Tibial stress reaction": (
+        "Spectrum of bone injury from repetitive submaximal loading, "
+        "ranging from periostitis (medial tibial stress syndrome, "
+        "shin splints) through stress reaction (marrow oedema without "
+        "cortical break) to stress fracture. Risk factors: sudden "
+        "increase in training load, hard or cambered surfaces, low "
+        "bone density, female sex, RED-S, vitamin D deficiency and "
+        "prior stress fracture. Features: exercise-related pain over "
+        "the posteromedial tibia. Early pain occurs after exercise. "
+        "As injury progresses it starts earlier in the run and "
+        "persists at rest. Focal segmental tenderness (not diffuse as "
+        "in shin splints) suggests stress fracture. Ix: plain X-ray "
+        "is often normal early and only shows periosteal reaction "
+        "after 2-3 weeks. MRI grades severity from marrow oedema to "
+        "visible fracture line. Mx: relative rest for 4-8 weeks with "
+        "cross-training, address the load error (10% weekly rule), "
+        "correct footwear and treat vitamin D deficiency or RED-S. "
+        "Return to running is progressive and pain-guided. Red flags: "
+        "anterior mid-shaft (dreaded black line) fractures are "
+        "high-risk for non-union and need orthopaedic review."
+    ),
+    "Golfer's elbow": (
+        "Overuse tendinopathy of the common flexor-pronator origin at "
+        "the medial epicondyle of the humerus. Golfer elbow. Less "
+        "common than lateral epicondylitis. Aetiology: repetitive "
+        "wrist flexion and forearm pronation, particularly with a "
+        "valgus load - golf, throwing, racquet sports and manual "
+        "work. Degenerative tendinosis rather than true inflammation. "
+        "Features: gradual onset of medial elbow pain radiating along "
+        "the flexor forearm, aggravated by gripping, resisted wrist "
+        "flexion and resisted pronation. Focal tenderness just distal "
+        "to the medial epicondyle. Diagnosis: clinical. Imaging only "
+        "for atypical presentations or failed conservative treatment. "
+        "Mx: activity modification, load management and eccentric "
+        "strengthening of the wrist flexors is the mainstay. Simple "
+        "analgesia and topical NSAIDs for symptom control. "
+        "Counterforce brace and physio-supervised progressive "
+        "loading. Corticosteroid injection gives short-term relief "
+        "but worse long-term outcome than exercise. Recovery "
+        "typically 6-12 months. Note: exclude ulnar neuropathy at the "
+        "elbow (paraesthesia in the medial one and a half fingers, "
+        "positive Tinel) - it coexists in up to a quarter and changes "
+        "management."
+    ),
+    "Iliotibial band syndrome": (
+        "Overuse injury causing lateral knee pain from compression of "
+        "the distal iliotibial band against the lateral femoral "
+        "epicondyle during repetitive knee flexion-extension. "
+        "Aetiology: high-volume running (especially downhill), "
+        "cycling and sudden increases in training load. Predisposing "
+        "factors include weak hip abductors, leg length discrepancy "
+        "and running on cambered surfaces. Features: gradual onset of "
+        "sharp or burning lateral knee pain, typically starting a "
+        "predictable distance into a run and forcing the runner to "
+        "stop. Focal tenderness 2-3 cm proximal to the lateral joint "
+        "line. Pain reproduced by Noble compression test and Ober "
+        "test. Knee examination is otherwise normal. Diagnosis: "
+        "clinical. Imaging reserved for atypical or refractory cases. "
+        "Mx: relative rest and reduced running volume, ice and simple "
+        "analgesia acutely. Rehabilitation targets hip abductor and "
+        "external rotator strength and gait retraining. Foam rolling "
+        "gives short-term relief but does not lengthen the band. "
+        "Corticosteroid injection for refractory pain; surgical "
+        "release rarely needed. Note: this is a lateral compartment "
+        "enthesopathy, not a bursitis."
+    ),
+    "Sever disease": (
+        "Traction apophysitis of the calcaneal apophysis in children, "
+        "from repetitive Achilles pull on an unfused growth plate. "
+        "Commonest cause of heel pain in the growing child. "
+        "Aetiology: rapid growth causing relative tightness of the "
+        "gastrocnemius-soleus complex, combined with high-impact "
+        "sport on hard surfaces (running, football, gymnastics). "
+        "Features: age 8-14 (younger in girls), heel pain worse with "
+        "sport and improving with rest, often bilateral. Tenderness "
+        "on medial-lateral squeeze of the posterior calcaneus. Gait "
+        "may be antalgic or on tiptoe. Diagnosis: clinical. Imaging "
+        "only for atypical features (unilateral fixed pain, night "
+        "pain, systemic symptoms). X-ray fragmentation of the "
+        "apophysis is a normal developmental finding. Mx: reassurance "
+        "about the self-limiting course (resolves with skeletal "
+        "maturity, usually 12-18 months) is central. Activity "
+        "modification with reduced high-impact loading, ice after "
+        "activity, calf stretching, heel raises or gel cups, and "
+        "supportive footwear. Simple analgesia when needed. Complete "
+        "rest is rarely required. Note: benign and self-limiting; "
+        "imaging and specialist referral are unnecessary in the "
+        "typical case."
+    ),
+    "Hirsutism": (
+        "Excess terminal hair in a male pattern (face, chest, back, "
+        "abdomen) in a woman, from increased androgen action on hair "
+        "follicles. Distinct from hypertrichosis (generalised vellus "
+        "hair). Aetiology: polycystic ovary syndrome accounts for "
+        "around 80%. Also idiopathic, non-classic congenital adrenal "
+        "hyperplasia, Cushing syndrome, androgen-secreting tumour, "
+        "and drugs (anabolic steroids, danazol, ciclosporin). "
+        "Features: assessed with modified Ferriman-Gallwey score at 9 "
+        "sites, 0-4 each. Score over 8 is abnormal. Red flags: rapid "
+        "onset over months, virilisation (clitoromegaly, deep voice, "
+        "temporal balding) or onset after menopause suggests an "
+        "androgen-secreting tumour and warrants urgent workup. Ix: "
+        "morning total testosterone (very high suggests tumour), "
+        "DHEA-S, 17-hydroxyprogesterone (non-classic CAH), TFTs, "
+        "prolactin and pelvic ultrasound. Overnight dexamethasone "
+        "suppression if Cushing suspected. Mx: address the cause. "
+        "Cosmetic measures (shaving, laser, electrolysis) first-line "
+        "for mild disease. Combined oral contraceptive with "
+        "drospirenone or cyproterone reduces free androgens. "
+        "Spironolactone 50-200 mg with reliable contraception for "
+        "inadequate response. Assess response at 6 months."
+    ),
+    "Premenstrual dysphoric disorder": (
+        "Severe premenstrual mood disorder in DSM-5, causing "
+        "significant impairment in the week before menses with "
+        "resolution within days of onset. Affects around 3-8% of "
+        "menstruating women. Aetiology: abnormal CNS response to "
+        "normal cyclical fluctuations of oestrogen and progesterone, "
+        "with serotonergic mediation. Not a hormonal imbalance - "
+        "hormone levels are typically normal. Features: at least 5 of "
+        "11 symptoms in the final week before menses, including one "
+        "core mood symptom (marked lability, irritability, depressed "
+        "mood, anxiety). Other symptoms include reduced interest, "
+        "poor concentration, fatigue, appetite and sleep change, and "
+        "physical symptoms (breast tenderness, bloating). Symptoms "
+        "must remit within days of menses onset. Diagnosis: "
+        "prospective symptom charting over at least two cycles (Daily "
+        "Record of Severity of Problems) is required. Exclude "
+        "premenstrual exacerbation of underlying depression, which "
+        "does not remit fully post-menses. Mx: SSRIs (fluoxetine, "
+        "sertraline, escitalopram) are first-line and work within "
+        "days, given continuously or luteal-phase only. Combined oral "
+        "contraceptive with drospirenone 24/4 is an alternative. "
+        "Note: symptoms often worsen approaching menopause."
     ),
 }
 
