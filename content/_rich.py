@@ -1649,6 +1649,114 @@ NEW_CONDITIONS = [
                              "infants"]],
         "summary": "",
     },
+    {
+        "name": 'Pityriasis versicolor',
+        "aliases": ['Tinea versicolor', 'PV rash'],
+        "utd": [['Overview', 'tinea versicolor pityriasis versicolor']],
+        "summary": "",
+    },
+    {
+        "name": 'Miliaria',
+        "aliases": ['Heat rash', 'Prickly heat', 'Sweat rash'],
+        "utd": [['Overview', 'miliaria heat rash treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Erythrasma',
+        "aliases": ['Corynebacterium minutissimum infection'],
+        "utd": [['Overview', 'erythrasma diagnosis treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Erythroderma',
+        "aliases": ['Exfoliative dermatitis'],
+        "utd": [['Overview', 'erythroderma exfoliative dermatitis']],
+        "summary": "",
+    },
+    {
+        "name": 'Keratosis pilaris',
+        "aliases": ['KP', 'Follicular keratosis'],
+        "utd": [['Overview', 'keratosis pilaris treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Nasal septal haematoma',
+        "aliases": ['Septal haematoma', 'Septal hematoma'],
+        "utd": [['Overview', 'nasal septal hematoma drainage']],
+        "summary": "",
+    },
+    {
+        "name": 'Laryngitis',
+        "aliases": ['Acute laryngitis', 'Chronic laryngitis'],
+        "utd": [['Overview', 'acute laryngitis hoarseness']],
+        "summary": "",
+    },
+    {
+        "name": 'Amaurosis fugax',
+        "aliases": ['Transient monocular vision loss', 'TMVL'],
+        "utd": [['Overview', 'amaurosis fugax transient monocular vision loss']],
+        "summary": "",
+    },
+    {
+        "name": 'Mycoplasma genitalium',
+        "aliases": ['MG infection', 'M genitalium urethritis'],
+        "utd": [['Overview', 'mycoplasma genitalium infection treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Craniopharyngioma',
+        "aliases": ['Rathke pouch tumour', 'Adamantinomatous craniopharyngioma'],
+        "utd": [['Overview', 'craniopharyngioma clinical features']],
+        "summary": "",
+    },
+    {
+        "name": 'Chylothorax',
+        "aliases": ['Thoracic duct leak'],
+        "utd": [['Overview', 'chylothorax evaluation management']],
+        "summary": "",
+    },
+    {
+        "name": 'Aspergilloma',
+        "aliases": ['Fungal ball lung', 'Pulmonary mycetoma'],
+        "utd": [['Overview', 'pulmonary aspergilloma treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Chiari malformation',
+        "aliases": ['Arnold-Chiari malformation', 'Chiari I malformation'],
+        "utd": [['Overview', 'chiari malformation clinical features']],
+        "summary": "",
+    },
+    {
+        "name": 'Postdural puncture headache',
+        "aliases": ['PDPH', 'Post-lumbar puncture headache', 'Spinal headache'],
+        "utd": [['Overview', 'postdural puncture headache blood patch']],
+        "summary": "",
+    },
+    {
+        "name": 'Hypercalcaemia of malignancy',
+        "aliases": ['Malignant hypercalcaemia', 'Malignant hypercalcemia'],
+        "utd": [['Overview', 'hypercalcemia of malignancy treatment']],
+        "summary": "",
+    },
+    {
+        "name": 'Frailty syndrome',
+        "aliases": ['Clinical frailty', 'Fried frailty phenotype'],
+        "utd": [['Overview', 'frailty older adults assessment']],
+        "summary": "",
+    },
+    {
+        "name": 'Xanthelasma',
+        "aliases": ['Xanthelasma palpebrarum'],
+        "utd": [['Overview', 'xanthelasma treatment lipid']],
+        "summary": "",
+    },
+    {
+        "name": 'Stress urinary incontinence',
+        "aliases": ['SUI', 'Genuine stress incontinence'],
+        "utd": [['Overview', 'stress urinary incontinence women treatment']],
+        "summary": "",
+    },
 ]
 
 
@@ -27242,6 +27350,346 @@ RICH_SUMMARIES = {
         "spontaneously and does not scar. Note: greasy yellow scalp "
         "scale in a happy well baby is cradle cap - reassure and "
         "moisturise before medicating."
+    ),
+    'Pityriasis versicolor': (
+        "Superficial mycosis caused by lipophilic Malassezia yeasts "
+        "overgrowing on sebum-rich skin, producing patchy "
+        "dyspigmentation. Aetiology: warm humid climates, oily skin, "
+        "immunosuppression and topical oils; often first seen after "
+        "summer tanning. Clinical features: hypo or hyperpigmented "
+        "finely scaling macules on the upper trunk, shoulders and "
+        "neck; tan skin fails to darken with sun exposure. Ix: "
+        "clinical, scratch scale to elicit dust-like flake; skin "
+        "scraping with KOH shows spaghetti-and-meatballs hyphae if "
+        "unsure. Mx: topical ketoconazole shampoo or selenium sulfide "
+        "applied for 10 min daily for 1 to 2 weeks per eTG; oral "
+        "fluconazole 400 mg single dose or 300 mg weekly for two "
+        "weeks for extensive or recurrent disease; pigment change "
+        "persists months after cure. Note: annual seasonal recurrence "
+        "is the rule."
+    ),
+    'Miliaria': (
+        "Sweat retention rash caused by occlusion of eccrine ducts, "
+        "common in hot humid environments, febrile bed-bound patients "
+        "and newborns. Aetiology: heat, occlusive dressings, tight "
+        "clothing and fever; Staphylococcus epidermidis biofilms plug "
+        "the duct. Clinical features: crystallina is clear pinpoint "
+        "superficial vesicles that rupture easily; rubra (prickly "
+        "heat) is erythematous itchy papules on trunk and flexures; "
+        "profunda gives deeper flesh-coloured papules and anhidrosis. "
+        "Ix: clinical; consider it in any bed-bound febrile patient "
+        "with a truncal rash. Mx: cool the patient, remove occlusion, "
+        "air-conditioned environment and lightweight cotton clothing; "
+        "short course of low-potency topical steroid (hydrocortisone "
+        "1%) for pruritic rubra per eTG; antibiotics only if "
+        "secondary infection. Note: cooling the environment fixes it "
+        "faster than any topical."
+    ),
+    'Erythrasma': (
+        "Superficial intertriginous infection with Corynebacterium "
+        "minutissimum, easily mistaken for tinea. Aetiology: warm "
+        "moist skin folds, diabetes, obesity, hyperhidrosis and "
+        "occlusive clothing. Clinical features: well-demarcated "
+        "red-brown finely scaling patches in groin, axillae, "
+        "submammary folds and toe webs; usually asymptomatic or "
+        "mildly pruritic. Ix: Wood lamp shows coral-red fluorescence "
+        "from porphyrin production, distinguishing from tinea cruris; "
+        "skin scraping if uncertain. Mx: topical clindamycin or "
+        "erythromycin twice daily for 2 weeks; extensive disease "
+        "responds to oral erythromycin 250 mg qid for 5 days or "
+        "single-dose azithromycin 1 g per eTG; treat concurrent "
+        "diabetes and hyperhidrosis to prevent recurrence. Note: "
+        "coral-red under Wood lamp clinches it at the bedside."
+    ),
+    'Erythroderma': (
+        "Confluent erythema and scaling covering >90% body surface "
+        "area, a dermatological emergency with high fluid, protein "
+        "and thermoregulation losses. Aetiology: pre-existing "
+        "psoriasis or atopic dermatitis, drug reactions (allopurinol, "
+        "sulfonamides, carbamazepine, vancomycin), cutaneous T-cell "
+        "lymphoma and idiopathic. Clinical features: generalised red "
+        "scaling skin, shivering, tachycardia, high-output cardiac "
+        "failure, peripheral oedema, lymphadenopathy and hypothermia; "
+        "nail dystrophy and alopecia in chronic cases. Ix: FBC, EUC, "
+        "LFTs, albumin, blood cultures if febrile, and multiple skin "
+        "biopsies to identify underlying cause; look for Sezary cells "
+        "on peripheral film. Mx: admit, warm ambient temperature, IV "
+        "fluid and albumin replacement, bland emollients and "
+        "low-potency topical steroids; stop all suspect drugs "
+        "immediately; treat the underlying dermatosis or malignancy. "
+        "Sepsis has low threshold for empirical antibiotics. Note: "
+        "the skin fails as an organ and patients die of sepsis or "
+        "heart failure."
+    ),
+    'Keratosis pilaris': (
+        "Benign disorder of follicular keratinisation producing rough "
+        "goose-flesh papules, most obvious on extensor surfaces of "
+        "upper arms and thighs. Aetiology: autosomal dominant "
+        "tendency, atopic diathesis, obesity and dry skin; peaks in "
+        "adolescence and often improves with age. Clinical features: "
+        "multiple flesh-coloured or erythematous keratotic follicular "
+        "papules with surrounding erythema, giving a sandpaper feel; "
+        "distinguished from acne by follicular symmetry and absence "
+        "of comedones. Ix: clinical; no investigations required. Mx: "
+        "reassurance is the mainstay; daily emollients with urea 10% "
+        "or lactic acid 12% for smoothing; short courses of topical "
+        "retinoids or salicylic acid for cosmetic concern per eTG; "
+        "avoid harsh exfoliation. Note: it is cosmetic and "
+        "self-limiting, so reassurance beats a prescription."
+    ),
+    'Nasal septal haematoma': (
+        "Blood collection between septal cartilage and its "
+        "perichondrium after nasal trauma, causing avascular necrosis "
+        "and saddle-nose deformity if not drained promptly. "
+        "Aetiology: blunt nasal trauma (sport, assault, fall), "
+        "post-op septoplasty or a coagulopathy. Clinical features: "
+        "bilateral bluish-purple bulging of the anterior septum on "
+        "nasal speculum exam, complete nasal obstruction, pain and "
+        "low-grade fever if abscess forms. Ix: clinical inspection "
+        "with speculum after blowing the nose or gentle suction of "
+        "clot; CT face if concurrent facial fractures suspected. Mx: "
+        "urgent incision and drainage within 24-48 hours through a "
+        "horizontal mucoperichondrial incision, place a suction drain "
+        "or nasal packing to prevent re-accumulation; oral "
+        "flucloxacillin or cefalexin cover per eTG; ENT review for "
+        "reassessment and cartilage integrity. Note: bilateral septal "
+        "bulge after trauma is drain-now, not wait-and-see."
+    ),
+    'Laryngitis': (
+        "Inflammation of the larynx producing hoarseness or aphonia, "
+        "usually self-limiting and viral in adults. Aetiology: viral "
+        "URTI (rhinovirus, influenza, parainfluenza), voice overuse, "
+        "GORD, smoking and, less commonly, bacterial or fungal "
+        "infection or malignancy in chronic cases. Clinical features: "
+        "acute hoarseness over 1-3 days, dry cough, throat pain and "
+        "low-grade fever; chronic laryngitis over 3 weeks warrants "
+        "further workup. Ix: clinical for acute cases; refer for "
+        "flexible nasendoscopy if hoarseness persists >3 weeks or "
+        "with red flags (weight loss, dysphagia, smoking, "
+        "haemoptysis, stridor). Mx: voice rest, hydration, "
+        "humidification and simple analgesia; treat underlying cause "
+        "(PPI for reflux, cease smoking); antibiotics not indicated "
+        "in viral disease per eTG; refer chronic hoarseness urgently "
+        "to exclude laryngeal cancer. Note: hoarseness beyond 3 weeks "
+        "is cancer until proven otherwise."
+    ),
+    'Amaurosis fugax': (
+        "Transient monocular vision loss lasting seconds to minutes, "
+        "classically described as a curtain descending over one eye, "
+        "and a warning of impending stroke. Aetiology: retinal "
+        "embolism from carotid atherosclerosis (most common), cardiac "
+        "source (AF, endocarditis), giant cell arteritis in patients "
+        ">50, and rarely hypercoagulable states or vasospasm. "
+        "Clinical features: painless, sudden, brief monocular vision "
+        "loss with complete recovery; may recur; look for carotid "
+        "bruit and cardiac arrhythmia. Ix: urgent carotid duplex, "
+        "ECG, echocardiogram, FBC, ESR/CRP (giant cell arteritis), "
+        "fasting lipids, HbA1c and CT/MRI brain within 24 hours; "
+        "ophthalmology to rule out branch retinal artery occlusion. "
+        "Mx: aspirin 300 mg loading then 100 mg daily started "
+        "immediately, statin, BP and diabetes optimisation per "
+        "Australian CVD Risk; carotid endarterectomy if ipsilateral "
+        "stenosis 70-99% within 2 weeks; empirical steroids if "
+        "temporal arteritis suspected. Note: treat like a TIA of the "
+        "eye - stroke workup within 24 hours."
+    ),
+    'Mycoplasma genitalium': (
+        "Small intracellular bacterium causing non-gonococcal "
+        "urethritis in men and cervicitis, PID and preterm birth in "
+        "women; treatment failure now common from macrolide "
+        "resistance. Aetiology: sexually transmitted; prevalence 1-3% "
+        "general population, higher in MSM and STI clinic attendees. "
+        "Clinical features: often asymptomatic; urethral or vaginal "
+        "discharge, dysuria, post-coital bleeding and pelvic pain in "
+        "women; test only in symptomatic patients or contacts of "
+        "confirmed cases per ASHM. Ix: nucleic acid amplification "
+        "test on first-catch urine or vulvovaginal swab; macrolide "
+        "resistance testing on the same sample; test for concurrent "
+        "chlamydia and gonorrhoea. Mx: doxycycline 100 mg bd for 7 "
+        "days followed by azithromycin 1 g stat then 500 mg daily for "
+        "3 days if macrolide-sensitive, or moxifloxacin 400 mg daily "
+        "7 days if resistant per ASHM; treat partners, no sex for 14 "
+        "days, test of cure at 4 weeks. Note: azithromycin "
+        "monotherapy is no longer adequate."
+    ),
+    'Craniopharyngioma': (
+        "Benign but locally aggressive epithelial tumour arising from "
+        "Rathke pouch remnants, straddling the sellar and suprasellar "
+        "region with a bimodal age peak (5-14 and 50-74). Aetiology: "
+        "sporadic; adamantinomatous type (children, calcified, "
+        "cystic) and papillary type (adults, solid). Clinical "
+        "features: headache and visual disturbance (bitemporal "
+        "hemianopia from chiasmal compression), growth failure or "
+        "delayed puberty in children, panhypopituitarism, diabetes "
+        "insipidus and hydrocephalus. Ix: MRI pituitary with contrast "
+        "shows cystic suprasellar mass with calcification and "
+        "enhancement; formal visual fields; full pituitary hormone "
+        "panel including morning cortisol, thyroid, IGF-1 and urine "
+        "osmolality. Mx: transsphenoidal or transcranial resection "
+        "with hormone replacement; adjuvant radiotherapy or "
+        "intracystic bleomycin for residual disease; lifelong "
+        "endocrine and ophthalmology follow-up given high recurrence "
+        "and long-term hypopituitarism. Note: calcified suprasellar "
+        "mass in a child with growth failure is craniopharyngioma."
+    ),
+    'Chylothorax': (
+        "Accumulation of chyle in the pleural space from disruption "
+        "of the thoracic duct, presenting as a milky pleural "
+        "effusion. Aetiology: iatrogenic thoracic surgery (esp. "
+        "oesophagectomy, cardiothoracic), trauma, malignancy "
+        "(lymphoma most common non-traumatic), tuberculosis and "
+        "congenital lymphatic malformations. Clinical features: "
+        "dyspnoea, pleuritic chest pain, cough and signs of pleural "
+        "effusion; milky pleural fluid on tap, sometimes with "
+        "lymphopenia and immunosuppression if chronic. Ix: pleural "
+        "fluid triglycerides >1.24 mmol/L (>110 mg/dL) or "
+        "chylomicrons on lipoprotein electrophoresis is diagnostic; "
+        "CT chest for source, lymphangiography or lymphoscintigraphy "
+        "for site of leak. Mx: chest drain, dietary medium-chain "
+        "triglyceride or NBM with TPN, octreotide; treat underlying "
+        "cause (chemotherapy for lymphoma); thoracic duct ligation or "
+        "embolisation if output persists >1 L/day for 5 days. Note: "
+        "milky pleural fluid needs triglyceride assay, not just "
+        "observation."
+    ),
+    'Aspergilloma': (
+        "Fungal ball of Aspergillus fumigatus growing within a "
+        "pre-existing pulmonary cavity, usually old TB, sarcoid or "
+        "bullous emphysema. Aetiology: colonisation of a cavity by "
+        "inhaled Aspergillus conidia in an immunocompetent host; the "
+        "mycelia mat forms without tissue invasion. Clinical "
+        "features: chronic cough with recurrent, sometimes massive, "
+        "haemoptysis; weight loss and fatigue; often incidental on "
+        "CXR. Ix: CXR or CT chest shows a mobile solid mass within a "
+        "cavity with a crescent of air (Monod sign); serum "
+        "Aspergillus IgG (precipitins) usually positive; sputum "
+        "culture confirms species; bronchoscopy for atypical cases. "
+        "Mx: observation if asymptomatic; surgical resection is "
+        "definitive for recurrent haemoptysis in fit patients; "
+        "bronchial artery embolisation for acute massive haemoptysis; "
+        "oral itraconazole for inoperable disease; treat underlying "
+        "cavity cause. Note: massive haemoptysis in an old TB cavity "
+        "is aspergilloma until proven otherwise."
+    ),
+    'Chiari malformation': (
+        "Congenital hindbrain herniation with cerebellar tonsils "
+        "descending below the foramen magnum, obstructing CSF flow. "
+        "Aetiology: developmental; type I (tonsillar herniation >5 "
+        "mm, adults), type II (with myelomeningocele, infants), types "
+        "III and IV are rare and severe. Clinical features: "
+        "suboccipital headache worse on Valsalva or cough, dizziness, "
+        "dysphagia, sleep apnoea, ataxia and cape-distribution "
+        "sensory loss if syrinx develops; type II presents with "
+        "hydrocephalus in a neonate with spina bifida. Ix: MRI brain "
+        "and cervical spine confirms herniation, hydrocephalus and "
+        "syringomyelia; CSF cine flow studies to quantify "
+        "obstruction. Mx: observation for asymptomatic incidental "
+        "findings; posterior fossa decompression with or without "
+        "duraplasty for symptomatic patients; VP shunt for "
+        "hydrocephalus; multidisciplinary neurosurgery and neurology "
+        "follow-up. Note: cough-headache plus a cape sensory loss "
+        "should trigger cervical MRI."
+    ),
+    'Postdural puncture headache': (
+        "Positional headache after inadvertent or intentional dural "
+        "puncture, from CSF leak with reduced intracranial pressure "
+        "and traction on pain-sensitive structures. Aetiology: "
+        "neuraxial anaesthesia (spinal or epidural with accidental "
+        "dural tap), diagnostic lumbar puncture, larger-gauge or "
+        "cutting-tip needles, younger women and previous PDPH raise "
+        "risk. Clinical features: bilateral fronto-occipital headache "
+        "within 5 days of dural puncture, worse upright, relieved "
+        "supine, with neck stiffness, tinnitus, photophobia and "
+        "sometimes cranial nerve palsies. Ix: clinical; MRI brain if "
+        "atypical or persistent to exclude subdural haematoma or "
+        "venous sinus thrombosis. Mx: bed rest, IV hydration, oral "
+        "analgesia, caffeine 300 mg oral or IV; epidural blood patch "
+        "(15-20 mL autologous blood) for headache persisting >48 "
+        "hours per ANZCA guidance, effective in 70-90%; anaesthetic "
+        "review for recurrence. Note: postural headache after a "
+        "spinal is not migraine and needs a blood patch if it "
+        "lingers."
+    ),
+    'Hypercalcaemia of malignancy': (
+        "Corrected calcium above 2.6 mmol/L in a cancer patient, "
+        "occurring in up to 20-30% of solid tumours and myeloma; "
+        "worst prognostic marker after diagnosis. Aetiology: PTHrP "
+        "secretion (squamous cell, renal, breast), osteolytic bone "
+        "metastases (breast, myeloma), tumoural 1,25-vitamin D "
+        "production (lymphoma) and, rarely, ectopic PTH. Clinical "
+        "features: fatigue, polyuria, polydipsia, constipation, "
+        "anorexia, nausea, confusion, muscle weakness and, if severe, "
+        "coma and arrhythmia; ECG shows shortened QT. Ix: corrected "
+        "calcium (or ionised), phosphate, EUC, PTH (suppressed) and "
+        "PTHrP; consider vitamin D and myeloma screen; ECG for QT "
+        "interval. Mx: IV normal saline 3-4 L over 24 h, then IV "
+        "zoledronic acid 4 mg (or pamidronate 60-90 mg) after "
+        "rehydration; calcitonin 4 U/kg SC 12-hourly for rapid "
+        "effect; denosumab 120 mg SC for bisphosphonate-refractory "
+        "disease; treat the underlying cancer. Avoid loop diuretics "
+        "unless volume-overloaded. Note: rehydrate first, then "
+        "bisphosphonate; loop diuretics are last resort not first "
+        "line."
+    ),
+    'Frailty syndrome': (
+        "Multisystem physiological decline reducing reserve and "
+        "increasing vulnerability to adverse outcomes after minor "
+        "stressors, distinct from disability or multimorbidity. "
+        "Aetiology: sarcopenia, chronic inflammation, endocrine "
+        "changes and multimorbidity; prevalence rises from 10% at 65 "
+        "to over 50% at 85. Clinical features: unintentional weight "
+        "loss, exhaustion, weakness (grip strength), slow gait speed "
+        "and low physical activity (Fried phenotype: 3+ = frail, 1-2 "
+        "= pre-frail); high fall, delirium and hospitalisation risk. "
+        "Ix: apply Clinical Frailty Scale or FRAIL screen; FBC, EUC, "
+        "TSH, B12, vitamin D and albumin; medication review for "
+        "STOPP/START inappropriate prescribing. Mx: comprehensive "
+        "geriatric assessment, resistance training and nutritional "
+        "supplementation with protein 1.2 g/kg/day, deprescribing of "
+        "high-risk medications, falls prevention and advance care "
+        "planning; refer to a specialist geriatric or Aged Care "
+        "Assessment Team for community supports. Note: CFS score "
+        "guides prognosis and shared decision-making before major "
+        "intervention."
+    ),
+    'Xanthelasma': (
+        "Yellowish cholesterol-laden plaques of the medial eyelids, "
+        "associated with dyslipidaemia and cardiovascular risk in "
+        "about half of cases. Aetiology: local fibroblast lipid "
+        "accumulation; up to 50% of cases have normal lipids, others "
+        "show elevated LDL, low HDL or familial "
+        "hypercholesterolaemia. Clinical features: soft yellow flat "
+        "plaques on the medial upper (and less commonly lower) "
+        "eyelids, bilateral, gradually enlarging over years; "
+        "asymptomatic. Ix: fasting lipid profile, HbA1c and TSH; "
+        "consider Australian CVD Risk calculator; screen for familial "
+        "hypercholesterolaemia if age <45 or strong family history. "
+        "Mx: manage underlying dyslipidaemia and CV risk (statin, "
+        "lifestyle); cosmetic options include surgical excision, TCA "
+        "peel, cryotherapy, radiofrequency or CO2 laser, all with "
+        "20-40% recurrence; refer to ophthalmology or dermatology. "
+        "Note: xanthelasma is a marker for CV risk even when lipids "
+        "are normal."
+    ),
+    'Stress urinary incontinence': (
+        "Involuntary loss of urine on effort, exertion, sneezing or "
+        "coughing due to sphincteric or pelvic floor weakness; the "
+        "most common incontinence type in women. Aetiology: pregnancy "
+        "and vaginal delivery, menopausal oestrogen loss, obesity, "
+        "chronic cough, prostatectomy (in men) and pelvic surgery. "
+        "Clinical features: small leaks with exertion, no urgency "
+        "between leaks, no nocturnal enuresis; positive cough stress "
+        "test with a full bladder; bladder diary to distinguish from "
+        "urge incontinence. Ix: urinalysis and MSU to exclude "
+        "infection, post-void residual, bladder diary; urodynamics if "
+        "diagnosis uncertain or before surgery. Mx: supervised pelvic "
+        "floor muscle training with a women's health physiotherapist "
+        "for at least 3 months first line per RANZCOG; weight loss, "
+        "treat cough and constipation; vaginal oestrogen for "
+        "postmenopausal atrophy; duloxetine second line; midurethral "
+        "sling or urethral bulking if conservative measures fail. "
+        "Note: pelvic floor training beats surgery for "
+        "mild-to-moderate cases and always precedes it."
     ),
 }
 
