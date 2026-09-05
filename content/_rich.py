@@ -3878,6 +3878,204 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "vernal keratoconjunctivitis"]],
         "summary": "",
     },
+    {
+        "name": "Galeazzi fracture",
+        "aliases": ["Galeazzi fracture-dislocation"],
+        "utd": [["Overview", "galeazzi fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Monteggia fracture",
+        "aliases": ["Monteggia fracture-dislocation"],
+        "utd": [["Overview", "monteggia fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervical spondylosis",
+        "aliases": ["Cervical spondylotic radiculopathy", "Degenerative cervical spine disease"],
+        "utd": [["Overview", "cervical spondylosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Facet joint syndrome",
+        "aliases": ["Facet syndrome"],
+        "utd": [["Overview", "facet joint syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Sacroiliitis",
+        "aliases": ["Sacroiliac joint dysfunction"],
+        "utd": [["Overview", "sacroiliitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Osteopetrosis",
+        "aliases": ["Marble bone disease", "Albers-Schonberg disease"],
+        "utd": [["Overview", "osteopetrosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Congenital scoliosis",
+        "aliases": ["Congenital vertebral anomaly scoliosis"],
+        "utd": [["Overview", "congenital scoliosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Klippel-Feil syndrome",
+        "aliases": [],
+        "utd": [["Overview", "klippel feil syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Septic bursitis",
+        "aliases": ["Infected bursitis"],
+        "utd": [["Overview", "septic bursitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Gastric volvulus",
+        "aliases": [],
+        "utd": [["Overview", "gastric volvulus"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute mesenteric ischaemia",
+        "aliases": ["Acute mesenteric infarction"],
+        "utd": [["Overview", "acute mesenteric ischemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Menetrier disease",
+        "aliases": ["Hypertrophic gastropathy"],
+        "utd": [["Overview", "menetrier disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Protein-losing enteropathy",
+        "aliases": ["PLE"],
+        "utd": [["Overview", "protein losing enteropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Autoimmune pancreatitis",
+        "aliases": ["IgG4-related pancreatitis"],
+        "utd": [["Overview", "autoimmune pancreatitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Caroli disease",
+        "aliases": [],
+        "utd": [["Overview", "caroli disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Fanconi anaemia",
+        "aliases": ["Fanconi's anaemia"],
+        "utd": [["Overview", "fanconi anemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Evans syndrome",
+        "aliases": [],
+        "utd": [["Overview", "evans syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Mycosis fungoides",
+        "aliases": ["Cutaneous T-cell lymphoma"],
+        "utd": [["Overview", "mycosis fungoides"]],
+        "summary": "",
+    },
+    {
+        "name": "Langerhans cell histiocytosis",
+        "aliases": ["Histiocytosis X", "Eosinophilic granuloma"],
+        "utd": [["Overview", "langerhans cell histiocytosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Palindromic rheumatism",
+        "aliases": [],
+        "utd": [["Overview", "palindromic rheumatism"]],
+        "summary": "",
+    },
+    {
+        "name": "Valproate toxicity",
+        "aliases": ["Valproic acid toxicity"],
+        "utd": [["Overview", "valproate toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Isoniazid toxicity",
+        "aliases": ["INH toxicity"],
+        "utd": [["Overview", "isoniazid toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Hydroxychloroquine toxicity",
+        "aliases": ["Hydroxychloroquine retinopathy"],
+        "utd": [["Overview", "hydroxychloroquine toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Paralysis tick envenomation",
+        "aliases": ["Tick paralysis"],
+        "utd": [["Overview", "tick paralysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Scombroid poisoning",
+        "aliases": ["Histamine fish poisoning"],
+        "utd": [["Overview", "scombroid poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Ciguatera poisoning",
+        "aliases": [],
+        "utd": [["Overview", "ciguatera poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Amatoxin mushroom poisoning",
+        "aliases": ["Death cap mushroom poisoning"],
+        "utd": [["Overview", "mushroom poisoning amatoxin"]],
+        "summary": "",
+    },
+    {
+        "name": "Postoperative urinary retention",
+        "aliases": ["POUR"],
+        "utd": [["Overview", "postoperative urinary retention"]],
+        "summary": "",
+    },
+    {
+        "name": "Perforated peptic ulcer",
+        "aliases": ["Perforated duodenal ulcer"],
+        "utd": [["Overview", "perforated peptic ulcer"]],
+        "summary": "",
+    },
+    {
+        "name": "Epigastric hernia",
+        "aliases": [],
+        "utd": [["Overview", "epigastric hernia"]],
+        "summary": "",
+    },
+    {
+        "name": "Spigelian hernia",
+        "aliases": [],
+        "utd": [["Overview", "spigelian hernia"]],
+        "summary": "",
+    },
+    {
+        "name": "Obturator hernia",
+        "aliases": [],
+        "utd": [["Overview", "obturator hernia"]],
+        "summary": "",
+    },
+    {
+        "name": "Richter hernia",
+        "aliases": ["Richter's hernia"],
+        "utd": [["Overview", "richter hernia"]],
+        "summary": "",
+    },
 ]
 
 
@@ -36418,6 +36616,655 @@ RICH_SUMMARIES = {
         "ciclosporin for steroid-sparing control of severe disease. "
         "Note: this usually improves after puberty, which helps when "
         "counselling anxious parents about a chronic-looking problem."
+    ),
+    "Galeazzi fracture": (
+        "Fracture of the distal third of the radial shaft with "
+        "disruption of the distal radioulnar joint (DRUJ). Aetiology: "
+        "fall onto an outstretched hand with forced pronation, or "
+        "direct blow to the forearm. Clinical features: forearm "
+        "deformity and tenderness over the radius with point "
+        "tenderness and instability at the wrist over the ulnar head. "
+        "Ix: forearm radiographs including the wrist. DRUJ widening, "
+        "ulnar styloid fracture or radial shortening greater than 5mm "
+        "on the lateral view all suggest DRUJ disruption. Mx: open "
+        "reduction and plate fixation of the radius, then reassess "
+        "DRUJ stability. Persistent instability needs pinning or DRUJ "
+        "repair. Note: this is the fracture that is dislocated until "
+        "proven otherwise; missing the DRUJ injury and fixing the "
+        "radius alone leaves a chronically unstable wrist."
+    ),
+    "Monteggia fracture": (
+        "Fracture of the proximal ulna with dislocation of the radial "
+        "head. Aetiology: fall onto an outstretched hand with forced "
+        "pronation, or a direct blow to the posterior forearm (the "
+        "classic nightstick mechanism). Clinical features: elbow pain "
+        "and swelling with a palpable or radiographically obvious "
+        "anterior radial head, and possible posterior interosseous "
+        "nerve palsy causing finger and thumb extension weakness. Ix: "
+        "elbow and forearm radiographs. A line through the radial "
+        "shaft and head should always intersect the capitellum on "
+        "every view; if it does not, the radial head is dislocated "
+        "even if the ulna fracture looks trivial. Mx: open reduction "
+        "and plate fixation of the ulna almost always reduces the "
+        "radial head; persistent dislocation needs open reduction. "
+        "Note: the radial head dislocation is missed far more often "
+        "than the ulna fracture, so always trace that capitellum "
+        "line."
+    ),
+    "Cervical spondylosis": (
+        "Degenerative disease of the cervical spine from age-related "
+        "disc desiccation, osteophyte formation and facet joint "
+        "arthropathy, distinct from cervical myelopathy where the "
+        "same process compresses the cord. Clinical features: chronic "
+        "axial neck pain and stiffness worse with extension, with "
+        "radiculopathy from foraminal narrowing causing arm pain, "
+        "paraesthesia or weakness in a nerve root distribution. Ix: "
+        "clinical diagnosis supported by plain radiographs showing "
+        "disc space narrowing and osteophytes; MRI when radiculopathy "
+        "or myelopathic signs are present. Mx: analgesia, "
+        "physiotherapy and activity modification for axial pain; "
+        "radiculopathy adds a short course of oral corticosteroids or "
+        "nerve root injection; surgery is reserved for progressive "
+        "neurological deficit or myelopathy. Note: radiographic "
+        "spondylosis is near universal by age 60 and correlates "
+        "poorly with symptoms, so treat the patient, not the film."
+    ),
+    "Facet joint syndrome": (
+        "Axial back or neck pain arising from the paired "
+        "zygapophyseal (facet) joints, a common cause of mechanical "
+        "spinal pain distinct from disc or radicular pathology. "
+        "Aetiology: osteoarthritic degeneration of the facet joints "
+        "with ageing, accelerated by abnormal loading or prior "
+        "injury. Clinical features: localised paraspinal pain worse "
+        "with extension and rotation, often referred to the buttock "
+        "or shoulder girdle without a clear dermatomal pattern, and "
+        "no true neurological deficit. Ix: clinical diagnosis; "
+        "imaging shows facet arthropathy but correlates poorly with "
+        "pain, so it mainly excludes other causes. Diagnostic medial "
+        "branch block confirms the source when management decisions "
+        "depend on it. Mx: physiotherapy, analgesia and activity "
+        "modification first line; medial branch block or "
+        "radiofrequency ablation for refractory cases. Note: pain "
+        "worse on extension and better on flexion is the pattern that "
+        "separates this from discogenic pain, which is the reverse."
+    ),
+    "Sacroiliitis": (
+        "Inflammation of one or both sacroiliac joints, presenting as "
+        "buttock or lower back pain that can mimic lumbar spine "
+        "disease. Aetiology: spondyloarthropathies (ankylosing "
+        "spondylitis, psoriatic and reactive arthritis, inflammatory "
+        "bowel disease) cause bilateral inflammatory disease; "
+        "infection and pregnancy-related joint laxity cause "
+        "unilateral or mechanical disease. Clinical features: deep "
+        "buttock pain worse at night and with prolonged sitting, "
+        "morning stiffness lasting over 30 minutes, and improvement "
+        "with movement in inflammatory disease. Ix: inflammatory "
+        "markers, HLA-B27 where spondyloarthropathy is suspected, and "
+        "MRI showing bone marrow oedema, which appears before plain "
+        "film erosions. Mx: NSAIDs first line for inflammatory "
+        "disease, escalating to biologic therapy (anti-TNF) for "
+        "refractory axial spondyloarthritis; antibiotics and drainage "
+        "for septic sacroiliitis. Note: inflammatory pain that "
+        "improves with exercise and worsens with rest is the pattern "
+        "that separates this from mechanical back pain."
+    ),
+    "Osteopetrosis": (
+        "Rare inherited disorder of defective osteoclast function "
+        "causing failure of bone resorption, so bone becomes "
+        "abnormally dense but structurally weak and brittle. "
+        "Aetiology: autosomal recessive infantile forms present "
+        "severely in infancy; the autosomal dominant adult form is "
+        "milder and often incidental. Clinical features: fractures "
+        "from trivial trauma despite dense bone, bone marrow failure "
+        "causing anaemia, thrombocytopenia and recurrent infection as "
+        "marrow space is obliterated, and cranial nerve compression "
+        "causing blindness or deafness as skull foramina narrow. Ix: "
+        "radiographs show diffusely dense, sclerotic bone with a "
+        "characteristic bone-in-bone appearance; genetic testing "
+        "confirms the subtype. Mx: haematopoietic stem cell "
+        "transplant is curative in the severe infantile form; "
+        "supportive care and vitamin D for milder disease. Note: the "
+        "paradox of dense bone that fractures easily is the exam "
+        "hallmark, the opposite of what osteoporosis teaches."
+    ),
+    "Congenital scoliosis": (
+        "Lateral spinal curvature from a congenital vertebral anomaly "
+        "present from birth, distinct from the more common idiopathic "
+        "scoliosis of adolescence. Aetiology: failure of vertebral "
+        "formation (hemivertebra) or segmentation (unsegmented bar) "
+        "during embryogenesis, often associated with other midline "
+        "defects. Clinical features: visible spinal asymmetry, "
+        "shoulder or hip height discrepancy, and a curve that is "
+        "often noted earlier and progresses more predictably than "
+        "idiopathic disease. Associations: renal anomalies, "
+        "congenital heart disease and spinal dysraphism are common "
+        "enough that all three systems are screened for at diagnosis. "
+        "Ix: whole spine radiographs to classify the anomaly, MRI to "
+        "exclude cord tethering or syrinx, renal ultrasound and "
+        "echocardiogram. Mx: observation for mild, non-progressive "
+        "curves; bracing rarely helps a structural bony anomaly, so "
+        "early growth-friendly surgery is used for progressive "
+        "curves. Note: always look for the kidney and the heart, not "
+        "just the spine."
+    ),
+    "Klippel-Feil syndrome": (
+        "Congenital fusion of two or more cervical vertebrae from "
+        "failure of normal segmentation in early embryogenesis. "
+        "Clinical features: the classic triad of a short neck, low "
+        "posterior hairline and restricted neck movement is present "
+        "in only a minority; most patients present with an incidental "
+        "radiographic finding or with associated anomalies. "
+        "Associations: Sprengel deformity (elevated scapula), "
+        "scoliosis, renal anomalies and sensorineural hearing loss "
+        "occur often enough that all are screened for. Ix: cervical "
+        "spine radiographs showing fused vertebral bodies; MRI to "
+        "assess instability and cord compression before any contact "
+        "sport or anaesthetic intervention; renal ultrasound and "
+        "audiometry. Mx: activity modification and avoidance of "
+        "high-impact contact sport where instability is present; "
+        "surgical stabilisation for progressive instability or "
+        "myelopathy. Note: cervical spine instability makes neck "
+        "extension for intubation genuinely dangerous, so flag it "
+        "clearly before any anaesthetic."
+    ),
+    "Septic bursitis": (
+        "Bacterial infection of a superficial bursa, most often the "
+        "olecranon or prepatellar bursa, distinct from the far more "
+        "common non-septic (traumatic or inflammatory) bursitis. "
+        "Aetiology: direct inoculation through overlying skin breaks "
+        "or abrasions, usually with Staphylococcus aureus. Clinical "
+        "features: a warm, tender, fluctuant swelling over the joint "
+        "with overlying cellulitis and fever, and pain "
+        "disproportionate to the modest restriction of joint "
+        "movement, since the joint itself is spared. Ix: bursal "
+        "aspiration for cell count, Gram stain and culture is the key "
+        "step that separates this from inflammatory bursitis. Mx: "
+        "empirical antistaphylococcal antibiotics (flucloxacillin per "
+        "eTG) pending culture, with surgical drainage or bursectomy "
+        "for abscess or antibiotic failure. Note: near-full range of "
+        "joint movement despite an angry-looking swelling is what "
+        "points to the bursa rather than the joint; septic arthritis "
+        "restricts movement far more."
+    ),
+    "Gastric volvulus": (
+        "Abnormal rotation of the stomach along its long or short "
+        "axis, which can obstruct the lumen and strangulate its blood "
+        "supply. Aetiology: organoaxial rotation is usually "
+        "associated with a large paraoesophageal or diaphragmatic "
+        "hernia in older adults; mesoaxial rotation is less common "
+        "and often idiopathic. Clinical features: Borchardt's triad "
+        "of severe epigastric pain, retching without the ability to "
+        "vomit, and inability to pass a nasogastric tube signals "
+        "acute strangulating volvulus. Ix: erect chest and abdominal "
+        "radiograph show a distended, abnormally located gastric "
+        "bubble; CT confirms the rotation and any associated hernia. "
+        "Mx: emergency surgical detorsion and gastropexy, with "
+        "resection of any non-viable stomach; a stable chronic "
+        "volvulus can be electively repaired. Note: Borchardt's triad "
+        "is the classic exam trigger and reflects a true surgical "
+        "emergency, not a diagnosis to sit on."
+    ),
+    "Acute mesenteric ischaemia": (
+        "Sudden interruption of intestinal blood flow causing bowel "
+        "ischaemia and, if untreated, infarction; a vascular "
+        "emergency with high mortality. Aetiology: embolism from "
+        "atrial fibrillation is the most common cause, followed by "
+        "thrombosis of a diseased mesenteric artery, non-occlusive "
+        "ischaemia in low flow states, and mesenteric venous "
+        "thrombosis. Clinical features: severe, sudden abdominal pain "
+        "classically out of proportion to a soft, minimally tender "
+        "abdomen on early examination. Peritonism signals infarction "
+        "and is a late, ominous sign. Ix: raised lactate is sensitive "
+        "but nonspecific; CT angiography is the investigation of "
+        "choice and should not be delayed for lactate to rise. Mx: "
+        "resuscitation, broad spectrum antibiotics and urgent "
+        "surgical or endovascular revascularisation, with resection "
+        "of infarcted bowel. Note: pain out of proportion to "
+        "examination findings is the phrase to remember, because by "
+        "the time signs catch up, bowel is already dying."
+    ),
+    "Menetrier disease": (
+        "Rare acquired hypertrophic gastropathy causing giant, "
+        "irregular gastric mucosal folds with excessive mucus "
+        "secretion and protein loss. Aetiology: overexpression of "
+        "transforming growth factor alpha drives foveolar cell "
+        "hyperplasia; a similar picture in children is often "
+        "triggered by cytomegalovirus infection and usually resolves "
+        "spontaneously. Clinical features: epigastric pain, nausea, "
+        "weight loss and peripheral oedema from hypoalbuminaemia "
+        "caused by protein-losing enteropathy from the leaky mucosa. "
+        "Ix: endoscopy shows massively enlarged rugal folds, most "
+        "marked in the body and fundus; biopsy confirms foveolar "
+        "hyperplasia and excludes malignancy or lymphoma, which can "
+        "mimic it. Mx: acid suppression and dietary protein "
+        "supplementation; cetuximab targeting the growth factor "
+        "pathway helps refractory adult disease; gastrectomy is "
+        "reserved for severe protein loss or dysplasia. Note: adult "
+        "disease carries a modest increased gastric cancer risk, so "
+        "it needs surveillance, unlike the self-limiting paediatric "
+        "form."
+    ),
+    "Protein-losing enteropathy": (
+        "Excessive loss of plasma protein into the gastrointestinal "
+        "tract, causing hypoalbuminaemia out of proportion to liver "
+        "or kidney disease. Aetiology: mucosal disease with increased "
+        "permeability (coeliac disease, inflammatory bowel disease, "
+        "Menetrier disease) or lymphatic obstruction (intestinal "
+        "lymphangiectasia, constrictive pericarditis, the Fontan "
+        "circulation). Clinical features: peripheral and dependent "
+        "oedema, ascites and pleural effusion from hypoalbuminaemia, "
+        "plus diarrhoea and malabsorption when the underlying mucosal "
+        "disease is active. Ix: low serum albumin with normal liver "
+        "synthetic function and no proteinuria points here; faecal "
+        "alpha-1 antitrypsin clearance confirms gut protein loss "
+        "directly. Mx: treat the underlying cause, with a low-fat, "
+        "medium-chain triglyceride diet for lymphatic causes since "
+        "MCTs bypass the lymphatics. Note: normal urine protein with "
+        "a low albumin should always prompt a look at the gut, not "
+        "just the kidney."
+    ),
+    "Autoimmune pancreatitis": (
+        "Chronic fibroinflammatory pancreatitis driven by an "
+        "autoimmune process rather than gallstones or alcohol, and an "
+        "important mimic of pancreatic cancer. Classification: type 1 "
+        "is the pancreatic manifestation of IgG4-related disease and "
+        "affects older men; type 2 is pancreas-limited, affects "
+        "younger patients and is associated with inflammatory bowel "
+        "disease. Clinical features: painless obstructive jaundice "
+        "from a diffusely enlarged pancreas or focal mass, which is "
+        "what prompts the cancer work-up in the first place. Ix: "
+        "raised serum IgG4 supports type 1; CT shows a diffusely "
+        "enlarged sausage-shaped pancreas with a rim-like capsule; "
+        "biopsy is used when imaging cannot exclude malignancy. Mx: "
+        "oral corticosteroids produce a dramatic response that is "
+        "itself diagnostic; steroid-sparing agents (rituximab, "
+        "azathioprine) for relapse. Note: a rapid, near-complete "
+        "response to steroids is the clue that a presumed pancreatic "
+        "cancer was this instead."
+    ),
+    "Caroli disease": (
+        "Rare congenital disorder of segmental, saccular dilatation "
+        "of the intrahepatic bile ducts, from abnormal ductal plate "
+        "development. Classification: simple Caroli disease affects "
+        "the ducts alone; Caroli syndrome combines it with congenital "
+        "hepatic fibrosis and portal hypertension, and is the more "
+        "common form. Clinical features: recurrent bacterial "
+        "cholangitis with fever and right upper quadrant pain, "
+        "intrahepatic stone formation, and in the syndrome, variceal "
+        "bleeding from portal hypertension. Associations: autosomal "
+        "recessive polycystic kidney disease occurs in a significant "
+        "minority, so renal imaging is part of the work-up. Ix: "
+        "ultrasound or MRCP showing dilated intrahepatic ducts "
+        "communicating with the biliary tree, which distinguishes it "
+        "from polycystic liver disease. Mx: antibiotics for "
+        "cholangitis, ursodeoxycholic acid and drainage for localised "
+        "disease; liver transplant for diffuse disease, recurrent "
+        "sepsis or malignant transformation. Note: cholangiocarcinoma "
+        "risk is markedly increased, so surveillance is lifelong."
+    ),
+    "Fanconi anaemia": (
+        "Inherited bone marrow failure syndrome from defective DNA "
+        "damage repair, the most common inherited cause of aplastic "
+        "anaemia in children. Aetiology: autosomal recessive (rarely "
+        "X-linked) mutations in the Fanconi anaemia DNA repair "
+        "pathway genes impair cross-link repair, causing chromosomal "
+        "fragility. Clinical features: short stature, café-au-lait "
+        "macules, thumb and radial anomalies and microcephaly, "
+        "alongside progressive pancytopenia typically presenting in "
+        "the first decade. Associations: markedly increased risk of "
+        "acute myeloid leukaemia and of squamous cell carcinomas of "
+        "the head, neck and anogenital region later in life. Ix: "
+        "chromosomal breakage testing with diepoxybutane or mitomycin "
+        "C is diagnostic, since these agents cause exaggerated "
+        "breakage in affected cells. Mx: haematopoietic stem cell "
+        "transplant for marrow failure, androgen therapy as a bridge, "
+        "and lifelong cancer surveillance. Note: short stature plus "
+        "thumb anomalies plus marrow failure in a child is the "
+        "pattern that should trigger breakage testing."
+    ),
+    "Evans syndrome": (
+        "Simultaneous or sequential autoimmune haemolytic anaemia and "
+        "immune thrombocytopenia in the same patient, sometimes with "
+        "autoimmune neutropenia as well. Aetiology: primary disease "
+        "occurs without an identifiable cause; secondary disease is "
+        "associated with systemic lupus erythematosus, common "
+        "variable immunodeficiency and lymphoproliferative disorders, "
+        "which should always be sought. Clinical features: fatigue "
+        "and jaundice from haemolysis alongside bruising, petechiae "
+        "or mucosal bleeding from thrombocytopenia, often relapsing "
+        "and remitting over years. Ix: positive direct antiglobulin "
+        "test with reticulocytosis and low haptoglobin confirms "
+        "haemolysis; thrombocytopenia is confirmed on film with "
+        "normal marrow megakaryocytes. Mx: corticosteroids first line "
+        "for both cytopenias; refractory or relapsing disease uses "
+        "rituximab, splenectomy or other steroid-sparing "
+        "immunosuppression. Note: always screen for lupus and "
+        "lymphoma, since treating the cytopenias without finding the "
+        "driver invites relapse."
+    ),
+    "Mycosis fungoides": (
+        "Most common form of cutaneous T-cell lymphoma, an indolent "
+        "malignancy of skin-homing T-cells that can progress over "
+        "decades. Staging: patch stage shows scaly, erythematous "
+        "patches often mistaken for eczema or psoriasis; plaque stage "
+        "adds infiltrated, raised lesions; tumour stage develops "
+        "nodules that can ulcerate. Sezary syndrome is the leukaemic, "
+        "erythrodermic variant with circulating malignant cells. "
+        "Clinical features: chronic, often intensely itchy patches in "
+        "sun-protected sites (buttocks, trunk) that persist and "
+        "slowly evolve over years despite standard eczema treatment. "
+        "Ix: skin biopsy showing epidermotropic atypical lymphocytes "
+        "forming Pautrier microabscesses; immunophenotyping and "
+        "T-cell receptor gene rearrangement studies confirm "
+        "clonality. Mx: skin-directed therapy (topical "
+        "corticosteroids, phototherapy) for early stage disease; "
+        "systemic therapy (retinoids, interferon, chemotherapy) for "
+        "advanced or refractory disease. Note: any 'eczema' that has "
+        "not responded to treatment after months deserves a biopsy to "
+        "exclude this."
+    ),
+    "Langerhans cell histiocytosis": (
+        "Clonal proliferation of Langerhans-type dendritic cells that "
+        "can infiltrate bone, skin and viscera, ranging from a single "
+        "self-healing lesion to life-threatening multisystem disease. "
+        "Aetiology: driven by activating mutations in the MAPK "
+        "pathway, most often BRAF V600E, reframing what was once "
+        "thought a reactive process as a clonal neoplastic one. "
+        "Clinical features: a solitary lytic bone lesion "
+        "(eosinophilic granuloma) causing localised pain is the "
+        "commonest presentation; multisystem disease in infants can "
+        "cause the classic triad of bone lesions, diabetes insipidus "
+        "from pituitary stalk infiltration, and exophthalmos. Ix: "
+        "biopsy showing CD1a and CD207 (langerin) positive cells "
+        "confirms the diagnosis; skeletal survey and organ imaging "
+        "define the extent of disease. Mx: single-system bone disease "
+        "may need only curettage or observation; multisystem or "
+        "high-risk organ disease needs systemic chemotherapy "
+        "(vinblastine and prednisolone). Note: diabetes insipidus in "
+        "a young child with a lytic skull lesion is the combination "
+        "that should bring this to mind."
+    ),
+    "Palindromic rheumatism": (
+        "Recurrent, self-limiting episodes of joint pain and swelling "
+        "that resolve completely between attacks without residual "
+        "joint damage, in contrast to established rheumatoid "
+        "arthritis. Aetiology: considered a distinct entity and also "
+        "a prodrome that precedes rheumatoid arthritis in a "
+        "substantial minority of patients, particularly when anti-CCP "
+        "antibodies are positive. Clinical features: abrupt attacks "
+        "affecting one or a few joints, lasting hours to a few days, "
+        "with the joint appearing entirely normal between episodes. "
+        "Ix: anti-CCP antibody and rheumatoid factor help predict "
+        "progression to rheumatoid arthritis; inflammatory markers "
+        "and imaging are typically normal or only briefly abnormal "
+        "during an attack. Mx: NSAIDs and hydroxychloroquine for "
+        "symptom control and to reduce attack frequency; methotrexate "
+        "is considered when anti-CCP is positive or attacks are "
+        "frequent, to pre-empt progression. Note: a normal joint "
+        "examination between dramatic attacks is what separates this "
+        "from an inflammatory arthritis that simply flares."
+    ),
+    "Valproate toxicity": (
+        "Toxicity from sodium valproate or valproic acid, either "
+        "acute overdose or chronic accumulation, with effects "
+        "distinct from most other anticonvulsants. Clinical features: "
+        "reduced consciousness ranging from drowsiness to coma, "
+        "disproportionate to the apparent dose in severe cases, plus "
+        "cerebral oedema at very high levels. Hyperammonaemic "
+        "encephalopathy can occur even with therapeutic levels from "
+        "carnitine depletion. Ix: serum valproate level, ammonia "
+        "level (which can be raised with a normal valproate level and "
+        "explains otherwise unexplained confusion), and liver "
+        "function, since hepatotoxicity is a separate idiosyncratic "
+        "risk. Mx: supportive care and airway protection; L-carnitine "
+        "for hyperammonaemia or hepatotoxicity; haemodialysis for "
+        "very high levels with coma or shock, since valproate is "
+        "dialysable despite high protein binding at toxic "
+        "concentrations. Note: check ammonia whenever a patient on "
+        "valproate is unexpectedly confused, even with a therapeutic "
+        "drug level."
+    ),
+    "Isoniazid toxicity": (
+        "Toxicity from isoniazid overdose or, less often, therapeutic "
+        "use, causing a classic and dangerous triad of seizures, "
+        "metabolic acidosis and coma refractory to standard "
+        "treatment. Mechanism: isoniazid depletes pyridoxine (vitamin "
+        "B6), which is required to make GABA, so cortical inhibition "
+        "collapses and seizures follow that do not respond to "
+        "benzodiazepines alone. Clinical features: seizures typically "
+        "within two hours of overdose, severe anion gap metabolic "
+        "acidosis partly from lactate generated by ongoing seizure "
+        "activity, and coma. Ix: isoniazid level is rarely available "
+        "in time to guide treatment; diagnosis is clinical, from the "
+        "seizure and acidosis pattern in someone with access to "
+        "isoniazid. Mx: intravenous pyridoxine, gram for gram with "
+        "the ingested isoniazid dose or empirically 5g in an "
+        "unknown-dose adult, is the specific antidote and should not "
+        "be delayed pending confirmation. Note: seizures that will "
+        "not stop with benzodiazepines should always prompt "
+        "pyridoxine, since it works when nothing else will."
+    ),
+    "Hydroxychloroquine toxicity": (
+        "Toxicity from hydroxychloroquine, either acute overdose, "
+        "which is a cardiovascular emergency, or chronic retinal "
+        "accumulation with long-term therapeutic use. Clinical "
+        "features: acute overdose causes rapid-onset hypotension, "
+        "ventricular arrhythmia from sodium and potassium channel "
+        "blockade, and hypokalaemia from intracellular potassium "
+        "shift. Chronic use risks an irreversible bull's-eye "
+        "maculopathy that is initially asymptomatic. Ix: ECG for QRS "
+        "widening and QT prolongation in acute overdose; for chronic "
+        "surveillance, baseline and annual optical coherence "
+        "tomography and visual field testing after five years of use "
+        "or with risk factors. Mx: acute overdose needs early "
+        "intubation, high-dose diazepam, sodium bicarbonate for QRS "
+        "widening and aggressive potassium replacement with "
+        "monitoring for rebound hyperkalaemia. Chronic toxicity means "
+        "stopping the drug. Note: acute hydroxychloroquine overdose "
+        "kills fast through the heart, while chronic toxicity blinds "
+        "slowly through the retina; the two need completely different "
+        "urgency."
+    ),
+    "Paralysis tick envenomation": (
+        "Progressive ascending flaccid paralysis from the neurotoxin "
+        "injected by the Australian paralysis tick, Ixodes "
+        "holocyclus, found along the eastern seaboard. Mechanism: the "
+        "toxin blocks acetylcholine release at the neuromuscular "
+        "junction, and paralysis can continue to worsen for 24 to 48 "
+        "hours even after the tick is removed. Clinical features: "
+        "unsteady gait and limb weakness progressing to ascending "
+        "flaccid paralysis and potentially respiratory failure, "
+        "sometimes with a preceding phase of local erythema and "
+        "lymphadenopathy near the bite. Ix: diagnosis is clinical; a "
+        "careful search of the scalp, behind ears and skin folds for "
+        "an embedded tick is essential, since small nymphs are easily "
+        "missed. Mx: careful tick removal with fine forceps grasping "
+        "close to the skin without squeezing the body, supportive "
+        "care and ventilation if respiratory muscles are affected; "
+        "tick antiserum is used in severe paediatric cases. Note: "
+        "paralysis often worsens for a day or two after the tick is "
+        "removed, which alarms families expecting immediate "
+        "improvement."
+    ),
+    "Scombroid poisoning": (
+        "Toxic reaction from eating fish (tuna, mackerel, mahi-mahi) "
+        "contaminated with high histamine levels from bacterial "
+        "spoilage after inadequate refrigeration, mimicking an "
+        "allergic reaction. Mechanism: bacterial histidine "
+        "decarboxylase converts histidine in the fish flesh to "
+        "histamine, which is not destroyed by cooking. Clinical "
+        "features: onset within an hour of eating, with flushing, "
+        "headache, palpitations, diarrhoea and a peppery or metallic "
+        "taste, closely resembling an IgE-mediated fish allergy. "
+        "Diagnosis: a cluster of similar symptoms in several people "
+        "who shared the same fish meal points strongly away from a "
+        "true allergy and towards scombroid, since allergy would not "
+        "affect everyone at the table equally. Mx: antihistamines "
+        "(both H1 and H2 blockers) resolve symptoms quickly, usually "
+        "within hours; the fish should be discarded and reported, "
+        "since spoilage is the true cause. Note: rapid, complete "
+        "response to antihistamines in a whole group who shared a "
+        "meal is what confirms this over anaphylaxis."
+    ),
+    "Ciguatera poisoning": (
+        "Toxic reaction from eating reef fish (barracuda, grouper, "
+        "snapper) contaminated with ciguatoxin, produced by "
+        "dinoflagellates and concentrated up the marine food chain. "
+        "Mechanism: ciguatoxin opens voltage-gated sodium channels, "
+        "causing prolonged depolarisation of nerve and muscle "
+        "membranes. Clinical features: gastrointestinal symptoms "
+        "within hours, followed by a distinctive neurological phase "
+        "with paraesthesia, and classically temperature reversal, "
+        "where cold objects feel burning hot to touch. Symptoms can "
+        "wax and wane for weeks to months. Ix: diagnosis is clinical "
+        "from the history of reef fish consumption and the pattern of "
+        "symptoms; toxin assay of the fish is available in some "
+        "jurisdictions but rarely changes acute management. Mx: "
+        "supportive care; intravenous mannitol has been used for "
+        "severe neurological symptoms though evidence is mixed; "
+        "alcohol, caffeine and nuts can trigger symptom relapse for "
+        "months and should be avoided. Note: temperature reversal, "
+        "hot feels cold, is the single most distinctive clue on "
+        "history."
+    ),
+    "Amatoxin mushroom poisoning": (
+        "Severe hepatotoxic poisoning from amatoxin-containing "
+        "mushrooms, most notoriously the death cap, Amanita "
+        "phalloides, responsible for the great majority of fatal "
+        "mushroom poisonings. Mechanism: amatoxin inhibits RNA "
+        "polymerase II, halting protein synthesis and causing "
+        "hepatocyte and renal tubular cell death. Clinical features: "
+        "a deceptive triphasic course, gastrointestinal symptoms at 6 "
+        "to 24 hours, an apparent recovery over the next day that "
+        "misleads patients into thinking they are better, then "
+        "fulminant hepatic and renal failure from day two onward. Ix: "
+        "liver function tests and coagulation studies trend the true "
+        "severity; mushroom identification, including from "
+        "photographs, helps confirm the species. Mx: activated "
+        "charcoal if early, aggressive intravenous fluids, "
+        "N-acetylcysteine and silibinin (or intravenous silibinin "
+        "where available) to limit hepatocyte uptake, and early liver "
+        "transplant referral for fulminant failure. Note: the false "
+        "recovery on day two is what kills people who go home "
+        "thinking the illness has passed."
+    ),
+    "Postoperative urinary retention": (
+        "Inability to void adequately after surgery, common enough "
+        "that it is a routine part of postoperative bladder care "
+        "rather than a rare complication. Aetiology: anaesthetic "
+        "agents (especially spinal and epidural anaesthesia) and "
+        "opioid analgesia impair detrusor contractility and bladder "
+        "sensation; pelvic, hernia and anorectal surgery carry "
+        "particular risk from local nerve disruption and pain-related "
+        "sphincter spasm. Clinical features: suprapubic discomfort "
+        "and a palpable, percussible bladder in a patient who has not "
+        "voided within 6 to 8 hours of surgery, though retention can "
+        "also be painless. Ix: bladder scan showing a residual volume "
+        "above about 400 to 500mL confirms retention and guides the "
+        "decision to catheterise. Mx: intermittent catheterisation is "
+        "preferred over an indwelling catheter where feasible to "
+        "reduce infection risk; an alpha blocker can be trialled "
+        "before recatheterisation in men with prostatic risk factors. "
+        "Note: risk rises sharply with spinal anaesthesia and pelvic "
+        "surgery, so anticipate it rather than waiting for a "
+        "distressed, silent patient to ask."
+    ),
+    "Perforated peptic ulcer": (
+        "Full-thickness perforation of a gastric or duodenal ulcer "
+        "into the peritoneal cavity, a surgical emergency and the "
+        "most dangerous complication of peptic ulcer disease. "
+        "Aetiology: Helicobacter pylori infection and NSAID use "
+        "remain the leading causes, with smoking and physiological "
+        "stress from critical illness as additional risk factors. "
+        "Clinical features: sudden, severe epigastric pain that "
+        "rapidly becomes generalised as gastric contents spread, with "
+        "a rigid, board-like abdomen and systemic signs of "
+        "peritonitis and shock. Ix: erect chest radiograph shows free "
+        "subdiaphragmatic air in most cases; CT is more sensitive and "
+        "defines the site when the diagnosis is not yet clear. Mx: "
+        "resuscitation, broad spectrum antibiotics and proton pump "
+        "inhibitor, then urgent surgical repair, usually omental "
+        "(Graham) patch closure, most often laparoscopically. Note: "
+        "sudden onset with a rigid abdomen after known ulcer disease "
+        "or NSAID use is the pattern; do not wait for free air to "
+        "appear before operating on a clear clinical picture."
+    ),
+    "Epigastric hernia": (
+        "Small ventral hernia through the linea alba above the "
+        "umbilicus, where extraperitoneal fat or, less often, bowel "
+        "protrudes through a defect in the midline fascia. Aetiology: "
+        "a congenital weakness at sites where small blood vessels "
+        "perforate the linea alba, aggravated by raised "
+        "intra-abdominal pressure from obesity, pregnancy or heavy "
+        "lifting. Clinical features: a small, often tender midline "
+        "lump between the umbilicus and xiphisternum, which can be "
+        "mistaken for dyspepsia since the pain can mimic upper "
+        "gastrointestinal disease. Ix: clinical examination is "
+        "usually sufficient; ultrasound helps when the lump is small "
+        "or the diagnosis is uncertain, and distinguishes it from a "
+        "lipoma. Mx: asymptomatic, easily reducible hernias can be "
+        "observed; symptomatic hernias are repaired surgically, "
+        "usually with mesh for defects large enough to recur without "
+        "it. Note: an epigastric lump that is tender to palpation is "
+        "often diagnosed as dyspepsia until someone actually examines "
+        "the abdomen."
+    ),
+    "Spigelian hernia": (
+        "Rare ventral hernia through the Spigelian fascia, the "
+        "aponeurotic layer at the lateral edge of the rectus sheath, "
+        "typically at or below the level of the umbilicus. Aetiology: "
+        "a natural weakness where the transversus abdominis "
+        "aponeurosis thins, most often affecting older adults and "
+        "those with raised intra-abdominal pressure. Clinical "
+        "features: a poorly defined, often intermittent lump or "
+        "localised pain in the lower lateral abdomen, made harder to "
+        "diagnose because the hernia frequently stays interparietal, "
+        "hidden beneath an intact external oblique aponeurosis. Ix: "
+        "ultrasound or CT is usually needed to confirm the diagnosis, "
+        "since clinical examination alone misses many cases. Mx: "
+        "surgical repair is generally recommended even for small "
+        "hernias because the narrow, well-defined defect carries a "
+        "disproportionately high risk of incarceration and "
+        "strangulation. Note: a hernia that cannot be felt clinically "
+        "despite convincing symptoms should prompt imaging rather "
+        "than reassurance."
+    ),
+    "Obturator hernia": (
+        "Rare pelvic floor hernia through the obturator canal, "
+        "occurring almost exclusively in thin, elderly women, and "
+        "notorious for presenting late with bowel obstruction. "
+        "Aetiology: loss of the preperitoneal fat that normally plugs "
+        "the canal, combined with a wider female pelvis, lets bowel "
+        "herniate along the obturator neurovascular bundle. Clinical "
+        "features: small bowel obstruction with no palpable groin "
+        "lump, since the hernia lies deep in the pelvis; compression "
+        "of the obturator nerve causes the Howship-Romberg sign, pain "
+        "radiating down the medial thigh that worsens with hip "
+        "extension or internal rotation. Ix: CT is the investigation "
+        "of choice and usually makes the diagnosis before surgery, "
+        "since clinical examination is typically unrevealing. Mx: "
+        "emergency surgical reduction and repair of the defect, with "
+        "resection of any non-viable bowel. Note: an elderly, thin "
+        "woman with unexplained small bowel obstruction and medial "
+        "thigh pain has this until proven otherwise."
+    ),
+    "Richter hernia": (
+        "Hernia in which only part of the bowel wall, not the full "
+        "lumen, becomes incarcerated or strangulated, most often "
+        "through a femoral or narrow laparoscopic port site defect. "
+        "Clinical features: because the bowel lumen usually remains "
+        "patent, patients can pass flatus and stool normally even as "
+        "the trapped segment becomes ischaemic and eventually "
+        "perforates, so features of bowel obstruction are often "
+        "absent or subtle. Ix: a high index of suspicion is needed in "
+        "anyone with a tender, irreducible groin or port-site lump, "
+        "since standard obstruction series can look reassuringly "
+        "normal; CT is more sensitive for the trapped bowel segment. "
+        "Mx: urgent surgical exploration and resection of the "
+        "strangulated segment, since perforation can occur silently. "
+        "Note: the absence of classic obstruction symptoms is "
+        "precisely what makes this dangerous; do not let a normal "
+        "bowel habit reassure you out of examining the hernia site."
     ),
 }
 
