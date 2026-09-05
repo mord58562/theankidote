@@ -3398,6 +3398,96 @@ NEW_CONDITIONS = [
         "utd": [['Mx', 'neonatal hypoglycemia']],
         "summary": "",
     },
+    {
+        "name": "Popliteal artery entrapment",
+        "aliases": ["PAES", "popliteal entrapment syndrome"],
+        "utd": [['Ix', 'popliteal artery entrapment']],
+        "summary": "",
+    },
+    {
+        "name": "Adventitial cystic disease of popliteal artery",
+        "aliases": ["popliteal adventitial cystic disease"],
+        "utd": [['Ix', 'adventitial cystic disease popliteal artery']],
+        "summary": "",
+    },
+    {
+        "name": "Paget-Schroetter syndrome",
+        "aliases": ["effort thrombosis upper extremity", "venous thoracic outlet syndrome"],
+        "utd": [['Mx', 'Paget Schroetter syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Medication-related osteonecrosis of the jaw",
+        "aliases": ["MRONJ", "bisphosphonate osteonecrosis jaw"],
+        "utd": [['Mx', 'medication related osteonecrosis of the jaw']],
+        "summary": "",
+    },
+    {
+        "name": "Denosumab hypocalcaemia",
+        "aliases": ["denosumab-induced hypocalcemia"],
+        "utd": [['Mx', 'denosumab hypocalcemia']],
+        "summary": "",
+    },
+    {
+        "name": "Dumping syndrome",
+        "aliases": ["post-gastrectomy dumping", "post-bariatric dumping"],
+        "utd": [['Mx', 'dumping syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Marginal ulcer",
+        "aliases": ["gastrojejunal ulcer bariatric"],
+        "utd": [['Mx', 'marginal ulcer gastric bypass']],
+        "summary": "",
+    },
+    {
+        "name": "Vitamin B6 deficiency",
+        "aliases": ["pyridoxine deficiency"],
+        "utd": [['Mx', 'vitamin B6 pyridoxine deficiency']],
+        "summary": "",
+    },
+    {
+        "name": "Vitamin B7 biotin deficiency",
+        "aliases": ["biotin deficiency", "biotinidase deficiency"],
+        "utd": [['Mx', 'biotin deficiency']],
+        "summary": "",
+    },
+    {
+        "name": "Selenium deficiency",
+        "aliases": ["Keshan disease", "Kashin-Beck disease"],
+        "utd": [['Overview', 'selenium deficiency']],
+        "summary": "",
+    },
+    {
+        "name": "Neuroblastoma",
+        "aliases": ["adrenal neuroblastoma"],
+        "utd": [['Mx', 'neuroblastoma pediatric']],
+        "summary": "",
+    },
+    {
+        "name": "Hepatoblastoma",
+        "aliases": ["pediatric liver cancer"],
+        "utd": [['Mx', 'hepatoblastoma']],
+        "summary": "",
+    },
+    {
+        "name": "Prostatic abscess",
+        "aliases": ["prostate abscess"],
+        "utd": [['Mx', 'prostatic abscess']],
+        "summary": "",
+    },
+    {
+        "name": "Emphysematous cystitis",
+        "aliases": ["gas-forming cystitis"],
+        "utd": [['Mx', 'emphysematous cystitis']],
+        "summary": "",
+    },
+    {
+        "name": "Retroperitoneal fibrosis",
+        "aliases": ["Ormond disease", "IgG4 retroperitoneal fibrosis"],
+        "utd": [['Mx', 'retroperitoneal fibrosis']],
+        "summary": "",
+    },
 ]
 
 
@@ -34535,6 +34625,339 @@ RICH_SUMMARIES = {
         "symptomatic under 2.6 mmol/L - IV dextrose bolus plus "
         "infusion, "
         "critical sample first."
+    ),
+    "Popliteal artery entrapment": (
+        "Compression of the popliteal artery by aberrant "
+        "musculotendinous structures behind the knee, producing "
+        "exercise-induced ischaemic calf pain in young athletes. Six "
+        "anatomical types (Rich classification), most involve medial "
+        "head of gastrocnemius. Bilateral in 25%. Sx: cramping calf "
+        "pain during exercise (running, cycling) in a young otherwise "
+        "healthy patient, relieved by rest; coldness, numbness, "
+        "cramping; distinguished from CECS and shin splints by pulse "
+        "changes on manoeuvres. Pedal pulses reduced or lost with "
+        "active plantar flexion or passive dorsiflexion. Ix: duplex "
+        "ultrasound with provocative manoeuvres shows arterial "
+        "compression on plantarflexion or dorsiflexion; CT or MR "
+        "angiography with stress views defines anatomy and confirms "
+        "diagnosis; MRI shows aberrant muscle relationship. ABI at "
+        "rest usually normal. Mx: surgical release of the entrapping "
+        "structure with or without arterial reconstruction depending "
+        "on damage - performed early prevents irreversible arterial "
+        "injury. Postoperative physiotherapy for return to sport. "
+        "Note: young athlete with exertional calf pain plus pulses "
+        "lost on active plantarflexion - imaging with stress views."
+    ),
+    "Adventitial cystic disease of popliteal artery": (
+        "Rare vascular disease with mucin-filled cyst in the "
+        "adventitia of the popliteal artery causing extrinsic "
+        "compression - mimics popliteal artery entrapment. "
+        "Predominantly males 40-50. Aetiology uncertain (theories "
+        "include synovial rest, repetitive microtrauma). Sx: gradual "
+        "onset intermittent claudication in a young otherwise healthy "
+        "male, without atherosclerotic risk factors; symptoms may "
+        "worsen with knee flexion (Ishikawa sign - pedal pulses "
+        "diminish on maximum knee flexion). Distinguish from "
+        "popliteal entrapment (provocative manoeuvres involve ankle "
+        "rather than knee flexion). Ix: duplex ultrasound shows the "
+        "cyst as an anechoic mass compressing the artery; MRI or MR "
+        "angiography confirms cyst location and defines relationship; "
+        "conventional angiography shows the scimitar sign (curved "
+        "luminal narrowing). Mx: surgical excision of the cyst with "
+        "or without arterial reconstruction is the standard - primary "
+        "anastomosis or vein graft as needed. Percutaneous aspiration "
+        "has high recurrence rate. Note: young male with claudication "
+        "and no risk factors plus symptoms on knee flexion - image "
+        "the popliteal artery for adventitial cyst."
+    ),
+    "Paget-Schroetter syndrome": (
+        "Effort-related thrombosis of the axillary-subclavian vein - "
+        "a form of secondary venous thoracic outlet syndrome from "
+        "repetitive overhead activity in young athletes (baseball "
+        "pitchers, swimmers, weightlifters, rowers). Distinguished "
+        "from primary DVT of the arm by the underlying anatomical "
+        "narrowing at the costoclavicular space. Sx: sudden onset "
+        "heaviness, swelling and cyanotic discolouration of the "
+        "affected arm after exertion; prominent superficial "
+        "collateral veins over the shoulder and upper chest; may have "
+        "pain radiating into the arm. Ix: duplex ultrasound of the "
+        "upper extremity confirms thrombus; contrast venography with "
+        "provocative arm positioning defines the anatomical "
+        "compression; CT or MRV as alternatives. D-dimer usually "
+        "positive; thrombophilia screen in atypical cases. Mx: "
+        "immediate anticoagulation followed by catheter-directed "
+        "thrombolysis within 14 days is now first-line, then first "
+        "rib resection at the same admission or shortly after "
+        "(recurrence high if the anatomical narrowing not corrected). "
+        "Anticoagulation for 3 months post-op. Return to sport at 3-6 "
+        "months. Note: young pitcher with sudden arm swelling after "
+        "training - venogram, thrombolyse, resect first rib."
+    ),
+    "Medication-related osteonecrosis of the jaw": (
+        "Exposed necrotic bone in the mandible or maxilla persisting "
+        "over 8 weeks in a patient with current or past exposure to "
+        "antiresorptive (bisphosphonates, denosumab) or "
+        "antiangiogenic agents. Higher risk with IV bisphosphonates "
+        "for cancer than oral for osteoporosis. Sx: exposed bone in "
+        "the oral cavity (usually posterior mandible), often after a "
+        "dental extraction; jaw pain, swelling, purulent drainage, "
+        "loose teeth, paraesthesia over the inferior alveolar nerve "
+        "distribution; may be asymptomatic. Staged 0-3 by severity. "
+        "Ix: clinical diagnosis; OPG or CT to assess extent and "
+        "exclude metastasis (which mimics); ESR, CRP if infection "
+        "suspected; culture drainage. Mx: prevention - dental review "
+        "and completion of invasive dental work BEFORE starting "
+        "antiresorptive therapy, avoid extractions during therapy "
+        "where possible. Established disease - conservative wound "
+        "care and antibacterial mouth rinses for stages 1-2, systemic "
+        "antibiotics for infection, surgical debridement or resection "
+        "for stage 3. Do NOT stop the antiresorptive without oncology "
+        "or endocrinology input. Note: exposed bone after dental "
+        "extraction plus bisphosphonate history - MRONJ, dental "
+        "oncology referral."
+    ),
+    "Denosumab hypocalcaemia": (
+        "Marked hypocalcaemia after denosumab administration - occurs "
+        "because the RANKL inhibitor abruptly halts "
+        "osteoclast-mediated bone resorption, trapping serum calcium "
+        "in bone. Risk factors: CKD (particularly eGFR under 30), "
+        "vitamin D deficiency, hypoparathyroidism, malabsorption, "
+        "high skeletal turnover (metastatic bone disease). Higher "
+        "risk with 120 mg dose (bone metastases) than 60 mg "
+        "(osteoporosis). Sx: paraesthesia (peri-oral, digits), muscle "
+        "cramps, tetany, laryngospasm, seizures, prolonged QT and "
+        "arrhythmia; often develops 7-14 days post-injection and may "
+        "persist for weeks; often asymptomatic until severe. Ix: "
+        "serum corrected calcium, phosphate, magnesium, PTH, 25-OH "
+        "vitamin D, U&Es before each dose; ECG for prolonged QT. Mx: "
+        "check calcium and vitamin D before EVERY dose - correct "
+        "deficiency first (vitamin D replete to over 50 nmol/L, "
+        "calcium into normal range). Withhold denosumab if eGFR under "
+        "30 unless benefit outweighs risk. Established hypocalcaemia "
+        "- oral or IV calcium and calcitriol; ICU-level care for "
+        "severe. Note: check calcium and vitamin D before each "
+        "denosumab dose - RANKL inhibitor plus low vitamin D causes "
+        "severe delayed hypocalcaemia."
+    ),
+    "Dumping syndrome": (
+        "Cluster of postprandial symptoms after gastric surgery "
+        "(bariatric, gastrectomy, vagotomy, fundoplication) - rapid "
+        "gastric emptying into the small bowel triggers osmotic fluid "
+        "shifts and vasoactive peptide release. Two phases. Early "
+        "dumping (15-30 min post-meal): vasomotor (flushing, "
+        "palpitations, sweating, hypotension, syncope) plus GI "
+        "(nausea, cramping, diarrhoea) from bowel distension and "
+        "fluid shift. Late dumping (1-3 hours post-meal): "
+        "hypoglycaemia (sweating, tremor, confusion) from reactive "
+        "hyperinsulinaemia after rapid glucose absorption. Ix: "
+        "clinical - Sigstad score aids diagnosis. Modified oral "
+        "glucose tolerance test (75 g glucose, monitor symptoms and "
+        "glucose 3 hourly) confirms with hypoglycaemia at 1-3 hours; "
+        "gastric emptying scintigraphy for confirmation. Mx: dietary "
+        "modification is first-line - small frequent meals, no fluid "
+        "with meals, high protein and complex carbohydrate, low "
+        "simple sugar, lie down after eating. Acarbose for late "
+        "dumping (delays carbohydrate absorption). Octreotide SC "
+        "pre-meal for refractory. Surgical revision rarely needed. "
+        "Note: flushing plus diarrhoea 20 min post-meal after gastric "
+        "bypass - dumping, dietary changes first."
+    ),
+    "Marginal ulcer": (
+        "Ulceration at the gastrojejunal anastomosis after Roux-en-Y "
+        "gastric bypass or other gastric surgery - occurs in 5-25% of "
+        "RYGB patients. Risk factors: smoking, NSAIDs, H. pylori "
+        "infection, gastric pouch distension, large pouch, "
+        "gastro-gastric fistula. Sx: epigastric pain (often burning, "
+        "poorly responsive to PPI), nausea, vomiting, dysphagia, "
+        "occult or overt upper GI bleeding, iron deficiency anaemia; "
+        "may perforate (severe pain, peritonism). Ix: upper endoscopy "
+        "is diagnostic - shows the ulcer at the anastomosis; H. "
+        "pylori testing (biopsy urease); FBC for anaemia; check for "
+        "gastro-gastric fistula on upper GI series. Mx: high-dose PPI "
+        "(double dose, twice-daily), often long-term; sucralfate for "
+        "local protection; smoking cessation; stop NSAIDs; eradicate "
+        "H. pylori if positive. Endoscopic follow-up at 8-12 weeks to "
+        "confirm healing. Surgical revision for non-healing, "
+        "recurrent bleeding or perforation. Note: epigastric pain "
+        "post-RYGB - endoscopy, high-dose PPI, stop smoking and "
+        "NSAIDs."
+    ),
+    "Vitamin B6 deficiency": (
+        "Pyridoxine deficiency - rare in developed countries in "
+        "isolation, usually secondary to isoniazid, penicillamine, "
+        "hydralazine, cycloserine, oral contraceptives, alcoholism, "
+        "malabsorption or dialysis. Neonatal seizures responsive to "
+        "pyridoxine are a distinct genetic disorder (PNPO "
+        "deficiency). Sx: peripheral sensorimotor neuropathy "
+        "(glove-and-stocking), seborrhoeic dermatitis on face and "
+        "scalp, cheilosis, glossitis, sideroblastic microcytic "
+        "anaemia (B6 is a cofactor for haem synthesis), depression, "
+        "confusion, seizures in severe or neonatal cases. Ix: serum "
+        "pyridoxal 5-phosphate (the active form) is the definitive "
+        "test; FBC and film shows microcytic sideroblastic anaemia; "
+        "drug history critical (particularly isoniazid). Mx: "
+        "pyridoxine 25-100 mg PO daily until repletion, then 10-25 mg "
+        "maintenance. Prophylactic pyridoxine 25 mg daily with "
+        "isoniazid treatment (routine in Australian TB protocols). "
+        "Reverse underlying cause. Note: peripheral neuropathy plus "
+        "isoniazid without pyridoxine - B6 deficiency, prophylaxis is "
+        "standard."
+    ),
+    "Vitamin B7 biotin deficiency": (
+        "Rare deficiency of biotin, a cofactor for four carboxylase "
+        "enzymes. Causes: prolonged raw egg white consumption (avidin "
+        "binds biotin), long-term TPN without supplementation, "
+        "chronic anticonvulsant use (phenytoin, phenobarbital, "
+        "carbamazepine), inherited biotinidase deficiency in "
+        "neonates. Sx: seborrhoeic dermatitis around eyes, nose and "
+        "mouth; alopecia (patchy or diffuse); conjunctivitis; "
+        "peripheral neuropathy; hypotonia and lethargy; in infants "
+        "with biotinidase deficiency - seizures, developmental delay, "
+        "hearing loss and metabolic acidosis. Ix: serum biotin (low), "
+        "urine organic acids (elevated 3-hydroxyisovalerate); newborn "
+        "screening includes biotinidase; genetic testing for "
+        "inherited forms. Mx: oral biotin 5-10 mg daily for acquired "
+        "deficiency, typically 5-20 mg daily for biotinidase "
+        "deficiency for life. Rapid response - dermatitis and "
+        "alopecia improve within weeks. Note: dermatitis, alopecia "
+        "and neurological symptoms with raw egg diet or "
+        "anticonvulsants - biotin deficiency, replace and expect "
+        "quick response."
+    ),
+    "Selenium deficiency": (
+        "Trace element deficiency - selenium is a cofactor for "
+        "glutathione peroxidase and thyroid hormone deiodinases. Rare "
+        "in Australia (adequate soil levels) but reported in TPN "
+        "without supplementation, severe malabsorption, bariatric "
+        "surgery, restrictive diets and in regions of China and "
+        "Siberia (Keshan disease endemic). Sx: Keshan disease - "
+        "dilated cardiomyopathy in children and young women in "
+        "endemic areas. Kashin-Beck disease - osteochondropathy of "
+        "joints. General deficiency - myopathy (proximal muscle "
+        "weakness, elevated CK), hair depigmentation, macrocytosis, "
+        "immune dysfunction, hypothyroidism from impaired T4 to T3 "
+        "conversion, increased risk of some cancers (prostate, "
+        "colorectal). Ix: serum or plasma selenium concentration; "
+        "glutathione peroxidase activity as functional marker; TSH "
+        "and free T4 if hypothyroidism suspected. Mx: selenium "
+        "supplementation 50-200 microgram/day (Australian recommended "
+        "intake 60-70 microgram/day). Include brazil nuts (rich "
+        "source) or supplements for at-risk patients on TPN or after "
+        "bariatric surgery. Note: cardiomyopathy or myopathy on TPN "
+        "without selenium - check selenium level."
+    ),
+    "Neuroblastoma": (
+        "Malignant tumour of the sympathetic nervous system from "
+        "neural crest precursors of the adrenal medulla or paraspinal "
+        "ganglia - the commonest solid extracranial malignancy of "
+        "childhood. Peaks under age 5, median 22 months. MYCN "
+        "amplification is the key prognostic marker. Sx: abdominal "
+        "mass crossing the midline (adrenal or paraspinal origin), "
+        "often with fever, weight loss and anaemia. Metastases "
+        "cause bone pain, proptosis and periorbital bruising "
+        "(raccoon eyes) from orbital secondaries, spinal cord "
+        "compression from dumbbell tumour, and subcutaneous "
+        "nodules (blueberry muffin) in infants. Associations: "
+        "opsoclonus-myoclonus-ataxia syndrome, VIP-secretion "
+        "diarrhoea. Ix: urine catecholamines (VMA, HVA) elevated in "
+        "90%; abdominal ultrasound then CT or MRI; MIBG scan for "
+        "staging; bilateral bone marrow biopsies; tumour biopsy for "
+        "histology, N-myc and ploidy. Mx: risk-stratified - "
+        "observation for infant Stage MS, surgery alone for low-risk, "
+        "multimodal chemotherapy plus surgery plus radiotherapy plus "
+        "immunotherapy for high-risk. Note: young child with "
+        "abdominal mass plus raccoon eyes - neuroblastoma, urine "
+        "catecholamines."
+    ),
+    "Hepatoblastoma": (
+        "Commonest primary liver malignancy of childhood - typically "
+        "under age 3, median age 18 months. Associated with "
+        "prematurity (particularly extreme low birth weight), "
+        "BWS, familial adenomatous polyposis and hemihypertrophy. "
+        "Sx: painless abdominal mass in the right "
+        "upper quadrant discovered on routine examination or by "
+        "carers; abdominal distension; anorexia and weight loss; "
+        "rarely precocious puberty from beta-hCG secretion. "
+        "Metastases typically to lung. Ix: alpha-fetoprotein grossly "
+        "elevated (over 1000 in most, useful for monitoring response "
+        "and recurrence); ultrasound then contrast CT or MRI for "
+        "PRETEXT staging (portal vein, hepatic vein, extrahepatic "
+        "involvement); CT chest for lung metastases; biopsy or "
+        "upfront resection depending on stage. Mx: risk-stratified. "
+        "Standard risk (small tumour, resectable at diagnosis) - "
+        "primary resection then adjuvant chemotherapy. High risk "
+        "(large, unresectable, metastatic) - neoadjuvant chemotherapy "
+        "(cisplatin-based) to shrink then delayed surgical resection "
+        "or liver transplantation. Overall 5-year survival 70-80%. "
+        "Note: toddler with right upper quadrant mass plus AFP over "
+        "1000 - hepatoblastoma, refer paeds onc."
+    ),
+    "Prostatic abscess": (
+        "Localised collection of pus within the prostate - a "
+        "complication of untreated or partially treated acute "
+        "bacterial prostatitis, particularly in diabetes, "
+        "immunosuppression, urethral instrumentation, or chronic "
+        "catheterisation. Usually E. coli, other Enterobacteriaceae "
+        "or occasionally Staphylococcus aureus (in bacteraemia). Sx: "
+        "persistent fever and urinary symptoms despite 24-48 hours of "
+        "appropriate antibiotics for prostatitis; perineal or rectal "
+        "pain; urinary retention; sepsis; fluctuant tender mass on "
+        "gentle PR (avoid vigorous exam - bacteraemia risk). Ix: MSU "
+        "and blood cultures, FBC, CRP; transrectal ultrasound or CT "
+        "(better) shows the abscess cavity; MRI if TB or malignancy "
+        "suspected. Mx: IV broad-spectrum antibiotics (gentamicin "
+        "plus amoxicillin, or piperacillin-tazobactam); transurethral "
+        "or transrectal ultrasound-guided drainage of collections "
+        "over 1 cm; urinary catheter for retention. Prolonged oral "
+        "antibiotics (4-6 weeks) that penetrate the prostate "
+        "(trimethoprim, ciprofloxacin) after drainage. Note: "
+        "prostatitis failing to settle at 48 hours - CT for abscess, "
+        "drain if over 1 cm."
+    ),
+    "Emphysematous cystitis": (
+        "Rare severe UTI with gas-forming organisms producing gas "
+        "within the bladder wall and lumen - a urological emergency. "
+        "Occurs almost exclusively in diabetes (70-80%), also in "
+        "immunocompromised, women, elderly and chronic "
+        "catheterisation. Aetiology: E. coli (most common), "
+        "Klebsiella pneumoniae, occasionally Candida. Fermentation of "
+        "glucose in the bladder wall produces CO2 and hydrogen gas. "
+        "Sx: severe cystitis symptoms - dysuria, frequency, urgency, "
+        "suprapubic pain, pneumaturia (bubbles in urine), haematuria; "
+        "abdominal distension; may be systemically septic or, "
+        "occasionally, asymptomatic in poorly controlled diabetics. "
+        "Ix: MSU and blood cultures, glucose (usually "
+        "hyperglycaemic), U&Es; plain X-ray shows gas outlining the "
+        "bladder wall (curvilinear); CT is diagnostic - intramural "
+        "and intraluminal gas. Rule out vesico-enteric fistula (also "
+        "causes bladder gas). Mx: IV broad-spectrum antibiotics "
+        "(piperacillin-tazobactam or a carbapenem); urinary catheter "
+        "for drainage; tight glucose control; treat DKA if present. "
+        "Cystoscopy and debridement for necrotic bladder; cystectomy "
+        "rarely needed. Note: pneumaturia in a diabetic - CT abdomen, "
+        "IV antibiotics, catheterise."
+    ),
+    "Retroperitoneal fibrosis": (
+        "Progressive fibrosis of the retroperitoneum encasing the "
+        "abdominal aorta, IVC and ureters - also called Ormond "
+        "disease. Idiopathic (two-thirds) or secondary (IgG4-related "
+        "disease, methysergide, beta-blockers, radiation, malignancy, "
+        "infection). Peaks 40-60, male:female 3:1. Sx: dull insidious "
+        "back, flank or abdominal pain, weight loss, lower limb "
+        "oedema from IVC compression, claudication and hydronephrosis "
+        "with AKI. Constitutional symptoms and raised inflammatory "
+        "markers suggest IgG4-related disease. Ix: raised ESR/CRP, "
+        "IgG4 and creatinine. CT or MRI shows a soft tissue mass "
+        "around the aorta and iliac vessels, may encase ureters "
+        "(medial deviation on CT urogram is characteristic). FDG-PET "
+        "for activity and malignancy exclusion. Biopsy confirms "
+        "IgG4-related disease. Mx: relieve ureteric obstruction "
+        "(stent or nephrostomy) first. Prednisolone 1 mg/kg tapered "
+        "over 12 months is first-line. Tamoxifen, mycophenolate or "
+        "rituximab for steroid-refractory or IgG4-related disease. "
+        "Note: hydronephrosis with medial ureter deviation plus "
+        "raised IgG4 - retroperitoneal fibrosis, steroids after "
+        "stenting."
     ),
 }
 
