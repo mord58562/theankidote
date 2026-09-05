@@ -5,6 +5,78 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.0] - 2026-09-05
+
+Quality release across popup UX, failure modes, and code shape. No
+migration required.
+
+### Added
+
+- **Escape and outside-click dismiss the popup.** `keydown` and
+  capture-phase `mousedown` listeners in `web/marker.js` hide the
+  tip and cancel any pending dwell.
+- **`minWidth` config is honoured.** The dock's `setMinimumWidth`
+  and `sizeHint` in `_panel_pearls.py` now read the user's value,
+  clamped to 520 px so NCBI book pages still render.
+- **New-library notice.** `_notify_if_new_library` in `__init__.py`
+  compares `_library.CONTENT_VERSION` against a persisted
+  `lastSeenContentVersion` config key and shows a one-line tooltip
+  on the launch after a background content update becomes active.
+- **`pearls/_vocab.py`.** Shared factory used by `_signs`,
+  `_descriptive`, `_psych` and `_preclinical` - each of those four
+  modules is now a docstring plus one call.
+- **`tools/context_digest.sh`.** Prints the sha256 of the cloud
+  routine's context bundle for the routine's integrity check.
+
+### Changed
+
+- **`_local_results_for_card` reuses Phase-1 output.** The condition
+  and drug lists computed by `_on_card_will_show` are stashed on the
+  card and read back by the sidebar builder, removing a redundant
+  matcher pass per card transition (~1-3 ms saved).
+- **`_preclinical_terms` dedupe is O(n) instead of O(n^2).**
+- **First-run update gate.** `_check_for_library_update` in
+  `__init__.py` refuses to fire until `firstRunDone` is True; the
+  welcome dialog kicks the check explicitly after the user accepts.
+- **Diagnostic log rotates at 1 MB.** `_log.diag` promotes the
+  current log to `.log.1` and starts a fresh file rather than
+  appending forever.
+- **Toolbar handler is defensive.** `_add_pearls_toolbar_link`
+  wraps `link_handlers[...]` in try/except so an Anki API rename
+  disables the crown button rather than the whole add-on.
+- **Cloud routine context has an integrity check.** Section 0 of
+  `.remote-agent-context.md` documents the sha256 verification the
+  routine must run against a value baked into its config on
+  `claude.ai/code/environments`, so a repo compromise cannot
+  hijack the routine.
+
+### Fixed
+
+- **`source` attribute escape.** `_reviewer._build_pattern` runs
+  `_esc_attr` on the `source` field before it lands in a
+  `data-sp-source="..."` attribute (defence-in-depth; no live
+  library entry currently exploits it).
+- **install.sh path-traversal guard.** `zipinfo -1` prescan refuses
+  archives whose entries contain `..` components or absolute paths.
+
+### Removed
+
+- **Dead Phase-2 fallback in `web/marker.js`.** `spAddon.mark`,
+  `spAddon.clear`, `_runPass`, `_replaceText`, `_escRx`, `_injectCSS`
+  had no live callers since Phase-1 synchronous injection landed;
+  the public API is now `dismissTip` only.
+
+### Housekeeping
+
+- 27 em-dashes (U+2014) removed across README, WHATS-NEW-2.0/2.1/
+  2.1.1, CHANGELOG, tests/test_security.
+- "canonical" replaced with "primary" / "core" across
+  `.remote-agent-context`, CHANGELOG, `_panel_pearls`, `__init__`,
+  `_dock_layout`, `content/_rich`, `pearls/_ncbi`, `pearls/_drugs`,
+  `pearls/_reviewer`, `pearls/_conditions`, `docs/CHECKPOINT`.
+- Two "This X does Y" openers collapsed; two proprietary-app
+  comparisons ("AMBOSS-style", "AT V2-style") reworded.
+
 ## [2.2.1] - 2026-08-28
 
 Patch on top of 2.2.
