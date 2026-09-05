@@ -3056,6 +3056,96 @@ NEW_CONDITIONS = [
         "utd": [['Mx', 'chancroid']],
         "summary": "",
     },
+    {
+        "name": "Little league elbow",
+        "aliases": ["medial epicondyle apophysitis", "pitcher elbow youth"],
+        "utd": [['Mx', 'little league elbow']],
+        "summary": "",
+    },
+    {
+        "name": "Little league shoulder",
+        "aliases": ["proximal humeral epiphysiolysis"],
+        "utd": [['Mx', 'little league shoulder']],
+        "summary": "",
+    },
+    {
+        "name": "Sinding-Larsen-Johansson syndrome",
+        "aliases": ["SLJ syndrome", "patellar apophysitis"],
+        "utd": [['Mx', 'Sinding Larsen Johansson syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Snapping hip syndrome",
+        "aliases": ["coxa saltans", "dancer hip"],
+        "utd": [['Mx', 'snapping hip syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Trochanteric bursitis",
+        "aliases": ["greater trochanteric pain syndrome", "GTPS"],
+        "utd": [['Mx', 'greater trochanteric pain syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Foster Kennedy syndrome",
+        "aliases": ["Kennedy syndrome ophthalmology"],
+        "utd": [['Ix', 'Foster Kennedy syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Anton syndrome",
+        "aliases": ["Anton-Babinski syndrome", "visual anosognosia"],
+        "utd": [['Overview', 'Anton syndrome cortical blindness']],
+        "summary": "",
+    },
+    {
+        "name": "Balint syndrome",
+        "aliases": ["Balint-Holmes syndrome"],
+        "utd": [['Overview', 'Balint syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Gerstmann syndrome",
+        "aliases": ["angular gyrus syndrome"],
+        "utd": [['Overview', 'Gerstmann syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Bouveret syndrome",
+        "aliases": ["gastric outlet gallstone", "duodenal gallstone impaction"],
+        "utd": [['Mx', 'Bouveret syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Sphincter of Oddi dysfunction",
+        "aliases": ["SOD", "biliary dyskinesia"],
+        "utd": [['Ix', 'sphincter of Oddi dysfunction']],
+        "summary": "",
+    },
+    {
+        "name": "Chronic mesenteric ischaemia",
+        "aliases": ["intestinal angina", "chronic mesenteric ischemia"],
+        "utd": [['Mx', 'chronic mesenteric ischemia']],
+        "summary": "",
+    },
+    {
+        "name": "Failure to thrive elderly",
+        "aliases": ["adult failure to thrive", "geriatric failure to thrive"],
+        "utd": [['Mx', 'geriatric failure to thrive']],
+        "summary": "",
+    },
+    {
+        "name": "Air embolism",
+        "aliases": ["venous air embolism", "arterial gas embolism"],
+        "utd": [['Mx', 'air embolism']],
+        "summary": "",
+    },
+    {
+        "name": "Amyl nitrite abuse",
+        "aliases": ["poppers abuse", "alkyl nitrite inhalation"],
+        "utd": [['Mx', 'amyl nitrite methemoglobinemia']],
+        "summary": "",
+    },
 ]
 
 
@@ -32935,6 +33025,330 @@ RICH_SUMMARIES = {
         "incise fluctuant buboes. Note: painful genital ulcer plus "
         "tender bubo in a returned traveller - chancroid, "
         "azithromycin single dose and test for HIV."
+    ),
+    "Little league elbow": (
+        "Overuse injury of the medial epicondyle in a skeletally "
+        "immature thrower - medial epicondyle apophysitis from "
+        "repetitive valgus stress during the throwing motion, usually "
+        "pitchers aged 8-15. Age-related equivalent of adult medial "
+        "epicondylitis but at the growth plate. Sx: gradual-onset "
+        "medial elbow pain worsening through the season, reduced "
+        "throwing velocity, tenderness over the medial epicondyle, "
+        "mild swelling, restricted elbow extension in severe cases; "
+        "frank avulsion presents acutely after a hard throw. Ix: "
+        "plain X-ray of both elbows for comparison - widening or "
+        "fragmentation of the medial epicondyle apophysis; MRI if "
+        "avulsion or UCL injury suspected. Mx: strict rest from "
+        "throwing for 6 weeks minimum, then a structured throwing "
+        "program with pitch-count limits (age-appropriate per USA "
+        "Baseball or similar); ice and simple analgesia. Surgical "
+        "fixation for displaced avulsion greater than 5 mm. "
+        "Prevention: pitch counts, no year-round pitching, curveballs "
+        "delayed until skeletal maturity. Note: young pitcher with "
+        "medial elbow pain through the season - X-ray both elbows, "
+        "rest 6 weeks, enforce pitch counts."
+    ),
+    "Little league shoulder": (
+        "Overuse injury of the proximal humeral physis in a "
+        "skeletally immature thrower - repetitive rotational stress "
+        "causes microtrauma at the growth plate, resembling a stress "
+        "fracture through the physis. Typical age 11-16, usually "
+        "pitchers. Sx: gradual-onset lateral shoulder pain during and "
+        "after throwing, tenderness over the proximal humerus, "
+        "reduced throwing velocity and control; usually no history of "
+        "a single traumatic event. Rotator cuff strength and range of "
+        "motion preserved. Ix: bilateral shoulder AP X-rays with "
+        "external rotation - widening of the proximal humeral physis "
+        "compared with the contralateral side is diagnostic; MRI if "
+        "X-ray unclear or another shoulder pathology suspected. Mx: "
+        "rest from throwing for at least 3 months (longer than the "
+        "elbow equivalent), no throwing until pain-free with full "
+        "ROM. Progressive throwing program with pitch counts and no "
+        "curveballs until skeletal maturity. Physiotherapy for "
+        "scapular stabilisation. Note: lateral shoulder pain in a "
+        "young pitcher - bilateral X-rays for physeal widening, 3 "
+        "months rest from throwing."
+    ),
+    "Sinding-Larsen-Johansson syndrome": (
+        "Traction apophysitis of the inferior pole of the patella in "
+        "adolescents - the patellar equivalent of Osgood-Schlatter, "
+        "at the origin rather than insertion of the patellar tendon. "
+        "Typical age 10-14, males, active in jumping or running "
+        "sports. Sx: anterior knee pain at the inferior pole of the "
+        "patella, worse with jumping, running, stairs and kneeling; "
+        "tenderness localised to the inferior pole; occasional "
+        "swelling and reduced knee flexion. Improves with rest, "
+        "recurs with activity. Ix: clinical diagnosis, X-ray for "
+        "atypical presentations - fragmentation or calcification at "
+        "the inferior patellar pole; MRI unnecessary in typical "
+        "cases. Mx: activity modification (avoid the aggravating "
+        "sport for 4-6 weeks), ice, NSAIDs; quadriceps and hamstring "
+        "stretching, patellar strap. Self-limiting - resolves at "
+        "skeletal maturity within 12-18 months. Surgery is not "
+        "indicated. Note: inferior patellar pain in an adolescent "
+        "jumper - SLJ syndrome, rest and reassure it resolves at "
+        "skeletal maturity."
+    ),
+    "Snapping hip syndrome": (
+        "Audible or palpable snapping around the hip during movement "
+        "- three anatomical types with different aetiologies. "
+        "External (most common) - iliotibial band over the greater "
+        "trochanter. Internal - iliopsoas tendon over the "
+        "iliopectineal eminence. Intra-articular - labral tear, loose "
+        "body, cartilage flap. Common in dancers, runners and young "
+        "adults. Sx: reproducible snap with hip flexion-extension; "
+        "painless in most, painful when tendinous types become "
+        "symptomatic. External type visible over lateral hip. "
+        "Internal type reproduced by moving flexed abducted "
+        "externally rotated hip back into extension. Intra-articular "
+        "snap felt deep in the groin with mechanical symptoms "
+        "(catching, locking). Ix: clinical for external and internal "
+        "types; dynamic ultrasound confirms tendon subluxation; MRI "
+        "arthrogram for intra-articular type. Mx: extra-articular "
+        "types - rest, physiotherapy for hip abductor and iliopsoas "
+        "stretching, NSAIDs, corticosteroid injection into the bursa; "
+        "surgical release only for refractory painful cases. "
+        "Intra-articular type - arthroscopic labral repair. Note: "
+        "painless hip snap in a dancer needs reassurance, not "
+        "imaging."
+    ),
+    "Trochanteric bursitis": (
+        "Now more accurately called greater trochanteric pain "
+        "syndrome - lateral hip pain from gluteus medius and minimus "
+        "tendinopathy at their trochanteric insertion, often with "
+        "secondary bursal inflammation. Peaks in women 40-60. Risk "
+        "factors: obesity, ITB tightness, leg length discrepancy, "
+        "spinal pathology, hip osteoarthritis. Sx: lateral hip pain "
+        "worse with lying on the affected side, walking, stairs and "
+        "prolonged sitting; radiates to the lateral thigh (not below "
+        "the knee - suggests referred spinal pain if further); tender "
+        "over the greater trochanter with resisted hip abduction. Ix: "
+        "clinical diagnosis; X-ray to exclude hip osteoarthritis; MRI "
+        "or ultrasound only if diagnosis unclear or surgical "
+        "planning. Mx: activity modification, weight loss, "
+        "physiotherapy targeting gluteal strengthening and ITB "
+        "stretching (LEAP protocol first-line evidence-based); "
+        "NSAIDs; ultrasound-guided corticosteroid injection into the "
+        "bursa for short-term relief but no long-term benefit over "
+        "exercise. Surgery reserved for refractory cases with "
+        "confirmed tendon tear. Note: lateral hip pain worse on the "
+        "affected side at night - exercise beats injection long-term."
+    ),
+    "Foster Kennedy syndrome": (
+        "Classic triad from a frontal lobe mass compressing the "
+        "ipsilateral optic nerve while raising intracranial pressure "
+        "- ipsilateral optic atrophy, contralateral papilloedema, and "
+        "ipsilateral anosmia. Rare, historically described with "
+        "olfactory groove and sphenoid ridge meningiomas but any "
+        "large frontal mass can produce it. The pseudo-Foster-Kennedy "
+        "syndrome (sequential bilateral AION with atrophy in the "
+        "first and swelling in the second) mimics it and is more "
+        "common. Sx: progressive unilateral visual loss (compressed "
+        "nerve), headache and reduced smell on the same side, gradual "
+        "bilateral field changes if the mass is untreated; "
+        "behavioural change from frontal involvement. Ix: MRI brain "
+        "with contrast is diagnostic - identifies the frontal mass, "
+        "distinguishes true Foster Kennedy from bilateral AION; "
+        "formal visual fields, colour vision and RAPD; CSF opening "
+        "pressure if IIH considered. Mx: surgical resection of the "
+        "underlying mass (usually meningioma) is definitive; steroids "
+        "for peritumoural oedema pending surgery. Note: unilateral "
+        "optic atrophy with contralateral papilloedema - MRI now, "
+        "hunting for a frontal mass."
+    ),
+    "Anton syndrome": (
+        "Cortical visual loss with denial of blindness (anosognosia "
+        "for blindness) - the patient is cortically blind but insists "
+        "they can see and confabulates visual detail. Caused by "
+        "bilateral occipital damage sparing enough tissue to abolish "
+        "sight while destroying visual awareness pathways. Aetiology: "
+        "bilateral posterior cerebral artery stroke, top-of-basilar "
+        "syndrome, PRES, eclampsia, cardiac surgery embolism, "
+        "occipital tumour. Sx: bilateral cortical blindness with "
+        "pupillary responses intact (afferent pathway preserved); "
+        "patient denies blindness, describes non-existent scenes and "
+        "bumps into obstacles; associated memory or language deficits "
+        "from adjacent damage. Ix: MRI shows bilateral occipital "
+        "infarction or lesion; preserved visual evoked potentials "
+        "distinguish from ocular blindness. Mx: treat the underlying "
+        "cause - stroke pathway, BP control. Anosognosia usually "
+        "evolves into acknowledgement over weeks; visual recovery "
+        "variable and often incomplete. Note: patient confabulates "
+        "what they cannot see plus intact pupils plus bilateral "
+        "occipital stroke - Anton."
+    ),
+    "Balint syndrome": (
+        "Triad from bilateral parieto-occipital lesions - "
+        "simultanagnosia (perceiving only one object at a time), "
+        "optic ataxia (inaccurate reaching under visual guidance), "
+        "and ocular apraxia (inability to shift gaze voluntarily). A "
+        "profound disorder of visual attention and spatial awareness. "
+        "Aetiology: bilateral watershed infarction in the posterior "
+        "circulation (classic after cardiac arrest or hypotension), "
+        "posterior cortical atrophy (Alzheimer variant), CJD, PRES, "
+        "tumour, MS. Sx: patient cannot see the whole scene, only "
+        "isolated fragments; reaches inaccurately despite normal "
+        "motor function; eye movements do not smoothly shift to a new "
+        "stimulus though eye muscles are intact; often loses "
+        "orientation. Basic vision, recognition and language spared. "
+        "Ix: MRI shows bilateral parieto-occipital pathology; "
+        "neuropsychology confirms the triad; consider posterior "
+        "cortical atrophy in an older adult with insidious visual "
+        "complaints. Mx: treat underlying cause. Rehabilitation with "
+        "structured environment and single-object presentation. Note: "
+        "cardiac-arrest survivor with strange visual attention "
+        "deficit - test for the Balint triad."
+    ),
+    "Gerstmann syndrome": (
+        "Tetrad from a lesion of the dominant (usually left) inferior "
+        "parietal lobule at the angular gyrus - acalculia, agraphia, "
+        "finger agnosia, and left-right disorientation. Also called "
+        "angular gyrus syndrome. Aetiology: stroke (left MCA branch "
+        "to the parietal cortex most common), tumour, trauma, "
+        "degenerative disease. Developmental Gerstmann syndrome is a "
+        "paediatric learning disorder without a discrete lesion. Sx: "
+        "cannot perform simple arithmetic (acalculia), cannot write "
+        "though speech is preserved (agraphia), cannot identify or "
+        "name individual fingers on either hand (finger agnosia), and "
+        "confuses left and right sides of self or others; often "
+        "accompanied by aphasia if the lesion is larger. Ix: MRI "
+        "localises the lesion to the dominant angular gyrus; formal "
+        "neuropsychology confirms the tetrad. Mx: treat the "
+        "underlying cause. Rehabilitation of writing and arithmetic "
+        "skills; the syndrome is a useful clinical clue to left "
+        "inferior parietal pathology. Note: acalculia plus agraphia "
+        "plus finger agnosia plus left-right confusion - lesion at "
+        "dominant angular gyrus."
+    ),
+    "Bouveret syndrome": (
+        "Rare variant of gallstone ileus in which the migrating "
+        "gallstone impacts in the duodenum (rather than the terminal "
+        "ileum), causing gastric outlet obstruction. Occurs when a "
+        "large gallstone erodes through a cholecystoduodenal fistula. "
+        "Elderly with a long history of gallstones, female "
+        "predominance. Sx: gastric outlet obstruction - vomiting "
+        "(often bilious then non-bilious as obstruction progresses), "
+        "epigastric fullness, weight loss over weeks, dehydration; "
+        "may present acutely or subacutely. Ix: erect abdominal X-ray "
+        "sometimes shows Rigler triad (pneumobilia, dilated stomach "
+        "or bowel, ectopic gallstone) but CT is diagnostic and "
+        "identifies the impacted stone, fistula site, gastric "
+        "distension and any associated cholecystitis. Mx: fluid and "
+        "electrolyte resuscitation, NG decompression; endoscopic "
+        "extraction or fragmentation of the stone is first-line where "
+        "feasible; surgery (enterolithotomy plus cholecyst-ectomy and "
+        "fistula repair, or two-stage) for failed endoscopy or "
+        "complications. Mortality substantial in the elderly. Note: "
+        "elderly woman with gastric outlet obstruction plus "
+        "pneumobilia on CT - Bouveret syndrome, try endoscopic "
+        "extraction first."
+    ),
+    "Sphincter of Oddi dysfunction": (
+        "Motility disorder of the sphincter at the ampulla of Vater "
+        "causing biliary or pancreatic-type pain, classically after "
+        "cholecystectomy when a suspected biliary source is missing. "
+        "Subtypes: biliary (post-cholecystectomy RUQ pain plus "
+        "derangement of LFTs or bile duct dilatation) and pancreatic "
+        "(unexplained recurrent pancreatitis). Sx: intermittent "
+        "epigastric or RUQ pain lasting 30 minutes to hours, "
+        "radiating to back or right shoulder, sometimes triggered by "
+        "fatty food or opioids; transient LFT rise during attacks. "
+        "Ix: exclude structural causes with MRCP or EUS first (stone, "
+        "stricture); LFTs, lipase, amylase during pain. Rome IV "
+        "criteria classify. Sphincter of Oddi manometry is diagnostic "
+        "but carries pancreatitis risk and is reserved for atypical "
+        "cases. Mx: type I (objective findings) - ERCP with biliary "
+        "sphincterotomy is effective. Type II (some findings) - trial "
+        "of sphincterotomy after manometry. Type III (pain only) - "
+        "EPISOD trial showed no benefit from sphincterotomy; treat as "
+        "functional pain disorder. Note: post-cholecystectomy biliary "
+        "pain plus abnormal LFTs during attack - MRCP first, "
+        "sphincterotomy only if objective findings."
+    ),
+    "Chronic mesenteric ischaemia": (
+        "Ischaemia of the small bowel from progressive "
+        "atherosclerotic stenosis of two or more of the three "
+        "mesenteric arteries (coeliac, SMA, IMA) - collateral "
+        "circulation compensates until food demand outstrips it. Also "
+        "called intestinal angina. Peaks in women 60-80 with diffuse "
+        "atherosclerosis; smoking is the strongest risk factor. Sx: "
+        "postprandial abdominal pain (starts 10-30 min after eating, "
+        "lasts 1-2 hours), food fear (patient avoids meals to avoid "
+        "pain), significant weight loss; abdominal bruit sometimes "
+        "audible; often normal examination between meals. Ix: CT "
+        "mesenteric angiography is the standard - shows calcified "
+        "plaque and stenosis in SMA and coeliac axis. Duplex "
+        "ultrasound is a screening alternative. Exclude other causes "
+        "of postprandial pain (gastric ulcer, gallstones, chronic "
+        "pancreatitis) with endoscopy and MRCP. Mx: smoking cessation "
+        "and antiplatelet essential. Mesenteric revascularisation "
+        "(endovascular stenting first-line in most centres, surgical "
+        "bypass for complex disease) prevents progression to acute "
+        "mesenteric ischaemia (mortality over 50%). Note: "
+        "postprandial pain plus food fear plus weight loss plus "
+        "vascular risk - CT angiography, revascularise."
+    ),
+    "Failure to thrive elderly": (
+        "Progressive decline in an older adult with unintentional "
+        "weight loss (over 5% in a month or 10% in 6 months), reduced "
+        "appetite, functional decline, dehydration and depressed "
+        "mood. A syndrome not a diagnosis; the task is finding the "
+        "reversible cause. Aetiology: chronic disease, depression "
+        "(very commonly missed), polypharmacy, poor dentition, "
+        "swallowing dysfunction and social isolation. Sx: weight "
+        "loss, apathy, reduced self-care, worsening cognition, "
+        "cachexia and recurrent infection. Ix: comprehensive "
+        "geriatric assessment with a broad bloods screen (FBC, U&Es, "
+        "LFTs, TSH, B12, folate, HbA1c, albumin) plus MSU. Screen "
+        "depression, cognition, function, nutrition and social "
+        "supports. Mx: treat reversible contributors and deprescribe "
+        "aggressively. Dietitian and oral nutritional supplements. "
+        "Dental and swallowing review. Treat depression. ACAT for "
+        "home supports or residential care. Note: not a diagnosis - "
+        "the diagnosis is what is causing it. Depression first."
+    ),
+    "Air embolism": (
+        "Entry of air into the vascular system causing circulatory "
+        "obstruction. Venous air reaches the right heart and "
+        "pulmonary circulation. Arterial air reaches the systemic "
+        "circulation through a shunt or pulmonary barotrauma. Causes: "
+        "CVC insertion or removal (unsealed hub is classic), "
+        "pulmonary barotrauma in ventilated or diving patients, "
+        "laparoscopic and neurosurgical procedures. Sx: venous - "
+        "sudden dyspnoea, hypoxia, chest pain, hypotension, "
+        "mill-wheel murmur (rare, classic); large air lock causes "
+        "cardiac arrest. Arterial - stroke-like symptoms, seizures, "
+        "myocardial ischaemia, livedo reticularis. Ix: clinical, "
+        "based on precipitating event and abrupt deterioration. TOE "
+        "is most sensitive. CT for pulmonary or cerebral air. Mx: "
+        "left lateral decubitus with head-down (Durant manoeuvre) to "
+        "trap air in the RV apex. 100% oxygen shrinks bubbles. "
+        "Aspirate air from a central line if present. CPR if arrest. "
+        "Hyperbaric oxygen is definitive for arterial or cerebral "
+        "air. Note: sudden collapse during CVC removal - left lateral "
+        "head-down, 100% oxygen, hyperbaric if arterial."
+    ),
+    "Amyl nitrite abuse": (
+        "Recreational inhalation of alkyl nitrites (poppers) - sold "
+        "as room deodorisers or DVD cleaners in Australia to "
+        "circumvent scheduling. Used for brief peripheral "
+        "vasodilation, euphoria and smooth-muscle relaxation. "
+        "Overdose or sustained use produces methaemoglobinaemia. Sx: "
+        "acute - headache, flushing, dizziness, syncope. "
+        "Methaemoglobinaemia when severe - cyanosis unresponsive to "
+        "oxygen, chocolate-brown blood on venesection, dyspnoea, "
+        "altered mental state. Chronic use - retinal maculopathy with "
+        "central visual loss. Concurrent PDE5 inhibitor use causes "
+        "profound hypotension - contraindicated combination. Ix: "
+        "co-oximetry measures MetHb percentage (routine pulse "
+        "oximetry plateaus around 85% and misreads); toxicology "
+        "screens do not detect nitrites - history is key; fundoscopy "
+        "for maculopathy in chronic users. Mx: remove exposure, "
+        "high-flow oxygen, IV methylene blue 1-2 mg/kg for "
+        "symptomatic methaemoglobinaemia over 20% (avoid in G6PD "
+        "deficiency - precipitates haemolysis). Ophthalmology for "
+        "visual symptoms. Note: cyanosis unresponsive to oxygen in a "
+        "young man - co-oximetry for MetHb, methylene blue."
     ),
 }
 
