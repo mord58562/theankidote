@@ -1869,12 +1869,6 @@ NEW_CONDITIONS = [
         "summary": "",
     },
     {
-        "name": 'Dialysis disequilibrium',
-        "aliases": ['Disequilibrium syndrome', 'DDS'],
-        "utd": [["Overview", 'dialysis disequilibrium syndrome cerebral oedema']],
-        "summary": "",
-    },
-    {
         "name": 'Arteriovenous fistula complications',
         "aliases": ['AVF complications', 'Dialysis access complications'],
         "utd": [["Overview", 'arteriovenous fistula complications steal thrombosis']],
@@ -2802,6 +2796,90 @@ NEW_CONDITIONS = [
         "name": 'Necrotising soft tissue infection',
         "aliases": ['NSTI'],
         "utd": [["Overview", 'necrotizing soft tissue infections']],
+        "summary": "",
+    },
+    {
+        "name": "Malignant bowel obstruction",
+        "aliases": ["MBO"],
+        "utd": [['Mx', 'management of malignant bowel obstruction']],
+        "summary": "",
+    },
+    {
+        "name": "Cancer-related fatigue",
+        "aliases": ["CRF", "cancer fatigue"],
+        "utd": [['Mx', 'management of cancer related fatigue']],
+        "summary": "",
+    },
+    {
+        "name": "Opioid-induced constipation",
+        "aliases": ["OIC"],
+        "utd": [['Mx', 'management of opioid induced constipation']],
+        "summary": "",
+    },
+    {
+        "name": "Anaesthetic anaphylaxis",
+        "aliases": ["perioperative anaphylaxis", "intraoperative anaphylaxis"],
+        "utd": [['Mx', 'perioperative anaphylaxis management']],
+        "summary": "",
+    },
+    {
+        "name": "Dialysis disequilibrium syndrome",
+        "aliases": ["DDS", "Dialysis disequilibrium"],
+        "utd": [['Overview', 'dialysis disequilibrium syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Calciphylaxis",
+        "aliases": ["calcific uraemic arteriolopathy", "CUA"],
+        "utd": [['Mx', 'management of calciphylaxis']],
+        "summary": "",
+    },
+    {
+        "name": "Uraemic pericarditis",
+        "aliases": ["dialysis pericarditis"],
+        "utd": [['Mx', 'uremic pericarditis management']],
+        "summary": "",
+    },
+    {
+        "name": "AV fistula thrombosis",
+        "aliases": ["arteriovenous fistula thrombosis", "dialysis access thrombosis"],
+        "utd": [['Mx', 'arteriovenous access thrombosis']],
+        "summary": "",
+    },
+    {
+        "name": "BreastScreen Australia",
+        "aliases": ["breast cancer screening", "screening mammography Australia"],
+        "utd": [['Overview', 'breast cancer screening']],
+        "summary": "",
+    },
+    {
+        "name": "Lung cancer screening",
+        "aliases": ["low dose CT screening", "LDCT screening"],
+        "utd": [['Overview', 'lung cancer screening low dose CT']],
+        "summary": "",
+    },
+    {
+        "name": "Hand-arm vibration syndrome",
+        "aliases": ["HAVS", "vibration white finger"],
+        "utd": [['Overview', 'hand arm vibration syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Behavioural and psychological symptoms of dementia",
+        "aliases": ["BPSD"],
+        "utd": [['Mx', 'behavioural symptoms of dementia management']],
+        "summary": "",
+    },
+    {
+        "name": "Perilunate dislocation",
+        "aliases": ["lunate dislocation"],
+        "utd": [['Ix', 'perilunate dislocation imaging']],
+        "summary": "",
+    },
+    {
+        "name": "Chronic exertional compartment syndrome",
+        "aliases": ["CECS", "exertional compartment syndrome"],
+        "utd": [['Overview', 'chronic exertional compartment syndrome']],
         "summary": "",
     },
 ]
@@ -28857,22 +28935,6 @@ RICH_SUMMARIES = {
         "psychosocial factors. Note: symptom clusters often track "
         "workplace dissatisfaction as much as air quality."
     ),
-    "Dialysis disequilibrium": (
-        "Acute neurological syndrome during or shortly after "
-        "haemodialysis, from rapid urea clearance creating an osmotic "
-        "gradient that drives water into brain cells (reverse-urea "
-        "effect). Highest risk on first dialysis session with very "
-        "high pre-dialysis urea, in children and elderly. Features: "
-        "headache, nausea, restlessness, blurred vision, tremor and "
-        "muscle cramps, progressing rarely to seizures, coma or "
-        "death. Ix: clinical diagnosis, exclude stroke, subdural "
-        "haematoma and hypoglycaemia. Mx: prevent by short "
-        "low-efficiency initial sessions with slow blood flow, "
-        "prophylactic mannitol or hypertonic saline in high-risk "
-        "starts. Stop or slow dialysis if symptoms develop. Note: "
-        "modern gradual initiation protocols have made severe cases "
-        "rare."
-    ),
     "Arteriovenous fistula complications": (
         "AV fistula is the preferred haemodialysis access "
         "(radiocephalic or brachiocephalic) with lower infection and "
@@ -31761,6 +31823,313 @@ RICH_SUMMARIES = {
         "out of proportion to examination findings is the single most "
         "important clue - it should trigger urgent surgical review, "
         "not reassurance and discharge."
+    ),
+    "Malignant bowel obstruction": (
+        "Mechanical or functional obstruction complicating "
+        "intra-abdominal or pelvic malignancy, usually ovarian or "
+        "colorectal. Distinct from benign SBO because most patients "
+        "are not surgical candidates and management is palliative. "
+        "Aetiology: peritoneal disease, mesenteric infiltration, "
+        "extrinsic compression, motility failure from carcinomatosis. "
+        "Sx: colicky pain, vomiting (large-volume with high "
+        "obstruction, faeculent with distal), obstipation, "
+        "distension; presentation often intermittent and partial. Ix: "
+        "erect and supine AXR; CT abdomen with contrast to define "
+        "level, single vs multi-level, and viability. Mx: NG "
+        "decompression, IV fluids, analgesia; parenteral opioid + "
+        "antiemetic + antisecretory. First-line pharmacology is "
+        "octreotide 300-600 microgram/day SC infusion for high-volume "
+        "vomiting; add dexamethasone 8 mg IV for oedema and "
+        "inflammation. Metoclopramide only if obstruction is "
+        "functional and not complete. Consider venting gastrostomy if "
+        "refractory. Surgery, stenting or bypass reserved for "
+        "single-level disease in fit patients. Note: octreotide plus "
+        "dexamethasone plus a non-prokinetic antiemetic reduces "
+        "vomiting within 48 hours in most patients."
+    ),
+    "Cancer-related fatigue": (
+        "Persistent subjective sense of exhaustion related to cancer "
+        "or its treatment, disproportionate to activity and not "
+        "relieved by rest. Present in 80% during treatment and up to "
+        "30% of survivors years later. Aetiology: multifactorial - "
+        "tumour cytokines, chemotherapy, radiotherapy, anaemia, "
+        "hypothyroidism, hypogonadism, deconditioning, pain, "
+        "insomnia, depression, opioids. Ix: exclude reversible "
+        "contributors - FBC, iron studies, TSH, testosterone in men, "
+        "vitamin D, HbA1c, U&Es; screen for depression and sleep "
+        "disturbance. Mx: treat reversible causes first. Exercise "
+        "(aerobic plus resistance, 150 min/week) has the strongest "
+        "evidence and is first-line non-pharmacological therapy. "
+        "Cognitive behavioural therapy and mindfulness-based stress "
+        "reduction help. Sleep hygiene and energy conservation "
+        "counselling. Rx: methylphenidate 5-20 mg "
+        "morning trial in advanced disease with limited prognosis; "
+        "modafinil not first-line. Corticosteroids reserved for "
+        "end-of-life fatigue with poor prognosis. Note: exercise "
+        "beats stimulants for most patients; prescribe it explicitly, "
+        "with dose and frequency."
+    ),
+    "Opioid-induced constipation": (
+        "Constipation caused by opioid action on mu receptors in the "
+        "enteric nervous system, present in 40-90% of chronic opioid "
+        "users. Unlike other opioid side effects, tolerance does not "
+        "develop, so it persists for the duration of therapy. Sx: "
+        "reduced stool frequency, hard stools, straining, incomplete "
+        "evacuation, abdominal discomfort. Distinguish from "
+        "opioid-induced bowel dysfunction (includes bloating, reflux, "
+        "incomplete evacuation). Ix: clinical; PR examination to "
+        "exclude faecal impaction; AXR if faecal loading suspected. "
+        "Mx: prescribe a laxative prophylactically with every opioid "
+        "script - do not wait for symptoms. First line is a "
+        "stimulant plus softener (senna 15 mg nocte plus docusate) "
+        "or macrogol 1-2 sachets daily, titrated to a soft daily "
+        "stool. Add lactulose or sodium picosulfate if inadequate. "
+        "For refractory palliative patients, a PAMORA "
+        "(peripherally acting mu-opioid receptor antagonist - "
+        "methylnaltrexone SC or naloxegol PO) is third line. Avoid "
+        "bulking agents (psyllium) - they worsen impaction without "
+        "adequate hydration. Note: laxative goes on the script with "
+        "the opioid, not after the patient complains."
+    ),
+    "Anaesthetic anaphylaxis": (
+        "IgE or non-IgE hypersensitivity during anaesthesia, usually "
+        "within minutes of induction. Australian incidence 1 in "
+        "10,000-20,000; mortality 3-9%. Triggers (ANZAAG data): "
+        "neuromuscular blockers (rocuronium, suxamethonium), "
+        "antibiotics (cefazolin, teicoplanin), chlorhexidine, latex, "
+        "blue dyes. Sx: sudden hypotension, bronchospasm, "
+        "desaturation, tachycardia; urticaria and angioedema often "
+        "hidden under drapes; cardiac arrest without warning. Ix: "
+        "mast cell tryptase at 1, 4 and 24 hours; specific IgE and "
+        "skin-prick testing at a specialist clinic 4-6 weeks "
+        "post-event. Mx: stop trigger, call for help, 100% oxygen, "
+        "adrenaline IV 10-100 microgram boluses titrated (500 "
+        "microgram IM if no IV), 20 mL/kg crystalloid. Consider "
+        "vasopressin, glucagon (on beta-blocker), sugammadex if "
+        "rocuronium suspected. Mandatory ANZAAG report and allergy "
+        "referral. Note: cardiovascular collapse without a rash "
+        "under drapes is anaphylaxis until proven otherwise."
+    ),
+    "Dialysis disequilibrium syndrome": (
+        "Neurological syndrome during or shortly after haemodialysis "
+        "caused by rapid osmolar shift between plasma and brain. "
+        "Highest risk during first dialysis sessions in patients with "
+        "severe uraemia (urea over 60 mmol/L), and in children, "
+        "elderly, and those with pre-existing cerebral disease. "
+        "Mechanism: urea clears faster from plasma than brain, "
+        "creating an osmotic gradient that drives water into cerebral "
+        "cells - cytotoxic oedema. Sx: mild - headache, nausea, "
+        "restlessness, muscle cramps; severe - confusion, seizures, "
+        "coma, brainstem herniation. Onset during dialysis or up to "
+        "24 hours after. Ix: clinical diagnosis; CT head only to "
+        "exclude bleed or stroke in severe or atypical presentation. "
+        "Mx: prevention is primary - initial sessions short (2 "
+        "hours), low blood flow (150-200 mL/min), small dialyser, "
+        "reduce urea by no more than 30% per session; sodium "
+        "modelling (start at 145 mmol/L, taper). If it develops, stop "
+        "dialysis, give mannitol 12.5 g IV or hypertonic saline for "
+        "severe symptoms; supportive care. Note: gentle initial "
+        "sessions prevent it; there is no rescue for severe cases."
+    ),
+    "Calciphylaxis": (
+        "Calcific uraemic arteriolopathy - painful ischaemic skin "
+        "necrosis from calcification of small dermal and subcutaneous "
+        "arterioles. Almost exclusively in ESRD on dialysis; 1-year "
+        "mortality 50-80%. Risk factors: female, obesity, diabetes, "
+        "warfarin use, high calcium-phosphate product, "
+        "hyperparathyroidism, vitamin K deficiency. Sx: exquisitely "
+        "tender indurated violaceous plaques or nodules progressing "
+        "to necrotic ulcers with black eschar, typically on adipose "
+        "areas (thighs, abdomen, buttocks); livedo reticularis around "
+        "lesions. Ix: clinical suspicion; skin biopsy shows medial "
+        "calcification of arterioles and cutaneous necrosis (biopsy "
+        "carries ulceration risk - use punch, not incisional). Bone "
+        "scan may show soft-tissue uptake. Mx: multidisciplinary. "
+        "Stop warfarin - switch to apixaban or LMWH. Sodium "
+        "thiosulfate 25 g IV three times weekly with dialysis is "
+        "first-line. Optimise mineral bone disease: lower phosphate "
+        "(non-calcium binders - sevelamer, lanthanum), cinacalcet for "
+        "hyperparathyroidism. Wound care, aggressive analgesia "
+        "(opioids), infection prophylaxis, hyperbaric oxygen for "
+        "refractory cases. Note: warfarin off, sodium thiosulfate on, "
+        "phosphate down."
+    ),
+    "Uraemic pericarditis": (
+        "Pericardial inflammation from uraemia, distinct from "
+        "dialysis-associated pericarditis. Uraemic form occurs in "
+        "untreated or under-dialysed ESRD with urea over 20 mmol/L; "
+        "dialysis-associated form occurs on established dialysis with "
+        "adequate urea clearance and reflects inadequate dialysis or "
+        "fluid overload. Sx: sharp retrosternal chest pain worse on "
+        "inspiration, relieved sitting forward; pericardial friction "
+        "rub; fever less common than in viral pericarditis; large "
+        "effusions frequent and tamponade risk high. Ix: ECG changes "
+        "classically ABSENT (no diffuse ST elevation) because "
+        "inflammation is subepicardial-sparing; raised CRP; echo for "
+        "effusion size and haemodynamic effect. Mx: intensive daily "
+        "haemodialysis for 10-14 days is first-line and often "
+        "curative (avoid heparin - use regional citrate or "
+        "heparin-free circuit to reduce haemopericardium risk). "
+        "NSAIDs and colchicine are second-line and often avoided "
+        "(bleeding risk, renal clearance). Steroids for refractory "
+        "disease. Pericardial drainage for tamponade or large "
+        "effusion not responding to dialysis. Note: no ECG changes "
+        "plus a rub in ESRD - dialyse intensively, avoid heparin."
+    ),
+    "AV fistula thrombosis": (
+        "Acute occlusion of a haemodialysis arteriovenous access - "
+        "the commonest cause of vascular access failure. Risk "
+        "factors: venous stenosis (usually at anastomosis or "
+        "outflow), hypotension, dehydration, prolonged post-dialysis "
+        "compression, hypercoagulable state. Sx: loss of thrill and "
+        "bruit on the fistula, access cool and non-pulsatile, "
+        "cannulation reveals no flow. Ix: bedside Doppler confirms "
+        "absent flow; duplex ultrasound identifies underlying "
+        "stenosis; fistulogram is diagnostic and therapeutic. Mx: "
+        "URGENT vascular or interventional radiology referral - "
+        "salvage within 24-48 hours dramatically improves patency. "
+        "Percutaneous thrombectomy plus angioplasty of the causative "
+        "stenosis is standard; pharmacomechanical thrombolysis or "
+        "surgical thrombectomy are alternatives. Temporary internal "
+        "jugular catheter (preferred over femoral) for interim "
+        "dialysis. Prevention: regular access surveillance, avoid "
+        "intradialytic hypotension, gentle compression. Note: no "
+        "thrill or bruit means call vascular now; every hour "
+        "reduces salvage."
+    ),
+    "BreastScreen Australia": (
+        "Definition: national population-based breast cancer "
+        "screening programme delivered by state and territory "
+        "BreastScreen services. Screening: free biennial two-view "
+        "digital mammography for asymptomatic women, actively "
+        "invited from 50-74 (the target age with best mortality "
+        "evidence); women 40-49 and 75+ eligible but not invited. "
+        "Coverage target 70%, actual around 55%. Recall rate 5-10% "
+        "first round, 3% subsequent; PPV of recall 8-12%. Aboriginal "
+        "and Torres Strait Islander women encouraged from 40 given "
+        "younger age at diagnosis. Australian notes: Higher-risk "
+        "women (BRCA, prior chest radiation) need MRI-based "
+        "surveillance outside the programme via familial cancer "
+        "services. Excludes women with current breast symptoms "
+        "(refer to GP for triple test), breast cancer within 5 "
+        "years, and pregnant or lactating women. Implants reduce "
+        "sensitivity but do not exclude. Note: screen the "
+        "asymptomatic 50-74 group; symptomatic women need triple "
+        "assessment through diagnostic services, not a screening "
+        "mammogram."
+    ),
+    "Lung cancer screening": (
+        "Definition: low-dose CT (LDCT) chest screening for lung "
+        "cancer in high-risk asymptomatic adults. Screening: the "
+        "Australian National Lung Cancer Screening Program launched "
+        "July 2025 for adults 50-70 with 30 pack-year smoking history "
+        "who currently smoke or quit within 10 years; Aboriginal and "
+        "Torres Strait Islander eligibility from 50 with 30 "
+        "pack-years regardless of quit interval given higher "
+        "incidence and earlier onset. Biennial LDCT if baseline "
+        "negative or shows small stable nodules; more frequent for "
+        "indeterminate or growing lesions per Lung-RADS. Mortality "
+        "reduction 20-24% in NLST and NELSON trials. Cautions: false "
+        "positives around 25% first round, overdiagnosis of indolent "
+        "cancers, LDCT radiation dose about 1.5 mSv, incidental "
+        "coronary, adrenal and thyroid findings. Prevention: smoking "
+        "cessation support integrated into every screening episode - "
+        "screening is not a substitute for quitting. Excludes "
+        "symptomatic patients (need diagnostic CT, not screening) "
+        "and those with prior lung cancer within 5 years. Note: "
+        "baseline LDCT plus offered cessation support is the current "
+        "standard for eligible current or recent smokers."
+    ),
+    "Hand-arm vibration syndrome": (
+        "Vascular, neurological and musculoskeletal disorder from "
+        "chronic use of vibrating hand-held tools (jackhammers, "
+        "chainsaws, grinders, riveters). Notifiable occupational "
+        "disease in most Australian jurisdictions. Sx: three "
+        "coexisting components. Vascular (vibration white finger) - "
+        "episodic demarcated blanching then cyanosis and reactive "
+        "hyperaemia on cold exposure; distinguished from primary "
+        "Raynaud by unilateral onset in the dominant hand and "
+        "demarcation at a joint line. Sensorineural - numbness, "
+        "paraesthesia, reduced fine touch and dexterity, independent "
+        "of temperature. Musculoskeletal - grip weakness, "
+        "tenosynovitis, carpal tunnel. Graded with the Stockholm "
+        "workshop scale. Ix: cold provocation with digital "
+        "rethermalisation, vibrotactile and thermal threshold "
+        "testing, nerve conduction studies. Mx: reduce vibration "
+        "exposure (job rotation, damped tools, anti-vibration "
+        "gloves), warm environment, smoking cessation. Nifedipine "
+        "for vascular symptoms. Report to WorkCover; workers "
+        "compensation usually applicable. Note: unilateral demarcated "
+        "Raynaud in a tradesperson is HAVS until proven otherwise."
+    ),
+    "Behavioural and psychological symptoms of dementia": (
+        "Non-cognitive symptoms of dementia including agitation, "
+        "aggression, wandering, sleep disturbance, disinhibition, "
+        "psychosis, depression and anxiety. Affects up to 90% across "
+        "the course of illness; leading driver of caregiver distress "
+        "and residential-care placement. Assess for reversible "
+        "triggers before escalating - the PINCH ME framework: Pain, "
+        "Infection (UTI, chest), Nutrition, Constipation, Hydration, "
+        "Medication (anticholinergics, benzos, opioids), Environment. "
+        "Ix: MSU, FBC, U&Es, CRP, medication review, delirium screen. "
+        "Mx: non-pharmacological FIRST and always - environmental "
+        "modification, structured activity, music therapy, "
+        "reminiscence, addressing unmet needs, caregiver education. "
+        "Pharmacology only for severe distress or safety risk: "
+        "risperidone 0.25-0.5 mg BD is the only PBS-approved "
+        "antipsychotic for Alzheimer aggression, 12-week limit, TGA "
+        "black-box warning for increased mortality and stroke. Avoid "
+        "in Lewy body and Parkinson dementia (neuroleptic "
+        "sensitivity). Trazodone or mirtazapine for depression with "
+        "sleep disturbance. Benzodiazepines avoided (falls, "
+        "paradoxical agitation). Note: rule out pain and infection "
+        "before an antipsychotic; risperidone caps at 12 weeks."
+    ),
+    "Perilunate dislocation": (
+        "High-energy carpal injury with dislocation of the capitate "
+        "dorsal to the lunate, which remains in the radial fossa. "
+        "Follows fall on outstretched hyperextended hand or MVA. "
+        "Progresses through Mayfield stages: scapholunate, "
+        "capitolunate and lunotriquetral disruption, then volar "
+        "lunate dislocation. Missed in 25% at first presentation with "
+        "devastating consequences (median nerve injury, avascular "
+        "necrosis, chronic pain, arthritis). Sx: dorsal wrist pain "
+        "and swelling, restricted movement, median nerve paraesthesia "
+        "in 25%. Ix: three-view wrist X-ray. Lateral view is "
+        "diagnostic - capitate dorsal to lunate, lunate still "
+        "articulated with radius (perilunate) or tipped volarly and "
+        "empty of capitate (spilled teacup - lunate dislocation). PA "
+        "- loss of Gilula's arcs, triangular lunate. CT for surgical "
+        "planning. Mx: URGENT orthopaedic referral. Closed reduction "
+        "under sedation as temporising measure; definitive open "
+        "reduction, ligament repair and K-wire fixation within 24-48 "
+        "hours. Median nerve decompression if symptoms persist "
+        "post-reduction. Note: dorsal wrist injury with median "
+        "symptoms - lateral X-ray, look for the spilled teacup, call "
+        "ortho now."
+    ),
+    "Chronic exertional compartment syndrome": (
+        "Reversible ischaemic pain from raised pressure within a "
+        "fascial compartment during exercise, typically the lower leg "
+        "(anterior most common). Affects young athletes, particularly "
+        "runners and military recruits. Distinct from acute "
+        "compartment syndrome (surgical emergency after trauma). Sx: "
+        "cramping or burning pain at a predictable exercise intensity "
+        "or duration, resolving in 15-30 minutes of rest; may include "
+        "paraesthesia and weakness (foot drop in anterior "
+        "compartment); bilateral in 80%. Examination usually normal "
+        "at rest; palpable compartment tension post-exercise. Ix: "
+        "intracompartmental pressure measurement pre- and "
+        "post-provocative exercise is gold standard - diagnostic if "
+        "resting over 15 mmHg, 1 minute post-exercise over 30 mmHg, "
+        "or 5 minute over 20 mmHg. Post-exercise MRI less invasive. "
+        "Exclude tibial stress fracture, popliteal artery entrapment, "
+        "medial tibial stress syndrome. Mx: activity modification, "
+        "gait retraining (forefoot strike reduces anterior loading), "
+        "physiotherapy. Fasciotomy for persistent symptoms - success "
+        "80-90% anterior, less posterior. Note: predictable exercise "
+        "pain that stops with rest - measure pressures around "
+        "exercise, not at rest."
     ),
 }
 
