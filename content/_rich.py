@@ -2882,6 +2882,96 @@ NEW_CONDITIONS = [
         "utd": [['Overview', 'chronic exertional compartment syndrome']],
         "summary": "",
     },
+    {
+        "name": "Cardiac amyloidosis",
+        "aliases": ["ATTR cardiac amyloidosis", "AL cardiac amyloidosis"],
+        "utd": [['Overview', 'cardiac amyloidosis']],
+        "summary": "",
+    },
+    {
+        "name": "Athlete heart",
+        "aliases": ["athletic heart syndrome"],
+        "utd": [['Overview', 'athlete heart syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Bronchiectasis exacerbation",
+        "aliases": ["acute exacerbation of bronchiectasis"],
+        "utd": [['Mx', 'acute exacerbation of bronchiectasis']],
+        "summary": "",
+    },
+    {
+        "name": "Cystic fibrosis exacerbation",
+        "aliases": ["CF pulmonary exacerbation"],
+        "utd": [['Mx', 'cystic fibrosis pulmonary exacerbation']],
+        "summary": "",
+    },
+    {
+        "name": "Diffuse alveolar haemorrhage",
+        "aliases": ["DAH", "alveolar hemorrhage"],
+        "utd": [['Mx', 'diffuse alveolar hemorrhage']],
+        "summary": "",
+    },
+    {
+        "name": "Membranoproliferative glomerulonephritis",
+        "aliases": ["MPGN", "mesangiocapillary glomerulonephritis"],
+        "utd": [['Ix', 'membranoproliferative glomerulonephritis']],
+        "summary": "",
+    },
+    {
+        "name": "Emphysematous pyelonephritis",
+        "aliases": ["gas-forming pyelonephritis"],
+        "utd": [['Mx', 'emphysematous pyelonephritis']],
+        "summary": "",
+    },
+    {
+        "name": "Anti-NMDA receptor encephalitis",
+        "aliases": ["NMDA-R encephalitis", "anti-NMDAR encephalitis"],
+        "utd": [['Mx', 'anti NMDA receptor encephalitis']],
+        "summary": "",
+    },
+    {
+        "name": "Reversible cerebral vasoconstriction syndrome",
+        "aliases": ["RCVS", "Call-Fleming syndrome"],
+        "utd": [['Ix', 'reversible cerebral vasoconstriction syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Familial hypocalciuric hypercalcaemia",
+        "aliases": ["FHH", "familial benign hypercalcemia"],
+        "utd": [['Ix', 'familial hypocalciuric hypercalcemia']],
+        "summary": "",
+    },
+    {
+        "name": "Cutaneous larva migrans",
+        "aliases": ["creeping eruption", "sandworm"],
+        "utd": [['Mx', 'cutaneous larva migrans']],
+        "summary": "",
+    },
+    {
+        "name": "Coeliac crisis",
+        "aliases": ["celiac crisis"],
+        "utd": [['Mx', 'celiac crisis']],
+        "summary": "",
+    },
+    {
+        "name": "Portal hypertensive gastropathy",
+        "aliases": ["PHG"],
+        "utd": [['Mx', 'portal hypertensive gastropathy']],
+        "summary": "",
+    },
+    {
+        "name": "Silo filler disease",
+        "aliases": ["silo filler lung", "nitrogen dioxide pneumonitis"],
+        "utd": [['Overview', 'silo filler disease nitrogen dioxide']],
+        "summary": "",
+    },
+    {
+        "name": "Metal fume fever",
+        "aliases": ["welder fever", "brass founder fever", "zinc fume fever"],
+        "utd": [['Overview', 'metal fume fever']],
+        "summary": "",
+    },
 ]
 
 
@@ -32130,6 +32220,328 @@ RICH_SUMMARIES = {
         "80-90% anterior, less posterior. Note: predictable exercise "
         "pain that stops with rest - measure pressures around "
         "exercise, not at rest."
+    ),
+    "Cardiac amyloidosis": (
+        "Infiltrative cardiomyopathy from myocardial deposition of "
+        "misfolded protein fibrils - an under-diagnosed cause of "
+        "HFpEF in older adults. Aetiology: AL (light-chain from "
+        "plasma cell dyscrasia, rapidly progressive) or ATTR "
+        "(transthyretin, wild-type in older men or hereditary). Sx: "
+        "HFpEF with dyspnoea, syncope, oedema; bilateral carpal "
+        "tunnel, spontaneous biceps rupture and lumbar canal stenosis "
+        "often precede cardiac symptoms by years; postural "
+        "hypotension from autonomic involvement. Ix: ECG shows low "
+        "voltages with pseudo-infarct pattern despite thick walls on "
+        "echo (voltage-mass mismatch is diagnostic gold); echo - "
+        "biventricular hypertrophy, sparkling myocardium, biatrial "
+        "enlargement, restrictive filling; cardiac MRI shows diffuse "
+        "late gadolinium enhancement; serum and urine electrophoresis "
+        "plus free light chains rule in AL; 99mTc-PYP bone scan is "
+        "diagnostic for ATTR without biopsy. Mx: AL - urgent "
+        "haematology for chemotherapy; ATTR - tafamidis (PBS-listed "
+        "2023). Avoid ACEi and beta-blockers - poorly tolerated in "
+        "restrictive physiology. Note: HFpEF plus bilateral carpal "
+        "tunnel plus low-voltage ECG - amyloid, PYP scan."
+    ),
+    "Athlete heart": (
+        "Physiological adaptation of the heart to chronic endurance "
+        "training - eccentric LV hypertrophy, biventricular "
+        "dilatation, resting bradycardia. Distinguished from "
+        "pathological cardiomyopathy because it is reversible with "
+        "deconditioning and does not compromise function. Sx: "
+        "asymptomatic; sinus bradycardia (30-40 bpm), respiratory "
+        "sinus arrhythmia, benign junctional rhythms at rest; "
+        "sometimes syncope during heavy exertion (usually vasovagal). "
+        "Ix: ECG - sinus bradycardia, incomplete RBBB, early "
+        "repolarisation, isolated voltage criteria for LVH; "
+        "distinguish from HCM by lack of ST/T abnormalities, "
+        "pathological Q waves or LV wall thickness over 15 mm. Echo - "
+        "symmetric LVH with LV wall usually 13-14 mm, preserved "
+        "diastolic function, dilated LV cavity. Detrained echo at "
+        "6-12 weeks shows regression, confirming physiology. Cardiac "
+        "MRI if HCM cannot be excluded by echo (no fibrosis or late "
+        "gadolinium enhancement in athlete heart). Mx: no "
+        "restriction. Note: LVH plus normal diastolic function plus "
+        "regression on detraining - physiological."
+    ),
+    "Bronchiectasis exacerbation": (
+        "Acute worsening of chronic bronchiectasis - increased sputum "
+        "volume and purulence, dyspnoea, cough, sometimes haemoptysis "
+        "and fever. Distinguished from stable disease by sustained "
+        "symptom change requiring treatment escalation. Aetiology: "
+        "bacterial (Haemophilus, Pseudomonas aeruginosa - colonises "
+        "20-30%, Moraxella, Staphylococcus), viral triggers common. "
+        "Ix: sputum M/C/S is essential before antibiotics "
+        "(Pseudomonas colonisation changes empiric choice); FBC, CRP; "
+        "chest X-ray to exclude pneumonic consolidation and "
+        "pneumothorax; consider CT if unusual or haemoptysis. Mx: "
+        "14-day oral antibiotics targeted to prior sputum isolates - "
+        "amoxicillin-clavulanate for Haemophilus, ciprofloxacin 750 "
+        "mg BD for Pseudomonas; IV piperacillin-tazobactam if severe "
+        "or resistant. Intensified airway clearance - active cycle of "
+        "breathing, hypertonic saline nebulised, chest physiotherapy. "
+        "Bronchodilators for reversible obstruction. Note: swap "
+        "antibiotic to cover Pseudomonas if the patient is "
+        "chronically colonised, regardless of current culture."
+    ),
+    "Cystic fibrosis exacerbation": (
+        "Acute worsening of chronic CF lung disease - increased "
+        "sputum, dyspnoea, cough, weight loss, decline in FEV1 by 10% "
+        "or more from baseline. Triggers: bacterial "
+        "(Pseudomonas aeruginosa, Staphylococcus aureus including "
+        "MRSA, Burkholderia cepacia complex, non-tuberculous "
+        "mycobacteria), viral. Ix: sputum M/C/S including "
+        "mycobacterial and fungal culture; spirometry to quantify "
+        "FEV1 drop from baseline; FBC, CRP, U&Es; chest X-ray if "
+        "consolidation or pneumothorax suspected; blood glucose "
+        "(CF-related diabetes can decompensate). Mx: admit for IV "
+        "antibiotics if moderate-severe exacerbation - dual therapy "
+        "against Pseudomonas is standard (tobramycin plus ceftazidime "
+        "or piperacillin-tazobactam) for 14 days; add vancomycin if "
+        "MRSA colonised. Intensified airway clearance including "
+        "hypertonic saline, dornase alfa, chest physiotherapy "
+        "3-4x/day. Nutritional support - increased kilojoule intake, "
+        "enzyme replacement optimised. Refer to specialist CF centre. "
+        "Note: single antipseudomonal agent is inadequate - dual "
+        "coverage prevents resistance."
+    ),
+    "Diffuse alveolar haemorrhage": (
+        "Life-threatening bleeding into alveolar spaces from the "
+        "pulmonary microcirculation - haemoptysis, hypoxaemia, "
+        "anaemia, bilateral infiltrates. Aetiology: immune "
+        "(ANCA-associated vasculitis, anti-GBM, SLE, APS), "
+        "drug-induced (crack cocaine, propylthiouracil, hydralazine), "
+        "bone marrow transplant, coagulopathy. Sx: haemoptysis "
+        "(absent in one-third), dyspnoea, cough, hypoxaemia; falling "
+        "haemoglobin without external blood loss. Ix: CT chest shows "
+        "bilateral airspace opacities; bronchoscopy with sequential "
+        "BAL shows progressively bloodier returns (diagnostic); "
+        "haemosiderin-laden macrophages confirm ongoing bleeding; "
+        "ANCA, anti-GBM, ANA, C3/C4, coagulation and urinalysis - "
+        "concurrent glomerulonephritis narrows to pulmonary-renal "
+        "syndrome. Mx: intubate if severe, correct coagulopathy, IV "
+        "methylprednisolone 1 g/day for 3 days for immune-mediated "
+        "cases, cyclophosphamide or rituximab induction, "
+        "plasmapheresis for anti-GBM or severe ANCA. Note: "
+        "haemoptysis plus anaemia plus bilateral infiltrates - "
+        "sequential BAL confirms; start steroids while workup runs."
+    ),
+    "Membranoproliferative glomerulonephritis": (
+        "Pattern of glomerular injury with mesangial and "
+        "endocapillary proliferation plus capillary wall thickening. "
+        "Classified by mechanism into immune-complex-mediated, "
+        "complement-mediated (C3 glomerulopathy, including dense "
+        "deposit disease), and thrombotic microangiopathy. Aetiology: "
+        "immune-complex - hepatitis C most common in adults, then "
+        "chronic infections, SLE, cryoglobulinaemia, monoclonal "
+        "gammopathy; complement-mediated - alternative-pathway "
+        "dysregulation. Sx: mixed nephritic-nephrotic - proteinuria, "
+        "haematuria, hypertension, reduced GFR; hypocomplementaemia "
+        "(low C3). Ix: urinalysis with dysmorphic RBCs, quantified "
+        "proteinuria, creatinine, C3/C4, cryoglobulins, hepatitis "
+        "serology, serum protein electrophoresis; renal biopsy is "
+        "diagnostic (tramtrack basement membrane on silver stain, "
+        "subendothelial deposits on EM). Mx: treat the underlying "
+        "cause - direct-acting antivirals for HCV, immunosuppression "
+        "for autoimmune; RAS blockade and BP control; eculizumab for "
+        "some C3 glomerulopathy. Note: nephritic-nephrotic overlap "
+        "with low C3 - hepatitis C serology first, biopsy next."
+    ),
+    "Emphysematous pyelonephritis": (
+        "Necrotising renal infection with gas within the renal "
+        "parenchyma, collecting system or perinephric tissue - a "
+        "urological emergency with historical mortality over 40%, now "
+        "around 20% with early recognition. Almost exclusive to "
+        "poorly controlled diabetes (90-95%) or urinary obstruction. "
+        "Aetiology: E. coli (most common), Klebsiella, Proteus, "
+        "occasionally Candida; anaerobes rarely implicated despite "
+        "the gas. Sx: severe pyelonephritis - fever, flank pain, "
+        "vomiting, sepsis - often with pneumaturia and crepitus over "
+        "the flank; commonly presents in DKA. Ix: urine and blood "
+        "cultures, glucose (usually DKA range), U&Es, FBC, VBG; CT "
+        "abdomen without contrast is diagnostic - gas in the renal "
+        "parenchyma or collecting system, staged 1-4 by extent (Huang "
+        "and Tseng). Mx: IV broad-spectrum antibiotics "
+        "(piperacillin-tazobactam or a carbapenem), aggressive fluid "
+        "resuscitation, insulin infusion for DKA, early urological "
+        "referral. Percutaneous drainage plus antibiotics for stages "
+        "1-2 preserves the kidney; nephrectomy for stages 3-4 with "
+        "sepsis unresponsive to drainage. Note: pyelonephritis plus "
+        "DKA - CT to look for gas before assuming simple UTI."
+    ),
+    "Anti-NMDA receptor encephalitis": (
+        "Autoimmune encephalitis from IgG antibodies against the NR1 "
+        "subunit of the NMDA receptor - the commonest autoimmune "
+        "encephalitis in young adults, majority female, 30-50% "
+        "paraneoplastic (ovarian teratoma). Sx: biphasic - viral-like "
+        "prodrome, then psychiatric phase (psychosis, mood change, "
+        "insomnia, catatonia) mistaken for a first episode of "
+        "psychosis, then neurological phase with seizures, orofacial "
+        "dyskinesias, autonomic instability, reduced consciousness "
+        "and central hypoventilation. Age under 40 with new psychosis "
+        "plus movement disorder plus seizure is pathognomonic until "
+        "proven otherwise. Ix: CSF shows lymphocytic pleocytosis and "
+        "NMDA-R antibodies (serum less sensitive); MRI often normal; "
+        "EEG shows extreme delta brush pattern in 30%; pelvic imaging "
+        "in all females for teratoma. Mx: high-dose "
+        "methylprednisolone plus IVIG or plasma exchange first-line; "
+        "rituximab or cyclophosphamide for non-responders; teratoma "
+        "removal is often curative. Recovery over months to years. "
+        "Note: young woman, new psychosis, seizure, dyskinesia - CSF "
+        "NMDA-R antibodies and pelvic imaging same admission."
+    ),
+    "Reversible cerebral vasoconstriction syndrome": (
+        "Reversible multifocal narrowing of cerebral arteries causing "
+        "recurrent thunderclap headaches, sometimes with stroke or "
+        "seizure. Precipitated by vasoactive substances (SSRIs, "
+        "triptans, cannabis, cocaine, decongestants), postpartum "
+        "state (postpartum angiopathy is a subset), or spontaneous. "
+        "Peaks age 20-50, female predominance. Sx: recurrent "
+        "thunderclap headaches (peak within 1 minute, severe, over "
+        "1-3 weeks) often triggered by exertion, sexual activity or "
+        "Valsalva; may develop cortical subarachnoid haemorrhage "
+        "(convexity, not basal), ischaemic stroke or PRES-like "
+        "features. Ix: CT and LP to exclude aneurysmal SAH (basal "
+        "blood on CT, xanthochromia in LP); CT or MR angiogram shows "
+        "segmental beading (string of beads) that may be normal "
+        "initially and requires repeat imaging at 1-2 weeks (dynamic "
+        "finding); complete resolution within 3 months confirms the "
+        "diagnosis. Mx: remove precipitants, BP control, oral "
+        "nimodipine 30-60 mg 4-hourly for 8-12 weeks (empiric), "
+        "analgesia. Steroids worsen outcome - avoid. Note: "
+        "thunderclap headache plus normal CT/LP - MRA now and again "
+        "at 1-2 weeks looking for beading."
+    ),
+    "Familial hypocalciuric hypercalcaemia": (
+        "Autosomal dominant benign cause of lifelong mild "
+        "hypercalcaemia from a loss-of-function mutation in the "
+        "calcium-sensing receptor (CaSR) - the parathyroid and kidney "
+        "behave as if calcium is normal at a higher setpoint. "
+        "Critical to distinguish from primary hyperparathyroidism "
+        "because it needs no treatment and parathyroidectomy is "
+        "harmful. Sx: asymptomatic lifelong mild hypercalcaemia "
+        "(usually 2.6-3.0 mmol/L); no renal stones, no bone disease, "
+        "no neuropsychiatric symptoms. Ix: raised calcium with "
+        "inappropriately normal or slightly raised PTH (looks like "
+        "primary hyperparathyroidism) but 24-hour urinary calcium is "
+        "LOW (calcium/creatinine clearance ratio under 0.01 is "
+        "diagnostic; over 0.02 argues against). Family history of "
+        "hypercalcaemia (autosomal dominant) supports; CaSR genetic "
+        "testing confirms. Mx: reassurance, no treatment, no "
+        "parathyroidectomy. Bisphosphonates and cinacalcet are not "
+        "indicated. Screen first-degree relatives with a serum "
+        "calcium. Note: hypercalcaemia plus normal PTH plus low "
+        "urinary calcium plus family history - FHH, do not operate."
+    ),
+    "Cutaneous larva migrans": (
+        "Serpiginous cutaneous eruption caused by migration of "
+        "hookworm larvae (Ancylostoma braziliense or Ancylostoma "
+        "caninum) through the epidermis - the human is a dead-end "
+        "host and the larvae cannot penetrate the basement membrane. "
+        "Acquired by direct skin contact with sand or soil "
+        "contaminated by dog or cat faeces, classically on tropical "
+        "beaches. Sx: intensely pruritic serpiginous erythematous "
+        "track advancing 1-2 cm/day; commonly on the feet, buttocks "
+        "or hands; incubation days to weeks after travel. Rarely "
+        "vesicular; secondary bacterial infection from scratching is "
+        "common. Ix: clinical diagnosis on appearance and travel "
+        "history; biopsy unhelpful (the larva usually is not where "
+        "the visible track ends). Mx: oral ivermectin 200 "
+        "microgram/kg as a single dose is first-line, cure over 95%; "
+        "alternative albendazole 400 mg daily for 3-5 days; topical "
+        "albendazole 10% for pregnancy or children. Symptoms resolve "
+        "within days. Self-limiting over weeks to months if untreated "
+        "but pruritus is intense. Note: itchy serpiginous track after "
+        "a tropical beach holiday - single-dose ivermectin."
+    ),
+    "Coeliac crisis": (
+        "Rare life-threatening presentation of coeliac disease with "
+        "severe diarrhoea, dehydration, electrolyte disturbance and "
+        "metabolic derangement - usually the first presentation in "
+        "adults or a decompensation after gluten challenge. Now rare "
+        "in developed countries with earlier diagnosis. Sx: profuse "
+        "watery diarrhoea, vomiting, severe abdominal pain, weight "
+        "loss over days to weeks; dehydration, hypokalaemia, "
+        "hypocalcaemia, hypomagnesaemia, hypoproteinaemia with "
+        "oedema, metabolic acidosis; sometimes hypotension and acute "
+        "kidney injury. Ix: FBC, U&Es (severe electrolyte "
+        "derangement), Mg, PO4, LFTs, albumin, INR (fat-soluble "
+        "vitamin deficiency); anti-tissue-transglutaminase IgA plus "
+        "total IgA; duodenal biopsy at endoscopy (Marsh 3 changes) "
+        "confirms after resuscitation. Mx: admit, aggressive IV fluid "
+        "and electrolyte resuscitation, correct hypocalcaemia and "
+        "hypomagnesaemia before potassium; strict gluten-free diet; "
+        "IV methylprednisolone 1 mg/kg for 48-72 hours if no "
+        "response, taper over weeks; consider TPN if severe. Note: "
+        "severe diarrhoea plus electrolyte derangement in previously "
+        "well adult - check coeliac serology and biopsy after "
+        "stabilisation."
+    ),
+    "Portal hypertensive gastropathy": (
+        "Mucosal congestion of the gastric body and fundus caused by "
+        "portal hypertension - a common source of chronic "
+        "iron-deficiency anaemia in cirrhosis and, less often, acute "
+        "upper GI bleeding. Distinct from gastric varices (discrete "
+        "tortuous submucosal veins) and from gastric antral vascular "
+        "ectasia (watermelon stomach, antral location, unrelated to "
+        "portal pressure). Sx: chronic - iron-deficiency anaemia, "
+        "occult blood loss; acute - haematemesis or melaena from "
+        "severe cases. Ix: upper endoscopy shows mosaic snakeskin "
+        "mucosal pattern in mild disease and red spots or diffuse "
+        "bleeding in severe; FBC and iron studies; assess portal "
+        "pressure and Child-Pugh score. Mx: chronic - non-selective "
+        "beta-blocker (propranolol titrated to 25% heart rate "
+        "reduction, or carvedilol) reduces portal pressure and "
+        "bleeding, iron replacement (IV if oral not tolerated). Acute "
+        "bleeding - resuscitation, octreotide infusion, IV PPI, "
+        "endoscopy; argon plasma coagulation for focal lesions; TIPS "
+        "for refractory. Transplant referral if decompensated "
+        "cirrhosis. Note: iron-deficiency anaemia in cirrhosis "
+        "without visible varices - snakeskin PHG on endoscopy, start "
+        "propranolol."
+    ),
+    "Silo filler disease": (
+        "Acute nitrogen dioxide (NO2) pneumonitis from inhalation of "
+        "gas released by fermenting silage in freshly filled farm "
+        "silos, typically within 1-2 days of filling. Occupational "
+        "disease of grain and dairy farmers. Mechanism: NO2 forms "
+        "nitric and nitrous acid on contact with alveolar water, "
+        "causing chemical burn, pulmonary oedema and delayed "
+        "bronchiolitis obliterans. Sx: three-phase illness - acute "
+        "cough, dyspnoea and pulmonary oedema hours after exposure. "
+        "Then a latent period of apparent recovery. Then a late "
+        "phase of bronchiolitis obliterans with progressive dyspnoea "
+        "2-6 weeks later. Fatal at either phase. Ix: exposure "
+        "history is diagnostic. Chest X-ray - pulmonary oedema "
+        "acutely, then nodular infiltrates late. PFTs show "
+        "obstructive pattern in the late phase. Mx: high-flow "
+        "oxygen, positive-pressure ventilation for pulmonary oedema, "
+        "high-dose methylprednisolone 1 mg/kg IV then oral taper "
+        "4-6 weeks started early to prevent the late bronchiolitis. "
+        "Prevention: ventilate silo 2 weeks after filling, use SCBA "
+        "for entry. Note: farmer with pulmonary oedema after silo "
+        "entry - steroids early prevent the late bronchiolitis."
+    ),
+    "Metal fume fever": (
+        "Self-limited flu-like illness following inhalation of "
+        "freshly generated metal oxide fumes, most often zinc oxide "
+        "from galvanised steel welding. Occupational disease of "
+        "welders and foundry workers. Cadmium exposure causes "
+        "chemical pneumonitis instead, with much higher mortality. "
+        "Mechanism: cytokine release from macrophage engulfment of "
+        "ultrafine metal oxide particles. Sx: onset 4-12 hours "
+        "after exposure - fever, chills, myalgia, dry cough and "
+        "metallic taste. Resolves in 24-48 hours. Tachyphylaxis "
+        "develops through the working week (Monday-morning fever "
+        "pattern). Ix: clinical, based on exposure history. "
+        "Leucocytosis common. Chest X-ray usually normal - "
+        "infiltrates suggest cadmium instead. Distinguish from "
+        "occupational asthma and cadmium pneumonitis (persistent "
+        "dyspnoea, infiltrates, high mortality). Mx: supportive - "
+        "antipyretics, hydration, rest. Report to WorkCover. "
+        "Prevention: local exhaust ventilation, respirator. Note: "
+        "welder with Monday-morning flu that resolves by Wednesday "
+        "- metal fume fever."
     ),
 }
 
