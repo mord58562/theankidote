@@ -3686,6 +3686,198 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "blount disease"]],
         "summary": "",
     },
+    {
+        "name": "Porphyria cutanea tarda",
+        "aliases": ["PCT"],
+        "utd": [["Overview", "porphyria cutanea tarda"]],
+        "summary": "",
+    },
+    {
+        "name": "Darier disease",
+        "aliases": ["Darier-White disease", "Keratosis follicularis"],
+        "utd": [["Overview", "darier disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Confluent and reticulated papillomatosis",
+        "aliases": ["Gougerot-Carteaud syndrome"],
+        "utd": [["Overview", "confluent and reticulated papillomatosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Juvenile nasopharyngeal angiofibroma",
+        "aliases": ["JNA", "Nasopharyngeal angiofibroma"],
+        "utd": [["Overview", "juvenile nasopharyngeal angiofibroma"]],
+        "summary": "",
+    },
+    {
+        "name": "Tympanosclerosis",
+        "aliases": [],
+        "utd": [["Overview", "tympanosclerosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Superior canal dehiscence syndrome",
+        "aliases": ["SCDS", "Minor syndrome"],
+        "utd": [["Overview", "superior canal dehiscence syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Optic disc drusen",
+        "aliases": [],
+        "utd": [["Overview", "optic disc drusen"]],
+        "summary": "",
+    },
+    {
+        "name": "Coats disease",
+        "aliases": ["Exudative retinitis"],
+        "utd": [["Overview", "coats disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Fuchs endothelial corneal dystrophy",
+        "aliases": ["Fuchs dystrophy"],
+        "utd": [["Overview", "fuchs endothelial corneal dystrophy"]],
+        "summary": "",
+    },
+    {
+        "name": "Posterior vitreous detachment",
+        "aliases": ["Vitreous detachment"],
+        "utd": [["Overview", "posterior vitreous detachment"]],
+        "summary": "",
+    },
+    {
+        "name": "Ureteropelvic junction obstruction",
+        "aliases": ["UPJ obstruction", "UPJO"],
+        "utd": [["Overview", "ureteropelvic junction obstruction"]],
+        "summary": "",
+    },
+    {
+        "name": "Pelvic congestion syndrome",
+        "aliases": [],
+        "utd": [["Overview", "pelvic congestion syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Bladder exstrophy",
+        "aliases": ["Exstrophy of the bladder"],
+        "utd": [["Overview", "bladder exstrophy"]],
+        "summary": "",
+    },
+    {
+        "name": "Posterior urethral valves",
+        "aliases": ["PUV"],
+        "utd": [["Overview", "posterior urethral valves"]],
+        "summary": "",
+    },
+    {
+        "name": "Maturity-onset diabetes of the young",
+        "aliases": ["MODY"],
+        "utd": [["Overview", "maturity onset diabetes of the young"]],
+        "summary": "",
+    },
+    {
+        "name": "Gastric antral vascular ectasia",
+        "aliases": ["GAVE", "Watermelon stomach"],
+        "utd": [["Overview", "gastric antral vascular ectasia"]],
+        "summary": "",
+    },
+    {
+        "name": "Loeffler syndrome",
+        "aliases": ["Simple pulmonary eosinophilia", "Loffler syndrome"],
+        "utd": [["Overview", "loeffler syndrome simple pulmonary eosinophilia"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulmonary alveolar microlithiasis",
+        "aliases": [],
+        "utd": [["Overview", "pulmonary alveolar microlithiasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Bronchogenic cyst",
+        "aliases": [],
+        "utd": [["Overview", "bronchogenic cyst"]],
+        "summary": "",
+    },
+    {
+        "name": "Dandy-Walker malformation",
+        "aliases": ["Dandy-Walker syndrome"],
+        "utd": [["Overview", "dandy walker malformation"]],
+        "summary": "",
+    },
+    {
+        "name": "Dissociative identity disorder",
+        "aliases": ["DID", "Multiple personality disorder"],
+        "utd": [["Overview", "dissociative identity disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Depersonalization-derealization disorder",
+        "aliases": ["DPDR"],
+        "utd": [["Overview", "depersonalization derealization disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Kleine-Levin syndrome",
+        "aliases": ["Sleeping Beauty syndrome"],
+        "utd": [["Overview", "kleine levin syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Pica",
+        "aliases": [],
+        "utd": [["Overview", "pica eating disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Meigs syndrome",
+        "aliases": ["Meigs-Salmon syndrome"],
+        "utd": [["Overview", "meigs syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Mayer-Rokitansky-Kuster-Hauser syndrome",
+        "aliases": ["MRKH syndrome", "Mullerian agenesis"],
+        "utd": [["Overview", "mayer rokitansky kuster hauser syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Eosinophilic fasciitis",
+        "aliases": ["Shulman syndrome"],
+        "utd": [["Overview", "eosinophilic fasciitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Milia",
+        "aliases": ["Milium cyst"],
+        "utd": [["Overview", "milia"]],
+        "summary": "",
+    },
+    {
+        "name": "Nasolacrimal duct obstruction",
+        "aliases": ["NLDO", "Dacryostenosis"],
+        "utd": [["Overview", "nasolacrimal duct obstruction"]],
+        "summary": "",
+    },
+    {
+        "name": "Persistent Mullerian duct syndrome",
+        "aliases": ["PMDS"],
+        "utd": [["Overview", "persistent mullerian duct syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Erythema toxicum neonatorum",
+        "aliases": ["ETN", "Toxic erythema of the newborn"],
+        "utd": [["Overview", "erythema toxicum neonatorum"]],
+        "summary": "",
+    },
+    {
+        "name": "Vernal keratoconjunctivitis",
+        "aliases": ["VKC"],
+        "utd": [["Overview", "vernal keratoconjunctivitis"]],
+        "summary": "",
+    },
 ]
 
 
@@ -35687,6 +35879,545 @@ RICH_SUMMARIES = {
         "from physiological genu varum early matters, since bracing "
         "works only in the infantile form and only if started before "
         "structural deformity is established."
+    ),
+    "Porphyria cutanea tarda": (
+        "Commonest porphyria, from reduced uroporphyrinogen "
+        "decarboxylase activity causing porphyrin build-up in skin "
+        "and liver. Aetiology: sporadic (acquired hepatic enzyme "
+        "inhibition) or familial; precipitated by alcohol, oestrogen, "
+        "hepatitis C, HIV, iron overload and smoking. Clinical "
+        "features: photosensitive blistering and skin fragility on "
+        "sun-exposed skin, hyperpigmentation, hypertrichosis, "
+        "sclerodermoid change. Ix: elevated urinary uroporphyrins are "
+        "diagnostic; check iron studies, hepatitis C and HIV "
+        "serology, liver function. Mx: remove triggers, sun "
+        "protection, low-dose hydroxychloroquine or serial "
+        "venesection to lower iron stores. Treat any hepatitis C. "
+        "Note: unlike the acute porphyrias this causes no "
+        "neurovisceral attacks, so abdominal pain should prompt a "
+        "rethink."
+    ),
+    "Darier disease": (
+        "Autosomal dominant keratinisation disorder from an ATP2A2 "
+        "mutation disrupting keratinocyte adhesion. Clinical "
+        "features: greasy hyperkeratotic papules coalescing in "
+        "seborrhoeic distribution - scalp, chest, back and flexures - "
+        "worse with heat, sweat and sun. Nail changes give red and "
+        "white longitudinal streaks with a V-shaped nick at the free "
+        "edge; palmar pits are common. Ix: clinical, confirmed by "
+        "biopsy showing acantholytic dyskeratosis. Mx: emollients, "
+        "topical retinoids or corticosteroids for flares, oral "
+        "retinoids for severe disease. Avoid heat, sun and occlusive "
+        "dressings, which all worsen it. Note: recurrent malodorous "
+        "flexural flares are often mistaken for chronic intertrigo "
+        "until the nail changes are looked for."
+    ),
+    "Confluent and reticulated papillomatosis": (
+        "Uncommon dermatosis of hyperpigmented, velvety papules that "
+        "coalesce centrally and become reticulated at the periphery, "
+        "classically over the intermammary and interscapular skin. "
+        "Aetiology: unclear, thought to reflect an abnormal "
+        "keratinocyte response to Malassezia rather than true "
+        "infection, despite responding to antimicrobials. Clinical "
+        "features: gradual onset in adolescents and young adults, "
+        "asymptomatic or mildly itchy, often mistaken for tinea "
+        "versicolor or acanthosis nigricans. Ix: clinical; biopsy if "
+        "uncertain shows papillomatosis without the hyperinsulinaemia "
+        "workup acanthosis nigricans prompts. Mx: minocycline or "
+        "azithromycin first line, topical retinoids or selenium "
+        "sulfide as alternatives. Note: failure to respond to "
+        "antifungals despite the tinea-versicolor appearance is the "
+        "clue that redirects the diagnosis here."
+    ),
+    "Juvenile nasopharyngeal angiofibroma": (
+        "Benign but locally aggressive vascular tumour of the "
+        "nasopharynx, arising near the sphenopalatine foramen almost "
+        "exclusively in adolescent males. Clinical features: "
+        "unilateral nasal obstruction and recurrent, often severe, "
+        "epistaxis; larger lesions cause facial swelling, proptosis "
+        "or cranial nerve palsies from skull base extension. Ix: CT "
+        "or MRI shows a vascular mass widening the pterygopalatine "
+        "fossa; biopsy is avoided given bleeding risk, since imaging "
+        "is usually diagnostic. Mx: pre-operative embolisation "
+        "followed by surgical resection, endoscopic where feasible; "
+        "radiotherapy for unresectable or recurrent disease. Note: an "
+        "adolescent boy with unilateral epistaxis and nasal "
+        "obstruction should not be biopsied in clinic - the bleeding "
+        "can be dramatic."
+    ),
+    "Tympanosclerosis": (
+        "Scarring of the tympanic membrane and middle ear from chalky "
+        "calcium deposits following chronic inflammation. Aetiology: "
+        "recurrent otitis media, grommet insertion or previous "
+        "myringotomy. Clinical features: white chalky plaques on the "
+        "eardrum on otoscopy, usually asymptomatic; ossicular "
+        "involvement can cause conductive hearing loss. Ix: otoscopy "
+        "is usually sufficient; audiometry if hearing loss is "
+        "reported, CT if surgery is being considered. Mx: no "
+        "treatment needed for membrane plaques alone; hearing aids or "
+        "surgical ossicular reconstruction for significant conductive "
+        "loss, though results are less reliable than for "
+        "otosclerosis. Note: the plaques themselves are a benign "
+        "incidental finding - the history of recurrent ear infections "
+        "is what explains them."
+    ),
+    "Superior canal dehiscence syndrome": (
+        "Vestibular disorder from a bony defect over the superior "
+        "semicircular canal that creates a pathological third mobile "
+        "window in the inner ear. Clinical features: sound- or "
+        "pressure-induced vertigo and nystagmus (Tullio phenomenon), "
+        "autophony, pulsatile tinnitus and a sense of hearing one's "
+        "own eye movements or heartbeat. Ix: high-resolution temporal "
+        "bone CT with coronal reconstructions shows the dehiscence; "
+        "vestibular-evoked myogenic potentials show reduced "
+        "thresholds. Mx: conservative management and trigger "
+        "avoidance for mild cases; surgical plugging or resurfacing "
+        "of the canal for disabling symptoms. Note: a low-frequency "
+        "conductive hearing loss with normal tympanometry is the "
+        "pattern that should raise this rather than otosclerosis."
+    ),
+    "Optic disc drusen": (
+        "Calcified deposits within the optic nerve head, often "
+        "congenital and bilateral, that mimic papilloedema on "
+        "fundoscopy. Clinical features: usually asymptomatic and "
+        "found incidentally, though visible drusen give a lumpy "
+        "irregular disc margin; buried drusen cause "
+        "pseudopapilloedema with blurred margins but no true disc "
+        "swelling. Visual field defects, most often arcuate, occur in "
+        "a minority. Ix: B-scan ultrasound or CT shows calcification; "
+        "autofluorescence and OCT distinguish buried drusen from true "
+        "oedema without needing invasive imaging. Mx: no treatment "
+        "for asymptomatic disease; monitor visual fields, since rare "
+        "vascular complications occur. Note: distinguishing this from "
+        "papilloedema avoids an unnecessary work-up for raised "
+        "intracranial pressure."
+    ),
+    "Coats disease": (
+        "Idiopathic retinal vascular disorder causing telangiectasia "
+        "and exudation, almost always unilateral and presenting in "
+        "childhood, predominantly boys. Clinical features: "
+        "leukocoria, strabismus or reduced vision from lipid-rich "
+        "subretinal exudate; can progress to exudative retinal "
+        "detachment. Ix: fundoscopy shows the telangiectatic vessels "
+        "and yellow exudate; fluorescein angiography delineates the "
+        "abnormal vasculature. Retinoblastoma is the key differential "
+        "and must be excluded, since both cause leukocoria. Mx: laser "
+        "photocoagulation or cryotherapy to the abnormal vessels, "
+        "staged for extensive disease; vitrectomy if the retina "
+        "detaches. Note: any child with leukocoria needs urgent "
+        "ophthalmology review to exclude retinoblastoma before this "
+        "diagnosis is accepted."
+    ),
+    "Fuchs endothelial corneal dystrophy": (
+        "Progressive, usually bilateral loss of corneal endothelial "
+        "cells leading to stromal oedema, more common in older women. "
+        "Aetiology: inherited in a subset (TCF4 trinucleotide repeat "
+        "expansion is the commonest identified cause), otherwise "
+        "sporadic. Clinical features: guttae visible on slit lamp "
+        "progress to blurred vision worst on waking and improving "
+        "through the day, as overnight corneal swelling clears with "
+        "evaporation; advanced disease causes painful bullous "
+        "keratopathy. Ix: slit lamp examination shows guttae; "
+        "specular microscopy quantifies endothelial cell density and "
+        "pachymetry tracks corneal thickness. Mx: hypertonic saline "
+        "drops for early oedema, endothelial keratoplasty (DMEK or "
+        "DSAEK) for visually significant disease. Note: morning blur "
+        "that clears by midday is the pattern that separates this "
+        "from most other causes of blurred vision."
+    ),
+    "Posterior vitreous detachment": (
+        "Age-related separation of the vitreous gel from the retina "
+        "as the vitreous liquefies and contracts, near-universal by "
+        "old age. Clinical features: sudden onset floaters and "
+        "photopsia (flashes) from traction on the retina during "
+        "separation; vision is otherwise unaffected in uncomplicated "
+        "cases. Ix: dilated fundoscopy to look for a Weiss ring "
+        "confirming complete separation, and to exclude retinal tear "
+        "or detachment, which occur in a minority and are the reason "
+        "new floaters and flashes always need same-day review. Mx: "
+        "reassurance and observation for uncomplicated PVD; laser or "
+        "cryotherapy for any associated retinal tear to prevent "
+        "detachment. Note: a shower of new floaters plus a shadow or "
+        "curtain in the visual field signals detachment rather than "
+        "simple PVD and needs urgent referral."
+    ),
+    "Ureteropelvic junction obstruction": (
+        "Impaired urine flow from the renal pelvis into the ureter, "
+        "the commonest cause of antenatally detected hydronephrosis. "
+        "Aetiology: intrinsic stenosis or aberrant crossing vessels "
+        "in congenital disease; strictures, stones or tumour when "
+        "acquired in adults. Clinical features: often asymptomatic "
+        "and picked up on antenatal ultrasound; older children and "
+        "adults present with flank pain, often worse with high fluid "
+        "intake (Dietl crisis), or with recurrent UTIs or stones. Ix: "
+        "renal ultrasound shows pelvicalyceal dilatation without "
+        "ureteric dilatation; diuretic renography (MAG3) quantifies "
+        "obstruction and split function. Mx: observation with serial "
+        "imaging for stable mild cases, pyeloplasty (open, "
+        "laparoscopic or robotic) for deteriorating function or "
+        "symptomatic obstruction. Note: hydronephrosis without a "
+        "dilated ureter on ultrasound is the pattern that points here "
+        "rather than to a lower obstruction."
+    ),
+    "Pelvic congestion syndrome": (
+        "Chronic pelvic pain from pelvic venous incompetence and "
+        "varicosities, mainly affecting multiparous women of "
+        "reproductive age. Aetiology: ovarian and pelvic vein reflux, "
+        "often from valve incompetence worsened by the venous "
+        "dilation of pregnancy. Clinical features: dull chronic "
+        "pelvic pain worse after prolonged standing, before menses "
+        "and with intercourse (deep dyspareunia), often with vulval "
+        "or thigh varicosities. Ix: transvaginal ultrasound with "
+        "Doppler shows dilated, sluggish-flowing pelvic veins; CT or "
+        "MR venography and venography confirm reflux before "
+        "intervention. Other causes of chronic pelvic pain, "
+        "particularly endometriosis, should be excluded first. Mx: "
+        "NSAIDs and hormonal suppression as first line, ovarian or "
+        "pelvic vein embolisation for refractory disease. Note: pain "
+        "that worsens through the day with standing and eases when "
+        "lying down is the pattern that distinguishes this from most "
+        "other pelvic pain."
+    ),
+    "Bladder exstrophy": (
+        "Rare congenital anomaly where the bladder and urethra fail "
+        "to close during embryogenesis, leaving the bladder mucosa "
+        "exposed on the lower abdominal wall. Associated with "
+        "epispadias, pubic diastasis and, in the exstrophy-epispadias "
+        "complex, vesicointestinal fissure at the severe end. "
+        "Clinical features: evident at birth - exposed, everted "
+        "bladder mucosa below the umbilicus with continuous urinary "
+        "leakage, plus the associated genital and skeletal anomalies. "
+        "Ix: clinical diagnosis at birth; renal ultrasound and spinal "
+        "imaging assess for associated anomalies. Mx: staged surgical "
+        "reconstruction, ideally starting within the first days of "
+        "life - bladder and abdominal wall closure, then epispadias "
+        "repair, then continence procedures. Note: this is a "
+        "paediatric surgical and urological emergency at birth, not "
+        "something managed expectantly."
+    ),
+    "Posterior urethral valves": (
+        "Congenital obstructing membranous folds in the posterior "
+        "male urethra, the commonest cause of lower urinary tract "
+        "obstruction in boys. Clinical features: antenatally, "
+        "bilateral hydronephrosis and oligohydramnios from reduced "
+        "fetal urine output; postnatally, a poor urinary stream, "
+        "palpable bladder, UTI or renal impairment. Severe antenatal "
+        "obstruction causes pulmonary hypoplasia. Ix: antenatal "
+        "ultrasound suggests the diagnosis; postnatal micturating "
+        "cystourethrogram confirms the valve and grades any "
+        "vesicoureteric reflux. Renal function is assessed with "
+        "creatinine and ultrasound. Mx: bladder catheterisation to "
+        "relieve obstruction, then cystoscopic valve ablation; some "
+        "infants progress to renal failure despite treatment. Note: "
+        "bilateral hydronephrosis on an antenatal scan in a male "
+        "fetus should always raise this before other causes."
+    ),
+    "Maturity-onset diabetes of the young": (
+        "Autosomal dominant monogenic diabetes from a single gene "
+        "defect impairing pancreatic beta-cell function, distinct "
+        "from type 1 and type 2 diabetes. Clinical features: diabetes "
+        "diagnosed before about age 25 in a person without the "
+        "typical features of type 2 (obesity, insulin resistance) and "
+        "without islet autoantibodies, often with a strong "
+        "multi-generational family history. HNF1A and GCK are the "
+        "commonest subtypes. Ix: C-peptide and islet autoantibodies "
+        "help exclude type 1 and type 2; genetic testing confirms the "
+        "specific subtype, which changes management. Mx: GCK-MODY "
+        "usually needs no treatment, since it causes stable mild "
+        "hyperglycaemia; HNF1A-MODY responds well to low-dose "
+        "sulfonylureas rather than insulin. Note: getting the genetic "
+        "diagnosis right can move a patient off insulin entirely."
+    ),
+    "Gastric antral vascular ectasia": (
+        "Acquired vascular malformation of the gastric antrum causing "
+        "chronic occult or overt GI bleeding, associated with "
+        "cirrhosis, systemic sclerosis and chronic kidney disease. "
+        "Clinical features: iron deficiency anaemia from chronic "
+        "blood loss, occasionally overt melaena; distinguished from "
+        "portal hypertensive gastropathy by endoscopic appearance "
+        "rather than by symptoms alone. Ix: upper endoscopy shows "
+        "characteristic linear red streaks radiating from the pylorus "
+        "('watermelon stomach'); biopsy confirms dilated mucosal "
+        "vessels with fibrin thrombi. Mx: endoscopic argon plasma "
+        "coagulation is first line, iron replacement for anaemia; "
+        "antrectomy is reserved for refractory bleeding. Note: the "
+        "endoscopic 'watermelon' pattern is what separates this from "
+        "portal hypertensive gastropathy, which matters because the "
+        "treatments differ."
+    ),
+    "Loeffler syndrome": (
+        "Transient pulmonary infiltrates with peripheral blood "
+        "eosinophilia from parasite larvae migrating through the "
+        "lungs, classically Ascaris lumbricoides or hookworm. "
+        "Clinical features: self-limiting dry cough, wheeze and "
+        "dyspnoea over one to two weeks, sometimes with fever; "
+        "symptoms resolve as larvae complete migration to the gut. "
+        "Ix: peripheral eosinophilia and fleeting, migratory "
+        "infiltrates on chest X-ray that clear within weeks; stool "
+        "microscopy may only become positive later once adult worms "
+        "mature in the intestine. Mx: usually self-limiting; "
+        "antihelminthics (albendazole or mebendazole) once the adult "
+        "infection is confirmed, corticosteroids for severe "
+        "respiratory symptoms. Note: infiltrates that move between "
+        "films within days is the finding that separates this from "
+        "pneumonia."
+    ),
+    "Pulmonary alveolar microlithiasis": (
+        "Rare autosomal recessive disorder from SLC34A2 mutation "
+        "causing calcium phosphate microliths to accumulate in the "
+        "alveoli. Clinical features: a striking disconnect between "
+        "often minimal symptoms and dramatic chest imaging is "
+        "characteristic; disease is frequently discovered "
+        "incidentally, though slowly progressive dyspnoea and "
+        "eventual respiratory failure occur over decades. Ix: chest "
+        "X-ray shows a diffuse, dense 'sandstorm' micronodular "
+        "pattern; CT confirms innumerable tiny calcified nodules, "
+        "often with a black pleural line. Lung biopsy is rarely "
+        "needed given the distinctive imaging. Mx: no proven medical "
+        "therapy; supportive care and lung transplantation for "
+        "end-stage disease. Note: imaging this dramatic in a patient "
+        "who feels comparatively well is the clue to this diagnosis."
+    ),
+    "Bronchogenic cyst": (
+        "Congenital foregut malformation from abnormal budding of the "
+        "tracheobronchial tree during development, usually "
+        "mediastinal or intrapulmonary. Clinical features: often "
+        "asymptomatic and found incidentally on imaging; larger cysts "
+        "cause cough, dyspnoea or recurrent infection from airway "
+        "compression, and can become infected themselves. Ix: chest "
+        "X-ray may show a mediastinal mass; CT or MRI characterises "
+        "the cyst and its relationship to the airway and oesophagus. "
+        "Mx: surgical excision for symptomatic or enlarging cysts, "
+        "and often recommended even when asymptomatic given the risk "
+        "of infection or, rarely, malignant change. Note: a "
+        "well-defined, fluid-filled mediastinal mass in an otherwise "
+        "well patient should prompt consideration of this rather than "
+        "a solid tumour."
+    ),
+    "Dandy-Walker malformation": (
+        "Congenital hindbrain anomaly comprising cerebellar vermis "
+        "hypoplasia, cystic dilatation of the fourth ventricle and an "
+        "enlarged posterior fossa. Clinical features: presentation "
+        "depends on severity - macrocephaly and signs of "
+        "hydrocephalus in infancy, or later developmental delay, "
+        "ataxia and cranial nerve signs; often associated with other "
+        "CNS and systemic anomalies. Ix: antenatal ultrasound may "
+        "detect it; MRI is the definitive investigation, showing the "
+        "vermian hypoplasia and fourth ventricular cyst. Mx: "
+        "ventriculoperitoneal shunting or endoscopic cyst "
+        "fenestration for hydrocephalus, supportive management and "
+        "developmental follow-up otherwise. Note: outcome tracks more "
+        "closely with associated brain and systemic anomalies than "
+        "with the posterior fossa finding alone."
+    ),
+    "Dissociative identity disorder": (
+        "Dissociative disorder marked by two or more distinct "
+        "personality states with disruptions in memory, identity and "
+        "sense of self, strongly associated with severe childhood "
+        "trauma. Clinical features: recurrent gaps in recall for "
+        "everyday events beyond ordinary forgetfulness, reported "
+        "shifts in identity or sense of being controlled, often with "
+        "comorbid PTSD, depression and self-harm. Ix: clinical "
+        "diagnosis after excluding substance use, seizure disorders "
+        "and other psychiatric conditions that better explain the "
+        "presentation; structured interview tools support diagnosis "
+        "where available. Mx: trauma-focused psychotherapy is first "
+        "line, aimed at integration and safety rather than "
+        "eliminating identity states; treat comorbid depression, "
+        "anxiety or PTSD alongside. Note: this is frequently "
+        "misdiagnosed as psychosis, and antipsychotics do not target "
+        "the underlying dissociation."
+    ),
+    "Depersonalization-derealization disorder": (
+        "Persistent or recurrent experience of feeling detached from "
+        "one's own body or thoughts (depersonalisation) or from one's "
+        "surroundings (derealisation), with intact reality testing "
+        "throughout. Aetiology: often triggered by severe stress, "
+        "trauma, panic attacks, or cannabis and hallucinogen use; "
+        "frequently comorbid with anxiety and depression. Clinical "
+        "features: patients describe feeling like an outside observer "
+        "of themselves, or that the world feels unreal, dreamlike or "
+        "foggy - distressing but never accompanied by delusions or "
+        "hallucinations. Ix: clinical diagnosis after excluding "
+        "substance intoxication, seizures, and other psychiatric and "
+        "neurological causes. Mx: psychotherapy, particularly CBT, is "
+        "first line; SSRIs help comorbid anxiety or depression though "
+        "evidence for the dissociation itself is limited. Note: "
+        "preserved insight that the experience is 'not real' is what "
+        "separates this from psychosis."
+    ),
+    "Kleine-Levin syndrome": (
+        "Rare relapsing-remitting disorder of recurrent hypersomnia "
+        "episodes, predominantly affecting adolescent males. Clinical "
+        "features: episodes of sleeping 16 to 20 hours a day for days "
+        "to weeks, with associated cognitive fog, hyperphagia, "
+        "hypersexuality and irritability when awake, followed by "
+        "complete return to normal between episodes. Ix: clinical "
+        "diagnosis after excluding structural brain lesions with MRI "
+        "and other causes of recurrent hypersomnia; polysomnography "
+        "is often normal between episodes. Mx: no proven "
+        "disease-modifying therapy; supportive care during episodes, "
+        "with lithium sometimes used to reduce recurrence. Episodes "
+        "typically become less frequent and resolve over years. Note: "
+        "complete normality between episodes is what distinguishes "
+        "this from a primary mood or sleep disorder."
+    ),
+    "Pica": (
+        "Persistent eating of non-nutritive, non-food substances - "
+        "clay, chalk, ice, paper or hair - for at least a month, "
+        "beyond what is developmentally normal. Aetiology: associated "
+        "with iron or zinc deficiency, pregnancy, autism spectrum "
+        "disorder, intellectual disability and, in trichophagia, "
+        "obsessive-compulsive spectrum behaviour. Clinical features: "
+        "the substance eaten varies by cause; complications include "
+        "intestinal obstruction, lead poisoning from paint chips, "
+        "dental injury and parasitic infection. Ix: iron studies and "
+        "zinc level, lead level if pica involves paint or soil, "
+        "abdominal imaging if obstruction is suspected. Mx: correct "
+        "any nutritional deficiency, behavioural therapy, treat the "
+        "underlying psychiatric or developmental condition. Note: "
+        "pagophagia (ice craving) is specific enough for iron "
+        "deficiency that it should prompt ferritin testing on its "
+        "own."
+    ),
+    "Meigs syndrome": (
+        "Triad of a benign ovarian tumour, most often a fibroma, with "
+        "ascites and a pleural effusion that both resolve after "
+        "tumour removal. Aetiology: thought to reflect "
+        "transdiaphragmatic fluid movement from the tumour surface "
+        "rather than malignant seeding. Clinical features: abdominal "
+        "distension and dyspnoea mimicking advanced ovarian "
+        "malignancy, usually right-sided effusion. Ix: pelvic "
+        "ultrasound or CT shows the ovarian mass; pleural and ascitic "
+        "fluid are transudative and cytology-negative, which is what "
+        "distinguishes this from malignant disease. CA-125 can be "
+        "mildly elevated, adding to the diagnostic confusion. Mx: "
+        "surgical resection of the tumour cures the ascites and "
+        "effusion completely. Note: complete resolution of ascites "
+        "and effusion after removing a benign mass is what confirms "
+        "the diagnosis retrospectively."
+    ),
+    "Mayer-Rokitansky-Kuster-Hauser syndrome": (
+        "Congenital absence or hypoplasia of the uterus and upper "
+        "vagina from failed Mullerian duct development, with normal "
+        "ovaries and a normal 46,XX karyotype. Clinical features: "
+        "primary amenorrhoea in an otherwise normally developing "
+        "adolescent girl with normal secondary sexual "
+        "characteristics, since ovarian and hormonal function is "
+        "unaffected. Renal (unilateral agenesis) and skeletal "
+        "anomalies coexist in a significant minority. Ix: pelvic "
+        "ultrasound or MRI shows absent or rudimentary uterus with "
+        "normal ovaries; karyotype confirms 46,XX and excludes "
+        "androgen insensitivity syndrome, the key differential. Renal "
+        "ultrasound and spinal imaging screen for associated "
+        "anomalies. Mx: vaginal dilator therapy first line to create "
+        "a functional vaginal length, surgical vaginoplasty if this "
+        "fails; fertility needs a gestational carrier or uterus "
+        "transplantation. Note: normal puberty with absent periods is "
+        "what separates this from androgen insensitivity, where "
+        "puberty is also atypical."
+    ),
+    "Eosinophilic fasciitis": (
+        "Rare sclerosing disorder of the deep fascia causing skin "
+        "induration, often triggered by strenuous exercise and "
+        "associated with peripheral eosinophilia. Clinical features: "
+        "rapid-onset symmetrical swelling and painful induration of "
+        "the limbs, sparing the hands and face, giving a "
+        "characteristic 'groove sign' where veins appear sunken "
+        "between bands of thickened tissue; joint contractures "
+        "develop in established disease. Ix: peripheral eosinophilia "
+        "and raised ESR are typical; full-thickness skin-to-muscle "
+        "biopsy showing fascial thickening and inflammation confirms "
+        "the diagnosis, since MRI findings alone are not specific. "
+        "Mx: high-dose corticosteroids are first line, often with a "
+        "steroid-sparing agent such as methotrexate for prolonged "
+        "courses. Note: sparing of the hands and face distinguishes "
+        "this from systemic sclerosis, which it otherwise resembles."
+    ),
+    "Milia": (
+        "Small, firm, keratin-filled epidermal cysts that present as "
+        "pinhead white or yellow papules, most often on the face. "
+        "Aetiology: primary milia arise spontaneously, common in "
+        "neonates from immature pilosebaceous units; secondary milia "
+        "follow skin trauma, blistering disorders, burns or prolonged "
+        "topical steroid use. Clinical features: asymptomatic, firm "
+        "papules a millimetre or two across, typically around the "
+        "eyelids and cheeks. Ix: clinical diagnosis; biopsy is "
+        "unnecessary unless the appearance is atypical. Mx: neonatal "
+        "milia resolve spontaneously within weeks and need no "
+        "treatment; persistent milia in adults can be removed by "
+        "needle extraction, de-roofing or light cautery for cosmetic "
+        "reasons. Note: reassurance is the main intervention in "
+        "neonates, where these are frequently mistaken by parents for "
+        "infected spots."
+    ),
+    "Nasolacrimal duct obstruction": (
+        "Blockage of tear drainage from the eye into the nose, "
+        "congenital in infants from a persistent membrane at the "
+        "duct's lower end, or acquired in adults from involutional "
+        "stenosis, trauma or chronic sinus disease. Clinical "
+        "features: persistent watery eye (epiphora) with or without "
+        "mucoid discharge, worse in the morning; recurrent "
+        "dacryocystitis can follow if the sac becomes infected. Ix: "
+        "clinical diagnosis; fluorescein dye disappearance test "
+        "supports the diagnosis in infants, and dacryocystography or "
+        "probing under anaesthesia clarifies the level of obstruction "
+        "when surgery is planned. Mx: congenital cases are managed "
+        "expectantly with lacrimal sac massage, since most resolve by "
+        "age one; probing or intubation for persistent cases, "
+        "dacryocystorhinostomy for adults with acquired obstruction. "
+        "Note: persistent watering beyond the first year of life is "
+        "what prompts referral for probing rather than continued "
+        "observation."
+    ),
+    "Persistent Mullerian duct syndrome": (
+        "Rare disorder of sex development in phenotypic and "
+        "chromosomally normal (46,XY) males who retain Mullerian "
+        "structures - uterus and fallopian tubes - from failed "
+        "anti-Mullerian hormone signalling or receptor insensitivity. "
+        "Clinical features: usually discovered incidentally during "
+        "surgery for cryptorchidism or an inguinal hernia containing "
+        "a uterus; external genitalia and puberty are otherwise "
+        "normal male, since testosterone production is unaffected. "
+        "Ix: pelvic ultrasound or MRI confirms Mullerian remnants; "
+        "genetic testing identifies AMH or AMH-receptor mutations. "
+        "Mx: orchidopexy to bring cryptorchid testes down, with "
+        "careful surgical preservation of the vas deferens and blood "
+        "supply during any removal of Mullerian remnants, given the "
+        "risk of infertility from injury. Note: this is usually a "
+        "surgical surprise rather than a pre-operative diagnosis."
+    ),
+    "Erythema toxicum neonatorum": (
+        "Common, entirely benign neonatal rash of unclear cause "
+        "affecting up to half of term newborns. Clinical features: "
+        "erythematous macules with a central pale papule or pustule, "
+        "appearing in crops over the trunk and proximal limbs from "
+        "day one to three of life, sparing palms and soles, and "
+        "resolving spontaneously within one to two weeks. Ix: "
+        "clinical diagnosis; if confirmation is needed, a smear of "
+        "pustule contents shows eosinophils rather than the "
+        "neutrophils and organisms seen in neonatal sepsis or herpes "
+        "simplex. Mx: none required beyond parental reassurance. "
+        "Note: the well-appearing baby and eosinophilic smear are "
+        "what separate this confidently from neonatal HSV or "
+        "bacterial pustulosis, which cannot be missed."
+    ),
+    "Vernal keratoconjunctivitis": (
+        "Chronic, recurrent bilateral allergic conjunctivitis "
+        "affecting children and young adults, typically in warm "
+        "climates and often with an atopic background. Clinical "
+        "features: intense itching, photophobia, thick ropy mucoid "
+        "discharge and giant cobblestone papillae on the upper tarsal "
+        "conjunctiva; limbal disease gives Horner-Trantas dots. "
+        "Severe disease risks shield ulcers and corneal scarring. Ix: "
+        "clinical diagnosis from the seasonal pattern and "
+        "characteristic papillae; conjunctival scraping showing "
+        "eosinophils supports the diagnosis where atypical. Mx: "
+        "topical antihistamines and mast cell stabilisers first line, "
+        "topical corticosteroids in short courses for flares, topical "
+        "ciclosporin for steroid-sparing control of severe disease. "
+        "Note: this usually improves after puberty, which helps when "
+        "counselling anxious parents about a chronic-looking problem."
     ),
 }
 
