@@ -2972,6 +2972,90 @@ NEW_CONDITIONS = [
         "utd": [['Overview', 'metal fume fever']],
         "summary": "",
     },
+    {
+        "name": "Lipoma",
+        "aliases": ["subcutaneous lipoma"],
+        "utd": [['Overview', 'lipoma']],
+        "summary": "",
+    },
+    {
+        "name": "Nummular eczema",
+        "aliases": ["discoid eczema"],
+        "utd": [['Mx', 'nummular eczema']],
+        "summary": "",
+    },
+    {
+        "name": "Dyshidrotic eczema",
+        "aliases": ["pompholyx"],
+        "utd": [['Mx', 'dyshidrotic eczema pompholyx']],
+        "summary": "",
+    },
+    {
+        "name": "Grover disease",
+        "aliases": ["transient acantholytic dermatosis"],
+        "utd": [['Overview', 'Grover disease']],
+        "summary": "",
+    },
+    {
+        "name": "Branch retinal artery occlusion",
+        "aliases": ["BRAO"],
+        "utd": [['Mx', 'branch retinal artery occlusion']],
+        "summary": "",
+    },
+    {
+        "name": "Ischaemic optic neuropathy",
+        "aliases": ["NAION", "AAION", "arteritic ischemic optic neuropathy"],
+        "utd": [['Mx', 'ischemic optic neuropathy']],
+        "summary": "",
+    },
+    {
+        "name": "Ranula",
+        "aliases": ["plunging ranula", "mucous retention cyst"],
+        "utd": [['Overview', 'ranula']],
+        "summary": "",
+    },
+    {
+        "name": "Vocal cord paralysis",
+        "aliases": ["vocal fold paralysis", "recurrent laryngeal nerve palsy"],
+        "utd": [['Ix', 'vocal cord paralysis']],
+        "summary": "",
+    },
+    {
+        "name": "Chronic rhinosinusitis with polyps",
+        "aliases": ["CRSwNP", "nasal polyposis"],
+        "utd": [['Mx', 'chronic rhinosinusitis nasal polyps']],
+        "summary": "",
+    },
+    {
+        "name": "Peripartum cardiomyopathy",
+        "aliases": ["PPCM"],
+        "utd": [['Mx', 'peripartum cardiomyopathy']],
+        "summary": "",
+    },
+    {
+        "name": "Paraquat poisoning",
+        "aliases": ["paraquat toxicity"],
+        "utd": [['Mx', 'paraquat poisoning']],
+        "summary": "",
+    },
+    {
+        "name": "Antisynthetase syndrome",
+        "aliases": ["anti-Jo-1 syndrome"],
+        "utd": [['Overview', 'antisynthetase syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Craniosynostosis",
+        "aliases": ["scaphocephaly", "trigonocephaly"],
+        "utd": [['Overview', 'craniosynostosis']],
+        "summary": "",
+    },
+    {
+        "name": "Chancroid",
+        "aliases": ["Haemophilus ducreyi ulcer", "soft chancre"],
+        "utd": [['Mx', 'chancroid']],
+        "summary": "",
+    },
 ]
 
 
@@ -32542,6 +32626,315 @@ RICH_SUMMARIES = {
         "Prevention: local exhaust ventilation, respirator. Note: "
         "welder with Monday-morning flu that resolves by Wednesday "
         "- metal fume fever."
+    ),
+    "Lipoma": (
+        "Benign encapsulated tumour of mature adipocytes - the "
+        "commonest soft-tissue neoplasm in adults. Most are "
+        "cosmetically noticed rather than symptomatic. Sx: soft, "
+        "mobile, non-tender subcutaneous nodule, doughy on palpation; "
+        "slippage sign (rolls under the finger); typically on trunk, "
+        "neck, proximal limbs; usually 1-5 cm and stable in size for "
+        "years. Multiple lipomas suggest familial multiple "
+        "lipomatosis or Madelung disease (alcoholic, symmetrical "
+        "cervical). Ix: clinical diagnosis. Ultrasound if uncertain "
+        "or over 5 cm - homogeneous hyperechoic mass without "
+        "vascularity. MRI and biopsy only for red flags: rapid "
+        "growth, size over 5 cm, deep to fascia, pain, fixation "
+        "(raises liposarcoma suspicion, particularly in the "
+        "retroperitoneum or thigh). Mx: reassurance and observation "
+        "for typical lesions. Excision if symptomatic, cosmetically "
+        "troubling, or diagnostically uncertain - straightforward "
+        "under local anaesthesia for small subcutaneous lesions. "
+        "Note: soft mobile subcutaneous nodule that has been stable "
+        "for years - reassure. Rapid growth, over 5 cm, deep or "
+        "painful - image and refer."
+    ),
+    "Nummular eczema": (
+        "Chronic pruritic dermatosis with sharply demarcated "
+        "coin-shaped (nummular) plaques - a distinct pattern of "
+        "atopic-spectrum eczema. Bimodal peaks in young adults and "
+        "elderly, male predominance. Triggers: dry skin, contact "
+        "allergens, wool, hot showers, alcohol, staphylococcal "
+        "colonisation. Sx: multiple round or oval erythematous "
+        "plaques 1-10 cm, symmetrically distributed on extensor limbs "
+        "(particularly shins and forearms); very pruritic; oozing and "
+        "crusting when acute, scaly and lichenified when chronic; "
+        "often misdiagnosed as tinea. Ix: clinical; skin scraping for "
+        "KOH microscopy to exclude tinea (annular clearing is central "
+        "in tinea, active edge; nummular eczema is uniform across the "
+        "plaque); patch testing if suspicion of contact dermatitis "
+        "component. Mx: emollients heavily and often; potent topical "
+        "corticosteroid (mometasone or betamethasone) twice daily for "
+        "2-4 weeks; treat secondary staphylococcal infection with "
+        "oral flucloxacillin. Phototherapy or systemic "
+        "immunosuppression for refractory cases. Note: coin-shaped "
+        "scaly plaques on shins - nummular eczema, confirm with "
+        "negative KOH before starting a steroid."
+    ),
+    "Dyshidrotic eczema": (
+        "Recurrent vesicular eczema of the palms, soles and lateral "
+        "digits - also called pompholyx. Common in young adults, "
+        "female predominance, often precipitated by stress, heat, "
+        "sweating, contact allergens (nickel, cobalt) and atopic "
+        "background. Sx: sudden crops of intensely pruritic "
+        "deep-seated tapioca-like vesicles on palms, soles and sides "
+        "of fingers; vesicles do not rupture readily; resolve over "
+        "2-3 weeks with desquamation and fissuring; recurrent in "
+        "monthly cycles. Distinguish from tinea manuum (usually "
+        "unilateral, KOH positive) and contact dermatitis (linked to "
+        "exposure). Ix: clinical; KOH to exclude tinea; patch testing "
+        "if contact allergen suspected; consider nickel avoidance "
+        "trial. Mx: cool compresses, potent topical corticosteroid "
+        "(betamethasone dipropionate BD for 2-4 weeks) or "
+        "ultra-potent (clobetasol) for palms and soles; aluminium "
+        "chloride 20% for sweating; systemic corticosteroid or "
+        "ciclosporin for severe flares. Trigger avoidance is the "
+        "mainstay of maintenance. Note: recurrent tapioca vesicles on "
+        "palms plus fissuring - dyshidrotic eczema, screen for nickel "
+        "contact."
+    ),
+    "Grover disease": (
+        "Transient acantholytic dermatosis - a self-limited pruritic "
+        "eruption of the trunk in middle-aged and older men. "
+        "Precipitants include sweating, heat, sun exposure, bed rest "
+        "and prolonged occlusion. Sx: intensely pruritic small "
+        "erythematous or crusted papulovesicles scattered over the "
+        "chest, upper back and abdomen, sparing the face and limbs; "
+        "excoriations dominate the picture; recurrent flares over "
+        "weeks to months, sometimes years. Ix: skin biopsy is "
+        "diagnostic (focal acantholysis with dyskeratosis, four "
+        "histological patterns); rule out early bullous pemphigoid, "
+        "Darier disease and folliculitis in the differential. Mx: "
+        "reduce heat and sweating (light clothing, air conditioning, "
+        "cool showers); potent topical corticosteroid (mometasone or "
+        "betamethasone) BD for flares; menthol or pramoxine for "
+        "pruritus; systemic therapy (acitretin, isotretinoin, PUVA) "
+        "reserved for severe or persistent cases. Prognosis "
+        "self-limited - resolves over months to a few years. Note: "
+        "itchy chest papules in a middle-aged man during hot weather "
+        "- Grover disease, biopsy confirms."
+    ),
+    "Branch retinal artery occlusion": (
+        "Sudden painless partial visual field loss from embolic "
+        "occlusion of a branch of the central retinal artery. Retinal "
+        "equivalent of a stroke - the same workup and same urgent "
+        "secondary prevention. Aetiology: emboli from carotid "
+        "atherosclerosis (Hollenhorst plaques), cardiac source (AF, "
+        "valve disease), giant cell arteritis in over-50s. Sx: sudden "
+        "painless altitudinal or sectoral visual field loss; central "
+        "vision preserved unless macula involved; symptoms persist "
+        "unlike amaurosis fugax; usually monocular. Ix: fundoscopy - "
+        "pale wedge-shaped retinal infarct along the affected branch, "
+        "sometimes a visible embolus at a bifurcation; ESR and CRP "
+        "urgently in over-50s for GCA; ECG, carotid Doppler, echo for "
+        "embolic source; MRI brain to look for concurrent silent "
+        "cerebral infarct. Mx: within 4.5 hours, refer immediately "
+        "for IV thrombolysis consideration (some centres); otherwise "
+        "urgent stroke workup and secondary prevention - "
+        "antiplatelet, statin, BP and AF management; high-dose "
+        "prednisolone 1 mg/kg immediately if GCA suspected. Note: "
+        "sudden altitudinal field loss - fundoscopy for wedge "
+        "infarct, ESR now, treat as stroke."
+    ),
+    "Ischaemic optic neuropathy": (
+        "Sudden painless visual loss from infarction of the optic "
+        "nerve head. Subtypes: non-arteritic (NAION, common, "
+        "small crowded disc, cardiovascular risk factors, often on "
+        "waking) and arteritic (AAION, giant cell arteritis, over 50, "
+        "ESR grossly elevated, second eye at high risk within days). "
+        "Sx: NAION - sudden painless altitudinal visual loss on "
+        "waking, ipsilateral RAPD, disc oedema with flame "
+        "haemorrhages; contralateral disc small and crowded (disc at "
+        "risk). AAION - abrupt severe monocular vision loss with "
+        "headache, jaw claudication, temporal tenderness, scalp "
+        "tenderness and polymyalgia symptoms; pale swollen disc. Ix: "
+        "ESR and CRP in every suspected case (both elevated in AAION, "
+        "usually normal in NAION); urgent ophthalmology; temporal "
+        "artery biopsy within 2 weeks if AAION suspected. Mx: AAION - "
+        "IV methylprednisolone 1 g/day for 3 days then oral "
+        "prednisolone 1 mg/kg (start empirically before biopsy - "
+        "vision in the fellow eye is at risk within days). NAION - no "
+        "proven treatment; optimise cardiovascular risk factors, "
+        "screen for and treat sleep apnoea, avoid PDE5 inhibitors. "
+        "Note: sudden painless visual loss with pale swollen disc - "
+        "ESR now, steroids before biopsy if arteritic."
+    ),
+    "Ranula": (
+        "Mucous retention pseudocyst arising from the sublingual "
+        "salivary gland after ductal obstruction or trauma. Types: "
+        "simple (confined to floor of mouth) and plunging (extends "
+        "through mylohyoid into the neck). "
+        "Peaks in children and young adults. Sx: simple - soft "
+        "translucent bluish fluctuant swelling under the tongue, "
+        "usually painless, may interfere with speech or swallowing "
+        "when large. Plunging - unilateral submandibular or upper "
+        "cervical swelling, sometimes visible only in the neck "
+        "without an intraoral component. Ix: clinical for simple "
+        "ranula; ultrasound confirms cystic nature and distinguishes "
+        "from thyroglossal cyst, dermoid or lymphatic malformation. "
+        "MRI for plunging ranula to define cervical extent before "
+        "surgery. Mx: definitive treatment is excision of the "
+        "sublingual gland (source of mucin) - marsupialisation alone "
+        "has a high recurrence rate. Sclerotherapy (OK-432) is an "
+        "alternative. Small asymptomatic simple ranulas may be "
+        "observed. Note: bluish translucent floor-of-mouth swelling "
+        "in a child - ranula, refer for gland excision not just "
+        "drainage."
+    ),
+    "Vocal cord paralysis": (
+        "Loss of laryngeal muscle innervation from vagus or recurrent "
+        "laryngeal nerve injury - unilateral more common than "
+        "bilateral. Left recurrent laryngeal nerve loops under the "
+        "aortic arch and is more vulnerable. Aetiology: iatrogenic "
+        "(thyroidectomy, cervical spine or cardiothoracic surgery), "
+        "malignancy (lung, thyroid, oesophageal), idiopathic, "
+        "neurological (stroke, MS, Guillain-Barré), viral. Sx: "
+        "unilateral - breathy dysphonia, weak cough, aspiration on "
+        "liquids, exertional dyspnoea. Bilateral - biphasic stridor "
+        "and respiratory distress with paradoxically preserved voice; "
+        "may need emergency airway intervention. Ix: flexible "
+        "nasoendoscopy is diagnostic. CT skull base to aortic arch to "
+        "trace the recurrent laryngeal nerve for compressive lesion. "
+        "Laryngeal EMG helps prognosis. Mx: unilateral - speech "
+        "therapy 6-12 months, injection medialisation or thyroplasty "
+        "for persistent dysphonia or aspiration. Bilateral - urgent "
+        "airway assessment, tracheostomy or cordotomy. Treat the "
+        "underlying cause. Note: new hoarseness in a smoker - "
+        "nasoendoscopy and CT neck-chest looking for tumour."
+    ),
+    "Chronic rhinosinusitis with polyps": (
+        "Chronic inflammation of the nasal and paranasal sinus mucosa "
+        "for over 12 weeks with visible nasal polyps on endoscopy - a "
+        "Type 2 inflammatory phenotype associated with asthma, "
+        "aspirin-exacerbated respiratory disease (Samter triad) and "
+        "eosinophilia. Sx: nasal obstruction, reduced or absent smell "
+        "(anosmia is characteristic), postnasal drip, facial "
+        "fullness; smell loss and disease burden are the two features "
+        "that most affect quality of life. Ix: nasal endoscopy shows "
+        "pale grape-like polyps in the middle meatus; CT sinuses "
+        "shows opacification and polypoid soft tissue; check aspirin "
+        "history and asthma control; consider IgE, blood eosinophils. "
+        "Mx: intranasal corticosteroid (mometasone 200 microgram BD "
+        "via saline rinse for high delivery) is first-line and "
+        "lifelong; short oral prednisolone burst 25 mg for 1-2 weeks "
+        "for flares. Refer ENT for endoscopic sinus surgery if "
+        "medical therapy fails, then continue topical steroid post-op "
+        "to reduce recurrence. Biologics (dupilumab, omalizumab, "
+        "mepolizumab) PBS-restricted for severe refractory disease "
+        "with asthma. Note: anosmia plus polyps plus asthma - CRSwNP, "
+        "saline-rinse steroid then surgery."
+    ),
+    "Peripartum cardiomyopathy": (
+        "Idiopathic dilated cardiomyopathy presenting in the last "
+        "month of pregnancy or within 5 months postpartum, in the "
+        "absence of prior heart disease - a diagnosis of exclusion. "
+        "More common in multiparous women, over 30, African ancestry, "
+        "pre-eclampsia, twin pregnancy. Sx: typical heart failure - "
+        "dyspnoea, orthopnoea, PND, oedema, fatigue; overlap with "
+        "normal late-pregnancy symptoms delays diagnosis; "
+        "arrhythmias, embolism and cardiogenic shock can be "
+        "presenting features. Ix: BNP elevated, ECG usually abnormal "
+        "(LVH, T-wave changes, arrhythmia); echo shows LVEF under 45% "
+        "with LV dilatation; troponin and CTPA if PE suspected; "
+        "cardiac MRI once stable. Mx: standard heart failure therapy "
+        "- beta-blocker, diuretic, digoxin; ACEi and spironolactone "
+        "only postpartum (teratogenic in pregnancy); anticoagulate if "
+        "LVEF under 35% (embolism risk); bromocriptine may improve "
+        "recovery in some. Deliver if antenatal and unstable. "
+        "Contraception advice - future pregnancy carries high risk of "
+        "recurrence if LVEF has not normalised. Note: new heart "
+        "failure in a woman near term or postpartum - echo before "
+        "assuming PE or asthma."
+    ),
+    "Paraquat poisoning": (
+        "Severe herbicide poisoning with high mortality even after "
+        "small ingestions - paraquat concentrates in lung tissue and "
+        "generates free radicals, causing progressive pulmonary "
+        "fibrosis over days to weeks. Restricted product in Australia "
+        "but ingestion (accidental or self-harm) still occurs. Sx: "
+        "immediate corrosive oropharyngeal and gastric burns; "
+        "multi-organ failure over 1-4 days (renal, hepatic, cardiac); "
+        "progressive respiratory failure from pulmonary fibrosis over "
+        "1-2 weeks in survivors of the acute phase. Ix: urine sodium "
+        "dithionite test (blue colour confirms paraquat); "
+        "quantitative plasma paraquat determines prognosis by "
+        "nomogram; U&Es, LFTs, ABG, CXR. Mx: activated charcoal or "
+        "Fuller earth if within 1-2 hours; aggressive fluid "
+        "resuscitation and IV N-acetylcysteine; NEVER give "
+        "supplemental oxygen unless SpO2 below 90 percent - oxygen "
+        "accelerates free-radical injury and hastens death; "
+        "immunosuppression (cyclophosphamide plus methylprednisolone) "
+        "is used but evidence is weak; early haemoperfusion if "
+        "concentration in lethal range. Prognosis poor overall. Note: "
+        "never give oxygen for paraquat unless frankly hypoxic - it "
+        "kills faster."
+    ),
+    "Antisynthetase syndrome": (
+        "Systemic autoimmune disease defined by an antisynthetase "
+        "antibody (anti-Jo-1 most common, also anti-PL-7, anti-PL-12, "
+        "anti-EJ) with a specific clinical triad: inflammatory "
+        "myopathy, interstitial lung disease and inflammatory "
+        "polyarthritis. Overlaps with polymyositis and "
+        "dermatomyositis but ILD dominates prognosis. Sx: myositis "
+        "with symmetric proximal weakness; ILD (dyspnoea, dry cough) "
+        "often precedes myopathy; polyarthritis of small joints "
+        "resembling RA; Raynaud phenomenon; mechanic hands (thick "
+        "fissured skin on lateral fingers, pathognomonic); fever. Ix: "
+        "CK elevated, positive ANA and myositis-specific antibody "
+        "panel (anti-Jo-1 etc); HRCT chest for ILD pattern (NSIP most "
+        "common, sometimes OP or UIP); PFTs with DLCO; muscle biopsy "
+        "shows perifascicular necrosis and perimysial inflammation. "
+        "Mx: high-dose prednisolone 1 mg/kg plus steroid-sparing "
+        "agent (mycophenolate, azathioprine, methotrexate); rituximab "
+        "or cyclophosphamide for aggressive or rapidly progressive "
+        "ILD. ILD monitoring is lifelong. Note: proximal weakness "
+        "plus dyspnoea plus mechanic hands - antisynthetase syndrome, "
+        "HRCT and myositis antibody panel."
+    ),
+    "Craniosynostosis": (
+        "Premature fusion of one or more cranial sutures causing an "
+        "abnormal skull shape and, in complex cases, raised "
+        "intracranial pressure and neurodevelopmental delay. Presents "
+        "at birth or in early infancy. Non-syndromic single-suture is "
+        "most common. Syndromic forms (Apert, Crouzon, Pfeiffer) "
+        "involve multiple sutures and other malformations. Sx: "
+        "characteristic skull shape by suture - sagittal gives "
+        "scaphocephaly (long narrow), unicoronal gives anterior "
+        "plagiocephaly, metopic gives trigonocephaly (triangular "
+        "forehead). Palpable ridge along the fused suture; anterior "
+        "fontanelle may close early. Distinguished from positional "
+        "plagiocephaly by absent parallelogram deformation on ear "
+        "position. Ix: clinical, confirmed by low-dose CT skull with "
+        "3D reconstruction. Genetic testing for syndromic features. "
+        "Ophthalmology and developmental review. Mx: refer to "
+        "craniofacial centre. Surgical correction (endoscopic strip "
+        "craniectomy in infancy, or open vault remodelling) before 12 "
+        "months for best cosmetic and neurodevelopmental outcome. "
+        "Note: abnormal head shape from birth plus palpable sutural "
+        "ridge - CT skull, refer craniofacial team early."
+    ),
+    "Chancroid": (
+        "Sexually transmitted genital ulcer disease caused by "
+        "Haemophilus ducreyi. Now rare in Australia, still endemic in "
+        "parts of Africa, Asia and the Caribbean; a cofactor for HIV "
+        "transmission. Sx: one or more painful non-indurated genital "
+        "ulcers with a ragged undermined edge and grey exudate, "
+        "appearing 3-10 days after exposure; unilateral tender "
+        "fluctuant inguinal lymphadenopathy (bubo) in 50%, may "
+        "suppurate through the skin. Distinguish from syphilis "
+        "(painless, indurated, clean base), herpes (grouped vesicles "
+        "then ulcers, recurrent, painful) and lymphogranuloma "
+        "venereum (transient ulcer, later bilateral buboes). Ix: PCR "
+        "of ulcer swab is the most sensitive test (culture is "
+        "difficult and rarely done); test for concurrent syphilis, "
+        "HSV, HIV and other STIs; dark-ground microscopy for "
+        "syphilis; HIV testing at diagnosis and at 3 months. Mx: "
+        "azithromycin 1 g PO single dose OR ceftriaxone 250 mg IM "
+        "single dose; ciprofloxacin 500 mg PO BD for 3 days if "
+        "allergic. Treat partners from the last 10 days. Aspirate or "
+        "incise fluctuant buboes. Note: painful genital ulcer plus "
+        "tender bubo in a returned traveller - chancroid, "
+        "azithromycin single dose and test for HIV."
     ),
 }
 
