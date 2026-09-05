@@ -3314,6 +3314,90 @@ NEW_CONDITIONS = [
         "utd": [['Mx', 'forearm compartment syndrome']],
         "summary": "",
     },
+    {
+        "name": "Enteropathic arthritis",
+        "aliases": ["IBD arthritis", "IBD-associated arthritis"],
+        "utd": [['Mx', 'enteropathic arthritis']],
+        "summary": "",
+    },
+    {
+        "name": "Costochondritis",
+        "aliases": ["chondrosternal pain"],
+        "utd": [['Mx', 'costochondritis']],
+        "summary": "",
+    },
+    {
+        "name": "Tietze syndrome",
+        "aliases": ["costochondral swelling"],
+        "utd": [['Overview', 'Tietze syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Legg-Calve-Perthes disease",
+        "aliases": ["Perthes disease", "LCP"],
+        "utd": [['Mx', 'Legg Calve Perthes disease']],
+        "summary": "",
+    },
+    {
+        "name": "Meconium ileus",
+        "aliases": ["neonatal meconium obstruction"],
+        "utd": [['Mx', 'meconium ileus']],
+        "summary": "",
+    },
+    {
+        "name": "Nutcracker oesophagus",
+        "aliases": ["jackhammer esophagus", "hypertensive peristalsis"],
+        "utd": [['Ix', 'nutcracker esophagus']],
+        "summary": "",
+    },
+    {
+        "name": "Plummer-Vinson syndrome",
+        "aliases": ["Paterson-Kelly syndrome", "sideropenic dysphagia"],
+        "utd": [['Overview', 'Plummer Vinson syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Cephalohaematoma",
+        "aliases": ["subperiosteal haematoma newborn"],
+        "utd": [['Overview', 'cephalohematoma newborn']],
+        "summary": "",
+    },
+    {
+        "name": "Caput succedaneum",
+        "aliases": ["scalp oedema newborn"],
+        "utd": [['Overview', 'caput succedaneum']],
+        "summary": "",
+    },
+    {
+        "name": "Subgaleal haemorrhage",
+        "aliases": ["subaponeurotic hemorrhage neonate"],
+        "utd": [['Mx', 'subgaleal hemorrhage newborn']],
+        "summary": "",
+    },
+    {
+        "name": "Gastroschisis",
+        "aliases": ["abdominal wall defect right of cord"],
+        "utd": [['Mx', 'gastroschisis']],
+        "summary": "",
+    },
+    {
+        "name": "Omphalocele",
+        "aliases": ["exomphalos"],
+        "utd": [['Mx', 'omphalocele']],
+        "summary": "",
+    },
+    {
+        "name": "Alagille syndrome",
+        "aliases": ["arteriohepatic dysplasia", "AGS"],
+        "utd": [['Overview', 'Alagille syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal hypoglycaemia",
+        "aliases": ["neonatal hypoglycemia"],
+        "utd": [['Mx', 'neonatal hypoglycemia']],
+        "summary": "",
+    },
 ]
 
 
@@ -34141,6 +34225,316 @@ RICH_SUMMARIES = {
         "to heart level (not above). Do not apply ice. Note: pain out "
         "of proportion after a supracondylar fracture - fasciotomy "
         "now, not pressures."
+    ),
+    "Enteropathic arthritis": (
+        "Inflammatory arthritis associated with inflammatory bowel "
+        "disease (ulcerative colitis, Crohn), affecting up to 20% of "
+        "IBD patients. Two distinct patterns. Type 1 - pauciarticular "
+        "(under 5 joints), asymmetric, large joint (knee, ankle), "
+        "acute self-limiting flares that mirror gut disease activity, "
+        "HLA-B27 negative. Type 2 - polyarticular, symmetric, small "
+        "joints of hands, independent of gut disease activity, "
+        "chronic. Axial disease (sacroiliitis, ankylosing "
+        "spondylitis) also occurs and is HLA-B27 associated. Sx: "
+        "joint pain, swelling, morning stiffness of affected pattern; "
+        "inflammatory back pain in axial disease; may precede IBD "
+        "diagnosis. Extra-articular: uveitis, erythema nodosum, "
+        "pyoderma gangrenosum. Ix: FBC, ESR, CRP, HLA-B27; X-ray of "
+        "affected joints; MRI SI joints for early sacroiliitis; "
+        "colonoscopy if IBD not confirmed. Mx: treat the underlying "
+        "IBD first - controls type 1 peripheral disease. "
+        "Sulfasalazine or methotrexate for persistent peripheral. "
+        "Anti-TNF (infliximab, adalimumab) for axial disease or "
+        "resistant peripheral - dual benefit on gut and joints. Avoid "
+        "NSAIDs (flare IBD). Note: asymmetric large-joint arthritis "
+        "flaring with the gut - treat the gut, joints follow."
+    ),
+    "Costochondritis": (
+        "Self-limited inflammation of the costochondral junctions - "
+        "the commonest musculoskeletal cause of anterior chest pain "
+        "in outpatients, particularly primary care. Peaks in young "
+        "adults; often precipitated by unaccustomed heavy lifting, "
+        "forceful cough, or minor chest wall trauma. Sx: sharp or "
+        "aching anterior chest pain reproducibly worse with palpation "
+        "of the affected costochondral junctions, movement, deep "
+        "breathing or coughing; usually multiple sites unilateral "
+        "(second to fifth costochondral joints most common); no "
+        "visible swelling (distinguishes from Tietze syndrome). Ix: "
+        "clinical diagnosis. Investigate to exclude cardiac and "
+        "pulmonary causes as appropriate - ECG and troponin if any "
+        "doubt, D-dimer or CTPA if PE considered, chest X-ray if "
+        "respiratory features. Do not over-investigate a young "
+        "patient with pain fully reproducible on palpation. Mx: "
+        "reassurance - explain the self-limited nature (weeks to "
+        "months), NSAIDs, activity modification, warm compress. "
+        "Simple analgesia usually sufficient. Local corticosteroid "
+        "injection considered for refractory cases at 3+ months. "
+        "Note: fully reproducible chest pain on palpation in a young "
+        "adult - costochondritis, reassure and NSAIDs."
+    ),
+    "Tietze syndrome": (
+        "Idiopathic inflammation of the costal cartilages producing "
+        "PALPABLE SWELLING at the costochondral or sternoclavicular "
+        "junction - distinguishes it from costochondritis (no "
+        "swelling). Rarer, usually a single joint (second or third "
+        "costal cartilage most common), young adults. Sx: painful "
+        "visible swelling of the affected junction, tender on "
+        "palpation, exacerbated by arm movement, coughing, sneezing "
+        "and deep breathing; chronic, waxing and waning over months "
+        "to years; may present with concern about a lump. Ix: "
+        "clinical; ultrasound confirms swelling; MRI or CT if "
+        "malignancy or SAPHO syndrome suspected (multiple "
+        "involvement, concurrent skin lesions); rule out relapsing "
+        "polychondritis and infective septic arthritis of "
+        "sternoclavicular joint (IVDU classic). Mx: reassurance, "
+        "NSAIDs, activity modification, warm compress; local "
+        "corticosteroid injection for persistent symptoms; "
+        "self-limiting in most within 12 months. Surgical excision "
+        "reserved for exceptional cases with disabling pain "
+        "unresponsive to conservative management. Note: tender lump "
+        "plus pain at second costochondral junction in a young adult "
+        "- Tietze, not cancer."
+    ),
+    "Legg-Calve-Perthes disease": (
+        "Idiopathic avascular necrosis of the femoral head in "
+        "children aged 4-10, peaking 5-7 years - male:female 4:1, "
+        "bilateral in 10-20%. Aetiology unknown. Sx: insidious limp "
+        "with intermittent hip, groin or KNEE pain (referred), "
+        "reduced abduction and internal rotation, painless in "
+        "one-third; leg length discrepancy in advanced disease. "
+        "Trendelenburg gait. Ix: bilateral hip X-ray with frog-leg "
+        "lateral view - staged by Waldenstrom (initial normal, then "
+        "increased density, fragmentation, reossification and healing "
+        "over 2-4 years). Early X-ray may be normal - MRI is more "
+        "sensitive. FBC and ESR to exclude septic arthritis and "
+        "transient synovitis. Mx: orthopaedic referral. Under 6 years "
+        "or minor head involvement - observe and activity "
+        "modification; physiotherapy to preserve range of motion. "
+        "Older or more extensive involvement - containment surgery "
+        "(femoral or pelvic osteotomy) to keep the head within the "
+        "acetabulum. Prognosis depends on age at onset (younger "
+        "better) and head involvement. Note: limping 5-year-old with "
+        "knee pain - X-ray both hips."
+    ),
+    "Meconium ileus": (
+        "Intestinal obstruction in a neonate from tenacious meconium "
+        "impacting in the terminal ileum - a presenting feature of "
+        "cystic fibrosis in 15-20% of CF infants (over 90% of "
+        "meconium ileus cases have CF). Sx: bilious vomiting in the "
+        "first 24-48 hours of life, abdominal distension, failure to "
+        "pass meconium (or delayed meconium passage); soap-bubble "
+        "appearance of trapped air and meconium in the right lower "
+        "quadrant on X-ray; microcolon distal to the obstruction on "
+        "contrast enema. Distinguish from Hirschsprung (failure to "
+        "pass meconium plus explosive stool on rectal exam, "
+        "transition zone on biopsy). Ix: abdominal X-ray - dilated "
+        "small bowel loops with soap-bubble appearance, no air-fluid "
+        "levels typically (thick meconium); Gastrografin contrast "
+        "enema is both diagnostic (microcolon) and therapeutic "
+        "(osmotic effect may relieve obstruction); IRT and sweat test "
+        "for CF; CFTR gene testing. Mx: NG decompression, IV fluids. "
+        "Uncomplicated - therapeutic Gastrografin enema clears in "
+        "60-80%. Complicated (perforation, atresia, meconium "
+        "peritonitis) - surgery. Long-term CF care. Note: neonate "
+        "with bowel obstruction plus soap-bubble on X-ray - meconium "
+        "ileus, sweat test."
+    ),
+    "Nutcracker oesophagus": (
+        "Oesophageal motility disorder with high-amplitude "
+        "peristaltic contractions - part of the spectrum of spastic "
+        "oesophageal disorders (with diffuse spasm and jackhammer). "
+        "Manometric diagnosis requires distal contraction amplitude "
+        "over 180 mmHg or distal contractile integral over 5000 "
+        "mmHg-s-cm (jackhammer variant). Sx: intermittent "
+        "retrosternal chest pain often mimicking cardiac ischaemia, "
+        "dysphagia (less prominent than in achalasia), sometimes "
+        "regurgitation. Attacks triggered by cold liquids or stress. "
+        "Ix: exclude cardiac cause first (ECG, troponin, stress "
+        "test). Upper endoscopy to exclude structural cause. "
+        "Oesophageal manometry is diagnostic. Barium swallow may show "
+        "corkscrew appearance. Mx: reassurance and trigger avoidance. "
+        "Smooth muscle relaxants - calcium channel blocker, nitrate "
+        "or PDE5 inhibitor. Botulinum toxin injection at endoscopy "
+        "for refractory cases. Peroral endoscopic myotomy for severe "
+        "disabling disease. Treat coexisting reflux and anxiety. "
+        "Note: chest pain with normal cardiac workup - manometry may "
+        "show nutcracker."
+    ),
+    "Plummer-Vinson syndrome": (
+        "Rare triad of iron deficiency anaemia, dysphagia and "
+        "cervical oesophageal web - now uncommon in developed "
+        "countries with better nutrition. Historically "
+        "over-represented in Scandinavian and North American women. "
+        "Recognised premalignant condition (postcricoid squamous cell "
+        "carcinoma risk 10%). Sx: chronic iron deficiency anaemia "
+        "(fatigue, pallor, angular cheilitis, atrophic glossitis, "
+        "koilonychia), progressive dysphagia for solids from a "
+        "proximal oesophageal web; occasional regurgitation of "
+        "undigested food; more common in middle-aged women. Ix: FBC "
+        "(microcytic anaemia), iron studies confirm deficiency; "
+        "barium swallow shows a thin post-cricoid web; upper "
+        "endoscopy visualises the web and enables biopsy to exclude "
+        "malignancy; look for underlying cause of iron deficiency "
+        "(colonoscopy, menstrual history, coeliac serology). Mx: iron "
+        "replacement (oral or IV) resolves the web in most cases. "
+        "Endoscopic dilatation for persistent stricture or dysphagia "
+        "after iron replete. Surveillance endoscopy for post-cricoid "
+        "carcinoma. Treat underlying iron loss. Note: middle-aged "
+        "woman with dysphagia plus microcytic anaemia - iron studies, "
+        "barium swallow, endoscopy."
+    ),
+    "Cephalohaematoma": (
+        "Subperiosteal collection of blood over a single cranial bone "
+        "in a newborn - blood contained by periosteal attachments "
+        "DOES NOT cross suture lines. Usually parietal bone. Occurs "
+        "in 1-2% of births, more common with instrumental delivery. "
+        "Sx: firm swelling of the scalp appearing hours to days after "
+        "birth, becoming fluctuant; strictly confined to one cranial "
+        "bone; overlying skin normal; infant otherwise well. "
+        "Distinguish from caput succedaneum (crosses sutures, present "
+        "at birth) and subgaleal haemorrhage (crosses sutures, boggy, "
+        "dangerous). Ix: clinical. Skull X-ray or CT only if "
+        "concurrent skull fracture suspected (5% of cases). FBC and "
+        "coagulation if large or expanding. Watch bilirubin - "
+        "breakdown of the collection causes jaundice. Mx: reassurance "
+        "and observation - resorbs over weeks to months. Do NOT "
+        "aspirate (infection risk without benefit). Monitor bilirubin "
+        "daily until resolving. Follow up for late calcification "
+        "which may leave a palpable ridge. Note: scalp swelling "
+        "confined to one bone in a newborn - cephalohaematoma, watch "
+        "bilirubin, do not aspirate."
+    ),
+    "Caput succedaneum": (
+        "Soft-tissue swelling of the presenting part of the fetal "
+        "scalp from pressure against the cervix during labour - "
+        "diffuse boggy oedema that CROSSES SUTURE LINES. Common and "
+        "benign, distinct from cephalohaematoma (bone-limited, later "
+        "onset) and subgaleal haemorrhage (dangerous, extensive, "
+        "boggy). Sx: soft pitting boggy swelling present at birth, "
+        "crosses suture lines and midline, overlying skin sometimes "
+        "bruised or petechial; infant otherwise well; no expanding "
+        "volume. Ix: clinical - no imaging needed for uncomplicated "
+        "presentation. If in doubt about subgaleal haemorrhage, "
+        "serial head circumference measurements and FBC. Mx: "
+        "reassurance and observation; resolves spontaneously in 24-48 "
+        "hours (sometimes several days); no intervention needed. "
+        "Bilirubin monitoring is not routine (unlike "
+        "cephalohaematoma). Educate parents that a temporary moulded "
+        "appearance is normal. Note: soft boggy scalp swelling that "
+        "crosses sutures and is present at birth - caput, reassure, "
+        "resolves in days."
+    ),
+    "Subgaleal haemorrhage": (
+        "Bleeding into the potential space between the epicranial "
+        "aponeurosis (galea) and the periosteum of the skull - can "
+        "accumulate the neonate's entire blood volume, making it a "
+        "life-threatening emergency. Almost always associated with "
+        "instrumental delivery (vacuum particularly). Sx: diffuse "
+        "boggy fluctuant swelling of the scalp CROSSING SUTURE LINES, "
+        "expanding over hours; may extend from orbital ridge to nape "
+        "and laterally to the ears; increasing head circumference; "
+        "pallor, tachycardia, hypotension, poor perfusion; jaundice "
+        "from haemolysis of extravasated blood. Ix: serial head "
+        "circumference (increase over 1 cm per hour is concerning); "
+        "FBC, coagulation, blood group and crossmatch, bilirubin; "
+        "skull X-ray or CT if fracture suspected. Mx: NICU admission "
+        "for close monitoring, aggressive volume and blood product "
+        "resuscitation, correct any coagulopathy, phototherapy for "
+        "hyperbilirubinaemia; watch for shock and multi-organ "
+        "failure. Prevention - cautious use of vacuum, abandon if "
+        "unsuccessful in 3 attempts or 20 minutes. Mortality 12-25% "
+        "if massive. Note: boggy scalp swelling after vacuum delivery "
+        "that crosses sutures and expands - subgaleal, NICU now."
+    ),
+    "Gastroschisis": (
+        "Congenital abdominal wall defect (usually right of a "
+        "normally-inserted umbilical cord) with free bowel loops "
+        "herniated outside the abdomen without a covering membrane - "
+        "the bowel is exposed to amniotic fluid, causing inflammation "
+        "and matting. Incidence rising globally; associated with "
+        "young maternal age, smoking and drug use in pregnancy. Sx: "
+        "antenatal diagnosis on 18-20 week ultrasound - free-floating "
+        "bowel loops adjacent to a normal umbilicus, raised AFP. "
+        "The neonate has exposed thickened matted bowel loops "
+        "without a covering sac, right of the umbilical cord. Not "
+        "associated with "
+        "chromosomal abnormalities (unlike omphalocele) but bowel "
+        "atresia in 10%. Ix: prenatal serial growth ultrasound and "
+        "cardiac echo. Postnatal - abdominal examination confirms; "
+        "FBC, U&Es, blood gas. Mx: delivery in a tertiary centre. "
+        "Wrap exposed bowel in clear sterile film or place in a bowel "
+        "bag immediately (heat and fluid loss). NG decompression, IV "
+        "resuscitation. Primary surgical closure at 24-48 hours if "
+        "defect small, otherwise silo reduction over 5-10 days. Long "
+        "TPN course typical. Note: exposed bowel right of umbilicus "
+        "with no covering - bowel bag now, tertiary centre."
+    ),
+    "Omphalocele": (
+        "Congenital central abdominal wall defect with abdominal "
+        "contents herniated INTO the umbilical cord and covered by a "
+        "membranous sac (peritoneum and amnion) - the cord inserts on "
+        "the sac. Distinct from gastroschisis. Strong association "
+        "with chromosomal abnormalities (30-50%; trisomy 13, 18, 21) "
+        "and other malformations (BWS, pentalogy of Cantrell, "
+        "cardiac defects). Sx: antenatal diagnosis on 18-20 week "
+        "ultrasound - abdominal contents in a membranous sac with "
+        "cord on the sac. The neonate has a translucent sac "
+        "containing "
+        "bowel and often liver, cord attached to the sac apex. Ix: "
+        "karyotyping and microarray, fetal echocardiogram, detailed "
+        "anomaly scan. Postnatal - abdominal examination, imaging for "
+        "associated anomalies. Mx: delivery in a tertiary centre. "
+        "Protect the intact sac (do NOT rupture it - the sac protects "
+        "bowel). NG decompression, IV fluids. Primary surgical "
+        "closure for small defects, staged silo reduction over 1-2 "
+        "weeks for large. Ruptured sac is a surgical emergency. "
+        "Long-term care for associated anomalies. Note: abdominal "
+        "contents in a covered sac with cord on the sac - "
+        "omphalocele, karyotype, echo, do not rupture the sac."
+    ),
+    "Alagille syndrome": (
+        "Autosomal dominant multisystem disorder from JAG1 (95%) or "
+        "NOTCH2 mutation - chronic cholestasis from paucity of "
+        "interlobular bile ducts, plus characteristic facies and "
+        "involvement of heart, vertebrae, eye and kidneys. Sx: "
+        "neonatal cholestasis (conjugated hyperbilirubinaemia, pale "
+        "stools, dark urine) progressing to pruritus and xanthomas; "
+        "growth failure, fat-soluble vitamin deficiencies. "
+        "Characteristic facies (broad forehead, deep-set eyes, "
+        "pointed chin - inverted triangle). Cardiac (peripheral "
+        "pulmonary artery stenosis most common). Butterfly vertebrae, "
+        "posterior embryotoxon, renal cysts. Ix: LFTs (raised "
+        "conjugated bilirubin, gamma-GT). Liver biopsy shows bile "
+        "duct paucity. Genetic testing for JAG1 or NOTCH2. "
+        "Echocardiogram, slit-lamp, spine X-ray, renal ultrasound. "
+        "Mx: fat-soluble vitamin supplementation, ursodeoxycholic "
+        "acid for cholestasis, rifampicin or ileal bile acid "
+        "transporter inhibitors for pruritus, MCT-based formula. "
+        "Liver transplantation for refractory disease. Genetic "
+        "counselling. Note: neonatal cholestasis plus PPS murmur plus "
+        "triangular facies - Alagille, liver biopsy and JAG1 testing."
+    ),
+    "Neonatal hypoglycaemia": (
+        "Low blood glucose in a newborn - clinically significant "
+        "below 2.6 mmol/L in the first 48 hours. Usually "
+        "transient in high-risk infants. Aetiology: "
+        "hyperinsulinism (IDM or congenital), prematurity, SGA, "
+        "LGA, sepsis, hypothermia, feeding difficulty, inborn "
+        "error of metabolism, hypopituitarism. Sx: jittery, "
+        "lethargy, poor feeding, apnoea, cyanosis, hypotonia and "
+        "seizure; often asymptomatic. Ix: bedside glucose with "
+        "venous confirmation if abnormal. For persistent cases "
+        "take a critical sample during hypoglycaemia (insulin, "
+        "C-peptide, cortisol, GH, ketones, free fatty acids and "
+        "ammonia) plus urine metabolic screen. Mx: feed the "
+        "infant for asymptomatic or borderline cases. IV 10% "
+        "dextrose bolus 2 mL/kg then continuous infusion at 6-8 "
+        "mg/kg/min for symptomatic or persistent cases; monitor "
+        "glucose 2-4 hourly. Endocrinology referral if persistent "
+        "beyond 48 hours or high dextrose requirement. Note: "
+        "symptomatic under 2.6 mmol/L - IV dextrose bolus plus "
+        "infusion, "
+        "critical sample first."
     ),
 }
 
