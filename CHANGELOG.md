@@ -291,7 +291,7 @@ implementation over every string in the library before being kept.
 ### Fixed
 
 - **Twelve preclinical terms could never be highlighted.** Their
-  canonical names begin or end with a non-word character - `LR+`, `LR-`,
+  primary names begin or end with a non-word character - `LR+`, `LR-`,
   `Compliance (respiratory)`, `Vitamin B12 (cobalamin)` and eight others
   - and `\b` has no boundary to anchor to after `)` or `+`, so the
   alternation regex could not match them under any input. `PhraseMatcher`
@@ -644,7 +644,7 @@ control of the content host or local access to the add-on folder.
 - **Eight popups were titled something other than what they described.**
   An override keyed on an alias still merges, because the lookup is
   keyed on every alias, but the popup takes its heading from the
-  canonical name. A summary written about community-acquired pneumonia
+  primary name. A summary written about community-acquired pneumonia
   appeared under "Pneumonia", and one written about acute coronary
   syndrome under "Myocardial infarction" - narrower than the heading
   claimed, silently. All eight re-keyed, with a test so it cannot
@@ -833,7 +833,7 @@ control of the content host or local access to the add-on folder.
   so the label silently rendered as body text, which is how a
   differential ended up buried mid-paragraph inside the management
   section of the stroke popup. Labels now match in any case and display
-  in a canonical form.
+  in a primary form.
 - **A repeated label no longer emits a second heading.** Summaries
   legitimately return to a heading - acute management, then long-term -
   and two identical `MX` headers stacked on one popup read as a
@@ -881,7 +881,7 @@ control of the content host or local access to the add-on folder.
   Differential, Management, with `Note:` for the discriminating fact and
   `Red flags:` for anything time-critical. Dermatomyositis goes from 968
   characters of prose to 2,337 in seven labelled sections.
-- **Override-layer tests.** Overrides apply by canonical name, so a typo
+- **Override-layer tests.** Overrides apply by primary name, so a typo
   or a renamed condition silently does nothing - the popup keeps its old
   summary and nothing errors. The tests assert every override lands, has
   at least three sections, uses only labels the renderer knows, and uses
@@ -1357,7 +1357,7 @@ control of the content host or local access to the add-on folder.
 
 - **"Open article" now opens the article.** Every condition and 47% of
   drugs had no direct link, so the button loaded a search results page
-  and left you to click again — which is most of why the sidebar was
+  and left you to click again - which is most of why the sidebar was
   worth skipping. The panel now resolves the term to the real chapter or
   drug page, via NCBI's E-utilities for StatPearls and by following an
   unambiguous exact match for DrugBank, and caches the result so it only
@@ -1369,7 +1369,7 @@ control of the content host or local access to the add-on folder.
   so the popup covers the summary and one click reaches the detail.
 - Part of the popup stylesheet was silently discarded. A missing string
   concatenation left JavaScript's automatic semicolon insertion to split
-  the declaration, dropping every rule after it — the UpToDate chips,
+  the declaration, dropping every rule after it - the UpToDate chips,
   section labels and rarity styling were unstyled as a result.
 - **The add-on follows Anki's theme when it changes mid-session.**
   Previously the palette was fixed when Anki started, so switching
@@ -1478,7 +1478,7 @@ control of the content host or local access to the add-on folder.
 ### Fixed
 
 - Capitalisation variants of the same term no longer appear as separate
-  synonyms. Aliases that differ from the canonical name only in case
+  synonyms. Aliases that differ from the primary name only in case
   have been pruned (10 conditions, 6 drugs), and the lookup builders now
   case-insensitively dedup names at load time so future entries can't
   reintroduce the issue.
@@ -1629,7 +1629,7 @@ AnkiDate addons into a single package and adds a third AI-chat module.
   "Myocardial infarction" with the full condition summary).
 - British / American spelling normalisation in the acronym → condition
   resolver so "Acute lymphoblastic Leukemia" matches the British
-  "Leukaemia" canonical entry.
+  "Leukaemia" primary entry.
 
 ### Changed
 

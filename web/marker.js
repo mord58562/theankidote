@@ -4,8 +4,7 @@
  * directly into card HTML).  This script handles:
  *   1. Hover tooltip  (event-delegated - works for spans added at any time)
  *   2. Click → pycmd  (event-delegated)
- *   3. spAddon.mark() - async fallback when results arrive after card render
- *   4. spAddon.clear()
+ *   3. Escape / outside-click dismissal for the tip
  *
  * Injected once via webview_will_set_content; idempotent.
  */
@@ -1014,107 +1013,28 @@
     if (url && typeof pycmd !== "undefined") pycmd("tad_open:" + url);
   });
 
-  /* ── CSS ─────────────────────────────────────────────────────────────── */
-
-  function _injectCSS(color) {
-    var id = "_spStyle";
-    var el = document.getElementById(id);
-    if (!el) { el = document.createElement("style"); el.id = id; document.head.appendChild(el); }
-    el.textContent =
-      ".sp-mark{border-bottom:2px solid " + color + ";cursor:pointer;" +
-      "border-radius:2px;display:inline;transition:background .1s;}" +
-      ".sp-mark:hover{background:rgba(15,202,212,.18);}";
-  }
-
-  /* ── spAddon.mark() - async fallback only ────────────────────────────── */
-
-  function _escRx(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
-
-  function _replaceText(node, rx, map, lowerKey) {
-    if (node.nodeType === 3) {
-      var txt = node.nodeValue;
-      if (!txt || !txt.trim()) return;
-      rx.lastIndex = 0;
-      if (!rx.test(txt)) return;
-      rx.lastIndex = 0;
-      var html = txt.replace(rx, function (m) {
-        var t = map[lowerKey ? m.toLowerCase() : m];
-        if (!t) return m;
-        var utdAttr = "";
-        try { utdAttr = JSON.stringify(t.utd || []); } catch (e) { utdAttr = "[]"; }
-        return '<span class="sp-mark" data-sp-url="' + _esc(t.url) +
-               '" data-sp-title="' + _esc(t.article || t.title) +
-               '" data-sp-summary="' + _esc(t.summary || "") +
-               '" data-sp-source="' + _esc(t.source || "") +
-               '" data-sp-badge="' + _esc(t.badge || "") +
-               '" data-sp-utd="' + _esc(utdAttr) + '">' + m + "</span>";
-      });
-      var wrap = document.createElement("span");
-      wrap.innerHTML = html;
-      node.parentNode.insertBefore(wrap, node);
-      node.parentNode.removeChild(node);
-      return;
+  // Dismiss on Escape and on mousedown outside both the mark and the tip.
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && _tip && _tip.style.display !== "none") {
+      _cancelDwell();
+      _cancelHide();
+      _hideTip();
     }
-    if (node.nodeType !== 1) return;
-    var tag = (node.tagName || "").toUpperCase();
-    if (tag === "SCRIPT" || tag === "STYLE" || tag === "INPUT" ||
-        tag === "TEXTAREA" || (node.classList && node.classList.contains("sp-mark"))) return;
-    var kids = Array.prototype.slice.call(node.childNodes);
-    for (var i = 0; i < kids.length; i++) _replaceText(kids[i], rx, map, lowerKey);
-  }
+  });
+
+  document.addEventListener("mousedown", function (e) {
+    if (!_tip || _tip.style.display === "none") return;
+    if (_closest(e.target, "sp-mark")) return;   // click on a highlight
+    if (_inTip(e.target)) return;                // click inside the popup
+    _cancelDwell();
+    _cancelHide();
+    _hideTip();
+  }, true);
 
   /* ── public API ──────────────────────────────────────────────────────── */
 
   window.spAddon = {
     _v: 18,
-
-    mark: function (terms, color) {
-      color = color || "#0fcad4";
-      _injectCSS(color);
-      this.clear();
-      if (!terms || !terms.length) return;
-
-      terms = terms.slice().sort(function (a, b) { return b.title.length - a.title.length; });
-
-      function _runPass(subset, flags, mapKeyFn) {
-        var parts = [], map = {};
-        for (var i = 0; i < subset.length; i++) {
-          var t = subset[i];
-          if (!t.title) continue;
-          var minLen = t.case_sensitive ? 2 : 4;
-          if (t.title.length < minLen) continue;
-          parts.push("\\b(" + _escRx(t.title) + ")\\b");
-          map[mapKeyFn(t.title)] = t;
-          var sh = t.title.split(/[,(]/)[0].trim();
-          if (sh !== t.title && sh.length >= minLen && !map[mapKeyFn(sh)]) {
-            parts.push("\\b(" + _escRx(sh) + ")\\b");
-            map[mapKeyFn(sh)] = t;
-          }
-        }
-        if (!parts.length) return;
-        var rx = new RegExp(parts.join("|"), flags);
-        _replaceText(document.body, rx, map, flags.indexOf("i") >= 0);
-      }
-
-      var sensitive   = [], insensitive = [];
-      for (var i = 0; i < terms.length; i++) {
-        (terms[i].case_sensitive ? sensitive : insensitive).push(terms[i]);
-      }
-      if (sensitive.length)   _runPass(sensitive,   "g",  function (s) { return s; });
-      if (insensitive.length) _runPass(insensitive, "gi", function (s) { return s.toLowerCase(); });
-    },
-
-    clear: function () {
-      var old = document.querySelectorAll(".sp-mark");
-      for (var i = 0; i < old.length; i++) {
-        var m = old[i];
-        if (m.parentNode)
-          m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
-      }
-      if (document.body) document.body.normalize();
-      _hideTip();
-    },
-
     dismissTip: function () { _hideTip(); }
   };
 })();

@@ -8,7 +8,7 @@ held, so `Causes: A; B; C` spent about 60 pixels saying what fits on one
 22-pixel line. Across the reference database this was the single largest
 cause of popups that overflowed and scrolled.
 
-Lists still bullet where bullets earn their space — four or more items,
+Lists still bullet where bullets earn their space - four or more items,
 at least one of them long enough to be worth scanning for.
 
 Nothing was shortened to achieve this. On the layout change alone, the
@@ -28,7 +28,7 @@ almost completely: the tallest entries in the whole database were
 conditions like Fournier gangrene, tularaemia and pellagra, which almost
 nobody has a card about.
 
-Australian sources throughout — eTG, the National Bowel Cancer Screening
+Australian sources throughout - eTG, the National Bowel Cancer Screening
 Program, PBS criteria for biologics, eviQ protocols.
 
 ## Eight popups were titled something other than what they described
@@ -42,8 +42,8 @@ exactly as designed. All eight corrected.
 ## The reference database can now update itself
 
 Every condition, drug, acronym and sign used to live inside the add-on's
-Python code, which meant a correction — a wrong dose, a superseded
-guideline — could only reach you as a new AnkiWeb release, reviewed and
+Python code, which meant a correction - a wrong dose, a superseded
+guideline - could only reach you as a new AnkiWeb release, reviewed and
 then waited for. The database is now a separate data file, and can be
 updated on its own.
 
@@ -70,7 +70,7 @@ copy if you would rather control what your install receives.
 ## Under the hood
 
 The test that was supposed to stop oversized summaries shipping had
-never looked at most of them — it checked the rewritten entries, the
+never looked at most of them - it checked the rewritten entries, the
 acronyms and the drugs, but not the several hundred conditions still
 carrying their original text, which is where the length actually was. It
 now checks every summary the popup can render, and a second test pins

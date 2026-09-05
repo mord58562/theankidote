@@ -470,7 +470,7 @@ class ContentVersionFormat(unittest.TestCase):
         `tools/publish_content.sh` moves it. Between a code push and the
         next content publish the repository legitimately holds a
         manifest naming a *later* content version than the bundled
-        `library.json` — that is the channel being ahead of the shipped
+        `library.json` - that is the channel being ahead of the shipped
         floor, which is the whole point of having a channel.
 
         What must never happen is the manifest sorting *below* the

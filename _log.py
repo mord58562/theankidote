@@ -85,16 +85,31 @@ def diag_path() -> str:
     return _DIAG_PATH
 
 
+_DIAG_ROTATE_BYTES = 1_000_000  # 1 MB: rotate to .log.1 then start fresh
+
+
 def diag(msg: str) -> None:
     """Append a timestamped line to user_files/diagnostic.log.
 
     Always on: it is a handful of lines per article opened, and the
     whole point is that it is there *before* the user knows they need
     it.  Failures here are swallowed - diagnostics must never be the
-    thing that breaks the feature."""
+    thing that breaks the feature.  Rotates at 1 MB so a busy user's
+    log cannot grow unbounded."""
     try:
         import time
-        with open(diag_path(), "a", encoding="utf-8") as fh:
+        path = diag_path()
+        try:
+            if os.path.getsize(path) >= _DIAG_ROTATE_BYTES:
+                rotated = path + ".1"
+                try:
+                    os.remove(rotated)
+                except FileNotFoundError:
+                    pass
+                os.replace(path, rotated)
+        except FileNotFoundError:
+            pass
+        with open(path, "a", encoding="utf-8") as fh:
             fh.write(f"{time.strftime('%H:%M:%S')} {msg}\n")
     except Exception:
         pass

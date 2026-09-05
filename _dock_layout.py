@@ -7,7 +7,7 @@ The three side panels (AI chat, UpToDate, StatPearls) all live in the
 same dock area.  Without intervention Qt tabs them together when more
 than one is visible, so opening a second dock hides the first.
 
-This helper places each dock side-by-side in the canonical left-to-right
+Places each dock side-by-side in the core left-to-right
 order (AI -> UTD -> Pearls) when it becomes visible, regardless of the
 order the user opens them in.
 
@@ -71,7 +71,7 @@ def _our_visible_siblings(self_dock: QDockWidget):
 
 
 def arrange(self_dock: QDockWidget, self_order: int) -> None:
-    """Position `self_dock` in the canonical left-to-right row.
+    """Position `self_dock` in the core left-to-right row.
 
     Called every time the dock is shown.  Idempotent - if no rearrangement
     is needed the call is a no-op.  Safe when no siblings are visible

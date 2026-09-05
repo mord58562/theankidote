@@ -57,7 +57,7 @@ Published as content-`03.09.2026` (commit 6394e91).
    - No em-dashes anywhere - use space-hyphen-space.
    - Never "Pabrinal" (Pabrinex).
    - Never "ATSI" - full phrase "Aboriginal and Torres Strait Islander" for general references; only the applicable half for a specific group.
-   - Never "canonical" - use live/core/primary/main.
+   - Never use the c-word (dead metaphor) - use live/core/primary/main.
    - Australian spellings only (oedema/anaemia/oesophag/tumour/diarrhoea/leukaemia/ischaemia/aetiology/paediatric).
    - Preserve period-vs-semicolon rhythm of surrounding entry; semicolons in Mx blocks can promote clauses to bulleted lines and inflate rendered height.
 

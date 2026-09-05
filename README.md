@@ -32,7 +32,7 @@ Six databases are matched:
 
 The last one exists because the gap was the wrong way round. Cards were
 resolving *dermatomyositis* and not *poikiloderma*, *telangiectasia*,
-*myalgia* or *pathognomonic* — but a reader who already knows the
+*myalgia* or *pathognomonic* - but a reader who already knows the
 disease name reads past it either way, and one who doesn't is usually
 stuck on the descriptive word, because it is the part of the sentence
 carrying the finding.
@@ -43,18 +43,18 @@ You can add your own terms under **Settings → General → Custom terms**.
 
 A dock on the right of the reviewer, with three modes:
 
-- **StatPearls / DrugBank** — reference browsing, with pills to switch
+- **StatPearls / DrugBank** - reference browsing, with pills to switch
   between the two. Popup articles open here.
-- **UpToDate** — your own institutional subscription, signed into once
+- **UpToDate** - your own institutional subscription, signed into once
   and remembered. Set your entry URL under Settings → Services if your
   institution uses an SSO proxy.
-- **AI chat** — your existing browser session with Claude, ChatGPT,
+- **AI chat** - your existing browser session with Claude, ChatGPT,
   Gemini, Copilot, Perplexity, DeepSeek, Grok or a self-hosted endpoint.
   No API key, no account of ours, nothing is sent anywhere on its own.
 
 `Ctrl+Shift+K` sends the current text selection to the chat and
 `Ctrl+Shift+J` sends the whole visible card: the dock opens, the message
-box is focused, and the text is pasted into it. **Nothing is submitted —
+box is focused, and the text is pasted into it. **Nothing is submitted  - 
 pressing Enter is always your keystroke.**
 
 ### Relevant articles
@@ -104,12 +104,12 @@ defaults** is there if you lose one, and clashing bindings are flagged.
 
 **Tools → The AnkiDote → Settings**, in four tabs:
 
-- **General** — which modules are active, reference-popup behaviour,
+- **General** - which modules are active, reference-popup behaviour,
   custom terms, toolbar button order.
-- **Services** — UpToDate institution URL, AI chat provider and paste
+- **Services** - UpToDate institution URL, AI chat provider and paste
   behaviour.
-- **Shortcuts** — every binding, editable.
-- **Advanced** — verbose logging, the diagnostic log, and a web
+- **Shortcuts** - every binding, editable.
+- **Advanced** - verbose logging, the diagnostic log, and a web
   inspector for the sidebar webviews.
 
 Everything writes on close, matching Anki's own Preferences. Every
@@ -127,8 +127,8 @@ setting also has a config key; see [config.md](config.md).
   message box and paste. They never press Enter.
 - **Your collection stays local.** Card text is read to find terms and
   is never transmitted anywhere.
-- **Network access** is limited to the sites you are browsing —
-  StatPearls, DrugBank, UpToDate and your chosen chat provider — plus
+- **Network access** is limited to the sites you are browsing  - 
+  StatPearls, DrugBank, UpToDate and your chosen chat provider - plus
   NCBI when resolving an article link.
 
 ---
@@ -156,7 +156,7 @@ Bug reports are much easier to act on with a diagnostic log: turn on
 **Settings → Advanced → Verbose logging**, reproduce the problem, then
 use **Show log**.
 
-Tests live in `tests/` and run with plain `python3` — no Anki required:
+Tests live in `tests/` and run with plain `python3` - no Anki required:
 
 ```bash
 python3 tests/test_security.py      # untrusted content, updater, URL trust
@@ -179,7 +179,7 @@ at 2.2.
 GPL-3.0-or-later. See [LICENSE](LICENSE).
 
 Clinical content is compiled from public sources and is intended for
-study. It is not a clinical decision tool and carries no warranty —
+study. It is not a clinical decision tool and carries no warranty  - 
 check current guidance before acting on anything you read here.
 
 Version history is in [CHANGELOG.md](CHANGELOG.md).

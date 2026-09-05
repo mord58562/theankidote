@@ -8,7 +8,7 @@ characters - but they are unstructured: one dense block with section
 labels used inconsistently, which is exactly what makes a long popup
 unreadable. The information is there and none of it is findable.
 
-This file holds rewritten versions keyed by canonical name, merged over
+Holds rewritten versions keyed by primary name, merged over
 the base at import. An override layer rather than edits in place,
 because:
 

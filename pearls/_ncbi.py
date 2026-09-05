@@ -395,7 +395,7 @@ def headings_for(label: str) -> list:
 
 # ── generic URL cache (StatPearls chapters and DrugBank drug pages) ──
 def remember_url(term: str, url: str) -> None:
-    """Cache the canonical URL a search page resolved to.
+    """Cache the primary URL a search page resolved to.
 
     Used for DrugBank, which has no public lookup API, so the only
     reliable resolver is the site's own search: follow it once, keep the

@@ -6,12 +6,12 @@ way Australians write them now actually highlight.
 ## Australian drug names
 
 Twenty-three drug spellings that Australian cards routinely use matched
-nothing at all — `frusemide`, `cephalexin`, `cephazolin`, `thyroxine`,
+nothing at all - `frusemide`, `cephalexin`, `cephazolin`, `thyroxine`,
 `amoxycillin`, `indomethacin`, `cholecalciferol`, `sulphasalazine`,
 `valproate`, `glyceryl trinitrate` and others.
 
 No popup appeared for any of them. That is easy not to notice, because
-there is nothing there to look wrong — a card mentioning frusemide
+there is nothing there to look wrong - a card mentioning frusemide
 simply behaved like a card mentioning nothing at all. All now highlight,
 whatever the capitalisation, and show the standard name.
 
@@ -20,7 +20,7 @@ whatever the capitalisation, and show the standard name.
 Pethidine, rifampicin, oestradiol and lignocaine were appearing in the
 popup heading as meperidine, rifampin, estradiol and lidocaine. Each was
 in fact stored twice, once under each name, with whichever matched first
-winning — so the summary you got depended on which spelling the card
+winning - so the summary you got depended on which spelling the card
 used.
 
 The duplicates are merged and the Australian name is shown. Cards

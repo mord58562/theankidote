@@ -5,7 +5,7 @@
 The sidebar hides NCBI's own search bar on the StatPearls landing page,
 because the page already has a "Search this book" box doing the same job
 in the middle of the screen. It turned out to be hiding it on article
-pages too — which is the one place it is the only way to search the book
+pages too - which is the one place it is the only way to search the book
 without navigating back first.
 
 ## Forty-one more conditions rewritten
@@ -27,7 +27,7 @@ database and comes up twice; lung cancer comes up fifty-two times. Acute
 appendicitis, also over the limit, does not come up at all.
 
 All forty-one now fit the popup without scrolling. Australian sources
-throughout — eTG, AMH, PBS, RANZCOG, and the Poisons Information Centre
+throughout - eTG, AMH, PBS, RANZCOG, and the Poisons Information Centre
 number where it matters.
 
 ## Australian drug names
@@ -47,9 +47,9 @@ cards written the American way still work.
 
 Five captions that restated the control they sat under are gone, and
 three more are shorter. The ones that tell you a rule you could not
-otherwise work out — that a link has to start with `http://`, that
+otherwise work out - that a link has to start with `http://`, that
 leaving a shortcut field empty turns it off, that passkey sign-in will
-not work in an embedded browser — are still there.
+not work in an embedded browser - are still there.
 
 ## Security
 

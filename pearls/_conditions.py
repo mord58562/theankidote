@@ -6,7 +6,7 @@
 and named clinical entities linked to specific StatPearls articles.
 
 Each entry has:
-  • name      - canonical name; matches case-insensitively as a whole word
+  • name      - primary name; matches case-insensitively as a whole word
   • aliases   - alternate forms (plurals, alt-spellings) that should also match
   • nbk       - optional NBK accession (e.g., "NBK513321") for a direct article
                 URL.  When omitted, a StatPearls book-title search URL is used.
@@ -200,8 +200,8 @@ _CONDITION_MATCHER = _matcher.PhraseMatcher(_NAMES) if _NAMES else None
 
 # Structured rewrites, merged over the entries above. Authored in
 # content/_rich.py and compiled into the library, so a corrected summary
-# can ship without a new add-on release. Applied by canonical name, so
-# aliases inherit it automatically - and only by canonical name, because
+# can ship without a new add-on release. Applied by primary name, so
+# aliases inherit it automatically - and only by primary name, because
 # `resolve()` titles the popup from `c["name"]`: an override keyed on an
 # alias still merges but renders under a heading it was not written for.
 _RICH: dict = _library.get("rich_summaries")
@@ -217,7 +217,7 @@ for _canon, _text in _RICH.items():
 def resolve(text: str) -> list:
     """Find condition mentions in `text`. Returns a list of dicts:
         {name, summary, url, source, utd, case_sensitive=False}
-    `name` is the canonical name (regardless of which form was matched in the
+    `name` is the primary name (regardless of which form was matched in the
     text), so the popup title is consistent.
     `utd` is a list of {label, url} chip dicts for the popup footer.  When
     a condition has no NBK but has UTD entries, the first UTD slot powers

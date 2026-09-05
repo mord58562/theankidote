@@ -2,7 +2,7 @@
 # Copyright (C) 2025 mord58562
 # This file is part of TheAnkiDote. See LICENSE for details.
 
-"""Side panel: AMBOSS-style UI - nav header + article webview."""
+"""Side panel: nav header plus article webview."""
 
 try:
     from PyQt6.QtCore import Qt, QUrl, QSize, pyqtSignal
@@ -721,9 +721,15 @@ class StatPearlsPanel(QWidget):
         outer.addWidget(self._view, 1)
 
         # NCBI bookshelf article pages need ~520 px of usable content width to
-        # render without a horizontal scrollbar.  Set this as the minimum AND
-        # advertise it through sizeHint so the dock opens at this width.
-        self.setMinimumWidth(520)
+        # render without a horizontal scrollbar. Users can raise the floor via
+        # `minWidth` in config.json; anything under 520 is clamped so book
+        # pages stay readable.
+        try:
+            cfg_min = int(_config.get("minWidth") or 0)
+        except Exception:
+            cfg_min = 0
+        self._min_width = max(520, cfg_min)
+        self.setMinimumWidth(self._min_width)
 
         # ── wire nav ──────────────────────────────────────────────────────
         self._btn_back.clicked.connect(self._view.back)
@@ -743,7 +749,10 @@ class StatPearlsPanel(QWidget):
     def sizeHint(self):  # type: ignore[override]
         # Default dock width chosen so NCBI book pages fit without horizontal
         # scrolling.  Anki uses sizeHint when first docking the widget.
-        return QSize(560, 600)
+        # Grow the hint alongside a user-raised `minWidth` so the dock opens
+        # at the requested floor rather than snapping open at 560 and then
+        # jumping wider.
+        return QSize(max(560, getattr(self, "_min_width", 520) + 40), 600)
 
     # ── public API ────────────────────────────────────────────────────────
 
@@ -1106,7 +1115,7 @@ class StatPearlsPanel(QWidget):
     # to click again.  Rather than shipping thousands of hand-collected
     # IDs that rot, let each site resolve its own term: when a search
     # page finishes loading, look for a single unambiguous exact match
-    # and follow it.  The resulting canonical URL is cached by
+    # and follow it.  The resulting primary URL is cached by
     # `_on_url_changed`, so it only ever happens once per term.
     _AUTOJUMP_JS = r"""
     (function () {
@@ -1177,7 +1186,7 @@ class StatPearlsPanel(QWidget):
             _log.diag(f"autojump failed: {exc}")
 
     def _cache_resolved(self, url: str) -> None:
-        """Remember a canonical article/drug URL reached from a search."""
+        """Remember a primary article/drug URL reached from a search."""
         term = getattr(self, "_pending_term", "") or ""
         if not term:
             return

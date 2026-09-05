@@ -91,12 +91,12 @@ _DRUGS = _DRUGS + [dict(d) for d in _NEW_DRUGS]
 #
 # This is the same seam as `rich_summaries`, deliberately: authored in
 # `content/_rich.py`, compiled into the library, applied at runtime
-# rather than baked in at build time, keyed on the canonical generic.
+# rather than baked in at build time, keyed on the primary generic.
 #
 # Keyed on the generic only, never an alias. `resolve()` titles the
 # popup from `d["generic"]`, so an override keyed on an alias would
 # merge and then render under a heading it was not written for - the
-# same rule `_conditions.py` records for canonical names.
+# same rule `_conditions.py` records for primary names.
 #
 # Optional key: a library published before 2.2 does not carry it, and a
 # published library is preferred over the bundled one, so its absence is
@@ -169,7 +169,7 @@ def resolve(text: str) -> list:
     """Find drug mentions in `text`. Returns a list of dicts:
         {name, summary, url, case_sensitive}
     name preserves the case as it appeared in the text for brand matches and
-    uses the canonical generic spelling for generic matches.
+    uses the primary generic spelling for generic matches.
     """
     if not text:
         return []

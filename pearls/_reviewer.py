@@ -202,7 +202,7 @@ def _term_search_url(term: str) -> str:
 
 
 _AE_E_SWAPS = [
-    # American -> British (the canonical names in _conditions.py use
+    # American -> British (the primary names in _conditions.py use
     # British spelling, so we normalise expansions toward British).
     ("hematolog",   "haematolog"),
     ("hemoglob",    "haemoglob"),
@@ -239,7 +239,7 @@ def _normalise_for_lookup(s: str) -> str:
 
 
 def _acronym_to_condition(expansion: str):
-    """If `expansion` matches a known condition's canonical name or any
+    """If `expansion` matches a known condition's primary name or any
     of its aliases, return that condition entry; otherwise None.
 
     Used to give acronym popups a richer body: instead of the acronym's
@@ -249,7 +249,7 @@ def _acronym_to_condition(expansion: str):
     condition rather than restating the expansion a second time.
 
     Spelling-tolerant: tries direct lookup first, then a normalised
-    form swapping American spelling to British (the canonical form used
+    form swapping American spelling to British (the primary form used
     in _conditions.py) so e.g. ALL ('Acute Lymphoblastic Leukemia')
     matches the British 'Acute lymphoblastic leukaemia' entry.
     """
@@ -353,6 +353,7 @@ def _preclinical_terms(card) -> list:
     if not text:
         return []
     out = []
+    seen: set = set()
     # Several databases, one popup source. `_preclinical` holds
     # basic-science concepts, `_descriptive` the vocabulary cards are
     # written in (lesion morphology, symptom words, lab descriptors),
@@ -364,8 +365,9 @@ def _preclinical_terms(card) -> list:
                + list(_descriptive.resolve(text))
                + list(_psych.resolve(text))
                + list(_signs.resolve(text))):
-        if any(o["title"] == it["name"] for o in out):
+        if it["name"] in seen:
             continue
+        seen.add(it["name"])
         out.append({
             "title":          it["name"],
             "_article":       it["name"],
@@ -451,7 +453,7 @@ def _build_pattern(terms: list):
             "url":     _esc_attr(t["url"]),
             "article": _esc_attr(t.get("_article") or title),
             "summary": _esc_attr(t.get("summary") or ""),
-            "source":  t.get("source") or "statpearls",
+            "source":  _esc_attr(t.get("source") or "statpearls"),
             "badge":   _esc_attr(t.get("label") or ""),
             "utd":     _esc_attr(json.dumps(t.get("utd") or [],
                                             separators=(",", ":"))),
@@ -469,7 +471,7 @@ def _build_pattern(terms: list):
                 "url":     _esc_attr(t["url"]),
                 "article": _esc_attr(t.get("_article") or title),
                 "summary": _esc_attr(t.get("summary") or ""),
-                "source":  t.get("source") or "statpearls",
+                "source":  _esc_attr(t.get("source") or "statpearls"),
                 "badge":   _esc_attr(t.get("label") or ""),
                 "utd":     _esc_attr(json.dumps(t.get("utd") or [],
                                                 separators=(",", ":"))),
@@ -588,6 +590,14 @@ def _on_card_will_show(html: str, card, kind: str) -> str:
         conditions  = _condition_terms(card)
         preclinical = _preclinical_terms(card)
         custom      = _custom_term_matches(card)
+        # Stash the two lists the sidebar builder will need, so
+        # `_local_results_for_card` doesn't re-run the same matchers
+        # on the same card a moment later.
+        try:
+            card._ap_cond = conditions
+            card._ap_drug = drugs
+        except Exception:
+            pass
         all_terms   = acronyms + drugs + conditions + preclinical + custom
         if not all_terms:
             return html
@@ -690,7 +700,10 @@ def _local_results_for_card(card) -> list:
     one at least stays out of the way."""
     results = []
     seen: set = set()
-    for t in _condition_terms(card):
+    conds = getattr(card, "_ap_cond", None)
+    if conds is None:
+        conds = _condition_terms(card)
+    for t in conds:
         key = t["url"]
         if key and key not in seen:
             seen.add(key)
@@ -701,7 +714,10 @@ def _local_results_for_card(card) -> list:
                 "url":     t["url"],
                 "summary": t.get("summary", ""),
             })
-    for t in _drug_terms(card):
+    drugs = getattr(card, "_ap_drug", None)
+    if drugs is None:
+        drugs = _drug_terms(card)
+    for t in drugs:
         key = t["url"]
         if key and key not in seen:
             seen.add(key)
@@ -745,8 +761,9 @@ def _on_show_question(card) -> None:
 
     # Drop any prior text cache on this card so re-shown cards re-strip lazily.
     try:
-        if hasattr(card, "_ap_text"):
-            del card._ap_text
+        for attr in ("_ap_text", "_ap_cond", "_ap_drug"):
+            if hasattr(card, attr):
+                delattr(card, attr)
     except Exception:
         pass
 

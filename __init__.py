@@ -35,7 +35,7 @@ and CHANGELOG.md for the per-version release notes.
 # command line.  That env var is read by Qt at QApplication
 # construction, which has already happened by the time an Anki addon
 # loads, so the assignment was a no-op.  Removed in 1.0 - we now use
-# the AT V2-style minimal profile (see _webengine.py) which clears
+# the minimal AT V2 profile (see _webengine.py) which clears
 # Cloudflare without any flag tweaks.
 
 import base64 as _b64
@@ -266,7 +266,7 @@ def _term_for_url(url: str) -> str:
 
     Both fallbacks encode the term as a query parameter, so there is no
     need to thread the term separately through the JS bridge.  Returns
-    "" for URLs that are already canonical - nothing to resolve."""
+    "" for URLs that are already primary - nothing to resolve."""
     try:
         # Only the names not already imported at module scope are pulled
         # in here - importing `urlparse` again would shadow the global
@@ -366,7 +366,12 @@ def _amboss_installed() -> bool:
 def _add_pearls_toolbar_link(links: list, toolbar: Toolbar) -> None:
     # Always register the handler so the keyboard shortcut still works
     # when the dock is visible (closing the dock with the same shortcut).
-    toolbar.link_handlers[_PEARLS_TOGGLE_CMD] = toggle_pearls_dock
+    # If Anki ever renames/removes link_handlers, log and continue - the
+    # crown button will be inert but the add-on stays loaded.
+    try:
+        toolbar.link_handlers[_PEARLS_TOGGLE_CMD] = toggle_pearls_dock
+    except (AttributeError, TypeError) as exc:
+        _log.warn(f"toolbar.link_handlers missing: {exc}")
     if _pearls_dock_visible:
         return
     shortcut = _config.get("shortcutTogglePearls") or "Ctrl+Shift+S"
@@ -752,6 +757,10 @@ def _maybe_first_run() -> None:
         _config.set_value("firstRunDone", True)
         if accepted and _config.get("enableUpToDate") is not False:
             QTimer.singleShot(50, _open_uptodate_login)
+        # First-run gate on the outbound update check has now cleared;
+        # kick it off so the fresh install picks up the current library
+        # in the background without waiting for another Anki restart.
+        QTimer.singleShot(1200, _check_for_library_update)
 
     QTimer.singleShot(800, _ask)
 
@@ -2185,9 +2194,14 @@ def _check_for_library_update() -> None:
     Opt-in, and deliberately so: a medical add-on that contacts a server
     without being asked is a fair thing to be annoyed about. The check
     itself runs on a daemon thread and never raises, so the worst case
-    here is that nothing happens.
+    here is that nothing happens. Also gated on `firstRunDone`: on a
+    brand-new install we wait until the welcome dialog has been shown
+    before making outbound requests, so the user is never surprised by
+    a network call from an add-on they haven't yet accepted.
     """
     try:
+        if not _config.get("firstRunDone"):
+            return
         if not _config.get("libraryAutoUpdate"):
             return
         from .pearls import _updater
@@ -2198,9 +2212,39 @@ def _check_for_library_update() -> None:
         _log.debug(f"library update check not started: {exc}")
 
 
+def _notify_if_new_library() -> None:
+    """One-line tooltip when a background-fetched library becomes active.
+
+    Content updates land during a session, but the new terms only take
+    effect at next launch (the matcher is built at import). So compare
+    the version we're now running against the last version the user was
+    told about; if it moved, show a brief non-blocking tooltip.
+    """
+    try:
+        from .pearls import _library
+        current = getattr(_library, "CONTENT_VERSION", None)
+        if not current:
+            return
+        last_seen = _config.get("lastSeenContentVersion")
+        if last_seen == current:
+            return
+        _config.set_value("lastSeenContentVersion", current)
+        if last_seen is None:
+            # First time we're recording it; do not toast on fresh install.
+            return
+        try:
+            from aqt.utils import tooltip
+            tooltip(f"Reference library updated to {current}", period=3500)
+        except Exception:
+            pass
+    except Exception as exc:
+        _log.debug(f"library version toast skipped: {exc}")
+
+
 def _setup_and_check(*args, **kwargs):
     _setup(*args, **kwargs)
     _migrate_library_auto_update()
+    _notify_if_new_library()
     _check_for_library_update()
 
 

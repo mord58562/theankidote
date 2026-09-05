@@ -57,6 +57,15 @@ if [ -d "$DEST" ]; then
 fi
 
 mkdir -p "$DEST"
+
+# Path-traversal guard: refuse archives with entries that escape $DEST
+# via absolute paths or `..` components. `zipinfo -1` lists filenames
+# only; grep exits 0 on match (bad) and 1 on no-match (good).
+if zipinfo -1 "$ADDON" 2>/dev/null | grep -qE '(^/|(^|/)\.\.(/|$))'; then
+  echo "Refusing to install: $ADDON contains path-escaping entries." >&2
+  exit 1
+fi
+
 unzip -oq "$ADDON" -d "$DEST"
 
 # A correct install has the package's own files at the top level.
