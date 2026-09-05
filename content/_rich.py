@@ -281,14 +281,6 @@ NEW_CONDITIONS = [
         "summary": "",
     },
     {
-        "name": "Bartholin abscess",
-        "aliases": ["Bartholin gland abscess",
-                    "Bartholin gland infection"],
-        "utd": [["Overview", "bartholin gland masses diagnosis and "
-                             "management"]],
-        "summary": "",
-    },
-    {
         "name": "Digoxin toxicity",
         "aliases": ["Digoxin poisoning", "Digitalis toxicity"],
         "utd": [["Overview", "cardiac arrhythmias due to digoxin toxicity"]],
@@ -427,13 +419,6 @@ NEW_CONDITIONS = [
                     "Parvovirus B19"],
         "utd": [["Overview", "clinical manifestations and diagnosis of "
                              "parvovirus b19 infection"]],
-        "summary": "",
-    },
-    {
-        "name": "Coarctation of the aorta",
-        "aliases": ["Aortic coarctation", "CoA"],
-        "utd": [["Overview", "clinical manifestations and diagnosis of "
-                             "coarctation of the aorta"]],
         "summary": "",
     },
     {
@@ -1037,7 +1022,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Central diabetes insipidus",
-        "aliases": ["Central DI", "Neurogenic diabetes insipidus"],
+        "aliases": ["Neurogenic diabetes insipidus"],
         "utd": [["Overview", "clinical manifestations and causes of "
                              "central diabetes insipidus"]],
         "summary": "",
@@ -1806,12 +1791,6 @@ NEW_CONDITIONS = [
         "summary": "",
     },
     {
-        "name": 'Post-dural puncture headache',
-        "aliases": ['PDPH', 'Post lumbar puncture headache'],
-        "utd": [["Overview", 'postdural puncture headache epidural blood patch']],
-        "summary": "",
-    },
-    {
         "name": 'Myeloproliferative neoplasms',
         "aliases": ['MPN', 'Myeloproliferative disorders'],
         "utd": [["Overview", 'myeloproliferative neoplasms polycythaemia essential thrombocythaemia myelofibrosis']],
@@ -2028,12 +2007,6 @@ NEW_CONDITIONS = [
         "summary": "",
     },
     {
-        "name": 'Salicylate toxicity',
-        "aliases": ['Aspirin overdose', 'Aspirin toxicity'],
-        "utd": [["Overview", 'salicylate aspirin poisoning management']],
-        "summary": "",
-    },
-    {
         "name": 'Urethral stricture',
         "aliases": [],
         "utd": [["Overview", 'urethral stricture disease management']],
@@ -2160,18 +2133,6 @@ NEW_CONDITIONS = [
         "summary": "",
     },
     {
-        "name": 'Conversion disorder',
-        "aliases": ['Functional neurological symptom disorder', 'FND'],
-        "utd": [["Overview", 'functional neurological disorder treatment']],
-        "summary": "",
-    },
-    {
-        "name": 'Hand-foot-mouth disease',
-        "aliases": ['HFMD'],
-        "utd": [["Overview", 'hand foot mouth disease treatment children']],
-        "summary": "",
-    },
-    {
         "name": 'Threadworm',
         "aliases": ['Pinworm', 'Enterobius vermicularis'],
         "utd": [["Overview", 'threadworm pinworm treatment']],
@@ -2191,7 +2152,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": 'Premature ovarian insufficiency',
-        "aliases": ['POI', 'Premature ovarian failure'],
+        "aliases": ['Premature ovarian failure'],
         "utd": [["Overview", 'premature ovarian insufficiency management']],
         "summary": "",
     },
@@ -2664,12 +2625,6 @@ NEW_CONDITIONS = [
         "summary": "",
     },
     {
-        "name": 'Community acquired pneumonia',
-        "aliases": ['CAP'],
-        "utd": [["Overview", 'community acquired pneumonia in adults']],
-        "summary": "",
-    },
-    {
         "name": 'Asthma exacerbation',
         "aliases": ['acute asthma attack', 'acute severe asthma'],
         "utd": [["Overview", 'acute exacerbations of asthma in adults']],
@@ -2844,12 +2799,6 @@ NEW_CONDITIONS = [
         "summary": "",
     },
     {
-        "name": 'Superior vena cava obstruction',
-        "aliases": ['SVCO', 'SVC syndrome'],
-        "utd": [["Overview", 'superior vena cava syndrome']],
-        "summary": "",
-    },
-    {
         "name": 'Necrotising soft tissue infection',
         "aliases": ['NSTI'],
         "utd": [["Overview", 'necrotizing soft tissue infections']],
@@ -3017,30 +2966,6 @@ RICH_SUMMARIES = {
         "falls only after decompensation."
     ),
 
-    "Guillain-Barré syndrome": (
-        "Acute immune-mediated polyradiculoneuropathy causing "
-        "ascending weakness, typically 1-3 weeks after infection. "
-        "Causes: Campylobacter jejuni most often, then CMV, EBV, "
-        "Mycoplasma and influenza. Sx: symmetrical ascending flaccid "
-        "weakness with areflexia, developing over days to 4 weeks; "
-        "sensory symptoms usually mild relative to weakness; back "
-        "and limb pain common; autonomic instability with arrhythmia "
-        "and labile BP; facial and bulbar involvement. In the Miller "
-        "Fisher variant, ophthalmoplegia, ataxia and areflexia dominate. "
-        "Ix: nerve "
-        "conduction studies showing demyelination; CSF with raised "
-        "protein and normal cell count (albuminocytological "
-        "dissociation) - may be normal in the first week. Serial "
-        "FVC, respiratory rate and inspiratory pressures are key "
-        "monitoring; the \"20-30-40\" rule (VC under 20 mL/kg, PImax "
-        "weaker than -30 cmH2O, PEmax under 40 cmH2O) flags need "
-        "for intubation before hypoxia. Mx: IVIg or PLEX, equally "
-        "effective and not combined; supportive care with VTE "
-        "prophylaxis and cardiac monitoring. Corticosteroids do not "
-        "work here. Red flags: bulbar weakness or autonomic "
-        "instability means ICU. Respiratory failure develops before "
-        "hypoxia appears on oximetry."
-    ),
 
     "Syphilis": (
         "Sexually transmitted infection caused by the spirochaete Treponema "
@@ -3244,27 +3169,6 @@ RICH_SUMMARIES = {
         "too fast for the phenotype to appear."
     ),
 
-    "Syndrome of inappropriate antidiuretic hormone secretion": (
-        "Euvolaemic hypotonic hyponatraemia from unsuppressed ADH. "
-        "Causes: malignancy especially small cell lung cancer; CNS disease "
-        "including stroke, haemorrhage and meningitis; pulmonary disease; "
-        "and drugs - SSRIs, carbamazepine, and thiazides among others. "
-        "Criteria: hyponatraemia with low serum osmolality, "
-        "inappropriately concentrated urine above 100 mOsm/kg, urinary "
-        "sodium above 30 mmol/L, clinical euvolaemia, and normal thyroid, "
-        "adrenal and renal function. "
-        "Clinical features: often asymptomatic when chronic; nausea, "
-        "headache, confusion, and seizure or coma when severe or rapid. Rate "
-        "of fall matters more than the absolute level. "
-        "Mx: treat the cause; fluid restriction first-line; salt tablets or "
-        "tolvaptan in resistant cases. Hypertonic saline only for severe "
-        "symptoms. "
-        "Note: correct no faster than 8-10 mmol/L in 24 hours - overly rapid "
-        "correction of chronic hyponatraemia causes osmotic demyelination "
-        "syndrome, which is irreversible. Volume status is what separates "
-        "SIADH from hypovolaemic and hypervolaemic hyponatraemia, so assess "
-        "it before treating."
-    ),
 
     # ═══════════ TOPIC 7: ONCOLOGY AND HAEMATOLOGY ══════════════════════
 
@@ -4536,24 +4440,6 @@ RICH_SUMMARIES = {
         "but PBS-listed only for chronic migraine."
     ),
 
-    "Tension headache": (
-        "The commonest primary headache, and the one most often "
-        "over-investigated and under-managed. Clinical features: bilateral, "
-        "pressing or tightening, mild to moderate, not aggravated by "
-        "routine activity, without vomiting. Photophobia or phonophobia may "
-        "occur but not both. Pericranial tenderness is common. "
-        "Classification: episodic if fewer than 15 days a month, chronic if "
-        "15 or more for over three months. Ix: none if the history is "
-        "typical and examination normal. Mx: simple analgesia for "
-        "infrequent attacks, limited to fewer than 15 days a month. "
-        "Amitriptyline is the best-supported preventer for chronic tension "
-        "headache. Address sleep, posture, stress and neck pain, since "
-        "these do more work than the medication does. Note: the single most "
-        "useful question in a frequent headache is how many days a month "
-        "analgesia is taken - medication overuse converts episodic headache "
-        "into chronic daily headache and no preventer works until it is "
-        "withdrawn."
-    ),
 
     "Medication overuse headache": (
         "Headache on 15 or more days a month in someone with a pre-existing "
@@ -5882,28 +5768,6 @@ RICH_SUMMARIES = {
         "gastroenteritis - IV is a fallback."
     ),
 
-    "Haemochromatosis": (
-        "Iron overload, most often hereditary autosomal recessive HFE "
-        "C282Y homozygous. Pathophysiology: hepcidin deficiency drives "
-        "excess intestinal iron absorption; iron deposits in liver, "
-        "pancreas, heart, joints, pituitary and skin. Clinical "
-        "features: often asymptomatic and picked up on iron studies. "
-        "When symptomatic - fatigue, arthralgia (second and third MCP "
-        "joints, hook osteophytes), bronze skin, hepatomegaly with "
-        "cirrhosis, diabetes mellitus, cardiomyopathy and "
-        "hypogonadism. Men present earlier; women later because "
-        "menstruation is protective. Ix: transferrin saturation over "
-        "45% or high ferritin triggers HFE genotyping; if C282Y "
-        "homozygous, confirm with LFT, glucose, ECG, echocardiogram; "
-        "MRI T2* or biopsy for iron burden if ferritin over 1000 or "
-        "LFTs abnormal. Mx: therapeutic venesection weekly (450 to "
-        "500 mL) until ferritin under 50, then every 3 to 4 months "
-        "targeting 50 to 100. Avoid iron and vitamin C supplements; "
-        "limit alcohol; screen for HCC by 6-monthly ultrasound and "
-        "AFP if cirrhotic. Note: first-degree relatives need genetic "
-        "and iron-study screening - diagnosis before organ damage is "
-        "the point."
-    ),
 
     "Endocarditis": (
         "Infection of the endocardium, most often a valve. Causes: "
@@ -12270,39 +12134,6 @@ RICH_SUMMARIES = {
         "before age 2 improves outcomes."
     ),
 
-    "Sjögren syndrome": (
-        "Autoimmune exocrinopathy - lymphocytic "
-        "infiltration of exocrine glands causing "
-        "keratoconjunctivitis sicca (dry eyes) "
-        "and xerostomia (dry mouth). Primary "
-        "isolated or secondary to another "
-        "connective tissue disease (RA, SLE, "
-        "systemic sclerosis). Female predominance "
-        "(9:1); peak age 40 to 60. Clinical "
-        "features: dry gritty eyes, corneal "
-        "abrasion, dry mouth with dental caries "
-        "and oral candidiasis, parotid enlargement, "
-        "dry skin and vagina, arthralgia, Raynaud, "
-        "and fatigue; extraglandular disease "
-        "includes ILD, renal tubular acidosis, "
-        "small-fibre neuropathy and cytopenias.Non-Hodgkin lymphoma risk is "
-        "markedly elevated (especially parotid "
-        "MALT - suspect persistent unilateral "
-        "parotid swelling). Ix: Schirmer under 5 "
-        "mm in 5 min; ocular staining score; "
-        "unstimulated whole salivary flow; anti-Ro "
-        "(SSA) and anti-La (SSB); ANA and RF "
-        "often positive; minor salivary gland "
-        "biopsy when diagnosis uncertain. Mx: "
-        "symptomatic - artificial tears and "
-        "saliva, pilocarpine for xerostomia, "
-        "dental prevention. Hydroxychloroquine "
-        "for arthralgia and fatigue; "
-        "immunosuppression for extraglandular "
-        "disease. Note: pregnant women with "
-        "anti-Ro face fetal cardiac block risk - "
-        "fetal echocardiogram surveillance."
-    ),
 
     # ═══════ BATCH 32: same balance ═════════════════════════════════════
     #
@@ -12506,38 +12337,6 @@ RICH_SUMMARIES = {
         "cirrhotic patients."
     ),
 
-    "Hashimoto thyroiditis": (
-        "Autoimmune destruction of the thyroid by "
-        "lymphocytic infiltration with anti-TPO "
-        "and anti-thyroglobulin antibodies; the "
-        "commonest cause of primary hypothyroidism "
-        "in iodine-sufficient areas. Female "
-        "predominance (7:1); peak age 30 to 50; "
-        "associated with other autoimmune disease "
-        "(T1DM, coeliac, vitiligo, pernicious "
-        "anaemia). Clinical features: insidious "
-        "fatigue, cold intolerance, weight gain, "
-        "constipation, dry skin, hair loss, "
-        "menstrual disturbance, depression, "
-        "cognitive slowing, diffuse rubbery goitre "
-        "in most; may transiently present with "
-        "hashitoxicosis; untreated gives myxoedema, "
-        "pericardial effusion, coma. Rare primary "
-        "thyroid lymphoma (rapid growth in a "
-        "Hashimoto goitre warrants biopsy).Ix: TSH raised, free T4 low (or "
-        "normal in subclinical); anti-TPO "
-        "antibodies positive in over 90%; anti-"
-        "thyroglobulin also positive in most; "
-        "thyroid ultrasound if nodule suspected. "
-        "Mx: levothyroxine, dosed by weight and "
-        "titrated to TSH in mid-normal range; "
-        "recheck TSH at 6 to 8 weeks after any "
-        "dose change; subclinical hypothyroidism "
-        "treatment case-by-case (TSH over 10, "
-        "pregnancy, or symptoms). Note: iron, "
-        "calcium and PPIs impair thyroxine "
-        "absorption - separate dosing by 4 hours."
-    ),
 
     "Generalised anxiety disorder": (
         "Excessive, persistent and hard-to-control "
@@ -15184,27 +14983,6 @@ RICH_SUMMARIES = {
         "adjudicates causality and rechallenge risk."
     ),
 
-    "Behçet disease": (
-        "Systemic vasculitis of all vessel sizes; classical triad of "
-        "recurrent oral ulcers, genital ulcers and uveitis; commoner "
-        "along the Silk Road. Genetics: strong HLA-B51 association. "
-        "Clinical features: mucocutaneous - recurrent aphthous oral "
-        "ulcers (3+/year, essential), scarring genital ulcers, erythema "
-        "nodosum and pathergy (papulopustule at needle prick 24-48h); "
-        "systemic - panuveitis with hypopyon and retinal vasculitis, "
-        "arthritis, neuro-Behcet (brainstem, meningoencephalitis), "
-        "vascular thromboses with pulmonary aneurysm and GI ulceration. "
-        "Ix: no specific test - ICBD criteria; ANA/RF negative; "
-        "pathergy test; MRI brain and vascular imaging as guided; "
-        "HLA-B51 supportive. Mx: colchicine and topical steroid for "
-        "mucocutaneous disease; systemic steroid plus steroid-sparing "
-        "agent (azathioprine, mycophenolate) for major organ disease; "
-        "anti-TNF (infliximab, adalimumab) for refractory ocular, GI or "
-        "neurological disease; immunosuppression preferred over "
-        "anticoagulation for inflammatory thrombi. Note: recurrent oral "
-        "aphthosis over years plus another organ feature earns a Behcet "
-        "workup."
-    ),
 
     "Phenylketonuria": (
         "Autosomal recessive deficiency of phenylalanine hydroxylase; "
@@ -15959,29 +15737,6 @@ RICH_SUMMARIES = {
         "preserved episodic memory is bvFTD until MRI proves otherwise."
     ),
 
-    "Lewy body dementia": (
-        "Two synucleinopathies - DLB (dementia first or within a "
-        "year of parkinsonism) and Parkinson disease dementia (over "
-        "a year after motor onset); second commonest neurodegenerative "
-        "dementia. Core features (DLB): fluctuating cognition; "
-        "recurrent well-formed visual hallucinations; spontaneous "
-        "parkinsonism; REM sleep behaviour disorder (may predate by "
-        "years). Two or more = probable DLB. Ix: cognitive testing "
-        "(visuospatial/executive dominate; memory less affected "
-        "than AD); FP-CIT DAT scan shows reduced striatal uptake; "
-        "polysomnography confirms RBD; MRI (relative sparing of "
-        "medial temporal lobes vs AD). Mx: cholinesterase inhibitor "
-        "(rivastigmine, donepezil) for cognition and hallucinations; "
-        "levodopa cautiously (may worsen hallucinations); "
-        "immediate-release melatonin 3-12 mg is preferred first-line "
-        "for RBD in older patients (safer than clonazepam), and "
-        "transdermal rivastigmine adds coverage if already on-board "
-        "for cognition (AASM 2023); AVOID typical and most atypical "
-        "antipsychotics - severe neuroleptic sensitivity with "
-        "irreversible parkinsonism and death (low-dose quetiapine "
-        "if unavoidable). Note: parkinsonism plus early "
-        "hallucinations plus RBD - avoid antipsychotics."
-    ),
 
     "Prostatitis": (
         "Prostate inflammation; NIH categories I acute bacterial, II "
@@ -16579,25 +16334,6 @@ RICH_SUMMARIES = {
         "ultrasound TI-RADS scoring and TSH first."
     ),
 
-    "Typhoid fever": (
-        "Enteric fever from Salmonella Typhi or Paratyphi; notifiable; "
-        "almost all cases imported from South/Southeast Asia. "
-        "Aetiology: faecal-oral via contaminated food and water; "
-        "chronic gallbladder carriers. Clinical features: 7-14 day "
-        "incubation; stepwise fever to 40+; relative bradycardia "
-        "(Faget); abdominal pain with constipation then pea-soup "
-        "diarrhoea; rose spots on trunk; hepatosplenomegaly; week 3 - "
-        "GI haemorrhage and perforation. Ix: blood cultures (highest "
-        "yield in week 1); stool and urine culture; marrow culture gold "
-        "standard; FBC shows anaemia and eosinopenia. Mx: notify public "
-        "health unit; empirical azithromycin or ceftriaxone (MDR/XDR "
-        "common from the subcontinent); ciprofloxacin if susceptible; "
-        "corticosteroid for altered mentation or shock; chronic "
-        "carriers - prolonged ciprofloxacin plus consider "
-        "cholecystectomy. Note: fever with relative bradycardia in a "
-        "returning traveller from the subcontinent is typhoid until "
-        "blood cultures and public-health notification done."
-    ),
 
     "Subacute thyroiditis": (
         "Granulomatous thyroiditis (de Quervain); painful thyroid with "
@@ -17337,27 +17073,6 @@ RICH_SUMMARIES = {
 
     # ═══════ BATCH 47: MND + ENT + hepatology + andrology + shoulder + peds ID + derm + Legionella ══
 
-    "Meniere disease": (
-        "Idiopathic endolymphatic hydrops causing episodic vertigo, "
-        "hearing loss, tinnitus and aural fullness. Epidemiology: adults "
-        "40-60, women slightly more; unilateral at onset then bilateral "
-        "in a third over 10 years. Clinical features: attacks last 20 "
-        "minutes to 24 hours with rotational vertigo, low-frequency SNHL, "
-        "tinnitus and ear fullness; between attacks the patient may be "
-        "well early on but progressive hearing loss develops; drop "
-        "attacks (Tumarkin) in late disease. Ix: audiometry - fluctuating "
-        "low-frequency SNHL early, progressive later; MRI to exclude "
-        "vestibular schwannoma. Mx: acute attack - vestibular sedative "
-        "(prochlorperazine, promethazine) and antiemetic. Prevention - "
-        "low-salt diet (under 2 g sodium), reduce caffeine and alcohol; "
-        "thiazide; betahistine (evidence weak but widely used in "
-        "Australia). Refractory - intratympanic steroid, then "
-        "intratympanic gentamicin (ablates vestibular function, risks "
-        "hearing loss); endolymphatic sac decompression rarely. Note: "
-        "sudden severe unilateral SNHL is sudden sensorineural hearing "
-        "loss until audiometry says otherwise - refer within 48 hours for "
-        "high-dose steroid, not attributed to Meniere."
-    ),
 
     "Non-alcoholic fatty liver disease": (
         "MASLD (metabolic dysfunction-associated steatotic liver "
@@ -17663,25 +17378,6 @@ RICH_SUMMARIES = {
         "well young adult is Gilbert - do not chase it with imaging."
     ),
 
-    "Bartholin abscess": (
-        "Acute infection of a Bartholin gland or cyst at the vulvar "
-        "vestibule (4 and 8 o'clock positions). Epidemiology: 2% of "
-        "women; reproductive age; polymicrobial (skin flora plus enteric "
-        "organisms); gonorrhoea and chlamydia increasingly rare but check "
-        "in sexually active. Clinical features: rapidly enlarging painful "
-        "unilateral vulvar swelling, dyspareunia, difficulty walking or "
-        "sitting; fluctuant tender mass; systemic features uncommon "
-        "unless immunocompromised; simple Bartholin cyst is painless and "
-        "chronic. Ix: clinical; STI screen if risk factors; consider "
-        "biopsy in the post-menopausal woman (vulvar carcinoma "
-        "occasionally presents as apparent Bartholin mass). Mx: incision "
-        "and drainage with Word catheter (small balloon catheter left in "
-        "for 4-6 weeks to allow tract epithelialisation and prevent "
-        "recurrence) is standard; sitz baths after; antibiotics only if "
-        "surrounding cellulitis, systemic features, immunocompromise or "
-        "MRSA. Recurrent - marsupialisation or gland excision. Note: any "
-        "vulvar mass in a woman over 40 needs biopsy at drainage."
-    ),
 
     "Digoxin toxicity": (
         "Narrow therapeutic index cardiac glycoside; toxicity common "
@@ -18148,27 +17844,6 @@ RICH_SUMMARIES = {
         "dissection until CTA proves otherwise."
     ),
 
-    "Generalized anxiety disorder": (
-        "Chronic excessive worry across multiple domains, present more "
-        "days than not for at least 6 months, with associated physical "
-        "symptoms. Epidemiology: lifetime prevalence 5-6%; women twice as "
-        "often; onset teenage-30s; high comorbidity with depression, "
-        "other anxiety disorders and substance use. Clinical features: "
-        "uncontrollable worry about everyday events; restlessness, "
-        "fatigue, poor concentration, muscle tension, sleep disturbance, "
-        "irritability; somatic complaints (headache, GI, palpitations) "
-        "often bring the patient to GP. Ix: screen with GAD-7 (>=10 "
-        "moderate); TSH to exclude hyperthyroidism; FBC and EUC; exclude "
-        "substance use (caffeine, cocaine, amphetamine) and withdrawal. "
-        "Mx: psychological first-line - CBT (evidence strongest); "
-        "sertraline or escitalopram first-line pharmacotherapy, titrate "
-        "over 4-6 weeks; SNRI (venlafaxine, duloxetine) if SSRI "
-        "intolerant; short course benzodiazepine only for crisis, tapered "
-        "off within weeks; propranolol for performance anxiety; buspirone "
-        "or pregabalin as adjuncts. Note: sudden onset anxiety in an "
-        "older adult is medical (hyperthyroidism, drug, phaeo) until "
-        "proven otherwise."
-    ),
 
     "Spinal muscular atrophy": (
         "Autosomal recessive degeneration of anterior horn cells from "
@@ -18733,30 +18408,6 @@ RICH_SUMMARIES = {
         "infectivity."
     ),
 
-    "Coarctation of the aorta": (
-        "Congenital narrowing of the aorta at the ductus insertion "
-        "just distal to the left subclavian - duct-dependent in "
-        "the neonate. "
-        "Associations: bicuspid aortic valve (over 50%), Turner "
-        "syndrome, VSD, PDA, berry aneurysms. "
-        "Clinical features: neonate after ductal closure - shock, "
-        "tachypnoea, poor feeding, absent femoral pulses "
-        "(indistinguishable from sepsis). Older - upper-limb "
-        "hypertension, radiofemoral delay, weak femoral pulses, "
-        "systolic murmur between scapulae, headaches, leg "
-        "claudication. "
-        "Ix: four-limb BP with right arm to leg gradient over 20 "
-        "mmHg; echocardiogram is reference; CXR - rib notching after "
-        "age 5, '3 sign' on aortic knuckle; CT/MR angiography for "
-        "planning. "
-        "Mx: prostaglandin E1 in shocked neonate to reopen ductus "
-        "for surgical resection with end-to-end anastomosis, or "
-        "balloon angioplasty with stenting in older patients; "
-        "aggressive upper-limb BP control. Lifelong cardiology "
-        "follow-up. "
-        "Red flags: shocked neonate with absent femoral pulses - "
-        "start prostaglandin before the echo."
-    ),
 
     "Malrotation with midgut volvulus": (
         "Congenital failure of normal 270-degree midgut rotation "
@@ -21479,27 +21130,6 @@ RICH_SUMMARIES = {
         "brain before assuming psychiatric cause."
     ),
 
-    "Prion disease": (
-        "Fatal neurodegenerative disorders from misfolded PrP protein "
-        "- sporadic (Creutzfeldt-Jakob 85%), genetic (familial CJD, "
-        "fatal familial insomnia), or acquired (variant CJD from BSE, "
-        "iatrogenic, kuru). "
-        "Clinical features: sporadic CJD - rapidly progressive "
-        "dementia over weeks to months, startle-induced myoclonus, "
-        "cerebellar ataxia, visual disturbance, akinetic mutism. "
-        "Variant CJD - younger onset, psychiatric prodrome, slower "
-        "course. Death within a year of onset. "
-        "Ix: MRI brain - cortical ribboning and pulvinar/basal "
-        "ganglia hyperintensity on DWI (very sensitive); EEG shows "
-        "periodic sharp wave complexes; CSF 14-3-3 and tau raised; "
-        "RT-QuIC highly sensitive and specific; genetic testing "
-        "(PRNP) if familial. "
-        "Mx: no disease-modifying treatment. Symptomatic - "
-        "clonazepam or levetiracetam for myoclonus; palliative care "
-        "planning; family support; refer to national CJD registry. "
-        "Note: rapidly progressive dementia over weeks with myoclonus "
-        "- MRI DWI and CSF RT-QuIC urgently."
-    ),
 
     "Osteochondritis dissecans": (
         "Focal subchondral bone lesion with overlying cartilage "
@@ -22550,29 +22180,6 @@ RICH_SUMMARIES = {
         "notify."
     ),
 
-    "Golfer's elbow": (
-        "Medial epicondylitis - overuse tendinopathy of the common "
-        "flexor tendon at the medial epicondyle; distinct from "
-        "tennis elbow (lateral, extensor). "
-        "Aetiology: repetitive wrist flexion and forearm pronation "
-        "- golf, throwing sports, manual work with hand tools; peak "
-        "age 40 to 60. "
-        "Clinical features: gradual medial elbow pain worsened by "
-        "grip, wrist flexion and forearm pronation; tender over "
-        "medial epicondyle; reproduced by resisted wrist flexion "
-        "with elbow extended; screen ulnar nerve (Tinel over cubital "
-        "tunnel) - 20% coexistent ulnar neuropathy. "
-        "Ix: clinical; ultrasound or MRI if diagnosis uncertain, "
-        "poor response or concern for tear; nerve conduction if "
-        "ulnar neuropathy suspected. "
-        "Mx: activity modification, NSAIDs, counterforce brace, "
-        "physiotherapy with eccentric flexor loading is first-line. "
-        "Corticosteroid injection gives short-term relief but "
-        "worsens long-term; PRP evidence weak. Refractory (over 6 "
-        "to 12 months) - surgical debridement. "
-        "Note: pain reproduced by resisted wrist flexion with elbow "
-        "extended - golfer's, not tennis (that's wrist extension)."
-    ),
 
     "Williams syndrome": (
         "Contiguous gene deletion syndrome from microdeletion of "
@@ -28956,28 +28563,6 @@ RICH_SUMMARIES = {
         "described. Avoid vasopressin, calcium channel blockers and "
         "beta blockers; use small adrenaline doses under 1 mcg/kg."
     ),
-    "Post-dural puncture headache": (
-        "Positional headache after dural puncture, from CSF leak that "
-        "lowers intracranial pressure and produces traction on "
-        "pain-sensitive structures. Risk factors: young age, female "
-        "sex, pregnancy, low BMI, and larger cutting-tip needles. "
-        "Pencil-point (Sprotte, Whitacre) needles reduce incidence "
-        "relative to Quincke. Features: onset within 5 days, "
-        "bilateral frontal or occipital headache worsening within 15 "
-        "minutes of sitting or standing and improving within 15 "
-        "minutes of lying down. Neck stiffness, tinnitus and nausea "
-        "are common. Resolves spontaneously in most within a week. "
-        "Red flags: fever, focal deficit, seizure, altered mental "
-        "state or a headache that becomes non-positional warrant "
-        "urgent imaging to exclude subdural haematoma, cerebral "
-        "venous sinus thrombosis or meningitis. Mx: bed rest as "
-        "tolerated, oral hydration, simple analgesia and caffeine "
-        "300-500 mg give modest relief. Definitive treatment is an "
-        "epidural blood patch (15-20 mL autologous blood into the "
-        "epidural space) for severe or persistent headache beyond "
-        "24-48 hours, typically resolving within an hour with 70-90% "
-        "success at first attempt."
-    ),
     "Myeloproliferative neoplasms": (
         "Clonal haematopoietic stem cell disorders producing "
         "overproduction of mature myeloid lineages, driven in most "
@@ -29640,23 +29225,6 @@ RICH_SUMMARIES = {
         "red flags for referral are biphasic stridor, feeding "
         "difficulty or growth faltering, not stridor alone."
     ),
-    "Salicylate toxicity": (
-        "Aspirin overdose causing a mixed acid-base disturbance and "
-        "direct metabolic toxicity. Aetiology: deliberate "
-        "self-poisoning or, in children, accidental ingestion; "
-        "chronic toxicity from therapeutic use is under-recognised in "
-        "the elderly. Clinical features: tinnitus, hyperventilation, "
-        "nausea, sweating and confusion; early respiratory alkalosis "
-        "(direct respiratory centre stimulation) followed by a "
-        "superimposed metabolic acidosis. Ix: serum salicylate level, "
-        "ABG, electrolytes and glucose; repeat levels as absorption "
-        "can be delayed. Mx: activated charcoal if early, IV fluids, "
-        "urinary alkalinisation with sodium bicarbonate to enhance "
-        "elimination, haemodialysis for severe toxicity, altered "
-        "mental state or renal impairment. Note: never intubate "
-        "without senior input - losing hyperventilation precipitates "
-        "acidaemia and can be fatal."
-    ),
     "Urethral stricture": (
         "Narrowing of the urethral lumen from scar tissue, causing "
         "progressive obstructive voiding. Aetiology: iatrogenic "
@@ -29993,40 +29561,6 @@ RICH_SUMMARIES = {
         "Note: factitious disorder imposed on another (previously "
         "Munchausen by proxy) is a child protection emergency, not "
         "just a psychiatric diagnosis."
-    ),
-    "Conversion disorder": (
-        "Neurological symptoms (functional neurological symptom "
-        "disorder) that are incompatible with recognised disease, "
-        "causing genuine distress and disability. Aetiology: often "
-        "follows psychological stress or trauma, though a clear "
-        "precipitant is not required for diagnosis; symptoms are not "
-        "consciously produced. Clinical features: weakness, sensory "
-        "loss, non-epileptic seizures or gait disturbance; positive "
-        "signs on examination (Hoover sign, tremor entrainment) "
-        "support the diagnosis rather than relying on exclusion "
-        "alone. Ix: thorough neurological examination for positive "
-        "supportive signs; investigations to exclude organic disease "
-        "as clinically indicated, not exhaustively. Mx: explain the "
-        "diagnosis as real and treatable, not imagined; physiotherapy "
-        "and psychological therapy (often CBT), multidisciplinary "
-        "rehabilitation. Note: this is a diagnosis made on positive "
-        "clinical signs, not simply a label applied when tests are "
-        "normal."
-    ),
-    "Hand-foot-mouth disease": (
-        "Common self-limiting childhood viral exanthem affecting the "
-        "hands, feet and mouth. Aetiology: coxsackievirus A16 and "
-        "enterovirus 71, spread by faecal-oral and respiratory "
-        "droplet routes; outbreaks common in childcare settings. "
-        "Clinical features: painful oral ulcers followed by vesicular "
-        "papules on the palms, soles and buttocks, mild fever and "
-        "reduced oral intake from mouth pain. Ix: clinical diagnosis; "
-        "no routine investigation needed in typical cases. Mx: "
-        "supportive - analgesia, hydration, exclusion from childcare "
-        "until vesicles have dried per local health guidance. Note: "
-        "enterovirus 71 strains carry a small risk of neurological "
-        "complications - persistent lethargy, myoclonic jerks or "
-        "ataxia should prompt urgent review."
     ),
     "Threadworm": (
         "Enterobius vermicularis infection, the commonest helminth "
@@ -31664,20 +31198,6 @@ RICH_SUMMARIES = {
         "recurrence after excision is common if pressure offloading "
         "is not maintained."
     ),
-    "Community acquired pneumonia": (
-        "Acute lower respiratory infection acquired outside hospital, "
-        "presenting with fever, cough, pleuritic pain and new "
-        "consolidation. Aetiology: Streptococcus pneumoniae remains "
-        "the leading cause; atypicals (Mycoplasma, Legionella) and "
-        "viruses are also common. Ix: chest X-ray for consolidation, "
-        "plus SMART-COP or CORB for severity and disposition. Mx: eTG "
-        "guides empirical therapy - amoxicillin for low severity, "
-        "escalating to a beta-lactam plus doxycycline or a macrolide "
-        "for moderate to severe disease; add atypical cover and "
-        "consider Legionella urinary antigen if severe. Note: failure "
-        "to improve by 72 hours prompts re-imaging to exclude empyema "
-        "or an alternative diagnosis, not simply broader antibiotics."
-    ),
     "Asthma exacerbation": (
         "Acute worsening of airflow obstruction with increasing "
         "wheeze, breathlessness and chest tightness, sometimes life "
@@ -32221,25 +31741,6 @@ RICH_SUMMARIES = {
         "substantially better prognosis than HPV-negative disease at "
         "the same stage, changing counselling and treatment "
         "intensity."
-    ),
-    "Superior vena cava obstruction": (
-        "Impaired venous return from the head, neck and upper limbs "
-        "due to compression, invasion or thrombosis of the superior "
-        "vena cava. Aetiology: lung cancer is the commonest malignant "
-        "cause, along with lymphoma and mediastinal metastases; "
-        "central venous catheters and pacemaker leads are a growing "
-        "non-malignant cause. Clinical features: facial and upper "
-        "limb swelling, distended neck and chest wall veins, and "
-        "dyspnoea, all worsened by lying flat or bending forward. Ix: "
-        "CT chest with contrast to define the level and cause of "
-        "obstruction; tissue diagnosis of any underlying malignancy "
-        "before starting treatment where possible. Mx: eTG-aligned "
-        "approach - endovascular stenting for rapid symptom relief, "
-        "with chemotherapy or radiotherapy directed at the underlying "
-        "malignancy, and anticoagulation for a thrombotic cause. "
-        "Note: obtain tissue diagnosis before empirical radiotherapy "
-        "where the patient is stable, since radiotherapy can obscure "
-        "the histology needed to guide definitive treatment."
     ),
     "Necrotising soft tissue infection": (
         "Rapidly progressive, life-threatening infection of the "
