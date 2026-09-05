@@ -3146,6 +3146,90 @@ NEW_CONDITIONS = [
         "utd": [['Mx', 'amyl nitrite methemoglobinemia']],
         "summary": "",
     },
+    {
+        "name": "Rat-bite fever",
+        "aliases": ["sodoku", "Haverhill fever", "Streptobacillus moniliformis infection"],
+        "utd": [['Mx', 'rat bite fever']],
+        "summary": "",
+    },
+    {
+        "name": "Bullous impetigo",
+        "aliases": ["staphylococcal bullous impetigo"],
+        "utd": [['Mx', 'bullous impetigo']],
+        "summary": "",
+    },
+    {
+        "name": "Ecthyma",
+        "aliases": ["ecthyma vulgaris", "streptococcal ecthyma"],
+        "utd": [['Mx', 'ecthyma']],
+        "summary": "",
+    },
+    {
+        "name": "Ecthyma gangrenosum",
+        "aliases": ["Pseudomonas cutaneous sepsis"],
+        "utd": [['Mx', 'ecthyma gangrenosum']],
+        "summary": "",
+    },
+    {
+        "name": "Herpes simplex keratitis",
+        "aliases": ["HSV keratitis", "dendritic keratitis"],
+        "utd": [['Mx', 'herpes simplex keratitis']],
+        "summary": "",
+    },
+    {
+        "name": "Acanthamoeba keratitis",
+        "aliases": ["amoebic keratitis"],
+        "utd": [['Mx', 'acanthamoeba keratitis']],
+        "summary": "",
+    },
+    {
+        "name": "Erythromelalgia",
+        "aliases": ["Mitchell disease", "acromelalgia"],
+        "utd": [['Overview', 'erythromelalgia']],
+        "summary": "",
+    },
+    {
+        "name": "Sweet syndrome",
+        "aliases": ["acute febrile neutrophilic dermatosis"],
+        "utd": [['Overview', 'Sweet syndrome']],
+        "summary": "",
+    },
+    {
+        "name": "Erythema induratum",
+        "aliases": ["Bazin disease", "nodular vasculitis"],
+        "utd": [['Ix', 'erythema induratum Bazin']],
+        "summary": "",
+    },
+    {
+        "name": "Analgesic nephropathy",
+        "aliases": ["phenacetin nephropathy", "APC nephropathy"],
+        "utd": [['Overview', 'analgesic nephropathy']],
+        "summary": "",
+    },
+    {
+        "name": "Papillary muscle rupture",
+        "aliases": ["post-MI mitral regurgitation"],
+        "utd": [['Mx', 'papillary muscle rupture']],
+        "summary": "",
+    },
+    {
+        "name": "Ventricular free wall rupture",
+        "aliases": ["LV free wall rupture", "cardiac rupture"],
+        "utd": [['Mx', 'ventricular free wall rupture']],
+        "summary": "",
+    },
+    {
+        "name": "Left atrial appendage thrombus",
+        "aliases": ["LAA thrombus"],
+        "utd": [['Ix', 'left atrial appendage thrombus']],
+        "summary": "",
+    },
+    {
+        "name": "Cold urticaria",
+        "aliases": ["cold-induced urticaria"],
+        "utd": [['Mx', 'cold urticaria']],
+        "summary": "",
+    },
 ]
 
 
@@ -33349,6 +33433,317 @@ RICH_SUMMARIES = {
         "deficiency - precipitates haemolysis). Ophthalmology for "
         "visual symptoms. Note: cyanosis unresponsive to oxygen in a "
         "young man - co-oximetry for MetHb, methylene blue."
+    ),
+    "Rat-bite fever": (
+        "Zoonotic febrile illness following a bite or scratch from a "
+        "rat (or occasionally other rodents) or ingestion of "
+        "contaminated food or water (Haverhill fever). Two organisms "
+        "cause it - Streptobacillus moniliformis (most cases in the "
+        "Americas and Europe) and Spirillum minus (sodoku, mainly "
+        "Asia). Sx: streptobacillary - abrupt fever, chills, myalgia, "
+        "migratory polyarthralgia, and a maculopapular or petechial "
+        "rash on palms and soles 2-10 days after the bite (the bite "
+        "itself has usually healed). Sodoku - relapsing fevers every "
+        "4-8 days, indurated ulcer at the bite site, regional "
+        "lymphadenopathy, dark eruption. Complications: endocarditis, "
+        "meningitis, abscesses. Ix: blood or joint fluid culture in "
+        "enriched media (organism fastidious, alert lab), PCR "
+        "increasingly used; sodoku is culture-negative and needs "
+        "microscopy of wound exudate or blood. Mx: IV penicillin G "
+        "1.2 g 6-hourly for 7-14 days is first-line; ceftriaxone or "
+        "doxycycline for penicillin allergy. Longer for endocarditis. "
+        "Mortality up to 10% untreated. Note: rat handler with fever, "
+        "migratory arthralgia and palm-sole rash - blood cultures and "
+        "empiric penicillin."
+    ),
+    "Bullous impetigo": (
+        "Superficial staphylococcal skin infection with flaccid "
+        "fluid-filled bullae from local production of exfoliative "
+        "toxin (ET-A) by Staphylococcus aureus. A localised form of "
+        "the same toxin injury that in generalised form causes "
+        "staphylococcal scalded skin syndrome. Predominantly affects "
+        "infants and young children, adults uncommon. Sx: flaccid "
+        "clear or turbid bullae 1-2 cm on trunk, axillae, neck, nappy "
+        "area or extremities; roof rupture leaves a shallow moist "
+        "erosion with a collarette of scale; minimal surrounding "
+        "erythema; usually afebrile and systemically well. "
+        "Distinguished from non-bullous impetigo (thicker "
+        "honey-crusted plaques) by the predominance of intact bullae. "
+        "Ix: clinical; swab of vesicle fluid for M/C/S; consider PVL "
+        "testing for recurrent or severe. Mx: localised - topical "
+        "mupirocin 2% TDS for 5 days. Widespread or systemic - oral "
+        "flucloxacillin 12.5 mg/kg (max 500 mg) QID for 7 days; "
+        "cephalexin if penicillin-allergic; add clindamycin or "
+        "TMP-SMX if MRSA suspected. Exclude from school until 24 "
+        "hours of antibiotics. Note: flaccid bullae in a child - "
+        "swab, oral fluclox, school exclusion 24 hours."
+    ),
+    "Ecthyma": (
+        "Deep pyoderma extending through the epidermis into the "
+        "dermis - a punched-out ulcerated form of impetigo. Usually "
+        "group A Streptococcus, sometimes with Staphylococcus "
+        "aureus. Risk factors include poor hygiene, warm humid "
+        "climate, malnutrition and immunosuppression. Common in "
+        "remote Aboriginal and Torres Strait Islander communities "
+        "where it is a reservoir for APSGN and rheumatic fever. "
+        "Sx: painful vesicles or pustules on erythematous base "
+        "progress to punched-out ulcers 0.5-3 cm with adherent "
+        "honey-brown crust; typically on lower legs, feet or "
+        "buttocks; heals with scarring (unlike impetigo). Ix: "
+        "clinical; swab underneath the crust for M/C/S. Screen "
+        "for APSGN in endemic settings with urinalysis and BP "
+        "2-3 weeks post-infection. Mx: gentle debridement of "
+        "crust; oral flucloxacillin 500 mg QID for 7-10 days; add "
+        "benzylpenicillin IM if streptococcal outbreak suspected. "
+        "Treat underlying predisposing factor. Note: punched-out "
+        "crusted ulcer on the lower leg of an Aboriginal or Torres "
+        "Strait Islander child - ecthyma, screen for post-strep "
+        "GN at 2 weeks."
+    ),
+    "Ecthyma gangrenosum": (
+        "Cutaneous manifestation of Pseudomonas aeruginosa "
+        "bacteraemia - vasculitis with skin necrosis in a severely "
+        "immunocompromised patient. Not the same as ordinary ecthyma. "
+        "Occurs in neutropenia, haematological malignancy, HIV, bone "
+        "marrow transplant, burns. Herald of overwhelming sepsis. Sx: "
+        "rapidly evolving painless erythematous macule to "
+        "haemorrhagic pustule to central grey-black necrotic eschar "
+        "over 12-24 hours; typically axilla, groin or perianal area; "
+        "usually multiple; systemic sepsis with fever, hypotension, "
+        "shock. Ix: blood cultures (positive in bacteraemic form), "
+        "tissue biopsy for culture and histology (necrotising "
+        "vasculitis with bacilli in vessel walls); FBC shows severe "
+        "neutropenia; CRP, lactate, ABG. Mx: URGENT broad-spectrum "
+        "antipseudomonal IV antibiotics - piperacillin-tazobactam "
+        "plus tobramycin, or a carbapenem; ICU-level resuscitation; "
+        "G-CSF if neutropenic; surgical debridement of necrotic "
+        "tissue. Mortality 30-50% even with treatment. Note: black "
+        "necrotic skin lesion in a neutropenic patient - Pseudomonas "
+        "bacteraemia, cover empirically now."
+    ),
+    "Herpes simplex keratitis": (
+        "Corneal infection with herpes simplex virus (usually HSV-1) "
+        "- the commonest infectious cause of unilateral corneal "
+        "blindness in developed countries. Recurrent disease from "
+        "viral reactivation in the trigeminal ganglion is more common "
+        "than primary infection. Sx: unilateral red painful eye with "
+        "photophobia, tearing, foreign body sensation, and reduced "
+        "vision; corneal sensation reduced (helpful discriminating "
+        "feature); characteristic dendritic ulcer on fluorescein "
+        "staining in epithelial disease; geographic ulcer if "
+        "dendrites coalesce (often steroid-related); stromal disease "
+        "causes deep opacity and neovascularisation. Ix: slit-lamp "
+        "with fluorescein reveals branching dendrites with terminal "
+        "bulbs, corneal sensation testing shows reduction. Viral PCR "
+        "of corneal scraping if uncertain. Mx: URGENT ophthalmology. "
+        "Topical aciclovir 3% ointment 5x/day OR oral valaciclovir "
+        "500 mg TDS for 7-10 days. Never give topical corticosteroids "
+        "in epithelial disease - accelerates ulceration and can "
+        "perforate the cornea. Long-term oral prophylaxis for "
+        "recurrent disease. Note: unilateral red eye plus dendritic "
+        "ulcer plus reduced corneal sensation - HSV keratitis, no "
+        "steroids."
+    ),
+    "Acanthamoeba keratitis": (
+        "Chronic corneal infection with free-living amoebae - "
+        "overwhelmingly associated with soft contact lens wear, "
+        "particularly tap-water rinsing, swimming or showering in "
+        "lenses. Rare but sight-threatening. Sx: severe unilateral "
+        "eye pain disproportionate to clinical findings (hallmark), "
+        "photophobia, tearing, red eye and reduced vision over weeks; "
+        "often misdiagnosed as HSV or bacterial keratitis initially "
+        "with poor response to standard treatment; characteristic "
+        "ring-shaped stromal infiltrate and radial perineuritis on "
+        "slit-lamp in later disease. Ix: URGENT ophthalmology. "
+        "Corneal scraping for microscopy (cysts and trophozoites on "
+        "calcofluor white or Giemsa), culture on non-nutrient agar "
+        "with E. coli lawn, PCR; confocal microscopy shows cysts in "
+        "vivo. Mx: dual-agent topical anti-amoebic therapy for months "
+        "- polyhexamethylene biguanide 0.02% plus chlorhexidine 0.02% "
+        "hourly initially, tapering over months to a year. Corneal "
+        "transplantation for scarring or perforation. Prevention: no "
+        "tap water contact with lenses, no lens wear in showers or "
+        "pools. Note: severe pain out of proportion in a lens wearer "
+        "- scrape for amoebae before assuming HSV."
+    ),
+    "Erythromelalgia": (
+        "Episodic syndrome of intense burning pain, redness and "
+        "warmth of the extremities - triggered by heat, exercise or "
+        "dependency, relieved by cooling and elevation. Subtypes: "
+        "primary (idiopathic or SCN9A sodium channel mutation) and "
+        "secondary (myeloproliferative disease - essential "
+        "thrombocythaemia and polycythaemia vera are classic, also "
+        "small-fibre neuropathy, autoimmune disease, calcium channel "
+        "blockers). Sx: attacks of minutes to hours, mostly feet, "
+        "sometimes hands; skin bright red, warm, swollen; patients "
+        "may immerse feet in ice water for relief, which can cause "
+        "ulceration. Ix: FBC and film urgently for myeloproliferative "
+        "disease; JAK2 mutation; skin biopsy for small-fibre "
+        "neuropathy; SCN9A testing if childhood onset or familial. "
+        "Mx: treat secondary cause - aspirin is dramatically "
+        "effective for MPN-related erythromelalgia. Symptomatic - "
+        "cooling (not ice; can cause tissue damage), elevation, "
+        "trigger avoidance. Trials of gabapentin, mexiletine, topical "
+        "lidocaine for primary form. Note: burning red feet relieved "
+        "by cold - FBC for essential thrombocythaemia, aspirin if "
+        "positive."
+    ),
+    "Sweet syndrome": (
+        "Acute febrile neutrophilic dermatosis - abrupt tender "
+        "erythematous plaques with a dense dermal neutrophilic "
+        "infiltrate. Subtypes: classical (post-infective, IBD, "
+        "pregnancy), malignancy-associated (up to 20% of cases; AML "
+        "is the classic, also myelodysplasia and solid tumours), "
+        "drug-induced (G-CSF, all-trans retinoic acid, azathioprine, "
+        "sulfa drugs). Sx: sudden fever, tender juicy red-purple "
+        "plaques and nodules on face, neck, upper limbs (dorsum of "
+        "hand classic - pseudovesicular surface but no true "
+        "blisters); arthralgia, malaise; may have oral, ocular or "
+        "visceral involvement. Ix: FBC (neutrophilia is typical but "
+        "can be neutropenic in malignancy-associated form), CRP "
+        "raised, ESR raised; skin biopsy is diagnostic (dense "
+        "neutrophilic infiltrate without vasculitis); screen for "
+        "underlying malignancy (FBC, film, CT, colonoscopy per "
+        "demographics), infection, drug review. Mx: oral prednisolone "
+        "0.5-1 mg/kg daily tapered over 4-6 weeks is first-line "
+        "(dramatic response); dapsone, colchicine, potassium iodide "
+        "as alternatives; treat underlying cause. Note: tender juicy "
+        "red plaques plus fever plus neutrophilia - Sweet syndrome, "
+        "biopsy and hunt for AML."
+    ),
+    "Erythema induratum": (
+        "Chronic nodular vasculitis on the calves of adult women, "
+        "historically associated with Mycobacterium tuberculosis "
+        "hypersensitivity (Bazin disease). Now also linked to "
+        "hepatitis C, other infections, drugs and idiopathic forms - "
+        "a hypersensitivity reaction rather than direct infection. "
+        "Sx: recurrent crops of tender deep-seated dusky red or "
+        "violaceous nodules and plaques on the posterior calves; may "
+        "ulcerate and heal with atrophic scarring; worsens in winter; "
+        "usually bilateral. Distinguished from erythema nodosum "
+        "(anterior shins, does not ulcerate). Ix: skin biopsy shows "
+        "lobular panniculitis with vasculitis and caseation-like "
+        "necrosis; tuberculin skin test or interferon-gamma release "
+        "assay to screen for latent TB; hepatitis serology; PCR for "
+        "mycobacterial DNA on biopsy. Mx: treat latent TB with a full "
+        "course of isoniazid or rifampicin if TB-associated (highly "
+        "effective). Treat hepatitis C with direct-acting antivirals "
+        "if positive. Idiopathic form - NSAIDs, potassium iodide, "
+        "tetracyclines, systemic corticosteroids for severe. Note: "
+        "ulcerating nodules on posterior calves in a woman - biopsy "
+        "plus TB screen."
+    ),
+    "Analgesic nephropathy": (
+        "Chronic tubulointerstitial disease from long-term "
+        "consumption of combined analgesics containing phenacetin, "
+        "paracetamol, aspirin and caffeine - historic peak from the "
+        "widespread use of Vincent APC powders in Australia 1950s-70s "
+        "(Australia had one of the highest incidences in the world). "
+        "Now rare with phenacetin banned since 1983 but occasionally "
+        "seen in long-term high-dose NSAID or paracetamol users. Sx: "
+        "slowly progressive CKD, sterile pyuria, mild proteinuria, "
+        "distal tubular dysfunction (concentrating defect, renal "
+        "tubular acidosis), papillary necrosis with haematuria and "
+        "colic if sloughed papillae cause ureteric obstruction; "
+        "increased risk of urothelial carcinoma. Ix: careful "
+        "analgesic history (patients often under-report); urinalysis, "
+        "urine microscopy, imaging - CT shows small kidneys with a "
+        "bumpy contour and calcified papillae; urine cytology for "
+        "atypical cells given malignancy risk. Mx: stop the offending "
+        "analgesic. Standard CKD care - BP control (ACEi), avoid "
+        "nephrotoxins, manage complications. Regular urine cytology "
+        "and cystoscopy for urothelial surveillance. Note: elderly "
+        "Australian with unexplained CKD - ask about APC powders."
+    ),
+    "Papillary muscle rupture": (
+        "Mechanical complication of acute myocardial infarction - "
+        "rupture of a papillary muscle head causes acute severe "
+        "mitral regurgitation and cardiogenic shock. Peaks 3-5 days "
+        "post-infarction, usually inferior MI affecting the "
+        "posteromedial papillary muscle (single blood supply from the "
+        "PDA - vulnerable). Sx: sudden severe dyspnoea and flash "
+        "pulmonary oedema in a patient in the recovery phase of an "
+        "MI; new loud pansystolic murmur radiating to axilla, "
+        "sometimes soft or absent because of large regurgitant volume "
+        "with equalised LA and LV pressures; cardiogenic shock. Ix: "
+        "urgent bedside echo - flail leaflet with severe MR, "
+        "hyperdynamic LV, elevated pulmonary pressures; TOE for "
+        "definitive assessment; haemodynamic instability, elevated "
+        "lactate. Mx: URGENT cardiac surgical review for emergency "
+        "mitral valve repair or replacement; bridging with IABP or "
+        "Impella for shock; afterload reduction with sodium "
+        "nitroprusside if BP tolerates; furosemide, non-invasive "
+        "ventilation; avoid delay - mortality with medical therapy "
+        "alone is over 75%. Note: sudden pulmonary oedema plus new "
+        "murmur day 3-5 post-inferior MI - bedside echo, call "
+        "cardiothoracics."
+    ),
+    "Ventricular free wall rupture": (
+        "Catastrophic mechanical complication of transmural MI - the "
+        "infarcted ventricular wall ruptures into the pericardium, "
+        "causing acute cardiac tamponade and electromechanical "
+        "dissociation. Peaks in the first week post-infarction; "
+        "usually first MI, elderly, female, hypertensive; often left "
+        "ventricular lateral or anterior wall. Sx: sudden onset of "
+        "chest pain, syncope, and electromechanical dissociation - "
+        "electrical activity on the monitor with no palpable pulse or "
+        "measurable BP; rapid death within minutes in most cases. "
+        "Subacute rupture (contained by pericardial adhesions forming "
+        "a pseudoaneurysm) presents as recurrent chest pain, "
+        "hypotension and rising JVP over hours. Ix: bedside echo "
+        "shows pericardial effusion with tamponade physiology (RV "
+        "collapse, distended IVC); ECG may show ST re-elevation "
+        "before the event. Mx: URGENT - pericardiocentesis for "
+        "temporary relief of tamponade, emergency thoracotomy for "
+        "surgical repair (survival less than 30% even with prompt "
+        "surgery). Prevention - avoid late thrombolysis, avoid "
+        "steroids and NSAIDs post-MI (impair healing). Note: PEA "
+        "arrest in the first week post-MI - think free wall rupture, "
+        "echo immediately, thoracotomy is the only chance."
+    ),
+    "Left atrial appendage thrombus": (
+        "Formation of thrombus within the left atrial appendage - the "
+        "source of over 90% of cardiac emboli in non-valvular atrial "
+        "fibrillation. Also occurs in mitral stenosis, dilated "
+        "cardiomyopathy and hypercoagulable states. Sx: often "
+        "asymptomatic and discovered on pre-cardioversion or "
+        "pre-ablation imaging; presenting symptom is embolic - "
+        "ischaemic stroke, TIA, mesenteric ischaemia, acute limb "
+        "ischaemia. Ix: transoesophageal echocardiogram is the gold "
+        "standard - direct view of the appendage; TTE cannot reliably "
+        "visualise the LAA. Cardiac CT or MRI as alternatives if TOE "
+        "contraindicated. Always perform TOE before cardioversion of "
+        "AF over 48 hours or of unknown duration (unless "
+        "anticoagulated 3 weeks prior). Mx: therapeutic "
+        "anticoagulation (warfarin with INR 2-3, or DOAC) for at "
+        "least 3-6 weeks; repeat imaging before proceeding to "
+        "cardioversion or ablation. Consider LAA occlusion device "
+        "(Watchman) for patients with contraindication to long-term "
+        "anticoagulation. Note: no cardioversion of AF without 3 "
+        "weeks of anticoagulation or a clean TOE - LAA thrombus will "
+        "embolise on rhythm restoration."
+    ),
+    "Cold urticaria": (
+        "Physical urticaria triggered by cold air, water or objects - "
+        "wheals within minutes of cold exposure, resolving as skin "
+        "rewarms. Acquired form usually idiopathic; occasionally "
+        "secondary to infection (mononucleosis, hepatitis), "
+        "cryoglobulinaemia or drug reactions. Familial cold "
+        "autoinflammatory syndrome is a distinct condition. Sx: itchy "
+        "wheals and angioedema at sites of cold contact. Systemic "
+        "reactions on cold-water immersion (pool, ocean) can cause "
+        "hypotension, syncope and cardiac arrest - swimming is the "
+        "highest-risk activity. Ice cube test on the forearm for 5 "
+        "minutes reproduces a wheal within 10 minutes of rewarming "
+        "and confirms the diagnosis. Ix: FBC, ESR, cryoglobulins, "
+        "cryofibrinogen, monospot, hepatitis serology and syphilis "
+        "serology. Mx: avoid cold exposure, warn against swimming "
+        "alone. Second-generation antihistamine (cetirizine 10 mg or "
+        "loratadine 10 mg daily, up-titrated to 4x standard dose if "
+        "needed). Adrenaline auto-injector for systemic reaction "
+        "risk. Omalizumab for refractory cases. Note: hives after "
+        "swimming plus positive ice cube test - cold urticaria, "
+        "prescribe EpiPen and forbid solo swimming."
     ),
 }
 
