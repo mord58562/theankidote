@@ -2657,6 +2657,204 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "premenstrual syndrome"]],
         "summary": "",
     },
+    {
+        "name": 'Chondrodermatitis nodularis helicis',
+        "aliases": ['CNH'],
+        "utd": [["Overview", 'chondrodermatitis nodularis helicis']],
+        "summary": "",
+    },
+    {
+        "name": 'Community acquired pneumonia',
+        "aliases": ['CAP'],
+        "utd": [["Overview", 'community acquired pneumonia in adults']],
+        "summary": "",
+    },
+    {
+        "name": 'Asthma exacerbation',
+        "aliases": ['acute asthma attack', 'acute severe asthma'],
+        "utd": [["Overview", 'acute exacerbations of asthma in adults']],
+        "summary": "",
+    },
+    {
+        "name": 'COPD exacerbation',
+        "aliases": ['AECOPD', 'acute exacerbation of COPD'],
+        "utd": [["Overview", 'COPD exacerbations']],
+        "summary": "",
+    },
+    {
+        "name": 'Sciatica',
+        "aliases": ['lumbar radiculopathy'],
+        "utd": [["Overview", 'sciatica']],
+        "summary": "",
+    },
+    {
+        "name": 'Dementia',
+        "aliases": ['major neurocognitive disorder'],
+        "utd": [["Overview", 'evaluation of cognitive impairment and dementia']],
+        "summary": "",
+    },
+    {
+        "name": 'Conduct disorder',
+        "aliases": [],
+        "utd": [["Overview", 'conduct disorder']],
+        "summary": "",
+    },
+    {
+        "name": 'HIV infection',
+        "aliases": ['human immunodeficiency virus infection'],
+        "utd": [["Overview", 'acute and early HIV infection']],
+        "summary": "",
+    },
+    {
+        "name": 'Acute leukaemia',
+        "aliases": ['acute leukemia'],
+        "utd": [["Overview", 'acute leukemia']],
+        "summary": "",
+    },
+    {
+        "name": 'Thrombocytopenia',
+        "aliases": ['low platelet count'],
+        "utd": [["Overview", 'approach to the adult with thrombocytopenia']],
+        "summary": "",
+    },
+    {
+        "name": 'Frailty',
+        "aliases": [],
+        "utd": [["Overview", 'frailty']],
+        "summary": "",
+    },
+    {
+        "name": 'Falls in older adults',
+        "aliases": ['geriatric falls'],
+        "utd": [["Overview", 'falls in older persons']],
+        "summary": "",
+    },
+    {
+        "name": 'Necrotising otitis externa',
+        "aliases": ['malignant otitis externa'],
+        "utd": [["Overview", 'malignant otitis externa']],
+        "summary": "",
+    },
+    {
+        "name": 'Chronic rhinosinusitis',
+        "aliases": [],
+        "utd": [["Overview", 'chronic rhinosinusitis']],
+        "summary": "",
+    },
+    {
+        "name": 'Noise induced hearing loss',
+        "aliases": ['NIHL'],
+        "utd": [["Overview", 'noise induced hearing loss']],
+        "summary": "",
+    },
+    {
+        "name": 'Age related macular degeneration',
+        "aliases": [],
+        "utd": [["Overview", 'age related macular degeneration']],
+        "summary": "",
+    },
+    {
+        "name": 'Chronic prostatitis',
+        "aliases": ['chronic pelvic pain syndrome'],
+        "utd": [["Overview", 'chronic prostatitis chronic pelvic pain syndrome']],
+        "summary": "",
+    },
+    {
+        "name": 'Premature ejaculation',
+        "aliases": [],
+        "utd": [["Overview", 'premature ejaculation']],
+        "summary": "",
+    },
+    {
+        "name": 'Chronic constipation',
+        "aliases": ['functional constipation'],
+        "utd": [["Overview", 'constipation in adults']],
+        "summary": "",
+    },
+    {
+        "name": 'Patellofemoral pain syndrome',
+        "aliases": ['anterior knee pain'],
+        "utd": [["Overview", 'patellofemoral pain']],
+        "summary": "",
+    },
+    {
+        "name": 'Idiopathic scoliosis',
+        "aliases": ['adolescent idiopathic scoliosis'],
+        "utd": [["Overview", 'adolescent idiopathic scoliosis']],
+        "summary": "",
+    },
+    {
+        "name": 'Sleep paralysis',
+        "aliases": [],
+        "utd": [["Overview", 'sleep paralysis']],
+        "summary": "",
+    },
+    {
+        "name": 'Diabetic peripheral neuropathy',
+        "aliases": [],
+        "utd": [["Overview", 'diabetic neuropathy']],
+        "summary": "",
+    },
+    {
+        "name": 'Trichotillomania',
+        "aliases": ['hair pulling disorder'],
+        "utd": [["Overview", 'trichotillomania']],
+        "summary": "",
+    },
+    {
+        "name": 'Hyperemesis in pregnancy',
+        "aliases": ['hyperemesis gravidarum severe'],
+        "utd": [["Overview", 'hyperemesis gravidarum']],
+        "summary": "",
+    },
+    {
+        "name": 'Chickenpox in pregnancy',
+        "aliases": ['varicella in pregnancy'],
+        "utd": [["Overview", 'varicella zoster infection in pregnancy']],
+        "summary": "",
+    },
+    {
+        "name": 'Group B streptococcus in pregnancy',
+        "aliases": ['GBS in pregnancy'],
+        "utd": [["Overview", 'group B streptococcus in pregnancy']],
+        "summary": "",
+    },
+    {
+        "name": 'Lemierre syndrome',
+        "aliases": ['jugular vein suppurative thrombophlebitis'],
+        "utd": [["Overview", 'lemierre syndrome']],
+        "summary": "",
+    },
+    {
+        "name": 'Acute glomerulonephritis',
+        "aliases": [],
+        "utd": [["Overview", 'acute glomerulonephritis']],
+        "summary": "",
+    },
+    {
+        "name": 'Hydronephrosis',
+        "aliases": [],
+        "utd": [["Overview", 'hydronephrosis']],
+        "summary": "",
+    },
+    {
+        "name": 'Head and neck cancer',
+        "aliases": ['squamous cell carcinoma of head and neck'],
+        "utd": [["Overview", 'head and neck squamous cell carcinoma']],
+        "summary": "",
+    },
+    {
+        "name": 'Superior vena cava obstruction',
+        "aliases": ['SVCO', 'SVC syndrome'],
+        "utd": [["Overview", 'superior vena cava syndrome']],
+        "summary": "",
+    },
+    {
+        "name": 'Necrotising soft tissue infection',
+        "aliases": ['NSTI'],
+        "utd": [["Overview", 'necrotizing soft tissue infections']],
+        "summary": "",
+    },
 ]
 
 
@@ -31451,6 +31649,617 @@ RICH_SUMMARIES = {
         "symptoms persisting through the follicular phase are not "
         "premenstrual syndrome, however severe - that pattern points "
         "to an independent mood disorder needing its own workup."
+    ),
+    "Chondrodermatitis nodularis helicis": (
+        "Painful nodule on the most prominent part of the ear helix, "
+        "driven by chronic pressure ischaemia of the skin and "
+        "underlying cartilage. Aetiology: repetitive pressure from "
+        "sleeping on that side, cold exposure and sun damage in older "
+        "men. Clinical features: a tender, firm, skin coloured to "
+        "erythematous nodule, often mistaken for skin cancer. Ix: "
+        "clinical diagnosis; biopsy only if atypical or non-healing "
+        "to exclude squamous cell carcinoma. Mx: pressure offloading "
+        "with a foam pillow first line, then intralesional steroid, "
+        "and surgical cartilage excision for refractory cases. Note: "
+        "recurrence after excision is common if pressure offloading "
+        "is not maintained."
+    ),
+    "Community acquired pneumonia": (
+        "Acute lower respiratory infection acquired outside hospital, "
+        "presenting with fever, cough, pleuritic pain and new "
+        "consolidation. Aetiology: Streptococcus pneumoniae remains "
+        "the leading cause; atypicals (Mycoplasma, Legionella) and "
+        "viruses are also common. Ix: chest X-ray for consolidation, "
+        "plus SMART-COP or CORB for severity and disposition. Mx: eTG "
+        "guides empirical therapy - amoxicillin for low severity, "
+        "escalating to a beta-lactam plus doxycycline or a macrolide "
+        "for moderate to severe disease; add atypical cover and "
+        "consider Legionella urinary antigen if severe. Note: failure "
+        "to improve by 72 hours prompts re-imaging to exclude empyema "
+        "or an alternative diagnosis, not simply broader antibiotics."
+    ),
+    "Asthma exacerbation": (
+        "Acute worsening of airflow obstruction with increasing "
+        "wheeze, breathlessness and chest tightness, sometimes life "
+        "threatening. Aetiology: viral infection is the commonest "
+        "trigger, alongside allergen exposure, poor adherence and "
+        "NSAID or beta-blocker use. Clinical features: tachypnoea, "
+        "accessory muscle use, and a silent chest signals critical "
+        "severity. Ix: peak flow against best or predicted, oximetry, "
+        "and an ABG only if life-threatening features are present. "
+        "Mx: eTG stepwise approach - salbutamol via spacer or "
+        "nebuliser, ipratropium and early oral corticosteroid, with "
+        "IV magnesium sulfate for severe cases unresponsive to first "
+        "line therapy. Note: a normalising respiratory rate with "
+        "worsening fatigue can signal impending respiratory arrest, "
+        "not improvement."
+    ),
+    "COPD exacerbation": (
+        "Acute sustained worsening of respiratory symptoms beyond "
+        "normal day-to-day variation in a patient with COPD, "
+        "requiring treatment change. Aetiology: most commonly viral "
+        "or bacterial infection, with air pollution and non-adherence "
+        "to maintenance therapy also contributing. Clinical features: "
+        "increased dyspnoea, sputum volume and purulence guide the "
+        "decision to add antibiotics. Ix: chest X-ray to exclude "
+        "pneumonia or pneumothorax, plus an ABG if drowsy or severely "
+        "breathless to check for CO2 retention. Mx: eTG approach - "
+        "bronchodilators, a short course of oral corticosteroid, and "
+        "antibiotics only if purulent sputum or ventilatory support "
+        "is needed; controlled oxygen targeting 88 to 92% saturation. "
+        "Note: uncontrolled high flow oxygen can precipitate CO2 "
+        "narcosis in chronic retainers."
+    ),
+    "Sciatica": (
+        "Radicular leg pain following a dermatomal distribution below "
+        "the knee, caused by irritation or compression of a "
+        "lumbosacral nerve root. Aetiology: lumbar disc herniation is "
+        "the leading cause, with spinal stenosis and rarely tumour or "
+        "infection in older patients. Clinical features: pain worse "
+        "with sitting or straight leg raise, with associated numbness "
+        "or weakness in the affected root distribution. Ix: clinical "
+        "diagnosis in most cases; MRI reserved for red flags "
+        "(progressive weakness, saddle anaesthesia, bladder or bowel "
+        "dysfunction) or persistent symptoms beyond six weeks. Mx: "
+        "eTG approach - stay active, simple analgesia, and "
+        "physiotherapy; surgical referral for red flags or refractory "
+        "severe pain. Note: bilateral leg pain with saddle "
+        "anaesthesia is cauda equina syndrome until proven otherwise "
+        "and needs same-day imaging."
+    ),
+    "Dementia": (
+        "Acquired, progressive decline in cognition severe enough to "
+        "impair independent function, distinct from the transient "
+        "course of delirium. Aetiology: Alzheimer disease is the "
+        "commonest cause, followed by vascular, Lewy body and "
+        "frontotemporal dementia. Clinical features: gradual memory "
+        "and executive decline for Alzheimer disease, stepwise "
+        "decline with vascular risk factors for vascular dementia, "
+        "and early visual hallucinations or parkinsonism for Lewy "
+        "body disease. Ix: cognitive screening (MMSE or MoCA), bloods "
+        "to exclude reversible causes (B12, TSH, calcium), and "
+        "neuroimaging to assess for a vascular or structural cause. "
+        "Mx: cholinesterase inhibitors for Alzheimer and Lewy body "
+        "dementia, memantine for moderate to severe disease, "
+        "cardiovascular risk modification for vascular dementia, and "
+        "carer support and advance care planning throughout. Note: a "
+        "rapid decline over weeks favours delirium or a rarer rapidly "
+        "progressive dementia, not typical Alzheimer disease."
+    ),
+    "Conduct disorder": (
+        "Persistent pattern of behaviour in children or adolescents "
+        "that violates the rights of others or age-appropriate "
+        "societal norms. Aetiology: a mix of genetic vulnerability, "
+        "harsh or inconsistent parenting, and exposure to violence or "
+        "neglect. Clinical features: aggression to people or animals, "
+        "property destruction, deceitfulness or theft, and serious "
+        "rule violations such as truancy or running away, present for "
+        "at least twelve months. Ix: clinical diagnosis with "
+        "collateral history from caregivers and school; screen for "
+        "comorbid ADHD, mood disorder and substance use. Mx: "
+        "eTG-aligned approach - parent management training and "
+        "multisystemic therapy first line, with pharmacotherapy "
+        "reserved for comorbid conditions or severe aggression. Note: "
+        "onset before age ten (childhood-onset type) carries a worse "
+        "prognosis for antisocial personality disorder in adulthood "
+        "than adolescent-onset conduct disorder."
+    ),
+    "HIV infection": (
+        "Chronic retroviral infection causing progressive depletion "
+        "of CD4 T-cells, leading to immunodeficiency if untreated. "
+        "Aetiology: spread by sexual contact, blood exposure and "
+        "vertical transmission; acute seroconversion causes a "
+        "glandular-fever-like illness two to four weeks after "
+        "exposure. Clinical features: often asymptomatic for years; "
+        "advanced disease presents with opportunistic infections "
+        "(Pneumocystis pneumonia, oesophageal candidiasis) or "
+        "AIDS-defining cancers. Ix: fourth-generation combined "
+        "antigen-antibody test, confirmed with viral load and Western "
+        "blot or immunoassay; CD4 count stages disease severity. Mx: "
+        "eTG and ASHM guidance - combination antiretroviral therapy "
+        "for all patients regardless of CD4 count, started promptly "
+        "after diagnosis, with PrEP recommended for high-risk "
+        "contacts. Note: undetectable viral load on treatment means "
+        "untransmittable (U=U), which is central to modern "
+        "counselling."
+    ),
+    "Acute leukaemia": (
+        "Malignant proliferation of immature blood precursors "
+        "(blasts) crowding out normal marrow, causing cytopenias. "
+        "Aetiology: acute myeloid leukaemia predominates in adults; "
+        "acute lymphoblastic leukaemia predominates in children, with "
+        "prior chemotherapy or radiation as risk factors for either. "
+        "Clinical features: fatigue and pallor from anaemia, bruising "
+        "or bleeding from thrombocytopenia, and fever or infection "
+        "from neutropenia despite a high white cell count. Ix: full "
+        "blood count and film showing blasts, confirmed by bone "
+        "marrow biopsy with flow cytometry and cytogenetics for "
+        "subtyping. Mx: eTG-aligned approach - urgent haematology "
+        "referral for induction chemotherapy, with all-trans retinoic "
+        "acid added for acute promyelocytic leukaemia, and allogeneic "
+        "transplant considered for high-risk disease. Note: acute "
+        "promyelocytic leukaemia can present with disseminated "
+        "intravascular coagulation and needs ATRA started on clinical "
+        "suspicion, before genetic confirmation."
+    ),
+    "Thrombocytopenia": (
+        "Platelet count below the normal range, ranging from an "
+        "incidental finding to a cause of life-threatening bleeding. "
+        "Aetiology: reduced production (marrow failure, B12 "
+        "deficiency), increased destruction (immune thrombocytopenia, "
+        "heparin induced thrombocytopenia, DIC) or sequestration "
+        "(hypersplenism) - pregnancy-related gestational "
+        "thrombocytopenia is a common benign cause. Clinical "
+        "features: petechiae, easy bruising and mucosal bleeding; "
+        "spontaneous bleeding risk rises sharply below 20 x10^9/L. "
+        "Ix: full blood count and film to exclude "
+        "pseudothrombocytopenia and identify schistocytes, with "
+        "coagulation studies if DIC is suspected. Mx: eTG-aligned "
+        "approach - treat the underlying cause, corticosteroids or "
+        "IVIG for immune thrombocytopenia, and platelet transfusion "
+        "reserved for active bleeding or very low counts before an "
+        "invasive procedure. Note: a falling platelet count five to "
+        "ten days after starting heparin should trigger urgent "
+        "testing for heparin induced thrombocytopenia."
+    ),
+    "Frailty": (
+        "A state of increased vulnerability to stressors from "
+        "cumulative decline across multiple physiological systems, "
+        "distinct from normal ageing or a single chronic disease. "
+        "Aetiology: sarcopenia, chronic inflammation and "
+        "multimorbidity all contribute; it predicts poor recovery "
+        "after illness, surgery or hospitalisation. Clinical "
+        "features: unintentional weight loss, slow gait speed, "
+        "weakness, exhaustion and low activity define the Fried "
+        "phenotype. Ix: clinical screening with the Clinical Frailty "
+        "Scale or a comprehensive geriatric assessment rather than a "
+        "single blood test. Mx: individualised approach - resistance "
+        "exercise and adequate protein intake, medication review to "
+        "deprescribe where possible, and shared decision-making about "
+        "the risks of invasive treatment. Note: a frail patient can "
+        "decompensate dramatically from a trivial insult like a "
+        "urinary tract infection, presenting atypically as a fall or "
+        "delirium."
+    ),
+    "Falls in older adults": (
+        "An unintentional event resulting in a person coming to rest "
+        "on the ground, common in older adults and a marker of "
+        "underlying vulnerability rather than a diagnosis itself. "
+        "Aetiology: multifactorial - postural hypotension, "
+        "polypharmacy (especially sedatives), visual impairment, gait "
+        "and balance disorders, and environmental hazards. Clinical "
+        "features: recurrent falls, near misses or a fear of falling "
+        "all warrant assessment even without injury. Ix: lying and "
+        "standing blood pressure, medication review, gait and balance "
+        "testing (Timed Up and Go), and vision check; imaging only if "
+        "a specific injury or red flag is suspected. Mx: eTG-aligned "
+        "approach - deprescribe high-risk medications, vitamin D and "
+        "resistance exercise, home hazard modification, and "
+        "cardiovascular workup if syncope is suspected. Note: any "
+        "unwitnessed fall in an older adult should prompt "
+        "consideration of an occult subdural haematoma, especially if "
+        "on anticoagulation."
+    ),
+    "Necrotising otitis externa": (
+        "Aggressive skull base osteomyelitis originating from the "
+        "external auditory canal, almost exclusively in older "
+        "diabetics or the immunocompromised. Aetiology: Pseudomonas "
+        "aeruginosa is the dominant organism, spreading from the "
+        "canal floor into the tympanomastoid suture and skull base. "
+        "Clinical features: severe, unrelenting otalgia and otorrhoea "
+        "out of proportion to exam findings, with granulation tissue "
+        "at the bony-cartilaginous junction; cranial nerve VII palsy "
+        "signals advanced disease. Ix: CT temporal bone for bony "
+        "erosion, technetium bone scan or MRI for extent, and ESR as "
+        "a baseline to track response. Mx: eTG approach - prolonged "
+        "systemic antipseudomonal antibiotics (ciprofloxacin or IV "
+        "beta-lactam) for six or more weeks, with surgical "
+        "debridement reserved for progressive disease. Note: this is "
+        "a life-threatening emergency, not simple otitis externa - "
+        "unremitting pain and diabetes should trigger urgent ENT "
+        "referral, not another course of ear drops."
+    ),
+    "Chronic rhinosinusitis": (
+        "Inflammation of the nasal mucosa and paranasal sinuses "
+        "persisting beyond twelve weeks, with or without nasal "
+        "polyps. Aetiology: multifactorial - impaired mucociliary "
+        "clearance, allergic rhinitis, and biofilm formation; "
+        "aspirin-exacerbated respiratory disease is a key subtype "
+        "with asthma and nasal polyps. Clinical features: nasal "
+        "obstruction, purulent discharge, facial pressure and reduced "
+        "or lost sense of smell for at least twelve weeks. Ix: nasal "
+        "endoscopy for polyps and discharge, with CT sinuses if "
+        "surgery is being considered or diagnosis is uncertain. Mx: "
+        "eTG approach - saline irrigation and intranasal "
+        "corticosteroid first line, a short oral corticosteroid "
+        "course for polyps, and endoscopic sinus surgery for "
+        "refractory disease. Note: unilateral symptoms with "
+        "blood-stained discharge should prompt imaging to exclude a "
+        "sinonasal tumour rather than assuming simple chronic "
+        "rhinosinusitis."
+    ),
+    "Noise induced hearing loss": (
+        "Sensorineural hearing loss from cumulative or acute exposure "
+        "to hazardous noise levels, a common and entirely preventable "
+        "occupational disease. Aetiology: outer hair cell damage in "
+        "the cochlea from prolonged loud noise (occupational "
+        "machinery, music) or a single very loud impulse (blast, "
+        "gunfire). Clinical features: bilateral, symmetric loss "
+        "classically with a notch at 4000 Hz on audiometry, sparing "
+        "lower frequencies early on; tinnitus is common. Ix: pure "
+        "tone audiometry showing the characteristic high-frequency "
+        "notch, with otoscopy to exclude a conductive cause. Mx: "
+        "eTG-aligned approach - hearing protection and reduced "
+        "exposure are the only means of prevention, as cochlear "
+        "damage is irreversible; hearing aids for established loss. "
+        "Note: WorkSafe and workers compensation claims require "
+        "documented occupational noise exposure and serial audiometry "
+        "showing progressive threshold shift."
+    ),
+    "Age related macular degeneration": (
+        "Progressive degeneration of the macula causing central "
+        "vision loss in older adults, the leading cause of "
+        "irreversible blindness in this group in Australia. "
+        "Aetiology: age, smoking and a family history are the "
+        "strongest risk factors; classified as dry (atrophic, slowly "
+        "progressive) or wet (neovascular, rapidly progressive) "
+        "disease. Clinical features: gradual central blurring and "
+        "distorted straight lines (metamorphopsia) in dry disease, "
+        "versus sudden central vision loss in wet disease from "
+        "subretinal haemorrhage or fluid. Ix: fundus examination "
+        "showing drusen and pigment change, with optical coherence "
+        "tomography confirming fluid, and an Amsler grid for home "
+        "monitoring. Mx: eTG-aligned approach - AREDS2 vitamin "
+        "supplementation and smoking cessation for intermediate dry "
+        "disease, and intravitreal anti-VEGF injections for wet "
+        "disease. Note: any sudden new distortion or central scotoma "
+        "needs same-week ophthalmology review, since prompt anti-VEGF "
+        "treatment preserves vision that delay does not."
+    ),
+    "Chronic prostatitis": (
+        "Chronic pelvic pain syndrome attributed to the prostate, "
+        "present for at least three months, most often without a "
+        "demonstrable infection. Aetiology: the majority is category "
+        "III (chronic pelvic pain syndrome) with no organism "
+        "identified; pelvic floor dysfunction and central "
+        "sensitisation are thought to contribute. Clinical features: "
+        "perineal, suprapubic or penile pain, with variable urinary "
+        "symptoms and sexual dysfunction, often disproportionate to "
+        "any objective finding. Ix: urinalysis and culture to exclude "
+        "infection, with pre- and post-massage urine samples if "
+        "bacterial prostatitis is considered; imaging reserved for "
+        "atypical features. Mx: eTG-aligned approach - a trial of "
+        "alpha-blockers, pelvic floor physiotherapy and analgesia for "
+        "category III disease; a prolonged fluoroquinolone course "
+        "only if a bacterial cause is confirmed. Note: repeated "
+        "antibiotic courses without a positive culture rarely help "
+        "and should prompt a switch to pain-focused, multimodal "
+        "management."
+    ),
+    "Premature ejaculation": (
+        "Ejaculation occurring sooner than desired, with minimal "
+        "sexual stimulation, causing distress - the commonest male "
+        "sexual dysfunction. Aetiology: lifelong type relates to "
+        "serotonergic neurobiology, while acquired type is often "
+        "linked to anxiety, relationship factors or comorbid erectile "
+        "dysfunction. Clinical features: intravaginal ejaculatory "
+        "latency typically under one minute for the lifelong subtype, "
+        "with perceived lack of control and personal distress. Ix: "
+        "clinical diagnosis from history; screen for comorbid "
+        "erectile dysfunction, which should be treated first if "
+        "present. Mx: eTG-aligned approach - behavioural techniques "
+        "(stop-start, squeeze), topical local anaesthetic, and "
+        "off-label on-demand or daily SSRI (dapoxetine where "
+        "available) for persistent cases. Note: always screen for and "
+        "treat coexisting erectile dysfunction first, since untreated "
+        "ED commonly drives secondary premature ejaculation."
+    ),
+    "Chronic constipation": (
+        "Persistently infrequent or difficult defecation for at least "
+        "three months, one of the commonest presentations in primary "
+        "care and geriatrics. Aetiology: most is functional or "
+        "opioid-induced; secondary causes include hypothyroidism, "
+        "hypercalcaemia, colorectal cancer and medications (opioids, "
+        "anticholinergics, iron). Clinical features: straining, hard "
+        "stools, incomplete evacuation and fewer than three bowel "
+        "motions weekly per the Rome IV criteria. Ix: clinical "
+        "diagnosis in most; colonoscopy or FOBT for red flags (rectal "
+        "bleeding, weight loss, anaemia, new onset after age 50). Mx: "
+        "eTG stepwise approach - fibre, fluid and activity first, "
+        "then an osmotic laxative (macrogol) as first line "
+        "pharmacotherapy, adding a stimulant laxative if needed; a "
+        "prophylactic laxative for anyone starting opioids. Note: "
+        "constipation with overflow can present as watery diarrhoea "
+        "(overflow incontinence), a trap that leads to inappropriate "
+        "antidiarrhoeal treatment."
+    ),
+    "Patellofemoral pain syndrome": (
+        "Anterior knee pain arising from abnormal patellar tracking "
+        "and loading against the femoral trochlea, common in young, "
+        "active patients. Aetiology: quadriceps (especially vastus "
+        "medialis) weakness, hip abductor weakness and training "
+        "overload disturb patellar tracking. Clinical features: dull "
+        "anterior knee pain worsened by prolonged sitting (movie "
+        "sign), squatting or stair descent, without true locking or "
+        "instability. Ix: clinical diagnosis based on history and "
+        "exam; imaging only to exclude an alternative cause if the "
+        "presentation is atypical or fails to improve. Mx: "
+        "eTG-aligned approach - activity modification, quadriceps and "
+        "hip strengthening physiotherapy, and taping or bracing as an "
+        "adjunct; surgery is rarely indicated. Note: true joint line "
+        "tenderness, effusion or mechanical locking points away from "
+        "patellofemoral pain towards a meniscal or ligamentous "
+        "injury."
+    ),
+    "Idiopathic scoliosis": (
+        "Structural lateral curvature of the spine with rotation, "
+        "arising without an identifiable underlying cause, most "
+        "commonly diagnosed in adolescence. Aetiology: unknown, "
+        "though genetic and neuromuscular factors are implicated; the "
+        "adolescent form is far commoner in females and can progress "
+        "rapidly during the growth spurt. Clinical features: "
+        "asymmetric shoulders, waist or scapular prominence, best "
+        "seen on the forward bend (Adams) test showing a rib hump. "
+        "Ix: standing whole-spine X-ray with Cobb angle measurement "
+        "to quantify curve severity and guide follow-up. Mx: "
+        "eTG-aligned approach - observation for mild curves, bracing "
+        "for moderate curves in a still-growing child, and surgical "
+        "fusion for severe or rapidly progressive curves. Note: "
+        "significant back pain or a rapidly progressive curve is "
+        "atypical for idiopathic scoliosis and warrants MRI to "
+        "exclude an underlying spinal cord abnormality."
+    ),
+    "Sleep paralysis": (
+        "Transient, frightening inability to move or speak while "
+        "falling asleep or waking, with preserved awareness, often "
+        "accompanied by vivid hallucinations. Aetiology: reflects "
+        "dissociation of REM sleep atonia into wakefulness; "
+        "associated with sleep deprivation, irregular sleep "
+        "schedules, stress and narcolepsy. Clinical features: "
+        "episodes last seconds to a few minutes, resolving "
+        "spontaneously or with external touch or sound, and are often "
+        "accompanied by a sense of a threatening presence. Ix: "
+        "clinical diagnosis from history; polysomnography and "
+        "multiple sleep latency testing if narcolepsy is suspected "
+        "(recurrent episodes with cataplexy or excessive daytime "
+        "sleepiness). Mx: eTG-aligned approach - reassurance and "
+        "sleep hygiene for isolated episodes; treat any underlying "
+        "narcolepsy or sleep disorder if episodes are frequent or "
+        "highly distressing. Note: isolated sleep paralysis is common "
+        "and benign - recurrent episodes with cataplexy should prompt "
+        "referral for a sleep disorder workup."
+    ),
+    "Diabetic peripheral neuropathy": (
+        "Symmetric, distal sensorimotor polyneuropathy from chronic "
+        "hyperglycaemia, the commonest complication of long-standing "
+        "diabetes. Aetiology: sustained hyperglycaemia damages small "
+        "vessels supplying peripheral nerves; duration of diabetes "
+        "and glycaemic control are the strongest predictors. Clinical "
+        "features: length-dependent glove-and-stocking numbness, "
+        "tingling and burning pain, worse at night, with reduced "
+        "vibration and monofilament sensation on exam. Ix: annual "
+        "monofilament and vibration testing as part of diabetic foot "
+        "screening; nerve conduction studies only if the pattern is "
+        "atypical. Mx: eTG approach - optimise glycaemic control to "
+        "slow progression, and for painful symptoms use duloxetine, "
+        "amitriptyline, pregabalin or gabapentin as first line "
+        "agents; regular foot care to prevent ulceration. Note: loss "
+        "of protective sensation, not pain, is what drives ulceration "
+        "and amputation risk, so a painless numb foot is the higher "
+        "risk foot."
+    ),
+    "Trichotillomania": (
+        "Recurrent pulling out of one's own hair resulting in "
+        "noticeable hair loss, classified with obsessive-compulsive "
+        "and related disorders. Aetiology: onset typically in "
+        "adolescence, associated with anxiety, stress and, in some, a "
+        "soothing or gratifying sensation from pulling. Clinical "
+        "features: irregular patches of hair loss with hairs of "
+        "varying length, most often scalp, eyebrows or eyelashes, "
+        "with repeated attempts to stop. Ix: clinical diagnosis; "
+        "dermoscopy shows broken hairs of different lengths without "
+        "scarring, distinguishing it from alopecia areata. Mx: "
+        "eTG-aligned approach - habit reversal training is first line "
+        "psychological therapy, with an SSRI or N-acetylcysteine "
+        "considered for refractory cases. Note: trichophagia "
+        "(swallowing pulled hair) can cause a gastric trichobezoan, a "
+        "rare but important complication to ask about."
+    ),
+    "Hyperemesis in pregnancy": (
+        "Severe, persistent nausea and vomiting of pregnancy causing "
+        "weight loss, dehydration and electrolyte disturbance, more "
+        "severe than typical morning sickness. Aetiology: linked to "
+        "rapidly rising hCG and oestrogen; risk factors include "
+        "multiple pregnancy, molar pregnancy and a prior affected "
+        "pregnancy. Clinical features: intractable vomiting from the "
+        "first trimester, greater than 5% pre-pregnancy weight loss, "
+        "ketonuria and postural hypotension. Ix: urinalysis for "
+        "ketones, electrolytes, and thyroid function (transient "
+        "biochemical hyperthyroidism is common); pelvic ultrasound to "
+        "exclude molar or multiple pregnancy. Mx: eTG approach - IV "
+        "fluid resuscitation with thiamine before any dextrose, "
+        "antiemetics (doxylamine-pyridoxine first line, then "
+        "ondansetron or metoclopramide), and corticosteroids for "
+        "refractory cases. Note: give thiamine before "
+        "glucose-containing fluids in prolonged vomiting, since "
+        "dextrose first can precipitate Wernicke encephalopathy."
+    ),
+    "Chickenpox in pregnancy": (
+        "Primary varicella zoster infection during pregnancy, "
+        "carrying maternal and fetal risks beyond those in "
+        "non-pregnant adults. Aetiology: varicella zoster virus, more "
+        "likely to cause severe maternal pneumonitis in pregnancy, "
+        "especially in the third trimester or with smoking. Clinical "
+        "features: the typical vesicular rash, with risk of "
+        "congenital varicella syndrome if maternal infection occurs "
+        "before 20 weeks, and neonatal varicella if infection occurs "
+        "around delivery. Ix: clinical diagnosis, confirmed with PCR "
+        "if uncertain; check varicella IgG status in any exposed "
+        "non-immune pregnant woman. Mx: eTG approach - varicella "
+        "zoster immunoglobulin for non-immune exposed women, oral "
+        "aciclovir if the rash appears within 24 hours in the third "
+        "trimester, and IV aciclovir for pneumonitis or severe "
+        "disease. Note: delivery should be delayed if possible when "
+        "the rash appears close to term, since infection within five "
+        "days before to two days after delivery risks severe neonatal "
+        "varicella."
+    ),
+    "Group B streptococcus in pregnancy": (
+        "Vaginal or rectal colonisation with Streptococcus "
+        "agalactiae, usually asymptomatic in the mother but a leading "
+        "cause of early-onset neonatal sepsis. Aetiology: "
+        "colonisation is common and often intermittent; risk factors "
+        "for neonatal transmission include preterm labour, prolonged "
+        "rupture of membranes and maternal fever in labour. Clinical "
+        "features: the mother is typically asymptomatic; affected "
+        "neonates present with respiratory distress, sepsis or "
+        "meningitis in the first week of life. Ix: routine low "
+        "vaginal and rectal swab screening at 35 to 37 weeks per "
+        "Australian guidelines, or a risk-based approach where "
+        "screening is unavailable. Mx: eTG approach - intrapartum IV "
+        "benzylpenicillin (or clindamycin if penicillin allergic) for "
+        "colonised women or those with risk factors, continued until "
+        "delivery. Note: a positive screen earlier in pregnancy does "
+        "not need antenatal treatment - colonisation is addressed "
+        "intrapartum, not before labour."
+    ),
+    "Lemierre syndrome": (
+        "Rare but life-threatening septic thrombophlebitis of the "
+        "internal jugular vein following an oropharyngeal infection, "
+        "with septic emboli to the lungs. Aetiology: Fusobacterium "
+        "necrophorum is the classic organism, spreading from a "
+        "preceding pharyngitis or peritonsillar abscess into the "
+        "parapharyngeal space and jugular vein. Clinical features: a "
+        "sore throat that fails to settle, followed days later by "
+        "neck swelling and tenderness along the sternocleidomastoid, "
+        "fever and pleuritic chest pain from septic pulmonary emboli. "
+        "Ix: CT neck with contrast showing jugular vein thrombosis, "
+        "blood cultures, and CT chest for septic emboli. Mx: eTG "
+        "approach - prolonged IV antibiotics with anaerobic cover "
+        "(beta-lactam/beta-lactamase inhibitor or metronidazole "
+        "combination) for four to six weeks; anticoagulation is "
+        "considered but not routine. Note: think of Lemierre syndrome "
+        "in a young, previously well patient with a recent sore "
+        "throat now presenting with sepsis and respiratory symptoms."
+    ),
+    "Acute glomerulonephritis": (
+        "Acute inflammation of the glomeruli causing haematuria, "
+        "proteinuria and reduced kidney function, classically "
+        "following a streptococcal infection in children. Aetiology: "
+        "post-infectious (post-streptococcal) is commonest in "
+        "children; IgA nephropathy, lupus nephritis and vasculitis "
+        "are important causes across all ages. Clinical features: the "
+        "nephritic syndrome - haematuria (often cola-coloured), "
+        "hypertension, oliguria and periorbital oedema, one to three "
+        "weeks after a throat or skin infection for the "
+        "post-streptococcal form. Ix: urinalysis showing red cell "
+        "casts and dysmorphic red cells, complement levels (low C3 in "
+        "post-streptococcal disease), and renal biopsy if the "
+        "diagnosis or severity is unclear. Mx: eTG-aligned approach - "
+        "supportive care with fluid and salt restriction and "
+        "antihypertensives for post-streptococcal disease, which is "
+        "usually self-limiting; immunosuppression for lupus nephritis "
+        "or vasculitis. Note: red cell casts on urine microscopy are "
+        "specific for glomerular bleeding and distinguish it from a "
+        "lower urinary tract source."
+    ),
+    "Hydronephrosis": (
+        "Dilatation of the renal pelvis and calyces from obstructed "
+        "urine flow, a radiological finding rather than a diagnosis "
+        "in itself. Aetiology: ureteric calculus is the commonest "
+        "acute cause in adults; pelviureteric junction obstruction "
+        "and posterior urethral valves cause congenital "
+        "hydronephrosis, while pelvic malignancy causes it in older "
+        "adults. Clinical features: renal colic if acute and "
+        "obstructive, or an incidental finding on imaging if chronic "
+        "and painless. Ix: renal tract ultrasound as first line, with "
+        "CT KUB for suspected stone disease and to define the level "
+        "of obstruction. Mx: eTG-aligned approach - urgent "
+        "decompression (nephrostomy or stent) for an infected "
+        "obstructed system, which is a urological emergency; "
+        "definitive treatment of the underlying cause once "
+        "decompressed. Note: fever with an obstructing stone is an "
+        "emergency requiring urgent drainage, not just antibiotics, "
+        "since an infected obstructed kidney can progress rapidly to "
+        "septic shock."
+    ),
+    "Head and neck cancer": (
+        "Squamous cell carcinoma arising from the mucosal surfaces of "
+        "the oral cavity, pharynx or larynx, with two distinct "
+        "epidemiological patterns. Aetiology: tobacco and alcohol "
+        "drive the traditional pattern in older patients, while HPV "
+        "(particularly type 16) drives a rising incidence of "
+        "oropharyngeal cancer in younger, non-smoking patients. "
+        "Clinical features: a persistent neck lump, hoarseness, "
+        "odynophagia or otalgia lasting more than three weeks should "
+        "raise suspicion, especially with a smoking history. Ix: "
+        "nasoendoscopy and biopsy of the primary site, with CT or MRI "
+        "and PET for staging. Mx: eTG-aligned approach - surgery, "
+        "radiotherapy or chemoradiotherapy depending on stage and "
+        "site, in a multidisciplinary head and neck cancer service. "
+        "Note: HPV-related oropharyngeal cancer carries a "
+        "substantially better prognosis than HPV-negative disease at "
+        "the same stage, changing counselling and treatment "
+        "intensity."
+    ),
+    "Superior vena cava obstruction": (
+        "Impaired venous return from the head, neck and upper limbs "
+        "due to compression, invasion or thrombosis of the superior "
+        "vena cava. Aetiology: lung cancer is the commonest malignant "
+        "cause, along with lymphoma and mediastinal metastases; "
+        "central venous catheters and pacemaker leads are a growing "
+        "non-malignant cause. Clinical features: facial and upper "
+        "limb swelling, distended neck and chest wall veins, and "
+        "dyspnoea, all worsened by lying flat or bending forward. Ix: "
+        "CT chest with contrast to define the level and cause of "
+        "obstruction; tissue diagnosis of any underlying malignancy "
+        "before starting treatment where possible. Mx: eTG-aligned "
+        "approach - endovascular stenting for rapid symptom relief, "
+        "with chemotherapy or radiotherapy directed at the underlying "
+        "malignancy, and anticoagulation for a thrombotic cause. "
+        "Note: obtain tissue diagnosis before empirical radiotherapy "
+        "where the patient is stable, since radiotherapy can obscure "
+        "the histology needed to guide definitive treatment."
+    ),
+    "Necrotising soft tissue infection": (
+        "Rapidly progressive, life-threatening infection of the "
+        "fascia and subcutaneous tissue with a mortality far "
+        "exceeding that of cellulitis. Aetiology: often polymicrobial "
+        "in surgical or diabetic wounds, or monomicrobial from Group "
+        "A Streptococcus or Vibrio species following minor trauma. "
+        "Clinical features: pain grossly out of proportion to visible "
+        "skin changes, rapidly spreading erythema, crepitus, skin "
+        "bullae and systemic toxicity are the classic red flags. Ix: "
+        "this is a clinical diagnosis needing urgent surgical "
+        "exploration - do not wait for imaging if suspicion is high; "
+        "the LRINEC score can support but never exclude the "
+        "diagnosis. Mx: eTG approach - emergency surgical debridement "
+        "is the definitive treatment, alongside broad-spectrum IV "
+        "antibiotics (covering Gram-positive, Gram-negative and "
+        "anaerobic organisms) and haemodynamic support. Note: pain "
+        "out of proportion to examination findings is the single most "
+        "important clue - it should trigger urgent surgical review, "
+        "not reassurance and discharge."
     ),
 }
 
