@@ -3488,6 +3488,204 @@ NEW_CONDITIONS = [
         "utd": [['Mx', 'retroperitoneal fibrosis']],
         "summary": "",
     },
+    {
+        "name": "Osteitis pubis",
+        "aliases": ["pubic symphysitis", "athletic pubalgia"],
+        "utd": [["Overview", "osteitis pubis"]],
+        "summary": "",
+    },
+    {
+        "name": "Femoroacetabular impingement",
+        "aliases": ["FAI", "cam impingement", "pincer impingement"],
+        "utd": [["Overview", "femoroacetabular impingement"]],
+        "summary": "",
+    },
+    {
+        "name": "Chondromalacia patellae",
+        "aliases": ["chondromalacia patella", "patellar chondromalacia"],
+        "utd": [["Overview", "chondromalacia patellae"]],
+        "summary": "",
+    },
+    {
+        "name": "Benzodiazepine withdrawal",
+        "aliases": ["benzo withdrawal"],
+        "utd": [["Mx", "benzodiazepine withdrawal treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Cannabis withdrawal",
+        "aliases": ["marijuana withdrawal", "THC withdrawal"],
+        "utd": [["Overview", "cannabis withdrawal"]],
+        "summary": "",
+    },
+    {
+        "name": "Opioid withdrawal",
+        "aliases": ["opiate withdrawal", "narcotic withdrawal syndrome"],
+        "utd": [["Mx", "opioid withdrawal management adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Theophylline toxicity",
+        "aliases": ["theophylline overdose", "theophylline poisoning"],
+        "utd": [["Mx", "theophylline toxicity treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Elder self-neglect",
+        "aliases": ["self-neglect in older adults"],
+        "utd": [["Overview", "elder self-neglect"]],
+        "summary": "",
+    },
+    {
+        "name": "Abdominal compartment syndrome",
+        "aliases": ["ACS intra-abdominal hypertension"],
+        "utd": [["Mx", "abdominal compartment syndrome management"]],
+        "summary": "",
+    },
+    {
+        "name": "Perforated viscus",
+        "aliases": ["gastrointestinal perforation", "bowel perforation"],
+        "utd": [["Mx", "gastrointestinal perforation management"]],
+        "summary": "",
+    },
+    {
+        "name": "Breath-holding spells",
+        "aliases": ["breath holding spell", "cyanotic breath-holding"],
+        "utd": [["Overview", "breath holding spells children"]],
+        "summary": "",
+    },
+    {
+        "name": "Nursemaid elbow",
+        "aliases": ["radial head subluxation", "pulled elbow"],
+        "utd": [["Mx", "nursemaid elbow reduction"]],
+        "summary": "",
+    },
+    {
+        "name": "Cystic hygroma",
+        "aliases": ["lymphangioma colli", "cervical lymphatic malformation"],
+        "utd": [["Overview", "cystic hygroma"]],
+        "summary": "",
+    },
+    {
+        "name": "Bone metastases",
+        "aliases": ["skeletal metastases", "metastatic bone disease"],
+        "utd": [["Mx", "bone metastases management"]],
+        "summary": "",
+    },
+    {
+        "name": "Brain metastases",
+        "aliases": ["cerebral metastases", "intracranial metastases"],
+        "utd": [["Mx", "brain metastases management"]],
+        "summary": "",
+    },
+    {
+        "name": "Malignant pleural effusion",
+        "aliases": ["MPE"],
+        "utd": [["Mx", "malignant pleural effusion management"]],
+        "summary": "",
+    },
+    {
+        "name": "Methaemoglobinaemia",
+        "aliases": ["methemoglobinemia"],
+        "utd": [["Mx", "methemoglobinemia treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Massive transfusion",
+        "aliases": ["massive transfusion protocol", "MTP"],
+        "utd": [["Mx", "massive transfusion protocol trauma"]],
+        "summary": "",
+    },
+    {
+        "name": "Crush syndrome",
+        "aliases": ["traumatic rhabdomyolysis", "crush injury syndrome"],
+        "utd": [["Mx", "crush syndrome management"]],
+        "summary": "",
+    },
+    {
+        "name": "Laryngospasm",
+        "aliases": ["reflex laryngeal spasm"],
+        "utd": [["Mx", "laryngospasm management"]],
+        "summary": "",
+    },
+    {
+        "name": "Enterocutaneous fistula",
+        "aliases": ["ECF bowel fistula"],
+        "utd": [["Mx", "enterocutaneous fistula management"]],
+        "summary": "",
+    },
+    {
+        "name": "Functional dyspepsia",
+        "aliases": ["non-ulcer dyspepsia"],
+        "utd": [["Mx", "functional dyspepsia treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Non-accidental injury",
+        "aliases": ["child physical abuse", "inflicted childhood injury"],
+        "utd": [["Overview", "child physical abuse evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Uterine inversion",
+        "aliases": ["puerperal uterine inversion"],
+        "utd": [["Mx", "uterine inversion management"]],
+        "summary": "",
+    },
+    {
+        "name": "Button battery ingestion",
+        "aliases": ["disc battery ingestion"],
+        "utd": [["Mx", "button battery ingestion management"]],
+        "summary": "",
+    },
+    {
+        "name": "Genu valgum",
+        "aliases": ["knock knees"],
+        "utd": [["Overview", "genu valgum children"]],
+        "summary": "",
+    },
+    {
+        "name": "Genu varum",
+        "aliases": ["bow legs", "bow-leggedness"],
+        "utd": [["Overview", "genu varum children"]],
+        "summary": "",
+    },
+    {
+        "name": "Torus fracture",
+        "aliases": ["buckle fracture"],
+        "utd": [["Overview", "torus fracture children"]],
+        "summary": "",
+    },
+    {
+        "name": "Greenstick fracture",
+        "aliases": ["incomplete paediatric fracture"],
+        "utd": [["Overview", "greenstick fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Salter-Harris fracture",
+        "aliases": ["growth plate fracture", "physeal fracture"],
+        "utd": [["Overview", "salter harris fracture classification"]],
+        "summary": "",
+    },
+    {
+        "name": "Toddler fracture",
+        "aliases": ["toddlers fracture tibial fracture"],
+        "utd": [["Overview", "toddler fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Kienbock disease",
+        "aliases": ["lunate avascular necrosis", "Kienbock's disease"],
+        "utd": [["Overview", "kienbock disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Blount disease",
+        "aliases": ["tibia vara", "Blount's disease"],
+        "utd": [["Overview", "blount disease"]],
+        "summary": "",
+    },
 ]
 
 
@@ -34958,6 +35156,537 @@ RICH_SUMMARIES = {
         "Note: hydronephrosis with medial ureter deviation plus "
         "raised IgG4 - retroperitoneal fibrosis, steroids after "
         "stenting."
+    ),
+    "Osteitis pubis": (
+        "Overuse enthesopathy of the pubic symphysis from repetitive "
+        "adductor and rectus abdominis loading. Aetiology: kicking "
+        "sports, running, pregnancy, prior pelvic surgery. Clinical "
+        "features: insidious groin or suprapubic pain worse with "
+        "kicking, sit-ups or single-leg stance, tender pubic "
+        "symphysis. Ix: clinical diagnosis. Plain pelvis X-ray or MRI "
+        "if red flags or slow to settle to exclude stress fracture "
+        "and bone marrow oedema. Mx: relative rest, adductor and core "
+        "rehabilitation, NSAIDs, graded return to sport over months. "
+        "Corticosteroid injection or surgery reserved for refractory "
+        "cases. Note: chronic and recurrence-prone. Rushing return to "
+        "sport is the usual cause of relapse."
+    ),
+    "Femoroacetabular impingement": (
+        "Abnormal contact between the femoral head-neck junction and "
+        "acetabular rim causing labral and cartilage damage. "
+        "Aetiology: cam morphology (aspherical femoral head, young "
+        "athletic males), pincer morphology (acetabular overcoverage) "
+        "or mixed. Clinical features: activity-related anterior groin "
+        "pain, reduced hip flexion and internal rotation, positive "
+        "FADIR test (flexion, adduction, internal rotation). Ix: AP "
+        "pelvis and lateral hip X-ray for cam and pincer signs, MR "
+        "arthrogram for labral tear. Mx: activity modification and "
+        "physiotherapy first line. Arthroscopic osteochondroplasty or "
+        "labral repair for persistent symptomatic impingement. Note: "
+        "an important precursor of early hip osteoarthritis in young "
+        "adults if untreated."
+    ),
+    "Chondromalacia patellae": (
+        "Softening and fibrillation of the patellar articular "
+        "cartilage, a structural diagnosis rather than a clinical "
+        "syndrome label. Aetiology: patellar maltracking, quadriceps "
+        "imbalance, trauma or repetitive loading. Clinical features: "
+        "anterior knee pain worse with stairs, squatting or prolonged "
+        "sitting, patellofemoral crepitus. Ix: clinical assessment, "
+        "X-ray to exclude other pathology. MRI shows cartilage signal "
+        "change and confirms grade when surgery is being considered. "
+        "Mx: quadriceps and hip strengthening, activity modification, "
+        "NSAIDs. Arthroscopic debridement reserved for advanced, "
+        "refractory disease. Note: overlaps clinically with "
+        "patellofemoral pain syndrome, but chondromalacia "
+        "specifically describes visible cartilage change."
+    ),
+    "Benzodiazepine withdrawal": (
+        "Physiological rebound after abrupt cessation of chronic "
+        "benzodiazepine use, potentially life-threatening. Aetiology: "
+        "long-term prescribed use or dependence, abrupt cessation, "
+        "higher risk with short-acting agents and high doses. "
+        "Clinical features: anxiety, tremor, insomnia, autonomic "
+        "hyperactivity, and in severe cases seizures or delirium, "
+        "onset delayed with longer-acting agents. Ix: clinical "
+        "diagnosis, exclude other causes of delirium. Mx: gradual "
+        "taper is preventive; established withdrawal is treated with "
+        "a long-acting benzodiazepine such as diazepam and slow dose "
+        "reduction per eTG. Admit if seizures, delirium or high-dose "
+        "dependence. Note: unlike most withdrawal syndromes, this one "
+        "can kill through seizures, so never stop abruptly."
+    ),
+    "Cannabis withdrawal": (
+        "A recognised withdrawal syndrome in regular, heavy cannabis "
+        "users after cessation. Aetiology: down-regulation of "
+        "cannabinoid receptors with chronic THC exposure. Clinical "
+        "features: onset within a day or two of last use, "
+        "irritability, anxiety, sleep disturbance, decreased "
+        "appetite, restlessness and cravings, peaking around day one "
+        "week and settling within two weeks. Ix: clinical diagnosis, "
+        "urine drug screen to confirm recent use if needed. Mx: "
+        "supportive care, sleep hygiene advice, symptomatic treatment "
+        "of insomnia and anxiety, brief intervention or referral for "
+        "cannabis use disorder. Note: milder and non-life-threatening "
+        "compared with alcohol or benzodiazepine withdrawal, but a "
+        "common driver of relapse if unrecognised."
+    ),
+    "Opioid withdrawal": (
+        "An unpleasant but rarely dangerous syndrome from abrupt "
+        "cessation or reversal of opioid use. Aetiology: dependence "
+        "from prescribed or illicit opioid use, precipitated "
+        "withdrawal after naloxone or buprenorphine in a dependent "
+        "patient. Clinical features: yawning, lacrimation, "
+        "rhinorrhoea, piloerection, myalgia, abdominal cramps, "
+        "diarrhoea and dysphoria, objectively scored with the "
+        "Clinical Opiate Withdrawal Scale. Ix: clinical diagnosis and "
+        "COWS score. Mx: symptomatic treatment (clonidine, "
+        "antiemetics, loperamide) or buprenorphine or methadone "
+        "substitution per eTG for those seeking treatment. Note: "
+        "distinct from neonatal opioid withdrawal, which follows in "
+        "utero exposure rather than adult dependence."
+    ),
+    "Theophylline toxicity": (
+        "Narrow therapeutic index xanthine toxicity, now uncommon as "
+        "theophylline use has declined. Aetiology: acute overdose or "
+        "chronic accumulation from interacting medications "
+        "(macrolides, fluoroquinolones), reduced clearance in liver "
+        "disease or heart failure. Clinical features: nausea, "
+        "vomiting, tremor, tachyarrhythmias and, in severe toxicity, "
+        "seizures and hypotension, with chronic toxicity causing "
+        "arrhythmia at lower levels than acute overdose. Ix: serum "
+        "theophylline level, ECG, electrolytes (hypokalaemia is "
+        "characteristic). Mx: activated charcoal if early, "
+        "beta-blockade for tachyarrhythmia, benzodiazepines for "
+        "seizures, haemodialysis for severe or refractory toxicity. "
+        "Note: chronic toxicity is more dangerous than acute overdose "
+        "at an equivalent serum level."
+    ),
+    "Elder self-neglect": (
+        "An older adult's failure to meet their own essential needs "
+        "for health, safety or hygiene, distinct from abuse inflicted "
+        "by others. Aetiology: cognitive impairment, untreated mental "
+        "illness, social isolation, substance use or executive "
+        "dysfunction limiting capacity to self-care. Clinical "
+        "features: poor hygiene, malnutrition, unsafe or unsanitary "
+        "living conditions, untreated medical conditions, hoarding. "
+        "Ix: cognitive screen, capacity assessment, home environment "
+        "and social supports review, exclude reversible medical "
+        "causes of decline. Mx: multidisciplinary aged care "
+        "assessment, capacity-sensitive support services, "
+        "guardianship referral if capacity is impaired and safety is "
+        "at risk. Note: mandatory reporting obligations differ from "
+        "those for third-party elder abuse."
+    ),
+    "Abdominal compartment syndrome": (
+        "Organ dysfunction from sustained intra-abdominal "
+        "hypertension above 20 mmHg. Aetiology: massive fluid "
+        "resuscitation, abdominal trauma, large-volume ascites, bowel "
+        "obstruction, retroperitoneal haemorrhage, damage-control "
+        "laparotomy with tight closure. Clinical features: tense "
+        "distended abdomen, rising ventilator pressures, oliguria and "
+        "hypotension despite resuscitation. Ix: intravesical "
+        "(bladder) pressure measurement is the diagnostic standard, "
+        "trend with renal function and lactate. Mx: optimise sedation "
+        "and fluid balance first, percutaneous drainage of ascites or "
+        "blood, decompressive laparotomy with temporary abdominal "
+        "closure if pressures remain critical. Note: a diagnosis "
+        "clinicians miss because the abdomen alone doesn't explain a "
+        "deteriorating ICU patient until pressure is measured."
+    ),
+    "Perforated viscus": (
+        "Full-thickness breach of a hollow abdominal organ causing "
+        "peritoneal contamination, a surgical emergency. Aetiology: "
+        "perforated peptic ulcer, diverticulitis, appendicitis, "
+        "malignancy, ischaemia or iatrogenic instrumentation. "
+        "Clinical features: sudden severe abdominal pain, generalised "
+        "peritonism, guarding and rigidity, tachycardia and fever as "
+        "sepsis develops. Ix: erect chest X-ray or CT for free air, "
+        "lactate and inflammatory markers, CT abdomen with contrast "
+        "to localise the site. Mx: resuscitation, broad-spectrum "
+        "antibiotics per eTG, urgent surgical source control (repair, "
+        "resection or washout). Note: free air can be absent on X-ray "
+        "in retroperitoneal or contained perforations, so a normal "
+        "film never excludes the diagnosis in a peritonitic patient."
+    ),
+    "Breath-holding spells": (
+        "Involuntary reflex apnoeic episodes in toddlers triggered by "
+        "crying or minor injury, frightening but benign. Aetiology: "
+        "autonomic dysregulation, often with an iron deficiency "
+        "association, typically presents between six months and five "
+        "years. Clinical features: cyanotic type follows crying with "
+        "breath-holding, cyanosis and brief loss of consciousness; "
+        "pallid type follows a minor fright or bump with sudden "
+        "pallor, bradycardia and syncope, resolving within a minute. "
+        "Ix: clinical history from a witness is usually diagnostic. "
+        "ECG and iron studies if episodes are frequent or atypical to "
+        "exclude arrhythmia and treat deficiency. Mx: parental "
+        "reassurance and education, iron supplementation if "
+        "deficient. Note: not epilepsy, does not need "
+        "anticonvulsants, and resolves by school age."
+    ),
+    "Nursemaid elbow": (
+        "Radial head subluxation from the annular ligament in young "
+        "children, a common presentation after a pulling injury. "
+        "Aetiology: axial traction on an extended, pronated arm, "
+        "classically from being swung by the hand or a sudden pull to "
+        "prevent a fall, typically age one to four years. Clinical "
+        "features: the child holds the arm slightly flexed and "
+        "pronated, refuses to use it, minimal swelling or tenderness. "
+        "Ix: clinical diagnosis; X-ray only if the mechanism is "
+        "unclear, swelling is present or reduction fails. Mx: closed "
+        "reduction by hyperpronation or supination-flexion manoeuvre, "
+        "usually immediately successful with prompt return to normal "
+        "use. Note: recurrence is common, and parents should be "
+        "taught to avoid pulling on the extended arm."
+    ),
+    "Cystic hygroma": (
+        "A congenital lymphatic malformation, most often found in the "
+        "posterior neck. Aetiology: failure of the jugular lymphatic "
+        "sac to connect with the venous system during development, "
+        "associated with Turner syndrome, Down syndrome and Noonan "
+        "syndrome. Clinical features: soft, compressible, "
+        "transilluminating neck mass, often detected antenatally on "
+        "nuchal translucency scan or visible at birth, can cause "
+        "airway or feeding compromise if large. Ix: antenatal "
+        "ultrasound, postnatal MRI to define extent, karyotype given "
+        "the syndromic association. Mx: expectant monitoring for "
+        "small asymptomatic lesions, sclerotherapy or surgical "
+        "excision for symptomatic or disfiguring malformations. Note: "
+        "a first-trimester finding should prompt genetic counselling "
+        "given the aneuploidy risk."
+    ),
+    "Bone metastases": (
+        "Secondary skeletal deposits from a distant primary "
+        "malignancy, most commonly breast, prostate, lung, kidney and "
+        "thyroid cancer. Aetiology: haematogenous spread with a "
+        "predilection for the axial skeleton (spine, pelvis, ribs, "
+        "proximal long bones). Clinical features: localised bone pain "
+        "worse at night, pathological fracture, spinal cord "
+        "compression if vertebral, hypercalcaemia symptoms. Ix: plain "
+        "X-ray, bone scan or PET for staging, MRI spine if cord "
+        "compression suspected, serum calcium. Mx: analgesia, "
+        "bisphosphonates or denosumab to reduce skeletal events, "
+        "palliative radiotherapy for painful or at-risk lesions, "
+        "orthopaedic fixation for impending fracture. Note: a new "
+        "pathological fracture in an older adult is a malignancy "
+        "until proven otherwise."
+    ),
+    "Brain metastases": (
+        "The most common intracranial tumour in adults, from a "
+        "distant primary malignancy. Aetiology: haematogenous spread, "
+        "most often from lung, breast, melanoma, renal and colorectal "
+        "cancer, frequently multiple lesions at the grey-white "
+        "junction. Clinical features: headache worse in the morning, "
+        "focal neurological deficit, seizures, cognitive change, "
+        "raised intracranial pressure signs. Ix: contrast MRI brain "
+        "is the investigation of choice, staging CT to find or "
+        "confirm the primary. Mx: dexamethasone for oedema, "
+        "stereotactic radiosurgery or whole-brain radiotherapy, "
+        "surgical resection for a solitary accessible lesion, "
+        "systemic therapy per primary tumour. Note: often the "
+        "presenting feature of an undiagnosed cancer."
+    ),
+    "Malignant pleural effusion": (
+        "Pleural fluid accumulation from direct tumour involvement of "
+        "the pleura, signifying advanced, incurable disease. "
+        "Aetiology: lung and breast cancer account for most cases, "
+        "also lymphoma, ovarian and mesothelioma. Clinical features: "
+        "progressive dyspnoea, dull percussion and reduced breath "
+        "sounds, often recurs rapidly after drainage. Ix: chest X-ray "
+        "or CT, pleural fluid cytology (exudate by Light criteria), "
+        "pleural biopsy if cytology is negative but suspicion remains "
+        "high. Mx: therapeutic drainage for symptom relief, "
+        "indwelling pleural catheter or pleurodesis for recurrent "
+        "effusions, systemic treatment of the underlying cancer. "
+        "Note: cytology-negative does not exclude malignancy, repeat "
+        "sampling or biopsy if suspicion persists."
+    ),
+    "Methaemoglobinaemia": (
+        "A haemoglobinopathy where iron is oxidised to the ferric "
+        "state, impairing oxygen delivery despite normal oxygen "
+        "saturation readings. Aetiology: acquired from oxidising "
+        "drugs (dapsone, local anaesthetics like benzocaine and "
+        "prilocaine, nitrates) or congenital enzyme deficiency. "
+        "Clinical features: cyanosis unresponsive to supplemental "
+        "oxygen, chocolate-brown blood, dyspnoea and headache "
+        "disproportionate to pulse oximetry, which characteristically "
+        "reads around 85 percent regardless of true saturation. Ix: "
+        "co-oximetry arterial blood gas gives the true methaemoglobin "
+        "level, standard pulse oximetry is unreliable. Mx: stop the "
+        "causative agent, high-flow oxygen, intravenous methylene "
+        "blue for symptomatic or high-level toxicity. Note: suspect "
+        "this whenever oxygen saturation plateaus in the mid-80s "
+        "despite a normal-looking patient on oxygen."
+    ),
+    "Massive transfusion": (
+        "Large-volume blood product replacement for life-threatening "
+        "haemorrhage, most often trauma, obstetric or major surgical "
+        "bleeding. Aetiology: any bleeding exceeding one blood volume "
+        "in twenty-four hours or requiring rapid ongoing replacement, "
+        "triggers activation of a hospital massive transfusion "
+        "protocol. Clinical features: haemorrhagic shock, "
+        "coagulopathy from dilution and consumption, hypothermia and "
+        "acidosis compounding bleeding, the lethal triad. Ix: "
+        "point-of-care viscoelastic testing (ROTEM or TEG) where "
+        "available, full blood count, coagulation studies, "
+        "fibrinogen, group and crossmatch. Mx: balanced red cell, "
+        "plasma and platelet ratio transfusion per local protocol, "
+        "tranexamic acid early in trauma, fibrinogen concentrate or "
+        "cryoprecipitate, source control of bleeding. Note: "
+        "activating the protocol early, before shock is profound, "
+        "improves outcomes more than any single product ratio."
+    ),
+    "Crush syndrome": (
+        "Systemic reperfusion injury after prolonged compression of "
+        "large muscle mass, distinct from localised compartment "
+        "syndrome. Aetiology: building collapse, entrapment, "
+        "prolonged immobilisation after a fall, most feared after "
+        "mass-casualty events. Clinical features: massive "
+        "rhabdomyolysis on release of the crushed limb, "
+        "hyperkalaemia, acute kidney injury, hypocalcaemia and "
+        "cardiac arrhythmia, may cause sudden death on extrication. "
+        "Ix: creatine kinase, potassium, renal function, ECG for "
+        "hyperkalaemic changes. Mx: aggressive intravenous fluid "
+        "resuscitation started before extrication where possible, "
+        "treat hyperkalaemia aggressively, renal replacement therapy "
+        "for established acute kidney injury. Note: sudden death on "
+        "release, so fluids and monitoring should start before the "
+        "crushing weight is removed, not after."
+    ),
+    "Laryngospasm": (
+        "Involuntary reflex closure of the vocal cords obstructing "
+        "the airway, a recognised anaesthetic and paediatric "
+        "emergency. Aetiology: airway irritation during light "
+        "anaesthesia, secretions, blood or vomitus contacting the "
+        "cords, upper respiratory infection, extubation. Clinical "
+        "features: stridor or complete silent obstruction, "
+        "paradoxical chest and abdominal movement, falling oxygen "
+        "saturation, tracheal tug. Ix: clinical diagnosis, made at "
+        "the bedside or in theatre. Mx: remove the stimulus, jaw "
+        "thrust with continuous positive airway pressure and one "
+        "hundred percent oxygen, deepen anaesthesia with propofol if "
+        "not resolving, small-dose suxamethonium for complete "
+        "laryngospasm unresponsive to simple measures. Note: the "
+        "single most important manoeuvre is early positive-pressure "
+        "jaw thrust, most episodes resolve without needing paralysis."
+    ),
+    "Enterocutaneous fistula": (
+        "An abnormal communication between the bowel lumen and the "
+        "skin surface, most often a complication of surgery. "
+        "Aetiology: anastomotic breakdown, inadvertent enterotomy, "
+        "inflammatory bowel disease, malignancy or radiation injury. "
+        "Clinical features: enteric content draining through a wound "
+        "or drain site, skin excoriation, sepsis, malnutrition and "
+        "dehydration from output losses. Ix: fistulogram or CT to "
+        "define anatomy and output tract, nutritional assessment, "
+        "sepsis screen. Mx: sepsis control and skin protection first, "
+        "nutritional optimisation (often parenteral), octreotide to "
+        "reduce output, definitive surgical repair only after sepsis "
+        "and nutrition are controlled, typically delayed months. "
+        "Note: operating early on a fistulous abdomen usually fails, "
+        "control sepsis and optimise nutrition before definitive "
+        "repair."
+    ),
+    "Functional dyspepsia": (
+        "Chronic upper gastrointestinal symptoms without an "
+        "identifiable structural or biochemical cause on "
+        "investigation. Aetiology: visceral hypersensitivity, delayed "
+        "gastric emptying, Helicobacter pylori infection, "
+        "psychosocial stress, poorly understood brain-gut "
+        "interaction. Clinical features: postprandial fullness, early "
+        "satiety, epigastric pain or burning, no alarm features such "
+        "as weight loss, dysphagia or gastrointestinal bleeding. Ix: "
+        "test and treat for Helicobacter pylori, endoscopy reserved "
+        "for alarm features or age over the local threshold to "
+        "exclude peptic ulcer and malignancy. Mx: H. pylori "
+        "eradication if positive, acid suppression trial, prokinetics "
+        "for postprandial distress, low-dose tricyclic for "
+        "pain-predominant symptoms, dietary and stress modification. "
+        "Note: a diagnosis of exclusion, but does not require "
+        "repeated endoscopy once alarm features have been excluded "
+        "once."
+    ),
+    "Non-accidental injury": (
+        "Physical injury inflicted on a child, requiring a high index "
+        "of suspicion as presentations mimic accidental trauma. "
+        "Aetiology: caregiver violence, often with a history "
+        "inconsistent with the injury pattern or developmental stage "
+        "of the child. Clinical features: bruising in unusual "
+        "locations (torso, ears, neck) or patterns (grip marks, loop "
+        "marks), fractures in a non-ambulant infant, retinal "
+        "haemorrhage, delayed presentation. Ix: skeletal survey in "
+        "infants, fundoscopy, coagulation screen to exclude a "
+        "bleeding diathesis mimic, detailed history-taking from the "
+        "child and carers separately. Mx: mandatory notification to "
+        "child protection services, admission for safety while "
+        "investigations proceed, multidisciplinary child protection "
+        "team involvement. Note: a mechanism that does not match the "
+        "injury, or an injury inconsistent with developmental stage, "
+        "should always trigger further review."
+    ),
+    "Uterine inversion": (
+        "The uterine fundus turns inside out through the cervix, a "
+        "rare but life-threatening obstetric emergency. Aetiology: "
+        "excessive cord traction or fundal pressure during the third "
+        "stage of labour, uterine atony, fundal placental attachment. "
+        "Clinical features: sudden severe abdominal pain, a mass "
+        "palpable at or beyond the cervix or vulva, brisk postpartum "
+        "haemorrhage, profound vagal shock disproportionate to "
+        "visible blood loss. Ix: clinical diagnosis on examination. "
+        "Mx: call for urgent obstetric and anaesthetic help, manual "
+        "replacement (Johnson manoeuvre) as soon as possible before a "
+        "contraction ring forms, uterine relaxants (tocolysis) to aid "
+        "replacement, oxytocin after repositioning, hydrostatic or "
+        "surgical correction if manual replacement fails. Note: shock "
+        "out of proportion to visible bleeding is a vagal response to "
+        "inversion itself, not evidence of a hidden bleed."
+    ),
+    "Button battery ingestion": (
+        "Ingestion of a disc battery lodged in the oesophagus, a "
+        "paediatric emergency causing rapid tissue injury. Aetiology: "
+        "accidental ingestion of batteries from remote controls, toys "
+        "or hearing aids, highest risk in children under six. "
+        "Clinical features: may be asymptomatic, or drooling, "
+        "dysphagia, chest pain or vomiting, injury from "
+        "electrolysis-generated caustic burns begins within hours. "
+        "Ix: urgent X-ray of neck, chest and abdomen to localise the "
+        "battery, a halo sign on the coin confirms a battery rather "
+        "than a coin. Mx: emergency endoscopic removal if lodged in "
+        "the oesophagus, regardless of symptoms, batteries that have "
+        "passed into the stomach in an asymptomatic child can usually "
+        "be observed. Note: an oesophageal button battery is a "
+        "same-hour emergency, delay of even a few hours risks fistula "
+        "into the airway or great vessels."
+    ),
+    "Genu valgum": (
+        "Knock-knee alignment where the knees angle inward and the "
+        "ankles sit apart, a normal developmental phase in most young "
+        "children. Aetiology: physiological in children aged two to "
+        "seven, pathological causes include rickets, skeletal "
+        "dysplasia or prior physeal injury. Clinical features: "
+        "intermalleolar distance measured with the knees together, "
+        "usually symmetrical and painless in physiological cases. Ix: "
+        "clinical measurement and observation over time, X-ray only "
+        "if asymmetrical, painful, extreme or persisting beyond age "
+        "seven. Mx: reassurance and observation for physiological "
+        "genu valgum, which usually corrects by mid-childhood, "
+        "orthopaedic referral for pathological, asymmetrical or "
+        "persistent deformity. Note: symmetry and painlessness are "
+        "the reassuring features that separate normal development "
+        "from pathology."
+    ),
+    "Genu varum": (
+        "Bow-legged alignment where the knees angle outward, "
+        "physiological in infants and toddlers but occasionally "
+        "pathological. Aetiology: normal in children under two, "
+        "pathological causes include Blount disease, rickets and "
+        "skeletal dysplasia, consider if severe, asymmetrical or "
+        "worsening after age two. Clinical features: intercondylar "
+        "distance measured with the ankles together, gait assessment "
+        "for in-toeing. Ix: clinical observation over serial visits, "
+        "X-ray if asymmetrical, progressive, severe or persisting "
+        "beyond age two to look for Blount disease or rickets. Mx: "
+        "reassurance for physiological bowing, which resolves by "
+        "around age two, further work-up and orthopaedic referral if "
+        "pathological features are present. Note: progressive bowing "
+        "after age two is the key red flag for Blount disease rather "
+        "than normal variation."
+    ),
+    "Torus fracture": (
+        "A buckle-type incomplete fracture of the metaphyseal cortex "
+        "in a child, from the compressibility of immature bone. "
+        "Aetiology: fall onto an outstretched hand, most often "
+        "affecting the distal radius. Clinical features: localised "
+        "tenderness and mild swelling over the metaphysis, no "
+        "deformity, the child often still uses the limb. Ix: plain "
+        "X-ray shows a subtle cortical bulge without a visible "
+        "fracture line. Mx: removable splint or brief cast "
+        "immobilisation for comfort, no reduction needed, early "
+        "return to normal activity is safe. Note: a stable, "
+        "inherently healing injury; the main pitfall is over-treating "
+        "it like an unstable fracture."
+    ),
+    "Greenstick fracture": (
+        "An incomplete fracture where one cortex breaks and the "
+        "opposite cortex bends, unique to the pliable bone of "
+        "childhood. Aetiology: angulating force such as a fall onto "
+        "an outstretched arm, common in the forearm. Clinical "
+        "features: localised pain, swelling and reluctance to use the "
+        "limb, with visible angulation if displacement is "
+        "significant. Ix: plain X-ray showing the fracture on one "
+        "cortex with intact but bent bone on the other. Mx: closed "
+        "reduction if angulated beyond an age-appropriate threshold, "
+        "cast immobilisation, check for re-angulation on follow-up "
+        "X-ray since the intact cortex can spring back. Note: because "
+        "one cortex remains intact, these can re-displace during cast "
+        "wear more than a complete fracture would."
+    ),
+    "Salter-Harris fracture": (
+        "A fracture involving the growth plate (physis) in a child, "
+        "classified by pattern to predict growth disturbance risk. "
+        "Aetiology: any injury crossing the physis, common in ankle, "
+        "wrist and knee injuries in growing children. Clinical "
+        "features: point tenderness over the growth plate, may look "
+        "like a sprain in a child, who cannot sprain a ligament that "
+        "is stronger than their own physis. Ix: plain X-ray "
+        "classified types one to five by increasing growth-plate and "
+        "joint involvement, comparison views or MRI if the plain film "
+        "is equivocal. Mx: type one and two usually managed with "
+        "closed reduction and immobilisation, type three to five "
+        "often need orthopaedic referral and may need surgical "
+        "fixation given fracture instability or joint involvement. "
+        "Note: any child with point tenderness over a physis should "
+        "be treated as a fracture until proven otherwise, not "
+        "dismissed as a sprain."
+    ),
+    "Toddler fracture": (
+        "An undisplaced spiral fracture of the distal tibia in a "
+        "young ambulant child, from a low-energy twisting injury. "
+        "Aetiology: a trip, twist or fall during early walking, "
+        "typically age one to three. Clinical features: sudden "
+        "refusal to weight-bear, subtle or absent swelling, no "
+        "history of major trauma, exam can be entirely unremarkable "
+        "at the fracture site. Ix: plain tibia and fibula X-ray, may "
+        "be normal initially, oblique views or repeat imaging in one "
+        "to two weeks if a strong clinical suspicion persists. Mx: "
+        "below-knee cast or splint immobilisation, uncomplicated "
+        "healing expected. Note: a normal initial X-ray does not "
+        "exclude this fracture, treat clinically and re-image if the "
+        "refusal to weight-bear persists."
+    ),
+    "Kienbock disease": (
+        "Avascular necrosis of the lunate carpal bone. Aetiology: "
+        "repetitive wrist loading, negative ulnar variance (a short "
+        "ulna relative to the radius) predisposes by increasing "
+        "lunate load, trauma in some cases. Clinical features: "
+        "insidious dorsal wrist pain and stiffness, reduced grip "
+        "strength, tenderness over the lunate, typically in young "
+        "adults. Ix: plain X-ray for lunate sclerosis or collapse in "
+        "later stages, MRI is more sensitive and shows early marrow "
+        "oedema before X-ray changes appear. Mx: immobilisation and "
+        "activity modification for early disease, joint-levelling "
+        "procedures (radial shortening) or revascularisation surgery "
+        "for progressive disease, salvage procedures for advanced "
+        "collapse. Note: early MRI is important, since plain X-ray "
+        "can look normal while the lunate is already avascular."
+    ),
+    "Blount disease": (
+        "Progressive tibia vara from abnormal growth at the medial "
+        "proximal tibial growth plate. Aetiology: excess mechanical "
+        "loading on the medial physis, associated with early walking "
+        "and obesity, infantile and adolescent forms. Clinical "
+        "features: progressive bowing of the lower leg beyond the age "
+        "when physiological genu varum should resolve, often "
+        "asymmetrical, may cause a lateral thrust gait. Ix: standing "
+        "long-leg X-ray showing medial metaphyseal beaking and "
+        "depression, distinguishes from physiological bowing by "
+        "severity and persistence past age two. Mx: bracing for mild "
+        "infantile disease detected early, corrective osteotomy for "
+        "progressive or adolescent disease. Note: distinguishing this "
+        "from physiological genu varum early matters, since bracing "
+        "works only in the infantile form and only if started before "
+        "structural deformity is established."
     ),
 }
 
