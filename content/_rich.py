@@ -3230,6 +3230,90 @@ NEW_CONDITIONS = [
         "utd": [['Mx', 'cold urticaria']],
         "summary": "",
     },
+    {
+        "name": "Subacromial impingement",
+        "aliases": ["shoulder impingement syndrome"],
+        "utd": [['Mx', 'subacromial impingement']],
+        "summary": "",
+    },
+    {
+        "name": "Plantar plate rupture",
+        "aliases": ["plantar plate tear"],
+        "utd": [['Mx', 'plantar plate tear']],
+        "summary": "",
+    },
+    {
+        "name": "Freiberg infraction",
+        "aliases": ["Freiberg disease", "second metatarsal osteonecrosis"],
+        "utd": [['Overview', 'Freiberg infraction']],
+        "summary": "",
+    },
+    {
+        "name": "Perineal tear",
+        "aliases": ["OASIS obstetric injury", "obstetric anal sphincter injury"],
+        "utd": [['Mx', 'perineal laceration repair']],
+        "summary": "",
+    },
+    {
+        "name": "Lactational mastitis",
+        "aliases": ["puerperal mastitis", "breastfeeding mastitis"],
+        "utd": [['Mx', 'lactational mastitis']],
+        "summary": "",
+    },
+    {
+        "name": "Nipple thrush",
+        "aliases": ["nipple candidiasis", "breast candidiasis"],
+        "utd": [['Mx', 'nipple candidiasis breastfeeding']],
+        "summary": "",
+    },
+    {
+        "name": "Acute bacterial prostatitis",
+        "aliases": ["ABP"],
+        "utd": [['Mx', 'acute bacterial prostatitis']],
+        "summary": "",
+    },
+    {
+        "name": "Acute urinary retention",
+        "aliases": ["AUR"],
+        "utd": [['Mx', 'acute urinary retention']],
+        "summary": "",
+    },
+    {
+        "name": "Empyema thoracis",
+        "aliases": ["pleural empyema", "thoracic empyema"],
+        "utd": [['Mx', 'empyema thoracis']],
+        "summary": "",
+    },
+    {
+        "name": "Flail chest",
+        "aliases": ["flail segment"],
+        "utd": [['Mx', 'flail chest']],
+        "summary": "",
+    },
+    {
+        "name": "Massive haemothorax",
+        "aliases": ["massive hemothorax"],
+        "utd": [['Mx', 'massive hemothorax']],
+        "summary": "",
+    },
+    {
+        "name": "Blunt cardiac injury",
+        "aliases": ["BCI", "myocardial contusion"],
+        "utd": [['Ix', 'blunt cardiac injury']],
+        "summary": "",
+    },
+    {
+        "name": "Q fever endocarditis",
+        "aliases": ["Coxiella endocarditis"],
+        "utd": [['Mx', 'Q fever endocarditis']],
+        "summary": "",
+    },
+    {
+        "name": "Forearm compartment syndrome",
+        "aliases": ["Volkmann ischaemic contracture"],
+        "utd": [['Mx', 'forearm compartment syndrome']],
+        "summary": "",
+    },
 ]
 
 
@@ -33744,6 +33828,319 @@ RICH_SUMMARIES = {
         "risk. Omalizumab for refractory cases. Note: hives after "
         "swimming plus positive ice cube test - cold urticaria, "
         "prescribe EpiPen and forbid solo swimming."
+    ),
+    "Subacromial impingement": (
+        "Compression of the rotator cuff (supraspinatus in "
+        "particular) and subacromial bursa between the humeral head "
+        "and acromion during elevation. The dominant cause of chronic "
+        "shoulder pain in adults. Aetiology: acromial morphology "
+        "(curved or hooked type III), scapular dyskinesis, rotator "
+        "cuff weakness, overhead occupation or sport. Sx: gradual "
+        "lateral or anterior shoulder pain worse with overhead "
+        "activity and at night lying on the shoulder; painful arc "
+        "60-120 degrees of abduction; Neer and Hawkins-Kennedy tests "
+        "reproduce the pain; weakness on resisted external rotation "
+        "suggests cuff tear. Ix: clinical; X-ray to assess acromial "
+        "morphology and exclude calcific tendinopathy; ultrasound or "
+        "MRI if not improving at 6 weeks or cuff tear suspected. Mx: "
+        "activity modification, NSAIDs, structured physiotherapy "
+        "targeting rotator cuff and scapular stabilisers (6-12 weeks, "
+        "evidence-based first-line); ultrasound-guided subacromial "
+        "corticosteroid injection for persistent pain. Subacromial "
+        "decompression surgery only for refractory cases with "
+        "confirmed structural cause. Note: painful arc plus overhead "
+        "work - physio and NSAIDs first, image at 6 weeks if not "
+        "improving."
+    ),
+    "Plantar plate rupture": (
+        "Tear of the fibrocartilaginous plantar plate at the lesser "
+        "metatarsophalangeal joints (usually the second) - an "
+        "underdiagnosed cause of forefoot pain that mimics Morton "
+        "neuroma. Peaks in women 40-60, associated with hallux "
+        "valgus, high heels, high BMI and second-toe length longer "
+        "than first. Sx: gradual plantar forefoot pain under the "
+        "second MTP joint worse with push-off and barefoot walking; "
+        "sometimes dorsal drift, crossing or elevation of the "
+        "involved toe; positive drawer sign at the MTP joint "
+        "(dorsally translate the proximal phalanx); distinguishable "
+        "from Morton neuroma by joint tenderness and positive drawer "
+        "rather than web-space pain. Ix: clinical; ultrasound or MRI "
+        "confirms tear; weight-bearing X-ray for alignment. Mx: "
+        "activity modification, stiff-soled rocker shoe, metatarsal "
+        "pad or offloading orthotic, taping the toe in plantar "
+        "flexion; NSAIDs. Surgical plantar plate repair with or "
+        "without metatarsal shortening osteotomy (Weil) for "
+        "refractory cases with significant deformity. Note: forefoot "
+        "pain under second MTP with positive drawer - plantar plate "
+        "rupture, not Morton neuroma."
+    ),
+    "Freiberg infraction": (
+        "Osteonecrosis of the second (occasionally third) metatarsal "
+        "head - the fourth most common osteochondrosis, peaks in "
+        "adolescent females (male:female 1:5), often associated with "
+        "a long second metatarsal and repetitive loading. Sx: gradual "
+        "forefoot pain and stiffness in the second MTP joint, worse "
+        "with weight-bearing and running; swelling and reduced range "
+        "of motion; can progress to flattened joint and secondary "
+        "osteoarthritis if untreated. Ix: weight-bearing X-ray shows "
+        "flattening, sclerosis and fragmentation of the second "
+        "metatarsal head (Smillie stages I-V); MRI for early disease "
+        "before X-ray changes appear. Mx: activity modification, "
+        "stiff-soled shoe or rocker-bottom sole to offload the "
+        "forefoot, metatarsal bar, NSAIDs; usually resolves over 6-12 "
+        "months in adolescents. Surgical options for advanced disease "
+        "or persistent pain include debridement, dorsal closing wedge "
+        "osteotomy of the metatarsal head (Gauthier) to bring healthy "
+        "plantar cartilage into the joint, or MTP joint arthroplasty. "
+        "Note: adolescent girl with second MTP pain and X-ray "
+        "flattening - Freiberg infraction, offload and expect "
+        "resolution."
+    ),
+    "Perineal tear": (
+        "Perineal injury during vaginal delivery, graded 1-4 by "
+        "depth - first degree involves skin only, second into "
+        "perineal muscles, third through the anal sphincter "
+        "complex and fourth through anal epithelium. Third and "
+        "fourth degree combined are obstetric anal sphincter "
+        "injuries (OASIS). Risk factors: primiparity, big baby, "
+        "forceps delivery, midline episiotomy and occipitoposterior "
+        "position. Sx: bleeding, perineal pain, and faecal "
+        "incontinence or urgency after OASIS. Ix: systematic "
+        "vaginal and rectal examination immediately post-delivery "
+        "grades the tear. Endoanal ultrasound for occult OASIS if "
+        "symptoms persist. Mx: first and second degree get local "
+        "repair with absorbable suture. Third and fourth degree "
+        "need repair in theatre by a trained obstetrician, "
+        "prophylactic antibiotics, laxatives, pelvic-floor "
+        "physiotherapy and follow-up at 6-12 weeks. Discuss mode "
+        "of delivery for future pregnancy. Note: every post-"
+        "delivery woman needs a systematic PR - missed OASIS "
+        "causes lifelong incontinence."
+    ),
+    "Lactational mastitis": (
+        "Inflammation of the lactating breast, most often within the "
+        "first 6 weeks postpartum. Usually starts as milk stasis "
+        "progressing to bacterial infection (Staphylococcus aureus "
+        "commonest, sometimes streptococci or MRSA). Do not stop "
+        "breastfeeding - continued drainage is central to treatment. "
+        "Sx: unilateral wedge-shaped area of erythema, warmth, "
+        "tenderness and induration in one quadrant of the breast; "
+        "fever, myalgia, malaise (may be flu-like); intact milk "
+        "supply. Distinguish from engorgement (bilateral, no systemic "
+        "features) and abscess (fluctuant collection, needs "
+        "drainage). Ix: clinical; breast milk culture for recurrent "
+        "or hospital-acquired cases; ultrasound if abscess suspected. "
+        "Mx: continue breastfeeding from both breasts (the affected "
+        "side first), warm compresses before feeds, cool after; "
+        "gentle massage toward the nipple; adequate emptying with "
+        "pump if the baby will not feed. Empiric oral flucloxacillin "
+        "500 mg QID for 10-14 days if no improvement in 24 hours or "
+        "systemic symptoms; cephalexin if penicillin allergic. Refer "
+        "for I&D if abscess. Note: keep the milk moving - abrupt "
+        "weaning worsens it and risks abscess."
+    ),
+    "Nipple thrush": (
+        "Candida albicans infection of the nipple and areola in "
+        "breastfeeding mothers, usually with concurrent oral thrush "
+        "in the infant. Predisposed by recent maternal or infant "
+        "antibiotics, cracked nipples, moist environment under "
+        "nursing pads. Sx: severe burning nipple pain during and "
+        "after feeds (out of proportion to visible changes), nipples "
+        "appear pink or shiny with flaky skin and a burning sensation "
+        "radiating deep into the breast (ductal candidiasis); infant "
+        "may have white oral plaques, nappy rash or fussy feeding. "
+        "Ix: clinical; nipple and infant oral swab for Candida if "
+        "uncertain or refractory. Rule out bacterial superinfection "
+        "and nipple vasospasm (blanching with cold). Mx: treat mother "
+        "and infant simultaneously - topical miconazole 2% cream to "
+        "the mother's nipples after every feed; oral nystatin drops 1 "
+        "mL QID to the infant for 7-14 days; miconazole oral gel for "
+        "infants over 4 months (choking risk in younger). Fluconazole "
+        "150 mg PO stat then 100 mg daily for 10-14 days for maternal "
+        "ductal disease. Wash and boil nipple accessories daily. "
+        "Note: burning nipple pain radiating deep post-feed plus oral "
+        "thrush in the baby - treat both, keep feeding."
+    ),
+    "Acute bacterial prostatitis": (
+        "Acute bacterial infection of the prostate gland - a "
+        "urological emergency because of sepsis risk. Ascending "
+        "urethral infection from Enterobacteriaceae (predominantly E. "
+        "coli), also Klebsiella, Enterococcus, occasionally "
+        "Pseudomonas. Predisposed by recent catheterisation, prostate "
+        "biopsy, urethral instrumentation and BPH. Sx: acute-onset "
+        "perineal or pelvic pain, urinary frequency, urgency, "
+        "dysuria, painful ejaculation, acute urinary retention, "
+        "fever, rigors and prostration; exquisitely tender, boggy "
+        "warm prostate on gentle PR (avoid vigorous massage - "
+        "bacteraemia risk). Ix: MSU and blood cultures, FBC, CRP, "
+        "U&Es; PSA elevated during infection and unreliable for "
+        "cancer screening for 6-8 weeks. Ultrasound or CT if "
+        "prostatic abscess suspected (failure to improve, diabetic, "
+        "immunocompromised). Mx: IV empiric antibiotics with "
+        "gentamicin plus amoxicillin, or ceftriaxone monotherapy, "
+        "until sensitivities back. Step down to 2-4 weeks of oral "
+        "trimethoprim, ciprofloxacin or TMP-SMX (drugs that penetrate "
+        "the prostate). Catheterise if retention. Sepsis management "
+        "for unstable. Note: fever plus dysuria plus tender prostate "
+        "- blood cultures, IV antibiotics, 4-week oral course."
+    ),
+    "Acute urinary retention": (
+        "Inability to voluntarily void with painful bladder "
+        "distension - a common urological emergency, particularly "
+        "in older men. Causes: BPH, prostate cancer, urethral "
+        "stricture, faecal impaction, UTI, medications "
+        "(anticholinergics, opioids and sympathomimetics), "
+        "postoperative (spinal or epidural anaesthesia), and "
+        "neurological (cord compression, cauda equina). Sx: "
+        "sudden inability to void, suprapubic pain and palpable "
+        "bladder; painless in chronic or neurological retention "
+        "with overflow incontinence. Ix: bladder scan confirms "
+        "retention (over 400 mL suggestive, over 800 diagnostic). "
+        "MSU and U&Es to detect obstructive renal impairment. PR "
+        "to assess prostate and rectal tone. Defer PSA (falsely "
+        "elevated acutely). Mx: immediate urethral catheterisation "
+        "and measure residual. If over 1 L, monitor for post-"
+        "obstructive diuresis (needs IV fluid replacement) and "
+        "decompression haematuria. Treat underlying cause. Trial "
+        "without catheter at 24-72 hours on alpha-blocker "
+        "(tamsulosin 400 microgram daily started 24 hours prior); "
+        "urology referral if fails. Note: over 1 L drained - "
+        "watch for post-obstructive diuresis."
+    ),
+    "Empyema thoracis": (
+        "Pus in the pleural space, usually a complication of "
+        "bacterial pneumonia (parapneumonic effusion progressing "
+        "through exudative, fibrinopurulent and organising stages). "
+        "Also from thoracic surgery, oesophageal rupture or "
+        "subdiaphragmatic infection. Causes: Streptococcus "
+        "pneumoniae, anaerobes and Staphylococcus aureus (including "
+        "MRSA). Sx: persistent or worsening fever and dyspnoea in a "
+        "patient with pneumonia despite appropriate antibiotics, "
+        "pleuritic chest pain, weight loss over weeks; stony dull "
+        "percussion and absent breath sounds over the effusion. Ix: "
+        "chest X-ray shows effusion; ultrasound guides diagnostic "
+        "thoracentesis. Pleural fluid analysis distinguishes empyema "
+        "(pus, pH under 7.2, glucose under 2.2, LDH over 1000) from "
+        "simple parapneumonic. Gram stain, culture, blood cultures. "
+        "CT chest if loculated. Mx: chest drain as soon as diagnosis "
+        "confirmed - the pus must come out. IV broad-spectrum "
+        "antibiotics 2-6 weeks. Intrapleural fibrinolytics (tPA plus "
+        "DNase) for loculated collections. VATS decortication if "
+        "thickened pleural peel or ongoing sepsis. Note: pneumonia "
+        "not settling - ultrasound the chest, drain any pus that day."
+    ),
+    "Flail chest": (
+        "Segmental rib fractures (three or more consecutive ribs each "
+        "broken in two or more places) creating a free-floating "
+        "segment that moves paradoxically with respiration. The true "
+        "morbidity is the underlying pulmonary contusion, not the "
+        "mechanical flail. Usually blunt chest trauma (MVA, high "
+        "fall, assault). Sx: severe chest pain worse with "
+        "respiration, dyspnoea, respiratory distress, splinting; "
+        "paradoxical chest wall movement (inward on inspiration, "
+        "outward on expiration) visible in a lean patient; hypoxaemia "
+        "from contusion; may progress to respiratory failure. Ix: "
+        "chest X-ray shows multiple rib fractures and often pulmonary "
+        "infiltrate; CT chest defines the fracture pattern and "
+        "associated injuries. ABG for hypoxaemia. Mx: aggressive "
+        "analgesia is central - intercostal nerve blocks, epidural or "
+        "paravertebral catheter, PCA opioid. Oxygen. Physiotherapy "
+        "and incentive spirometry. NIV or intubation for respiratory "
+        "failure. Surgical rib fixation reduces ventilator days and "
+        "pneumonia risk in selected patients. Note: paradoxical "
+        "movement plus hypoxaemia - contusion kills, not the flail; "
+        "analgesia, oxygen, ICU."
+    ),
+    "Massive haemothorax": (
+        "Accumulation of over 1500 mL of blood in the pleural space, "
+        "or ongoing bleeding of over 200 mL/hour for 4 hours after "
+        "chest drain insertion. A thoracic surgical emergency. "
+        "Usually blunt or penetrating chest trauma injuring "
+        "intercostal or internal mammary arteries, or hilar vessels. "
+        "Sx: haemorrhagic shock signs (tachycardia, hypotension, cool "
+        "peripheries) combined with reduced breath sounds and stony "
+        "dullness on the affected side; distended neck veins if "
+        "tension physiology develops from tamponade of the lung; "
+        "hypoxaemia. Ix: primary survey with FAST or bedside chest "
+        "ultrasound; erect chest X-ray shows opacified hemithorax "
+        "with tracheal shift; CT chest angiogram if stable to "
+        "localise bleeding source. Cross-match 4-6 units urgently. "
+        "Mx: large-bore intercostal drain (28-32 Fr) into the fifth "
+        "intercostal space anterior axillary line; volume "
+        "resuscitation with balanced blood products via major "
+        "haemorrhage protocol; immediate cardiothoracic consultation "
+        "for emergency thoracotomy if initial drain over 1500 mL or "
+        "ongoing bleeding over 200 mL/hour; consider REBOA and "
+        "damage-control surgery. Autotransfusion if available. Note: "
+        "instant 1.5 L from a chest drain - thoracotomy same "
+        "admission."
+    ),
+    "Blunt cardiac injury": (
+        "Spectrum of cardiac injury after blunt chest trauma - from "
+        "clinically silent troponin rise to fatal cardiac rupture. "
+        "Most common after high-speed MVA with sternum or steering "
+        "wheel impact; also crush injuries and falls from height. Sx: "
+        "variable - unexplained tachycardia and hypotension out of "
+        "proportion to visible injury, arrhythmias (sinus tachycardia "
+        "most common, then PVCs, AF, RBBB), signs of cardiac "
+        "tamponade, or new murmur of valvular disruption; often "
+        "coexisting sternal or rib fractures and pulmonary contusion. "
+        "Ix: 12-lead ECG on arrival and 6-8 hours later (persistent "
+        "normal ECG plus normal troponin at 6 hours excludes "
+        "significant BCI); troponin (elevated in myocardial "
+        "contusion); FAST for pericardial effusion; TTE for "
+        "functional assessment and wall motion abnormalities; CT "
+        "chest for structural injury and aortic assessment. Mx: "
+        "cardiac monitoring for 24 hours if any abnormality on ECG or "
+        "troponin; arrhythmia management by cause; supportive care; "
+        "surgical repair for chamber rupture or valvular injury "
+        "(rare, usually fatal at scene). Note: unexplained "
+        "tachycardia after MVA plus sternal tenderness - ECG, "
+        "troponin, 24-hour monitoring."
+    ),
+    "Q fever endocarditis": (
+        "Chronic Coxiella burnetii infection of the endocardium - the "
+        "most feared chronic manifestation of Q fever, developing "
+        "months to years after acute infection in patients with "
+        "pre-existing valvular disease, prosthetic valves or "
+        "immunosuppression. Sx: insidious constitutional symptoms - "
+        "fever, night sweats, fatigue, weight loss over months; "
+        "embolic phenomena; new or worsening murmur; heart failure; "
+        "hepatosplenomegaly. Blood cultures persistently NEGATIVE - Q "
+        "fever is the classic culture-negative endocarditis. Ix: high "
+        "index of suspicion is needed. Coxiella burnetii serology - "
+        "phase I IgG over 1:800 is diagnostic. PCR of blood or valve "
+        "tissue. TOE for vegetations (often small or absent). Mx: "
+        "prolonged combination antibiotics - doxycycline plus "
+        "hydroxychloroquine for at least 18 months (native valve) or "
+        "24 months (prosthetic). Serology every 6 months; treat until "
+        "phase I IgG below 1:400. Valve surgery if severe "
+        "regurgitation or heart failure. Lifelong follow-up. Note: "
+        "culture-negative endocarditis plus abattoir contact - "
+        "Coxiella serology, doxycycline plus hydroxychloroquine 18 "
+        "months."
+    ),
+    "Forearm compartment syndrome": (
+        "Raised pressure within a fascial compartment compromising "
+        "perfusion - a surgical emergency with a 6-hour window before "
+        "permanent muscle and nerve injury. Volar and dorsal "
+        "compartments. Aetiology: supracondylar humerus fracture "
+        "(paediatric classic - Volkmann ischaemic contracture is the "
+        "historical endpoint), distal radius fracture, high-energy "
+        "forearm fracture, reperfusion after prolonged ischaemia, "
+        "tight cast, crush injury or coagulopathy. Sx: pain out of "
+        "proportion to injury and pain on passive stretch are the "
+        "earliest and most sensitive. Numbness, pallor, paralysis and "
+        "pulselessness are late signs meaning tissue is already "
+        "dying. Tense swollen compartment; palpable pulses often "
+        "preserved. Ix: clinical diagnosis is standard - do not wait "
+        "for pressures. Intracompartmental pressure (Stryker) with "
+        "delta P under 30 mmHg confirms if unsure or unable to assess "
+        "(unconscious, child). Mx: URGENT orthopaedic referral for "
+        "fasciotomy. Remove any restrictive dressing or cast. Elevate "
+        "to heart level (not above). Do not apply ice. Note: pain out "
+        "of proportion after a supracondylar fracture - fasciotomy "
+        "now, not pressures."
     ),
 }
 
