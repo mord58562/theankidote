@@ -5915,6 +5915,174 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "mucocele and ranula"]],
         "summary": "",
     },
+    {
+        "name": "Erythema elevatum diutinum",
+        "aliases": ["EED"],
+        "utd": [["Overview", "erythema elevatum diutinum"]],
+        "summary": "",
+    },
+    {
+        "name": "Urticarial vasculitis",
+        "aliases": ["Hypocomplementaemic urticarial vasculitis syndrome", "HUVS"],
+        "utd": [["Overview", "urticarial vasculitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Cutaneous small vessel vasculitis",
+        "aliases": ["Leukocytoclastic vasculitis", "Hypersensitivity vasculitis"],
+        "utd": [["Overview", "cutaneous small vessel vasculitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Non-fatal strangulation",
+        "aliases": ["Strangulation injury", "Attempted strangulation"],
+        "utd": [["Overview", "strangulation injury evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Navicular stress fracture",
+        "aliases": ["Tarsal navicular stress fracture"],
+        "utd": [["Overview", "navicular stress fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Turf toe",
+        "aliases": ["First MTP joint sprain", "Plantar plate injury of the great toe"],
+        "utd": [["Overview", "turf toe"]],
+        "summary": "",
+    },
+    {
+        "name": "Second impact syndrome",
+        "aliases": [],
+        "utd": [["Overview", "second impact syndrome concussion"]],
+        "summary": "",
+    },
+    {
+        "name": "Exertional rhabdomyolysis",
+        "aliases": ["Exercise-induced rhabdomyolysis"],
+        "utd": [["Overview", "exertional rhabdomyolysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Stinger (burner) syndrome",
+        "aliases": ["Burner syndrome", "Brachial plexus neurapraxia"],
+        "utd": [["Overview", "stinger burner brachial plexus injury sports"]],
+        "summary": "",
+    },
+    {
+        "name": "Clay shoveler fracture",
+        "aliases": ["Clay shoveller's fracture", "Spinous process avulsion fracture"],
+        "utd": [["Overview", "clay shoveler fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Cowden syndrome",
+        "aliases": ["PTEN hamartoma tumour syndrome"],
+        "utd": [["Overview", "cowden syndrome pten hamartoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Hermansky-Pudlak syndrome",
+        "aliases": [],
+        "utd": [["Overview", "hermansky pudlak syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Beckwith-Wiedemann syndrome",
+        "aliases": ["BWS"],
+        "utd": [["Overview", "beckwith wiedemann syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "CHARGE syndrome",
+        "aliases": [],
+        "utd": [["Overview", "charge syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Smith-Magenis syndrome",
+        "aliases": [],
+        "utd": [["Overview", "smith magenis syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Cri du chat syndrome",
+        "aliases": ["5p deletion syndrome", "Cat cry syndrome"],
+        "utd": [["Overview", "cri du chat syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Cornelia de Lange syndrome",
+        "aliases": ["CdLS"],
+        "utd": [["Overview", "cornelia de lange syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Westermark sign",
+        "aliases": [],
+        "utd": [["Overview", "pulmonary embolism chest radiograph findings"]],
+        "summary": "",
+    },
+    {
+        "name": "Kerley B lines",
+        "aliases": ["Septal lines"],
+        "utd": [["Overview", "cardiogenic pulmonary edema chest radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Rigler sign",
+        "aliases": ["Double wall sign"],
+        "utd": [["Overview", "pneumoperitoneum plain radiograph findings"]],
+        "summary": "",
+    },
+    {
+        "name": "Air crescent sign",
+        "aliases": [],
+        "utd": [["Overview", "invasive pulmonary aspergillosis imaging"]],
+        "summary": "",
+    },
+    {
+        "name": "Target sign of intussusception",
+        "aliases": ["Doughnut sign intussusception"],
+        "utd": [["Overview", "intussusception in children ultrasound"]],
+        "summary": "",
+    },
+    {
+        "name": "Napkin ring sign",
+        "aliases": ["Apple core lesion"],
+        "utd": [["Overview", "colorectal cancer imaging findings"]],
+        "summary": "",
+    },
+    {
+        "name": "Colchicine toxicity",
+        "aliases": ["Colchicine overdose", "Colchicine poisoning"],
+        "utd": [["Overview", "colchicine poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Bernard-Soulier syndrome",
+        "aliases": [],
+        "utd": [["Overview", "bernard soulier syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Glanzmann thrombasthenia",
+        "aliases": [],
+        "utd": [["Overview", "glanzmann thrombasthenia"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-intensive care syndrome",
+        "aliases": ["PICS"],
+        "utd": [["Overview", "post intensive care syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "ICU-acquired weakness",
+        "aliases": ["Critical illness polyneuropathy", "Critical illness myopathy"],
+        "utd": [["Overview", "intensive care unit acquired weakness"]],
+        "summary": "",
+    },
 ]
 
 
@@ -44937,6 +45105,509 @@ RICH_SUMMARIES = {
         "draining a mucocele without excising the gland almost always "
         "leads to recurrence, since the underlying duct injury is "
         "untouched."
+    ),
+    "Erythema elevatum diutinum": (
+        "Rare chronic leukocytoclastic vasculitis producing symmetric "
+        "red-violet to brown papules, plaques and nodules over "
+        "extensor surfaces, associated with IgA monoclonal "
+        "gammopathy, streptococcal infection, HIV, IBD and rheumatoid "
+        "arthritis. Clinical features: firm, persistent lesions over "
+        "elbows, knees and hand joints, becoming fibrotic and "
+        "yellow-brown with chronicity. Ix: biopsy shows "
+        "leukocytoclastic vasculitis with fibrosis in older lesions; "
+        "screen for associated conditions with serum protein "
+        "electrophoresis, HIV and streptococcal serology. Mx: dapsone "
+        "is first-line and often dramatically effective; niacinamide "
+        "or colchicine as alternatives, plus treating any underlying "
+        "association. Note: the extensor-joint distribution plus a "
+        "dramatic dapsone response helps distinguish this from other "
+        "chronic vasculitides."
+    ),
+    "Urticarial vasculitis": (
+        "Small-vessel vasculitis presenting as urticarial weals that, "
+        "unlike ordinary urticaria, persist over 24 hours, burn or "
+        "hurt rather than itch, and leave bruising or pigmentation "
+        "behind. The hypocomplementaemic form is more severe, linked "
+        "to SLE, and can affect lungs, kidneys, joints and eyes. Ix: "
+        "biopsy shows leukocytoclastic vasculitis; check complement "
+        "(C3, C4, C1q), ANA and anti-C1q antibodies, and screen for "
+        "connective tissue disease. Mx: antihistamines rarely help. "
+        "NSAIDs, colchicine or dapsone suit mild disease; oral "
+        "corticosteroids plus a steroid-sparing agent such as "
+        "hydroxychloroquine for hypocomplementaemic or systemic "
+        "disease. Note: a weal lasting over 24 hours with residual "
+        "bruising rather than itch is what separates this from "
+        "chronic urticaria."
+    ),
+    "Cutaneous small vessel vasculitis": (
+        "Localised small-vessel vasculitis confined to skin, the most "
+        "common vasculitis seen in primary care, triggered by "
+        "infection, drugs (antibiotics, NSAIDs) or idiopathic causes. "
+        "Distinct from IgA vasculitis, which needs IgA deposition and "
+        "often systemic involvement. Clinical features: palpable "
+        "purpura, classically over dependent areas such as the lower "
+        "legs, sometimes with vesicles or ulcers. Ix: skin biopsy "
+        "confirms leukocytoclastic vasculitis. Screen for systemic "
+        "involvement with urinalysis, FBC and CRP, and look for a "
+        "drug or infective trigger before labelling it idiopathic. "
+        "Mx: remove the trigger and give supportive care (rest, leg "
+        "elevation, NSAIDs) for skin-limited disease; escalate to "
+        "corticosteroids for extensive, ulcerating or systemic "
+        "disease. Note: pure skin-limited disease on biopsy usually "
+        "resolves within weeks once the trigger is removed."
+    ),
+    "Non-fatal strangulation": (
+        "Compression of the neck reducing or blocking blood flow or "
+        "air entry without causing death, a well-recognised marker of "
+        "escalating intimate partner violence with a markedly "
+        "increased risk of subsequent homicide by the same "
+        "perpetrator. Clinical features: often minimal or absent "
+        "external signs despite serious internal injury, so a "
+        "normal-looking neck does not exclude significant harm. Ix: "
+        "forensic photography and detailed neck examination. CT "
+        "angiography of the neck if any red flag - voice change, "
+        "dysphagia, neurological symptom or loss of consciousness - "
+        "to exclude dissection or laryngeal fracture. Mx: admit for "
+        "observation if any high-risk feature, document injuries "
+        "carefully for forensic and legal purposes, and always refer "
+        "for safety planning and domestic violence support. Note: "
+        "absent visible marks must never be used to downplay risk or "
+        "deny admission."
+    ),
+    "Navicular stress fracture": (
+        "Stress fracture through the tarsal navicular's relatively "
+        "avascular central third, classically in young sprinting or "
+        "jumping athletes, notorious for delayed diagnosis and "
+        "non-union because pain is vague and plain films are often "
+        "normal. Clinical features: poorly localised dorsal midfoot "
+        "pain worsened by running or jumping, tender over the "
+        "navicular dorsally. Ix: plain radiographs are often normal "
+        "early; MRI or CT is needed for diagnosis and to assess "
+        "fracture completeness. Mx: complete non-weight-bearing "
+        "immobilisation for six weeks is standard for incomplete "
+        "fractures; displaced or complete fractures need surgical "
+        "fixation given the high non-union risk from poor central "
+        "blood supply. Note: persistent vague midfoot pain in a "
+        "sprinter with normal x-rays should prompt MRI, not "
+        "reassurance."
+    ),
+    "Turf toe": (
+        "Sprain of the first metatarsophalangeal joint's plantar "
+        "plate and capsuloligamentous complex from forced "
+        "hyperextension, typically on artificial turf, common in "
+        "football and other cutting sports. Clinical features: pain, "
+        "swelling and reduced range of motion at the great toe MTP "
+        "joint, worse pushing off. Severe injuries show plantar "
+        "bruising and instability. Ix: clinical grading by degree of "
+        "plantar plate disruption; plain radiographs exclude fracture "
+        "or sesamoid involvement; MRI for higher-grade injury or "
+        "surgical planning. Mx: mild sprains need rest, taping and a "
+        "stiff-soled shoe to limit dorsiflexion; moderate injury "
+        "needs immobilisation and protected weight-bearing for weeks; "
+        "plantar plate rupture with joint instability needs surgical "
+        "repair. Note: under-treating turf toe as a simple sprain "
+        "risks chronic joint instability."
+    ),
+    "Second impact syndrome": (
+        "Rare, often fatal, diffuse cerebral swelling occurring when "
+        "a second head injury is sustained before full recovery from "
+        "a first concussion, thought to reflect loss of cerebral "
+        "autoregulation, overwhelmingly reported in adolescents and "
+        "young athletes. Clinical features: after a second, sometimes "
+        "trivial, head impact, rapid deterioration in consciousness "
+        "within minutes, with signs of raised intracranial pressure "
+        "and brainstem herniation. Ix: urgent CT shows diffuse "
+        "cerebral swelling with loss of grey-white differentiation, "
+        "often without a large mass lesion. Mx: emergency management "
+        "of raised ICP with neurosurgical involvement, though "
+        "mortality remains very high despite treatment. Note: this is "
+        "the evidence base behind graduated return-to-sport "
+        "concussion protocols and no same-day return to play after "
+        "any suspected concussion."
+    ),
+    "Exertional rhabdomyolysis": (
+        "Skeletal muscle breakdown from unaccustomed or excessive "
+        "exertion, especially in heat, with novice recruits, "
+        "bootcamp-style training and sickle cell trait carriers at "
+        "particular risk. Clinical features: severe myalgia, weakness "
+        "and swelling of exercised muscle groups, with dark "
+        "tea-coloured urine from myoglobinuria. Ix: markedly elevated "
+        "CK, often in the tens of thousands, urinalysis positive for "
+        "blood without red cells on microscopy, renal function and "
+        "potassium. Mx: aggressive IV crystalloid to maintain good "
+        "urine output, correct hyperkalaemia, and monitor for "
+        "compartment syndrome and acute kidney injury. Urinary "
+        "alkalinisation is no longer routinely recommended. Note: "
+        "dipstick blood-positive urine with no red cells on "
+        "microscopy after unaccustomed exercise is myoglobinuria "
+        "until proven otherwise."
+    ),
+    "Stinger (burner) syndrome": (
+        "Transient brachial plexus neurapraxia from traction or "
+        "compression of the plexus, typically a tackle forcing the "
+        "head away from the shoulder, common in contact sports. "
+        "Clinical features: sudden burning pain and weakness "
+        "radiating down one arm after a collision, usually resolving "
+        "within minutes. Recurrent or persistent weakness raises "
+        "concern for more significant plexus injury. Ix: clinical "
+        "diagnosis if symptoms resolve fully within minutes with no "
+        "neck pain or bilateral symptoms, which instead mandate "
+        "cervical spine imaging to exclude cervical cord neurapraxia, "
+        "a distinct and more serious entity. Mx: same-session return "
+        "to play only once full strength, sensation and neck range of "
+        "motion return. Recurrent stingers warrant assessment for "
+        "foraminal narrowing before further contact play. Note: "
+        "bilateral symptoms or neck pain after a stinger needs full "
+        "cervical spine workup for cord injury."
+    ),
+    "Clay shoveler fracture": (
+        "Avulsion fracture of a spinous process, classically C6-T1, "
+        "from sudden forceful flexion against resisted paraspinal "
+        "muscle contraction, historically from shovelling clay, now "
+        "more often seen in sports or after a direct blow. Clinical "
+        "features: localised interspinous neck pain and tenderness "
+        "over the affected spinous process, without neurological "
+        "deficit. Ix: lateral cervical spine radiograph typically "
+        "shows the avulsed fragment. This is a stable fracture with "
+        "no ligamentous or bony column instability. Mx: symptomatic "
+        "treatment with analgesia and a soft collar for comfort; no "
+        "surgical fixation is needed given inherent stability. Note: "
+        "recognising this as a stable, isolated posterior element "
+        "avulsion, not an unstable fracture-dislocation, avoids "
+        "unnecessary immobilisation and anxiety."
+    ),
+    "Cowden syndrome": (
+        "Autosomal dominant PTEN hamartoma tumour syndrome causing "
+        "multiple hamartomas and a markedly increased lifetime risk "
+        "of breast, thyroid, endometrial and renal cancers. Clinical "
+        "features: mucocutaneous trichilemmomas, oral papillomas, "
+        "acral keratoses, macrocephaly and benign hamartomas across "
+        "multiple organs including juvenile-type GI polyps. Ix: "
+        "genetic testing for a PTEN mutation once clinical criteria "
+        "are met, then baseline and ongoing surveillance imaging - "
+        "thyroid ultrasound, breast MRI or mammography, endometrial "
+        "surveillance and colonoscopy. Mx: risk-reducing surgery "
+        "(mastectomy, hysterectomy) is an option once childbearing is "
+        "complete, alongside lifelong organ-specific cancer "
+        "surveillance. Note: macrocephaly with mucocutaneous lesions "
+        "and a strong family history of thyroid or breast cancer "
+        "should prompt PTEN testing."
+    ),
+    "Hermansky-Pudlak syndrome": (
+        "Rare autosomal recessive disorder combining oculocutaneous "
+        "albinism with a platelet dense-granule storage defect "
+        "causing a bleeding diathesis, and in some subtypes "
+        "progressive pulmonary fibrosis and granulomatous colitis. "
+        "Clinical features: albinism with hypopigmented skin and "
+        "hair, nystagmus and reduced visual acuity, alongside easy "
+        "bruising, epistaxis and excessive surgical or postpartum "
+        "bleeding. Ix: platelet aggregation studies show absent "
+        "dense-granule release; electron microscopy confirms absent "
+        "dense granules; genetic testing identifies the subtype, "
+        "which guides pulmonary fibrosis surveillance. Mx: bleeding "
+        "precautions with desmopressin or platelet transfusion for "
+        "procedures; pulmonary fibrosis in affected subtypes is "
+        "managed as for other progressive fibrotic lung disease. "
+        "Note: albinism with a bleeding tendency disproportionate to "
+        "a normal platelet count is the pattern-recognition clue."
+    ),
+    "Beckwith-Wiedemann syndrome": (
+        "Overgrowth syndrome from dysregulation of imprinted genes at "
+        "chromosome 11p15, causing macrosomia and a substantially "
+        "increased risk of embryonal tumours, chiefly Wilms tumour "
+        "and hepatoblastoma, in early childhood. Clinical features: "
+        "macroglossia, omphalocele or umbilical hernia, "
+        "hemihyperplasia, ear creases or pits, and neonatal "
+        "hypoglycaemia from hyperinsulinism. Ix: clinical diagnosis "
+        "supported by molecular or genetic testing of the 11p15 "
+        "region; once diagnosed, regular abdominal ultrasound and AFP "
+        "screening through early childhood for tumour surveillance. "
+        "Mx: manage neonatal hypoglycaemia aggressively to prevent "
+        "neurological injury, provide airway and feeding support for "
+        "macroglossia, and continue scheduled tumour surveillance "
+        "until around age eight, when risk falls substantially. Note: "
+        "macroglossia with omphalocele and neonatal hypoglycaemia in "
+        "a large-for-dates baby should trigger BWS screening, not "
+        "just management of the hypoglycaemia alone."
+    ),
+    "CHARGE syndrome": (
+        "Multisystem congenital anomaly syndrome, most often from a "
+        "CHD7 mutation, whose name describes the classic feature "
+        "cluster - coloboma, heart defects, atresia of the choanae, "
+        "retarded growth or development, genital abnormalities and "
+        "ear anomalies - rather than every case showing all features. "
+        "Clinical features: neonatal respiratory distress from "
+        "bilateral choanal atresia, complex congenital heart disease, "
+        "characteristic ear anomalies with sensorineural hearing "
+        "loss, and ocular coloboma. Ix: genetic testing for CHD7; "
+        "echocardiogram, ENT and audiology assessment, ophthalmology "
+        "review and renal ultrasound to map the full anomaly pattern. "
+        "Mx: multidisciplinary management with surgical correction of "
+        "choanal atresia and cardiac defects, hearing amplification "
+        "or cochlear implantation, and developmental support. Note: a "
+        "neonate who cannot breathe through the nose with a cardiac "
+        "murmur should prompt CHARGE workup, not isolated ENT "
+        "referral."
+    ),
+    "Smith-Magenis syndrome": (
+        "Contiguous gene deletion syndrome at chromosome 17p11.2 "
+        "causing intellectual disability with a distinctive "
+        "behavioural phenotype and an inverted circadian melatonin "
+        "rhythm. Clinical features: self-injurious behaviours such as "
+        "self-hugging and hand or wrist biting, sleep disturbance "
+        "from melatonin secretion peaking during the day rather than "
+        "at night, and characteristic facial features including a "
+        "broad square face. Ix: chromosomal microarray confirms the "
+        "17p11.2 deletion; sleep studies can demonstrate the inverted "
+        "melatonin rhythm. Mx: an evening beta-blocker to suppress "
+        "the abnormal daytime melatonin peak, combined with morning "
+        "bright light and exogenous melatonin at night, helps correct "
+        "sleep-wake reversal; behavioural strategies address "
+        "self-injury. Note: self-hugging stereotypy with severely "
+        "disrupted sleep in a child with intellectual disability is "
+        "distinctive enough to prompt targeted genetic testing."
+    ),
+    "Cri du chat syndrome": (
+        "Chromosome 5p deletion syndrome named for the characteristic "
+        "high-pitched, cat-like cry in affected infants from "
+        "laryngeal hypoplasia. Clinical features: the distinctive cry "
+        "is most prominent in infancy and fades with age; "
+        "microcephaly, low birth weight, hypotonia, moderate to "
+        "severe intellectual disability and characteristic facial "
+        "features (round face, hypertelorism, micrognathia) round out "
+        "the picture. Ix: chromosomal microarray or FISH confirms the "
+        "5p deletion; cardiac and renal ultrasound screen for "
+        "associated anomalies. Mx: multidisciplinary supportive care "
+        "with early intervention, speech and physiotherapy, and "
+        "management of any associated cardiac defect. No "
+        "disease-modifying treatment exists. Note: the cat-like cry "
+        "is most useful diagnostically in the neonatal period and "
+        "becomes far less distinctive with age, so a normal older "
+        "child's cry does not exclude the diagnosis."
+    ),
+    "Cornelia de Lange syndrome": (
+        "Multisystem developmental disorder, commonly from an NIPBL "
+        "mutation, causing characteristic facial features, growth "
+        "restriction and upper limb anomalies ranging from small "
+        "hands to severe limb reduction defects. Clinical features: "
+        "synophrys (confluent eyebrows), long eyelashes, a small "
+        "upturned nose, prenatal and postnatal growth restriction, "
+        "intellectual disability and gastro-oesophageal reflux that "
+        "is often severe. Ix: clinical diagnosis supported by genetic "
+        "testing of NIPBL and related cohesin pathway genes; upper GI "
+        "assessment for reflux, which can be severe enough to cause "
+        "aspiration or failure to thrive. Mx: aggressive reflux "
+        "management, often needing fundoplication, early intervention "
+        "services, and limb or hand surgical input where relevant. "
+        "Note: synophrys with long eyelashes and significant growth "
+        "restriction in a refluxing infant is the classic recognition "
+        "pattern."
+    ),
+    "Westermark sign": (
+        "Radiographic sign of pulmonary embolism on chest x-ray: "
+        "focal oligaemia, a regional area of hypovascularity or "
+        "lucency, distal to an occluding embolus from abrupt vascular "
+        "cutoff. Clinical features: not a clinical sign but an "
+        "imaging finding, seen in only a minority of PE cases and "
+        "neither sensitive nor specific enough to rule PE in or out "
+        "alone. Ix: seen on plain chest x-ray, but CT pulmonary "
+        "angiography remains the diagnostic test of choice when PE is "
+        "suspected. A normal chest x-ray does not exclude PE, and "
+        "most PE chest x-rays are simply unremarkable. Mx: its "
+        "presence should prompt formal CTPA rather than change "
+        "management on its own. Note: taught heavily in exams but "
+        "rarely relied on clinically - a normal chest x-ray in a "
+        "breathless patient with high pre-test probability for PE "
+        "should never be reassuring."
+    ),
+    "Kerley B lines": (
+        "Radiographic sign of interstitial pulmonary oedema on chest "
+        "x-ray: short, horizontal, non-branching lines at the lung "
+        "periphery near the costophrenic angles, representing "
+        "fluid-thickened interlobular septa. Clinical features: an "
+        "imaging correlate of interstitial fluid overload, typically "
+        "seen alongside other signs of cardiac failure such as "
+        "cardiomegaly, upper lobe diversion, pleural effusion and "
+        "perihilar alveolar oedema in more advanced disease. Ix: seen "
+        "on plain chest x-ray in cardiogenic pulmonary oedema; "
+        "echocardiography and BNP support the diagnosis and identify "
+        "the underlying cause. Mx: treatment targets the underlying "
+        "cause of fluid overload - diuresis, afterload reduction and "
+        "managing the precipitant such as acute coronary syndrome or "
+        "arrhythmia. Note: Kerley B lines mark an earlier, "
+        "interstitial stage of oedema than frank alveolar shadowing, "
+        "useful for staging severity on a single film."
+    ),
+    "Rigler sign": (
+        "Radiographic sign of pneumoperitoneum on plain abdominal "
+        "x-ray: both sides of the bowel wall become visible, the "
+        "double wall sign, because free intraperitoneal gas outlines "
+        "the serosal surface as well as the usual luminal gas "
+        "outlining the mucosal surface. Clinical features: an imaging "
+        "finding indicating a large volume of free intraperitoneal "
+        "air, most often from a perforated viscus. Ix: seen on a "
+        "supine abdominal film, useful when an erect chest x-ray or "
+        "lateral decubitus film is impractical in an unwell patient; "
+        "CT abdomen is more sensitive for smaller volumes of free "
+        "air. Mx: identifies a surgical emergency - urgent surgical "
+        "review, resuscitation and likely laparotomy or laparoscopy "
+        "once perforation is confirmed. Note: it reflects a large "
+        "pneumoperitoneum, so its absence does not exclude "
+        "perforation with a smaller volume of free air."
+    ),
+    "Air crescent sign": (
+        "Radiographic sign on CT or chest x-ray: a crescent of air "
+        "outlining a mass, classically seen as invasive pulmonary "
+        "aspergillosis recovers and the necrotic lung mass retracts "
+        "from surrounding viable tissue, also described in other "
+        "cavitating lesions. Clinical features: typically appears as "
+        "an immunocompromised patient with invasive fungal pneumonia "
+        "begins recovering neutrophil counts, sometimes with "
+        "haemoptysis as the cavity forms. Ix: CT chest identifies the "
+        "crescent and underlying mass. Correlate with the clinical "
+        "context of recovering neutropenia, galactomannan, and prior "
+        "imaging showing the preceding halo sign of early invasive "
+        "aspergillosis. Mx: continue or complete antifungal therapy; "
+        "surgical resection is considered if haemoptysis is "
+        "significant or the diagnosis remains uncertain. Note: the "
+        "sign often appears as the patient is clinically improving "
+        "and neutrophils are recovering, not while most unwell."
+    ),
+    "Target sign of intussusception": (
+        "Ultrasound sign of intussusception: concentric alternating "
+        "hyper- and hypoechoic rings on transverse view from the "
+        "telescoped bowel loops with interposed mesenteric fat, "
+        "giving a doughnut or target appearance. Clinical features: "
+        "an imaging correlate sought in an infant with intermittent "
+        "colicky abdominal pain, drawing up of the legs, vomiting and "
+        "classically redcurrant jelly stool, a late sign. Ix: "
+        "abdominal ultrasound is the investigation of choice, with "
+        "the target sign on transverse view and a pseudokidney sign "
+        "on longitudinal view, and has largely replaced plain films "
+        "for diagnosis. Mx: once confirmed, air or contrast enema is "
+        "both diagnostic and usually therapeutic, reducing the "
+        "intussusception, with surgery reserved for failed reduction, "
+        "perforation or peritonism. Note: waiting for redcurrant "
+        "jelly stool to suspect intussusception is a delayed sign - "
+        "ultrasound should be sought earlier on the classic triad."
+    ),
+    "Napkin ring sign": (
+        "Annular, circumferential thickening of the bowel wall "
+        "narrowing the lumen on CT, classically described in "
+        "colorectal carcinoma causing an apple core or napkin-ring "
+        "constricting lesion, also seen in some inflammatory "
+        "strictures. Clinical features: an imaging finding rather "
+        "than a clinical sign, corresponding to symptoms of the "
+        "underlying obstructing lesion such as a change in bowel "
+        "habit, abdominal pain, rectal bleeding or obstruction. Ix: "
+        "seen on contrast-enhanced CT or barium studies; colonoscopy "
+        "with biopsy is required to confirm malignancy and "
+        "differentiate from other causes of a stricture such as Crohn "
+        "disease or an ischaemic stricture. Mx: management follows "
+        "the underlying diagnosis - staging and surgical resection "
+        "for confirmed colorectal cancer, or medical therapy if an "
+        "inflammatory stricture is confirmed instead. Note: an "
+        "annular apple core lesion is malignant until histology "
+        "proves otherwise."
+    ),
+    "Colchicine toxicity": (
+        "Narrow therapeutic index alkaloid, used for gout, familial "
+        "Mediterranean fever and pericarditis, where overdose or "
+        "accumulation from renal impairment or interacting CYP3A4 "
+        "inhibitors such as clarithromycin causes severe, often "
+        "delayed multi-organ toxicity with no specific antidote. "
+        "Clinical features: classically triphasic - severe "
+        "gastroenteritis and volume depletion in the first 24 hours, "
+        "then multi-organ failure with marrow suppression, "
+        "cardiogenic shock and acute kidney injury over the next few "
+        "days, followed by rebound leucocytosis and alopecia in "
+        "survivors. Ix: colchicine level if available, FBC for "
+        "progressive pancytopenia, renal function, CK and ECG. Mx: "
+        "supportive care in an ICU or HDU setting with aggressive "
+        "fluid resuscitation, blood product and growth factor support "
+        "for marrow suppression, and early poisons information centre "
+        "involvement, since even modest overdoses can be fatal. Note: "
+        "a seemingly well patient after colchicine overdose should "
+        "still be admitted, since the fatal phase is delayed by one "
+        "to three days."
+    ),
+    "Bernard-Soulier syndrome": (
+        "Rare autosomal recessive platelet disorder from a defect in "
+        "the GPIb-IX-V complex, the platelet receptor for von "
+        "Willebrand factor needed for adhesion to the vessel wall, "
+        "causing a mucocutaneous bleeding tendency. Clinical "
+        "features: easy bruising, epistaxis, gum bleeding and "
+        "menorrhagia from early life, with bleeding often "
+        "disproportionate to the platelet count. Ix: mild to moderate "
+        "thrombocytopenia with characteristically giant platelets on "
+        "blood film; platelet aggregation studies show absent "
+        "response to ristocetin that is not corrected by adding "
+        "normal plasma, distinguishing it from von Willebrand "
+        "disease, where normal plasma does correct the response. Mx: "
+        "bleeding precautions, desmopressin or platelet transfusion "
+        "for bleeding episodes or procedures, reserving transfusion "
+        "for significant bleeding given alloimmunisation risk. Note: "
+        "giant platelets with a low-normal count and disproportionate "
+        "bleeding should trigger platelet function testing."
+    ),
+    "Glanzmann thrombasthenia": (
+        "Rare autosomal recessive platelet disorder from a defect in "
+        "the GPIIb/IIIa receptor, which normally binds fibrinogen to "
+        "link platelets together, causing failure of platelet "
+        "aggregation despite a normal platelet count. Clinical "
+        "features: mucocutaneous bleeding from early childhood - "
+        "epistaxis, gum bleeding, menorrhagia and easy bruising - "
+        "with normal platelet count and morphology. Ix: platelet "
+        "aggregation studies show absent aggregation to ADP, collagen "
+        "and thrombin, but a normal response to ristocetin, the "
+        "reverse pattern to Bernard-Soulier syndrome. Mx: bleeding "
+        "precautions, antifibrinolytics such as tranexamic acid for "
+        "mucosal bleeding, and recombinant activated factor VII as an "
+        "alternative to platelet transfusion for significant "
+        "bleeding, since repeated transfusion risks alloimmunisation. "
+        "Note: significant mucocutaneous bleeding with a normal "
+        "platelet count and normal von Willebrand screen should "
+        "prompt platelet aggregation studies."
+    ),
+    "Post-intensive care syndrome": (
+        "New or worsening impairment in physical, cognitive or mental "
+        "health persisting after critical illness and ICU discharge, "
+        "affecting a substantial proportion of ICU survivors and "
+        "often under-recognised once the patient leaves hospital. "
+        "Clinical features: physical impairment from ICU-acquired "
+        "weakness and reduced function; cognitive impairment in "
+        "memory, attention and executive function; and psychological "
+        "symptoms of anxiety, depression and post-traumatic stress, "
+        "sometimes related to delirium or frightening ICU memories. "
+        "Ix: no single test - structured follow-up assessment "
+        "covering physical function, cognitive screening and mental "
+        "health screening is recommended at ICU follow-up clinics, "
+        "ideally within weeks of discharge. Mx: multidisciplinary "
+        "rehabilitation with physiotherapy, cognitive rehabilitation "
+        "where needed, and psychological support for anxiety, "
+        "depression or PTSD symptoms. Note: symptoms are often missed "
+        "because they emerge only after hospital discharge."
+    ),
+    "ICU-acquired weakness": (
+        "Diffuse, symmetric limb weakness developing during critical "
+        "illness, encompassing critical illness polyneuropathy, "
+        "myopathy or a mixed picture, strongly associated with "
+        "sepsis, multi-organ failure, prolonged mechanical "
+        "ventilation, corticosteroids and neuromuscular blocking "
+        "agents. Clinical features: symmetric flaccid weakness "
+        "affecting limbs more than face, often noticed as difficulty "
+        "weaning from the ventilator or failure to mobilise despite "
+        "resolving critical illness, with reduced or absent reflexes. "
+        "Ix: primarily a clinical diagnosis using a Medical Research "
+        "Council sum score once other causes of weakness are "
+        "excluded; nerve conduction studies and EMG distinguish "
+        "neuropathic from myopathic patterns when needed. Mx: early "
+        "mobilisation and physiotherapy from the outset of ICU "
+        "admission is the strongest preventive strategy, alongside "
+        "minimising sedation depth and judicious use of steroids and "
+        "paralytics. Note: this is a leading cause of delayed "
+        "ventilator weaning, not an unavoidable consequence of "
+        "critical illness."
     ),
 }
 
