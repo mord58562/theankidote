@@ -4409,6 +4409,1344 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "selective mutism"]],
         "summary": "",
     },
+    {
+        "name": "Merkel cell carcinoma",
+        "aliases": ["MCC", "Cutaneous neuroendocrine carcinoma", "Trabecular carcinoma of skin"],
+        "utd": [["Overview", "merkel cell carcinoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Dermatofibrosarcoma protuberans",
+        "aliases": ["DFSP"],
+        "utd": [["Overview", "dermatofibrosarcoma protuberans"]],
+        "summary": "",
+    },
+    {
+        "name": "Sebaceous carcinoma",
+        "aliases": ["Sebaceous gland carcinoma", "Meibomian gland carcinoma"],
+        "utd": [["Overview", "sebaceous carcinoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Extramammary Paget disease",
+        "aliases": ["EMPD", "Extramammary Paget's disease"],
+        "utd": [["Overview", "extramammary paget disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Lentigo maligna",
+        "aliases": ["Hutchinson melanotic freckle", "Melanoma in situ lentigo maligna type"],
+        "utd": [["Overview", "lentigo maligna"]],
+        "summary": "",
+    },
+    {
+        "name": "Herpetic whitlow",
+        "aliases": ["HSV whitlow", "Herpes simplex whitlow"],
+        "utd": [["Overview", "herpetic whitlow"]],
+        "summary": "",
+    },
+    {
+        "name": "Eczema herpeticum",
+        "aliases": ["Kaposi varicelliform eruption", "Disseminated HSV in atopic dermatitis"],
+        "utd": [["Overview", "eczema herpeticum"]],
+        "summary": "",
+    },
+    {
+        "name": "Folliculitis",
+        "aliases": ["Superficial folliculitis", "Hot tub folliculitis", "Pseudomonas folliculitis", "Malassezia folliculitis", "Pityrosporum folliculitis"],
+        "utd": [["Overview", "folliculitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Furuncle",
+        "aliases": ["Boil", "Furunculosis", "Carbuncle"],
+        "utd": [["Overview", "furuncle carbuncle skin abscess"]],
+        "summary": "",
+    },
+    {
+        "name": "Sporotrichosis",
+        "aliases": ["Rose gardener disease", "Sporothrix schenckii infection"],
+        "utd": [["Overview", "sporotrichosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Cutaneous leishmaniasis",
+        "aliases": ["Oriental sore", "Chiclero ulcer", "Baghdad boil"],
+        "utd": [["Overview", "cutaneous leishmaniasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Pemphigus foliaceus",
+        "aliases": ["Superficial pemphigus", "Fogo selvagem"],
+        "utd": [["Overview", "pemphigus foliaceus"]],
+        "summary": "",
+    },
+    {
+        "name": "Linear IgA bullous dermatosis",
+        "aliases": ["LABD", "Linear IgA disease", "Chronic bullous disease of childhood"],
+        "utd": [["Overview", "linear iga bullous dermatosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Epidermolysis bullosa acquisita",
+        "aliases": ["EBA", "Acquired epidermolysis bullosa"],
+        "utd": [["Overview", "epidermolysis bullosa acquisita"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute generalised exanthematous pustulosis",
+        "aliases": ["AGEP", "Acute generalized exanthematous pustulosis", "Pustular drug eruption"],
+        "utd": [["Overview", "acute generalized exanthematous pustulosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Guttate psoriasis",
+        "aliases": ["Eruptive psoriasis", "Post-streptococcal psoriasis"],
+        "utd": [["Overview", "guttate psoriasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Pustular psoriasis",
+        "aliases": ["Generalised pustular psoriasis", "Von Zumbusch psoriasis", "Impetigo herpetiformis", "Acrodermatitis continua of Hallopeau"],
+        "utd": [["Overview", "generalized pustular psoriasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Palmoplantar pustulosis",
+        "aliases": ["Pustulosis palmaris et plantaris"],
+        "utd": [["Overview", "palmoplantar pustulosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Lichen planopilaris",
+        "aliases": ["LPP", "Follicular lichen planus"],
+        "utd": [["Overview", "lichen planopilaris"]],
+        "summary": "",
+    },
+    {
+        "name": "Frontal fibrosing alopecia",
+        "aliases": ["FFA", "Kossard alopecia"],
+        "utd": [["Overview", "frontal fibrosing alopecia"]],
+        "summary": "",
+    },
+    {
+        "name": "Discoid lupus erythematosus",
+        "aliases": ["DLE", "Chronic cutaneous lupus erythematosus"],
+        "utd": [["Overview", "discoid lupus erythematosus"]],
+        "summary": "",
+    },
+    {
+        "name": "Prurigo nodularis",
+        "aliases": ["Hyde disease", "Nodular prurigo"],
+        "utd": [["Overview", "prurigo nodularis"]],
+        "summary": "",
+    },
+    {
+        "name": "Congenital melanocytic naevus",
+        "aliases": ["Congenital melanocytic nevus", "CMN", "Giant congenital naevus", "Bathing trunk naevus"],
+        "utd": [["Overview", "congenital melanocytic nevus"]],
+        "summary": "",
+    },
+    {
+        "name": "Dysplastic naevus",
+        "aliases": ["Atypical mole", "Clark naevus", "Dysplastic nevus"],
+        "utd": [["Overview", "dysplastic nevus atypical mole"]],
+        "summary": "",
+    },
+    {
+        "name": "Cherry angioma",
+        "aliases": ["Campbell de Morgan spot", "Senile angioma", "Cherry haemangioma"],
+        "utd": [["Overview", "cherry angioma"]],
+        "summary": "",
+    },
+    {
+        "name": "Cutaneous horn",
+        "aliases": ["Cornu cutaneum"],
+        "utd": [["Overview", "cutaneous horn"]],
+        "summary": "",
+    },
+    {
+        "name": "Bacterial conjunctivitis",
+        "aliases": ["Purulent conjunctivitis", "Mucopurulent conjunctivitis"],
+        "utd": [["Overview", "bacterial conjunctivitis in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Viral conjunctivitis",
+        "aliases": ["Adenoviral conjunctivitis", "Epidemic keratoconjunctivitis", "EKC"],
+        "utd": [["Overview", "viral conjunctivitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Allergic conjunctivitis",
+        "aliases": ["Seasonal allergic conjunctivitis", "Perennial allergic conjunctivitis"],
+        "utd": [["Overview", "allergic conjunctivitis clinical manifestations diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal conjunctivitis",
+        "aliases": ["Ophthalmia neonatorum"],
+        "utd": [["Overview", "conjunctivitis newborn"]],
+        "summary": "",
+    },
+    {
+        "name": "Fungal keratitis",
+        "aliases": ["Keratomycosis", "Mycotic keratitis"],
+        "utd": [["Overview", "fungal keratitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Marginal keratitis",
+        "aliases": ["Staphylococcal marginal keratitis", "Catarrhal infiltrate"],
+        "utd": [["Overview", "marginal keratitis staphylococcal hypersensitivity"]],
+        "summary": "",
+    },
+    {
+        "name": "Exposure keratopathy",
+        "aliases": ["Lagophthalmos keratopathy", "Neurotrophic exposure keratopathy"],
+        "utd": [["Overview", "exposure keratopathy lagophthalmos"]],
+        "summary": "",
+    },
+    {
+        "name": "Photokeratitis",
+        "aliases": ["Arc eye", "Snow blindness", "Welders flash", "Ultraviolet keratitis"],
+        "utd": [["Overview", "ultraviolet keratitis photokeratitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Secondary glaucoma",
+        "aliases": ["Steroid-induced glaucoma", "Steroid response glaucoma"],
+        "utd": [["Overview", "secondary open angle glaucoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Pigment dispersion glaucoma",
+        "aliases": ["Pigmentary glaucoma", "Pigment dispersion syndrome"],
+        "utd": [["Overview", "pigmentary glaucoma pigment dispersion syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Pseudoexfoliation glaucoma",
+        "aliases": ["Exfoliation glaucoma", "PXF glaucoma"],
+        "utd": [["Overview", "pseudoexfoliation syndrome glaucoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Neovascular glaucoma",
+        "aliases": ["Rubeotic glaucoma", "100-day glaucoma"],
+        "utd": [["Overview", "neovascular glaucoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Proliferative diabetic retinopathy",
+        "aliases": ["PDR"],
+        "utd": [["Overview", "diabetic retinopathy classification clinical features"]],
+        "summary": "",
+    },
+    {
+        "name": "Non-proliferative diabetic retinopathy",
+        "aliases": ["NPDR", "Background diabetic retinopathy"],
+        "utd": [["Overview", "diabetic retinopathy nonproliferative"]],
+        "summary": "",
+    },
+    {
+        "name": "Diabetic macular oedema",
+        "aliases": ["DMO", "Diabetic macular edema", "DME"],
+        "utd": [["Overview", "diabetic macular edema"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypertensive retinopathy",
+        "aliases": ["Malignant hypertensive retinopathy", "Keith-Wagener-Barker retinopathy"],
+        "utd": [["Overview", "hypertensive retinopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Retinal vein occlusion",
+        "aliases": ["RVO"],
+        "utd": [["Overview", "retinal vein occlusion clinical features diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Ocular migraine",
+        "aliases": ["Retinal migraine"],
+        "utd": [["Overview", "retinal migraine"]],
+        "summary": "",
+    },
+    {
+        "name": "Trichiasis",
+        "aliases": ["Misdirected eyelashes", "Inward growing eyelashes"],
+        "utd": [["Overview", "trichiasis eyelash disorders"]],
+        "summary": "",
+    },
+    {
+        "name": "Anisocoria",
+        "aliases": ["Unequal pupils", "Pupillary asymmetry"],
+        "utd": [["Overview", "approach patient anisocoria"]],
+        "summary": "",
+    },
+    {
+        "name": "Adie tonic pupil",
+        "aliases": ["Adie pupil", "Holmes-Adie syndrome", "Tonic pupil"],
+        "utd": [["Overview", "adie tonic pupil"]],
+        "summary": "",
+    },
+    {
+        "name": "Argyll Robertson pupil",
+        "aliases": ["AR pupil"],
+        "utd": [["Overview", "argyll robertson pupil light near dissociation"]],
+        "summary": "",
+    },
+    {
+        "name": "Relative afferent pupillary defect",
+        "aliases": ["RAPD", "Marcus Gunn pupil", "Swinging flashlight test"],
+        "utd": [["Overview", "relative afferent pupillary defect swinging flashlight"]],
+        "summary": "",
+    },
+    {
+        "name": "Ocular rosacea",
+        "aliases": ["Rosacea blepharoconjunctivitis"],
+        "utd": [["Overview", "ocular rosacea"]],
+        "summary": "",
+    },
+    {
+        "name": "Meibomian gland dysfunction",
+        "aliases": ["MGD", "Posterior blepharitis"],
+        "utd": [["Overview", "meibomian gland dysfunction evaporative dry eye"]],
+        "summary": "",
+    },
+    {
+        "name": "Corneal foreign body",
+        "aliases": ["Metallic corneal foreign body", "Corneal rust ring"],
+        "utd": [["Overview", "corneal foreign body evaluation removal"]],
+        "summary": "",
+    },
+    {
+        "name": "Cystoid macular oedema",
+        "aliases": ["CMO", "Irvine-Gass syndrome", "Cystoid macular edema"],
+        "utd": [["Overview", "cystoid macular edema"]],
+        "summary": "",
+    },
+    {
+        "name": "Globe rupture",
+        "aliases": ["Open globe injury", "Ocular perforation", "Ruptured globe"],
+        "utd": [["Overview", "open globe injuries emergency evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Sympathetic ophthalmia",
+        "aliases": ["Sympathetic uveitis"],
+        "utd": [["Overview", "sympathetic ophthalmia"]],
+        "summary": "",
+    },
+    {
+        "name": "Ototoxicity",
+        "aliases": ["Drug-induced hearing loss", "Aminoglycoside ototoxicity"],
+        "utd": [["Overview", "drug induced ototoxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Bullous myringitis",
+        "aliases": ["Myringitis bullosa"],
+        "utd": [["Overview", "bullous myringitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Serous otitis media",
+        "aliases": ["Otitis media with effusion", "Glue ear", "OME"],
+        "utd": [["Overview", "otitis media with effusion in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Acoustic trauma",
+        "aliases": ["Acoustic injury", "Blast-induced hearing loss"],
+        "utd": [["Overview", "acoustic trauma hearing loss"]],
+        "summary": "",
+    },
+    {
+        "name": "Cerumen management",
+        "aliases": ["Cerumen removal", "Ear wax removal", "Wax irrigation"],
+        "utd": [["Overview", "cerumen impaction management"]],
+        "summary": "",
+    },
+    {
+        "name": "Dix-Hallpike manoeuvre",
+        "aliases": ["Dix-Hallpike test", "Dix Hallpike maneuver"],
+        "utd": [["Overview", "dix hallpike test bppv"]],
+        "summary": "",
+    },
+    {
+        "name": "Epley manoeuvre",
+        "aliases": ["Epley maneuver", "Canalith repositioning procedure"],
+        "utd": [["Overview", "canalith repositioning procedure bppv"]],
+        "summary": "",
+    },
+    {
+        "name": "Vestibular migraine",
+        "aliases": ["Migrainous vertigo", "Migraine-associated vertigo"],
+        "utd": [["Overview", "vestibular migraine"]],
+        "summary": "",
+    },
+    {
+        "name": "Non-allergic rhinitis",
+        "aliases": ["Vasomotor rhinitis", "Idiopathic rhinitis", "NARES"],
+        "utd": [["Overview", "non allergic rhinitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Rhinitis medicamentosa",
+        "aliases": ["Rebound nasal congestion", "Decongestant rebound"],
+        "utd": [["Overview", "rhinitis medicamentosa"]],
+        "summary": "",
+    },
+    {
+        "name": "Anterior epistaxis",
+        "aliases": ["Little's area bleed", "Kiesselbach bleed"],
+        "utd": [["Overview", "anterior epistaxis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Posterior epistaxis",
+        "aliases": ["Sphenopalatine bleed", "Posterior nose bleed"],
+        "utd": [["Overview", "posterior epistaxis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Nasal foreign body",
+        "aliases": ["Foreign body in nose", "Nasal FB"],
+        "utd": [["Overview", "nasal foreign body children"]],
+        "summary": "",
+    },
+    {
+        "name": "Septal perforation",
+        "aliases": ["Nasal septal perforation"],
+        "utd": [["Overview", "nasal septal perforation"]],
+        "summary": "",
+    },
+    {
+        "name": "Invasive fungal sinusitis",
+        "aliases": ["Mucormycosis sinusitis", "Rhinocerebral mucormycosis", "Acute invasive fungal rhinosinusitis"],
+        "utd": [["Overview", "invasive fungal rhinosinusitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Centor criteria",
+        "aliases": ["Modified Centor criteria", "McIsaac score"],
+        "utd": [["Overview", "centor criteria streptococcal pharyngitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Adenoid hypertrophy",
+        "aliases": ["Enlarged adenoids", "Adenoidal enlargement"],
+        "utd": [["Overview", "adenoid hypertrophy children"]],
+        "summary": "",
+    },
+    {
+        "name": "Laryngopharyngeal reflux",
+        "aliases": ["LPR", "Silent reflux", "Reflux laryngitis"],
+        "utd": [["Overview", "laryngopharyngeal reflux"]],
+        "summary": "",
+    },
+    {
+        "name": "Pleomorphic adenoma",
+        "aliases": ["Benign mixed tumour salivary", "Pleomorphic adenoma parotid"],
+        "utd": [["Overview", "pleomorphic adenoma salivary gland"]],
+        "summary": "",
+    },
+    {
+        "name": "Warthin tumour",
+        "aliases": ["Warthin tumor", "Papillary cystadenoma lymphomatosum"],
+        "utd": [["Overview", "warthin tumor parotid"]],
+        "summary": "",
+    },
+    {
+        "name": "Temporomandibular joint dysfunction",
+        "aliases": ["TMJ dysfunction", "TMD", "Temporomandibular disorder"],
+        "utd": [["Overview", "temporomandibular disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Nasopharyngeal carcinoma",
+        "aliases": ["Nasopharyngeal cancer", "EBV nasopharyngeal carcinoma"],
+        "utd": [["Overview", "nasopharyngeal carcinoma"]],
+        "summary": "",
+    },
+    {
+        "name": "HPV-associated oropharyngeal cancer",
+        "aliases": ["HPV oropharyngeal SCC", "p16 positive oropharyngeal cancer", "HPV tonsil cancer"],
+        "utd": [["Overview", "hpv associated oropharyngeal cancer"]],
+        "summary": "",
+    },
+    {
+        "name": "Angular cheilitis",
+        "aliases": ["Perleche", "Angular stomatitis", "Cheilosis"],
+        "utd": [["Overview", "angular cheilitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Geographic tongue",
+        "aliases": ["Benign migratory glossitis", "Erythema migrans lingualis"],
+        "utd": [["Overview", "geographic tongue benign migratory glossitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Silent thyroiditis",
+        "aliases": ["Painless thyroiditis", "Subacute lymphocytic thyroiditis"],
+        "utd": [["Overview", "painless silent thyroiditis"]],
+        "summary": "",
+    },
+    {
+        "name": "Amiodarone-induced thyrotoxicosis",
+        "aliases": ["AIT", "Amiodarone thyrotoxicosis", "Amiodarone induced hyperthyroidism"],
+        "utd": [["Overview", "amiodarone and thyroid dysfunction"]],
+        "summary": "",
+    },
+    {
+        "name": "Sick euthyroid syndrome",
+        "aliases": ["Non-thyroidal illness syndrome", "Euthyroid sick syndrome", "NTIS"],
+        "utd": [["Overview", "thyroid function in nonthyroidal illness"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypothyroidism in pregnancy",
+        "aliases": ["Maternal hypothyroidism", "Pregnancy hypothyroidism"],
+        "utd": [["Overview", "hypothyroidism during pregnancy clinical implications"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypopituitarism",
+        "aliases": ["Panhypopituitarism", "Anterior pituitary insufficiency"],
+        "utd": [["Overview", "causes of hypopituitarism"]],
+        "summary": "",
+    },
+    {
+        "name": "Multiple endocrine neoplasia type 2B",
+        "aliases": ["MEN 2B", "MEN 3"],
+        "utd": [["Overview", "multiple endocrine neoplasia type 2 clinical features MEN 2B"]],
+        "summary": "",
+    },
+    {
+        "name": "TSH-secreting pituitary adenoma",
+        "aliases": ["TSHoma", "Thyrotropinoma", "TSH producing pituitary adenoma"],
+        "utd": [["Overview", "TSH secreting pituitary adenomas"]],
+        "summary": "",
+    },
+    {
+        "name": "Milk-alkali syndrome",
+        "aliases": ["Calcium alkali syndrome", "Burnett syndrome"],
+        "utd": [["Overview", "milk alkali syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "X-linked hypophosphataemia",
+        "aliases": ["XLH", "X linked hypophosphatemic rickets", "Vitamin D resistant rickets"],
+        "utd": [["Overview", "x linked hypophosphatemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Severe hypertriglyceridaemia",
+        "aliases": ["Severe hypertriglyceridemia", "Chylomicronaemia", "Hypertriglyceridaemic pancreatitis risk"],
+        "utd": [["Overview", "hypertriglyceridemia in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Cerebral salt wasting",
+        "aliases": ["CSW", "Cerebral salt wasting syndrome"],
+        "utd": [["Overview", "cerebral salt wasting"]],
+        "summary": "",
+    },
+    {
+        "name": "Reset osmostat",
+        "aliases": ["Reset osmostat syndrome", "Type C SIADH"],
+        "utd": [["Overview", "reset osmostat hyponatremia"]],
+        "summary": "",
+    },
+    {
+        "name": "Ectopic ACTH syndrome",
+        "aliases": ["Ectopic ACTH secretion", "Paraneoplastic Cushing syndrome"],
+        "utd": [["Overview", "ectopic ACTH syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Non-classical congenital adrenal hyperplasia",
+        "aliases": ["Non classical CAH", "NCAH", "Late onset congenital adrenal hyperplasia"],
+        "utd": [["Overview", "nonclassic congenital adrenal hyperplasia"]],
+        "summary": "",
+    },
+    {
+        "name": "Waterhouse-Friderichsen syndrome",
+        "aliases": ["Waterhouse Friderichsen syndrome", "Adrenal haemorrhage of sepsis"],
+        "utd": [["Overview", "waterhouse friderichsen adrenal hemorrhage sepsis"]],
+        "summary": "",
+    },
+    {
+        "name": "Atypical femoral fracture",
+        "aliases": ["AFF", "Bisphosphonate atypical fracture", "Subtrochanteric atypical fracture"],
+        "utd": [["Overview", "atypical femur fractures"]],
+        "summary": "",
+    },
+    {
+        "name": "Denosumab rebound",
+        "aliases": ["Denosumab discontinuation fractures", "Denosumab withdrawal syndrome", "Rebound vertebral fractures denosumab"],
+        "utd": [["Overview", "denosumab discontinuation and rebound"]],
+        "summary": "",
+    },
+    {
+        "name": "Familial combined hyperlipidaemia",
+        "aliases": ["FCHL", "Familial combined hyperlipidemia"],
+        "utd": [["Overview", "familial combined hyperlipidemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Chylomicronaemia syndrome",
+        "aliases": ["Chylomicronemia syndrome", "Familial chylomicronaemia syndrome", "FCS"],
+        "utd": [["Overview", "familial chylomicronemia syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Fabry disease",
+        "aliases": ["Anderson Fabry disease", "Alpha galactosidase A deficiency"],
+        "utd": [["Overview", "fabry disease clinical features"]],
+        "summary": "",
+    },
+    {
+        "name": "Homocystinuria",
+        "aliases": ["Cystathionine beta synthase deficiency", "CBS deficiency"],
+        "utd": [["Overview", "homocystinuria and hyperhomocysteinemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Parathyroid carcinoma",
+        "aliases": ["Parathyroid cancer"],
+        "utd": [["Overview", "parathyroid carcinoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Iodine-induced hyperthyroidism",
+        "aliases": ["Jod Basedow phenomenon", "Iodine induced thyrotoxicosis", "Contrast induced hyperthyroidism"],
+        "utd": [["Overview", "iodine induced thyroid dysfunction"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroid hormone resistance",
+        "aliases": ["Refetoff syndrome", "Resistance to thyroid hormone", "THRB mutation syndrome"],
+        "utd": [["Overview", "resistance to thyroid hormone"]],
+        "summary": "",
+    },
+    {
+        "name": "Nesidioblastosis",
+        "aliases": ["Non insulinoma pancreatogenous hypoglycaemia syndrome", "NIPHS", "Post bariatric hypoglycaemia"],
+        "utd": [["Overview", "noninsulinoma pancreatogenous hypoglycemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Pseudo-Cushing syndrome",
+        "aliases": ["Pseudo Cushing syndrome", "Physiological hypercortisolism"],
+        "utd": [["Overview", "pseudo cushing syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Follicular thyroid carcinoma",
+        "aliases": ["FTC", "Follicular carcinoma of thyroid"],
+        "utd": [["Overview", "follicular thyroid cancer"]],
+        "summary": "",
+    },
+    {
+        "name": "Adrenoleukodystrophy",
+        "aliases": ["ALD", "X linked adrenoleukodystrophy", "Adrenomyeloneuropathy", "AMN"],
+        "utd": [["Overview", "x linked adrenoleukodystrophy"]],
+        "summary": "",
+    },
+    {
+        "name": "Tophaceous gout",
+        "aliases": ["Chronic tophaceous gout", "Gouty tophi"],
+        "utd": [["Overview", "tophaceous gout chronic urate"]],
+        "summary": "",
+    },
+    {
+        "name": "Chondrocalcinosis",
+        "aliases": ["Cartilage calcification", "CPPD chondrocalcinosis"],
+        "utd": [["Overview", "chondrocalcinosis calcium pyrophosphate cartilage"]],
+        "summary": "",
+    },
+    {
+        "name": "Hydroxyapatite deposition disease",
+        "aliases": ["Basic calcium phosphate arthropathy", "BCP arthropathy", "Milwaukee shoulder"],
+        "utd": [["Overview", "hydroxyapatite deposition calcium periarticular"]],
+        "summary": "",
+    },
+    {
+        "name": "Subacute cutaneous lupus erythematosus",
+        "aliases": ["SCLE"],
+        "utd": [["Overview", "subacute cutaneous lupus erythematosus SCLE"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug-induced lupus",
+        "aliases": ["Drug-induced lupus erythematosus", "DIL"],
+        "utd": [["Overview", "druginduced lupus"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal lupus",
+        "aliases": ["Neonatal lupus erythematosus", "NLE"],
+        "utd": [["Overview", "neonatal lupus erythematosus congenital heart block"]],
+        "summary": "",
+    },
+    {
+        "name": "Primary Sjogren syndrome",
+        "aliases": ["Primary Sjogren", "pSS"],
+        "utd": [["Overview", "primary sjogren syndrome sicca autoimmune"]],
+        "summary": "",
+    },
+    {
+        "name": "Inclusion body myositis",
+        "aliases": ["IBM", "Sporadic inclusion body myositis"],
+        "utd": [["Overview", "inclusion body myositis IBM slowly progressive weakness"]],
+        "summary": "",
+    },
+    {
+        "name": "Scleroderma renal crisis",
+        "aliases": ["SRC"],
+        "utd": [["Overview", "scleroderma renal crisis hypertension ACE inhibitor"]],
+        "summary": "",
+    },
+    {
+        "name": "Neurosarcoidosis",
+        "aliases": ["CNS sarcoidosis", "Sarcoid neuropathy"],
+        "utd": [["Overview", "neurosarcoidosis cranial nerve granulomatous"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiac sarcoidosis",
+        "aliases": ["Sarcoid heart disease"],
+        "utd": [["Overview", "cardiac sarcoidosis granulomatous conduction"]],
+        "summary": "",
+    },
+    {
+        "name": "Lofgren syndrome",
+        "aliases": ["Lofgren"],
+        "utd": [["Overview", "lofgren syndrome acute sarcoidosis erythema nodosum"]],
+        "summary": "",
+    },
+    {
+        "name": "Heerfordt syndrome",
+        "aliases": ["Uveoparotid fever"],
+        "utd": [["Overview", "heerfordt syndrome uveoparotid fever sarcoidosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Catastrophic antiphospholipid syndrome",
+        "aliases": ["CAPS"],
+        "utd": [["Overview", "catastrophic antiphospholipid syndrome multiorgan thrombosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Pes anserine bursitis",
+        "aliases": ["Anserine bursitis"],
+        "utd": [["Overview", "pes anserine bursitis medial knee pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Prepatellar bursitis",
+        "aliases": ["Housemaid knee"],
+        "utd": [["Overview", "prepatellar bursitis knee bursa infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Retrocalcaneal bursitis",
+        "aliases": ["Achilles bursitis", "Haglund bursitis"],
+        "utd": [["Overview", "retrocalcaneal bursitis achilles heel pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Rotator cuff tendinopathy",
+        "aliases": ["Subacromial impingement syndrome", "Supraspinatus tendinopathy"],
+        "utd": [["Overview", "rotator cuff tendinopathy shoulder impingement"]],
+        "summary": "",
+    },
+    {
+        "name": "Enthesitis",
+        "aliases": ["Enthesopathy"],
+        "utd": [["Overview", "enthesitis inflammation tendon insertion spondyloarthropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Dactylitis",
+        "aliases": ["Sausage digit"],
+        "utd": [["Overview", "dactylitis sausage digit psoriatic arthritis"]],
+        "summary": "",
+    },
+    {
+        "name": "Rheumatoid vasculitis",
+        "aliases": [],
+        "utd": [["Overview", "rheumatoid vasculitis extra articular"]],
+        "summary": "",
+    },
+    {
+        "name": "Caplan syndrome",
+        "aliases": ["Rheumatoid pneumoconiosis"],
+        "utd": [["Overview", "caplan syndrome rheumatoid pneumoconiosis coal"]],
+        "summary": "",
+    },
+    {
+        "name": "Guyon canal syndrome",
+        "aliases": ["Ulnar tunnel syndrome"],
+        "utd": [["Overview", "guyon canal syndrome ulnar nerve wrist"]],
+        "summary": "",
+    },
+    {
+        "name": "Radial tunnel syndrome",
+        "aliases": ["Posterior interosseous nerve entrapment"],
+        "utd": [["Overview", "radial tunnel syndrome forearm pain PIN"]],
+        "summary": "",
+    },
+    {
+        "name": "PFAPA syndrome",
+        "aliases": ["Marshall syndrome"],
+        "utd": [["Overview", "PFAPA periodic fever aphthous pharyngitis adenitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Cogan syndrome",
+        "aliases": ["Cogan"],
+        "utd": [["Overview", "cogan syndrome interstitial keratitis vestibuloauditory"]],
+        "summary": "",
+    },
+    {
+        "name": "Osteopenia",
+        "aliases": ["Low bone mass"],
+        "utd": [["Overview", "osteopenia low bone density T score"]],
+        "summary": "",
+    },
+    {
+        "name": "Osteomalacia in adults",
+        "aliases": ["Adult rickets"],
+        "utd": [["Overview", "osteomalacia vitamin D deficiency bone pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Sympathomimetic toxidrome",
+        "aliases": ["Sympathomimetic poisoning", "Stimulant toxidrome", "Cocaine toxidrome", "Amphetamine toxidrome"],
+        "utd": [["Overview", "sympathomimetic toxidrome management"]],
+        "summary": "",
+    },
+    {
+        "name": "Sedative-hypnotic toxidrome",
+        "aliases": ["Sedative-hypnotic overdose", "Benzodiazepine toxidrome", "GABAergic toxidrome"],
+        "utd": [["Overview", "sedative hypnotic toxidrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Opioid toxidrome",
+        "aliases": ["Opioid intoxication", "Narcotic toxidrome", "Opioid overdose syndrome"],
+        "utd": [["Overview", "opioid toxidrome recognition management"]],
+        "summary": "",
+    },
+    {
+        "name": "Australian snake bite",
+        "aliases": ["Snake envenomation Australia", "Elapid envenomation Australian", "Snakebite algorithm Australia"],
+        "utd": [["Overview", "australian snake envenomation approach"]],
+        "summary": "",
+    },
+    {
+        "name": "Tiger snake envenomation",
+        "aliases": ["Tiger snake bite", "Notechis envenomation"],
+        "utd": [["Overview", "tiger snake envenomation antivenom"]],
+        "summary": "",
+    },
+    {
+        "name": "Taipan envenomation",
+        "aliases": ["Taipan bite", "Oxyuranus envenomation", "Coastal taipan bite"],
+        "utd": [["Overview", "taipan envenomation antivenom"]],
+        "summary": "",
+    },
+    {
+        "name": "Death adder envenomation",
+        "aliases": ["Death adder bite", "Acanthophis envenomation"],
+        "utd": [["Overview", "death adder envenomation antivenom"]],
+        "summary": "",
+    },
+    {
+        "name": "Sea snake envenomation",
+        "aliases": ["Sea snake bite", "Hydrophiid envenomation"],
+        "utd": [["Overview", "sea snake envenomation antivenom"]],
+        "summary": "",
+    },
+    {
+        "name": "Stonefish envenomation",
+        "aliases": ["Stonefish sting", "Synanceia envenomation"],
+        "utd": [["Overview", "stonefish envenomation antivenom management"]],
+        "summary": "",
+    },
+    {
+        "name": "Pressure immobilisation bandage",
+        "aliases": ["PIB technique", "Pressure bandage snake bite", "Pressure immobilisation technique"],
+        "utd": [["Overview", "pressure immobilisation bandage snake bite"]],
+        "summary": "",
+    },
+    {
+        "name": "Snake venom detection kit",
+        "aliases": ["SVDK", "Venom detection kit"],
+        "utd": [["Overview", "snake venom detection kit interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Venom induced consumption coagulopathy",
+        "aliases": ["VICC", "Venom induced coagulopathy", "Snake bite coagulopathy"],
+        "utd": [["Overview", "venom induced consumption coagulopathy management"]],
+        "summary": "",
+    },
+    {
+        "name": "N-acetylcysteine infusion",
+        "aliases": ["NAC infusion", "Paracetamol antidote", "Acetylcysteine paracetamol"],
+        "utd": [["Overview", "acetylcysteine paracetamol overdose regimen"]],
+        "summary": "",
+    },
+    {
+        "name": "Fomepizole antidote",
+        "aliases": ["Fomepizole", "4-methylpyrazole", "Fomepizole toxic alcohol"],
+        "utd": [["Overview", "fomepizole methanol ethylene glycol"]],
+        "summary": "",
+    },
+    {
+        "name": "Hydroxocobalamin antidote",
+        "aliases": ["Hydroxocobalamin cyanide", "Cyanokit"],
+        "utd": [["Overview", "hydroxocobalamin cyanide poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "High-dose insulin euglycaemia therapy",
+        "aliases": ["HIET", "Hyperinsulinaemic euglycaemia therapy", "High-dose insulin therapy"],
+        "utd": [["Overview", "high dose insulin calcium channel blocker overdose"]],
+        "summary": "",
+    },
+    {
+        "name": "Intralipid emulsion therapy",
+        "aliases": ["Lipid emulsion therapy", "Intralipid rescue", "ILE overdose"],
+        "utd": [["Overview", "lipid emulsion local anaesthetic toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Digoxin-specific Fab fragments",
+        "aliases": ["Digibind", "DigiFab", "Digoxin Fab antidote"],
+        "utd": [["Overview", "digoxin specific fab digibind dosing"]],
+        "summary": "",
+    },
+    {
+        "name": "Refractory hypoxaemia",
+        "aliases": ["Refractory hypoxemia", "Severe refractory ARDS hypoxaemia"],
+        "utd": [["Overview", "refractory hypoxaemia rescue therapies"]],
+        "summary": "",
+    },
+    {
+        "name": "Prone positioning ventilation",
+        "aliases": ["Proning ARDS", "Prone ventilation"],
+        "utd": [["Overview", "prone positioning ards evidence"]],
+        "summary": "",
+    },
+    {
+        "name": "Rapid sequence intubation",
+        "aliases": ["RSI airway", "Rapid sequence induction", "Emergency RSI"],
+        "utd": [["Overview", "rapid sequence intubation adult emergency"]],
+        "summary": "",
+    },
+    {
+        "name": "Cricothyroidotomy",
+        "aliases": ["Surgical cricothyroidotomy", "Front of neck access", "FONA airway"],
+        "utd": [["Overview", "emergency cricothyroidotomy technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-cardiac arrest care",
+        "aliases": ["Post-ROSC care", "Post-resuscitation syndrome"],
+        "utd": [["Overview", "post cardiac arrest care bundle"]],
+        "summary": "",
+    },
+    {
+        "name": "Targeted temperature management",
+        "aliases": ["TTM post-arrest", "Therapeutic hypothermia", "Post-arrest temperature control"],
+        "utd": [["Overview", "targeted temperature management post cardiac arrest"]],
+        "summary": "",
+    },
+    {
+        "name": "Wellens syndrome",
+        "aliases": ["Wellens sign", "LAD T wave syndrome"],
+        "utd": [["Overview", "wellens syndrome ecg pattern"]],
+        "summary": "",
+    },
+    {
+        "name": "Sgarbossa criteria",
+        "aliases": ["Modified Sgarbossa criteria", "MI in LBBB Sgarbossa"],
+        "utd": [["Overview", "sgarbossa criteria mi lbbb paced"]],
+        "summary": "",
+    },
+    {
+        "name": "Refractory ventricular fibrillation",
+        "aliases": ["Refractory VF", "Shock resistant VF"],
+        "utd": [["Overview", "refractory ventricular fibrillation management"]],
+        "summary": "",
+    },
+    {
+        "name": "Rectal chlamydia",
+        "aliases": ["Chlamydia proctitis", "Anorectal chlamydia"],
+        "utd": [["Overview", "rectal chlamydia trachomatis infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Pharyngeal gonorrhoea",
+        "aliases": ["Pharyngeal gonorrhea", "Oropharyngeal gonococcal infection"],
+        "utd": [["Overview", "pharyngeal gonorrhea treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Disseminated gonococcal infection",
+        "aliases": ["DGI", "Gonococcal arthritis dermatitis syndrome"],
+        "utd": [["Overview", "disseminated gonococcal infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Latent syphilis",
+        "aliases": ["Early latent syphilis", "Late latent syphilis"],
+        "utd": [["Overview", "latent syphilis diagnosis treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Recurrent genital herpes",
+        "aliases": ["Recurrent HSV genital", "Genital herpes recurrence"],
+        "utd": [["Overview", "recurrent genital herpes treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Primary genital herpes",
+        "aliases": ["First episode genital herpes", "Primary HSV genital"],
+        "utd": [["Overview", "primary genital herpes treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "HPV vaccination Australia",
+        "aliases": ["Gardasil 9", "HPV immunisation NIP", "Human papillomavirus vaccine"],
+        "utd": [["Overview", "human papillomavirus vaccination"]],
+        "summary": "",
+    },
+    {
+        "name": "Donovanosis",
+        "aliases": ["Granuloma inguinale", "Klebsiella granulomatis infection"],
+        "utd": [["Overview", "granuloma inguinale donovanosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic bacterial prostatitis",
+        "aliases": ["NIH category II prostatitis", "Recurrent prostatitis"],
+        "utd": [["Overview", "chronic bacterial prostatitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Testicular seminoma",
+        "aliases": ["Seminoma of testis", "Pure seminoma"],
+        "utd": [["Overview", "testicular seminoma treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Late-onset hypogonadism",
+        "aliases": ["Andropause", "Age-related testosterone deficiency", "Adult-onset hypogonadism"],
+        "utd": [["Overview", "male hypogonadism age related"]],
+        "summary": "",
+    },
+    {
+        "name": "Recurrent vulvovaginal candidiasis",
+        "aliases": ["RVVC", "Recurrent thrush"],
+        "utd": [["Overview", "recurrent vulvovaginal candidiasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Vulvar lichen planus",
+        "aliases": ["Erosive vulvar lichen planus", "Vulvovaginal gingival syndrome"],
+        "utd": [["Overview", "vulvar lichen planus"]],
+        "summary": "",
+    },
+    {
+        "name": "Mixed urinary incontinence",
+        "aliases": ["Mixed incontinence"],
+        "utd": [["Overview", "mixed urinary incontinence"]],
+        "summary": "",
+    },
+    {
+        "name": "Semen analysis",
+        "aliases": ["Spermiogram", "Sperm count analysis", "WHO 2021 semen analysis"],
+        "utd": [["Overview", "semen analysis male fertility"]],
+        "summary": "",
+    },
+    {
+        "name": "Feminising hormone therapy",
+        "aliases": ["Feminizing hormone therapy", "Gender-affirming oestrogen therapy", "Trans feminine HRT"],
+        "utd": [["Overview", "feminizing hormone therapy transgender"]],
+        "summary": "",
+    },
+    {
+        "name": "Masculinising hormone therapy",
+        "aliases": ["Masculinizing hormone therapy", "Gender-affirming testosterone", "Trans masculine HRT"],
+        "utd": [["Overview", "masculinizing hormone therapy transgender"]],
+        "summary": "",
+    },
+    {
+        "name": "HIV pre-exposure prophylaxis",
+        "aliases": ["PrEP", "HIV PrEP", "Tenofovir emtricitabine prophylaxis"],
+        "utd": [["Overview", "hiv pre exposure prophylaxis"]],
+        "summary": "",
+    },
+    {
+        "name": "HIV post-exposure prophylaxis",
+        "aliases": ["PEP", "HIV PEP", "Nonoccupational HIV PEP"],
+        "utd": [["Overview", "hiv post exposure prophylaxis"]],
+        "summary": "",
+    },
+    {
+        "name": "Mycoplasma genitalium infection",
+        "aliases": ["M genitalium", "Mgen"],
+        "utd": [["Overview", "mycoplasma genitalium infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Non-gonococcal urethritis",
+        "aliases": ["NGU", "Nonspecific urethritis"],
+        "utd": [["Overview", "non gonococcal urethritis men"]],
+        "summary": "",
+    },
+    {
+        "name": "Vaginismus",
+        "aliases": ["Genito-pelvic pain penetration disorder"],
+        "utd": [["Overview", "vaginismus dyspareunia"]],
+        "summary": "",
+    },
+    {
+        "name": "Emergency contraception",
+        "aliases": ["Morning-after pill", "Postcoital contraception", "EC"],
+        "utd": [["Overview", "emergency contraception"]],
+        "summary": "",
+    },
+    {
+        "name": "Levonorgestrel intrauterine system",
+        "aliases": ["Mirena", "LNG-IUS", "Kyleena", "Hormonal IUD"],
+        "utd": [["Overview", "levonorgestrel intrauterine system"]],
+        "summary": "",
+    },
+    {
+        "name": "Etonogestrel implant",
+        "aliases": ["Implanon", "Implanon NXT", "Contraceptive implant"],
+        "utd": [["Overview", "etonogestrel subdermal contraceptive implant"]],
+        "summary": "",
+    },
+    {
+        "name": "Menopausal hormone therapy",
+        "aliases": ["MHT", "HRT menopause", "Hormone replacement therapy"],
+        "utd": [["Overview", "menopausal hormone therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Medication abortion",
+        "aliases": ["Medical abortion", "Mifepristone misoprostol termination", "MS-2 Step"],
+        "utd": [["Overview", "medication abortion first trimester"]],
+        "summary": "",
+    },
+    {
+        "name": "Lacunar stroke syndromes",
+        "aliases": [],
+        "utd": [["Overview", "lacunar stroke syndromes"]],
+        "summary": "",
+    },
+    {
+        "name": "Watershed cerebral infarction",
+        "aliases": [],
+        "utd": [["Overview", "watershed cerebral infarction"]],
+        "summary": "",
+    },
+    {
+        "name": "Cerebellar stroke",
+        "aliases": [],
+        "utd": [["Overview", "cerebellar stroke"]],
+        "summary": "",
+    },
+    {
+        "name": "CADASIL",
+        "aliases": [],
+        "utd": [["Overview", "cadasil"]],
+        "summary": "",
+    },
+    {
+        "name": "Stroke mimics",
+        "aliases": [],
+        "utd": [["Overview", "stroke mimics"]],
+        "summary": "",
+    },
+    {
+        "name": "Paroxysmal hemicrania",
+        "aliases": [],
+        "utd": [["Overview", "paroxysmal hemicrania"]],
+        "summary": "",
+    },
+    {
+        "name": "Hemicrania continua",
+        "aliases": [],
+        "utd": [["Overview", "hemicrania continua"]],
+        "summary": "",
+    },
+    {
+        "name": "SUNCT syndrome",
+        "aliases": [],
+        "utd": [["Overview", "sunct syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypnic headache",
+        "aliases": [],
+        "utd": [["Overview", "hypnic headache"]],
+        "summary": "",
+    },
+    {
+        "name": "Primary cough headache",
+        "aliases": [],
+        "utd": [["Overview", "primary cough headache"]],
+        "summary": "",
+    },
+    {
+        "name": "Primary exercise headache",
+        "aliases": [],
+        "utd": [["Overview", "primary exercise headache"]],
+        "summary": "",
+    },
+    {
+        "name": "Spontaneous intracranial hypotension",
+        "aliases": [],
+        "utd": [["Overview", "spontaneous intracranial hypotension"]],
+        "summary": "",
+    },
+    {
+        "name": "Focal dystonia",
+        "aliases": [],
+        "utd": [["Overview", "focal dystonia"]],
+        "summary": "",
+    },
+    {
+        "name": "Neuromyelitis optica spectrum disorder",
+        "aliases": [],
+        "utd": [["Overview", "neuromyelitis optica spectrum disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "MOG antibody disease",
+        "aliases": [],
+        "utd": [["Overview", "mog antibody disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute disseminated encephalomyelitis",
+        "aliases": [],
+        "utd": [["Overview", "acute disseminated encephalomyelitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Kennedy disease",
+        "aliases": [],
+        "utd": [["Overview", "kennedy disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Primary lateral sclerosis",
+        "aliases": [],
+        "utd": [["Overview", "primary lateral sclerosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Progressive muscular atrophy",
+        "aliases": [],
+        "utd": [["Overview", "progressive muscular atrophy"]],
+        "summary": "",
+    },
+    {
+        "name": "Multifocal motor neuropathy",
+        "aliases": [],
+        "utd": [["Overview", "multifocal motor neuropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Herpes simplex encephalitis",
+        "aliases": [],
+        "utd": [["Overview", "herpes simplex encephalitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Cerebral toxoplasmosis",
+        "aliases": [],
+        "utd": [["Overview", "cerebral toxoplasmosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Primary progressive aphasia",
+        "aliases": [],
+        "utd": [["Overview", "primary progressive aphasia"]],
+        "summary": "",
+    },
+    {
+        "name": "Behavioural variant frontotemporal dementia",
+        "aliases": [],
+        "utd": [["Overview", "behavioural variant frontotemporal dementia"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-dural puncture headache",
+        "aliases": [],
+        "utd": [["Overview", "postdural puncture headache"]],
+        "summary": "",
+    },
+    {
+        "name": "Miller Fisher syndrome",
+        "aliases": [],
+        "utd": [["Overview", "miller fisher syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Bickerstaff brainstem encephalitis",
+        "aliases": [],
+        "utd": [["Overview", "bickerstaff brainstem encephalitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Neurogenic orthostatic hypotension",
+        "aliases": [],
+        "utd": [["Overview", "neurogenic orthostatic hypotension"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-concussion syndrome",
+        "aliases": [],
+        "utd": [["Overview", "postconcussion syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Spinal shock",
+        "aliases": [],
+        "utd": [["Overview", "spinal shock"]],
+        "summary": "",
+    },
+    {
+        "name": "Susac syndrome",
+        "aliases": [],
+        "utd": [["Overview", "susac syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Neurogenic thoracic outlet syndrome",
+        "aliases": [],
+        "utd": [["Overview", "neurogenic thoracic outlet syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Radiation-induced brachial plexopathy",
+        "aliases": [],
+        "utd": [["Overview", "radiationinduced brachial plexopathy"]],
+        "summary": "",
+    },
 ]
 
 
@@ -38726,6 +40064,4238 @@ RICH_SUMMARIES = {
         "child to speak, which worsens anxiety. Note: this is an "
         "anxiety disorder, not wilful defiance, and early "
         "intervention before school entry gives the best outcomes."
+    ),
+    "Merkel cell carcinoma": (
+        "Rare, aggressive cutaneous neuroendocrine carcinoma driven "
+        "by Merkel cell polyomavirus in ~80% of cases and by UV "
+        "mutational load in the remainder. Risk factors: age over 65, "
+        "chronic UV exposure, immunosuppression (SOT, HIV, CLL) and "
+        "fair skin. Features: solitary, rapidly enlarging, painless "
+        "red-violaceous firm nodule on sun-exposed head, neck or limb "
+        "(AEIOU mnemonic: Asymptomatic, Expanding rapidly, "
+        "Immunosuppressed, Older than 50, UV-exposed fair skin). Ix: "
+        "excisional biopsy with CK20 perinuclear dot and "
+        "neuroendocrine markers, sentinel lymph node biopsy, staging "
+        "CT or PET given ~30% nodal spread at diagnosis. Mx: wide "
+        "local excision with 1-2 cm margins plus adjuvant "
+        "radiotherapy to primary site and nodal basin under "
+        "Australian multidisciplinary skin cancer MDT; avelumab "
+        "(PBS-listed) for metastatic disease. Note: think Merkel when "
+        "a solid pink nodule grows in weeks on an older, sun-damaged "
+        "face."
+    ),
+    "Dermatofibrosarcoma protuberans": (
+        "Low- to intermediate-grade dermal spindle-cell sarcoma with "
+        "COL1A1-PDGFB fusion and high local recurrence but rare "
+        "metastasis. Epidemiology: adults aged 20 to 50, trunk and "
+        "proximal limbs, no strong UV link. Features: slowly "
+        "enlarging indurated red-brown plaque that develops "
+        "protuberant nodules over years, often mistaken for a keloid "
+        "or dermatofibroma. Ix: deep incisional biopsy with "
+        "CD34-positive storiform spindle cells and confirmatory FISH "
+        "for the fusion. Mx: Mohs micrographic surgery is preferred "
+        "where available in Australia; otherwise wide local excision "
+        "with 2-3 cm margins to fascia, then long-term surveillance "
+        "for recurrence. Imatinib is second-line for unresectable or "
+        "metastatic disease. Note: a firm plaque that keeps recurring "
+        "after shave-biopsy is DFSP until proven otherwise."
+    ),
+    "Sebaceous carcinoma": (
+        "Uncommon adnexal malignancy of the sebaceous gland with high "
+        "recurrence and periocular predilection. Risk factors: age "
+        "over 60, prior radiotherapy, immunosuppression and "
+        "Muir-Torre syndrome (Lynch-associated MMR deficiency). "
+        "Features: firm yellow-pink nodule or diffuse lid thickening "
+        "masquerading as recurrent chalazion or blepharitis; "
+        "extraocular lesions appear on the head, neck and trunk. Ix: "
+        "full-thickness biopsy with EMA and adipophilin staining, MMR "
+        "immunohistochemistry to screen for Muir-Torre, and imaging "
+        "for regional and distant spread. Mx: wide local excision or "
+        "Mohs surgery with sentinel node biopsy for larger lesions, "
+        "adjuvant radiotherapy for positive margins, MDT input at an "
+        "Australian tertiary centre. Note: any chalazion that recurs "
+        "after two incisions demands a biopsy."
+    ),
+    "Extramammary Paget disease": (
+        "Rare intraepithelial adenocarcinoma of apocrine-bearing "
+        "anogenital skin; may be primary or secondary to an "
+        "underlying visceral malignancy. Sites: vulva, perianal skin, "
+        "scrotum, penis and axilla. Features: chronic well-demarcated "
+        "erythematous scaly or eczematous plaque that itches, burns "
+        "or oozes and fails to respond to topical steroids or "
+        "antifungals over months. Ix: punch biopsy showing pale "
+        "intraepidermal Paget cells staining CK7 positive; workup for "
+        "underlying cancer including colonoscopy for perianal "
+        "disease, cystoscopy and gynaecological or urological review "
+        "as anatomy dictates. Mx: wide local excision with margin "
+        "control (Mohs when feasible), imiquimod or photodynamic "
+        "therapy for extensive or recurrent superficial disease, and "
+        "treatment of any underlying tumour. Note: eczema that will "
+        "not clear on the vulva or perianal skin is EMPD until "
+        "biopsied."
+    ),
+    "Lentigo maligna": (
+        "In-situ melanoma of chronically sun-damaged skin; the "
+        "precursor to lentigo maligna melanoma if left untreated. "
+        "Risk factors: age over 60, fair skin (Fitzpatrick I-II), "
+        "cumulative UV on head and neck. Features: slowly enlarging "
+        "irregularly pigmented brown macule on the cheek, temple or "
+        "nose with colour variation, notched border and often several "
+        "centimetres by diagnosis. Ix: dermoscopy showing asymmetric "
+        "pigmented follicular openings, rhomboidal grey structures "
+        "and annular-granular pattern; broad shave or incisional "
+        "biopsy confirms atypical junctional melanocytic "
+        "proliferation on a sun-damaged background. Mx: wide local "
+        "excision with 5 mm clinical margins, staged excision or Mohs "
+        "where subclinical spread is likely; topical imiquimod or "
+        "radiotherapy for surgically unfit patients; lifelong skin "
+        "surveillance under Australian melanoma guidelines. Note: any "
+        "slow-growing brown cheek macule in an older Australian needs "
+        "dermoscopy and usually biopsy."
+    ),
+    "Herpetic whitlow": (
+        "Painful HSV-1 or HSV-2 infection of the distal finger, most "
+        "often in health workers exposed to oral secretions and in "
+        "children with primary herpetic gingivostomatitis. Features: "
+        "prodromal burning and tingling, then a cluster of tense "
+        "vesicles on an erythematous base at the fingertip or nail "
+        "fold, often with regional lymphadenopathy and low-grade "
+        "fever; recurs at the same site. Ix: clinical diagnosis; PCR "
+        "of vesicle fluid confirms HSV type when uncertain or before "
+        "invasive procedures. Mx: analgesia, dry dressing and "
+        "avoidance of incision (which spreads infection and delays "
+        "healing); oral aciclovir or valaciclovir per AMH shortens "
+        "severe or recurrent episodes if started within 72 hours. "
+        "Note: never incise a herpetic whitlow mistaken for felon or "
+        "paronychia."
+    ),
+    "Eczema herpeticum": (
+        "Disseminated HSV infection of eczematous or otherwise "
+        "barrier-impaired skin; a dermatological emergency in atopic "
+        "children and adults. Risk factors: active atopic dermatitis, "
+        "Darier disease, burns, pemphigus and topical calcineurin "
+        "inhibitor use. Features: acute onset of monomorphic "
+        "punched-out umbilicated vesicles or haemorrhagic crusts on "
+        "top of eczematous skin, spreading over 24-48 hours with "
+        "fever, malaise and lymphadenopathy; periocular involvement "
+        "threatens the cornea. Ix: HSV PCR or immunofluorescence from "
+        "a vesicle roof; bacterial swab for Staphylococcus aureus "
+        "superinfection. Mx: admit for IV aciclovir per eTG, urgent "
+        "ophthalmology if any eye involvement, treat bacterial "
+        "superinfection with flucloxacillin, restart bland emollients "
+        "and reintroduce topical steroids once infection is "
+        "controlled. Note: rapid monomorphic vesicles on eczema means "
+        "aciclovir now, not stronger steroid."
+    ),
+    "Folliculitis": (
+        "Inflammation of the hair follicle from infection, occlusion "
+        "or irritation. Causes: Staphylococcus aureus is commonest; "
+        "Pseudomonas after hot-tub or wetsuit exposure; Malassezia on "
+        "the trunk of young adults; gram-negative organisms after "
+        "prolonged antibiotics for acne; sterile eosinophilic "
+        "folliculitis in HIV. Features: itchy or tender follicular "
+        "papules and pustules on the beard, scalp, buttocks, thighs "
+        "or trunk, sparing palms and soles. Ix: usually clinical; "
+        "swab pus for MCS when recurrent or resistant and check HbA1c "
+        "and HIV serology in atypical or refractory disease. Mx: "
+        "antibacterial wash (chlorhexidine or triclosan) plus topical "
+        "clindamycin or mupirocin per eTG; oral flucloxacillin or "
+        "cefalexin for extensive bacterial disease; ketoconazole "
+        "shampoo or oral itraconazole for Malassezia; treat "
+        "underlying diabetes or immunosuppression. Note: recurrent "
+        "boils in flexures should trigger consideration of "
+        "hidradenitis suppurativa."
+    ),
+    "Furuncle": (
+        "Deep folliculitis progressing to a walled-off dermal "
+        "abscess, usually caused by Staphylococcus aureus including "
+        "community-acquired MRSA. Risk factors: nasal Staph carriage, "
+        "diabetes, obesity, close-contact sports and shared razors. "
+        "Features: tender erythematous nodule on hair-bearing skin "
+        "(neck, axilla, buttock, thigh) that becomes fluctuant and "
+        "points centrally; a carbuncle is coalescence of adjacent "
+        "furuncles with systemic upset. Ix: usually clinical; swab "
+        "pus for MCS and MRSA screen when recurrent or in outbreak "
+        "settings; check HbA1c if recurrent. Mx: incision and "
+        "drainage is the primary treatment for a fluctuant lesion; "
+        "add oral flucloxacillin or cefalexin per eTG for cellulitis, "
+        "immunosuppression or systemic features, and "
+        "trimethoprim-sulfamethoxazole or clindamycin if MRSA is "
+        "likely. Decolonisation (intranasal mupirocin plus "
+        "chlorhexidine washes) reduces recurrence. Note: fluctuant "
+        "equals cut, not just antibiotics."
+    ),
+    "Sporotrichosis": (
+        "Subacute or chronic subcutaneous mycosis caused by "
+        "Sporothrix schenckii complex, classically inoculated by rose "
+        "thorns or sphagnum moss and, in some regions, by cat "
+        "scratches. Features: painless papulonodule at the "
+        "inoculation site that ulcerates, followed by a chain of "
+        "similar nodules spreading proximally along lymphatics "
+        "(sporotrichoid pattern); pulmonary and disseminated forms "
+        "occur in the immunocompromised. Ix: fungal culture of biopsy "
+        "tissue or pus is the reference standard; histology may show "
+        "cigar-shaped yeasts and granulomatous inflammation but is "
+        "often paucibacillary. Mx: oral itraconazole for 3-6 months "
+        "per eTG for cutaneous or lymphocutaneous disease; IV "
+        "amphotericin B followed by itraconazole for severe pulmonary "
+        "or disseminated disease; occupational advice on gloves for "
+        "gardeners. Note: an ulcerating nodule with a linear proximal "
+        "chain in a gardener equals sporotrichosis until fungal "
+        "culture returns."
+    ),
+    "Cutaneous leishmaniasis": (
+        "Vector-borne protozoal infection with Leishmania species "
+        "transmitted by phlebotomine sandflies; a rising traveller "
+        "diagnosis in Australia in returnees from the Middle East, "
+        "Central and South America. Features: papule at the bite that "
+        "enlarges to a painless crateriform ulcer with a raised "
+        "indurated rim over weeks to months; mucosal spread with L. "
+        "braziliensis; diffuse or leishmaniasis recidivans in the "
+        "immunocompromised. Ix: skin scraping, slit-skin smear or "
+        "biopsy for Giemsa-stained amastigotes, PCR for species "
+        "identification (guides treatment intensity and mucosal "
+        "risk); HIV testing when clinically indicated. Mx: refer to "
+        "an Australian tropical or infectious diseases service; "
+        "options include intralesional or systemic pentavalent "
+        "antimonials, liposomal amphotericin B or miltefosine per "
+        "species and site, plus wound care. Note: any chronic "
+        "painless ulcer in a returned traveller needs a leishmania "
+        "PCR before empirical antibiotics."
+    ),
+    "Pemphigus foliaceus": (
+        "Superficial autoimmune blistering disease with IgG "
+        "antibodies against desmoglein 1 in the granular layer; "
+        "milder than pemphigus vulgaris and mucosae are spared. "
+        "Epidemiology: sporadic worldwide, plus an endemic form (fogo "
+        "selvagem) in rural Brazil. Features: crusted erosions and "
+        "shallow flaccid bullae over the scalp, face, chest and upper "
+        "back in a seborrhoeic distribution; positive Nikolsky sign, "
+        "no oral involvement. Ix: skin biopsy showing subcorneal "
+        "acantholysis and direct immunofluorescence with "
+        "intercellular IgG and C3 in upper epidermis; anti-desmoglein "
+        "1 ELISA in serum. Mx: potent topical steroids for limited "
+        "disease, oral prednisolone with steroid-sparing agents "
+        "(azathioprine or mycophenolate) for widespread disease per "
+        "eTG; rituximab for refractory or steroid-dependent cases. "
+        "Note: crusted seborrhoeic-pattern erosions without mouth "
+        "involvement point to foliaceus, not vulgaris."
+    ),
+    "Linear IgA bullous dermatosis": (
+        "Subepidermal autoimmune blistering disease defined by linear "
+        "IgA at the basement membrane on direct immunofluorescence. "
+        "Causes: idiopathic; drug-induced (vancomycin is by far the "
+        "commonest trigger, plus captopril, phenytoin and NSAIDs). "
+        "Features: tense bullae in a string-of-pearls or rosette "
+        "arrangement around normal or erythematous skin on the trunk, "
+        "buttocks and extensor surfaces; mucosal involvement in a "
+        "third; chronic bullous disease of childhood is the "
+        "paediatric form. Ix: skin biopsy of a fresh vesicle for "
+        "histology and perilesional skin for direct "
+        "immunofluorescence showing linear IgA along the DEJ. Mx: "
+        "withdraw any suspect drug; dapsone is first-line per eTG "
+        "after G6PD screen; sulfapyridine or oral prednisolone for "
+        "dapsone-intolerant patients; usually resolves in weeks when "
+        "drug-induced. Note: tense bullae in a rosette pattern soon "
+        "after vancomycin equals drug-induced LABD."
+    ),
+    "Epidermolysis bullosa acquisita": (
+        "Chronic autoimmune subepidermal blistering disease with IgG "
+        "against type VII collagen in anchoring fibrils; not the same "
+        "as inherited epidermolysis bullosa. Features: two clinical "
+        "patterns - a classic mechanobullous form with tense bullae "
+        "on trauma-prone sites (hands, elbows, knees) healing with "
+        "scars and milia, and an inflammatory form resembling bullous "
+        "pemphigoid; mucosal disease may cause oesophageal "
+        "strictures. Ix: skin biopsy shows subepidermal split; direct "
+        "immunofluorescence gives linear IgG at DEJ, and salt-split "
+        "skin binds the dermal side (unlike bullous pemphigoid); "
+        "serum anti-collagen VII antibodies confirm. Mx: gentle skin "
+        "care, wound dressings and treatment of secondary infection; "
+        "systemic corticosteroids with azathioprine, mycophenolate or "
+        "ciclosporin; rituximab or IVIG for refractory disease under "
+        "dermatology and often immunology input. Note: scarring "
+        "blisters on knuckles that look like porphyria but pan-IgG "
+        "DEJ suggests EBA."
+    ),
+    "Acute generalised exanthematous pustulosis": (
+        "Severe cutaneous adverse drug reaction with abrupt "
+        "widespread sterile pustules on erythema; T-cell mediated. "
+        "Causes: aminopenicillins, cephalosporins, macrolides, "
+        "diltiazem, hydroxychloroquine and terbinafine account for "
+        "most cases, typically within 1-4 days of exposure. Features: "
+        "high fever plus rapid eruption of dozens to hundreds of tiny "
+        "non-follicular pustules on oedematous erythema starting in "
+        "flexures and spreading, often with facial oedema and "
+        "pruritus; mucosae usually spared. Ix: FBC (marked "
+        "neutrophilia), CRP, U and E, LFTs; skin biopsy shows "
+        "subcorneal or intraepidermal pustules with papillary dermal "
+        "oedema; EuroSCAR score aids diagnosis. Mx: stop the culprit "
+        "drug and admit if febrile or extensive; supportive care with "
+        "emollients and moderate topical steroids; oral prednisolone "
+        "for severe disease; resolves in 1-2 weeks with post-pustular "
+        "desquamation. Notify TGA and label the allergy. Note: fever "
+        "plus pinhead pustules in flexures 2 days after antibiotics "
+        "equals AGEP."
+    ),
+    "Guttate psoriasis": (
+        "Acute papular psoriasis, often the first presentation in "
+        "children and young adults, classically 1-3 weeks after a "
+        "group A streptococcal pharyngitis. Features: sudden crop of "
+        "small (2-10 mm) salmon-pink drop-shaped scaly papules over "
+        "trunk and proximal limbs, sparing palms, soles and face; may "
+        "itch mildly; personal or family history of psoriasis common. "
+        "Ix: clinical diagnosis; throat swab and anti-streptolysin O "
+        "titre when a preceding sore throat is reported; assess "
+        "psoriasis severity and quality-of-life impact. Mx: "
+        "emollients, low- to mid-potency topical corticosteroids and "
+        "vitamin D analogues per eTG; narrowband UVB phototherapy for "
+        "widespread disease; treat active streptococcal infection "
+        "with phenoxymethylpenicillin. Most episodes settle within "
+        "3-4 months; some transition to chronic plaque psoriasis. "
+        "Note: sudden shower of small scaly papules after a sore "
+        "throat in a teen equals guttate psoriasis."
+    ),
+    "Pustular psoriasis": (
+        "Severe neutrophilic variant of psoriasis with sterile "
+        "pustules on erythema; a dermatological emergency in the "
+        "generalised (von Zumbusch) form. Triggers: abrupt "
+        "corticosteroid withdrawal, infection, pregnancy (impetigo "
+        "herpetiformis), lithium and hypocalcaemia; IL36RN mutations "
+        "underlie some familial cases. Features: acute onset of "
+        "confluent sterile pustules on tender erythematous skin with "
+        "high fever, malaise, tachycardia and often hypoalbuminaemia; "
+        "localised palmoplantar or acrodermatitis continua of "
+        "Hallopeau variants are less severe but disabling. Ix: FBC, "
+        "CRP, U and E, LFTs, calcium; skin biopsy shows subcorneal "
+        "spongiform pustules of Kogoj; blood and pustule cultures to "
+        "exclude sepsis. Mx: admit for fluids, temperature control "
+        "and skin care; acitretin, ciclosporin or infliximab per eTG "
+        "and dermatology direction; PBS-listed spesolimab is "
+        "first-line for acute generalised flares. Note: fever with "
+        "sheeting sterile pustules is generalised pustular psoriasis "
+        "- admit."
+    ),
+    "Palmoplantar pustulosis": (
+        "Chronic relapsing sterile pustular eruption confined to "
+        "palms and soles, considered a variant of psoriasis but "
+        "genetically distinct. Risk factors: female, middle age, "
+        "current or ex-smokers (strong association), thyroid "
+        "autoimmunity. Features: crops of yellow sterile pustules on "
+        "erythematous scaly plaques on thenar, hypothenar and instep, "
+        "evolving to brown macules and painful fissures; walking and "
+        "grip may be impaired. Ix: clinical; biopsy when uncertain "
+        "shows intraepidermal neutrophilic pustules; swab pustule "
+        "contents if superinfection suspected. Mx: smoking cessation "
+        "is central; potent topical corticosteroids under occlusion, "
+        "calcipotriol and coal tar; second-line acitretin, "
+        "methotrexate or PUVA; PBS-listed biologics (guselkumab, "
+        "secukinumab) via dermatology for severe refractory disease. "
+        "Note: painful palmar pustules in a female smoker equals PPP; "
+        "quitting smoking is the highest-yield intervention."
+    ),
+    "Lichen planopilaris": (
+        "Lymphocyte-mediated scarring alopecia considered a "
+        "follicular variant of lichen planus. Epidemiology: adults "
+        "aged 40 to 70, women more than men; associated with "
+        "cutaneous lichen planus in a third. Features: patchy "
+        "scarring alopecia on the vertex and parietal scalp with "
+        "perifollicular erythema and scale at the advancing edge, "
+        "pruritus, tenderness and loss of follicular ostia; eyebrows "
+        "and body hair spared. Ix: trichoscopy showing perifollicular "
+        "scale and loss of ostia; 4 mm scalp biopsy at the active "
+        "margin (interface lymphocytic infiltrate at the isthmus) is "
+        "diagnostic; TSH and iron studies to exclude contributors. "
+        "Mx: aim to halt progression - existing hair loss is "
+        "permanent. Superpotent topical or intralesional "
+        "corticosteroids, hydroxychloroquine per eTG, and oral "
+        "doxycycline or methotrexate for progressive disease; "
+        "camouflage and psychological support. Note: any scarring "
+        "scalp patch with perifollicular scale needs a biopsy early - "
+        "the window to preserve hair is short."
+    ),
+    "Frontal fibrosing alopecia": (
+        "Distinctive scarring alopecia along the frontotemporal "
+        "hairline, considered a clinical variant of lichen "
+        "planopilaris; incidence has risen sharply in recent decades. "
+        "Epidemiology: postmenopausal women predominate; possible "
+        "link with sunscreen and leave-on facial cosmetics remains "
+        "debated. Features: symmetrical band-like recession of the "
+        "frontal and temporal hairline exposing pale scarred skin, "
+        "loss of eyebrows (often the first sign), facial papules and "
+        "body hair loss; perifollicular erythema and scale at the "
+        "receding edge. Ix: trichoscopy shows loss of ostia and "
+        "perifollicular scale; scalp biopsy at the active margin "
+        "mirrors lichen planopilaris; screen for thyroid dysfunction. "
+        "Mx: photoprotection and stopping leave-on facial products "
+        "where triggering; potent topical or intralesional "
+        "corticosteroids plus 5-alpha reductase inhibitors "
+        "(finasteride or dutasteride) are first-line; "
+        "hydroxychloroquine or oral minoxidil second-line. Note: "
+        "eyebrow loss in a postmenopausal woman with a receding "
+        "hairline is FFA until proven otherwise."
+    ),
+    "Discoid lupus erythematosus": (
+        "Chronic scarring cutaneous lupus limited to skin in most "
+        "patients; 5-10% progress to systemic lupus. Epidemiology: "
+        "women aged 20 to 50; higher incidence in Aboriginal and "
+        "Torres Strait Islander populations mirroring SLE. Features: "
+        "well-defined erythematous scaly plaques with follicular "
+        "plugging on face, scalp and ears, healing with atrophy, "
+        "scarring alopecia and dyspigmentation; sun exposure "
+        "precipitates flares. Ix: skin biopsy shows interface "
+        "dermatitis, follicular plugging and basement membrane "
+        "thickening; direct immunofluorescence gives a positive lupus "
+        "band; ANA, ENA, FBC, U and E, urinalysis to screen for "
+        "systemic disease. Mx: strict SPF 50+ photoprotection and "
+        "smoking cessation; potent topical or intralesional "
+        "corticosteroids and topical tacrolimus; oral "
+        "hydroxychloroquine per eTG for widespread or refractory "
+        "disease with baseline ophthalmology review. Note: scarring "
+        "plaques on cheeks or ears in a young woman need sunscreen, "
+        "biopsy and hydroxychloroquine, plus SLE screen."
+    ),
+    "Prurigo nodularis": (
+        "Chronic hyperkeratotic nodular eruption driven by an "
+        "itch-scratch cycle on a background of neural sensitisation. "
+        "Associations: atopic dermatitis, chronic kidney disease "
+        "(uraemic pruritus), cholestasis, HIV, iron deficiency, "
+        "lymphoma and psychiatric distress. Features: firm "
+        "dome-shaped intensely pruritic nodules, often with central "
+        "excoriation, symmetrically distributed on extensor limbs and "
+        "trunk sparing the mid-back (butterfly sign); scarring and "
+        "dyspigmentation follow. Ix: identify and treat contributors "
+        "- FBC, ferritin, U and E, LFTs, TSH, HIV, hepatitis "
+        "serology; consider malignancy screen and biopsy if atypical "
+        "or refractory. Mx: emollients, superpotent topical or "
+        "intralesional corticosteroids, sedating antihistamines and "
+        "gabapentin or pregabalin for neuropathic itch; narrowband "
+        "UVB, methotrexate or ciclosporin for severe disease; "
+        "PBS-listed dupilumab for adults with inadequately controlled "
+        "disease. Note: treat the itch and the underlying trigger "
+        "together or the nodules keep coming back."
+    ),
+    "Congenital melanocytic naevus": (
+        "Benign melanocytic proliferation present at birth or within "
+        "the first year, arising from postzygotic NRAS or BRAF mosaic "
+        "mutation. Classification by projected adult size: small "
+        "under 1.5 cm, medium 1.5-20 cm, large 20-40 cm and giant "
+        "over 40 cm; giant garment-distribution naevi carry the "
+        "highest melanoma risk. Features: brown to black plaque with "
+        "coarse hair, well-defined border and sometimes satellite "
+        "lesions; giant lesions may associate with neurocutaneous "
+        "melanosis and neurological deficit. Ix: dermoscopy and "
+        "baseline photography; MRI brain and spine in the first 6 "
+        "months for large or giant lesions or satellites over 20; "
+        "biopsy any nodule or asymmetrical change. Mx: "
+        "photoprotection, patient and parent education and lifelong "
+        "skin surveillance in paediatric dermatology; staged excision "
+        "considered for large or cosmetically significant lesions; "
+        "excise any suspicious change. Note: giant congenital naevi "
+        "need MRI screening early because neurological disease drives "
+        "outcome as much as melanoma risk."
+    ),
+    "Dysplastic naevus": (
+        "Acquired melanocytic naevus with clinical and histological "
+        "atypia; marker of increased melanoma risk rather than an "
+        "obligate precursor. Risk factors: fair skin, high naevus "
+        "count, intermittent intense UV exposure and familial "
+        "atypical multiple mole melanoma (FAMMM) syndrome. Features: "
+        "asymmetrical macule or slightly raised naevus 5-15 mm across "
+        "with irregular border, variegated tan-to-brown colour and "
+        "often a fried-egg appearance; usually on trunk. Ix: "
+        "dermoscopy showing reticular or globular pattern with focal "
+        "atypia; sequential digital dermoscopy or total body "
+        "photography for high-risk patients; excisional biopsy of any "
+        "lesion changing over months, meeting ABCDE criteria or "
+        "standing out on the ugly-duckling sign. Mx: education on "
+        "SunSmart photoprotection, self-examination and 6-12 monthly "
+        "skin checks by GP or dermatologist; excise clinically or "
+        "dermoscopically atypical lesions with 2 mm margins. Note: "
+        "dysplastic naevi are a risk marker, not a reason for "
+        "prophylactic wide excision."
+    ),
+    "Cherry angioma": (
+        "Very common benign acquired vascular papule of adult skin; "
+        "also called Campbell de Morgan spot. Epidemiology: "
+        "prevalence rises steeply after age 30 and most adults over "
+        "70 have several. Features: bright red to violaceous "
+        "dome-shaped papule 1-5 mm across, most often on the trunk "
+        "and proximal limbs, blanches poorly and may bleed on trauma; "
+        "multiple sudden eruptive lesions rarely signal systemic "
+        "disease. Ix: clinical diagnosis; dermoscopy shows red-purple "
+        "lacunae. Consider POEMS syndrome workup only when "
+        "accompanied by neuropathy, organomegaly, endocrine "
+        "abnormality and paraprotein. Mx: reassurance is usually "
+        "sufficient; electrocautery, laser (pulsed dye or KTP) or "
+        "shave excision for cosmesis or repeated bleeding. Note: a "
+        "solitary new red papule in an adult is a cherry angioma "
+        "until dermoscopy or biopsy proves otherwise."
+    ),
+    "Cutaneous horn": (
+        "Clinical descriptor for a conical hyperkeratotic projection "
+        "of compacted keratin, not a diagnosis in itself; underlying "
+        "lesion determines management. Aetiology: benign in about 60% "
+        "(viral wart, seborrhoeic keratosis), premalignant in about "
+        "25% (actinic keratosis) and malignant in about 15% (squamous "
+        "cell carcinoma, less often basal cell or Merkel cell "
+        "carcinoma). Risk factors: age over 60, fair skin and chronic "
+        "UV exposure; face, scalp, ears and dorsal hands most "
+        "affected. Features: firm yellow-brown keratotic projection "
+        "often several times taller than wide; tender indurated base "
+        "or rapid growth raises suspicion for malignancy. Ix: "
+        "excisional biopsy including the base is mandatory - shave "
+        "biopsy of the horn alone misses invasive SCC. Mx: complete "
+        "excision with a small margin, then treat the underlying "
+        "lesion appropriately; long-term skin surveillance under "
+        "Australian melanoma and non-melanoma skin cancer guidelines. "
+        "Note: the horn is decoration; biopsy the base."
+    ),
+    "Bacterial conjunctivitis": (
+        "Acute purulent conjunctivitis from S. aureus, S. pneumoniae "
+        "or H. influenzae; gonococcal and chlamydial forms are "
+        "separate emergencies. Clinical features: unilateral onset "
+        "spreading to the other eye in 1-2 days, mucopurulent "
+        "discharge with eyelids stuck together on waking, gritty "
+        "foreign-body sensation and diffuse conjunctival injection "
+        "sparing the limbus. Vision, pupils and cornea are normal. "
+        "Ix: clinical diagnosis; swab for culture only if hyperacute "
+        "(gonococcal), neonatal, contact-lens wearer or "
+        "non-resolving. Mx: eTG recommends chloramphenicol 0.5% drops "
+        "1-2 hourly then QID for 5-7 days. Cold compresses, hand "
+        "hygiene and no contact lenses until resolved. Refer if "
+        "hyperacute purulent discharge, contact-lens wearer, corneal "
+        "involvement or vision loss. Note: unilateral copious "
+        "purulent discharge in a sexually active adult is gonococcal "
+        "until proven otherwise and needs same-day ophthalmology "
+        "review."
+    ),
+    "Viral conjunctivitis": (
+        "Highly contagious adenoviral infection, the most common "
+        "infective conjunctivitis. Clinical features: watery "
+        "discharge, follicular conjunctivitis, tender preauricular "
+        "lymphadenopathy, often bilateral (starts one eye then the "
+        "other) and preceded by URTI. Epidemic keratoconjunctivitis "
+        "subtype produces punctate keratitis and subepithelial "
+        "infiltrates that can blur vision for weeks. Ix: clinical; "
+        "swab reserved for outbreak investigation. Mx: supportive - "
+        "cold compresses, lubricants, strict hand hygiene, no work or "
+        "school while eyes are red and weeping (contagious 10-14 "
+        "days). Topical antibiotics not indicated. Refer if vision "
+        "drops, photophobia or symptoms persist beyond 3 weeks. Note: "
+        "florid follicles plus tender preauricular node is the "
+        "giveaway; steroids risk prolonging viral shedding and are "
+        "ophthalmology-only."
+    ),
+    "Allergic conjunctivitis": (
+        "IgE-mediated hypersensitivity, seasonal (pollens) or "
+        "perennial (dust mite, animal dander), often with atopic "
+        "rhinitis or eczema. Clinical features: bilateral itch (the "
+        "discriminating symptom), watery or stringy discharge, "
+        "chemosis, lid swelling and papillae on the upper tarsal "
+        "conjunctiva. Vision preserved. Ix: clinical; skin-prick "
+        "testing only if trigger unclear. Mx: allergen avoidance and "
+        "cool compresses first. Topical antihistamine or mast-cell "
+        "stabiliser drops (olopatadine, ketotifen) as per eTG, with "
+        "an oral antihistamine if systemic symptoms coexist. Refer "
+        "vernal or atopic keratoconjunctivitis for topical steroid or "
+        "ciclosporin. Note: itch dominates; if the eye is red but not "
+        "itchy, reconsider the diagnosis."
+    ),
+    "Neonatal conjunctivitis": (
+        "Ophthalmia neonatorum, conjunctivitis in the first 28 days. "
+        "Notifiable if gonococcal or chlamydial. Aetiology: timing "
+        "narrows the cause - chemical from silver nitrate on day 1 "
+        "(rare now), gonococcal days 2-5 with hyperacute purulent "
+        "discharge and lid oedema, chlamydial days 5-14 with "
+        "mucopurulent discharge, HSV in the first 2 weeks with "
+        "vesicles. Ix: urgent swabs for gram stain, culture and PCR "
+        "(gonococcus, chlamydia, HSV). Mx: any purulent neonatal "
+        "conjunctivitis is a same-day paediatric and ophthalmology "
+        "referral. Gonococcal needs IV ceftriaxone and saline "
+        "irrigation, chlamydial oral erythromycin for 14 days "
+        "(topical alone is insufficient - it colonises the lung), HSV "
+        "IV aciclovir. Test and treat both parents. Note: gonococcal "
+        "ophthalmia perforates the cornea within hours; do not wait "
+        "for culture."
+    ),
+    "Fungal keratitis": (
+        "Corneal infection with Fusarium, Aspergillus or Candida; "
+        "uncommon in Australia but sight-threatening and slow to "
+        "respond. Risk factors: vegetative trauma (plant matter, "
+        "agricultural work), contact-lens wear with poor hygiene, "
+        "topical steroid use, immunosuppression and tropical climate. "
+        "Clinical features: gradual onset over days, feathery-edged "
+        "corneal infiltrate with satellite lesions, hypopyon and "
+        "minimal discharge compared with bacterial ulcers. Ix: "
+        "same-day ophthalmology; corneal scrape for KOH, Gram stain "
+        "and fungal culture, with confocal microscopy where "
+        "available. Mx: intensive topical natamycin 5% (filamentous) "
+        "or voriconazole (yeasts), oral voriconazole for deep or "
+        "scleral involvement, and therapeutic keratoplasty if the "
+        "cornea perforates. Steroids are contraindicated until fungus "
+        "is controlled. Note: any corneal ulcer after vegetative "
+        "trauma is fungal until proven otherwise."
+    ),
+    "Marginal keratitis": (
+        "Sterile hypersensitivity reaction to staphylococcal "
+        "exotoxins on the lid margin, presenting as peripheral "
+        "corneal infiltrates. Common in chronic blepharitis and "
+        "rosacea. Clinical features: acute unilateral gritty red eye "
+        "with photophobia; slit-lamp shows small subepithelial white "
+        "infiltrates near the limbus, separated from it by a clear "
+        "zone, at 2, 4, 8 or 10 o'clock where the lid margin contacts "
+        "the cornea. Overlying epithelium may break down but there is "
+        "no discharge. Ix: clinical; scrape only if infiltrate is "
+        "central, large or worsening. Mx: warm compresses and lid "
+        "hygiene as first-line for the underlying blepharitis, plus a "
+        "short course of topical steroid with antibiotic cover (e.g. "
+        "chloramphenicol) under optometrist or ophthalmology "
+        "guidance. Oral doxycycline if rosacea driven. Note: "
+        "peripheral infiltrate with a clear limbal interval is the "
+        "marginal-keratitis look."
+    ),
+    "Exposure keratopathy": (
+        "Corneal damage from incomplete lid closure that stops the "
+        "tear film covering the cornea. Causes: facial nerve palsy "
+        "(Bell, post-parotid surgery), proptosis (thyroid eye "
+        "disease, orbital tumour), reduced blink in Parkinson disease "
+        "or coma, ectropion and nocturnal lagophthalmos. Clinical "
+        "features: gritty foreign-body sensation and blurred vision "
+        "worst on waking, with punctate epithelial erosions in the "
+        "lower third of the cornea on fluorescein. Chronic exposure "
+        "risks ulceration, infection and perforation. Mx: aggressive "
+        "lubrication - preservative-free artificial tears hourly, "
+        "thicker gel or ointment overnight, and taping the lids or a "
+        "moisture chamber. Treat the cause (orbital decompression, "
+        "lid weight or tarsorrhaphy for persistent facial palsy). "
+        "Refer any epithelial defect, infiltrate or vision drop same "
+        "day. Note: an unblinking patient in ICU needs lubrication "
+        "and lid taping from day one."
+    ),
+    "Photokeratitis": (
+        "Sunburn of the corneal epithelium from UV-B exposure. "
+        "Triggers: snow-reflection (skiing without goggles), welding "
+        "arc without a mask (arc eye), tanning beds, sun-lamp misuse "
+        "and unfiltered sun at altitude. Symptoms lag the exposure by "
+        "6-12 hours. Clinical features: severe bilateral pain, "
+        "photophobia, blepharospasm, tearing and gritty foreign-body "
+        "sensation. Slit-lamp shows diffuse punctate epithelial "
+        "erosions on fluorescein staining. Vision returns as the "
+        "epithelium heals over 24-72 hours. Mx: topical anaesthetic "
+        "once in ED for examination only (never send home with it - "
+        "delays healing and hides ulceration), then cold compresses, "
+        "oral analgesia, preservative-free lubricants and a short "
+        "course of prophylactic chloramphenicol. Dark glasses until "
+        "symptoms settle. Note: bilateral severe pain 6 hours after a "
+        "day skiing without goggles is arc eye of the mountain."
+    ),
+    "Secondary glaucoma": (
+        "Optic neuropathy from a raised intraocular pressure driven "
+        "by an identifiable ocular or systemic cause. Causes: uveitis "
+        "(trabeculitis or steroid response), lens-related "
+        "(phacomorphic, phacolytic), traumatic (angle recession, "
+        "hyphaema), pigment dispersion, pseudoexfoliation, "
+        "neovascular (post-CRVO or diabetes) and steroid-induced. "
+        "Clinical features: variable - some are asymptomatic on "
+        "screening, others present as acute pain and vision loss "
+        "(neovascular, phacomorphic). Slit-lamp identifies the "
+        "underlying process; gonioscopy grades the angle. Mx: treat "
+        "the cause and lower IOP. Topical prostaglandins, "
+        "beta-blockers and alpha-agonists; acetazolamide for acute "
+        "rises. Panretinal photocoagulation and anti-VEGF for "
+        "neovascular glaucoma, lens extraction for phacomorphic, "
+        "taper any topical steroid. Refractory cases need "
+        "trabeculectomy or a glaucoma drainage device. Note: any "
+        "glaucoma diagnosis after 6 months of topical steroid is "
+        "steroid-response glaucoma until proven otherwise."
+    ),
+    "Pigment dispersion glaucoma": (
+        "Iris pigment shed onto the trabecular meshwork blocks "
+        "aqueous outflow. Progresses from pigment dispersion syndrome "
+        "to secondary open-angle glaucoma. Risk factors: young myopic "
+        "men aged 20-50, deep anterior chamber and concave iris that "
+        "rubs the zonules. Exercise (jumping, jogging) triggers "
+        "pigment showers. Clinical features: often incidental on "
+        "screening; some report intermittent blurring and haloes "
+        "after exercise. Slit-lamp shows a Krukenberg spindle on the "
+        "corneal endothelium, iris transillumination defects and "
+        "heavy trabecular pigment on gonioscopy. IOP is often high "
+        "and fluctuates. Mx: topical prostaglandins first-line, "
+        "adding beta-blocker or alpha-agonist if target IOP not met. "
+        "Laser peripheral iridotomy or selective laser "
+        "trabeculoplasty as per ophthalmology. Trabeculectomy for "
+        "refractory cases. Note: young myopic man with high IOP after "
+        "gym is pigment dispersion until proven otherwise; check for "
+        "Krukenberg spindle."
+    ),
+    "Pseudoexfoliation glaucoma": (
+        "Deposition of fibrillary pseudoexfoliation material on the "
+        "lens, iris and trabecular meshwork raises IOP. Commonest "
+        "identifiable cause of secondary open-angle glaucoma "
+        "worldwide. Risk factors: age over 60, Scandinavian and "
+        "Mediterranean ancestry, LOXL1 gene variants and systemic "
+        "vascular disease. Clinical features: often unilateral or "
+        "asymmetric; slit-lamp shows white flakes on the anterior "
+        "lens capsule in a bullseye pattern, on the pupil margin and "
+        "in the angle. IOP fluctuates and rises higher than primary "
+        "open-angle glaucoma, with faster field loss. Zonular "
+        "weakness raises cataract-surgery complication risk. Mx: "
+        "prostaglandin analogue first-line, then beta-blocker or "
+        "alpha-agonist. Selective laser trabeculoplasty responds "
+        "well. Trabeculectomy or drainage device if uncontrolled. "
+        "Warn the surgeon of zonular weakness before cataract "
+        "extraction. Note: white flakes on the anterior lens capsule "
+        "in an elderly patient with asymmetric high IOP is "
+        "pseudoexfoliation."
+    ),
+    "Neovascular glaucoma": (
+        "Aggressive secondary glaucoma from new vessels growing on "
+        "the iris (rubeosis) and into the angle, closing it. "
+        "Sight-threatening and often painful. Causes: ischaemic CRVO "
+        "(most common), proliferative diabetic retinopathy, ocular "
+        "ischaemic syndrome from carotid disease and chronic retinal "
+        "detachment. Clinical features: severe eye pain, red eye, "
+        "corneal oedema, IOP often above 40 mmHg and vision loss. "
+        "Slit-lamp shows fine iris vessels at the pupil margin and, "
+        "on gonioscopy, angle neovascularisation with peripheral "
+        "anterior synechiae. Ix: same-day ophthalmology. Fundoscopy "
+        "and fluorescein angiography identify the ischaemic driver; "
+        "carotid duplex if ocular ischaemic syndrome suspected. Mx: "
+        "intravitreal anti-VEGF for rapid regression of new vessels, "
+        "panretinal photocoagulation to remove the ischaemic drive, "
+        "and topical or oral pressure-lowering therapy. Cyclodiode "
+        "laser or drainage device for refractory cases. Note: red "
+        "painful eye 3 months after a CRVO with IOP 50 mmHg is "
+        "100-day glaucoma."
+    ),
+    "Proliferative diabetic retinopathy": (
+        "Advanced stage of diabetic retinopathy defined by retinal "
+        "neovascularisation responding to widespread ischaemia. Risk "
+        "factors: longstanding type 1 or 2 diabetes, poor glycaemic "
+        "and blood pressure control, dyslipidaemia, pregnancy, renal "
+        "disease and rapid HbA1c drop. Clinical features: often "
+        "asymptomatic until sudden painless vision loss from vitreous "
+        "haemorrhage or tractional retinal detachment. Fundoscopy "
+        "shows new vessels at the disc or elsewhere, preretinal "
+        "haemorrhages, fibrovascular proliferation and "
+        "neovascularisation of the iris (late). Ix: dilated "
+        "fundoscopy at least yearly; OCT for macular oedema; "
+        "fluorescein angiography maps ischaemia and leakage. Mx: "
+        "urgent ophthalmology; panretinal photocoagulation is the "
+        "standard of care, with intravitreal anti-VEGF as adjunct or "
+        "alternative. Vitrectomy for non-clearing vitreous "
+        "haemorrhage or tractional detachment. Tighten diabetic "
+        "control (aim HbA1c individualised) and BP. Note: any "
+        "diabetic with new floaters or sudden vision loss needs "
+        "same-day ophthalmology - assume vitreous haemorrhage."
+    ),
+    "Non-proliferative diabetic retinopathy": (
+        "Early diabetic retinopathy without neovascularisation, "
+        "graded mild, moderate or severe. Risk factors: same as "
+        "proliferative disease - diabetes duration, HbA1c, BP, "
+        "lipids, renal function and pregnancy. Clinical features: "
+        "usually asymptomatic; fundoscopy shows microaneurysms "
+        "(mild), dot-and-blot haemorrhages, hard exudates, cotton "
+        "wool spots (moderate), and venous beading or intraretinal "
+        "microvascular abnormalities (severe). Vision drops only when "
+        "macular oedema develops. Ix: annual dilated fundoscopy or "
+        "fundus photography; OCT if macula involved. Severe NPDR "
+        "carries a 50% one-year risk of progression to proliferative "
+        "disease. Mx: optimise systemic control (HbA1c "
+        "individualised, BP under 130/80, statin per Australian CVD "
+        "Risk). Refer moderate to severe NPDR to ophthalmology for "
+        "monitoring every 3-6 months and consider early anti-VEGF or "
+        "panretinal photocoagulation in severe disease. Treat macular "
+        "oedema with intravitreal anti-VEGF. Note: no symptoms does "
+        "not mean no disease; screening is what catches this."
+    ),
+    "Diabetic macular oedema": (
+        "Retinal thickening at the macula from leaky microaneurysms; "
+        "the leading cause of vision loss in working-age diabetics. "
+        "Risk factors: long-duration diabetes, poor HbA1c and BP "
+        "control, dyslipidaemia, nephropathy and pregnancy. Can occur "
+        "at any stage of retinopathy. Clinical features: gradual "
+        "blurred central vision and metamorphopsia; fundoscopy shows "
+        "retinal thickening and hard exudates at the fovea. Vision "
+        "drops only when the fovea itself is involved "
+        "(centre-involving DMO). Ix: OCT is the standard for "
+        "detection and monitoring; fluorescein angiography maps "
+        "leakage. Mx: intravitreal anti-VEGF (aflibercept, "
+        "ranibizumab, bevacizumab) is first-line for centre-involving "
+        "DMO with vision below 6/9; PBS-subsidised. Focal laser for "
+        "extrafoveal leaks. Intravitreal steroid (dexamethasone "
+        "implant) as second-line. Optimise HbA1c, BP and lipids in "
+        "parallel. Note: DMO can happen with mild retinopathy - any "
+        "diabetic with new blur needs OCT."
+    ),
+    "Hypertensive retinopathy": (
+        "Retinal microvascular damage from chronic or acute "
+        "hypertension, graded by the Keith-Wagener-Barker scale. "
+        "Clinical features by grade: grade 1 - arteriolar narrowing "
+        "and copper wiring; grade 2 - arteriovenous nipping (Salus "
+        "sign) and silver wiring; grade 3 - flame haemorrhages, "
+        "cotton wool spots and hard exudates including a macular "
+        "star; grade 4 - papilloedema. Grades 3-4 indicate malignant "
+        "hypertension and end-organ damage. Ix: fundoscopy, BP with "
+        "orthostatic readings, urinalysis for protein and blood, U&E "
+        "and creatinine, ECG and CXR. Grade 3-4 needs same-day "
+        "admission. Mx: address the hypertension per NHF Australia "
+        "guidelines - lifestyle plus ACE inhibitor, ARB, "
+        "calcium-channel blocker or thiazide; target under 140/90 "
+        "(under 130/80 in diabetes or CKD). Malignant hypertension "
+        "needs controlled IV lowering in HDU (labetalol infusion) "
+        "with a 25% drop in 24 hours to avoid watershed infarcts. "
+        "Note: papilloedema with severe hypertension is a "
+        "hypertensive emergency, not raised-ICP workup."
+    ),
+    "Retinal vein occlusion": (
+        "Thrombotic occlusion of the central or branch retinal vein; "
+        "second commonest retinal vascular disease after diabetic "
+        "retinopathy. Risk factors: hypertension (in two-thirds), "
+        "diabetes, hyperlipidaemia, glaucoma, smoking and "
+        "thrombophilia in the young. Clinical features: sudden "
+        "painless vision loss (CRVO) or sectoral field loss (BRVO). "
+        "Fundoscopy shows the classic blood-and-thunder retina - "
+        "dilated tortuous veins, widespread flame haemorrhages, "
+        "cotton wool spots and disc oedema (CRVO) or a wedge of "
+        "haemorrhage along one vein (BRVO). Ix: same-day "
+        "ophthalmology; OCT for macular oedema, fluorescein "
+        "angiography to grade ischaemia. BP, fasting glucose, lipids, "
+        "FBC, ESR (rule out hyperviscosity) and thrombophilia screen "
+        "if under 50. Mx: intravitreal anti-VEGF for macular oedema, "
+        "panretinal photocoagulation for ischaemic CRVO to prevent "
+        "neovascular glaucoma at 90-100 days, treat systemic risk "
+        "factors, and consider aspirin only if concurrent vascular "
+        "indication. Note: the 100-day glaucoma window means "
+        "ischaemic CRVO needs monthly follow-up."
+    ),
+    "Ocular migraine": (
+        "Transient monocular vision loss with migraine, distinct from "
+        "migraine with visual aura (which is binocular and cortical). "
+        "Also called retinal migraine. Clinical features: fully "
+        "reversible monocular scotoma, dimming or blackout lasting "
+        "minutes to an hour, often followed by ipsilateral throbbing "
+        "headache. Diagnosed only after excluding embolic and "
+        "vascular causes; monocular field loss during the episode "
+        "confirms retinal rather than cortical origin. Ix: same-day "
+        "ophthalmology for the first episode - CRAO, amaurosis fugax "
+        "from carotid embolus and GCA all mimic. Fundoscopy, ESR, "
+        "CRP, carotid duplex and echocardiogram; MRI brain if "
+        "atypical or new headache pattern. Mx: manage as migraine per "
+        "eTG - trigger avoidance, acute paracetamol or NSAID plus a "
+        "triptan, and prophylaxis (propranolol, amitriptyline, "
+        "topiramate) if frequent. Avoid triptans and ergots if there "
+        "is any concern for vasospasm-driven irreversible loss. Note: "
+        "monocular does not equal migraine until embolic and "
+        "giant-cell causes are excluded, especially over 50."
+    ),
+    "Trichiasis": (
+        "Eyelashes misdirected inward against the globe. Common cause "
+        "of chronic red irritated eye. Causes: chronic blepharitis, "
+        "cicatricial pemphigoid, trachoma (Aboriginal remote "
+        "communities in Australia - the SAFE strategy targets this), "
+        "Stevens-Johnson syndrome, thermal or chemical burns and "
+        "involutional entropion. Clinical features: foreign-body "
+        "sensation, reflex tearing, photophobia and corneal punctate "
+        "epithelial erosions on fluorescein. Chronic rubbing causes "
+        "corneal ulcer, scarring and vision loss. Ix: slit-lamp "
+        "examination and fluorescein stain; identify the underlying "
+        "cicatrising process (biopsy the tarsal conjunctiva if "
+        "pemphigoid suspected). Mx: epilation with forceps for "
+        "temporary relief (lashes regrow), electrolysis, cryotherapy "
+        "or radiofrequency ablation for definitive treatment. Treat "
+        "the underlying condition. Bandage contact lens for corneal "
+        "protection while awaiting definitive care. Note: trachoma is "
+        "Australia's only endemic blinding disease of remote "
+        "Aboriginal and Torres Strait Islander communities - screen "
+        "the whole household and treat with azithromycin."
+    ),
+    "Anisocoria": (
+        "Unequal pupil sizes. Physiological in 20% of the population; "
+        "the pathological forms point to sympathetic, parasympathetic "
+        "or structural pathology. Features: the abnormal pupil is the "
+        "one whose asymmetry changes with lighting. Anisocoria "
+        "greater in the dark means the smaller pupil fails to dilate "
+        "(Horner syndrome, pharmacological miosis). Anisocoria "
+        "greater in the light means the larger pupil fails to "
+        "constrict (third nerve palsy, Adie tonic pupil, traumatic "
+        "mydriasis, pharmacological mydriasis). Ix: examine acuity, "
+        "ptosis (mild in Horner, marked in third nerve palsy), "
+        "extraocular movements (third nerve palsy gives down-and-out "
+        "eye), light and near reaction (Adie is light-near "
+        "dissociated), cocaine or apraclonidine test for Horner. Mx: "
+        "driven by cause. Painful pupil-involving third nerve palsy "
+        "is a posterior communicating artery aneurysm until proven "
+        "otherwise - CT angiogram same day. Horner needs imaging of "
+        "the sympathetic chain from hypothalamus to orbit. Note: "
+        "anisocoria unchanged between light and dark is physiological "
+        "in a well patient."
+    ),
+    "Adie tonic pupil": (
+        "Postganglionic parasympathetic denervation of the pupil and "
+        "ciliary body, typically in young women. Clinical features: "
+        "unilateral dilated pupil with poor or absent response to "
+        "light, slow tonic constriction to near effort with equally "
+        "slow redilation (light-near dissociation), and blurred near "
+        "vision from accommodative paresis. Sectoral iris movement or "
+        "vermiform movements on slit-lamp are characteristic. "
+        "Holmes-Adie syndrome adds absent deep tendon reflexes. Ix: "
+        "dilute pilocarpine 0.125% causes brisk constriction of the "
+        "affected pupil (denervation supersensitivity) but not the "
+        "normal one - confirmatory. Consider syphilis serology if "
+        "bilateral or atypical. Mx: reassurance; near correction "
+        "(bifocals or reading glasses) for accommodative difficulty. "
+        "Dilute pilocarpine drops if cosmetically bothersome. Over "
+        "years the pupil may become miotic. Note: young woman with "
+        "unilateral dilated pupil showing slow near-response and no "
+        "other neurology has Adie until proven otherwise - imaging is "
+        "not needed."
+    ),
+    "Argyll Robertson pupil": (
+        "Small irregular pupils that accommodate but do not react to "
+        "light; historically associated with tertiary syphilis (tabes "
+        "dorsalis). Clinical features: bilateral small (usually less "
+        "than 2 mm) irregular pupils, no reaction to bright light, "
+        "brisk constriction to near effort (light-near dissociation), "
+        "poor dilation with mydriatics and often iris atrophy. Vision "
+        "preserved. Causes: neurosyphilis is classic; also diabetes "
+        "mellitus (diabetic pseudo-tabes), multiple sclerosis, "
+        "sarcoidosis and midbrain lesions affecting the pretectal "
+        "region. Ix: syphilis serology (treponemal EIA then RPR), "
+        "fasting glucose or HbA1c, B12 and MRI brain and cord if "
+        "features suggest MS or midbrain lesion. Lumbar puncture with "
+        "CSF-VDRL if neurosyphilis suspected. Mx: treat the cause - "
+        "neurosyphilis needs IV benzylpenicillin 1.8 g four-hourly "
+        "for 15 days per eTG. Optimise diabetic control. Note: small "
+        "irregular pupils that accommodate but do not react - test "
+        "for syphilis the same day."
+    ),
+    "Relative afferent pupillary defect": (
+        "Asymmetric optic nerve or retinal function detected on the "
+        "swinging flashlight test. Also called Marcus Gunn pupil. "
+        "Examination: dim the room, alternate a bright light between "
+        "the eyes every 3 seconds. In a normal patient both pupils "
+        "constrict equally each time. An RAPD is present when the "
+        "affected pupil paradoxically dilates as the light swings to "
+        "it, because the direct input is weaker than the consensual "
+        "input just lost. Causes: unilateral optic neuritis, "
+        "ischaemic optic neuropathy, compressive optic neuropathy "
+        "(pituitary adenoma, meningioma), large retinal detachment, "
+        "CRAO or CRVO, advanced glaucoma and dense vitreous "
+        "haemorrhage. Cataract and refractive error do not cause an "
+        "RAPD - a helpful discriminator. Ix: dilated fundoscopy, "
+        "visual field, OCT of retinal nerve fibre layer and MRI "
+        "orbits with fat suppression if optic neuritis or compression "
+        "suspected. Mx: driven by cause and urgency. Any new RAPD is "
+        "a red flag needing same-week ophthalmology or neurology. "
+        "Note: unilateral vision loss with a normal-looking eye plus "
+        "an RAPD localises to the optic nerve."
+    ),
+    "Ocular rosacea": (
+        "Ocular manifestation of rosacea, present in over half of "
+        "skin rosacea cases and sometimes the only feature. Clinical "
+        "features: chronic bilateral gritty burning red eyes, "
+        "blepharitis with telangiectasia along the lid margins, "
+        "meibomian gland dysfunction with capped or inspissated "
+        "glands, recurrent chalazia, marginal keratitis and, in "
+        "advanced cases, peripheral corneal thinning and "
+        "vascularisation. Facial rosacea (flushing, papules, "
+        "telangiectasia) supports the diagnosis. Ix: clinical; "
+        "slit-lamp examination and fluorescein staining. Mx: warm "
+        "compresses and lid hygiene twice daily, preservative-free "
+        "lubricants, and oral doxycycline 50-100 mg daily for 6-12 "
+        "weeks per eTG. Topical ciclosporin or azithromycin drops in "
+        "refractory cases. Trigger avoidance for facial rosacea "
+        "(alcohol, spicy food, sun, heat). Refer if corneal "
+        "involvement. Note: chronic recurrent chalazia in an adult "
+        "with facial flushing is ocular rosacea - treat with "
+        "doxycycline, not just incision."
+    ),
+    "Meibomian gland dysfunction": (
+        "Obstruction or altered secretion of the meibomian glands, "
+        "causing evaporative dry eye. The commonest cause of chronic "
+        "irritation and the driver of most posterior blepharitis. "
+        "Risk factors: age, female sex, rosacea, seborrhoeic "
+        "dermatitis, isotretinoin, androgen deficiency, screen use "
+        "with reduced blink and contact-lens wear. Clinical features: "
+        "bilateral burning, gritty foreign-body sensation, transient "
+        "blur relieved by blinking, and worse late in the day. "
+        "Slit-lamp shows capped or telangiectatic lid margins, "
+        "thickened or absent meibum on gland expression, and rapid "
+        "tear break-up on fluorescein. Mx: warm compresses (mask "
+        "heated to 45 degrees for 10 minutes), lid hygiene with "
+        "diluted baby shampoo or commercial lid wipes, "
+        "preservative-free lubricants and omega-3 supplements. Oral "
+        "doxycycline for 6-12 weeks if inflammatory or "
+        "rosacea-driven. In-office thermal expression for refractory "
+        "disease. Note: dry-eye patients get told to use drops, but "
+        "MGD needs heat and lid hygiene first."
+    ),
+    "Corneal foreign body": (
+        "Superficial or embedded object on or in the cornea, usually "
+        "metallic from grinding, welding without eye protection or "
+        "wind-blown debris. Clinical features: acute unilateral "
+        "foreign-body sensation, tearing, photophobia and "
+        "blepharospasm. Slit-lamp shows the foreign body, often with "
+        "a rust ring around a metallic fragment and surrounding "
+        "infiltrate if delayed. Evert the upper lid to find subtarsal "
+        "foreign bodies. Ix: fluorescein stain, visual acuity, "
+        "examine for penetrating injury (Seidel test) and check for "
+        "intraocular foreign body on Xray or CT if the history "
+        "suggests high-speed impact (grinding, hammering metal on "
+        "metal). Mx: topical anaesthetic to allow examination, remove "
+        "with a 25-gauge needle bevel-up or foreign-body burr under "
+        "slit-lamp magnification, then chloramphenicol ointment and "
+        "cycloplegic drops for comfort. Review in 24-48 hours. Refer "
+        "if central, deep, infiltrate present or intraocular "
+        "penetration suspected. Update tetanus. Note: a "
+        "normal-looking eye after grinding metal without goggles is "
+        "intraocular foreign body until CT rules it out."
+    ),
+    "Cystoid macular oedema": (
+        "Fluid accumulation in cystic spaces at the fovea, giving a "
+        "petalloid pattern on fluorescein angiography. Causes: "
+        "post-cataract surgery (Irvine-Gass syndrome, peaks at 4-6 "
+        "weeks), diabetic retinopathy, retinal vein occlusion, "
+        "uveitis, epiretinal membrane and intraocular medication "
+        "toxicity (prostaglandin analogues, latanoprost). Clinical "
+        "features: gradual central vision blur and metamorphopsia "
+        "weeks after cataract surgery or in a known retinal disease. "
+        "Slit-lamp fundus shows loss of the foveal reflex and cystic "
+        "thickening. Ix: OCT is the standard - shows intraretinal "
+        "cystic spaces and increased central thickness; fluorescein "
+        "angiography if diagnosis unclear. Mx: topical NSAID "
+        "(ketorolac) plus topical steroid for Irvine-Gass syndrome "
+        "for 4-6 weeks; intravitreal steroid or anti-VEGF if "
+        "unresponsive. Treat the underlying disease in secondary CMO. "
+        "Stop offending prostaglandin drop. Note: blurred vision at "
+        "week 4-6 after cataract surgery in an otherwise clear eye is "
+        "Irvine-Gass - do an OCT."
+    ),
+    "Globe rupture": (
+        "Full-thickness break in the corneal or scleral wall from "
+        "blunt or penetrating trauma; a sight-threatening emergency. "
+        "Causes: blunt trauma raises intraocular pressure and "
+        "ruptures the sclera at its weakest points (limbus, muscle "
+        "insertions, optic nerve); penetrating trauma from sharp "
+        "objects or high-velocity fragments. Clinical features: "
+        "severe vision loss, peaked or teardrop pupil pointing to the "
+        "rupture site, prolapsed iris (dark plug on sclera), shallow "
+        "anterior chamber, hyphaema and a soft eye. Do not measure "
+        "IOP. Ix: same-day ophthalmology and CT orbits with fine cuts "
+        "(no MRI if metallic foreign body suspected). Never perform "
+        "B-scan. Mx: rigid eye shield (never a patch), nil by mouth, "
+        "analgesia, anti-emetics, IV ceftazidime plus vancomycin, "
+        "tetanus prophylaxis and same-day theatre for primary "
+        "closure. Note: never touch, patch or measure IOP on a "
+        "suspected ruptured globe - shield and refer."
+    ),
+    "Sympathetic ophthalmia": (
+        "Bilateral granulomatous panuveitis triggered days to years "
+        "after penetrating injury or intraocular surgery to one eye. "
+        "The injured (exciting) eye sensitises the immune system "
+        "against retinal antigens, which then attack the fellow "
+        "(sympathising) eye. Rare but sight-threatening. Clinical "
+        "features: bilateral photophobia, floaters, blurred vision, "
+        "deep aching pain and redness. Slit-lamp shows mutton-fat "
+        "keratic precipitates, anterior chamber cells, vitritis and "
+        "Dalen-Fuchs nodules on fundoscopy. Onset ranges from 2 weeks "
+        "to decades after the inciting event, peak in the first 3 "
+        "months. Ix: same-day ophthalmology; OCT, fluorescein "
+        "angiography and clinical picture support the diagnosis - "
+        "biopsy rarely needed. Mx: high-dose oral prednisolone 1 "
+        "mg/kg tapered over months, with steroid-sparing "
+        "immunosuppression (methotrexate, azathioprine, mycophenolate "
+        "or biologic). Consider enucleation of a blind painful "
+        "exciting eye within 2 weeks of injury as prevention - "
+        "controversial once sympathising eye is affected. Note: any "
+        "new red painful eye in a patient with a prior penetrating "
+        "injury or vitrectomy is sympathetic ophthalmia until proven "
+        "otherwise."
+    ),
+    "Ototoxicity": (
+        "Drug-induced cochlear or vestibular injury, often permanent. "
+        "Causes: aminoglycosides (gentamicin, tobramycin), cisplatin, "
+        "loop diuretics at high IV dose, vancomycin, macrolides, "
+        "salicylates and quinine. Aminoglycosides preferentially "
+        "damage outer hair cells in the basal turn (high-frequency "
+        "loss first) and can also produce bilateral vestibulopathy. "
+        "Risk factors: renal impairment, prolonged course, concurrent "
+        "loop diuretic, prior noise exposure and mitochondrial "
+        "m.1555A>G mutation (profound loss after a single gentamicin "
+        "dose). Features: tinnitus and high-frequency SNHL, "
+        "oscillopsia and unsteadiness if vestibular. Ix: baseline and "
+        "serial audiometry, trough drug levels, renal function. Mx: "
+        "stop or dose-reduce the offending drug, ENT and audiology "
+        "referral, hearing aids or cochlear implant for severe loss. "
+        "Note: ask about family history of aminoglycoside deafness "
+        "before dosing - a single dose can be catastrophic in "
+        "carriers."
+    ),
+    "Bullous myringitis": (
+        "Painful vesicular inflammation of the tympanic membrane, "
+        "usually viral or Mycoplasma-associated, occurring during "
+        "URTI or influenza. Distinct from otitis media in that the "
+        "middle ear is often uninvolved and hearing is largely "
+        "preserved. Features: sudden severe otalgia, blood-stained "
+        "otorrhoea if bullae rupture, haemorrhagic bullae on the TM "
+        "with the deep membrane visible through them. Hearing loss, "
+        "if present, is usually mild conductive. Ix: otoscopy is "
+        "diagnostic, audiometry if hearing is affected. Mx: analgesia "
+        "(paracetamol plus ibuprofen), topical local anaesthetic "
+        "drops, oral amoxicillin if concurrent otitis media or "
+        "systemic features, macrolide if Mycoplasma suspected. Note: "
+        "pain out of proportion to otoscopy in a child with a URTI - "
+        "lift the light, look for the bullae."
+    ),
+    "Serous otitis media": (
+        "Middle-ear effusion without acute infection (also known as "
+        "otitis media with effusion or glue ear). Peaks age 2-5 with "
+        "Eustachian tube dysfunction, adenoidal hypertrophy or "
+        "post-URTI. Aboriginal and Torres Strait Islander children "
+        "have much higher prevalence and earlier onset. Features: "
+        "conductive hearing loss, speech and language delay, "
+        "inattention, dull retracted TM with air-fluid level or amber "
+        "effusion, reduced mobility on pneumatic otoscopy. Ix: "
+        "otoscopy, tympanometry (type B trace), audiometry and "
+        "speech-language assessment if persisting. Mx: watchful "
+        "waiting for three months (most resolve); refer ENT for "
+        "grommets if bilateral effusion persists with hearing loss "
+        "over 25 dB or language delay. Adenoidectomy is added for "
+        "recurrence. Note: a unilateral persistent effusion in an "
+        "adult mandates nasopharyngoscopy for nasopharyngeal "
+        "carcinoma."
+    ),
+    "Acoustic trauma": (
+        "Cochlear injury from a brief intense sound exposure "
+        "(gunshot, explosion, airbag deployment). Distinct from "
+        "noise-induced hearing loss which follows chronic exposure. "
+        "Mechanism: mechanical shearing of stereocilia on outer hair "
+        "cells at the basal turn, sometimes with membranous rupture. "
+        "Features: sudden hearing loss, tinnitus, aural fullness and "
+        "vertigo if the vestibular apparatus is involved. May be "
+        "unilateral (ear closer to source) or bilateral. Ix: "
+        "audiogram shows a notch at 4 kHz that widens with severity, "
+        "tympanogram to exclude TM rupture. Mx: remove from exposure, "
+        "high-dose oral prednisolone started within 72 hours (per "
+        "sudden SNHL protocols), audiology follow-up. Hearing aids "
+        "for persistent loss. Note: hearing protection is prevention; "
+        "workplace SafeWork exposure limit is 85 dB(A) over 8 hours "
+        "in Australia."
+    ),
+    "Cerumen management": (
+        "Removal of impacted earwax that causes symptoms or blocks "
+        "otoscopy or audiology. Not every wax needs removal - only if "
+        "symptomatic (hearing loss, itch, pain, tinnitus) or "
+        "preventing needed examination. Mx: use cerumenolytics for "
+        "3-5 days (docusate, olive oil, sodium bicarbonate 5%) "
+        "followed by irrigation with body-warm water; microsuction "
+        "under direct vision (preferred if TM perforation, prior ear "
+        "surgery, only-hearing ear or diabetes); manual curette by "
+        "trained clinician. Contraindications to irrigation: known or "
+        "suspected TM perforation, grommets in situ, previous ear "
+        "surgery, recurrent otitis externa. Complications: otitis "
+        "externa, TM perforation, vertigo from cold water, canal "
+        "trauma. Note: no cotton buds - they push wax deeper and "
+        "injure the canal; document TM status before and after "
+        "irrigation."
+    ),
+    "Dix-Hallpike manoeuvre": (
+        "Bedside diagnostic manoeuvre for posterior canal BPPV. "
+        "Technique - patient sitting on couch, head turned 45 degrees "
+        "to the test side; rapidly lower to supine with head extended "
+        "20 degrees below horizontal and maintained turned; observe "
+        "eyes for 30-60 seconds. A positive response shows upbeating "
+        "torsional nystagmus (fast phase toward the downward ear) "
+        "with latency 5-20 seconds, duration under 60 seconds, and "
+        "fatigues on repeat testing. Vertigo reproduces the "
+        "presenting symptom, and a right-sided positive identifies "
+        "right posterior canal BPPV treated with a right Epley. "
+        "Cautions: cervical spine disease, vertebrobasilar "
+        "insufficiency, severe cardiac or morbid obesity - consider "
+        "side-lying (Semont) test instead. Ix: negative Dix-Hallpike "
+        "with typical history suggests horizontal canal BPPV, test "
+        "with supine roll. Note: no nystagmus visible does not "
+        "exclude BPPV, use Frenzel goggles or video-oculography when "
+        "available."
+    ),
+    "Epley manoeuvre": (
+        "Canalith repositioning procedure for posterior canal BPPV, "
+        "first-line treatment after positive Dix-Hallpike. Technique "
+        "for right-sided BPPV - start in Dix-Hallpike position with "
+        "head hanging right, hold 30 seconds; rotate head 90 degrees "
+        "to the left, hold 30 seconds; roll body onto left side while "
+        "turning head another 90 degrees so nose points down at "
+        "floor, hold 30 seconds; sit up with head still turned left, "
+        "then face forward. Each step held until nystagmus and "
+        "vertigo settle. Resolution rate 70-90% after one to three "
+        "sessions. Home Brandt-Daroff exercises taught for "
+        "maintenance and for patients who cannot access clinic "
+        "follow-up. Ix: reassess with Dix-Hallpike at 1-2 weeks. Mx: "
+        "refer ENT if refractory after three sessions or atypical "
+        "features. Note: post-manoeuvre positional restrictions (no "
+        "supine, no head tilt) have poor evidence and are no longer "
+        "routinely advised."
+    ),
+    "Vestibular migraine": (
+        "Recurrent vertigo attacks meeting Barany Society criteria: "
+        "at least five episodes lasting 5 minutes to 72 hours, a "
+        "personal or family history of migraine, and at least half "
+        "the episodes accompanied by migrainous features (headache, "
+        "photophobia, phonophobia, visual aura). One of the commonest "
+        "causes of episodic vertigo, often misdiagnosed as Meniere or "
+        "recurrent BPPV. Triggers: sleep loss, dehydration, hormonal "
+        "cycles, aged cheese, caffeine, red wine and stress. "
+        "Features: spontaneous or positional vertigo, motion "
+        "intolerance, photophobia, headache may lag or be absent. Ix: "
+        "clinical; audiometry to exclude Meniere; MRI if focal signs "
+        "or first attack. Mx: trigger diary and avoidance; acute "
+        "triptan; prophylaxis with propranolol, amitriptyline or "
+        "topiramate (per eTG migraine). Note: hearing loss is not a "
+        "feature - reconsider Meniere if audiogram is abnormal."
+    ),
+    "Non-allergic rhinitis": (
+        "Chronic rhinitis without evidence of IgE-mediated allergy. "
+        "Subtypes: vasomotor (autonomic), gustatory, hormonal "
+        "(pregnancy, hypothyroidism), atrophic, occupational, "
+        "drug-induced, and NARES (non-allergic rhinitis with "
+        "eosinophilia). Features: nasal congestion, rhinorrhoea, "
+        "post-nasal drip; less itch, sneezing and conjunctivitis than "
+        "allergic rhinitis; adult onset without seasonal pattern; "
+        "triggers include cold air, strong smells, spicy food, "
+        "alcohol. Ix: clinical; skin-prick or specific IgE negative; "
+        "nasal smear may show eosinophils in NARES. Mx: trigger "
+        "avoidance; intranasal corticosteroid; intranasal ipratropium "
+        "for rhinorrhoea-predominant; intranasal antihistamine "
+        "(azelastine) for congestion; saline irrigation. Note: think "
+        "medication cause - decongestant sprays over five days, "
+        "cocaine, antihypertensives (ACE, beta-blocker, "
+        "alpha-blocker) and PDE5 inhibitors."
+    ),
+    "Rhinitis medicamentosa": (
+        "Rebound nasal congestion from prolonged use of topical "
+        "decongestant sprays (oxymetazoline, xylometazoline, "
+        "phenylephrine). Occurs after 5-10 days of use as "
+        "alpha-adrenoceptors downregulate. Features: worsening "
+        "congestion despite continued spray use, beefy-red oedematous "
+        "nasal mucosa on rhinoscopy, no relief from usual "
+        "medications. Often patient hides use and buys OTC. Ix: "
+        "clinical, careful medication history including OTC and "
+        "herbals. Mx: stop the offending spray abruptly (or wean one "
+        "nostril at a time in severe cases); intranasal "
+        "corticosteroid (mometasone or budesonide) plus saline "
+        "irrigation for 4-6 weeks; short course oral prednisolone for "
+        "severe congestion; treat any underlying rhinitis. Note: "
+        "patients often relapse - counsel that decongestant sprays "
+        "are three-day drugs only, not chronic use, and offer a nasal "
+        "steroid as the maintenance alternative."
+    ),
+    "Anterior epistaxis": (
+        "Nosebleed from Little's area (Kiesselbach plexus) on the "
+        "anterior nasal septum, accounting for over 90% of cases. "
+        "Causes: nose picking, dry air, low-humidity heating, URTI, "
+        "allergic rhinitis, intranasal steroid use, cocaine, trauma, "
+        "and coagulopathy. Features: unilateral bleed from the front "
+        "of the nose, usually self-limiting. Ix: clinical; FBC and "
+        "coagulation if recurrent, on anticoagulant or heavy bleed. "
+        "Mx: sit forward and pinch the soft cartilaginous nose for "
+        "15-20 minutes continuously, breathe through the mouth; if "
+        "uncontrolled, apply topical vasoconstrictor (co-phenylcaine "
+        "or oxymetazoline); silver nitrate cautery to the identified "
+        "bleeding point (never bilateral - septal perforation risk); "
+        "anterior nasal packing (Rapid Rhino, Merocel) if cautery "
+        "fails. Prescribe topical antibiotic ointment (chlorsig or "
+        "mupirocin) for prevention. Note: pack in situ needs "
+        "prophylactic antibiotics only if immunocompromised or over "
+        "48 hours."
+    ),
+    "Posterior epistaxis": (
+        "Bleeding from posterior nasal cavity, usually the "
+        "sphenopalatine artery. Under 10% of nosebleeds but high "
+        "morbidity - brisker, bilateral or into the oropharynx, and "
+        "often in older patients on anticoagulants. Features: blood "
+        "dripping into the throat, unable to identify anterior "
+        "source, larger volume loss, sometimes haemodynamic "
+        "instability. Ix: flexible nasoendoscopy in ED, FBC, "
+        "coagulation, cross-match if significant loss. Mx: "
+        "resuscitate first - IV access, tranexamic acid, reverse "
+        "anticoagulation (PCC for warfarin, andexanet or PCC for DOAC "
+        "per local protocol); posterior pack with a double-balloon "
+        "device or Foley catheter; admit for observation. ENT for "
+        "sphenopalatine artery ligation or embolisation if packing "
+        "fails. Note: hypertension is common but rarely causal - "
+        "control it but do not delay control of the airway and blood "
+        "loss chasing a BP number."
+    ),
+    "Nasal foreign body": (
+        "Object lodged in the nasal cavity, commonest in children "
+        "under 5. Common items include beads, small toys, food, "
+        "paper, and dangerously button batteries and paired magnets. "
+        "Features: unilateral foul purulent nasal discharge in a "
+        "child (pathognomonic), unilateral epistaxis, sneezing or "
+        "mouth breathing. Battery or magnet may present with septal "
+        "necrosis in hours. Ix: anterior rhinoscopy with good light; "
+        "imaging rarely needed unless retained or radiodense; "
+        "suspected battery is a time-critical emergency. Mx: "
+        "cooperative child with anterior visible object - "
+        "positive-pressure 'mother's kiss', suction or forceps under "
+        "direct vision; sedation and ENT for uncooperative child or "
+        "posterior object. Button battery removal within hours by ENT "
+        "under GA. Antibiotics not needed after removal unless "
+        "established sinusitis. Note: unilateral nasal discharge in a "
+        "child is a foreign body until proven otherwise."
+    ),
+    "Septal perforation": (
+        "Hole through the cartilaginous or bony nasal septum. Causes: "
+        "iatrogenic (septal surgery, cautery, packing), intranasal "
+        "cocaine or amphetamine, nose picking, chronic intranasal "
+        "steroid or decongestant, granulomatosis with polyangiitis, "
+        "cocaine-associated midline destructive lesion, syphilis, TB, "
+        "sarcoid, trauma. Features: whistling on inspiration, "
+        "crusting, recurrent epistaxis, nasal obstruction, "
+        "saddle-nose deformity if large or cartilage-collapsing. Ix: "
+        "anterior rhinoscopy and nasoendoscopy; ANCA, ACE, syphilis "
+        "and TB serology if aetiology unclear; biopsy of edge if "
+        "vasculitis suspected. Mx: nasal saline irrigation and "
+        "petroleum jelly for crusting, treat the underlying cause and "
+        "stop the offending substance; septal button prosthesis for "
+        "symptom relief; surgical closure for selected perforations "
+        "under 2 cm. Note: always ask about cocaine and check ANCA - "
+        "do not miss GPA masquerading as chronic rhinitis."
+    ),
+    "Invasive fungal sinusitis": (
+        "Life-threatening angio-invasive fungal infection of "
+        "paranasal sinuses in immunocompromised hosts. Causes: "
+        "Mucorales (Rhizopus, Mucor) and Aspergillus in diabetic "
+        "ketoacidosis, haematological malignancy, post-transplant, "
+        "prolonged neutropenia or steroid use. Features: rapid facial "
+        "pain, fever, black necrotic eschar on turbinate or palate, "
+        "orbital swelling, cranial neuropathies, altered mental "
+        "state. Progression to cavernous sinus and brain in hours to "
+        "days. Ix: urgent nasoendoscopy with biopsy for histology "
+        "(broad non-septate hyphae in mucormycosis) and culture; MRI "
+        "face and orbit; blood glucose, ketones, FBC. Mx: aggressive "
+        "surgical debridement of necrotic tissue, IV liposomal "
+        "amphotericin B first line, isavuconazole or posaconazole as "
+        "adjunct or step-down; reverse the underlying "
+        "immunocompromise (correct DKA, taper steroids). Note: "
+        "mortality remains 40-80% - suspect early in any diabetic "
+        "with unilateral facial pain and image the same day."
+    ),
+    "Centor criteria": (
+        "Older clinical rule for streptococcal pharyngitis risk. "
+        "Criteria - one point each for tonsillar exudate, tender "
+        "anterior cervical lymphadenopathy, fever over 38 degrees, "
+        "and absence of cough. Modified Centor (McIsaac) adds a point "
+        "for age 3-14 and subtracts a point for age over 44. A score "
+        "of 0-1 means low risk (no test or antibiotic), 2-3 warrants "
+        "throat swab or rapid antigen, and 4-5 makes empiric "
+        "antibiotic reasonable while still considering testing. "
+        "Australian practice per eTG reserves antibiotics for "
+        "Aboriginal and Torres Strait Islander patients or those from "
+        "other populations at high acute rheumatic fever risk "
+        "regardless of score, and treats confirmed Strep A more "
+        "selectively in low-risk populations. Ix: throat swab for "
+        "culture remains reference standard; rapid antigen testing "
+        "has good specificity, imperfect sensitivity. Mx: "
+        "phenoxymethylpenicillin as per FeverPAIN. Note: FeverPAIN "
+        "has largely replaced Centor in UK NICE and many Australian "
+        "primary-care guidelines; know both."
+    ),
+    "Adenoid hypertrophy": (
+        "Enlargement of the nasopharyngeal (pharyngeal) tonsil, "
+        "physiological in children 2-8 and regressing in adolescence. "
+        "Persistent enlargement causes chronic nasal obstruction. "
+        "Features: mouth breathing, snoring, hyponasal speech, "
+        "chronic rhinorrhoea, recurrent otitis media with effusion, "
+        "obstructive sleep apnoea, adenoid facies (long face, open "
+        "mouth, high-arched palate) and dental malocclusion. Ix: "
+        "history and lateral neck X-ray or nasoendoscopy for airway "
+        "assessment; polysomnography if OSA suspected; audiometry and "
+        "tympanometry if hearing concerns. Mx: intranasal "
+        "corticosteroid for 6-12 weeks may shrink adenoids and "
+        "relieve symptoms; adenoidectomy for persistent obstruction, "
+        "OSA, recurrent otitis media with effusion or failure of "
+        "medical therapy. Often combined with grommets or "
+        "tonsillectomy. Note: unilateral adenoid mass in an adult or "
+        "asymmetric enlargement mandates biopsy for lymphoma or "
+        "nasopharyngeal carcinoma."
+    ),
+    "Laryngopharyngeal reflux": (
+        "Reflux of gastric contents into the upper aero-digestive "
+        "tract, distinct from GORD in symptom pattern. Features: "
+        "chronic throat clearing, globus sensation, hoarseness, "
+        "chronic cough, post-nasal drip sensation, dysphonia, mild "
+        "dysphagia; heartburn is often absent (silent reflux). Reflux "
+        "Symptom Index over 13 is suggestive. Ix: laryngoscopy shows "
+        "posterior laryngitis, arytenoid oedema, interarytenoid "
+        "pachydermia, vocal fold oedema; 24-hour dual-probe "
+        "pH-impedance monitoring is definitive if diagnosis unclear. "
+        "Mx: lifestyle (weight loss, elevate head of bed, avoid late "
+        "meals, reduce alcohol, coffee and spicy food); PPI twice "
+        "daily for 8-12 weeks (trial then reassess per PBS); speech "
+        "pathology for vocal hygiene. Note: under-response to PPI is "
+        "common - reconsider the diagnosis and think functional "
+        "laryngeal disorder, vocal cord dysfunction or muscle tension "
+        "dysphonia."
+    ),
+    "Pleomorphic adenoma": (
+        "Commonest salivary gland tumour, 80% arising in the parotid. "
+        "Benign but with malignant transformation potential "
+        "(carcinoma ex pleomorphic adenoma) if long-standing, and "
+        "high recurrence if incompletely excised (multifocal "
+        "spillage). Features: slow-growing, painless, firm, mobile "
+        "mass in the tail of parotid or submandibular gland; no "
+        "facial nerve weakness (that suggests malignancy); often "
+        "present for years before assessment. Ix: ultrasound-guided "
+        "fine-needle aspiration cytology (avoid core biopsy in "
+        "parotid - facial nerve risk and tract seeding); MRI for "
+        "deep-lobe and parapharyngeal extension. Mx: superficial "
+        "parotidectomy with facial nerve preservation for parotid "
+        "tumours; enucleation is inadequate (high recurrence); "
+        "submandibular gland excision for submandibular lesions. "
+        "Note: any facial nerve palsy, rapid growth, pain, fixation "
+        "or cervical lymphadenopathy converts the working diagnosis "
+        "to malignant salivary tumour until proven otherwise."
+    ),
+    "Warthin tumour": (
+        "Papillary cystadenoma lymphomatosum - second commonest "
+        "benign parotid tumour, strongly associated with smoking and "
+        "often bilateral or multifocal (10-15%). Almost exclusively "
+        "parotid, typically in the tail. Features: slow-growing, "
+        "painless, soft to cystic mass in an older male smoker; may "
+        "fluctuate in size with inflammation; facial nerve intact. "
+        "Ix: ultrasound shows well-defined hypoechoic cystic lesion; "
+        "FNA cytology shows oncocytic epithelium with lymphoid "
+        "stroma; technetium-99m pertechnetate scan shows uptake "
+        "(Warthin and oncocytoma are the hot parotid lesions). Mx: "
+        "observation is reasonable in older frail patients given "
+        "benign nature and low malignant potential; superficial "
+        "parotidectomy or extracapsular dissection if symptomatic, "
+        "growing or diagnostic uncertainty. Smoking cessation. Note: "
+        "bilateral parotid masses have a short differential - "
+        "Warthin, sarcoid, Sjogren, HIV-associated lymphoepithelial "
+        "cysts and lymphoma."
+    ),
+    "Temporomandibular joint dysfunction": (
+        "Umbrella term for pain and dysfunction of the masticatory "
+        "system, encompassing myofascial pain, disc displacement and "
+        "degenerative joint disease. Peak age 20-40, female "
+        "predominance. Risk factors: bruxism, malocclusion, stress "
+        "and anxiety, jaw trauma, connective tissue disease, chewing "
+        "gum. Features: preauricular pain worse with jaw movement, "
+        "clicking or crepitus, restricted mouth opening (under 35 "
+        "mm), morning stiffness, referred otalgia and headache, "
+        "masseter or temporalis tenderness. Ix: clinical; MRI for "
+        "suspected disc derangement not responding to conservative "
+        "care; CT if bony pathology. Mx: reassurance and education "
+        "(most self-limit); soft diet and jaw rest; heat and massage; "
+        "NSAIDs; occlusal splint from dentist; physiotherapy and "
+        "stress management; refer maxillofacial for persistent "
+        "locking or degenerative disease. Note: 80% resolve with "
+        "conservative measures within 6 months - avoid irreversible "
+        "surgery early."
+    ),
+    "Nasopharyngeal carcinoma": (
+        "Squamous cell carcinoma arising in the nasopharynx "
+        "(Rosenmuller fossa), strongly linked to Epstein-Barr virus "
+        "and disproportionately affecting people of Southern Chinese, "
+        "South-East Asian and North African ancestry. Diet high in "
+        "preserved salted fish is a risk factor. Features: unilateral "
+        "middle-ear effusion in an adult (blocked Eustachian tube), "
+        "painless neck lump (level II-V, often posterior triangle), "
+        "unilateral epistaxis, nasal obstruction, cranial nerve "
+        "palsies (III-VI in cavernous sinus, IX-XII at skull base). "
+        "Ix: flexible nasoendoscopy with biopsy of Rosenmuller fossa; "
+        "MRI base of skull and neck; PET-CT for staging; EBV DNA in "
+        "plasma useful for prognosis and monitoring. Mx: radiotherapy "
+        "is the mainstay given radiosensitivity and anatomy; "
+        "concurrent chemoradiation for stage II or higher "
+        "(cisplatin-based). Note: an adult with a unilateral "
+        "persistent middle-ear effusion needs nasoendoscopy - not a "
+        "grommet - until nasopharyngeal carcinoma is excluded."
+    ),
+    "HPV-associated oropharyngeal cancer": (
+        "Squamous cell carcinoma of tonsil or base of tongue driven "
+        "by high-risk HPV (mostly type 16), a rising epidemic "
+        "distinct from smoking-and-alcohol SCC. Younger patients, "
+        "often non-smokers, better prognosis stage-for-stage. "
+        "Features: painless cervical lymphadenopathy (frequently the "
+        "presenting sign, sometimes cystic and misdiagnosed as "
+        "branchial cyst in adults), sore throat, dysphagia, referred "
+        "otalgia, muffled voice, tonsillar asymmetry or ulceration. "
+        "Ix: flexible nasoendoscopy with biopsy; FNA of neck node; "
+        "p16 immunohistochemistry (surrogate for HPV) and HPV "
+        "testing; MRI or PET-CT for staging. AJCC 8th edition stages "
+        "HPV-related disease separately. Mx: chemoradiation or "
+        "transoral robotic surgery per MDT; treatment de-escalation "
+        "trials ongoing. Prevention: HPV vaccination via Australian "
+        "NIP (Gardasil 9 at age 12-13 for all genders). Note: always "
+        "aspirate a cystic neck mass in an adult - cystic metastasis "
+        "from tonsil is common and misdiagnosed."
+    ),
+    "Angular cheilitis": (
+        "Inflammation at the oral commissures, often chronic and "
+        "bilateral. Causes: candidal or staphylococcal infection in a "
+        "moist skin fold; risk factors include ill-fitting dentures, "
+        "loss of vertical dimension, drooling, iron deficiency, B12 "
+        "or folate deficiency, riboflavin deficiency, diabetes, "
+        "immunosuppression, atopic or seborrhoeic dermatitis, "
+        "isotretinoin and lip-lick habit. Features: erythema, "
+        "fissuring, crusting and pain at the mouth corners, sometimes "
+        "with pustules. Ix: clinical; swab if resistant to treatment; "
+        "FBC, ferritin, B12, folate and glucose if systemic cause "
+        "suspected; consider HIV in unusual cases. Mx: correct "
+        "nutritional deficiency; treat candidiasis with topical "
+        "miconazole (which also covers Gram-positives) or nystatin; "
+        "add hydro-cortisone 1% if inflammation prominent; adjust "
+        "dentures. Note: bilateral persistent cheilitis with "
+        "glossitis - check iron and B12 (Plummer-Vinson) before "
+        "repeating antifungal courses."
+    ),
+    "Geographic tongue": (
+        "Benign migratory glossitis - well-demarcated red atrophic "
+        "patches with white raised borders on the dorsal tongue, "
+        "changing shape and position over days to weeks. Prevalence "
+        "1-3%, familial, associated with psoriasis, atopy and "
+        "fissured tongue. Features: usually asymptomatic; some "
+        "patients report burning or sensitivity to spicy, acidic or "
+        "hot foods; lesions come and go without pattern; no "
+        "ulceration. Ix: clinical, no biopsy needed if classical "
+        "appearance. Consider iron, B12, folate and zinc if atypical "
+        "or symptomatic; swab for candida if white component is "
+        "predominant. Mx: reassurance; avoid triggers; topical "
+        "anaesthetic (2% lignocaine gel) for symptomatic episodes; "
+        "topical corticosteroid gel for persistent symptomatic "
+        "lesions; correct any deficiency. Note: persistent solitary "
+        "red patch that does not migrate is not geographic tongue - "
+        "biopsy for erythroplakia or SCC."
+    ),
+    "Silent thyroiditis": (
+        "Painless destructive thyroiditis with the same triphasic "
+        "course as postpartum thyroiditis but unrelated to pregnancy. "
+        "Aetiology: autoimmune lymphocytic infiltration; drug "
+        "triggers include interferon-alpha, amiodarone, lithium and "
+        "immune checkpoint inhibitors. Clinical features: painless "
+        "small firm goitre, transient thyrotoxicosis then "
+        "hypothyroidism over 3 to 6 months. Ix: TSH, free T4, TPO "
+        "antibodies (often positive) and low radioiodine uptake "
+        "distinguishing it from Graves; ESR is normal unlike De "
+        "Quervain. Mx: beta-blocker for symptoms, levothyroxine if "
+        "symptomatic hypothyroid phase; thionamides are ineffective "
+        "as hormone leak is not synthesis-driven. Note: painless "
+        "goitre plus low uptake plus normal ESR is silent thyroiditis "
+        "until proven otherwise."
+    ),
+    "Amiodarone-induced thyrotoxicosis": (
+        "Thyrotoxicosis in about 3 percent of Australian amiodarone "
+        "users, iodine-rich drug driving two mechanisms. Type 1: "
+        "iodine-induced hyperthyroidism in pre-existing nodular "
+        "goitre or latent Graves, with normal or increased "
+        "vascularity on colour Doppler. Type 2: destructive "
+        "thyroiditis in a normal gland, reduced vascularity and often "
+        "self-limiting. Clinical features: worsening arrhythmia, "
+        "weight loss, heat intolerance, tremor; masked by amiodarone "
+        "beta-blockade so presentation can be subtle. Ix: TSH, free "
+        "T4 and T3, TSH receptor antibody, thyroid colour Doppler; "
+        "radioiodine uptake is usually suppressed regardless of type. "
+        "Mx: carbimazole for Type 1, prednisolone for Type 2, "
+        "combined if mixed; stopping amiodarone rarely helps acutely "
+        "given 60 day half-life so continue if cardiac indication "
+        "demands. Note: colour Doppler and steroid response separate "
+        "the types when uptake scan is uninformative."
+    ),
+    "Sick euthyroid syndrome": (
+        "Adaptive changes in thyroid function tests during acute "
+        "non-thyroidal illness, seen in most ICU patients and many "
+        "medical inpatients. Mechanism: reduced peripheral T4 to T3 "
+        "conversion, increased reverse T3, cytokine-mediated TSH "
+        "suppression and altered binding protein levels. Clinical "
+        "features: no thyroid symptoms; the abnormality is a lab "
+        "finding in an unwell patient. Ix: low T3 first, then low "
+        "free T4 and low or normal TSH as illness worsens; TSH "
+        "rebounds transiently during recovery. Do not measure thyroid "
+        "function in acute illness unless clinical suspicion of "
+        "primary thyroid disease is high. Mx: treat the underlying "
+        "illness; thyroid hormone replacement does not improve "
+        "outcomes and is not recommended by eTG. Note: repeat testing "
+        "6 weeks after recovery separates sick euthyroid from true "
+        "hypothyroidism."
+    ),
+    "Hypothyroidism in pregnancy": (
+        "Overt or subclinical hypothyroidism during pregnancy carries "
+        "risks of miscarriage, preterm birth, pre-eclampsia and "
+        "impaired offspring neurodevelopment. Aetiology: chronic "
+        "autoimmune Hashimoto thyroiditis is the leading cause in "
+        "iodine-replete Australia; iodine deficiency remains relevant "
+        "given borderline population intake. Ix: trimester-specific "
+        "TSH reference ranges (first trimester upper limit around 2.5 "
+        "to 4.0 mIU/L per RANZCOG and ESA guidance), free T4 and TPO "
+        "antibodies. Mx: levothyroxine dose increase of about 25 to "
+        "30 percent as soon as pregnancy confirmed in known "
+        "hypothyroid women; initiate levothyroxine for overt "
+        "hypothyroidism and for TSH above 4 with positive TPO. Iodine "
+        "150 microgram daily supplement through pregnancy and "
+        "lactation per NHMRC. Recheck TSH every 4 weeks in first half "
+        "then once in third trimester. Note: pre-conception "
+        "optimisation matters more than any single trimester result."
+    ),
+    "Hypopituitarism": (
+        "Deficiency of one or more anterior pituitary hormones, "
+        "sometimes with posterior involvement. Aetiology: pituitary "
+        "adenoma or its treatment (surgery, radiotherapy), Sheehan "
+        "syndrome, apoplexy, traumatic brain injury, infiltrative "
+        "disease (sarcoidosis, haemochromatosis, IgG4) and "
+        "lymphocytic hypophysitis including checkpoint inhibitor "
+        "induced. Clinical features: fatigue, hypotension, "
+        "amenorrhoea, loss of libido, cold intolerance and pallor; "
+        "adrenal crisis can dominate acute presentation. Ix: paired "
+        "9am cortisol with ACTH, free T4 with TSH, LH, FSH, "
+        "testosterone or oestradiol, prolactin, IGF-1 and pituitary "
+        "MRI; dynamic testing (insulin tolerance or short synacthen) "
+        "confirms borderline axes. Mx: hydrocortisone first, then "
+        "levothyroxine (never reverse order or precipitate crisis), "
+        "sex steroids and growth hormone as indicated; MedicAlert and "
+        "steroid stress dosing education. Note: check cortisol before "
+        "thyroxine every single time."
+    ),
+    "Multiple endocrine neoplasia type 2B": (
+        "Autosomal dominant RET codon 918 mutation with the earliest "
+        "and most aggressive medullary thyroid carcinoma of the MEN "
+        "syndromes, plus phaeochromocytoma but no "
+        "hyperparathyroidism. Clinical features: marfanoid habitus, "
+        "mucosal neuromas on lips and tongue, intestinal "
+        "ganglioneuromatosis (chronic constipation from infancy), and "
+        "medullary carcinoma often presenting in infancy or early "
+        "childhood. Ix: RET testing for codon 918, calcitonin and "
+        "CEA, plasma metanephrines. Mx: prophylactic total "
+        "thyroidectomy within the first year of life per "
+        "international guidelines followed in Australia, lifelong "
+        "surveillance for phaeochromocytoma from age 11, and genetic "
+        "counselling; most cases are de novo so family history is "
+        "often absent. Note: mucosal neuromas plus marfanoid habitus "
+        "in a child mandates urgent RET testing."
+    ),
+    "TSH-secreting pituitary adenoma": (
+        "Rare pituitary tumour producing autonomous TSH, accounting "
+        "for under 2 percent of pituitary adenomas but the classic "
+        "cause of central hyperthyroidism. Clinical features: goitre "
+        "with thyrotoxic symptoms (weight loss, tremor, atrial "
+        "fibrillation), sometimes visual field loss or headache from "
+        "mass effect, and cosecretion of growth hormone or prolactin "
+        "in a third. Ix: elevated free T4 and T3 with inappropriately "
+        "normal or high TSH, elevated alpha subunit with a raised "
+        "alpha-subunit to TSH molar ratio, pituitary MRI showing "
+        "macroadenoma in most, and TRH stimulation showing blunted "
+        "response. Exclude thyroid hormone resistance which shares "
+        "the biochemistry but has no adenoma. Mx: transsphenoidal "
+        "resection first line, somatostatin analogue (octreotide, "
+        "lanreotide) for residual or unresectable disease, "
+        "radiotherapy for persistent disease. Note: elevated TSH with "
+        "elevated free T4 is either TSHoma or resistance, never assay "
+        "artefact until proven."
+    ),
+    "Milk-alkali syndrome": (
+        "Triad of hypercalcaemia, metabolic alkalosis and acute "
+        "kidney injury from excess ingestion of calcium plus "
+        "absorbable alkali, now more often from calcium carbonate "
+        "supplements or antacids than the historical "
+        "milk-and-bicarbonate ulcer regimen. Aetiology: high calcium "
+        "load suppresses PTH and causes vasoconstriction and "
+        "natriuresis; alkalosis reduces calcium excretion in a "
+        "self-reinforcing loop. Clinical features: nausea, polyuria, "
+        "confusion and AKI in a patient taking calcium supplements "
+        "often with thiazide or vitamin D. Ix: corrected calcium, "
+        "bicarbonate, urea, creatinine, PTH (suppressed) and 25-OH "
+        "vitamin D; exclude malignancy and primary "
+        "hyperparathyroidism. Mx: stop calcium and alkali, isotonic "
+        "saline rehydration, loop diuretic only after volume "
+        "repletion; avoid bisphosphonates as PTH-independent "
+        "hypercalcaemia resolves with the offending agent. Note: "
+        "third most common cause of hypercalcaemia after malignancy "
+        "and primary hyperparathyroidism in Australian inpatients."
+    ),
+    "X-linked hypophosphataemia": (
+        "Most common inherited rickets, caused by PHEX mutation with "
+        "elevated circulating FGF23 driving renal phosphate wasting "
+        "and impaired calcitriol synthesis. Clinical features: bowing "
+        "of the legs after walking begins, short stature, dental "
+        "abscesses without caries, enthesopathy and "
+        "osteomalacia-related bone pain in adults. Ix: low serum "
+        "phosphate, inappropriately normal or low 1,25-OH vitamin D, "
+        "elevated ALP, elevated intact FGF23, and low tubular "
+        "reabsorption of phosphate; family history plus PHEX testing "
+        "confirm. Mx: paediatric care by endocrinology from "
+        "diagnosis; historical oral phosphate plus calcitriol "
+        "supplanted by burosumab (anti-FGF23 antibody) available on "
+        "PBS for eligible Australian children, monitored for "
+        "hyperphosphataemia and ectopic calcification. Note: rickets "
+        "with low phosphate but normal calcium and 25-OH vitamin D is "
+        "FGF23-driven until proven otherwise."
+    ),
+    "Severe hypertriglyceridaemia": (
+        "Fasting triglycerides above 10 mmol/L, a pancreatitis risk "
+        "and a signal for underlying secondary drivers. Aetiology: "
+        "poorly controlled diabetes, alcohol, oestrogens, retinoids, "
+        "atypical antipsychotics, protease inhibitors and "
+        "hypothyroidism layered on familial chylomicronaemia, "
+        "familial combined hyperlipidaemia or type III "
+        "dysbetalipoproteinaemia. Clinical features: eruptive "
+        "xanthomata, lipaemia retinalis, hepatosplenomegaly and acute "
+        "pancreatitis; the plasma is lipaemic on visual inspection. "
+        "Ix: fasting lipids, HbA1c, TSH, LFTs and lipase; "
+        "apolipoprotein and genetic testing where familial cause "
+        "suspected. Mx: address secondary causes (glycaemic control, "
+        "alcohol cessation, drug review), very low fat diet, fibrate "
+        "as first line pharmacotherapy per eTG (fenofibrate on PBS), "
+        "omega-3 ethyl esters as add-on; insulin infusion for "
+        "hypertriglyceridaemia-induced pancreatitis. Note: "
+        "cholesterol targets are secondary; the immediate risk is "
+        "pancreatitis above 10 mmol/L."
+    ),
+    "Cerebral salt wasting": (
+        "Renal sodium loss with volume contraction following acute "
+        "brain injury, most classically subarachnoid haemorrhage; "
+        "mimics SIADH biochemically but differs in volume status and "
+        "management. Mechanism: proposed brain natriuretic peptide "
+        "release and sympathetic disruption of proximal tubular "
+        "sodium reabsorption. Clinical features: hyponatraemia in a "
+        "neurosurgical patient with orthostatic hypotension, "
+        "tachycardia, reduced skin turgor and negative fluid balance. "
+        "Ix: low serum sodium, high urine sodium, high urine output, "
+        "elevated haematocrit and urea suggesting hypovolaemia, "
+        "unlike euvolaemic SIADH. Mx: isotonic saline plus salt "
+        "replacement, fludrocortisone in refractory cases; fluid "
+        "restriction (the SIADH treatment) worsens cerebral perfusion "
+        "and increases vasospasm risk. Note: volume status at the "
+        "bedside is the single lever separating this from SIADH."
+    ),
+    "Reset osmostat": (
+        "A subtype of SIADH where ADH release resets around a lower "
+        "plasma osmolality set-point, giving stable mild "
+        "hyponatraemia (usually 125 to 135 mmol/L). Aetiology: "
+        "chronic illness (malnutrition, tuberculosis, malignancy), "
+        "pregnancy (physiological reset around 130 to 135) and "
+        "quadriplegia. Clinical features: asymptomatic chronic "
+        "hyponatraemia with normal volume status and appropriate "
+        "dilution and concentration in response to water loading and "
+        "restriction. Ix: sodium remains stable across days despite "
+        "fluid variation; urine osmolality varies appropriately with "
+        "intake, distinguishing from classical SIADH where urine "
+        "remains inappropriately concentrated. Mx: no treatment; the "
+        "sodium will not correct and attempts risk osmotic "
+        "demyelination. Reassure and stop repeat testing. Note: "
+        "stable mild hyponatraemia in a chronically ill or pregnant "
+        "patient does not need fluid restriction."
+    ),
+    "Ectopic ACTH syndrome": (
+        "Cushing syndrome from non-pituitary ACTH secretion, most "
+        "commonly small cell lung carcinoma, bronchial carcinoid, "
+        "medullary thyroid carcinoma, phaeochromocytoma and "
+        "pancreatic neuroendocrine tumour. Clinical features: rapid "
+        "onset with weight loss rather than gain, profound proximal "
+        "myopathy, hypokalaemic alkalosis and severe "
+        "hyperpigmentation; classical Cushingoid habitus may be "
+        "absent due to speed of onset. Ix: elevated 24-hour urinary "
+        "free cortisol, failed low-dose dexamethasone suppression, "
+        "high ACTH; failed high-dose dexamethasone suppression "
+        "separates ectopic from pituitary Cushing (which usually "
+        "suppresses partially); inferior petrosal sinus sampling and "
+        "cross-sectional imaging or gallium-68 DOTATATE PET to find "
+        "the source. Mx: resect primary if possible; medical adrenal "
+        "blockade with metyrapone or ketoconazole while awaiting "
+        "definitive treatment; bilateral adrenalectomy for occult "
+        "source. Note: hypokalaemic alkalosis plus hyperpigmentation "
+        "plus weight loss is ectopic ACTH until proven."
+    ),
+    "Non-classical congenital adrenal hyperplasia": (
+        "Mild 21-hydroxylase deficiency presenting after childhood "
+        "with hyperandrogenism rather than salt wasting, an important "
+        "PCOS-mimic in Australian women of Ashkenazi, Mediterranean "
+        "or Middle Eastern background. Clinical features: premature "
+        "adrenarche or pubarche, hirsutism, acne, oligomenorrhoea, "
+        "subfertility and short adult stature from early growth-plate "
+        "closure. Ix: early follicular 8am 17-hydroxyprogesterone "
+        "above 6 nmol/L is screening positive; ACTH-stimulated 17-OHP "
+        "above 30 nmol/L is diagnostic; CYP21A2 genotyping confirms. "
+        "Mx: hirsutism and menstrual irregularity often respond to "
+        "combined oral contraceptive plus spironolactone as for PCOS; "
+        "low-dose hydrocortisone or prednisolone for symptoms or "
+        "subfertility, with genetic counselling before pregnancy. "
+        "Note: work up hirsute women with elevated 17-OHP as CAH not "
+        "PCOS; management diverges materially."
+    ),
+    "Waterhouse-Friderichsen syndrome": (
+        "Acute adrenal failure from bilateral haemorrhagic infarction "
+        "during fulminant sepsis, classically meningococcal but also "
+        "pneumococcal, streptococcal, staphylococcal and Haemophilus "
+        "sepsis. Mechanism: DIC-mediated microvascular thrombosis and "
+        "haemorrhage in the adrenal cortex. Clinical features: shock "
+        "out of proportion to sepsis, petechiae and purpura "
+        "fulminans, hypoglycaemia, hyponatraemia and abdominal or "
+        "flank pain from adrenal haemorrhage. Ix: blood cultures, "
+        "lumbar puncture if safe, coagulation and DIC screen, "
+        "cortisol (very low), CT abdomen showing enlarged "
+        "haemorrhagic adrenals. Mx: empiric IV ceftriaxone per eTG "
+        "meningococcal disease guidance, IV hydrocortisone 100 mg "
+        "stat then infusion, aggressive resuscitation and ICU "
+        "support; notify public health for meningococcal disease. "
+        "Note: purpura fulminans plus refractory shock plus "
+        "hypoglycaemia is adrenal haemorrhage until proven."
+    ),
+    "Atypical femoral fracture": (
+        "Transverse or short oblique subtrochanteric or diaphyseal "
+        "femoral fracture with minimal or no trauma, associated with "
+        "long-term bisphosphonate or denosumab therapy. Mechanism: "
+        "suppressed bone turnover impairs microdamage repair, "
+        "producing accumulated cortical stress fractures. Clinical "
+        "features: prodromal groin or thigh pain for weeks to months, "
+        "bilateral in up to 50 percent; fracture line often lateral "
+        "cortex with medial spike and cortical beaking. Ix: femoral "
+        "radiograph including contralateral side; MRI or isotope bone "
+        "scan for prodromal pain with normal x-ray. Mx: prophylactic "
+        "intramedullary nail for incomplete fracture, surgical "
+        "fixation for complete; stop the antiresorptive, optimise "
+        "vitamin D and calcium, consider teriparatide for healing per "
+        "specialist advice. Note: absolute risk remains low and hip "
+        "fracture prevention benefit outweighs harm; reassess "
+        "bisphosphonate duration at 5 years, denosumab indefinitely."
+    ),
+    "Denosumab rebound": (
+        "Rapid rebound of bone turnover with multiple vertebral "
+        "fractures within 3 to 18 months of stopping denosumab, a "
+        "distinct risk not shared by bisphosphonates. Mechanism: "
+        "antibody clears and RANKL-driven osteoclastogenesis "
+        "overshoots baseline, dissolving newly acquired bone. Risk "
+        "factors: prior vertebral fracture, longer treatment duration "
+        "and delayed or missed doses. Clinical features: sudden back "
+        "pain and height loss weeks after a missed 6-monthly dose. "
+        "Ix: spinal x-ray or MRI showing multiple new vertebral "
+        "fractures; CTX rises sharply. Mx: never stop denosumab "
+        "without transition to bisphosphonate (oral alendronate or IV "
+        "zoledronic acid) starting around the time the next denosumab "
+        "dose would have been due, per Australasian ANZBMS guidance; "
+        "treat established fractures with analgesia and bracing. "
+        "Note: missed denosumab dose is an urgent recall, not a "
+        "routine reminder."
+    ),
+    "Familial combined hyperlipidaemia": (
+        "Most common familial dyslipidaemia in Australians (about 1 "
+        "in 100) with variable elevations of LDL cholesterol, "
+        "triglycerides or both across affected relatives. Aetiology: "
+        "polygenic overproduction of apolipoprotein B-100 and VLDL in "
+        "hepatocytes; family members show different phenotypes at "
+        "different times. Clinical features: premature cardiovascular "
+        "disease, family history of early MI, occasional xanthomata "
+        "but usually no distinctive skin signs. Ix: fasting lipid "
+        "profile with apolipoprotein B (elevated), lipid profiles on "
+        "first-degree relatives, exclude secondary drivers (diabetes, "
+        "hypothyroidism, alcohol, oestrogens). Mx: lifestyle first, "
+        "then statin as first-line lipid therapy per eTG; add "
+        "ezetimibe or fibrate for combined elevation with "
+        "triglycerides above 5 mmol/L; cascade screen adult "
+        "relatives. Note: normal LDL in the proband does not exclude "
+        "the diagnosis; check apoB and screen the family."
+    ),
+    "Chylomicronaemia syndrome": (
+        "Severe hypertriglyceridaemia usually above 20 mmol/L due to "
+        "impaired chylomicron clearance, presenting with "
+        "pancreatitis, eruptive xanthomata, hepatosplenomegaly and "
+        "lipaemia retinalis. Aetiology: monogenic (familial "
+        "chylomicronaemia from LPL, APOC2 or GPIHBP1 mutation) or the "
+        "multifactorial form on background of uncontrolled diabetes, "
+        "alcohol, oestrogen therapy or drugs. Ix: fasting "
+        "triglycerides, lipaemic plasma on standing, lipase, glucose "
+        "and HbA1c, genetic panel for early-onset or refractory "
+        "cases. Mx: very low fat diet (below 15 percent energy), "
+        "abstinence from alcohol, glycaemic control, fibrate and "
+        "omega-3 ethyl esters, insulin infusion for "
+        "hypertriglyceridaemia-induced pancreatitis; volanesorsen "
+        "access is limited in Australia. Note: lipaemic serum on the "
+        "bench is a rapid clue and should trigger a triglyceride "
+        "level in any pancreatitis workup."
+    ),
+    "Fabry disease": (
+        "X-linked alpha-galactosidase A deficiency causing "
+        "accumulation of globotriaosylceramide across vascular "
+        "endothelium, kidney, heart and nervous system. Clinical "
+        "features: neuropathic pain crises in hands and feet from "
+        "childhood, angiokeratomas over lower trunk, hypohidrosis, "
+        "cornea verticillata, proteinuria progressing to end-stage "
+        "kidney disease, left ventricular hypertrophy and early "
+        "stroke; heterozygous females variably affected. Ix: "
+        "alpha-galactosidase A activity in males, GLA gene sequencing "
+        "in females, urine globotriaosylceramide, cardiac and renal "
+        "assessment. Mx: enzyme replacement (agalsidase alfa or beta) "
+        "or migalastat for amenable mutations, all on the Australian "
+        "Life Saving Drugs Program with strict criteria; ACE "
+        "inhibitor or ARB for proteinuria, anticoagulation for atrial "
+        "fibrillation, genetic counselling for pedigree. Note: "
+        "unexplained LVH, early stroke or proteinuria plus "
+        "acroparaesthesiae warrants alpha-galactosidase testing."
+    ),
+    "Homocystinuria": (
+        "Autosomal recessive cystathionine beta-synthase deficiency "
+        "with elevated plasma homocysteine and methionine; commonly "
+        "detected on Australian newborn screening. Clinical features: "
+        "marfanoid habitus with downward ectopia lentis "
+        "(distinguishes from Marfan upward), intellectual disability, "
+        "thromboembolism (venous and arterial from a young age), "
+        "osteoporosis and psychiatric disease. Ix: elevated plasma "
+        "total homocysteine and methionine, low cystine, urinary "
+        "homocystine positive, CBS enzyme activity or gene testing. "
+        "Mx: pyridoxine trial (some are B6-responsive), "
+        "methionine-restricted diet with cystine supplementation, "
+        "betaine to lower homocysteine, folate and B12 as cofactors, "
+        "aspirin for thromboprophylaxis in adults per metabolic "
+        "clinic; anaesthetic and pregnancy planning need specialist "
+        "input. Note: downward lens dislocation plus intellectual "
+        "disability plus thrombosis is homocystinuria until proven, "
+        "not Marfan."
+    ),
+    "Parathyroid carcinoma": (
+        "Rare cause (under 1 percent) of primary hyperparathyroidism "
+        "with distinctive severity. Aetiology: sporadic or syndromic "
+        "(HRPT2/CDC73 mutation, MEN 1, familial isolated "
+        "hyperparathyroidism). Clinical features: markedly elevated "
+        "calcium (often above 3.5 mmol/L) with PTH more than 5 to 10 "
+        "times upper limit, palpable neck mass in about 30 to 50 "
+        "percent (rare in benign adenoma), hoarseness from recurrent "
+        "laryngeal nerve invasion, and both bone and renal disease at "
+        "presentation. Ix: calcium, PTH, imaging (ultrasound, "
+        "sestamibi, 4D-CT), formal histology after resection with "
+        "capsular or vascular invasion for diagnosis; CDC73 germline "
+        "testing in young patients. Mx: en bloc resection with "
+        "ipsilateral thyroid lobectomy at first operation is critical "
+        "(re-operation carries worse outcomes); cinacalcet, denosumab "
+        "and IV bisphosphonate for refractory hypercalcaemia. Note: "
+        "PTH more than five times the upper limit warrants surgical "
+        "planning for possible carcinoma, not standard adenomectomy."
+    ),
+    "Iodine-induced hyperthyroidism": (
+        "Thyrotoxicosis triggered by iodine load (Jod-Basedow "
+        "phenomenon) in patients with underlying nodular goitre or "
+        "latent Graves. Aetiology: iodinated contrast, amiodarone, "
+        "topical povidone-iodine, kelp supplements, high-iodine "
+        "seaweed diet; occurs weeks to months after exposure. Risk "
+        "highest in iodine-deficient regions and older Australians "
+        "with long-standing multinodular goitre. Clinical features: "
+        "new-onset tremor, weight loss, atrial fibrillation, heat "
+        "intolerance often precipitating cardiac decompensation in "
+        "elderly. Ix: TSH suppressed, elevated free T4 and T3, TSH "
+        "receptor antibody negative in nodular disease, low "
+        "radioiodine uptake if excess iodine still present; urinary "
+        "iodine confirms load. Mx: carbimazole, beta-blocker for "
+        "symptoms, avoid further iodine exposure, definitive "
+        "management (surgery or radioiodine after iodine washout of "
+        "several months) once euthyroid. Note: check TSH before and "
+        "after iodinated contrast in patients with known nodular "
+        "goitre, especially over 65."
+    ),
+    "Thyroid hormone resistance": (
+        "Autosomal dominant defect of thyroid hormone receptor beta "
+        "(THRB) with reduced tissue responsiveness to T3, mimicking "
+        "TSHoma biochemically. Clinical features: goitre, mixed "
+        "phenotype with tachycardia and ADHD-like features coexisting "
+        "with growth delay and hearing loss; some patients clinically "
+        "euthyroid despite abnormal labs. Ix: elevated free T4 and T3 "
+        "with inappropriately normal or high TSH, but pituitary MRI "
+        "is normal, alpha subunit is normal and TRH stimulation shows "
+        "preserved response, distinguishing from TSHoma; THRB gene "
+        "testing confirms and family cascade often reveals other "
+        "affected members. Mx: usually observation as most tissues "
+        "compensate; beta-blocker for tachycardia, avoid unnecessary "
+        "thionamides and definitive thyroid ablation as these worsen "
+        "fatigue and growth outcomes; refer to endocrinology. Note: "
+        "family history plus normal MRI in an "
+        "elevated-TSH-with-elevated-T4 patient favours resistance "
+        "over TSHoma."
+    ),
+    "Nesidioblastosis": (
+        "Diffuse pancreatic beta-cell hyperfunction causing "
+        "endogenous hyperinsulinaemic hypoglycaemia in the absence of "
+        "a discrete insulinoma. Aetiology: congenital form in "
+        "neonates (KATP channel mutations, ABCC8, KCNJ11) and adult "
+        "form after Roux-en-Y gastric bypass (post-bariatric "
+        "hypoglycaemia). Clinical features: neuroglycopenic symptoms "
+        "1 to 3 hours post-prandially rather than fasting, "
+        "distinguishing it from insulinoma; recurrent confusion, "
+        "sweating, seizures. Ix: mixed-meal test reproducing "
+        "hypoglycaemia with elevated insulin and C-peptide, negative "
+        "sulfonylurea screen, imaging (CT, EUS, selective arterial "
+        "calcium stimulation) to exclude insulinoma; histology after "
+        "partial pancreatectomy shows islet cell hyperplasia. Mx: "
+        "low-carbohydrate small-meal diet, acarbose, diazoxide, "
+        "octreotide for adults; partial pancreatectomy in refractory "
+        "cases; neonatal cases often need near-total pancreatectomy. "
+        "Note: post-prandial hypoglycaemia after bariatric surgery is "
+        "nesidioblastosis until proven, not dumping."
+    ),
+    "Pseudo-Cushing syndrome": (
+        "Physiological or non-neoplastic hypercortisolism in alcohol "
+        "use disorder, severe obesity, depression, chronic kidney "
+        "disease, poorly controlled diabetes or pregnancy; clinically "
+        "and biochemically overlaps true Cushing syndrome. Clinical "
+        "features: central obesity, plethora, hypertension and "
+        "glucose intolerance in a patient with an obvious alternate "
+        "driver; classical striae and proximal myopathy less "
+        "prominent. Ix: 24-hour urinary free cortisol may be modestly "
+        "elevated, low-dose dexamethasone suppression may fail; the "
+        "discriminating tests are the dexamethasone-CRH stimulation "
+        "test (suppresses in pseudo-Cushing) and desmopressin "
+        "stimulation. Late-night salivary cortisol is often normal in "
+        "pseudo-Cushing. Mx: treat the driver (alcohol cessation, "
+        "depression, weight loss, glycaemic control) and repeat "
+        "testing after several months; refer to endocrinology if "
+        "biochemistry persists. Note: hypercortisolism biochemistry "
+        "in an active drinker is not Cushing syndrome until proven "
+        "abstinence has been documented."
+    ),
+    "Follicular thyroid carcinoma": (
+        "Second most common differentiated thyroid cancer (about 10 "
+        "to 15 percent of Australian thyroid cancers), spreading "
+        "haematogenously to lung and bone unlike papillary cancer's "
+        "lymphatic spread. Aetiology: iodine deficiency historically, "
+        "PAX8-PPARG fusion or RAS mutation, prior radiation exposure. "
+        "Clinical features: solitary thyroid nodule usually in a "
+        "woman aged 40 to 60; presentation with bone or lung "
+        "metastasis without cervical lymphadenopathy is "
+        "characteristic. Ix: ultrasound (TIRADS scoring), fine-needle "
+        "aspiration; cytology cannot separate follicular carcinoma "
+        "from adenoma as diagnosis requires capsular or vascular "
+        "invasion on surgical specimen (Bethesda IV requires "
+        "diagnostic lobectomy). Mx: hemithyroidectomy for "
+        "indeterminate lesions, total thyroidectomy plus radioiodine "
+        "ablation for confirmed carcinoma above 4 cm or with "
+        "invasion, TSH suppression with levothyroxine, thyroglobulin "
+        "surveillance. Note: bone metastasis as first presentation is "
+        "follicular until papillary is excluded."
+    ),
+    "Adrenoleukodystrophy": (
+        "X-linked peroxisomal disorder of very long chain fatty acid "
+        "beta-oxidation, causing adrenal insufficiency and "
+        "progressive demyelination. Aetiology: ABCD1 gene mutations "
+        "encoding a peroxisomal membrane transporter; variable "
+        "phenotypes even within a family. Clinical features: cerebral "
+        "childhood ALD (rapid dementia, spasticity, cortical "
+        "blindness in boys aged 4 to 8), adrenomyeloneuropathy in "
+        "adults (progressive spastic paraparesis, bladder "
+        "dysfunction, adrenal insufficiency) and Addison-only "
+        "phenotype. Female heterozygotes may develop milder "
+        "myeloneuropathy. Ix: elevated plasma very long chain fatty "
+        "acids (C24:0, C26:0), ABCD1 gene testing, brain MRI showing "
+        "symmetrical parieto-occipital demyelination, ACTH-stimulated "
+        "cortisol. Mx: hydrocortisone for adrenal component; "
+        "allogeneic haematopoietic stem cell transplant for early "
+        "cerebral form arrests progression; gene therapy emerging. "
+        "Note: any boy with Addison disease needs plasma very long "
+        "chain fatty acids checked."
+    ),
+    "Tophaceous gout": (
+        "Chronic urate crystal deposition producing palpable tophi in "
+        "joints, tendons and skin after years of untreated "
+        "hyperuricaemia. Aetiology: sustained serum urate above 0.42 "
+        "mmol/L from renal impairment, thiazide or loop diuretic, "
+        "alcohol, obesity or a purine-rich diet plus untreated "
+        "recurrent gout. Features: firm nodules over helix, "
+        "olecranon, MTP and finger IP joints (chalky white discharge "
+        "if ulcerated) plus chronic polyarticular pain with erosive "
+        "damage on plain film. Ix: serum urate (aim below 0.36 or "
+        "below 0.30 with tophi) and UEC, joint aspirate showing "
+        "negatively birefringent needles, dual-energy CT if diagnosis "
+        "unclear. Mx: allopurinol titrated from 50 mg daily up to 900 "
+        "mg guided by urate per eTG (febuxostat if intolerant) with "
+        "colchicine 500 mcg BD cover for six months during titration "
+        "and review of diuretics and alcohol. Note: tophi regress "
+        "once urate is held below target for a year."
+    ),
+    "Chondrocalcinosis": (
+        "Radiographic calcification of hyaline and fibrocartilage "
+        "from calcium pyrophosphate deposition, often asymptomatic "
+        "but the substrate for pseudogout attacks. Aetiology: age "
+        "above 60, prior joint injury, hyperparathyroidism, "
+        "haemochromatosis, hypomagnesaemia and hypophosphatasia. "
+        "Features: linear calcification of knee meniscus, triangular "
+        "fibrocartilage of wrist and symphysis pubis, may be an "
+        "incidental film finding or precede acute pseudogout. Ix: "
+        "plain films of knees, wrists and pelvis. Screen calcium, "
+        "magnesium, phosphate, ferritin and transferrin saturation, "
+        "PTH and TSH when found before age 55. Mx: no treatment for "
+        "the calcification itself, manage acute attacks with NSAID or "
+        "intra-articular steroid, colchicine 500 mcg BD for recurrent "
+        "attacks per eTG, treat any secondary cause. Note: young "
+        "chondrocalcinosis is haemochromatosis until proven "
+        "otherwise."
+    ),
+    "Hydroxyapatite deposition disease": (
+        "Periarticular or intra-articular deposition of basic calcium "
+        "phosphate crystals causing calcific tendinopathy or "
+        "destructive arthropathy, classically Milwaukee shoulder in "
+        "elderly women. Aetiology: idiopathic, chronic rotator cuff "
+        "tear, dialysis, hyperphosphataemia and connective tissue "
+        "disease. Features: acute severe shoulder or hip pain with "
+        "restricted motion, blood-stained non-inflammatory aspirate "
+        "with hydroxyapatite on alizarin red stain, radiographic "
+        "calcification of supraspinatus tendon or destructive "
+        "glenohumeral changes. Ix: plain film, ultrasound to localise "
+        "calcific deposit, aspirate to exclude sepsis and gout. Mx: "
+        "NSAID and physiotherapy, ultrasound-guided barbotage lavage "
+        "plus corticosteroid for calcific tendinopathy, glenohumeral "
+        "steroid injection for destructive form, arthroplasty for "
+        "end-stage joint. Note: crystals are not birefringent, so "
+        "light microscopy misses them."
+    ),
+    "Subacute cutaneous lupus erythematosus": (
+        "Non-scarring photosensitive lupus rash, strongly associated "
+        "with anti-Ro antibody and often drug-induced. Aetiology: "
+        "idiopathic in half, drug-induced by hydrochlorothiazide, "
+        "terbinafine, PPIs, TNF inhibitors and calcium channel "
+        "blockers, anti-Ro positive in 70 to 90 percent. Features: "
+        "annular or papulosquamous psoriasiform plaques on "
+        "sun-exposed upper back, chest and arms sparing the knuckles, "
+        "resolves without scarring but leaves dyspigmentation. Ix: "
+        "skin biopsy with direct immunofluorescence, ANA, anti-Ro and "
+        "anti-La, drug history including recent starts, FBC, UEC and "
+        "urinalysis to exclude systemic involvement. Mx: "
+        "photoprotection and withdraw any culprit drug (rash may take "
+        "months to settle), topical steroid or tacrolimus, "
+        "hydroxychloroquine first-line systemic per eTG, methotrexate "
+        "or mycophenolate for refractory. Note: check every SCLE "
+        "patient for a recent thiazide or PPI start."
+    ),
+    "Drug-induced lupus": (
+        "Lupus-like syndrome triggered by chronic drug exposure, "
+        "resolving within weeks to months after withdrawal and rarely "
+        "involving kidneys or brain. Aetiology: highest risk with "
+        "procainamide and hydralazine (also isoniazid, minocycline, "
+        "TNF inhibitors, methyldopa, chlorpromazine and interferon). "
+        "Features: fever, arthralgia, myalgia and serositis after "
+        "months to years of therapy. Rash and renal disease are "
+        "uncommon compared with idiopathic SLE. Ix: ANA positive with "
+        "anti-histone antibody in over 90 percent (anti-dsDNA and low "
+        "complement usually absent, though present with TNF inhibitor "
+        "DIL) plus FBC, UEC and CRP. Mx: stop the culprit drug, use "
+        "NSAID or short prednisolone 15 to 25 mg for arthralgia and "
+        "serositis, add hydroxychloroquine if symptoms persist per "
+        "eTG. Note: anti-histone positive with normal complement "
+        "points to drug-induced over idiopathic SLE."
+    ),
+    "Neonatal lupus": (
+        "Passive autoimmune disease of newborns from transplacental "
+        "maternal anti-Ro or anti-La antibodies, causing transient "
+        "rash and cytopenias plus permanent congenital heart block. "
+        "Aetiology: maternal anti-Ro (SSA) in 95 percent, less "
+        "commonly anti-La (SSB), mother may be asymptomatic or have "
+        "Sjogren or SLE. Features: annular or periocular raccoon rash "
+        "on face and scalp appearing in first weeks and resolving by "
+        "6 months, complete heart block detected antenatally at 18 to "
+        "24 weeks, transient thrombocytopenia and cholestasis. Ix: "
+        "maternal anti-Ro and anti-La, fetal echo weekly from 16 to "
+        "26 weeks in known anti-Ro pregnancies, neonatal ECG, FBC, "
+        "LFTs. Mx: photoprotection for rash, pacemaker for "
+        "symptomatic complete heart block, hydroxychloroquine 400 mg "
+        "daily throughout pregnancy in anti-Ro mothers reduces "
+        "recurrent heart block per RANZCOG guidance. Note: heart "
+        "block is permanent even after antibodies clear."
+    ),
+    "Primary Sjogren syndrome": (
+        "Chronic autoimmune exocrinopathy of lacrimal and salivary "
+        "glands not attributable to another connective tissue "
+        "disease, with systemic and lymphoma risk. Aetiology: female "
+        "to male 9 to 1, peak 40 to 60 years, HLA-DR3 association. "
+        "Features: dry gritty eyes and mouth for over three months, "
+        "parotid swelling, dental caries, arthralgia, Raynaud, small "
+        "fibre neuropathy and 15 to 20 fold increased MALT lymphoma "
+        "risk. Ix: anti-Ro (70 percent) and anti-La (40 percent), "
+        "ANA, RF, Schirmer test under 5 mm at 5 min, unstimulated "
+        "salivary flow under 0.1 mL per min, labial gland biopsy "
+        "focus score at least 1, FBC and immunoglobulins for "
+        "cryoglobulins. Mx: preservative-free artificial tears, "
+        "pilocarpine 5 mg QID or cevimeline for xerostomia, "
+        "meticulous dental care, hydroxychloroquine for arthralgia "
+        "and fatigue per eTG, rituximab through PBS Section 100 for "
+        "severe extraglandular disease. Note: persistent unilateral "
+        "parotid mass warrants biopsy to exclude MALT lymphoma."
+    ),
+    "Inclusion body myositis": (
+        "Slowly progressive inflammatory myopathy of older adults, "
+        "distinguished from polymyositis by distal and asymmetric "
+        "weakness and near-total refractoriness to immunosuppression. "
+        "Aetiology: idiopathic, male preponderance, onset after 50, "
+        "associated with anti-cN1A antibody. Features: painless "
+        "weakness of finger flexors and quadriceps producing early "
+        "falls and grip loss, dysphagia in 60 percent, atrophy of "
+        "forearm and thigh, preserved reflexes. Ix: CK mildly "
+        "elevated (usually under 10 times normal), EMG mixed "
+        "myopathic and neurogenic, muscle biopsy showing rimmed "
+        "vacuoles, endomysial inflammation and protein aggregates, "
+        "anti-cN1A antibody supports diagnosis. Mx: no proven "
+        "disease-modifying therapy, referral to neuromuscular clinic, "
+        "resistance and aerobic exercise, speech pathology and "
+        "modified diet for dysphagia, cricopharyngeal myotomy for "
+        "severe swallowing failure. Note: steroid-refractory "
+        "polymyositis in an older man is IBM until biopsy proves "
+        "otherwise."
+    ),
+    "Scleroderma renal crisis": (
+        "Rheumatologic emergency of diffuse systemic sclerosis, "
+        "causing accelerated hypertension and thrombotic "
+        "microangiopathy that was uniformly fatal before ACE "
+        "inhibitors. Aetiology: diffuse cutaneous systemic sclerosis "
+        "in first 4 years, anti-RNA polymerase III antibody, recent "
+        "high-dose prednisolone over 15 mg daily, rapid skin "
+        "thickening. Features: abrupt rise in blood pressure often "
+        "above 180 systolic, headache, encephalopathy, oliguric AKI, "
+        "microangiopathic haemolysis with schistocytes and "
+        "thrombocytopenia. Ix: BP, UEC, urinalysis for protein and "
+        "casts, FBC and film for schistocytes, LDH, haptoglobin, "
+        "renin high, renal biopsy shows onion-skin arteriolar "
+        "changes. Mx: admit and start captopril 12.5 mg 8-hourly "
+        "titrated aggressively to normotension (continue even as "
+        "creatinine rises), add second agent if needed, dialysis for "
+        "AKI (half recover renal function within two years), avoid "
+        "prednisolone above 10 mg in high-risk patients. Note: never "
+        "withhold ACE inhibitor for a rising creatinine in SRC."
+    ),
+    "Neurosarcoidosis": (
+        "Non-caseating granulomatous inflammation of the nervous "
+        "system in 5 to 10 percent of sarcoid patients, protean and "
+        "often the presenting feature. Aetiology: subset of systemic "
+        "sarcoidosis, higher morbidity in African and Aboriginal and "
+        "Torres Strait Islander populations. Features: cranial nerve "
+        "VII palsy (often bilateral), basal meningitis with "
+        "hypothalamic-pituitary dysfunction, myelopathy, small fibre "
+        "neuropathy and seizures. Ix: gadolinium MRI brain and cord "
+        "showing leptomeningeal enhancement or parenchymal lesions, "
+        "LP with lymphocytic pleocytosis and raised protein, serum "
+        "ACE (insensitive), chest CT and PET for extraneural biopsy "
+        "target, tissue biopsy is definitive. Mx: high-dose "
+        "prednisolone 1 mg per kg per day tapered slowly, "
+        "methotrexate or azathioprine as steroid-sparing, infliximab "
+        "through PBS Section 100 for refractory disease, hormone "
+        "replacement for pituitary failure. Note: bilateral facial "
+        "nerve palsy is sarcoid until proven otherwise."
+    ),
+    "Cardiac sarcoidosis": (
+        "Granulomatous infiltration of myocardium causing conduction "
+        "disease, ventricular arrhythmia and cardiomyopathy, present "
+        "in a quarter of sarcoid patients but symptomatic in 5 "
+        "percent. Aetiology: subset of systemic sarcoidosis, "
+        "sometimes isolated cardiac disease, peak 30 to 50 years. "
+        "Features: unexplained AV block in a patient under 60, "
+        "non-sustained or sustained VT, heart failure with preserved "
+        "or reduced EF, sudden cardiac death. Ix: ECG and Holter, "
+        "echo, cardiac MRI with late gadolinium enhancement (patchy "
+        "mid-wall), FDG-PET for active inflammation, endomyocardial "
+        "biopsy has low yield, extracardiac biopsy site is preferred. "
+        "Mx: prednisolone 30 to 40 mg daily tapered over 6 to 12 "
+        "months, methotrexate steroid-sparing, ICD for sustained VT "
+        "or EF under 35 percent or high-grade AV block, heart failure "
+        "therapy per NHFA guidelines, transplant for end-stage. Note: "
+        "any young adult with new AV block deserves cardiac MRI."
+    ),
+    "Lofgren syndrome": (
+        "Acute self-limiting presentation of sarcoidosis with a "
+        "distinctive triad, carrying an excellent prognosis. "
+        "Aetiology: acute sarcoid phenotype, more common in Northern "
+        "European women in spring, HLA-DRB1*03 association. Features: "
+        "bilateral hilar lymphadenopathy on chest x-ray, erythema "
+        "nodosum over shins and ankle arthritis (often symmetrical), "
+        "fever, malaise and uveitis in a minority. Ix: CXR showing "
+        "symmetric bilateral hilar lymphadenopathy, ESR and CRP "
+        "raised, serum ACE non-specific, calcium, LFTs, exclude TB "
+        "with QFN and consider ILR biopsy only if atypical. Mx: NSAID "
+        "or colchicine 500 mcg BD for arthritis and erythema nodosum, "
+        "short prednisolone 20 to 30 mg for refractory symptoms per "
+        "eTG, most resolve within 2 years without immunosuppression. "
+        "Note: the triad is so characteristic that biopsy is not "
+        "required to diagnose."
+    ),
+    "Heerfordt syndrome": (
+        "Rare subacute presentation of sarcoidosis with a defined "
+        "tetrad, sometimes the first sign of systemic disease. "
+        "Aetiology: sarcoidosis, unknown genetic and environmental "
+        "triggers. Features: parotid enlargement (usually bilateral), "
+        "anterior uveitis, cranial nerve VII palsy and low-grade "
+        "fever, occasionally with hilar lymphadenopathy. Ix: CXR and "
+        "chest CT, slit lamp examination, serum ACE, calcium, LFTs, "
+        "tissue biopsy from accessible site (parotid, skin or lymph "
+        "node) showing non-caseating granulomas, exclude TB. Mx: "
+        "topical steroid and cycloplegic for uveitis, prednisolone 20 "
+        "to 40 mg daily for severe or systemic disease per eTG, "
+        "methotrexate steroid-sparing, ophthalmology and neurology "
+        "co-management, most resolve within a year. Note: bilateral "
+        "parotid swelling with facial palsy is Heerfordt until proven "
+        "otherwise."
+    ),
+    "Catastrophic antiphospholipid syndrome": (
+        "Rare fulminant variant of APS with multi-organ small-vessel "
+        "thrombosis over days, mortality around 30 percent even with "
+        "treatment. Aetiology: known APS in half, triggered by "
+        "infection, surgery, anticoagulant withdrawal, malignancy or "
+        "pregnancy. Features: three or more organs involved within "
+        "one week with histologic small-vessel thrombosis and "
+        "persistent antiphospholipid antibodies. Renal failure, "
+        "respiratory distress, cerebral infarction, cardiac "
+        "dysfunction and adrenal haemorrhage predominate. Ix: lupus "
+        "anticoagulant, anticardiolipin and anti-beta2 glycoprotein I "
+        "on two occasions 12 weeks apart, FBC and film for "
+        "microangiopathic haemolysis, coagulation, imaging of "
+        "affected organs, tissue biopsy showing thrombosis without "
+        "vasculitis. Mx: ICU care, therapeutic heparin, "
+        "methylprednisolone 1 g for 3 days then oral prednisolone, "
+        "plasma exchange or IVIG, rituximab or eculizumab for "
+        "refractory, treat any trigger. Note: never stop "
+        "anticoagulation abruptly in a patient with APS."
+    ),
+    "Pes anserine bursitis": (
+        "Inflammation of the bursa between medial tibial condyle and "
+        "the conjoined sartorius, gracilis and semitendinosus "
+        "tendons, a common cause of medial knee pain missed as "
+        "osteoarthritis. Aetiology: overuse in runners, obesity, "
+        "valgus knee, tight hamstrings, medial compartment "
+        "osteoarthritis, type 2 diabetes. Features: focal tenderness "
+        "4 to 5 cm below medial joint line, pain on climbing stairs "
+        "and rising from chairs, worse at night, no joint effusion or "
+        "restriction in true osteoarthritis distribution. Ix: "
+        "clinical diagnosis, ultrasound if uncertain (fluid in "
+        "bursa), plain film to assess coexistent osteoarthritis, "
+        "exclude stress fracture with MRI if refractory. Mx: relative "
+        "rest, ice, hamstring and adductor stretching, weight loss "
+        "and simple analgesia, NSAID 2 week course if not "
+        "contraindicated, ultrasound-guided corticosteroid injection "
+        "for refractory cases, physiotherapy for gait retraining. "
+        "Note: the point of maximal tenderness is below and medial to "
+        "the joint line, not on it."
+    ),
+    "Prepatellar bursitis": (
+        "Inflammation of the subcutaneous bursa anterior to the "
+        "patella, historically called housemaid knee, with an "
+        "important septic subtype. Aetiology: repetitive kneeling in "
+        "tilers, carpet layers and roofers plus direct trauma, gout "
+        "and rheumatoid. Septic bursitis is usually Staphylococcus "
+        "aureus via a skin breach. Features: fluctuant swelling "
+        "anterior to the patella with preserved joint range and "
+        "painless flexion (unlike septic arthritis). Warmth, erythema "
+        "and fever suggest septic bursitis. Ix: clinical diagnosis. "
+        "Aspirate any warm erythematous bursa for cell count, Gram "
+        "stain, culture and crystals plus FBC, CRP and plain film if "
+        "trauma. Mx: kneeling avoidance and knee pad, ice and NSAID, "
+        "aspiration plus compression for large sterile effusion, "
+        "empirical flucloxacillin 500 mg QID plus drainage for septic "
+        "bursitis per eTG. Note: painless full knee flexion helps "
+        "distinguish bursitis from septic arthritis."
+    ),
+    "Retrocalcaneal bursitis": (
+        "Inflammation of the bursa between Achilles tendon insertion "
+        "and posterior calcaneus, often coexisting with insertional "
+        "Achilles tendinopathy. Aetiology: overuse in runners, tight "
+        "heel counter footwear, Haglund deformity of posterosuperior "
+        "calcaneus, or spondyloarthropathy (bilateral in young men). "
+        "Features: posterior heel pain and swelling anterior to the "
+        "Achilles tendon, tender at insertion and worse with "
+        "dorsiflexion or after activity, sometimes with a visible "
+        "bump above heel. Ix: clinical diagnosis. Ultrasound shows "
+        "anechoic fluid deep to tendon and plain film shows any "
+        "Haglund or calcaneal spur. HLA-B27 and inflammatory markers "
+        "if bilateral in a young patient. Mx: heel lift, open-back "
+        "footwear, calf stretching, eccentric loading and simple "
+        "analgesia. Ultrasound-guided injection is controversial due "
+        "to rupture risk (avoid intratendinous). Surgical debridement "
+        "for refractory Haglund. Note: consider spondyloarthropathy "
+        "when a young man has bilateral retrocalcaneal pain."
+    ),
+    "Rotator cuff tendinopathy": (
+        "Degenerative or overuse tendinopathy of rotator cuff tendons "
+        "(supraspinatus most often), the leading cause of shoulder "
+        "pain in adults over 40. Aetiology: overuse in overhead "
+        "sports and occupations, age-related tendon degeneration, "
+        "acromial morphology and diabetes. Features: lateral shoulder "
+        "pain worse overhead and at night on affected side, painful "
+        "arc from 60 to 120 degrees abduction, positive Hawkins and "
+        "Neer signs, with preserved active elevation. Ix: clinical "
+        "diagnosis. Ultrasound is first-line to distinguish "
+        "tendinopathy from full-thickness tear (MRI if surgical "
+        "candidate). Plain film for calcific deposit or acromial "
+        "spur. Mx: relative rest, activity modification and 2 weeks "
+        "of NSAID, then structured physiotherapy for 6 to 12 weeks "
+        "focused on scapular stability and eccentric loading. "
+        "Subacromial corticosteroid injection for refractory cases "
+        "(limit two per year). Surgery for full-thickness tears in "
+        "active patients. Note: physiotherapy beats surgery for most "
+        "tendinopathies at one year."
+    ),
+    "Enthesitis": (
+        "Inflammation at the insertion of tendon, ligament or joint "
+        "capsule into bone, the pathological hallmark of "
+        "spondyloarthropathy. Aetiology: HLA-B27-associated "
+        "spondyloarthropathy including ankylosing spondylitis, "
+        "psoriatic arthritis, reactive arthritis and enteropathic "
+        "arthritis. Also mechanical overuse and diabetes. Features: "
+        "focal tenderness at insertion with pain on tendon loading, "
+        "common sites are Achilles, plantar fascia origin, patellar "
+        "tendon, epicondyles and iliac crest, morning stiffness with "
+        "inflammatory pattern. Ix: clinical MASES or SPARCC entheseal "
+        "count, ultrasound with power Doppler shows hypoechoic "
+        "thickening and vascularity, MRI shows bone oedema at "
+        "insertion, HLA-B27 and CRP support inflammatory aetiology. "
+        "Mx: NSAID first-line for inflammatory enthesitis, local "
+        "corticosteroid at safe sites (avoid Achilles and patellar "
+        "mid-substance), physiotherapy with eccentric loading, TNF "
+        "inhibitor via PBS Section 100 if refractory in confirmed "
+        "spondyloarthropathy. Note: multiple enthesitis sites in a "
+        "young man is spondyloarthropathy until proven otherwise."
+    ),
+    "Dactylitis": (
+        "Diffuse fusiform swelling of an entire finger or toe from "
+        "combined tenosynovitis and joint inflammation, giving the "
+        "sausage appearance. Aetiology: psoriatic arthritis (most "
+        "common), reactive arthritis, sarcoidosis, sickle cell "
+        "hand-foot syndrome in children, tuberculous dactylitis or "
+        "syphilis. Features: uniformly swollen digit tender along its "
+        "length so the patient cannot make a fist. Single or multiple "
+        "digits and third and fourth toes are most often affected in "
+        "psoriatic arthritis. Ix: HLA-B27 and CRP, screen for "
+        "psoriasis skin and nail changes, plain film for periostitis "
+        "and pencil-in-cup erosions, ultrasound for flexor "
+        "tenosynovitis. Sickle screen in children and RPR if risk "
+        "factors. Mx: NSAID first-line then intra-articular or "
+        "peritendinous corticosteroid injection. Methotrexate 15 to "
+        "25 mg weekly, with TNF or IL-17 inhibitor via PBS Section "
+        "100 if refractory psoriatic arthritis. Treat underlying "
+        "cause. Note: dactylitis is a marker of more severe erosive "
+        "disease in psoriatic arthritis."
+    ),
+    "Rheumatoid vasculitis": (
+        "Small and medium-vessel vasculitis complicating "
+        "long-standing seropositive rheumatoid arthritis, now "
+        "uncommon in the biologic era but carries high mortality. "
+        "Aetiology: seropositive erosive RA over 10 years, high RF "
+        "and anti-CCP titres, male sex, smoking, subcutaneous "
+        "nodules. Features: nailfold infarcts and digital gangrene, "
+        "palpable purpura and leg ulcers, mononeuritis multiplex, "
+        "scleritis and rarely mesenteric or coronary involvement in a "
+        "patient with often-quiescent joint disease. Ix: FBC, CRP, RF "
+        "and anti-CCP, ANCA usually negative, complement, "
+        "cryoglobulins, nerve conduction studies, biopsy of skin, "
+        "sural nerve or affected organ, angiography if visceral "
+        "involvement. Mx: high-dose prednisolone 1 mg per kg per day, "
+        "cyclophosphamide or rituximab through PBS Section 100 for "
+        "severe disease, wound care and revascularisation for digital "
+        "ischaemia, smoking cessation, methotrexate as maintenance. "
+        "Note: nailfold infarcts in longstanding RA warrant urgent "
+        "vasculitis workup."
+    ),
+    "Caplan syndrome": (
+        "Coexistence of rheumatoid arthritis and pneumoconiosis "
+        "producing distinctive nodular lung lesions, historically in "
+        "coal workers but described with silica and asbestos. "
+        "Aetiology: RA with occupational dust exposure (coal, silica, "
+        "asbestos), higher prevalence in mining and construction "
+        "workers. Features: multiple well-defined peripheral "
+        "pulmonary nodules 0.5 to 5 cm that may cavitate, usually "
+        "asymptomatic or mild cough, joint disease of typical RA. Ix: "
+        "CXR and HRCT showing multiple round nodules, exclude TB and "
+        "malignancy with sputum culture and PET or biopsy if solitary "
+        "or growing, RF and anti-CCP, spirometry, occupational "
+        "history. Mx: dust exposure reduction and smoking cessation, "
+        "standard DMARDs for RA (methotrexate first-line, monitor "
+        "pulmonary toxicity), biologic if refractory. Nodules "
+        "themselves require no specific therapy. Note: notify Workers "
+        "Compensation and refer to occupational lung disease clinic."
+    ),
+    "Guyon canal syndrome": (
+        "Compression of the ulnar nerve at the wrist within Guyon "
+        "canal, less common than cubital tunnel syndrome and often "
+        "occupation-related. Aetiology: cyclists (handlebar palsy), "
+        "ganglion cyst, ulnar artery aneurysm, hook of hamate "
+        "fracture, repetitive vibration, rheumatoid synovitis. "
+        "Features: numbness of little finger and ulnar half of ring "
+        "finger (spares dorsum, distinguishing from cubital tunnel), "
+        "weakness of intrinsic hand muscles with clawing, positive "
+        "Froment sign. Ix: nerve conduction studies localise lesion "
+        "at wrist, ultrasound or MRI of Guyon canal for "
+        "space-occupying lesion, plain film or CT for hook of hamate "
+        "fracture. Mx: activity modification, padded gloves and "
+        "handlebar changes for cyclists, splinting, NSAID, treat "
+        "identifiable cause (excise ganglion, ORIF hamate), surgical "
+        "decompression if refractory or motor deficit progresses. "
+        "Note: preserved dorsal ulnar sensation distinguishes Guyon "
+        "canal from cubital tunnel."
+    ),
+    "Radial tunnel syndrome": (
+        "Compression of the posterior interosseous nerve at the "
+        "radial tunnel, presenting as forearm pain without weakness "
+        "and often mistaken for lateral epicondylitis. Aetiology: "
+        "repetitive forearm pronation-supination, arcade of Frohse "
+        "fibrous edge, ganglion or lipoma, direct trauma or forceful "
+        "gripping occupations. Features: aching pain 4 to 5 cm distal "
+        "to lateral epicondyle worse with resisted supination and "
+        "long finger extension, tender over radial tunnel not on the "
+        "epicondyle. No sensory loss and typically no motor weakness "
+        "(distinguishing from PIN syndrome proper). Ix: clinical "
+        "diagnosis with nerve conduction studies often normal. "
+        "Ultrasound or MRI for mass lesions. Diagnostic lidocaine "
+        "block into radial tunnel can be confirmatory. Mx: activity "
+        "modification avoiding repetitive pronation-supination, wrist "
+        "splint in supination, NSAID and physiotherapy. "
+        "Corticosteroid injection into radial tunnel then surgical "
+        "decompression if refractory beyond 6 months. Note: think "
+        "radial tunnel when tennis elbow does not respond and "
+        "tenderness is distal to the epicondyle."
+    ),
+    "PFAPA syndrome": (
+        "Most common periodic fever syndrome of childhood, defined by "
+        "regular recurrent febrile episodes with pharyngitis, "
+        "adenitis and aphthous stomatitis. Aetiology: unknown, likely "
+        "dysregulated innate immunity, sporadic with onset before age "
+        "5, no clear genetic marker. Features: episodes of high fever "
+        "every 3 to 6 weeks lasting 3 to 6 days with cervical "
+        "adenopathy, exudative pharyngitis and aphthous ulcers, "
+        "completely well between episodes with normal growth. Ix: "
+        "clinical diagnosis by pattern, elevated CRP and neutrophilia "
+        "during episode returning to normal between, throat swab "
+        "negative for strep, exclude cyclic neutropenia with serial "
+        "FBC, genetic testing for FMF or TRAPS if atypical. Mx: "
+        "single-dose prednisolone 1 to 2 mg per kg at fever onset "
+        "aborts the attack within hours (diagnostic and therapeutic), "
+        "cimetidine or colchicine prophylaxis if frequent, "
+        "tonsillectomy is curative in most refractory cases per RACP "
+        "guidance. Note: predictable clockwork fevers in a "
+        "well-thriving preschooler point to PFAPA."
+    ),
+    "Cogan syndrome": (
+        "Rare autoimmune vasculitis of young adults combining "
+        "interstitial keratitis with vestibuloauditory dysfunction, "
+        "risking permanent deafness. Aetiology: autoimmune with "
+        "anti-cornea and inner ear antibodies, sometimes preceded by "
+        "upper respiratory infection, age 20 to 40. Features: sudden "
+        "interstitial keratitis with photophobia, redness and blurred "
+        "vision, plus Meniere-like episodes of vertigo, tinnitus and "
+        "progressive sensorineural hearing loss, systemic vasculitis "
+        "and aortitis in a third. Ix: slit-lamp examination, "
+        "audiometry showing sensorineural loss, MRI to exclude other "
+        "cerebellopontine pathology, ESR and CRP raised, ANCA usually "
+        "negative, echocardiography for aortic root, CTA for large "
+        "vessel involvement. Mx: topical steroid and cycloplegic for "
+        "eye, high-dose oral prednisolone 1 mg per kg with slow taper "
+        "for auditory symptoms started within 2 weeks of onset to "
+        "preserve hearing, methotrexate or infliximab "
+        "steroid-sparing, cochlear implant for established deafness. "
+        "Note: urgent ENT and ophthalmology referral within days can "
+        "save hearing."
+    ),
+    "Osteopenia": (
+        "Bone mineral density T-score between -1.0 and -2.5, a "
+        "fracture risk category rather than a disease, useful for "
+        "identifying patients who benefit from lifestyle change and "
+        "future monitoring. Aetiology: age, postmenopausal oestrogen "
+        "deficiency, low BMI, smoking, glucocorticoids, "
+        "malabsorption, hyperthyroidism and aromatase inhibitors. "
+        "Features: asymptomatic and detected on DEXA screening, may "
+        "only present after a low-trauma fracture that upstages to "
+        "osteoporosis. Ix: DEXA at lumbar spine and hip, calculate "
+        "FRAX or Garvan 10-year fracture risk, then calcium, vitamin "
+        "D, TSH, PTH, coeliac serology, testosterone in men and "
+        "myeloma screen if unexplained. Mx: weight-bearing and "
+        "resistance exercise, calcium 1000 to 1300 mg and vitamin D "
+        "800 to 1000 units daily, smoking cessation and alcohol below "
+        "2 standard drinks per day. Treat secondary causes. "
+        "Pharmacotherapy only if high fracture risk per RACGP "
+        "osteoporosis guideline, with repeat DEXA in 2 to 5 years. "
+        "Note: most fractures come from patients with osteopenia not "
+        "osteoporosis, so risk-stratify not just density-stratify."
+    ),
+    "Osteomalacia in adults": (
+        "Defective mineralisation of the adult skeleton, usually from "
+        "severe vitamin D deficiency, producing bone pain and "
+        "proximal weakness. Aetiology: vitamin D deficiency (dark "
+        "skin, veiling, institutionalised, malabsorption, chronic "
+        "kidney disease), hypophosphataemia (Fanconi, tumour-induced "
+        "osteomalacia, X-linked hypophosphataemic rickets), "
+        "anticonvulsants. Features: diffuse bone pain worse with "
+        "weight-bearing, proximal myopathy with waddling gait and "
+        "difficulty rising, tenderness on sternal or tibial pressure, "
+        "Looser pseudofractures on plain film, low-trauma fractures. "
+        "Ix: 25-OH vitamin D usually under 25 nmol/L, calcium low or "
+        "normal, phosphate low, ALP high, PTH raised, urinary "
+        "phosphate for renal wasting, plain films for "
+        "pseudofractures, exclude coeliac. Mx: cholecalciferol 3000 "
+        "to 5000 units daily for 6 to 12 weeks then maintenance 1000 "
+        "to 2000 units daily per eTG, calcium 1000 mg daily, "
+        "phosphate replacement for renal loss, treat malabsorption, "
+        "bone pain and weakness resolve over months. Note: "
+        "dark-skinned veiled women in southern Australia are the "
+        "classic modern presentation."
+    ),
+    "Sympathomimetic toxidrome": (
+        "Adrenergic storm from cocaine, methamphetamine, MDMA, "
+        "cathinones or synthetic stimulants. Aetiology: illicit "
+        "stimulants, decongestants or medications like dexamfetamine "
+        "at supratherapeutic dose. Clinical features: agitation, "
+        "mydriasis, diaphoresis, tachycardia, hypertension and "
+        "hyperthermia. Diaphoretic skin distinguishes from the dry "
+        "anticholinergic patient. Seizures and chest pain occur. Ix: "
+        "ECG (ischaemia, wide QRS), troponin if chest pain, creatine "
+        "kinase for rhabdomyolysis, electrolytes and glucose, CT "
+        "brain if focal signs. Mx: benzodiazepines first-line and "
+        "titrated to sedation. Aggressive cooling for temperature "
+        "above 39 degrees. IV fluids for rhabdomyolysis. GTN or "
+        "phentolamine for hypertension. Avoid pure beta-blockers "
+        "(unopposed alpha). Note: benzodiazepines treat almost every "
+        "feature. Call Poisons Information Centre 13 11 26 for "
+        "tailored advice."
+    ),
+    "Sedative-hypnotic toxidrome": (
+        "CNS depression from benzodiazepines, Z-drugs, barbiturates, "
+        "GHB or gabapentinoids. Aetiology: overdose (deliberate or "
+        "iatrogenic) or co-ingestion with alcohol or opioids. "
+        "Clinical features: drowsiness or coma with preserved pupils, "
+        "hyporeflexia, slurred speech and ataxia. Vital signs are "
+        "typically normal to mildly depressed. Airway obstruction and "
+        "aspiration are the main risks; profound apnoea suggests "
+        "polydrug. Ix: glucose, ECG, paracetamol and salicylate "
+        "levels, VBG for hypoventilation, consider CT head if "
+        "unexplained coma. Mx: supportive with airway positioning, "
+        "oxygen and observation. Flumazenil is generally avoided "
+        "(seizure risk in chronic users or TCA co-ingestion). "
+        "Intubate if GCS below 9 with airway compromise. Note: "
+        "isolated benzodiazepine overdose rarely kills; think "
+        "co-ingestion when patient is deeply obtunded."
+    ),
+    "Opioid toxidrome": (
+        "Triad of miosis, respiratory depression and CNS depression. "
+        "Aetiology: heroin, oxycodone, methadone, fentanyl, tramadol "
+        "and combined analgesics. Rising harm from illicit fentanyl "
+        "and nitazenes in Australia. Clinical features: pinpoint "
+        "pupils, RR under 12, hypoventilation and coma. Track marks, "
+        "hypothermia, hypotension and bradycardia. Tramadol and "
+        "pethidine can cause seizures and serotonin features. Ix: "
+        "paracetamol level (combined preparations), VBG, glucose, ECG "
+        "(QT with methadone), CXR if aspiration. Mx: bag-mask "
+        "ventilation and titrated naloxone 100 mcg IV (400 mcg IM "
+        "prehospital) aiming for adequate ventilation not full "
+        "reversal. Infusion often needed for long-acting agents "
+        "(methadone, sustained-release oxycodone). Admit for "
+        "observation given naloxone half-life is shorter than most "
+        "opioids. Note: normal pupils do not exclude opioids if "
+        "co-ingestion present."
+    ),
+    "Australian snake bite": (
+        "All suspected snakebites treated as potential envenomation. "
+        "Aetiology: brown, tiger, taipan, death adder, black snakes "
+        "across the continent; over 3000 bites annually with 1 to 2 "
+        "deaths. Clinical features: local pain often minimal; "
+        "systemic features are collapse, coagulopathy (VICC), "
+        "neurotoxicity (ptosis, bulbar weakness), myotoxicity and "
+        "thrombotic microangiopathy. Ix: pressure bandage in place "
+        "before removal. Bloods on arrival and at 1, 6 and 12 hours: "
+        "INR, aPTT, fibrinogen, D-dimer, CK, creatinine, FBC, VBG. "
+        "SVDK on bite site swab or urine. Mx: ABCs, IV access, keep "
+        "PIB until in a hospital with antivenom. Give appropriate "
+        "antivenom based on syndrome and geography (polyvalent if "
+        "unclear); premedicate with adrenaline per unit protocol. "
+        "Fresh frozen plasma only after antivenom given. Discuss "
+        "every case with Poisons 13 11 26 and clinical toxicologist. "
+        "Note: normal 12-hour bloods and no neuro features rule out "
+        "envenomation."
+    ),
+    "Tiger snake envenomation": (
+        "Notechis species across southern Australia and Tasmania. "
+        "Aetiology: bites in gardens, wetlands and outdoor work. "
+        "Clinical features: rapid onset VICC (undetectable "
+        "fibrinogen, INR unrecordable), neurotoxicity with ptosis and "
+        "bulbar weakness over hours, myotoxicity with rising CK, and "
+        "occasionally acute kidney injury. Collapse and pre-hospital "
+        "cardiac arrest occur. Ix: coagulation panel on arrival and "
+        "serially, CK, creatinine, urinalysis for myoglobin, SVDK on "
+        "bite site. ECG. Mx: pressure immobilisation bandage retained "
+        "until antivenom available. One vial of tiger snake antivenom "
+        "(CSL) covers most cases; a second vial only if features "
+        "progress. Fresh frozen plasma after antivenom, once venom is "
+        "neutralised. Note: unlike brown snake, tiger snake causes "
+        "clinically important neurotoxicity and myotoxicity, so watch "
+        "bulbar function and CK."
+    ),
+    "Taipan envenomation": (
+        "Oxyuranus species (coastal and inland taipan); potent "
+        "pre-synaptic neurotoxin plus procoagulant. Aetiology: mostly "
+        "northern Australia; inland taipan bites are rare "
+        "(herpetologists). Clinical features: early collapse, VICC "
+        "with undetectable fibrinogen and unrecordable INR, and "
+        "rapidly progressive neurotoxicity (ptosis, ophthalmoplegia, "
+        "bulbar and respiratory weakness within 2 to 6 hours). "
+        "Myotoxicity is common. Ix: pressure bandage kept on. "
+        "Coagulation profile on arrival and at 6 and 12 hours, CK, "
+        "renal function, SVDK. Serial spirometry or single-breath "
+        "count if neuro features develop. Mx: taipan antivenom (CSL) "
+        "as soon as envenomation confirmed; additional vials if "
+        "progression. Early intubation for bulbar or respiratory "
+        "weakness. FFP after antivenom for VICC. Note: pre-synaptic "
+        "neurotoxin damage is not reversed by antivenom, so timing "
+        "matters. Anticipate ICU stay of days to weeks."
+    ),
+    "Death adder envenomation": (
+        "Acanthophis species; predominantly post-synaptic neurotoxin, "
+        "no significant coagulopathy. Aetiology: ambush predator "
+        "across northern and central Australia. Clinical features: "
+        "onset over 1 to 24 hours with ptosis, ophthalmoplegia, "
+        "dysphagia and eventually respiratory muscle weakness. "
+        "Coagulation is typically normal. Local pain and swelling can "
+        "be prominent. Ix: pressure bandage retained. Coagulation "
+        "panel and CK (to exclude co-envenomation), SVDK, serial "
+        "cranial nerve exam and spirometry. Mx: death adder antivenom "
+        "(CSL) reverses post-synaptic block, so outcome is better "
+        "than taipan if given early. Supportive care with ventilation "
+        "if bulbar or diaphragmatic weakness. Repeat vials if "
+        "features progress after 6 hours. Note: absent VICC in a "
+        "neurotoxic bite in northern Australia should raise death "
+        "adder over tiger or taipan."
+    ),
+    "Sea snake envenomation": (
+        "Hydrophiid envenomation from tropical Australian waters. "
+        "Aetiology: divers, fishers and net-hauling in northern "
+        "Australia and Torres Strait; often painless bites. Clinical "
+        "features: myalgia and stiffness (marked myotoxicity), rising "
+        "CK, myoglobinuria and later renal failure. Neurotoxicity "
+        "with ptosis and bulbar weakness can occur; VICC is uncommon. "
+        "Ix: pressure bandage on the limb. CK, creatinine, potassium, "
+        "urinalysis for myoglobin, coagulation panel, ECG for "
+        "hyperkalaemia. SVDK is not validated for sea snakes. Mx: sea "
+        "snake antivenom (CSL); tiger snake antivenom is an "
+        "alternative if sea snake unavailable. Aggressive IV fluids "
+        "to protect kidneys, treat hyperkalaemia. Consider dialysis "
+        "for refractory hyperkalaemia or established AKI. Note: "
+        "myalgia out of proportion after a marine bite is the tell. "
+        "Discuss all cases with Poisons 13 11 26."
+    ),
+    "Stonefish envenomation": (
+        "Synanceia sting from stepping on camouflaged reef fish in "
+        "tropical Australian waters. Aetiology: bare feet on rocky or "
+        "coral flats in northern Queensland, WA and NT. Clinical "
+        "features: immediate excruciating pain out of proportion to "
+        "the puncture, marked local swelling, and occasionally "
+        "systemic features (hypotension, arrhythmia, weakness). "
+        "Wounds risk secondary infection with marine organisms. Ix: "
+        "clinical diagnosis; imaging only if retained spine "
+        "suspected. Check tetanus status. Mx: immerse limb in hot "
+        "water (up to 45 degrees, thermolabile toxin) for pain until "
+        "relieved. Regional or local anaesthesia for refractory pain. "
+        "Stonefish antivenom (CSL) IM for severe pain or systemic "
+        "features. Wound irrigation, remove foreign material, cover "
+        "for marine pathogens (ciprofloxacin plus doxycycline). Note: "
+        "hot water immersion before antivenom relieves most cases; "
+        "avoid pressure immobilisation bandage for marine stings."
+    ),
+    "Pressure immobilisation bandage": (
+        "First-aid technique that delays systemic venom absorption "
+        "via lymphatics after Australian elapid, funnel-web spider or "
+        "blue-ringed octopus envenomation. Indications: any suspected "
+        "snake bite, funnel-web spider bite or blue-ringed octopus "
+        "envenomation. Not for redback, jellyfish or stonefish "
+        "(venoms are already local or heat-labile). Mx: apply a wide "
+        "(10 to 15 cm) elastic crepe bandage over the bite site at "
+        "firm arterial pressure (tight enough that fingers barely "
+        "slide under). Extend the wrap from distal to proximal along "
+        "the whole limb, then splint the limb rigid. Mark the bite "
+        "site on the bandage. Keep the patient still and prone if "
+        "collapsed. Remove only in a hospital equipped with "
+        "antivenom, resuscitation and a clinical toxicologist on "
+        "call. Do not remove for tests. Note: incorrectly applied PIB "
+        "(too loose or only over the bite) gives false reassurance; "
+        "teach with a demonstration model."
+    ),
+    "Snake venom detection kit": (
+        "CSL enzyme immunoassay that identifies venom immunotype at "
+        "the bite site to guide antivenom choice. Uses: swab the bite "
+        "site (preferred) or use urine if bite site cleaned. Blood is "
+        "unreliable and not recommended. Colour change in one of five "
+        "wells indicates brown, tiger, taipan, death adder or black "
+        "snake immunotype. Cautions: faint reactions and "
+        "cross-reactivity occur, so results guide antivenom choice "
+        "only in a clinically envenomated patient. The kit does not "
+        "identify species (only immunotype), false positives are "
+        "common, and geography plus syndrome should override the "
+        "SVDK. Not validated for sea snakes. In Australian practice "
+        "SVDK use is falling; many units now give antivenom by "
+        "geography and syndrome, reserving SVDK for ambiguous "
+        "decisions. Note: never delay antivenom in a collapsed or "
+        "coagulopathic patient while waiting for the SVDK result."
+    ),
+    "Venom induced consumption coagulopathy": (
+        "Complete consumption of clotting factors from procoagulant "
+        "Australian snake venoms (brown, tiger, taipan). Aetiology: "
+        "venom prothrombin activators convert prothrombin to "
+        "thrombin, consuming fibrinogen and factors V, VIII, and X. "
+        "Clinical features: often asymptomatic despite unrecordable "
+        "INR. Bleeding from venepuncture sites, mucosa, or "
+        "intracranial haemorrhage in severe cases. May be transiently "
+        "associated with thrombotic microangiopathy (anaemia, "
+        "thrombocytopenia, AKI). Ix: INR, aPTT, fibrinogen and "
+        "D-dimer on arrival, at 1, 6, and 12 hours. Fibrinogen under "
+        "1 g/L with grossly elevated D-dimer confirms VICC. Mx: "
+        "antivenom neutralises circulating venom but does not replace "
+        "consumed factors. Fresh frozen plasma (2 units) after "
+        "antivenom may accelerate recovery for severe VICC or "
+        "intracranial bleed. Recheck coagulation 6 hours post FFP. "
+        "Note: absence of bleeding does not exclude VICC. Recovery of "
+        "fibrinogen typically takes 12 to 18 hours after antivenom."
+    ),
+    "N-acetylcysteine infusion": (
+        "Antidote for paracetamol overdose that replenishes "
+        "glutathione. Indications: paracetamol level above the "
+        "treatment line on the Rumack-Matthew nomogram (150 mg/L at 4 "
+        "hours), staggered ingestion over 8 hours, unknown time, "
+        "presentation over 8 hours after acute ingestion, or "
+        "established hepatotoxicity. Dose: standard Australian "
+        "21-hour protocol is 200 mg/kg over 4 hours, then 100 mg/kg "
+        "over 16 hours. Two-bag regimen reduces anaphylactoid "
+        "reactions. Continue beyond 21 hours if ALT still rising, INR "
+        "above 2 or paracetamol still detectable. Adverse effects: "
+        "anaphylactoid reactions (flushing, urticaria, bronchospasm) "
+        "in 10 to 15 percent; slow the infusion, give antihistamine, "
+        "and restart. True allergy is rare. Mx: check paracetamol at "
+        "4 hours post ingestion; start NAC empirically if "
+        "presentation over 8 hours and dose over 10 g or 200 mg/kg. "
+        "Refer to hepatology for King's College criteria if "
+        "fulminant. Note: never stop NAC to send a level; run it and "
+        "reassess."
+    ),
+    "Fomepizole antidote": (
+        "Alcohol dehydrogenase inhibitor for toxic alcohol poisoning "
+        "(methanol, ethylene glycol). Advantages over ethanol "
+        "infusion are no CNS depression, no need for level monitoring "
+        "of the antidote and reliable enzyme block. Indications: "
+        "methanol or ethylene glycol level above 6 mmol/L, history of "
+        "ingestion with metabolic acidosis, elevated osmolar gap, or "
+        "coma of unclear cause with high anion gap acidosis. Dose: 15 "
+        "mg/kg IV loading, then 10 mg/kg every 12 hours for four "
+        "doses, then 15 mg/kg every 12 hours until level under 3 "
+        "mmol/L or acidosis resolved. Dose interval halves during "
+        "dialysis (every 4 hours). Adverse effects: headache, nausea "
+        "and infusion-site pain. Australian access is limited; "
+        "contact Poisons 13 11 26 for supply. Ethanol infusion (10 "
+        "percent, target level 22 mmol/L) is the fallback where "
+        "fomepizole unavailable. Note: dialysis remains indicated for "
+        "severe acidosis, end-organ damage or level over 15 mmol/L "
+        "regardless of antidote."
+    ),
+    "Hydroxocobalamin antidote": (
+        "Vitamin B12 precursor that chelates cyanide to non-toxic "
+        "cyanocobalamin. Indications: smoke inhalation with soot in "
+        "mouth or airway and altered consciousness or hypotension, "
+        "known cyanide exposure, or profound lactic acidosis (lactate "
+        "over 10 mmol/L) after enclosed-space fire. Dose: 5 g IV over "
+        "15 minutes (paediatric 70 mg/kg). Repeat dose for persistent "
+        "instability. Sodium thiosulfate 12.5 g IV can be added. "
+        "Avoid nitrite-based kits in smoke inhalation "
+        "(methaemoglobinaemia worsens tissue hypoxia in CO "
+        "co-exposure). Adverse effects: red-orange discolouration of "
+        "skin, mucosa and urine for 2 to 5 days (may interfere with "
+        "dialysis machines and colorimetric assays). Transient "
+        "hypertension and rare anaphylactoid reactions. Mx: give 100 "
+        "percent oxygen, secure airway, treat burns, and consider "
+        "hyperbaric therapy for concurrent severe CO. Note: give "
+        "hydroxocobalamin empirically in a comatose fire victim; do "
+        "not wait for a cyanide level."
+    ),
+    "High-dose insulin euglycaemia therapy": (
+        "Rescue therapy for calcium channel blocker and beta blocker "
+        "overdose refractory to fluids, calcium and vasopressors. "
+        "MOA: overdose shifts myocardium to glucose metabolism and "
+        "reduces insulin secretion; high-dose insulin restores "
+        "contractility independent of receptor blockade. Dose: 1 "
+        "unit/kg regular insulin bolus, then 1 unit/kg/hr infusion "
+        "titrated up to 10 units/kg/hr for effect. Dextrose infusion "
+        "(D50W 25 g bolus, then 0.5 g/kg/hr) to maintain glucose 5 to "
+        "10 mmol/L. Potassium supplementation as levels fall. "
+        "Adjuncts include IV calcium (calcium gluconate 30 mL of 10 "
+        "percent), glucagon 5 mg IV (for beta blocker) and "
+        "noradrenaline. Lipid emulsion for lipophilic agents "
+        "(verapamil, propranolol) after HIET tried. Monitoring: "
+        "glucose every 15 to 30 minutes early, potassium and "
+        "phosphate hourly, arterial line for haemodynamics. Onset of "
+        "effect over 15 to 60 minutes. Note: escalate early. Contact "
+        "Poisons 13 11 26 and clinical toxicology."
+    ),
+    "Intralipid emulsion therapy": (
+        "Lipid rescue for cardiovascular collapse from local "
+        "anaesthetic systemic toxicity (LAST) and selected lipophilic "
+        "drug overdoses. Indications: LAST (bupivacaine, ropivacaine, "
+        "lignocaine) with arrhythmia, seizure or arrest. Consider for "
+        "refractory arrest from lipophilic agents (verapamil, "
+        "propranolol, TCA, amitriptyline, bupropion). Mechanism: "
+        "lipid sink sequesters lipophilic drug from cardiac tissue; "
+        "also metabolic and inotropic effects. Dose: 20 percent lipid "
+        "emulsion 1.5 mL/kg bolus over 1 minute, then infusion 0.25 "
+        "mL/kg/min for at least 10 minutes after haemodynamic "
+        "recovery. Repeat bolus up to twice for persistent arrest. "
+        "Maximum 12 mL/kg cumulative. Continue CPR and standard ACLS "
+        "throughout and contact Poisons 13 11 26. Adverse effects: "
+        "interferes with laboratory tests (creatinine, amylase), risk "
+        "of ARDS, pancreatitis and fat overload with repeated doses. "
+        "Note: LAST recovery may take hours; do not stop "
+        "resuscitation early."
+    ),
+    "Digoxin-specific Fab fragments": (
+        "Ovine antibody fragments that bind digoxin and are renally "
+        "excreted, indicated for life-threatening digoxin toxicity. "
+        "Indications: haemodynamically unstable arrhythmia (VT, VF, "
+        "high-grade AV block, bradycardia), potassium over 5 mmol/L "
+        "in acute overdose, ingestion over 10 mg (adult) or 4 mg "
+        "(child), digoxin level over 15 nmol/L acutely or over 4 "
+        "nmol/L with toxicity, or oleander or yellow oleander "
+        "poisoning. Dose: acute known ingestion 10 vials empirically, "
+        "or calculated from ingested dose. Chronic toxicity uses 1 to "
+        "2 vials with retitration. Onset within 30 minutes. Adverse "
+        "effects: allergic reaction rare; heart failure may worsen if "
+        "digoxin was needed for rate control (be ready for AF with "
+        "rapid ventricular response). Monitoring: total digoxin level "
+        "rises after Fab (bound fraction) but is inactive; check free "
+        "level if available. Redose if recurrence at 12 hours. Note: "
+        "hyperkalaemia in acute digoxin toxicity is a mortality "
+        "marker; avoid calcium (stone heart theory contested but "
+        "caution persists)."
+    ),
+    "Refractory hypoxaemia": (
+        "Severe ARDS with PaO2/FiO2 under 100 despite optimised lung "
+        "protective ventilation, PEEP and paralysis. Ix: confirm ARDS "
+        "by Berlin criteria, exclude reversible cause (mucus plug, "
+        "pneumothorax, tube position, secretions), and check "
+        "ventilator synchrony. Mx: optimise PEEP with lung "
+        "recruitment, ensure tidal volume 4 to 6 mL/kg IBW and "
+        "plateau under 30 cmH2O. Prone position for 16 hours at a "
+        "time in moderate to severe ARDS. Neuromuscular blockade "
+        "(cisatracurium) for 48 hours if dyssynchronous. Inhaled "
+        "pulmonary vasodilator (nitric oxide) as temporising bridge. "
+        "Veno-venous ECMO via retrieval service (NSW Ambulance "
+        "Aeromedical, ANZICS ECMO network) if Murray score over 3 or "
+        "PaO2/FiO2 under 80. Fluids conservative to negative balance, "
+        "diuresis once shock resolved (FACTT trial). Note: proning is "
+        "the single highest-yield rescue in ARDS; consider before "
+        "ECMO referral."
+    ),
+    "Prone positioning ventilation": (
+        "Placing an intubated ARDS patient face-down to improve "
+        "ventilation-perfusion matching and reduce mortality. "
+        "Indications: moderate to severe ARDS with PaO2/FiO2 under "
+        "150 on FiO2 at least 0.6 and PEEP at least 5. Evidence from "
+        "PROSEVA. Contraindications: unstable spine or pelvic "
+        "fracture, raised ICP, open abdomen, massive haemoptysis, "
+        "recent tracheal or sternal surgery, severe facial trauma. "
+        "Pregnancy is not absolute. Mx: minimum 5 trained staff, "
+        "secure airway and lines, swimmer's position with head-down "
+        "turn, arm-up-arm-down rotation every 4 hours. Session length "
+        "16 hours daily until PaO2/FiO2 over 150 sustained. Continue "
+        "lung-protective settings, deep sedation and often "
+        "neuromuscular blockade for the first 24 hours. "
+        "Complications: pressure injuries (face, chest, iliac "
+        "crests), endotracheal tube dislodgement, line loss, "
+        "transient desaturation during turn, brachial plexopathy from "
+        "arm position. Note: proning has an absolute mortality "
+        "benefit near 10 percent in severe ARDS; delay only for a "
+        "genuine contraindication."
+    ),
+    "Rapid sequence intubation": (
+        "Near-simultaneous administration of an induction agent and a "
+        "paralytic to secure the airway in a patient at aspiration "
+        "risk. Indications: emergency airway control (unprotected "
+        "airway, respiratory failure, agitation with head injury, "
+        "imminent surgery on a full stomach). Mx: seven Ps are "
+        "preparation (drugs, kit, team), preoxygenation (3 minutes on "
+        "non-rebreather or apnoeic O2), pretreatment (fentanyl for "
+        "haemodynamic blunting where indicated), paralysis with "
+        "induction (ketamine 1 to 2 mg/kg or propofol 1 to 2 mg/kg; "
+        "rocuronium 1.2 mg/kg or suxamethonium 1.5 mg/kg), "
+        "positioning, placement with confirmation (end-tidal CO2 "
+        "waveform), and post-intubation care. In haemodynamic "
+        "disaster halve induction dose, use ketamine and push-dose "
+        "pressor; shock index over 1 predicts post-RSI arrest. "
+        "Pre-brief the failed airway algorithm, place bougie and "
+        "video laryngoscope on the trolley and open the front-of-neck "
+        "kit. Note: hypoxia and hypotension pre-RSI predict cardiac "
+        "arrest; resuscitate before you intubate."
+    ),
+    "Cricothyroidotomy": (
+        "Emergency front-of-neck airway for "
+        "cannot-intubate-cannot-oxygenate (CICO) situations. "
+        "Indications: failed intubation and failed supraglottic "
+        "airway with unrelenting hypoxia, or complete upper airway "
+        "obstruction (angioedema, trauma, foreign body). Mx: "
+        "scalpel-bougie-tube per ANZCA and DAS. Extend the neck, "
+        "identify cricothyroid membrane (finger palpation between "
+        "thyroid and cricoid cartilage). Vertical skin incision from "
+        "thyroid notch down 8 cm if landmarks impalpable; horizontal "
+        "stab through the membrane. Rotate blade caudally, slide "
+        "bougie into trachea, railroad a size 6.0 cuffed tube, "
+        "inflate cuff and confirm with end-tidal CO2. Needle "
+        "cricothyroidotomy with jet ventilation is less reliable in "
+        "adults and not recommended over the surgical method except "
+        "in children under 8. Complications: bleeding, tube "
+        "misplacement (paratracheal), posterior tracheal wall injury, "
+        "later subglottic stenosis. Note: rehearse on a manikin "
+        "quarterly; hesitation kills more than technique errors."
+    ),
+    "Post-cardiac arrest care": (
+        "Structured post-ROSC bundle to minimise secondary brain "
+        "injury and address the precipitating cause. Investigations: "
+        "bedside echocardiography, 12-lead ECG immediately, CT brain "
+        "and CT pulmonary angiogram if cause unclear, plus lactate "
+        "and VBG serially. Mx: intubate if not already, target SpO2 "
+        "92 to 98 and PaCO2 35 to 45 mmHg, avoiding hyperoxia. MAP "
+        "target 65 to 80 (individualise), noradrenaline first-line, "
+        "add adrenaline or dobutamine if cardiogenic. Refer for "
+        "primary PCI if STEMI or high clinical suspicion of coronary "
+        "cause. Targeted temperature management 32 to 36 degrees for "
+        "at least 24 hours, sedation with propofol and short-acting "
+        "opioid, prevent fever for 72 hours. Continuous EEG for "
+        "status epilepticus. Follow ANZCOR guidelines and refer to an "
+        "ICU with cardiac arrest experience. Delay prognostication "
+        "for at least 72 hours off sedation. Note: post-arrest "
+        "hypotension doubles mortality; be aggressive."
+    ),
+    "Targeted temperature management": (
+        "Active temperature control post-cardiac arrest to reduce "
+        "secondary neuronal injury. Indications: comatose survivors "
+        "of out-of-hospital cardiac arrest regardless of initial "
+        "rhythm, initiated as soon as possible after ROSC. "
+        "In-hospital arrest evidence is weaker but reasonable. Mx: "
+        "target 32 to 36 degrees for at least 24 hours per ANZCOR. "
+        "Many Australian ICUs use 36 degrees post-TTM2, reserving 33 "
+        "degrees for select cases (severe injury, malignant EEG). Use "
+        "external cooling pads or intravascular catheter with "
+        "closed-loop control, sedation with propofol and fentanyl, "
+        "and neuromuscular blockade for shivering. Rewarm at 0.25 to "
+        "0.5 degrees per hour, then avoid fever (under 37.7) for a "
+        "further 72 hours. Delay prognostication for at least 72 "
+        "hours off sedation and normothermia; use bedside exam, EEG, "
+        "SSEPs and NSE. Complications: bradycardia, hypokalaemia "
+        "(rebound hyperkalaemia on rewarming), infection, "
+        "coagulopathy at lower targets. Note: fever after arrest is "
+        "neurotoxic. Prevent it aggressively regardless of TTM "
+        "target."
+    ),
+    "Wellens syndrome": (
+        "ECG pattern of biphasic (type A) or deeply inverted (type B) "
+        "T waves in V2 to V3 in a pain-free patient, signalling "
+        "critical proximal LAD stenosis. Aetiology: reperfusion "
+        "pattern after transient LAD occlusion; reflects viable "
+        "myocardium at high risk of anterior STEMI. Clinical "
+        "features: recent (often resolved) chest pain, ECG changes "
+        "when pain-free, minimal troponin rise. Exertion or stress "
+        "testing can precipitate infarction. Ix: 12-lead ECG (compare "
+        "with prior), serial troponin, urgent coronary angiography "
+        "within 24 hours. Do not stress test. Mx: admit, dual "
+        "antiplatelet loading, heparin per NSTEMI protocol, and refer "
+        "to cardiology for angiography and revascularisation. Treat "
+        "as high-risk NSTEACS even if troponin negative and "
+        "pain-free. Note: normal ECG during pain plus these T-wave "
+        "changes when pain-free is the classic bait; missing it risks "
+        "a large anterior infarct in days."
+    ),
+    "Sgarbossa criteria": (
+        "ECG rules to diagnose acute MI in the presence of LBBB or "
+        "ventricular-paced rhythm. Original criteria (score 3 or more "
+        "diagnostic): concordant ST elevation over 1 mm in a lead "
+        "with positive QRS (5 points), concordant ST depression over "
+        "1 mm in V1 to V3 (3 points), or discordant ST elevation over "
+        "5 mm in a lead with negative QRS (2 points). The modified "
+        "Smith rule replaces the 5 mm criterion with ST/S ratio under "
+        "minus 0.25 (any single criterion positive is diagnostic), "
+        "more sensitive without loss of specificity. Ix: 12-lead ECG, "
+        "prior ECG for comparison, serial troponin, bedside "
+        "echocardiography for regional wall motion. Mx: activate "
+        "STEMI pathway if criteria met, treat as STEMI with primary "
+        "PCI or fibrinolysis by local guideline (NSW Ambulance "
+        "PP-STEMI pathway). Do not wait for troponin. Note: absence "
+        "of Sgarbossa does not exclude MI in LBBB; clinical suspicion "
+        "plus dynamic ECG or symptoms still triggers cath lab "
+        "discussion."
+    ),
+    "Refractory ventricular fibrillation": (
+        "VF or pulseless VT persisting after three defibrillation "
+        "attempts, adrenaline and amiodarone per ANZCOR ALS "
+        "algorithm. Causes: ongoing ischaemia (LAD occlusion), "
+        "electrolyte disorder (K, Mg), toxic ingestion (TCA, cocaine, "
+        "digoxin), long QT with torsades. Mx: continue high-quality "
+        "CPR with minimal interruption. Rotate compressors every 2 "
+        "minutes. Give amiodarone 300 mg IV bolus (or 150 mg after "
+        "further shocks) plus lignocaine 1 to 1.5 mg/kg as adjunct. "
+        "Magnesium 2 g if torsades or hypomagnesaemia. Reverse "
+        "hyperkalaemia (calcium, insulin, bicarbonate). Consider "
+        "double-sequential defibrillation with two defibrillators "
+        "delivering shocks near-simultaneously (evidence emerging, "
+        "DOSE-VF trial). ECPR via retrieval service where available, "
+        "especially witnessed arrest with shockable rhythm and "
+        "no-flow time under 5 minutes. Consider transport with "
+        "mechanical CPR to a PCI-capable centre. Note: think "
+        "reversible cause after every third shock; refractory VF is "
+        "often a plumbing problem, not an electrical one."
+    ),
+    "Rectal chlamydia": (
+        "Chlamydia trachomatis infection of the rectal mucosa, often "
+        "asymptomatic and detected by three-site NAAT screening. "
+        "Aetiology: receptive anal sex; overlap with LGV serovars L1 "
+        "to L3 in men who have sex with men. Sx: often none; "
+        "proctitis, anal discharge, tenesmus, bleeding when "
+        "symptomatic. Ix: rectal swab NAAT (self or clinician "
+        "collected); LGV PCR if proctitis, ulceration or bloody "
+        "discharge; test HIV, syphilis, gonorrhoea, hepatitis B and "
+        "C. Mx: per ASHM STI guidelines and eTG doxycycline 100 mg BD "
+        "PO for 7 days is preferred over azithromycin for rectal "
+        "disease due to higher cure rates; 21 days if LGV confirmed. "
+        "Contact tracing 6 months; abstain 7 days after treatment; "
+        "retest at 3 months. Note: azithromycin single dose fails a "
+        "meaningful fraction of rectal infections and is no longer "
+        "first line."
+    ),
+    "Pharyngeal gonorrhoea": (
+        "Neisseria gonorrhoeae infection of the pharynx acquired "
+        "through oral sex, usually asymptomatic and a key reservoir "
+        "for onward transmission and antimicrobial resistance. Sx: "
+        "usually none; occasional sore throat, pharyngitis. Ix: "
+        "pharyngeal swab NAAT plus culture with sensitivities from "
+        "any positive site before treatment (resistance "
+        "surveillance); three-site testing (throat, urine or vaginal, "
+        "rectal) in men who have sex with men and any high-risk "
+        "patient. Mx: per ASHM ceftriaxone 500 mg IM stat as single "
+        "agent when susceptibility unknown or ciprofloxacin "
+        "resistance suspected; add azithromycin 1 g PO only for "
+        "co-treatment reasons not routinely. Test of cure NAAT at 2 "
+        "weeks (pharyngeal cure rates lower than genital); contact "
+        "tracing 2 months; retest at 3 months. Note: pharyngeal "
+        "gonorrhoea is harder to eradicate than urogenital and drives "
+        "ceftriaxone resistance."
+    ),
+    "Disseminated gonococcal infection": (
+        "Bacteraemic spread of Neisseria gonorrhoeae producing the "
+        "arthritis-dermatitis syndrome or purulent monoarthritis, an "
+        "uncommon complication of untreated mucosal infection. Risk: "
+        "female sex, menstruation, pregnancy, complement deficiency "
+        "(C5 to C9), untreated pharyngeal infection. Sx: classic "
+        "triad of tenosynovitis, migratory polyarthralgia and "
+        "painless pustular or haemorrhagic skin lesions on distal "
+        "extremities; or a purulent knee or wrist monoarthritis. "
+        "Fever, chills. Ix: blood cultures, synovial fluid culture "
+        "and NAAT, swabs of all mucosal sites (throat, rectum, "
+        "urethra or cervix); consider terminal complement screen if "
+        "recurrent. Mx: ceftriaxone 1 g IV daily for at least 7 days "
+        "then step down by susceptibilities per eTG; joint drainage "
+        "if purulent; treat presumptive chlamydia; partner "
+        "notification. Note: think DGI in any young sexually active "
+        "adult with pustules on hands or feet plus tenosynovitis."
+    ),
+    "Latent syphilis": (
+        "Asymptomatic syphilis with positive serology and no clinical "
+        "signs, staged by duration since exposure to guide treatment "
+        "length. Classification: early latent under 2 years (still "
+        "infectious), late latent over 2 years or unknown duration. "
+        "Ix: reactive treponemal test (EIA or TPPA) confirmed by "
+        "non-treponemal RPR titre; document RPR at diagnosis for "
+        "treatment response; test HIV, hepatitis B and C, other STIs; "
+        "LP only if neurological, ocular or otic symptoms, treatment "
+        "failure, or HIV with RPR at least 1 to 32. Mx: per ASHM "
+        "benzathine benzylpenicillin 1.8 g IM stat for early latent; "
+        "three weekly doses for late latent or unknown duration; "
+        "doxycycline 100 mg BD PO for 14 or 28 days if penicillin "
+        "allergy (desensitise if pregnant). Follow-up RPR at 3, 6 and "
+        "12 months; fourfold drop confirms cure. Contact tracing back "
+        "to likely exposure. Note: unknown duration is treated as "
+        "late latent."
+    ),
+    "Recurrent genital herpes": (
+        "Reactivation of latent HSV in sacral dorsal root ganglia "
+        "producing shorter, milder episodes than the primary attack; "
+        "HSV-2 recurs more often than HSV-1. Sx: prodromal tingling "
+        "or neuralgia, then a cluster of vesicles progressing to "
+        "ulcers on genital or perianal skin; heals in 5 to 10 days; "
+        "frequency declines over years. Ix: swab a fresh ulcer for "
+        "HSV PCR (type it, HSV-1 recurs less); serology rarely "
+        "useful; screen concurrent STIs. Mx: episodic therapy started "
+        "within 24 hours per eTG valaciclovir 500 mg BD PO for 3 "
+        "days, famciclovir 1 g BD for 1 day, or aciclovir 800 mg TDS "
+        "for 2 days; suppressive therapy (valaciclovir 500 mg daily) "
+        "if at least 6 attacks per year, severe attacks, or to reduce "
+        "transmission to a susceptible partner. Condoms and "
+        "disclosure reduce but do not eliminate shedding-driven "
+        "transmission. Note: type the first isolate; HSV-1 genital "
+        "rarely recurs and often does not need suppression."
+    ),
+    "Primary genital herpes": (
+        "First clinical HSV infection in a person with no "
+        "pre-existing antibody, typically the most severe attack with "
+        "systemic symptoms. Aetiology: HSV-2 or increasingly HSV-1 "
+        "(from orogenital contact). Sx: painful clustered vesicles "
+        "progressing to ulcers on vulva, penis, perianal skin; "
+        "dysuria, tender inguinal lymphadenopathy, fever, malaise; "
+        "urinary retention if severe (sacral radiculopathy). Heals "
+        "over 2 to 3 weeks. Ix: HSV PCR swab of a de-roofed vesicle "
+        "or ulcer with typing; screen STIs including HIV and "
+        "syphilis. Mx: per eTG valaciclovir 500 mg BD PO for 5 to 10 "
+        "days, or famciclovir 250 mg TDS, or aciclovir 400 mg TDS; "
+        "start within 5 days or while new lesions still forming; "
+        "analgesia, saline baths, topical lignocaine; catheterise if "
+        "retention. Counsel on natural history, asymptomatic "
+        "shedding, transmission and disclosure; pregnancy plan "
+        "(antivirals from 36 weeks, caesarean if lesions in labour). "
+        "Note: primary attack is a teachable moment more than a "
+        "treatment emergency."
+    ),
+    "HPV vaccination Australia": (
+        "Free HPV vaccination through the National Immunisation "
+        "Program covering nine oncogenic and wart-causing types (6, "
+        "11, 16, 18, 31, 33, 45, 52, 58) with Gardasil 9. Dosing: "
+        "single dose from 2023 for immunocompetent people aged 9 to "
+        "25 years, delivered in school Year 7; catch-up free to 25th "
+        "birthday; three doses for the immunocompromised. "
+        "Indications: universal in adolescents; also recommended for "
+        "men who have sex with men to 26, people with HIV, and "
+        "eligible adults after shared decision-making up to 45 "
+        "(funded only to 25). Prevention: near elimination of "
+        "vaccine-type genital warts and high-grade cervical disease "
+        "in cohorts vaccinated pre-exposure with herd effects in "
+        "unvaccinated. Cautions: pregnancy defer, egg allergy is not "
+        "a contraindication, anaphylaxis to a previous dose is. "
+        "Australian notes: NIP schedule shifted to single dose 2023 "
+        "based on WHO SAGE evidence; ATAGI recommends catch-up "
+        "documentation before university and travel. Note: "
+        "single-dose schedule simplifies catch-up counselling; still "
+        "record on AIR."
+    ),
+    "Donovanosis": (
+        "Chronic ulcerative genital infection caused by Klebsiella "
+        "granulomatis, endemic historically in northern and central "
+        "Australia including remote Aboriginal and Torres Strait "
+        "Islander communities but now near-elimination through "
+        "targeted control. Sx: painless beefy-red friable ulcer with "
+        "rolled edges that bleeds easily on contact; slowly enlarges "
+        "without regional lymphadenopathy (unlike LGV or chancroid); "
+        "pseudobubo (subcutaneous granuloma) may mimic nodes. Ix: "
+        "crush preparation or biopsy showing intracellular Donovan "
+        "bodies in mononuclear cells (Giemsa or Wright stain); PCR "
+        "where available; exclude coexisting HIV, syphilis and HSV. "
+        "Mx: per eTG azithromycin 1 g PO weekly (or 500 mg daily) for "
+        "at least 3 weeks and until lesions have healed; alternatives "
+        "doxycycline, ceftriaxone. Contact tracing 60 days. Note: "
+        "painless bleeding genital ulcer in a returned traveller from "
+        "PNG or northern Australia is donovanosis until proven "
+        "otherwise."
+    ),
+    "Chronic bacterial prostatitis": (
+        "Recurrent urinary tract infection with the same uropathogen "
+        "in a man, seeded from a chronic prostatic focus (NIH "
+        "category II prostatitis). Aetiology: E. coli most common; "
+        "other Enterobacterales, Enterococcus, Pseudomonas after "
+        "instrumentation. Sx: recurrent lower UTI (dysuria, "
+        "frequency), pelvic or perineal ache between episodes, "
+        "sometimes ejaculatory pain; prostate often unremarkable on "
+        "examination. Ix: midstream urine culture during flare; "
+        "Meares-Stamey two- or four-glass localisation test "
+        "(post-massage urine growing the same organism as pre-massage "
+        "in higher counts confirms prostatic focus); STI screen if "
+        "under 35. Mx: per eTG a fluoroquinolone (ciprofloxacin 500 "
+        "mg BD PO) or trimethoprim 300 mg daily for 4 to 6 weeks "
+        "(long courses reflect poor prostatic penetration); refer "
+        "urology if relapsing; low-dose suppressive therapy for "
+        "frequent relapse. Note: distinguish from chronic pelvic pain "
+        "syndrome (category III), where cultures are negative and "
+        "antibiotics do not help."
+    ),
+    "Testicular seminoma": (
+        "Malignant germ cell tumour of the testis with a distinct "
+        "radiosensitive and chemosensitive natural history; peak "
+        "incidence third to fourth decade, later than non-seminomas. "
+        "Sx: painless firm testicular lump; occasional dull ache; "
+        "back pain, cough, weight loss with metastases. Ix: scrotal "
+        "ultrasound (hypoechoic intratesticular mass) then tumour "
+        "markers (beta-hCG mildly raised in about 15 percent, "
+        "alpha-fetoprotein normal in pure seminoma - AFP elevation "
+        "reclassifies as mixed non-seminoma), LDH; CT chest abdomen "
+        "pelvis for staging; sperm banking pre-treatment. Mx: radical "
+        "inguinal orchidectomy (never trans-scrotal) with prosthesis "
+        "discussed; adjuvant options by stage per eTG and urology MDT "
+        "include surveillance for stage I, single-dose carboplatin, "
+        "or para-aortic radiotherapy; BEP chemotherapy for advanced "
+        "disease; excellent 5-year survival, over 95 percent overall. "
+        "Note: painless testicular lump gets ultrasound within days; "
+        "do not aspirate."
+    ),
+    "Late-onset hypogonadism": (
+        "Age-related decline in testicular function producing "
+        "symptomatic testosterone deficiency in older men; "
+        "testosterone falls approximately 1 to 2 percent per year "
+        "from age 40. Criteria: consistent symptoms (low libido, "
+        "erectile dysfunction, fatigue, loss of morning erections, "
+        "mood, sarcopenia) plus two morning fasting total "
+        "testosterone levels below 6 to 8 nmol/L (borderline 8 to 12 "
+        "needs SHBG and calculated free testosterone). Ix: exclude "
+        "reversible causes such as obesity, sleep apnoea, opioids, "
+        "glucocorticoids, hyperprolactinaemia, iron overload, "
+        "systemic illness; LH, FSH, SHBG, prolactin, iron studies, "
+        "FBC, PSA, DEXA. Mx: address reversible causes first; PBS "
+        "testosterone (gel, IM) requires documented total "
+        "testosterone under 6 nmol/L on two occasions or under 8 with "
+        "LH raised, and specialist confirmation (endocrinologist, "
+        "urologist, sexual health physician). Monitor PSA, "
+        "haematocrit, mood, lipids; contraindications include "
+        "prostate or breast cancer, untreated OSA, polycythaemia, "
+        "planning fertility. Note: PBS gatekeeping is deliberately "
+        "tight to prevent inappropriate use."
+    ),
+    "Recurrent vulvovaginal candidiasis": (
+        "Four or more mycologically confirmed episodes of Candida "
+        "vulvovaginitis in 12 months, present in about 5 percent of "
+        "women; usually Candida albicans but non-albicans (C. "
+        "glabrata) rises with repeated azole exposure. Risk: "
+        "diabetes, immunosuppression, oestrogen therapy, recent "
+        "antibiotics; frequent douching. Ix: high vaginal swab MC and "
+        "S with speciation and azole sensitivities (do not treat "
+        "empirically for recurrent disease); exclude diabetes "
+        "(HbA1c); consider lichen sclerosus or contact dermatitis if "
+        "pruritus without discharge. Mx: per eTG induction "
+        "fluconazole 150 mg PO every 72 hours for three doses, then "
+        "suppressive fluconazole 150 mg weekly for 6 months; boric "
+        "acid pessary 600 mg nocte for 14 days for C. glabrata; avoid "
+        "soap on vulva, dry cotton underwear. Treat partner only if "
+        "symptomatic balanitis. Note: swab before every empirical "
+        "script for recurrent thrush; azole resistance is now common."
+    ),
+    "Vulvar lichen planus": (
+        "Chronic inflammatory dermatosis of the vulva, oral mucosa "
+        "and sometimes vagina; erosive variant scars faster than "
+        "lichen sclerosus and causes dyspareunia. Types: classic "
+        "papular, hypertrophic and erosive; erosive is commonest at "
+        "the vulva and often coexists with oral disease "
+        "(vulvovaginal-gingival syndrome). Sx: burning, dyspareunia, "
+        "postcoital bleeding, discharge; glazed erythema with white "
+        "Wickham striae at the edge; introital narrowing, loss of "
+        "architecture, vaginal synechiae if untreated. Ix: clinical "
+        "diagnosis; biopsy for atypical or non-responsive cases; "
+        "screen oral cavity; culture to exclude candida; SCC risk "
+        "means lifelong follow-up. Mx: per eTG ultrapotent topical "
+        "corticosteroid (clobetasol propionate 0.05 percent ointment "
+        "nightly then taper) with dilator therapy if introital "
+        "narrowing; intravaginal hydrocortisone foam for vaginal "
+        "disease; refer specialist for methotrexate or oral "
+        "prednisolone if refractory. Note: erosive lichen planus "
+        "scars the vagina - refer early, do not just treat as "
+        "recurrent thrush."
+    ),
+    "Mixed urinary incontinence": (
+        "Involuntary leakage with both urgency and effort (cough, "
+        "exertion, sneeze); one component usually dominates and "
+        "guides initial therapy. Ix: bladder diary and validated "
+        "symptom questionnaire to identify which component bothers "
+        "the patient most; urinalysis and MSU; cough stress test; "
+        "post-void residual; urodynamics before surgery. Mx: treat "
+        "the dominant symptom first per RANZCOG and eTG. Pelvic floor "
+        "muscle training with a physiotherapist for 3 months benefits "
+        "both components; add bladder retraining and antimuscarinics "
+        "or mirabegron for the urge component; consider midurethral "
+        "sling for persistent stress component after urge control "
+        "(some patients worsen after sling if urgency dominant); "
+        "weight loss, caffeine reduction, oestrogen cream for "
+        "atrophy. Note: ask which is worse - the urge or the leak "
+        "with cough - and treat that first; do not offer surgery "
+        "until urge component treated."
+    ),
+    "Semen analysis": (
+        "Assessment of male fertility potential using WHO 2021 lower "
+        "reference limits derived from fertile men; two abnormal "
+        "analyses at least 4 weeks apart are needed before diagnosis "
+        "given day-to-day variability. Criteria: 2 to 7 days "
+        "abstinence, whole ejaculate into sterile container within 60 "
+        "minutes, kept at body temperature. Definition of WHO 2021 "
+        "lower limits (5th centile): volume 1.4 mL, pH 7.2 or "
+        "greater, sperm concentration 16 million per mL, total sperm "
+        "number 39 million per ejaculate, total motility 42 percent, "
+        "progressive motility 30 percent, normal morphology 4 "
+        "percent, vitality 54 percent. Classification: azoospermia "
+        "(no sperm), oligozoospermia (low count), asthenozoospermia "
+        "(poor motility), teratozoospermia (poor morphology), "
+        "cryptozoospermia (sperm only on centrifugation). Ix: repeat "
+        "abnormal result, examination, LH, FSH, testosterone, "
+        "prolactin, karyotype and Y-microdeletion if severe, scrotal "
+        "ultrasound. Note: WHO 2021 lowered thresholds; do not label "
+        "infertility on one result."
+    ),
+    "Feminising hormone therapy": (
+        "Gender-affirming hormone therapy for trans women and "
+        "non-binary people wanting feminisation, using oestrogen with "
+        "an androgen blocker; guided by AusPATH standards and "
+        "endocrinology. Dosing: 17-beta oestradiol (oral valerate 2 "
+        "to 8 mg daily, transdermal patch 100 to 200 mcg twice "
+        "weekly, or IM depot) plus antiandrogen (spironolactone 100 "
+        "to 200 mg daily or cyproterone acetate 12.5 to 25 mg daily); "
+        "GnRH agonist an alternative. Effects onset months to years: "
+        "breast development, softer skin, decreased libido and "
+        "spontaneous erections, fat redistribution, slower body hair "
+        "growth (voice and skeleton unchanged). Monitoring: "
+        "oestradiol level 250 to 500 pmol/L, testosterone in female "
+        "range under 2 nmol/L, LFTs, U and Es, prolactin, lipids at "
+        "3, 6, 12 months then annually; VTE, breast and cervical "
+        "screening per age; bone density at baseline and after 2 "
+        "years. Cautions: VTE risk highest with oral "
+        "ethinyloestradiol (avoid); smoking cessation. Note: "
+        "transdermal oestradiol preferred over 40 or with VTE risk; "
+        "document informed consent and fertility discussion "
+        "pre-initiation."
+    ),
+    "Masculinising hormone therapy": (
+        "Gender-affirming testosterone for trans men and non-binary "
+        "people seeking masculinisation, prescribed under AusPATH "
+        "informed consent or endocrinology model. Dosing: "
+        "testosterone gel 20 to 50 mg daily, testosterone enantate "
+        "200 to 250 mg IM every 2 to 3 weeks, or testosterone "
+        "undecanoate 1000 mg IM every 10 to 14 weeks; start low and "
+        "titrate. Effects onset months to years: cessation of menses "
+        "(usually within 6 months), voice deepening (irreversible), "
+        "clitoral growth, facial and body hair, acne, fat "
+        "redistribution, muscle mass, mood; frontal balding in "
+        "genetically susceptible. Monitoring: trough testosterone in "
+        "the male range 10 to 30 nmol/L, haematocrit (polycythaemia "
+        "risk), lipids, LFTs, BP, weight at 3, 6, 12 months then "
+        "annually; continue cervical screening if cervix present, "
+        "chest screening if not had top surgery, bone health. "
+        "Contraception still required if uterus present and sex with "
+        "sperm-producing partner (testosterone is not contraception). "
+        "Note: document informed consent, fertility preservation "
+        "offer, and voice change irreversibility pre-initiation."
+    ),
+    "HIV pre-exposure prophylaxis": (
+        "Daily or on-demand tenofovir disoproxil with emtricitabine "
+        "(TDF or FTC) taken by HIV-negative people at ongoing risk to "
+        "prevent seroconversion; over 99 percent effective with "
+        "adherence. Indications per PBS from 2018: HIV-negative adult "
+        "at medium to high risk (condomless anal sex with casual male "
+        "partners, serodiscordant relationship without viral "
+        "suppression, injecting drug use with sharing, recent "
+        "bacterial STI or PEP use); prescriber does not need "
+        "specialist authority. Dosing: daily TDF/FTC 300/200 mg; "
+        "on-demand 2-1-1 (2 tablets 2 to 24 hours before sex, 1 at 24 "
+        "hours, 1 at 48 hours) approved for cisgender men who have "
+        "sex with men only. Monitoring: HIV Ag/Ab and RNA if recent "
+        "exposure, hepatitis B and C serology, renal function, STI "
+        "screen; repeat HIV and STIs 3 monthly, renal function 6 to "
+        "12 monthly. Cautions: eGFR under 60 (use TAF/FTC via s100 or "
+        "refer), hepatitis B (do not stop abruptly), pregnancy is not "
+        "a contraindication. Note: initiate same day if eligible; "
+        "3-monthly HIV testing is the safety net."
+    ),
+    "HIV post-exposure prophylaxis": (
+        "28-day antiretroviral course started within 72 hours of a "
+        "significant HIV exposure to prevent seroconversion; earlier "
+        "is better (ideally within 2 hours). Indications: per ASHM "
+        "condomless receptive or insertive anal or vaginal sex with a "
+        "source known HIV positive with detectable viral load or "
+        "unknown status from a high-prevalence group; needlestick "
+        "from HIV-positive source; sexual assault with unknown "
+        "assailant. Dosing: tenofovir disoproxil with emtricitabine "
+        "plus dolutegravir 50 mg daily for 28 days (or raltegravir); "
+        "PBS listed for occupational and non-occupational exposure. "
+        "Ix: HIV Ag/Ab (must be negative or unknown at start), "
+        "hepatitis B and C, syphilis, STI screen, renal function, "
+        "pregnancy test, baseline HIV RNA if very recent exposure; "
+        "adverse effect counselling. Follow-up: HIV at 6 and 12 "
+        "weeks, hepatitis B and C to 6 months; transition to PrEP if "
+        "ongoing risk. Note: local sexual health clinic, ED, or 1800 "
+        "PEP LINE 24/7 nationally; do not wait for the source result "
+        "to start."
+    ),
+    "Mycoplasma genitalium infection": (
+        "Small fastidious bacterium causing non-gonococcal "
+        "urethritis, cervicitis, PID and proctitis; macrolide "
+        "resistance now widespread and drives treatment choice. Sx: "
+        "urethritis (dysuria, discharge), cervicitis, post-coital "
+        "bleeding, PID; often asymptomatic. Ix: NAAT with macrolide "
+        "resistance testing (23S rRNA mutation) on first-pass urine, "
+        "vaginal or rectal swab per ASHM; do not screen asymptomatic "
+        "patients. Mx: per ASHM resistance-guided therapy. If "
+        "macrolide susceptible azithromycin 1 g PO stat then 500 mg "
+        "daily for 3 days (or doxycycline 100 mg BD for 7 days then "
+        "azithromycin). If macrolide resistant or unknown "
+        "moxifloxacin 400 mg daily for 7 days after doxycycline "
+        "lead-in. Test of cure NAAT at 3 weeks; contact tracing 6 "
+        "months; abstain 14 days. Note: do not use single-dose "
+        "azithromycin - it drives resistance; always request "
+        "resistance PCR."
+    ),
+    "Non-gonococcal urethritis": (
+        "Urethral inflammation with polymorphs on Gram stain and no "
+        "Neisseria gonorrhoeae on NAAT; symptom-based diagnosis in "
+        "men. Aetiology: Chlamydia trachomatis (about 20 to 40 "
+        "percent), Mycoplasma genitalium (10 to 30 percent), "
+        "Trichomonas vaginalis, HSV, adenovirus, Ureaplasma "
+        "urealyticum (uncertain), rarely irritant. Sx: mucoid to "
+        "purulent urethral discharge, dysuria, meatal itch; onset "
+        "days to weeks after exposure. Ix: first-pass urine NAAT for "
+        "chlamydia, gonorrhoea and Mycoplasma genitalium with "
+        "macrolide resistance PCR; trichomonas NAAT in "
+        "high-prevalence populations; urethral Gram stain (over 5 "
+        "polymorphs per high-power field) if microscopy available; "
+        "HIV, syphilis screen. Mx: per ASHM doxycycline 100 mg BD PO "
+        "for 7 days empirically (covers chlamydia, most "
+        "macrolide-susceptible M. genitalium partially, and reduces "
+        "onward transmission); tailor once NAAT results back; treat "
+        "partners in past 60 days. Note: azithromycin single dose is "
+        "no longer first line for NGU."
+    ),
+    "Vaginismus": (
+        "Involuntary spasm of pelvic floor and vaginal introital "
+        "muscles preventing or making penetration painful; a "
+        "genito-pelvic pain and penetration disorder in DSM-5. Types: "
+        "primary (never able to tolerate penetration) or secondary "
+        "(after trauma, infection, atrophy, birth). Sx: pain, burning "
+        "or blockage at attempted penetration (intercourse, tampon, "
+        "speculum); anticipatory anxiety; often normal desire and "
+        "arousal outside penetration. Ix: sensitive history including "
+        "trauma and cultural context; gentle single-digit examination "
+        "only with consent; exclude vulvodynia, lichen sclerosus, "
+        "atrophy, endometriosis, infection. Mx: multidisciplinary. "
+        "Pelvic floor physiotherapy with graded vaginal dilators, "
+        "psychology (cognitive behavioural, sensate focus), "
+        "lubricants and oestrogen if atrophic; treat coexisting pain "
+        "conditions. Botulinum toxin injection to levator ani a "
+        "second-line specialist option. Partner involvement supports "
+        "adherence. Note: never force examination; consent-based "
+        "graded exposure is the therapy, not just the assessment."
+    ),
+    "Emergency contraception": (
+        "Post-coital contraception to prevent pregnancy after "
+        "unprotected sex or contraceptive failure; efficacy depends "
+        "on timing and body weight. Types available in Australia: "
+        "copper IUD within 5 days (most effective, over 99 percent; "
+        "also ongoing contraception), ulipristal acetate 30 mg oral "
+        "within 120 hours (most effective oral option; delays "
+        "ovulation up to 5 days), levonorgestrel 1.5 mg oral within "
+        "96 hours (pharmacist without script; less effective after "
+        "ovulation and in BMI over 26 - consider double dose). Ix: "
+        "pregnancy test if last menstrual period uncertain or more "
+        "than one exposure this cycle; discuss STI screening and "
+        "ongoing contraception at the same visit. Cautions: "
+        "ulipristal and progestogen contraception interact (avoid "
+        "starting progestogen for 5 days after ulipristal, or restart "
+        "with 7 days of backup); severe asthma on oral steroids a "
+        "relative contraindication to ulipristal. Note: copper IUD is "
+        "the only method reliably effective after ovulation and in "
+        "high BMI - always offer."
+    ),
+    "Levonorgestrel intrauterine system": (
+        "Progestogen-releasing intrauterine device (Mirena 52 mg over "
+        "8 years, Kyleena 19.5 mg over 5 years) causing endometrial "
+        "atrophy, thickened cervical mucus and variable ovulation "
+        "suppression; over 99 percent effective. Indications: "
+        "contraception, heavy menstrual bleeding (Mirena PBS listed), "
+        "endometrial protection for oestrogen-only menopausal hormone "
+        "therapy, endometriosis-related pain, adenomyosis. "
+        "Contraindications: current PID, cervical or endometrial "
+        "cancer, unexplained abnormal uterine bleeding, distorted "
+        "cavity, breast cancer within 5 years, active liver disease, "
+        "pregnancy. Dosing: insert preferably first 7 days of cycle "
+        "for immediate cover, or any time with pregnancy excluded (7 "
+        "days backup); STI screen if indicated; menstrual cup or "
+        "tampon use fine. Adverse effects: irregular spotting for 3 "
+        "to 6 months then oligomenorrhoea or amenorrhoea in 20 "
+        "percent; mood, acne, breast tenderness, ovarian cysts "
+        "usually functional. Perforation 1 per 1000, expulsion 3 to 5 "
+        "percent. Note: warn about spotting for 6 months and "
+        "amenorrhoea outcome up front - the main reason for early "
+        "removal is unmet expectation."
+    ),
+    "Etonogestrel implant": (
+        "Single 4 cm subdermal rod (Implanon NXT) releasing "
+        "etonogestrel over 3 years; ovulation suppression is the main "
+        "mechanism; over 99 percent effective and the most effective "
+        "reversible contraception. Indications: contraception; can be "
+        "used while breastfeeding, in adolescents, and where "
+        "oestrogen is contraindicated. Contraindications: current or "
+        "recent breast cancer, active liver disease, undiagnosed "
+        "vaginal bleeding, hypersensitivity; caution with "
+        "enzyme-inducing drugs (rifampicin, carbamazepine, some "
+        "antiretrovirals) which reduce efficacy - use additional "
+        "method. Dosing: insert any time in cycle with pregnancy "
+        "excluded (7 days backup unless first 5 days of cycle); place "
+        "in medial upper arm using accredited applicator, palpate "
+        "immediately post-insertion. Adverse effects: unpredictable "
+        "bleeding pattern (amenorrhoea, spotting, prolonged bleed) is "
+        "the leading reason for early removal, counsel up front; "
+        "headache, mood, acne, weight change, ovarian cysts. Not "
+        "palpable equals not correctly inserted - imaging (ultrasound "
+        "then CT) if lost. Note: bleeding counselling and applicator "
+        "technique are what determine 3-year retention."
+    ),
+    "Menopausal hormone therapy": (
+        "Oestrogen replacement (with progestogen if uterus present) "
+        "for troublesome vasomotor symptoms and genitourinary "
+        "syndrome of menopause; time-limited use in symptomatic "
+        "women. Indications: moderate to severe hot flushes, night "
+        "sweats, mood, vulvovaginal atrophy (topical oestrogen if "
+        "isolated); premature ovarian insufficiency (replacement to "
+        "age 51 regardless of symptoms for bone and CV protection). "
+        "Dosing: transdermal 17-beta oestradiol patch or gel is first "
+        "line (lower VTE and stroke risk than oral); micronised "
+        "progesterone 100 mg nightly (continuous) or 200 mg 12 nights "
+        "per month (sequential) if uterus present; local vaginal "
+        "oestrogen for isolated atrophy. Contraindications: current "
+        "or past breast cancer, undiagnosed vaginal bleeding, active "
+        "VTE or stroke, active liver disease, coronary artery "
+        "disease. Adverse effects: VTE higher with oral and "
+        "negligible with transdermal, small breast cancer risk with "
+        "combined MHT beyond 5 years, endometrial protection required "
+        "in women with uterus. Note: transdermal oestradiol plus "
+        "micronised progesterone is the current lowest-risk "
+        "combination per AMS."
+    ),
+    "Medication abortion": (
+        "Termination of pregnancy up to 63 days (9 weeks) gestation "
+        "using mifepristone 200 mg PO then misoprostol 800 mcg buccal "
+        "or vaginal 36 to 48 hours later; MS-2 Step PBS listed since "
+        "2013 and prescribable by any GP or nurse practitioner "
+        "completing MS Health training since 2023. Ix: confirm "
+        "intrauterine pregnancy and gestation by ultrasound, rule out "
+        "ectopic, blood group and Rh (anti-D if Rh negative and over "
+        "10 weeks - or per unit practice), FBC, STI screen; discuss "
+        "options non-directively and confirm decision. Mx: "
+        "mifepristone in clinic or at home, misoprostol at home with "
+        "support person, expect heavy bleeding and cramps for 4 to 6 "
+        "hours; simple analgesia and anti-emetic supplied. Follow-up: "
+        "urine beta-hCG at 2 weeks (should be under 1000) or "
+        "ultrasound; success rate 95 to 98 percent under 9 weeks; "
+        "contact if heavy bleeding (more than 2 pads per hour for 2 "
+        "hours), fever over 24 hours, or persistent symptoms; "
+        "commence contraception day of misoprostol. Note: 1800 My "
+        "Options (Vic) and Pregnancy Choices Helpline for referral "
+        "pathways."
+    ),
+    "Lacunar stroke syndromes": (
+        "Small-vessel occlusion producing five classic clinical "
+        "patterns from deep penetrating artery infarcts under 15 mm "
+        "in basal ganglia, internal capsule, thalamus or pons. "
+        "Aetiology: chronic hypertension, diabetes and smoking drive "
+        "lipohyalinosis of penetrators. Features: pure motor "
+        "hemiparesis (posterior limb internal capsule or pons), pure "
+        "sensory stroke (VPL thalamus), sensorimotor stroke, ataxic "
+        "hemiparesis and dysarthria clumsy-hand. Cortical signs "
+        "(aphasia, neglect, visual field cut) are absent by "
+        "definition. Ix: non-contrast CT often normal early; MRI DWI "
+        "confirms; carotid Doppler and echo to rule out embolic "
+        "source. Mx: thrombolysis within 4.5 h if eligible, then "
+        "aspirin 300 mg then dual antiplatelet aspirin plus "
+        "clopidogrel for 21 days per Stroke Foundation Australia. "
+        "Aggressive BP, lipid and diabetes control. Note: absence of "
+        "cortical signs plus a small deep infarct on DWI is the "
+        "giveaway."
+    ),
+    "Watershed cerebral infarction": (
+        "Border-zone infarct between major cerebral artery "
+        "territories from global hypoperfusion rather than embolism. "
+        "Aetiology: cardiac arrest, sepsis, severe carotid stenosis, "
+        "intraoperative hypotension. Cortical border-zone (ACA-MCA, "
+        "MCA-PCA) and internal border-zone (deep white matter) "
+        "patterns. Features: bilateral proximal arm weakness "
+        "(man-in-a-barrel), transcortical aphasia with preserved "
+        "repetition, visual disturbance and cognitive slowing. Ix: "
+        "MRI DWI shows linear cortical or rosary-bead deep white "
+        "matter lesions. Carotid imaging and echo to find the "
+        "upstream lesion. Mx: restore perfusion, treat the cause, "
+        "permissive hypertension until stable. Consider carotid "
+        "endarterectomy if symptomatic stenosis over 70 percent per "
+        "Stroke Foundation Australia. Note: bilateral proximal arm "
+        "weakness after cardiac arrest is watershed until proven "
+        "otherwise."
+    ),
+    "Cerebellar stroke": (
+        "Infarct or haemorrhage in PICA, AICA or SCA territory with "
+        "high risk of brainstem compression from oedema. Features: "
+        "acute vertigo, ataxia, nausea, dysarthria and nystagmus, "
+        "often mistaken for peripheral vertigo. HINTS exam (head "
+        "impulse, nystagmus direction, test of skew) distinguishes: "
+        "central pattern is normal head impulse, direction-changing "
+        "nystagmus and skew deviation. AICA adds ipsilateral hearing "
+        "loss and facial weakness; PICA gives Wallenberg. Ix: MRI is "
+        "far more sensitive than CT for posterior fossa. CTA to "
+        "define vertebrobasilar anatomy. Mx: thrombolysis or "
+        "thrombectomy if eligible. Neurosurgical decompression for "
+        "cerebellar infarct over 3 cm with declining GCS or "
+        "hydrocephalus, per Stroke Foundation Australia. Note: "
+        "isolated vertigo with abnormal HINTS is a stroke, not "
+        "vestibular neuritis."
+    ),
+    "CADASIL": (
+        "Cerebral autosomal dominant arteriopathy with subcortical "
+        "infarcts and leukoencephalopathy from NOTCH3 mutations, the "
+        "commonest hereditary small-vessel stroke syndrome. Features: "
+        "migraine with aura in the 30s, recurrent lacunar strokes in "
+        "the 40s and 50s and progressive vascular dementia and mood "
+        "disturbance by the 60s. Family history often striking. Ix: "
+        "MRI shows confluent white matter change with characteristic "
+        "anterior temporal pole and external capsule involvement. "
+        "NOTCH3 gene testing confirms; skin biopsy shows granular "
+        "osmiophilic material. Mx: no disease-modifying therapy. "
+        "Aggressive vascular risk control, avoid thrombolysis where "
+        "possible given microbleed risk, treat migraine with "
+        "paracetamol or antiemetics rather than triptans. Genetic "
+        "counselling. Note: young stroke plus migraine with aura plus "
+        "anterior temporal white matter change equals NOTCH3 until "
+        "excluded."
+    ),
+    "Stroke mimics": (
+        "Conditions presenting as acute focal neurological deficit "
+        "that are not stroke, accounting for up to a quarter of code "
+        "stroke activations. Causes commonly missed include seizure "
+        "with Todd paresis, hypoglycaemia, migraine with aura, "
+        "functional neurological disorder, sepsis unmasking old "
+        "deficit, hemiplegic migraine, MS relapse, tumour and Bell "
+        "palsy. Ix: bedside glucose is mandatory before any "
+        "thrombolysis decision. CT plus CTA rules out large-vessel "
+        "occlusion; MRI DWI clarifies if diagnosis remains unclear. "
+        "Mx: thrombolysis remains safe in mimics (haemorrhage rate "
+        "under 1 percent), so do not delay in the 4.5 h window for "
+        "uncertainty per Stroke Foundation Australia. Treat the mimic "
+        "once identified. Note: gradual onset, prior identical "
+        "episodes and positive symptoms (jerking, spreading tingling) "
+        "favour mimic; sudden maximal deficit favours stroke."
+    ),
+    "Paroxysmal hemicrania": (
+        "Trigeminal autonomic cephalalgia of short severe unilateral "
+        "orbital or temporal attacks lasting 2 to 30 minutes, 5 to 40 "
+        "times a day. Features: pain with ipsilateral cranial "
+        "autonomic signs (lacrimation, rhinorrhoea, conjunctival "
+        "injection, ptosis, miosis), like cluster but shorter and "
+        "more frequent. Female predominance, no circadian clustering. "
+        "Ix: MRI brain with pituitary views to exclude secondary "
+        "causes (pituitary lesion, posterior fossa lesion) mandatory "
+        "in all trigeminal autonomic cephalalgias. Mx: absolute "
+        "response to indomethacin 25 to 75 mg tds is diagnostic and "
+        "therapeutic. PPI cover for gastric protection. If "
+        "indomethacin fails, reconsider the diagnosis. Note: an "
+        "indomethacin-responsive short unilateral headache with "
+        "autonomic features is paroxysmal hemicrania by definition."
+    ),
+    "Hemicrania continua": (
+        "Continuous strictly unilateral headache with superimposed "
+        "exacerbations carrying ipsilateral autonomic features, "
+        "another indomethacin-responsive trigeminal autonomic "
+        "cephalalgia. Features: baseline moderate side-locked "
+        "headache present daily for over 3 months, with painful "
+        "flares lasting minutes to days that bring lacrimation, "
+        "ptosis, miosis or restlessness. No side shift. Ix: MRI brain "
+        "to exclude structural mimics (dural fistula, cervical artery "
+        "dissection, sinus disease). Mx: indomethacin 25 mg tds "
+        "titrated to 75 mg tds gives complete relief within 48 h and "
+        "confirms diagnosis. Long-term PPI cover. If indomethacin "
+        "intolerant, use melatonin, topiramate or occipital nerve "
+        "block. Note: side-locked daily headache that vanishes on "
+        "indomethacin is hemicrania continua by definition."
+    ),
+    "SUNCT syndrome": (
+        "Short-lasting unilateral neuralgiform headache with "
+        "conjunctival injection and tearing, a trigeminal autonomic "
+        "cephalalgia of brief stabbing orbital attacks. Features: "
+        "attacks 1 to 600 seconds long, 3 to 200 per day, always with "
+        "ipsilateral prominent conjunctival injection and "
+        "lacrimation. SUNA variant has autonomic features other than "
+        "both. Trigger zones on face mimic trigeminal neuralgia. Ix: "
+        "MRI with dedicated pituitary views to exclude posterior "
+        "fossa or pituitary lesion, which is more common in SUNCT "
+        "than other trigeminal autonomic cephalalgias. Mx: "
+        "lamotrigine titrated slowly to 200 to 400 mg daily is "
+        "first-line; topiramate or gabapentin second-line. Poor "
+        "response to indomethacin distinguishes from paroxysmal "
+        "hemicrania. IV lidocaine breaks status. Note: brief "
+        "unilateral stabs with red watery eye that fail indomethacin "
+        "equals SUNCT."
+    ),
+    "Hypnic headache": (
+        "Alarm-clock headache, a bilateral dull head pain that wakes "
+        "the patient from sleep at a consistent time in patients over "
+        "age 50. Features: attacks 15 min to 4 h after sleep onset, "
+        "waking the patient, lasting 15 min to 4 h, over 10 nights "
+        "per month for over 3 months. No autonomic features "
+        "(distinguishing from cluster) and no cutaneous allodynia. "
+        "Ix: MRI brain to rule out secondary causes (posterior fossa "
+        "lesion, intracranial hypertension, nocturnal hypertension). "
+        "Overnight oximetry if OSA suspected. Mx: caffeine 40 to 60 "
+        "mg at bedtime aborts and prevents. Lithium 200 to 600 mg "
+        "nocte second-line (levels, thyroid, renal monitoring per "
+        "AMH). Indomethacin or melatonin third-line. Note: recurrent "
+        "nocturnal headache in an older adult without autonomic "
+        "features is hypnic headache, and caffeine at bedtime helps "
+        "rather than hurts."
+    ),
+    "Primary cough headache": (
+        "Sudden bilateral severe headache lasting seconds to 2 h "
+        "triggered by cough, sneeze, straining or Valsalva, in "
+        "patients over 40. Aetiology: primary form is idiopathic; "
+        "secondary form (40 percent) is due to Chiari 1 malformation, "
+        "posterior fossa lesion or intracranial hypotension. Ix: MRI "
+        "brain with attention to craniocervical junction is mandatory "
+        "in all new cough headache to exclude Chiari 1 and posterior "
+        "fossa mass. Mx: primary form responds to indomethacin 25 to "
+        "100 mg daily. Treat cough trigger (ACE inhibitor cessation, "
+        "asthma control). Surgical decompression if Chiari 1 with "
+        "symptomatic tonsillar descent. Note: any new "
+        "Valsalva-triggered headache demands MRI before labelling as "
+        "primary; the secondary rate is far higher than for other "
+        "headache types."
+    ),
+    "Primary exercise headache": (
+        "Bilateral throbbing headache brought on by sustained "
+        "exertion, lasting 5 min to 48 h, more common in hot weather "
+        "and at altitude. Aetiology: primary form probably from "
+        "arterial dilatation and jugular incompetence; secondary form "
+        "from subarachnoid haemorrhage, cervical artery dissection, "
+        "cardiac cephalgia (ischaemic) or phaeochromocytoma. Ix: "
+        "first episode requires CT plus CTA to exclude SAH and "
+        "dissection; consider ECG and stress testing if cardiac "
+        "features. MRI if imaging negative but pattern atypical. Mx: "
+        "indomethacin 25 to 150 mg 30 to 60 min pre-exercise. Warm-up "
+        "graduated exercise, hydration and gradual altitude "
+        "acclimatisation. Beta-blockers second-line. Note: first-ever "
+        "exertional headache is a red flag, not a diagnosis - image "
+        "before reassuring."
+    ),
+    "Spontaneous intracranial hypotension": (
+        "Orthostatic headache from CSF leak, usually spinal, without "
+        "preceding lumbar puncture. Features: headache within 15 min "
+        "of standing, relieved within 30 min of lying flat, often "
+        "occipital or frontal. Neck stiffness, tinnitus, hearing "
+        "changes, nausea. Can progress to subdural haematoma, brain "
+        "sag with coma. Ix: MRI brain with contrast shows SEEPS "
+        "(subdural collections, pachymeningeal enhancement, engorged "
+        "venous sinuses, pituitary enlargement, sagging brain). "
+        "Spinal MRI or CT myelography localises the leak. Mx: bed "
+        "rest, hydration, caffeine 500 mg IV or 200 mg oral bd. "
+        "Epidural blood patch (autologous 10 to 20 mL) is definitive; "
+        "surgical repair if refractory. Avoid empirical thrombosis "
+        "prophylaxis; venous sinus thrombosis complicates 2 percent. "
+        "Note: an orthostatic headache without recent LP is "
+        "spontaneous intracranial hypotension until MRI clears it."
+    ),
+    "Focal dystonia": (
+        "Sustained or intermittent involuntary muscle contraction "
+        "producing twisting postures or repetitive movements confined "
+        "to one body region, adult-onset and usually idiopathic. "
+        "Types: cervical (torticollis) commonest, blepharospasm, "
+        "writer cramp and other task-specific limb dystonias, "
+        "laryngeal (spasmodic dysphonia), oromandibular. Sensory "
+        "tricks (geste antagoniste) reduce contraction. Ix: clinical "
+        "diagnosis. MRI if young onset, hemidystonia or rapid "
+        "progression to exclude structural cause. Consider DYT gene "
+        "panel if under 30 or family history. Wilson disease screen "
+        "(caeruloplasmin, 24 h urine copper) under 50. Mx: botulinum "
+        "toxin type A injections every 3 months are first-line for "
+        "cervical, blepharospasm and laryngeal forms. Trihexyphenidyl "
+        "or baclofen adjunct. Deep brain stimulation for medically "
+        "refractory generalised or cervical dystonia. Note: any young "
+        "dystonia demands a Wilson screen; missing it wastes the "
+        "treatable window."
+    ),
+    "Neuromyelitis optica spectrum disorder": (
+        "Aquaporin-4 IgG antibody demyelinating disease with "
+        "predilection for optic nerve and spinal cord, distinct from "
+        "MS in mechanism and management. Features: severe unilateral "
+        "or bilateral optic neuritis (often chiasmal), longitudinally "
+        "extensive transverse myelitis over 3 vertebral segments, and "
+        "area postrema syndrome (intractable hiccups and vomiting). "
+        "Attacks are more severe with less recovery than MS. Ix: "
+        "serum AQP4-IgG (cell-based assay) is diagnostic; MOG-IgG "
+        "defines a related but distinct disorder. MRI shows LETM and "
+        "cord swelling, brain often normal or with dorsal medulla "
+        "lesion. CSF often shows pleocytosis without oligoclonal "
+        "bands. Mx of acute attack is IV methylprednisolone 1 g daily "
+        "5 days plus plasma exchange if severe. Long-term rituximab, "
+        "eculizumab, satralizumab or inebilizumab. Avoid MS agents "
+        "(interferon, natalizumab, fingolimod worsen NMOSD). Note: "
+        "LETM plus severe optic neuritis is NMOSD until AQP4 "
+        "excluded; do not start an MS drug empirically."
+    ),
+    "MOG antibody disease": (
+        "Myelin oligodendrocyte glycoprotein IgG-associated disorder "
+        "presenting as optic neuritis, transverse myelitis, ADEM-like "
+        "brain lesions or brainstem encephalitis, distinct from both "
+        "MS and NMOSD. Features: bilateral simultaneous optic "
+        "neuritis with severe swelling and good recovery is classic "
+        "in adults; ADEM-like presentation dominates in children. "
+        "Cortical encephalitis with seizures also described. "
+        "Relapsing in about half. Ix: serum MOG-IgG by cell-based "
+        "assay (not ELISA); low titres non-specific. MRI shows longer "
+        "optic nerve involvement with perineural enhancement, fluffy "
+        "cord lesions. AQP4 negative by definition. Mx: high-dose IV "
+        "methylprednisolone with slow oral taper over 3 to 6 months "
+        "(fast wean triggers rebound). For relapsing disease use "
+        "rituximab, IVIG or mycophenolate. Avoid MS-specific agents. "
+        "Note: bilateral optic neuritis with dramatic swelling that "
+        "steroid-responds and then rebounds on wean equals MOGAD."
+    ),
+    "Acute disseminated encephalomyelitis": (
+        "Monophasic post-infectious or post-vaccination demyelinating "
+        "disease of brain and cord, mostly in children within 4 weeks "
+        "of viral illness. Features: encephalopathy (mandatory for "
+        "diagnosis in children per IPMSSG), multifocal deficits, "
+        "seizures, fever, meningism. Fulminant onset over days. "
+        "Adults can present similarly, often more severely. Ix: MRI "
+        "shows large, poorly demarcated, symmetric white and grey "
+        "matter lesions all enhancing at the same age (unlike MS "
+        "temporal dissemination). CSF shows pleocytosis and raised "
+        "protein with oligoclonal bands usually absent. Rule out "
+        "infection with HSV PCR plus empirical aciclovir until "
+        "cleared. Test MOG-IgG (positive in a third). Mx: IV "
+        "methylprednisolone 30 mg/kg (max 1 g) daily 5 days then oral "
+        "taper over 4 to 6 weeks. IVIG or plasma exchange if "
+        "refractory. Most recover well. Note: child with post-viral "
+        "encephalopathy plus multifocal MRI lesions all enhancing "
+        "together is ADEM until proven otherwise."
+    ),
+    "Kennedy disease": (
+        "Spinal and bulbar muscular atrophy: X-linked recessive "
+        "CAG-repeat expansion in the androgen receptor gene causing "
+        "adult-onset lower motor neuron disease with androgen "
+        "insensitivity. Features: adult male in 30s to 50s with "
+        "proximal limb weakness, dysphagia and dysarthria, facial and "
+        "tongue fasciculations, postural tremor, gynaecomastia, "
+        "testicular atrophy and reduced fertility. Slowly progressive "
+        "over decades, normal lifespan. Ix: creatine kinase mildly "
+        "raised. AR gene testing confirms (over 38 CAG repeats). "
+        "Nerve conduction shows sensory involvement (subclinical). "
+        "Androgen levels raised. Distinguish from ALS by slow course, "
+        "sensory involvement and endocrine features. Mx: symptomatic "
+        "and multidisciplinary care through motor neuron disease "
+        "clinic. Speech pathology, physio, non-invasive ventilation "
+        "late. Androgen deprivation trials have not helped. Genetic "
+        "counselling. Note: any adult male labelled ALS with slow "
+        "progression, sensory signs and gynaecomastia needs an AR "
+        "gene test."
+    ),
+    "Primary lateral sclerosis": (
+        "Pure upper motor neuron variant of motor neuron disease with "
+        "insidious progressive spastic paraparesis and bulbar "
+        "dysfunction, no lower motor neuron features. Features: onset "
+        "in 50s with lower limb spasticity, then upper limb "
+        "involvement and pseudobulbar affect. No fasciculations, no "
+        "wasting, brisk reflexes with clonus, extensor plantars. "
+        "Progression over years to decades, slower than ALS. "
+        "Diagnosis requires 4 years without lower motor neuron signs "
+        "(before then, upper motor neuron dominant ALS). Ix: MRI "
+        "brain and cord to exclude structural, MS, HSP, HTLV-1 "
+        "myelopathy, B12 deficiency, adrenoleukodystrophy. EMG "
+        "confirms absent lower motor neuron denervation. Mx: "
+        "symptomatic: baclofen, tizanidine or intrathecal baclofen "
+        "for spasticity. Botulinum toxin for focal spasticity. "
+        "Riluzole not indicated. Physiotherapy, speech and swallow "
+        "input. Note: pure spasticity progressing for over 4 years "
+        "without wasting or fasciculations is PLS, not ALS."
+    ),
+    "Progressive muscular atrophy": (
+        "Pure lower motor neuron variant of motor neuron disease: "
+        "progressive wasting, weakness and fasciculations without any "
+        "upper motor neuron signs. Features: asymmetric limb wasting "
+        "and weakness in 50s to 60s, absent reflexes, prominent "
+        "fasciculations. No spasticity, no bulbar involvement (until "
+        "late), no cognitive change. About 20 percent develop upper "
+        "motor neuron signs and become ALS. Median survival 5 years, "
+        "better than classic ALS. Ix: EMG shows widespread "
+        "denervation in three regions (bulbar, cervical, thoracic, "
+        "lumbosacral). Exclude multifocal motor neuropathy with "
+        "conduction block (treatable), Kennedy disease, inclusion "
+        "body myositis. Anti-GM1 antibody, AR gene test, muscle "
+        "biopsy if diagnosis unclear. Mx: multidisciplinary MND "
+        "clinic. Riluzole 50 mg bd (survival benefit extrapolated "
+        "from ALS trials). PEG for nutrition, non-invasive "
+        "ventilation for respiratory support. Note: pure lower motor "
+        "neuron picture demands ruling out multifocal motor "
+        "neuropathy with conduction block before accepting PMA."
+    ),
+    "Multifocal motor neuropathy": (
+        "Rare treatable immune-mediated motor neuropathy with "
+        "conduction block, mimicking pure lower motor neuron MND. "
+        "Features: slowly progressive asymmetric distal upper limb "
+        "weakness (wrist and finger drop), wasting disproportionately "
+        "mild for weakness, fasciculations, cramps. No sensory "
+        "symptoms, no upper motor neuron signs, no bulbar "
+        "involvement. Male predominance, onset 40s to 50s. Ix: nerve "
+        "conduction studies show conduction block in motor nerves at "
+        "non-entrapment sites; sensory conduction normal (key). "
+        "Anti-GM1 IgM antibodies positive in half. MRI of brachial "
+        "plexus may show T2 hyperintensity. CSF normal. Distinguish "
+        "from ALS. Mx: IVIG 2 g/kg over 2 to 5 days is first-line, "
+        "repeated every 4 to 8 weeks. Response within weeks. Steroids "
+        "and plasma exchange do not work and may worsen. "
+        "Cyclophosphamide or rituximab if IVIG-refractory. Note: "
+        "asymmetric distal arm weakness with preserved sensation and "
+        "conduction block equals MMN; treat with IVIG before "
+        "labelling ALS."
+    ),
+    "Herpes simplex encephalitis": (
+        "Most common cause of sporadic fatal encephalitis in "
+        "Australia, HSV-1 reactivation with predilection for temporal "
+        "and inferior frontal lobes. Features: subacute fever, "
+        "headache, altered mental state over days, focal seizures, "
+        "personality change, aphasia (temporal lobe). Untreated "
+        "mortality 70 percent. Ix: CSF PCR for HSV is diagnostic "
+        "(sensitivity over 95 percent after 48 h) with lymphocytic "
+        "pleocytosis, raised protein, normal glucose and red cells. "
+        "MRI shows unilateral or bilateral temporal lobe T2 "
+        "hyperintensity with restricted diffusion. EEG shows temporal "
+        "periodic discharges. Mx: empirical IV aciclovir 10 mg/kg tds "
+        "for 14 to 21 days on suspicion, before PCR result. Adjust to "
+        "renal function. Seizure control (levetiracetam). Neurology "
+        "and ICU involvement. Autoimmune anti-NMDA encephalitis can "
+        "follow HSV in weeks, retest if relapse. Note: fever plus "
+        "behavioural change plus focal seizure equals empirical "
+        "aciclovir before imaging - delay kills."
+    ),
+    "Cerebral toxoplasmosis": (
+        "Toxoplasma gondii reactivation causing multiple "
+        "ring-enhancing brain lesions in advanced HIV (CD4 under "
+        "100), the commonest cerebral mass lesion in AIDS. Features: "
+        "subacute headache, focal deficits, seizures, altered mental "
+        "state over 2 to 3 weeks. Fever in half. Ix: MRI shows "
+        "multiple ring-enhancing lesions at grey-white junction and "
+        "basal ganglia with surrounding oedema. Toxoplasma IgG "
+        "positive in over 95 percent (negative serology makes "
+        "diagnosis unlikely). CSF PCR sensitivity moderate. Empirical "
+        "treatment trial for 2 weeks with follow-up imaging is "
+        "standard; brain biopsy if no response. Rule out CNS "
+        "lymphoma. Mx: sulfadiazine plus pyrimethamine plus folinic "
+        "acid for 6 weeks acute, then secondary prophylaxis until CD4 "
+        "over 200 for 6 months on ART. Cotrimoxazole alternative and "
+        "used for primary prophylaxis when CD4 under 100 with "
+        "positive serology per ASHM. Steroids only if mass effect. "
+        "Note: multiple ring-enhancing lesions with positive toxo IgG "
+        "and CD4 under 100 gets empirical treatment before biopsy."
+    ),
+    "Primary progressive aphasia": (
+        "Neurodegenerative syndrome with insidious progressive "
+        "language impairment as the dominant early feature, sparing "
+        "other cognition for years, an FTD spectrum disorder. "
+        "Subtypes: nonfluent (agrammatic, apraxia of speech, often "
+        "tau or PSP-linked), semantic (loss of word meaning and "
+        "object knowledge, TDP-43), logopenic (word-finding pauses, "
+        "phonological errors, Alzheimer pathology in most). Ix: "
+        "neuropsychology defines subtype. On MRI the nonfluent form "
+        "shows left frontal atrophy, semantic left anterior temporal "
+        "and logopenic left temporoparietal. FDG-PET or amyloid PET "
+        "if logopenic suspected (AD-directed treatment). CSF or "
+        "plasma AD biomarkers where available. Exclude reversible "
+        "causes (stroke, tumour, MS). Mx: no disease-modifying "
+        "therapy. Speech pathology for compensatory strategies, "
+        "communication devices. Treat associated depression. "
+        "Cholinesterase inhibitor trial if logopenic (AD pathology). "
+        "Support services via Dementia Australia. Advance care "
+        "planning early. Note: isolated progressive language decline "
+        "in a 60-year-old with preserved memory is PPA, not stroke."
+    ),
+    "Behavioural variant frontotemporal dementia": (
+        "Frontotemporal dementia subtype dominated by early "
+        "progressive personality change, disinhibition and executive "
+        "dysfunction, onset typically 45 to 65. Features: three of "
+        "six core symptoms required: disinhibition, apathy, loss of "
+        "empathy, perseverative or compulsive behaviour, hyperorality "
+        "or dietary change, dysexecutive neuropsychology. Memory and "
+        "visuospatial function relatively preserved early "
+        "(distinguishing from AD). Ix: MRI shows frontal and anterior "
+        "temporal atrophy (asymmetric). FDG-PET shows frontal "
+        "hypometabolism. Neuropsychology confirms executive and "
+        "social cognition deficits. Genetic testing (C9orf72, GRN, "
+        "MAPT) if family history or under 55. Rule out mood disorder, "
+        "autism spectrum, structural, HIV, neurosyphilis. Mx: no "
+        "disease-modifying therapy. Trial SSRI (citalopram, "
+        "sertraline) for compulsive and disinhibited behaviour per "
+        "eTG. Avoid cholinesterase inhibitors (worsen behaviour). "
+        "Antipsychotics cautiously for aggression. Carer support, "
+        "driving cessation, guardianship early. Note: personality "
+        "change in a 55-year-old with intact memory is bvFTD until "
+        "proven otherwise, not depression."
+    ),
+    "Post-dural puncture headache": (
+        "Orthostatic headache from CSF leak through the LP or spinal "
+        "anaesthesia needle site, typically within 72 h of the "
+        "procedure. Aetiology: risk higher with larger cutting "
+        "needles, younger patient, female, low BMI, prior PDPH. "
+        "Atraumatic pencil-point needles halve the risk. Features: "
+        "bifrontal or occipital headache worse when upright, "
+        "improving supine, with neck stiffness, tinnitus, "
+        "photophobia, nausea. Can be severe and disabling. Cranial "
+        "nerve palsies (usually VI) if leak large. Ix: clinical "
+        "diagnosis. MRI if atypical (persisting supine, focal signs) "
+        "to exclude cerebral venous sinus thrombosis (a known PDPH "
+        "complication) and subdural haematoma. Mx: bed rest, "
+        "hydration, oral caffeine 300 mg bd, paracetamol and NSAIDs "
+        "for 24 to 48 h. Epidural blood patch (autologous 15 to 20 mL "
+        "by anaesthetics) if refractory beyond 48 h - success 70 to "
+        "90 percent. Note: orthostatic headache after neuraxial "
+        "procedure is PDPH until imaged; sudden neurology on top "
+        "means venous sinus thrombosis until CT venogram clears it."
+    ),
+    "Miller Fisher syndrome": (
+        "GBS variant with the triad of ophthalmoplegia, ataxia and "
+        "areflexia, mediated by anti-GQ1b IgG antibodies. Aetiology: "
+        "post-infectious (Campylobacter jejuni, Haemophilus "
+        "influenzae, CMV) 1 to 2 weeks before onset. Features: acute "
+        "onset over days of external ophthalmoplegia (bilateral, "
+        "symmetric, ptosis), gait ataxia and areflexia, usually "
+        "without significant limb weakness. Bulbar and pupillary "
+        "involvement in some. Bickerstaff brainstem encephalitis "
+        "overlap adds drowsiness and long tract signs. Ix: anti-GQ1b "
+        "IgG positive in over 85 percent (diagnostic). CSF shows "
+        "albuminocytological dissociation (raised protein, normal "
+        "cells) after week 1. MRI usually normal, excludes stroke. "
+        "Nerve conduction shows reduced sensory potentials. Mx: IVIG "
+        "2 g/kg over 5 days or plasma exchange. Recovery starts "
+        "within 2 to 4 weeks, most fully recover by 6 months. "
+        "Respiratory monitoring (small chance of GBS overlap). Note: "
+        "triad of ophthalmoplegia, ataxia and areflexia "
+        "post-infection is Miller Fisher; send GQ1b and start IVIG."
+    ),
+    "Bickerstaff brainstem encephalitis": (
+        "Rare post-infectious anti-GQ1b syndrome combining Miller "
+        "Fisher features with brainstem encephalopathy, on the same "
+        "spectrum as GBS. Features: progressive drowsiness or coma, "
+        "ophthalmoplegia, ataxia, pyramidal signs (brisk reflexes or "
+        "extensor plantars, distinguishing from Miller Fisher). "
+        "Preceding infection in most (Campylobacter, respiratory "
+        "virus). Face and bulbar weakness common. Ix: anti-GQ1b IgG "
+        "positive in about two-thirds. MRI shows brainstem T2 lesions "
+        "in a third (thalamus, cerebellum, midbrain). CSF shows "
+        "albuminocytological dissociation. Rule out Wernicke, "
+        "brainstem stroke, viral encephalitis (HSV PCR) and "
+        "autoimmune encephalitis. Mx: IVIG 2 g/kg or plasma exchange. "
+        "ICU-level airway support if bulbar or coma. Most recover "
+        "well over months. Note: Miller Fisher features plus reduced "
+        "conscious level and pyramidal signs is Bickerstaff, not "
+        "stroke - image the brainstem and send GQ1b."
+    ),
+    "Neurogenic orthostatic hypotension": (
+        "Sustained drop in systolic BP over 20 mmHg or diastolic over "
+        "10 mmHg within 3 min of standing from autonomic failure, "
+        "distinct from volume depletion. Causes include Parkinson "
+        "disease, multiple system atrophy (severe early nOH), pure "
+        "autonomic failure, dementia with Lewy bodies, diabetic "
+        "autonomic neuropathy and amyloidosis. Features: postural "
+        "dizziness, presyncope, occipital coathanger neck ache and "
+        "blurred vision. Supine hypertension over 150 is common and "
+        "complicates management. Absent compensatory tachycardia "
+        "distinguishes from volume-loss orthostatic hypotension. Ix: "
+        "active stand or tilt-table with BP and HR. Screen FBC, EUC, "
+        "glucose, TSH, B12, morning cortisol and ECG. Autonomic "
+        "function tests if primary autonomic failure suspected. Mx: "
+        "non-pharm first (compression stockings and abdominal binder, "
+        "slow position change, head-of-bed elevated 20 cm, small "
+        "frequent meals, water bolus pre-standing). Then midodrine "
+        "2.5 to 10 mg tds or fludrocortisone 100 mcg mane. Avoid "
+        "bedtime dosing. Note: absent tachycardia plus supine "
+        "hypertension separates neurogenic from volume-loss cause."
+    ),
+    "Post-concussion syndrome": (
+        "Persistent symptoms beyond the expected 10 to 14 day "
+        "recovery window after mild traumatic brain injury, more "
+        "common with prior concussions or migraine history. Features: "
+        "symptoms 4 or more weeks after injury across four clusters: "
+        "cognitive (poor concentration, memory), somatic (headache, "
+        "dizziness, fatigue, insomnia, photophobia), affective "
+        "(anxiety, low mood, irritability), oculomotor and vestibular "
+        "(blurred vision, motion sensitivity). Risk factors: female, "
+        "adolescent, prior mental health, litigation. Ix: SCAT6 "
+        "tracking. VOMS (vestibular ocular motor screen), BESS "
+        "balance. Neuroimaging only if red flags (focal deficit, "
+        "worsening headache, seizure). Mx: sub-symptom-threshold "
+        "aerobic exercise (Buffalo treadmill protocol) from day 2 to "
+        "3 (not prolonged rest). Vestibular and cervical physio, "
+        "oculomotor rehab if positive VOMS. Sleep hygiene, mood "
+        "support, staged return to learn and play per AIS concussion "
+        "in sport guidelines. Amitriptyline or nortriptyline if "
+        "headache dominant. Note: prolonged rest worsens "
+        "post-concussion syndrome; graded aerobic exercise "
+        "sub-threshold speeds recovery."
+    ),
+    "Spinal shock": (
+        "Transient loss of all spinal cord function below the level "
+        "of an acute cord injury: flaccid paralysis, areflexia, "
+        "anaesthesia and autonomic dysfunction lasting hours to "
+        "weeks. Mechanism: sudden withdrawal of descending "
+        "facilitation on spinal reflex arcs. Not the same as "
+        "neurogenic shock (hypotension and bradycardia from "
+        "sympathetic disconnection). Features: initial phase (0 to 24 "
+        "h) areflexia and flaccid paralysis, then reflex recovery in "
+        "stages over days to weeks. Return of bulbocavernosus reflex "
+        "within 48 h signals resolution of spinal shock (allows ASIA "
+        "classification to be reliable). Priapism and paralytic ileus "
+        "common. Ix: neurological exam, ASIA scale once shock "
+        "resolves. MRI cord to define injury. Mx: airway and "
+        "haemodynamic stabilisation (vasopressors for neurogenic "
+        "shock, target MAP 85 to 90 for 7 days per spinal cord injury "
+        "guidelines). Catheter, NG tube, DVT prophylaxis, pressure "
+        "care. Refer to spinal injury unit. Do not prognosticate "
+        "until spinal shock resolves. Note: absent bulbocavernosus "
+        "reflex means still in spinal shock; ASIA grade before it "
+        "returns is unreliable."
+    ),
+    "Susac syndrome": (
+        "Rare autoimmune endotheliopathy producing the triad of "
+        "encephalopathy, branch retinal artery occlusion and "
+        "sensorineural hearing loss, mostly in young women. Features: "
+        "full triad in only a third at onset. Encephalopathy with "
+        "headache, personality change, confusion, focal deficits. "
+        "BRAOs cause scotomas (often asymptomatic, need FFA to "
+        "detect). Bilateral asymmetric low-frequency sensorineural "
+        "hearing loss with vertigo. Course can be monocyclic or "
+        "relapsing. Ix: MRI shows pathognomonic snowball lesions in "
+        "central corpus callosum with sparing of periphery, plus deep "
+        "grey and white matter lesions. Fundus fluorescein "
+        "angiography confirms BRAOs. Pure tone audiometry for "
+        "low-frequency hearing loss. Anti-endothelial cell antibodies "
+        "in some. Rule out MS, primary CNS vasculitis. Mx: high-dose "
+        "IV methylprednisolone then oral prednisolone taper, plus "
+        "IVIG. Steroid-sparing agents (mycophenolate, rituximab or "
+        "cyclophosphamide) if severe. Aspirin. Aggressive treatment "
+        "prevents relapse. Note: central corpus callosum snowballs "
+        "plus BRAOs plus low-tone SNHL in a young woman is Susac, not "
+        "MS."
+    ),
+    "Neurogenic thoracic outlet syndrome": (
+        "Compression of the lower trunk of the brachial plexus "
+        "(C8-T1) at the thoracic outlet by cervical rib, fibrous band "
+        "or hypertrophied scalene muscle, the commonest but hardest "
+        "to diagnose TOS subtype. Features: chronic aching arm and "
+        "hand pain, worse with overhead activity, wasting of thenar "
+        "eminence and intrinsic hand muscles (Gilliatt-Sumner hand, "
+        "medial thenar first), C8-T1 sensory loss (ulnar and medial "
+        "forearm), no vascular signs. Female predominance, 20s to "
+        "40s. Ix: chest and cervical spine radiograph for cervical "
+        "rib or C7 transverse process elongation. MRI brachial plexus "
+        "with arm abducted may show impingement. Nerve conduction "
+        "shows low ulnar sensory and median motor amplitudes with "
+        "proximal conduction slowing. Rule out C8 radiculopathy, "
+        "ulnar neuropathy, MND. Mx: physiotherapy first (posture, "
+        "scalene stretching, first rib mobilisation) for 3 to 6 "
+        "months. Surgery (transaxillary first rib resection with "
+        "scalenectomy) if refractory or established wasting. Note: "
+        "thenar wasting from the medial side up plus C8-T1 sensory "
+        "loss with normal ulnar nerve at the elbow equals neurogenic "
+        "TOS."
+    ),
+    "Radiation-induced brachial plexopathy": (
+        "Progressive brachial plexus injury from radiotherapy to "
+        "breast, lung or head and neck cancer, presenting months to "
+        "decades after treatment. Features: painless progressive "
+        "upper trunk (C5-C6) predominant weakness and sensory loss, "
+        "lymphoedema of the arm, myokymia on examination. Contrast "
+        "with metastatic infiltration: painful, lower trunk (C8-T1) "
+        "predominant, Horner syndrome. Dose over 60 Gy raises risk. "
+        "Ix: MRI plexus shows diffuse T2 hyperintensity without a "
+        "mass, often with fibrosis. FDG-PET differentiates from "
+        "recurrent tumour (radiation cold, tumour hot). EMG shows "
+        "myokymic discharges (highly suggestive of radiation). Nerve "
+        "biopsy rarely needed. Mx: no disease-modifying therapy. "
+        "Symptomatic care includes physiotherapy to maintain range, "
+        "occupational therapy, lymphoedema massage and compression, "
+        "and neuropathic pain agents (amitriptyline, pregabalin or "
+        "duloxetine per eTG). Hyperbaric oxygen trialled with mixed "
+        "evidence. Rule out recurrence periodically. Note: painless "
+        "C5-C6 plexopathy with lymphoedema and EMG myokymia after "
+        "radiotherapy is radiation plexopathy, not tumour recurrence."
     ),
 }
 
