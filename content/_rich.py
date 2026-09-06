@@ -4076,6 +4076,153 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "richter hernia"]],
         "summary": "",
     },
+    {
+        "name": "Pendred syndrome",
+        "aliases": ["Pendred disease"],
+        "utd": [["Overview", "pendred syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Pediculosis pubis",
+        "aliases": ["Pubic lice", "Crab lice", "Phthiriasis pubis"],
+        "utd": [["Overview", "pediculosis pubis"]],
+        "summary": "",
+    },
+    {
+        "name": "Caustic ingestion",
+        "aliases": ["Corrosive ingestion", "Alkali ingestion", "Acid ingestion"],
+        "utd": [["Overview", "caustic esophageal injury in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Brown recluse spider bite",
+        "aliases": ["Loxoscelism", "Recluse spider bite"],
+        "utd": [["Overview", "brown recluse spider bites"]],
+        "summary": "",
+    },
+    {
+        "name": "Perioperative myocardial infarction",
+        "aliases": ["Perioperative MI", "Postoperative myocardial infarction"],
+        "utd": [["Overview", "perioperative myocardial infarction after "
+                             "noncardiac surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Emergence delirium",
+        "aliases": ["Emergence agitation"],
+        "utd": [["Overview", "emergence delirium in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Transfusion-related acute lung injury",
+        "aliases": ["TRALI"],
+        "utd": [["Overview", "transfusion related acute lung injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Transfusion-associated circulatory overload",
+        "aliases": ["TACO"],
+        "utd": [["Overview", "transfusion associated circulatory overload"]],
+        "summary": "",
+    },
+    {
+        "name": "Amoebic liver abscess",
+        "aliases": ["Hepatic amoebiasis", "Entamoeba histolytica liver abscess"],
+        "utd": [["Overview", "extraintestinal entamoeba histolytica amebiasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Erysipeloid",
+        "aliases": ["Erysipelothrix infection", "Fish handler's disease"],
+        "utd": [["Overview", "erysipelothrix rhusiopathiae infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Subdural empyema",
+        "aliases": ["Intracranial subdural empyema"],
+        "utd": [["Overview", "subdural empyema"]],
+        "summary": "",
+    },
+    {
+        "name": "Transient global amnesia",
+        "aliases": ["TGA"],
+        "utd": [["Overview", "transient global amnesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Todd paresis",
+        "aliases": ["Todd paralysis", "Postictal paralysis"],
+        "utd": [["Overview", "todd paralysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Hyperhidrosis",
+        "aliases": ["Primary focal hyperhidrosis", "Excessive sweating"],
+        "utd": [["Overview", "primary focal hyperhidrosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Purpura fulminans",
+        "aliases": ["Fulminant purpura"],
+        "utd": [["Overview", "purpura fulminans"]],
+        "summary": "",
+    },
+    {
+        "name": "Foreign body in the ear",
+        "aliases": ["Ear foreign body", "Aural foreign body"],
+        "utd": [["Overview", "ear foreign body removal"]],
+        "summary": "",
+    },
+    {
+        "name": "Ear barotrauma",
+        "aliases": ["Otic barotrauma", "Barotitis media"],
+        "utd": [["Overview", "diving injuries of the ear and paranasal "
+                             "sinuses"]],
+        "summary": "",
+    },
+    {
+        "name": "Bile acid malabsorption",
+        "aliases": ["Bile acid diarrhoea", "Bile salt malabsorption"],
+        "utd": [["Overview", "bile acid malabsorption"]],
+        "summary": "",
+    },
+    {
+        "name": "Hereditary spastic paraplegia",
+        "aliases": ["Familial spastic paraplegia", "Strumpell-Lorrain syndrome"],
+        "utd": [["Overview", "hereditary spastic paraplegia"]],
+        "summary": "",
+    },
+    {
+        "name": "Cannabis use disorder",
+        "aliases": ["Cannabis dependence", "Cannabis addiction"],
+        "utd": [["Overview", "cannabis use disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Blunt abdominal trauma",
+        "aliases": ["Blunt abdominal injury"],
+        "utd": [["Overview", "blunt abdominal trauma in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Pelvic fracture",
+        "aliases": ["Fractured pelvis", "Pelvic ring fracture"],
+        "utd": [["Overview", "pelvic trauma initial evaluation and "
+                             "management"]],
+        "summary": "",
+    },
+    {
+        "name": "Lightning injury",
+        "aliases": ["Lightning strike injury"],
+        "utd": [["Overview", "lightning injuries"]],
+        "summary": "",
+    },
+    {
+        "name": "Tethered cord syndrome",
+        "aliases": ["Tethered spinal cord"],
+        "utd": [["Overview", "tethered spinal cord in children"]],
+        "summary": "",
+    },
 ]
 
 
@@ -37265,6 +37412,528 @@ RICH_SUMMARIES = {
         "Note: the absence of classic obstruction symptoms is "
         "precisely what makes this dangerous; do not let a normal "
         "bowel habit reassure you out of examining the hernia site."
+    ),
+    "Pendred syndrome": (
+        "Autosomal recessive syndrome of congenital sensorineural "
+        "hearing loss with a euthyroid or mildly hypothyroid goitre, "
+        "from biallelic SLC26A4 mutations affecting the pendrin "
+        "transporter. Aetiology: one of the commonest causes of "
+        "syndromic deafness, alongside non-syndromic DFNB4 from the "
+        "same gene. Clinical features: bilateral sensorineural loss "
+        "present from birth or early childhood, often progressive or "
+        "fluctuating. Goitre typically appears later, in adolescence, "
+        "and thyroid function is usually normal. Vestibular symptoms "
+        "are common. Ix: temporal bone imaging shows an enlarged "
+        "vestibular aqueduct or Mondini dysplasia. SLC26A4 genetic "
+        "testing confirms. TFTs are usually normal. Mx: hearing aids "
+        "or cochlear implantation for severe loss, thyroxine only if "
+        "hypothyroid, genetic counselling for the family, and "
+        "avoidance of head trauma given the dysplastic inner ear. "
+        "Note: congenital deafness with a later goitre and an "
+        "enlarged vestibular aqueduct on imaging is Pendred syndrome "
+        "until proven otherwise."
+    ),
+    "Pediculosis pubis": (
+        "Infestation of coarse body hair, classically pubic, by the "
+        "crab louse Pthirus pubis, spread mainly by close physical or "
+        "sexual contact. Clinical features: intense pruritus in the "
+        "pubic and perianal region, visible lice or nits at the hair "
+        "base, and maculae caerulea, the grey-blue bite marks louse "
+        "saliva leaves behind. Eyelash involvement occurs in children "
+        "and should raise concern for sexual abuse. Ix: clinical "
+        "diagnosis, confirmed by finding lice or eggs with a hand "
+        "lens or dermoscopy. Screen for other sexually transmissible "
+        "infections given the transmission route. Mx: permethrin 1% "
+        "or 5% cream, or malathion, applied to all affected "
+        "hair-bearing areas and repeated at 7 days for newly hatched "
+        "lice. Treat sexual contacts from the preceding month and "
+        "launder or heat-dry bedding and clothing. Eyelash "
+        "infestation needs petroleum jelly rather than insecticide "
+        "near the eye. Note: finding pubic lice in a child or on "
+        "eyelashes is a cue to ask about, and screen for, sexual "
+        "contact."
+    ),
+    "Caustic ingestion": (
+        "Ingestion of a strongly acidic or alkaline substance causing "
+        "chemical injury to the oropharynx, oesophagus and stomach. "
+        "Aetiology: household alkalis (drain and oven cleaners) tend "
+        "to cause deep liquefactive necrosis of the oesophagus, while "
+        "acids cause coagulative necrosis and more gastric injury. "
+        "Accidental in toddlers, deliberate self-harm in adults. "
+        "Clinical features: oral and pharyngeal burns, drooling, "
+        "odynophagia and stridor from airway involvement. The absence "
+        "of visible oral burns does not exclude significant "
+        "oesophageal injury. Ix: early laryngoscopy or endoscopy, "
+        "ideally within 24 hours, grades injury and guides feeding. "
+        "CT chest and abdomen if perforation is suspected. Avoid "
+        "blind nasogastric tube placement or induced vomiting. Mx: "
+        "secure the airway early if there is stridor or extensive "
+        "oropharyngeal burns. Do not attempt neutralisation. "
+        "Analgesia, IV fluids, and surgical review for suspected "
+        "perforation. Strictures are managed later with dilatation. "
+        "Red flags: stridor, chest or back pain, and haematemesis "
+        "suggest perforation or mediastinitis and need urgent "
+        "surgical input."
+    ),
+    "Brown recluse spider bite": (
+        "Bite of the North American Loxosceles reclusa, causing "
+        "loxoscelism, a spectrum from a self-limiting local reaction "
+        "to dermonecrotic ulceration and, rarely, systemic "
+        "haemolysis. Clinical features: initially a painless or "
+        "mildly stinging bite; over 1 to 3 days a painful, indurated "
+        "plaque develops with central blue-grey discolouration that "
+        "can progress to a necrotic ulcer. Fever, myalgia and "
+        "haemolytic anaemia mark the rare systemic form. Ix: clinical "
+        "diagnosis. Australia has no native Loxosceles species, so "
+        "the history should specify overseas travel or exposure to "
+        "imported goods before the diagnosis is entertained locally. "
+        "FBC and haptoglobin if systemic features are present. Mx: "
+        "wound care, analgesia and tetanus prophylaxis. Early "
+        "surgical debridement is not recommended, since it can worsen "
+        "the wound before the necrotic margin has demarcated. Dapsone "
+        "has been used but evidence is weak. Note: most confident "
+        "field diagnoses of a spider bite ulcer, especially in "
+        "Australia, turn out to be something else, commonly a "
+        "staphylococcal skin infection."
+    ),
+    "Perioperative myocardial infarction": (
+        "Myocardial infarction occurring during or within 30 days of "
+        "non-cardiac surgery, most often from a supply-demand "
+        "mismatch rather than plaque rupture. Aetiology: "
+        "perioperative tachycardia, hypotension, anaemia and the "
+        "pro-thrombotic surgical stress response combine to injure "
+        "myocardium that may look unremarkable on angiography. "
+        "Clinical features: over two-thirds have no chest pain, "
+        "because of anaesthesia, analgesia or sedation, so it "
+        "presents as unexplained hypotension, dyspnoea, delirium or "
+        "an incidental troponin rise. Ix: routine postoperative "
+        "troponin surveillance in at-risk patients picks up "
+        "myocardial injury after non-cardiac surgery, which carries a "
+        "mortality risk even without a rise-and-fall pattern or "
+        "symptoms. ECG for new changes. Mx: treat as for any MI where "
+        "bleeding risk allows - aspirin, beta blockade and statin - "
+        "but full anticoagulation and thrombolysis are usually "
+        "deferred because of surgical bleeding risk. Cardiology input "
+        "to weigh revascularisation. Note: a troponin rise after "
+        "surgery is not written off as 'just the stress of the "
+        "operation' - it independently predicts 30-day mortality."
+    ),
+    "Emergence delirium": (
+        "Agitation, disorientation and inconsolable crying on waking "
+        "from general anaesthesia, most common in preschool children "
+        "after sevoflurane. Aetiology: rapid emergence from a "
+        "volatile agent with a low blood-gas solubility, unfamiliar "
+        "environment, pain and pre-existing anxiety all contribute. "
+        "Distinct from postoperative delirium, which appears later "
+        "and mainly affects older adults. Clinical features: onset "
+        "within minutes of waking, thrashing, inconsolability and a "
+        "lack of eye contact or recognition of parents, typically "
+        "resolving within 15 to 30 minutes. Ix: clinical diagnosis of "
+        "exclusion. Check for a treatable cause of agitation first - "
+        "pain, hypoxaemia, a full bladder or hypoglycaemia. Mx: keep "
+        "the recovery environment calm and parents present where "
+        "possible. IV fentanyl or dexmedetomidine settle most "
+        "episodes if reassurance fails. Premedication with intranasal "
+        "dexmedetomidine reduces the incidence. Note: it is "
+        "self-limiting and not associated with lasting harm, which is "
+        "the key reassurance for distressed parents at the bedside."
+    ),
+    "Transfusion-related acute lung injury": (
+        "Acute non-cardiogenic pulmonary oedema starting within 6 "
+        "hours of a blood product transfusion, the leading cause of "
+        "transfusion-related death. Aetiology: donor anti-leucocyte "
+        "antibodies, often from a multiparous donor, activate "
+        "recipient neutrophils sequestered in the pulmonary "
+        "microvasculature, causing capillary leak. Clinical features: "
+        "acute dyspnoea, hypoxaemia and fever during or soon after "
+        "transfusion, with bilateral infiltrates on chest X-ray. "
+        "Hypotension is common, unlike in fluid overload. Ix: "
+        "diagnosis is clinical, since it mimics ARDS. Chest X-ray, "
+        "BNP to help exclude circulatory overload, and reporting the "
+        "implicated unit for donor investigation. Mx: stop the "
+        "transfusion immediately, give high-flow oxygen or "
+        "ventilatory support, and treat as ARDS with supportive care. "
+        "Diuretics do not help and can worsen the picture, unlike in "
+        "circulatory overload. Note: TRALI is hypotensive and "
+        "pulmonary-artery pressure is normal or low, which is the key "
+        "bedside distinction from transfusion-associated circulatory "
+        "overload."
+    ),
+    "Transfusion-associated circulatory overload": (
+        "Acute cardiogenic pulmonary oedema from volume overload "
+        "during or shortly after a blood transfusion, now the most "
+        "commonly reported serious transfusion reaction. Aetiology: "
+        "transfusion rate exceeding cardiac reserve, most often in "
+        "the elderly, in renal or cardiac failure, or with "
+        "large-volume transfusion. Clinical features: dyspnoea, "
+        "hypertension, tachycardia and a raised JVP developing during "
+        "or within hours of transfusion, with bilateral infiltrates "
+        "and often a raised BNP. Ix: clinical diagnosis supported by "
+        "chest X-ray and a BNP rise over baseline. Distinguishing "
+        "from TRALI matters, since TRALI is hypotensive rather than "
+        "hypertensive and BNP is typically normal. Mx: stop or slow "
+        "the transfusion, sit the patient upright, give oxygen and IV "
+        "diuretics. Prevent it by transfusing at a slower rate with a "
+        "diuretic cover in at-risk patients. Note: TACO is common and "
+        "under-recognised - a patient who 'can't tolerate blood' "
+        "after a unit or two usually has this, not an allergic "
+        "reaction."
+    ),
+    "Amoebic liver abscess": (
+        "The commonest extraintestinal manifestation of infection "
+        "with Entamoeba histolytica, from portal spread of amoebic "
+        "trophozoites from the colon. Aetiology: faecal-oral "
+        "transmission, endemic in India, Southeast Asia, Africa and "
+        "Central and South America; travellers and migrants from "
+        "these regions are the typical Australian presentation. "
+        "Clinical features: fever and right upper quadrant pain over "
+        "days to weeks, with hepatomegaly and point tenderness. "
+        "Diarrhoea is present in only a minority at the time of the "
+        "abscess. Ix: ultrasound or CT shows a single, usually "
+        "right-lobe, hypoechoic lesion. Serology for E. histolytica "
+        "antibodies is highly sensitive; stool microscopy is often "
+        "negative by this stage. Mx: metronidazole or tinidazole to "
+        "kill invasive trophozoites, followed by a luminal agent such "
+        "as paromomycin to clear intestinal cysts and prevent "
+        "relapse. Aspiration is reserved for large, left-lobe, or "
+        "non-responding abscesses. Note: treat the lumen as well as "
+        "the liver - metronidazole alone leaves cysts behind and the "
+        "abscess can recur."
+    ),
+    "Erysipeloid": (
+        "Localised skin infection with Erysipelothrix rhusiopathiae, "
+        "an occupational disease of people who handle fish, "
+        "shellfish, meat or poultry. Aetiology: inoculation through a "
+        "small cut or puncture while handling contaminated animal "
+        "products; fishmongers, butchers and vets are classically "
+        "affected. Clinical features: a well-demarcated, violaceous, "
+        "slowly spreading plaque on the hand or finger, painful and "
+        "itchy rather than acutely septic-looking, usually without "
+        "fever. Rare bacteraemia can seed the heart valves. Ix: "
+        "clinical diagnosis supported by the occupational history. "
+        "Culture of a skin biopsy can confirm but is rarely needed. "
+        "Blood cultures and echocardiography if there are systemic "
+        "features. Mx: penicillin or amoxicillin for 7 to 10 days; "
+        "the organism is intrinsically resistant to vancomycin, which "
+        "is a trap if empirical cellulitis cover is used instead. "
+        "Note: a slowly spreading, well-demarcated purplish hand "
+        "plaque in a fishmonger is erysipeloid, not typical "
+        "staphylococcal cellulitis, and vancomycin will not treat it."
+    ),
+    "Subdural empyema": (
+        "Collection of pus in the subdural space, a neurosurgical "
+        "emergency that spreads rapidly across the dural surface with "
+        "little to contain it. Aetiology: direct extension from "
+        "sinusitis or otitis media in young adults, or from a bone "
+        "flap or wound infection after cranial surgery. Streptococcus "
+        "and anaerobes predominate. Clinical features: fever, "
+        "headache and rapidly progressive focal deficit or seizures, "
+        "evolving over hours to days as the collection spreads over "
+        "the cerebral convexity. Ix: contrast MRI is more sensitive "
+        "than CT for a thin subdural collection. Blood cultures and, "
+        "once imaging excludes a mass effect risk, cultures from "
+        "source surgery guide antibiotics. Mx: urgent neurosurgical "
+        "drainage plus broad-spectrum antibiotics covering "
+        "streptococci, anaerobes and staphylococci, adjusted to "
+        "culture, continued for weeks. Source control of the sinus or "
+        "ear infection. Red flags: rapid neurological deterioration "
+        "over hours distinguishes this from the slower course of a "
+        "chronic subdural haematoma and demands same-day imaging."
+    ),
+    "Transient global amnesia": (
+        "Abrupt, self-limiting episode of dense anterograde amnesia "
+        "with preserved personal identity and procedural skill, "
+        "resolving within 24 hours. Aetiology: unclear, with venous "
+        "congestion of the medial temporal lobe, migraine and "
+        "transient ischaemia all proposed. Valsalva, emotional "
+        "stress, cold water immersion and sexual intercourse are "
+        "recognised triggers. Clinical features: repetitive "
+        "questioning, inability to form new memories, and mild "
+        "retrograde amnesia, in a patient who remains alert and can "
+        "perform complex tasks. No focal weakness, and it does not "
+        "recur within the same episode. Ix: a clinical diagnosis when "
+        "the classic picture and full recovery within 24 hours are "
+        "seen. MRI with diffusion weighting at 24 to 72 hours may "
+        "show small hippocampal punctate lesions, and helps exclude "
+        "stroke or seizure when the story is atypical. Mx: "
+        "reassurance and observation; no specific treatment is "
+        "needed, and recurrence is uncommon. Note: this is not a TIA "
+        "- it is not associated with an increased stroke risk and "
+        "does not need antiplatelet therapy on that basis alone."
+    ),
+    "Todd paresis": (
+        "Transient focal weakness following a focal seizure, "
+        "resolving over minutes to (rarely) 48 hours, that mimics "
+        "stroke. Aetiology: thought to reflect localised post-ictal "
+        "neuronal exhaustion or inhibition rather than structural "
+        "injury, in the cortex that generated the seizure. Clinical "
+        "features: hemiparesis, aphasia or a visual field defect "
+        "appearing immediately after a focal or focal-to-bilateral "
+        "seizure, in the same distribution as the ictal semiology, "
+        "with full recovery expected. Ix: a witnessed seizure with "
+        "typical evolution supports the diagnosis. CT or MRI is still "
+        "needed if there is no clear seizure history, the deficit "
+        "outlasts 48 hours, or a structural lesion such as tumour or "
+        "stroke causing the seizure itself is suspected. Mx: manage "
+        "the underlying seizure disorder; the paresis itself needs "
+        "only observation and serial neurological review to confirm "
+        "resolution. Note: a stroke-mimic that follows a witnessed "
+        "seizure and resolves within a day or two is Todd paresis, "
+        "but new focal seizures still warrant imaging to find the "
+        "cause."
+    ),
+    "Hyperhidrosis": (
+        "Sweating in excess of what is needed for thermoregulation, "
+        "either primary and focal or secondary to an underlying "
+        "cause. Aetiology: primary hyperhidrosis reflects overactive "
+        "sympathetic cholinergic sweat gland stimulation, usually "
+        "bilateral and symmetric, starting in childhood or "
+        "adolescence. Secondary causes include hyperthyroidism, "
+        "menopause and drugs. Clinical features: primary disease "
+        "affects the axillae, palms, soles or face, sparing sleep, "
+        "and often has a family history. Secondary hyperhidrosis is "
+        "more often generalised, nocturnal or of recent onset, which "
+        "should prompt a search for a cause. Ix: largely clinical. "
+        "Investigate for a secondary cause when sweating is "
+        "generalised, nocturnal or of recent onset, with TFTs and a "
+        "screen for malignancy as indicated. Mx: topical aluminium "
+        "chloride first-line, then glycopyrrolate or oxybutynin, "
+        "iontophoresis for palms and soles, and botulinum toxin for "
+        "refractory axillary disease. Endoscopic thoracic "
+        "sympathectomy is reserved for severe, refractory cases given "
+        "the risk of compensatory truncal sweating. Note: sweating "
+        "that interrupts sleep is not primary hyperhidrosis and needs "
+        "a secondary cause excluded."
+    ),
+    "Purpura fulminans": (
+        "Rapidly progressive haemorrhagic skin necrosis with "
+        "disseminated intravascular coagulation, a life-threatening "
+        "emergency most often seen in meningococcal sepsis. "
+        "Aetiology: overwhelming sepsis, classically Neisseria "
+        "meningitidis, triggers consumptive coagulopathy and "
+        "microvascular thrombosis. Rarer causes include severe "
+        "protein C or S deficiency in neonates and post-infectious "
+        "purpura fulminans after varicella. Clinical features: "
+        "rapidly enlarging, sharply demarcated purpuric and necrotic "
+        "skin lesions, often starting on the limbs, accompanied by "
+        "shock and features of the underlying sepsis. Ix: this is a "
+        "clinical diagnosis that should not wait on results. FBC, "
+        "coagulation studies and fibrinogen confirm DIC; blood "
+        "cultures and, if safe, lumbar puncture identify the "
+        "organism, but must not delay antibiotics. Mx: immediate "
+        "broad-spectrum antibiotics, aggressive resuscitation, and "
+        "DIC support with fresh frozen plasma, cryoprecipitate and "
+        "platelets as needed. ICU care and early surgical or plastics "
+        "review for demarcating necrotic tissue. Red flags: a rapidly "
+        "spreading purpuric rash with a septic patient is treated as "
+        "meningococcaemia immediately, before confirmation."
+    ),
+    "Foreign body in the ear": (
+        "A retained object in the external auditory canal, most often "
+        "in young children or in adults following insect entry. "
+        "Aetiology: children insert beads, toys or food; insects can "
+        "crawl in at any age and are distressing because of movement "
+        "against the tympanic membrane. Clinical features: ear pain, "
+        "a sensation of blockage, hearing loss or, with an insect, a "
+        "buzzing noise. Bleeding suggests canal trauma or an "
+        "attempted removal that has pushed the object deeper. Ix: "
+        "otoscopy identifies the object and its relationship to the "
+        "tympanic membrane; button batteries and disc magnets need "
+        "urgent removal because of rapid tissue injury. Mx: a live "
+        "insect is drowned with lidocaine or mineral oil before "
+        "removal to stop it moving. Irrigation suits most inert "
+        "objects if the drum is intact, while a button battery, a "
+        "sharp object, or a failed first attempt needs ENT referral "
+        "for microscope-guided removal. Note: never irrigate a button "
+        "battery or a vegetable matter foreign body - irrigation "
+        "swells organic material and accelerates battery-related "
+        "tissue damage."
+    ),
+    "Ear barotrauma": (
+        "Middle or inner ear injury from a pressure gradient the "
+        "Eustachian tube cannot equalise, typically during descent in "
+        "diving or air travel. Aetiology: Eustachian tube dysfunction "
+        "from an upper respiratory tract infection, allergic rhinitis "
+        "or anatomical narrowing prevents equalisation as ambient "
+        "pressure rises. Clinical features: ear pain and fullness "
+        "worsening with descent; conductive hearing loss, tinnitus or "
+        "vertigo if there is haemotympanum or perforation. Sudden "
+        "vertigo with sensorineural loss suggests inner ear "
+        "barotrauma or a perilymph fistula. Ix: otoscopy for "
+        "haemotympanum, effusion or perforation. Audiometry if there "
+        "is hearing loss, and urgent ENT review if inner ear "
+        "involvement is suspected, since a fistula can threaten "
+        "hearing. Mx: decongestants and analgesia for mild middle ear "
+        "barotrauma, which usually settles over days; avoid further "
+        "diving or flying until resolved. Inner ear barotrauma with "
+        "vertigo or sensorineural loss needs urgent ENT assessment "
+        "and bed rest with head elevation while a fistula is "
+        "excluded. Note: divers should be taught to equalise early "
+        "and often on descent - waiting until pain starts means "
+        "equalisation has already become difficult."
+    ),
+    "Bile acid malabsorption": (
+        "Chronic watery diarrhoea from excess bile acids reaching the "
+        "colon, an under-recognised cause of what is often labelled "
+        "diarrhoea-predominant irritable bowel syndrome. Aetiology: "
+        "terminal ileal disease or resection (Crohn disease, "
+        "surgery), or a primary idiopathic form with reduced feedback "
+        "inhibition of bile acid synthesis, allows bile acids to "
+        "reach and irritate the colon. Clinical features: chronic, "
+        "often urgent watery diarrhoea, sometimes nocturnal, without "
+        "the alternating constipation seen in IBS, and typically "
+        "worse after fatty meals. Ix: SeHCAT scanning is the "
+        "reference test where available; where it is not, an "
+        "empirical trial of a bile acid sequestrant is a reasonable "
+        "alternative. Serum C4 or faecal bile acid measurement are "
+        "used in some centres. Colonoscopy to exclude other causes "
+        "first if red flags are present. Mx: bile acid sequestrants "
+        "such as cholestyramine or colesevelam, titrated against "
+        "response; a low-fat diet can help. Treat the underlying "
+        "ileal disease if one is found. Note: consider this before "
+        "settling on an IBS-D label, especially after ileal resection "
+        "or in Crohn disease - it is treatable and frequently missed."
+    ),
+    "Hereditary spastic paraplegia": (
+        "A genetically heterogeneous group of disorders causing "
+        "progressive, symmetric spasticity and weakness of the legs "
+        "from corticospinal tract degeneration. Aetiology: over 80 "
+        "causative genes described, inherited in autosomal dominant, "
+        "recessive or X-linked patterns; SPAST (SPG4) is the "
+        "commonest dominant cause. Clinical features: slowly "
+        "progressive spastic gait with hyperreflexia and extensor "
+        "plantar responses, usually beginning in the legs, with "
+        "relatively preserved strength early on. 'Complicated' forms "
+        "add features such as ataxia, neuropathy, cognitive "
+        "impairment or optic atrophy. Ix: clinical diagnosis "
+        "supported by family history and gait assessment; MRI spine "
+        "and brain excludes structural or compressive causes and "
+        "looks for complicated-form features; targeted genetic "
+        "testing confirms the subtype. Mx: no disease-modifying "
+        "treatment. Baclofen or tizanidine for spasticity, "
+        "physiotherapy to maintain function and prevent contractures, "
+        "and botulinum toxin for focal spasticity. Genetic "
+        "counselling for the family. Note: a slowly progressive "
+        "spastic paraparesis with a positive family history and no "
+        "sensory level should prompt HSP genetic testing rather than "
+        "repeated spinal imaging alone."
+    ),
+    "Cannabis use disorder": (
+        "A problematic pattern of cannabis use causing impairment or "
+        "distress, meeting DSM-5 criteria across tolerance, "
+        "withdrawal, craving and continued use despite harm. "
+        "Aetiology: risk rises with earlier age of first use, "
+        "frequency and potency of use (high-THC products), and "
+        "co-existing anxiety, depression or psychosis. Clinical "
+        "features: escalating use, unsuccessful attempts to cut down, "
+        "and a withdrawal syndrome of irritability, insomnia, anxiety "
+        "and reduced appetite peaking around days 2 to 6 after "
+        "stopping. Cannabis hyperemesis syndrome and psychosis are "
+        "recognised complications of heavy use. Ix: clinical history "
+        "and validated screening tools such as the CUDIT-R. Screen "
+        "for co-occurring mental illness, which is common and "
+        "bidirectional with heavy cannabis use. Mx: psychological "
+        "therapies, particularly CBT and motivational interviewing, "
+        "are first-line; no medication is approved for cannabis use "
+        "disorder itself in Australia. Manage withdrawal "
+        "symptomatically and treat co-existing anxiety or depression. "
+        "Note: ask specifically about early psychotic symptoms in "
+        "heavy users - the psychosis link is dose- and "
+        "potency-related and often under-recognised until a first "
+        "presentation."
+    ),
+    "Blunt abdominal trauma": (
+        "Non-penetrating injury to abdominal viscera, most often from "
+        "motor vehicle collisions, falls or direct blows, where "
+        "external signs can be deceptively minor. Aetiology: the "
+        "spleen and liver are the organs most often injured; hollow "
+        "viscus and mesenteric injury are less common but easily "
+        "missed on initial imaging. Clinical features: abdominal "
+        "pain, tenderness, bruising from a seatbelt or steering "
+        "wheel, and haemodynamic instability in significant injury. "
+        "Signs can be subtle or absent early, especially with "
+        "distracting injuries or reduced consciousness. Ix: FAST scan "
+        "for free fluid at the bedside in the unstable patient; CT "
+        "abdomen and pelvis with contrast is the investigation of "
+        "choice once stable, since it defines solid organ injury "
+        "grade and picks up subtle bowel or mesenteric injury FAST "
+        "will miss. Mx: haemodynamically unstable patients with a "
+        "positive FAST go to theatre; stable patients with solid "
+        "organ injury are managed non-operatively with serial "
+        "observation, and angioembolisation is used for ongoing "
+        "bleeding without frank instability. Red flags: a normal "
+        "initial CT does not exclude a hollow viscus injury - "
+        "re-examine and re-image if pain or tenderness worsens."
+    ),
+    "Pelvic fracture": (
+        "Fracture of the pelvic ring, ranging from a stable "
+        "low-energy fracture in an older person to a life-threatening "
+        "high-energy disruption with major haemorrhage. Aetiology: "
+        "low-energy falls in osteoporotic bone in the elderly; "
+        "high-energy trauma such as motor vehicle collisions or falls "
+        "from height in younger patients, where the pelvis rarely "
+        "fractures in isolation. Clinical features: pelvic or hip "
+        "pain, inability to weight bear, and leg length discrepancy "
+        "or rotational deformity in high-energy injury. Haemodynamic "
+        "instability out of proportion to visible injury suggests "
+        "major pelvic venous or arterial bleeding. Ix: pelvic X-ray "
+        "in the trauma bay, then CT once stable for surgical "
+        "planning; avoid repeated pelvic springing, which can "
+        "dislodge a stabilising clot. Mx: a pelvic binder applied "
+        "early in suspected instability reduces haemorrhage before "
+        "imaging. Unstable patients need urgent angioembolisation or "
+        "surgical stabilisation as part of massive transfusion "
+        "protocol activation. Stable low-energy fractures are managed "
+        "with analgesia and early mobilisation. Red flags: apply a "
+        "binder on clinical suspicion of pelvic instability - do not "
+        "wait for imaging in a shocked trauma patient."
+    ),
+    "Lightning injury": (
+        "Injury from a direct or indirect lightning strike, "
+        "delivering a massive but very brief current that behaves "
+        "differently from industrial electrical injury. Aetiology: "
+        "direct strike, a side flash from a nearby object, or ground "
+        "current; outdoor workers and sports players are typically "
+        "affected. Clinical features: cardiac and respiratory arrest "
+        "is the commonest cause of death, from current-induced "
+        "asystole with a secondary respiratory arrest that can "
+        "outlast it. Keraunoparalysis, a transient mottled limb "
+        "paralysis, and a feathering Lichtenberg skin pattern are "
+        "characteristic and usually resolve. Tympanic membrane "
+        "rupture is common. Ix: ECG and troponin, CK for muscle "
+        "injury, and CT brain if consciousness is reduced. Deep burns "
+        "are uncommon compared with high-voltage electrical injury. "
+        "Mx: reverse triage - resuscitate those who appear dead "
+        "first, since the respiratory arrest often reverses with "
+        "prompt ventilation while cardiac activity recovers on its "
+        "own. Standard ALS otherwise, plus admission for cardiac "
+        "monitoring. Note: unlike other mass casualty triage, treat "
+        "apparently dead victims first - lightning arrest is "
+        "survivable if ventilation starts before secondary hypoxic "
+        "arrest."
+    ),
+    "Tethered cord syndrome": (
+        "Progressive neurological, urological and orthopaedic "
+        "dysfunction from abnormal fixation of the spinal cord, which "
+        "prevents it rising normally with growth and puts it under "
+        "traction. Aetiology: a thickened or fatty filum terminale, "
+        "lipomyelo-meningocele, or scarring after myelomeningocele "
+        "repair are typical causes; often found alongside other "
+        "spinal dysraphism. Clinical features: back or leg pain "
+        "worsened by flexion, progressive lower limb weakness or gait "
+        "change, new bladder or bowel dysfunction, and foot or spinal "
+        "deformity in a growing child. Cutaneous markers - a sacral "
+        "dimple, hairy patch or lipoma - often mark the level. Ix: "
+        "MRI spine is diagnostic, showing a low-lying conus and a "
+        "thickened filum; urodynamic studies quantify bladder "
+        "involvement before intervention. Mx: neurosurgical "
+        "untethering for progressive symptoms, aiming to halt "
+        "deterioration rather than reverse existing deficit. "
+        "Asymptomatic incidental tethering in an adult is often "
+        "managed with surveillance alone. Note: a lumbosacral "
+        "cutaneous marker in an infant warrants spinal ultrasound or "
+        "MRI even without neurological signs yet, since surgery works "
+        "best before deficits are established."
     ),
 }
 
