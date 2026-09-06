@@ -6083,6 +6083,210 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "intensive care unit acquired weakness"]],
         "summary": "",
     },
+    {
+        "name": "Fanconi syndrome",
+        "aliases": ["Renal Fanconi syndrome"],
+        "utd": [["Overview", "fanconi syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Cholera",
+        "aliases": ["Vibrio cholerae infection"],
+        "utd": [["Overview", "cholera clinical manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Narcissistic personality disorder",
+        "aliases": ["NPD"],
+        "utd": [["Overview", "narcissistic personality disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Stasis dermatitis",
+        "aliases": ["Venous eczema", "Gravitational eczema"],
+        "utd": [["Overview", "stasis dermatitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Ichthyosis vulgaris",
+        "aliases": ["Common ichthyosis"],
+        "utd": [["Overview", "ichthyosis vulgaris"]],
+        "summary": "",
+    },
+    {
+        "name": "Waardenburg syndrome",
+        "aliases": [],
+        "utd": [["Overview", "waardenburg syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Treacher Collins syndrome",
+        "aliases": ["Mandibulofacial dysostosis"],
+        "utd": [["Overview", "treacher collins syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Pierre Robin sequence",
+        "aliases": ["Pierre Robin syndrome"],
+        "utd": [["Overview", "pierre robin sequence"]],
+        "summary": "",
+    },
+    {
+        "name": "Prune belly syndrome",
+        "aliases": ["Eagle-Barrett syndrome"],
+        "utd": [["Overview", "prune belly syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "VACTERL association",
+        "aliases": ["VATER association"],
+        "utd": [["Overview", "vacterl association"]],
+        "summary": "",
+    },
+    {
+        "name": "Choledochal cyst",
+        "aliases": [],
+        "utd": [["Overview", "choledochal cysts"]],
+        "summary": "",
+    },
+    {
+        "name": "Periodic limb movement disorder",
+        "aliases": ["PLMD"],
+        "utd": [["Overview", "periodic limb movement disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Cataplexy",
+        "aliases": [],
+        "utd": [["Overview", "cataplexy"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervical dystonia",
+        "aliases": [],
+        "utd": [["Overview", "cervical dystonia"]],
+        "summary": "",
+    },
+    {
+        "name": "Diabetic amyotrophy",
+        "aliases": ["Diabetic lumbosacral radiculoplexus neuropathy"],
+        "utd": [["Overview", "diabetic amyotrophy"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervicogenic headache",
+        "aliases": [],
+        "utd": [["Overview", "cervicogenic headache"]],
+        "summary": "",
+    },
+    {
+        "name": "Cerebral amyloid angiopathy",
+        "aliases": ["CAA"],
+        "utd": [["Overview", "cerebral amyloid angiopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Wernicke aphasia",
+        "aliases": ["Receptive aphasia"],
+        "utd": [["Overview", "classification of aphasic syndromes"]],
+        "summary": "",
+    },
+    {
+        "name": "Broca aphasia",
+        "aliases": ["Expressive aphasia"],
+        "utd": [["Overview", "classification of aphasic syndromes"]],
+        "summary": "",
+    },
+    {
+        "name": "Alcohol-related psychosis",
+        "aliases": ["Alcoholic hallucinosis"],
+        "utd": [["Overview", "alcohol related psychotic disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Gambling disorder",
+        "aliases": ["Pathological gambling"],
+        "utd": [["Overview", "gambling disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Kleptomania",
+        "aliases": [],
+        "utd": [["Overview", "kleptomania"]],
+        "summary": "",
+    },
+    {
+        "name": "Intermittent explosive disorder",
+        "aliases": [],
+        "utd": [["Overview", "intermittent explosive disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Separation anxiety disorder",
+        "aliases": [],
+        "utd": [["Overview", "separation anxiety disorder in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Seasonal affective disorder",
+        "aliases": ["Winter depression"],
+        "utd": [["Overview", "seasonal affective disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Dissociative amnesia",
+        "aliases": [],
+        "utd": [["Overview", "dissociative amnesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Bruxism",
+        "aliases": ["Teeth grinding"],
+        "utd": [["Overview", "sleep related bruxism"]],
+        "summary": "",
+    },
+    {
+        "name": "Trismus",
+        "aliases": ["Lockjaw"],
+        "utd": [["Overview", "trismus causes and evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Frey syndrome",
+        "aliases": ["Gustatory sweating", "Auriculotemporal syndrome"],
+        "utd": [["Overview", "frey syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Leprosy",
+        "aliases": ["Hansen disease"],
+        "utd": [["Overview", "leprosy"]],
+        "summary": "",
+    },
+    {
+        "name": "Babesiosis",
+        "aliases": [],
+        "utd": [["Overview", "babesiosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Ehrlichiosis",
+        "aliases": [],
+        "utd": [["Overview", "ehrlichiosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Yellow fever",
+        "aliases": [],
+        "utd": [["Overview", "yellow fever"]],
+        "summary": "",
+    },
+    {
+        "name": "Ebola virus disease",
+        "aliases": ["Ebola haemorrhagic fever"],
+        "utd": [["Overview", "ebola virus disease"]],
+        "summary": "",
+    },
 ]
 
 
@@ -45608,6 +45812,687 @@ RICH_SUMMARIES = {
         "paralytics. Note: this is a leading cause of delayed "
         "ventilator weaning, not an unavoidable consequence of "
         "critical illness."
+    ),
+
+    # ═══════ BATCH: 06.09.2026 scheduled agent - neuro, psych, ENT/dental,
+    # dysmorphology/paediatric surgical and tropical ID topics ═══
+
+    "Fanconi syndrome": (
+        "Generalised dysfunction of the proximal renal tubule causing "
+        "wasting of glucose, amino acids, phosphate and bicarbonate "
+        "that should normally be reabsorbed. Aetiology: cystinosis is "
+        "the commonest inherited cause in children; adults acquire it "
+        "from myeloma light chains, tenofovir, ifosfamide, valproate "
+        "or heavy metal exposure. Clinical features: growth failure "
+        "and rickets in children, osteomalacia and proximal myopathy "
+        "in adults, polyuria and dehydration from the osmotic "
+        "diuresis of glycosuria. Ix: normoglycaemic glycosuria, "
+        "generalised aminoaciduria, hypophosphataemia with renal "
+        "phosphate wasting, hyperchloraemic metabolic acidosis "
+        "(proximal RTA). Mx: treat the cause (stop the offending "
+        "drug, treat myeloma), replace bicarbonate, phosphate and "
+        "vitamin D. Note: normoglycaemic glycosuria plus metabolic "
+        "acidosis is the pattern that should trigger a proximal "
+        "tubulopathy workup."
+    ),
+    "Cholera": (
+        "Acute watery diarrhoeal illness from Vibrio cholerae "
+        "enterotoxin, which drives massive small-bowel fluid "
+        "secretion. Aetiology: faecal-oral spread via contaminated "
+        "water, endemic in South Asia and sub-Saharan Africa, "
+        "epidemic after floods or in crowded displaced populations. "
+        "Clinical features: profuse rice-water stool without blood, "
+        "vomiting, rapid dehydration with sunken eyes, low blood "
+        "pressure and muscle cramps from electrolyte loss, death "
+        "within hours if untreated. Ix: clinical diagnosis in an "
+        "outbreak setting, stool culture or rapid antigen test "
+        "confirms. Mx: aggressive oral rehydration solution is "
+        "lifesaving in most cases, IV Ringer's lactate for severe "
+        "dehydration or shock, a single dose of doxycycline or "
+        "azithromycin shortens the illness and reduces transmission. "
+        "Note: rehydration, not antibiotics, is what prevents cholera "
+        "deaths - do not delay fluids while awaiting confirmation."
+    ),
+    "Narcissistic personality disorder": (
+        "A pervasive pattern of grandiosity, need for admiration and "
+        "lack of empathy beginning by early adulthood and present "
+        "across contexts. Aetiology: proposed links to inconsistent "
+        "parental validation and temperament, more often diagnosed in "
+        "men, frequently coexists with other personality disorders. "
+        "Clinical features: exaggerated sense of self-importance, "
+        "preoccupation with fantasies of success, sense of "
+        "entitlement, exploitation of others, envy, and fragile "
+        "self-esteem that reacts to criticism with rage or contempt. "
+        "Ix: clinical interview against DSM-5 criteria, collateral "
+        "history is valuable since insight is often limited. Mx: "
+        "long-term psychotherapy (schema therapy or "
+        "transference-focused therapy) is the mainstay, treat "
+        "comorbid depression or substance use, medication has no "
+        "specific role. Note: grandiosity that masks profound "
+        "insecurity is the clinical signature, not simple arrogance."
+    ),
+    "Stasis dermatitis": (
+        "Chronic eczematous skin change on the lower legs from venous "
+        "hypertension, a cutaneous marker of chronic venous "
+        "insufficiency. Aetiology: venous reflux or obstruction "
+        "raises capillary pressure, driving fibrin cuff formation and "
+        "inflammation, risk factors include obesity, prior deep vein "
+        "thrombosis, immobility and older age. Clinical features: "
+        "itchy, scaly, hyperpigmented plaques over the medial "
+        "malleolus, associated varicose veins, oedema, "
+        "lipodermatosclerosis in advanced disease, and secondary "
+        "cellulitis or contact dermatitis from topical treatments are "
+        "common complications. Ix: clinical diagnosis, venous duplex "
+        "ultrasound to characterise reflux, patch testing if allergic "
+        "contact dermatitis is suspected. Mx: compression therapy is "
+        "central once arterial disease is excluded, leg elevation, "
+        "emollients, topical corticosteroids for flares. Note: "
+        "misdiagnosis as cellulitis and unnecessary antibiotics is "
+        "common - stasis dermatitis is usually bilateral and chronic, "
+        "cellulitis is not."
+    ),
+    "Ichthyosis vulgaris": (
+        "The commonest inherited disorder of skin scaling, from a "
+        "semi-dominant filaggrin gene mutation that impairs the skin "
+        "barrier. Aetiology: filaggrin loss-of-function variants "
+        "reduce natural moisturising factor and barrier integrity, "
+        "strongly associated with atopic dermatitis and keratosis "
+        "pilaris. Clinical features: fine, white to grey scale "
+        "sparing the flexures, worse on the shins, hyperlinear palms, "
+        "onset in early childhood, improves in summer and worsens in "
+        "winter. Ix: clinical diagnosis, family history supports it, "
+        "skin biopsy rarely needed. Mx: regular emollients and "
+        "keratolytics (urea or lactic acid creams), avoid excessive "
+        "bathing that strips natural oils, treat coexisting atopic "
+        "dermatitis. Note: hyperlinear palms plus flexural sparing "
+        "distinguishes it from acquired ichthyosis, which should "
+        "prompt a search for lymphoma or hypothyroidism."
+    ),
+    "Waardenburg syndrome": (
+        "A group of autosomal dominant neurocristopathies causing "
+        "sensorineural hearing loss with pigmentary abnormalities, "
+        "from PAX3, MITF or related gene mutations affecting neural "
+        "crest-derived melanocytes. Aetiology: several subtypes (type "
+        "1 to 4) distinguished by dystopia canthorum and additional "
+        "features, type 4 includes Hirschsprung disease. Clinical "
+        "features: congenital sensorineural hearing loss (variable, "
+        "often asymmetric), heterochromia iridis, a white forelock, "
+        "premature greying, and wide-set inner canthi in type 1. Ix: "
+        "clinical diagnosis supported by audiometry, genetic testing "
+        "confirms the gene and subtype, screen for Hirschsprung "
+        "disease if type 4 features are present. Mx: early hearing "
+        "amplification or cochlear implant, genetic counselling, "
+        "surgical referral if Hirschsprung disease is confirmed. "
+        "Note: a white forelock with congenital deafness should "
+        "prompt Waardenburg workup, not be dismissed as a cosmetic "
+        "variant."
+    ),
+    "Treacher Collins syndrome": (
+        "An autosomal dominant craniofacial disorder from TCOF1 or "
+        "related gene mutations that disrupt first and second "
+        "pharyngeal arch development, causing symmetric malar and "
+        "mandibular hypoplasia. Aetiology: roughly half arise from "
+        "new mutations, normal intelligence is typical which "
+        "distinguishes it from many other craniofacial syndromes. "
+        "Clinical features: downslanting palpebral fissures, lower "
+        "eyelid coloboma, malar and mandibular hypoplasia, microtia "
+        "with conductive hearing loss, cleft palate in a minority, "
+        "and airway compromise from micrognathia in neonates. Ix: "
+        "clinical and radiographic diagnosis, genetic testing "
+        "confirms, prenatal ultrasound may detect severe cases. Mx: "
+        "multidisciplinary craniofacial team, secure the airway early "
+        "(may need tracheostomy), staged reconstructive surgery "
+        "through childhood, hearing rehabilitation. Note: normal "
+        "cognition despite a striking facial phenotype is the key "
+        "counselling point for families."
+    ),
+    "Pierre Robin sequence": (
+        "A sequence of micrognathia leading to posterior tongue "
+        "displacement and airway obstruction, often with an "
+        "associated cleft palate, from impaired mandibular growth in "
+        "utero. Aetiology: may be isolated or part of a syndrome such "
+        "as Stickler syndrome, mandibular hypoplasia restricts space "
+        "for the tongue which then obstructs the airway and prevents "
+        "palatal shelf fusion. Clinical features: the classic triad "
+        "of micrognathia, glossoptosis and airway obstruction, "
+        "feeding difficulty and failure to thrive, U-shaped cleft "
+        "palate in most cases. Ix: clinical diagnosis at birth, "
+        "polysomnography quantifies airway obstruction severity, "
+        "genetic assessment for an underlying syndrome. Mx: prone "
+        "positioning first-line for mild obstruction, nasopharyngeal "
+        "airway or mandibular distraction for moderate disease, "
+        "tracheostomy for severe cases, staged cleft palate repair. "
+        "Note: check for Stickler syndrome (myopia, joint "
+        "hypermobility) since it changes long-term surveillance."
+    ),
+    "Prune belly syndrome": (
+        "A rare congenital triad of deficient abdominal wall "
+        "musculature, urinary tract abnormalities and bilateral "
+        "cryptorchidism, almost exclusively affecting males. "
+        "Aetiology: proposed early urethral obstruction causing "
+        "massive bladder distension that stretches and thins the "
+        "abdominal wall and impairs testicular descent, exact cause "
+        "unclear. Clinical features: wrinkled, lax 'prune-like' "
+        "abdominal skin, a dilated poorly emptying bladder and "
+        "dilated ureters, undescended testes, and pulmonary "
+        "hypoplasia in severe antenatal cases. Ix: antenatal "
+        "ultrasound often detects it, postnatal renal ultrasound and "
+        "voiding cystourethrogram define urinary tract anatomy, renal "
+        "function monitoring. Mx: multidisciplinary urology and "
+        "neonatology care, vesicoureteric reflux and obstruction may "
+        "need surgical correction, orchidopexy, abdominal wall "
+        "reconstruction is sometimes performed for cosmesis and "
+        "support. Note: renal dysplasia, not the abdominal wall "
+        "defect, is what determines long-term survival."
+    ),
+    "VACTERL association": (
+        "A non-random co-occurrence of congenital anomalies spanning "
+        "Vertebral, Anal, Cardiac, TracheoEsophageal, Renal and Limb "
+        "defects, diagnosed when at least three are present. "
+        "Aetiology: no single genetic or environmental cause "
+        "identified, considered a field defect of early mesodermal "
+        "development, overlaps with maternal diabetes and some "
+        "genetic syndromes. Clinical features: vertebral segmentation "
+        "defects, imperforate anus, cardiac septal defects, "
+        "tracheoesophageal fistula with oesophageal atresia, renal "
+        "agenesis or dysplasia, and radial ray limb anomalies in "
+        "varying combinations. Ix: full anomaly screen once one "
+        "feature is identified (spinal imaging, echocardiogram, renal "
+        "ultrasound, limb x-rays), genetic testing to exclude a "
+        "specific syndrome. Mx: staged surgical correction of "
+        "individual anomalies by the relevant specialty, coordinated "
+        "multidisciplinary follow-up. Note: finding one VACTERL "
+        "feature should trigger a systematic search for the others, "
+        "not reassurance that it is an isolated defect."
+    ),
+    "Choledochal cyst": (
+        "Congenital cystic dilatation of the bile ducts, usually "
+        "presenting in childhood, that predisposes to cholangitis, "
+        "stone formation and later malignancy. Aetiology: an "
+        "anomalous pancreaticobiliary junction lets pancreatic "
+        "enzymes reflux into the bile duct and weaken its wall, "
+        "Todani classification describes the anatomical types. "
+        "Clinical features: the classic triad of abdominal pain, "
+        "jaundice and a palpable right upper quadrant mass is present "
+        "in only a minority, more often recurrent cholangitis or "
+        "pancreatitis. Ix: ultrasound is first-line, MRCP defines "
+        "ductal anatomy and the pancreaticobiliary junction, liver "
+        "function tests during cholangitis. Mx: complete surgical "
+        "excision of the cyst with biliary-enteric reconstruction "
+        "(Roux-en-Y hepaticojejunostomy) is curative, treat "
+        "cholangitis with antibiotics first if active. Note: the "
+        "malignancy risk that develops in retained cyst tissue is why "
+        "drainage alone is inadequate treatment."
+    ),
+    "Periodic limb movement disorder": (
+        "Repetitive, stereotyped limb jerking during sleep that "
+        "fragments sleep architecture and causes daytime symptoms, "
+        "distinct from restless legs syndrome though the two often "
+        "coexist. Aetiology: iron deficiency, dopaminergic "
+        "dysfunction, uraemia, and some antidepressants (SSRIs, "
+        "SNRIs) increase movement frequency. Clinical features: "
+        "rhythmic dorsiflexion of the toe, ankle and sometimes knee "
+        "and hip every 20 to 40 seconds through the night, bed "
+        "partner reports kicking, patient reports unrefreshing sleep "
+        "and daytime fatigue. Ix: polysomnography with limb "
+        "electromyography quantifies the periodic limb movement "
+        "index, serum ferritin to exclude iron deficiency. Mx: "
+        "correct iron deficiency (ferritin under 75), review and stop "
+        "provoking antidepressants where possible, dopamine agonists "
+        "or gabapentinoids for significant daytime impact. Note: "
+        "diagnose PLMD only when movements cause a sleep disturbance "
+        "or symptom, not from the movements alone."
+    ),
+    "Cataplexy": (
+        "Sudden, brief loss of voluntary muscle tone triggered by "
+        "strong emotion, almost always seen with narcolepsy type 1 "
+        "and reflecting loss of hypothalamic orexin (hypocretin) "
+        "neurons. Aetiology: an autoimmune process is suspected to "
+        "destroy orexin-producing neurons, strongly linked to "
+        "HLA-DQB1*06:02, laughter is the most common trigger. "
+        "Clinical features: bilateral facial or limb weakness lasting "
+        "seconds to minutes with preserved consciousness and "
+        "respiration, ranges from subtle jaw sag to a full collapse, "
+        "usually accompanies excessive daytime sleepiness and sleep "
+        "paralysis. Ix: clinical history is often diagnostic when "
+        "triggered by emotion, low CSF orexin level confirms, "
+        "polysomnography and multiple sleep latency test support the "
+        "narcolepsy diagnosis. Mx: sodium oxybate is first-line for "
+        "cataplexy and sleepiness together, venlafaxine or "
+        "clomipramine suppress cataplexy through REM suppression. "
+        "Note: cataplexy triggered by laughter is pathognomonic "
+        "enough that it should prompt a narcolepsy workup on its own."
+    ),
+    "Cervical dystonia": (
+        "The commonest focal dystonia, causing involuntary sustained "
+        "neck muscle contraction that produces an abnormal head "
+        "posture, usually idiopathic and adult-onset. Aetiology: "
+        "thought to reflect basal ganglia network dysfunction, rarely "
+        "secondary to antipsychotic exposure, structural lesions or "
+        "inherited dystonia genes, distinct from congenital muscular "
+        "torticollis of infancy. Clinical features: sustained or "
+        "jerky head turning (torticollis), tilting (laterocollis) or "
+        "flexion/extension (antero- or retrocollis), often with pain, "
+        "a sensory trick (geste antagoniste) that reduces the "
+        "posture, and mild tremor. Ix: clinical diagnosis, MRI brain "
+        "if onset is atypical or there are additional neurological "
+        "signs, screen for a drug cause. Mx: botulinum toxin "
+        "injection into the affected muscles is first-line and highly "
+        "effective, oral anticholinergics or baclofen as adjuncts, "
+        "deep brain stimulation for refractory cases. Note: a sensory "
+        "trick that eases the posture is a specific clinical clue "
+        "distinguishing dystonia from structural neck disease."
+    ),
+    "Diabetic amyotrophy": (
+        "A painful, asymmetric proximal lower limb neuropathy "
+        "occurring in diabetes, thought to be an immune-mediated "
+        "microvasculitis of the lumbosacral plexus rather than "
+        "classic distal diabetic neuropathy. Aetiology: more common "
+        "in type 2 diabetes with recent weight loss or sudden "
+        "glycaemic improvement, an inflammatory vasculitic process "
+        "affecting the lumbosacral plexus and proximal nerves is "
+        "presumed. Clinical features: severe unilateral thigh or hip "
+        "pain followed over days to weeks by asymmetric quadriceps "
+        "and iliopsoas weakness and wasting, absent knee reflex, "
+        "often with significant weight loss. Ix: nerve conduction "
+        "studies and EMG show a lumbosacral plexopathy pattern, MRI "
+        "lumbosacral plexus to exclude a structural cause, exclude "
+        "other neuropathy causes. Mx: glycaemic optimisation, "
+        "analgesia (gabapentinoids or tricyclics), physiotherapy, "
+        "immunotherapy (steroids or IVIG) is used in severe cases "
+        "though evidence is limited. Note: most recover substantially "
+        "over 12 to 24 months even without immunotherapy - "
+        "reassurance matters as much as treatment."
+    ),
+    "Cervicogenic headache": (
+        "Unilateral headache referred from a cervical spine source, "
+        "typically the upper cervical joints or C2/C3 nerve roots, "
+        "that mimics migraine but has a mechanical trigger. "
+        "Aetiology: cervical facet joint degeneration, whiplash "
+        "injury or upper cervical pathology irritates convergent "
+        "trigeminocervical nucleus pathways that are shared with "
+        "primary headache. Clinical features: unilateral head pain "
+        "starting in the neck or occiput and spreading forward, "
+        "reduced neck range of motion, precipitated by neck movement "
+        "or sustained posture, may mimic migraine's associated nausea "
+        "and photophobia. Ix: clinical diagnosis, diagnostic cervical "
+        "facet or nerve blocks confirm the source, imaging to exclude "
+        "structural cervical pathology. Mx: physiotherapy and "
+        "postural correction first-line, cervical facet joint or "
+        "nerve blocks for confirmation and relief, radiofrequency "
+        "ablation for recurrent cases. Note: pain provoked reliably "
+        "by neck movement or sustained neck posture is the feature "
+        "that should prompt a cervical source workup instead of a "
+        "migraine label."
+    ),
+    "Cerebral amyloid angiopathy": (
+        "Deposition of beta-amyloid in small and medium cerebral "
+        "vessel walls that weakens them, a leading cause of lobar "
+        "intracerebral haemorrhage in older adults distinct from "
+        "hypertensive haemorrhage. Aetiology: sporadic amyloid "
+        "deposition increases with age and Alzheimer pathology, APOE "
+        "e4 carriage raises risk, a rare familial form exists. "
+        "Clinical features: recurrent lobar (not deep) haemorrhage, "
+        "transient focal neurological episodes ('amyloid spells'), "
+        "progressive cognitive decline, and incidental "
+        "microhaemorrhages on imaging in asymptomatic older adults. "
+        "Ix: MRI with susceptibility-weighted or gradient-echo "
+        "sequences shows cortical and subcortical microbleeds and "
+        "superficial siderosis, Boston criteria combine imaging with "
+        "clinical features for diagnosis. Mx: no disease-modifying "
+        "treatment, manage blood pressure, avoid anticoagulation and "
+        "antiplatelets where possible given rebleeding risk, "
+        "supportive care after haemorrhage. Note: lobar (not deep) "
+        "haemorrhage location in an older adult is the clue that "
+        "separates this from hypertensive haemorrhage."
+    ),
+    "Wernicke aphasia": (
+        "A fluent aphasia from damage to the posterior superior "
+        "temporal gyrus (Wernicke area), impairing language "
+        "comprehension while speech output remains fluent but often "
+        "meaningless. Aetiology: usually a middle cerebral artery "
+        "territory stroke affecting the dominant (typically left) "
+        "temporal lobe, also tumour or trauma in that region. "
+        "Clinical features: fluent, grammatically structured speech "
+        "that is empty of meaning, frequent paraphasic errors and "
+        "neologisms, impaired repetition and comprehension, patients "
+        "are often unaware of their errors (anosognosia). Ix: "
+        "clinical language assessment, MRI or CT to localise the "
+        "lesion, formal aphasia battery for severity and prognosis. "
+        "Mx: acute stroke pathway if presenting acutely, speech and "
+        "language therapy is the mainstay of rehabilitation, treat "
+        "the underlying cause. Note: fluent but nonsensical speech "
+        "with poor comprehension and no insight is the pattern that "
+        "separates this from Broca aphasia."
+    ),
+    "Broca aphasia": (
+        "A non-fluent aphasia from damage to the posterior inferior "
+        "frontal gyrus (Broca area), impairing speech production "
+        "while comprehension is relatively preserved. Aetiology: "
+        "usually a middle cerebral artery territory stroke affecting "
+        "the dominant frontal lobe, often with accompanying "
+        "hemiparesis since the lesion sits near the motor cortex. "
+        "Clinical features: slow, effortful, non-fluent speech with "
+        "short phrases and impaired grammar (agrammatism), relatively "
+        "preserved comprehension, patients are typically aware of and "
+        "frustrated by their errors, often with right-sided weakness. "
+        "Ix: clinical language assessment, MRI or CT to localise the "
+        "lesion, formal aphasia battery for severity and prognosis. "
+        "Mx: acute stroke pathway if presenting acutely, speech and "
+        "language therapy is the mainstay, treat the underlying "
+        "cause. Note: non-fluent, effortful speech with preserved "
+        "comprehension and intact insight is the pattern that "
+        "separates this from Wernicke aphasia."
+    ),
+    "Alcohol-related psychosis": (
+        "Hallucinations, typically auditory, occurring in the context "
+        "of heavy alcohol use, either during intoxication, withdrawal "
+        "or as a distinct chronic hallucinosis, and separate from "
+        "delirium tremens. Aetiology: chronic heavy alcohol use is "
+        "thought to sensitise auditory pathways, onset may follow "
+        "reduction or cessation of drinking, chronic alcoholic "
+        "hallucinosis can persist for weeks. Clinical features: vivid "
+        "auditory hallucinations (often threatening or critical "
+        "voices) with clear consciousness and orientation, "
+        "distinguishing it from the confusion and autonomic "
+        "instability of delirium tremens. Ix: clinical diagnosis, "
+        "exclude delirium tremens and Wernicke encephalopathy, screen "
+        "for other substance use and primary psychotic illness. Mx: "
+        "manage alcohol withdrawal with benzodiazepines if relevant, "
+        "antipsychotics for persistent hallucinations, thiamine to "
+        "prevent Wernicke encephalopathy, engage with alcohol "
+        "treatment services. Note: preserved orientation and clear "
+        "consciousness is what distinguishes this from delirium "
+        "tremens, which is a medical emergency."
+    ),
+    "Gambling disorder": (
+        "A behavioural addiction with persistent, recurrent problem "
+        "gambling causing significant distress or impairment, now "
+        "classified alongside substance use disorders given shared "
+        "reward pathway mechanisms. Aetiology: dopaminergic reward "
+        "system dysfunction similar to substance addiction, dopamine "
+        "agonist medications (used in Parkinson disease) can trigger "
+        "it, associated with impulsivity traits and comorbid mood or "
+        "substance use disorders. Clinical features: preoccupation "
+        "with gambling, needing to gamble with increasing amounts, "
+        "unsuccessful efforts to cut back, chasing losses, lying to "
+        "conceal the extent of gambling, and jeopardising "
+        "relationships or employment. Ix: clinical interview against "
+        "DSM-5 criteria, screening tools such as the Problem Gambling "
+        "Severity Index, screen for comorbid depression and substance "
+        "use. Mx: cognitive behavioural therapy is first-line, "
+        "naltrexone has evidence particularly with a family history "
+        "of alcohol use disorder, self-exclusion programs and "
+        "financial counselling. Note: check any dopamine agonist "
+        "medication first - stopping it can resolve iatrogenic "
+        "gambling disorder entirely."
+    ),
+    "Kleptomania": (
+        "An impulse control disorder with recurrent failure to resist "
+        "urges to steal items not needed for personal use or monetary "
+        "value, distinct from ordinary theft. Aetiology: poorly "
+        "understood, proposed serotonergic and dopaminergic "
+        "dysregulation, often coexists with mood disorders, anxiety, "
+        "OCD or other impulse control disorders. Clinical features: "
+        "rising tension before the theft, gratification or relief "
+        "during the act, followed by guilt or shame, items stolen are "
+        "typically not needed and are often discarded, hoarded or "
+        "returned. Ix: clinical interview against DSM-5 criteria, "
+        "distinguish from theft for material gain or organised crime, "
+        "screen for comorbid psychiatric illness. Mx: cognitive "
+        "behavioural therapy is first-line, SSRIs or naltrexone have "
+        "some evidence, treat comorbid mood or anxiety disorder. "
+        "Note: the absence of financial motive and the tension-relief "
+        "cycle is what distinguishes kleptomania from ordinary "
+        "shoplifting."
+    ),
+    "Intermittent explosive disorder": (
+        "Recurrent, impulsive outbursts of aggression grossly out of "
+        "proportion to the provocation, occurring separately from "
+        "another psychiatric condition that would better explain "
+        "them. Aetiology: thought to reflect impaired prefrontal "
+        "regulation of amygdala-driven aggression, associated with "
+        "childhood trauma, family history, and comorbid mood, anxiety "
+        "or substance use disorders. Clinical features: verbal or "
+        "physical outbursts lasting under 30 minutes, occurring at "
+        "least twice weekly for three months or as three destructive "
+        "episodes within a year, with rapid escalation and subsequent "
+        "regret. Ix: clinical interview against DSM-5 criteria, "
+        "exclude a mood, psychotic or substance-induced cause, and "
+        "exclude a general medical or neurological cause for the "
+        "aggression. Mx: cognitive behavioural therapy focused on "
+        "anger management is first-line, SSRIs have the best evidence "
+        "base, mood stabilisers as an adjunct. Note: the rapid onset "
+        "and disproportion to the trigger is what separates this from "
+        "anger secondary to another condition."
+    ),
+    "Separation anxiety disorder": (
+        "Developmentally inappropriate and excessive fear of "
+        "separation from attachment figures, the commonest anxiety "
+        "disorder of childhood though it also occurs in adults. "
+        "Aetiology: genetic predisposition to anxiety, behaviourally "
+        "inhibited temperament, and precipitating stressors such as "
+        "parental illness, divorce or starting school. Clinical "
+        "features: excessive distress when separation is anticipated "
+        "or occurs, worry about harm coming to an attachment figure, "
+        "school refusal, nightmares with separation themes, and "
+        "physical symptoms such as headache or abdominal pain before "
+        "separation. Ix: clinical interview with the child and "
+        "caregivers against DSM-5 criteria, exclude a medical cause "
+        "for physical symptoms, assess school attendance pattern. Mx: "
+        "cognitive behavioural therapy with graded exposure is "
+        "first-line, involve parents in treatment, SSRIs for moderate "
+        "to severe cases, liaise with the school for a "
+        "return-to-school plan. Note: persistent school refusal with "
+        "physical symptoms that resolve once the child stays home is "
+        "the classic presentation, not simple truancy."
+    ),
+    "Seasonal affective disorder": (
+        "A pattern of major depressive episodes with a seasonal "
+        "onset, most often in autumn or winter and remitting in "
+        "spring, linked to reduced light exposure. Aetiology: reduced "
+        "daylight is thought to disrupt circadian rhythm and "
+        "serotonin and melatonin regulation, more common at higher "
+        "latitudes and in women. Clinical features: low mood, low "
+        "energy and anhedonia recurring each winter, atypical "
+        "features are common including hypersomnia, increased "
+        "appetite and carbohydrate craving and weight gain, full "
+        "remission between episodes. Ix: clinical diagnosis requiring "
+        "a seasonal pattern over at least two years, exclude "
+        "hypothyroidism and other causes of fatigue, mood and sleep "
+        "questionnaires support severity assessment. Mx: bright light "
+        "therapy each morning is first-line and often effective "
+        "within weeks, SSRIs for moderate to severe episodes, "
+        "cognitive behavioural therapy adapted for seasonal pattern. "
+        "Note: hypersomnia and carbohydrate craving (atypical "
+        "features), not the classic insomnia and appetite loss, are "
+        "typical of this subtype."
+    ),
+    "Dissociative amnesia": (
+        "Inability to recall important personal information, usually "
+        "traumatic or stressful, that is too extensive to be "
+        "explained by ordinary forgetfulness and is not due to a "
+        "medical or substance cause. Aetiology: thought to be a "
+        "psychological defence against overwhelming trauma, more "
+        "likely after abuse, combat exposure or disaster, "
+        "occasionally accompanied by dissociative fugue with sudden "
+        "travel and identity confusion. Clinical features: localised "
+        "amnesia for a specific event or period is commonest, less "
+        "often generalised amnesia for identity and life history, "
+        "patients appear otherwise cognitively intact and are often "
+        "distressed by the gap. Ix: clinical diagnosis of exclusion, "
+        "thorough neurological assessment and MRI to exclude a "
+        "structural cause, urine drug screen to exclude a substance "
+        "cause. Mx: safety assessment first, trauma-focused "
+        "psychotherapy is the mainstay, memories should not be forced "
+        "or recovered through hypnosis given the risk of false "
+        "memories. Note: normal neurological examination with a clear "
+        "temporal gap around a traumatic event points away from an "
+        "organic amnesia."
+    ),
+    "Bruxism": (
+        "Repetitive jaw muscle activity with clenching or grinding of "
+        "the teeth, occurring during sleep or wakefulness and a "
+        "common cause of dental wear and jaw pain. Aetiology: sleep "
+        "bruxism is linked to micro-arousals and obstructive sleep "
+        "apnoea, awake bruxism to stress and anxiety, also associated "
+        "with caffeine, alcohol, smoking and some antidepressants "
+        "(SSRIs). Clinical features: flattened or chipped teeth, "
+        "morning jaw pain or headache, masseter hypertrophy, bed "
+        "partner reports grinding noise, and secondary "
+        "temporomandibular joint symptoms. Ix: clinical and dental "
+        "examination is usually sufficient, polysomnography if "
+        "obstructive sleep apnoea is suspected as the trigger. Mx: an "
+        "occlusal splint protects teeth overnight, treat obstructive "
+        "sleep apnoea if present, reduce caffeine and alcohol, stress "
+        "management, review any contributing antidepressant. Note: "
+        "new-onset bruxism after starting an SSRI is a recognised "
+        "drug effect worth asking about before extensive dental "
+        "workup."
+    ),
+    "Trismus": (
+        "Restricted mouth opening from spasm or mechanical limitation "
+        "of the muscles of mastication, a physical sign rather than a "
+        "single diagnosis with causes ranging from dental infection "
+        "to tetanus. Aetiology: odontogenic infection and "
+        "peritonsillar abscess are the commonest causes, also "
+        "temporomandibular joint disease, post-radiotherapy fibrosis, "
+        "tetanus, and rarely a masticator space tumour. Clinical "
+        "features: inability to open the mouth beyond roughly 35 mm, "
+        "pain with jaw movement, associated dysphagia or muffled "
+        "voice if there is an underlying abscess, and generalised "
+        "rigidity or opisthotonus if tetanus is the cause. Ix: "
+        "examine for a dental or peritonsillar source, CT or "
+        "ultrasound if an abscess is suspected, tetanus is a clinical "
+        "diagnosis with no confirmatory test. Mx: treat the "
+        "underlying cause (drain an abscess, antibiotics for "
+        "infection), tetanus immunoglobulin and wound care for "
+        "tetanus, physiotherapy for post-radiotherapy fibrosis. Note: "
+        "trismus with fever and drooling in a patient with recent "
+        "tonsillitis is peritonsillar abscess until proven otherwise."
+    ),
+    "Frey syndrome": (
+        "Gustatory sweating and flushing over the cheek and temple "
+        "during eating, following damage to the parotid gland or "
+        "auriculotemporal nerve, most often after parotid surgery. "
+        "Aetiology: severed parasympathetic secretomotor fibres to "
+        "the parotid gland aberrantly regenerate to innervate sweat "
+        "glands and cutaneous vessels of the overlying skin, a form "
+        "of neural misdirection. Clinical features: sweating, "
+        "flushing and warmth over the preauricular and temporal skin "
+        "triggered by the sight, smell or taste of food, typically "
+        "starting months after parotidectomy or parotid trauma. Ix: "
+        "clinical diagnosis, the minor starch-iodine test can map the "
+        "affected skin if confirmation is needed. Mx: reassurance for "
+        "mild cases, topical anticholinergics (glycopyrrolate) for "
+        "troublesome symptoms, botulinum toxin injection is effective "
+        "for refractory cases. Note: this is a recognised delayed "
+        "complication of parotid surgery, not a sign of infection or "
+        "tumour recurrence, and should be counselled for before "
+        "surgery."
+    ),
+    "Leprosy": (
+        "A chronic granulomatous infection with Mycobacterium leprae "
+        "affecting skin and peripheral nerves, with disease pattern "
+        "determined by the host's cell-mediated immune response. "
+        "Aetiology: spread by prolonged close respiratory contact, "
+        "long incubation (years), endemic in parts of Asia, Africa "
+        "and South America and occasionally acquired from armadillo "
+        "contact. Clinical features: tuberculoid leprosy causes few, "
+        "well-demarcated hypopigmented anaesthetic skin lesions with "
+        "strong immune response; lepromatous leprosy causes numerous "
+        "poorly-defined nodular lesions with weak immune response and "
+        "higher bacillary load; peripheral nerve thickening and "
+        "sensory loss drive deformity. Ix: skin smear or biopsy for "
+        "acid-fast bacilli, PCR where available, nerve conduction "
+        "studies to assess nerve involvement. Mx: WHO multidrug "
+        "therapy (dapsone, rifampicin, and clofazimine for "
+        "multibacillary disease) for 6 to 12 months, early treatment "
+        "prevents nerve damage and deformity. Note: sensory loss "
+        "precedes visible deformity - early antibiotic treatment, not "
+        "late reconstructive surgery, is what prevents disability."
+    ),
+    "Babesiosis": (
+        "A tick-borne malaria-like illness from Babesia protozoa "
+        "infecting red blood cells, endemic in the northeastern and "
+        "midwestern United States and transmitted by the same Ixodes "
+        "tick as Lyme disease. Aetiology: Ixodes scapularis tick "
+        "bite, also transmissible by blood transfusion, severe "
+        "disease occurs in the asplenic, elderly and "
+        "immunocompromised. Clinical features: fever, chills, sweats, "
+        "myalgia and fatigue one to several weeks after a bite, "
+        "haemolytic anaemia in more severe cases, and co-infection "
+        "with Lyme disease or anaplasmosis is common given the shared "
+        "vector. Ix: thin blood film shows intraerythrocytic ring "
+        "forms and occasionally the pathognomonic Maltese cross "
+        "tetrad, PCR is more sensitive at low parasitaemia, serology "
+        "for past exposure. Mx: mild disease may not need treatment "
+        "in the immunocompetent, atovaquone plus azithromycin for "
+        "most symptomatic cases, clindamycin plus quinine and "
+        "exchange transfusion for severe or asplenic disease. Note: "
+        "always test for Lyme disease and anaplasmosis alongside "
+        "babesiosis given the shared tick vector."
+    ),
+    "Ehrlichiosis": (
+        "A tick-borne infection with Ehrlichia bacteria that infect "
+        "white blood cells, causing a febrile illness with "
+        "distinctive laboratory abnormalities, transmitted by the "
+        "lone star tick in the United States. Aetiology: Amblyomma "
+        "americanum tick bite transmits Ehrlichia chaffeensis, more "
+        "severe disease in the elderly and immunocompromised. "
+        "Clinical features: fever, headache, myalgia and malaise one "
+        "to two weeks after a bite, rash in a minority (more common "
+        "in children), can progress to multiorgan involvement if "
+        "untreated. Ix: leukopenia, thrombocytopenia and "
+        "transaminitis are characteristic, PCR is the most sensitive "
+        "confirmatory test, serology confirms retrospectively. Mx: "
+        "doxycycline started empirically on clinical suspicion, do "
+        "not wait for confirmatory testing, treatment is effective "
+        "even in children and pregnancy for this indication. Note: "
+        "leukopenia, thrombocytopenia and raised transaminases in a "
+        "febrile patient with tick exposure should prompt empirical "
+        "doxycycline, not watchful waiting."
+    ),
+    "Yellow fever": (
+        "A mosquito-borne flavivirus infection endemic to tropical "
+        "Africa and South America, ranging from a mild febrile "
+        "illness to severe haemorrhagic disease with high mortality. "
+        "Aetiology: transmitted by Aedes and Haemagogus mosquitoes in "
+        "a jungle or urban cycle, vaccination is highly effective and "
+        "required for entry to some countries. Clinical features: an "
+        "initial phase of fever, headache, myalgia and nausea lasting "
+        "a few days, a minority progress after a brief remission to a "
+        "toxic phase with jaundice, haemorrhage, myocardial injury "
+        "and renal failure. Ix: clinical diagnosis supported by "
+        "travel history, PCR in the first week, serology thereafter, "
+        "liver function tests and coagulation profile in severe "
+        "disease. Mx: no specific antiviral, supportive care with "
+        "fluid and organ support in the toxic phase, prevention with "
+        "the live attenuated vaccine is the priority for travellers "
+        "to endemic areas. Note: a brief remission before the toxic "
+        "phase is a classic and dangerous pattern - do not discharge "
+        "a returning traveller as recovered too early."
+    ),
+    "Ebola virus disease": (
+        "A severe, often fatal viral haemorrhagic fever from "
+        "Ebolavirus, endemic to parts of Central and West Africa, "
+        "transmitted by direct contact with infected body fluids. "
+        "Aetiology: zoonotic spillover from fruit bats is the "
+        "presumed natural reservoir, human-to-human spread via blood, "
+        "secretions and contaminated surfaces, healthcare workers and "
+        "carers are at particular risk. Clinical features: abrupt "
+        "fever, severe fatigue, myalgia and headache followed by "
+        "vomiting, diarrhoea and abdominal pain, progressing in a "
+        "minority to bleeding, shock and multiorgan failure. Ix: "
+        "strict isolation and PPE precautions before any testing, "
+        "RT-PCR on blood confirms the diagnosis, notify public health "
+        "immediately on suspicion. Mx: supportive care with "
+        "aggressive fluid and electrolyte replacement is the "
+        "mainstay, monoclonal antibody therapies (such as inmazeb) "
+        "improve survival when available, strict infection control "
+        "prevents onward spread. Note: any suspected case demands "
+        "immediate isolation and public health notification before "
+        "further workup, given the severe transmission risk to staff."
     ),
 }
 
