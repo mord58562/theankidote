@@ -4223,6 +4223,192 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "tethered spinal cord in children"]],
         "summary": "",
     },
+    {
+        "name": "HIV seroconversion illness",
+        "aliases": ["Acute HIV infection", "Acute retroviral syndrome"],
+        "utd": [["Overview", "acute and early hiv infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Total spinal anaesthesia",
+        "aliases": ["High spinal block", "Total spinal block"],
+        "utd": [["Overview", "total spinal blockade"]],
+        "summary": "",
+    },
+    {
+        "name": "Succinylcholine apnoea",
+        "aliases": ["Prolonged succinylcholine paralysis", "Suxamethonium apnoea"],
+        "utd": [["Overview", "pharmacogenetic variation in neuromuscular blockade"]],
+        "summary": "",
+    },
+    {
+        "name": "Awareness under general anaesthesia",
+        "aliases": ["Intraoperative awareness", "Anaesthesia awareness"],
+        "utd": [["Overview", "accidental awareness during general anesthesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Autonomic dysreflexia",
+        "aliases": ["Autonomic hyperreflexia"],
+        "utd": [["Overview", "autonomic dysreflexia in spinal cord injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Osteitis fibrosa cystica",
+        "aliases": ["Brown tumour of hyperparathyroidism"],
+        "utd": [["Overview", "osteitis fibrosa cystica hyperparathyroidism"]],
+        "summary": "",
+    },
+    {
+        "name": "Anticholinergic toxidrome",
+        "aliases": ["Antimuscarinic toxidrome", "Anticholinergic syndrome"],
+        "utd": [["Overview", "anticholinergic poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Postpartum thyroiditis",
+        "aliases": ["Postpartum thyroid dysfunction"],
+        "utd": [["Overview", "postpartum thyroiditis"]],
+        "summary": "",
+    },
+    {
+        "name": "Transurethral resection syndrome",
+        "aliases": ["TURP syndrome"],
+        "utd": [["Overview", "transurethral resection turp syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Interscalene block phrenic nerve palsy",
+        "aliases": ["Hemidiaphragmatic paresis interscalene block"],
+        "utd": [["Overview", "interscalene brachial plexus block complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Postoperative cognitive dysfunction",
+        "aliases": ["POCD"],
+        "utd": [["Overview", "postoperative cognitive dysfunction"]],
+        "summary": "",
+    },
+    {
+        "name": "Sugammadex hypersensitivity",
+        "aliases": ["Sugammadex anaphylaxis"],
+        "utd": [["Overview", "sugammadex adverse effects"]],
+        "summary": "",
+    },
+    {
+        "name": "Pneumocephalus",
+        "aliases": ["Tension pneumocephalus", "Intracranial air"],
+        "utd": [["Overview", "pneumocephalus"]],
+        "summary": "",
+    },
+    {
+        "name": "Central serous chorioretinopathy",
+        "aliases": ["CSCR"],
+        "utd": [["Overview", "central serous chorioretinopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Macular hole",
+        "aliases": ["Idiopathic macular hole"],
+        "utd": [["Overview", "macular hole"]],
+        "summary": "",
+    },
+    {
+        "name": "Epiretinal membrane",
+        "aliases": ["Macular pucker", "Cellophane maculopathy"],
+        "utd": [["Overview", "epiretinal membrane"]],
+        "summary": "",
+    },
+    {
+        "name": "Commotio retinae",
+        "aliases": ["Berlin oedema", "Retinal concussion"],
+        "utd": [["Overview", "commotio retinae"]],
+        "summary": "",
+    },
+    {
+        "name": "Eustachian tube dysfunction",
+        "aliases": ["ETD"],
+        "utd": [["Overview", "eustachian tube dysfunction"]],
+        "summary": "",
+    },
+    {
+        "name": "Reinke oedema",
+        "aliases": ["Polypoid corditis"],
+        "utd": [["Overview", "reinke edema vocal cord"]],
+        "summary": "",
+    },
+    {
+        "name": "Subglottic stenosis",
+        "aliases": ["Idiopathic subglottic stenosis"],
+        "utd": [["Overview", "subglottic stenosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-tonsillectomy haemorrhage",
+        "aliases": ["Secondary tonsillectomy bleed"],
+        "utd": [["Overview", "post tonsillectomy hemorrhage"]],
+        "summary": "",
+    },
+    {
+        "name": "Perilymph fistula",
+        "aliases": [],
+        "utd": [["Overview", "perilymphatic fistula"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric foreign body aspiration",
+        "aliases": ["Inhaled foreign body child"],
+        "utd": [["Overview", "airway foreign bodies in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Hepatopulmonary syndrome",
+        "aliases": [],
+        "utd": [["Overview", "hepatopulmonary syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Staphylococcal scalded skin syndrome",
+        "aliases": ["SSSS", "Ritter disease"],
+        "utd": [["Overview", "staphylococcal scalded skin syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Charcot arthropathy",
+        "aliases": ["Charcot joint", "Neuropathic arthropathy"],
+        "utd": [["Overview", "charcot neuroarthropathy diabetic foot"]],
+        "summary": "",
+    },
+    {
+        "name": "Patellar tendinopathy",
+        "aliases": ["Jumpers knee", "Patellar tendinitis"],
+        "utd": [["Overview", "patellar tendinopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Tokophobia",
+        "aliases": ["Fear of childbirth"],
+        "utd": [["Overview", "tokophobia fear of childbirth"]],
+        "summary": "",
+    },
+    {
+        "name": "Reactive attachment disorder",
+        "aliases": ["RAD attachment disorder"],
+        "utd": [["Overview", "reactive attachment disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Oppositional defiant disorder",
+        "aliases": ["ODD"],
+        "utd": [["Overview", "oppositional defiant disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Selective mutism",
+        "aliases": [],
+        "utd": [["Overview", "selective mutism"]],
+        "summary": "",
+    },
 ]
 
 
@@ -37934,6 +38120,612 @@ RICH_SUMMARIES = {
         "cutaneous marker in an infant warrants spinal ultrasound or "
         "MRI even without neurological signs yet, since surgery works "
         "best before deficits are established."
+    ),
+    "HIV seroconversion illness": (
+        "The acute illness that follows primary HIV infection, "
+        "typically 2 to 4 weeks after exposure, driven by explosive "
+        "viral replication before the immune response contains it. "
+        "Aetiology: mucosal or blood exposure to HIV, with viral load "
+        "peaking during this window and infectivity at its highest. "
+        "Clinical features: fever, pharyngitis, lymphadenopathy, "
+        "myalgia and a maculopapular rash mimicking glandular fever, "
+        "sometimes with mouth ulcers or aseptic meningitis. Ix: "
+        "fourth-generation antigen/antibody test can still be "
+        "negative in the eclipse period, so add HIV RNA viral load if "
+        "suspicion is high; repeat serology at 6 weeks and 3 months. "
+        "Mx: refer urgently for specialist review and consider early "
+        "antiretroviral therapy per eTG; discuss partner notification "
+        "and PEP for recent contacts. Note: any young adult with a "
+        "glandular-fever-like illness and a negative Monospot "
+        "deserves an HIV risk history."
+    ),
+    "Total spinal anaesthesia": (
+        "Catastrophic cephalad spread of local anaesthetic within the "
+        "subarachnoid space, blocking cervical and cranial nerve "
+        "roots after an intended epidural or spinal dose. Aetiology: "
+        "inadvertent intrathecal injection of an epidural dose, most "
+        "often when a dural puncture goes unrecognised. Clinical "
+        "features: rapid-onset hypotension and bradycardia, ascending "
+        "motor block, dyspnoea from intercostal and phrenic "
+        "paralysis, then apnoea and loss of consciousness as the "
+        "block reaches the brainstem. Ix: clinical diagnosis; monitor "
+        "for progressive block level, airway compromise and "
+        "haemodynamic collapse rather than waiting on investigations. "
+        "Mx: secure the airway, ventilate, give vasopressors and "
+        "atropine for bradycardia, and support the circulation until "
+        "the block regresses over one to two hours. Note: the "
+        "difference from a routine high block is respiratory arrest "
+        "and unconsciousness, not just numb hands."
+    ),
+    "Succinylcholine apnoea": (
+        "Prolonged neuromuscular blockade after a single dose of "
+        "succinylcholine, from reduced or absent plasma "
+        "cholinesterase activity that normally hydrolyses the drug "
+        "within minutes. Aetiology: inherited butyrylcholinesterase "
+        "variants (autosomal recessive), or acquired reduction from "
+        "liver disease, pregnancy, malnutrition or drugs such as "
+        "metoclopramide and organophosphates. Clinical features: "
+        "apnoea and flaccid paralysis persisting for hours instead of "
+        "minutes after induction, with the patient fully conscious "
+        "but unable to breathe or move. Ix: dibucaine number confirms "
+        "an atypical enzyme variant; send a sample before further "
+        "paralysing agents are given. Mx: sedate and ventilate until "
+        "spontaneous respiration returns; do not attempt to reverse "
+        "with anticholinesterases, which do not affect this enzyme. "
+        "Note: warn the patient and flag their record, since "
+        "first-degree relatives may share the trait."
+    ),
+    "Awareness under general anaesthesia": (
+        "Explicit recall of intraoperative events despite intended "
+        "unconsciousness, occasionally with distressing sensory or "
+        "paralytic detail. Aetiology: light anaesthesia relative to "
+        "paralysis, common in rapid-sequence induction, cardiac and "
+        "trauma surgery, or equipment and drug-delivery failure. "
+        "Clinical features: reported sounds, pain or the sensation of "
+        "paralysis recalled after surgery, sometimes evolving into "
+        "post-traumatic stress symptoms. Ix: structured postoperative "
+        "interview (the modified Brice questionnaire) at discharge "
+        "and again at follow-up; processed EEG depth-of-anaesthesia "
+        "monitoring in high-risk cases. Mx: acknowledge the "
+        "experience, document it, offer early psychological support "
+        "and refer for counselling if distress persists; review "
+        "anaesthetic technique for the next procedure. Note: the risk "
+        "is highest when muscle relaxants mask the physical signs "
+        "anaesthetists usually rely on."
+    ),
+    "Autonomic dysreflexia": (
+        "A sudden, exaggerated sympathetic surge in patients with "
+        "spinal cord injury at or above T6, triggered by a noxious "
+        "stimulus below the level of injury that the brain cannot "
+        "dampen through normal inhibitory pathways. Aetiology: "
+        "bladder distension and faecal impaction are the classic "
+        "triggers; pressure injuries, ingrown toenails and even tight "
+        "clothing can provoke it. Clinical features: abrupt severe "
+        "hypertension with pounding headache, flushing and sweating "
+        "above the lesion, and pallor with bradycardia below it. Ix: "
+        "clinical diagnosis; check blood pressure immediately in any "
+        "cord-injury patient with a new headache, and search for the "
+        "trigger. Mx: sit the patient upright, loosen restrictive "
+        "clothing, empty the bladder (catheterise gently) and check "
+        "for impaction; give a rapid-acting antihypertensive such as "
+        "GTN if pressure stays high. Note: untreated dysreflexia can "
+        "cause seizure, stroke or death within minutes, so treat the "
+        "trigger and the pressure together."
+    ),
+    "Osteitis fibrosa cystica": (
+        "Bone disease from longstanding, severe hyperparathyroidism, "
+        "in which excess parathyroid hormone drives osteoclastic "
+        "resorption faster than bone can remodel. Aetiology: usually "
+        "a parathyroid adenoma causing primary hyperparathyroidism, "
+        "or longstanding secondary hyperparathyroidism in chronic "
+        "kidney disease. Clinical features: bone pain, pathological "
+        "fractures and palpable lytic lesions (brown tumours), "
+        "alongside the systemic features of hypercalcaemia such as "
+        "fatigue, constipation and renal stones. Ix: elevated calcium "
+        "and PTH, low phosphate in primary disease, and "
+        "characteristic radiographic changes including subperiosteal "
+        "resorption and salt-and-pepper skull. Mx: parathyroidectomy "
+        "for primary disease; treat the underlying renal disease and "
+        "phosphate binders per eTG when secondary. Note: brown "
+        "tumours are reactive giant-cell lesions, not metastases, and "
+        "typically regress once the parathyroid disease is "
+        "controlled."
+    ),
+    "Anticholinergic toxidrome": (
+        "A predictable pattern of toxicity from blockade of "
+        "muscarinic acetylcholine receptors, classically remembered "
+        "as 'blind as a bat, mad as a hatter, red as a beet, hot as a "
+        "hare and dry as a bone'. Aetiology: overdose or excess "
+        "dosing of tricyclic antidepressants, antihistamines, "
+        "antipsychotics or atropine, and plant sources such as "
+        "Datura. Clinical features: mydriasis, delirium and "
+        "agitation, flushed dry skin, urinary retention, tachycardia "
+        "and hyperthermia, with absent bowel sounds. Ix: 12-lead ECG "
+        "for QRS and QT prolongation, especially with tricyclics; "
+        "paracetamol and salicylate levels to exclude co-ingestion. "
+        "Mx: supportive care with cooling, benzodiazepines for "
+        "agitation and sedation, and cautious physostigmine in severe "
+        "pure anticholinergic toxicity under toxicology guidance. "
+        "Note: it is easy to confuse with the sympathomimetic "
+        "toxidrome, but dry skin and absent bowel sounds point to "
+        "anticholinergic causes."
+    ),
+    "Postpartum thyroiditis": (
+        "A destructive, autoimmune thyroiditis occurring within the "
+        "first twelve months after delivery, often following a "
+        "triphasic course of thyrotoxicosis, hypothyroidism and "
+        "eventual recovery. Aetiology: an exaggerated postpartum "
+        "rebound of an underlying autoimmune process, strongly linked "
+        "to pre-existing thyroid peroxidase antibodies and type 1 "
+        "diabetes. Clinical features: an early thyrotoxic phase with "
+        "anxiety, palpitations and heat intolerance around 1 to 4 "
+        "months postpartum, followed by a hypothyroid phase with "
+        "fatigue and low mood around 4 to 8 months. Ix: TSH, free T4 "
+        "and thyroid peroxidase antibodies; a low radioactive iodine "
+        "uptake distinguishes it from Graves disease if thyrotoxic "
+        "symptoms are prominent. Mx: beta-blockers for symptomatic "
+        "thyrotoxicosis (antithyroid drugs are not indicated), and "
+        "thyroxine for symptomatic or persistent hypothyroidism, "
+        "reviewed against AMH dosing in pregnancy planning. Note: "
+        "about one in five progress to permanent hypothyroidism, so "
+        "recheck thyroid function annually."
+    ),
+    "Transurethral resection syndrome": (
+        "Dilutional hyponatraemia and fluid overload from absorption "
+        "of hypotonic irrigation fluid during transurethral resection "
+        "of the prostate, now uncommon with modern bipolar and saline "
+        "techniques. Aetiology: glycine or sorbitol irrigating fluid "
+        "absorbed through open venous sinuses in the prostatic bed, "
+        "worsened by long resection times and high irrigation "
+        "pressure. Clinical features: confusion, nausea, visual "
+        "disturbance and bradycardia intraoperatively or shortly "
+        "after, progressing to seizures and pulmonary oedema in "
+        "severe cases. Ix: urgent serum sodium and osmolality; ECG "
+        "for bradyarrhythmia. Mx: stop the procedure, give "
+        "supplemental oxygen, restrict further fluid and correct "
+        "sodium cautiously with hypertonic saline only if severely "
+        "symptomatic, since rapid correction risks osmotic "
+        "demyelination. Note: modern bipolar resection using isotonic "
+        "saline has made this syndrome rare, but it still occurs with "
+        "monopolar technique or very long resections."
+    ),
+    "Interscalene block phrenic nerve palsy": (
+        "Near-universal, usually transient hemidiaphragmatic paresis "
+        "following an interscalene brachial plexus block, from local "
+        "anaesthetic spread onto the phrenic nerve running just "
+        "anterior to the brachial plexus at this level. Aetiology: "
+        "proximity of the phrenic nerve to the interscalene injection "
+        "site means even accurate needle placement usually blocks it "
+        "too. Clinical features: dyspnoea, reduced exercise tolerance "
+        "and a subjective sense of breathlessness, more pronounced in "
+        "patients with pre-existing respiratory disease or obesity. "
+        "Ix: clinical assessment of respiratory effort; chest X-ray "
+        "or ultrasound confirms a raised, poorly moving hemidiaphragm "
+        "if severe symptoms warrant it. Mx: reassurance for mild "
+        "cases, since function returns as the block wears off; "
+        "supplemental oxygen and monitoring for patients with limited "
+        "respiratory reserve. Note: consider lower-volume or more "
+        "distal blocks (supraclavicular with care, or peripheral "
+        "nerve blocks) in patients who cannot tolerate a blocked "
+        "hemidiaphragm."
+    ),
+    "Postoperative cognitive dysfunction": (
+        "A measurable decline in memory, attention and executive "
+        "function after surgery and anaesthesia, distinct from "
+        "delirium in that it is subtler and can persist for weeks to "
+        "months. Aetiology: more common after major or cardiac "
+        "surgery, in older patients and those with pre-existing "
+        "cognitive impairment; contributing factors include "
+        "neuroinflammation, cerebral hypoperfusion and disrupted "
+        "sleep. Clinical features: forgetfulness, difficulty "
+        "concentrating and reduced processing speed reported by the "
+        "patient or family, usually without the fluctuating "
+        "consciousness seen in delirium. Ix: formal "
+        "neuropsychological testing pre- and postoperatively in "
+        "research settings; clinically, exclude delirium, stroke and "
+        "metabolic derangement first. Mx: optimise sleep, hydration "
+        "and analgesia, minimise benzodiazepines, and involve family "
+        "in reorientation; most cases improve over three to twelve "
+        "months. Note: counsel older patients preoperatively that "
+        "transient cognitive change after major surgery is common and "
+        "usually reversible."
+    ),
+    "Sugammadex hypersensitivity": (
+        "Anaphylaxis or hypersensitivity to sugammadex, the "
+        "cyclodextrin agent used to reverse rocuronium and vecuronium "
+        "neuromuscular blockade. Aetiology: an IgE or non-IgE "
+        "mediated reaction to sugammadex itself, dose-dependent and "
+        "more frequent with the higher doses used for immediate "
+        "reversal. Clinical features: bronchospasm, hypotension, "
+        "urticaria and angioedema occurring within minutes of "
+        "administration, mimicking reactions to neuromuscular "
+        "blockers or antibiotics given around the same time. Ix: "
+        "serial mast cell tryptase levels, and later skin testing or "
+        "referral to an allergy specialist to confirm the culprit "
+        "agent among several given close together. Mx: treat as "
+        "anaphylaxis with adrenaline, fluids and oxygen; document the "
+        "reaction clearly since future exposure should be avoided. "
+        "Note: sugammadex reactions are rare but rising in reported "
+        "frequency as its use has grown, so keep it on the "
+        "differential alongside rocuronium and latex."
+    ),
+    "Pneumocephalus": (
+        "Air within the cranial cavity, usually a benign incidental "
+        "finding after neurosurgery or trauma but occasionally a "
+        "tension phenomenon causing mass effect. Aetiology: skull "
+        "base or cribriform plate fracture, neurosurgical or sinus "
+        "surgery, spinal or epidural anaesthesia with an inadvertent "
+        "dural breach, or nitrous oxide diffusing into an existing "
+        "pocket of trapped air. Clinical features: headache, nausea "
+        "and reduced consciousness; tension pneumocephalus causes "
+        "rapidly worsening neurological decline from raised "
+        "intracranial pressure. Ix: CT brain shows hypodense air, "
+        "classically the 'Mount Fuji sign' when tension "
+        "pneumocephalus compresses both frontal lobes. Mx: most cases "
+        "resorb spontaneously with high-flow oxygen to washout "
+        "nitrogen and conservative monitoring; tension pneumocephalus "
+        "needs urgent neurosurgical decompression. Note: avoid "
+        "nitrous oxide anaesthesia in any patient with known "
+        "intracranial air, since it diffuses into the space faster "
+        "than it is absorbed."
+    ),
+    "Central serous chorioretinopathy": (
+        "Idiopathic serous detachment of the neurosensory retina from "
+        "fluid leaking through the retinal pigment epithelium, "
+        "typically in young to middle-aged adults. Aetiology: "
+        "strongly associated with corticosteroid use (systemic, "
+        "inhaled or even topical) and with type A personality, stress "
+        "and hypercortisolism. Clinical features: unilateral blurred "
+        "or distorted central vision, micropsia and a relative "
+        "scotoma, usually without pain or redness. Ix: optical "
+        "coherence tomography shows subretinal fluid; fluorescein "
+        "angiography demonstrates a characteristic 'smokestack' or "
+        "ink-blot leak. Mx: stop or reduce any corticosteroid "
+        "exposure first, since most cases resolve spontaneously "
+        "within three months; persistent or recurrent cases may need "
+        "laser or photodynamic therapy from ophthalmology. Note: "
+        "always ask about steroid nasal sprays and creams, which "
+        "patients rarely volunteer as 'medication'."
+    ),
+    "Macular hole": (
+        "A full-thickness defect in the fovea, most often from "
+        "age-related vitreomacular traction pulling the retina apart "
+        "at its thinnest point. Aetiology: idiopathic in most cases "
+        "from posterior vitreous detachment; also follows blunt "
+        "trauma, high myopia or chronic macular oedema. Clinical "
+        "features: gradual central visual distortion (metamorphopsia) "
+        "and a central blind spot, sparing peripheral vision. Ix: "
+        "optical coherence tomography confirms the hole and stages "
+        "its size; Amsler grid testing shows central distortion. Mx: "
+        "refer to ophthalmology for pars plana vitrectomy with "
+        "internal limiting membrane peeling and gas tamponade, which "
+        "closes most holes and improves vision if done before "
+        "longstanding damage. Note: patients are told to posture "
+        "face-down after surgery so the gas bubble tamponades the "
+        "hole while it heals."
+    ),
+    "Epiretinal membrane": (
+        "A fibrocellular membrane forming on the inner retinal "
+        "surface that contracts and distorts the underlying macula, "
+        "sometimes called macular pucker. Aetiology: idiopathic in "
+        "most older adults following posterior vitreous detachment; "
+        "secondary causes include retinal tears, diabetic retinopathy "
+        "and prior intraocular surgery or inflammation. Clinical "
+        "features: mild to moderate blurred or distorted vision with "
+        "metamorphopsia, often noticed when straight lines appear "
+        "wavy on an Amsler grid. Ix: optical coherence tomography "
+        "shows the membrane and any associated macular thickening or "
+        "pseudohole. Mx: observation is reasonable for mild, stable "
+        "symptoms; vitrectomy with membrane peeling for significant "
+        "visual impairment or progressive distortion. Note: many "
+        "patients have only mild symptoms for years, so surgery is "
+        "reserved for those whose vision or quality of life is "
+        "genuinely affected."
+    ),
+    "Commotio retinae": (
+        "Transient retinal whitening after blunt ocular trauma, from "
+        "concussive disruption of the photoreceptor outer segments "
+        "rather than structural damage, also called Berlin oedema "
+        "when it involves the macula. Aetiology: direct blunt trauma "
+        "from a ball, fist or airbag, transmitting a shockwave "
+        "through the vitreous to the retina. Clinical features: "
+        "reduced visual acuity if the macula is involved, with pale, "
+        "oedematous-looking retina on examination; a cherry-red spot "
+        "can appear if the fovea is spared amid surrounding "
+        "whitening. Ix: dilated fundus examination; optical coherence "
+        "tomography helps distinguish it from more serious trauma "
+        "such as choroidal rupture or retinal detachment. Mx: no "
+        "specific treatment is needed, since most cases resolve over "
+        "days to weeks; arrange ophthalmology follow-up to exclude "
+        "coexisting retinal tears or detachment. Note: always dilate "
+        "and examine the peripheral retina after blunt trauma, since "
+        "commotio retinae can mask a more serious injury sitting "
+        "alongside it."
+    ),
+    "Eustachian tube dysfunction": (
+        "Impaired equalisation of middle ear pressure from a "
+        "eustachian tube that fails to open, close or clear normally, "
+        "one of the most common reasons for ear symptoms seen in "
+        "general practice. Aetiology: upper respiratory tract "
+        "infection, allergic rhinitis, adenoid hypertrophy in "
+        "children, or rapid altitude change during flying or diving. "
+        "Clinical features: ear fullness, muffled hearing, popping or "
+        "crackling sounds and mild discomfort, usually bilateral and "
+        "worse with swallowing or yawning. Ix: clinical diagnosis; "
+        "otoscopy may show a retracted or dull tympanic membrane, and "
+        "tympanometry demonstrates negative middle ear pressure. Mx: "
+        "treat the underlying cause (intranasal corticosteroid or "
+        "antihistamine for allergic rhinitis), autoinflation "
+        "manoeuvres such as Valsalva, and decongestants for "
+        "short-term relief before flying. Note: persistent unilateral "
+        "symptoms in an adult warrant nasopharyngeal examination to "
+        "exclude a mass obstructing the tube."
+    ),
+    "Reinke oedema": (
+        "Chronic, gelatinous swelling of the superficial layer of the "
+        "vocal cords (Reinke space), producing a characteristically "
+        "low, husky voice. Aetiology: smoking is the dominant driver, "
+        "often compounded by voice overuse, chronic laryngopharyngeal "
+        "reflux and hypothyroidism. Clinical features: progressive "
+        "hoarseness and voice deepening, more noticeable in women, "
+        "with a sensation of a lump in the throat; airway obstruction "
+        "is rare but possible in severe bilateral disease. Ix: "
+        "laryngoscopy shows swollen, translucent, polypoid vocal "
+        "cords; biopsy if any suspicious asymmetric lesion is seen to "
+        "exclude malignancy. Mx: smoking cessation is essential and "
+        "may partly reverse early changes; voice therapy and reflux "
+        "management help, with microlaryngoscopic surgical stripping "
+        "for severe or airway-threatening disease. Note: the voice "
+        "change is often permanent even after the underlying irritant "
+        "is removed, so counsel patients honestly about the prognosis "
+        "before surgery is offered."
+    ),
+    "Subglottic stenosis": (
+        "Narrowing of the airway just below the vocal cords, either "
+        "congenital or acquired, with acquired disease now more often "
+        "seen after prolonged intubation than from historic "
+        "tracheostomy practice. Aetiology: prolonged or traumatic "
+        "endotracheal intubation is the leading acquired cause; "
+        "idiopathic subglottic stenosis occurs in women without an "
+        "obvious cause, and granulomatosis with polyangiitis is an "
+        "important autoimmune cause. Clinical features: progressive "
+        "dyspnoea, stridor and exercise intolerance, often "
+        "misdiagnosed as asthma until flow-volume loops or direct "
+        "visualisation are done. Ix: flexible or rigid laryngoscopy "
+        "and bronchoscopy define the site and degree of narrowing; CT "
+        "airway imaging helps with surgical planning. Mx: endoscopic "
+        "dilatation or laser for short segments, cricotracheal "
+        "resection for longer or recurrent stenosis, and treatment of "
+        "any underlying vasculitis. Note: think of this diagnosis in "
+        "a patient labelled 'difficult asthma' who does not respond "
+        "to inhalers and has a normal chest X-ray."
+    ),
+    "Post-tonsillectomy haemorrhage": (
+        "Bleeding from the tonsillar fossa after tonsillectomy, the "
+        "most feared complication of one of the most common "
+        "paediatric surgical procedures. Aetiology: primary "
+        "haemorrhage occurs within 24 hours from inadequate "
+        "intraoperative haemostasis; secondary haemorrhage, more "
+        "common, occurs 5 to 10 days later as the fibrinous eschar "
+        "separates from the healing fossa. Clinical features: fresh "
+        "blood in the mouth or vomited, sometimes swallowed and "
+        "presenting only as melaena or pallor; a young child may "
+        "simply look unwell before bleeding is obvious. Ix: direct "
+        "oropharyngeal examination with good lighting and suction "
+        "available; full blood count and group and hold if bleeding "
+        "is ongoing or significant. Mx: sit the patient up, apply "
+        "direct pressure or a gargled ice-cold adrenaline-soaked "
+        "gauze, and arrange urgent ENT review, since even small "
+        "secondary bleeds can herald a larger one. Note: any bleeding "
+        "after tonsillectomy needs same-day ENT assessment, because a "
+        "small warning bleed can precede a life-threatening one "
+        "within hours."
+    ),
+    "Perilymph fistula": (
+        "An abnormal communication between the perilymph-filled inner "
+        "ear and the middle ear, causing leakage of inner ear fluid. "
+        "Aetiology: barotrauma from diving or flying, head trauma, "
+        "vigorous Valsalva or straining, or as a complication of "
+        "stapedectomy and other ear surgery. Clinical features: "
+        "sudden or fluctuating sensorineural hearing loss, vertigo "
+        "and tinnitus provoked by loud sounds (Tullio phenomenon) or "
+        "pressure changes such as sneezing or straining. Ix: "
+        "audiometry documents sensorineural loss; the diagnosis is "
+        "often clinical and confirmed at exploratory tympanotomy, "
+        "since imaging is frequently normal. Mx: bed rest with head "
+        "elevation and avoidance of straining or flying for mild "
+        "cases, with surgical exploration and patching for persistent "
+        "or severe symptoms. Note: suspect this after a diving or "
+        "flying incident with new vertigo and hearing loss, "
+        "especially if symptoms worsen with straining."
+    ),
+    "Paediatric foreign body aspiration": (
+        "Inhalation of a foreign object into the airway, a common and "
+        "potentially fatal emergency in children aged one to three "
+        "who explore the world by mouth. Aetiology: peanuts and other "
+        "nuts, small toy parts and food such as grapes or hot dog "
+        "segments are classic culprits, aspirated during play, crying "
+        "or laughing while eating. Clinical features: a witnessed "
+        "choking episode with coughing and gagging, sometimes "
+        "followed by a symptom-free interval before wheeze, stridor "
+        "or recurrent pneumonia develop if the object lodges "
+        "distally. Ix: chest X-ray in inspiration and expiration may "
+        "show air trapping or mediastinal shift, but a normal X-ray "
+        "does not exclude a radiolucent object such as plastic or "
+        "food. Mx: back blows and chest thrusts for the choking "
+        "infant per resuscitation guidelines; rigid bronchoscopy "
+        "under general anaesthesia is the definitive treatment for a "
+        "retained foreign body. Note: a normal chest X-ray in a child "
+        "with a convincing choking history does not rule this out, so "
+        "refer for bronchoscopy on history alone if suspicion is "
+        "high."
+    ),
+    "Hepatopulmonary syndrome": (
+        "Arterial hypoxaemia caused by intrapulmonary vascular "
+        "dilatation in the setting of chronic liver disease and "
+        "portal hypertension. Aetiology: nitric oxide-mediated "
+        "dilatation of pulmonary capillaries impairs oxygen diffusion "
+        "and creates a functional shunt, most often in cirrhosis of "
+        "any cause. Clinical features: dyspnoea and hypoxaemia that "
+        "characteristically worsen when upright and improve when "
+        "lying flat (platypnoea-orthodeoxia), alongside spider naevi "
+        "and other stigmata of chronic liver disease. Ix: contrast "
+        "(bubble) echocardiography shows delayed opacification of the "
+        "left heart confirming intrapulmonary shunting; arterial "
+        "blood gas quantifies the hypoxaemia. Mx: supplemental oxygen "
+        "for symptomatic relief; liver transplantation is the only "
+        "treatment that reverses the underlying shunting and should "
+        "be expedited once diagnosed. Note: ask any cirrhotic patient "
+        "with breathlessness whether it is worse sitting up, since "
+        "this postural clue is often missed."
+    ),
+    "Staphylococcal scalded skin syndrome": (
+        "A toxin-mediated blistering skin disease in young children, "
+        "caused by exfoliative toxins from Staphylococcus aureus that "
+        "cleave desmosomes in the superficial epidermis. Aetiology: "
+        "toxin released from a distant staphylococcal focus (often "
+        "conjunctivitis, omphalitis or a minor skin infection) is "
+        "haematogenously spread, since renal clearance of the toxin "
+        "is immature in infants. Clinical features: fever and "
+        "irritability followed by diffuse erythema and flaccid, "
+        "easily ruptured blisters with a positive Nikolsky sign, "
+        "sparing mucous membranes unlike toxic epidermal necrolysis. "
+        "Ix: clinical diagnosis; skin biopsy shows a split within the "
+        "superficial epidermis if needed to distinguish it from TEN, "
+        "which splits at the dermoepidermal junction. Mx: admit for "
+        "IV antistaphylococcal antibiotics, careful fluid balance and "
+        "skin protection as for a burn, avoiding aggressive "
+        "debridement since the epidermis regenerates quickly. Note: "
+        "unlike toxic epidermal necrolysis, mucous membranes are "
+        "spared and the prognosis in children is excellent with "
+        "prompt treatment."
+    ),
+    "Charcot arthropathy": (
+        "Progressive destruction of a joint from loss of protective "
+        "sensation, most often affecting the midfoot in longstanding "
+        "diabetic peripheral neuropathy. Aetiology: repeated "
+        "unrecognised microtrauma in a neuropathic, well-perfused "
+        "foot triggers an inflammatory cascade of bone resorption and "
+        "fragmentation; other causes include syringomyelia and tabes "
+        "dorsalis. Clinical features: a warm, swollen, often painless "
+        "foot with preserved pulses, easily mistaken for cellulitis "
+        "or osteomyelitis, progressing to gross midfoot collapse "
+        "(rocker-bottom deformity) if unrecognised. Ix: plain X-ray "
+        "shows fragmentation and subluxation once established, but "
+        "MRI is more sensitive early; inflammatory markers and blood "
+        "cultures help exclude infection. Mx: strict offloading in a "
+        "total contact cast is the cornerstone of acute management, "
+        "with surgical reconstruction reserved for unstable or "
+        "ulcerated deformity. Note: a warm swollen diabetic foot with "
+        "a normal white cell count is Charcot until proven otherwise, "
+        "not cellulitis."
+    ),
+    "Patellar tendinopathy": (
+        "Overuse degeneration of the patellar tendon at its origin "
+        "from the inferior pole of the patella, common in sports "
+        "involving repeated jumping and landing. Aetiology: "
+        "repetitive eccentric loading exceeds the tendon's capacity "
+        "to remodel, seen in basketball, volleyball and athletics; "
+        "risk factors include increased training load, poor landing "
+        "mechanics and reduced flexibility. Clinical features: "
+        "localised anterior knee pain at the inferior pole of the "
+        "patella, worse with jumping, squatting or descending stairs, "
+        "and tender to direct palpation at that point. Ix: usually a "
+        "clinical diagnosis; ultrasound or MRI shows tendon "
+        "thickening and hypoechoic change if imaging is needed to "
+        "exclude other causes. Mx: relative rest from aggravating "
+        "load, a structured eccentric or heavy slow resistance "
+        "loading programme, and addressing training errors; "
+        "corticosteroid injection is avoided given the risk of tendon "
+        "rupture. Note: complete rest alone does not fix "
+        "tendinopathy, progressive loading under physiotherapy "
+        "guidance is what drives recovery."
+    ),
+    "Tokophobia": (
+        "Severe, persistent fear of childbirth intense enough to "
+        "affect decision-making about pregnancy or delivery, distinct "
+        "from the ordinary anxiety many women feel. Aetiology: "
+        "primary tokophobia arises without a prior traumatic birth, "
+        "often linked to prior sexual trauma or anxiety disorders; "
+        "secondary tokophobia follows a previous difficult or "
+        "traumatic delivery. Clinical features: intrusive fear of "
+        "labour, avoidance of pregnancy, requests for elective "
+        "caesarean section driven by fear rather than obstetric "
+        "indication, and sometimes panic symptoms when pregnancy is "
+        "discussed. Ix: clinical history and validated screening "
+        "tools such as the Wijma Delivery Expectancy Questionnaire; "
+        "screen for coexisting depression, anxiety or post-traumatic "
+        "stress disorder. Mx: early referral to a perinatal mental "
+        "health service, structured antenatal counselling and birth "
+        "planning, with psychological therapy such as CBT; caesarean "
+        "section is a reasonable accommodation when fear remains "
+        "severe despite treatment. Note: dismissing the fear as "
+        "'normal nerves' delays care that antenatal counselling can "
+        "genuinely help."
+    ),
+    "Reactive attachment disorder": (
+        "A disorder of disrupted social and emotional functioning in "
+        "young children who experienced grossly insufficient early "
+        "caregiving, such as severe neglect or repeated changes of "
+        "primary carer. Aetiology: pathogenic care before age two to "
+        "five, including institutional rearing, frequent placement "
+        "changes in out-of-home care, or severe parental neglect, "
+        "prevents a stable attachment bond from forming. Clinical "
+        "features: a child who rarely seeks or responds to comfort "
+        "when distressed, shows minimal positive affect, and appears "
+        "emotionally withdrawn even with familiar carers. Ix: "
+        "clinical diagnosis based on developmental and caregiving "
+        "history from multiple informants; exclude autism spectrum "
+        "disorder and intellectual disability, which can present with "
+        "overlapping social features. Mx: the priority is a safe, "
+        "stable and nurturing caregiving environment; refer to a "
+        "child and adolescent mental health service for "
+        "attachment-focused therapy with the caregiver. Note: this "
+        "diagnosis requires a documented history of pathogenic care, "
+        "it should not be applied to a child with a normal caregiving "
+        "history."
+    ),
+    "Oppositional defiant disorder": (
+        "A childhood pattern of angry, irritable mood and defiant, "
+        "argumentative behaviour towards authority figures, "
+        "persisting beyond the developmentally normal defiance of "
+        "toddlerhood. Aetiology: multifactorial, with genetic "
+        "temperament, harsh or inconsistent parenting, family "
+        "conflict and coexisting ADHD all contributing. Clinical "
+        "features: frequent temper outbursts, deliberate annoyance of "
+        "others, blaming others for mistakes and persistent argument "
+        "with adults, present across more than one setting for at "
+        "least six months. Ix: clinical diagnosis using DSM-5 "
+        "criteria and collateral history from parents and teachers; "
+        "screen for coexisting ADHD, anxiety and learning "
+        "difficulties. Mx: parent management training is first-line, "
+        "teaching consistent, positive behavioural strategies; "
+        "individual or family therapy helps older children, with "
+        "medication reserved for coexisting conditions such as ADHD. "
+        "Note: ODD without conduct disorder rarely involves "
+        "aggression towards people or animals, that pattern should "
+        "prompt reassessment for conduct disorder."
+    ),
+    "Selective mutism": (
+        "A childhood anxiety disorder in which a child consistently "
+        "fails to speak in specific social situations, such as "
+        "school, despite speaking normally at home. Aetiology: "
+        "strongly linked to social anxiety and behavioural "
+        "inhibition, sometimes with a family history of anxiety "
+        "disorders or, in some children, a background of bilingualism "
+        "or recent migration that is mistakenly blamed instead. "
+        "Clinical features: normal language development and fluent "
+        "speech at home or with close family, but persistent silence "
+        "at school or with unfamiliar people, present for at least "
+        "one month beyond the initial settling-in period. Ix: "
+        "clinical diagnosis after excluding a primary speech or "
+        "language disorder, autism spectrum disorder and hearing "
+        "impairment; collateral history from school is essential. Mx: "
+        "refer to a speech pathologist and psychologist for a graded "
+        "exposure and behavioural approach; avoid pressuring the "
+        "child to speak, which worsens anxiety. Note: this is an "
+        "anxiety disorder, not wilful defiance, and early "
+        "intervention before school entry gives the best outcomes."
     ),
 }
 
