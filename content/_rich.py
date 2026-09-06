@@ -5747,6 +5747,174 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "radiationinduced brachial plexopathy"]],
         "summary": "",
     },
+    {
+        "name": "Intimate partner violence",
+        "aliases": ["Domestic violence", "Domestic abuse", "IPV"],
+        "utd": [["Overview", "intimate partner violence diagnosis and screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Smoking cessation",
+        "aliases": ["Quitting smoking", "Tobacco cessation"],
+        "utd": [["Overview", "overview of smoking cessation management in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Pre-conception counselling",
+        "aliases": ["Preconception counselling", "Preconception care"],
+        "utd": [["Overview", "the preconception office visit"]],
+        "summary": "",
+    },
+    {
+        "name": "Vulvar cancer",
+        "aliases": ["Vulval cancer", "Vulvar carcinoma", "Vulval carcinoma"],
+        "utd": [["Overview", "vulvar cancer clinical manifestations diagnosis and pathology"]],
+        "summary": "",
+    },
+    {
+        "name": "Sepsis six",
+        "aliases": ["Sepsis 6", "Sepsis six bundle"],
+        "utd": [["Overview", "evaluation and management of suspected sepsis and septic shock in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Metatarsalgia",
+        "aliases": [],
+        "utd": [["Overview", "evaluation and diagnosis of metatarsalgia"]],
+        "summary": "",
+    },
+    {
+        "name": "Peroneal nerve palsy",
+        "aliases": ["Common peroneal nerve palsy", "Fibular nerve palsy"],
+        "utd": [["Overview", "peroneal fibular neuropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Falls in the elderly",
+        "aliases": ["Falls risk in the elderly"],
+        "utd": [["Overview", "falls prevention in community dwelling older persons"]],
+        "summary": "",
+    },
+    {
+        "name": "Deep sternal wound infection",
+        "aliases": ["Post-sternotomy mediastinitis", "Sternal wound infection"],
+        "utd": [["Overview", "management of mediastinitis after cardiac surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Anastomotic stricture",
+        "aliases": ["Anastomotic stenosis"],
+        "utd": [["Overview", "surgical anastomotic stricture evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Stoma complications",
+        "aliases": ["Ileostomy complications", "Colostomy complications"],
+        "utd": [["Overview", "overview of complications of intestinal stomas"]],
+        "summary": "",
+    },
+    {
+        "name": "Bariatric surgery complications",
+        "aliases": ["Gastric bypass complications", "Sleeve gastrectomy complications"],
+        "utd": [["Overview", "late complications of bariatric surgical operations"]],
+        "summary": "",
+    },
+    {
+        "name": "Spinal anaesthesia complications",
+        "aliases": ["Intrathecal anaesthesia complications"],
+        "utd": [["Overview", "complications of neuraxial anesthesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Travel medicine",
+        "aliases": ["Travel health advice", "Pre-travel consultation"],
+        "utd": [["Overview", "the pretravel consultation"]],
+        "summary": "",
+    },
+    {
+        "name": "Needlestick injury management",
+        "aliases": ["Sharps injury", "Occupational blood exposure"],
+        "utd": [["Overview", "management of healthcare personnel exposed to blood and body fluids"]],
+        "summary": "",
+    },
+    {
+        "name": "Advance care directive",
+        "aliases": ["Advance health directive", "Living will"],
+        "utd": [["Overview", "advance care planning and advance directives"]],
+        "summary": "",
+    },
+    {
+        "name": "Palliative sedation",
+        "aliases": ["Terminal sedation"],
+        "utd": [["Overview", "palliative sedation"]],
+        "summary": "",
+    },
+    {
+        "name": "Terminal agitation",
+        "aliases": ["End-of-life agitation", "Dying with agitation"],
+        "utd": [["Overview", "overview of managing common non pain symptoms near the end of life"]],
+        "summary": "",
+    },
+    {
+        "name": "Extravasation injury",
+        "aliases": ["IV extravasation", "Chemotherapy extravasation"],
+        "utd": [["Overview", "extravasation injury from intravenous infusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Mucositis",
+        "aliases": ["Oral mucositis", "Chemotherapy-induced mucositis"],
+        "utd": [["Overview", "oral toxicity of chemotherapy and radiation therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Diverticular abscess",
+        "aliases": ["Pericolic abscess"],
+        "utd": [["Overview", "acute colonic diverticulitis clinical manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Hyponatraemia in endurance athletes",
+        "aliases": ["Exercise-associated hyponatraemia", "Marathon hyponatraemia"],
+        "utd": [["Overview", "exercise associated hyponatremia"]],
+        "summary": "",
+    },
+    {
+        "name": "Exercise-associated collapse",
+        "aliases": ["Post-exercise collapse", "Finish-line collapse"],
+        "utd": [["Overview", "exercise associated collapse"]],
+        "summary": "",
+    },
+    {
+        "name": "Diabetic gastroparesis",
+        "aliases": ["Gastroparesis diabeticorum"],
+        "utd": [["Overview", "diabetic gastroparesis"]],
+        "summary": "",
+    },
+    {
+        "name": "Diabetic mastopathy",
+        "aliases": ["Fibrous mastopathy of diabetes"],
+        "utd": [["Overview", "diabetic mastopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Bartholin gland carcinoma",
+        "aliases": ["Bartholin's gland carcinoma"],
+        "utd": [["Overview", "bartholin gland masses"]],
+        "summary": "",
+    },
+    {
+        "name": "Paget disease of the vulva",
+        "aliases": ["Vulvar Paget disease", "Extramammary Paget disease of the vulva"],
+        "utd": [["Overview", "extramammary paget disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Mucocele of the lip",
+        "aliases": ["Oral mucocele"],
+        "utd": [["Overview", "mucocele and ranula"]],
+        "summary": "",
+    },
 ]
 
 
@@ -44296,6 +44464,479 @@ RICH_SUMMARIES = {
         "evidence. Rule out recurrence periodically. Note: painless "
         "C5-C6 plexopathy with lymphoedema and EMG myokymia after "
         "radiotherapy is radiation plexopathy, not tumour recurrence."
+    ),
+    "Intimate partner violence": (
+        "Physical, sexual, psychological or coercive-control abuse by "
+        "a current or former partner, disproportionately affecting "
+        "women. Clinical features: injuries inconsistent with the "
+        "stated mechanism, old fractures on imaging, frequent "
+        "attendances, chronic pain and anxiety with a partner "
+        "reluctant to leave the room. Ix: routine enquiry is not "
+        "universally recommended, but ask directly when features are "
+        "present, in private and without the partner. Use a validated "
+        "tool such as HARK. Mx: validate, document verbatim quotes "
+        "and injuries with a body map, assess immediate safety and "
+        "children in the household, and offer referral to a "
+        "specialist family violence service. Provide 1800RESPECT and "
+        "safety planning rather than insisting on police involvement. "
+        "Note: leaving is the highest-risk period for lethal "
+        "violence, so safety planning takes priority over urging "
+        "departure."
+    ),
+    "Smoking cessation": (
+        "Behavioural and pharmacological support to help a smoker "
+        "quit, the single most effective preventable-disease "
+        "intervention available in primary care. Ix: assess "
+        "pack-years, quit attempts, triggers and readiness using the "
+        "5A framework - ask, advise, assess, assist, arrange "
+        "follow-up. Mx: combination nicotine replacement (patch plus "
+        "a fast-acting form) outperforms either alone. Varenicline is "
+        "the most effective single agent; bupropion is an "
+        "alternative. All three are PBS-subsidised with a "
+        "prescription. Brief advice from a GP alone measurably raises "
+        "quit rates, and combining it with Quitline referral is more "
+        "effective still. Note: relapse is expected, not failure - "
+        "most successful quitters have tried more than once, so "
+        "reframe a lapse as data and restart rather than abandoning "
+        "the attempt."
+    ),
+    "Pre-conception counselling": (
+        "Structured review before a planned pregnancy to optimise "
+        "maternal health and reduce risk to the fetus. Ix: check "
+        "rubella and varicella immunity, review chronic disease "
+        "control, current medications for teratogenicity and "
+        "vaccination status. Mx: start folic acid at least one month "
+        "before conception, higher dose for epilepsy, diabetes, "
+        "obesity or a prior neural-tube defect. Optimise glycaemic "
+        "control in diabetes, switch teratogenic drugs such as sodium "
+        "valproate and ACE inhibitors, and address smoking, alcohol "
+        "and weight. Offer carrier screening for cystic fibrosis, "
+        "spinal muscular atrophy and fragile X per RANZCOG guidance. "
+        "Note: the neural tube closes by day 28, before most people "
+        "know they are pregnant, which is why folic acid is timed to "
+        "precede conception rather than follow a positive test."
+    ),
+    "Vulvar cancer": (
+        "Squamous cell carcinoma of the vulva in most cases, arising "
+        "either from HPV-related vulvar intraepithelial neoplasia in "
+        "younger women or from lichen sclerosus-associated "
+        "differentiated VIN in older women. Clinical features: a "
+        "persistent vulvar lump, ulcer or pruritus unresponsive to "
+        "topical treatment, often on the labia majora. Ix: vulvar "
+        "biopsy under local anaesthesia; groin examination and "
+        "imaging, since inguinofemoral node status drives staging. "
+        "Mx: wide local excision with sentinel node biopsy for early "
+        "disease; radical vulvectomy with groin dissection for larger "
+        "or node-positive tumours, followed by adjuvant radiotherapy. "
+        "Note: any vulvar lesion that fails to settle with treatment "
+        "needs biopsy, not a repeat trial of steroid cream, because "
+        "delayed diagnosis is common when symptoms are attributed to "
+        "candidiasis or dermatitis."
+    ),
+    "Sepsis six": (
+        "The bundle of six actions to complete within the first hour "
+        "of recognising sepsis, designed to be deliverable by any "
+        "ward team without waiting for intensive care review. Mx: "
+        "give high-flow oxygen, take blood cultures before "
+        "antibiotics, give broad-spectrum IV antibiotics per local "
+        "guideline, give an IV fluid bolus, measure serum lactate and "
+        "monitor hourly urine output. Ix: repeat lactate at 2 to 4 "
+        "hours to confirm clearance; escalate to ICU if lactate stays "
+        "above 4 mmol/L or hypotension persists after 30 mL/kg fluid. "
+        "Note: each hour of delayed antibiotics in septic shock "
+        "raises mortality, which is the entire rationale for a bundle "
+        "simple enough to start before senior review rather than "
+        "after it."
+    ),
+    "Metatarsalgia": (
+        "Pain under the metatarsal heads of the forefoot, a "
+        "descriptive term rather than a single diagnosis, commonly "
+        "from abnormal load distribution. Clinical features: burning "
+        "or aching plantar forefoot pain worse with walking barefoot "
+        "or in flat shoes, sometimes with callus under the second or "
+        "third metatarsal head. Ix: clinical diagnosis; "
+        "weight-bearing X-ray if a stress fracture or structural "
+        "deformity such as hallux valgus is suspected, ultrasound if "
+        "Morton neuroma is on the differential. Mx: metatarsal "
+        "offloading pad, cushioned footwear with a wide toe box, "
+        "activity modification and stretching. Refer for orthotics if "
+        "simple measures fail, and consider surgery only after "
+        "conservative care is exhausted. Note: think of metatarsalgia "
+        "as a symptom to explain, not a diagnosis to write on the "
+        "chart - hallux valgus, Morton neuroma and stress fracture "
+        "all present this way."
+    ),
+    "Peroneal nerve palsy": (
+        "Common peroneal (fibular) nerve injury at the fibular neck, "
+        "typically from external compression, trauma or prolonged "
+        "leg-crossing or squatting. Clinical features: foot drop with "
+        "weak ankle dorsiflexion and eversion, a high-stepping gait, "
+        "and sensory loss over the dorsum of the foot and lateral "
+        "shin. Inversion and plantar flexion are preserved. Ix: "
+        "clinical diagnosis; nerve conduction studies and EMG "
+        "localise the lesion and gauge severity if recovery stalls. "
+        "MRI if a mass lesion is suspected. Mx: remove the "
+        "compressive cause, an ankle-foot orthosis for foot drop, and "
+        "physiotherapy. Most compressive palsies recover over weeks "
+        "to months; refer for surgical exploration if there is no "
+        "improvement by three months. Note: foot drop with sensory "
+        "loss confined to the lateral shin and foot dorsum, sparing "
+        "the sole, localises to the peroneal nerve rather than the "
+        "sciatic nerve or L5 root."
+    ),
+    "Falls in the elderly": (
+        "Unintentional loss of an upright position, arising from the "
+        "interaction of multiple risk factors rather than any single "
+        "cause, and a leading cause of injury-related death in older "
+        "people. Ix: ask about falls at every review. After a fall, "
+        "assess gait and balance, postural blood pressure, vision, "
+        "cognition, footwear and home hazards, and review medications "
+        "for sedatives and antihypertensives. Mx: individualised "
+        "exercise programs targeting strength and balance give the "
+        "strongest evidence for reducing falls. Deprescribe "
+        "psychotropics where possible, treat orthostatic hypotension, "
+        "correct vitamin D deficiency and arrange a home safety "
+        "assessment. Note: a fall is rarely mechanical bad luck alone "
+        "- it is a sentinel event that should prompt a multifactorial "
+        "assessment, since the risk of a further fall is highest in "
+        "the following months."
+    ),
+    "Deep sternal wound infection": (
+        "Mediastinitis or deep infection of the sternal wound after "
+        "cardiac surgery, an uncommon but serious complication with "
+        "substantial mortality. Clinical features: wound discharge, "
+        "sternal instability or click, fever and rising inflammatory "
+        "markers, typically in the first few weeks after surgery. "
+        "Diabetes, obesity and bilateral internal mammary harvest "
+        "raise the risk. Ix: wound swab and blood cultures, CT chest "
+        "if mediastinitis is suspected, and sternal imaging for "
+        "instability. Mx: urgent surgical debridement with sternal "
+        "rewiring or vacuum-assisted closure, prolonged targeted IV "
+        "antibiotics, and cardiothoracic and infectious diseases "
+        "input. Note: a clicking or unstable sternum after cardiac "
+        "surgery is a surgical emergency, not a wound-care problem, "
+        "because untreated mediastinitis carries mortality up to 20%."
+    ),
+    "Anastomotic stricture": (
+        "Narrowing at a surgical anastomosis from scarring, ischaemia "
+        "or recurrent disease, seen after bowel resection, "
+        "oesophagectomy or biliary surgery. Clinical features: "
+        "progressive dysphagia after oesophageal surgery, or "
+        "bloating, altered bowel habit and obstructive symptoms after "
+        "bowel anastomosis, usually developing weeks to months "
+        "postoperatively. Ix: contrast study or endoscopy to confirm "
+        "the stricture and exclude malignant recurrence with biopsy. "
+        "Mx: endoscopic balloon dilatation is first line and often "
+        "needs repeating; refractory strictures may need stenting or "
+        "surgical revision. Note: any new obstructive symptom at an "
+        "old anastomosis warrants biopsy of the stricture, since "
+        "benign scarring and recurrent cancer look identical without "
+        "tissue."
+    ),
+    "Stoma complications": (
+        "Problems arising after formation of an ileostomy or "
+        "colostomy, ranging from minor skin irritation to "
+        "complications needing surgical revision. Clinical features: "
+        "peristomal skin excoriation from leakage, parastomal hernia, "
+        "stomal prolapse or retraction, and high ileostomy output "
+        "causing dehydration and acute kidney injury. Ix: clinical "
+        "examination of the stoma and surrounding skin; electrolytes "
+        "and renal function if output is high; CT if obstruction or "
+        "ischaemia is suspected. Mx: stomal therapy nurse review and "
+        "appliance refitting for skin problems, loperamide and fluid "
+        "restriction for high output, and surgical repair for "
+        "prolapse, parastomal hernia or ischaemia. Note: ileostomy "
+        "output above 1.5 to 2 L per day is high output and needs "
+        "active management, since dehydration and renal impairment "
+        "are the usual reason for readmission after stoma formation."
+    ),
+    "Bariatric surgery complications": (
+        "Early and late problems following sleeve gastrectomy or "
+        "Roux-en-Y gastric bypass, the two most common bariatric "
+        "procedures. Clinical features: early - anastomotic or "
+        "staple-line leak with tachycardia and fever, and venous "
+        "thromboembolism. Late - dumping syndrome, marginal "
+        "ulceration, internal hernia causing obstruction, and "
+        "nutritional deficiencies of iron, B12, folate and "
+        "fat-soluble vitamins. Ix: CT with oral contrast for "
+        "suspected leak or obstruction; annual bloods for iron "
+        "studies, B12, folate, calcium and vitamin D lifelong. Mx: "
+        "urgent surgical review for leak, internal hernia or "
+        "obstruction; lifelong multivitamin and specific "
+        "supplementation guided by bloods; dietitian input for "
+        "dumping syndrome. Note: unremitting tachycardia after "
+        "bariatric surgery is a leak until proven otherwise, even "
+        "with a normal temperature and a reassuring wound."
+    ),
+    "Spinal anaesthesia complications": (
+        "Adverse effects of intrathecal local anaesthetic, distinct "
+        "from the systemic toxicity of nerve blocks because the drug "
+        "is given directly into cerebrospinal fluid. Clinical "
+        "features: hypotension and bradycardia from sympathetic "
+        "blockade, post-dural puncture headache worse on sitting, "
+        "urinary retention, and rarely a high or total spinal causing "
+        "respiratory arrest. Ix: clinical diagnosis; consider "
+        "epidural blood patch work-up for headache persisting beyond "
+        "48 to 72 hours despite conservative care. Mx: IV fluids and "
+        "vasopressors for hypotension, atropine for bradycardia, and "
+        "airway support for a high spinal. Post-dural puncture "
+        "headache responds to caffeine, analgesia and, if refractory, "
+        "an epidural blood patch. Note: a high spinal causing "
+        "dyspnoea or arm weakness after intrathecal injection is a "
+        "medical emergency requiring immediate airway and "
+        "cardiovascular support, not reassurance."
+    ),
+    "Travel medicine": (
+        "Pre-travel health assessment covering vaccination, malaria "
+        "prevention and destination-specific risk, ideally 4 to 6 "
+        "weeks before departure. Ix: review itinerary, activities and "
+        "duration; check routine immunisation status and any chronic "
+        "disease that affects travel fitness. Mx: "
+        "destination-specific vaccines such as yellow fever, typhoid, "
+        "Japanese encephalitis and rabies pre-exposure series; "
+        "malaria chemoprophylaxis matched to regional resistance "
+        "patterns; advice on traveller's diarrhoea self-treatment, "
+        "venous thromboembolism prevention on long flights and travel "
+        "insurance. Note: yellow fever vaccination requires a "
+        "registered provider and an International Certificate of "
+        "Vaccination, and some countries deny entry without it "
+        "regardless of clinical need."
+    ),
+    "Needlestick injury management": (
+        "Percutaneous or mucocutaneous exposure to blood or body "
+        "fluid, most often a hollow-bore needle, carrying risk of "
+        "hepatitis B, hepatitis C and HIV transmission. Mx: wash the "
+        "site with soap and water without squeezing or scrubbing, do "
+        "not suck the wound, and report the exposure immediately for "
+        "risk assessment. Ix: baseline bloods for the exposed person "
+        "and, where possible, source patient testing for hepatitis B, "
+        "hepatitis C and HIV with consent. Mx: HIV post-exposure "
+        "prophylaxis started within 72 hours, ideally within 2 hours, "
+        "continued for 28 days if indicated; hepatitis B vaccination "
+        "or immunoglobulin per the exposed person's immunity; "
+        "hepatitis C has no prophylaxis, only follow-up testing. "
+        "Note: risk is driven by the source's viral load and the "
+        "device, not by how the exposed person feels about it, so "
+        "assessment must not be delayed while awaiting reassurance."
+    ),
+    "Advance care directive": (
+        "A legal document recording a person's wishes for future "
+        "medical treatment, made while they have decision-making "
+        "capacity, to guide care if capacity is later lost. Mx: "
+        "complete while capacity is intact, ideally with the treating "
+        "team and family involved, covering specific scenarios such "
+        "as resuscitation and artificial feeding rather than vague "
+        "statements. Nominate a substitute decision-maker where the "
+        "relevant state framework allows it. Ix: check the directive "
+        "is current, applies to the clinical situation at hand and "
+        "was made with capacity, since an outdated or ambiguous "
+        "directive may not be actionable. Note: an advance care "
+        "directive that specifically addresses the situation in front "
+        "of you is legally binding in most Australian states, and "
+        "overrides family wishes that conflict with it."
+    ),
+    "Palliative sedation": (
+        "Deliberate reduction of consciousness with titrated "
+        "sedatives to relieve otherwise refractory suffering at the "
+        "end of life, distinct in intent and dosing from euthanasia. "
+        "Ix: confirm the symptom - typically terminal agitation, "
+        "dyspnoea or pain - is truly refractory to standard measures "
+        "before escalating, and that prognosis is short. Mx: titrate "
+        "midazolam or, second line, an antipsychotic such as "
+        "levomepromazine, to the lowest dose that relieves distress "
+        "rather than to unconsciousness. Continue essential comfort "
+        "medications and involve family and the palliative care team "
+        "in the decision. Note: the doctrine of double effect "
+        "underpins this - intent is symptom relief, and sedation "
+        "proportionate to that goal is ethically and legally distinct "
+        "from an intent to hasten death."
+    ),
+    "Terminal agitation": (
+        "Restlessness, confusion and distress in the final days of "
+        "life, common and distressing for family even when the "
+        "patient is not in pain. Ix: exclude reversible causes first "
+        "- urinary retention, constipation, uncontrolled pain, opioid "
+        "toxicity, hypoxia and withdrawal from alcohol, nicotine or "
+        "benzodiazepines. Mx: treat any reversible cause found. If "
+        "none is identified or correction does not help, use "
+        "haloperidol or an atypical antipsychotic first line, "
+        "escalating to midazolam for refractory agitation. Keep the "
+        "environment calm and family informed. Note: a full bladder "
+        "is one of the most commonly missed causes of apparent "
+        "terminal agitation, so a bladder scan before escalating "
+        "sedation is worthwhile."
+    ),
+    "Extravasation injury": (
+        "Leakage of an IV infusate into surrounding tissue rather "
+        "than the vein, ranging from mild irritation to severe tissue "
+        "necrosis depending on the agent. Clinical features: "
+        "swelling, pain and blanching at the cannula site during "
+        "infusion, progressing to blistering or skin breakdown with "
+        "vesicant drugs such as vincristine or concentrated calcium. "
+        "Mx: stop the infusion immediately, aspirate residual drug "
+        "through the cannula before removing it, elevate the limb, "
+        "and apply cold compresses for most agents or warm compresses "
+        "for vinca alkaloids. Specific antidotes exist for some "
+        "agents, such as hyaluronidase. Ix: photograph and document "
+        "the site, and involve plastic surgery early if a known "
+        "vesicant is involved or necrosis develops. Note: the drug, "
+        "not the volume, determines severity - a small extravasation "
+        "of a vesicant chemotherapy agent can cause full-thickness "
+        "necrosis needing surgical debridement."
+    ),
+    "Mucositis": (
+        "Inflammation and ulceration of the mucosal lining, most "
+        "often the mouth, from cytotoxic chemotherapy or head and "
+        "neck radiotherapy. Clinical features: painful oral "
+        "ulceration and erythema impairing eating and speech, graded "
+        "by severity from mild soreness to ulceration preventing oral "
+        "intake. Breaks in the mucosal barrier are a portal for line "
+        "infection and neutropenic sepsis. Mx: oral hygiene with a "
+        "soft brush and saline or bicarbonate rinses, regular "
+        "analgesia including topical local anaesthetic or opioids for "
+        "severe pain, and cryotherapy during bolus 5-fluorouracil to "
+        "reduce severity. Ix: assess ability to swallow food and "
+        "medications, and check for superimposed candidal or herpetic "
+        "infection if ulceration is atypical. Note: severe mucositis "
+        "limiting oral intake is a common reason chemotherapy doses "
+        "are delayed or reduced, so prevention and early treatment "
+        "protect the treatment schedule as well as comfort."
+    ),
+    "Diverticular abscess": (
+        "Localised collection of pus from perforated diverticulitis "
+        "contained by the mesentery or adjacent structures, a "
+        "complicated form of diverticulitis. Clinical features: "
+        "persistent left iliac fossa pain and fever despite "
+        "antibiotics for diverticulitis, sometimes with a palpable "
+        "mass. Ix: CT abdomen and pelvis with contrast, which stages "
+        "severity on the Hinchey classification and guides whether "
+        "drainage is needed. Mx: IV antibiotics with image-guided "
+        "percutaneous drainage for abscesses larger than about 3 to 4 "
+        "cm; smaller collections often respond to antibiotics alone. "
+        "Elective resection is considered after recovery given the "
+        "risk of recurrence. Note: a diverticulitis patient not "
+        "settling on antibiotics needs imaging to look for an abscess "
+        "before treatment is simply escalated or extended."
+    ),
+    "Hyponatraemia in endurance athletes": (
+        "Dilutional hyponatraemia during prolonged exercise from "
+        "excess hypotonic fluid intake outpacing sodium losses, seen "
+        "in marathon and ultra-endurance events. Clinical features: "
+        "nausea, headache, confusion and, in severe cases, seizure or "
+        "cerebral oedema, which can mimic dehydration and prompt the "
+        "dangerous response of giving more fluid. Ix: point-of-care "
+        "sodium at the event medical tent in anyone with altered "
+        "mental state or collapse; do not assume dehydration on "
+        "clinical grounds alone. Mx: restrict further hypotonic "
+        "fluid; give hypertonic saline for severe symptomatic "
+        "hyponatraemia with seizure or reduced consciousness. Mild "
+        "cases need only fluid restriction and observation. Note: a "
+        "collapsed marathon runner who has been drinking heavily "
+        "throughout the race should raise suspicion for "
+        "hyponatraemia, not dehydration, and empirical IV fluids can "
+        "be harmful."
+    ),
+    "Exercise-associated collapse": (
+        "Postural collapse immediately after finishing endurance "
+        "exercise, from transient venous pooling once the muscle pump "
+        "stops, distinct from and far more common than exertional "
+        "heat stroke or cardiac collapse. Clinical features: collapse "
+        "or near-syncope at or just after the finish line, with a "
+        "normal or near-normal core temperature and rapid improvement "
+        "lying flat with legs elevated. Ix: check core temperature "
+        "and glucose, and a brief neurological and cardiac assessment "
+        "to exclude heat stroke, arrhythmia or hypoglycaemia before "
+        "labelling it benign. Mx: supine positioning with legs "
+        "raised, oral fluids once alert, and monitoring until "
+        "symptoms resolve, typically within minutes. Note: a normal "
+        "temperature and rapid recovery lying flat distinguish this "
+        "benign collapse from heat stroke, where temperature is "
+        "markedly elevated and mental state stays impaired."
+    ),
+    "Diabetic gastroparesis": (
+        "Delayed gastric emptying from autonomic neuropathy in "
+        "longstanding diabetes, without mechanical obstruction. "
+        "Clinical features: early satiety, bloating, nausea and "
+        "vomiting of undigested food, and erratic glycaemic control "
+        "from unpredictable nutrient absorption. Ix: exclude "
+        "mechanical obstruction with endoscopy, then confirm with a "
+        "gastric emptying scintigraphy study once obstruction is "
+        "excluded. Mx: small, frequent low-fat, low-fibre meals, "
+        "optimise glycaemic control since hyperglycaemia itself slows "
+        "emptying, and a prokinetic such as metoclopramide for short "
+        "courses given its adverse effect profile. Consider gastric "
+        "electrical stimulation or a feeding jejunostomy for "
+        "refractory cases. Note: matching prandial insulin timing to "
+        "actual gastric emptying, rather than the meal, prevents the "
+        "mismatched hypoglycaemia that erratic absorption otherwise "
+        "causes."
+    ),
+    "Diabetic mastopathy": (
+        "A benign fibrous breast lesion occurring in longstanding "
+        "type 1 diabetes and other autoimmune conditions, important "
+        "chiefly because it mimics breast cancer clinically and on "
+        "imaging. Clinical features: firm, painless, irregular breast "
+        "mass, often bilateral or recurrent, in a patient with "
+        "long-duration diabetes. Ix: mammography and ultrasound are "
+        "often suspicious for malignancy given the irregular, dense "
+        "appearance, so core biopsy showing keloidal fibrosis and "
+        "lymphocytic infiltration is needed to confirm the diagnosis. "
+        "Mx: no treatment needed once malignancy is excluded by "
+        "biopsy; reassurance and continued mammographic surveillance, "
+        "since lesions commonly recur. Note: the irregular, hard, "
+        "immobile feel of the lump mimics carcinoma closely enough "
+        "that biopsy is mandatory - imaging features alone cannot "
+        "distinguish the two."
+    ),
+    "Bartholin gland carcinoma": (
+        "Rare primary malignancy of the Bartholin gland, usually "
+        "squamous cell or adenocarcinoma, distinct from the far more "
+        "common benign Bartholin cyst or abscess. Clinical features: "
+        "a vulvar mass in the Bartholin gland position, typically in "
+        "a woman over 40, that is hard, fixed or persists or recurs "
+        "after drainage. Ix: biopsy of any Bartholin swelling in a "
+        "woman over 40, or any swelling that fails to resolve or "
+        "recurs after standard management, since cystic disease is "
+        "rare in this age group. Mx: radical local excision with "
+        "groin node assessment, typically followed by adjuvant "
+        "radiotherapy for advanced or node-positive disease. Note: "
+        "age is the key discriminator - a new Bartholin swelling over "
+        "40 should prompt biopsy rather than the marsupialisation "
+        "used for a younger woman's simple cyst."
+    ),
+    "Paget disease of the vulva": (
+        "Rare intraepithelial adenocarcinoma of vulvar skin, usually "
+        "primary and confined to the epidermis, occasionally "
+        "associated with an underlying invasive adenocarcinoma or a "
+        "distant malignancy elsewhere. Clinical features: chronic "
+        "vulvar pruritus and soreness with a well-demarcated, "
+        "eczematous, red and white speckled plaque, typically in a "
+        "postmenopausal woman, often misdiagnosed as dermatitis for "
+        "months. Ix: vulvar biopsy is diagnostic, showing "
+        "characteristic Paget cells; investigate for an associated "
+        "underlying malignancy, including colorectal and urothelial "
+        "primaries, if invasive disease is found. Mx: wide local "
+        "excision, accepting that margins are often microscopically "
+        "involved because disease extends beyond the visible lesion, "
+        "so recurrence is common and long-term follow-up is needed. "
+        "Note: any eczema-like vulvar plaque that fails to respond to "
+        "topical steroids over a few weeks needs biopsy rather than a "
+        "stronger steroid."
+    ),
+    "Mucocele of the lip": (
+        "Mucus-filled cyst from a ruptured minor salivary gland duct, "
+        "usually on the lower lip after a bite or minor trauma. "
+        "Clinical features: a soft, dome-shaped, bluish translucent "
+        "swelling on the inner lower lip, fluctuating in size and "
+        "prone to rupture and recurrence. Ix: clinical diagnosis; "
+        "biopsy only if the appearance is atypical or persistent "
+        "despite excision, to exclude a salivary gland tumour. Mx: "
+        "many resolve spontaneously and can be observed; persistent "
+        "or recurrent lesions are excised with the feeding minor "
+        "salivary gland to prevent recurrence. Note: incising and "
+        "draining a mucocele without excising the gland almost always "
+        "leads to recurrence, since the underlying duct injury is "
+        "untouched."
     ),
 }
 
