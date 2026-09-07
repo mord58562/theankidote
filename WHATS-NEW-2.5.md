@@ -2,6 +2,15 @@
 
 Two kinds of dishonesty in the popup, both fixed.
 
+## Eponyms with apostrophes work again
+
+If a card said "Addison's disease" and the apostrophe was the curly one
+your editor inserts automatically, the add-on saw a different word and
+showed nothing. That was true of every one of the 107 terms in the
+library with an apostrophe in it - Crohn's, Bell's, Graves', Meniere's -
+and it failed silently, so there was nothing to notice except an
+absence. Both forms are now treated as the same character.
+
 ## Popups no longer promise articles that do not exist
 
 Every condition popup carried a StatPearls badge and an "Open article"

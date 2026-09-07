@@ -76,6 +76,33 @@ def _is_word(ch: str) -> bool:
 _scan_cache: tuple = (None, None, None, None)
 
 
+# Apostrophe folding.
+#
+# Card authors type with whatever their editor produces, and on macOS
+# that is the typographic apostrophe U+2019. Every library term uses the
+# ASCII U+0027, so "Addison’s disease" - which is how nine cards in
+# the test collection actually write it - matched none of the 107 terms
+# in the library that contain an apostrophe. The failure was invisible:
+# no error, just a popup that never appeared.
+#
+# Folded on both sides, at index time and at scan time. Every variant is
+# a single character, so offsets into the original text are unchanged
+# and the highlighter still spans the right characters.
+_APOSTROPHES = {
+    "\u2019": "'",   # right single quotation mark
+    "\u2018": "'",   # left single quotation mark
+    "\u02bc": "'",   # modifier letter apostrophe
+    "\u00b4": "'",   # acute accent, used as an apostrophe by some editors
+    "\u2032": "'",   # prime
+}
+_APOSTROPHE_TABLE = str.maketrans(_APOSTROPHES)
+
+
+def fold_apostrophes(s: str) -> str:
+    """Normalise every apostrophe variant to ASCII, preserving length."""
+    return s.translate(_APOSTROPHE_TABLE)
+
+
 def _scan(text: str, ci: bool):
     """Return `(haystack, tokens)` for `text`, reusing the last scan.
 
@@ -88,16 +115,18 @@ def _scan(text: str, ci: bool):
         key, low, ci_toks, cs_toks = text, None, None, None
     if ci:
         if ci_toks is None:
-            low = text.lower()
+            low = fold_apostrophes(text.lower())
             ci_toks = [(m.start(), m.group(0))
                        for m in _TOKEN_RE.finditer(low)]
             _scan_cache = (key, low, ci_toks, cs_toks)
         return low, ci_toks
     if cs_toks is None:
+        folded = fold_apostrophes(text)
         cs_toks = [(m.start(), m.group(0))
-                   for m in _TOKEN_RE.finditer(text)]
+                   for m in _TOKEN_RE.finditer(folded)]
         _scan_cache = (key, low, ci_toks, cs_toks)
-    return text, cs_toks
+        return folded, cs_toks
+    return fold_apostrophes(text), cs_toks
 
 
 class PhraseMatcher:
@@ -123,7 +152,7 @@ class PhraseMatcher:
         for p in phrases:
             if not p:
                 continue
-            low = p.lower() if self._ci else p
+            low = fold_apostrophes(p.lower() if self._ci else p)
             if low in seen:
                 continue
             seen.add(low)

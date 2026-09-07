@@ -12,6 +12,15 @@ acronyms that are also English words stop firing on the words.
 
 ### Fixed
 
+- **Every term containing an apostrophe was unmatchable on a normally
+  typed card.** The library writes `Addison's disease` with ASCII
+  U+0027; card authors type with whatever their editor produces, which
+  on macOS is the typographic U+2019. Nothing folded the two, so all
+  107 apostrophe-bearing terms silently failed - `Addison's disease`
+  matched 0 notes while `Addison\u2019s disease` matched 9. No error,
+  just a popup that never appeared. `_matcher.fold_apostrophes()` now
+  normalises five apostrophe variants at both index and scan time; each
+  is a single character so highlight offsets are unchanged.
 - **The popup asserted a StatPearls article for 1,591 conditions that
   have none.** Every condition carried the StatPearls badge and an
   "Open article" button. Only 635 have an NBK id; for the rest
