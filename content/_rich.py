@@ -11031,6 +11031,246 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "depersonalization derealization disorder"]],
         "summary": "",
     },
+    {
+        "name": "Terson syndrome",
+        "aliases": ["Terson's syndrome", "Intraocular haemorrhage with intracranial haemorrhage"],
+        "utd": [["Overview", "terson syndrome intraocular haemorrhage subarachnoid haemorrhage"]],
+        "summary": "",
+    },
+    {
+        "name": "Interstitial keratitis",
+        "aliases": ["Stromal keratitis", "Corneal stromal inflammation"],
+        "utd": [["Overview", "interstitial keratitis corneal stromal inflammation causes"]],
+        "summary": "",
+    },
+    {
+        "name": "Purtscher retinopathy",
+        "aliases": ["Purtscher's retinopathy", "Traumatic retinal angiopathy"],
+        "utd": [["Overview", "purtscher retinopathy trauma pancreatitis retinal"]],
+        "summary": "",
+    },
+    {
+        "name": "Ocular ischaemic syndrome",
+        "aliases": ["Ocular ischemic syndrome", "Venous stasis retinopathy"],
+        "utd": [["Overview", "ocular ischaemic syndrome carotid occlusive disease eye"]],
+        "summary": "",
+    },
+    {
+        "name": "Angioid streaks",
+        "aliases": ["Angioid streaks of the retina", "Breaks in Bruch membrane"],
+        "utd": [["Overview", "angioid streaks bruch membrane pseudoxanthoma elasticum"]],
+        "summary": "",
+    },
+    {
+        "name": "Samter triad",
+        "aliases": ["Aspirin-exacerbated respiratory disease", "AERD", "Aspirin triad"],
+        "utd": [["Overview", "aspirin exacerbated respiratory disease samter triad"]],
+        "summary": "",
+    },
+    {
+        "name": "Glomus tympanicum",
+        "aliases": ["Tympanic paraganglioma", "Middle ear paraganglioma"],
+        "utd": [["Overview", "glomus tympanicum paraganglioma middle ear management"]],
+        "summary": "",
+    },
+    {
+        "name": "Gradenigo syndrome",
+        "aliases": ["Petrous apicitis", "Petrositis"],
+        "utd": [["Overview", "gradenigo syndrome petrous apicitis otitis media complication"]],
+        "summary": "",
+    },
+    {
+        "name": "Bezold abscess",
+        "aliases": ["Bezold's abscess", "Neck abscess from mastoiditis"],
+        "utd": [["Overview", "bezold abscess mastoiditis sternocleidomastoid neck"]],
+        "summary": "",
+    },
+    {
+        "name": "External auditory canal exostoses",
+        "aliases": ["Surfer's ear", "Ear canal exostoses"],
+        "utd": [["Overview", "external auditory canal exostoses surfers ear"]],
+        "summary": "",
+    },
+    {
+        "name": "Pitted keratolysis",
+        "aliases": ["Keratolysis plantare sulcatum", "Sweaty sock syndrome"],
+        "utd": [["Overview", "pitted keratolysis plantar pitting corynebacterium"]],
+        "summary": "",
+    },
+    {
+        "name": "Acquired perforating dermatosis",
+        "aliases": ["Kyrle disease", "Perforating collagenosis"],
+        "utd": [["Overview", "acquired perforating dermatosis diabetes dialysis pruritus"]],
+        "summary": "",
+    },
+    {
+        "name": "Papular urticaria",
+        "aliases": ["Insect bite hypersensitivity", "Urticaria papulosa"],
+        "utd": [["Overview", "papular urticaria insect bite hypersensitivity children"]],
+        "summary": "",
+    },
+    {
+        "name": "Hydrofluoric acid burn",
+        "aliases": ["Hydrofluoric acid exposure", "HF burn"],
+        "utd": [["Overview", "hydrofluoric acid burn calcium gluconate hypocalcaemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Thallium poisoning",
+        "aliases": ["Thallotoxicosis", "Thallium toxicity"],
+        "utd": [["Overview", "thallium poisoning alopecia neuropathy prussian blue"]],
+        "summary": "",
+    },
+    {
+        "name": "Baclofen overdose",
+        "aliases": ["Baclofen toxicity", "Intrathecal baclofen withdrawal"],
+        "utd": [["Overview", "baclofen overdose coma withdrawal intrathecal pump"]],
+        "summary": "",
+    },
+    {
+        "name": "Commotio cordis",
+        "aliases": ["Cardiac concussion", "Blunt precordial impact arrest"],
+        "utd": [["Overview", "commotio cordis blunt chest impact ventricular fibrillation"]],
+        "summary": "",
+    },
+    {
+        "name": "Left ventricular non-compaction",
+        "aliases": ["Left ventricular noncompaction cardiomyopathy", "Spongiform cardiomyopathy"],
+        "utd": [["Overview", "left ventricular noncompaction cardiomyopathy trabeculation"]],
+        "summary": "",
+    },
+    {
+        "name": "Carcinoid heart disease",
+        "aliases": ["Hedinger syndrome", "Carcinoid valve disease"],
+        "utd": [["Overview", "carcinoid heart disease tricuspid valve serotonin"]],
+        "summary": "",
+    },
+    {
+        "name": "Stiff person syndrome",
+        "aliases": ["Stiff-person syndrome", "Moersch-Woltman syndrome"],
+        "utd": [["Overview", "stiff person syndrome GAD antibody rigidity spasms"]],
+        "summary": "",
+    },
+    {
+        "name": "Spinal dural arteriovenous fistula",
+        "aliases": ["Spinal dural AV fistula", "Type I spinal arteriovenous malformation"],
+        "utd": [["Overview", "spinal dural arteriovenous fistula myelopathy venous congestion"]],
+        "summary": "",
+    },
+    {
+        "name": "Marchiafava-Bignami disease",
+        "aliases": ["Corpus callosum demyelination of alcoholism"],
+        "utd": [["Overview", "marchiafava bignami disease corpus callosum alcohol"]],
+        "summary": "",
+    },
+    {
+        "name": "Hirayama disease",
+        "aliases": ["Monomelic amyotrophy", "Juvenile muscular atrophy of the distal upper limb"],
+        "utd": [["Overview", "hirayama disease monomelic amyotrophy cervical flexion myelopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Pure red cell aplasia",
+        "aliases": ["PRCA", "Erythroblastopenia"],
+        "utd": [["Overview", "pure red cell aplasia parvovirus thymoma treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Diamond-Blackfan anaemia",
+        "aliases": ["Diamond-Blackfan anemia", "Congenital hypoplastic anaemia"],
+        "utd": [["Overview", "diamond blackfan anaemia ribosomopathy congenital"]],
+        "summary": "",
+    },
+    {
+        "name": "Shwachman-Diamond syndrome",
+        "aliases": ["Shwachman-Bodian-Diamond syndrome", "SDS"],
+        "utd": [["Overview", "shwachman diamond syndrome neutropenia pancreatic insufficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Chediak-Higashi syndrome",
+        "aliases": ["Chediak-Higashi disease", "Chediak Higashi anomaly"],
+        "utd": [["Overview", "chediak higashi syndrome giant granules albinism"]],
+        "summary": "",
+    },
+    {
+        "name": "Amyand hernia",
+        "aliases": ["Amyand's hernia", "Appendix in inguinal hernia"],
+        "utd": [["Overview", "amyand hernia appendix inguinal hernia sac"]],
+        "summary": "",
+    },
+    {
+        "name": "Chilaiditi syndrome",
+        "aliases": ["Chilaiditi sign", "Hepatodiaphragmatic interposition"],
+        "utd": [["Overview", "chilaiditi syndrome colonic interposition pseudopneumoperitoneum"]],
+        "summary": "",
+    },
+    {
+        "name": "Rapunzel syndrome",
+        "aliases": ["Gastric trichobezoar with tail", "Trichobezoar"],
+        "utd": [["Overview", "rapunzel syndrome trichobezoar trichophagia gastric"]],
+        "summary": "",
+    },
+    {
+        "name": "Splenic artery aneurysm",
+        "aliases": ["Splenic artery aneurysm rupture", "Visceral artery aneurysm"],
+        "utd": [["Overview", "splenic artery aneurysm pregnancy rupture management"]],
+        "summary": "",
+    },
+    {
+        "name": "Sister Mary Joseph nodule",
+        "aliases": ["Sister Mary Joseph nodule of the umbilicus", "Umbilical metastasis"],
+        "utd": [["Overview", "sister mary joseph nodule umbilical metastasis malignancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Cholesterol embolisation syndrome",
+        "aliases": ["Cholesterol crystal embolism", "Atheroembolic renal disease"],
+        "utd": [["Overview", "cholesterol embolisation syndrome blue toe eosinophilia"]],
+        "summary": "",
+    },
+    {
+        "name": "Nephrogenic systemic fibrosis",
+        "aliases": ["Nephrogenic fibrosing dermopathy", "NSF"],
+        "utd": [["Overview", "nephrogenic systemic fibrosis gadolinium renal failure"]],
+        "summary": "",
+    },
+    {
+        "name": "Klippel-Trenaunay syndrome",
+        "aliases": ["Klippel-Trenaunay-Weber syndrome", "Capillary lymphatic venous malformation"],
+        "utd": [["Overview", "klippel trenaunay syndrome capillary venous malformation limb"]],
+        "summary": "",
+    },
+    {
+        "name": "Alkaptonuria",
+        "aliases": ["Ochronosis", "Homogentisic acid oxidase deficiency"],
+        "utd": [["Overview", "alkaptonuria ochronosis homogentisic acid nitisinone"]],
+        "summary": "",
+    },
+    {
+        "name": "Paget disease of the nipple",
+        "aliases": ["Mammary Paget disease", "Paget disease of the breast"],
+        "utd": [["Overview", "paget disease of the nipple breast eczema biopsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Blackwater fever",
+        "aliases": ["Malarial haemoglobinuria", "Quartan malarial nephropathy"],
+        "utd": [["Overview", "blackwater fever malaria haemoglobinuria quinine"]],
+        "summary": "",
+    },
+    {
+        "name": "Balo concentric sclerosis",
+        "aliases": ["Balo's concentric sclerosis", "Concentric sclerosis"],
+        "utd": [["Overview", "balo concentric sclerosis demyelination MRI rings"]],
+        "summary": "",
+    },
+    {
+        "name": "Presbyoesophagus",
+        "aliases": ["Presbyesophagus", "Age-related oesophageal dysmotility"],
+        "utd": [["Overview", "presbyoesophagus ageing oesophageal motility dysphagia"]],
+        "summary": "",
+    },
 ]
 
 
@@ -67077,6 +67317,877 @@ RICH_SUMMARIES = {
         "medication is approved. Note: the preserved insight is the "
         "point, because the patient knows it feels unreal rather than "
         "believing it is."
+    ),
+    "Terson syndrome": (
+        "Intraocular haemorrhage occurring with acute intracranial "
+        "haemorrhage, most often aneurysmal subarachnoid haemorrhage. "
+        "Present in roughly 10 to 20 per cent of subarachnoid "
+        "haemorrhage and marks a more severe bleed. Mechanism: an "
+        "abrupt rise in intracranial pressure is transmitted along "
+        "the optic nerve sheath, obstructing retinal venous outflow "
+        "and rupturing peripapillary capillaries. Clinical features: "
+        "blurring or a dense central scotoma once the patient is "
+        "awake enough to report it. Blood may be preretinal, "
+        "subhyaloid or frank vitreous. Bilateral in about half. Ix: "
+        "dilated fundoscopy in every poor-grade subarachnoid "
+        "haemorrhage patient, since intubated patients cannot "
+        "volunteer visual symptoms. B-scan ultrasound when the view "
+        "is obscured. Mx: treat the aneurysm first. Most haemorrhages "
+        "clear spontaneously over weeks to months. Vitrectomy is "
+        "offered for non-clearing vitreous blood, bilateral "
+        "involvement or where amblyopia risk exists in children. "
+        "Note: a Glasgow Coma Scale score does not examine the "
+        "retina. Terson is the reason fundoscopy belongs in the "
+        "neurocritical care round, not the ophthalmology consult "
+        "pile."
+    ),
+    "Interstitial keratitis": (
+        "Inflammation of the corneal stroma without primary "
+        "involvement of the epithelium or endothelium, producing "
+        "stromal vascularisation and scarring. Aetiology: "
+        "historically congenital syphilis, now more often herpes "
+        "simplex or zoster. Also tuberculosis, Lyme disease and Cogan "
+        "syndrome. Onchocerciasis matters in returned travellers. "
+        "Clinical features: pain, photophobia and reduced acuity with "
+        "a hazy cornea. Deep stromal vessels give the classic salmon "
+        "patch while active, leaving ghost vessels and haze once "
+        "quiet. Congenital syphilis is bilateral and presents in "
+        "later childhood. Ix: syphilis serology, interferon gamma "
+        "release assay and Lyme serology guided by exposure. "
+        "Audiometry if Cogan syndrome is possible, since hearing loss "
+        "can be irreversible. Mx: treat the cause. Topical "
+        "corticosteroids with slow taper control the stromal "
+        "inflammation and limit scarring. Cycloplegia for comfort. "
+        "Penetrating keratoplasty for established visually "
+        "significant scar. Note: interstitial keratitis is a sign, "
+        "not a diagnosis. The cornea has told you there is systemic "
+        "infection somewhere and the workup starts there."
+    ),
+    "Purtscher retinopathy": (
+        "A rare occlusive microvasculopathy of the posterior pole "
+        "causing sudden painless visual loss after trauma or certain "
+        "systemic insults. Aetiology: chest compression, long bone "
+        "fracture and head injury classically. Purtscher-like "
+        "retinopathy follows acute pancreatitis, amniotic fluid "
+        "embolism, chronic kidney disease and connective tissue "
+        "disease. Complement activation and leucoembolisation occlude "
+        "precapillary arterioles. Clinical features: bilateral in "
+        "about 60 per cent, with acuity ranging from mild blur to "
+        "counting fingers. Fundus shows cotton wool spots and "
+        "polygonal Purtscher flecken between retinal arterioles, "
+        "sparing a clear zone either side of the vessel. Ix: fundus "
+        "photography and optical coherence tomography showing inner "
+        "retinal thickening. Serum lipase where no trauma is evident. "
+        "Mx: supportive, with treatment directed at the precipitant. "
+        "High dose corticosteroid is often given but evidence is "
+        "weak. Around half recover two or more Snellen lines over "
+        "months. Note: painless bilateral visual loss days after a "
+        "crush injury or a pancreatitis admission is Purtscher until "
+        "proven otherwise."
+    ),
+    "Ocular ischaemic syndrome": (
+        "Chronic hypoperfusion of the globe from severe carotid "
+        "occlusive disease, producing a slowly progressive painful "
+        "loss of vision. Aetiology: at least 90 per cent stenosis of "
+        "the ipsilateral internal carotid artery in most cases. Giant "
+        "cell arteritis and Takayasu arteritis are non "
+        "atherosclerotic causes. Clinical features: gradual visual "
+        "loss over weeks with a dull periorbital ache, delayed "
+        "recovery after a bright light and amaurosis fugax. Signs "
+        "include mid-peripheral dot blot haemorrhages, dilated but "
+        "non-tortuous veins, iris neovascularisation and a low or "
+        "paradoxically normal intraocular pressure. Ix: carotid "
+        "duplex, then CT or MR angiography. Fluorescein angiography "
+        "shows delayed arm to retina and choroidal filling. Mx: this "
+        "is a stroke and cardiac risk marker, so manage vascular risk "
+        "aggressively and refer for carotid endarterectomy "
+        "assessment. Panretinal photocoagulation and intravitreal "
+        "anti-VEGF for neovascularisation. Note: five year mortality "
+        "approaches 40 per cent and the cause is cardiac, so the "
+        "referral that matters is vascular, not just ophthalmic."
+    ),
+    "Angioid streaks": (
+        "Irregular crack-like dehiscences in a calcified and brittle "
+        "Bruch membrane, radiating from the optic disc and resembling "
+        "blood vessels on fundoscopy. Aetiology: about half are "
+        "idiopathic. Named associations are pseudoxanthoma elasticum "
+        "(the commonest), Paget disease of bone, sickle cell disease "
+        "and Ehlers-Danlos syndrome. Clinical features: asymptomatic "
+        "until choroidal neovascularisation breaks through a streak, "
+        "causing metamorphopsia and central visual loss. Peau "
+        "d'orange mottling of the temporal fundus often precedes the "
+        "streaks. Ix: fundus autofluorescence and optical coherence "
+        "tomography angiography for neovascular membranes. Look for "
+        "the systemic association with skin examination of the neck "
+        "and flexures and a serum alkaline phosphatase. Mx: "
+        "intravitreal anti-VEGF for choroidal neovascularisation. "
+        "Counsel on eye protection, since minor blunt trauma can "
+        "rupture the fragile membrane. Amsler grid self-monitoring at "
+        "home. Note: plucked chicken skin in the axillae plus streaks "
+        "at the disc is pseudoxanthoma elasticum, and that patient "
+        "needs a cardiovascular workup."
+    ),
+    "Samter triad": (
+        "The triad of asthma, chronic rhinosinusitis with nasal "
+        "polyps and respiratory reactions to aspirin or other COX-1 "
+        "inhibitors. Affects around 7 per cent of adult asthmatics "
+        "and up to 15 per cent of those with severe asthma. "
+        "Mechanism: not IgE mediated. COX-1 blockade shunts "
+        "arachidonic acid down the 5-lipoxygenase pathway, causing "
+        "cysteinyl leukotriene overproduction with reduced protective "
+        "prostaglandin E2. Clinical features: adult onset asthma "
+        "preceded by anosmia and refractory polyps. Ingestion "
+        "produces bronchospasm, rhinorrhoea and flushing within three "
+        "hours. Ix: clinical diagnosis. Graded oral aspirin challenge "
+        "in a supervised setting confirms it where doubt remains. "
+        "Urinary leukotriene E4 is supportive. Mx: avoid all non "
+        "selective NSAIDs. Celecoxib is usually tolerated after "
+        "supervised challenge. Intranasal and inhaled corticosteroid, "
+        "endoscopic sinus surgery, then aspirin desensitisation or a "
+        "biologic such as dupilumab or mepolizumab. Note: polyps that "
+        "keep growing back after surgery in an adult asthmatic should "
+        "prompt the aspirin question."
+    ),
+    "Glomus tympanicum": (
+        "A benign vascular paraganglioma arising from glomus bodies "
+        "on the cochlear promontory, confined to the middle ear. The "
+        "commonest primary middle ear tumour. Aetiology: arises from "
+        "neural crest derived paraganglia of the tympanic branch of "
+        "the glossopharyngeal nerve. Up to a third are familial, "
+        "chiefly SDHD and SDHB mutations, and these are more often "
+        "multicentric. Clinical features: pulsatile tinnitus "
+        "synchronous with the pulse plus conductive hearing loss. "
+        "Otoscopy shows a red mass behind an intact drum that "
+        "blanches on positive pressure, the Brown sign. Ix: high "
+        "resolution temporal bone CT distinguishes tympanicum from "
+        "jugulare by showing an intact jugular plate. MRI gives the "
+        "salt and pepper appearance. Plasma free metanephrines since "
+        "a minority secrete catecholamines. Mx: complete surgical "
+        "excision through a transcanal or postauricular approach is "
+        "curative for small tumours. Radiotherapy or observation for "
+        "older patients. Genetic referral when young or multifocal. "
+        "Note: never biopsy a red mass behind the drum in clinic, "
+        "because it bleeds briskly."
+    ),
+    "Gradenigo syndrome": (
+        "Infection of the petrous apex complicating otitis media, "
+        "defined by a triad of otorrhoea, deep retro-orbital pain and "
+        "an ipsilateral abducens palsy. Rare since antibiotics but "
+        "still seen in children. Mechanism: spread from a pneumatised "
+        "petrous apex inflames Dorello canal, where the sixth nerve "
+        "runs, and the adjacent trigeminal ganglion in Meckel cave. "
+        "Clinical features: a child with treated or persisting otitis "
+        "media who develops diplopia on lateral gaze and severe "
+        "facial or eye pain. Fever and meningism raise concern for "
+        "intracranial extension. Ix: contrast CT of the temporal "
+        "bones shows petrous apex opacification with bony erosion. "
+        "MRI with diffusion imaging defines abscess and detects "
+        "lateral sinus thrombosis. Lumbar puncture only after "
+        "imaging. Mx: admit for high dose intravenous antibiotics "
+        "covering Pseudomonas and anaerobes, usually for six weeks. "
+        "Myringotomy with grommet for drainage and culture. Surgical "
+        "petrous apex drainage if no response. Note: a squint in a "
+        "child with a discharging ear is not coincidence."
+    ),
+    "Bezold abscess": (
+        "A deep neck abscess formed when acute mastoiditis erodes the "
+        "medial mastoid tip and pus tracks along the "
+        "sternocleidomastoid into the neck. Aetiology: complication "
+        "of untreated or partly treated acute otitis media. Requires "
+        "a pneumatised mastoid tip, so it is uncommon before two "
+        "years of age. Streptococcus pneumoniae, Streptococcus "
+        "pyogenes and Staphylococcus aureus dominate. Clinical "
+        "features: a tender fluctuant swelling at the angle of the "
+        "jaw with torticollis toward the affected side, on a "
+        "background of ear discharge and fever. Postauricular "
+        "swelling may be absent, which is what makes it deceptive. "
+        "Ix: contrast CT of the temporal bone and neck defines the "
+        "collection and excludes sinus thrombosis. Blood cultures and "
+        "pus for culture. Mx: intravenous antibiotics plus surgical "
+        "drainage. Cortical mastoidectomy addresses the source, with "
+        "separate neck drainage as required. Note: torticollis plus a "
+        "discharging ear should send you looking at the mastoid tip, "
+        "not the neck muscles."
+    ),
+    "External auditory canal exostoses": (
+        "Broad-based bony outgrowths of the tympanic ring narrowing "
+        "the ear canal, driven by repeated cold water exposure. "
+        "Aetiology: cold water and wind cause periosteal inflammation "
+        "and reactive new bone. Risk rises steeply with years of "
+        "surfing or diving in water under 19 degrees, so it is common "
+        "in southern Australian and New Zealand surfers. Distinguish "
+        "from osteoma, which is solitary, pedunculated and unrelated "
+        "to cold. Clinical features: usually bilateral, multiple and "
+        "asymptomatic for years. Symptoms begin once the canal traps "
+        "water and debris, giving recurrent otitis externa, "
+        "conductive hearing loss and blocked ears. Ix: otoscopy is "
+        "usually enough. CT temporal bone before surgery to map the "
+        "relationship to the facial nerve. Mx: prevention with fitted "
+        "earplugs and a hood. Treat infections and remove wax under "
+        "microscopy. Canalplasty via a transcanal or postauricular "
+        "approach when the canal is near occluded. Note: this is an "
+        "occupational disease of cold water, and the plug given at "
+        "diagnosis prevents the operation later."
+    ),
+    "Pitted keratolysis": (
+        "A superficial bacterial infection of the plantar stratum "
+        "corneum producing crateriform pits and malodour. Aetiology: "
+        "Kytococcus sedentarius, Dermatophilus congolensis and "
+        "Corynebacterium species digest keratin with proteases, "
+        "releasing sulphur compounds that cause the smell. Occlusive "
+        "footwear, hyperhidrosis and prolonged standing are the risk "
+        "factors, so it clusters in soldiers, athletes and farm "
+        "workers. Clinical features: shallow punched-out pits one to "
+        "seven millimetres across on pressure-bearing plantar skin, "
+        "often coalescing. Feet are macerated and malodorous. Itch "
+        "and soreness are variable and nails are spared. Ix: "
+        "clinical. Wood lamp may show coral red fluorescence and "
+        "potassium hydroxide microscopy excludes tinea. Mx: reduce "
+        "occlusion with moisture-wicking socks, changed twice daily, "
+        "and alternate footwear. Topical clindamycin, erythromycin or "
+        "benzoyl peroxide. Treat hyperhidrosis with 20 per cent "
+        "aluminium chloride. Note: smelly feet with pits and no scale "
+        "is bacterial, so an antifungal cream will not touch it."
+    ),
+    "Acquired perforating dermatosis": (
+        "A group of disorders in which altered dermal collagen or "
+        "elastin is extruded through the epidermis, presenting as "
+        "umbilicated keratotic papules. Aetiology: strongly "
+        "associated with diabetes mellitus and chronic kidney "
+        "disease, particularly on haemodialysis. Repeated scratching "
+        "of pruritic uraemic or diabetic skin is thought to trigger "
+        "transepidermal elimination. Reported with TNF inhibitors and "
+        "sorafenib. Clinical features: intensely itchy dome-shaped "
+        "papules with a central keratotic plug on the extensor limbs "
+        "and trunk. Koebnerises along scratch lines. Ix: clinical in "
+        "a dialysis or diabetic patient. Punch biopsy confirms "
+        "transepidermal elimination of collagen and excludes prurigo "
+        "nodularis and folliculitis. Check renal function, HbA1c and "
+        "liver function. Mx: control the itch first with emollients, "
+        "topical corticosteroid under occlusion and narrowband UVB. "
+        "Topical or oral retinoid for resistant disease. Optimise "
+        "dialysis adequacy and glycaemic control. Note: the lesions "
+        "are a consequence of scratching, so treatment that ignores "
+        "the pruritus will fail."
+    ),
+    "Papular urticaria": (
+        "A hypersensitivity reaction to insect bites producing "
+        "recurrent crops of intensely itchy papules, mainly in "
+        "children aged two to ten. Aetiology: delayed and immediate "
+        "hypersensitivity to salivary antigens from fleas, mosquitoes "
+        "and bed bugs. Sensitisation develops with exposure and "
+        "tolerance eventually follows, which is why it resolves in "
+        "later childhood. Clinical features: symmetrical crops of "
+        "firm 3 to 10 millimetre papules on exposed limbs, often in "
+        "linear or clustered groups. A central punctum may be seen. "
+        "Reactivation of older lesions when newly bitten is "
+        "characteristic. Excoriation leads to impetiginisation and "
+        "postinflammatory pigment change. Ix: clinical. Biopsy only "
+        "when scabies, bullous pemphigoid of childhood or dermatitis "
+        "herpetiformis is genuinely in question. Mx: source control "
+        "is the treatment. Treat household pets for fleas, launder "
+        "bedding hot and use repellent containing DEET or picaridin. "
+        "Potent topical corticosteroid for the papules and a sedating "
+        "antihistamine at night. Note: parents report bites only on "
+        "the child, because the adults in the house are already "
+        "tolerant."
+    ),
+    "Hydrofluoric acid burn": (
+        "A chemical injury that behaves unlike other acid burns "
+        "because the fluoride ion penetrates tissue and chelates "
+        "calcium and magnesium. Sources are rust removers, wheel "
+        "cleaners, glass etching and semiconductor work. Mechanism: "
+        "the undissociated acid crosses skin painlessly, then "
+        "fluoride binds cations, causing liquefactive necrosis, bone "
+        "decalcification and systemic hypocalcaemia with "
+        "hyperkalaemia. Clinical features: with dilute solutions pain "
+        "may be delayed many hours and out of proportion to a "
+        "near-normal looking hand. Concentrated exposure causes "
+        "immediate white or blistered skin. Cardiac arrest can follow "
+        "burns over as little as 2 to 3 per cent body surface area. "
+        "Ix: continuous cardiac monitoring, calcium, magnesium and "
+        "potassium, and an ECG watching the QT interval. Mx: copious "
+        "irrigation then calcium gluconate gel massaged in. Escalate "
+        "to intradermal calcium gluconate or intra-arterial infusion "
+        "for digits. Correct hypocalcaemia intravenously and call the "
+        "Poisons Information Centre on 13 11 26. Note: severe pain "
+        "with an unremarkable hand after a cleaning product is the "
+        "presentation to fear."
+    ),
+    "Thallium poisoning": (
+        "Heavy metal poisoning classically from deliberate "
+        "administration, since thallium salts are tasteless, "
+        "odourless and highly soluble. Industrial and rodenticide "
+        "sources persist overseas. Mechanism: thallium substitutes "
+        "for potassium at the sodium potassium ATPase and binds "
+        "sulfhydryl groups, disabling mitochondrial oxidative "
+        "phosphorylation. It concentrates in hair and nerve. Clinical "
+        "features: gastroenteritis within hours, then a painful "
+        "ascending sensory neuropathy over days that is burning and "
+        "dysaesthetic in the feet. Diffuse alopecia appears at two to "
+        "three weeks and is the clue that arrives too late. Mees "
+        "lines follow. Ix: 24 hour urinary thallium is the test of "
+        "choice. Abdominal radiograph may show radio-opaque material. "
+        "Nerve conduction studies show axonal neuropathy. Mx: "
+        "Prussian blue orally interrupts enterohepatic recirculation "
+        "and is the specific antidote. Multi-dose activated charcoal, "
+        "potassium repletion with caution and haemodialysis early in "
+        "severe cases. Notify police where poisoning is suspected. "
+        "Note: painful neuropathy that precedes hair loss should "
+        "raise thallium and prompt a urine sample."
+    ),
+    "Baclofen overdose": (
+        "GABA-B agonist poisoning that mimics brain death, and its "
+        "mirror image, abrupt withdrawal, which mimics sepsis. "
+        "Mechanism: presynaptic GABA-B activation causes profound "
+        "central nervous system depression. Renal excretion means "
+        "kidney impairment produces toxicity at normal doses. "
+        "Clinical features: coma with absent brainstem reflexes, "
+        "flaccidity and respiratory failure, often with seizures and "
+        "a paradoxical mix of hypotonia and hyperreflexia. Withdrawal "
+        "from an intrathecal pump gives fever, rigidity, rebound "
+        "spasticity and rhabdomyolysis resembling neuroleptic "
+        "malignant syndrome. Ix: no useful level. Check creatinine, "
+        "creatine kinase, an ECG for bradyarrhythmia and interrogate "
+        "the pump. Mx: supportive with early intubation, since deep "
+        "coma resolves fully over 24 to 72 hours. Activated charcoal "
+        "if early and airway protected. Haemodialysis for severe "
+        "toxicity in renal failure. For withdrawal, restore baclofen "
+        "urgently by any route and give benzodiazepines. Note: do not "
+        "certify brain death in a baclofen overdose, and do not let a "
+        "pump run empty over a long weekend."
+    ),
+    "Commotio cordis": (
+        "Ventricular fibrillation triggered by a blunt precordial "
+        "impact in a structurally normal heart. A leading cause of "
+        "sudden death in young athletes. Mechanism: an impact landing "
+        "in a narrow 10 to 30 millisecond window on the upstroke of "
+        "the T wave activates mechanosensitive potassium channels, "
+        "causing heterogeneous repolarisation and fibrillation. A "
+        "hard small projectile and a compliant paediatric chest wall "
+        "raise the risk. Clinical features: instantaneous collapse "
+        "after a baseball, cricket ball or hockey puck strikes the "
+        "chest. Brief agonal respiration and seizure-like movement "
+        "are common and are mistaken for a faint. There is no "
+        "structural injury on autopsy. Ix: nothing prehospital beyond "
+        "rhythm recognition. Post-arrest, echocardiography and a "
+        "cardiac MRI exclude cardiomyopathy and contusion. Mx: "
+        "immediate high quality CPR and defibrillation, which is the "
+        "only thing that changes outcome. Survival exceeds 50 per "
+        "cent when a defibrillator reaches the field within three "
+        "minutes. Note: a young player who drops after a ball to the "
+        "chest is in arrest, not winded."
+    ),
+    "Left ventricular non-compaction": (
+        "A cardiomyopathy phenotype of prominent left ventricular "
+        "trabeculation with deep intertrabecular recesses and a thin "
+        "compacted layer. Aetiology: arrest of normal embryonic "
+        "compaction, though many adult cases appear acquired. "
+        "Sarcomeric gene variants overlap with hypertrophic and "
+        "dilated cardiomyopathy, so families are screened. "
+        "Association with neuromuscular disease, particularly Barth "
+        "syndrome in boys. Clinical features: a spectrum from "
+        "incidental finding to heart failure, ventricular arrhythmia "
+        "and thromboembolic stroke. Many patients are asymptomatic "
+        "with normal systolic function and never progress. Ix: "
+        "echocardiography with a non-compacted to compacted ratio "
+        "above 2 at end systole. Cardiac MRI is more specific and "
+        "late gadolinium enhancement predicts arrhythmia. Ambulatory "
+        "monitoring and first degree relative screening. Mx: treat by "
+        "phenotype rather than by the label. Standard heart failure "
+        "therapy where the ejection fraction is reduced, "
+        "anticoagulation for atrial fibrillation or thrombus, and an "
+        "implantable defibrillator on conventional criteria. Note: "
+        "trabeculation alone in an athlete or in pregnancy is often a "
+        "normal variant."
+    ),
+    "Carcinoid heart disease": (
+        "Right-sided valvular fibrosis complicating metastatic "
+        "neuroendocrine tumour, affecting up to half of patients with "
+        "carcinoid syndrome. Mechanism: serotonin and other "
+        "vasoactive mediators reaching the systemic circulation from "
+        "liver metastases drive fibroblast proliferation, laying down "
+        "plaques on the downstream surfaces of the tricuspid and "
+        "pulmonary valves. Pulmonary inactivation of serotonin "
+        "protects the left heart unless there is a patent foramen "
+        "ovale or bronchial primary. Clinical features: flushing and "
+        "diarrhoea, then fatigue, ascites, peripheral oedema and a "
+        "pansystolic murmur that increases on inspiration. Elevated "
+        "jugular venous pressure with giant V waves. Ix: "
+        "transthoracic echocardiography shows thickened retracted "
+        "tricuspid leaflets fixed in a semi-open position. 24 hour "
+        "urinary 5-HIAA and NT-proBNP as a screening marker. Mx: "
+        "somatostatin analogue to control mediator release, diuretics "
+        "for congestion and early valve replacement before right "
+        "ventricular function declines. Note: right heart failure "
+        "with flushing and diarrhoea points to the abdomen, not the "
+        "chest."
+    ),
+    "Stiff person syndrome": (
+        "A rare autoimmune disorder of axial and limb rigidity with "
+        "superimposed painful spasms, caused by impaired inhibitory "
+        "neurotransmission. Aetiology: antibodies against glutamic "
+        "acid decarboxylase in about 80 per cent, or against "
+        "amphiphysin, which carries a strong paraneoplastic link to "
+        "breast and lung cancer. Associated with type 1 diabetes, "
+        "thyroid autoimmunity and pernicious anaemia. Clinical "
+        "features: progressive truncal and proximal stiffness "
+        "producing exaggerated lumbar lordosis and a wooden gait. "
+        "Spasms are triggered by startle, touch or emotional stress "
+        "and can fracture bone. Task-specific phobia of open spaces "
+        "is common and is misread as psychiatric. Ix: high titre "
+        "anti-GAD65, EMG showing continuous motor unit activity in "
+        "agonists and antagonists that abolishes with diazepam, and "
+        "MRI to exclude cord pathology. Malignancy screen. Mx: high "
+        "dose diazepam or baclofen for symptoms. Immunotherapy with "
+        "intravenous immunoglobulin, and rituximab for refractory "
+        "disease. Note: a wooden hyperlordotic gait with "
+        "startle-induced spasms is not a functional disorder."
+    ),
+    "Spinal dural arteriovenous fistula": (
+        "An abnormal connection between a radicular artery and a "
+        "radicular vein within the dural sleeve, causing progressive "
+        "congestive myelopathy. The commonest spinal vascular "
+        "malformation and the most commonly missed treatable cause of "
+        "myelopathy. Mechanism: arterialised flow raises spinal "
+        "venous pressure, reducing perfusion and producing chronic "
+        "cord oedema, mostly at the thoracolumbar level. Clinical "
+        "features: a man over 50 with insidious ascending leg "
+        "weakness, sensory loss and sphincter disturbance over "
+        "months. Symptoms worsen with exercise, standing and "
+        "Valsalva, which distinguishes it from disc disease. Ix: MRI "
+        "shows a long segment of central T2 cord hyperintensity with "
+        "dilated perimedullary flow voids on the dorsal surface. "
+        "Spinal digital subtraction angiography is definitive and "
+        "localises the feeding level. Mx: endovascular embolisation "
+        "or open surgical disconnection of the draining vein. Early "
+        "treatment arrests progression, though established deficit "
+        "recovers incompletely. Note: progressive myelopathy plus "
+        "flow voids on MRI needs an angiogram, not a steroid trial "
+        "for suspected inflammation."
+    ),
+    "Marchiafava-Bignami disease": (
+        "A rare toxic demyelination and necrosis of the corpus "
+        "callosum, seen almost exclusively in chronic alcohol use "
+        "with malnutrition. Aetiology: originally described in "
+        "Italian red wine drinkers but reported with all alcohol "
+        "types and occasionally without alcohol. B group vitamin "
+        "deficiency is implicated and the middle callosal layers are "
+        "selectively vulnerable. Clinical features: type A presents "
+        "acutely with impaired consciousness, seizures and "
+        "hypertonia, and carries high mortality. Type B is subacute "
+        "with dysarthria, gait apraxia and interhemispheric "
+        "disconnection signs such as left hand agraphia and alien "
+        "limb. Ix: MRI is diagnostic, showing symmetrical T2 "
+        "hyperintensity of the callosal body with restricted "
+        "diffusion and sandwich-like sparing of the upper and lower "
+        "layers. Exclude Wernicke encephalopathy and central pontine "
+        "myelinolysis, which coexist. Mx: parenteral thiamine before "
+        "any glucose, plus B complex replacement, nutrition and "
+        "abstinence support. Corticosteroids are reported but "
+        "unproven. Note: an intoxicated patient with disconnection "
+        "signs and a bright corpus callosum needs thiamine now."
+    ),
+    "Hirayama disease": (
+        "A benign cervical flexion myelopathy causing insidious "
+        "wasting and weakness of one hand and forearm in adolescent "
+        "and young adult men. Mechanism: during neck flexion a "
+        "detached posterior dural sac shifts forward and compresses "
+        "the lower cervical cord, producing repeated microcirculatory "
+        "injury to the anterior horn cells at C7 to T1. Clinical "
+        "features: unilateral or asymmetric wasting of the hand and "
+        "forearm sparing brachioradialis, giving the oblique "
+        "amyotrophy sign. Cold paresis and fine tremor of the "
+        "outstretched fingers are typical. Sensation and reflexes are "
+        "normal and there are no upper motor neuron signs. Progresses "
+        "for one to five years then arrests spontaneously. Ix: "
+        "flexion MRI of the cervical spine is essential, showing "
+        "anterior dural displacement and a crescentic epidural flow "
+        "void that neutral imaging misses. EMG confirms chronic "
+        "anterior horn cell loss. Mx: a cervical collar limiting "
+        "flexion for three to four years is first line. Anterior "
+        "decompression and fusion for continued progression. Note: a "
+        "young man with a wasting hand needs flexion views, and this "
+        "is not motor neurone disease."
+    ),
+    "Pure red cell aplasia": (
+        "Selective failure of erythroid production with preserved "
+        "white cell and platelet lines, giving a normocytic anaemia "
+        "with near-absent reticulocytes. Aetiology: parvovirus B19 in "
+        "the immunosuppressed or in anyone with a shortened red cell "
+        "lifespan. Also thymoma, large granular lymphocytic "
+        "leukaemia, systemic lupus erythematosus and drugs including "
+        "phenytoin and azathioprine. Anti-erythropoietin antibodies "
+        "are a rare cause after subcutaneous epoetin. Clinical "
+        "features: progressive anaemia symptoms without infection or "
+        "bleeding, since neutrophils and platelets are normal. An "
+        "aplastic crisis in sickle cell disease or hereditary "
+        "spherocytosis presents abruptly. Ix: reticulocyte count near "
+        "zero is the key result. Marrow shows absent erythroid "
+        "precursors, with giant pronormoblasts in parvovirus. "
+        "Parvovirus B19 PCR, CT chest for thymoma and flow cytometry "
+        "for a clonal T cell population. Mx: treat the cause. "
+        "Intravenous immunoglobulin clears parvovirus, thymectomy for "
+        "thymoma, and ciclosporin or corticosteroid for idiopathic "
+        "disease. Note: a reticulocyte count costs little and "
+        "separates this from every other anaemia on the list."
+    ),
+    "Diamond-Blackfan anaemia": (
+        "An inherited bone marrow failure syndrome of selective "
+        "erythroid aplasia presenting in infancy. Aetiology: a "
+        "ribosomopathy, with heterozygous variants in ribosomal "
+        "protein genes, most often RPS19, causing p53-mediated "
+        "apoptosis of erythroid progenitors. Autosomal dominant "
+        "inheritance with many de novo cases. Clinical features: "
+        "macrocytic anaemia with reticulocytopenia presenting before "
+        "one year of age, usually by two to three months. Around half "
+        "have congenital anomalies, including craniofacial "
+        "dysmorphism, thumb malformations such as a triphalangeal "
+        "thumb, short stature and cardiac or renal defects. Ix: "
+        "macrocytosis with a very low reticulocyte count and normal "
+        "neutrophils and platelets. Raised erythrocyte adenosine "
+        "deaminase and haemoglobin F. Marrow shows erythroid "
+        "hypoplasia and genetic panel testing confirms. Mx: "
+        "corticosteroids induce response in about 80 per cent, with "
+        "chronic transfusion and iron chelation for non-responders. "
+        "Allogeneic stem cell transplant is curative. Lifelong "
+        "surveillance for myelodysplasia and osteosarcoma. Note: "
+        "Blackfan is a baby with a bad thumb, while transient "
+        "erythroblastopenia hits a well toddler and resolves."
+    ),
+    "Shwachman-Diamond syndrome": (
+        "An autosomal recessive ribosomopathy combining exocrine "
+        "pancreatic insufficiency, bone marrow failure and skeletal "
+        "dysplasia. The second commonest inherited cause of "
+        "pancreatic insufficiency after cystic fibrosis. Aetiology: "
+        "biallelic SBDS variants impair ribosome maturation and "
+        "mitotic spindle stability. Clinical features: steatorrhoea "
+        "and failure to thrive from infancy, with intermittent or "
+        "persistent neutropenia causing recurrent otitis media, "
+        "pneumonia and skin sepsis. Metaphyseal chondrodysplasia, "
+        "short stature and a narrow thorax. Cognitive and behavioural "
+        "difficulties are common. Ix: low faecal elastase with normal "
+        "sweat chloride is the discriminating pair. Serum trypsinogen "
+        "and isoamylase, full blood count series showing cyclical "
+        "neutropenia, skeletal survey and SBDS sequencing. Marrow for "
+        "baseline cytogenetics. Mx: pancreatic enzyme replacement "
+        "with fat soluble vitamins, prompt antibiotics for febrile "
+        "neutropenia and G-CSF for severe episodes. Annual marrow "
+        "surveillance, since a third progress to myelodysplasia or "
+        "acute myeloid leukaemia. Note: fatty stools plus neutropenia "
+        "and a normal sweat test is the combination to remember."
+    ),
+    "Chediak-Higashi syndrome": (
+        "A rare autosomal recessive disorder of lysosomal trafficking "
+        "producing partial albinism, immunodeficiency and a bleeding "
+        "tendency. Aetiology: biallelic LYST variants cause formation "
+        "of giant dysfunctional lysosome-related organelles. "
+        "Neutrophils cannot deliver granule contents, melanosomes "
+        "clump and platelet dense granules are absent. Clinical "
+        "features: silvery grey hair with pale skin and photophobia "
+        "from ocular albinism, recurrent pyogenic skin and "
+        "respiratory infection, and easy bruising with mucosal "
+        "bleeding. Progressive peripheral neuropathy and ataxia "
+        "develop in survivors. About 85 per cent enter an accelerated "
+        "phase of haemophagocytic lymphohistiocytosis, often "
+        "triggered by Epstein-Barr virus. Ix: giant peroxidase "
+        "positive granules in neutrophils on blood film is the "
+        "diagnostic finding. Hair shaft microscopy shows clumped "
+        "melanin. Platelet aggregation studies and LYST sequencing. "
+        "Mx: allogeneic haematopoietic stem cell transplant is the "
+        "only treatment that prevents the accelerated phase, though "
+        "it does not halt neurological decline. Prophylactic "
+        "antibiotics and etoposide-based protocols for the "
+        "accelerated phase. Note: look at the blood film and the "
+        "hair."
+    ),
+    "Amyand hernia": (
+        "An inguinal hernia whose sac contains the vermiform "
+        "appendix, with or without appendicitis. Present in about 1 "
+        "per cent of inguinal hernia repairs, and appendicitis within "
+        "the sac in only 0.1 per cent. Aetiology: a patent processus "
+        "vaginalis, a mobile caecum or a long appendix allows entry. "
+        "Incarceration then impairs appendiceal blood supply, so "
+        "inflammation may be a consequence of the hernia rather than "
+        "its cause. Clinical features: usually an incidental "
+        "operative finding. When inflamed, a tender irreducible right "
+        "groin lump with fever, easily called a strangulated hernia. "
+        "Ix: often diagnosed at operation. Ultrasound or CT shows a "
+        "blind-ending tubular structure within the sac and guides the "
+        "approach when imaging is obtained. Mx: guided by the "
+        "Losanoff and Basson classification. A normal appendix is "
+        "reduced and the hernia repaired with mesh. An inflamed "
+        "appendix requires appendicectomy through the sac with "
+        "primary suture repair, since mesh in a contaminated field "
+        "risks infection. Note: finding the appendix in the sac "
+        "changes the repair, so mesh is not automatic."
+    ),
+    "Chilaiditi syndrome": (
+        "Interposition of bowel, usually the hepatic flexure, between "
+        "the liver and the right hemidiaphragm. The radiological "
+        "appearance alone is the Chilaiditi sign, while the syndrome "
+        "requires symptoms. Aetiology: laxity or absence of the "
+        "suspensory ligaments of the liver, a redundant colon, "
+        "hepatic atrophy from cirrhosis, chronic lung hyperinflation "
+        "and ascites. Prevalence rises with age and with intellectual "
+        "disability. Clinical features: most are asymptomatic. "
+        "Symptomatic cases have intermittent right upper quadrant "
+        "pain, distension, constipation and vomiting. Volvulus and "
+        "obstruction are rare complications. Ix: erect chest "
+        "radiograph shows gas under the right hemidiaphragm "
+        "containing valvulae or haustra, which is what distinguishes "
+        "it from free air. CT confirms and excludes perforation. Mx: "
+        "conservative for the sign, with bowel decompression, fluids "
+        "and laxatives for symptoms. Surgery is reserved for "
+        "ischaemia, volvulus or failed conservative care. Note: "
+        "haustral markings in the subdiaphragmatic gas have saved "
+        "many patients an unnecessary laparotomy."
+    ),
+    "Rapunzel syndrome": (
+        "A gastric trichobezoar whose tail extends through the "
+        "pylorus into the small bowel, sometimes as far as the "
+        "ileocaecal valve. Aetiology: trichophagia in the setting of "
+        "trichotillomania, usually in adolescent girls, often with "
+        "anxiety, intellectual disability or a history of abuse. Hair "
+        "is indigestible and resists peristalsis, so it accumulates "
+        "in gastric folds. Clinical features: epigastric pain, early "
+        "satiety, vomiting and weight loss over months. A mobile "
+        "non-tender epigastric mass is palpable in most. Halitosis, "
+        "alopecia patches and iron deficiency anaemia support the "
+        "diagnosis. Obstruction, ulceration and perforation are the "
+        "reasons it presents acutely. Ix: upper endoscopy is "
+        "diagnostic and defines the extent. CT shows a mottled "
+        "intraluminal mass with trapped air and no wall enhancement. "
+        "Mx: laparotomy or laparoscopy for removal, since endoscopic "
+        "retrieval of a large hair mass usually fails. Psychiatric "
+        "referral is essential, because recurrence without it is "
+        "common. Note: an epigastric mass with a bald patch on the "
+        "scalp is the clinical pairing."
+    ),
+    "Splenic artery aneurysm": (
+        "The commonest visceral artery aneurysm, accounting for about "
+        "60 per cent, and the one most likely to rupture in "
+        "pregnancy. Aetiology: multiparity and portal hypertension "
+        "are the dominant associations, with fibromuscular dysplasia, "
+        "pancreatitis-related pseudoaneurysm and atherosclerosis also "
+        "implicated. Oestrogen and increased splenic flow explain the "
+        "female predominance of four to one. Clinical features: "
+        "usually asymptomatic and found incidentally as a ring of "
+        "calcification in the left upper quadrant. Rupture gives left "
+        "upper quadrant pain radiating to the shoulder, then shock. A "
+        "double rupture pattern occurs when initial bleeding is "
+        "contained in the lesser sac before free peritoneal spill. "
+        "Ix: CT angiography defines size and anatomy. Mx: repair "
+        "aneurysms above 2 centimetres, any pseudoaneurysm, and any "
+        "aneurysm in a woman planning pregnancy or awaiting liver "
+        "transplant, regardless of size. Endovascular coil "
+        "embolisation is first line. Note: rupture in the third "
+        "trimester carries maternal mortality near 75 per cent and "
+        "fetal loss near 95 per cent."
+    ),
+    "Sister Mary Joseph nodule": (
+        "A metastatic deposit in the umbilicus, signalling advanced "
+        "intra-abdominal or pelvic malignancy. Named for the surgical "
+        "assistant who noticed the association before it was "
+        "published. Aetiology: gastric, pancreatic, colorectal and "
+        "ovarian primaries account for most. Spread reaches the "
+        "umbilicus by direct extension along the urachal or falciform "
+        "remnants, or through peritoneal, lymphatic and haematogenous "
+        "routes. Around a third have no known primary at "
+        "presentation. Clinical features: a firm irregular umbilical "
+        "nodule that may ulcerate or discharge serous or "
+        "blood-stained fluid. Often painless, with ascites, weight "
+        "loss and an abdominal mass. Ix: core biopsy or fine needle "
+        "aspiration of the nodule with immunohistochemistry to "
+        "identify the primary. CT chest, abdomen and pelvis, plus "
+        "endoscopy directed by the histology. Mx: usually palliative, "
+        "with systemic therapy by tumour type and best supportive "
+        "care. Median survival is under a year. Note: an umbilical "
+        "lump is not always a hernia, and the distinction is made by "
+        "examining the abdomen for ascites and a mass."
+    ),
+    "Cholesterol embolisation syndrome": (
+        "Showering of cholesterol crystals from ulcerated aortic "
+        "plaque into small arteries, causing a multiorgan ischaemic "
+        "and inflammatory syndrome. Aetiology: most cases follow "
+        "arterial instrumentation such as coronary angiography or "
+        "aortic surgery. Anticoagulation and thrombolysis are "
+        "recognised precipitants. Spontaneous cases occur in severe "
+        "atherosclerosis. Clinical features: a delayed onset of days "
+        "to weeks distinguishes it from contrast nephropathy. Livedo "
+        "reticularis, blue toes with intact peripheral pulses, "
+        "progressive renal impairment, abdominal pain and amaurosis "
+        "fugax with Hollenhorst plaques on fundoscopy. Ix: "
+        "eosinophilia, raised inflammatory markers and low complement "
+        "support the diagnosis. Skin or renal biopsy shows biconvex "
+        "needle-shaped clefts in arterioles. Mx: no specific therapy. "
+        "Statin, blood pressure and antiplatelet optimisation, "
+        "avoidance of further arterial instrumentation and supportive "
+        "care including dialysis. Corticosteroids are used but "
+        "unproven. Note: renal failure appearing two weeks after an "
+        "angiogram with blue toes and eosinophilia is atheroembolic, "
+        "not contrast induced."
+    ),
+    "Nephrogenic systemic fibrosis": (
+        "A fibrosing disorder of skin and internal organs occurring "
+        "in advanced kidney disease after gadolinium-based contrast "
+        "exposure. Aetiology: gadolinium retained through impaired "
+        "clearance dissociates from its chelate and deposits in "
+        "tissue, recruiting circulating fibrocytes. Risk is confined "
+        "to eGFR below 30, dialysis and acute kidney injury, and is "
+        "highest with older linear agents. Clinical features: onset "
+        "days to months after exposure, with symmetrical woody "
+        "induration and hyperpigmented plaques of the limbs and "
+        "trunk, sparing the face. Peau d'orange texture with joint "
+        "contractures and disabling immobility. Cardiac, pulmonary "
+        "and diaphragmatic fibrosis occurs. Ix: deep incisional "
+        "biopsy showing spindle cells positive for CD34 and "
+        "procollagen with mucin deposition. Exclude scleromyxoedema "
+        "and systemic sclerosis, which spares no face here. Mx: no "
+        "reliably effective treatment. Restoring renal function "
+        "through transplantation offers the best chance of "
+        "regression. Physiotherapy for contractures. Note: prevention "
+        "is the whole story, so check eGFR before gadolinium and use "
+        "group II macrocyclic agents, which have made new cases very "
+        "rare."
+    ),
+    "Klippel-Trenaunay syndrome": (
+        "A congenital overgrowth disorder defined by a triad of "
+        "capillary malformation, venous or lymphatic malformation and "
+        "limb hypertrophy. Aetiology: somatic mosaic activating "
+        "variants in PIK3CA, placing it within the PIK3CA-related "
+        "overgrowth spectrum. Sporadic, with no inheritance risk to "
+        "siblings. Clinical features: a port wine stain over the "
+        "affected limb from birth, usually one leg, with progressive "
+        "soft tissue and bony overgrowth causing limb length "
+        "discrepancy. A persistent embryonic lateral marginal vein of "
+        "Servelle is characteristic. Lymphoedema, recurrent "
+        "cellulitis, bleeding from vesicles and coagulopathy occur. "
+        "Distinguish from Parkes Weber syndrome, which has "
+        "arteriovenous fistulae and a worse prognosis. Ix: MRI with "
+        "venography maps the malformation and deep venous anatomy. "
+        "Serial leg length radiographs, D-dimer and fibrinogen for "
+        "localised intravascular coagulopathy. Mx: multidisciplinary. "
+        "Compression garments, sclerotherapy or laser, epiphysiodesis "
+        "for leg length discrepancy and sirolimus for extensive "
+        "disease. Note: never strip a superficial varicosity before "
+        "confirming the deep system exists."
+    ),
+    "Alkaptonuria": (
+        "An autosomal recessive disorder of tyrosine metabolism in "
+        "which homogentisic acid accumulates and deposits as dark "
+        "pigment in connective tissue. Aetiology: biallelic HGD "
+        "variants cause deficiency of homogentisate 1,2-dioxygenase. "
+        "Homogentisic acid is excreted in urine, which darkens on "
+        "standing or with alkali, and the remainder polymerises into "
+        "ochronotic pigment in cartilage. Clinical features: dark "
+        "nappies or urine that blackens in the toilet bowl is the "
+        "childhood clue. Ochronosis appears in the third decade with "
+        "slate-blue scleral and ear cartilage pigmentation. A severe "
+        "destructive spondyloarthropathy of the lumbar spine and "
+        "large joints follows, with aortic valve calcification and "
+        "renal stones. Ix: raised urinary homogentisic acid on gas "
+        "chromatography mass spectrometry confirms. Spinal "
+        "radiographs show dense intervertebral disc calcification. "
+        "HGD sequencing. Mx: nitisinone reduces homogentisic acid "
+        "substantially and is the only disease-modifying therapy. "
+        "Analgesia, physiotherapy, joint replacement and "
+        "echocardiographic surveillance. Note: black urine on "
+        "standing plus early crippling back pain is the pairing that "
+        "makes the diagnosis decades before the joints fail."
+    ),
+    "Paget disease of the nipple": (
+        "An intraepidermal adenocarcinoma of the nipple areolar "
+        "complex, present in 1 to 4 per cent of breast cancers and "
+        "almost always signalling underlying malignancy. Aetiology: "
+        "the prevailing epidermotropic theory holds that malignant "
+        "ductal cells migrate along lactiferous ducts into the "
+        "epidermis. Around 90 per cent have an underlying ductal "
+        "carcinoma in situ or invasive carcinoma, which is frequently "
+        "HER2 positive and hormone receptor negative. Clinical "
+        "features: a unilateral eczematous, scaling or ulcerated "
+        "nipple with itch and burning, spreading outward to the "
+        "areola. Nipple discharge or retraction may follow. Only half "
+        "have a palpable mass. Ix: full thickness punch or wedge "
+        "biopsy of the nipple showing large pale Paget cells that are "
+        "cytokeratin 7 positive. Bilateral mammography with "
+        "ultrasound, and MRI when imaging is negative but biopsy "
+        "positive. Mx: breast conserving surgery including the nipple "
+        "areolar complex with whole breast radiotherapy, or "
+        "mastectomy for multicentric disease. Sentinel node biopsy "
+        "and adjuvant therapy by receptor status. Note: unilateral "
+        "nipple eczema that fails a two week steroid trial gets a "
+        "biopsy, not a stronger cream."
+    ),
+    "Blackwater fever": (
+        "Massive intravascular haemolysis with haemoglobinuria "
+        "complicating falciparum malaria, named for the dark "
+        "port-wine urine. Aetiology: classically described in "
+        "non-immune Europeans with repeated Plasmodium falciparum "
+        "infection and intermittent quinine use. Modern cases are "
+        "linked to artemisinin derivatives and to glucose 6 phosphate "
+        "dehydrogenase deficiency exposed to oxidant antimalarials. "
+        "Antibody-mediated destruction of uninfected red cells "
+        "explains haemolysis out of proportion to parasitaemia. "
+        "Clinical features: abrupt fever, rigors and vomiting with "
+        "rapidly deepening jaundice and dark urine. Anaemia is severe "
+        "and progresses over hours. Acute kidney injury from "
+        "haemoglobin cast nephropathy is the main threat. Ix: "
+        "parasitaemia is often low or absent. Falling haemoglobin "
+        "with raised bilirubin and lactate dehydrogenase, low "
+        "haptoglobin, urine positive for blood on dipstick but few "
+        "red cells on microscopy. Check G6PD once recovered. Mx: "
+        "intravenous artesunate, transfusion, generous fluids and "
+        "renal replacement therapy where needed. Stop the implicated "
+        "drug. Note: dark urine with a low parasite count does not "
+        "exclude malaria, it defines this complication."
+    ),
+    "Balo concentric sclerosis": (
+        "A rare inflammatory demyelinating disorder producing "
+        "alternating concentric rings of demyelinated and preserved "
+        "white matter, usually regarded as a variant of multiple "
+        "sclerosis. Aetiology: hypoxia-like tissue injury with "
+        "upregulation of protective proteins in the rim is thought to "
+        "produce the banded pattern as the lesion expands outward. "
+        "Most cases occur in young adults, with a reported "
+        "predominance in Chinese and Filipino populations. Clinical "
+        "features: subacute onset over days to weeks with headache, "
+        "hemiparesis, aphasia, cognitive change and seizures. The "
+        "tumour-like presentation resembles a glioma or abscess more "
+        "than typical relapsing multiple sclerosis. Ix: MRI is "
+        "diagnostic, showing onion-bulb concentric rings of "
+        "alternating T2 signal with layered gadolinium enhancement. "
+        "Cerebrospinal fluid oligoclonal bands are positive in only "
+        "about half. Biopsy is avoidable when imaging is typical. Mx: "
+        "high dose intravenous methylprednisolone, with plasma "
+        "exchange for steroid refractory disease. Many recover well "
+        "and are then managed as multiple sclerosis with disease "
+        "modifying therapy. Note: concentric rings on MRI spare the "
+        "patient a craniotomy, so read the pattern before referring."
+    ),
+    "Presbyoesophagus": (
+        "Age-related change in oesophageal motility, with reduced "
+        "peristaltic amplitude, more failed swallows and impaired "
+        "lower oesophageal sphincter relaxation. Aetiology: loss of "
+        "myenteric plexus neurons and reduced smooth muscle "
+        "compliance with ageing. Contributions from diabetic and "
+        "other neuropathies, anticholinergic burden and sarcopenia "
+        "make it hard to separate normal ageing from disease. "
+        "Clinical features: often asymptomatic. When symptomatic "
+        "there is slow eating, a sense of food sticking "
+        "retrosternally, regurgitation and nocturnal cough. Weight "
+        "loss and aspiration pneumonia mark significant impairment. "
+        "Ix: this is a diagnosis of exclusion, so endoscopy comes "
+        "first to rule out malignancy, stricture and eosinophilic "
+        "oesophagitis. Barium swallow shows tertiary contractions. "
+        "High resolution manometry defines ineffective motility and "
+        "excludes achalasia. Mx: no drug reliably helps. Speech "
+        "pathology assessment, upright posture during and after "
+        "meals, texture modification and smaller frequent meals. "
+        "Review the medication list for anticholinergics and "
+        "bisphosphonates. Note: never accept dysphagia in an older "
+        "person as simply age, since cancer sits in the same "
+        "differential."
     ),
 }
 
