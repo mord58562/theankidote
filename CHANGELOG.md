@@ -5,6 +5,43 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.1] - 2026-09-07
+
+Settings-only release: one inconsistent button, one untrue notice, and
+a version number that was nowhere to be seen.
+
+### Fixed
+
+- **No content button claims the accent.** Qt sets `autoDefault` on
+  every `QPushButton` in a `QDialog` and promotes the first, which
+  macOS renders filled. "Custom terms..." won that by tab order while
+  "Check now" did not. All eight dialog buttons now go through
+  `_push()` in `__init__.py`, which clears `autoDefault` and
+  `default`; the accent stays with a modal's `QDialogButtonBox`.
+- **The restart notice is state-driven and accurate.** The permanent
+  footer string and the Advanced tab's "Needs Anki to restart." both
+  overstated the case - shortcuts rebind on close, `debug` is read per
+  call in `_log.py`, custom terms apply to the next card. Only the
+  module switches need a restart, their imports being gated at load,
+  so the footer names the module and appears only when one is
+  switched back on. The Advanced caption now describes what it
+  actually reports: whether the web inspector's port is open.
+
+### Added
+
+- **Version mark in Settings.** `_version_label()` puts the add-on
+  version bottom-right in fixed pitch, selectable, with the add-on,
+  library and Anki versions in its tooltip and a click to copy all
+  three.
+
+### Changed
+
+- The Reference database group labels its version "Library" rather
+  than "Version", so the two numbers in the window are distinguishable.
+- `test_australian_spelling` widened its `edema` lookbehind from
+  `(?<![oa])` to `(?<![a-z])`: the narrow form flagged
+  "Beckwith-Wiedemann", which contains the substring but is a surname.
+
 ## [2.4.0] - 2026-09-05
 
 Quality release across popup UX, failure modes, and code shape. No
