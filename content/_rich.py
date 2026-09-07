@@ -10641,6 +10641,210 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "bereavement and grief in adults clinical features"]],
         "summary": "",
     },
+    {
+        "name": "Informed consent",
+        "aliases": ["Valid consent", "Material risk disclosure", "Consent to treatment"],
+        "utd": [["Overview", "informed consent in medical practice"]],
+        "summary": "",
+    },
+    {
+        "name": "Decision-making capacity",
+        "aliases": ["Capacity assessment", "Competence to consent", "Mental capacity"],
+        "utd": [["Overview", "assessment of decision making capacity in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Gillick competence",
+        "aliases": ["Mature minor", "Gillick competent"],
+        "utd": [["Overview", "consent for minors mature minor doctrine"]],
+        "summary": "",
+    },
+    {
+        "name": "Death certification",
+        "aliases": ["Medical certificate of cause of death", "Cause of death certificate"],
+        "utd": [["Overview", "death certification cause of death"]],
+        "summary": "",
+    },
+    {
+        "name": "Coronial referral",
+        "aliases": ["Reportable death", "Coroner notification", "Coronial autopsy"],
+        "utd": [["Overview", "reportable death coroner referral"]],
+        "summary": "",
+    },
+    {
+        "name": "Brain death determination",
+        "aliases": ["Brain death", "Brainstem death", "Death by neurological criteria"],
+        "utd": [["Overview", "diagnosis of brain death in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Breaking bad news",
+        "aliases": ["SPIKES protocol", "Delivering serious news"],
+        "utd": [["Overview", "communicating serious news to patients"]],
+        "summary": "",
+    },
+    {
+        "name": "Root cause analysis",
+        "aliases": ["Sentinel event review", "Clinical incident investigation"],
+        "utd": [["Overview", "root cause analysis patient safety"]],
+        "summary": "",
+    },
+    {
+        "name": "Medication reconciliation",
+        "aliases": ["Best possible medication history", "Medicines reconciliation"],
+        "utd": [["Overview", "medication reconciliation transitions of care"]],
+        "summary": "",
+    },
+    {
+        "name": "ASA physical status classification",
+        "aliases": ["ASA score", "ASA grade", "ASA classification"],
+        "utd": [["Overview", "asa physical status classification preoperative"]],
+        "summary": "",
+    },
+    {
+        "name": "Newborn bloodspot screening",
+        "aliases": ["Guthrie test", "Heel prick test", "Newborn screening"],
+        "utd": [["Overview", "newborn screening for inherited disorders"]],
+        "summary": "",
+    },
+    {
+        "name": "Reproductive carrier screening",
+        "aliases": ["Genetic carrier screening", "Preconception carrier screening"],
+        "utd": [["Overview", "preconception carrier screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Prostate specific antigen testing",
+        "aliases": ["PSA test", "PSA screening", "Prostate specific antigen"],
+        "utd": [["Overview", "prostate specific antigen screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Chemotherapy-induced peripheral neuropathy",
+        "aliases": ["CIPN", "Oxaliplatin neuropathy", "Taxane neuropathy"],
+        "utd": [["Overview", "chemotherapy induced peripheral neuropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Fever in the returned traveller",
+        "aliases": ["Returned traveller fever", "Post-travel fever", "Fever after travel"],
+        "utd": [["Overview", "fever in the returning traveler"]],
+        "summary": "",
+    },
+    {
+        "name": "Hazard ratio",
+        "aliases": ["Cox proportional hazards", "Cox regression"],
+        "utd": [["Overview", "hazard ratio survival analysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Receiver operating characteristic curve",
+        "aliases": ["ROC curve", "AUROC", "Area under the ROC curve"],
+        "utd": [["Overview", "receiver operating characteristic curve diagnostic tests"]],
+        "summary": "",
+    },
+    {
+        "name": "Kaplan-Meier survival analysis",
+        "aliases": ["Kaplan-Meier curve", "Log-rank test", "Survival analysis"],
+        "utd": [["Overview", "kaplan meier survival analysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Systematic review and meta-analysis",
+        "aliases": ["Meta-analysis", "Forest plot", "Systematic review"],
+        "utd": [["Overview", "systematic review and meta analysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Publication bias",
+        "aliases": ["Funnel plot", "Small study effects"],
+        "utd": [["Overview", "publication bias in meta analysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Case-control study",
+        "aliases": ["Case control design", "Recall bias"],
+        "utd": [["Overview", "case control study design"]],
+        "summary": "",
+    },
+    {
+        "name": "Cohort study",
+        "aliases": ["Prospective cohort study", "Retrospective cohort study"],
+        "utd": [["Overview", "cohort study design"]],
+        "summary": "",
+    },
+    {
+        "name": "Randomised controlled trial design",
+        "aliases": ["Randomised controlled trial", "RCT design", "Non-inferiority trial"],
+        "utd": [["Overview", "randomized controlled trial design"]],
+        "summary": "",
+    },
+    {
+        "name": "Shoulder dislocation",
+        "aliases": ["Anterior shoulder dislocation", "Posterior shoulder dislocation", "Dislocated shoulder"],
+        "utd": [["Overview", "anterior shoulder dislocation reduction"]],
+        "summary": "",
+    },
+    {
+        "name": "Elbow dislocation",
+        "aliases": ["Dislocated elbow", "Terrible triad of the elbow"],
+        "utd": [["Overview", "elbow dislocation reduction adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Patellar dislocation",
+        "aliases": ["Patella dislocation", "Lateral patellar dislocation"],
+        "utd": [["Overview", "acute patellar dislocation"]],
+        "summary": "",
+    },
+    {
+        "name": "Rib fracture",
+        "aliases": ["Rib fractures", "Fractured rib"],
+        "utd": [["Overview", "rib fractures management adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Open fracture management",
+        "aliases": ["Open fracture", "Compound fracture", "Gustilo-Anderson classification"],
+        "utd": [["Overview", "open fracture initial management"]],
+        "summary": "",
+    },
+    {
+        "name": "Fracture nonunion",
+        "aliases": ["Non-union", "Delayed union", "Fracture non-union"],
+        "utd": [["Overview", "fracture nonunion management"]],
+        "summary": "",
+    },
+    {
+        "name": "Flexor tendon sheath infection",
+        "aliases": ["Pyogenic flexor tenosynovitis", "Kanavel signs", "Flexor tenosynovitis"],
+        "utd": [["Overview", "flexor tenosynovitis of the hand"]],
+        "summary": "",
+    },
+    {
+        "name": "Clenched fist injury",
+        "aliases": ["Fight bite", "Human bite to the hand"],
+        "utd": [["Overview", "clenched fist injury human bite hand"]],
+        "summary": "",
+    },
+    {
+        "name": "Subungual haematoma",
+        "aliases": ["Nail bed haematoma", "Subungual hematoma"],
+        "utd": [["Overview", "subungual hematoma trephination"]],
+        "summary": "",
+    },
+    {
+        "name": "Ingrown toenail",
+        "aliases": ["Onychocryptosis", "Ingrowing toenail"],
+        "utd": [["Overview", "ingrown toenail management"]],
+        "summary": "",
+    },
+    {
+        "name": "Dry socket",
+        "aliases": ["Alveolar osteitis", "Post-extraction pain"],
+        "utd": [["Overview", "alveolar osteitis dry socket"]],
+        "summary": "",
+    },
 ]
 
 
@@ -65314,6 +65518,684 @@ RICH_SUMMARIES = {
         "prolonged grief disorder responds to grief-focused "
         "psychological therapy, and comorbid depression is treated on "
         "its own merits."
+    ),
+
+    "Informed consent": (
+        "Consent is valid only when the person has capacity, is "
+        "informed of material risks and decides voluntarily. "
+        "Australian law after Rogers v Whitaker judges disclosure by "
+        "what this patient would consider significant, not by what a "
+        "body of doctors would say. Features: the discussion covers "
+        "the condition, what is proposed, realistic alternatives "
+        "including doing nothing, material and rare but serious "
+        "risks, and what recovery involves. Cautions: consent taken "
+        "under sedation, on the trolley outside theatre, or by a "
+        "clinician who cannot perform the procedure is fragile. An "
+        "interpreter is required whenever language would limit "
+        "understanding, and a family member is not an interpreter. "
+        "Consent is specific to the procedure and can be withdrawn at "
+        "any time. Note: emergency treatment of a person who cannot "
+        "consent proceeds under the doctrine of necessity, limited to "
+        "what cannot safely wait, and a valid advance care directive "
+        "still binds. Key point: document the risks you actually "
+        "named, because a signed form is evidence of a process and no "
+        "substitute for one."
+    ),
+    "Decision-making capacity": (
+        "Capacity is specific to a decision and to a moment, so a "
+        "person may lack capacity to consent to surgery yet retain it "
+        "for where they live. Criteria: the person can understand the "
+        "relevant information, retain it long enough to decide, use "
+        "and weigh it, and communicate a choice. Failure of any one "
+        "limb means capacity is absent for that decision at that "
+        "time. Aetiology: delirium is the commonest reversible cause, "
+        "then dementia, intellectual disability, acute psychosis and "
+        "intoxication. An unwise decision is not itself evidence of "
+        "incapacity. Ix: treat what is reversible and reassess before "
+        "concluding, using a structured conversation rather than a "
+        "cognitive score alone. Mx: presume capacity, give "
+        "information in the simplest form that works, involve an "
+        "interpreter or communication aid, and reassess when the "
+        "person is at their best. Where capacity is absent, the "
+        "substitute decision maker follows the person's known wishes, "
+        "and each state sets its own hierarchy and tribunal. Note: "
+        "document the four limbs against the specific decision, not a "
+        "global verdict."
+    ),
+    "Gillick competence": (
+        "A young person under 16 who fully understands what is "
+        "proposed can consent to it themselves, a principle from "
+        "Gillick and adopted in Australia through Marion's case as "
+        "the mature minor doctrine. Definition: competence is judged "
+        "for the specific decision, so the same teenager may be "
+        "competent for contraception and not for major surgery. "
+        "Features: assess understanding of the treatment, its risks, "
+        "alternatives and consequences, plus enough maturity to weigh "
+        "them free of coercion. Encourage parental involvement "
+        "without requiring it, and record that you did. Mx: "
+        "contraception, sexual health care and mental health "
+        "treatment are the usual settings, and an Australian "
+        "prescriber may provide contraception to a competent minor "
+        "without parental consent. Confidentiality holds unless there "
+        "is risk of serious harm, where child protection obligations "
+        "override it. Refusal of life saving treatment is the point "
+        "at which courts become involved. Note: the bar rises with "
+        "the gravity of the decision, so competence is not a badge "
+        "earned once."
+    ),
+    "Death certification": (
+        "The medical certificate of cause of death records the "
+        "sequence that led to death, not the mode of dying. "
+        "Definition: part 1 gives the immediate cause on the top line "
+        "and works backwards to the underlying cause on the lowest "
+        "line, and part 2 carries contributing conditions outside "
+        "that sequence. Give the approximate interval for each line. "
+        "Cautions: cardiac arrest, respiratory arrest and old age are "
+        "modes rather than causes, and a certificate naming them is "
+        "returned unregistered. Criteria: the doctor completing it "
+        "must have attended during the last illness and be satisfied "
+        "the death was natural and its cause known, otherwise the "
+        "case goes to the coroner and no certificate is written. Mx: "
+        "the certificate is lodged with the state registry, usually "
+        "electronically, and a family cannot arrange a funeral until "
+        "it is done. Note: writing a plausible cause to spare a "
+        "family the coroner is the error that costs most, since a "
+        "death that should have been reported cannot be uncertified "
+        "later."
+    ),
+    "Coronial referral": (
+        "A reportable death must be notified to the coroner and "
+        "cannot be certified by the treating doctor. Criteria: deaths "
+        "that are violent or unnatural, unexpected, of unknown cause, "
+        "during or soon after an anaesthetic or procedure, in care or "
+        "custody, or where identity is unknown. Each state's Coroners "
+        "Act sets its own list, and deaths of a person under a mental "
+        "health order or in disability care are reportable in most. "
+        "Mx: notify police or the coroner's office early, leave "
+        "lines, tubes and drains in place, and avoid last offices "
+        "that would destroy evidence. The body is not released until "
+        "the coroner authorises it. Record the clinical facts "
+        "contemporaneously, since a statement may be requested months "
+        "later. Note: a referral is neither an accusation nor a "
+        "complaint, and saying that plainly to the family reduces "
+        "distress. Key point: wondering whether a death is reportable "
+        "is itself the answer, because unknown cause is a criterion "
+        "on its own."
+    ),
+    "Brain death determination": (
+        "Death determined by neurological criteria means irreversible "
+        "cessation of all brain function, and the person is legally "
+        "dead from that point. Criteria: preconditions come first, "
+        "with a known cause of catastrophic brain injury, an adequate "
+        "observation period, and exclusion of hypothermia, sedative "
+        "drugs, severe metabolic derangement and neuromuscular "
+        "blockade. Clinical testing then shows unresponsive coma, "
+        "absent brainstem reflexes, no motor response within cranial "
+        "nerve distribution, and apnoea despite a documented rise in "
+        "arterial carbon dioxide. Ix: two suitably qualified and "
+        "independent doctors examine, and imaging of cerebral blood "
+        "flow is used where clinical testing is impossible, such as "
+        "severe facial trauma or high cervical injury. Mx: tell the "
+        "family the person has died rather than that they are on life "
+        "support, and let the donation team raise organ donation "
+        "separately. Note: spinal reflexes persist and can be "
+        "dramatic, and they do not contradict the diagnosis."
+    ),
+    "Breaking bad news": (
+        "News is bad in proportion to the gap between what a person "
+        "expects and what they hear, so start by asking what they "
+        "already understand. Mx: a structured approach such as SPIKES "
+        "sets up the setting, checks perception, seeks an invitation, "
+        "gives knowledge in small pieces after a warning shot, "
+        "responds to emotion, and closes with a plan. Sit down, "
+        "silence the pager, and have present whoever the patient "
+        "wants there. Features: use plain words, say cancer or died "
+        "rather than a euphemism, then stop and let silence do the "
+        "work. Acknowledge the feeling before adding information, "
+        "since little after the first sentence is retained while "
+        "distress is high. Note: give prognosis as ranges, ask "
+        "permission before offering numbers, and frame hope around "
+        "what can still be controlled. Key point: book the follow up "
+        "conversation before leaving the room, because most of the "
+        "questions arrive the next day."
+    ),
+    "Root cause analysis": (
+        "A structured review of a serious clinical incident that asks "
+        "how the system allowed it rather than who was at fault. "
+        "Definition: it is used for sentinel events and the highest "
+        "severity incidents, and in Australian jurisdictions it runs "
+        "under statutory privilege so the report cannot be used in "
+        "disciplinary or legal proceedings. Mx: a multidisciplinary "
+        "team with no involvement in the event maps the timeline, "
+        "separates contributing factors from findings, and issues "
+        "recommendations that change the system rather than exhorting "
+        "people to be careful. Strong actions are forcing functions, "
+        "physical changes and standardisation, while education, "
+        "reminders and new policies are weak ones. Cautions: "
+        "hindsight bias makes the outcome look inevitable, and "
+        "counterfactual language smuggles in knowledge nobody had at "
+        "the time. Note: open disclosure to the patient and family "
+        "runs in parallel and is not delayed by the review. Key "
+        "point: an incident that recurs after training was the "
+        "recommendation is proof the analysis stopped too early."
+    ),
+    "Medication reconciliation": (
+        "Compiling the best possible medication history and comparing "
+        "it against what has been prescribed, at every transition of "
+        "care. Definition: an unintentional discrepancy at admission "
+        "is among the commonest preventable harms in hospital, and "
+        "the risk repeats at transfer and at discharge. Mx: build the "
+        "history from at least two sources, such as the patient or "
+        "carer plus the dispensing history or a My Health Record "
+        "summary. Ask about over the counter medicines, complementary "
+        "products, inhalers and anything stopped recently. Classify "
+        "each difference as intended or unintended, and document the "
+        "reason. Red flags: anticoagulants, insulin, opioids and "
+        "antiepileptics account for most of the harm. Note: the "
+        "discharge summary is the handover that fails most often, so "
+        "state what changed, why, and how long a short course runs. "
+        "Key point: a medicine nobody can account for is a "
+        "discrepancy, not a mystery to leave in the chart."
+    ),
+    "ASA physical status classification": (
+        "A six point description of a patient's systemic health "
+        "assigned before anaesthesia. Classification: I is a healthy "
+        "person, II is mild systemic disease without functional "
+        "limitation, III is severe systemic disease that limits "
+        "activity, IV is severe disease that is a constant threat to "
+        "life, V is moribund and not expected to survive without the "
+        "operation, and VI is a declared brain dead organ donor. E is "
+        "appended for an emergency. Uses: it gives a shared language "
+        "for risk, drives decisions about anaesthetic staffing and "
+        "location, and feeds surgical risk calculators and audit. "
+        "Cautions: it describes the patient and not the operation, "
+        "pregnancy is classified as at least II, and agreement "
+        "between assessors is only moderate at the II against III "
+        "boundary. It is not a standalone predictor of outcome. Note: "
+        "examples anchor it better than adjectives, so well "
+        "controlled hypertension on one agent is II while diabetes "
+        "with nephropathy and poor control is III. Key point: grade "
+        "the physiology in front of you, not the number the last "
+        "chart carried."
+    ),
+    "Newborn bloodspot screening": (
+        "Heel prick sampling onto filter paper at 48 to 72 hours of "
+        "age, offered to every Australian baby with parental consent. "
+        "Screening: the national panel covers more than 25 rare "
+        "conditions where early treatment changes the outcome, "
+        "including congenital hypothyroidism, cystic fibrosis, "
+        "phenylketonuria, congenital adrenal hyperplasia and medium "
+        "chain acyl-CoA dehydrogenase deficiency. Features: sampling "
+        "too early raises false negatives for some analytes, and a "
+        "preterm or transfused baby needs a repeat, so record "
+        "gestation, feeding and any transfusion on the card. Mx: a "
+        "positive screen is not a diagnosis and triggers urgent "
+        "recall for definitive testing, which families should hear "
+        "about when consent is taken. Declining is permitted and "
+        "documented. Note: cards are stored after testing, and "
+        "parents may ask what they are used for and whether theirs "
+        "can be returned. Key point: an unwell newborn is "
+        "investigated on clinical grounds, never reassured by a "
+        "normal screen that tested a fixed panel and nothing else."
+    ),
+    "Reproductive carrier screening": (
+        "Testing prospective parents for recessive and X linked "
+        "conditions they could pass on, ideally before conception. "
+        "Screening: Australian practice offers cystic fibrosis, "
+        "spinal muscular atrophy and fragile X screening to every "
+        "couple, with Medicare funding for both reproductive "
+        "partners, and expanded panels covering hundreds of genes are "
+        "available privately. Features: most people who screen "
+        "positive have no family history, which is exactly why it is "
+        "offered to everyone rather than to the worried. Mx: where "
+        "both partners carry the same recessive condition the risk is "
+        "one in four in every pregnancy, and the options are "
+        "preimplantation genetic testing, prenatal diagnosis, donor "
+        "gametes, or accepting the risk with a plan for the newborn. "
+        "A woman found to carry a fragile X premutation needs "
+        "assessment of her own risks. Note: a negative result lowers "
+        "risk without removing it, since no panel is exhaustive. Key "
+        "point: raise it at the preconception visit, because the "
+        "options narrow once a pregnancy has started."
+    ),
+    "Prostate specific antigen testing": (
+        "A glycoprotein made by prostate epithelium, raised by cancer "
+        "but also by benign hyperplasia, prostatitis, instrumentation "
+        "and recent ejaculation. Screening: Australian guidance "
+        "offers two yearly testing from 50 to 69 to men who want it "
+        "after an informed discussion, and from 40 to 45 with a "
+        "strong family history or known genetic risk. Population "
+        "screening is not recommended. Features: the harm is "
+        "overdiagnosis of disease that would never have caused "
+        "symptoms, and the treatment that follows it. Ix: repeat an "
+        "abnormal result before acting, then use multiparametric MRI "
+        "to decide who needs biopsy, which spares biopsies in "
+        "indolent disease. Digital rectal examination adds little in "
+        "primary care. Mx: low risk disease found this way is usually "
+        "managed by active surveillance rather than immediate "
+        "treatment. Note: 5-alpha reductase inhibitors roughly halve "
+        "the level, so double the result to interpret it. Key point: "
+        "the conversation belongs before the test, not after the "
+        "number comes back."
+    ),
+    "Chemotherapy-induced peripheral neuropathy": (
+        "A dose dependent, sensory predominant neuropathy from "
+        "platinum agents, taxanes, vinca alkaloids, bortezomib and "
+        "thalidomide, and a leading reason effective chemotherapy is "
+        "stopped early. Features: symmetrical glove and stocking "
+        "numbness, tingling and neuropathic pain beginning in the "
+        "toes, with vibration and proprioception lost before pain and "
+        "temperature. Oxaliplatin also causes an acute cold triggered "
+        "pharyngolaryngeal dysaesthesia within hours of infusion. "
+        "Weakness is late and suggests another cause. Ix: clinical, "
+        "with a baseline examination before treatment and grading "
+        "each cycle. Investigate asymmetry, rapid progression or "
+        "bulbar signs as something else. Mx: dose reduction or delay "
+        "is the only measure that changes the course. Duloxetine has "
+        "the best evidence for established painful disease, with "
+        "amitriptyline, pregabalin and gabapentin used in practice. "
+        "Note: platinum neuropathy can worsen for months after the "
+        "last dose, which surprises patients told treatment had "
+        "finished. Key point: proprioceptive loss makes falls the "
+        "practical risk."
+    ),
+    "Fever in the returned traveller": (
+        "Fever within weeks of return from the tropics is malaria "
+        "until excluded, whatever else also fits. Features: take an "
+        "itinerary with dates, rural or urban exposure, prophylaxis "
+        "actually taken, freshwater contact, bites, food, sex and "
+        "healthcare abroad, then match it to incubation. Under 10 "
+        "days favours dengue, rickettsial infection, chikungunya or a "
+        "bacterial cause. Ten to 21 days favours typhoid, malaria or "
+        "leptospirosis. Beyond a month think malaria, tuberculosis, "
+        "viral hepatitis, amoebic liver abscess or schistosomiasis. "
+        "Ix: thick and thin films or a rapid antigen test repeated "
+        "over 48 hours, blood cultures, full blood count looking for "
+        "thrombocytopenia or eosinophilia, liver function and dengue "
+        "serology. Mx: treat empirically for malaria if severely "
+        "unwell while tests return, and isolate early where viral "
+        "haemorrhagic fever is plausible. Note: eosinophilia points "
+        "to helminths rather than the common febrile viruses. Key "
+        "point: correctly taken prophylaxis does not exclude malaria."
+    ),
+    "Hazard ratio": (
+        "The ratio of the instantaneous event rate in one group to "
+        "that in another, averaged across follow up, and the usual "
+        "effect measure from a Cox proportional hazards model. Uses: "
+        "it is reported when time to event matters, such as survival, "
+        "relapse or time to first admission, and it uses information "
+        "from people who never have the event. A ratio of 0.7 means "
+        "the rate at any instant is 30% lower, which is not the same "
+        "as 30% fewer events. Cautions: the model assumes the hazards "
+        "stay proportional over time, and survival curves that cross "
+        "are a visual sign that they do not. It carries no "
+        "information about how much time was gained, so pair it with "
+        "median survival or an absolute difference. A ratio near 1 "
+        "with a wide interval means an underpowered study, not proven "
+        "equivalence. Note: a striking ratio on a rare outcome can "
+        "still be a trivial absolute benefit. Key point: read the "
+        "ratio next to the curve, since the number is an average of a "
+        "shape."
+    ),
+    "Receiver operating characteristic curve": (
+        "A plot of true positive rate against false positive rate "
+        "across every possible cut-off of a continuous test. Uses: "
+        "the area under the curve summarises discrimination, running "
+        "from 0.5 for a coin toss to 1.0 for perfect separation, and "
+        "it allows two tests to be compared without committing to a "
+        "threshold. Features: moving the threshold trades the two "
+        "errors against each other, so the choice depends on the cost "
+        "of a missed case against the cost of a false alarm. The "
+        "point nearest the top left corner is the mathematical "
+        "optimum and is rarely the clinical one. Cautions: the area "
+        "ignores prevalence and calibration, so a test with excellent "
+        "discrimination can still give predicted probabilities that "
+        "are unusable. Curves from populations with different disease "
+        "spectrum are not comparable. Note: to rule out a dangerous "
+        "diagnosis, choose the threshold by the sensitivity you need "
+        "and accept the specificity left over. Key point: "
+        "discrimination is not the same thing as usefulness."
+    ),
+    "Kaplan-Meier survival analysis": (
+        "A method for estimating the probability of remaining event "
+        "free over time when people are followed for different "
+        "lengths of time. Definition: each event drops the curve by a "
+        "step, and anyone still event free when their follow up ends "
+        "is censored, contributing to the denominator until they "
+        "leave it. Uses: median survival is read where the curve "
+        "crosses 50%, and the numbers at risk printed under the axis "
+        "show how much data supports the tail. Features: groups are "
+        "compared with the log-rank test, which asks whether whole "
+        "curves differ rather than comparing one time point. "
+        "Cautions: censoring must be unrelated to prognosis, so "
+        "patients lost because they became too unwell break the "
+        "method. The right hand end of any curve rests on few people "
+        "and moves wildly. Note: the log-rank test returns a p value "
+        "and no effect size, which is why a Cox model is usually "
+        "fitted alongside it. Key point: quoting five year survival "
+        "from a curve whose numbers at risk have run out is the "
+        "classic misreading."
+    ),
+    "Systematic review and meta-analysis": (
+        "A systematic review answers a defined question by finding, "
+        "appraising and summarising every eligible study under a "
+        "prespecified protocol, and a meta-analysis is the optional "
+        "statistical pooling of their results. Features: prospective "
+        "registration, a reproducible search of several databases, "
+        "duplicate screening and formal risk of bias assessment are "
+        "what separate it from a narrative review. Results are shown "
+        "as a forest plot, each study a box scaled to its weight, "
+        "with the pooled estimate as a diamond. Cautions: pooling "
+        "clinically dissimilar studies gives a precise answer to no "
+        "question, so heterogeneity is quantified and inspected "
+        "rather than merely reported. A pooled estimate inherits "
+        "every bias of the trials inside it, and no amount of "
+        "arithmetic repairs them. Note: sitting high in an evidence "
+        "hierarchy is a property of the method, not a guarantee about "
+        "the trials beneath it. Key point: read the inclusion "
+        "criteria and the risk of bias table before you read the "
+        "diamond."
+    ),
+    "Publication bias": (
+        "Studies with positive, significant results are more likely "
+        "to be written up, submitted, accepted and cited, so the "
+        "published literature overstates treatment effects. "
+        "Aetiology: author decisions drive more of it than editorial "
+        "rejection, and industry funded trials with unwelcome results "
+        "have historically gone unreported. Time lag, language and "
+        "selective outcome reporting act in the same direction. "
+        "Features: it is suspected when a funnel plot is asymmetric, "
+        "with small negative studies missing from one corner, and "
+        "tested formally with the Egger test. Small study effects "
+        "have other explanations, so asymmetry is a prompt to look "
+        "rather than a verdict. Mx: prospective trial registration, "
+        "mandatory results reporting, and searching registries and "
+        "preprints for unpublished data are the defences. Note: a "
+        "meta-analysis of small positive trials for a treatment that "
+        "then fails a large trial is exactly the pattern this "
+        "predicts. Key point: no published negative trials is not "
+        "evidence that none were run."
+    ),
+    "Case-control study": (
+        "An observational design that starts from the outcome, "
+        "comparing the exposure histories of people with a disease "
+        "against controls without it. Uses: it is the efficient "
+        "design for rare diseases and long latency, and often the "
+        "only practical one when a cohort would take decades. "
+        "Features: it yields an odds ratio and cannot give incidence "
+        "or absolute risk, because the investigator sets the ratio of "
+        "cases to controls. Controls must come from the population "
+        "that produced the cases and be selected independently of "
+        "exposure. Cautions: recall bias, where people with disease "
+        "search their memories harder, and selection bias in control "
+        "recruitment are the characteristic threats. Exposure "
+        "measured after diagnosis may be a consequence of the disease "
+        "rather than its cause. Mx: matching and multivariable "
+        "adjustment handle known confounders, and matched pairs must "
+        "then be analysed as pairs. Note: a nested case-control study "
+        "inside an existing cohort avoids most of this by using "
+        "exposure recorded before anyone fell ill."
+    ),
+    "Cohort study": (
+        "An observational design that follows people grouped by "
+        "exposure and counts outcomes as they occur. Types: "
+        "prospective cohorts recruit and then wait, while "
+        "retrospective cohorts assemble exposure and outcome from "
+        "records already collected. Uses: cohorts give incidence, "
+        "relative risk and absolute risk, capture several outcomes "
+        "from one exposure, and are the strongest observational "
+        "design for causal inference. Cautions: loss to follow up "
+        "that differs by exposure biases the result, confounding by "
+        "indication is unavoidable when clinicians chose the "
+        "exposure, and rare outcomes need very large numbers. "
+        "Immortal time bias appears when the exposed group had to "
+        "survive long enough to be classified as exposed. Mx: adjust "
+        "for measured confounders, report completeness of follow up, "
+        "and test the unmeasured ones with a sensitivity analysis. "
+        "Note: a cohort establishes temporality, which is precisely "
+        "what a cross-sectional study cannot. Key point: it answers "
+        "questions no trial will be run for, at the price of never "
+        "quite excluding confounding."
+    ),
+    "Randomised controlled trial design": (
+        "Random allocation is the only method that balances unknown "
+        "as well as known confounders, which is why the randomised "
+        "trial anchors the evidence hierarchy. Features: a sequence "
+        "generated centrally, allocation concealed from whoever "
+        "recruits, blinding of participants, clinicians and outcome "
+        "assessors wherever possible, and analysis by intention to "
+        "treat. Types: superiority trials ask whether a difference "
+        "exists, while non-inferiority trials ask whether a new "
+        "treatment stays within a prespecified margin of an old one, "
+        "and that margin must be justified before the trial starts. "
+        "Cautions: an underpowered trial reporting no difference has "
+        "shown nothing, per-protocol analysis reintroduces the "
+        "confounding that randomisation removed, and a composite "
+        "outcome can be driven entirely by its softest component. "
+        "Note: pragmatic trials trade internal validity for a "
+        "population that resembles the clinic. Key point: read who "
+        "was excluded before applying the result to the patient in "
+        "front of you."
+    ),
+    "Shoulder dislocation": (
+        "Over 95% are anterior, from an abducted externally rotated "
+        "arm forced backwards. Features: the arm is held slightly "
+        "abducted and externally rotated, the deltoid contour is "
+        "flattened into a squared off shoulder, and internal rotation "
+        "is resisted. Posterior dislocation follows a seizure or "
+        "electric shock, holds the arm internally rotated and locked, "
+        "and is the one missed on a single anteroposterior film. Ix: "
+        "radiographs before and after reduction with an axillary or "
+        "scapular Y view, and document axillary nerve sensation over "
+        "the regimental badge area and the radial pulse each time. "
+        "Mx: reduce under analgesia with or without sedation using a "
+        "gentle traction technique such as external rotation or "
+        "scapular manipulation, then a sling for comfort and early "
+        "physiotherapy. Complications: recurrent instability is close "
+        "to the rule under 20 years of age, while a rotator cuff tear "
+        "is the equivalent problem over 40. Note: an associated "
+        "greater tuberosity fracture does not prevent closed "
+        "reduction."
+    ),
+    "Elbow dislocation": (
+        "Usually posterolateral, from a fall on an outstretched hand "
+        "with the elbow slightly flexed. Features: the elbow is held "
+        "flexed with obvious deformity, the olecranon is prominent "
+        "posteriorly, and the three bony points lose their normal "
+        "triangle. Classification: simple dislocations have no "
+        "fracture and do well, while complex ones involve the radial "
+        "head, coronoid and lateral collateral ligament, the terrible "
+        "triad, and are unstable. Ix: radiographs before and after "
+        "reduction, with computed tomography afterwards if a fracture "
+        "is present. Assess median, ulnar, radial and anterior "
+        "interosseous nerve function and the brachial pulse at every "
+        "step. Mx: reduce under procedural sedation with in line "
+        "traction, correcting medial or lateral shift before flexing, "
+        "then test stability through range and splint at 90 degrees "
+        "briefly. Complications: stiffness from prolonged "
+        "immobilisation is the main long term problem, so early "
+        "movement is the goal. Note: heterotopic ossification follows "
+        "the higher energy injuries."
+    ),
+    "Patellar dislocation": (
+        "The patella dislocates laterally, typically as a flexed knee "
+        "twists over a planted foot in a young athlete. Risk factors: "
+        "trochlear dysplasia, patella alta, a high quadriceps angle, "
+        "generalised ligamentous laxity and female sex. Features: the "
+        "knee is held flexed with an obvious lateral mass, or it has "
+        "already reduced spontaneously and presents as a "
+        "haemarthrosis with tenderness over the medial retinaculum "
+        "and a positive apprehension test. Ix: radiographs including "
+        "a skyline view, looking for the osteochondral fragment that "
+        "changes management. Mx: reduce by extending the knee with "
+        "gentle medial pressure, aspirate a tense haemarthrosis for "
+        "comfort, then brace briefly and rehabilitate the quadriceps "
+        "with attention to vastus medialis. Refer for a loose body, "
+        "an osteochondral fracture or recurrent instability. "
+        "Complications: recurrence approaches half in adolescents. "
+        "Note: a first dislocation in an older adult with a trivial "
+        "mechanism should prompt a look for another diagnosis."
+    ),
+    "Rib fracture": (
+        "Common after blunt chest trauma and after minor falls in the "
+        "elderly, where the fracture matters less than the pneumonia "
+        "that follows it. Features: localised tenderness with pain on "
+        "inspiration and shallow splinted breathing. Fractures of the "
+        "first three ribs mark high energy transfer, and of the ninth "
+        "to twelfth raise liver, spleen and kidney injury. Ix: "
+        "radiographs miss many fractures and are taken mainly to find "
+        "the pneumothorax, haemothorax or contusion that changes "
+        "management, with computed tomography after high energy "
+        "trauma. Mx: analgesia is the treatment, escalating from "
+        "regular paracetamol and a non-steroidal to an opioid, with a "
+        "regional block or epidural for multiple fractures. Add "
+        "incentive spirometry, early mobilisation and physiotherapy. "
+        "Red flags: three or more fractures, age over 65, an oxygen "
+        "requirement or a flail segment all argue for admission. "
+        "Note: analgesia good enough to allow a deep breath and a "
+        "cough is not comfort care, it is the pneumonia prevention."
+    ),
+    "Open fracture management": (
+        "A fracture communicating with the outside through a wound, "
+        "where contamination and soft tissue loss drive the outcome "
+        "more than the bone does. Classification: Gustilo-Anderson "
+        "grades by wound size, contamination and soft tissue cover, "
+        "with type III subdivided by periosteal stripping, vascular "
+        "injury and the need for flap coverage. Mx: intravenous "
+        "antibiotics within an hour, usually cefazolin with cover "
+        "broadened for gross contamination, and check tetanus status. "
+        "Photograph the wound once, remove gross debris, cover with a "
+        "saline soaked dressing and splint. Formal debridement in "
+        "theatre follows within 12 to 24 hours, with skeletal "
+        "stabilisation and early soft tissue cover by a combined "
+        "orthopaedic and plastics team. Ix: neurovascular assessment "
+        "before and after splinting, and radiographs of the joint "
+        "above and below. Complications: infection, non-union and "
+        "compartment syndrome. Note: irrigating in the emergency "
+        "department does not replace theatre and can drive "
+        "contamination deeper. Key point: the clock starts at injury, "
+        "not at arrival."
+    ),
+    "Fracture nonunion": (
+        "A fracture that has stopped progressing towards union, "
+        "conventionally by 6 to 9 months, although the trajectory "
+        "across serial films matters more than the calendar. Types: "
+        "hypertrophic non-union shows abundant callus and reflects "
+        "inadequate stability, while atrophic non-union shows none "
+        "and reflects poor biology or blood supply. Risk factors: "
+        "smoking, diabetes, infection, an open injury, segmental bone "
+        "loss, and sites with tenuous supply such as the scaphoid "
+        "waist, femoral head and base of the fifth metatarsal. "
+        "Features: persistent pain at the site, movement at the "
+        "fracture and tenderness long past the expected healing time. "
+        "Ix: serial radiographs, computed tomography to confirm the "
+        "absence of bridging bone, and inflammatory markers, since "
+        "infection must be excluded before any reconstruction. Mx: "
+        "correct the cause. Hypertrophic non-union needs stability, "
+        "atrophic needs graft and biology, and infected non-union "
+        "needs debridement first. Note: stopping smoking shifts union "
+        "rates more than any choice of implant."
+    ),
+    "Flexor tendon sheath infection": (
+        "A closed space infection of a finger flexor sheath, usually "
+        "after a penetrating injury, and a surgical emergency because "
+        "tendon necrosis begins within days. Criteria: the four "
+        "Kanavel signs are a fusiform swollen digit, the finger held "
+        "slightly flexed, tenderness along the whole sheath, and pain "
+        "on passive extension, which appears earliest. Aetiology: "
+        "Staphylococcus aureus and streptococci predominate, a bite "
+        "adds Pasteurella or Eikenella, and a garden injury raises "
+        "atypical organisms. Ix: the diagnosis is clinical. Take "
+        "radiographs for a retained foreign body, mark the extent of "
+        "swelling, and do not let imaging delay referral. Mx: urgent "
+        "hand surgical referral with intravenous antibiotics, "
+        "elevation and splinting while awaiting theatre. Very early "
+        "presentations may settle on antibiotics under close "
+        "observation, but established infection needs sheath "
+        "irrigation. Complications: adhesions and stiffness are "
+        "common even after good treatment. Note: the thumb and little "
+        "finger sheaths communicate at the wrist, so infection can "
+        "track between them."
+    ),
+    "Clenched fist injury": (
+        "A wound over the knuckle from a punch to a mouth, and the "
+        "most consequential bite in medicine because patients "
+        "minimise it and present late. Aetiology: oral flora "
+        "inoculated into the joint, with Eikenella corrodens "
+        "alongside staphylococci, streptococci and anaerobes. "
+        "Features: a small innocent looking wound over the third or "
+        "fourth metacarpophalangeal joint. As the fist opens, the "
+        "skin, extensor tendon and capsule wounds slide out of "
+        "alignment and seal bacteria inside the joint. Ix: "
+        "radiographs for a tooth fragment or fracture, and explore "
+        "the wound through the full range of movement rather than in "
+        "extension alone. Mx: never close the wound primarily. "
+        "Irrigate thoroughly, give amoxicillin with clavulanate or "
+        "intravenous therapy if infection is established, review "
+        "tetanus, splint and elevate, and refer to hand surgery for "
+        "any joint or tendon involvement. Assess blood-borne virus "
+        "risk. Note: the patient who volunteers that they cut it on a "
+        "wall has given you the mechanism by denying it."
+    ),
+    "Subungual haematoma": (
+        "Blood trapped between nail plate and nail bed after a crush "
+        "injury, painful because the space cannot expand. Features: a "
+        "tense dark collection under the nail with throbbing pain out "
+        "of proportion to the visible injury. Ix: radiograph the "
+        "distal phalanx after a crush, since an underlying tuft "
+        "fracture is common and makes this an open fracture if the "
+        "nail plate is disrupted. Mx: trephine for pain relief while "
+        "the nail is intact, using a heated cautery tip or a needle "
+        "rotated through the plate, which is quick, needs no "
+        "anaesthetic and relieves pain immediately. A collection "
+        "under more than half the nail with a disrupted nail fold "
+        "warrants nail removal and repair of the bed to prevent later "
+        "deformity. Antibiotics are not routine after simple "
+        "trephination of an intact nail. Note: warn that the nail "
+        "will be shed over weeks and takes months to regrow. Key "
+        "point: pain is the indication for trephination, not the size "
+        "of the collection."
+    ),
+    "Ingrown toenail": (
+        "The nail edge penetrates the lateral nail fold, almost "
+        "always on the hallux, producing inflammation and then "
+        "infection and granulation tissue. Risk factors: tight "
+        "footwear, curved nail plates, hyperhidrosis, obesity, and "
+        "trimming the corners down rather than cutting straight "
+        "across. Features: pain and swelling of the lateral fold, "
+        "then discharge and exuberant granulation tissue as it "
+        "progresses. Diabetes and peripheral vascular disease lower "
+        "the threshold for referral considerably. Mx: mild cases "
+        "settle with warm soaks, correct nail cutting, roomy footwear "
+        "and elevation of the corner with a cotton wisp. Persistent "
+        "or infected cases need partial nail avulsion under a digital "
+        "ring block, and phenol ablation of the germinal matrix cuts "
+        "recurrence to under 10%. Antibiotics alone will not resolve "
+        "a nail that is still penetrating skin. Note: granulation "
+        "tissue signals ongoing penetration rather than infection "
+        "needing another antibiotic course. Key point: recurrence is "
+        "a matrix problem, so definitive treatment addresses the "
+        "matrix."
+    ),
+    "Dry socket": (
+        "Loss or breakdown of the clot in an extraction socket "
+        "exposes bone, and it is the commonest complication after "
+        "removal of a lower third molar. Risk factors: smoking, oral "
+        "contraceptive use, a traumatic or difficult extraction, "
+        "previous dry socket and poor oral hygiene. Features: severe "
+        "throbbing pain starting 2 to 4 days after the extraction, "
+        "radiating to the ear, with an empty looking socket, visible "
+        "bone and a foul taste. Fever, trismus and facial swelling "
+        "point to infection instead. Ix: clinical, with a radiograph "
+        "only if a retained root or fragment is suspected. Mx: gentle "
+        "warm saline irrigation, a medicated dressing placed by the "
+        "dentist, and regular simple analgesia, since antibiotics add "
+        "nothing without spreading infection. Refer back to the "
+        "treating dentist rather than managing it with repeat opioid "
+        "prescriptions. Note: pain that begins on the third day after "
+        "an extraction in an otherwise well patient is this until "
+        "proven otherwise. Key point: prevention is smoking cessation "
+        "and preoperative chlorhexidine."
     ),
 }
 
