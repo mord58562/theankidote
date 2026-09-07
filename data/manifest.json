@@ -1,6 +1,7 @@
 {
   "schema": 1,
-  "content_version": "07.09.2026",
-  "sha256": "7baf2dd68122d97e108d96bb5c5d30c9ce471131d6541de8c021a8f69ae0f30a",
-  "bytes": 6230518
+  "content_version": "07.09.2026.6",
+  "sha256": "34c33e934382c4308dbd05570348fe57d2c3edfec479b12991262b08a2fbd0ef",
+  "bytes": 6292420,
+  "url": "https://github.com/mord58562/theankidote/releases/download/content-07.09.2026.6/library.json"
 }
