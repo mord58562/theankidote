@@ -30,6 +30,55 @@ acronyms that are also English words stop firing on the words.
 
 ### Fixed
 
+- **The popup's honesty fix did not work.** The release notes below say
+  the popup stopped claiming StatPearls articles it does not have. Two
+  faults, either sufficient on its own, meant it never did.
+  `pearls/_reviewer.py` built its lookup dicts without the `link` key
+  that `_conditions._link_kind` computes and `_span` reads, so
+  `data-sp-link` was always the "search" default and `isArticle` in
+  `web/marker.js` was always false - the badge read "The AnkiDote" even
+  on conditions with a real NBK chapter. `marker.js` then set the
+  button label from `isArticle` correctly and reassigned it
+  unconditionally sixty lines later, from a block that predates the fix
+  by four releases, so every popup promised "Open article" regardless.
+  Both fixed; the label now covers UpToDate, preclinical and custom too.
+- **`highlightColor` reached the card stylesheet unvalidated.** The
+  same class as the dock bug fixed in this release, at the site that
+  was missed - and the worse of the two, since the reviewer webview
+  carries Anki's own `pycmd` bridge. One validator now serves both, and
+  a test scans for a read that skips it rather than naming two paths
+  someone has to remember.
+- **The chat dock reloaded on every resize.** `self.load()` sat in
+  `resizeEvent`, so the dock loaded at all only because showing it
+  resizes it, and dragging the splitter renavigated continuously,
+  discarding a half-typed message and the conversation above it.
+- **Escape left the reviewer.** Dismissing a popup did not stop the
+  event, so Anki took it too, as "leave the reviewer".
+- **The diagnostic log was never written.** `_log.py` imported `os`
+  only inside `diag_path()`, so `diag()` raised NameError on every call
+  into its own bare except. "Reveal diagnostic log" handed the user an
+  empty file. The module also defined no `log`, the name
+  `pearls/_library.py` and `_updater.py` both import, so every message
+  about a refused schema, a failed checksum or a quarantined payload
+  went nowhere - the messages that explain why content stopped
+  arriving.
+- **Certificate errors were accepted for domains nobody trusted.** The
+  UpToDate view appended the configured home host to its trust list
+  without a leading dot, making `endswith` a substring test: a home
+  host of `example.edu` also trusted `notexample.edu`.
+- **The popup rendered light on dark pages in the dock.** It read
+  Anki's `nightMode` body class, which exists on a card and never on an
+  NCBI or DrugBank page.
+- **Acronym expansions searched with Australian spelling.**
+  `_term_search_url` existed twice and the reviewer's copy never
+  applied `_us_spelling`, so "oesophageal varices" went to a database
+  that indexes only "esophageal".
+- The content channel is pinned to the hosts it publishes from; the
+  manifest hash validates its own payload and so proves nothing about
+  who wrote it. `content_version` is now required, since without it
+  updates stopped permanently and silently. The newer of the bundled
+  and downloaded libraries wins, rather than the downloaded one always.
+
 - **1.16 MB of authoring notes shipped in every release.** `docs/`
   (session checkpoints, coverage measurements, priority-gap lists),
   `audit/` (audit transcripts plus an 870 KB uncompressed snapshot of

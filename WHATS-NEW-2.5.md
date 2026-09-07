@@ -86,3 +86,23 @@ The package now ships what runs and the release notes, and nothing else.
 Even with a large batch of new terms added in the same release, the
 download is smaller than the last one was. Nothing you can see or use
 has been removed.
+
+## Smaller things that were quietly wrong
+
+Pressing Escape to dismiss a popup also dropped you out of the
+reviewer, because the key reached Anki as well.
+
+Resizing the AI chat dock reloaded the page. Dragging the splitter
+while a conversation was open threw the conversation away, and a
+half-typed message with it.
+
+Popups opened over a StatPearls or DrugBank page in the sidebar were
+always styled light, whatever your theme, because they were looking for
+a signal that only exists on a card.
+
+Searching from an acronym's expansion used Australian spelling against
+a database that only indexes American, so "oesophageal varices" found
+nothing.
+
+And Settings has always offered to reveal a diagnostic log that was
+never being written. It is now.

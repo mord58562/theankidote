@@ -133,3 +133,83 @@ Three things worth carrying forward:
    the triage, the drafts and the coverage script. It is deliberately
    not in the tree - the extracted curriculum lists are institutional
    material and this remote is public.
+
+
+## The audit, finished
+
+Seven passes ran in parallel: AI tells, future-proofing, usability,
+simplicity, speed, security, and a blind from-scratch design (Phase 4,
+which is what makes this a full audit rather than a light one). Every
+finding below was verified against the code before it was acted on.
+
+**The headline: 2.5.0's flagship fix did not work.** The release notes
+say popups stopped claiming StatPearls articles they do not have. Two
+independent faults meant they never stopped. `_reviewer.py` dropped the
+`link` key between the builder that computes it and the span that reads
+it, so `isArticle` was always false; and `marker.js` set the button
+label correctly and then overwrote it unconditionally from a block four
+releases older. The badge said "The AnkiDote" on articles that exist,
+the button said "Open article" on articles that do not. Exactly
+inverted.
+
+Nine more real defects fixed, listed in the CHANGELOG under 2.5.0.
+
+**Three findings were rejected on inspection**, and the reasoning is
+now in the files so the next audit does not re-raise them:
+
+1. The Settings window writing on close is deliberate, and says so in a
+   comment directly above the writes.
+2. The rich merge writing into `new_conditions` in place is safe. The
+   build re-sources them from `content/_rich.py`, where the stubs are
+   filled from `RICH_SUMMARIES` at import, so an edited override still
+   takes effect. Two separate audits flagged this one.
+3. The `!=` schema gate is correct. A bump means an existing key
+   changed meaning, so a newer client genuinely cannot read an older
+   library; refusing both directions is the contract, not an oversight.
+
+### Deliberately not done
+
+**The dock's per-node highlighting.** Measured: `highlight_text` is
+called once per text node, 105 times on a 66 KB article, 16.9 ms
+against 5.8 ms for a single pass, and up to 620 ms of blocked main
+thread at the 4000-node cap. The fix is to resolve once over the joined
+text and run only the substitution per node. It is the largest
+remaining win and it is a rewrite of the hot path, which cannot be
+runtime-tested from here - the add-on is never installed locally and
+Anki is never restarted. Shipping an untested restructure of the
+highlighting path into a release about to be published is worse than
+carrying the cost one more release. The number is recorded; the
+handover's old "2.5 ms, no concern" line is corrected in place, since
+it measured a function nothing calls.
+
+**The popup's vertical rhythm.** Fourteen spacing values in one box.
+Snapping them to a scale is the ordinary fix and it costs content: the
+cap is 900px, 29 summaries are already over it, `PopupHeightBudget`
+mirrors this CSS line for line, and the ratchet only allows the count
+to fall. The colour, weight, radius and register fixes were all free
+and were made; the spacing was not.
+
+**Signing the content manifest.** Two reviews arrived at this
+independently. The hash validates the manifest's own payload, so it
+proves the download was not truncated and nothing about who wrote it.
+The host is pinned now, which closes the config-repointing hole; a
+signature against a key in the package is the real answer and is a
+larger change than belongs here.
+
+### From the blind design, worth carrying
+
+The from-scratch design (`$CLAUDE_JOB_DIR/tmp/from-scratch-design.md`,
+653 lines, written without reading this tree) converged on the current
+architecture more often than not: the engine/library split, the
+case-sensitive index for acronyms, refusing to match ordinary words.
+Two divergences are worth recording.
+
+1. **`core/` may not import `aqt`.** Today `pearls/_reviewer.py`
+   imports `aqt` at module scope, so none of the matching logic can be
+   exercised without Anki. This is not theoretical: verifying one of
+   this session's own fixes failed with `ModuleNotFoundError: aqt` and
+   had to be checked through `_conditions` instead.
+2. **A signed feed and a payload carrying no HTML.** The second half
+   matters less here - every path from library text to the DOM is
+   escaped, and that was traced end to end this session - but the
+   first is the item above.
