@@ -2,6 +2,19 @@
 
 Two kinds of dishonesty in the popup, both fixed.
 
+## The sidebar highlights terms as well
+
+Until now the underlines and popups only appeared on your cards. Open a
+StatPearls or DrugBank article in the sidebar and hit a term you do not
+know, and you were on your own. Those pages are now marked up the same
+way, with the same popups, drawn from the same library - so a term you
+meet while reading about something else is one hover away, in the panel
+you are already in. Clicking through follows the link in the sidebar
+rather than opening a browser.
+
+It can be turned off in Settings if you would rather read the page
+clean.
+
 ## Eponyms with apostrophes work again
 
 If a card said "Addison's disease" and the apostrophe was the curly one

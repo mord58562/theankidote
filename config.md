@@ -17,6 +17,7 @@ JSON, but both are supported.
 | `enableHighlightsOnQuestions` | bool | `true` | Highlight on the question side, not just the answer. |
 | `pearlsHomePage` | string | `"statpearls"` | Which page the side panel's Home button loads. Accepts `"statpearls"` or `"drugbank"`. Toggleable from the dock's home-button dropdown. |
 | `enableArticleViewer` | bool | `true` | If true, popup clicks open the side panel; if false, they open the user's external browser. |
+| `enableDockHighlights` | boolean | `true` | Highlight recognised terms on StatPearls and DrugBank pages in the reference sidebar, the same way cards are highlighted. |
 | `highlightColor` | hex string | `"#0fcad4"` | Underline colour for highlighted terms. |
 | `maxResults` | int | `8` | How many entries the sidebar's article list shows, best-ranked first. `0` removes the cap. |
 | `customTerms` | string (JSON) / null | `null` | User-defined popup terms - see "Custom popup terms" below. |

@@ -1406,6 +1406,13 @@ def _build_pearls_group(_w):
     articleview_cb.setToolTip("Off: open the source in your default browser.")
     lay.addWidget(articleview_cb)
 
+    dockhl_cb = _w["QCheckBox"]("Highlight terms in the sidebar too")
+    dockhl_cb.setChecked(_config.get("enableDockHighlights") is not False)
+    dockhl_cb.setToolTip(
+        "Marks up StatPearls and DrugBank pages in the reference sidebar\n"
+        "with the same underlines and popups used on cards.")
+    lay.addWidget(dockhl_cb)
+
     # Held in a mutable box so the button can update it without the
     # caller needing a widget handle to read back on close.
     state = {"raw": _config.get("customTerms") or ""}
@@ -1430,7 +1437,7 @@ def _build_pearls_group(_w):
     row.addWidget(count_lab)
     row.addStretch(1)
     lay.addLayout(row)
-    return box, pearls_qcb, articleview_cb, state
+    return box, pearls_qcb, articleview_cb, dockhl_cb, state
 
 
 def _build_utd_group(_w):
@@ -1776,7 +1783,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
         return page
 
     modules_box, pearls_cb, utd_cb, chat_cb = _build_modules_group(_w, False)
-    pearls_box, pearls_qcb, articleview_cb, terms_state = _build_pearls_group(_w)
+    pearls_box, pearls_qcb, articleview_cb, dockhl_cb, terms_state = _build_pearls_group(_w)
     order_box, toolbar_order_list = _build_order_group(_w)
     library_box, library_update_cb = _build_library_group(_w)
     misc_box, remember_cb, _ = _build_misc_group(_w)
@@ -1866,6 +1873,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     _config.set_value("enableChat",       chat_cb.isChecked())
     _config.set_value("enableHighlightsOnQuestions", pearls_qcb.isChecked())
     _config.set_value("enableArticleViewer", articleview_cb.isChecked())
+    _config.set_value("enableDockHighlights", dockhl_cb.isChecked())
     _config.set_value("uptodateHomeUrl", utd_url_edit.text().strip() or None)
     _config.set_value("chatCustomProviderUrl", chat_url_edit.text().strip() or None)
     _config.set_value("chatAdblockEnabled", adblock_cb.isChecked())

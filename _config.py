@@ -28,6 +28,7 @@ _DEFAULTS = {
     "enableHighlights": True,
     "enableHighlightsOnQuestions": True,
     "enableArticleViewer": True,
+    "enableDockHighlights": True,
     "highlightColor": "#0fcad4",
 
     # User-defined popup terms.  String containing a JSON array of

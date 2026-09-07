@@ -178,7 +178,15 @@ def _strip_html(html: str) -> str:
 def _card_text(card) -> str:
     """Plain-text concatenation of all note fields, stripped of HTML.
     Cached on the card object so multiple consumers (query builder, acronym
-    resolver) don't repeatedly re-strip."""
+    resolver) don't repeatedly re-strip.
+
+    A plain string is passed straight through. Every term builder below
+    starts by calling this, so accepting a string is what lets the
+    reference dock reuse all five of them on page text rather than on a
+    card - see `highlight_text`.
+    """
+    if isinstance(card, str):
+        return card
     cached = getattr(card, "_ap_text", None)
     if cached is not None:
         return cached
@@ -577,6 +585,38 @@ def _inject_highlights(html: str, results: list, color: str) -> str:
             i = j
 
     return _HIGHLIGHT_CSS_TPL.format(c=color) + ''.join(result)
+
+
+def highlight_text(text: str, color: str = "") -> str:
+    """Wrap every recognised term in `text` in an sp-mark span.
+
+    The reviewer path highlights a card; this highlights any text, which
+    is what the reference dock needs to mark up a StatPearls or DrugBank
+    page. It reuses all five term builders and the same injector, so the
+    dock cannot drift from the reviewer: one vocabulary, one matcher,
+    one set of data attributes, and `web/marker.js` renders the popup in
+    both places.
+
+    Returns `text` unchanged when nothing matches, so a caller can test
+    identity to skip a DOM write.
+    """
+    if not text or not text.strip():
+        return text
+    try:
+        results = (_acronym_terms(text) + _drug_terms(text)
+                   + _condition_terms(text) + _preclinical_terms(text)
+                   + _custom_term_matches(text))
+    except Exception as exc:
+        _log.error("highlight_text resolve", exc)
+        return text
+    if not results:
+        return text
+    col = color or _config.get("highlightColor") or "#0fcad4"
+    try:
+        return _inject_highlights(text, results, col)
+    except Exception as exc:
+        _log.error("highlight_text inject", exc)
+        return text
 
 
 def _on_card_will_show(html: str, card, kind: str) -> str:

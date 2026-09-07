@@ -30,6 +30,7 @@ except (ImportError, AttributeError):
     _NO_HSCROLL = Qt.ScrollBarAlwaysOff
 
 import json
+import os
 import re
 
 from . import _webengine, _log, _config, _theme
@@ -367,6 +368,124 @@ _rebuild_qss()
 # Glyph optical sizes and header metrics live in `_theme` now - all
 # three docks draw from the same table so the same glyph is the same
 # size wherever it appears.
+
+
+# ──────────────────────────────────────────────────────────────────────────
+# In-page highlighting for the reference dock
+# ──────────────────────────────────────────────────────────────────────────
+# The reviewer marks up cards; this marks up the article you are reading.
+# Same vocabulary, same matcher, same popup - `_reviewer.highlight_text`
+# and `web/marker.js` are shared, so the dock cannot drift from the card.
+#
+# Deliberately a one-way runJavaScript round trip rather than a
+# QWebChannel. A channel would expose a Python object to whatever else
+# runs on an NCBI or DrugBank page; a round trip exposes nothing.
+
+_MARKER_JS_CACHE = None
+
+
+def _marker_js() -> str:
+    """The reviewer's popup script, for injection into a dock page.
+
+    Read from disk once and cached. Wrapped in a guard so a second
+    navigation does not install a second set of listeners: marker.js
+    attaches document-level handlers, and two copies would fire the
+    popup twice.
+    """
+    global _MARKER_JS_CACHE
+    if _MARKER_JS_CACHE is None:
+        try:
+            path = os.path.join(os.path.dirname(__file__), "web", "marker.js")
+            with open(path, encoding="utf-8") as fh:
+                src = fh.read()
+        except Exception as exc:
+            _log.error("read marker.js for dock", exc)
+            src = ""
+        _MARKER_JS_CACHE = (
+            "(function(){if(window.__tadMarkerLoaded)return;"
+            "window.__tadMarkerLoaded=true;\n" + src + "\n})();"
+        ) if src else ""
+    return _MARKER_JS_CACHE
+
+
+# Collect candidate text nodes and park references on `window` so the
+# apply step can address them by index. Skips anchors (they already have
+# behaviour), form controls, and anything we have marked before, which
+# is what stops a re-run wrapping its own output.
+_HL_COLLECT_JS = r"""
+(function () {
+  try {
+    var SKIP = {SCRIPT:1, STYLE:1, NOSCRIPT:1, TEXTAREA:1, INPUT:1, SELECT:1,
+                OPTION:1, CODE:1, PRE:1, A:1, BUTTON:1};
+    var nodes = [], out = [];
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    var n;
+    while ((n = w.nextNode())) {
+      var v = n.nodeValue;
+      if (!v || v.length < 8 || !/[A-Za-z]{3}/.test(v)) continue;
+      var bad = false, p = n.parentNode;
+      while (p && p !== document.body) {
+        if (SKIP[p.nodeName]) { bad = true; break; }
+        if (p.classList && (p.classList.contains("sp-mark") ||
+                            p.id === "tad-hl-tip")) { bad = true; break; }
+        p = p.parentNode;
+      }
+      if (bad) continue;
+      nodes.push(n);
+      out.push([nodes.length - 1, v]);
+      if (out.length >= 4000) break;
+    }
+    window.__tadHlNodes = nodes;
+    return JSON.stringify(out);
+  } catch (e) { return "[]"; }
+})();
+"""
+
+# Replace each changed node with the marked-up HTML. Uses a template so
+# the browser parses the fragment rather than us hand-building elements.
+_HL_APPLY_JS = r"""
+(function () {
+  try {
+    var edits = %s, nodes = window.__tadHlNodes || [], done = 0;
+    for (var k = 0; k < edits.length; k++) {
+      var n = nodes[edits[k][0]];
+      if (!n || !n.parentNode) continue;
+      var tpl = document.createElement("template");
+      tpl.innerHTML = edits[k][1];
+      n.parentNode.replaceChild(tpl.content, n);
+      done++;
+    }
+    window.__tadHlNodes = null;
+    if (!document.getElementById("tad-hl-style")) {
+      var s = document.createElement("style");
+      s.id = "tad-hl-style";
+      s.textContent = ".sp-mark{border-bottom:2px solid %s;cursor:pointer;}" +
+                      ".sp-mark:hover{background:rgba(15,202,212,.18);}";
+      document.head.appendChild(s);
+    }
+    return done;
+  } catch (e) { return -1; }
+})();
+"""
+
+# marker.js guards every Anki call behind `typeof pycmd !== "undefined"`,
+# so it runs unchanged here. Supplying a pycmd that navigates the dock
+# gives "Open article" the right meaning inside a reference panel: follow
+# the link in the panel you are already reading.
+_HL_PYCMD_SHIM_JS = r"""
+(function () {
+  if (typeof window.pycmd === "function") return;
+  window.pycmd = function (cmd) {
+    try {
+      if (cmd && cmd.indexOf("tad_open:") === 0) {
+        var u = cmd.slice(9).split("#tad-sec=")[0];
+        if (/^https?:\/\//.test(u)) window.location.href = u;
+      }
+    } catch (e) {}
+    return false;
+  };
+})();
+"""
 
 
 def _nav_btn(parent: QWidget, text: str, tip: str,
@@ -1586,6 +1705,56 @@ class StatPearlsPanel(QWidget):
             _log.warn(f"load failed twice: {target[:100]!r}")
             self._show_load_error(target)
 
+    def _highlight_page(self, url: str) -> None:
+        """Mark up recognised terms on the article currently displayed.
+
+        Runs only on StatPearls and DrugBank - `_site_of` returns "" for
+        anything else, including the error and placeholder pages this
+        dock draws itself, which must not be highlighted.
+
+        Three steps, all asynchronous so the page stays responsive:
+        collect the text nodes, resolve them in Python with the same
+        matcher the reviewer uses, then write back only the nodes that
+        actually changed.
+        """
+        if _config.get("enableDockHighlights") is False:
+            return
+        if not _site_of(url):
+            return
+
+        def _resolved(raw):
+            try:
+                nodes = json.loads(raw or "[]")
+            except Exception:
+                return
+            if not nodes:
+                return
+            try:
+                from .pearls import _reviewer
+            except ImportError:
+                from pearls import _reviewer
+            edits = []
+            for idx, text in nodes:
+                marked = _reviewer.highlight_text(text)
+                # identity means nothing matched; skip the DOM write
+                if marked is not text and marked != text:
+                    edits.append([idx, marked])
+            if not edits:
+                return
+            _log.diag(f"dock highlight: {len(edits)} of {len(nodes)} nodes")
+            colour = _config.get("highlightColor") or _TEAL
+            try:
+                self._page.runJavaScript(_HL_APPLY_JS % (json.dumps(edits), colour))
+                self._page.runJavaScript(_HL_PYCMD_SHIM_JS)
+                self._page.runJavaScript(_marker_js())
+            except Exception as exc:
+                _log.error("dock highlight apply", exc)
+
+        try:
+            self._page.runJavaScript(_HL_COLLECT_JS, _resolved)
+        except Exception as exc:
+            _log.error("dock highlight collect", exc)
+
     def _finish_good_load(self, cur: str) -> None:
         """Everything that happens once a page is genuinely on screen.
 
@@ -1675,4 +1844,5 @@ class StatPearlsPanel(QWidget):
             self._probe_failed_load(cur)
             return
         self._finish_good_load(cur)
+        self._highlight_page(cur)
 

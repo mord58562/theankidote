@@ -10,6 +10,24 @@ this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 Popups stop claiming sources and destinations they do not have, and
 acronyms that are also English words stop firing on the words.
 
+### Added
+
+- **The reference sidebar highlights terms too.** StatPearls and
+  DrugBank pages now get the same underlines and hover popups as a card.
+  `_reviewer.highlight_text()` accepts arbitrary text rather than a
+  card - `_card_text` passes a string straight through, so all five term
+  builders and the injector are reused unchanged - and the dock runs a
+  three-step round trip on load: collect text nodes, resolve in Python,
+  write back only the nodes that changed. `web/marker.js` is injected
+  for the popup, so the dock cannot drift from the reviewer: one
+  vocabulary, one matcher, one popup.
+  Deliberately a one-way `runJavaScript` round trip and not a
+  `QWebChannel`, which would expose a Python object to whatever else
+  runs on an NCBI or DrugBank page. Anchors, form controls and existing
+  marks are skipped, and `marker.js` installs once per page.
+  New `enableDockHighlights` config key, on by default, with a switch in
+  Settings.
+
 ### Fixed
 
 - **Every term containing an apostrophe was unmatchable on a normally
