@@ -61,6 +61,7 @@ SCHEMA = 1
 def collect() -> dict:
     import _rich                                        # content/_rich.py
     import _blocklist                                   # content/_blocklist.py
+    import _new_acronyms                                # content/_new_acronyms.py
     from pearls import (  # noqa: E402
         _acronyms, _conditions, _descriptive, _drugs, _preclinical,
         _psych, _signs,
@@ -237,6 +238,42 @@ def collect() -> dict:
             f"DRUG_SUMMARIES names {len(orphaned)} generic(s) not in the "
             f"library, so the text would never match: {orphaned}")
 
+    # `pearls/_acronyms` reads this dictionary out of the library and we
+    # write it straight back, so without an overlay the vocabulary has no
+    # way in - the one vocabulary that never grew a `NEW_*` file. Merge
+    # it here on the same terms as the others.
+    acronyms = {k: [list(c) for c in v]
+                for k, v in _acronyms._ACRONYMS.items()}
+    for key, senses in getattr(_new_acronyms, "NEW_ACRONYMS", {}).items():
+        bucket = acronyms.setdefault(key, [])
+        have = {str(c[0]).lower() for c in bucket}
+        for sense in senses:
+            if len(sense) != 3:
+                raise SystemExit(
+                    f"NEW_ACRONYMS[{key!r}] sense is not "
+                    f"(expansion, keywords, description): {sense!r}")
+            expansion, keywords, desc = sense
+            if not (expansion and desc):
+                raise SystemExit(
+                    f"NEW_ACRONYMS[{key!r}] has an empty expansion or "
+                    "description")
+            if not isinstance(keywords, (list, tuple)):
+                raise SystemExit(
+                    f"NEW_ACRONYMS[{key!r}] keywords must be a list")
+            if str(expansion).lower() in have:
+                continue
+            have.add(str(expansion).lower())
+            bucket.append([expansion, list(keywords), desc])
+        # An acronym carrying more than one sense is disambiguated only
+        # by its keywords; a sense with none can never lose, so it would
+        # silently shadow its siblings.
+        if len(bucket) > 1:
+            starved = [c[0] for c in bucket if not c[1]]
+            if starved:
+                raise SystemExit(
+                    f"acronym {key!r} has {len(bucket)} senses but "
+                    f"{starved} carry no context keywords")
+
     blocklist = sorted({
         t.strip() for t in getattr(_blocklist, "BLOCKLIST", []) if t.strip()})
     bad = [t for t in blocklist if not isinstance(t, str)]
@@ -252,8 +289,7 @@ def collect() -> dict:
         "new_drugs": new_drugs,
         "drug_summaries": _rich.DRUG_SUMMARIES,
         "drugbank_ids": drugbank_ids,
-        "acronyms": {k: [list(c) for c in v]
-                     for k, v in _acronyms._ACRONYMS.items()},
+        "acronyms": acronyms,
         "signs": _signs.SIGN_TERMS,
         "descriptive": _descriptive.DESCRIPTIVE_TERMS,
         "preclinical": _library.get("preclinical"),

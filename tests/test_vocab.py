@@ -966,5 +966,43 @@ class StatPearlsLinks(unittest.TestCase):
                 f"real article before adding it, or leave it out.")
 
 
+class AmbiguousAcronymsCanBeTold(unittest.TestCase):
+    """An acronym with two senses needs enough context to separate them.
+
+    `resolve` scores each candidate against the card text and takes the
+    best, so a sense carrying no keywords can never lose and silently
+    shadows its siblings. PCR is the case that prompted this: 30 notes
+    in the collection mean amplification and three, all pre-eclampsia
+    cards, mean the urine protein:creatinine ratio.
+    """
+
+    def test_every_ambiguous_acronym_can_lose(self):
+        starved = {
+            key: [c[0] for c in senses if not c[1]]
+            for key, senses in _acronyms._ACRONYMS.items()
+            if len(senses) > 1
+        }
+        starved = {k: v for k, v in starved.items() if v}
+        self.assertFalse(
+            starved,
+            f"these senses carry no context keywords and so always win: "
+            f"{starved}")
+
+    def test_pcr_reads_the_surrounding_card(self):
+        if "PCR" not in _acronyms._ACRONYMS:
+            self.skipTest("library predates the PCR overlay")
+        obstetric = ("New hypertension after 20 weeks with proteinuria "
+                     "on a spot urine PCR of 45 mg/mmol.")
+        micro = ("First-void urine PCR for chlamydia detects nucleic "
+                 "acid and is more sensitive than culture.")
+        for text, want in ((obstetric, "Creatinine"),
+                           (micro, "Polymerase")):
+            hit = next((h for h in _acronyms.resolve(text)
+                        if h["acronym"] == "PCR"), None)
+            self.assertIsNotNone(hit, f"PCR did not resolve in: {text}")
+            self.assertIn(want, hit["expansion"],
+                          f"wrong sense for: {text}")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
