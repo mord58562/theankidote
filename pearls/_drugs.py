@@ -50,6 +50,14 @@ _DRUGBANK_IDS: dict = _library.get("drugbank_ids")
 DRUGBANK_FREE_ACCOUNT_URL = "https://go.drugbank.com/public_users/sign_up"
 
 
+def _drug_link_kind(entry: dict) -> str:
+    """A DrugBank id gives a real monograph; without one the URL is an
+    `unearth` search, so the popup must not offer to open an article."""
+    return ("article"
+            if _DRUGBANK_IDS.get((entry.get("generic") or "").lower())
+            else "search")
+
+
 def _drugbank_url(entry: dict) -> str:
     # DrugBank monograph pages are viewable without an account; the unearth
     # search endpoint is sometimes gated - users can sign up for a free
@@ -188,6 +196,7 @@ def resolve(text: str) -> list:
                 "name":           d["generic"],
                 "summary":        d["summary"],
                 "url":            _drugbank_url(d),
+                "link":           _drug_link_kind(d),
                 "case_sensitive": False,
             })
 
@@ -203,6 +212,7 @@ def resolve(text: str) -> list:
                 "name":           brand,
                 "summary":        d["summary"],
                 "url":            _drugbank_url(d),
+                "link":           _drug_link_kind(d),
                 "case_sensitive": True,
             })
 

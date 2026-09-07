@@ -68,6 +68,7 @@ def _custom_terms() -> list:
             "url": url,
             "summary": (entry.get("summary") or "").strip(),
             "source": entry.get("source") or "custom",
+            "link": "article",
             "label": (entry.get("label") or "").strip(),
             "case_sensitive": bool(entry.get("case_sensitive")),
             "user_defined": True,
@@ -290,6 +291,7 @@ def _acronym_terms(card) -> list:
                 "url":        _conditions._url_for(cond),
                 "summary":    (cond.get("summary", "") or "").strip(),
                 "source":     "statpearls",
+                "link":       _conditions._link_kind(cond),
                 "case_sensitive": True,
             })
             continue
@@ -300,6 +302,7 @@ def _acronym_terms(card) -> list:
             "url":        _term_search_url(it["expansion"]),
             "summary":    it["description"],
             "source":     "statpearls",
+            "link":       "search",
             "case_sensitive": True,
         })
     return out
@@ -320,6 +323,7 @@ def _drug_terms(card) -> list:
             "url":            it.get("url", ""),
             "summary":        it["summary"],
             "source":         "drugbank",
+            "link":           it.get("link", "search"),
             "case_sensitive": it.get("case_sensitive", False),
         })
     return out
@@ -340,6 +344,7 @@ def _condition_terms(card) -> list:
             "url":            it["url"],
             "summary":        it["summary"],
             "source":         it.get("source") or "statpearls",
+            "link":           it.get("link", "search"),
             "case_sensitive": False,
         })
     return out
@@ -374,6 +379,7 @@ def _preclinical_terms(card) -> list:
             "url":            it["url"],
             "summary":        it["summary"],
             "source":         "preclinical",
+            "link":           it.get("link", "search"),
             "case_sensitive": False,
         })
     return out
@@ -530,6 +536,7 @@ def _inject_highlights(html: str, results: list, color: str) -> str:
                     f'data-sp-summary="{t["summary"]}" '
                     f'data-sp-source="{t.get("source", "statpearls")}" '
                     f'data-sp-badge="{t.get("badge", "")}" '
+                    f'data-sp-link="{t.get("link", "search")}" '
                     f'data-sp-utd="{t.get("utd", "[]")}">{word}</span>')
         return rx.sub(_span, text)
 

@@ -89,6 +89,10 @@ def build_vocab(base_key: str, default_category: str = "",
                 "summary":        t["summary"],
                 "url":            _wikipedia_url(canon),
                 "source":         "preclinical",
+                # Always a search: `_wikipedia_url` builds a
+                # Special:Search query, never a direct page. The popup
+                # button used to read "Open article" regardless.
+                "link":           "search",
                 "category":       t.get("category", default_category),
                 "case_sensitive": False,
             })

@@ -5,7 +5,29 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.4.2] - 2026-09-07
+## [2.5.0] - 2026-09-07
+
+Popups stop claiming sources and destinations they do not have, and
+acronyms that are also English words stop firing on the words.
+
+### Fixed
+
+- **The popup asserted a StatPearls article for 1,591 conditions that
+  have none.** Every condition carried the StatPearls badge and an
+  "Open article" button. Only 635 have an NBK id; for the rest
+  `_url_for` falls back to an in-book search, so the button offered to
+  open something that does not exist - "Notifiable disease" is an
+  Australian statutory concept StatPearls has never written about - and
+  the badge credited StatPearls with a summary the add-on wrote itself.
+  The same held for the 519 preclinical, signs, descriptive and psych
+  entries, whose `_wikipedia_url` is a `Special:Search` query, and for
+  the 525 drugs with no DrugBank id.
+  `_link_kind()` now reports whether a URL lands on a document or only
+  runs a query, threaded through every reviewer wrapper as
+  `data-sp-link`. The badge reads "The AnkiDote" when the summary is
+  the add-on's own, and the button reads "Search StatPearls",
+  "Search Wikipedia" or "Search DrugBank" when that is what it does.
+  **2,635 popups stop making a false claim.**
 
 ### Fixed
 

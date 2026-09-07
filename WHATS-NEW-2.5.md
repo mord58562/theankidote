@@ -1,4 +1,22 @@
-# What's new in The AnkiDote 2.4.2
+# What's new in The AnkiDote 2.5
+
+Two kinds of dishonesty in the popup, both fixed.
+
+## Popups no longer promise articles that do not exist
+
+Every condition popup carried a StatPearls badge and an "Open article"
+button. Only about a quarter of them actually have a StatPearls article
+behind them. For the rest the button ran a search, which is how a popup
+headed "Notifiable disease" came to offer an article about it - there
+isn't one, because notifiable disease is an Australian statutory idea
+and StatPearls is American.
+
+The badge was wrong in the same way. Those summaries are not from
+StatPearls; they were written for this add-on. So the badge now says so,
+and the button says what it will really do - search StatPearls, search
+Wikipedia, search DrugBank - unless there is a genuine article waiting,
+in which case nothing has changed. About 2,600 popups stop overstating
+themselves.
 
 ## Acronyms that are also ordinary words stay quiet
 

@@ -135,6 +135,27 @@ def _utd_url(query: str) -> str:
             f"{quote_plus(query)}&source=USER_INPUT&searchType=PLAIN_TEXT")
 
 
+def _link_kind(entry: dict) -> str:
+    """Whether `_url_for` will land on a real article or only a search.
+
+    Every condition popup used to carry the StatPearls badge and an
+    "Open article" button, including the 1,583 entries that have no NBK
+    id. For those the URL is an in-book search, so the button promised
+    an article that does not exist - "Notifiable disease" is an
+    Australian statutory concept StatPearls has never written about -
+    and the badge claimed a provenance the summary does not have, since
+    those summaries are the add-on's own.
+
+    Returns "article" only when the destination is a specific document.
+    """
+    if entry.get("source") == "uptodate":
+        utd = entry.get("utd") or []
+        if utd and str(utd[0][1]).startswith("slug:"):
+            return "article"
+        return "search"
+    return "article" if entry.get("nbk") else "search"
+
+
 def _url_for(entry: dict) -> str:
     """Primary URL for the condition.  Resolution order:
       1. `source == "uptodate"` and UTD entries → first UTD entry
@@ -246,6 +267,7 @@ def resolve(text: str) -> list:
             "summary":        c["summary"],
             "url":            _url_for(c),
             "source":         "uptodate" if utd_primary else "statpearls",
+            "link":           _link_kind(c),
             "utd":            utd_chips,
             "case_sensitive": False,
         })

@@ -405,15 +405,30 @@
     var isUtd    = source === "uptodate";
     var isPre    = source === "preclinical";
     var isCustom = source === "custom";
+    // "article" means the link lands on a specific document; "search"
+    // means it only runs a query. Most condition entries are the
+    // latter: they have no NBK id, so the badge used to claim
+    // StatPearls wrote a summary it did not write, and the button
+    // offered to open an article that does not exist.
+    var isArticle = (el.getAttribute("data-sp-link") || "search") === "article";
     if (_tipLabel) {
       _tipLabel.textContent = isDb ? "DrugBank"
                             : (isUtd ? "UpToDate"
                               : (isPre ? "Preclinical"
-                                : (isCustom ? (badge || "Custom") : "StatPearls")));
+                                : (isCustom ? (badge || "Custom")
+                                  : (isArticle ? "StatPearls" : "The AnkiDote"))));
       _tipLabel.className   = isDb ? "label label-db"
                             : (isUtd ? "label label-utd"
                               : (isPre ? "label label-pre"
                                 : (isCustom ? "label label-custom" : "label")));
+    }
+    // The button says what it will actually do.
+    if (_tipOpenBtn) {
+      _tipOpenBtn.textContent = isArticle
+        ? "Open article \u2192"
+        : ("Search " + (isDb ? "DrugBank"
+                      : (isUtd ? "UpToDate"
+                        : (isPre ? "Wikipedia" : "StatPearls"))) + " \u2192");
     }
     var egg = _eggFor(el, _bumpPopupCounter());
     if (_tipBox) {
