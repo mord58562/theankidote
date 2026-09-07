@@ -185,6 +185,20 @@ echo "tag             $TAG"
 # ── build ────────────────────────────────────────────────────────────
 step "Building library"
 
+# A dry run builds for real - that is the point, it is what checks the
+# manifest against the library - and the build writes data/. So the dry
+# run has to put data/ back, or it leaves the working tree carrying the
+# version it only pretended to publish, and the real run that follows
+# refuses it as "does not sort after the current". The documented
+# workflow is "run the dry run first", which made that a certainty.
+if [ "$DRY_RUN" = "1" ]; then
+  _DRY_STASH="$(mktemp -d)"
+  cp data/manifest.json data/library.json "$_DRY_STASH/"
+  # shellcheck disable=SC2064
+  trap "cp '$_DRY_STASH/manifest.json' '$_DRY_STASH/library.json' data/ \
+        && rm -rf '$_DRY_STASH'" EXIT
+fi
+
 ASSET_URL="https://github.com/${SLUG}/releases/download/${TAG}/library.json"
 python3 tools/build_library.py --version "$VERSION" --url "$ASSET_URL"
 
@@ -259,6 +273,8 @@ if [ "$DRY_RUN" = "1" ]; then
   echo "Would upload    data/library.json"
   echo "Would commit    data/manifest.json to $BRANCH"
   echo "Asset URL       $ASSET_URL"
+  echo "data/ restored  - the tree is unchanged, so the real run of this"
+  echo "                  same version will not be refused as stale"
   exit 0
 fi
 
