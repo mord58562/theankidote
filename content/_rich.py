@@ -232,7 +232,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Erectile dysfunction",
-        "aliases": ["Impotence", "ED"],
+        "aliases": ["Impotence"],
         "utd": [["Overview", "epidemiology and etiologies of male sexual "
                              "dysfunction"]],
         "summary": "",
@@ -1786,7 +1786,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": 'Local anaesthetic systemic toxicity',
-        "aliases": ['LAST', 'Local anesthetic toxicity'],
+        "aliases": ['Local anesthetic toxicity'],
         "utd": [["Overview", 'local anaesthetic systemic toxicity lipid emulsion rescue']],
         "summary": "",
     },
@@ -4145,7 +4145,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Transient global amnesia",
-        "aliases": ["TGA"],
+        "aliases": [],
         "utd": [["Overview", "transient global amnesia"]],
         "summary": "",
     },
@@ -6427,7 +6427,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Cyclic vomiting syndrome",
-        "aliases": ["CVS"],
+        "aliases": [],
         "utd": [["Overview", "cyclic vomiting syndrome"]],
         "summary": "",
     },
@@ -6901,7 +6901,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Chronic disease management plan",
-        "aliases": ["GP management plan", "GPMP", "care plan", "team care arrangement", "TCA", "chronic disease management"],
+        "aliases": ["GP management plan", "GPMP", "care plan", "team care arrangement", "chronic disease management"],
         "utd": [["Overview", "chronic illness care coordination primary care"]],
         "summary": "",
     },
