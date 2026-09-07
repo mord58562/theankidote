@@ -169,7 +169,12 @@ now in the files so the next audit does not re-raise them:
 
 ### Deliberately not done
 
-**The dock's per-node highlighting.** Measured: `highlight_text` is
+**The dock's per-node highlighting.** *Rob, 2026-09-07: underlining on
+StatPearls pages works well.* That is the common case, and it is what
+the numbers predict - the concern was always the tail, not correctness,
+so this is support for the deferral rather than a contradiction of it.
+The open question is whether the tail is reachable at all: a genuinely
+long chapter, not a short topic, is the test. Measured: `highlight_text` is
 called once per text node, 105 times on a 66 KB article, 16.9 ms
 against 5.8 ms for a single pass, and up to 620 ms of blocked main
 thread at the 4000-node cap. The fix is to resolve once over the joined
@@ -285,8 +290,13 @@ on any of them.
   `hide()` and only collapses in the rebuilt package. Good evidence for
   the change; not a test of it.
 
+  **Also confirmed by Rob, 2026-09-07:** term underlining on StatPearls
+  pages in the dock. Again the shipped behaviour - this session's change
+  to that surface was the popup rendering light over a dark page, which
+  is in the rebuilt package and untested.
+
   Still unexercised: the popup-click path collapsing rather than
-  hiding, the remembered article surviving a restart and being cleared
+  hiding, the dock popup taking the dark palette on a dark page, the remembered article surviving a restart and being cleared
   by Home, keyboard shortcuts still binding after the `_dock_layout`
   move, popup positioning near the bottom of the window, and the two
   new tooltip paths (a failed content update, and a module toggled from
