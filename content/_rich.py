@@ -9308,6 +9308,162 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "cultural competence interpreter use clinical care"]],
         "summary": "",
     },
+    {
+        "name": "Stillbirth",
+        "aliases": ["stillborn", "intrauterine fetal death", "fetal death in utero", "IUFD", "FDIU"],
+        "utd": [["Overview", "stillbirth incidence risk factors etiology"], ["Evaluation", "evaluation of stillbirth"]],
+        "summary": "",
+    },
+    {
+        "name": "Perinatal mortality",
+        "aliases": ["perinatal death", "perinatal mortality rate", "neonatal mortality"],
+        "utd": [["Overview", "perinatal mortality definitions and rates"]],
+        "summary": "",
+    },
+    {
+        "name": "Polyhydramnios",
+        "aliases": ["hydramnios", "excess amniotic fluid"],
+        "utd": [["Overview", "polyhydramnios etiology diagnosis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Prolonged pregnancy",
+        "aliases": ["post-term pregnancy", "postterm pregnancy", "post-dates", "post-dates pregnancy", "postdates", "prolonged gestation"],
+        "utd": [["Overview", "postterm pregnancy management"]],
+        "summary": "",
+    },
+    {
+        "name": "Physiology of labour onset",
+        "aliases": ["parturition", "initiation of labour", "physiology of parturition"],
+        "utd": [["Overview", "physiology of parturition"]],
+        "summary": "",
+    },
+    {
+        "name": "Vaginal examination in labour",
+        "aliases": ["vaginal examination", "digital vaginal examination"],
+        "utd": [["Overview", "labor assessment cervical examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Intermittent auscultation of the fetal heart",
+        "aliases": ["intermittent auscultation", "fetal heart auscultation", "Pinard stethoscope", "Pinard"],
+        "utd": [["Overview", "intrapartum fetal heart rate assessment auscultation"]],
+        "summary": "",
+    },
+    {
+        "name": "Bimanual pelvic examination",
+        "aliases": ["bimanual examination", "pelvic examination", "cervical excitation", "cervical motion tenderness"],
+        "utd": [["Overview", "pelvic examination technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Speculum examination",
+        "aliases": ["speculum", "vaginal speculum", "Cusco speculum", "Sims speculum"],
+        "utd": [["Overview", "pelvic examination speculum technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Colposcopy",
+        "aliases": ["colposcope", "colposcopic examination"],
+        "utd": [["Overview", "colposcopy technique and findings"]],
+        "summary": "",
+    },
+    {
+        "name": "Diagnostic laparoscopy",
+        "aliases": ["laparoscopy", "laparoscopy and dye", "keyhole surgery"],
+        "utd": [["Overview", "gynecologic laparoscopy technique complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic pelvic pain",
+        "aliases": ["persistent pelvic pain"],
+        "utd": [["Overview", "chronic pelvic pain in women evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Pelvic pain in women",
+        "aliases": ["pelvic pain", "acute pelvic pain"],
+        "utd": [["Overview", "evaluation of acute pelvic pain in nonpregnant women"]],
+        "summary": "",
+    },
+    {
+        "name": "Sexual assault",
+        "aliases": ["rape", "sexual violence", "sexual assault care"],
+        "utd": [["Overview", "evaluation and management of adult sexual assault victims"]],
+        "summary": "",
+    },
+    {
+        "name": "Forensic medical examination",
+        "aliases": ["forensic examination", "sexual assault investigation kit", "chain of custody"],
+        "utd": [["Overview", "sexual assault forensic evidence collection"]],
+        "summary": "",
+    },
+    {
+        "name": "Lactation",
+        "aliases": ["lactogenesis", "let-down reflex", "milk ejection reflex", "milk production"],
+        "utd": [["Overview", "physiology of lactation"]],
+        "summary": "",
+    },
+    {
+        "name": "Breastfeeding",
+        "aliases": ["breast feeding", "breast-feeding"],
+        "utd": [["Overview", "breastfeeding technique and common problems"]],
+        "summary": "",
+    },
+    {
+        "name": "Aboriginal and Torres Strait Islander maternal and perinatal health",
+        "aliases": ["Birthing on Country", "Aboriginal maternal health"],
+        "utd": [["Overview", "indigenous maternal health disparities"]],
+        "summary": "",
+    },
+    {
+        "name": "Developmental origins of health and disease",
+        "aliases": ["Barker hypothesis", "DOHaD", "fetal programming", "thrifty phenotype"],
+        "utd": [["Overview", "long term consequences of intrauterine growth restriction"]],
+        "summary": "",
+    },
+    {
+        "name": "Polymerase chain reaction",
+        "aliases": ["NAAT", "nucleic acid amplification test", "polymerase chain reaction test"],
+        "utd": [["Overview", "polymerase chain reaction diagnostic use"]],
+        "summary": "",
+    },
+    {
+        "name": "Serology",
+        "aliases": ["serological testing"],
+        "utd": [["Overview", "interpretation of serologic tests"]],
+        "summary": "",
+    },
+    {
+        "name": "ELISA",
+        "aliases": ["enzyme-linked immunosorbent assay", "enzyme immunoassay"],
+        "utd": [["Overview", "enzyme linked immunosorbent assay principles"]],
+        "summary": "",
+    },
+    {
+        "name": "Western blot",
+        "aliases": ["immunoblot", "western blotting"],
+        "utd": [["Overview", "western blot immunoassay"]],
+        "summary": "",
+    },
+    {
+        "name": "Genital ulcer",
+        "aliases": ["genital ulceration", "genital ulcer disease"],
+        "utd": [["Overview", "approach to genital ulcers"]],
+        "summary": "",
+    },
+    {
+        "name": "Contraception",
+        "aliases": ["birth control", "contraceptive choice", "contraceptive counselling"],
+        "utd": [["Overview", "contraception counseling and selection"]],
+        "summary": "",
+    },
+    {
+        "name": "Surgical hand antisepsis",
+        "aliases": ["surgical scrub", "surgical hand scrub", "scrubbing up"],
+        "utd": [["Overview", "surgical hand antisepsis"]],
+        "summary": "",
+    },
 ]
 
 
@@ -59186,6 +59342,555 @@ RICH_SUMMARIES = {
         "loaded, so use the RUDAS rather than the MMSE. Written "
         "consent and health literacy material must be in the person's "
         "own language."
+    ),
+
+    "Stillbirth": (
+        "Birth of a baby with no signs of life. Criteria: in "
+        "Australia, fetal death from 20 completed weeks or 400 g if "
+        "gestation is unknown, against the WHO figure of 28 weeks. "
+        "Epidemiology: about 7 per 1000 births, close to 2000 babies "
+        "a year; roughly double that for Aboriginal and Torres Strait "
+        "Islander families. Causes: unexplained is the largest group, "
+        "then congenital anomaly, placental insufficiency, abruption "
+        "and infection; the risk factors are smoking, obesity, age "
+        "over 35, a previous stillbirth, a small baby, reduced fetal "
+        "movements and pregnancy beyond 41 weeks. Ix: diagnosis is "
+        "absent fetal heart on real-time ultrasound, never Doppler "
+        "alone; then placental histopathology in every case, autopsy "
+        "offered as full, limited or external, cytogenetic microarray "
+        "and Kleihauer; plus blood group and antibodies, HbA1c and "
+        "infection serology. Mx: induction with mifepristone then "
+        "misoprostol is usually safest, with anti-D if RhD negative. "
+        "Note: memory making, lactation suppression, Red Nose "
+        "referral, PSANZ classification at review, and extra "
+        "surveillance next pregnancy."
+    ),
+    "Perinatal mortality": (
+        "Composite of stillbirth and neonatal death, the standard "
+        "measure of the safety of birth. Criteria: perinatal death "
+        "means a stillbirth from 20 weeks or 400 g plus death of a "
+        "liveborn baby within 28 days; early neonatal death is within "
+        "7 days. The rate is expressed per 1000 births, counting "
+        "stillbirths in the denominator, while the neonatal death "
+        "rate uses live births only. Epidemiology: about 9 per 1000 "
+        "births in Australia, roughly three quarters of it "
+        "stillbirth, and around double in Aboriginal and Torres "
+        "Strait Islander babies and in the most disadvantaged areas. "
+        "Causes: congenital anomaly, spontaneous preterm birth and "
+        "extreme prematurity, placental insufficiency and growth "
+        "restriction, hypoxic peripartum events, infection. Note: "
+        "every death is classified with the PSANZ system and reviewed "
+        "by a state perinatal mortality committee, then reported "
+        "nationally, so the purpose is to find preventable "
+        "contributing factors rather than to produce a number."
+    ),
+    "Polyhydramnios": (
+        "Excess amniotic fluid, defined as an amniotic fluid index "
+        "above 25 cm or a deepest vertical pocket above 8 cm. "
+        "Complicates 1 to 2 per cent of pregnancies. Causes: "
+        "idiopathic in over half. Maternal diabetes is the commonest "
+        "identifiable cause. Anything that stops the fetus swallowing "
+        "does it too - oesophageal or duodenal atresia, anencephaly, "
+        "cleft palate, neuromuscular disease. Also fetal anaemia from "
+        "parvovirus B19 or alloimmunisation, twin to twin transfusion "
+        "in the recipient, and aneuploidy. Features: large for dates, "
+        "a tense uterus with fetal parts hard to feel, maternal "
+        "breathlessness and oedema. Ix: glucose tolerance test, "
+        "detailed morphology ultrasound looking for the stomach "
+        "bubble, middle cerebral artery Doppler for anaemia, red cell "
+        "antibodies and infection serology. Complications: preterm "
+        "labour, malpresentation, cord prolapse at rupture of "
+        "membranes, abruption and postpartum haemorrhage from an "
+        "overdistended uterus. Mx: treat the cause, controlled "
+        "artificial rupture, active third stage, and pass a "
+        "nasogastric tube in the baby."
+    ),
+    "Prolonged pregnancy": (
+        "Pregnancy continuing past the due date. Criteria: early term "
+        "is 37+0 to 38+6, full term 39+0 to 40+6, late term 41+0 to "
+        "41+6 and post-term from 42+0 completed weeks. Accurate first "
+        "trimester dating on crown rump length halves the diagnosis. "
+        "Risk factors: previous prolonged pregnancy, nulliparity, "
+        "obesity, male fetus, family history. Complications: the "
+        "fetal risks are placental insufficiency and dysmaturity, "
+        "oligohydramnios with cord compression, meconium stained "
+        "liquor and aspiration, macrosomia with shoulder dystocia, "
+        "and fetal distress in labour. Stillbirth risk begins "
+        "climbing at about 41 weeks and roughly doubles by 42. "
+        "Maternal risks are operative delivery, perineal trauma and "
+        "postpartum haemorrhage. Mx: RANZCOG advises offering "
+        "induction from 41+0 and recommending it by 41+3 to 42+0. A "
+        "membrane sweep from 40 weeks reduces the need for formal "
+        "induction. If she declines, arrange twice weekly "
+        "cardiotocography with amniotic fluid assessment from 41 "
+        "weeks. Note: post-term describes the gestation, not the "
+        "baby, and a dysmature baby can be born at 40 weeks."
+    ),
+    "Physiology of labour onset": (
+        "The endocrine and myometrial switch from a quiescent uterus "
+        "to coordinated expulsive contractions. Mechanism: "
+        "progesterone keeps the uterus quiet through pregnancy, and "
+        "in humans there is no fall in circulating progesterone. "
+        "Instead a functional withdrawal occurs as myometrial "
+        "progesterone receptor isoforms shift. Oestrogen rises, "
+        "driven by fetal adrenal androgen precursor, and upregulates "
+        "oxytocin receptors, prostaglandin synthesis and connexin-43 "
+        "gap junctions, which electrically couple myometrial cells "
+        "into a syncytium so contractions become synchronised and "
+        "fundally dominant. Phases: the fetal "
+        "hypothalamic-pituitary-adrenal axis matures, cortisol rises "
+        "and placental corticotrophin releasing hormone climbs "
+        "exponentially, the so-called placental clock. Decidual and "
+        "amniotic prostaglandins E2 and F2 alpha ripen the cervix by "
+        "degrading collagen and drawing in water and inflammatory "
+        "cells. Stretch of the cervix then releases oxytocin in a "
+        "positive feedback loop, the Ferguson reflex. Key point: no "
+        "single trigger has been proven in humans, which is why "
+        "induction combines a prostaglandin or mechanical ripening "
+        "with oxytocin."
+    ),
+    "Vaginal examination in labour": (
+        "Digital assessment of the cervix and presenting part to "
+        "establish whether labour is established and progressing. "
+        "Indications: on admission, four hourly in the active first "
+        "stage, when membranes rupture, before starting oxytocin or "
+        "regional analgesia, if the fetal heart becomes abnormal, and "
+        "when she feels the urge to push. Contraindications: never do "
+        "a digital examination in antepartum haemorrhage until "
+        "praevia is excluded on imaging; minimise examinations once "
+        "membranes have ruptured. Examination: consent and a "
+        "chaperone, empty bladder, abdominal palpation first, then "
+        "sterile gloves and lubricant. Record cervical position, "
+        "consistency, effacement, dilatation in cm, the presenting "
+        "part and its station relative to the ischial spines, "
+        "position from the sagittal suture and fontanelles, caput and "
+        "moulding, and whether membranes are intact and the liquor "
+        "clear. Red flags: pulsating cord means cord prolapse and "
+        "immediate delivery. Note: a high head with severe caput and "
+        "moulding suggests obstructed labour, and progress is judged "
+        "on the partogram rather than one examination."
+    ),
+    "Intermittent auscultation of the fetal heart": (
+        "Listening to the fetal heart at intervals with a Pinard "
+        "stethoscope or handheld Doppler. Indications: the "
+        "recommended method for women at low risk with an "
+        "uncomplicated pregnancy, because routine continuous "
+        "cardiotocography in this group raises caesarean and "
+        "instrumental birth rates without reducing cerebral palsy or "
+        "perinatal death. Examination: palpate the abdomen to find "
+        "the fetal back and listen over the anterior shoulder, feel "
+        "the maternal radial pulse at the same time so you do not "
+        "count her, and listen for a full 60 seconds starting "
+        "immediately after a contraction. Monitoring: every 15 to 30 "
+        "minutes in the active first stage and every 5 minutes or "
+        "after every contraction in the second stage, recording rate, "
+        "rhythm and contractions. Red flags: a baseline outside 110 "
+        "to 160, a rising baseline over successive readings, an "
+        "audible deceleration, or any new risk factor such as "
+        "meconium, bleeding, fever or oxytocin, all mean switching to "
+        "continuous cardiotocography. Note: auscultation cannot "
+        "assess variability, and fetal death is confirmed on "
+        "ultrasound."
+    ),
+    "Bimanual pelvic examination": (
+        "Two fingers in the vagina and the other hand on the lower "
+        "abdomen, trapping the pelvic organs between them. "
+        "Indications: pelvic pain, abnormal bleeding, discharge, a "
+        "suspected mass or prolapse, and before intrauterine device "
+        "insertion. Examination: consent, a chaperone and an empty "
+        "bladder. Inspect the vulva, then insert index and middle "
+        "fingers to the cervix and press the abdominal hand down "
+        "behind the uterus. Assess uterine size in weeks, axis "
+        "(anteverted in about 80 per cent, retroverted in the rest), "
+        "surface, mobility and tenderness. Then sweep each fornix for "
+        "adnexal masses. Signs: a bulky tender uterus suggests "
+        "adenomyosis, a knobbly irregular one fibroids. Pain on "
+        "moving the cervix suggests pelvic inflammatory disease, "
+        "ectopic pregnancy or any peritoneal irritation. A fixed "
+        "retroverted uterus with tender uterosacral nodules suggests "
+        "endometriosis. Note: a palpable ovary after the menopause is "
+        "abnormal until proven otherwise. Key point: it is unreliable "
+        "in obesity and adds nothing in a young woman with a normal "
+        "ultrasound, so do not do it without a question it can "
+        "answer."
+    ),
+    "Speculum examination": (
+        "Instrumental inspection of the vagina and cervix. Types: the "
+        "bivalve Cusco speculum is self-retaining and used for "
+        "cervical screening, swabs and inspection. The single-bladed "
+        "Sims speculum is used in the left lateral position to assess "
+        "prolapse and fistula. Indications: cervical screening, "
+        "vaginal discharge or abnormal bleeding, suspected ruptured "
+        "membranes, retrieval of intrauterine device threads or a "
+        "foreign body, and before any digital examination when "
+        "antepartum haemorrhage might be praevia. Examination: "
+        "consent and a chaperone, warm the speculum and lubricate it, "
+        "insert closed with the blades oblique aiming posteriorly "
+        "toward the sacrum, rotate to transverse, then open. Signs: "
+        "an ectropion is columnar epithelium around the os, benign "
+        "and often bleeds on contact. Also look for polyps, Nabothian "
+        "follicles, atrophy, discharge and products of conception "
+        "sitting in the os in miscarriage. Red flags: a friable, "
+        "irregular or ulcerated cervix needs colposcopy referral "
+        "whatever the screening result, because a negative human "
+        "papillomavirus test does not exclude a visible cancer."
+    ),
+    "Colposcopy": (
+        "Magnified binocular inspection of the cervix after applying "
+        "5 per cent acetic acid and Lugol iodine. Indications: under "
+        "the National Cervical Screening Program, detection of human "
+        "papillomavirus types 16 or 18, oncogenic non-16/18 types "
+        "with high grade cytology, oncogenic types persisting at the "
+        "12 month repeat, a cervix that looks abnormal, unexplained "
+        "postcoital or persistent intermenstrual bleeding, and "
+        "urgently for a glandular abnormality. Features: acetic acid "
+        "coagulates nuclear protein, so dysplasia with a high nuclear "
+        "to cytoplasmic ratio turns dense white. Mosaicism and "
+        "punctation reflect abnormal vessels, and atypical vessels "
+        "suggest invasion. Lugol iodine stains glycogen-rich normal "
+        "squamous epithelium dark brown while dysplastic and columnar "
+        "epithelium does not take it up. Mx: biopsy the worst area, "
+        "or proceed to see and treat with a large loop excision when "
+        "high grade disease is expected. Note: if the transformation "
+        "zone cannot be seen the examination is inadequate. "
+        "Follow-up: co-test at 12 and 24 months after treating high "
+        "grade disease, then five yearly."
+    ),
+    "Diagnostic laparoscopy": (
+        "Inspection of the peritoneal cavity through a telescope "
+        "passed after insufflation with carbon dioxide. Indications: "
+        "suspected endometriosis, where visualisation with histology "
+        "is the reference standard, chronic pelvic pain after "
+        "empirical treatment fails, infertility with dye passed "
+        "through the cervix to test tubal patency, adnexal mass, "
+        "suspected ectopic pregnancy or torsion, adhesiolysis and "
+        "surgical sterilisation. Entry is at the umbilicus with a "
+        "Veress needle or by the open Hasson method, under general "
+        "anaesthesia with head-down tilt and pressure to about 15 "
+        "mmHg, then accessory ports go in lateral to the inferior "
+        "epigastric vessels. Complications: injury to bowel, bladder "
+        "or a major retroperitoneal vessel at entry, in the order of "
+        "1 per 1000, bleeding from an epigastric vessel, hernia at "
+        "ports of 10 mm or more, gas embolism, surgical emphysema, "
+        "and shoulder tip pain from residual gas irritating the "
+        "diaphragm and referring through the phrenic nerve. Note: "
+        "consent must cover conversion to laparotomy and that the "
+        "findings may be normal, which happens often in pelvic pain."
+    ),
+    "Chronic pelvic pain": (
+        "Non-cyclical or cyclical pain in the pelvis lasting at least "
+        "6 months and causing disability or prompting care. Affects "
+        "up to one in five women. Causes: gynaecological "
+        "(endometriosis, adenomyosis, chronic pelvic inflammatory "
+        "disease, pelvic congestion), urological (bladder pain "
+        "syndrome, recurrent infection), gastrointestinal (irritable "
+        "bowel syndrome, constipation, inflammatory bowel disease), "
+        "musculoskeletal (pelvic floor myofascial pain, abdominal "
+        "wall trigger points, hip and sacroiliac), and neuropathic "
+        "(pudendal or ilioinguinal entrapment after a Pfannenstiel "
+        "incision). Mechanism: whatever starts it, persistence "
+        "usually involves central sensitisation, and comorbid poor "
+        "sleep, anxiety, depression and past physical or sexual abuse "
+        "are common and worsen outcomes. Ix: examine to reproduce the "
+        "pain, urine culture, chlamydia testing, transvaginal "
+        "ultrasound. Mx: multidisciplinary from the start - "
+        "explanation, pelvic floor physiotherapy, psychological "
+        "therapy, a hormonal suppression trial, neuromodulators, and "
+        "no long-term opioids. Note: reserve laparoscopy for when the "
+        "result would change treatment, since repeated surgery makes "
+        "central pain worse."
+    ),
+    "Pelvic pain in women": (
+        "Approach to acute pain in the lower abdomen or pelvis in a "
+        "woman of reproductive age. Key point: do a pregnancy test "
+        "first in every one of them, because it splits the "
+        "differential in half. Causes: pregnant early, think ectopic, "
+        "miscarriage, ovarian torsion and corpus luteum; pregnant "
+        "late, think abruption, labour, chorioamnionitis and uterine "
+        "rupture. Not pregnant, think pelvic inflammatory disease, "
+        "ovarian torsion, ruptured or haemorrhagic cyst, "
+        "mittelschmerz, endometriosis and degenerating fibroid. "
+        "Differential: appendicitis, diverticulitis, urinary "
+        "infection, renal colic and constipation present the same "
+        "way. Features: sudden severe unilateral pain with vomiting "
+        "and an enlarged oedematous ovary means torsion, a positive "
+        "pregnancy test with an empty uterus and an adnexal mass "
+        "means ectopic, bilateral pain with cervical excitation and "
+        "fever means infection, migratory right iliac fossa pain with "
+        "anorexia means appendicitis. Ix: beta hCG, full blood count, "
+        "C-reactive protein, urine, chlamydia and gonorrhoea testing, "
+        "then transvaginal ultrasound with Doppler."
+    ),
+    "Sexual assault": (
+        "Any sexual act without consent. Care is led by what the "
+        "person chooses, and they may accept or decline any part of "
+        "it. Mx: in NSW, contact the local NSW Health Sexual Assault "
+        "Service, which provides 24 hour medical, forensic and "
+        "counselling care, or the Sexual Violence Helpline on 1800 "
+        "424 017. The options are medical care alone, medical care "
+        "with a forensic examination reported to police, or a "
+        "forensic examination stored without reporting. Treat "
+        "injuries and address safety first. Prevention: emergency "
+        "contraception with levonorgestrel up to 96 hours, ulipristal "
+        "up to 120 hours, or a copper intrauterine device up to 5 "
+        "days, which is the most effective. Assess for HIV "
+        "post-exposure prophylaxis, which must start within 72 hours "
+        "and ideally within 24. Give hepatitis B vaccine if not "
+        "immune, consider antibiotic prophylaxis, and take baseline "
+        "serology with repeat testing. Note: for anyone under 16 "
+        "there is a mandatory report to the NSW Child Protection "
+        "Helpline. Follow-up: counselling and review for "
+        "post-traumatic stress; document findings factually without "
+        "drawing conclusions."
+    ),
+    "Forensic medical examination": (
+        "Structured collection and documentation of evidence after an "
+        "alleged assault, done by a trained forensic medical officer, "
+        "separately from and never ahead of medical care. "
+        "Indications: reported sexual or physical assault where the "
+        "person consents. Consent is specific and can be withdrawn at "
+        "any point, and it is separate from consent to treatment and "
+        "to police involvement. Examination: documented history, top "
+        "to toe injury survey with measurements, body diagrams and "
+        "photography, anogenital examination, and swabs and reference "
+        "samples taken into a sealed kit. Note: yield falls quickly "
+        "with time, so seek advice immediately rather than deciding "
+        "locally. Oral samples are worthwhile only for about the "
+        "first day, and swabs from other sites for several days, "
+        "commonly up to 7. Clothing, bedding and a first void of "
+        "urine are collected, and washing, eating, drinking and "
+        "changing reduce yield. Key point: chain of custody means "
+        "every sample is labelled, sealed and signed for at each "
+        "handover, so that a break in the record can make otherwise "
+        "good evidence inadmissible."
+    ),
+    "Lactation": (
+        "Production and delivery of breast milk. Phases: oestrogen "
+        "and progesterone build the ducts and alveoli in pregnancy "
+        "while blocking secretion. Secretory initiation from about 16 "
+        "weeks makes colostrum. Secretory activation, the milk coming "
+        "in at 30 to 72 hours after birth, is triggered by the abrupt "
+        "fall in progesterone once the placenta is delivered, which "
+        "releases prolactin to act on the alveolar cell. Established "
+        "lactation is then controlled locally by supply and demand "
+        "through a feedback inhibitor in the milk itself, so an "
+        "undrained breast makes less. Mechanism: prolactin from the "
+        "anterior pituitary drives synthesis, oxytocin from the "
+        "posterior pituitary contracts myoepithelial cells for "
+        "let-down. Let-down is a conditioned neuroendocrine reflex "
+        "that a baby's cry can trigger and that pain, stress and lack "
+        "of privacy inhibit. Causes: failure follows retained "
+        "placenta, Sheehan syndrome, breast hypoplasia or surgery. "
+        "Note: prolactin suppresses pulsatile gonadotrophin releasing "
+        "hormone, giving lactational amenorrhoea, which is only "
+        "reliable contraception if fully breastfeeding, amenorrhoeic "
+        "and under 6 months."
+    ),
+    "Breastfeeding": (
+        "Feeding at the breast, recommended exclusively to around 6 "
+        "months and then alongside solids to 12 months and beyond. "
+        "Epidemiology: about 96 per cent of Australian mothers start, "
+        "but only around one in five are still exclusively "
+        "breastfeeding at 5 months. Examination: assess a full feed. "
+        "Good attachment means the baby's chin into the breast, nose "
+        "free, a wide gape, more areola visible above than below, "
+        "flanged lips, rhythmic sucking with pauses and audible "
+        "swallowing, and no pain after the first few seconds. "
+        "Monitoring: adequacy is 8 to 12 feeds a day, at least 6 "
+        "heavy wet nappies after day 5, soft yellow stools, no more "
+        "than 7 to 10 per cent weight loss with birth weight back by "
+        "2 weeks, and steady gain thereafter. Complications: nipple "
+        "pain and damage are almost always poor attachment, and also "
+        "consider tongue tie and thrush; engorgement peaks at day 3 "
+        "to 5; then blocked ducts and mastitis. Low supply is usually "
+        "perceived rather than real. Note: support from midwives, "
+        "child and family health nurses, lactation consultants and "
+        "the Australian Breastfeeding Association helpline on 1800 "
+        "686 268."
+    ),
+    "Aboriginal and Torres Strait Islander maternal and perinatal health": (
+        "The maternal and newborn health of First Nations families in "
+        "Australia, and the gap between it and that of other "
+        "Australians. Epidemiology: the maternal mortality ratio is "
+        "roughly double, perinatal mortality is roughly double, "
+        "preterm birth runs at about 14 per cent against 8, and low "
+        "birth weight at about 11 per cent against 6. Smoking in "
+        "pregnancy is far more common though falling steeply, and "
+        "antenatal care starts later in the first trimester. Causes: "
+        "the drivers are colonisation and its ongoing effects, racism "
+        "and unsafe care, poverty, housing, food insecurity, and the "
+        "distance that forces many women off Country to give birth "
+        "alone at 38 weeks. Mx: Aboriginal community controlled "
+        "health services, continuity of midwifery carer, Aboriginal "
+        "health workers in the team, and Birthing on Country models, "
+        "which have been shown to reduce preterm birth. In NSW the "
+        "Aboriginal Maternal and Infant Health Service delivers this. "
+        "Key point: ask everyone whether they identify, because "
+        "identification is what triggers the funded programs, and "
+        "record it accurately."
+    ),
+    "Developmental origins of health and disease": (
+        "The idea that conditions in the womb and in infancy "
+        "permanently set structure and metabolism, and so shift adult "
+        "disease risk. Barker's cohorts showed an inverse relation "
+        "between birth weight and later coronary heart disease, "
+        "hypertension and type 2 diabetes. Mechanism: undernutrition "
+        "makes the fetus redistribute blood flow to the brain at the "
+        "cost of viscera, so it ends up with fewer nephrons, less "
+        "beta cell mass, a reset hypothalamic-pituitary-adrenal axis "
+        "and altered DNA methylation. This thrifty phenotype is well "
+        "suited to scarcity and badly suited to an energy-rich adult "
+        "life. Associations: the Dutch Hunger Winter cohort exposed "
+        "in early gestation had more obesity, dyslipidaemia and "
+        "cardiovascular disease decades later, with persisting "
+        "methylation change at IGF2. Risk is highest when a small "
+        "baby has rapid catch-up growth. Higher birth weight carries "
+        "a modest excess of childhood leukaemia and later breast "
+        "cancer, while asthma links are inconsistent. Note: these are "
+        "population associations of modest size, confounded by "
+        "disadvantage and smoking, so they justify preconception and "
+        "antenatal care rather than predicting any one child."
+    ),
+    "Polymerase chain reaction": (
+        "Amplification of a target nucleic acid sequence by repeated "
+        "cycles of denaturation, primer annealing and extension with "
+        "a heat-stable polymerase, so copies double each cycle and a "
+        "trace becomes detectable. Types: real-time quantitative "
+        "polymerase chain reaction reads fluorescence per cycle and "
+        "gives a viral load; reverse transcription converts RNA to "
+        "complementary DNA first, for RNA viruses; multiplex panels "
+        "test many targets at once. Uses: nucleic acid amplification "
+        "on first void urine or a self-collected vaginal swab is the "
+        "reference test for chlamydia and gonorrhoea; herpes simplex "
+        "from a deroofed vesicle; meningococcal and respiratory "
+        "panels; HIV, hepatitis B and C viral loads; tuberculosis "
+        "with rifampicin resistance; cytomegalovirus on amniotic "
+        "fluid; cell-free DNA in prenatal screening. Key point: it "
+        "detects nucleic acid, not a living organism, so it stays "
+        "positive after successful treatment. Note: defer any test of "
+        "cure by about 4 weeks, and culture gonorrhoea as well, "
+        "because amplification gives no antibiotic susceptibility."
+    ),
+    "Serology": (
+        "Testing serum for antibody, or antigen, to infer exposure, "
+        "immunity or active infection. Types: IgM appears within "
+        "about a week and fades over 1 to 3 months, so it points to "
+        "recent infection. IgG appears later, persists for years and "
+        "means past infection or immunity. Criteria: paired acute and "
+        "convalescent sera 2 to 4 weeks apart showing a fourfold "
+        "titre rise confirms recent infection. IgG avidity separates "
+        "recent from remote, which matters for toxoplasma and "
+        "cytomegalovirus in pregnancy. Uses: the antenatal booking "
+        "screen for rubella IgG, syphilis, hepatitis B and HIV; "
+        "hepatitis B panels, where surface antigen means infection, "
+        "surface antibody means immunity, and core antibody separates "
+        "past infection from vaccination. Note: a window period "
+        "before seroconversion means an early negative does not "
+        "exclude infection, and IgM cross-reacts readily. Maternal "
+        "IgG persists in the infant to about 12 to 18 months, so "
+        "infant antibody cannot diagnose vertical infection and "
+        "nucleic acid testing is used instead."
+    ),
+    "ELISA": (
+        "Plate-based immunoassay in which antigen or antibody bound "
+        "to a well is detected by an enzyme-linked antibody, "
+        "generating colour in proportion to the amount present. "
+        "Types: indirect assays detect patient antibody and underlie "
+        "most screening serology; sandwich assays capture antigen "
+        "between two antibodies; competitive assays suit small "
+        "molecules; fourth generation combined assays detect antigen "
+        "and antibody together, which shortens the window period in "
+        "HIV testing. Uses: HIV, hepatitis B and C, treponemal "
+        "syphilis tests, coeliac tissue transglutaminase IgA, "
+        "autoantibodies, allergen-specific IgE, faecal calprotectin, "
+        "and many hormone and drug level platforms. Key point: it is "
+        "deliberately tuned for sensitivity as a screening test, so a "
+        "reactive result needs a more specific confirmatory assay, "
+        "and in a low prevalence population most reactive results are "
+        "false. Note: false negatives occur before seroconversion and "
+        "in immunosuppression, false positives in pregnancy, "
+        "autoimmune disease and after recent vaccination."
+    ),
+    "Western blot": (
+        "Immunoassay that separates proteins by size on a gel, "
+        "transfers them to a membrane and detects one of them with a "
+        "labelled antibody, read as a pattern of bands. Uses: "
+        "historically the confirmatory test for HIV antibody, where "
+        "bands to gp120, gp41 and p24 were scored; supplemental "
+        "testing in Lyme disease; some autoimmune and neuromuscular "
+        "antibody panels; protein quantitation in research. "
+        "Australian notes: it is no longer used to confirm HIV here. "
+        "The current algorithm is a fourth generation combined "
+        "antigen and antibody immunoassay, with a reactive result "
+        "confirmed on a supplemental assay and HIV RNA, which detects "
+        "infection about 2 weeks earlier and resolves indeterminate "
+        "results instead of leaving them hanging. Note: the blot "
+        "family is Southern for DNA, Northern for RNA and Western for "
+        "protein. Only Southern is a surname, and the others are a "
+        "laboratory joke on it, which is why Southern alone is "
+        "capitalised in strict usage."
+    ),
+    "Genital ulcer": (
+        "Break in the epithelium of the vulva, penis, perineum or "
+        "perianal skin. Key point: pain is the single most useful "
+        "discriminator. Causes: painful ulcers are usually herpes "
+        "simplex, which gives multiple shallow ulcers preceded by "
+        "vesicles, tender inguinal nodes, a tingling prodrome and "
+        "recurrence. Chancroid is painful, deep and ragged with "
+        "suppurating nodes but is rare in Australia. Painless ulcers "
+        "suggest primary syphilis, a single indurated clean-based "
+        "chancre with rubbery painless nodes that heals in 3 to 6 "
+        "weeks whether treated or not, or lymphogranuloma venereum, a "
+        "fleeting ulcer followed by buboes and proctitis. "
+        "Differential: aphthous ulcers, Behcet syndrome with oral "
+        "ulcers and uveitis, Crohn disease, erosive lichen planus or "
+        "sclerosus, fixed drug eruption, trauma, and vulval cancer. "
+        "Ix: herpes swab for nucleic acid from the deroofed base, "
+        "syphilis serology and lesion testing, chlamydia testing, and "
+        "HIV serology in everyone. Red flags: biopsy any ulcer "
+        "lasting beyond 3 to 4 weeks or looking atypical."
+    ),
+    "Contraception": (
+        "Choosing a method that prevents pregnancy and that the "
+        "person will actually use. Classification: effectiveness "
+        "falls into tiers. Long acting reversible methods and "
+        "surgical sterilisation fail in under 1 per cent a year with "
+        "typical use, because nothing has to be remembered. The "
+        "injection, pill, ring and patch fail in about 4 to 9 per "
+        "cent. Condoms, diaphragms, withdrawal and fertility "
+        "awareness fail in 13 per cent or more. Criteria: Australia "
+        "uses the UK Medical Eligibility Criteria, where category 3 "
+        "means risks usually outweigh benefits and category 4 is "
+        "unacceptable. Combined methods are category 4 with migraine "
+        "with aura, current venous thromboembolism, blood pressure at "
+        "or above 160/100, smoking 15 a day at 35 or older, and under "
+        "6 weeks postpartum while breastfeeding. Mx: cover "
+        "effectiveness, bleeding change, return of fertility, which "
+        "takes up to a year after the injection, that only condoms "
+        "prevent infection, quick starting with a pregnancy test and "
+        "7 days of backup, and emergency options. Note: offer long "
+        "acting methods first, since uptake here lags comparable "
+        "countries."
+    ),
+    "Surgical hand antisepsis": (
+        "Decontamination of hands and forearms before a sterile "
+        "procedure, to cut transient flora and hold resident flora "
+        "down under the gloves for the length of the operation. "
+        "Types: an aqueous scrub with 4 per cent chlorhexidine "
+        "gluconate or povidone-iodine under running water, or an "
+        "alcohol-based surgical hand rub with an added persistent "
+        "agent, which is at least as effective, faster and kinder to "
+        "skin and is preferred when hands are visibly clean. Before "
+        "starting, remove rings, watch and wrist jewellery, keep "
+        "nails short with no polish or artificial nails, and use a "
+        "nail pick for the first scrub of the day. Wash to the elbow "
+        "keeping hands above elbows so water drains away from the "
+        "fingertips, for the time the product specifies, then dry "
+        "with a sterile towel from fingertips upward without going "
+        "back. Note: alcohol rub goes on clean dry hands and is "
+        "rubbed until dry, never wiped off. Key point: antisepsis "
+        "reduces flora but never sterilises skin, which is why double "
+        "gloving and prompt change after a puncture matter."
     ),
 }
 
