@@ -227,6 +227,28 @@ base = {c["name"]: c["summary"] for c in lib["conditions"]}
 baked = [n for n, t in lib["rich_summaries"].items() if base.get(n) == t]
 assert not baked, f"{len(baked)} override(s) baked into base text: {baked[:3]}"
 
+# Size guards. The updater will not read more than the manifest
+# declares, and refuses outright above a backstop, so a payload that
+# outgrows either one turns the content channel off for everybody with
+# no visible cause. Clients before 2.5.0 carried a flat 8 MB ceiling;
+# crossing it strands them on their bundled copy for good, which is a
+# decision to take deliberately rather than to discover months later.
+sys.path.insert(0, ".")
+from pearls import _updater          # noqa: E402  (single source of truth)
+BACKSTOP = _updater._MAX_BYTES
+LEGACY = 8 << 20
+size = len(blob)
+assert size <= BACKSTOP, (
+    f"library is {size / 1048576:.1f} MB, over the {BACKSTOP >> 20} MB "
+    "updater backstop; no client would install it")
+if size > LEGACY:
+    print(f"  WARNING: library is {size / 1048576:.1f} MB, over the 8 MB "
+          "ceiling in add-on versions before 2.5.0.")
+    print("  Those clients will stop receiving content until they update.")
+elif size > LEGACY * 0.8:
+    print(f"  NOTE: library is {size / 1048576:.1f} MB, "
+          f"{100 * size / LEGACY:.0f}% of the 8 MB pre-2.5.0 client ceiling.")
+
 print(f"  manifest and library agree ({len(blob) / 1024:.0f} KB, "
       f"sha {man['sha256'][:12]})")
 PY

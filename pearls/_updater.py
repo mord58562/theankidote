@@ -52,7 +52,7 @@ DEFAULT_MANIFEST_URL = (
     "/main/data/manifest.json")
 
 _TIMEOUT = 8          # seconds; a check that cannot finish is not worth having
-_MAX_BYTES = 8 << 20  # a library ~40x the current size is a bug or an attack
+_MAX_BYTES = 32 << 20  # backstop against a forged manifest; see _library_limit
 _UA = "TheAnkiDote content updater"
 
 
@@ -109,6 +109,29 @@ def _fetch(url: str, limit: int = _MAX_BYTES, what: str = "url") -> bytes:
     if len(body) > limit:
         raise ValueError(f"response larger than {limit} bytes")
     return body
+
+
+def _library_limit(declared):
+    """How many bytes we are willing to read for one library download.
+
+    The ceiling used to be a flat 8 MB, chosen when the library was a
+    few hundred kilobytes. Content publishing took it to 5.9 MB in
+    nineteen days, so that constant was about to become the thing that
+    quietly switched the content channel off: the download would fail,
+    every client would keep its bundled copy, and the only symptom
+    would be content that stopped arriving.
+
+    The manifest already declares `bytes`, and a payload whose length
+    disagrees with that number is discarded a few lines below. So the
+    honest limit is what the manifest declares, which scales with the
+    content on its own and never needs revisiting. `_MAX_BYTES` stays
+    as a backstop for a manifest that declares something absurd, which
+    is the case the old constant was really there to catch.
+    """
+    if isinstance(declared, int) and not isinstance(declared, bool):
+        if 0 < declared <= _MAX_BYTES:
+            return declared
+    return _MAX_BYTES
 
 
 def _newer(remote: str, local: str) -> bool:
@@ -269,7 +292,7 @@ def _check(manifest_url: str) -> str:
         return "The update server returned an incomplete response."
 
     try:
-        body = _fetch(url, _MAX_BYTES, "library url")
+        body = _fetch(url, _library_limit(manifest.get("bytes")), "library url")
     except Exception as exc:                            # noqa: BLE001
         log(f"updater: download failed ({exc})")
         return "Download failed."

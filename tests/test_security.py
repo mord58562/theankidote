@@ -982,5 +982,39 @@ class ConcurrentDownloadsDoNotCorruptTheLibrary(unittest.TestCase):
             self.assertFalse(leftovers, f"temp files left behind: {leftovers}")
 
 
+class DownloadCeilingTracksTheManifest(unittest.TestCase):
+    """The read limit must scale with the content, not with a constant.
+
+    A flat ceiling sized against the library of the day is a slow fuse:
+    the library grows past it, every download fails the length check,
+    and the add-on silently keeps serving its bundled copy. The limit
+    now comes from the manifest's declared `bytes`, which the payload is
+    checked against anyway, with a constant left only as a backstop
+    against a manifest declaring something absurd.
+    """
+
+    def test_declared_size_is_the_limit(self):
+        self.assertEqual(_updater._library_limit(6_230_518), 6_230_518)
+
+    def test_limit_grows_with_the_library(self):
+        big = 20 << 20
+        self.assertEqual(_updater._library_limit(big), big,
+                         "a library larger than the old 8 MB ceiling must "
+                         "still be installable")
+
+    def test_absurd_declaration_falls_back_to_the_backstop(self):
+        for declared in (1 << 40, -1, 0, None, "6230518", True, 1.5):
+            self.assertEqual(_updater._library_limit(declared),
+                             _updater._MAX_BYTES,
+                             f"{declared!r} should not raise the limit")
+
+    def test_shipped_library_is_installable_by_this_build(self):
+        blob = (ROOT / "data" / "library.json").read_bytes()
+        self.assertLessEqual(
+            len(blob), _updater._MAX_BYTES,
+            "the library we ship exceeds our own backstop; no client "
+            "could install it")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
