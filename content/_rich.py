@@ -9464,6 +9464,192 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "surgical hand antisepsis"]],
         "summary": "",
     },
+    {
+        "name": "Total intravenous anaesthesia",
+        "aliases": ["TIVA", "target controlled infusion", "propofol infusion anaesthesia"],
+        "utd": [["Overview", "total intravenous anesthesia propofol"]],
+        "summary": "",
+    },
+    {
+        "name": "Enhanced recovery after surgery",
+        "aliases": ["ERAS", "enhanced recovery pathway", "fast track surgery"],
+        "utd": [["Overview", "enhanced recovery after surgery protocols"]],
+        "summary": "",
+    },
+    {
+        "name": "Neuromuscular blockade reversal",
+        "aliases": ["reversal of neuromuscular blockade", "residual neuromuscular blockade", "train of four monitoring"],
+        "utd": [["Overview", "reversal of neuromuscular blockade"]],
+        "summary": "",
+    },
+    {
+        "name": "Adhesive small bowel obstruction",
+        "aliases": ["adhesional bowel obstruction", "adhesive obstruction", "postoperative adhesions"],
+        "utd": [["Overview", "adhesive small bowel obstruction management"]],
+        "summary": "",
+    },
+    {
+        "name": "Negative pressure wound therapy",
+        "aliases": ["NPWT", "vacuum assisted wound closure", "wound vac"],
+        "utd": [["Overview", "negative pressure wound therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Parastomal hernia",
+        "aliases": ["peristomal hernia", "hernia at stoma site"],
+        "utd": [["Overview", "parastomal hernia"]],
+        "summary": "",
+    },
+    {
+        "name": "Comprehensive geriatric assessment",
+        "aliases": ["CGA", "multidimensional geriatric assessment", "geriatric assessment"],
+        "utd": [["Overview", "comprehensive geriatric assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Nocturnal leg cramps",
+        "aliases": ["night cramps", "nocturnal cramps", "leg cramps at night"],
+        "utd": [["Overview", "nocturnal leg cramps"]],
+        "summary": "",
+    },
+    {
+        "name": "Body packing",
+        "aliases": ["body stuffing", "internal drug concealment", "drug mule"],
+        "utd": [["Overview", "body packing and body stuffing"]],
+        "summary": "",
+    },
+    {
+        "name": "Activated charcoal decontamination",
+        "aliases": ["activated charcoal", "single dose activated charcoal", "gastrointestinal decontamination"],
+        "utd": [["Overview", "activated charcoal gastrointestinal decontamination"]],
+        "summary": "",
+    },
+    {
+        "name": "Whole bowel irrigation",
+        "aliases": ["polyethylene glycol bowel irrigation", "bowel irrigation in poisoning"],
+        "utd": [["Overview", "whole bowel irrigation poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Radiation dermatitis",
+        "aliases": ["radiodermatitis", "radiation skin reaction", "radiation skin toxicity"],
+        "utd": [["Overview", "radiation dermatitis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Immune checkpoint inhibitor colitis",
+        "aliases": ["checkpoint inhibitor colitis", "immunotherapy colitis", "ipilimumab colitis"],
+        "utd": [["Overview", "checkpoint inhibitor colitis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Cancer associated thrombosis",
+        "aliases": ["malignancy associated venous thromboembolism", "tumour associated thrombosis"],
+        "utd": [["Overview", "cancer associated venous thromboembolism"]],
+        "summary": "",
+    },
+    {
+        "name": "Hyposplenism",
+        "aliases": ["asplenia", "functional asplenia", "absent splenic function"],
+        "utd": [["Overview", "hyposplenism and asplenia infection risk"]],
+        "summary": "",
+    },
+    {
+        "name": "Surgical antibiotic prophylaxis",
+        "aliases": ["preoperative antibiotic prophylaxis", "perioperative antibiotic prophylaxis"],
+        "utd": [["Overview", "antimicrobial prophylaxis for surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Vaccine hesitancy",
+        "aliases": ["vaccine refusal", "immunisation hesitancy", "vaccine reluctance"],
+        "utd": [["Overview", "vaccine hesitancy counselling"]],
+        "summary": "",
+    },
+    {
+        "name": "Iodine deficiency",
+        "aliases": ["dietary iodine deficiency", "iodine deficiency disorders"],
+        "utd": [["Overview", "iodine deficiency disorders"]],
+        "summary": "",
+    },
+    {
+        "name": "Zinc deficiency",
+        "aliases": ["dietary zinc deficiency", "acrodermatitis enteropathica"],
+        "utd": [["Overview", "zinc deficiency clinical"]],
+        "summary": "",
+    },
+    {
+        "name": "Thiamine deficiency",
+        "aliases": ["beriberi", "vitamin B1 deficiency", "wet beriberi"],
+        "utd": [["Overview", "thiamine deficiency beriberi"]],
+        "summary": "",
+    },
+    {
+        "name": "Motion sickness",
+        "aliases": ["travel sickness", "seasickness", "kinetosis"],
+        "utd": [["Overview", "motion sickness prevention treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Whiplash associated disorder",
+        "aliases": ["whiplash", "whiplash injury", "cervical acceleration deceleration injury"],
+        "utd": [["Overview", "whiplash associated disorders"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic cough in adults",
+        "aliases": ["chronic cough", "persistent cough", "cough of over eight weeks"],
+        "utd": [["Overview", "chronic cough in adults evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Ankle sprain",
+        "aliases": ["lateral ankle ligament sprain", "inversion ankle injury", "rolled ankle"],
+        "utd": [["Overview", "ankle sprain evaluation and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Aphthous ulcer",
+        "aliases": ["aphthous stomatitis", "canker sore", "recurrent aphthous ulceration"],
+        "utd": [["Overview", "recurrent aphthous stomatitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Dental abscess",
+        "aliases": ["odontogenic abscess", "periapical abscess", "tooth abscess"],
+        "utd": [["Overview", "odontogenic infections and dental abscess"]],
+        "summary": "",
+    },
+    {
+        "name": "Sunburn",
+        "aliases": ["solar erythema", "ultraviolet burn"],
+        "utd": [["Overview", "sunburn treatment prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Jet lag",
+        "aliases": ["jet lag disorder", "circadian desynchrony", "time zone change syndrome"],
+        "utd": [["Overview", "jet lag disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Vitreous floaters",
+        "aliases": ["eye floaters", "floaters", "vitreous syneresis"],
+        "utd": [["Overview", "vitreous floaters and posterior vitreous detachment"]],
+        "summary": "",
+    },
+    {
+        "name": "Halitosis",
+        "aliases": ["bad breath", "oral malodour"],
+        "utd": [["Overview", "halitosis evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Dental caries",
+        "aliases": ["tooth decay", "dental cavities", "carious lesion"],
+        "utd": [["Overview", "dental caries prevention"]],
+        "summary": "",
+    },
 ]
 
 
@@ -59891,6 +60077,647 @@ RICH_SUMMARIES = {
         "rubbed until dry, never wiped off. Key point: antisepsis "
         "reduces flora but never sterilises skin, which is why double "
         "gloving and prompt change after a puncture matter."
+    ),
+    "Total intravenous anaesthesia": (
+        "Anaesthesia maintained by continuous intravenous infusion, "
+        "usually propofol with remifentanil, rather than by a "
+        "volatile agent. Delivery is by target controlled infusion "
+        "using a pharmacokinetic model aimed at a plasma or effect "
+        "site concentration. Indications: high risk of postoperative "
+        "nausea and vomiting, malignant hyperthermia susceptibility, "
+        "and shared airway or neurosurgical work where a still field "
+        "and smooth emergence matter. It also suits procedures in "
+        "remote sites without scavenging. Ix: depth of anaesthesia "
+        "monitoring is advised because there is no end tidal agent "
+        "number confirming delivery, so a processed EEG index plus "
+        "vigilance for line disconnection is standard. Mx: use a "
+        "dedicated cannula with an antireflux valve, keep the line "
+        "visible for the whole case and recheck the infusion after "
+        "every position change. Titrate to clinical signs rather than "
+        "to the model number, which is only a population estimate. "
+        "Note: the classic disaster is a tissued or disconnected "
+        "cannula hidden under drapes, so the failure mode is "
+        "awareness rather than overdose."
+    ),
+    "Enhanced recovery after surgery": (
+        "A bundled perioperative pathway that shortens length of stay "
+        "and reduces complications by attacking the surgical stress "
+        "response rather than any single step. Features: preoperative "
+        "counselling and optimisation, carbohydrate loading instead "
+        "of prolonged fasting, and multimodal opioid sparing "
+        "analgesia. Intraoperatively it means goal directed fluid, "
+        "normothermia and minimally invasive access where feasible. "
+        "Afterwards the levers are early oral intake, mobilisation on "
+        "the day of surgery and early removal of drains and "
+        "catheters. Ix: audit compliance, because benefit tracks the "
+        "proportion of elements delivered rather than any favourite "
+        "component. Mx: multidisciplinary buy in with nursing "
+        "protocols, written patient expectations and a named "
+        "coordinator to stop compliance drifting. Note: the evidence "
+        "is strongest in colorectal surgery, but pathways now cover "
+        "hepatobiliary, gynaecological and orthopaedic work. Key "
+        "point: no single element carries the effect, so partial "
+        "adoption buys only partial benefit."
+    ),
+    "Neuromuscular blockade reversal": (
+        "Return of neuromuscular function after non-depolarising "
+        "blockade, either spontaneous or pharmacologically reversed "
+        "before extubation. Residual blockade is common and "
+        "under-recognised, and is a preventable cause of "
+        "postoperative respiratory complications. Monitoring: "
+        "quantitative train of four at the adductor pollicis, with a "
+        "ratio of at least 0.9 required before extubation. Head lift "
+        "and grip are insensitive and do not exclude residual "
+        "weakness. Mx: neostigmine with an antimuscarinic works only "
+        "once some recovery has returned, so it cannot rescue deep "
+        "block. Sugammadex encapsulates rocuronium or vecuronium and "
+        "reverses even profound block within minutes, which makes it "
+        "the agent for rescue after rapid sequence induction. "
+        "Cautions: it binds progesterone, so advise additional "
+        "contraception for seven days, and it can cause anaphylaxis "
+        "or marked bradycardia. Note: reverse on a measured train of "
+        "four ratio rather than on time since the last dose, because "
+        "duration varies with temperature, renal function and "
+        "magnesium."
+    ),
+    "Adhesive small bowel obstruction": (
+        "Mechanical obstruction from fibrous bands after previous "
+        "abdominal surgery, and the commonest cause of small bowel "
+        "obstruction in adults. Aetiology: prior laparotomy, "
+        "especially colorectal and gynaecological work, with "
+        "adhesiolysis itself also implicated. Clinical features: "
+        "colicky central pain, vomiting, distension and absolute "
+        "constipation, with high pitched then absent bowel sounds. "
+        "Fever, tachycardia, localised tenderness or a rising lactate "
+        "suggest strangulation and remove the option of watching. Ix: "
+        "plain films often confirm dilated loops, but CT defines the "
+        "transition point, excludes another cause and grades "
+        "ischaemia. Mx: nasogastric decompression, fluid "
+        "resuscitation and electrolyte correction, then a trial of "
+        "conservative management for up to 48 hours if uncomplicated. "
+        "Water soluble contrast is both therapeutic and predictive, "
+        "since contrast reaching the colon by 24 hours predicts "
+        "resolution. Operate for strangulation, a closed loop or "
+        "failure to settle. Note: obstruction in a virgin abdomen is "
+        "not adhesive until proven otherwise, so hunt for a hernia or "
+        "a tumour."
+    ),
+    "Negative pressure wound therapy": (
+        "A sealed foam or gauze dressing connected to controlled "
+        "subatmospheric pressure, typically 125 mmHg, that removes "
+        "exudate and promotes granulation. Uses: open abdomen, "
+        "dehisced surgical wounds, pressure injuries and diabetic "
+        "foot wounds, and increasingly prophylactically over closed "
+        "high risk incisions. Mechanism: macrodeformation draws wound "
+        "edges together while reduced oedema improves perfusion at "
+        "the wound bed. Contraindications: untreated osteomyelitis, "
+        "malignancy in the wound, and exposed vessels or bowel, where "
+        "erosion and fistula are real risks. Mx: debride first, "
+        "protect adjacent structures with a non-adherent layer, "
+        "change every 48 to 72 hours and stop once granulation is "
+        "adequate for closure or grafting. Monitor for bleeding, "
+        "retained foam and maceration of surrounding skin. Note: the "
+        "therapy is a bridge to closure rather than a substitute for "
+        "it, so a wound that stops improving after two weeks needs "
+        "the diagnosis revisited rather than a longer run of suction."
+    ),
+    "Parastomal hernia": (
+        "Herniation of abdominal contents through the fascial defect "
+        "created for a stoma, and the commonest late complication of "
+        "stoma formation. Rates approach half of colostomies by two "
+        "years. Risk factors: obesity, older age, malnutrition, "
+        "chronic cough, and an emergency stoma sited outside the "
+        "rectus sheath. Clinical features: a bulge around the stoma "
+        "that enlarges on straining, a poor appliance seal with "
+        "leakage, and discomfort. Obstruction and strangulation are "
+        "uncommon but are the reason to review pain with an "
+        "irreducible bulge urgently. Ix: usually clinical with the "
+        "patient standing and straining. CT confirms the defect and "
+        "plans repair. Mx: most are managed conservatively with a "
+        "support garment, stoma therapist review and appliance "
+        "refitting. Repair is offered for obstruction, intractable "
+        "leakage or pain, and mesh reinforcement gives lower "
+        "recurrence than suture repair alone. Note: relocating the "
+        "stoma simply moves the problem elsewhere, so mesh "
+        "reinforcement or reversal is preferred where either is "
+        "feasible."
+    ),
+    "Comprehensive geriatric assessment": (
+        "A multidimensional multidisciplinary process assessing "
+        "medical, functional, psychological and social domains to "
+        "build one coordinated care plan. It reduces mortality and "
+        "improves the odds of still living at home when delivered on "
+        "a dedicated ward. Features: medical review of problems and "
+        "medicines, functional assessment of activities of daily "
+        "living and mobility, cognition and mood screening, and "
+        "social review of supports and housing. Ix: delirium and "
+        "cognitive screens, falls and continence history, a nutrition "
+        "screen, and targeted bloods for reversible contributors. Mx: "
+        "the assessment is worthless without the plan that follows, "
+        "so it ends in an explicit problem list, deprescribing "
+        "decisions, a rehabilitation goal and a documented "
+        "conversation about goals of care. Discharge planning starts "
+        "on admission. Note: the benefit comes from the team acting "
+        "on the findings rather than from the questionnaire, which is "
+        "why a checklist completed and filed changes nothing."
+    ),
+    "Nocturnal leg cramps": (
+        "Sudden painful involuntary contraction of calf or foot "
+        "muscles at night, lasting seconds to minutes and leaving "
+        "residual soreness. Prevalence rises with age. They are "
+        "distinct from restless legs, which brings an urge to move "
+        "rather than pain. Aetiology: usually idiopathic. Secondary "
+        "causes include dehydration, pregnancy, haemodialysis, "
+        "peripheral arterial disease and hypothyroidism, and drugs "
+        "such as diuretics and beta agonists. Ix: none routinely. "
+        "Check electrolytes, renal function, glucose and thyroid "
+        "function if cramps are new, frequent or accompanied by "
+        "weakness. Mx: stretch and massage the cramping muscle during "
+        "an attack, then prevent with nightly calf and hamstring "
+        "stretching, adequate hydration and a review of the drug "
+        "list. Quinine reduces frequency only modestly while risking "
+        "thrombocytopenia and haemolytic uraemic syndrome, so it is "
+        "not recommended and is not approved for this use in "
+        "Australia. Magnesium is ineffective outside pregnancy. Red "
+        "flags: fasciculation, wasting or persistent weakness point "
+        "to motor neurone disease rather than simple cramp."
+    ),
+    "Body packing": (
+        "Internal concealment of drug packages for smuggling, "
+        "classically cocaine, heroin or methamphetamine in machine "
+        "wrapped packets swallowed in numbers. Body stuffing is the "
+        "hurried swallowing of poorly wrapped drug during arrest, "
+        "carrying a higher rupture risk but a smaller dose. Clinical "
+        "features: usually asymptomatic on presentation. Rupture "
+        "produces an abrupt toxidrome and obstruction produces "
+        "vomiting and distension, so any deterioration is both a "
+        "surgical and a toxicological emergency. Ix: abdominal CT is "
+        "the most sensitive test and also counts packets. Plain films "
+        "miss modern wrapping, so a negative film does not clear the "
+        "patient. Mx: asymptomatic packers get monitored observation "
+        "with whole bowel irrigation until packets clear and imaging "
+        "is negative. Rupture of a stimulant packet means immediate "
+        "laparotomy, since no antidote exists and toxicity is "
+        "unsurvivable without source control. Note: endoscopic "
+        "retrieval risks perforating a packet and is avoided. Key "
+        "point: custody and consent issues never justify delaying "
+        "imaging in a symptomatic packer."
+    ),
+    "Activated charcoal decontamination": (
+        "Adsorption of ingested poison onto activated charcoal to "
+        "reduce systemic absorption, given as 50 g in adults or 1 g "
+        "per kilogram in children. Benefit falls steeply with time, "
+        "so it is worthwhile mainly within one hour of ingestion, or "
+        "later for sustained release preparations and drugs that slow "
+        "gut transit. Indications: potentially toxic ingestion of an "
+        "adsorbed drug in an alert cooperative patient with a "
+        "protected airway. Multiple dose charcoal enhances "
+        "elimination of carbamazepine, dapsone, phenobarbitone and "
+        "theophylline. Contraindications: fluctuating consciousness "
+        "without a secured airway, corrosives, and bowel obstruction. "
+        "Charcoal does not bind alcohols, metals such as iron and "
+        "lithium, or hydrocarbons. Mx: discuss with the Poisons "
+        "Information Centre on 13 11 26, give as a flavoured slurry "
+        "to improve palatability and observe for aspiration. Note: "
+        "aspirated charcoal causes a severe pneumonitis, which is why "
+        "the decision hinges on airway and cooperation more than on "
+        "the drug itself."
+    ),
+    "Whole bowel irrigation": (
+        "Administration of polyethylene glycol electrolyte solution "
+        "until rectal effluent runs clear, flushing unabsorbed drug "
+        "through the gut before it is absorbed. It is a niche "
+        "technique rather than a routine decontamination step. "
+        "Indications: sustained release or enteric coated "
+        "preparations taken in overdose, ingestion of iron, lithium "
+        "or lead that charcoal does not bind, and packet clearance in "
+        "body packers. Dose: 1500 to 2000 mL per hour in adults and "
+        "25 mL per kilogram per hour in children, usually by "
+        "nasogastric tube with the head of the bed elevated. "
+        "Contraindications: ileus or bowel obstruction, perforation, "
+        "haemodynamic instability, and an unprotected airway in a "
+        "drowsy patient. Mx: give an antiemetic, monitor electrolytes "
+        "and abdominal signs, and stop when effluent is clear or "
+        "imaging shows clearance. Involve the Poisons Information "
+        "Centre on 13 11 26 early. Note: it is labour intensive and "
+        "often abandoned when nursing capacity is short, so decide "
+        "early whether the ingestion truly justifies it."
+    ),
+    "Radiation dermatitis": (
+        "Skin injury within the radiotherapy field, occurring in most "
+        "patients receiving curative doses and peaking in the second "
+        "to fourth week. Reactions run from erythema through dry "
+        "desquamation to moist desquamation and, rarely, ulceration. "
+        "Risk factors: breast, head and neck and perineal fields, "
+        "skin folds and bolus use, concurrent chemotherapy, and "
+        "smoking. Clinical features: well demarcated erythema "
+        "following the field edges, with itch, tenderness and later "
+        "hyperpigmentation. Sharp geometric borders distinguish it "
+        "from cellulitis or contact dermatitis. Mx: gentle washing "
+        "with a mild cleanser is encouraged, alongside a bland "
+        "moisturiser and loose cotton clothing. Moist desquamation "
+        "needs a non-adherent silicone or hydrogel dressing and "
+        "review for secondary infection, and topical corticosteroid "
+        "reduces itch and severity. Deodorant and shaving are "
+        "permitted, contrary to older advice. Note: radiation recall "
+        "reproduces the field weeks or months later when chemotherapy "
+        "is given, so ask about radiotherapy when a rash follows "
+        "field lines."
+    ),
+    "Immune checkpoint inhibitor colitis": (
+        "Immune mediated colitis triggered by PD-1, PD-L1 or CTLA-4 "
+        "blockade, and the commonest serious gastrointestinal immune "
+        "related adverse event. Risk is highest with ipilimumab and "
+        "with combination therapy, and onset is typically six to "
+        "eight weeks after starting. Clinical features: diarrhoea "
+        "with abdominal pain, blood or mucus, and sometimes fever. "
+        "Grading is by stool frequency above baseline, and "
+        "deterioration to perforation or toxic megacolon can be "
+        "rapid. Ix: exclude infection with stool culture and "
+        "Clostridioides difficile testing, check inflammatory markers "
+        "and faecal calprotectin, and image with CT if severe. "
+        "Flexible sigmoidoscopy confirms the diagnosis and grades "
+        "mucosal damage. Mx: withhold the checkpoint inhibitor and "
+        "start prednisolone at 1 to 2 mg per kilogram for grade 2 or "
+        "above, adding infliximab or vedolizumab if steroid "
+        "refractory at three days, then taper over four to six weeks. "
+        "Note: antimotility agents mask deterioration and are "
+        "avoided. Key point: diarrhoea on immunotherapy is colitis "
+        "until infection is excluded."
+    ),
+    "Cancer associated thrombosis": (
+        "Venous thromboembolism arising in malignancy, with a risk "
+        "four to seven times that of the general population and a "
+        "leading cause of death in cancer patients. Risk factors: "
+        "pancreatic, gastric, brain and haematological primaries, "
+        "metastatic disease, central venous catheters, and platinum "
+        "based or antiangiogenic therapy. Clinical features: usually "
+        "the familiar limb swelling or pleuritic pain, but incidental "
+        "pulmonary embolism found on staging CT is common and carries "
+        "the same prognosis as symptomatic disease. Ix: image as for "
+        "any suspected VTE, with attention to catheter related upper "
+        "limb thrombosis. Unprovoked VTE warrants age appropriate "
+        "screening rather than a broad occult cancer hunt. Mx: a "
+        "direct oral anticoagulant is first line for most, with low "
+        "molecular weight heparin preferred in luminal "
+        "gastrointestinal or urothelial tumours because of bleeding "
+        "risk, and in significant thrombocytopenia. Continue while "
+        "the cancer is active. Note: the Khorana score identifies "
+        "outpatients who may benefit from primary prophylaxis."
+    ),
+    "Hyposplenism": (
+        "Reduced or absent splenic function, whether after "
+        "splenectomy or from coeliac disease, sickle cell disease or "
+        "inflammatory bowel disease. The consequence is lost "
+        "clearance of encapsulated organisms and depleted IgM memory "
+        "B cells. Clinical features: silent until overwhelming post "
+        "splenectomy infection, which begins with a nonspecific "
+        "prodrome and progresses to septic shock within hours, "
+        "carrying mortality above one in three. Ix: Howell-Jolly "
+        "bodies on blood film support the diagnosis, though their "
+        "absence does not exclude it. Mx: vaccinate against "
+        "pneumococcus, meningococcus ACWY and B, and Haemophilus "
+        "influenzae type b, ideally two weeks before elective "
+        "splenectomy, plus annual influenza. Give antibiotic "
+        "prophylaxis with amoxicillin or phenoxymethylpenicillin, a "
+        "standby course for febrile illness, a medical alert device "
+        "and enrolment in the state spleen registry. Malaria and "
+        "babesiosis run more severely, so travel advice matters. "
+        "Note: fever in an asplenic patient is an emergency needing "
+        "antibiotics within the hour."
+    ),
+    "Surgical antibiotic prophylaxis": (
+        "A single preoperative antibiotic dose aimed at reducing "
+        "surgical site infection, distinct from treatment of "
+        "established infection. Timing is the key variable, with "
+        "administration within 60 minutes of incision, or 120 minutes "
+        "for vancomycin, so tissue concentrations peak at knife to "
+        "skin. Indications: clean surgery involving prosthetic "
+        "material, and all clean contaminated and contaminated "
+        "procedures. Clean surgery without implants usually needs "
+        "none. Mx: cefazolin 2 g intravenously covers most procedures "
+        "under Australian Therapeutic Guidelines, with metronidazole "
+        "added for colorectal and gynaecological work. Adjust dose "
+        "above 120 kg and redose after prolonged surgery or blood "
+        "loss over 1500 mL. Stop within 24 hours, since continuing "
+        "past wound closure adds resistance and Clostridioides "
+        "difficile risk without reducing infection. Note: a reported "
+        "penicillin allergy usually still permits cefazolin, and "
+        "reflex substitution with vancomycin raises infection rates, "
+        "so allergy delabelling is a genuine surgical intervention."
+    ),
+    "Vaccine hesitancy": (
+        "Delay in acceptance or refusal of vaccines despite "
+        "availability, sitting on a continuum between full acceptance "
+        "and outright refusal rather than being a fixed trait. The "
+        "World Health Organization lists it among the leading threats "
+        "to global health. Aetiology: complacency where disease is "
+        "rarely seen, inconvenient access, and low confidence in "
+        "vaccine safety or in the institutions delivering it. Social "
+        "media amplification and a previous adverse experience feed "
+        "the last. Clinical features: the hesitant parent asks "
+        "questions and still attends, unlike the refuser, which is "
+        "why the consultation is worth investing in. Mx: open "
+        "presumptively rather than with an open invitation, elicit "
+        "the specific concern and answer that concern rather than "
+        "reciting the schedule. Motivational interviewing outperforms "
+        "confrontation, and blunt myth correction can backfire. Offer "
+        "catch up under the National Immunisation Program and "
+        "document declines. Note: dismissing families from the "
+        "practice removes the only trusted voice they have, so keep "
+        "the door open and revisit next visit."
+    ),
+    "Iodine deficiency": (
+        "Inadequate dietary iodine, the leading preventable cause of "
+        "intellectual disability worldwide and re-emergent in "
+        "Australia before mandatory fortification. Requirement rises "
+        "in pregnancy and lactation. Aetiology: low soil iodine, "
+        "diets without iodised salt or seafood, and reduced iodine "
+        "use by the dairy industry. Goitrogens in cassava and soy "
+        "contribute where intake is already marginal. Clinical "
+        "features: goitre is the visible marker. Deficiency in "
+        "pregnancy causes miscarriage, stillbirth and congenital "
+        "hypothyroidism with irreversible neurodevelopmental "
+        "impairment, while milder childhood deficiency lowers IQ. Ix: "
+        "urinary iodine concentration assesses populations rather "
+        "than individuals, so diagnosis is largely dietary. Thyroid "
+        "function and ultrasound assess the consequences. Mx: "
+        "Australian bread is fortified with iodised salt, and "
+        "pregnant or breastfeeding women are advised to take 150 "
+        "micrograms of iodine daily. Note: supplementation is "
+        "withheld in known Graves disease or autonomous nodules, "
+        "where an iodine load can precipitate thyrotoxicosis."
+    ),
+    "Zinc deficiency": (
+        "Deficiency of a trace element required by over 300 enzymes "
+        "and central to wound healing, taste and immune function. "
+        "Aetiology: poor intake on restrictive or high phytate diets, "
+        "malabsorption in coeliac and inflammatory bowel disease, "
+        "high output stomas and chronic diarrhoea, alcohol "
+        "dependence, and the inherited transporter defect "
+        "acrodermatitis enteropathica. Clinical features: a "
+        "symmetrical scaly acral and periorificial rash, alopecia, "
+        "diarrhoea and poor wound healing, with impaired taste and "
+        "growth failure in children. Recurrent infection and delayed "
+        "sexual maturation occur in severe cases. Ix: plasma zinc "
+        "guides but falls in inflammation and hypoalbuminaemia, so "
+        "interpret alongside albumin and CRP. Alkaline phosphatase is "
+        "zinc dependent and is often low, and response to replacement "
+        "is itself diagnostic. Mx: oral zinc sulfate or gluconate for "
+        "two to three months while treating the underlying cause. "
+        "Watch for copper deficiency with prolonged high dose "
+        "supplementation. Note: the periorificial rash is often "
+        "treated as eczema for months before anyone checks a zinc "
+        "level."
+    ),
+    "Thiamine deficiency": (
+        "Vitamin B1 deficiency, causing beriberi and Wernicke "
+        "encephalopathy. Body stores last only two to three weeks, so "
+        "deficiency develops quickly with poor intake or high demand. "
+        "Aetiology: alcohol dependence, hyperemesis gravidarum, "
+        "bariatric surgery, prolonged vomiting, refeeding after "
+        "starvation, and dialysis. A glucose load given without "
+        "thiamine precipitates symptoms by consuming what remains. "
+        "Clinical features: dry beriberi gives a symmetrical "
+        "peripheral neuropathy with wasting, and wet beriberi gives "
+        "high output cardiac failure with oedema and warm "
+        "peripheries. Wernicke encephalopathy classically brings "
+        "confusion, ophthalmoplegia and ataxia, though most patients "
+        "show only one or two of these. Ix: treat on clinical "
+        "suspicion. Red cell transketolase and blood thiamine are "
+        "slow and rarely alter acute management. Mx: give parenteral "
+        "thiamine before any glucose load, with high dose intravenous "
+        "thiamine three times daily for suspected Wernicke, then oral "
+        "maintenance. Note: oral thiamine is inadequate acutely, and "
+        "untreated Wernicke progresses to irreversible Korsakoff "
+        "amnesia."
+    ),
+    "Motion sickness": (
+        "Nausea, pallor, sweating and vomiting provoked by mismatch "
+        "between vestibular, visual and proprioceptive inputs. "
+        "Susceptibility peaks in childhood, falls with age, and is "
+        "higher in women and in migraineurs. Aetiology: conflict "
+        "between actual and expected motion, worst with low frequency "
+        "vertical motion at sea and when reading in a moving vehicle. "
+        "Clinical features: prodromal yawning, salivation, cold "
+        "sweating and epigastric awareness precede nausea, and "
+        "vomiting brings only brief relief. Symptoms settle with "
+        "habituation over days of continuous exposure. Mx: "
+        "behavioural measures first, meaning a forward facing seat "
+        "with a horizon view, avoidance of reading and screens, and "
+        "graded repeated exposure to build habituation. Hyoscine "
+        "hydrobromide is the most effective drug and works best taken "
+        "before travel, with a transdermal patch for long journeys. "
+        "Promethazine is the alternative and the usual option in "
+        "pregnancy. Note: ondansetron works poorly here because the "
+        "pathway is vestibular rather than chemoreceptor driven."
+    ),
+    "Whiplash associated disorder": (
+        "Neck injury from acceleration and deceleration transfer of "
+        "energy, usually in a rear end vehicle collision. Most people "
+        "recover within weeks, but a substantial minority develop "
+        "persistent pain and disability. Classification: the Quebec "
+        "grades run from neck complaint with no signs, through "
+        "musculoskeletal signs and neurological signs, to fracture or "
+        "dislocation. Clinical features: neck pain and stiffness with "
+        "onset delayed over hours, headache, restricted rotation and "
+        "referred interscapular pain. Dizziness, paraesthesia and "
+        "poor concentration are common and do not imply structural "
+        "damage. Ix: apply the Canadian C-spine rule to select "
+        "imaging rather than scanning everyone. CT is preferred where "
+        "imaging is indicated, and MRI is reserved for neurological "
+        "deficit. Mx: reassurance with a clear expectation of "
+        "recovery, early return to normal activity, simple analgesia "
+        "and active range of motion exercise. Collars worsen outcomes "
+        "and are avoided. Note: early high pain intensity and "
+        "catastrophising predict chronicity better than collision "
+        "speed or vehicle damage."
+    ),
+    "Chronic cough in adults": (
+        "Cough lasting more than eight weeks, common, disabling and "
+        "too often assumed to be untreatable. Aetiology: with a "
+        "normal chest x-ray in a non-smoker, the great majority are "
+        "upper airway cough syndrome, asthma or eosinophilic "
+        "bronchitis, and reflux, often in combination. An ACE "
+        "inhibitor is the drug cause to exclude first. Clinical "
+        "features: dry or minimally productive cough with throat "
+        "clearing and hypersensitivity to cold air, perfume and "
+        "talking. Urinary incontinence, syncope and rib fracture "
+        "occur in severe cases. Ix: chest x-ray and spirometry with "
+        "bronchodilator response in everyone, adding induced sputum "
+        "eosinophils or exhaled nitric oxide where available. Then "
+        "treat empirically and sequentially rather than testing "
+        "exhaustively. Mx: stop the ACE inhibitor, give each "
+        "contributor an adequate trial of adequate duration, and "
+        "reserve speech pathology and low dose morphine or gabapentin "
+        "for refractory cough hypersensitivity. Red flags: "
+        "haemoptysis, weight loss, hoarseness, or new cough in a "
+        "smoker over 40."
+    ),
+    "Ankle sprain": (
+        "Ligamentous injury from an inversion mechanism, most often "
+        "to the anterior talofibular ligament, and one of the "
+        "commonest musculoskeletal presentations. Clinical features: "
+        "lateral pain and swelling with an anterolateral haematoma, "
+        "tenderness over ligament rather than over bone, and "
+        "difficulty weight bearing. A high syndesmotic injury gives "
+        "tenderness above the joint line with pain on external "
+        "rotation. Ix: apply the Ottawa ankle rules, which permit no "
+        "imaging when there is no bony tenderness at the posterior "
+        "malleolar edges, navicular or fifth metatarsal base, and the "
+        "patient can take four steps. Mx: relative rest, ice, "
+        "compression and elevation for the first days with early "
+        "protected weight bearing, then progressive proprioceptive "
+        "and strengthening rehabilitation over six weeks. A "
+        "functional brace beats immobilisation. Note: proprioceptive "
+        "training roughly halves recurrence, and recurrent sprains "
+        "are the main path to chronic instability. Key point: pain "
+        "over the proximal fibula suggests a Maisonneuve fracture, so "
+        "palpate the whole leg."
+    ),
+    "Aphthous ulcer": (
+        "Recurrent painful shallow oral ulcers with a grey base and "
+        "erythematous halo, sparing keratinised gingiva and hard "
+        "palate. Minor ulcers under 10 mm heal within a week or two "
+        "without scarring. Aetiology: mostly idiopathic with a "
+        "familial tendency. Consider iron, folate or B12 deficiency, "
+        "coeliac and inflammatory bowel disease, HIV and Behcet "
+        "disease, and note that smoking cessation can trigger a "
+        "flare. Clinical features: prodromal tingling, then well "
+        "defined ulcers on non-keratinised mucosa. Major ulcers "
+        "exceed 10 mm, last weeks and scar. Ix: none for simple "
+        "recurrent disease. Check full blood count, iron studies, "
+        "B12, folate and coeliac serology if ulcers are severe, of "
+        "late onset or accompanied by systemic features. Mx: topical "
+        "anaesthetic or corticosteroid paste, chlorhexidine rinse, "
+        "and avoidance of trigger foods and sodium lauryl sulfate "
+        "toothpaste. Systemic therapy is reserved for major or Behcet "
+        "related disease. Red flags: a single ulcer persisting beyond "
+        "three weeks needs biopsy to exclude carcinoma."
+    ),
+    "Dental abscess": (
+        "Pus collection arising from a necrotic tooth pulp or a "
+        "periodontal pocket, most often from untreated caries. "
+        "Clinical features: severe throbbing localised pain, "
+        "tenderness on percussion of the tooth, and a tender "
+        "fluctuant swelling with trismus. Spread beyond the alveolus "
+        "produces facial swelling and fever, and floor of mouth "
+        "swelling with tongue elevation is Ludwig angina, an airway "
+        "emergency. Ix: clinical, with an orthopantomogram to "
+        "identify the offending tooth. CT is needed for deep space "
+        "infection or suspected spread. Mx: definitive treatment is "
+        "drainage, meaning extraction or root canal by a dentist, "
+        "since antibiotics alone do not cure an abscess and only buy "
+        "time. Amoxicillin with metronidazole is used under "
+        "Australian Therapeutic Guidelines when there is systemic "
+        "upset, spreading cellulitis or immunocompromise. Give "
+        "adequate analgesia and arrange urgent dental care. Red "
+        "flags: trismus, dysphagia, drooling or a raised tongue "
+        "mandate emergency department referral rather than a dental "
+        "appointment."
+    ),
+    "Sunburn": (
+        "Acute cutaneous inflammation from ultraviolet B exposure "
+        "exceeding the capacity of skin to repair DNA damage, peaking "
+        "at 12 to 24 hours. Australia carries among the world's "
+        "highest UV indices and melanoma rates. Risk factors: "
+        "Fitzpatrick type I and II skin, midday exposure, reflective "
+        "surfaces such as water and snow, and photosensitising drugs "
+        "including doxycycline, amiodarone and thiazides. Clinical "
+        "features: well demarcated erythema at exposed sites with "
+        "tenderness and oedema, progressing to blistering, chills and "
+        "malaise in severe cases, then peeling. Mx: cool compresses, "
+        "simple analgesia with an NSAID, generous emollient and oral "
+        "fluids. Blistering, extensive involvement or systemic "
+        "symptoms warrant review, and topical benzocaine preparations "
+        "are avoided because of sensitisation. Prevention: seek "
+        "shade, cover up, and apply SPF 50 plus broad spectrum "
+        "sunscreen 20 minutes before exposure with reapplication "
+        "every two hours. Note: childhood sunburn carries more "
+        "melanoma risk than adult exposure, so one blistering episode "
+        "matters."
+    ),
+    "Jet lag": (
+        "Temporary misalignment between the internal circadian clock "
+        "and destination time after rapid travel across time zones, "
+        "resolving at roughly one day per zone crossed. Aetiology: "
+        "the clock shifts slowly, and eastward travel demands a phase "
+        "advance, which is harder than the phase delay needed going "
+        "west. Older travellers and those with rigid sleep habits "
+        "adapt more slowly. Clinical features: insomnia at the new "
+        "bedtime, daytime sleepiness, poor concentration, "
+        "gastrointestinal upset and low mood, worst on the second or "
+        "third day after arrival. Mx: adopt destination time on "
+        "arrival and use timed light, seeking morning light after "
+        "eastward travel and evening light after westward travel "
+        "while avoiding light at the wrong end of the day. Melatonin "
+        "at destination bedtime for the first few nights helps "
+        "eastward travel most. Short acting hypnotics restore sleep "
+        "but do not shift the clock. Note: travel fatigue follows any "
+        "long journey without zone crossing and settles after one "
+        "night of sleep."
+    ),
+    "Vitreous floaters": (
+        "Mobile shadows cast on the retina by opacities in the "
+        "vitreous gel, seen as drifting specks, threads or cobwebs "
+        "against a bright background. Most are benign and follow age "
+        "related vitreous syneresis. Aetiology: posterior vitreous "
+        "detachment is commonest and rises sharply after 50 years and "
+        "in myopia. Other causes are vitreous haemorrhage, uveitis "
+        "and, rarely, vitreoretinal lymphoma. Clinical features: "
+        "benign floaters are longstanding, few and unchanged. New "
+        "floaters with flashes suggest acute posterior vitreous "
+        "detachment, while a shower of floaters or a curtain in the "
+        "field suggests retinal tear or detachment. Ix: dilated "
+        "fundoscopy by an optometrist or ophthalmologist, ideally "
+        "within 24 to 48 hours for new symptoms. Mx: reassurance and "
+        "observation for stable benign floaters, since the brain "
+        "adapts and vitrectomy is rarely justified. Retinal tear is "
+        "treated by laser or cryotherapy. Red flags: a sudden "
+        "increase in floaters, flashing lights or a field defect "
+        "demand same day ophthalmology assessment."
+    ),
+    "Halitosis": (
+        "Offensive breath odour, arising within the mouth in about "
+        "85% of cases from volatile sulfur compounds produced by "
+        "anaerobic bacteria. Patients often present with anxiety "
+        "disproportionate to the odour. Aetiology: tongue coating, "
+        "periodontal disease, caries, dry mouth and poor denture "
+        "hygiene account for most. Extraoral causes include chronic "
+        "sinusitis, tonsilloliths and reflux, along with the "
+        "distinctive odours of ketoacidosis, hepatic failure and "
+        "uraemia. Clinical features: confirm the odour objectively "
+        "rather than accepting self report, since halitophobia with "
+        "no detectable odour needs an entirely different approach. "
+        "Ix: dental examination first. Investigate systemically only "
+        "when the mouth is clean and odour persists. Mx: tongue "
+        "scraping, interdental cleaning, treatment of periodontal "
+        "disease and caries, and management of dry mouth. "
+        "Chlorhexidine or zinc containing rinses reduce sulfur "
+        "compounds, while cosmetic mouthwash masks only briefly. "
+        "Note: refer to a dentist before ordering endoscopy, which "
+        "otherwise wastes everyone's time."
+    ),
+    "Dental caries": (
+        "Demineralisation of enamel and dentine by acid from "
+        "bacterial fermentation of dietary sugars, the most prevalent "
+        "chronic disease worldwide and largely preventable. "
+        "Aetiology: a cariogenic biofilm containing mutans "
+        "streptococci, frequent free sugar intake, reduced salivary "
+        "flow and inadequate fluoride exposure. Frequency of sugar "
+        "intake matters more than total quantity. Clinical features: "
+        "early lesions are reversible white spots, progressing to "
+        "cavitation, then sensitivity to sweet and cold, then "
+        "pulpitis with spontaneous night pain. Ix: visual and tactile "
+        "dental examination with bitewing radiographs for "
+        "interproximal lesions. Mx: restoration of cavitated lesions "
+        "by a dentist, with remineralisation of early lesions using "
+        "fluoride varnish and better oral hygiene. Prevention rests "
+        "on water fluoridation, twice daily fluoride toothpaste and "
+        "limiting sugary drinks and grazing. Note: early childhood "
+        "caries from a bottle at night marks social disadvantage and "
+        "needs family level intervention. Key point: pain that wakes "
+        "a patient means pulpitis and needs urgent dental review."
     ),
 }
 
