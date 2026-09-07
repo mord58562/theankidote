@@ -7402,7 +7402,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "McRoberts manoeuvre",
-        "aliases": ["McRoberts maneuver", "McRoberts position"],
+        "aliases": ["McRoberts maneuver", "McRoberts position", "McRoberts"],
         "utd": [["Overview", "shoulder dystocia McRoberts maneuver technique"]],
         "summary": "",
     },
