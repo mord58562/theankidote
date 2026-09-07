@@ -42,6 +42,7 @@ import hashlib
 import json
 import os
 import threading
+import urllib.parse
 import urllib.request
 
 from . import _library
@@ -50,6 +51,28 @@ from ._library import log
 DEFAULT_MANIFEST_URL = (
     "https://raw.githubusercontent.com/mord58562/theankidote"
     "/main/data/manifest.json")
+
+# Hosts the content channel is allowed to come from.
+#
+# The manifest carries a sha256 and the payload is checked against it,
+# which sounds like it settles provenance and does not: the manifest and
+# the payload come from the same place, so a manifest an attacker wrote
+# validates a payload the same attacker wrote. The hash proves the
+# download was not truncated or corrupted in transit. It proves nothing
+# about who wrote it.
+#
+# `libraryManifestUrl` is config, and config is a file on disk that a
+# hand edit, a pasted config or another add-on can reach. Repointing it
+# silently replaces the clinical content of every popup, and
+# `_library._load` prefers the downloaded copy, so the substitution
+# survives restarts. Pinning the host is the cheap half of the fix; the
+# other half is signing the manifest against a key shipped in the
+# package, which is the real answer and a larger change.
+_ALLOWED_HOSTS = frozenset({
+    "raw.githubusercontent.com",      # the manifest
+    "github.com",                     # release asset, before the redirect
+    "objects.githubusercontent.com",  # release asset, after it
+})
 
 _TIMEOUT = 8          # seconds; a check that cannot finish is not worth having
 _MAX_BYTES = 32 << 20  # backstop against a forged manifest; see _library_limit
@@ -92,6 +115,11 @@ def _require_https(url: str, what: str) -> str:
     """
     if not isinstance(url, str) or not url.lower().startswith("https://"):
         raise ValueError(f"{what} must be an https URL, got {str(url)[:60]!r}")
+    host = urllib.parse.urlsplit(url).hostname or ""
+    if host.lower() not in _ALLOWED_HOSTS:
+        raise ValueError(
+            f"{what} points at {host!r}, which is not one of the hosts "
+            f"the content channel is published from")
     return url
 
 

@@ -203,8 +203,10 @@ class UpdaterTransport(unittest.TestCase):
                 _updater._require_https(bad, "test")
 
     def test_https_is_allowed_case_insensitively(self):
-        _updater._require_https("https://example.org/x", "test")
-        _updater._require_https("HTTPS://example.org/x", "test")
+        # An allowlisted host, since `_require_https` also pins the host
+        # now. The scheme is what this test is about.
+        _updater._require_https("https://raw.githubusercontent.com/x", "test")
+        _updater._require_https("HTTPS://raw.githubusercontent.com/x", "test")
 
     def test_both_fetches_are_scheme_checked(self):
         """Not just the manifest.

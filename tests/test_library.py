@@ -459,6 +459,23 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
                     if g.lower() not in generics]
         self.assertEqual(orphaned, [])
 
+    def test_content_channel_hosts_are_pinned(self):
+        """The manifest's hash validates its own payload, so it says
+        nothing about provenance: both come from wherever the URL points.
+        `libraryManifestUrl` is config, and repointing it swaps the
+        clinical content of every popup, durably, because the downloaded
+        copy is preferred on load."""
+        from pearls import _updater
+        for evil in ("https://evil.example/manifest.json",
+                     "https://raw.githubusercontent.com.evil.example/x",
+                     "https://notgithub.com/x"):
+            with self.assertRaises(ValueError, msg=f"{evil} was accepted"):
+                _updater._require_https(evil, "manifest")
+        for good in (_updater.DEFAULT_MANIFEST_URL,
+                     "https://objects.githubusercontent.com/x",
+                     "https://github.com/mord58562/theankidote/releases/x"):
+            self.assertEqual(_updater._require_https(good, "manifest"), good)
+
     def test_schema_constant_agrees_with_the_compiler(self):
         """`SCHEMA` is declared twice and nothing checked they matched.
 
