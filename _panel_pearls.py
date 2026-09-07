@@ -723,7 +723,6 @@ class StatPearlsPanel(QWidget):
         super().__init__(parent)
 
         self._last_results: list = []
-        self._auto_loaded  = False
         # The page the reader last picked on purpose. Restored across
         # restarts, because "leave it where I put it" is not a property
         # of one session: the sidebar is a reference surface and the
@@ -965,7 +964,6 @@ class StatPearlsPanel(QWidget):
         worth keeping - blank, or already the page it would load.
         """
         self._show_articles = True
-        self._auto_loaded = False
         here = (self._view.url().toString() or "").strip()
         home = self._current_home_url()
         if here in ("", "about:blank", home):
@@ -1008,7 +1006,6 @@ class StatPearlsPanel(QWidget):
            stay blank after the dock appears.  Deferring by one event-loop
            tick lets the show + layout land first.
         """
-        self._auto_loaded = True
         self._pending_url = url
         self._pending_section = section
         self._load_retries = 0
@@ -1218,7 +1215,6 @@ class StatPearlsPanel(QWidget):
         self._pending_section = ""
 
     def _go_home(self):
-        self._auto_loaded = False
         self._clear_pending()
         self._view.load(QUrl(self._current_home_url()))
 

@@ -24,9 +24,6 @@ def night_mode() -> bool:
         return True
 
 
-_PALETTES = {}
-
-
 def _build(dark: bool) -> dict:
     """Palette for one mode.  Kept as a function so the theme can be
     rebuilt when Anki switches mode mid-session; module constants are

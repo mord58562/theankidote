@@ -158,7 +158,7 @@ def set_blocklist(phrases) -> None:
 class PhraseMatcher:
     """Case-insensitive, longest-wins, non-overlapping phrase finder."""
 
-    __slots__ = ("_by_first", "_odd_re", "_max_len", "_ci")
+    __slots__ = ("_by_first", "_odd_re", "_ci")
 
     def __init__(self, phrases, case_sensitive: bool = False):
         """`phrases` is any iterable of strings.
@@ -174,7 +174,6 @@ class PhraseMatcher:
         by_first: dict = {}
         odd: list = []
         seen: set = set()
-        max_len = 0
         for p in phrases:
             if not p:
                 continue
@@ -187,7 +186,6 @@ class PhraseMatcher:
             if _BLOCKED and low.lower() in _BLOCKED:
                 continue
             seen.add(low)
-            max_len = max(max_len, len(low))
             m = _TOKEN_RE.match(low)
             if m is None or m.start() != 0:
                 # Starts with punctuation, so no token boundary opens it.
@@ -213,7 +211,6 @@ class PhraseMatcher:
             bucket.sort(key=_by_len, reverse=True)
 
         self._by_first = by_first
-        self._max_len = max_len
         self._odd_re = (
             re.compile(r"\b(?:" + "|".join(re.escape(o) for o in odd) + r")\b",
                        re.IGNORECASE if self._ci else 0)

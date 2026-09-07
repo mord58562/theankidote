@@ -124,7 +124,6 @@ _DEFAULTS = {
 
     # Internal first-run flags.
     "firstRunDone": False,
-    "tourSeen": False,
     # Human version of the last release this install has actually run.
     # `null` means either a fresh install or an upgrade from a version
     # predating the key (i.e. anything below 1.4.1); the two are told

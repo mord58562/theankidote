@@ -117,9 +117,10 @@ _SCRIPT_URL = f"/_addons/{_ADDON_PKG}/web/marker.js?v={_marker_fingerprint()}"
 
 # ── module-level state ────────────────────────────────────────────────────────
 
-_on_answer    = False
+# `_on_answer` and `_current_card` used to live here too, set on every
+# question and answer "for Phase 2 use". Three writes each, no reads,
+# and Phase 2 never arrived. Same class as `_articles_dismissed`.
 _panel_ref    = None
-_current_card = None  # set on show_question/show_answer for Phase 2 use
 _prev_card_id: "int | None" = None  # for detecting card progression vs flip
 
 
@@ -130,19 +131,6 @@ def set_panel(panel) -> None:
 
 # ── card text extraction ──────────────────────────────────────────────────────
 
-_STOPWORDS = frozenset({
-    "what","is","are","the","a","an","of","for","in","on","at","to",
-    "with","how","why","when","where","which","who","be","was","were",
-    "has","have","had","do","does","did","will","would","could","should",
-    "can","this","that","these","those","and","or","but","not","if",
-    "then","than","so","as","it","its","he","she","they","we","you",
-    "from","by","about","used","most","common","first","line","versus",
-    "describe","explain","define","name","list","cause","causes",
-    "mechanism","treatment","management","diagnosis","patient",
-    "occurs","following","associated","often","seen","found","also",
-    "their","your","more","less","such","each","over","under","type",
-    "types","class","classes","drug","drugs","agent","agents",
-})
 
 
 class _Stripper(HTMLParser):
@@ -802,13 +790,11 @@ def _local_results_for_card(card) -> list:
 
 
 def _on_show_question(card) -> None:
-    global _on_answer, _current_card, _prev_card_id
-    _on_answer = False
+    global _prev_card_id
 
     card_id = getattr(card, "id", None)
     card_changed = (card_id != _prev_card_id)
     _prev_card_id = card_id
-    _current_card = card
 
     # Dismiss any open popup immediately when progressing to a new card.
     if card_changed:
@@ -842,9 +828,7 @@ def _on_show_question(card) -> None:
 
 
 def _on_show_answer(card) -> None:
-    global _on_answer, _current_card
-    _on_answer = True
-    _current_card = card
+    pass
 
 
 # ── register hooks ────────────────────────────────────────────────────────────

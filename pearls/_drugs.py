@@ -111,7 +111,6 @@ _DRUGS = _DRUGS + [dict(d) for d in _NEW_DRUGS]
 # a normal state.
 _DRUG_SUMMARIES: dict = _library.get("drug_summaries", {})
 
-_SUMMARIES_APPLIED: set = set()
 _BY_GENERIC: dict = {}
 for _d in _DRUGS:
     _g0 = _d.get("generic")
@@ -121,7 +120,6 @@ for _canon, _text in _DRUG_SUMMARIES.items():
     _entry = _BY_GENERIC.get(_canon.lower())
     if _entry is not None and _text:
         _entry["summary"] = _text
-        _SUMMARIES_APPLIED.add(_canon)
 
 
 # ── Build lookup tables and master regexes ────────────────────────────────────
