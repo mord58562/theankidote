@@ -250,8 +250,41 @@ highlighting rewrite stayed deferred.
   exercising from the built package before it goes up.
 - The three deferred items above: dock per-node highlighting, the
   popup's vertical rhythm, and signing the content manifest.
-- Roughly 15 smaller usability findings not applied, mostly copy and
-  Settings-structure work: `config.json` and `config.md` have drifted
-  from `_config._DEFAULTS`, several failure messages state a fact
-  without a next step, and the Tools-menu module toggles do not carry
-  the restart note the Settings ones do.
+## Third pass
+
+The smaller findings are done: the config drift (with a test holding
+`config.json`, `_config._DEFAULTS` and `config.md` together, and
+distinguishing settings from managed state rather than demanding they
+match exactly), all eight updater failure messages, the load-failure
+page that asserted NCBI rate-limiting as the cause, the duplicated
+"Reference popups" label, and the Tools-menu module toggles, which
+wrote a value and said nothing while the Settings window redrew the
+toolbar and named the module needing a restart.
+
+Two more findings rejected on inspection, bringing the total to five
+across the audit. The first run opening UpToDate to trigger SSO is not
+an unprompted login wall - it fires only if the user accepted the setup
+dialog and left the module enabled seconds earlier. And `config.md` is
+correct that `debug` logs to the debug console; the always-on
+diagnostic file is a separate mechanism, and that was the omission.
+
+Rejecting one finding in five is worth noting for the next audit: the
+reports were strong, and the ones that did not survive were all cases
+where the reasoning was sound but a comment, a guard or a caller
+elsewhere already settled it. Read the surrounding code before acting
+on any of them.
+
+## What is left
+
+- **Rob's, and only Rob's**: the Qt runtime behaviour. The sidebar
+  collapse and restore, the remembered article, the shortcut binding
+  after the `_dock_layout` move, the popup positioning, and the two new
+  tooltip paths all want exercising from the built package.
+- The three deferred items: dock per-node highlighting, the popup's
+  vertical rhythm, and signing the content manifest.
+- Four findings deliberately left, all of them Qt behaviour that cannot
+  be verified without running Anki: no `loadFinished(ok=False)`
+  handling in the UpToDate and chat docks, a silent failure when the
+  chat OAuth popup cannot open, no empty state on a card with no
+  recognised terms, and the "Open in side panel" switch whose off-state
+  lives only in a tooltip.
