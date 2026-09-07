@@ -30,6 +30,17 @@ acronyms that are also English words stop firing on the words.
 
 ### Fixed
 
+- The span the reviewer writes is now tested. `pearls/_reviewer.py`
+  imports `aqt` at module scope, so it could not be imported under test
+  and nothing on the matching path was covered - which is how a dropped
+  dict key defeated the popup's honesty fix and shipped. Two stubs
+  reach it without Anki: a fake `aqt`, and a synthetic parent package so
+  the relative imports resolve. The tests assert that a condition with a
+  verified chapter is marked as an article and one without is marked as
+  a search, that every attribute marker.js reads is present, and that
+  the button label is assigned exactly once. All proven to fail against
+  the original bugs.
+
 - **The same three module switches explained themselves in Settings and
   not in the Tools menu.** The menu path wrote the value and stopped:
   no toolbar redraw, and no word that switching a dock module off leaves
