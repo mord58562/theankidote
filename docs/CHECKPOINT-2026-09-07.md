@@ -1,54 +1,77 @@
-# TheAnkiDote checkpoint - 2026-09-07
+# TheAnkiDote checkpoint - 2026-09-07 (end of session)
 
-Supersedes `CHECKPOINT-2026-09-03.md` for state; that file's style rules and
-publish-flow section are still the reference and are not repeated here.
+Supersedes `CHECKPOINT-2026-09-03.md` for state. That file's style rules and
+publish flow still apply and are not repeated here.
 
 ## State
 
-- **Content channel:** `07.09.2026.2` (published)
-- **Add-on version:** `2.3.2` (unchanged - AnkiWeb gate still closed; 2.3.3 code work still on the backburner)
-- **Rich summaries:** 1927 (686 on 03-09, 1853 at the start of this session)
-- **NEW_CONDITIONS:** 1103. **Base conditions:** 826. **Acronyms:** 424.
-- **Ratchet:** `OVER_CAP_BUDGET["conditions"] = 29` - real headroom, unlike the 79/79 of 03-09
-- **Tests:** 133/133 pass. AST scan shows no duplicate RICH_SUMMARIES keys.
+- **Content channel:** `07.09.2026.4`, published
+- **Add-on:** **2.5.0 built, NOT yet on AnkiWeb.** Everything new folds into
+  2.5.0 until Rob confirms the push; do not open 2.5.1.
+- **Rich summaries:** 2224. **NEW_CONDITIONS:** 1400. **Base conditions:** 826.
+  **Acronyms:** 429.
+- **Tests:** 133/133. AST scan shows no duplicate keys.
+
+## Releases
+
+2.4.0 was built and never uploaded. 2.4.1 shipped to AnkiWeb (tag `v2.4.1` at
+`66ed54b`, GitHub release published). 2.4.2 was built, never uploaded, and
+folded into 2.5.0. So 2.5.0 carries everything since 2.4.1.
 
 ## What shipped this session
 
-1. **Batch 80 - 74 new entries** across four clusters that were genuinely
-   uncovered: clinical scores and decision rules (24), bedside procedures and
-   anaesthesia (15), investigations (21), Australian health systems and
-   medicolegal (14). Drafted by four parallel agents, verified by the parent
-   (budget, labels, dupes, banned tokens, spelling, cross-batch collisions).
-2. **Acronym-alias false-positive fix.** Eight short all-caps condition aliases
-   were shadowing the context-aware acronym matcher and firing wrong popups on
-   real cards: TGA, GBS, ED, LAST, ARF, TCA, CVS, BED. Removed from their
-   owning conditions; LAST/ARF/CVS/BED added to the acronym dictionary with
-   context keywords, and Therapeutic Goods Administration added as TGA's first
-   candidate.
-3. Banned dead-metaphor word purged from code comments, test docstrings and
-   audit prose.
-4. `.claude/settings.json` now tracked (`model: opus`, `effortLevel: high`) so
-   the cloud routine inherits high effort; `.gitignore` narrowed to allow it.
+- **Batches 80-82, ~370 entries.** Clinical scores and decision rules,
+  procedures, investigations, Australian health-system and medicolegal topics,
+  then two data-driven rounds against the notes that trigger no popup.
+- **Dock chrome unified.** `_theme.py` owns header metrics, the glyph set,
+  per-glyph optical sizes and the nav stylesheet; the three docks had drifted
+  into two arrow families, three glyph-sizing systems and header heights of
+  40/40/44.
+- **Settings pass.** No content button takes the accent by tab order; the
+  restart notice is state-driven and names the module in both directions; the
+  version sits in a real footer strip.
+- **Three classes of false-positive matching found and fixed** - see below.
 
-## The AnkiConnect method - use it every session
+## The three false-positive classes (the session's main lesson)
 
-Anki must be open. `http://127.0.0.1:8765`, `findNotes` on `deck:*` then
-`notesInfo` in batches of 800 dumps all 6,088 notes in seconds. Two things it
-answers that guesswork cannot:
+1. **Condition aliases shadowing the acronym dictionary.** TGA fired
+   Transposition of the Great Arteries on 175 notes that meant the Therapeutic
+   Goods Administration. Also GBS, ED, LAST, ARF, TCA, CVS, BED, and AMH caught
+   before shipping.
+2. **Acronyms that are ordinary English words.** `resolve()` skips context
+   scoring for single-candidate acronyms, so OR, ALL, PET, CAP, TEN, MEN, ARM,
+   BED, MAP, TI, IF and DID expanded on sight. `_ENGLISH_WORD_ACRONYMS` now
+   requires a context keyword. Worse, "OR" and "IF" were also aliases in the
+   preclinical vocabulary, which matches case-insensitively - firing on 1,889
+   and 1,101 notes.
+3. **Popups claiming articles that do not exist.** Only 635 of 2,226 condition
+   entries have an NBK id; the rest fell back to a StatPearls search while the
+   badge said "StatPearls" and the button said "Open article". Same for
+   Wikipedia-search and DrugBank-search entries. `_link_kind()` now drives both.
+   2,635 popups stopped overstating themselves.
 
-- **Which candidates are worth writing.** Word-boundary count every candidate
-  name and alias against the collection text. Batch 80 scored 43 of 74 firing
-  on current cards; the zero-hit ones (Wells, Child-Pugh, MELD, qSOFA, Ottawa)
-  are real gaps in Rob's deck, not bad picks.
-- **Which aliases are wrong.** Running `pearls._conditions.resolve` over every
-  note surfaces false positives directly. That is how all eight bad aliases
-  above were found. Re-run it after any batch that adds short all-caps aliases.
+## Coverage, and why the number went up
 
-Scripts left in the session scratchpad (regenerate if gone): `dupecheck.py`,
-`check_budget.py`, `merge_batch.py`, `freq.py`.
+Live via AnkiConnect: of 6,088 notes, about 13% trigger no popup. Roughly 640
+of those are image-occlusion cards carrying under six words, which can never
+match text, leaving ~165 genuinely addressable. The figure rose from 12% to 13%
+after the false-positive purge - correct, because bad aliases had been
+spuriously counting as coverage.
 
-## Coverage picture
+## The richest seam is not new entries
 
-967 distinct conditions currently fire across the collection. Roughly 38% of
-notes match no condition at all - that set is the best source of candidates for
-the next batch and has not been mined yet.
+Repeatedly, the highest-value finding was an **alias gap**: the entity already
+exists and only the card's wording misses it. Plurals, hyphenation,
+possessives, apostrophe-less eponyms ("Turners"), bare surnames ("McRoberts"
+against "McRoberts manoeuvre"), and abbreviations ("Abx", 59 notes, no acronym
+entry at all). Sweep for these before writing anything new, and make every
+drafting agent report them as a deliverable rather than a side note.
+
+## Never work from a snapshot
+
+The collection changes while a session runs. Every frequency or context
+question goes to AnkiConnect at the moment it is asked. `anki_freq.py` in the
+session scratchpad does this with no cache; hand agents that rather than a
+dumped file. Scripts worth recreating: `anki_freq.py`, `dupecheck.py` (scans
+every vocabulary, not just conditions), `check_budget.py`, `merge_batch.py`,
+`verify_batch.py`.
