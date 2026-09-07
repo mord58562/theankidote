@@ -60,11 +60,10 @@ nothing left untriaged in either module:
       qualified framework phrase against its entity unaided), most of
       the rest was curriculum phrasing no card carries, and several
       were wrong targets. Committed as `f4fb4b7`.
-- [~] 3. Merge the new entries (10 parallel authoring agents, one
-      per framework topic, drafts to `_extracted/drafts/*.json`).
-- [ ] 4. `verify_batch.py`, then `merge_batch.py`, then
-      `build_library.py`, then `tests/test_vocab.py`.
-- [ ] 5. Publish content, rebuild the `.ankiaddon`, commit and push.
+- [x] 3. 116 entries merged. 10 agents, one per framework topic.
+- [x] 4. Verified, merged, built, suite green (150 tests).
+- [x] 5. Published `07.09.2026.11`, then `07.09.2026.13` for a
+      restored alias. 2.5.1 built, committed and pushed.
 
 ## Traps carried forward from the handover
 
@@ -76,3 +75,54 @@ nothing left untriaged in either module:
 - Library is 6.18 MB against the 8 MB ceiling that every pre-2.5.0
   client carries. 124 entries will move that. Watch the publish
   script's warning.
+
+
+## Outcome
+
+Framework coverage on the raw scorer:
+
+| module | before | after |
+|---|---|---|
+| Medicine-1 | 60% | 72% |
+| Psychiatry | 39% | 55% |
+| TOTAL (four modules) | 55% | 63% |
+
+Read that as a floor, not a measurement. The scorer requires the matched
+entity to share the framework item's head noun, so it counts an item as
+a gap whenever the curriculum's phrasing differs from the entry's title
+even though `resolve()` finds it. Of the 249 items still scored as gaps
+across the two modules, 21 resolve to nothing at all, and all but a
+handful of those are covered under another name - 'Organic illness
+presenting as psychiatric illness' by `Organic causes of psychiatric
+symptoms', 'Interpretation of coagulation tests' by `Coagulation test
+interpretation'. The residual real gap is small.
+
+Deliberate non-entries, so they are not re-proposed next time:
+'Cough' (would highlight everywhere; `Chronic cough in adults' exists),
+'Inflammatory versus non-inflammatory joint pathology' (the `Arthritis'
+entry already carries the discriminator, and fires on the commoner
+word), and 'Lived experience of mental illness' (the entry written is
+`Lived experience workforce', which is a narrower thing - an alias would
+mislead).
+
+## Opened during the session
+
+**2.5.1 is built and unshipped.** Rob confirmed 2.5.0 reached AnkiWeb
+mid-session, so this is the version everything now folds into.
+`theankidote-2.5.1.ankiaddon`, 66 files, 2.87 MB, bundling content
+`07.09.2026.13`.
+
+Three things worth carrying forward:
+
+1. **`docs/` and `audit/` are no longer packaged.** This file included.
+   If a future session wants a note to reach users, it goes in
+   `WHATS-NEW-*.md`, which is still shipped.
+2. **Do not hand `build_library.py` an explicit `--version`** unless
+   publishing. The preflight in `publish_content.sh` compares against
+   the local manifest, which the build rewrites, so a hand-build at
+   version N makes the real publish of N refuse itself as stale. The
+   dry-run case is fixed; this one is workflow, not code.
+3. **`_extracted/` outside the repo** holds the framework item lists,
+   the triage, the drafts and the coverage script. It is deliberately
+   not in the tree - the extracted curriculum lists are institutional
+   material and this remote is public.
