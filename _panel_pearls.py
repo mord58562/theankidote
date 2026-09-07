@@ -1843,7 +1843,12 @@ class StatPearlsPanel(QWidget):
                 from pearls import _reviewer
             edits = []
             for idx, text in nodes:
-                marked = _reviewer.highlight_text(text)
+                # No stylesheet per node. Each edit is inserted with
+                # `template.innerHTML`, so a rule carried on every
+                # marked node put one `<style>` element into the
+                # article body per node - and the apply script above
+                # already installs exactly one, with the same rule.
+                marked = _reviewer.highlight_text(text, with_css=False)
                 # identity means nothing matched; skip the DOM write
                 if marked is not text and marked != text:
                     edits.append([idx, marked])

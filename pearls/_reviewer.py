@@ -506,7 +506,8 @@ def _build_pattern(terms: list):
     return result
 
 
-def _inject_highlights(html: str, results: list, color: str) -> str:
+def _inject_highlights(html: str, results: list, color: str,
+                       with_css: bool = True) -> str:
     """Inject .sp-mark spans + CSS into card HTML string.
     Operates on the raw HTML string - no JS needed, no CSP concerns.
     """
@@ -586,10 +587,21 @@ def _inject_highlights(html: str, results: list, color: str) -> str:
             result.append(chunk)
             i = j
 
-    return _HIGHLIGHT_CSS_TPL.format(c=color) + ''.join(result)
+    marked = ''.join(result)
+    # The card path needs the rule travelling with the HTML,
+    # because it is handed to Anki as one string. The dock does
+    # not: it installs a single `#tad-hl-style` element after
+    # applying the edits, and each edit is inserted with
+    # `template.innerHTML`, so a rule carried per node put one
+    # `<style>` element into the article body per highlighted
+    # node - 105 of them on a 66 KB page, all identical, all
+    # redundant against the one the apply script adds.
+    return (_HIGHLIGHT_CSS_TPL.format(c=color) + marked) if with_css \
+        else marked
 
 
-def highlight_text(text: str, color: str = "") -> str:
+def highlight_text(text: str, color: str = "",
+                   with_css: bool = True) -> str:
     """Wrap every recognised term in `text` in an sp-mark span.
 
     The reviewer path highlights a card; this highlights any text, which
@@ -615,10 +627,11 @@ def highlight_text(text: str, color: str = "") -> str:
         return text
     col = _config.safe_css_colour(color or _config.get("highlightColor"))
     try:
-        return _inject_highlights(text, results, col)
+        return _inject_highlights(text, results, col, with_css=with_css)
     except Exception as exc:
         _log.error("highlight_text inject", exc)
         return text
+
 
 
 def _on_card_will_show(html: str, card, kind: str) -> str:

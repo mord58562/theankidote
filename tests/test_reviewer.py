@@ -109,6 +109,22 @@ class SpanAttributes(unittest.TestCase):
                 self._attr(span, attr),
                 f"{attr} is absent from the span; marker.js reads it")
 
+    def test_the_dock_path_carries_no_stylesheet(self):
+        """The card path is handed to Anki as one string and needs the
+        rule travelling with it. The dock inserts each edit with
+        `template.innerHTML` and installs one `#tad-hl-style` element
+        itself, so a rule carried per node put one `<style>` into the
+        article body per highlighted node.
+        """
+        text = "Mild and subclinical PID causes tubal infertility."
+        card = self.rv.highlight_text(text)
+        dock = self.rv.highlight_text(text, with_css=False)
+        self.assertIn("<style>", card, "the card path lost its rule")
+        self.assertNotIn("<style>", dock)
+        self.assertEqual(
+            re.sub(r"^<style>.*?</style>", "", card, flags=re.S), dock,
+            "the two paths disagree about the markup, not just the rule")
+
     def test_search_urls_use_us_spelling(self):
         """The reviewer had its own copy of this builder that skipped the
         rewrite, so acronym expansions searched a US-only database with
