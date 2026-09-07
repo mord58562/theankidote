@@ -1798,16 +1798,30 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
         _cb.toggled.connect(_refresh_restart_note)
     _refresh_restart_note()
 
-    footer_row = _w["QHBoxLayout"]()
-    footer_row.addWidget(restart_note)
-    footer_row.addStretch(1)
-    footer_row.addWidget(_version_label(_w))
-    outer.addLayout(footer_row)
+    # A dialog gets one baseline, not two. The version first sat on a row
+    # of its own above the button row, which left it floating in a band
+    # of empty space with nothing to align to - present, but plainly
+    # dropped in. It anchors the left end of a single footer strip
+    # instead, under a hairline: what you are running, then what is
+    # pending, then the way out. Reading left to right that is identity,
+    # state, action, which is the order a Mac sheet footer is read in,
+    # and nothing sits alone on a row.
+    rule = _w["QFrame"]()
+    rule.setFrameShape(_w["QFrame"].Shape.HLine)
+    rule.setFrameShadow(_w["QFrame"].Shadow.Plain)
+    outer.addWidget(rule)
 
     btns = _w["QDialogButtonBox"](_w["QDialogButtonBox"].StandardButton.Close)
     btns.rejected.connect(dlg.reject)
     btns.accepted.connect(dlg.accept)
-    outer.addWidget(btns)
+
+    footer_row = _w["QHBoxLayout"]()
+    footer_row.setSpacing(10)
+    footer_row.addWidget(_version_label(_w))
+    footer_row.addWidget(restart_note)
+    footer_row.addStretch(1)
+    footer_row.addWidget(btns)
+    outer.addLayout(footer_row)
 
     dlg.exec()
 
