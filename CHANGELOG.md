@@ -5,10 +5,28 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.5.1] - 2026-09-07
+## [2.5.0] - 2026-09-07
 
-Stops packaging the working documents from the sessions that build the
-add-on.
+Popups stop claiming sources and destinations they do not have, and
+acronyms that are also English words stop firing on the words.
+
+### Added
+
+- **The reference sidebar highlights terms too.** StatPearls and
+  DrugBank pages now get the same underlines and hover popups as a card.
+  `_reviewer.highlight_text()` accepts arbitrary text rather than a
+  card - `_card_text` passes a string straight through, so all five term
+  builders and the injector are reused unchanged - and the dock runs a
+  three-step round trip on load: collect text nodes, resolve in Python,
+  write back only the nodes that changed. `web/marker.js` is injected
+  for the popup, so the dock cannot drift from the reviewer: one
+  vocabulary, one matcher, one popup.
+  Deliberately a one-way `runJavaScript` round trip and not a
+  `QWebChannel`, which would expose a Python object to whatever else
+  runs on an NCBI or DrugBank page. Anchors, form controls and existing
+  marks are skipped, and `marker.js` installs once per page.
+  New `enableDockHighlights` config key, on by default, with a switch in
+  Settings.
 
 ### Fixed
 
@@ -48,31 +66,6 @@ add-on.
   current. The documented workflow is "run the dry run first", so this
   was the normal path, not an edge case. The dry run now snapshots
   `data/` and restores it on exit.
-
-## [2.5.0] - 2026-09-07
-
-Popups stop claiming sources and destinations they do not have, and
-acronyms that are also English words stop firing on the words.
-
-### Added
-
-- **The reference sidebar highlights terms too.** StatPearls and
-  DrugBank pages now get the same underlines and hover popups as a card.
-  `_reviewer.highlight_text()` accepts arbitrary text rather than a
-  card - `_card_text` passes a string straight through, so all five term
-  builders and the injector are reused unchanged - and the dock runs a
-  three-step round trip on load: collect text nodes, resolve in Python,
-  write back only the nodes that changed. `web/marker.js` is injected
-  for the popup, so the dock cannot drift from the reviewer: one
-  vocabulary, one matcher, one popup.
-  Deliberately a one-way `runJavaScript` round trip and not a
-  `QWebChannel`, which would expose a Python object to whatever else
-  runs on an NCBI or DrugBank page. Anchors, form controls and existing
-  marks are skipped, and `marker.js` installs once per page.
-  New `enableDockHighlights` config key, on by default, with a switch in
-  Settings.
-
-### Fixed
 
 - **Clozapine carried two contradictory monitoring schedules.** The
   rich summary gave the Australian protocol - FBC weekly for 18 weeks

@@ -107,10 +107,17 @@ mislead).
 
 ## Opened during the session
 
-**2.5.1 is built and unshipped.** Rob confirmed 2.5.0 reached AnkiWeb
-mid-session, so this is the version everything now folds into.
-`theankidote-2.5.1.ankiaddon`, 66 files, 2.87 MB, bundling content
+**2.5.0 is rebuilt and awaiting a re-upload.** Rob confirmed 2.5.0
+reached AnkiWeb mid-session, and then corrected course: republish 2.5.0
+rather than open 2.5.1. The 2.5.1 that had been built was rolled back -
+manifest returned to 2.5.0, its changelog section folded into 2.5.0's
+`### Fixed`, and `WHATS-NEW-2.5.1.md` folded into `WHATS-NEW-2.5.md`.
+`theankidote-2.5.0.ankiaddon`, 66 files, bundling content
 `07.09.2026.13`.
+
+Re-uploading the same version number reaches users: Anki decides an
+add-on has an update from AnkiWeb's modification time on the listing,
+not from the version string in `manifest.json`.
 
 Three things worth carrying forward:
 
