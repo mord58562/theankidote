@@ -413,9 +413,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Erythema infectiosum",
-        "aliases": ["Fifth disease", "Slapped cheek disease",
-                    "Slapped cheek syndrome", "Parvovirus B19 infection",
-                    "Parvovirus B19"],
+        "aliases": ["Fifth disease", "Slapped cheek disease", "Slapped cheek syndrome", "Parvovirus B19 infection", "Parvovirus B19", "Parvovirus-B19-infection", "Parvovirus-B19"],
         "utd": [["Overview", "clinical manifestations and diagnosis of "
                              "parvovirus b19 infection"]],
         "summary": "",
@@ -6744,7 +6742,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Spirometry",
-        "aliases": ["Lung function test", "Pulmonary function test", "Pulmonary function tests", "PFTs", "PFT", "Flow volume loop"],
+        "aliases": ["Lung function test", "Pulmonary function test", "Pulmonary function tests", "PFTs", "PFT", "Flow volume loop", "Lung function tests"],
         "utd": [["Overview", "office spirometry interpretation"]],
         "summary": "",
     },
@@ -6768,7 +6766,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Transthoracic echocardiography",
-        "aliases": ["TTE", "Echocardiogram", "Echocardiography", "Transthoracic echo"],
+        "aliases": ["TTE", "Echocardiogram", "Echocardiography", "Transthoracic echo", "TTEs"],
         "utd": [["Overview", "transthoracic echocardiography indications interpretation"]],
         "summary": "",
     },
@@ -6858,7 +6856,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Slit lamp examination",
-        "aliases": ["Slit lamp", "Slit-lamp examination", "Slit-lamp biomicroscopy", "Slit lamp biomicroscopy"],
+        "aliases": ["Slit lamp", "Slit-lamp examination", "Slit-lamp biomicroscopy", "Slit lamp biomicroscopy", "Slit-lamp"],
         "utd": [["Overview", "slit lamp examination technique red eye"]],
         "summary": "",
     },
@@ -6984,13 +6982,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Menstrual cycle",
-        "aliases": ["Follicular phase", "Luteal phase", "Proliferative phase", "Secretory phase", "Ovarian cycle"],
+        "aliases": ["Follicular phase", "Luteal phase", "Proliferative phase", "Secretory phase", "Ovarian cycle", "Menstrual cycles"],
         "utd": [["Overview", "normal menstrual cycle physiology"]],
         "summary": "",
     },
     {
         "name": "Ovarian folliculogenesis",
-        "aliases": ["Primordial follicle", "Graafian follicle", "Primary oocyte", "Secondary oocyte", "Corpus luteum"],
+        "aliases": ["Primordial follicle", "Graafian follicle", "Primary oocyte", "Secondary oocyte", "Corpus luteum", "Primordial follicles"],
         "utd": [["Overview", "ovarian follicle development oogenesis"]],
         "summary": "",
     },
@@ -7200,7 +7198,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Twin pregnancy",
-        "aliases": ["multiple pregnancy", "twin gestation", "chorionicity", "twin peak sign", "lambda sign", "DCDA", "MCDA", "dichorionic diamniotic", "monochorionic diamniotic"],
+        "aliases": ["multiple pregnancy", "twin gestation", "chorionicity", "twin peak sign", "lambda sign", "DCDA", "MCDA", "dichorionic diamniotic", "monochorionic diamniotic", "Twin pregnancies"],
         "utd": [["Overview", "twin pregnancy chorionicity management"]],
         "summary": "",
     },
@@ -7230,7 +7228,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Middle cerebral artery Doppler",
-        "aliases": ["MCA Doppler", "middle cerebral artery peak systolic velocity", "MCA peak systolic velocity", "MCA PSV", "fetal anaemia Doppler"],
+        "aliases": ["MCA Doppler", "middle cerebral artery peak systolic velocity", "MCA peak systolic velocity", "MCA PSV", "fetal anaemia Doppler", "MCA-PSV"],
         "utd": [["Overview", "middle cerebral artery Doppler fetal anaemia"]],
         "summary": "",
     },
@@ -7500,7 +7498,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Toilet training",
-        "aliases": ["toilet trained", "potty training", "toilet training readiness"],
+        "aliases": ["toilet trained", "potty training", "toilet training readiness", "Toilet-training"],
         "utd": [["Overview", "toilet training children readiness"]],
         "summary": "",
     },
@@ -7542,7 +7540,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Hypomania",
-        "aliases": ["hypomanic episode", "manic episode", "mania"],
+        "aliases": ["hypomanic episode", "manic episode", "mania", "hypomanic episodes"],
         "utd": [["Overview", "bipolar disorder diagnosis mania hypomania"]],
         "summary": "",
     },
@@ -7602,7 +7600,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Standard drink",
-        "aliases": ["Australian standard drink", "NHMRC alcohol guidelines", "alcohol guidelines"],
+        "aliases": ["Australian standard drink", "NHMRC alcohol guidelines", "alcohol guidelines", "Standard drinks"],
         "utd": [["Overview", "risky drinking and alcohol use disorder screening"]],
         "summary": "",
     },
@@ -7854,13 +7852,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Focal seizure",
-        "aliases": ["Partial seizure", "Focal onset seizure", "Simple partial seizure", "Complex partial seizure", "Focal impaired awareness seizure"],
+        "aliases": ["Partial seizure", "Focal onset seizure", "Simple partial seizure", "Complex partial seizure", "Focal impaired awareness seizure", "Focal seizures"],
         "utd": [["Overview", "focal epilepsy clinical features and diagnosis"]],
         "summary": "",
     },
     {
         "name": "Generalised tonic-clonic seizure",
-        "aliases": ["Tonic-clonic seizure", "Generalised seizure", "Grand mal seizure"],
+        "aliases": ["Tonic-clonic seizure", "Generalised seizure", "Grand mal seizure", "Tonic-clonic seizures"],
         "utd": [["Overview", "generalized tonic clonic seizures in adults"]],
         "summary": "",
     },
@@ -7902,7 +7900,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Haemolytic anaemia",
-        "aliases": ["Haemolysis", "Hemolysis", "Hemolytic anemia", "Intravascular haemolysis", "Extravascular haemolysis"],
+        "aliases": ["Haemolysis", "Hemolysis", "Hemolytic anemia", "Intravascular haemolysis", "Extravascular haemolysis", "Haemolytic anaemias"],
         "utd": [["Overview", "diagnosis of hemolytic anemia in adults"]],
         "summary": "",
     },

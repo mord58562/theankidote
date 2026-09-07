@@ -21,7 +21,7 @@ def _wikipedia_url(term: str) -> str:
 
 
 def build_vocab(base_key: str, default_category: str = "",
-                new_key: str | None = None) -> tuple:
+                new_key=None) -> tuple:
     """Build the term list, name index and `resolve()` function for a
     vocabulary database.
 
@@ -29,6 +29,14 @@ def build_vocab(base_key: str, default_category: str = "",
     * `new_key`, when set, appends the equivalent overlay list; missing
       keys are tolerated so a library published before the overlay
       shipped still loads.
+
+    `new_key` is left unannotated on purpose. Written as `str | None` it
+    is a PEP 604 union, and an annotation in a signature is evaluated
+    when the `def` runs, not lazily - so on any interpreter below 3.10
+    importing this module raises TypeError and the whole add-on fails to
+    load. `manifest.json` claims support from Anki 2.1.50, which ships
+    Python 3.9. Nothing else in the add-on uses that syntax and no file
+    carries `from __future__ import annotations`.
     * `default_category` supplies the `category` field when an entry
       omits it (kept per-module so `_signs` can default to "signs"
       while `_descriptive` stays "").
