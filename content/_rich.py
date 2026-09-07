@@ -6509,6 +6509,450 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "swan neck deformity"]],
         "summary": "",
     },
+    {
+        "name": "Wells score for pulmonary embolism",
+        "aliases": ["Wells score", "Wells criteria", "Wells PE score", "Wells score for PE"],
+        "utd": [["Overview", "clinical presentation and diagnosis of acute pulmonary embolism in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "CURB-65 score",
+        "aliases": ["CURB-65", "CURB65", "CRB-65"],
+        "utd": [["Overview", "community acquired pneumonia in adults assessing severity and site of care"]],
+        "summary": "",
+    },
+    {
+        "name": "CHA2DS2-VASc score",
+        "aliases": ["CHA2DS2-VASc", "CHA2DS2VASc", "CHADSVASC", "CHA2DS2-VA"],
+        "utd": [["Overview", "atrial fibrillation risk of embolisation and selection of anticoagulation"]],
+        "summary": "",
+    },
+    {
+        "name": "HAS-BLED score",
+        "aliases": ["HAS-BLED", "HASBLED", "HAS BLED score"],
+        "utd": [["Overview", "atrial fibrillation risks and benefits of anticoagulation bleeding risk"]],
+        "summary": "",
+    },
+    {
+        "name": "Child-Pugh score",
+        "aliases": ["Child-Pugh", "Child-Pugh classification", "Child-Turcotte-Pugh score", "Child Pugh score"],
+        "utd": [["Overview", "cirrhosis in adults natural history and management Child Pugh classification"]],
+        "summary": "",
+    },
+    {
+        "name": "MELD score",
+        "aliases": ["MELD", "Model for End-stage Liver Disease", "MELD-Na"],
+        "utd": [["Overview", "model for end stage liver disease MELD score liver transplantation"]],
+        "summary": "",
+    },
+    {
+        "name": "Glasgow Coma Scale",
+        "aliases": ["GCS", "Glasgow coma score", "Glasgow Coma Scale score"],
+        "utd": [["Overview", "Glasgow coma scale assessment of impaired consciousness in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "qSOFA",
+        "aliases": ["quick SOFA", "qSOFA score", "quick Sequential Organ Failure Assessment"],
+        "utd": [["Overview", "sepsis syndromes in adults definitions screening and early recognition"]],
+        "summary": "",
+    },
+    {
+        "name": "Ottawa ankle rules",
+        "aliases": ["Ottawa ankle rule", "Ottawa rules", "Ottawa ankle and foot rules"],
+        "utd": [["Overview", "ankle fractures in adults Ottawa ankle rules radiography"]],
+        "summary": "",
+    },
+    {
+        "name": "ABCD2 score",
+        "aliases": ["ABCD2", "ABCD2 stroke score", "ABCD score"],
+        "utd": [["Overview", "transient ischemic attack initial evaluation and management risk stratification"]],
+        "summary": "",
+    },
+    {
+        "name": "Alvarado score",
+        "aliases": ["Alvarado", "MANTRELS score", "Alvarado criteria"],
+        "utd": [["Overview", "acute appendicitis in adults clinical manifestations and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Bishop score",
+        "aliases": ["Bishop", "Modified Bishop score", "Bishop scoring"],
+        "utd": [["Overview", "induction of labor techniques cervical ripening Bishop score"]],
+        "summary": "",
+    },
+    {
+        "name": "APGAR score",
+        "aliases": ["Apgar", "Apgar scoring", "Apgar scores"],
+        "utd": [["Overview", "Apgar score assessment of the newborn infant"]],
+        "summary": "",
+    },
+    {
+        "name": "Ranson criteria",
+        "aliases": ["Ranson score", "Ranson criteria for pancreatitis", "Ransons criteria"],
+        "utd": [["Overview", "predicting the severity of acute pancreatitis Ranson criteria"]],
+        "summary": "",
+    },
+    {
+        "name": "Glasgow-Blatchford score",
+        "aliases": ["Blatchford score", "Glasgow Blatchford bleeding score", "Glasgow-Blatchford bleeding score"],
+        "utd": [["Overview", "approach to acute upper gastrointestinal bleeding in adults risk scores"]],
+        "summary": "",
+    },
+    {
+        "name": "Rockall score",
+        "aliases": ["Rockall", "Rockall risk score", "Rockall scoring system"],
+        "utd": [["Overview", "approach to acute upper gastrointestinal bleeding in adults Rockall score"]],
+        "summary": "",
+    },
+    {
+        "name": "PERC rule",
+        "aliases": ["PERC", "Pulmonary Embolism Rule-out Criteria", "PERC criteria"],
+        "utd": [["Overview", "evaluation of adults with suspected pulmonary embolism PERC rule"]],
+        "summary": "",
+    },
+    {
+        "name": "NEWS score",
+        "aliases": ["NEWS2", "National Early Warning Score", "National Early Warning Score 2"],
+        "utd": [["Overview", "early warning scores rapid response systems for deteriorating adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Braden scale",
+        "aliases": ["Braden score", "Braden risk assessment", "Braden Scale for Predicting Pressure Sore Risk"],
+        "utd": [["Overview", "prevention of pressure induced skin and soft tissue injury risk assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Wagner classification",
+        "aliases": ["Wagner grade", "Wagner-Meggitt classification", "Wagner ulcer classification", "Wagner grading"],
+        "utd": [["Overview", "management of diabetic foot ulcers classification and evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Light criteria",
+        "aliases": ["Light's criteria", "Lights criteria", "Light criteria for pleural effusion"],
+        "utd": [["Overview", "diagnostic evaluation of a pleural effusion in adults Light criteria"]],
+        "summary": "",
+    },
+    {
+        "name": "Duke criteria",
+        "aliases": ["Modified Duke criteria", "Duke criteria for infective endocarditis", "Duke-ISCVID criteria"],
+        "utd": [["Overview", "clinical manifestations and diagnosis of infective endocarditis Duke criteria"]],
+        "summary": "",
+    },
+    {
+        "name": "Modified Rankin scale",
+        "aliases": ["mRS", "Rankin scale", "Modified Rankin Score", "Rankin score"],
+        "utd": [["Overview", "stroke outcome measures modified Rankin scale disability"]],
+        "summary": "",
+    },
+    {
+        "name": "Barthel index",
+        "aliases": ["Barthel ADL index", "Modified Barthel index", "Barthel score"],
+        "utd": [["Overview", "comprehensive geriatric assessment activities of daily living Barthel index"]],
+        "summary": "",
+    },
+    {
+        "name": "Lumbar puncture",
+        "aliases": ["Spinal tap", "CSF sampling", "Diagnostic lumbar puncture"],
+        "utd": [["Overview", "lumbar puncture technique and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Intercostal catheter insertion",
+        "aliases": ["Intercostal catheter", "Chest drain", "Chest drain insertion", "Chest tube insertion", "ICC insertion", "Tube thoracostomy"],
+        "utd": [["Overview", "chest tube thoracostomy placement technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Ascitic tap",
+        "aliases": ["Paracentesis", "Abdominal paracentesis", "Diagnostic paracentesis", "Ascitic fluid aspiration"],
+        "utd": [["Overview", "diagnostic and therapeutic abdominal paracentesis"]],
+        "summary": "",
+    },
+    {
+        "name": "Arterial blood gas sampling",
+        "aliases": ["Arterial blood gas", "ABG sampling", "Arterial puncture", "Radial artery puncture"],
+        "utd": [["Overview", "arterial blood gas sampling technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Nasogastric tube insertion",
+        "aliases": ["Nasogastric tube", "NG tube", "NG tube insertion", "Ryles tube"],
+        "utd": [["Overview", "nasogastric tube placement and confirmation"]],
+        "summary": "",
+    },
+    {
+        "name": "Urinary catheterisation",
+        "aliases": ["Urethral catheterisation", "Indwelling urinary catheter", "Indwelling catheter insertion", "IDC insertion", "Foley catheter", "Urinary catheter insertion"],
+        "utd": [["Overview", "placement and management of indwelling urinary catheters"]],
+        "summary": "",
+    },
+    {
+        "name": "Central venous catheter insertion",
+        "aliases": ["Central venous catheter", "Central line", "Central line insertion", "CVC insertion", "Central venous access"],
+        "utd": [["Overview", "central venous catheter placement complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Joint aspiration",
+        "aliases": ["Arthrocentesis", "Synovial fluid aspiration", "Knee aspiration"],
+        "utd": [["Overview", "joint aspiration and synovial fluid analysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Skin punch biopsy",
+        "aliases": ["Punch biopsy", "Skin biopsy", "Dermatological punch biopsy"],
+        "utd": [["Overview", "skin biopsy techniques punch biopsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Fine needle aspiration",
+        "aliases": ["Fine needle aspiration cytology", "FNA biopsy", "FNAC", "Fine needle biopsy"],
+        "utd": [["Overview", "fine needle aspiration biopsy of a mass"]],
+        "summary": "",
+    },
+    {
+        "name": "Procedural sedation",
+        "aliases": ["Conscious sedation", "Procedural sedation and analgesia", "Sedation for procedures"],
+        "utd": [["Overview", "procedural sedation and analgesia in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Spinal anaesthesia",
+        "aliases": ["Subarachnoid block", "Intrathecal anaesthesia", "Spinal block", "Spinal anaesthetic"],
+        "utd": [["Overview", "spinal anaesthesia technique and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Epidural analgesia",
+        "aliases": ["Epidural anaesthesia", "Epidural block", "Lumbar epidural", "Epidural infusion"],
+        "utd": [["Overview", "epidural analgesia technique and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Patient controlled analgesia",
+        "aliases": ["Patient-controlled analgesia", "PCA pump", "PCA morphine", "Patient controlled opioid analgesia"],
+        "utd": [["Overview", "patient controlled analgesia acute pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Regional nerve block",
+        "aliases": ["Peripheral nerve block", "Nerve block", "Regional anaesthesia", "Ultrasound guided nerve block"],
+        "utd": [["Overview", "peripheral nerve block ultrasound guided technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Spirometry",
+        "aliases": ["Lung function test", "Pulmonary function test", "Pulmonary function tests", "PFTs", "PFT", "Flow volume loop"],
+        "utd": [["Overview", "office spirometry interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Peak expiratory flow",
+        "aliases": ["PEF", "PEFR", "Peak flow", "Peak flow meter", "Peak expiratory flow rate"],
+        "utd": [["Overview", "peak expiratory flow rate monitoring asthma"]],
+        "summary": "",
+    },
+    {
+        "name": "CT pulmonary angiogram",
+        "aliases": ["CTPA", "CT pulmonary angiography", "CT pulmonary angiogram scan"],
+        "utd": [["Overview", "computed tomographic pulmonary angiography diagnosis pulmonary embolism"]],
+        "summary": "",
+    },
+    {
+        "name": "Ventilation perfusion scan",
+        "aliases": ["VQ scan", "V/Q scan", "Ventilation perfusion scintigraphy", "VQ scintigraphy"],
+        "utd": [["Overview", "ventilation perfusion scanning pulmonary embolism"]],
+        "summary": "",
+    },
+    {
+        "name": "Transthoracic echocardiography",
+        "aliases": ["TTE", "Echocardiogram", "Echocardiography", "Transthoracic echo"],
+        "utd": [["Overview", "transthoracic echocardiography indications interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Dual-energy X-ray absorptiometry",
+        "aliases": ["DEXA", "DEXA scan", "DXA", "DXA scan", "Bone density scan", "Bone mineral density scan", "Bone densitometry"],
+        "utd": [["Overview", "dual energy x-ray absorptiometry bone density interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Holter monitor",
+        "aliases": ["Holter monitoring", "Ambulatory ECG", "Ambulatory ECG monitoring", "24 hour ECG"],
+        "utd": [["Overview", "ambulatory ecg monitoring holter indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Exercise stress test",
+        "aliases": ["Exercise tolerance test", "Exercise ECG", "Treadmill test", "Exercise stress testing", "Stress ECG"],
+        "utd": [["Overview", "exercise ecg stress testing diagnosis coronary artery disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Coronary angiography",
+        "aliases": ["Coronary angiogram", "Cardiac catheterisation", "Coronary catheterisation", "Invasive coronary angiography"],
+        "utd": [["Overview", "coronary angiography indications complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Endoscopic retrograde cholangiopancreatography",
+        "aliases": ["ERCP", "Endoscopic retrograde cholangiopancreatogram"],
+        "utd": [["Overview", "endoscopic retrograde cholangiopancreatography indications adverse events"]],
+        "summary": "",
+    },
+    {
+        "name": "Colonoscopy",
+        "aliases": ["Colonoscopic examination", "Flexible colonoscopy"],
+        "utd": [["Overview", "colonoscopy indications complications quality"]],
+        "summary": "",
+    },
+    {
+        "name": "Gastroscopy",
+        "aliases": ["OGD", "Oesophagogastroduodenoscopy", "Upper endoscopy", "Upper GI endoscopy", "Upper gastrointestinal endoscopy"],
+        "utd": [["Overview", "upper endoscopy indications gastroscopy"]],
+        "summary": "",
+    },
+    {
+        "name": "Bronchoscopy",
+        "aliases": ["Flexible bronchoscopy", "Fibreoptic bronchoscopy", "Endobronchial ultrasound", "EBUS"],
+        "utd": [["Overview", "flexible bronchoscopy indications complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Cystoscopy",
+        "aliases": ["Flexible cystoscopy", "Rigid cystoscopy", "Cystourethroscopy"],
+        "utd": [["Overview", "cystoscopy indications haematuria evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Electroencephalogram",
+        "aliases": ["EEG", "Electroencephalography", "Electroencephalogram recording"],
+        "utd": [["Overview", "electroencephalography clinical indications epilepsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Nerve conduction studies",
+        "aliases": ["NCS", "Nerve conduction study", "Nerve conduction test"],
+        "utd": [["Overview", "nerve conduction studies overview peripheral neuropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Electromyography",
+        "aliases": ["EMG", "Needle electromyography", "Electromyogram"],
+        "utd": [["Overview", "needle electromyography overview interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Audiometry",
+        "aliases": ["Pure tone audiometry", "Audiogram", "Pure tone audiogram", "Hearing test"],
+        "utd": [["Overview", "evaluation of hearing loss audiometry interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Tympanometry",
+        "aliases": ["Tympanogram", "Impedance audiometry", "Acoustic immittance testing"],
+        "utd": [["Overview", "tympanometry interpretation otitis media effusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Slit lamp examination",
+        "aliases": ["Slit lamp", "Slit-lamp examination", "Slit-lamp biomicroscopy", "Slit lamp biomicroscopy"],
+        "utd": [["Overview", "slit lamp examination technique red eye"]],
+        "summary": "",
+    },
+    {
+        "name": "Visual field testing",
+        "aliases": ["Perimetry", "Automated perimetry", "Humphrey visual field test", "Visual field assessment", "Visual field test"],
+        "utd": [["Overview", "visual field testing perimetry interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Voluntary assisted dying",
+        "aliases": ["VAD", "assisted dying", "voluntary euthanasia"],
+        "utd": [["Overview", "palliative care and terminal illness end of life decisions"]],
+        "summary": "",
+    },
+    {
+        "name": "Mandatory reporting",
+        "aliases": ["mandatory notification", "notifiable conduct", "Ahpra notification"],
+        "utd": [["Overview", "physician impairment and professional regulation"]],
+        "summary": "",
+    },
+    {
+        "name": "Open disclosure",
+        "aliases": ["open disclosure framework", "disclosure of adverse events"],
+        "utd": [["Overview", "disclosure of medical errors to patients"]],
+        "summary": "",
+    },
+    {
+        "name": "Fitness to drive assessment",
+        "aliases": ["fitness to drive", "Assessing Fitness to Drive", "driving assessment", "driving fitness"],
+        "utd": [["Overview", "driving and medical conditions older drivers"]],
+        "summary": "",
+    },
+    {
+        "name": "Notifiable disease",
+        "aliases": ["notifiable condition", "disease notification", "notifiable diseases"],
+        "utd": [["Overview", "public health reporting of communicable diseases"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic disease management plan",
+        "aliases": ["GP management plan", "GPMP", "care plan", "team care arrangement", "TCA", "chronic disease management"],
+        "utd": [["Overview", "chronic illness care coordination primary care"]],
+        "summary": "",
+    },
+    {
+        "name": "Home medicines review",
+        "aliases": ["HMR", "domiciliary medication management review", "medication review"],
+        "utd": [["Overview", "medication reconciliation and polypharmacy in older adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Immunisation schedule",
+        "aliases": ["National Immunisation Program", "NIP", "vaccination schedule", "childhood immunisation schedule"],
+        "utd": [["Overview", "standard childhood immunization schedule"]],
+        "summary": "",
+    },
+    {
+        "name": "Contact tracing",
+        "aliases": ["partner notification", "case contact tracing"],
+        "utd": [["Overview", "contact tracing for communicable disease control"]],
+        "summary": "",
+    },
+    {
+        "name": "Venous thromboembolism prophylaxis",
+        "aliases": ["VTE prophylaxis", "DVT prophylaxis", "thromboprophylaxis", "clexane prophylaxis"],
+        "utd": [["Overview", "prevention of venous thromboembolism in hospitalized patients"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal resuscitation",
+        "aliases": ["newborn resuscitation", "neonatal life support", "NLS", "newborn life support"],
+        "utd": [["Overview", "neonatal resuscitation in the delivery room"]],
+        "summary": "",
+    },
+    {
+        "name": "Developmental milestones",
+        "aliases": ["milestones", "child development milestones", "developmental screening"],
+        "utd": [["Overview", "developmental surveillance and screening in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Child protection notification",
+        "aliases": ["child protection report", "risk of significant harm", "ROSH", "mandatory reporting of child abuse"],
+        "utd": [["Overview", "child abuse and neglect evaluation and reporting"]],
+        "summary": "",
+    },
+    {
+        "name": "Antimicrobial stewardship",
+        "aliases": ["antibiotic stewardship", "antimicrobial stewardship program"],
+        "utd": [["Overview", "antimicrobial stewardship in hospitals"]],
+        "summary": "",
+    },
 ]
 
 
@@ -47474,6 +47918,1206 @@ RICH_SUMMARIES = {
         "arthrodesis for fixed disease. Note: check for an underlying "
         "untreated mallet finger in any new swan neck deformity - the "
         "two are commonly linked."
+    ),
+
+    "Wells score for pulmonary embolism": (
+        "Validated prediction rule stratifying pretest probability of "
+        "pulmonary embolism to decide between D-dimer and imaging. "
+        "Criteria: clinical signs of DVT 3, PE the most likely "
+        "diagnosis 3, heart rate over 100 1.5, immobilisation for 3 "
+        "days or more or surgery within 4 weeks 1.5, previous DVT or "
+        "PE 1.5, haemoptysis 1, active malignancy 1. Dx: "
+        "dichotomised, 4 or less means PE unlikely so proceed to "
+        "D-dimer, and over 4 means PE likely so proceed straight to "
+        "CTPA. The three-tier version reads under 2 low, 2 to 6 "
+        "moderate, over 6 high. Note: a negative D-dimer only "
+        "excludes PE in the unlikely group. A separate Wells score "
+        "exists for DVT with different items and a cut-off of 2. Key "
+        "point: in pregnancy use a pregnancy-adapted pathway such as "
+        "YEARS, not Wells."
+    ),
+    "CURB-65 score": (
+        "Five-point severity score for community-acquired pneumonia "
+        "that guides site of care. Criteria: new Confusion or "
+        "abbreviated mental test 8 or less, Urea over 7 mmol/L, "
+        "Respiratory rate 30 or more, Blood pressure systolic under "
+        "90 or diastolic 60 or less, and age 65 or over. One point "
+        "each. Mx: 0 to 1 is low risk with 30-day mortality under 3% "
+        "and usually suits outpatient treatment, 2 is intermediate at "
+        "about 9% and warrants hospital assessment, and 3 or more is "
+        "severe at 15 to 40% and needs admission with intensive care "
+        "review. Australian notes: eTG uses SMART-COP to predict need "
+        "for intensive respiratory or vasopressor support. CRB-65 "
+        "omits urea for use in general practice."
+    ),
+    "CHA2DS2-VASc score": (
+        "Stroke risk score in non-valvular atrial fibrillation used "
+        "to decide who needs oral anticoagulation. Criteria: cardiac "
+        "failure or LV dysfunction 1, hypertension 1, age 75 or over "
+        "2, diabetes 1, prior stroke or TIA or thromboembolism 2, "
+        "vascular disease 1, age 65 to 74 1, female sex 1. Maximum 9. "
+        "Mx: anticoagulate men scoring 2 or more and women scoring 3 "
+        "or more, and consider it for men scoring 1 and women scoring "
+        "2. Australian notes: the NHFA and CSANZ guideline prefers "
+        "CHA2DS2-VA, which drops the sex category, recommending a "
+        "DOAC at 2 or more and considering one at 1. Note: female sex "
+        "modifies risk rather than creating it, so it never justifies "
+        "anticoagulation alone."
+    ),
+    "HAS-BLED score": (
+        "Bleeding risk score in atrial fibrillation used to flag "
+        "modifiable risk factors, not to withhold anticoagulation. "
+        "Criteria: uncontrolled Hypertension with systolic over 160, "
+        "Abnormal renal or liver function scoring 1 each, prior "
+        "Stroke, Bleeding history or predisposition such as anaemia, "
+        "Labile INR with time in range under 60%, Elderly over 65, "
+        "and Drugs meaning antiplatelets or NSAIDs plus alcohol of 8 "
+        "or more standard drinks a week scoring 1 each. Maximum 9. "
+        "Mx: 3 or more is high risk and should prompt blood pressure "
+        "control, review of concurrent antiplatelets and alcohol, and "
+        "earlier follow-up rather than stopping the anticoagulant. "
+        "Note: labile INR scores nothing on a DOAC."
+    ),
+    "Child-Pugh score": (
+        "Points-based grading of cirrhosis severity that predicts "
+        "mortality and guides operative and transplant decisions. "
+        "Criteria: bilirubin, albumin, INR, ascites and "
+        "encephalopathy, each scored 1 to 3. Bilirubin scores by "
+        "under 34, 34 to 50 and over 50 micromol/L. Albumin scores by "
+        "over 35, 28 to 35 and under 28 g/L. INR scores by under 1.7, "
+        "1.7 to 2.3 and over 2.3. Ascites and encephalopathy score by "
+        "absent, mild or medically controlled, and severe or "
+        "refractory. Grading: class A is 5 to 6 points, B is 7 to 9 "
+        "and C is 10 to 15. Prognosis: one-year survival is roughly "
+        "100%, 80% and 45%. Mnemonic: albumin, bilirubin, clotting, "
+        "distension, encephalopathy."
+    ),
+    "MELD score": (
+        "Logarithmic score ranking candidates for liver "
+        "transplantation and predicting 3-month mortality in chronic "
+        "liver disease. Criteria: bilirubin, INR and creatinine, with "
+        "the result capped to a range of 6 to 40. MELD-Na adds serum "
+        "sodium and MELD 3.0 also adds albumin and sex. Patients on "
+        "dialysis are assigned a creatinine of 4 mg per dL. "
+        "Prognosis: 3-month mortality rises from about 2% below a "
+        "score of 10 to roughly 20% at 20 to 29 and over 50% at 30 or "
+        "more. Mx: 15 or more is the usual threshold above which "
+        "transplant benefit exceeds operative risk. Australian notes: "
+        "MELD-Na drives priority on the national liver transplant "
+        "waiting list, with exception points for hepatocellular "
+        "carcinoma."
+    ),
+    "Glasgow Coma Scale": (
+        "Fifteen-point scale of impaired consciousness scored across "
+        "eye, verbal and motor responses, used to trend neurological "
+        "state and trigger airway protection. Criteria: eye opening "
+        "scores 1 to 4 from none to spontaneous, verbal scores 1 to 5 "
+        "from none through sounds, words and confused to oriented, "
+        "and motor scores 1 to 6 from none through extension, "
+        "abnormal flexion, withdrawal and localising to obeying "
+        "commands. Minimum 3, maximum 15. Classification: 13 to 15 "
+        "mild, 9 to 12 moderate, 8 or less severe. Mx: 8 or less "
+        "means the airway is at risk and intubation should be "
+        "considered. Note: always record the three components, since "
+        "E2V2M5 and E4V1M4 both total 9 but mean different things."
+    ),
+    "qSOFA": (
+        "Three-item bedside prompt flagging patients with suspected "
+        "infection at higher risk of death or prolonged intensive "
+        "care stay. Criteria: respiratory rate 22 or more, altered "
+        "mentation with GCS under 15, and systolic blood pressure 100 "
+        "mmHg or less. One point each. Dx: 2 or more indicates high "
+        "risk and should trigger investigation for organ dysfunction, "
+        "escalation of care and senior review. Note: this is a "
+        "Sepsis-3 prognostic screen, not a diagnosis of sepsis, which "
+        "requires a rise in SOFA of 2 or more attributable to "
+        "infection. Sensitivity is poor and the Surviving Sepsis 2021 "
+        "guideline advises against using it as a sole screening tool. "
+        "Australian notes: NSW uses the CEC adult sepsis pathway with "
+        "red flags."
+    ),
+    "Ottawa ankle rules": (
+        "Decision rule identifying which acute ankle injuries need "
+        "x-ray, safely cutting radiography by around a third. "
+        "Criteria: order an ankle series if there is malleolar zone "
+        "pain plus either bone tenderness over the posterior edge or "
+        "tip of a malleolus in its distal 6 cm, or inability to bear "
+        "weight for four steps both at the time of injury and in the "
+        "emergency department. Ix: order a foot series if there is "
+        "midfoot pain plus tenderness at the base of the fifth "
+        "metatarsal or over the navicular, or the same weight-bearing "
+        "failure. Note: sensitivity approaches 100% for clinically "
+        "significant fracture but specificity is low, so a positive "
+        "rule only means image. Key point: not validated under age 5, "
+        "in intoxication or where a distracting injury masks "
+        "tenderness."
+    ),
+    "ABCD2 score": (
+        "Score estimating short-term stroke risk after a transient "
+        "ischaemic attack, historically used to triage urgency of "
+        "assessment. Criteria: age 60 or over 1, blood pressure "
+        "140/90 or higher 1, unilateral weakness 2 or speech "
+        "disturbance without weakness 1, duration 60 minutes or more "
+        "2 or 10 to 59 minutes 1, and diabetes 1. Maximum 7. Risk: 0 "
+        "to 3 is low, 4 to 5 moderate and 6 to 7 high, with 2-day "
+        "stroke risk rising from about 1% to 8%. Australian notes: "
+        "the Stroke Foundation Living Guidelines no longer support "
+        "ABCD2 for triage. Every suspected TIA needs urgent "
+        "assessment with brain and carotid imaging and an ECG within "
+        "24 to 48 hours whatever the score."
+    ),
+    "Alvarado score": (
+        "Ten-point score for the probability of acute appendicitis in "
+        "undifferentiated right iliac fossa pain. Criteria: migration "
+        "of pain 1, anorexia 1, nausea or vomiting 1, right iliac "
+        "fossa tenderness 2, rebound tenderness 1, temperature 37.3 "
+        "degrees or above 1, white cell count over 10 2, and "
+        "neutrophil left shift over 75% 1. Dx: 0 to 4 makes "
+        "appendicitis unlikely, 5 to 6 is compatible and warrants "
+        "observation or imaging, 7 to 8 is probable and 9 to 10 very "
+        "probable. Mnemonic: MANTRELS. Note: it rules out reasonably "
+        "well in men but over-diagnoses in women and children, so "
+        "ultrasound or CT is usually still needed before "
+        "appendicectomy."
+    ),
+    "Bishop score": (
+        "Cervical assessment before induction of labour that predicts "
+        "whether induction will succeed. Criteria: dilatation, "
+        "effacement or cervical length, station of the presenting "
+        "part, cervical consistency and cervical position, to a "
+        "maximum of 13. Dilatation, effacement and station each score "
+        "0 to 3 while consistency and position score 0 to 2. Mx: 6 or "
+        "less is unfavourable and calls for ripening with vaginal "
+        "prostaglandin E2 or a balloon catheter, while 8 or more is "
+        "favourable and allows amniotomy with oxytocin, giving a "
+        "vaginal delivery rate similar to spontaneous labour. Note: "
+        "the modified score substitutes measured cervical length for "
+        "effacement. A low score predicts longer induction and higher "
+        "caesarean risk, especially in nulliparous women."
+    ),
+    "APGAR score": (
+        "Rapid five-item description of a newborn's condition at 1 "
+        "and 5 minutes, repeated every 5 minutes until it reaches 7 "
+        "or more. Criteria: appearance or colour, pulse, grimace or "
+        "reflex irritability, activity or tone, and respiration, each "
+        "scored 0 to 2 for a maximum of 10. Pulse scores 0 if absent, "
+        "1 if under 100 and 2 if 100 or more. Classification: 7 to 10 "
+        "is reassuring, 4 to 6 moderately depressed and 0 to 3 "
+        "severely depressed. Note: the score records the response to "
+        "resuscitation rather than guiding it. ANZCOR newborn life "
+        "support is driven by heart rate, breathing and tone. A low "
+        "score does not diagnose asphyxia and predicts long-term "
+        "neurological outcome poorly."
+    ),
+    "Ranson criteria": (
+        "Eleven-variable score predicting mortality in acute "
+        "pancreatitis, five measured on admission and six at 48 "
+        "hours. Criteria: on admission, age over 55, white cells over "
+        "16, glucose over 11 mmol/L, LDH over 350 and AST over 250. "
+        "At 48 hours, a fall in haematocrit over 10%, a rise in urea, "
+        "calcium under 2.0 mmol/L, PaO2 under 60 mmHg, base deficit "
+        "over 4 and fluid sequestration over 6 L. Prognosis: fewer "
+        "than 3 criteria predicts mild disease with about 1% "
+        "mortality, and mortality climbs steeply above 5. Note: the "
+        "score cannot be completed for 48 hours so it never guides "
+        "initial management. Modified Glasgow, APACHE II and a CRP "
+        "over 150 at 48 hours are more practical."
+    ),
+    "Glasgow-Blatchford score": (
+        "Pre-endoscopy score for upper gastrointestinal bleeding that "
+        "identifies patients safe for outpatient management. "
+        "Criteria: urea, haemoglobin using sex-specific thresholds, "
+        "systolic blood pressure, pulse 100 or more, melaena, "
+        "syncope, hepatic disease and cardiac failure, totalling 0 to "
+        "23. Mx: a score of 0, or 1 or less in some protocols, marks "
+        "a very low risk group who can be discharged for outpatient "
+        "endoscopy, while higher scores predict need for transfusion, "
+        "endoscopic therapy or surgery. Note: it uses no endoscopic "
+        "findings, so it is the score to apply at the front door. "
+        "Rockall is its post-endoscopy counterpart for rebleeding and "
+        "mortality."
+    ),
+    "Rockall score": (
+        "Score predicting rebleeding and mortality after upper "
+        "gastrointestinal haemorrhage, with a clinical part usable "
+        "before endoscopy. Criteria: age scores 0 for under 60, 1 for "
+        "60 to 79 and 2 for 80 or over. Shock scores 1 for a pulse "
+        "over 100 and 2 for a systolic under 100. Comorbidity scores "
+        "2 for ischaemic heart disease or cardiac failure and 3 for "
+        "renal failure, liver failure or metastatic cancer. The full "
+        "score adds endoscopic diagnosis and stigmata of recent "
+        "haemorrhage, each 0 to 2, for a maximum of 11. Prognosis: 2 "
+        "or less predicts rebleeding around 5% with near-zero "
+        "mortality, while 8 or more carries mortality above 40%. "
+        "Note: use Glasgow-Blatchford at the front door and Rockall "
+        "once the scope is done."
+    ),
+    "PERC rule": (
+        "Eight-item rule that excludes pulmonary embolism without any "
+        "testing in patients already judged low risk. Criteria: age "
+        "under 50, pulse under 100, oxygen saturation 95% or more, no "
+        "unilateral leg swelling, no haemoptysis, no surgery or "
+        "trauma requiring admission in the past 4 weeks, no prior DVT "
+        "or PE, and no exogenous oestrogen. Dx: if all eight are "
+        "satisfied the risk of PE is under 2% and neither D-dimer nor "
+        "imaging is required. Note: PERC is valid only after gestalt "
+        "or a Wells score has placed the patient in the "
+        "low-probability group of under about 15%. Applying it to a "
+        "moderate or high-risk patient will miss PE. It is not "
+        "validated in pregnancy."
+    ),
+    "NEWS score": (
+        "Aggregate track-and-trigger score standardising detection of "
+        "clinical deterioration in adult ward patients. Criteria: "
+        "respiratory rate, oxygen saturation, whether supplemental "
+        "oxygen is running, systolic blood pressure, pulse, level of "
+        "consciousness on the ACVPU scale, and temperature, each "
+        "scoring 0 to 3. NEWS2 adds an alternative saturation scale "
+        "for hypercapnic respiratory failure targeting 88 to 92% and "
+        "scores new confusion as 3. Mx: 0 to 4 is low risk, 5 to 6 or "
+        "any single parameter scoring 3 needs urgent review, and 7 or "
+        "more triggers an emergency response with critical care "
+        "input. Australian notes: NSW Health uses Between the Flags "
+        "charts with Clinical Review and Rapid Response criteria "
+        "instead."
+    ),
+    "Braden scale": (
+        "Screening scale grading a patient's risk of developing a "
+        "pressure injury so prevention can be targeted. Criteria: "
+        "sensory perception, moisture, activity, mobility and "
+        "nutrition each score 1 to 4, and friction and shear scores 1 "
+        "to 3, giving a total of 6 to 23 in which a lower score means "
+        "higher risk. Risk: 19 or more is low, 15 to 18 mild, 13 to "
+        "14 moderate, 10 to 12 high and 9 or less very high. Mx: "
+        "repositioning schedules, pressure-redistributing surfaces, "
+        "skin and continence care and dietitian review. Australian "
+        "notes: the Comprehensive Care Standard requires pressure "
+        "injury screening on admission and reassessment when the "
+        "patient's condition changes. Waterlow and Norton are "
+        "accepted alternatives."
+    ),
+    "Wagner classification": (
+        "Six-grade description of diabetes-related foot ulcers based "
+        "on depth and the presence of infection or gangrene. Grading: "
+        "grade 0 is intact skin with deformity or a healed ulcer, "
+        "grade 1 a superficial full-thickness ulcer, grade 2 a deeper "
+        "ulcer reaching tendon, capsule or bone without infection, "
+        "grade 3 a deep ulcer with abscess or osteomyelitis, grade 4 "
+        "localised gangrene of forefoot or heel, and grade 5 gangrene "
+        "of the whole foot. Mx: grade 3 and above generally needs "
+        "admission, imaging, surgical debridement and vascular "
+        "assessment. Note: the system grades neither ischaemia nor "
+        "neuropathy, so a well-perfused and a critically ischaemic "
+        "ulcer share a grade. Australian notes: national guidelines "
+        "favour SINBAD."
+    ),
+    "Light criteria": (
+        "Biochemical rule separating exudative from transudative "
+        "pleural effusions, which redirects the entire differential. "
+        "Criteria: the fluid is an exudate if any one of a pleural to "
+        "serum protein ratio over 0.5, a pleural to serum LDH ratio "
+        "over 0.6, or a pleural LDH above two-thirds the upper limit "
+        "of normal for serum LDH. Ix: send paired pleural and serum "
+        "protein and LDH with every diagnostic tap. Ddx: transudate "
+        "suggests cardiac failure, cirrhosis or nephrotic syndrome, "
+        "while exudate suggests infection, malignancy, pulmonary "
+        "embolism or connective tissue disease. Note: about a quarter "
+        "of transudates are misclassified as exudates, especially "
+        "after diuresis, and a serum to pleural albumin gradient "
+        "above 12 g/L then indicates a transudate."
+    ),
+    "Duke criteria": (
+        "Classification combining microbiology, echocardiography and "
+        "clinical findings to call suspected infective endocarditis "
+        "definite, possible or rejected. Criteria: definite disease "
+        "needs 2 major, 1 major plus 3 minor, or 5 minor criteria, or "
+        "histology of a vegetation. Possible disease needs 1 major "
+        "plus 1 minor, or 3 minor. The major criteria are typical "
+        "organisms in two separate blood cultures or persistent "
+        "bacteraemia, and echocardiographic vegetation, abscess, new "
+        "prosthetic dehiscence or new regurgitation. The minor "
+        "criteria are a predisposing valve lesion or injecting drug "
+        "use, fever above 38, vascular phenomena, immunological "
+        "phenomena, and microbiology short of a major criterion. Ix: "
+        "three sets of blood cultures from separate sites before "
+        "antibiotics, then transthoracic echocardiography escalating "
+        "to transoesophageal. Note: the 2023 update accepts CT and "
+        "PET findings as major."
+    ),
+    "Modified Rankin scale": (
+        "Seven-level global measure of disability after stroke and "
+        "the usual primary outcome in stroke trials. Grading: 0 is no "
+        "symptoms, 1 symptoms without disability, 2 slight disability "
+        "with independent daily affairs but not all previous "
+        "activities, 3 moderate disability needing some help yet "
+        "walking unaided, 4 moderately severe disability unable to "
+        "walk or self-care unaided, 5 severe disability, bedbound and "
+        "needing constant nursing, and 6 dead. Note: trials usually "
+        "dichotomise 0 to 2 as functional independence against 3 to "
+        "6, or report a shift across the whole scale. Interobserver "
+        "agreement improves with a structured interview. Key point: "
+        "it measures global dependency, not neurological deficit, for "
+        "which the NIHSS is used."
+    ),
+    "Barthel index": (
+        "Hundred-point measure of independence in basic activities of "
+        "daily living, used to track rehabilitation and plan "
+        "discharge. Criteria: feeding, bathing, grooming, dressing, "
+        "bowel control, bladder control, toilet use, transfers, "
+        "mobility and stairs, each scored in steps of 5 by how much "
+        "help is needed. Grading: 0 to 20 is total dependency, 21 to "
+        "60 severe, 61 to 90 moderate, 91 to 99 slight and 100 "
+        "independent. Note: a score of 100 does not mean the person "
+        "can live alone. The index ignores instrumental activities "
+        "such as cooking, finances and medications, and ignores "
+        "cognition, so it has a marked ceiling effect. The Lawton "
+        "scale and modified Rankin scale complement it."
+    ),
+    "Lumbar puncture": (
+        "Sterile needle sampling of CSF from the lumbar subarachnoid "
+        "space, entered at L3/4 or L4/5 below the conus, in the "
+        "lateral decubitus position if a true opening pressure is "
+        "needed. Indications: suspected meningitis or encephalitis, "
+        "suspected subarachnoid haemorrhage after a negative CT, and "
+        "therapeutic drainage in idiopathic intracranial "
+        "hypertension. Contraindications: raised intracranial "
+        "pressure with mass effect, coagulopathy or platelets under "
+        "50, and infection over the puncture site. Ix: opening "
+        "pressure, then CSF for cell count and differential, protein, "
+        "paired glucose and Gram stain plus culture. Add "
+        "xanthochromia if SAH is suspected. Complications: "
+        "post-dural-puncture headache in up to a third, less with a "
+        "fine pencil-point needle. Key point: never delay antibiotics "
+        "for the tap in suspected bacterial meningitis."
+    ),
+    "Intercostal catheter insertion": (
+        "Insertion of a drain through the chest wall into the pleural "
+        "space to evacuate air, blood or fluid and re-expand the "
+        "lung. Indications: tension, large or symptomatic "
+        "pneumothorax. Haemothorax, empyema or a complicated "
+        "parapneumonic effusion. Drainage of a large symptomatic "
+        "malignant effusion. Sites: the safe triangle, bounded by the "
+        "lateral border of pectoralis major and the anterior border "
+        "of latissimus dorsi above the nipple line, entering just "
+        "above the rib to spare the neurovascular bundle. Note: "
+        "small-bore Seldinger drains suit air and free fluid, while "
+        "large-bore tubes are kept for haemothorax. Complications: "
+        "malposition or blockage. Site infection and re-expansion "
+        "pulmonary oedema after rapid drainage. Injury to lung, liver "
+        "or spleen. Key point: tension pneumothorax is decompressed "
+        "clinically, before imaging."
+    ),
+    "Ascitic tap": (
+        "Percutaneous needle sampling of peritoneal fluid, diagnostic "
+        "in new or decompensated ascites and therapeutic when tense "
+        "ascites needs draining. Indications: any admission with "
+        "ascites, to exclude spontaneous bacterial peritonitis (SBP). "
+        "New ascites of unknown cause. Tense ascites causing pain or "
+        "breathlessness. Sites: left lower quadrant, lateral to the "
+        "rectus sheath to avoid the inferior epigastric vessels, "
+        "ideally under ultrasound. Ix: cell count, with SBP diagnosed "
+        "at neutrophils of 250 or more per mm3. Ascitic albumin for "
+        "the serum-ascites albumin gradient. Culture into blood "
+        "culture bottles at the bedside, plus cytology if malignancy "
+        "is suspected. Note: replace albumin at 6 to 8 g per litre "
+        "removed when drainage exceeds 5 L. Complications: bowel or "
+        "bladder perforation, persistent leak, and circulatory "
+        "dysfunction after large-volume drainage."
+    ),
+    "Arterial blood gas sampling": (
+        "Percutaneous arterial puncture, usually radial, giving pH, "
+        "PaO2, PaCO2, bicarbonate, base excess and lactate on a "
+        "heparinised sample. Indications: suspected respiratory "
+        "failure or an unexplained falling saturation, assessing "
+        "ventilation before and during non-invasive ventilation, and "
+        "severe metabolic derangement such as diabetic ketoacidosis "
+        "or sepsis. Contraindications: local infection, an "
+        "arteriovenous fistula or vascular graft in the limb, and "
+        "severe peripheral vascular disease. Note: extend the wrist, "
+        "palpate the radial pulse and enter at about 30 to 45 degrees "
+        "with a fine needle, then press firmly for at least 5 minutes "
+        "and longer if anticoagulated. Complications: pain, "
+        "haematoma, and rarely arterial spasm or distal ischaemia. "
+        "Key point: a venous gas answers pH, bicarbonate, base excess "
+        "and lactate, so reserve arterial sampling for when "
+        "oxygenation or an accurate PaCO2 matters."
+    ),
+    "Nasogastric tube insertion": (
+        "Passage of a tube through the nose into the stomach for "
+        "feeding, medication or gastric decompression. Indications: "
+        "feeding when swallowing is unsafe, such as after stroke. "
+        "Decompression in bowel obstruction or ileus. Gastric "
+        "aspiration in poisoning. Contraindications: base of skull "
+        "fracture and significant midface trauma bar the nasal route. "
+        "Take care with varices, strictures and coagulopathy. Note: "
+        "measure from nose to earlobe to xiphisternum, pass with the "
+        "neck slightly flexed, and ask the patient to sip water as "
+        "the tube passes the oropharynx. Ix: confirm placement with "
+        "an aspirate pH of 5.5 or below before anything is given. If "
+        "there is no aspirate or the pH is higher, a chest x-ray "
+        "showing the tip below the diaphragm and left of midline is "
+        "required. Key point: auscultating insufflated air never "
+        "confirms position."
+    ),
+    "Urinary catheterisation": (
+        "Insertion of a catheter through the urethra into the bladder "
+        "to drain urine, measure output accurately or relieve outflow "
+        "obstruction. Indications: acute urinary retention, accurate "
+        "output monitoring in critical illness, perioperative "
+        "drainage, and to protect sacral wounds from intractable "
+        "incontinence. Contraindications: suspected urethral injury, "
+        "signalled by blood at the meatus, a high-riding prostate or "
+        "pelvic fracture, needs urology review and often suprapubic "
+        "drainage. Note: aseptic technique, instil lidocaine gel and "
+        "wait, advance to the hilt in men before inflating the "
+        "balloon with 10 mL of sterile water, then reduce the "
+        "foreskin. Complications: catheter-associated urinary tract "
+        "infection, rising with every day in situ. Urethral trauma or "
+        "false passage. Paraphimosis. Post-obstructive diuresis after "
+        "chronic retention. Key point: review the need daily and "
+        "remove early."
+    ),
+    "Central venous catheter insertion": (
+        "Placement of a catheter into a large central vein, with the "
+        "tip at the cavo-atrial junction, via the internal jugular, "
+        "subclavian or femoral route. Indications: vasopressors and "
+        "other vesicant infusions, central venous pressure "
+        "monitoring, haemodialysis or plasma exchange, and prolonged "
+        "therapy with poor peripheral access. Contraindications: "
+        "infection over the site, known thrombosis of the target "
+        "vein, and uncorrected coagulopathy for a non-compressible "
+        "site. Note: real-time ultrasound guidance, full barrier "
+        "precautions, chlorhexidine skin preparation, and head-down "
+        "positioning for jugular or subclavian access to fill the "
+        "vein and reduce air embolism. Complications: pneumothorax, "
+        "highest with the subclavian route. Arterial puncture and air "
+        "embolism. Catheter-related bloodstream infection, highest at "
+        "the femoral site. Ix: chest x-ray after jugular or "
+        "subclavian insertion to check tip position and exclude "
+        "pneumothorax."
+    ),
+    "Joint aspiration": (
+        "Needle aspiration of synovial fluid from a joint, performed "
+        "urgently in any acutely hot, swollen joint to exclude septic "
+        "arthritis. Indications: suspected septic arthritis, an "
+        "undiagnosed monoarthritis where crystal disease is possible, "
+        "and drainage of a tense effusion or haemarthrosis. "
+        "Contraindications: overlying cellulitis or infected skin. A "
+        "prosthetic joint is aspirated by orthopaedics, not on the "
+        "ward. Ix: urgent Gram stain and culture, cell count with "
+        "differential, and polarised light microscopy for crystals. "
+        "Note: septic fluid is turbid with a white cell count usually "
+        "above 50,000 per mm3 and over 90% neutrophils, but a lower "
+        "count does not exclude infection, and crystals and sepsis "
+        "can coexist. Key point: aspirate before antibiotics where "
+        "possible, but never delay treatment in a septic patient."
+    ),
+    "Skin punch biopsy": (
+        "Full-thickness sampling of skin with a cylindrical blade, "
+        "usually 3 to 4 mm, taken under local anaesthetic down to "
+        "subcutaneous fat. Indications: an undiagnosed inflammatory "
+        "rash, suspected cutaneous vasculitis or lymphoma, blistering "
+        "disease, and confirmation of a suspected non-melanoma skin "
+        "cancer. Note: sample a fresh, well-developed lesion rather "
+        "than an excoriated or treated one, avoid the lower leg where "
+        "healing is poor, and stretch the skin perpendicular to "
+        "relaxed skin tension lines so the defect closes as a neat "
+        "ellipse. Note: immunobullous disease needs two samples, "
+        "lesional skin in formalin for histology and perilesional "
+        "skin in Michel's medium for direct immunofluorescence. "
+        "Contraindications: suspected melanoma is excised whole where "
+        "possible, since a partial sample can understage Breslow "
+        "thickness. Complications: bleeding, infection and scarring."
+    ),
+    "Fine needle aspiration": (
+        "Sampling of cells from a palpable or imaged mass through a "
+        "fine needle for cytology, usually under ultrasound guidance. "
+        "Indications: thyroid nodules meeting sonographic criteria, a "
+        "breast lump as the pathology arm of triple assessment, "
+        "undiagnosed lymphadenopathy, and salivary or superficial "
+        "soft tissue masses. Note: results are reported on structured "
+        "scales, such as Bethesda for thyroid, which tie the cytology "
+        "grade to a malignancy risk and a next step. Note: aspiration "
+        "yields cells but not architecture, so it cannot separate "
+        "follicular adenoma from follicular carcinoma or subtype a "
+        "lymphoma. Core biopsy or excision is needed for those. "
+        "Complications: bruising, and a non-diagnostic sample "
+        "requiring repeat. Key point: a benign result in a clinically "
+        "or radiologically suspicious lump does not close the case, "
+        "as the triple test must be concordant."
+    ),
+    "Procedural sedation": (
+        "Drug-induced depression of consciousness that allows a "
+        "painful or distressing procedure while the patient maintains "
+        "their own airway. Indications: reduction of fractures and "
+        "dislocations, electrical cardioversion, and abscess drainage "
+        "or debridement. Note: ANZCA standards require a practitioner "
+        "dedicated to sedation and monitoring who is separate from "
+        "the proceduralist, with continuous pulse oximetry, "
+        "capnography, ECG and blood pressure, plus airway equipment "
+        "and suction checked beforehand. Note: propofol titrated in "
+        "small boluses is the usual agent, ketamine suits children "
+        "and shocked patients because it preserves airway tone and "
+        "blood pressure, and a midazolam with fentanyl combination "
+        "carries the highest risk of stacked respiratory depression. "
+        "Cautions: fasting status, difficult airway predictors, "
+        "obstructive sleep apnoea and the extremes of age. "
+        "Complications: hypoxia and apnoea dominate, so recover the "
+        "patient in a monitored area until back to baseline."
+    ),
+    "Spinal anaesthesia": (
+        "Single injection of local anaesthetic into the lumbar "
+        "subarachnoid space, giving a dense, rapid-onset sensory, "
+        "motor and sympathetic block below the level reached. "
+        "Indications: caesarean section, lower limb joint "
+        "replacement, transurethral resection, and hernia repair, "
+        "especially where general anaesthesia is high risk. Sites: "
+        "L3/4 or L4/5 with a fine pencil-point needle. Block height "
+        "depends on dose, patient position and baricity, as "
+        "hyperbaric bupivacaine settles to the dependent part. "
+        "Contraindications: patient refusal, coagulopathy or "
+        "therapeutic anticoagulation, sepsis at the site, raised "
+        "intracranial pressure, and fixed cardiac output states such "
+        "as severe aortic stenosis. Complications: hypotension and "
+        "bradycardia from sympathetic blockade. Urinary retention. "
+        "Post-dural-puncture headache. Rarely a total spinal with "
+        "apnoea. Note: co-load with fluid and have metaraminol or "
+        "phenylephrine drawn up."
+    ),
+    "Epidural analgesia": (
+        "Local anaesthetic, usually combined with an opioid, "
+        "delivered by catheter into the epidural space to give "
+        "segmental analgesia without a dense motor block. "
+        "Indications: labour analgesia, and analgesia after major "
+        "abdominal or thoracic surgery, where it reduces respiratory "
+        "complications. Sites: the catheter is sited at the dermatome "
+        "matching the incision, low thoracic for a laparotomy and "
+        "lumbar for labour, using loss of resistance with a Tuohy "
+        "needle. Contraindications: patient refusal, coagulopathy or "
+        "anticoagulation within the recommended interval, sepsis at "
+        "the site, and raised intracranial pressure. Complications: "
+        "hypotension, a patchy or one-sided block, accidental dural "
+        "puncture with severe postural headache, and rarely epidural "
+        "haematoma or abscess. Red flags: new back pain with "
+        "progressive leg weakness or bladder dysfunction needs urgent "
+        "MRI and neurosurgical review."
+    ),
+    "Patient controlled analgesia": (
+        "An infusion pump that lets the patient self-administer small "
+        "intravenous opioid boluses within a preset lockout, "
+        "titrating analgesia to their own need. Indications: moderate "
+        "to severe acute pain after major surgery or trauma, "
+        "particularly when the oral route is unavailable. Dose: a "
+        "typical adult regimen is morphine 1 mg per bolus with a 5 "
+        "minute lockout and no background infusion. Fentanyl or "
+        "hydromorphone substitutes in renal impairment. Note: the "
+        "patient must be awake enough to press the button, which "
+        "makes the loop self-limiting, so nobody else may press it "
+        "for them. Monitoring: sedation score, respiratory rate and "
+        "pain score at set intervals, with naloxone available. "
+        "Complications: nausea, pruritus, urinary retention and "
+        "constipation. Respiratory depression is heralded by a rising "
+        "sedation score rather than a falling respiratory rate. Note: "
+        "a background infusion sharply raises that risk in "
+        "opioid-naive patients."
+    ),
+    "Regional nerve block": (
+        "Injection of local anaesthetic around a peripheral nerve or "
+        "plexus to anaesthetise its distribution, usually under "
+        "ultrasound guidance. Indications: fascia iliaca or femoral "
+        "nerve block for a fractured neck of femur, interscalene or "
+        "supraclavicular brachial plexus block for shoulder and arm "
+        "surgery, and digital or wrist blocks for hand injuries. "
+        "Note: use in-plane needling under vision, aspirate before "
+        "each increment, and deposit around rather than into the "
+        "nerve, since injection against high resistance or with pain "
+        "suggests an intraneural needle. Complications: local "
+        "anaesthetic systemic toxicity, nerve injury, and "
+        "block-specific problems such as phrenic palsy after an "
+        "interscalene block or pneumothorax after a supraclavicular "
+        "one. Key point: toxicity starts with perioral tingling, "
+        "tinnitus and agitation, then seizures and cardiac arrest, "
+        "and is treated with intravenous 20% lipid emulsion."
+    ),
+    "Spirometry": (
+        "Effort-dependent measurement of airflow that separates "
+        "obstructive from restrictive ventilatory defects. "
+        "Indications: diagnosis and monitoring of asthma and COPD, "
+        "and pre-operative assessment of known lung disease. "
+        "Diagnosis: FEV1/FVC below 0.7 post-bronchodilator confirms "
+        "fixed obstruction. A rise in FEV1 of 12 percent and 200 mL "
+        "after bronchodilator is significant reversibility and "
+        "supports asthma. Restriction is suggested by a normal or "
+        "high ratio with a reduced FVC, confirmed on lung volumes. "
+        "Note: a normal spirometry between attacks does not exclude "
+        "asthma."
+    ),
+    "Peak expiratory flow": (
+        "Effort-dependent measure of maximal expiratory flow rate, "
+        "reflecting the calibre of the large airways. Indications: "
+        "supporting an asthma diagnosis, home monitoring against "
+        "personal best and grading acute exacerbations. Diagnosis: "
+        "average daily diurnal variability above 10 percent in adults "
+        "(above 13 percent in children) supports asthma. A PEF at or "
+        "below 50 percent of predicted or personal best marks a "
+        "severe exacerbation. Note: PEF depends heavily on effort and "
+        "technique and reflects only the large airways, so it cannot "
+        "diagnose COPD and does not replace spirometry."
+    ),
+    "CT pulmonary angiogram": (
+        "Contrast-enhanced CT of the pulmonary arteries and the "
+        "first-line imaging test for pulmonary embolism. Indications: "
+        "suspected PE with a raised D-dimer or a high pre-test "
+        "probability by Wells or revised Geneva score. Diagnosis: an "
+        "intraluminal filling defect confirms PE. A right to left "
+        "ventricular diameter ratio above 1 signals right heart "
+        "strain and higher risk. A negative scan effectively excludes "
+        "PE at low or intermediate probability and often shows an "
+        "alternative diagnosis. Cautions: iodinated contrast allergy "
+        "and renal impairment. In pregnancy a ventilation perfusion "
+        "scan is preferred to limit breast radiation."
+    ),
+    "Ventilation perfusion scan": (
+        "Nuclear medicine scan comparing regional ventilation with "
+        "regional perfusion to detect the mismatch caused by "
+        "pulmonary embolism. Indications: suspected PE when CTPA is "
+        "unsuitable, chiefly pregnancy, renal impairment or contrast "
+        "allergy. Diagnosis: one or more mismatched segmental "
+        "perfusion defects with normal ventilation indicates PE, and "
+        "a normal perfusion scan excludes it. Note: a recent and "
+        "near-normal chest X-ray is required first. Coexisting COPD, "
+        "effusion or consolidation produces matched defects and "
+        "non-diagnostic intermediate probability results, so CTPA is "
+        "preferred in those patients."
+    ),
+    "Transthoracic echocardiography": (
+        "Transthoracic ultrasound of the heart assessing chamber "
+        "size, wall motion, valves, pericardium and ventricular "
+        "function. Indications: heart failure and murmur assessment, "
+        "plus suspected endocarditis, post-infarct evaluation and "
+        "cardioembolic stroke. Diagnosis: a left ventricular ejection "
+        "fraction of 50 percent or above is normal. HFrEF is an LVEF "
+        "of 40 percent or less, and HFpEF is an LVEF of 50 percent or "
+        "above with raised filling pressures. Severe aortic stenosis "
+        "is a peak velocity above 4 m/s, a mean gradient above 40 "
+        "mmHg or a valve area below 1.0 cm2. Note: TTE is insensitive "
+        "for vegetations, so a normal study does not exclude "
+        "endocarditis and transoesophageal echo is needed."
+    ),
+    "Dual-energy X-ray absorptiometry": (
+        "Low-dose X-ray measurement of bone mineral density at the "
+        "lumbar spine and proximal femur. Indications: minimal-trauma "
+        "fracture, age 70 or over, prolonged glucocorticoid use and "
+        "conditions causing secondary osteoporosis. Medicare rebates "
+        "the scan for these groups. Diagnosis: a T-score of -2.5 or "
+        "lower at either site is osteoporosis, and -1.0 to -2.5 is "
+        "osteopenia. The T-score compares the patient with young "
+        "adult peak bone mass, while the Z-score compares with "
+        "age-matched peers and is the one used under age 50. PBS: "
+        "anti-resorptive therapy is subsidised after any "
+        "minimal-trauma fracture, or on a T-score of -2.5 or lower in "
+        "people aged 70 and over. Note: spinal degenerative change "
+        "and aortic calcification falsely raise spine density, so "
+        "read the hip."
+    ),
+    "Holter monitor": (
+        "Continuous ambulatory ECG recording, usually over 24 to 48 "
+        "hours, to correlate symptoms with the underlying rhythm. "
+        "Indications: palpitations, unexplained syncope, rate control "
+        "assessment in atrial fibrillation and AF detection after "
+        "cryptogenic stroke. Diagnosis: the study is only diagnostic "
+        "if symptoms occur during the recording, so a patient symptom "
+        "diary is essential. An episode of irregular narrow complex "
+        "tachycardia lasting 30 seconds or longer counts as clinical "
+        "AF. Note: yield is poor when symptoms occur less often than "
+        "weekly. Use an event recorder, patch monitor or implantable "
+        "loop recorder instead."
+    ),
+    "Exercise stress test": (
+        "Graded treadmill or bicycle exercise with continuous ECG and "
+        "blood pressure monitoring to unmask inducible myocardial "
+        "ischaemia. Indications: chest pain with an intermediate "
+        "pre-test probability of coronary disease, and risk "
+        "stratification after an event. Diagnosis: horizontal or "
+        "downsloping ST depression of 1 mm or more, measured 80 ms "
+        "after the J point, is a positive test. High risk features "
+        "are ST change at a low workload, a fall in systolic blood "
+        "pressure, ventricular arrhythmia or failure to reach 6 METs. "
+        "Contraindications: acute coronary syndrome within 48 hours, "
+        "severe symptomatic aortic stenosis and uncontrolled "
+        "arrhythmia. Note: left bundle branch block, ventricular "
+        "pacing, pre-excitation or digoxin effect make the ECG "
+        "uninterpretable, so use stress imaging."
+    ),
+    "Coronary angiography": (
+        "Catheter-based contrast imaging of the coronary arteries, "
+        "the reference standard for defining stenosis and allowing "
+        "percutaneous intervention in the same sitting. Indications: "
+        "STEMI for primary PCI, non-ST-elevation acute coronary "
+        "syndrome for early invasive management, and refractory "
+        "angina or a high risk stress test. Diagnosis: a stenosis of "
+        "70 percent or more, or 50 percent or more in the left main, "
+        "is flow limiting. A fractional flow reserve of 0.80 or less "
+        "shows that an intermediate lesion is functionally "
+        "significant. Complications: access site bleeding, contrast "
+        "nephropathy, coronary dissection and stroke. Note: radial "
+        "access lowers bleeding risk. High risk NSTEMI with a GRACE "
+        "score above 140 should be angiographed within 24 hours."
+    ),
+    "Endoscopic retrograde cholangiopancreatography": (
+        "Side-viewing endoscopy with cannulation of the ampulla to "
+        "image and treat the biliary and pancreatic ducts. "
+        "Indications: now almost entirely therapeutic, covering bile "
+        "duct stone extraction, sphincterotomy, stenting of biliary "
+        "strictures and repair of a post-operative bile leak. In "
+        "acute cholangitis, biliary drainage should follow "
+        "resuscitation and antibiotics within 24 hours. "
+        "Complications: post-ERCP pancreatitis in about 3 to 5 "
+        "percent is the commonest, followed by bleeding after "
+        "sphincterotomy, cholangitis and duodenal perforation. "
+        "Prevention: a rectal NSAID at the time of the procedure "
+        "reduces post-ERCP pancreatitis. Note: for diagnosis alone "
+        "use MRCP or endoscopic ultrasound rather than ERCP."
+    ),
+    "Colonoscopy": (
+        "Endoscopic examination of the whole colon and terminal ileum "
+        "allowing biopsy and polypectomy. Indications: a positive "
+        "faecal occult blood test, iron deficiency anaemia, rectal "
+        "bleeding, persistent change in bowel habit and surveillance "
+        "of adenomas or inflammatory bowel disease. Diagnosis: the "
+        "report must document bowel preparation quality and caecal "
+        "intubation. Unit standards are a caecal intubation rate of "
+        "90 percent or more and an adenoma detection rate of 25 "
+        "percent or more. Complications: perforation in roughly 1 in "
+        "1000, and post-polypectomy bleeding. Australian notes: the "
+        "National Bowel Cancer Screening Program mails immunochemical "
+        "faecal occult blood kits to people aged 45 to 74, and a "
+        "positive result should lead to colonoscopy within 30 days."
+    ),
+    "Gastroscopy": (
+        "Endoscopy of the oesophagus, stomach and duodenum with "
+        "biopsy and therapeutic capability. Indications: dyspepsia "
+        "with alarm features, upper gastrointestinal bleeding, "
+        "dysphagia, iron deficiency anaemia and suspected coeliac "
+        "disease. Alarm features are dysphagia, weight loss, "
+        "vomiting, anaemia, a palpable mass or new dyspepsia over the "
+        "age of 55. Diagnosis: in acute upper gastrointestinal "
+        "bleeding scope within 24 hours, or within 12 hours if the "
+        "patient is unstable or variceal bleeding is suspected. For "
+        "coeliac disease take at least four duodenal biopsies plus a "
+        "bulb biopsy while the patient is still eating gluten. Note: "
+        "fast 6 hours for solids and 2 hours for clear fluids."
+    ),
+    "Bronchoscopy": (
+        "Flexible endoscopy of the airways allowing lavage, brushings "
+        "and transbronchial or endobronchial ultrasound guided needle "
+        "biopsy. Indications: a central lung lesion, mediastinal "
+        "nodal staging by endobronchial ultrasound, unexplained "
+        "haemoptysis and suspected tuberculosis or Pneumocystis when "
+        "sputum is negative. Diagnosis: the lavage differential "
+        "helps. Lymphocytosis suggests sarcoidosis or "
+        "hypersensitivity pneumonitis, neutrophilia suggests "
+        "infection, and eosinophilia suggests eosinophilic pneumonia. "
+        "Cautions: uncorrected coagulopathy, refractory hypoxaemia "
+        "and recent myocardial infarction. Note: peripheral nodules "
+        "are sampled poorly by bronchoscopy, so use CT-guided "
+        "percutaneous biopsy instead."
+    ),
+    "Cystoscopy": (
+        "Direct endoscopic inspection of the urethra and bladder, "
+        "flexible under local anaesthetic or rigid under general "
+        "anaesthetic. Indications: visible haematuria at any age, "
+        "non-visible haematuria with risk factors, recurrent urinary "
+        "infection and surveillance of non-muscle-invasive bladder "
+        "cancer. Diagnosis: cystoscopy plus CT urography is the "
+        "standard pairing for visible haematuria, since imaging "
+        "assesses the upper tract and cystoscopy the bladder. Note: "
+        "normal urine cytology and normal imaging do not exclude a "
+        "bladder tumour, so cystoscopy is still required. "
+        "Complications: dysuria, transient haematuria and urinary "
+        "tract infection."
+    ),
+    "Electroencephalogram": (
+        "Scalp recording of cortical electrical activity over time. "
+        "Indications: classifying epilepsy after a first unprovoked "
+        "seizure, suspected non-convulsive status epilepticus and "
+        "unexplained encephalopathy. Diagnosis: interictal "
+        "epileptiform discharges support epilepsy and raise "
+        "recurrence risk, but a single routine study is only about 50 "
+        "percent sensitive, improving with sleep deprivation and "
+        "repeat recordings. Generalised 3 Hz spike and wave indicates "
+        "childhood absence epilepsy. Periodic lateralised discharges "
+        "over a temporal lobe suggest herpes simplex encephalitis, "
+        "and triphasic waves suggest hepatic encephalopathy. Note: a "
+        "normal EEG never excludes epilepsy and an abnormal one does "
+        "not by itself diagnose it, since the diagnosis stays "
+        "clinical."
+    ),
+    "Nerve conduction studies": (
+        "Surface stimulation and recording that measures conduction "
+        "velocity, distal latency and response amplitude in "
+        "peripheral nerves. Indications: separating demyelinating "
+        "from axonal neuropathy, carpal tunnel syndrome, "
+        "radiculopathy and suspected Guillain-Barre syndrome. "
+        "Diagnosis: slowed conduction velocity with prolonged distal "
+        "latency and conduction block indicates demyelination, as in "
+        "Guillain-Barre and chronic inflammatory demyelinating "
+        "polyneuropathy. Reduced amplitude with preserved velocity "
+        "indicates axonal loss, as in diabetes, alcohol and B12 "
+        "deficiency. Note: studies can be normal in the first one to "
+        "two weeks of Guillain-Barre, so never delay treatment for "
+        "them. Small fibre neuropathy gives normal studies."
+    ),
+    "Electromyography": (
+        "Needle recording of muscle electrical activity at rest and "
+        "during voluntary contraction. Indications: distinguishing "
+        "neurogenic from myopathic weakness, motor neurone disease, "
+        "localising radiculopathy and inflammatory myopathy. "
+        "Diagnosis: fibrillation potentials and positive sharp waves "
+        "at rest indicate active denervation. Large amplitude, long "
+        "duration polyphasic motor units with reduced recruitment are "
+        "neurogenic and chronic. Small, short duration units with "
+        "early full recruitment are myopathic. Note: denervation "
+        "changes take two to three weeks to appear, so an early study "
+        "misleads. Needling raises creatine kinase, so take the CK "
+        "sample before the test."
+    ),
+    "Audiometry": (
+        "Measurement of pure tone hearing thresholds by air and bone "
+        "conduction from 250 Hz to 8 kHz, plotted as an audiogram. "
+        "Indications: hearing loss, tinnitus, vertigo, occupational "
+        "noise exposure and ototoxic drug monitoring. Diagnosis: "
+        "thresholds above 25 dB HL are abnormal in adults, and above "
+        "15 to 20 dB HL in children. Conductive loss shows an "
+        "air-bone gap of more than 10 dB with normal bone conduction. "
+        "Sensorineural loss reduces air and bone thresholds together "
+        "with no gap. Presbyacusis takes the high frequencies first, "
+        "and noise-induced loss gives a notch at 4 kHz. Note: "
+        "asymmetric sensorineural loss needs MRI to exclude a "
+        "vestibular schwannoma."
+    ),
+    "Tympanometry": (
+        "Measurement of middle ear compliance while the ear canal "
+        "pressure is varied, plotted as a tympanogram. Indications: "
+        "suspected otitis media with effusion, Eustachian tube "
+        "dysfunction, grommet patency and unexplained conductive loss "
+        "in children. Diagnosis: type A is a normal peak near 0 daPa. "
+        "Type B is flat with a normal canal volume and indicates "
+        "middle ear fluid, while a flat trace with a large canal "
+        "volume means a perforation or a patent grommet. Type C peaks "
+        "at negative pressure and indicates Eustachian tube "
+        "dysfunction. Note: tympanometry tests the middle ear, not "
+        "hearing, so pair it with audiometry."
+    ),
+    "Slit lamp examination": (
+        "Binocular biomicroscopy giving a magnified stereoscopic view "
+        "of the anterior segment of the eye. Indications: red eye, "
+        "ocular trauma or foreign body, suspected corneal ulcer and "
+        "acute painful visual loss. Diagnosis: fluorescein stains "
+        "epithelial defects and shows the branching dendritic ulcer "
+        "of herpes simplex keratitis. Cells and flare in the anterior "
+        "chamber indicate anterior uveitis, and a layered white cell "
+        "level is a hypopyon. A Seidel test is positive when aqueous "
+        "streams through and dilutes the dye, meaning full thickness "
+        "corneal perforation. Cautions: if globe rupture is suspected "
+        "never press on the eye. Do not dilate a shallow anterior "
+        "chamber, and always measure intraocular pressure in a "
+        "painful red eye."
+    ),
+    "Visual field testing": (
+        "Mapping of the field of vision, either by bedside "
+        "confrontation or by automated static perimetry. Indications: "
+        "glaucoma diagnosis and monitoring, suspected chiasmal or "
+        "pituitary lesion, stroke and driving fitness assessment. "
+        "Diagnosis: the pattern localises the lesion. Monocular loss "
+        "is anterior to the chiasm, bitemporal hemianopia is "
+        "chiasmal, and homonymous hemianopia lies in the "
+        "contralateral optic tract or radiation. A superior "
+        "quadrantanopia is temporal from the Meyer loop and an "
+        "inferior one is parietal, while macular sparing points to "
+        "occipital cortex. Glaucoma produces arcuate scotomas and a "
+        "nasal step, with peripheral loss long before central acuity "
+        "falls. Note: an untreated field defect can make a patient "
+        "unfit to drive under the Austroads standards."
+    ),
+    "Voluntary assisted dying": (
+        "Lawful assistance for an eligible person with an advanced, "
+        "progressive and terminal condition to end their own life at "
+        "their own repeated request. Criteria: NSW works from the "
+        "Voluntary Assisted Dying Act 2022. The person must be 18 or "
+        "over with decision-making capacity, act voluntarily and free "
+        "of coercion, meet residency requirements and have a "
+        "condition expected to cause death within 6 months. "
+        "Neurodegenerative disease allows 12 months. Suffering must "
+        "be intolerable to that person. Management: three separate "
+        "requests are needed. A first request. Then a witnessed "
+        "written declaration. Then a final request. A trained "
+        "coordinating practitioner and an independent consulting "
+        "practitioner each assess eligibility. Self-administration is "
+        "the default. Note: mental illness, disability or age alone "
+        "never make a person eligible. A conscientious objector may "
+        "decline but in NSW must give information on how to access "
+        "the service. Key point: in NSW a doctor may raise the topic "
+        "only if they also discuss treatment and palliative care "
+        "options and their likely outcomes. Victoria forbids a "
+        "practitioner initiating the discussion at all."
+    ),
+    "Mandatory reporting": (
+        "Legal duty on registered health practitioners, employers and "
+        "education providers to notify Ahpra when a practitioner or "
+        "student engages in notifiable conduct. Criteria: four "
+        "grounds. Practising while intoxicated by alcohol or drugs. "
+        "Sexual misconduct in connection with practice. An impairment "
+        "placing the public at substantial risk of harm. Practice "
+        "departing significantly from accepted standards and placing "
+        "the public at substantial risk of harm. Note: since the 2020 "
+        "National Law amendments a treating practitioner must notify "
+        "only where there is a substantial risk of harm to the "
+        "public, so a colleague under treatment and safe to practise "
+        "is not notifiable. Treating practitioners in Western "
+        "Australia are exempt entirely. Key point: a student is "
+        "notifiable only for an impairment that may put the public at "
+        "substantial risk during clinical training. This scheme is "
+        "separate from child protection reporting, and a notification "
+        "is not a finding of guilt."
+    ),
+    "Open disclosure": (
+        "Open communication with a patient and their support people "
+        "after a patient safety incident that caused harm or could "
+        "have caused harm, required of Australian services under the "
+        "Australian Open Disclosure Framework. Management: "
+        "acknowledge the incident as soon as practicable and usually "
+        "within 24 hours. Apologise and use the word sorry. Give the "
+        "facts known so far and let the patient describe their own "
+        "experience. Explain what is being done and what happens "
+        "next. Document the discussion and arrange follow-up. Note: "
+        "in NSW a severe-harm incident triggers a formal high-level "
+        "response alongside a serious adverse event review, and the "
+        "clinicians involved take part. Key point: an apology is not "
+        "an admission of legal liability, since state civil liability "
+        "legislation protects expressions of regret. Do not speculate "
+        "about cause, blame a colleague, or wait for the "
+        "investigation to finish before speaking with the patient."
+    ),
+    "Fitness to drive assessment": (
+        "Assessment of whether a medical condition affects safe "
+        "driving, judged against the national Assessing Fitness to "
+        "Drive standards that every Australian licensing authority "
+        "uses. Criteria: commercial standards are stricter than "
+        "private throughout. Durable private-licence examples are 6 "
+        "months off driving after a first unprovoked seizure, 12 "
+        "months seizure-free for established epilepsy, 2 weeks after "
+        "acute coronary syndrome treated with angioplasty, 4 weeks "
+        "after coronary bypass surgery, and binocular acuity of at "
+        "least 6/12. Note: the doctor assesses and advises while the "
+        "licensing authority decides. Reporting a patient directly to "
+        "Transport for NSW is discretionary in NSW and protected when "
+        "made in good faith. South Australia and the Northern "
+        "Territory make reporting mandatory. The driver holds the "
+        "legal duty to declare their own condition. Key point: "
+        "document the advice and that the patient was told not to "
+        "drive, because undocumented advice is the medicolegal "
+        "failure point. Dementia is judged on function rather than on "
+        "the diagnosis."
+    ),
+    "Notifiable disease": (
+        "Condition that a doctor, hospital or laboratory is legally "
+        "required to notify to the state health department so public "
+        "health can act on transmission risk. Indications: the NSW "
+        "schedule sits under the Public Health Act 2010 and covers "
+        "measles, meningococcal disease, tuberculosis, pertussis and "
+        "acute viral hepatitis among many others. Some conditions are "
+        "laboratory-notifiable only. Note: urgent conditions go by "
+        "phone to the local public health unit immediately on "
+        "clinical suspicion rather than on laboratory confirmation. "
+        "Measles and meningococcal disease are the classic examples, "
+        "along with diphtheria, poliomyelitis and viral haemorrhagic "
+        "fever. Key point: notification is a statutory duty on the "
+        "treating doctor, needs no patient consent and is not a "
+        "breach of confidentiality. It does not replace treating the "
+        "patient or starting contact tracing."
+    ),
+    "Chronic disease management plan": (
+        "Medicare-funded structured plan prepared by a GP for a "
+        "patient with a chronic condition that has been, or is likely "
+        "to be, present for at least 6 months. Management: the GP "
+        "records the problems, agreed goals, treatments and the "
+        "services needed, gives the patient a copy and reviews the "
+        "plan regularly. Six-monthly review is the usual rhythm. "
+        "Where other providers are involved the plan coordinates "
+        "them. Indications: diabetes, ischaemic heart disease, "
+        "chronic kidney disease, chronic airways disease and "
+        "arthritis are typical. A referral under the plan gives "
+        "access to up to five Medicare-subsidised allied health "
+        "services per calendar year, such as podiatry, dietetics or "
+        "physiotherapy. Note: from mid-2025 the separate GP "
+        "management plan and team care arrangement items were "
+        "consolidated into a single chronic condition management "
+        "plan. Item numbers change, so quote the principle rather "
+        "than the number. Key point: psychological therapy runs "
+        "through a mental health treatment plan instead, and the "
+        "allied health cap is per calendar year, not per plan."
+    ),
+    "Home medicines review": (
+        "GP-initiated review in which an accredited pharmacist visits "
+        "the patient at home, reviews every medicine including "
+        "over-the-counter and complementary products, and reports "
+        "back so the GP and patient can agree a medication management "
+        "plan. Indications: five or more regular medicines or more "
+        "than twelve doses a day. Multiple prescribers or a recent "
+        "hospital discharge. A recent significant change to the "
+        "regimen. Suspected non-adherence or confusion about the "
+        "regimen. A narrow therapeutic index drug such as warfarin, "
+        "digoxin, lithium or methotrexate. Note: the patient must be "
+        "living in the community and must consent. For a permanent "
+        "resident of an aged care facility the equivalent service is "
+        "a residential medication management review. Key point: the "
+        "pharmacist recommends and the GP decides, so nothing changes "
+        "until the GP and patient agree it. Treat it as a "
+        "deprescribing opportunity rather than an adherence check."
+    ),
+    "Immunisation schedule": (
+        "Publicly funded vaccines given at set ages under the "
+        "National Immunisation Program, with the detail set out in "
+        "the Australian Immunisation Handbook. Management: hepatitis "
+        "B at birth. Hexavalent diphtheria-tetanus-pertussis with "
+        "hepatitis B, polio and Hib at 2, 4 and 6 months. "
+        "Pneumococcal at 2, 4 and 12 months and rotavirus at 2 and 4 "
+        "months only. Measles-mumps-rubella with meningococcal ACWY "
+        "at 12 months. MMR-varicella and further DTPa and Hib at 18 "
+        "months. DTPa-polio at 4 years. HPV and dTpa in Year 7 and "
+        "meningococcal ACWY in Year 10. Note: Aboriginal and Torres "
+        "Strait Islander children receive extra doses including "
+        "meningococcal B and influenza from 6 months. Pregnant women "
+        "are offered influenza in any trimester and dTpa at 20 to 32 "
+        "weeks. Key point: rotavirus has hard upper age limits and is "
+        "never given late. Minor illness or low-grade fever is not a "
+        "contraindication and egg allergy does not bar influenza or "
+        "MMR. Record every dose on the Australian Immunisation "
+        "Register."
+    ),
+    "Contact tracing": (
+        "Systematic identification and follow-up of people exposed to "
+        "a case of communicable disease so they can be tested, "
+        "vaccinated, given prophylaxis or advised to isolate. "
+        "Indications: meningococcal disease, tuberculosis, measles, "
+        "pertussis, viral hepatitis and sexually transmitted "
+        "infections including HIV and syphilis. Management: household "
+        "and intimate contacts of meningococcal disease need "
+        "clearance antibiotics such as single-dose ciprofloxacin. "
+        "Susceptible measles contacts need MMR within 72 hours or "
+        "immunoglobulin within 6 days. Household pertussis contacts "
+        "need azithromycin. Tuberculosis contacts are screened with "
+        "an interferon-gamma release assay and chest x-ray. Note: in "
+        "NSW the local public health unit leads tracing for "
+        "notifiable conditions. Sexual health services and the "
+        "treating clinician handle partner notification, which may be "
+        "done by the patient or by the provider. Key point: the index "
+        "case is never identified to contacts. Notify early, because "
+        "waiting for confirmation loses the prophylaxis window."
+    ),
+    "Venous thromboembolism prophylaxis": (
+        "Assessment of every hospital inpatient for thrombosis risk "
+        "against bleeding risk on admission and at each transfer of "
+        "care, with mechanical or pharmacological prophylaxis "
+        "prescribed accordingly. Management: enoxaparin 40 mg "
+        "subcutaneously daily is the usual agent. Reduce the dose in "
+        "severe renal impairment or use unfractionated heparin "
+        "instead. Intermittent pneumatic compression and graduated "
+        "stockings are the alternative when anticoagulation is "
+        "contraindicated. Everyone gets early mobilisation and "
+        "hydration. Duration: until discharge or full mobility for "
+        "medical patients. Extend to about a month after hip fracture "
+        "surgery or hip replacement. Extend about 4 weeks after major "
+        "abdominal or pelvic cancer surgery. Contraindications: "
+        "active bleeding, platelets under 50 or untreated "
+        "coagulopathy. Stockings are contraindicated in peripheral "
+        "arterial disease and in acute stroke. Key point: pregnancy "
+        "uses low molecular weight heparin and never a direct oral "
+        "anticoagulant or warfarin. Leave at least 12 hours between a "
+        "prophylactic enoxaparin dose and a spinal or epidural."
+    ),
+    "Neonatal resuscitation": (
+        "Structured support of the newborn at birth following ANZCOR "
+        "guidance. About 85% breathe unaided, around 10% need only "
+        "drying and stimulation and fewer than 1% need compressions "
+        "or adrenaline. Management: within 30 seconds assess tone, "
+        "breathing and heart rate while keeping the baby warm with "
+        "the airway neutral. If apnoeic, gasping or heart rate under "
+        "100, start positive pressure ventilation at 40 to 60 breaths "
+        "a minute, in air for term babies. If heart rate stays under "
+        "60 after 30 seconds of effective ventilation, add "
+        "compressions at 3 to 1 and increase oxygen. Adrenaline goes "
+        "intravenously, ideally by umbilical venous catheter, only "
+        "once ventilation and compressions are adequate. Note: delay "
+        "cord clamping at least 60 seconds in a vigorous baby. Wrap "
+        "babies under 32 weeks in plastic without drying and start on "
+        "low-dose oxygen. Key point: effective ventilation is what "
+        "works and a poor mask seal is the usual reason resuscitation "
+        "stalls. Preductal saturations are read from the right hand "
+        "and reach only about 90% by 10 minutes. Apgar scores "
+        "document progress, they do not direct resuscitation."
+    ),
+    "Developmental milestones": (
+        "Age-referenced attainments across gross motor, fine motor "
+        "and vision, speech and language, and social domains, used to "
+        "screen for delay at routine child health checks. Features: 6 "
+        "weeks smiles and follows a face. 6 months rolls, sits with "
+        "support and babbles. 9 months sits unsupported with an "
+        "emerging pincer grip. 12 months cruises, waves and says a "
+        "first word. 18 months walks alone with around ten words. 2 "
+        "years runs and joins two words. 3 years speaks in sentences "
+        "and copies a circle. 4 years hops and copies a cross. Red "
+        "flags: no smile by 10 weeks. Not sitting unsupported by 9 "
+        "months. Not walking by 18 months. No words by 18 months or "
+        "no two-word phrases by 2 years. Hand preference before 12 "
+        "months, which suggests hemiplegia. Loss of skills already "
+        "acquired at any age. Note: correct for prematurity until 2 "
+        "years. NSW records checks in the child's Blue Book, and "
+        "delay in one domain warrants hearing and vision testing "
+        "before anything else."
+    ),
+    "Child protection notification": (
+        "Report to the state child protection authority when a child "
+        "is suspected on reasonable grounds to be at risk of "
+        "significant harm. Criteria: NSW works from the Children and "
+        "Young Persons (Care and Protection) Act 1998. Concerns count "
+        "when basic physical, medical or educational needs go unmet. "
+        "Also when supervision is inadequate. Also for physical or "
+        "sexual abuse or serious psychological harm. Also for "
+        "exposure to domestic violence or to parental substance "
+        "misuse or mental illness affecting care. Management: "
+        "mandatory reporters include doctors, nurses, teachers and "
+        "police. Use the NSW Mandatory Reporter Guide and phone the "
+        "Child Protection Helpline, which runs 24 hours. Reporting is "
+        "mandatory for children under 16 and voluntary for 16 and 17 "
+        "year olds and for unborn children. Note: if the child is in "
+        "immediate danger, keep them somewhere safe and call police. "
+        "A Helpline report does not itself secure safety. Key point: "
+        "reasonable suspicion is enough and proof is not needed. "
+        "Parental consent is not required, a good-faith report is "
+        "protected and the reporter's identity stays confidential. "
+        "Other states report to their own authority under their own "
+        "legislation."
+    ),
+    "Antimicrobial stewardship": (
+        "Coordinated programme to optimise the choice, dose, route "
+        "and duration of antimicrobials, required of Australian "
+        "hospitals under the national safety and quality health "
+        "service standards. Management: prescribe from Therapeutic "
+        "Guidelines or the local formulary and document the "
+        "indication with a stop or review date at the moment of "
+        "prescribing. Take cultures before the first dose. Review at "
+        "48 to 72 hours to narrow the spectrum and switch intravenous "
+        "to oral once the patient is improving and absorbing. Note: "
+        "broad agents such as meropenem, vancomycin and linezolid are "
+        "restricted and need an approval code. Surgical prophylaxis "
+        "is a single dose within 60 minutes of incision and stops "
+        "within 24 hours. Key point: most patients labelled "
+        "penicillin allergic are not allergic, and delabelling "
+        "matters because the alternatives are broader, less effective "
+        "and more toxic. Shorter courses match longer ones for most "
+        "common infections."
     ),
 
 }
