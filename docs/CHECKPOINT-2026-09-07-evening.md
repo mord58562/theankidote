@@ -213,3 +213,45 @@ Two divergences are worth recording.
    matters less here - every path from library text to the DOM is
    escaped, and that was traced end to end this session - but the
    first is the item above.
+
+
+## Second pass, same evening
+
+The remaining verified findings were applied: the popup-click path
+collapsing rather than hiding the article list, the chosen article
+being remembered on both paths and forgotten when deliberately left,
+the popup surviving a question-to-answer flip, the popup running off
+the bottom of the window, and the updater telling nobody when a check
+failed. `_make_shortcut` was consolidated from three copies into
+`_dock_layout.make_shortcut`.
+
+**That consolidation introduced a NameError and the suite passed
+anyway** - the moved function referenced `_log` and its new home did
+not import it. Almost nothing in this tree can be imported under test,
+because it needs Anki, so a missing name is invisible to 155 passing
+tests and arrives the first time a shortcut fails to bind. The suite
+now runs pyflakes' undefined-name check over the package. The names
+`_rebind_theme` and `_theme.refresh` write into `globals()` are
+allowlisted one by one rather than the files being skipped, so a
+genuine undefined name in those files still fails. Proven against the
+bug that prompted it.
+
+That is the general lesson from this audit worth carrying: the test
+suite covers content and pure logic well and covers the Qt surface not
+at all, so anything touching a widget, a hook or a signal is verified
+by reading and by static analysis only. It is also why the dock
+highlighting rewrite stayed deferred.
+
+## What is left
+
+- **Rob's, and only Rob's**: the Qt runtime behaviour. The sidebar
+  collapse and restore, the remembered article, the shortcut binding
+  after the `_dock_layout` move, and the popup positioning all want
+  exercising from the built package before it goes up.
+- The three deferred items above: dock per-node highlighting, the
+  popup's vertical rhythm, and signing the content manifest.
+- Roughly 15 smaller usability findings not applied, mostly copy and
+  Settings-structure work: `config.json` and `config.md` have drifted
+  from `_config._DEFAULTS`, several failure messages state a fact
+  without a next step, and the Tools-menu module toggles do not carry
+  the restart note the Settings ones do.
