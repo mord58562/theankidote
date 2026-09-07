@@ -20,8 +20,9 @@ Thumbs.db
 build/
 dist/
 
-# Tooling state
-.claude/
+# Tooling state (worktrees, local caches) - but track the shared project settings
+.claude/*
+!.claude/settings.json
 
 # Local-only publishing notes (working-tree only, never ship)
 theankidote-publishing-instructions.txt
