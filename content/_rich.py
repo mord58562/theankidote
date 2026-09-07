@@ -7988,6 +7988,750 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "prevention of sepsis in the asplenic patient"]],
         "summary": "",
     },
+    {
+        "name": "Infertility",
+        "aliases": ["Subfertility", "Couple infertility"],
+        "utd": [["Overview", "overview of infertility evaluation of the infertile couple"]],
+        "summary": "",
+    },
+    {
+        "name": "Oligomenorrhoea",
+        "aliases": ["Infrequent menstrual bleeding", "Oligomenorrhea"],
+        "utd": [["Overview", "evaluation of oligomenorrhea infrequent menses"]],
+        "summary": "",
+    },
+    {
+        "name": "Mittelschmerz",
+        "aliases": ["Ovulation pain", "Midcycle pain", "Ovulatory pain"],
+        "utd": [["Overview", "mittelschmerz midcycle ovulation pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Pouch of Douglas",
+        "aliases": ["Rectouterine pouch", "Recto-uterine pouch", "Cul-de-sac", "Douglas pouch"],
+        "utd": [["Overview", "female pelvic anatomy rectouterine pouch"]],
+        "summary": "",
+    },
+    {
+        "name": "B-Lynch suture",
+        "aliases": ["Uterine compression suture", "Brace suture", "B Lynch suture", "Uterine brace suture"],
+        "utd": [["Overview", "management of postpartum hemorrhage uterine compression sutures"]],
+        "summary": "",
+    },
+    {
+        "name": "Hysteroscopy",
+        "aliases": ["Diagnostic hysteroscopy", "Operative hysteroscopy", "Hysteroscopic"],
+        "utd": [["Overview", "overview of hysteroscopy indications complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Depot medroxyprogesterone acetate",
+        "aliases": ["Depo-Provera", "Depot medroxyprogesterone", "Depo-Ralovera", "Contraceptive injection", "Depot contraception"],
+        "utd": [["Overview", "depot medroxyprogesterone acetate contraception"]],
+        "summary": "",
+    },
+    {
+        "name": "Long-acting reversible contraception",
+        "aliases": ["LARC", "Long acting reversible contraception"],
+        "utd": [["Overview", "long acting reversible contraception counseling"]],
+        "summary": "",
+    },
+    {
+        "name": "Liquid-based cytology",
+        "aliases": ["Reflex LBC", "LBC", "Reflex liquid-based cytology", "Liquid based cytology"],
+        "utd": [["Overview", "cervical cancer screening cytology human papillomavirus testing"]],
+        "summary": "",
+    },
+    {
+        "name": "Levator ani",
+        "aliases": ["Pelvic floor muscles", "Pubococcygeus", "Puborectalis", "Iliococcygeus", "Levator ani muscle"],
+        "utd": [["Overview", "pelvic floor anatomy levator ani"]],
+        "summary": "",
+    },
+    {
+        "name": "Haematocolpos",
+        "aliases": ["Haematometra", "Haematometria", "Haematometrocolpos", "Hematocolpos"],
+        "utd": [["Overview", "imperforate hymen transverse vaginal septum hematocolpos"]],
+        "summary": "",
+    },
+    {
+        "name": "Enterocele",
+        "aliases": ["Small bowel prolapse", "Enterocoele"],
+        "utd": [["Overview", "pelvic organ prolapse posterior compartment enterocele"]],
+        "summary": "",
+    },
+    {
+        "name": "Oogenesis",
+        "aliases": ["Oocyte development", "Oogonia"],
+        "utd": [["Overview", "physiology of oocyte development meiosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Sexual differentiation",
+        "aliases": ["SRY", "SRY gene", "Testis determining factor", "Genital tubercle", "Labioscrotal swellings", "Urogenital sinus", "Urethral folds"],
+        "utd": [["Overview", "normal sexual differentiation embryology"]],
+        "summary": "",
+    },
+    {
+        "name": "Contraceptive vaginal ring",
+        "aliases": ["Vaginal ring", "NuvaRing", "Combined vaginal ring", "Etonogestrel vaginal ring"],
+        "utd": [["Overview", "contraceptive vaginal ring combined hormonal contraception"]],
+        "summary": "",
+    },
+    {
+        "name": "Barrier contraception",
+        "aliases": ["Male condom", "Female condom", "External condom", "Internal condom", "Barrier method", "Barrier methods"],
+        "utd": [["Overview", "external internal condom barrier contraception"]],
+        "summary": "",
+    },
+    {
+        "name": "Contraceptive efficacy",
+        "aliases": ["Perfect use", "Typical use", "Pearl Index", "Contraceptive failure rate"],
+        "utd": [["Overview", "contraceptive efficacy typical use failure rates counseling"]],
+        "summary": "",
+    },
+    {
+        "name": "Myometrium",
+        "aliases": ["Perimetrium", "Uterine wall layers", "Layers of the uterus"],
+        "utd": [["Overview", "uterine anatomy myometrium endometrium"]],
+        "summary": "",
+    },
+    {
+        "name": "Vaginal cancer",
+        "aliases": ["Primary vaginal carcinoma", "Vaginal carcinoma", "Vaginal malignancy"],
+        "utd": [["Overview", "vaginal cancer clinical features diagnosis staging"]],
+        "summary": "",
+    },
+    {
+        "name": "Cytochrome P450 induction",
+        "aliases": ["Enzyme induction", "Cytochrome P450", "Enzyme-inducing drugs", "Enzyme inducers", "P450 induction"],
+        "utd": [["Overview", "drug interactions cytochrome P450 enzyme induction"]],
+        "summary": "",
+    },
+    {
+        "name": "Progestogen-only pill",
+        "aliases": ["Progestogen-only pills", "Progestogen only pill", "Progesterone only pill", "Mini pill", "Minipill"],
+        "utd": [["Overview", "progestin only oral contraceptive pill"]],
+        "summary": "",
+    },
+    {
+        "name": "Uterus",
+        "aliases": ["Uterine anatomy", "anteflexed", "anteflexion", "anteverted", "anteversion", "retroverted", "retroversion"],
+        "utd": [["Overview", "surgical female pelvic anatomy"]],
+        "summary": "",
+    },
+    {
+        "name": "Uterine artery",
+        "aliases": ["Uterine arteries", "cardinal ligament"],
+        "utd": [["Overview", "surgical female pelvic anatomy"]],
+        "summary": "",
+    },
+    {
+        "name": "Second trimester maternal serum screening",
+        "aliases": ["Maternal serum screening", "2TMSS", "Quad screen", "Quadruple test", "Second trimester screening"],
+        "utd": [["Overview", "second trimester maternal serum screening for down syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Vanishing twin syndrome",
+        "aliases": ["Vanishing twin"],
+        "utd": [["Overview", "twin pregnancy prenatal issues and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Placental growth factor",
+        "aliases": ["PlGF"],
+        "utd": [["Overview", "early pregnancy prediction of preeclampsia"]],
+        "summary": "",
+    },
+    {
+        "name": "Human placental lactogen",
+        "aliases": ["hPL", "Human chorionic somatomammotropin", "somatomammotropin"],
+        "utd": [["Overview", "maternal adaptations to pregnancy endocrine"]],
+        "summary": "",
+    },
+    {
+        "name": "Relaxin",
+        "aliases": [],
+        "utd": [["Overview", "maternal adaptations to pregnancy musculoskeletal changes"]],
+        "summary": "",
+    },
+    {
+        "name": "Early pregnancy assessment service",
+        "aliases": ["EPAS", "Early pregnancy assessment", "Early pregnancy assessment clinic"],
+        "utd": [["Overview", "ultrasonography of pregnancy of unknown location"]],
+        "summary": "",
+    },
+    {
+        "name": "Pregnancy of unknown location",
+        "aliases": ["PUL"],
+        "utd": [["Overview", "pregnancy of unknown location"]],
+        "summary": "",
+    },
+    {
+        "name": "PUQE score",
+        "aliases": ["PUQE", "PUQE-24", "PUQE-24 score"],
+        "utd": [["Overview", "nausea and vomiting of pregnancy clinical findings and evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Polymorphic eruption of pregnancy",
+        "aliases": ["PUPPP", "PUPP", "Pruritic urticarial papules and plaques of pregnancy", "Polymorphic eruption"],
+        "utd": [["Overview", "dermatoses of pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Oral glucose tolerance test",
+        "aliases": ["OGTT", "Glucose tolerance test", "75 g OGTT"],
+        "utd": [["Overview", "gestational diabetes mellitus screening diagnosis and prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Breast milk",
+        "aliases": ["Breastmilk", "Colostrum", "Human milk"],
+        "utd": [["Overview", "nutritional composition of human milk"]],
+        "summary": "",
+    },
+    {
+        "name": "Congenital malformation",
+        "aliases": ["Malformation", "Congenital malformations"],
+        "utd": [["Overview", "birth defects overview classification"]],
+        "summary": "",
+    },
+    {
+        "name": "Maternal mortality",
+        "aliases": ["Maternal death", "Maternal deaths", "Direct maternal death", "Indirect maternal death"],
+        "utd": [["Overview", "overview of maternal mortality"]],
+        "summary": "",
+    },
+    {
+        "name": "Gravidity and parity",
+        "aliases": ["Gravidity", "Parity"],
+        "utd": [["Overview", "prenatal care initial assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Spontaneous rupture of membranes",
+        "aliases": ["SROM", "spontaneous rupture of the membranes"],
+        "utd": [["Overview", "prelabor rupture of membranes at term management"]],
+        "summary": "",
+    },
+    {
+        "name": "Dilatation and curettage",
+        "aliases": ["Dilation and curettage", "D&C", "Curettage", "Uterine curettage"],
+        "utd": [["Overview", "dilation and curettage"]],
+        "summary": "",
+    },
+    {
+        "name": "Amniotic fluid",
+        "aliases": ["Liquor"],
+        "utd": [["Overview", "assessment of amniotic fluid volume"]],
+        "summary": "",
+    },
+    {
+        "name": "Oestrogen",
+        "aliases": ["Estrogen", "Oestrogens", "Estrogens"],
+        "utd": [["Overview", "estrogen action and physiology"]],
+        "summary": "",
+    },
+    {
+        "name": "Fetal scalp electrode",
+        "aliases": ["FSE", "Foetal scalp electrode", "Scalp electrode"],
+        "utd": [["Overview", "intrapartum fetal heart rate monitoring overview"]],
+        "summary": "",
+    },
+    {
+        "name": "Caesarean section",
+        "aliases": ["caesarean", "caesarean delivery", "caesarean birth", "C-section", "caesarian section", "cesarean section", "lower segment caesarean section", "classical caesarean", "emergency caesarean", "elective caesarean"],
+        "utd": [["Overview", "cesarean birth overview surgical technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Anterior abdominal wall layers",
+        "aliases": ["abdominal wall layers", "layers of the abdominal wall", "Pfannenstiel incision", "Scarpa's fascia", "Camper's fascia", "rectus sheath", "arcuate line"],
+        "utd": [["Overview", "anterior abdominal wall anatomy cesarean incision"]],
+        "summary": "",
+    },
+    {
+        "name": "Delayed cord clamping",
+        "aliases": ["deferred cord clamping", "delayed clamping of the cord", "optimal cord clamping", "cord milking"],
+        "utd": [["Overview", "delayed umbilical cord clamping benefits"]],
+        "summary": "",
+    },
+    {
+        "name": "Postpartum urinary retention",
+        "aliases": ["postnatal urinary retention", "urinary retention after birth", "postpartum bladder dysfunction"],
+        "utd": [["Overview", "postpartum urinary retention diagnosis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Aortocaval compression",
+        "aliases": ["supine hypotensive syndrome", "aortocaval compression syndrome", "left lateral tilt", "manual uterine displacement", "left uterine displacement", "left lateral position", "left lateral decubitus"],
+        "utd": [["Overview", "supine hypotensive syndrome pregnancy aortocaval compression"]],
+        "summary": "",
+    },
+    {
+        "name": "In-utero transfer",
+        "aliases": ["in utero transfer", "antenatal transfer", "maternal transfer", "in-utero retrieval"],
+        "utd": [["Overview", "maternal transport regionalization perinatal care"]],
+        "summary": "",
+    },
+    {
+        "name": "Tocolysis",
+        "aliases": ["tocolytic", "tocolytics", "tocolytic therapy", "labour suppression"],
+        "utd": [["Overview", "inhibition of acute preterm labor tocolysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervical length screening",
+        "aliases": ["cervical length", "cervical length measurement", "transvaginal cervical length", "short cervix"],
+        "utd": [["Overview", "transvaginal ultrasound cervical length preterm birth"]],
+        "summary": "",
+    },
+    {
+        "name": "Placental anatomy",
+        "aliases": ["placental structure", "decidua basalis", "decidua", "chorion", "chorion frondosum", "chorionic plate", "cotyledon", "cotyledons"],
+        "utd": [["Overview", "placental development structure anatomy"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal oestrogen withdrawal",
+        "aliases": ["neonatal oestrogen effects", "maternal oestrogen effects in the newborn", "mini-puberty of infancy", "neonatal breast enlargement", "neonatal vaginal bleeding", "witch's milk"],
+        "utd": [["Overview", "physiologic neonatal breast hypertrophy vaginal bleeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Episiotomy",
+        "aliases": ["mediolateral episiotomy", "perineal incision at birth"],
+        "utd": [["Overview", "approach to episiotomy technique indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Abdominal palpation in pregnancy",
+        "aliases": ["abdominal palpation", "obstetric abdominal examination", "Leopold manoeuvres", "Leopold maneuvers"],
+        "utd": [["Overview", "obstetric abdominal examination fetal lie presentation"]],
+        "summary": "",
+    },
+    {
+        "name": "Signs of placental separation",
+        "aliases": ["placental separation", "signs of separation of the placenta"],
+        "utd": [["Overview", "management of the third stage of labor placental separation"]],
+        "summary": "",
+    },
+    {
+        "name": "Antenatal corticosteroids",
+        "aliases": ["antenatal steroids", "antenatal corticosteroid", "corticosteroids for fetal lung maturity"],
+        "utd": [["Overview", "antenatal corticosteroid therapy for reduction of neonatal morbidity"]],
+        "summary": "",
+    },
+    {
+        "name": "Artificial rupture of membranes",
+        "aliases": ["amniotomy", "AROM", "artificial ROM", "amnihook", "amniohook"],
+        "utd": [["Overview", "amniotomy technique indications labor"]],
+        "summary": "",
+    },
+    {
+        "name": "Speech and language development",
+        "aliases": ["communication ability", "communication abilities", "speech and language milestones", "babbling", "single words", "two words together", "respond to their name", "responds to name", "name, sex and age"],
+        "utd": [["Overview", "expressive language delay specific language impairment in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Social and emotional development",
+        "aliases": ["social abilities", "social milestones", "social and emotional milestones", "copy gestures", "point with their finger", "stranger anxiety", "grasps for objects"],
+        "utd": [["Overview", "social and emotional development in infants and young children"]],
+        "summary": "",
+    },
+    {
+        "name": "Cognitive development",
+        "aliases": ["cognitive ability", "cognitive abilities", "cognitive milestones"],
+        "utd": [["Overview", "cognitive development in children normal milestones"]],
+        "summary": "",
+    },
+    {
+        "name": "Developmental red flags",
+        "aliases": ["not meeting appropriate development", "developmental warning signs", "walk independently"],
+        "utd": [["Overview", "developmental surveillance and screening in primary care"]],
+        "summary": "",
+    },
+    {
+        "name": "Drawing and copying skills",
+        "aliases": ["copy/draw", "draw a circle", "copying shapes", "drawing milestones"],
+        "utd": [["Overview", "fine motor development in children milestones"]],
+        "summary": "",
+    },
+    {
+        "name": "Speech and language delay",
+        "aliases": ["speech delay", "language and speech delay", "language delay", "expressive language delay"],
+        "utd": [["Overview", "etiology of speech and language disorders in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Headache in children",
+        "aliases": ["headaches in children", "paediatric headache", "childhood headache", "tension headaches"],
+        "utd": [["Overview", "headache in children evaluation and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute seizure management",
+        "aliases": ["acute management of seizures", "managing a seizure", "prolonged seizure", "seizure lasting more than 5 minutes"],
+        "utd": [["Overview", "management of convulsive status epilepticus in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Altered conscious state",
+        "aliases": ["altered level of consciousness", "reduced level of consciousness", "reduced conscious state", "decreased conscious state"],
+        "utd": [["Overview", "evaluation of stupor and coma in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Monosymptomatic nocturnal enuresis",
+        "aliases": ["MNE", "non-monosymptomatic nocturnal enuresis"],
+        "utd": [["Overview", "nocturnal enuresis in children etiology and evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Development of continence",
+        "aliases": ["continent of urine", "bladder control", "wets the bed", "night-time bladder control"],
+        "utd": [["Overview", "toilet training and management of toileting problems in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Anxiety in children and adolescents",
+        "aliases": ["anxiety in children", "child with anxiety", "excessive anxiety and worry", "childhood anxiety"],
+        "utd": [["Overview", "anxiety disorders in children and adolescents assessment and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Depression in children and adolescents",
+        "aliases": ["depression in children", "adolescent depression", "childhood depression", "temper outbursts"],
+        "utd": [["Overview", "pediatric unipolar depression epidemiology clinical features assessment and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Temper tantrums",
+        "aliases": ["temper tantrum", "tantrum", "tantrums", "terrible twos", "defiant behaviour"],
+        "utd": [["Overview", "temper tantrums in children behavioral management"]],
+        "summary": "",
+    },
+    {
+        "name": "Hearing assessment in children",
+        "aliases": ["audiology", "newborn hearing screening", "hearing screening"],
+        "utd": [["Overview", "hearing loss in children screening and evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Childhood injury patterns",
+        "aliases": ["inhaled foreign bodies", "childhood injuries", "injury prevention", "unintentional injury"],
+        "utd": [["Overview", "injury prevention in children anticipatory guidance"]],
+        "summary": "",
+    },
+    {
+        "name": "Rhonchi",
+        "aliases": ["Rhonchus", "Low-pitched wheeze"],
+        "utd": [["Overview", "auscultation of the lungs"]],
+        "summary": "",
+    },
+    {
+        "name": "Respiratory tract",
+        "aliases": ["Upper respiratory tract", "Lower respiratory tract", "Conducting zone", "Respiratory zone"],
+        "utd": [["Overview", "respiratory tract anatomy"]],
+        "summary": "",
+    },
+    {
+        "name": "Lobes of the lung",
+        "aliases": ["Lung lobes", "Pulmonary lobes", "Lingula"],
+        "utd": [["Overview", "lung anatomy segments and fissures"]],
+        "summary": "",
+    },
+    {
+        "name": "Respiratory mechanics",
+        "aliases": ["Mechanics of breathing", "Intrathoracic pressure", "Intrapleural pressure"],
+        "utd": [["Overview", "mechanics of breathing physiology"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric oxygen therapy",
+        "aliases": ["Low flow oxygen", "Low-flow oxygen", "HFNC", "High-flow nasal cannula", "High flow nasal oxygen"],
+        "utd": [["Overview", "oxygen delivery systems in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric fluid resuscitation",
+        "aliases": ["Fluid deficit", "Paediatric fluid bolus", "Fluid bolus in children"],
+        "utd": [["Overview", "treatment of hypovolemia in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric blood volume",
+        "aliases": ["Total blood volume", "Circulating blood volume"],
+        "utd": [["Overview", "hypovolemic shock in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Antiemetics",
+        "aliases": ["Antiemetic", "Anti-emetic", "Antiemetic therapy"],
+        "utd": [["Overview", "characteristics of antiemetic drugs"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric urinary tract infection",
+        "aliases": ["Paediatric UTI", "UTI in children", "Childhood UTI", "Febrile UTI"],
+        "utd": [["Overview", "urinary tract infections in infants and children"]],
+        "summary": "",
+    },
+    {
+        "name": "Six-week baby check",
+        "aliases": ["6 week check", "Six week check", "6 to 8 week check"],
+        "utd": [["Overview", "the pediatric physical examination infant"]],
+        "summary": "",
+    },
+    {
+        "name": "Enterovirus",
+        "aliases": ["Enteroviruses", "Coxsackievirus", "Coxsackie virus", "Echovirus", "Enterovirus 71"],
+        "utd": [["Overview", "clinical manifestations of enterovirus infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Burden of disease",
+        "aliases": ["DALY", "Disability-adjusted life year", "Burden of disease study", "Australian Burden of Disease Study", "disability-adjusted life years"],
+        "utd": [["Overview", "global burden of disease measurement"]],
+        "summary": "",
+    },
+    {
+        "name": "Smoking in pregnancy",
+        "aliases": ["Smoking during pregnancy", "Antenatal smoking", "Maternal smoking"],
+        "utd": [["Overview", "cigarette smoking practices during pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Micturating cystourethrogram",
+        "aliases": ["MCUG", "Micturating cystourethrography", "Voiding cystourethrogram"],
+        "utd": [["Overview", "voiding cystourethrography in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Thalamus",
+        "aliases": [],
+        "utd": [["Thalamic stroke", "posterior cerebral artery stroke clinical syndromes"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypothalamus",
+        "aliases": [],
+        "utd": [["Hypopituitarism", "causes of hypopituitarism"]],
+        "summary": "",
+    },
+    {
+        "name": "Basal ganglia",
+        "aliases": ["Basal nuclei"],
+        "utd": [["Parkinson", "clinical manifestations of parkinson disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Amygdala",
+        "aliases": [],
+        "utd": [["PTSD", "posttraumatic stress disorder epidemiology pathophysiology clinical manifestations"]],
+        "summary": "",
+    },
+    {
+        "name": "Dopaminergic pathways",
+        "aliases": ["Dopamine pathways", "Mesolimbic pathway", "Mesocortical pathway", "Nigrostriatal pathway", "Tuberoinfundibular pathway", "mesolimbic", "mesocortical", "nigrostriatal", "tuberoinfundibular"],
+        "utd": [["Antipsychotics", "first generation antipsychotic medications pharmacology administration"]],
+        "summary": "",
+    },
+    {
+        "name": "Deep brain stimulation",
+        "aliases": ["DBS"],
+        "utd": [["Parkinson", "device assisted and surgical treatment of parkinson disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Frontal assessment battery",
+        "aliases": [],
+        "utd": [["Executive testing", "evaluation of cognitive impairment and dementia"]],
+        "summary": "",
+    },
+    {
+        "name": "Suicidal ideation",
+        "aliases": ["passive suicidal ideation", "active suicidal ideation"],
+        "utd": [["Assessment", "suicidal ideation and behavior in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Anxiety disorders",
+        "aliases": ["anxiety disorder"],
+        "utd": [["Overview", "approach to treating generalized anxiety disorder in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Substance misuse",
+        "aliases": ["substance misuse disorder", "substance misuse disorders", "substance abuse"],
+        "utd": [["Screening", "screening for unhealthy use of alcohol and other drugs in primary care"]],
+        "summary": "",
+    },
+    {
+        "name": "Cannabis",
+        "aliases": ["marijuana", "cannabinoids", "cannabinoid", "tetrahydrocannabinol", "THC"],
+        "utd": [["Use disorder", "cannabis use disorder clinical features course assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Negative symptoms",
+        "aliases": ["negative symptoms of schizophrenia"],
+        "utd": [["Overview", "evaluation and management of negative symptoms in schizophrenia"]],
+        "summary": "",
+    },
+    {
+        "name": "Positive symptoms",
+        "aliases": ["positive symptoms of schizophrenia"],
+        "utd": [["Schizophrenia", "schizophrenia in adults clinical features assessment and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Child abuse",
+        "aliases": ["child maltreatment", "child neglect"],
+        "utd": [["Neglect", "child neglect and emotional maltreatment evaluation and management"]],
+        "summary": "",
+    },
+    {
+        "name": "LGBTIQA+ mental health",
+        "aliases": ["LGBTIQ", "LGBTIQA", "sexual orientation", "gender identity"],
+        "utd": [["Care", "primary care of lesbian gay bisexual and transgender adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Mindfulness",
+        "aliases": ["mindfulness-based cognitive therapy", "mindfulness-based stress reduction"],
+        "utd": [["MBCT", "unipolar depression in adults prevention of relapse"]],
+        "summary": "",
+    },
+    {
+        "name": "Tobacco smoking",
+        "aliases": ["tobacco", "cigarette smoking"],
+        "utd": [["Cessation", "overview of smoking cessation management in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Electrical alternans",
+        "aliases": ["electrical alternation", "total electrical alternans"],
+        "utd": [["Overview", "electrical alternans pericardial effusion tamponade"]],
+        "summary": "",
+    },
+    {
+        "name": "Pericardial effusion",
+        "aliases": ["pericardial effusions"],
+        "utd": [["Overview", "pericardial effusion diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Sudden cardiac death",
+        "aliases": ["sudden death", "sudden cardiac death in the young"],
+        "utd": [["Overview", "sudden cardiac death causes and risk stratification"]],
+        "summary": "",
+    },
+    {
+        "name": "Heart sounds",
+        "aliases": ["heart sound", "normal heart sounds"],
+        "utd": [["Overview", "auscultation of the heart normal and abnormal heart sounds"]],
+        "summary": "",
+    },
+    {
+        "name": "P wave",
+        "aliases": ["P waves"],
+        "utd": [["Overview", "ECG P wave morphology atrial enlargement"]],
+        "summary": "",
+    },
+    {
+        "name": "Gastric varices",
+        "aliases": ["gastric varix", "gastro-oesophageal varices", "fundal varices"],
+        "utd": [["Overview", "gastric varices classification and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Glomerular disease",
+        "aliases": ["glomerular diseases", "glomerulopathy", "glomerulopathies"],
+        "utd": [["Overview", "classification of glomerular disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Seizure",
+        "aliases": ["seizures", "epileptic seizure"],
+        "utd": [["Overview", "evaluation of the first seizure in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Headache",
+        "aliases": ["headaches", "cephalalgia"],
+        "utd": [["Overview", "evaluation of headache in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Muscle weakness",
+        "aliases": ["approach to muscle weakness", "limb weakness"],
+        "utd": [["Overview", "approach to the patient with muscle weakness"]],
+        "summary": "",
+    },
+    {
+        "name": "Facial nerve",
+        "aliases": ["cranial nerve VII", "seventh cranial nerve", "CN VII"],
+        "utd": [["Overview", "facial nerve anatomy and facial palsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Eyelid muscles",
+        "aliases": ["levator palpebrae superioris", "superior tarsal muscle", "Muller's muscle", "Mueller's muscle", "orbicularis oculi"],
+        "utd": [["Overview", "eyelid anatomy levator palpebrae Muller muscle ptosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Arthritis",
+        "aliases": ["arthritides"],
+        "utd": [["Overview", "approach to the adult with polyarticular joint pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Recurrent infection",
+        "aliases": ["recurrent infections"],
+        "utd": [["Overview", "approach to the adult with recurrent infections"]],
+        "summary": "",
+    },
+    {
+        "name": "Oxygen therapy",
+        "aliases": ["supplemental oxygen", "oxygen prescribing"],
+        "utd": [["Overview", "oxygen therapy in acutely ill adults targets and delivery"]],
+        "summary": "",
+    },
+    {
+        "name": "Anaemia",
+        "aliases": ["anemia"],
+        "utd": [["Overview", "diagnostic approach to anaemia in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Leukaemia",
+        "aliases": ["leukemia", "leukaemias"],
+        "utd": [["Overview", "classification of the leukaemias"]],
+        "summary": "",
+    },
+    {
+        "name": "Platelet",
+        "aliases": ["platelets", "thrombocyte", "thrombocytes"],
+        "utd": [["Overview", "platelet biology and evaluation of thrombocytopenia"]],
+        "summary": "",
+    },
+    {
+        "name": "Bone marrow",
+        "aliases": ["haematopoiesis", "haemopoiesis", "red marrow"],
+        "utd": [["Overview", "bone marrow structure haematopoiesis and marrow examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Valve gradient",
+        "aliases": ["transvalvular gradient", "valve pressure gradient", "transvalvular pressure gradient", "pressure gradient"],
+        "utd": [["Overview", "echocardiographic assessment of valve gradient aortic stenosis severity"]],
+        "summary": "",
+    },
 ]
 
 
@@ -53509,6 +54253,2405 @@ RICH_SUMMARIES = {
         "supply and a medical alert card. Mx: any fever is an "
         "emergency. Take cultures and give intravenous ceftriaxone "
         "immediately without waiting."
+    ),
+
+    "Infertility": (
+        "Failure to conceive after 12 months of regular unprotected "
+        "intercourse. Epidemiology: affects about 15 per cent of "
+        "couples. Where the woman is under 40, roughly 80 per cent "
+        "conceive within 1 year and 90 per cent within 2 years. "
+        "Causes: male factor, ovulatory disorder (polycystic ovary "
+        "syndrome, hypothalamic, premature ovarian insufficiency), "
+        "tubal disease, endometriosis, uterine factor, and "
+        "unexplained in about a quarter. Ix: both partners together. "
+        "Semen analysis first, repeated after 6 weeks if abnormal. "
+        "Mid-luteal progesterone 7 days before the expected period "
+        "confirms ovulation. Rubella serology, chlamydia testing, "
+        "thyroid function and prolactin. Tubal patency by "
+        "hysterosalpingogram or contrast sonography. Laparoscopy and "
+        "dye is the reference standard and is preferred where "
+        "endometriosis or adhesions are suspected, since it treats as "
+        "it assesses. Australian notes: RANZCOG and RACGP advise "
+        "investigating at 6 months rather than 12 if the woman is 35 "
+        "or older, and immediately with amenorrhoea, known tubal "
+        "disease or prior pelvic surgery. Note: give folic acid, "
+        "address weight, smoking and alcohol at the first visit."
+    ),
+    "Oligomenorrhoea": (
+        "Infrequent menstruation. Definition: fewer than 9 cycles a "
+        "year, or cycles longer than 35 days. The current FIGO term "
+        "is infrequent menstrual bleeding, defined as a cycle longer "
+        "than 38 days. Causes: polycystic ovary syndrome is the "
+        "commonest. Also hypothalamic (low weight, excessive "
+        "exercise, stress), hyperprolactinaemia, thyroid disease, "
+        "Cushing syndrome, non-classical congenital adrenal "
+        "hyperplasia, and approaching premature ovarian "
+        "insufficiency. It is physiological in the first 2 years "
+        "after menarche and in the perimenopause. Ix: pregnancy test "
+        "first, always. Then FSH, LH, oestradiol, prolactin, TSH, "
+        "testosterone and sex hormone binding globulin, with pelvic "
+        "ultrasound. Diagnosis: polycystic ovary syndrome needs 2 of "
+        "3 Rotterdam criteria after excluding mimics. Ultrasound "
+        "morphology is not used within 8 years of menarche. Note: "
+        "prolonged unopposed oestrogen with anovulation raises "
+        "endometrial cancer risk, so induce a withdrawal bleed or "
+        "give progestogen or a levonorgestrel intrauterine system."
+    ),
+    "Mittelschmerz": (
+        "Unilateral lower abdominal pain at ovulation. Mechanism: "
+        "follicular rupture releases follicular fluid and a little "
+        "blood, irritating the peritoneum. Features: mid-cycle, "
+        "roughly day 14 in a 28-day cycle. Lasts hours up to 2 days, "
+        "sometimes with light spotting, and may alternate sides "
+        "between cycles. The pain is dull or crampy and unaccompanied "
+        "by fever, vomiting or haemodynamic change. Diagnosis: "
+        "clinical and one of exclusion. Cycle diary showing pain that "
+        "recurs mid-cycle is the most useful evidence. Ddx: ectopic "
+        "pregnancy, ovarian torsion, ruptured ovarian cyst, "
+        "appendicitis and pelvic inflammatory disease. Ix: beta-hCG "
+        "in every woman of reproductive age. Ultrasound only if the "
+        "pain is severe, prolonged or atypical. Mx: reassurance, "
+        "simple analgesia and a heat pack. Suppressing ovulation with "
+        "the combined pill, an implant or depot ends it if symptoms "
+        "are disabling. Red flags: pain lasting beyond 48 hours, a "
+        "positive pregnancy test, fever or peritonism means this is "
+        "not mittelschmerz."
+    ),
+    "Pouch of Douglas": (
+        "The peritoneal recess between the posterior uterus and the "
+        "rectum, also called the rectouterine pouch or cul-de-sac. "
+        "Features: bounded in front by the posterior uterus and upper "
+        "vagina, behind by the rectum, and laterally by the "
+        "uterosacral ligaments. It is the most dependent part of the "
+        "peritoneal cavity when a woman is upright or supine, so free "
+        "fluid, blood and pus collect here first. The male equivalent "
+        "is the rectovesical pouch. Clinical features: free fluid in "
+        "the pouch on transvaginal ultrasound supports a ruptured "
+        "ectopic pregnancy or a ruptured ovarian cyst, and is a "
+        "marker of haemoperitoneum. Deep infiltrating endometriosis "
+        "in the pouch and uterosacral ligaments causes dyschezia and "
+        "deep dyspareunia, with tender nodularity felt on "
+        "rectovaginal examination. A hard shelf palpable per rectum "
+        "suggests peritoneal metastatic deposits. Note: it is drained "
+        "surgically through the posterior fornix, and an enterocele "
+        "is small bowel herniating into it and through the upper "
+        "posterior vaginal wall."
+    ),
+    "B-Lynch suture": (
+        "A brace suture that wraps the uterus front to back and "
+        "compresses it, used for atonic postpartum haemorrhage. "
+        "Indications: uterine atony still bleeding after uterotonics "
+        "and bimanual compression, most often at caesarean where the "
+        "abdomen is already open. Test first by compressing the "
+        "uterus manually. If bleeding stops, the suture is likely to "
+        "work. Mx: the uterus is exteriorised and a large absorbable "
+        "suture is passed through the lower segment and looped over "
+        "the fundus on each side, then tied so the anterior and "
+        "posterior walls are held together. A hysterotomy is needed, "
+        "so at vaginal birth the abdomen must be opened. Note: it "
+        "sits in a stepwise escalation. Uterotonics, then "
+        "intrauterine balloon tamponade, then compression sutures, "
+        "then uterine or internal iliac artery ligation or "
+        "embolisation, then hysterectomy. Balloon and brace can be "
+        "combined. Complications: uterine ischaemia and necrosis, "
+        "pyometra, and rarely Asherman syndrome. Fertility is usually "
+        "preserved and later pregnancy is generally successful."
+    ),
+    "Hysteroscopy": (
+        "Endoscopic inspection of the uterine cavity through the "
+        "cervix. Types: diagnostic hysteroscopy is done in the "
+        "outpatient clinic without anaesthesia using saline "
+        "distension and a fine scope. Operative hysteroscopy needs "
+        "theatre, cervical dilatation and usually general "
+        "anaesthesia. Indications: abnormal uterine bleeding, "
+        "postmenopausal bleeding with a thickened endometrium, "
+        "suspected endometrial polyp or submucosal fibroid, retained "
+        "products of conception, a lost intrauterine device, Asherman "
+        "syndrome and recurrent miscarriage. Blind pipelle sampling "
+        "misses focal lesions, so hysteroscopy with directed biopsy "
+        "is the reference standard for the cavity. Contraindications: "
+        "pregnancy and active pelvic infection. Complications: "
+        "uterine perforation in about 1 per cent, cervical trauma, "
+        "infection, bleeding and fluid overload with hyponatraemia "
+        "when hypotonic distension media are used in long resections. "
+        "Note: paired with laparoscopy and dye when tubal patency "
+        "also needs assessment in infertility."
+    ),
+    "Depot medroxyprogesterone acetate": (
+        "Injectable progestogen-only contraception given as 150 mg "
+        "intramuscularly every 12 weeks. MOA: suppresses the LH surge "
+        "and so ovulation, thickens cervical mucus and thins the "
+        "endometrium. Dose: deep intramuscular into the upper outer "
+        "quadrant of the gluteal muscle or the deltoid, repeated at "
+        "12 weeks with a grace period to 14 weeks. It can be started "
+        "any time postpartum including immediately, and is safe in "
+        "breastfeeding. Adverse effects: irregular bleeding early, "
+        "then amenorrhoea in a majority by 12 months, which is the "
+        "usual reason for both satisfaction and discontinuation. "
+        "Weight gain, mood change, and a reversible fall in bone "
+        "mineral density. Return of fertility is delayed, with a "
+        "median of about 9 months and up to 12 months after the last "
+        "injection. Cautions: not first-line in adolescents whose "
+        "peak bone mass is still accruing, or in perimenopausal "
+        "women. Note: along with the intrauterine devices it is "
+        "unaffected by enzyme-inducing drugs, since contraceptive "
+        "levels do not depend on gut and first-pass metabolism."
+    ),
+    "Long-acting reversible contraception": (
+        "Contraception lasting 3 months or longer and needing no user "
+        "action between administrations. Types: the etonogestrel "
+        "implant, the levonorgestrel intrauterine system, the copper "
+        "intrauterine device, and depot medroxyprogesterone acetate. "
+        "Note: RANZCOG and RACGP recommend these first-line for most "
+        "women, including nulliparous women and adolescents. "
+        "Typical-use failure is under 1 per cent for the implant and "
+        "both devices, because typical use equals perfect use once "
+        "there is nothing daily to forget. That is the whole "
+        "argument. By contrast the combined pill fails in about 7 "
+        "women per 100 per year with typical use. Cautions: none of "
+        "them protect against sexually transmitted infection, so "
+        "condoms are still advised. Irregular bleeding is the "
+        "commonest reason for early removal and should be raised at "
+        "counselling, not after it starts. Australian notes: the "
+        "implant and both devices are PBS-listed, and insertion "
+        "attracts an MBS item. Rapid uptake is limited by trained "
+        "inserter availability rather than by any clinical objection."
+    ),
+    "Liquid-based cytology": (
+        "Cervical cell sampling collected into preservative fluid "
+        "rather than smeared on a slide, used in Australia as the "
+        "reflex test on an HPV-positive sample. Note: since 2017 the "
+        "National Cervical Screening Program tests for oncogenic HPV "
+        "first, 5-yearly, from age 25 to 74, with self-collection "
+        "available to every participant. Cytology is no longer the "
+        "primary screen. Reflex means the laboratory runs it "
+        "automatically on the same vial when HPV is detected, so the "
+        "woman is not recalled. Mx: HPV 16 or 18 detected goes "
+        "straight to colposcopy whatever the cytology shows. Other "
+        "oncogenic types with negative, possible low-grade or "
+        "low-grade cytology are repeated at 12 months. Other "
+        "oncogenic types with possible high-grade or worse cytology "
+        "go to colposcopy. Advantages over the conventional smear are "
+        "fewer unsatisfactory slides and one sample serving both "
+        "tests. Note: any woman with abnormal bleeding, postcoital "
+        "bleeding or a visible cervical lesion needs examination and "
+        "referral regardless of a negative screen."
+    ),
+    "Levator ani": (
+        "The muscular sheet forming most of the pelvic floor. "
+        "Features: three parts, the puborectalis, the pubococcygeus "
+        "and the iliococcygeus. With the coccygeus behind it, which "
+        "is not a levator ani muscle, it makes the pelvic diaphragm. "
+        "Its innervation is direct branches from the sacral plexus, "
+        "most often quoted as S2 to S4, with the coccygeus supplied "
+        "from S4 and S5. Between the two sides lies the levator "
+        "hiatus, transmitting the urethra, vagina and anorectum. "
+        "Note: resting tone holds the pelvic organs above the hiatus "
+        "and keeps the anorectal angle, so it is continence as well "
+        "as support. Levator avulsion from the pubic bone occurs in a "
+        "minority of vaginal births, more so with forceps and a long "
+        "second stage, and is a major risk factor for later prolapse. "
+        "Mx: supervised pelvic floor muscle training is first-line "
+        "for stress urinary incontinence and mild prolapse, before "
+        "pessary or surgery, and needs 3 months to judge. In "
+        "Australia a GP chronic condition management plan gives "
+        "rebated physiotherapy sessions."
+    ),
+    "Haematocolpos": (
+        "Retained menstrual blood distending the vagina. Haematometra "
+        "is the same blood distending the uterus, and "
+        "haematometrocolpos is both. Causes: obstructed menstrual "
+        "outflow. Imperforate hymen is the commonest, then transverse "
+        "vaginal septum, cervical agenesis and an obstructed "
+        "hemivagina with a duplicated uterus. Acquired obstruction "
+        "from cervical stenosis after cone biopsy or ablation causes "
+        "it after the menopause or in older women. Presentation: an "
+        "adolescent with primary amenorrhoea but normal breast and "
+        "pubic hair development, cyclical lower abdominal pain over "
+        "several months, and a palpable suprapubic mass. Acute "
+        "urinary retention is a classic presenting complaint. A tense "
+        "bluish bulging membrane is visible at the introitus in "
+        "imperforate hymen. Ix: pelvic ultrasound first. MRI to "
+        "define the anomaly, plus renal tract imaging, since "
+        "Mullerian anomalies travel with renal anomalies. Mx: "
+        "surgical drainage by hymenotomy or septum excision under "
+        "anaesthesia. Never simply aspirate, as that risks pyocolpos."
+    ),
+    "Enterocele": (
+        "Herniation of small bowel through the pouch of Douglas into "
+        "the upper posterior vaginal wall. Classification: a "
+        "posterior compartment prolapse, distinguished from a "
+        "rectocele, which is the rectum bulging into the lower "
+        "posterior wall. The two coexist. Risk factors: previous "
+        "hysterectomy with an unsupported vaginal vault, vaginal "
+        "birth, chronic straining, obesity and oestrogen deficiency. "
+        "Features: vaginal bulge or dragging worse by the end of the "
+        "day, incomplete defaecation, and rarely obstructive "
+        "symptoms. Examination: examine standing and with Valsalva, "
+        "since supine examination understates prolapse. On "
+        "rectovaginal examination bowel is felt sliding between the "
+        "examining fingers above the rectum, which is what separates "
+        "it from a rectocele. Stage with the POP-Q system. Mx: pelvic "
+        "floor muscle training and weight loss for mild disease, a "
+        "pessary for support, topical oestrogen where atrophy is "
+        "present. Surgery is vault suspension with a McCall "
+        "culdoplasty or sacrocolpopexy rather than a posterior repair "
+        "alone."
+    ),
+    "Oogenesis": (
+        "Formation of the mature oocyte from primordial germ cells. "
+        "Phases: oogonia divide by mitosis before birth and enter "
+        "meiosis I as primary oocytes, which then arrest in prophase "
+        "I. They stay arrested from about 20 weeks gestation until "
+        "ovulation, up to 50 years later. The LH surge completes "
+        "meiosis I, giving a secondary oocyte and the first polar "
+        "body. The secondary oocyte arrests again in metaphase II and "
+        "only completes meiosis II if fertilised, releasing the "
+        "second polar body. Note: 2n means diploid, two sets of "
+        "chromosomes, as in oogonia and primary oocytes. 1n means "
+        "haploid, one set, as in the secondary oocyte and mature "
+        "ovum. Features: about 6 to 7 million oogonia at 20 weeks "
+        "gestation, 1 to 2 million at birth, around 300000 to 400000 "
+        "at puberty, and roughly 400 ovulated in a lifetime. The rest "
+        "are lost to atresia. Note: the decades-long prophase I "
+        "arrest explains why nondisjunction and trisomy 21 rise "
+        "steeply with maternal age. Sperm, made continuously from "
+        "puberty, do not carry that risk."
+    ),
+    "Sexual differentiation": (
+        "The embryological path from genetic sex to phenotypic sex. "
+        "Genetics: SRY, the sex determining region of the Y "
+        "chromosome, encodes testis determining factor, a "
+        "transcription factor that turns the indifferent gonad into a "
+        "testis from about week 7. No SRY means an ovary. Mechanism: "
+        "Sertoli cells make anti-Mullerian hormone, which regresses "
+        "the Mullerian ducts. Leydig cells make testosterone, which "
+        "maintains the Wolffian ducts as epididymis, vas deferens and "
+        "seminal vesicles. Dihydrotestosterone drives the prostate "
+        "and male external genitalia. Without them the Wolffian ducts "
+        "regress and the Mullerian ducts persist as tubes, uterus and "
+        "upper vagina. Note: external genitalia share one set of "
+        "precursors. The genital tubercle becomes the clitoris or "
+        "glans penis, the urethral folds become the labia minora or "
+        "the penile urethra, and the labioscrotal swellings become "
+        "the labia majora or the scrotum. The urogenital sinus forms "
+        "the lower vagina, urethra and vestibule. Sources differ on "
+        "how much of the vagina it contributes. Phenotypic sex is "
+        "distinguishable on ultrasound from about week 12."
+    ),
+    "Contraceptive vaginal ring": (
+        "A flexible ring releasing etonogestrel and ethinyloestradiol "
+        "from the vagina. Class: combined hormonal contraception, so "
+        "the same mechanism, benefits and risks as the combined pill. "
+        "It suppresses ovulation. Dose: inserted by the woman and "
+        "left for 21 days, then removed for a 7-day ring-free week "
+        "during which a withdrawal bleed occurs, then a new ring. "
+        "Continuous use skipping the ring-free week is acceptable and "
+        "reduces withdrawal bleeding. It may be removed for up to 3 "
+        "hours without losing efficacy. Pearls: no daily tablet, "
+        "steadier hormone levels, and it bypasses first-pass "
+        "metabolism, so absorption is unaffected by vomiting or "
+        "diarrhoea. Contraindications: as for the combined pill. "
+        "Migraine with aura, a history of venous thromboembolism or "
+        "known thrombophilia, uncontrolled hypertension, smoking over "
+        "age 35, and under 6 weeks postpartum in a breastfeeding "
+        "woman. Note: PBS listing has changed recently, so check the "
+        "current Schedule before quoting a cost. Perfect and typical "
+        "use figures match the combined pill."
+    ),
+    "Barrier contraception": (
+        "Methods that physically block sperm from reaching the "
+        "cervix. Types: the male or external condom, the female or "
+        "internal condom, and the diaphragm. Note: condoms are the "
+        "only contraceptive that also reduces transmission of "
+        "sexually transmitted infection, which is why they are "
+        "recommended alongside long-acting methods rather than "
+        "instead of them. Nothing else on the contraceptive list does "
+        "this. Uses: correct use means a new condom for every act, "
+        "applied before any genital contact, and water-based or "
+        "silicone lubricant only, since oil-based products degrade "
+        "latex. Polyurethane and polyisoprene are the alternatives in "
+        "latex allergy. The diaphragm is used with an acidic or "
+        "lactic acid gel, inserted before intercourse and left in "
+        "place at least 6 hours afterwards, then removed within 24 "
+        "hours. Note: perfect-use and typical-use figures differ "
+        "widely between sources, but the gap is large for every "
+        "barrier method and small for the implant and intrauterine "
+        "devices. Offer emergency contraception after breakage or "
+        "slippage."
+    ),
+    "Contraceptive efficacy": (
+        "How often a method fails in a year, quoted two ways. "
+        "Definition: perfect use is failure when the method is used "
+        "correctly and consistently every time. Typical use is "
+        "failure as people actually use it, including forgotten "
+        "pills, late injections and condoms applied halfway through. "
+        "Typical use is the number that matters in counselling. Note: "
+        "the gap between the two is entirely user error, so it is "
+        "near zero for the implant and intrauterine devices, where "
+        "typical use is under 1 failure per 100 women per year, and "
+        "wide for the combined pill at about 7 per 100 with typical "
+        "use against under 1 with perfect use. Barrier methods have "
+        "the widest gap of all. Note: figures are usually reported as "
+        "failures per 100 women in the first year, sometimes as the "
+        "Pearl Index, and published percentages differ between "
+        "sources, so quote the ranking rather than a decimal place. "
+        "Note: counselling that leads with typical-use numbers "
+        "explains why RANZCOG and RACGP put long-acting reversible "
+        "methods first, and it is a fairer basis for choice than "
+        "efficacy under ideal conditions."
+    ),
+    "Myometrium": (
+        "The smooth muscle layer of the uterine wall. Types: three "
+        "layers from outside in. The perimetrium is the serosa, "
+        "continuous with visceral peritoneum. The myometrium is the "
+        "thick smooth muscle bulk. The endometrium lines the cavity, "
+        "with a functional layer shed each month and a basal layer "
+        "that regenerates it. Note: myometrial fibres run obliquely "
+        "around the spiral arteries, so contraction after delivery "
+        "occludes them mechanically. This living ligature, not "
+        "clotting, is what stops physiological postpartum bleeding, "
+        "and its failure is uterine atony. Pathology: fibroids arise "
+        "in the myometrium and are classified by position as "
+        "submucosal, intramural or subserosal under the FIGO system. "
+        "Adenomyosis is endometrial glands and stroma within the "
+        "myometrium, giving a bulky tender uterus with heavy painful "
+        "periods. The placenta accreta spectrum is graded by "
+        "myometrial involvement. Accreta adheres to it, increta "
+        "invades it and percreta passes through the serosa. Note: "
+        "caesarean scars thin the myometrium and underlie both "
+        "accreta and uterine rupture."
+    ),
+    "Vaginal cancer": (
+        "Malignancy arising in the vagina, and rare, at under 2 per "
+        "cent of gynaecological cancers. Definition: called primary "
+        "only when the cervix and vulva are uninvolved, since most "
+        "vaginal malignancy is direct spread or metastasis from "
+        "cervix, endometrium, vulva or colorectum. Types: squamous "
+        "cell carcinoma in about 80 per cent. Then adenocarcinoma, "
+        "melanoma, and embryonal rhabdomyosarcoma in infants. Risk "
+        "factors: oncogenic HPV, smoking, prior cervical "
+        "intraepithelial neoplasia or cervical cancer, and vaginal "
+        "intraepithelial neoplasia. Clear cell adenocarcinoma follows "
+        "in-utero diethylstilboestrol exposure, now historical. "
+        "Features: postmenopausal or postcoital bleeding, malodorous "
+        "or blood-stained discharge, a palpable mass and later "
+        "urinary or rectal symptoms. Sites: lymphatic drainage splits "
+        "at the level of the lesion. The upper two-thirds drains to "
+        "iliac nodes and the lower third to inguinal nodes. Mx: "
+        "chemoradiation for most, with surgery reserved for selected "
+        "early upper-third disease. Prevention: HPV vaccination and "
+        "cervical screening."
+    ),
+    "Cytochrome P450 induction": (
+        "A drug increasing synthesis of cytochrome P450 enzymes, so "
+        "co-administered substrates are cleared faster and lose "
+        "effect. Mechanism: induction requires new enzyme protein, so "
+        "it builds over days to about 2 weeks and takes as long to "
+        "wear off after the inducer stops. Inhibition, by contrast, "
+        "is immediate. This lag is why loss of efficacy appears late "
+        "and why a rebound rise in substrate levels follows "
+        "withdrawal of the inducer. Causes: rifampicin and rifabutin, "
+        "carbamazepine, phenytoin, phenobarbitone, topiramate at 200 "
+        "mg daily or more, efavirenz, St John's wort and chronic "
+        "alcohol. Note: hormonal contraception is the classic "
+        "casualty. Enzyme inducers reduce the efficacy of the "
+        "combined pill, the progestogen-only pill, the implant and "
+        "the vaginal ring, so additional or alternative cover is "
+        "needed. The copper device, the levonorgestrel intrauterine "
+        "system and depot medroxyprogesterone acetate are unaffected. "
+        "Note: the old advice to use backup contraception with any "
+        "antibiotic has been withdrawn. Only enzyme-inducing "
+        "antibacterials require it."
+    ),
+    "Progestogen-only pill": (
+        "A daily oral contraceptive containing progestogen alone, "
+        "with no oestrogen. MOA: thickens cervical mucus, thins the "
+        "endometrium, and with drospirenone or desogestrel also "
+        "suppresses ovulation. The older levonorgestrel and "
+        "norethisterone preparations do not reliably suppress "
+        "ovulation. Dose: taken continuously with no inactive or "
+        "hormone-free tablets, so there is no scheduled withdrawal "
+        "bleed. That is a common exam point. Every packet is active. "
+        "Note: the late-pill window differs by preparation. "
+        "Levonorgestrel and norethisterone allow 3 hours, "
+        "drospirenone allows 24 hours. Beyond the window take the "
+        "tablet at once and use additional precautions, for 2 days "
+        "with levonorgestrel or norethisterone and for 7 days with "
+        "drospirenone. Starting on days 1 to 5 of the cycle gives "
+        "immediate cover, otherwise the same additional precautions "
+        "apply. Indications: where oestrogen is contraindicated, "
+        "including breastfeeding, migraine with aura, hypertension "
+        "and prior venous thromboembolism. Adverse effects: "
+        "unpredictable bleeding is the commonest and the usual reason "
+        "for stopping. Efficacy falls with enzyme-inducing drugs."
+    ),
+    "Uterus": (
+        "Thick-walled muscular pelvic organ lying between bladder and "
+        "rectum, lined by endometrium over myometrium. Sites: fundus "
+        "above the tubal ostia, body, isthmus (the narrow segment "
+        "that becomes the lower uterine segment in labour) and "
+        "cervix. Types: about 80 percent of uteri are anteverted and "
+        "anteflexed. Anteversion is the forward angle of the cervix "
+        "on the vagina. Anteflexion is the forward angle of the body "
+        "on the cervix. The remainder are retroverted, a normal "
+        "variant. Note: the broad ligament carries the tube and "
+        "vessels, the round ligament maintains anteversion, the "
+        "cardinal (transverse cervical) ligament carries the uterine "
+        "artery and the uterosacral ligaments give most of the "
+        "support. Pearls: version and flexion set the angle for IUD "
+        "insertion, pipelle sampling and hysteroscopy, so follow the "
+        "direction found on bimanual examination. A retroverted "
+        "gravid uterus can become incarcerated at 12 to 16 weeks with "
+        "urinary retention. The isthmus is the site of the lower "
+        "segment caesarean incision and of later scar rupture."
+    ),
+    "Uterine artery": (
+        "Main blood supply of the uterus, a branch of the anterior "
+        "division of the internal iliac artery. Sites: it runs "
+        "medially in the base of the broad ligament within the "
+        "cardinal ligament, crosses above the ureter about 2 cm "
+        "lateral to the cervix (water under the bridge), reaches the "
+        "uterus at the level of the internal os, then ascends "
+        "tortuously along the lateral wall so flow runs inferior to "
+        "superior. It anastomoses at the cornu with the ovarian "
+        "artery, which arises from the abdominal aorta and gives "
+        "collateral supply. Note: uterine blood flow rises from about "
+        "50 mL/min before pregnancy to 500 to 750 mL/min at term. "
+        "Complications: the ureter is at risk during hysterectomy and "
+        "caesarean when the pedicle is clamped. Pearls: uterine "
+        "artery ligation is a surgical step in postpartum haemorrhage "
+        "and uterine artery embolisation is the radiological "
+        "alternative, used for haemorrhage and for fibroids when "
+        "fertility is not being preserved."
+    ),
+    "Second trimester maternal serum screening": (
+        "Blood-only aneuploidy screen for women who book too late for "
+        "combined first trimester screening. Screening: performed 14 "
+        "to 20+6 weeks, optimally 15 to 17 weeks. The quadruple test "
+        "measures AFP, unconjugated oestriol, hCG and inhibin A, "
+        "combined with maternal age to give a risk figure. Criteria: "
+        "the trisomy 21 pattern is raised hCG and inhibin A with low "
+        "AFP and low oestriol. Detection is about 75 to 80 percent at "
+        "a 5 percent false positive rate, below the 85 to 90 percent "
+        "of combined first trimester screening. Ix: a raised AFP "
+        "alone suggests an open neural tube defect, an abdominal wall "
+        "defect, multiple pregnancy or wrong dates. Mx: a high risk "
+        "result is offered amniocentesis, since the chorionic villus "
+        "sampling window has passed. Cell-free DNA screening remains "
+        "available at any gestation from 10 weeks and is more "
+        "sensitive, but neither is diagnostic."
+    ),
+    "Vanishing twin syndrome": (
+        "Spontaneous demise and resorption of one twin in early "
+        "pregnancy, usually between 6 and 10 weeks. Epidemiology: "
+        "about 15 percent of twin pregnancies, and higher after "
+        "assisted reproduction where early scans detect more multiple "
+        "sacs. Presentation: often silent, sometimes light vaginal "
+        "bleeding or cramping. A previously seen sac is absent on the "
+        "next scan. Note: first trimester loss leaves the surviving "
+        "twin unaffected, and no intervention is needed. Ix: residual "
+        "placental material can raise maternal serum AFP and can "
+        "cause a false positive or failed cell-free DNA result for "
+        "several weeks, so time NIPT accordingly. Complications: "
+        "single fetal death after 14 weeks in a monochorionic pair is "
+        "different. Acute transfusion into the dead twin causes "
+        "co-twin hypotension with a risk of neurological injury or "
+        "death, so refer urgently for MCA Doppler and interval fetal "
+        "MRI."
+    ),
+    "Placental growth factor": (
+        "Angiogenic protein of the VEGF family released by "
+        "trophoblast, low when placentation is poor. Mechanism: "
+        "pre-eclampsia is an antiangiogenic state. PlGF falls and "
+        "soluble fms-like tyrosine kinase 1 (sFlt-1) rises, binding "
+        "free PlGF and VEGF, so the sFlt-1 to PlGF ratio widens weeks "
+        "before symptoms. Ix: used to rule out pre-eclampsia in women "
+        "with suspicious features between 20 and 35 weeks. With the "
+        "widely used assay a ratio at or below 38 makes pre-eclampsia "
+        "within the next week very unlikely, while a high ratio "
+        "predicts progression and preterm delivery. Cut-offs are "
+        "assay-specific. Screening: PlGF may be added to first "
+        "trimester screening with maternal factors, mean arterial "
+        "pressure, uterine artery pulsatility index and PAPP-A to "
+        "select women for aspirin, though availability is patchy in "
+        "Australia. Note: a low result supports growth restriction "
+        "and placental dysfunction, not just pre-eclampsia."
+    ),
+    "Human placental lactogen": (
+        "Placental hormone of the syncytiotrophoblast, also called "
+        "human chorionic somatomammotropin, structurally close to "
+        "growth hormone and prolactin. Its output tracks placental "
+        "mass and rises through the second and third trimesters. "
+        "Mechanism: it antagonises maternal insulin, driving insulin "
+        "resistance, and promotes lipolysis so the mother burns free "
+        "fatty acids and spares glucose and amino acids for the "
+        "fetus. Note: it is the main driver of the diabetogenic state "
+        "of later pregnancy, which is why gestational diabetes is "
+        "screened at 24 to 28 weeks and why insulin requirements "
+        "climb steadily in pre-existing diabetes. Pearls: levels drop "
+        "within hours of placental delivery, so insulin requirements "
+        "fall abruptly after birth and doses must be cut back towards "
+        "pre-pregnancy levels to avoid hypoglycaemia. It is not "
+        "measured as a clinical test."
+    ),
+    "Relaxin": (
+        "Peptide hormone of the corpus luteum, decidua and placenta, "
+        "peaking in the first trimester. Mechanism: it remodels "
+        "collagen in ligaments and cartilage and contributes to "
+        "systemic vasodilatation. Clinical features: ligamentous "
+        "laxity allows the pubic symphysis to widen and the costal "
+        "margin and ribcage attachments to relax, which with the "
+        "rising uterus raises tidal volume. Pelvic girdle and "
+        "symphysis pubis pain, increased lumbar lordosis with back "
+        "pain, a waddling gait and a rise in shoe size follow. "
+        "Associations: fluid retention and laxity also contribute to "
+        "carpal tunnel syndrome and to a higher rate of joint "
+        "sprains. Mx: pelvic support belt, physiotherapy, activity "
+        "modification and simple analgesia. Note: laxity settles over "
+        "the months after birth. The vasodilatory effect is part of "
+        "the fall in systemic vascular resistance and the rise in GFR "
+        "seen in normal pregnancy."
+    ),
+    "Early pregnancy assessment service": (
+        "Hospital clinic, usually midwife or nurse led, for women "
+        "under about 20 weeks with bleeding, pain or an uncertain "
+        "early pregnancy. It is the standard referral pathway in NSW "
+        "and Victoria. Indications: threatened, incomplete or missed "
+        "miscarriage, pregnancy of unknown location, hyperemesis "
+        "review, and recurrent early pregnancy loss follow-up. Ix: "
+        "transvaginal ultrasound, serial beta-hCG at 48 hours, blood "
+        "group and antibody screen, and progesterone in some units. "
+        "Mx: expectant care, medical management with misoprostol with "
+        "or without mifepristone, or surgical management by manual "
+        "vacuum aspiration. Anti-D is given to Rh D negative women "
+        "after bleeding or instrumentation. Red flags: haemodynamic "
+        "instability, syncope, shoulder tip pain or peritonism means "
+        "a suspected ruptured ectopic. Send those women straight to "
+        "the emergency department, not to the clinic."
+    ),
+    "Pregnancy of unknown location": (
+        "A positive pregnancy test with no intrauterine or "
+        "extrauterine pregnancy seen on transvaginal ultrasound. It "
+        "is a holding description, not a diagnosis, and covers "
+        "roughly 8 to 10 percent of early pregnancy scans. "
+        "Classification: failing pregnancy of unknown location, "
+        "intrauterine pregnancy too early to see, ectopic pregnancy, "
+        "and persisting pregnancy of unknown location. Ix: repeat "
+        "beta-hCG at 48 hours with a repeat scan. A rise above about "
+        "63 percent favours a developing intrauterine pregnancy, a "
+        "fall of more than 50 percent favours a failing pregnancy, "
+        "and a plateau or shallow change is the pattern that suggests "
+        "ectopic. Criteria: RANZCOG uses a discriminatory level of "
+        "3500 IU/L, above which a viable intrauterine pregnancy "
+        "should be visible. Mx: follow to resolution with hCG below 5 "
+        "IU/L or a confirmed location. Never diagnose an ectopic on a "
+        "single hCG."
+    ),
+    "PUQE score": (
+        "Pregnancy-Unique Quantification of Emesis, the 24 hour "
+        "scored tool for nausea and vomiting in pregnancy. Criteria: "
+        "three items scored 1 to 5 each - hours of nausea, episodes "
+        "of vomiting and episodes of retching in the last 24 hours. "
+        "Total 3 to 15. Mild is 6 or less, moderate 7 to 12 and "
+        "severe 13 or more. Indications: it grades severity at "
+        "presentation and tracks response, and it separates common "
+        "nausea from hyperemesis. Mx: SOMANZ supports admission for "
+        "severe disease, meaning weight loss above 5 percent, "
+        "ketonuria, electrolyte disturbance or a score of 13 or more. "
+        "Step up from pyridoxine with doxylamine to metoclopramide, "
+        "prochlorperazine or ondansetron, with thiamine before any "
+        "dextrose. Note: the score does not replace assessment for "
+        "other causes such as urinary infection, thyrotoxicosis or "
+        "molar pregnancy."
+    ),
+    "Polymorphic eruption of pregnancy": (
+        "The most common specific dermatosis of pregnancy - intensely "
+        "itchy urticarial papules and plaques. Presentation: third "
+        "trimester, most often a first pregnancy, twins or rapid "
+        "weight gain. Lesions start within the abdominal striae and "
+        "characteristically spare the umbilicus, then spread to "
+        "thighs, buttocks and arms. Face, palms and soles are spared. "
+        "Differential: pemphigoid gestationis starts around the "
+        "umbilicus, blisters, and shows linear C3 at the basement "
+        "membrane on direct immunofluorescence with fetal risk. "
+        "Intrahepatic cholestasis itches without a primary rash and "
+        "needs bile acids and LFTs. Atopic eruption of pregnancy "
+        "comes earlier and affects flexures. Mx: emollients, moderate "
+        "potency topical corticosteroid and a sedating antihistamine, "
+        "with a short oral prednisolone course if severe. Prognosis: "
+        "no fetal risk. It settles within days to a few weeks of "
+        "delivery and rarely recurs."
+    ),
+    "Oral glucose tolerance test": (
+        "Timed venous glucose sampling after a 75 g oral glucose "
+        "load. Indications: universal screening for gestational "
+        "diabetes at 24 to 28 weeks, brought forward to booking then "
+        "repeated if there is previous gestational diabetes, BMI over "
+        "30, previous macrosomia, polycystic ovary syndrome, family "
+        "history or older age. It is also used to confirm diabetes "
+        "outside pregnancy. Criteria: in pregnancy one abnormal value "
+        "diagnoses gestational diabetes - fasting 5.1 mmol/L or more, "
+        "one hour 10.0 or more, two hour 8.5 or more. Outside "
+        "pregnancy diabetes is fasting 7.0 or more or two hour 11.1 "
+        "or more, and a two hour result of 7.8 to 11.0 is impaired "
+        "glucose tolerance. Note: unrestricted carbohydrate for three "
+        "days beforehand, an overnight fast of 8 to 14 hours, seated "
+        "and no smoking. Agents that alter glycaemia, including oral "
+        "hypoglycaemics, are withheld 1 to 2 weeks before. Follow-up: "
+        "repeat at 6 to 12 weeks postpartum after gestational "
+        "diabetes."
+    ),
+    "Breast milk": (
+        "Milk produced by the lactating breast, about 90 percent "
+        "water, with lactose as the main carbohydrate, whey-dominant "
+        "protein and fat supplying roughly half the energy. Phases: "
+        "colostrum for the first few days, transitional milk to about "
+        "2 weeks, then mature milk. Note: colostrum is small in "
+        "volume and higher in protein, particularly secretory IgA, "
+        "and in the fat-soluble vitamins A, D, E and K, with less "
+        "water-soluble vitamin, fat, lactose and water than mature "
+        "milk. It has a laxative effect that clears meconium. Pearls: "
+        "within a feed the early foremilk is watery and the hindmilk "
+        "is fat-rich, so the baby should finish one side first. "
+        "Complications: milk is low in vitamin K, hence intramuscular "
+        "vitamin K at birth, and low in vitamin D. Iron stores fall "
+        "by about 6 months so iron-rich solids are needed from then."
+    ),
+    "Congenital malformation": (
+        "A structural defect arising from an intrinsically abnormal "
+        "developmental process, in contrast with the other three "
+        "mechanisms of birth defect. Classification: malformation is "
+        "a primary error of organ formation. Deformation is "
+        "distortion of a normally formed part by extrinsic mechanical "
+        "force. Disruption is breakdown of tissue that had formed "
+        "normally. Dysplasia is abnormal cellular organisation within "
+        "a tissue. Phases: malformations arise in organogenesis, "
+        "weeks 3 to 8 after conception. Deformations arise later, "
+        "after week 8, when the fetus is large relative to the "
+        "uterus. Causes: deformations follow oligohydramnios, uterine "
+        "anomaly, twins or breech, giving talipes and hip dysplasia. "
+        "Disruption follows amniotic bands or vascular events. Note: "
+        "teratogen exposure before day 14 is all or nothing. Weeks 3 "
+        "to 8 carry the maximum structural risk, and later exposure "
+        "affects growth and the central nervous system. Prognosis: "
+        "deformations correct with posture or splinting. "
+        "Malformations often need surgery."
+    ),
+    "Maternal mortality": (
+        "Death during pregnancy or within 42 days of its end from any "
+        "cause related to or aggravated by the pregnancy. Deaths from "
+        "42 days to one year are late maternal deaths, and unrelated "
+        "deaths such as trauma are incidental. Classification: direct "
+        "deaths come from obstetric causes - thromboembolism, "
+        "obstetric haemorrhage, hypertensive disorders, amniotic "
+        "fluid embolism and sepsis. Indirect deaths come from medical "
+        "conditions aggravated by pregnancy - pre-existing "
+        "cardiovascular disease, non-obstetric haemorrhage such as "
+        "intracranial bleeding or a ruptured splenic artery aneurysm, "
+        "and suicide. Epidemiology: the Australian ratio is about 5 "
+        "per 100 000 women giving birth, among the lowest in the "
+        "world, but roughly double that for Aboriginal and Torres "
+        "Strait Islander women. Indirect deaths account for about "
+        "half of the total. Note: cases are reviewed by state "
+        "maternal mortality committees and reported nationally, so "
+        "the focus is on preventable contributing factors rather than "
+        "the raw count."
+    ),
+    "Gravidity and parity": (
+        "The shorthand for obstetric history, written as G then P, "
+        "for example G3 P1. Definition: gravidity is the number of "
+        "pregnancies regardless of outcome, including the current "
+        "one, miscarriages, terminations and ectopics. Parity is the "
+        "number of pregnancies carried beyond 20 weeks gestation. "
+        "Note: parity counts pregnancies, not babies, so twins "
+        "delivered at term are para 1. A stillbirth after 20 weeks "
+        "still counts. A woman in a first pregnancy is G1 P0, "
+        "described as a primigravida and nulliparous. Pearls: "
+        "gravidity above 0 with parity 0 is the pattern of recurrent "
+        "early loss, and it also defines secondary infertility. Grand "
+        "multiparity, five or more births, raises the risk of "
+        "malpresentation, postpartum haemorrhage and placenta "
+        "praevia. Some units append the losses, as G3 P1+1, but the "
+        "plain number plus a written history is the safer record."
+    ),
+    "Spontaneous rupture of membranes": (
+        "Rupture of the amniotic membranes without intervention, "
+        "giving a gush or continuous leak of clear fluid. "
+        "Classification: rupture in established labour at term is "
+        "normal. Prelabour rupture at 37 weeks or more without labour "
+        "is PROM, before 37 weeks it is PPROM, and artificial rupture "
+        "with a hook is an amniotomy. Ix: sterile speculum showing "
+        "pooling of liquor in the posterior fornix confirms it. Avoid "
+        "digital examination unless the woman is in labour, because "
+        "it raises infection risk. If doubt remains use a PAMG-1 or "
+        "IGFBP-1 test, with ultrasound for liquor volume. Mx: at term "
+        "about 60 percent labour within 24 hours. RANZCOG supports "
+        "offering induction, with intrapartum antibiotics if group B "
+        "streptococcus positive or membranes ruptured beyond 18 "
+        "hours. Red flags: cord prolapse with a high presenting part, "
+        "meconium-stained liquor, and fever with offensive liquor and "
+        "fetal tachycardia meaning chorioamnionitis."
+    ),
+    "Dilatation and curettage": (
+        "Cervical dilatation followed by instrumental scraping or "
+        "suction emptying of the uterine cavity. Indications: "
+        "retained products of conception, surgical management of "
+        "miscarriage, evacuation of a molar pregnancy, and "
+        "endometrial sampling when a pipelle fails or is "
+        "non-diagnostic. Note: blind curettage has largely given way "
+        "to hysteroscopy with directed biopsy for abnormal bleeding, "
+        "and to manual vacuum aspiration under local anaesthesia in "
+        "early pregnancy. Give anti-D to Rh D negative women after "
+        "uterine instrumentation in pregnancy. Complications: uterine "
+        "perforation, cervical trauma, haemorrhage, infection and "
+        "incomplete evacuation. Intrauterine adhesions, Asherman "
+        "syndrome, follow repeated or postpartum curettage and "
+        "present with light or absent periods, cyclical pain or "
+        "subfertility. Pearls: prior curettage is a risk factor for "
+        "placenta accreta in a later pregnancy."
+    ),
+    "Amniotic fluid": (
+        "The liquor surrounding the fetus, produced and cleared "
+        "continuously so the volume turns over daily. Mechanism: in "
+        "the first trimester it is largely a transudate of maternal "
+        "plasma across the amnion and the unkeratinised fetal skin. "
+        "From the second trimester it is mainly fetal urine with a "
+        "contribution from lung fluid. Clearance is by fetal "
+        "swallowing and intramembranous absorption. Note: volume "
+        "rises to roughly 800 mL by 33 weeks, plateaus from 33 to 38 "
+        "weeks, then falls to about 600 mL at term as placental "
+        "transfer declines. Uses: it cushions the fetus and cord, "
+        "allows lung development and limb movement, maintains "
+        "temperature and is bacteriostatic. Ix: quantified as the "
+        "amniotic fluid index, normal 5 to 25 cm, or the single "
+        "deepest pocket, normal 2 to 8 cm. Colour matters at rupture "
+        "- clear is normal, meconium stained suggests fetal "
+        "compromise and blood stained suggests abruption."
+    ),
+    "Oestrogen": (
+        "The principal female sex steroid, made by ovarian granulosa "
+        "cells and by peripheral aromatisation of androgens. Types: "
+        "oestradiol is the most potent and dominates in reproductive "
+        "life, oestriol dominates in pregnancy from the placenta, and "
+        "oestrone dominates after menopause from adipose tissue. "
+        "Uses: it drives endometrial proliferation, thin fertile "
+        "cervical mucus, breast duct development, the positive "
+        "feedback LH surge and epiphyseal closure. Note: two "
+        "protective effects matter clinically. It restrains "
+        "osteoclastic bone resorption, so bone density falls sharply "
+        "after menopause. It also raises HDL, lowers LDL and promotes "
+        "vasodilatation, so cardiovascular risk is lower before "
+        "menopause. Adverse effects: venous thromboembolism, mainly "
+        "with oral rather than transdermal preparations, and "
+        "stimulation of oestrogen-dependent breast and endometrial "
+        "tissue. Unopposed oestrogen with an intact uterus causes "
+        "endometrial hyperplasia, so a progestogen is added."
+    ),
+    "Fetal scalp electrode": (
+        "A fine spiral electrode screwed into the fetal scalp to "
+        "record the fetal ECG directly for continuous monitoring in "
+        "labour. Indications: an external transducer that cannot hold "
+        "a reliable trace, usually with maternal obesity, a very "
+        "active fetus or maternal and fetal rates that cannot be told "
+        "apart. Criteria: membranes must be ruptured, the cervix "
+        "dilated, the presentation known and vertex, and the "
+        "gestation at or beyond about 34 weeks. Contraindications: "
+        "maternal HIV, hepatitis B or hepatitis C, active genital "
+        "herpes, and suspected fetal bleeding disorder or "
+        "thrombocytopenia. Complications: scalp laceration, bleeding, "
+        "abscess and vertical transmission of infection. Note: it "
+        "measures heart rate only. Fetal blood sampling is the "
+        "separate test of fetal acid-base status, where a scalp "
+        "lactate above 4.8 mmol/L is abnormal and prompts delivery."
+    ),
+    "Caesarean section": (
+        "Birth of the baby through incisions in the maternal "
+        "abdominal wall and uterus. Types: a lower segment transverse "
+        "uterine incision is used in over 99 percent. A classical "
+        "vertical incision is reserved for a very preterm poorly "
+        "formed lower segment, transverse lie or anterior placenta "
+        "praevia, and commits the woman to elective repeat caesarean "
+        "because of the high rupture risk. Classification: RANZCOG "
+        "urgency category 1 is an immediate threat to the life of "
+        "woman or fetus with a decision to birth interval around 30 "
+        "min, category 2 is compromise that is not immediately life "
+        "threatening, category 3 needs early birth without "
+        "compromise, and category 4 is planned at a time that suits. "
+        "Indications: previous caesarean, malpresentation, arrest of "
+        "labour, fetal compromise, placenta praevia. Mx: elective "
+        "birth at 39 weeks under spinal, antibiotic prophylaxis "
+        "before skin incision, VTE prophylaxis. Complications: "
+        "haemorrhage, sepsis, bladder injury, VTE, and neonatal "
+        "transient tachypnoea. Later pregnancies carry accreta "
+        "spectrum, praevia and scar rupture."
+    ),
+    "Anterior abdominal wall layers": (
+        "The layers divided from skin to uterus at a Pfannenstiel "
+        "caesarean incision. Sites: skin, then subcutaneous fat in "
+        "two laminae, the fatty Camper's fascia over the membranous "
+        "Scarpa's fascia, then the rectus sheath. Rectus abdominis is "
+        "separated in the midline rather than cut, with external "
+        "oblique, internal oblique and transversus abdominis lateral "
+        "to it, each with investing fascia. Deep to that lie "
+        "transversalis fascia, extraperitoneal fat, peritoneum and "
+        "then the lower uterine segment. Note: the arcuate line sits "
+        "about a third of the way from umbilicus to pubic symphysis. "
+        "Below it all three flat muscle aponeuroses pass in front of "
+        "rectus, so there is no posterior rectus sheath and only "
+        "transversalis fascia separates muscle from peritoneum. The "
+        "inferior epigastric vessels enter the sheath below this line "
+        "and are the vessels at risk when a transverse incision is "
+        "extended laterally. Mx: the skin incision is curved, about 2 "
+        "to 3 cm above the pubic symphysis. Complications: bleeding "
+        "from inferior epigastric injury, bladder injury when the "
+        "lower segment is scarred."
+    ),
+    "Delayed cord clamping": (
+        "Deferring clamping of the umbilical cord after birth so "
+        "placental transfusion into the baby continues. Mx: ANZCOR "
+        "and RANZCOG advise waiting at least 60 s in any vigorous "
+        "baby, term or preterm, with the baby dried and kept warm on "
+        "the mother's abdomen or chest. Give the prophylactic "
+        "uterotonic while waiting, then clamp and use controlled cord "
+        "traction. Uses: in preterm infants it reduces mortality, "
+        "intraventricular haemorrhage, necrotising enterocolitis and "
+        "the need for transfusion. At term it raises haemoglobin at "
+        "birth and iron stores at 3 to 6 months. Adverse effects: "
+        "more neonatal jaundice needing phototherapy, and "
+        "polycythaemia. Contraindications: a baby needing immediate "
+        "resuscitation, abruption, placenta praevia, cord avulsion, "
+        "monochorionic twins with a suspected transfusion imbalance, "
+        "and maternal haemorrhage or instability. Note: intact cord "
+        "resuscitation at the bedside is preferred where the "
+        "equipment allows. Cord milking is an alternative if "
+        "immediate clamping is unavoidable, but it is avoided below "
+        "28 weeks because it increases intraventricular haemorrhage."
+    ),
+    "Postpartum urinary retention": (
+        "Failure to void spontaneously within 6 h of vaginal birth, "
+        "or of catheter removal after caesarean. Types: overt "
+        "retention where she cannot void at all, and covert retention "
+        "where she voids but leaves a residual over 150 mL. Risk "
+        "factors: nulliparity, prolonged labour, epidural or spinal "
+        "analgesia, instrumental birth, caesarean, perineal trauma "
+        "and opioids. Features: inability to void, incomplete "
+        "emptying, overflow incontinence and a palpable bladder above "
+        "the symphysis. Ix: bladder scan for the post void residual, "
+        "plus urinalysis and MSU. Mx: analgesia, privacy, "
+        "mobilisation and a warm shower first. If she still cannot "
+        "void, or the residual is over 150 mL, catheterise and leave "
+        "an indwelling catheter for 24 to 48 h before a trial of void "
+        "with a residual check. Complications: urinary tract "
+        "infection, and irreversible detrusor damage if the bladder "
+        "is allowed to overdistend. Key point: chart every void "
+        "volume postnatally, since covert retention is silent."
+    ),
+    "Aortocaval compression": (
+        "The gravid uterus compressing the inferior vena cava and "
+        "aorta when the woman lies supine after about 20 weeks, "
+        "cutting venous return, cardiac output and uterine perfusion. "
+        "Features: hypotension, tachycardia, pallor, sweating, "
+        "nausea, light headedness and syncope within minutes of lying "
+        "flat, relieved by turning. The fetal effect shows as "
+        "decelerations or reduced variability on CTG. Mx: examine, "
+        "rest and sleep in the supported left lateral position, also "
+        "called left lateral decubitus. When supine posture is "
+        "unavoidable, as for imaging, theatre or after a spinal, use "
+        "a 15 to 30 degree left lateral tilt or continuous manual "
+        "displacement of the uterus to the left. Note: in maternal "
+        "cardiac arrest ANZCOR advises keeping the woman flat so "
+        "chest compressions stay effective, using manual left uterine "
+        "displacement instead of tilt, and proceeding to "
+        "resuscitative hysterotomy by 4 min if there is no return of "
+        "circulation and the uterus is at or above the umbilicus."
+    ),
+    "In-utero transfer": (
+        "Moving a pregnant woman before birth to a hospital whose "
+        "maternity and neonatal services match what her pregnancy "
+        "needs, rather than transferring the baby afterwards. "
+        "Indications: threatened preterm labour or preterm prelabour "
+        "rupture below the local unit's level of care, with transfer "
+        "before 28+0 weeks to a tertiary service with a neonatal "
+        "intensive care unit. Also placenta accreta spectrum, severe "
+        "early pre-eclampsia, a fetal anomaly needing surgery, and "
+        "higher order multiples. Mx: stabilise before moving. Give "
+        "nifedipine tocolysis to buy time, the first dose of "
+        "betamethasone, magnesium sulfate for neuroprotection if "
+        "birth below 30 weeks is expected, and group B streptococcal "
+        "prophylaxis if indicated. Arrange through the state "
+        "retrieval and perinatal advice service. Contraindications: "
+        "birth is imminent, the mother is unstable, or the fetal "
+        "heart rate is not reassuring. Deliver locally and retrieve "
+        "the baby instead. Key point: babies born in a tertiary "
+        "centre do better than those transferred after birth."
+    ),
+    "Tocolysis": (
+        "Drug suppression of uterine contractions in threatened "
+        "preterm labour. Uses: it buys roughly 48 h for antenatal "
+        "corticosteroids to work and for in-utero transfer. It does "
+        "not improve perinatal outcome on its own and is not used to "
+        "prolong pregnancy. Indications: contractions with cervical "
+        "change between about 24 and 34 weeks with intact membranes "
+        "and a reassuring CTG. Dose: nifedipine is first line in "
+        "Australia, 20 mg orally, repeated at 30 min if contractions "
+        "persist, then 20 mg 6 hourly for up to 48 h. Atosiban, an "
+        "oxytocin receptor antagonist, is the alternative where "
+        "nifedipine is unsuitable. Indomethacin is a short course "
+        "option below 32 weeks. Contraindications: chorioamnionitis, "
+        "significant antepartum haemorrhage, severe pre-eclampsia, "
+        "fetal death or lethal anomaly, and a non-reassuring CTG. "
+        "Adverse effects: nifedipine causes flushing, headache and "
+        "hypotension. Note: magnesium sulfate is given for fetal "
+        "neuroprotection below 30 weeks, not as a tocolytic, and beta "
+        "agonists are no longer used because of maternal cardiac "
+        "risk."
+    ),
+    "Cervical length screening": (
+        "Transvaginal ultrasound measurement of the closed "
+        "endocervical canal, used to predict spontaneous preterm "
+        "birth. Indications: women at high risk, meaning a previous "
+        "spontaneous preterm birth or mid trimester loss, previous "
+        "cervical excision such as a cone biopsy, a uterine anomaly, "
+        "or a current multiple pregnancy. Screening: measured in the "
+        "second trimester, usually between 16 and 24 weeks, often "
+        "serially every 2 weeks in the highest risk group. "
+        "Transvaginal is the route, since transabdominal and digital "
+        "assessment both underestimate. Criteria: 25 mm or less "
+        "before 24 weeks is the threshold that triggers intervention, "
+        "and risk rises steeply as length falls further. Funnelling "
+        "adds nothing once length is measured. Mx: vaginal "
+        "progesterone 200 mg nightly until 34 to 36 weeks for a short "
+        "cervix. Cerclage where a short cervix is combined with a "
+        "previous preterm birth, or on history alone after recurrent "
+        "mid trimester loss. Note: universal screening is not "
+        "standard in Australia, though some units add a single "
+        "measurement at the 18 to 20 week morphology scan."
+    ),
+    "Placental anatomy": (
+        "The fetomaternal organ of exchange, formed from the fetal "
+        "chorion frondosum and the maternal decidua basalis. Sites: "
+        "the maternal surface is dull dark red and divided by septa "
+        "into 15 to 20 cotyledons, and is the decidua basalis. The "
+        "fetal surface is the shiny grey chorionic plate covered by "
+        "amnion, with vessels radiating from the cord insertion. "
+        "Mechanism: trophoblast remodels the maternal spiral arteries "
+        "into low resistance vessels that spurt blood into the "
+        "intervillous space, where exchange occurs across the "
+        "terminal villi. The two circulations never mix. Note: the "
+        "term placenta weighs about 500 to 700 g, roughly a fifth of "
+        "the baby's weight, with the average newborn 3.3 kg and "
+        "normal range 2.5 to 4 kg, and about 800 mL of liquor at "
+        "term. Examination: after birth check the placenta for a "
+        "missing cotyledon or a torn vessel running to the membrane "
+        "edge, confirm the membranes are complete, count three cord "
+        "vessels, and note the cord insertion site."
+    ),
+    "Neonatal oestrogen withdrawal": (
+        "Transient physiological changes in a newborn caused by "
+        "transplacental maternal oestrogen and its abrupt withdrawal "
+        "after birth. Features: palpable breast buds in both sexes, "
+        "sometimes with a milky discharge. In girls, swollen labia, a "
+        "thick white mucoid vaginal discharge, and small volume blood "
+        "tinged vaginal discharge as the stimulated endometrium "
+        "sheds. Neonatal acne and milia often accompany it. Onset: "
+        "within the first days of life. Vaginal bleeding settles "
+        "within about a week and breast tissue regresses over weeks "
+        "to a few months. Mx: observation, routine care and "
+        "reassurance. Do not squeeze the breast, and no imaging or "
+        "hormone testing is needed. Red flags: bleeding that starts "
+        "after the first 2 weeks or continues beyond it, heavy "
+        "bleeding, a unilateral hot tender red breast suggesting "
+        "mastitis or abscess, and any breast development or vaginal "
+        "bleeding after 3 months. These need investigation for "
+        "precocious puberty, a vaginal foreign body, trauma or abuse."
+    ),
+    "Episiotomy": (
+        "Surgical incision of the perineum at crowning to enlarge the "
+        "vaginal outlet. Indications: suspected fetal compromise "
+        "needing faster birth, instrumental birth and particularly "
+        "forceps, shoulder dystocia, and an imminent severe tear or "
+        "previous obstetric anal sphincter injury. Use is restrictive "
+        "rather than routine. Mx: RANZCOG supports a right "
+        "mediolateral cut, starting at the fourchette and angled 60 "
+        "degrees from the midline while the perineum is distended, "
+        "since the angle falls towards 45 degrees once the perineum "
+        "retracts. Infiltrate with local anaesthetic even under "
+        "epidural, cut at the height of a contraction with the head "
+        "distending, then repair in layers with continuous absorbable "
+        "suture and perform a rectal examination to exclude sphincter "
+        "injury. Note: in shoulder dystocia it does not relieve the "
+        "bony impaction, but it makes room for internal rotational "
+        "manoeuvres such as the Rubin and Woods screw. Midline "
+        "episiotomy is not used in Australia because it extends into "
+        "the anal sphincter. Complications: extension to a third or "
+        "fourth degree tear, bleeding, infection, dyspareunia."
+    ),
+    "Abdominal palpation in pregnancy": (
+        "Systematic abdominal examination that establishes fundal "
+        "height, lie, presentation, position and engagement. "
+        "Examination: position her supine with a left lateral tilt, "
+        "or in the supported left lateral position, to avoid "
+        "aortocaval compression, with the bladder emptied and knees "
+        "flexed. Measure the symphysis fundal height in cm, which "
+        "approximates gestational weeks after 24. Palpate the fundus "
+        "for a soft irregular breech against a hard ballottable head, "
+        "use lateral palpation for the firm continuous fetal back "
+        "against knobbly limbs, then pelvic palpation for the "
+        "presenting part and descent recorded in fifths palpable "
+        "abdominally, where 2/5 or less means engaged. Auscultate the "
+        "fetal heart over the anterior shoulder. Monitoring: in "
+        "established labour palpate 2 hourly and immediately before "
+        "every vaginal examination, since it grades descent more "
+        "reliably than a vaginal examination when there is caput and "
+        "moulding. Note: a fundal height more than 3 cm from the "
+        "gestation warrants ultrasound."
+    ),
+    "Signs of placental separation": (
+        "The clinical signs that the placenta has sheared off the "
+        "uterine wall and sits in the lower segment, which must be "
+        "present before cord traction is applied. Signs: a sudden "
+        "gush of blood per vaginam, lengthening of the visible cord "
+        "at the vulva, and the uterus becoming firm, globular and "
+        "rising in the abdomen as it lifts off the pelvis. Mx: only "
+        "then apply controlled cord traction during a contraction, "
+        "with the other hand guarding the uterus suprapubically and "
+        "pushing it upwards. Traction before separation risks uterine "
+        "inversion or cord avulsion. Duration: with active management "
+        "and a prophylactic uterotonic the placenta usually separates "
+        "within 5 to 10 min, and is called retained if undelivered by "
+        "30 min, or by 60 min with physiological management. Note: "
+        "heavy bleeding with a high boggy fundus that will not rise "
+        "means atony, whereas bleeding with the fundus staying low "
+        "suggests the placenta is still partly adherent. Check the "
+        "placenta and membranes for completeness afterwards."
+    ),
+    "Antenatal corticosteroids": (
+        "Maternal intramuscular corticosteroid given before an "
+        "anticipated preterm birth to accelerate fetal surfactant "
+        "production and lung maturation. Indications: 24+0 to 34+6 "
+        "weeks when preterm birth is expected within 7 days, covering "
+        "threatened preterm labour, preterm prelabour rupture and "
+        "planned preterm birth. Consider from 23+0 weeks where active "
+        "neonatal resuscitation is planned. Dose: betamethasone 11.4 "
+        "mg IM, two doses 24 h apart, or dexamethasone 12 mg IM as "
+        "the alternative. Benefit begins after the first dose and is "
+        "greatest between 24 h after the second dose and 7 days. "
+        "Uses: reduces neonatal respiratory distress syndrome, "
+        "intraventricular haemorrhage, necrotising enterocolitis and "
+        "neonatal death. Note: give a single repeat course only if "
+        "more than 14 days have passed and birth before 34 weeks is "
+        "again imminent. Monitor blood glucose closely in diabetes "
+        "because steroids cause hyperglycaemia. Routine use at 35 to "
+        "36 weeks or before an elective term caesarean is not "
+        "recommended in Australia."
+    ),
+    "Artificial rupture of membranes": (
+        "Deliberate rupture of the fetal membranes with an amnihook "
+        "at vaginal examination, to start or speed up labour. "
+        "Indications: induction once the cervix is favourable, "
+        "followed by an oxytocin infusion. Augmentation of slow "
+        "progress in the first stage. Access for a fetal scalp "
+        "electrode or scalp lactate sampling. Inspection of the "
+        "liquor for meconium. Contraindications: a high or unengaged "
+        "presenting part, unstable or transverse lie, placenta or "
+        "vasa praevia, cord presentation, active genital herpes, and "
+        "untreated blood borne virus with a detectable load. Mx: "
+        "confirm cephalic presentation and that the head is applied "
+        "to the cervix, auscultate the fetal heart immediately before "
+        "and after, sweep for a pulsating cord, then note the colour "
+        "and volume of liquor. Complications: cord prolapse, bleeding "
+        "from vasa praevia, ascending infection as the interval "
+        "lengthens, fetal heart rate decelerations, and commitment to "
+        "birth if labour does not follow. Note: amniotomy alone is a "
+        "weaker induction method than prostaglandin or balloon "
+        "ripening in an unfavourable cervix."
+    ),
+    "Speech and language development": (
+        "Hearing, speech and language domain of development, covering "
+        "what a child understands and what they say. Features: 6 "
+        "weeks stills or startles to sound. 6 months babbles and "
+        "turns to a voice, responds to own name. 9 months babbles in "
+        "long strings and understands no. 12 months first single "
+        "words with meaning such as mama or dada, follows a one-step "
+        "command with gesture. 18 months around 10 to 20 words and "
+        "points to body parts. 2 years joins two words together and "
+        "names familiar objects. 3 years speaks in short sentences, "
+        "follows 3-step commands, gives own name, age and sex. 4 "
+        "years tells a story. Note: speech is roughly 50% "
+        "intelligible to a stranger at 2 years, 75% at 3 and near "
+        "100% at 4. Red flags: no babble or gesture by 12 months. No "
+        "single words by 18 months. No two-word phrases by 2 years. "
+        "Loss of language at any age. Ix: formal audiology before "
+        "anything else, since otitis media with effusion and "
+        "congenital hearing loss are the commonest reversible causes."
+    ),
+    "Social and emotional development": (
+        "Domain covering attachment, interaction, play and self-care. "
+        "Features: 6 weeks social smile. 3 months laughs and enjoys "
+        "being handled. 6 months smiles a lot, grasps for objects out "
+        "of reach and becomes wary of strangers. 9 months stranger "
+        "anxiety and plays peekaboo. 12 months waves, claps, points "
+        "at things to share interest and drinks from a cup. 18 months "
+        "feeds self with a spoon and imitates housework. 2 years "
+        "parallel play with tantrums and defiance. 3 years plays with "
+        "other children, takes turns and is dry by day. 4 years "
+        "cooperative imaginative play, dresses and undresses. Red "
+        "flags: no social smile by 10 weeks. No pointing or showing "
+        "by 18 months, which alongside poor eye contact and no "
+        "pretend play suggests autism. No interest in other children "
+        "by 3 years. Note: pointing at 12 months is protodeclarative. "
+        "The child points to share attention rather than to demand, "
+        "and its absence is one of the earliest autism markers."
+    ),
+    "Cognitive development": (
+        "Domain covering attention, problem solving, memory and the "
+        "complexity of play. Features: 6 weeks fixes on a face and "
+        "follows it. 6 months watches things as they move and "
+        "explores by mouthing. 9 months object permanence, so looks "
+        "for a toy hidden under a cloth. 12 months container play and "
+        "uses objects for their purpose. 18 months symbolic play such "
+        "as feeding a doll. 2 years matches shapes and colours and "
+        "follows two-step instructions. 3 years rote counts to 3 and "
+        "knows own name, age and sex. 4 years counts to 10, "
+        "understands same and different, and asks why. "
+        "Classification: Piaget describes sensorimotor from birth to "
+        "2 years, preoperational 2 to 7, concrete operational 7 to 11 "
+        "and formal operational from 11. Red flags: not watching "
+        "things as they move by 8 weeks. No object permanence by 12 "
+        "months. No pretend play by 2 years. Loss of skills already "
+        "gained, at any age."
+    ),
+    "Developmental red flags": (
+        "Findings at a given age that mean referral rather than "
+        "watchful waiting. Features: 8 weeks no social smile, no "
+        "fixing on a face, no startle to sound and head lag on "
+        "pulling to sit. 12 months not sitting unsupported, no babble "
+        "or gesture and no pointing. 18 months not walking "
+        "independently, fewer than 6 words. 2 years no two-word "
+        "phrases and cannot run. 3 years cannot climb stairs and "
+        "speech is unintelligible to strangers. 4 years cannot hop "
+        "and has no imaginative play. Red flags: at any age, loss of "
+        "skills already acquired. Hand preference before 12 months, "
+        "which suggests hemiplegia. Persistent primitive reflexes or "
+        "asymmetry of movement. Note: correct for prematurity until 2 "
+        "years. Test hearing and vision before any other "
+        "investigation. NSW records checks in the Blue Book. A red "
+        "flag warrants paediatric and early-intervention referral "
+        "rather than review in 6 months."
+    ),
+    "Drawing and copying skills": (
+        "Visuomotor part of fine motor development, tested by asking "
+        "a child to copy a shape you draw rather than one you name. "
+        "Features: 12 to 18 months scribbles spontaneously, with no "
+        "shape yet. 2 years copies a vertical line, then a horizontal "
+        "line by 2 and a half. 3 years copies a circle and draws a "
+        "person as a head with limbs. 4 years copies a cross, then a "
+        "square by about 4 and a half. 5 years copies a triangle and "
+        "draws a person with a body. 6 to 7 years copies a diamond. "
+        "Mnemonic: line at 2, circle at 3, cross at 4, triangle at 5. "
+        "Note: demonstrate the shape instead of naming it. Naming "
+        "tests language, copying tests visuomotor skill. Grip matures "
+        "from a palmar grasp at 18 months to a tripod grip around 4 "
+        "to 5 years. Red flags: cannot copy a circle at 4 or a cross "
+        "at 5, or drawing that lags well behind other fine motor "
+        "skills, which warrants vision testing and developmental "
+        "assessment."
+    ),
+    "Speech and language delay": (
+        "Delay in expressive or receptive language for age, the "
+        "commonest developmental concern parents raise. Causes: "
+        "hearing loss, congenital sensorineural or acquired from "
+        "otitis media with effusion. Global developmental delay or "
+        "intellectual disability. Autism spectrum disorder. Cerebral "
+        "palsy and other oromotor problems. Structural causes such as "
+        "cleft palate. Developmental language disorder. Severe "
+        "environmental deprivation. Risk factors: male sex, family "
+        "history, prematurity, low birthweight and craniofacial "
+        "abnormality. Ix: audiology in every child, first and without "
+        "exception. Then developmental assessment, adding microarray "
+        "and fragile X testing if delay is global or the child is "
+        "dysmorphic. Mx: refer to speech pathology and a "
+        "paediatrician together. Early intervention improves outcomes "
+        "and NDIS early childhood supports are available under 9 "
+        "years. Note: bilingual exposure does not cause true language "
+        "delay. Loss of language at any age needs urgent assessment."
+    ),
+    "Headache in children": (
+        "Headache is common in school-age children and most of it is "
+        "primary. Epidemiology: tension-type headache is the "
+        "commonest primary headache of childhood and accounts for "
+        "about half of them. Among children presenting to an "
+        "emergency department, migraine is the commonest cause. "
+        "Features: paediatric migraine is often bilateral or frontal "
+        "and shorter than in adults, with prominent nausea, abdominal "
+        "pain and a need to lie down in the dark. Tension-type "
+        "headache is band-like and mild to moderate, and is not made "
+        "worse by activity. Red flags: headache waking the child from "
+        "sleep or present on waking, morning vomiting, worse on lying "
+        "flat or straining, occipital site, progression over weeks, "
+        "focal signs, ataxia, papilloedema, head tilt, personality "
+        "change, or a child under 5 years. Any of these needs "
+        "imaging, preferably MRI. Mx: treat early with paracetamol 15 "
+        "mg/kg per dose or ibuprofen 10 mg/kg per dose. Keep simple "
+        "analgesia under 15 days a month to avoid medication overuse "
+        "headache."
+    ),
+    "Acute seizure management": (
+        "Any seizure lasting 5 minutes or more is treated as status "
+        "epilepticus and needs drug treatment. Mx: first secure the "
+        "airway by positioning and give high-flow oxygen. Do not "
+        "restrain the child, protect the head and time the seizure. "
+        "Second, gain IV or IO access and check the blood glucose. "
+        "Then give a benzodiazepine. Dose: midazolam 0.15 mg/kg to a "
+        "maximum of 10 mg, given buccally, intranasally, IM or IV, "
+        "repeated once after 5 minutes if the seizure continues. No "
+        "more than two benzodiazepine doses, because of respiratory "
+        "depression. Give 2 mL/kg of 10% glucose IV if hypoglycaemic. "
+        "Second line at about 10 minutes is levetiracetam 40 mg/kg IV "
+        "to a maximum of 3 g, with phenytoin 20 mg/kg or sodium "
+        "valproate 40 mg/kg as alternatives. Seizing at about 25 "
+        "minutes means rapid sequence intubation and intensive care. "
+        "Ix: glucose, sodium, calcium, magnesium and blood gas, plus "
+        "antiseizure drug levels, toxicology and cultures where "
+        "relevant."
+    ),
+    "Altered conscious state": (
+        "Reduction in arousal or awareness, graded at the bedside "
+        "with AVPU or the Glasgow Coma Scale. Causes: infection is "
+        "the commonest cause in children, including meningitis, "
+        "encephalitis, sepsis and any severe febrile illness. Then "
+        "hypoglycaemia and metabolic causes such as diabetic "
+        "ketoacidosis, hyponatraemia and inborn errors of metabolism. "
+        "Poisoning or ingestion. Post-ictal state. Head injury, "
+        "including abusive head trauma. Raised intracranial pressure "
+        "from tumour or hydrocephalus. Mx: ABCDE primary survey "
+        "first, with oxygen and airway protection. Check the blood "
+        "glucose in every patient and give 2 mL/kg of 10% glucose IV "
+        "if low. Naloxone where opioid toxicity is possible. If "
+        "febrile, take cultures and start ceftriaxone with aciclovir "
+        "without waiting for imaging or lumbar puncture. Red flags: "
+        "GCS 8 or less means intubate. Unequal or unreactive pupils, "
+        "or bradycardia with hypertension and irregular breathing, "
+        "indicate raised intracranial pressure."
+    ),
+    "Monosymptomatic nocturnal enuresis": (
+        "Bedwetting in a child of 5 years or older with no daytime "
+        "lower urinary tract symptoms and no other bladder "
+        "dysfunction. Non-monosymptomatic enuresis means daytime "
+        "urgency, frequency, wetting or holding manoeuvres coexist, "
+        "and it needs a fuller workup. Mechanism: overnight urine "
+        "output exceeds bladder capacity while arousal from sleep "
+        "fails. Low nocturnal antidiuretic hormone and a small "
+        "functional bladder capacity contribute, and it is strongly "
+        "familial. Ix: urinalysis, with culture if abnormal, and a "
+        "bladder diary recording drinks, voiding frequency and voided "
+        "volumes over about a week. Imaging is not required. Mx: "
+        "reassurance and education first, since about 15% resolve "
+        "each year. Spread fluids across the day, void before bed, "
+        "reward effort rather than dry nights and never punish. An "
+        "enuresis alarm is the most effective long-term treatment. "
+        "Desmopressin gives short-term cover for camps and "
+        "sleepovers. Note: treat constipation first, and restrict "
+        "fluid around desmopressin doses to avoid hyponatraemia."
+    ),
+    "Development of continence": (
+        "The normal timetable for gaining bladder and bowel control. "
+        "Features: bowel control usually comes before bladder "
+        "control, and daytime control before night. Most children are "
+        "dry by day around 3 years and continent of urine by 4 years. "
+        "Night-time bladder control is typically achieved between 5 "
+        "and 7 years. Epidemiology: at 4 years nearly 1 in 3 children "
+        "still wets the bed. By 6 years this is about 1 in 10, and "
+        "around 1% still wet at 15 years. Note: enuresis is not "
+        "diagnosed before a developmental age of 5 years, so "
+        "bedwetting in a 4 year old warrants reassurance rather than "
+        "investigation. Delay is usually a familial normal variant. "
+        "Red flags: daytime wetting, urgency or straining. Wetting "
+        "that returns after 6 months of dryness. Constipation or "
+        "soiling. A poor urinary stream, sacral dimple or hairy "
+        "patch, or abnormal lower limb neurology, which suggest "
+        "spinal dysraphism."
+    ),
+    "Anxiety in children and adolescents": (
+        "Excessive anxiety and worry about multiple events, on more "
+        "days than not for at least 6 months, that the child cannot "
+        "control. Criteria: adults need 3 of 6 associated symptoms "
+        "but children need only 1. The six are restlessness, fatigue "
+        "or loss of energy, poor concentration, irritability, muscle "
+        "tension and sleep disturbance. Features: children show "
+        "somatic complaints such as headache and tummy pain, "
+        "reassurance seeking, avoidance and school refusal. Fear may "
+        "be expressed as crying, tantrums, freezing or clinging. "
+        "Differential: separation anxiety disorder is the commonest "
+        "anxiety disorder of childhood. Consider also social anxiety, "
+        "selective mutism, autism, ADHD, hyperthyroidism and "
+        "stimulant effects. Mx: cognitive behavioural therapy with "
+        "graded exposure is first line at every severity, involving "
+        "parents and the school. Add sertraline or fluoxetine for "
+        "moderate to severe illness, with specialist input and weekly "
+        "review in the first month."
+    ),
+    "Depression in children and adolescents": (
+        "Depressive disorder in a person under 18, diagnosed on the "
+        "adult DSM-5 criteria with one change: irritable mood can "
+        "replace depressed mood. Features: rather than describing "
+        "sadness, children present as irritable, cranky, unhappy or "
+        "miserable, with temper outbursts. Look for falling grades, "
+        "school refusal, social withdrawal, boredom, loss of interest "
+        "in play and physical complaints. Ix: see the young person "
+        "alone for part of the consultation and use a psychosocial "
+        "screen such as HEEADSSS. Ask directly about self-harm, "
+        "suicidal plan, bullying, abuse and substance use. Mx: mild "
+        "illness is treated with psychological therapy alone, usually "
+        "cognitive behavioural or interpersonal therapy, with review. "
+        "Antidepressants are not first line. Moderate to severe "
+        "illness needs therapy plus fluoxetine, the antidepressant "
+        "with the best evidence under 18, started low with weekly "
+        "review for the first month. Red flags: suicidal plan, "
+        "psychosis, or risk of harm to self or others needs same-day "
+        "mental health assessment."
+    ),
+    "Temper tantrums": (
+        "Normal outbursts of frustration peaking between 18 months "
+        "and 3 years, the terrible twos, when a child's drive for "
+        "autonomy outruns their language and self-regulation. "
+        "Features: screaming, crying, hitting, throwing or dropping "
+        "to the floor, usually over within a few minutes. Saying no "
+        "and testing limits is developmentally expected at 2 years. "
+        "Triggers: tiredness, hunger, illness, transitions between "
+        "activities and being asked to stop a preferred activity. Mx: "
+        "stay calm and consistent. Praise and reinforce wanted "
+        "behaviour rather than attending to the tantrum. Ignore safe "
+        "attention-seeking behaviour, offer two acceptable choices "
+        "and warn before transitions. Use quiet time of about a "
+        "minute per year of age for unsafe behaviour, and never "
+        "smack. Structured parenting programs help when tantrums "
+        "dominate family life. Red flags: tantrums persisting well "
+        "beyond 5 years, several a day, lasting over 15 minutes or "
+        "causing injury. Also breath-holding with cyanosis and loss "
+        "of consciousness."
+    ),
+    "Hearing assessment in children": (
+        "Hearing testing is the first investigation for any speech, "
+        "language or behavioural concern in a child. Screening: every "
+        "newborn is offered otoacoustic emission or automated "
+        "auditory brainstem response screening before discharge, run "
+        "by the state program and recorded in the child health "
+        "record. A pass at birth does not exclude later acquired or "
+        "progressive loss. Ix: the test is chosen by developmental "
+        "age. Visual reinforcement audiometry from about 6 to 30 "
+        "months. Play audiometry from about 2 and a half to 5 years. "
+        "Pure tone audiometry from about 4 to 5 years. Tympanometry "
+        "at any age to detect middle ear effusion. Auditory brainstem "
+        "response when behavioural testing is unreliable. Causes: "
+        "otitis media with effusion is by far the commonest "
+        "conductive cause. Sensorineural causes include congenital "
+        "cytomegalovirus, rubella, genetic loss, prematurity, "
+        "kernicterus and meningitis. Note: otitis media and hearing "
+        "loss are far commoner in Aboriginal and Torres Strait "
+        "Islander children, so ear checks belong in every health "
+        "assessment."
+    ),
+    "Childhood injury patterns": (
+        "Unintentional injury is the leading cause of death in "
+        "Australian children over 1 year, and the risks track the "
+        "child's developmental stage. Features: under 6 months, falls "
+        "from change tables and beds, and scalds from a carer's hot "
+        "drink. 6 to 12 months, now mobile, inhaled or swallowed "
+        "foreign bodies including button batteries, plus falls and "
+        "burns. 1 to 4 years drowning, mostly in home pools, along "
+        "with poisoning and driveway run-overs. School age road, "
+        "bicycle, playground and sport injuries. Prevention: "
+        "four-sided isolation pool fencing, a restraint matched to "
+        "size with rear-facing until at least 6 months, back to "
+        "sleep, hot water limited to 50 degrees at the tap, medicines "
+        "and button batteries locked away, and working smoke alarms. "
+        "Red flags: an injury that does not match the child's motor "
+        "stage, such as a bruise or fracture in a baby who is not yet "
+        "mobile, suggests non-accidental injury and is a mandatory "
+        "report in NSW."
+    ),
+    "Rhonchi": (
+        "Low-pitched continuous rattling or snoring breath sounds "
+        "produced by secretions and narrowing in the larger airways. "
+        "Features: continuous and musical, lower pitched than wheeze, "
+        "heard in both phases of the breath, and often audible at the "
+        "mouth. Current respiratory nomenclature folds them into "
+        "low-pitched wheeze. Causes: bronchitis, pneumonia with "
+        "retained sputum, bronchiectasis, cystic fibrosis, COPD, and "
+        "any child too weak to clear secretions. Key point: rhonchi "
+        "change or clear after a cough because the sound comes from "
+        "mobile secretions. Wheeze is higher pitched, arises from "
+        "narrowed small airways and does not clear with coughing. "
+        "Crackles are discontinuous popping, not continuous. "
+        "Examination: listen before and after a cough, compare sides, "
+        "and record whether the sound is inspiratory, expiratory or "
+        "both. Ix: focal persistent rhonchi in a well toddler suggest "
+        "an inhaled foreign body, so image the chest."
+    ),
+    "Respiratory tract": (
+        "The airway from the nose to the alveoli, split into an upper "
+        "tract above the larynx and a lower tract below it. Sites: "
+        "the upper tract is the nose, nasal cavity, paranasal "
+        "sinuses, pharynx and larynx. The lower tract is the trachea, "
+        "bronchi, bronchioles and alveoli. Classification: the "
+        "conducting zone runs from the nose to the terminal "
+        "bronchioles, does no gas exchange, and forms about 150 mL of "
+        "anatomical dead space in an adult. The respiratory zone is "
+        "the respiratory bronchioles, alveolar ducts and alveoli. "
+        "Features: cartilage supports the airway down to the bronchi "
+        "but is absent in bronchioles, which is why bronchioles "
+        "collapse when intrathoracic pressure rises. Epithelium runs "
+        "from pseudostratified ciliated columnar through simple "
+        "cuboidal to type 1 and type 2 pneumocytes. Paediatric: the "
+        "narrowest point of a young child's airway is the subglottis "
+        "at the cricoid ring, which is why croup causes stridor. Key "
+        "point: upper airway obstruction gives inspiratory stridor, "
+        "lower airway narrowing gives expiratory wheeze."
+    ),
+    "Lobes of the lung": (
+        "The right lung has three lobes (upper, middle and lower) and "
+        "the left has two (upper and lower). Sites: the right lung is "
+        "divided by an oblique and a horizontal fissure, the left by "
+        "an oblique fissure alone. The lingula is the tongue of left "
+        "upper lobe that corresponds to the right middle lobe, and "
+        "the cardiac notch is why the left lung is the smaller of the "
+        "two. Features: ten bronchopulmonary segments on the right "
+        "and eight or nine on the left, each with its own segmental "
+        "bronchus and artery. Examination: the oblique fissure "
+        "follows the line of the sixth rib, so the anterior chest is "
+        "largely upper lobe and the posterior chest largely lower "
+        "lobe. Listen in the axilla for right middle lobe and "
+        "lingula. Key point: the right main bronchus is wider, "
+        "shorter and more vertical, so aspirated material lands on "
+        "the right. Supine it goes to the posterior segment of the "
+        "upper lobe or the superior segment of the lower lobe, "
+        "upright to the basal segments."
+    ),
+    "Respiratory mechanics": (
+        "How pressures generated by the respiratory muscles move air "
+        "in and out of the lungs. Mechanism: inspiration is active. "
+        "The diaphragm and external intercostals contract, the "
+        "thoracic cage enlarges, intrapleural pressure falls from "
+        "about minus 5 to minus 8 cmH2O, and alveolar pressure drops "
+        "below atmospheric so air is drawn in. Quiet expiration is "
+        "passive elastic recoil that raises alveolar pressure above "
+        "atmospheric and pushes air out. Features: intrapleural "
+        "pressure stays negative right through quiet breathing and "
+        "holds the lung expanded against the chest wall. It turns "
+        "positive only in forced expiration, coughing or straining. "
+        "Transpulmonary pressure is alveolar minus intrapleural. "
+        "Paediatric: an infant's chest wall is very compliant and the "
+        "diaphragm does nearly all the work, so the negative pressure "
+        "pulls the soft chest inwards and recession appears early. "
+        "Key point: the inspiratory fall in intrathoracic pressure "
+        "also increases venous return, which is the basis of sinus "
+        "arrhythmia and pulsus paradoxus."
+    ),
+    "Paediatric oxygen therapy": (
+        "Supplemental oxygen for a child, chosen by the flow the "
+        "child needs rather than by a fixed inspired fraction. Types: "
+        "low-flow nasal prongs are the usual start, capped near 2 "
+        "L/min in infants and small children because unheated dry gas "
+        "above that irritates the nose. The delivered fraction is not "
+        "fixed and falls as the child breathes harder. High-flow "
+        "nasal cannula gives heated humidified gas at 2 L/kg/min for "
+        "the first 12 kg, then 0.5 L/kg/min for each kilogram beyond, "
+        "washing out nasal dead space and adding a little positive "
+        "pressure. Indications: Australian guidelines start oxygen "
+        "when saturation sits persistently below 92 per cent, and "
+        "escalate to high flow for moderate to severe bronchiolitis "
+        "or rising work of breathing. Monitoring: saturation, "
+        "respiratory rate, work of breathing and feeding. Failure to "
+        "improve within an hour of high flow warrants senior review. "
+        "Note: high flow is a support device, not a treatment, and "
+        "does not shorten bronchiolitis."
+    ),
+    "Paediatric fluid resuscitation": (
+        "Rapid restoration of circulating volume in a shocked or "
+        "severely dehydrated child, followed by replacement of the "
+        "measured deficit. Dose: 10 to 20 mL/kg of sodium chloride "
+        "0.9 per cent as a bolus, reassessed after each one. Use the "
+        "smaller 10 mL/kg volume in diabetic ketoacidosis, in "
+        "neonates, in trauma and in known cardiac disease. Past 40 to "
+        "60 mL/kg without response, start inotropes and involve "
+        "intensive care. Note: deficit in mL equals premorbid weight "
+        "in kg minus current weight in kg, multiplied by 1000. This "
+        "is the most accurate method where a recent weight exists. "
+        "Otherwise estimate from severity, roughly 5 per cent for "
+        "mild, 5 to 10 per cent for moderate and over 10 per cent for "
+        "severe dehydration. Management: replace the deficit over 24 "
+        "hours on top of maintenance, and over 48 hours in "
+        "ketoacidosis or hypernatraemia to avoid cerebral oedema. "
+        "Monitoring: weight, hourly urine output, sodium, glucose and "
+        "conscious state."
+    ),
+    "Paediatric blood volume": (
+        "The circulating volume of a child, used to judge how much "
+        "blood loss matters and how much to transfuse. Key point: "
+        "about 80 mL/kg in an infant or young child, nearer 85 to 90 "
+        "mL/kg in a neonate and 70 mL/kg in an adult. A 20 kg child "
+        "holds only about 1600 mL, so a loss that looks small in "
+        "absolute terms is a large fraction. Features: loss above 20 "
+        "per cent produces haemodynamic instability and loss near 50 "
+        "per cent is an immediate threat to life. Children compensate "
+        "with tachycardia and vasoconstriction, so hypotension is "
+        "late and pre-terminal and a normal blood pressure never "
+        "excludes major haemorrhage. Signs: tachycardia, prolonged "
+        "capillary refill, cool peripheries, narrow pulse pressure, "
+        "agitation then drowsiness, falling urine output. Management: "
+        "control the bleeding, give 10 to 20 mL/kg of red cells "
+        "rather than repeated crystalloid in haemorrhagic shock, and "
+        "activate massive transfusion early. About 4 mL/kg of red "
+        "cells raises haemoglobin by 10 g/L."
+    ),
+    "Antiemetics": (
+        "Drugs that suppress nausea and vomiting, chosen by the "
+        "receptor pathway driving the symptom. Class: 5HT3 "
+        "antagonists (ondansetron) for gastroenteritis, chemotherapy "
+        "and postoperative nausea. Dopamine D2 antagonists "
+        "(metoclopramide, prochlorperazine, domperidone) for gastric "
+        "stasis and migraine. Antihistamine and antimuscarinic agents "
+        "(cyclizine, promethazine, hyoscine) for vestibular and "
+        "motion causes. Dexamethasone and NK1 antagonists "
+        "(aprepitant) as chemotherapy add-ons. Paediatric: "
+        "ondansetron is the only antiemetic recommended in Australian "
+        "paediatric gastroenteritis and is used from 6 months of age. "
+        "The oral wafer dose is 2 mg for 8 to 15 kg, 4 mg for 15 to "
+        "30 kg and 8 mg above 30 kg. Adverse effects: metoclopramide "
+        "and prochlorperazine cause acute dystonic reactions in the "
+        "young, so they are avoided under 20 years and metoclopramide "
+        "is contraindicated under 1 year. Ondansetron prolongs the QT "
+        "interval and constipates."
+    ),
+    "Paediatric urinary tract infection": (
+        "Urinary infection in a child, most often E. coli from bowel "
+        "flora ascending the urethra. Risk factors: age under 1 year, "
+        "female sex beyond infancy, uncircumcised boys in the first "
+        "year, constipation, dysfunctional voiding, and "
+        "vesicoureteric reflux or obstruction. Ix: clean catch urine "
+        "for microscopy and culture before antibiotics. Bag urine is "
+        "a screening test only because contamination is high, and an "
+        "unwell infant needs a catheter specimen or suprapubic "
+        "aspirate. Dipstick is unreliable under 2 years, so always "
+        "culture. Mx: cystitis or non-severe pyelonephritis takes "
+        "oral trimethoprim 4 mg/kg up to 150 mg twice daily, or "
+        "cefalexin 12.5 mg/kg up to 500 mg six-hourly. Give 3 days "
+        "for cystitis and 7 to 10 days for pyelonephritis. Infants "
+        "under 3 months are admitted for intravenous benzylpenicillin "
+        "with gentamicin. Follow-up: non-urgent renal tract "
+        "ultrasound after a first febrile infection under 6 months, "
+        "an atypical infection, or recurrent infection, looking for "
+        "obstruction and scarring."
+    ),
+    "Six-week baby check": (
+        "Routine health check of a well infant at 6 to 8 weeks, done "
+        "by a general practitioner or child and family health nurse "
+        "and recorded in the state personal health record. Screening: "
+        "four conditions are specifically examined for. Congenital "
+        "heart disease by femoral pulses, murmur and saturations. "
+        "Developmental dysplasia of the hip by Ortolani and Barlow, "
+        "leg length and skin creases. Congenital cataract and "
+        "retinoblastoma by the red reflex. Undescended testes. "
+        "Examination: plot weight, length and head circumference on "
+        "the growth chart, check the fontanelle, tone, eye contact "
+        "and social smile, then examine generally. Management: review "
+        "feeding and weight gain, ask about maternal mood and "
+        "support, give safe sleeping and smoke-free advice, and use "
+        "the visit to discuss immunisation. The 2 month vaccines may "
+        "be given from 6 weeks of age. Red flags: not back to birth "
+        "weight by 2 weeks, absent red reflex, absent femoral pulses, "
+        "no social smile by 8 weeks."
+    ),
+    "Enterovirus": (
+        "A genus of small non-enveloped RNA picornaviruses that "
+        "includes the coxsackieviruses, echoviruses, polioviruses and "
+        "the numbered enteroviruses. Epidemiology: peaks in late "
+        "summer and autumn, spreads by faecal-oral route, respiratory "
+        "droplets and vesicle fluid, and mostly affects preschool "
+        "children. Presentation: hand, foot and mouth disease from "
+        "coxsackievirus A16 and enterovirus 71. Herpangina from "
+        "coxsackievirus A. Aseptic meningitis, of which it is the "
+        "commonest cause in children. Myocarditis and pericarditis "
+        "from coxsackievirus B. Pleurodynia, and a sepsis-like "
+        "illness in the neonate. Complications: enterovirus 71 causes "
+        "brainstem encephalitis and neurogenic pulmonary oedema, with "
+        "outbreaks across the Asia-Pacific including Australia. "
+        "Enterovirus D68 is linked to acute flaccid myelitis. Mx: "
+        "supportive. There is no vaccine outside polio, so control "
+        "rests on hand and nappy hygiene and keeping a child home "
+        "while blisters weep."
+    ),
+    "Burden of disease": (
+        "A measure of total health loss in a population, counting "
+        "both early death and time lived in poor health. Definition: "
+        "one disability-adjusted life year is one year of healthy "
+        "life lost. It is the sum of years of life lost, from deaths "
+        "multiplied by remaining life expectancy, and years lived "
+        "with disability, from prevalence multiplied by a disability "
+        "weight. Note: the Australian Burden of Disease Study is "
+        "produced by the AIHW and shapes national prevention "
+        "priorities. Cancer, cardiovascular disease, musculoskeletal "
+        "conditions and mental and substance use disorders carry the "
+        "largest shares. Risk factors: tobacco is the single largest "
+        "contributor, then overweight and obesity, dietary risks and "
+        "high blood pressure. Australian notes: the burden rate for "
+        "Aboriginal and Torres Strait Islander people is more than "
+        "twice the non-Indigenous rate and about half that gap is "
+        "attributable to modifiable risks. Children aged 0 to 4 carry "
+        "roughly 7 to 9 per cent of the Indigenous burden."
+    ),
+    "Smoking in pregnancy": (
+        "Tobacco use during pregnancy, the most important modifiable "
+        "risk factor for poor perinatal outcome in Australia. "
+        "Epidemiology: about one in ten Australian mothers smoke at "
+        "some point in pregnancy, but close to four in ten Aboriginal "
+        "and Torres Strait Islander mothers and roughly a third of "
+        "mothers under 20, against only a few per cent of mothers "
+        "over 35. Complications: fetal growth restriction, preterm "
+        "birth, placental abruption, placenta praevia, preterm "
+        "prelabour rupture of membranes, stillbirth, sudden infant "
+        "death, orofacial clefts and childhood asthma. Note: smoking "
+        "lowers the risk of pre-eclampsia, a real but clinically "
+        "useless association that examiners like. Management: ask at "
+        "every antenatal visit, then offer behavioural support and "
+        "Quitline referral first. Nicotine replacement is used when "
+        "that alone fails, favouring intermittent forms and removing "
+        "patches overnight. Varenicline and bupropion are not "
+        "recommended in pregnancy."
+    ),
+    "Micturating cystourethrogram": (
+        "Fluoroscopic study in which the bladder is filled with "
+        "contrast through a catheter and imaged during voiding. "
+        "Indications: not routine after a childhood urinary "
+        "infection. Consider it when the renal tract ultrasound is "
+        "abnormal, when the infection was atypical or recurrent, when "
+        "posterior urethral valves are suspected in a boy with a poor "
+        "stream, or when there is a strong family history of reflux. "
+        "Uses: grades vesicoureteric reflux from 1, reflux into a "
+        "non-dilated ureter, up to 5, gross dilatation with a "
+        "tortuous ureter and loss of the papillary impressions. It is "
+        "also the test that demonstrates posterior urethral valves. "
+        "Note: do it once the infection is treated and give "
+        "antibiotic cover such as trimethoprim around the procedure. "
+        "Adverse effects: it needs catheterisation, distresses the "
+        "child and delivers gonadal radiation, which is why "
+        "ultrasound comes first and a DMSA scan is preferred when "
+        "scarring rather than reflux is the question."
+    ),
+    "Thalamus": (
+        "Paired diencephalic grey matter that relays nearly all "
+        "ascending sensory, motor and limbic traffic to the cortex. "
+        "Sites: VPL carries body somatosensation, VPM the face, LGN "
+        "vision, MGN hearing, VA and VL motor output from the basal "
+        "ganglia and cerebellum, and the dorsomedial and anterior "
+        "nuclei limbic and prefrontal traffic. Clinical features: "
+        "thalamic stroke in posterior cerebral or thalamoperforator "
+        "territory gives contralateral hemisensory loss, followed "
+        "weeks later by burning central pain (Dejerine-Roussy). "
+        "Bilateral paramedian infarction impairs arousal and memory. "
+        "Note: olfaction is the one modality reaching cortex without "
+        "a thalamic relay. The rest of the diencephalon is the "
+        "hypothalamus (autonomic and endocrine control) and the "
+        "epithalamus, whose pineal gland secretes melatonin and sets "
+        "the sleep-wake cycle. Exam tip: VIM is the deep brain "
+        "stimulation target for essential tremor, subthalamic nucleus "
+        "or globus pallidus internus for Parkinson disease."
+    ),
+    "Hypothalamus": (
+        "Small diencephalic region below the thalamus that holds "
+        "autonomic, endocrine, thermal, appetite and circadian "
+        "homeostasis. Mechanism: releasing hormones (GnRH, TRH, CRH, "
+        "GHRH, somatostatin, and dopamine as prolactin-inhibiting "
+        "factor) travel down the hypophyseal portal system to the "
+        "anterior pituitary, while ADH and oxytocin are made in the "
+        "supraoptic and paraventricular nuclei and released from the "
+        "posterior pituitary. Sites: anterior nucleus cools and "
+        "posterior heats (A/C, P/H), lateral drives hunger and "
+        "ventromedial satiety, suprachiasmatic sets circadian rhythm, "
+        "arcuate supplies the dopamine that tonically brakes "
+        "prolactin. Clinical features: craniopharyngioma, sarcoid or "
+        "radiation gives hypopituitarism, cranial diabetes insipidus, "
+        "hyperphagia and temperature instability. Note: "
+        "antipsychotics blocking that arcuate-pituitary "
+        "(tuberoinfundibular) dopamine release the prolactin brake, "
+        "giving galactorrhoea, amenorrhoea and sexual dysfunction."
+    ),
+    "Basal ganglia": (
+        "Subcortical nuclei (caudate, putamen, globus pallidus, "
+        "subthalamic nucleus, substantia nigra) that select and scale "
+        "movement rather than initiate it. Mechanism: the direct "
+        "pathway acts through D1 receptors to disinhibit thalamus and "
+        "facilitate movement, the indirect pathway acts through D2 "
+        "receptors to suppress it. Nigrostriatal dopamine drives the "
+        "direct and brakes the indirect pathway, so dopamine loss "
+        "tips the balance towards suppression. Clinical features: "
+        "nigrostriatal degeneration gives the hypokinetic Parkinson "
+        "picture. Striatal GABAergic neurone loss (Huntington "
+        "disease) and subthalamic lesions (hemiballismus) give "
+        "hyperkinetic pictures. Note: D2 blockade here produces "
+        "extrapyramidal effects - acute dystonia within days, "
+        "parkinsonism and akathisia within weeks, tardive dyskinesia "
+        "after months. Benzatropine blocks the unopposed cholinergic "
+        "activity and helps dystonia and parkinsonism, but not "
+        "akathisia or tardive dyskinesia."
+    ),
+    "Amygdala": (
+        "Almond-shaped limbic nucleus in the medial temporal lobe "
+        "that assigns emotional salience, above all fear, to sensory "
+        "input. Mechanism: a fast thalamo-amygdala route triggers "
+        "autonomic and startle responses before the cortex has "
+        "identified the stimulus, and the central nucleus drives "
+        "hypothalamic and brainstem output (tachycardia, freezing, "
+        "cortisol through the HPA axis). Long-term potentiation here "
+        "encodes fear conditioning, which is why exposure therapy "
+        "works by new inhibitory learning rather than by erasing the "
+        "old memory. Associations: amygdala hyperactivity with "
+        "reduced ventromedial prefrontal control is described in "
+        "PTSD, panic disorder and phobias. Clinical features: "
+        "bilateral destruction (herpes simplex encephalitis, "
+        "Urbach-Wiethe disease) gives Kluver-Bucy syndrome - "
+        "hyperorality, hypersexuality, placidity and visual agnosia. "
+        "Note: the amygdala also tags reward, storing which stimuli "
+        "were pleasurable when dopamine arrives from the ventral "
+        "tegmental area."
+    ),
+    "Dopaminergic pathways": (
+        "Four dopamine tracts whose separate jobs explain both "
+        "psychotic symptoms and antipsychotic adverse effects. Types: "
+        "mesolimbic (ventral tegmental area to nucleus accumbens) "
+        "runs reward and salience, and overactivity gives positive "
+        "symptoms. Mesocortical (ventral tegmental area to prefrontal "
+        "cortex) runs executive function and drive, and underactivity "
+        "gives negative and cognitive symptoms. Nigrostriatal "
+        "(substantia nigra to striatum) runs motor control. "
+        "Tuberoinfundibular (hypothalamus to pituitary) tonically "
+        "inhibits prolactin. Note: D2 blockade is not selective, so "
+        "the mesolimbic benefit arrives with nigrostriatal "
+        "extrapyramidal effects and tuberoinfundibular "
+        "hyperprolactinaemia, while mesocortical blockade can deepen "
+        "negative symptoms. Exam tip: aripiprazole is a partial D2 "
+        "agonist and raises prolactin least. Risperidone and "
+        "paliperidone raise it most."
+    ),
+    "Deep brain stimulation": (
+        "Stereotactic implantation of electrodes into a deep nucleus, "
+        "tunnelled to a programmable pulse generator sited under the "
+        "clavicle, delivering continuous adjustable high-frequency "
+        "stimulation. Indications: Parkinson disease with motor "
+        "fluctuations or dyskinesia despite optimised levodopa, "
+        "essential tremor and dystonia; refractory "
+        "obsessive-compulsive disorder and epilepsy in selected "
+        "centres. Targets: subthalamic nucleus or globus pallidus "
+        "internus for Parkinson disease, VIM thalamus for tremor. "
+        "Contraindications: significant dementia and untreated "
+        "depression, because stimulation does not improve "
+        "levodopa-unresponsive axial and cognitive features and may "
+        "worsen them. Note: the battery is internal, not external, "
+        "and is replaced every few years unless rechargeable. "
+        "Settings are titrated in clinic over months, and diathermy "
+        "is contraindicated. Australian notes: TGA-approved and "
+        "MBS-funded for Parkinson disease, assessed through a "
+        "specialist movement disorder centre."
+    ),
+    "Frontal assessment battery": (
+        "Six-item bedside battery scored out of 18 that probes "
+        "executive and frontal function rather than the memory and "
+        "orientation the MMSE samples. Features: conceptualisation "
+        "(how are a banana and an orange alike), lexical fluency "
+        "(words starting with S in one minute), motor series (Luria "
+        "fist-edge-palm sequence), conflicting instructions (tap once "
+        "when the examiner taps twice), go/no-go (do not tap when the "
+        "examiner taps twice) and prehension behaviour (do not grasp "
+        "the examiner's hands). Each item scores 0 to 3. Diagnosis: "
+        "12 or less suggests frontal dysfunction, and the pattern of "
+        "a low battery score with a near-normal MMSE points to "
+        "behavioural variant frontotemporal dementia rather than "
+        "Alzheimer disease. Note: low scores also occur in Parkinson "
+        "disease, progressive supranuclear palsy, depression and "
+        "delirium, so the battery localises rather than diagnoses. Do "
+        "not memorise the items, recognise them."
+    ),
+    "Suicidal ideation": (
+        "Thoughts of ending one's life, ranging from a wish not to "
+        "wake up through to a formed plan with means secured. Types: "
+        "passive ideation is a wish to be dead or better off dead, "
+        "with no plan to act. Active ideation carries intent and is "
+        "graded further by method, plan, timeframe and preparatory "
+        "acts (a note, giving possessions away, stockpiling "
+        "medication). Features: ask directly and specifically, since "
+        "asking does not plant the idea. Establish frequency, "
+        "controllability, access to lethal means, protective factors "
+        "and what has stopped the person so far. Risk factors: a "
+        "previous attempt is the strongest single predictor of a "
+        "future attempt. Management: means restriction, a written "
+        "safety plan, treatment of the underlying disorder and "
+        "follow-up within days. Australian notes: NSW Mental Health "
+        "Act 2007 allows detention of a mentally ill or mentally "
+        "disordered person for their own or others' protection - "
+        "schedule 1 certificate by a medical practitioner, section 20 "
+        "by ambulance officers, section 22 by police."
+    ),
+    "Anxiety disorders": (
+        "Disorders defined by fear or worry out of proportion to "
+        "threat, persistent and impairing, told apart from each other "
+        "by what is feared. Epidemiology: the most common mental "
+        "disorder in Australia, with a 12-month prevalence of 17.2% "
+        "of adults; roughly one in three women and one in five men "
+        "are affected over a lifetime. Onset is usually in the teens "
+        "or early twenties. Types: generalised anxiety disorder, "
+        "panic disorder, social anxiety disorder, specific phobia, "
+        "agoraphobia, separation anxiety disorder and selective "
+        "mutism. Differential: exclude hyperthyroidism, "
+        "phaeochromocytoma, arrhythmia and asthma, and stimulant "
+        "intoxication (methamphetamine, cocaine, caffeine) or alcohol "
+        "and benzodiazepine withdrawal, which reproduce the picture "
+        "exactly. Management: CBT with exposure is first line at any "
+        "severity. Add an SSRI or SNRI when moderate to severe, "
+        "reviewing closely in the first weeks in people under 25 for "
+        "emergent suicidal ideation. Benzodiazepines are not for "
+        "ongoing use."
+    ),
+    "Substance misuse": (
+        "Use of alcohol, tobacco or other drugs in a pattern causing "
+        "harm, running from hazardous use to a dependence syndrome "
+        "with tolerance, withdrawal, craving and loss of control. "
+        "Epidemiology: more common in males, peaking at 18 to 24 "
+        "years. Cannabis is the most widely used illicit drug in "
+        "Australia, while tobacco carries the largest share of "
+        "preventable disease burden, ahead of alcohol. Risk factors: "
+        "family history and genetic loading, childhood trauma or "
+        "neglect, peer use, early first exposure, and comorbid mental "
+        "illness (particularly mood, psychotic and personality "
+        "disorders). Screening: AUDIT-C for alcohol and ASSIST for "
+        "other drugs, plus urine drug screen where it changes "
+        "management. Management: motivational interviewing (FRAMES), "
+        "managed withdrawal where indicated, treatment of comorbid "
+        "mental illness, and opioid agonist or relapse-prevention "
+        "pharmacotherapy for the specific drug. Note: dependence is "
+        "driven by mesolimbic dopamine, which is why reward, craving "
+        "and cue-response dominate the picture rather than pleasure."
+    ),
+    "Cannabis": (
+        "Preparations of Cannabis sativa acting at CB1 and CB2 "
+        "receptors, and the most widely used illicit drug in "
+        "Australia (about 11.5% of people aged 14 and over in the "
+        "past year). Mechanism: delta-9-tetrahydrocannabinol (THC) is "
+        "the partial CB1 agonist responsible for intoxication and "
+        "psychotomimetic effects. Cannabidiol (CBD) is "
+        "non-intoxicating and is the component of most medicinal "
+        "products. Clinical features: conjunctival injection, "
+        "tachycardia, dry mouth, increased appetite, and impaired "
+        "short-term memory, reaction time and coordination. Heavy "
+        "chronic use gives an amotivational picture. Complications: "
+        "dose-dependent risk of psychosis, greatest with adolescent "
+        "onset and high-THC product. Cannabinoid hyperemesis gives "
+        "cyclical vomiting relieved by hot showers. Withdrawal brings "
+        "irritability, insomnia, vivid dreams and appetite loss over "
+        "one to two weeks. Australian notes: medicinal cannabis is "
+        "prescribed through the TGA Special Access Scheme or as an "
+        "Authorised Prescriber, and driving with THC detectable is an "
+        "offence in NSW regardless of impairment."
+    ),
+    "Negative symptoms": (
+        "Loss of functions that should be present in schizophrenia, "
+        "as opposed to positive symptoms which are additions to "
+        "experience. Features: the five A's - affective flattening, "
+        "alogia (poverty of speech), avolition, anhedonia and "
+        "asociality. Mechanism: underactivity of the mesocortical "
+        "dopamine pathway from the ventral tegmental area to "
+        "prefrontal cortex, mirroring the mesolimbic overactivity "
+        "behind positive symptoms. Differential: depression (low mood "
+        "and guilt are subjectively present), antipsychotic-induced "
+        "parkinsonism or sedation, and understimulation in "
+        "institutional care. Prognosis: they often appear as the "
+        "prodrome before the first psychotic episode, persist between "
+        "episodes and drive functional disability more than positive "
+        "symptoms; women fare better partly because they have fewer "
+        "of them. Management: poorly responsive to antipsychotics. "
+        "Minimise sedating and anticholinergic load, treat a "
+        "coexisting depression, and use psychosocial rehabilitation "
+        "and supported employment."
+    ),
+    "Positive symptoms": (
+        "Additions to normal experience in psychosis - phenomena "
+        "present that should not be there. Features: delusions, "
+        "hallucinations, disorganised speech (formal thought "
+        "disorder), and grossly disorganised or catatonic behaviour. "
+        "At least one of delusions, hallucinations or disorganised "
+        "speech must be among the two or more symptoms required to "
+        "diagnose schizophrenia. Mechanism: excess dopamine in the "
+        "mesolimbic pathway from the ventral tegmental area to "
+        "nucleus accumbens, which is why every effective "
+        "antipsychotic blocks D2 there, and why methamphetamine, "
+        "cocaine and levodopa can precipitate psychosis. Duration: "
+        "under one month is brief psychotic disorder, one to six "
+        "months schizophreniform disorder, and six months or more "
+        "with at least one month of active symptoms is schizophrenia. "
+        "Note: positive symptoms respond well to both first- and "
+        "second-generation agents, so a persisting positive burden "
+        "after two adequate trials defines treatment resistance and "
+        "is the trigger for clozapine."
+    ),
+    "Child abuse": (
+        "Physical, sexual or emotional harm to a child, or neglect - "
+        "failure to provide food, shelter, supervision, hygiene, "
+        "medical care or emotional care. Epidemiology: neglect is the "
+        "most common form of maltreatment in most international data, "
+        "though in AIHW substantiation figures emotional abuse is "
+        "recorded most often, largely because exposure to family "
+        "violence is coded there. Risk factors: parental substance "
+        "misuse, mental illness or intellectual disability, family "
+        "violence, social isolation, young or unsupported parents, "
+        "and prematurity or disability in the child. Red flags: "
+        "injury inconsistent with the mechanism given or the "
+        "developmental stage, delayed presentation, bruising in a "
+        "non-mobile infant, torn frenulum, retinal haemorrhage, "
+        "patterned burns, and failure to thrive that resolves in "
+        "hospital. Australian notes: doctors and nurses are mandatory "
+        "reporters. In NSW, report risk of significant harm to the "
+        "Child Protection Helpline on 132 111 or through the "
+        "eReporting portal; consent is not needed and good-faith "
+        "reporting is legally protected."
+    ),
+    "LGBTIQA+ mental health": (
+        "Mental health of people whose sexual orientation, gender "
+        "identity or sex characteristics sit outside the heterosexual "
+        "and cisgender majority. Sexual orientation is who a person "
+        "is attracted to; gender identity is their own sense of "
+        "gender, and the two vary independently. Epidemiology: "
+        "LGBTIQA+ Australians report roughly three times the rate of "
+        "high psychological distress of the general population "
+        "(Private Lives 3, 2020) and are several times more likely to "
+        "have attempted suicide. Aetiology: the excess comes from "
+        "minority stress rather than orientation or identity itself - "
+        "discrimination, marginalisation, family and peer rejection, "
+        "stigma, harassment and violence, compounded for Aboriginal "
+        "and Torres Strait Islander Sistergirls and Brotherboys and "
+        "for people outside major cities. Management: use the "
+        "person's own name and pronouns, ask rather than assume, do "
+        "not treat identity as the presenting complaint, and screen "
+        "for depression, anxiety, substance use and self-harm. Note: "
+        "conversion practices are harmful and are now prohibited by "
+        "law in several Australian jurisdictions, including NSW."
+    ),
+    "Mindfulness": (
+        "Deliberate, non-judgemental attention to present-moment "
+        "experience, used as a therapy component rather than as "
+        "relaxation. Features: practice combines being present in the "
+        "moment with a set of attitudes - non-judging, patience, "
+        "beginner's mind, trust, non-striving, acceptance, letting "
+        "go, gratitude and generosity. Uses: mindfulness-based "
+        "cognitive therapy prevents relapse in recurrent depression "
+        "(three or more episodes), with effect comparable to "
+        "maintenance antidepressant. Mindfulness-based stress "
+        "reduction is used in chronic pain and anxiety, and "
+        "mindfulness modules sit inside dialectical behaviour therapy "
+        "and acceptance and commitment therapy. Cautions: not first "
+        "line for acute severe depression or active psychosis, and "
+        "intensive practice can worsen dissociation and trauma "
+        "re-experiencing. Note: describe it as attention training. "
+        "Calling it relaxation sets the wrong expectation, because "
+        "unpleasant experience is deliberately turned towards rather "
+        "than avoided."
+    ),
+    "Tobacco smoking": (
+        "Combustible tobacco use, the largest single preventable "
+        "contributor to disease burden in Australia. Epidemiology: "
+        "tobacco accounts for about 8.6% of total Australian disease "
+        "burden, ahead of alcohol at about 4.5%. It is the largest "
+        "modifiable risk factor for Aboriginal and Torres Strait "
+        "Islander people, contributing around 12%. Complications: "
+        "lung, head and neck, oesophageal, bladder, pancreatic and "
+        "cervical cancer. COPD. Ischaemic heart disease, stroke and "
+        "peripheral arterial disease. In pregnancy, fetal growth "
+        "restriction, abruption and preterm birth. Management: ask, "
+        "advise and help at every consultation. Combination nicotine "
+        "replacement (a patch plus a fast-acting form) roughly "
+        "doubles quit rates, varenicline is the most effective single "
+        "agent as a partial nicotinic agonist, and bupropion is an "
+        "alternative. Note: tobacco smoke induces CYP1A2, so stopping "
+        "raises clozapine and olanzapine concentrations. Review the "
+        "dose when a psychiatric inpatient stops smoking on "
+        "admission."
+    ),
+    "Electrical alternans": (
+        "Beat-to-beat alternation in the amplitude of consecutive, "
+        "normally conducted QRS complexes. Mechanism: the heart "
+        "swings within a large pericardial effusion so the electrical "
+        "axis alternates with each beat. It is not a rhythm "
+        "disturbance - conduction and rate are normal. Causes: large "
+        "pericardial effusion and cardiac tamponade. Less often "
+        "severe left ventricular dysfunction or rate-related "
+        "alternans at fast heart rates. Associations: with sinus "
+        "tachycardia and low-voltage QRS complexes it forms the "
+        "classic ECG triad of tamponade. Total electrical alternans, "
+        "where P, QRS and T all alternate, is the most specific "
+        "pattern. Ix: urgent bedside transthoracic echo is the test "
+        "that matters. Note: the sign is specific but insensitive, so "
+        "its absence never excludes a large effusion or tamponade."
+    ),
+    "Pericardial effusion": (
+        "Fluid in the pericardial sac beyond the normal 15 to 50 mL. "
+        "Causes: pericarditis of any cause - viral, autoimmune, "
+        "uraemic, post-infarct or post-cardiotomy. Malignancy and "
+        "tuberculosis dominate large chronic effusions. Also "
+        "hypothyroidism, trauma and aortic dissection. Clinical "
+        "features: often silent when it collects slowly. Dyspnoea, "
+        "chest discomfort, muffled heart sounds and an impalpable "
+        "apex beat. Tamponade adds hypotension, raised JVP and pulsus "
+        "paradoxus over 10 mmHg. Ix: ECG shows low voltage and "
+        "electrical alternans. CXR shows a globular water-bottle "
+        "heart once volume exceeds roughly 200 mL. Transthoracic echo "
+        "is diagnostic and grades size and haemodynamic effect. Mx: "
+        "treat the cause. Pericardiocentesis for tamponade, suspected "
+        "purulent effusion or diagnostic sampling. Avoid diuretics "
+        "and vasodilators when tamponade physiology is present."
+    ),
+    "Sudden cardiac death": (
+        "Unexpected death from a cardiac cause within one hour of "
+        "symptom onset, or unwitnessed within 24 hours of the person "
+        "last being seen well. Causes: coronary artery disease is "
+        "commonest overall and dominates above 35 years. Structural "
+        "heart disease - hypertrophic, dilated and arrhythmogenic "
+        "right ventricular cardiomyopathy, congenital coronary "
+        "anomaly and valve disease. Electrophysiological disease with "
+        "a structurally normal heart - long QT, Brugada, "
+        "catecholaminergic polymorphic VT and pre-excitation. "
+        "Mechanism: ventricular fibrillation or pulseless VT in most "
+        "cases, asystole or PEA in the remainder. Red flags: "
+        "exertional syncope, syncope with no prodrome, chest pain or "
+        "dyspnoea at rest, and family history of sudden death under "
+        "50. Ix: 12-lead ECG in every young person with these "
+        "features, then echo and a three-generation family history. "
+        "Mx: refer to a cardiac genetic service and screen "
+        "first-degree relatives of an unexplained case."
+    ),
+    "Heart sounds": (
+        "The sounds of valve closure and of ventricular filling, "
+        "timed against the carotid pulse. Types: S1 is mitral and "
+        "tricuspid closure at the start of systole, loudest at the "
+        "apex. S2 is aortic and pulmonary closure at the end of "
+        "systole, loudest at the base. Variants: normal splitting of "
+        "S2 widens on inspiration as increased venous return delays "
+        "pulmonary closure. Fixed splitting suggests atrial septal "
+        "defect and reversed splitting suggests left bundle branch "
+        "block or severe aortic stenosis. Features: S3 falls in early "
+        "diastole just after S2 when rapid passive filling is "
+        "abruptly halted, physiological under 40 and in pregnancy but "
+        "otherwise indicating a dilated failing ventricle. S4 falls "
+        "just before S1 as the atrium contracts against a stiff "
+        "ventricle and is always abnormal. Examination: both are low "
+        "pitched, so use the bell at the apex with the patient rolled "
+        "left."
+    ),
+    "P wave": (
+        "Atrial depolarisation on the ECG, assessed best in leads II "
+        "and V1. Criteria: normally under 120 ms wide and under 2.5 "
+        "mm tall in lead II, upright in I, II and aVF, and biphasic "
+        "in V1. Types: P mitrale is a broad bifid P over 120 ms in "
+        "lead II with an M shape, from left atrial enlargement - M "
+        "for mitral, and the left atrium is the posterior left-sided "
+        "chamber. P pulmonale is a tall peaked P over 2.5 mm from "
+        "right atrial enlargement. Features: absent P waves with an "
+        "irregularly irregular rhythm mean atrial fibrillation. "
+        "Sawtooth waves near 300 per minute mean atrial flutter. "
+        "Inverted P waves inferiorly mean a junctional or low atrial "
+        "focus. Note: P morphology localises the atrial pacemaker, so "
+        "any change from the sinus shape signals an ectopic origin."
+    ),
+    "Gastric varices": (
+        "Dilated submucosal gastric veins from portal hypertension, "
+        "present in about 20 per cent of people with cirrhosis. "
+        "Classification: the Sarin system. Gastro-oesophageal varices "
+        "type 1 run along the lesser curve as an extension of "
+        "oesophageal varices, type 2 along the greater curve into the "
+        "fundus. Isolated gastric varices type 1 sit in the fundus "
+        "and type 2 elsewhere in the stomach or duodenum. Features: "
+        "they bleed less often than oesophageal varices but bleed "
+        "more heavily when they do. Fundal varices with a patent "
+        "portal vein should prompt a search for splenic vein "
+        "thrombosis, where splenectomy is curative. Mx: resuscitate "
+        "with restrictive transfusion to a haemoglobin near 70 to 80 "
+        "g/L, terlipressin, and antibiotic prophylaxis with IV "
+        "ceftriaxone per eTG. Endoscopic cyanoacrylate glue injection "
+        "is preferred over band ligation for fundal varices. TIPS or "
+        "balloon-occluded retrograde transvenous obliteration if that "
+        "fails."
+    ),
+    "Glomerular disease": (
+        "Disorders in which the glomerulus is the primary site of "
+        "injury, presenting with haematuria, proteinuria or falling "
+        "GFR. Classification: by syndrome - nephritic means "
+        "dysmorphic haematuria, red cell casts, hypertension and "
+        "proteinuria under 3.5 g per day, while nephrotic means "
+        "proteinuria over 3.5 g per day with albumin under 30 g/L, "
+        "oedema and hyperlipidaemia. By aetiology - primary and "
+        "kidney-limited, or secondary to diabetes, lupus, vasculitis, "
+        "infection, amyloid, myeloma or drugs. By histology - "
+        "proliferative and crescentic patterns behave nephritically, "
+        "while minimal change, FSGS and membranous behave "
+        "nephrotically. Ix: urine microscopy for casts, urine "
+        "protein-creatinine ratio, EUC, albumin, complement, ANA, "
+        "ANCA, anti-GBM, hepatitis and HIV serology, and serum free "
+        "light chains. Biopsy defines the lesion. Mx: treat the "
+        "cause, control blood pressure with an ACE inhibitor or ARB, "
+        "restrict salt, and add immunosuppression according to "
+        "histology."
+    ),
+    "Seizure": (
+        "Transient signs or symptoms caused by abnormal excessive or "
+        "synchronous neuronal activity in the brain. Classification: "
+        "the ILAE scheme divides by onset. Focal seizures start in "
+        "one hemisphere and are subdivided by awareness and by motor "
+        "or non-motor onset, and may evolve to focal to bilateral "
+        "tonic-clonic. Generalised seizures engage bilateral networks "
+        "from the outset. Onset may also be unknown. Features: aura, "
+        "lateralised onset, automatisms, lateral tongue biting, "
+        "incontinence and postictal confusion or dysphasia all favour "
+        "a seizure. Differential: most patients brought in after a "
+        "fit are not having an epileptic seizure. Consider syncope "
+        "with brief myoclonic jerks, functional seizures, arrhythmia, "
+        "migraine aura and hypoglycaemia. Ix: BGL, EUC, calcium, "
+        "magnesium and ECG in everyone, with EEG and MRI after a "
+        "first unprovoked event. Note: one seizure is not epilepsy. "
+        "Austroads requires six months off private driving after a "
+        "first unprovoked seizure, and the patient must be told."
+    ),
+    "Headache": (
+        "Pain in the head, and one of the commonest presentations in "
+        "general practice and emergency. Classification: primary "
+        "headache is itself the disease - migraine, tension-type, "
+        "cluster and the other trigeminal autonomic cephalalgias. "
+        "Secondary headache is a symptom of another disorder - "
+        "subarachnoid haemorrhage, meningitis, giant cell arteritis, "
+        "raised intracranial pressure, cerebral venous sinus "
+        "thrombosis, arterial dissection, acute angle-closure "
+        "glaucoma and medication overuse. Red flags: thunderclap "
+        "onset peaking within a minute, fever with neck stiffness, "
+        "new focal deficit or seizure, first onset after 50, "
+        "immunosuppression or known cancer, pregnancy or postpartum "
+        "onset, worse lying flat or with Valsalva, and a progressive "
+        "change in an established pattern. Ix: none are needed for a "
+        "typical primary headache with a normal examination. "
+        "Non-contrast CT then lumbar puncture for suspected "
+        "subarachnoid haemorrhage. ESR and CRP with prompt steroid if "
+        "giant cell arteritis is suspected."
+    ),
+    "Muscle weakness": (
+        "Reduced power on testing, which must first be separated from "
+        "fatigue, pain-limited effort, joint restriction and apraxia. "
+        "Examination: confirm true weakness and grade it MRC 0 to 5, "
+        "then define the pattern as focal, monoparetic, hemiparetic, "
+        "proximal, distal or generalised. Classification: by where "
+        "the lesion sits. Upper motor neurone gives spasticity, "
+        "hyperreflexia, upgoing plantars and a pyramidal "
+        "distribution. Lower motor neurone gives wasting, "
+        "fasciculation and hyporeflexia. Neuromuscular junction gives "
+        "fatigable weakness with normal reflexes and ocular or bulbar "
+        "onset. Muscle gives symmetrical proximal weakness with "
+        "normal sensation. Causes: stroke, cord compression and "
+        "multiple sclerosis above. Radiculopathy, neuropathy and "
+        "motor neurone disease below. Myasthenia gravis and "
+        "Lambert-Eaton at the junction. Inflammatory myositis and "
+        "statin or steroid myopathy in muscle. Red flags: a sensory "
+        "level, bladder or bowel change, or rapidly ascending "
+        "weakness."
+    ),
+    "Facial nerve": (
+        "Seventh cranial nerve, carrying motor, parasympathetic and "
+        "special sensory fibres. Features: motor supply to all "
+        "muscles of facial expression including orbicularis oculi, "
+        "plus stapedius. Taste from the anterior two thirds of the "
+        "tongue through chorda tympani. Secretomotor fibres to the "
+        "lacrimal, submandibular and sublingual glands. A small "
+        "sensory patch at the external auditory meatus. Examination: "
+        "an upper motor neurone lesion spares the forehead because "
+        "the upper face has bilateral cortical input, whereas a lower "
+        "motor neurone lesion weakens the whole side including "
+        "forehead and eye closure. Sites: an intracranial lesion adds "
+        "other cranial nerve signs. Geniculate involvement adds "
+        "hyperacusis and reduced tearing. Distal to the stylomastoid "
+        "foramen the palsy is purely motor. Causes: Bell palsy is the "
+        "commonest lower motor neurone cause. Exclude Ramsay Hunt, "
+        "otitis media, parotid tumour, trauma and Lyme disease."
+    ),
+    "Eyelid muscles": (
+        "Three muscles set upper eyelid position, and their "
+        "innervation explains the pattern of ptosis. Types: levator "
+        "palpebrae superioris is the main elevator, striated and "
+        "supplied by the superior division of the oculomotor nerve. "
+        "The superior tarsal or Muller muscle is smooth muscle from "
+        "the levator aponeurosis, sympathetically innervated, "
+        "contributing 1 to 2 mm of lift. Orbicularis oculi closes the "
+        "eye and is supplied by the facial nerve. Features: a "
+        "complete oculomotor palsy gives severe ptosis with a down "
+        "and out eye, often with a dilated pupil. Sympathetic "
+        "interruption gives partial ptosis with miosis and anhidrosis "
+        "in Horner syndrome. Facial nerve palsy causes failure of eye "
+        "closure rather than ptosis. Note: variable ptosis that "
+        "worsens through the day suggests myasthenia gravis, while "
+        "levator aponeurosis dehiscence gives age-related ptosis with "
+        "a high lid crease and full eye movements."
+    ),
+    "Arthritis": (
+        "Joint inflammation with pain, swelling, warmth and "
+        "stiffness, distinguished from arthralgia, which is joint "
+        "pain without signs. Classification: by joint count - "
+        "monoarthritis, oligoarthritis of two to four, polyarthritis "
+        "of five or more. By inflammatory versus mechanical - morning "
+        "stiffness beyond 30 minutes, easing with use, visible "
+        "swelling and raised CRP favour inflammatory, whereas "
+        "stiffness under 30 minutes that worsens with use favours "
+        "osteoarthritis. By pattern - symmetrical small joint disease "
+        "suggests rheumatoid, asymmetrical large joint and axial "
+        "disease suggests spondyloarthritis. Causes: septic arthritis "
+        "and crystal disease for acute monoarthritis. Gout and "
+        "calcium pyrophosphate deposition for crystal disease. "
+        "Rheumatoid, psoriatic, reactive, enteropathic and lupus for "
+        "chronic inflammatory disease. Ross River and Barmah Forest "
+        "virus for self-limiting polyarthritis in Australia. Red "
+        "flags: a hot swollen joint with fever is septic arthritis "
+        "until aspirated, and aspiration comes before antibiotics."
+    ),
+    "Recurrent infection": (
+        "Infections that are unusually frequent, severe, persistent "
+        "or caused by unexpected organisms, prompting a search for "
+        "underlying immune impairment. Red flags: two or more "
+        "pneumonias or serious sinus infections in a year, infection "
+        "clearing only with IV antibiotics, deep-seated or recurrent "
+        "abscesses, persistent oral thrush or extensive warts beyond "
+        "infancy, failure to thrive, and family history of early "
+        "death from infection. Causes: secondary causes are far "
+        "commoner than primary. HIV, diabetes, malignancy, "
+        "chemotherapy, corticosteroids and other immunosuppressants, "
+        "asplenia, malnutrition, and chronic kidney or liver disease. "
+        "Exclude a local anatomical cause such as bronchiectasis, "
+        "obstruction or a foreign body before assuming systemic "
+        "immunodeficiency. Ix: FBC with differential, immunoglobulins "
+        "and IgG subclasses, HIV serology, HbA1c, complement, and "
+        "vaccine-specific antibody responses. Note: the organism "
+        "pattern localises the defect - encapsulated bacteria to "
+        "antibody, complement or splenic problems, opportunistic and "
+        "viral infection to T cells, and staphylococcal or fungal "
+        "abscesses to phagocytes."
+    ),
+    "Oxygen therapy": (
+        "Supplemental oxygen given to correct hypoxaemia, prescribed "
+        "on the medication chart with a target saturation range "
+        "rather than a fixed flow. Targets: 92 to 96 per cent for "
+        "most acutely unwell adults, and 88 to 92 per cent where "
+        "there is a risk of hypercapnic respiratory failure such as "
+        "COPD, obesity hypoventilation, chest wall or neuromuscular "
+        "disease. Indications: hypoxaemia only. Oxygen does not "
+        "relieve breathlessness in a patient who is not hypoxaemic, "
+        "and it is not a treatment for pain or anxiety. Types: nasal "
+        "prongs, simple face mask, non-rebreather with reservoir, "
+        "Venturi mask for a fixed concentration, and high-flow nasal "
+        "oxygen. Adverse effects: absorption atelectasis, mucosal "
+        "drying, and worsening hypercapnia in at-risk patients "
+        "through V/Q mismatch, loss of hypoxic drive and the Haldane "
+        "effect. Monitoring: continuous oximetry, with a blood gas if "
+        "the patient is deteriorating or at risk of retention. Note: "
+        "in cardiac arrest or peri-arrest give high flow first and "
+        "titrate down once stable."
+    ),
+    "Anaemia": (
+        "Haemoglobin below the reference range for age and sex, "
+        "generally under about 130 g/L in men and 115 to 120 g/L in "
+        "non-pregnant women depending on the laboratory. Mechanisms: "
+        "blood loss, reduced production, or increased destruction. "
+        "Classification: by MCV. Microcytic under 80 fL from iron "
+        "deficiency, thalassaemia or chronic disease. Normocytic 80 "
+        "to 100 fL from bleeding, chronic disease, renal failure or "
+        "haemolysis. Macrocytic over 100 fL from B12 or folate "
+        "deficiency, alcohol, hypothyroidism or myelodysplasia. "
+        "Features: fatigue, exertional dyspnoea, pallor and angina. "
+        "Koilonychia suggests iron deficiency and jaundice with "
+        "splenomegaly suggests haemolysis. Ix: FBC with film and "
+        "reticulocytes. Reticulocytes are high in bleeding and "
+        "haemolysis and low in a production defect. Note: liver "
+        "disease loads red cell membranes with cholesterol and "
+        "phospholipid, giving target cells and, in advanced disease, "
+        "spur cells with a shortened red cell lifespan."
+    ),
+    "Leukaemia": (
+        "Malignant clonal proliferation of white cell precursors "
+        "arising in the bone marrow. Classification: two axes. "
+        "Lineage - lymphoid progenitors predominate in lymphocytic "
+        "leukaemia, myeloid progenitors in myeloid leukaemia. Tempo - "
+        "acute means blasts accumulate with rapid marrow failure, "
+        "chronic means more mature cells accumulate over months to "
+        "years. The two axes give ALL, AML, CLL and CML. "
+        "Epidemiology: ALL peaks in children aged 2 to 5. AML rises "
+        "steeply with age and is the commonest acute adult leukaemia. "
+        "CLL is the commonest leukaemia in Australian adults and is "
+        "often an incidental lymphocytosis. CML carries t(9;22) "
+        "BCR-ABL1. Features: acute disease brings fatigue, bruising, "
+        "fever and bone pain from cytopenias, while chronic disease "
+        "brings lymphocytosis, lymphadenopathy or splenomegaly. Ix: "
+        "FBC and film, then marrow aspirate and trephine with flow "
+        "cytometry, cytogenetics and molecular studies. Mx: "
+        "multidisciplinary haematology care covering the leukaemia "
+        "itself and its complications - tumour lysis, febrile "
+        "neutropenia and hyperviscosity."
+    ),
+    "Platelet": (
+        "Anucleate cell fragment that drives primary haemostasis, "
+        "with a normal count of 150 to 400 x10^9/L. Mechanism: "
+        "produced in the bone marrow by megakaryocytes under the "
+        "control of thrombopoietin, which is made in the liver. "
+        "Lifespan is 7 to 10 days and about a third of the pool is "
+        "sequestered in the spleen. Features: platelets adhere to "
+        "exposed collagen through von Willebrand factor and GPIb, "
+        "then activate and aggregate through GPIIb/IIIa and "
+        "fibrinogen to form the platelet plug. Causes: "
+        "thrombocytopenia comes from reduced production in marrow "
+        "failure, alcohol, B12 or folate deficiency and liver "
+        "disease. From increased destruction in immune "
+        "thrombocytopenia, heparin-induced thrombocytopenia, TTP, HUS "
+        "and DIC. Or from splenic sequestration. Note: bleeding risk "
+        "is not the count alone. Spontaneous bleeding is uncommon "
+        "above 20 x10^9/L, and function matters, so aspirin, "
+        "clopidogrel and uraemia cause bleeding at a normal count."
+    ),
+    "Bone marrow": (
+        "The haematopoietic tissue inside bone, producing all red "
+        "cells, white cells and platelets from a common "
+        "haematopoietic stem cell. Sites: at birth all marrow is red "
+        "and active. In adults active red marrow is confined to the "
+        "axial skeleton, the pelvis and the proximal femur and "
+        "humerus, the rest becoming yellow fatty marrow that can be "
+        "recruited under stress. The posterior iliac crest is the "
+        "standard biopsy site. Features: the stem cell yields a "
+        "myeloid progenitor giving red cells, platelets, granulocytes "
+        "and monocytes, and a lymphoid progenitor giving B, T and NK "
+        "cells. Erythropoietin from the kidney, thrombopoietin from "
+        "the liver and G-CSF drive the respective lines. Ix: aspirate "
+        "gives cell morphology and flow cytometry, while trephine "
+        "gives architecture and cellularity and is essential after a "
+        "dry tap. Causes: marrow failure from aplastic anaemia, "
+        "leukaemic or metastatic infiltration, myelofibrosis, drugs, "
+        "radiation, and B12 or folate deficiency."
+    ),
+    "Valve gradient": (
+        "The pressure difference across a heart valve, estimated on "
+        "Doppler echocardiography with the modified Bernoulli "
+        "equation. Mechanism: a normal valve equilibrates pressure "
+        "almost immediately on opening, so the gradient is "
+        "negligible. In stenosis the restricted orifice holds "
+        "pressure up on the proximal side while pressure falls "
+        "distally, and the gradient rises with the square of flow "
+        "velocity. Criteria: severe aortic stenosis is a mean "
+        "gradient of 40 mmHg or more, a peak velocity of 4 m/s or "
+        "more, or a valve area under 1.0 cm2. Note: the gradient is "
+        "flow-dependent and falls when stroke volume falls, so a low "
+        "gradient does not exclude severe stenosis in a patient with "
+        "poor left ventricular function or a small hypertrophied "
+        "ventricle. Ix: transthoracic echo is the reference test, "
+        "with dobutamine stress echo to separate true severe low-flow "
+        "low-gradient stenosis from pseudo-severe disease."
     ),
 
 }
