@@ -160,11 +160,20 @@ def _bundled_logo_b64(label: str):
 
 # Generic chat-bubble fallback (only used for the Custom slot or
 # completely-unknown providers).  Inline SVG, ~150 bytes.
-_CUSTOM_BUBBLE_SVG = (
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0fcad4">'
-    '<path d="M3 5h18a2 2 0 012 2v9a2 2 0 01-2 2H10l-5 4v-4H3a2 2 0 01-2-2V7a2 2 0 012-2z"/>'
-    '</svg>'
-)
+#
+# Built per call rather than frozen at import: the fill was the literal
+# dark-mode teal, so in light mode this one glyph stayed the bright
+# #0fcad4 while every other teal in the addon had moved to #0b7f89.
+
+
+def _custom_bubble_svg() -> str:
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" '
+        f'fill="{_theme.TEAL}">'
+        '<path d="M3 5h18a2 2 0 012 2v9a2 2 0 01-2 2H10l-5 4v-4H3a2 2 0 '
+        '01-2-2V7a2 2 0 012-2z"/>'
+        '</svg>'
+    )
 
 
 # Favicon cache - QtWebEngine downloads each provider's favicon
@@ -301,18 +310,15 @@ def _rebind_theme() -> None:
 
 def _nav_btn_qss() -> str:
     """Stylesheet for the header's text nav buttons (open externally,
-    close).  Built on demand rather than baked in at widget creation so
-    a theme switch can regenerate it."""
-    return (
-        "QPushButton {"
-        " background: transparent;"
-        f" color: {_HEADER_TXT};"
-        " border: none; border-radius: 4px;"
-        " font-size: 12px; font-weight: 600; padding: 0 6px; }"
-        "QPushButton:hover {"
-        f" background: {_TEAL_DIM}; color: {_TEAL}; }}"
-        f"QPushButton:disabled {{ color: {_MUTED}; }}"
-    )
+    close).
+
+    Now the shared builder in `_theme`, so the cross that closes this
+    dock is the same weight as the cross that closes the other two. The
+    local copy pinned every glyph at 12px/600; the shared one omits
+    font-size so the per-glyph optical table decides, which is what the
+    reference dock was already doing.
+    """
+    return _theme.nav_qss()
 
 
 def _house_label_qss() -> str:
@@ -553,12 +559,12 @@ class ChatBrowser(QWidget):
 
         # ── header: nav + provider quick-switch + utility buttons ──────
         header = QWidget()
-        header.setFixedHeight(40)
+        header.setFixedHeight(_theme.HEADER_H)
         header.setStyleSheet(f"QWidget {{ background: {_NAVY}; }}")
         self._header = header
         h_lay = QHBoxLayout(header)
-        h_lay.setContentsMargins(6, 0, 6, 0)
-        h_lay.setSpacing(3)
+        h_lay.setContentsMargins(*_theme.HEADER_MARGINS)
+        h_lay.setSpacing(_theme.HEADER_SPACING)
 
         # Provider quick-switch row: only the currently-selected provider
         # renders as an inline icon button; every other provider lives in
@@ -602,14 +608,14 @@ class ChatBrowser(QWidget):
         # finishing a task in a real browser when an embedded webview
         # can't (passkey sign-in, video DRM, file downloads, etc.).
         self._btn_external = self._nav_btn(
-            "↗", self._open_externally,
+            _theme.GLYPH_EXTERNAL, self._open_externally,
             "Open current page in system browser",
             28,
         )
         h_lay.addWidget(self._btn_external)
 
         # Close
-        self._btn_close = self._nav_btn("✕", toggle_dock, "Close", 26)
+        self._btn_close = self._nav_btn(_theme.GLYPH_CLOSE, toggle_dock, "Close", _theme.NAV_W)
         h_lay.addWidget(self._btn_close)
 
         # URL changes refresh the inline provider button (icon + tooltip)
@@ -832,12 +838,13 @@ class ChatBrowser(QWidget):
     def _nav_btn(self, text: str, callback, tip: str, w: int) -> QPushButton:
         btn = QPushButton(text)
         if w:
-            btn.setFixedSize(w, 28)
+            btn.setFixedSize(w, _theme.NAV_H)
         else:
-            btn.setFixedHeight(28)
+            btn.setFixedHeight(_theme.NAV_H)
         btn.setToolTip(tip)
         btn.clicked.connect(callback)
         btn.setStyleSheet(_nav_btn_qss())
+        _theme.size_glyph(btn)
         return btn
 
     def apply_theme(self) -> None:
@@ -1409,7 +1416,7 @@ def _icon_html_for(label: str) -> str:
             f'alt="{label}" '
             'style="height:1em;vertical-align:-0.18em;display:inline-block;">'
         )
-    b64 = base64.b64encode(_CUSTOM_BUBBLE_SVG.encode()).decode()
+    b64 = base64.b64encode(_custom_bubble_svg().encode()).decode()
     return (
         f'<img src="data:image/svg+xml;base64,{b64}" '
         f'alt="{label}" '

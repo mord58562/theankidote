@@ -265,33 +265,25 @@ _HIDE_BOOKSHELF_BAR_JS = r"""
 """
 
 
-def _night_mode() -> bool:
-    try:
-        from aqt.theme import theme_manager
-        return bool(theme_manager.night_mode)
-    except Exception:
-        return True
-
-
-_DARK = _night_mode()
-
-# ── Colour palette - dark (AMBOSS-inspired) or light (Anki light theme) ───
-if _DARK:
-    _NAVY        = "#0d2137"
-    _NAVY_LIGHT  = "#1a3a5c"
-    _TEAL        = "#0fcad4"
-    _TEAL_DIM    = "rgba(15,202,212,.12)"
-    _TEAL_BORDER = "rgba(15,202,212,.35)"
-    _HEADER_TXT  = "#e8f4f8"
-    _MUTED       = "rgba(232,244,248,.55)"
-else:
-    _NAVY        = "#e8f2f8"
-    _NAVY_LIGHT  = "#cfe0ec"
-    _TEAL        = "#0a9ba3"
-    _TEAL_DIM    = "rgba(10,155,163,.1)"
-    _TEAL_BORDER = "rgba(10,155,163,.3)"
-    _HEADER_TXT  = "#1a2c3e"
-    _MUTED       = "rgba(26,44,62,.5)"
+# ── Colour palette - aliased from `_theme` ────────────────────────────────
+# This module used to carry its own copy of the palette and its own
+# `_night_mode()`, and the two had drifted: light-mode teal here was
+# #0a9ba3 while `_theme` said #0b7f89, so this panel and the other two
+# docks were visibly different teals in light mode. Worse, the drift
+# healed itself on the first theme switch, because `_rebind_theme`
+# copies from `_theme` - so the panel changed colour once and then
+# stayed correct, which is the hardest kind of bug to be told about.
+# Aliased at import, exactly as the chat and UpToDate docks do it.
+_DARK        = _theme.DARK
+_NAVY        = _theme.NAVY
+_NAVY_LIGHT  = _theme.NAVY_LIGHT
+_TEAL        = _theme.TEAL
+_TEAL_DIM    = _theme.TEAL_DIM
+_TEAL_BORDER = _theme.TEAL_BORDER
+_HEADER_TXT  = _theme.HEADER_TXT
+_BODY_TXT    = _theme.BODY_TXT
+_MUTED       = _theme.MUTED
+_BG_BOX      = _theme.BG_BOX
 
 def _rebuild_results_palette() -> None:
     """(Re)build the RELEVANT ARTICLES list colours from the current
@@ -356,71 +348,42 @@ def _rebind_theme() -> None:
 
 
 def _rebuild_qss() -> None:
-    """(Re)build the button stylesheets from the current palette."""
+    """(Re)build the button stylesheets from the current palette.
+
+    Both names now resolve to the one shared builder. The close button
+    used to have its own rule with a red hover and a red pressed state,
+    which made this the only dock where closing a sidebar was styled as
+    a destructive act - and the only button in the addon with a
+    `:pressed` state, so it also felt different under the finger.
+    """
     g = globals()
-    g["_NAV_BTN_QSS"] = (
-        "QPushButton{"
-            f"background:transparent;color:{_HEADER_TXT};border:none;"
-            "border-radius:4px;}"
-        "QPushButton:hover{"
-            f"background:{_TEAL_DIM};color:{_TEAL};}}"
-        "QPushButton:disabled{"
-            f"color:{_MUTED};}}"
-    )
-    g["_CLOSE_BTN_QSS"] = (
-        "QPushButton{"
-            f"background:transparent;color:{_HEADER_TXT};"
-            "border:none;border-radius:4px;}"
-        "QPushButton:hover{"
-            "background:rgba(220,50,50,.18);color:#ff7070;}"
-        "QPushButton:pressed{"
-            "background:rgba(220,50,50,.32);}"
-    )
+    g["_NAV_BTN_QSS"] = _theme.nav_qss()
+    g["_CLOSE_BTN_QSS"] = _theme.nav_qss()
 
 
 _rebuild_qss()
 
 
-# Optical sizes for the header glyphs.  These come from different
-# Unicode blocks with different design metrics, so a single font-size
-# renders them at visibly different weights - the guillemets came out
-# tiny next to the arrows, and the house sat heavier than both.  Sizing
-# each glyph individually is the only way to get them to read as one
-# set; the QSS below deliberately omits font-size so these win.
-_GLYPH_PX = {
-    "\u2190": 15,  # back
-    "\u2192": 15,  # forward
-    "\u21bb": 16,  # reload
-    # The house glyph is drawn small within its em box in most system
-    # fonts, so it needs a couple more pixels than the arrows to look
-    # like it belongs to the same set.
-    "\u2302": 18,  # home
-    "\u2197": 14,  # open externally
-    "\u2715": 12,  # close
-}
+# Glyph optical sizes and header metrics live in `_theme` now - all
+# three docks draw from the same table so the same glyph is the same
+# size wherever it appears.
+_GLYPH_PX = _theme.GLYPH_PX
 
 
-def _nav_btn(parent: QWidget, text: str, tip: str, w: int = 26) -> QPushButton:
+def _nav_btn(parent: QWidget, text: str, tip: str,
+             w: int = _theme.NAV_W) -> QPushButton:
     b = QPushButton(text, parent)
-    b.setFixedSize(w, 28)
+    b.setFixedSize(w, _theme.NAV_H)
     b.setToolTip(tip)
     b.setStyleSheet(_NAV_BTN_QSS)
-    _size_glyph(b, text)
+    _theme.size_glyph(b)
     return b
 
 
 def _size_glyph(btn: QPushButton, text: str) -> None:
-    """Apply the per-glyph optical size from `_GLYPH_PX`."""
-    px = _GLYPH_PX.get(text)
-    if not px:
-        return
-    try:
-        f = btn.font()
-        f.setPixelSize(px)
-        f.setBold(True)
-        btn.setFont(f)
-    except Exception:
-        pass
+    """Kept as a thin wrapper: callers pass the text explicitly, and the
+    shared helper reads it off the button."""
+    _theme.size_glyph(btn)
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -608,12 +571,12 @@ class StatPearlsPanel(QWidget):
 
         # ── nav header ────────────────────────────────────────────────────
         header = QWidget()
-        header.setFixedHeight(40)
+        header.setFixedHeight(_theme.HEADER_H)
         self._header = header
         header.setStyleSheet(f"background: {_NAVY};")
         h_lay = QHBoxLayout(header)
-        h_lay.setContentsMargins(8, 0, 8, 0)
-        h_lay.setSpacing(2)
+        h_lay.setContentsMargins(*_theme.HEADER_MARGINS)
+        h_lay.setSpacing(_theme.HEADER_SPACING)
 
         self._btn_back     = _nav_btn(header, "←", "Back")
         self._btn_forward  = _nav_btn(header, "→", "Forward")
@@ -907,7 +870,7 @@ class StatPearlsPanel(QWidget):
     def _show_resolving(self, term: str) -> None:
         safe = (term or "").replace("&", "&amp;").replace("<", "&lt;")
         self._page.setHtml(
-            "<html><body style=\"margin:0;background:#162d45;color:#eaf3f8;"
+            f"<html><body style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
             "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
             "padding:34px 30px;line-height:1.6;\">"
             f"<div style=\"opacity:.75;\">Finding the StatPearls chapter for "
@@ -1090,7 +1053,7 @@ class StatPearlsPanel(QWidget):
         url = (getattr(self, "_crash_url", "") or "").replace("&", "&amp;")
         url = url.replace("<", "&lt;").replace('"', "&quot;")
         self._page.setHtml(
-            "<html><body style=\"margin:0;background:#162d45;color:#eaf3f8;"
+            f"<html><body style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
             "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
             "padding:34px 30px;line-height:1.6;\">"
             "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
@@ -1099,7 +1062,7 @@ class StatPearlsPanel(QWidget):
             "times in a row on this page, so reloading has been given up on. "
             "Opening it in your normal browser will work.</div>"
             f"<div style=\"margin-top:18px;\"><a href=\"{url}\" "
-            "style=\"color:#5dd5df;\">Open in browser</a></div>"
+            f"style=\"color:{_TEAL};\">Open in browser</a></div>"
             f"<div style=\"margin-top:22px;font-size:12px;opacity:.55;\">"
             f"Renderer exit status {status}, code {exit_code}. Please include "
             f"this line if you report the problem.</div>"
@@ -1353,7 +1316,7 @@ class StatPearlsPanel(QWidget):
         shared back - so the honest advice is to read it there."""
         safe = (url or "").replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
         self._page.setHtml(
-            "<html><body style=\"margin:0;background:#162d45;color:#eaf3f8;"
+            f"<html><body style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
             "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
             "padding:34px 30px;line-height:1.6;\">"
             "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
@@ -1363,7 +1326,7 @@ class StatPearlsPanel(QWidget):
             "doesn\u2019t, opening the page in your normal browser will "
             "work.</div>"
             f"<div style=\"margin-top:18px;\"><a href=\"{safe}\" "
-            "style=\"color:#5dd5df;\">Try again</a></div>"
+            f"style=\"color:{_TEAL};\">Try again</a></div>"
             f"<div style=\"margin-top:22px;font-size:12px;opacity:.55;"
             f"word-break:break-all;\">{safe}</div>"
             "</body></html>",
@@ -1374,14 +1337,14 @@ class StatPearlsPanel(QWidget):
         """Replace the blank grey rectangle with something actionable."""
         safe = (url or "").replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
         self._page.setHtml(
-            "<html><body style=\"margin:0;background:#162d45;color:#eaf3f8;"
+            f"<html><body style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
             "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
             "padding:34px 30px;line-height:1.6;\">"
             "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
             "Couldn\u2019t load this page</div>"
             "<div style=\"opacity:.85;\">The request failed twice. NCBI rate-limits "
             "rapid requests, so waiting a moment and retrying usually works.</div>"
-            f"<div style=\"margin-top:18px;\"><a href=\"{safe}\" style=\"color:#5dd5df;\">"
+            f"<div style=\"margin-top:18px;\"><a href=\"{safe}\" style=\"color:{_TEAL};\">"
             "Try again</a></div>"
             f"<div style=\"margin-top:22px;font-size:12px;opacity:.55;"
             f"word-break:break-all;\">{safe}</div>"

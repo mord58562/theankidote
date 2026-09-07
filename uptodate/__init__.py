@@ -193,18 +193,15 @@ def _rebind_theme() -> None:
 
 
 def _nav_btn_qss() -> str:
-    """Flat ghost-button style for the navy header.  Generated on demand
-    so a theme switch can rebuild it."""
-    return (
-        "QPushButton {"
-        " background: transparent;"
-        f" color: {_HEADER_TXT};"
-        " border: none; border-radius: 4px;"
-        " font-size: 15px; font-weight: bold; }"
-        "QPushButton:hover {"
-        f" background: {_TEAL_DIM}; color: {_TEAL}; }}"
-        f"QPushButton:disabled {{ color: {_MUTED}; }}"
-    )
+    """Flat ghost-button style for the navy header.
+
+    Now the shared builder in `_theme`. The local copy set one
+    `font-size: 15px` for every glyph, which is why the house rendered
+    smaller here than in the reference dock and the close cross larger:
+    the shared version omits font-size and lets the per-glyph optical
+    table decide.
+    """
+    return _theme.nav_qss()
 
 # ---------------------------------------------------------------------------
 # Web page classes
@@ -298,24 +295,24 @@ class UpToDateBrowser(QWidget):
 
         # ── flat navy nav header ──────────────
         header = QWidget()
-        header.setFixedHeight(44)
+        header.setFixedHeight(_theme.HEADER_H)
         header.setStyleSheet(f"QWidget {{ background: {_NAVY}; }}")
         self._header = header
         h_lay = QHBoxLayout(header)
-        h_lay.setContentsMargins(6, 0, 6, 0)
-        h_lay.setSpacing(4)
+        h_lay.setContentsMargins(*_theme.HEADER_MARGINS)
+        h_lay.setSpacing(_theme.HEADER_SPACING)
 
-        self._btn_back     = self._nav_btn("‹", self.view.back,    "Back")
-        self._btn_forward  = self._nav_btn("›", self.view.forward,  "Forward")
-        self._btn_reload   = self._nav_btn("↺", self.view.reload,   "Reload")
-        self._btn_home     = self._nav_btn("⌂",
+        self._btn_back     = self._nav_btn(_theme.GLYPH_BACK, self.view.back, "Back")
+        self._btn_forward  = self._nav_btn(_theme.GLYPH_FORWARD, self.view.forward, "Forward")
+        self._btn_reload   = self._nav_btn(_theme.GLYPH_RELOAD, self.view.reload, "Reload")
+        self._btn_home     = self._nav_btn(_theme.GLYPH_HOME,
                                 lambda: self.view.load(QUrl(_home_url())), "Home")
-        self._btn_clear    = self._nav_btn("⎚", self._clear_session,
+        self._btn_clear    = self._nav_btn(_theme.GLYPH_CLEAR, self._clear_session,
                                 "Clear UTD session and reload "
                                 "(use if stuck on a login / SSO error)")
-        self._btn_external = self._nav_btn("↗", self._open_externally,
+        self._btn_external = self._nav_btn(_theme.GLYPH_EXTERNAL, self._open_externally,
                                 "Open current page in system browser")
-        self._btn_close    = self._nav_btn("✕", toggle_dock,        "Close sidebar")
+        self._btn_close    = self._nav_btn(_theme.GLYPH_CLOSE, toggle_dock, "Close sidebar")
         self._btn_back.setEnabled(False)
         self._btn_forward.setEnabled(False)
 
@@ -388,10 +385,16 @@ class UpToDateBrowser(QWidget):
     def _nav_btn(self, text: str, callback, tip: str) -> QPushButton:
         """Create a flat ghost button matching the navy header style."""
         btn = QPushButton(text)
-        btn.setFixedSize(26, 30)
+        btn.setFixedSize(
+            _theme.NAV_W_WIDE if text in (_theme.GLYPH_HOME,
+                                          _theme.GLYPH_EXTERNAL,
+                                          _theme.GLYPH_CLEAR)
+            else _theme.NAV_W,
+            _theme.NAV_H)
         btn.setToolTip(tip)
         btn.clicked.connect(callback)
         btn.setStyleSheet(_nav_btn_qss())
+        _theme.size_glyph(btn)
         return btn
 
     def apply_theme(self) -> None:

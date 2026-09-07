@@ -5,44 +5,7 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.4.1] - 2026-09-07
-
-Settings-only release: one inconsistent button, one untrue notice, and
-a version number that was nowhere to be seen.
-
-### Fixed
-
-- **No content button claims the accent.** Qt sets `autoDefault` on
-  every `QPushButton` in a `QDialog` and promotes the first, which
-  macOS renders filled. "Custom terms..." won that by tab order while
-  "Check now" did not. All eight dialog buttons now go through
-  `_push()` in `__init__.py`, which clears `autoDefault` and
-  `default`; the accent stays with a modal's `QDialogButtonBox`.
-- **The restart notice is state-driven and accurate.** The permanent
-  footer string and the Advanced tab's "Needs Anki to restart." both
-  overstated the case - shortcuts rebind on close, `debug` is read per
-  call in `_log.py`, custom terms apply to the next card. Only the
-  module switches need a restart, their imports being gated at load,
-  so the footer names the module and appears only when one is
-  switched back on. The Advanced caption now describes what it
-  actually reports: whether the web inspector's port is open.
-
-### Added
-
-- **Version mark in Settings.** `_version_label()` puts the add-on
-  version bottom-right in fixed pitch, selectable, with the add-on,
-  library and Anki versions in its tooltip and a click to copy all
-  three.
-
-### Changed
-
-- The Reference database group labels its version "Library" rather
-  than "Version", so the two numbers in the window are distinguishable.
-- `test_australian_spelling` widened its `edema` lookbehind from
-  `(?<![oa])` to `(?<![a-z])`: the narrow form flagged
-  "Beckwith-Wiedemann", which contains the substring but is a surname.
-
-## [2.4.0] - 2026-09-05
+## [2.4.0] - 2026-09-07
 
 Quality release across popup UX, failure modes, and code shape. No
 migration required.
@@ -224,6 +187,60 @@ as internal notes and are reflected in the corresponding sections of
   entry, broken since 2.1.1) rewritten.
 - epinephrine and norepinephrine now resolve to the adrenaline and
   noradrenaline entries (Australian ampoules print both names).
+
+### Fixed
+
+- **No content button claims the accent.** Qt sets `autoDefault` on
+  every `QPushButton` in a `QDialog` and promotes the first, which
+  macOS renders filled. "Custom terms..." won that by tab order while
+  "Check now" did not. All eight dialog buttons now go through
+  `_push()` in `__init__.py`, which clears `autoDefault` and
+  `default`; the accent stays with a modal's `QDialogButtonBox`.
+- **The restart notice is state-driven and accurate.** The permanent
+  footer string and the Advanced tab's "Needs Anki to restart." both
+  overstated the case - shortcuts rebind on close, `debug` is read per
+  call in `_log.py`, custom terms apply to the next card. Only the
+  module switches need a restart, their imports being gated at load,
+  so the footer names the module and appears only when one is
+  switched back on. The Advanced caption now describes what it
+  actually reports: whether the web inspector's port is open.
+
+### Added
+
+- **Version mark in Settings.** `_version_label()` puts the add-on
+  version bottom-right in fixed pitch, selectable, with the add-on,
+  library and Anki versions in its tooltip and a click to copy all
+  three.
+
+### Changed
+
+- **One vocabulary for dock chrome.** The reference, UpToDate and chat
+  docks each built their own header band, and the copies had drifted:
+  two arrow families (`\u2190 \u2192 \u21bb` against `\u2039 \u203a \u21ba`), three systems for
+  sizing the glyphs, header heights of 40/40/44 px, nav buttons of
+  26x28/26x28/26x30, and header spacing of 2/3/4. `_theme.py` now owns
+  the metrics, the glyph set, the per-glyph optical sizes and the
+  button stylesheet; all three docks draw from it.
+- **The reference panel stops carrying its own palette.** It declared a
+  second copy of the colours and its own `_night_mode()`, and the two
+  had diverged - light-mode teal was `#0a9ba3` here against `#0b7f89`
+  everywhere else. The drift also healed itself on the first theme
+  switch, since the rebind copies from `_theme`, so the panel changed
+  colour once and then looked correct.
+- **Closing a sidebar is no longer styled as destructive.** The
+  reference dock's close button had a red hover and a red `:pressed`
+  state; the other two closed teal like every other nav button.
+- **The reference panel's error and placeholder pages follow the
+  theme.** Four `setHtml` pages were pinned to `#162d45` on `#eaf3f8`
+  with `#5dd5df` links, so they painted a dark slab inside a light-mode
+  Anki.
+- **The chat dock's fallback provider glyph follows the theme.** Its
+  SVG fill was the literal dark-mode teal, frozen at import.
+- The Reference database group labels its version "Library" rather
+  than "Version", so the two numbers in the window are distinguishable.
+- `test_australian_spelling` widened its `edema` lookbehind from
+  `(?<![oa])` to `(?<![a-z])`: the narrow form flagged
+  "Beckwith-Wiedemann", which contains the substring but is a surname.
 
 ## [2.3.1] - 2026-08-25
 
