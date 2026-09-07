@@ -8954,6 +8954,360 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "sideroblastic anaemia ring sideroblasts causes management"]],
         "summary": "",
     },
+    {
+        "name": "Female reproductive anatomy",
+        "aliases": ["Female Reproductive Anatomy", "female genital tract anatomy", "female pelvic anatomy", "reproductive anatomy"],
+        "utd": [["Overview", "female pelvic anatomy uterus fallopian tube ovary"]],
+        "summary": "",
+    },
+    {
+        "name": "Ovarian anatomy",
+        "aliases": ["Ovary Anatomy", "ovary anatomy", "ovarian blood supply", "ovarian fossa"],
+        "utd": [["Overview", "ovary anatomy blood supply lymphatic drainage"]],
+        "summary": "",
+    },
+    {
+        "name": "Uterine ligaments",
+        "aliases": ["Ligamentous Attachments", "Ligaments Supporting the Uterus", "uterine support", "uterosacral ligament", "round ligament of the uterus"],
+        "utd": [["Overview", "uterine ligaments pelvic support cardinal uterosacral"]],
+        "summary": "",
+    },
+    {
+        "name": "Antepartum fetal surveillance",
+        "aliases": ["Antepartum Fetal Surveillance", "antenatal fetal surveillance", "antenatal fetal monitoring", "fetal wellbeing"],
+        "utd": [["Overview", "antepartum fetal surveillance biophysical profile umbilical artery Doppler"]],
+        "summary": "",
+    },
+    {
+        "name": "Vaginal birth after caesarean",
+        "aliases": ["Trial of Labour Contraindications", "trial of labour after caesarean", "TOLAC", "trial of scar", "trial of labour"],
+        "utd": [["Overview", "vaginal birth after caesarean trial of labour uterine rupture"]],
+        "summary": "",
+    },
+    {
+        "name": "Embryogenesis",
+        "aliases": ["Embryogenesis and Development in Utero", "organogenesis", "embryonic period", "development in utero"],
+        "utd": [["Overview", "human embryogenesis organogenesis teratogen timing"]],
+        "summary": "",
+    },
+    {
+        "name": "Plasmin",
+        "aliases": ["plasminogen", "plasmin system"],
+        "utd": [["Overview", "plasmin plasminogen fibrin degradation D-dimer"]],
+        "summary": "",
+    },
+    {
+        "name": "Thrombopoietin",
+        "aliases": ["thrombopoiesis"],
+        "utd": [["Overview", "thrombopoietin megakaryocyte platelet production liver"]],
+        "summary": "",
+    },
+    {
+        "name": "GABA",
+        "aliases": ["gamma-aminobutyric acid", "gamma aminobutyric acid"],
+        "utd": [["Overview", "GABA receptor inhibitory neurotransmitter benzodiazepine"]],
+        "summary": "",
+    },
+    {
+        "name": "Glutamate",
+        "aliases": ["glutamic acid"],
+        "utd": [["Overview", "glutamate NMDA receptor excitotoxicity neurotransmitter"]],
+        "summary": "",
+    },
+    {
+        "name": "Bladder capacity",
+        "aliases": ["normal bladder capacity", "functional bladder capacity", "expected bladder capacity"],
+        "utd": [["Overview", "normal bladder capacity urodynamics post void residual"]],
+        "summary": "",
+    },
+    {
+        "name": "Trimesters of pregnancy",
+        "aliases": ["Trimester 1", "Trimester 2", "Trimester 3", "pregnancy trimesters", "first trimester of pregnancy"],
+        "utd": [["Overview", "pregnancy trimesters gestational age dating"]],
+        "summary": "",
+    },
+    {
+        "name": "Ovarian cycle hormones",
+        "aliases": ["Ovarian Cycles Hormones", "hormone profile of the menstrual cycle", "menstrual cycle hormones"],
+        "utd": [["Overview", "menstrual cycle hormone profile FSH LH oestradiol progesterone"]],
+        "summary": "",
+    },
+    {
+        "name": "Australasian Triage Scale",
+        "aliases": ["triage category", "ED triage category"],
+        "utd": [["Overview", "emergency department triage"]],
+        "summary": "",
+    },
+    {
+        "name": "Aeromedical retrieval",
+        "aliases": ["retrieval medicine", "aeromedical evacuation", "Royal Flying Doctor Service"],
+        "utd": [["Overview", "interfacility transport critically ill patient"]],
+        "summary": "",
+    },
+    {
+        "name": "Medical emergency team call",
+        "aliases": ["Between the Flags", "CERS", "Clinical Emergency Response System", "MET call", "Standard Adult General Observation chart", "rapid response call"],
+        "utd": [["Overview", "rapid response teams hospital"]],
+        "summary": "",
+    },
+    {
+        "name": "Damage control resuscitation",
+        "aliases": ["haemostatic resuscitation", "damage control surgery"],
+        "utd": [["Overview", "damage control resuscitation trauma"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiac arrest in pregnancy",
+        "aliases": ["maternal cardiac arrest", "perimortem caesarean section", "resuscitative hysterotomy"],
+        "utd": [["Overview", "cardiac arrest pregnancy resuscitation"]],
+        "summary": "",
+    },
+    {
+        "name": "Preoperative fasting",
+        "aliases": ["fasting before surgery", "preoperative starvation"],
+        "utd": [["Overview", "preoperative fasting guidelines"]],
+        "summary": "",
+    },
+    {
+        "name": "Perioperative diabetes management",
+        "aliases": ["diabetes and surgery", "periprocedural diabetes management"],
+        "utd": [["Overview", "perioperative management diabetes mellitus"]],
+        "summary": "",
+    },
+    {
+        "name": "Antivenom",
+        "aliases": ["snake antivenom", "antivenom administration"],
+        "utd": [["Overview", "snakebite antivenom administration"]],
+        "summary": "",
+    },
+    {
+        "name": "Bluebottle sting",
+        "aliases": ["Physalia sting", "bluebottle envenomation", "Portuguese man o war sting"],
+        "utd": [["Overview", "jellyfish envenomation treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Tick-induced mammalian meat allergy",
+        "aliases": ["mammalian meat allergy", "alpha-gal syndrome"],
+        "utd": [["Overview", "alpha gal syndrome mammalian meat allergy"]],
+        "summary": "",
+    },
+    {
+        "name": "Trachoma",
+        "aliases": ["trachomatous trichiasis"],
+        "utd": [["Overview", "trachoma diagnosis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Crusted scabies",
+        "aliases": ["Norwegian scabies", "hyperkeratotic scabies"],
+        "utd": [["Overview", "crusted scabies treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Secondary prophylaxis of acute rheumatic fever",
+        "aliases": ["rheumatic fever secondary prophylaxis", "benzathine penicillin prophylaxis"],
+        "utd": [["Overview", "rheumatic fever secondary prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Aboriginal and Torres Strait Islander health assessment",
+        "aliases": ["715 health assessment", "MBS item 715"],
+        "utd": [["Overview", "preventive health assessment indigenous population"]],
+        "summary": "",
+    },
+    {
+        "name": "Cultural safety",
+        "aliases": ["culturally safe care", "cultural competence"],
+        "utd": [["Overview", "cultural competence health care"]],
+        "summary": "",
+    },
+    {
+        "name": "Refugee health assessment",
+        "aliases": ["refugee health screening", "post-arrival health assessment"],
+        "utd": [["Overview", "medical screening refugees immigrants"]],
+        "summary": "",
+    },
+    {
+        "name": "Working with an interpreter",
+        "aliases": ["professional interpreter", "using an interpreter"],
+        "utd": [["Overview", "language barriers medical interpreter"]],
+        "summary": "",
+    },
+    {
+        "name": "Latent tuberculosis infection",
+        "aliases": ["latent TB", "latent tuberculosis"],
+        "utd": [["Overview", "latent tuberculosis infection treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Group and screen",
+        "aliases": ["group and hold", "group and antibody screen", "type and screen"],
+        "utd": [["Overview", "pretransfusion testing compatibility"]],
+        "summary": "",
+    },
+    {
+        "name": "Iron infusion",
+        "aliases": ["intravenous iron", "ferric carboxymaltose"],
+        "utd": [["Overview", "intravenous iron therapy iron deficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Patient blood management",
+        "aliases": ["restrictive transfusion threshold", "single unit transfusion"],
+        "utd": [["Overview", "indications for red blood cell transfusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Tetanus prophylaxis in wounds",
+        "aliases": ["tetanus immunoglobulin", "tetanus prone wound"],
+        "utd": [["Overview", "tetanus prophylaxis wound management"]],
+        "summary": "",
+    },
+    {
+        "name": "Skin tear",
+        "aliases": ["skin flap tear", "pretibial laceration"],
+        "utd": [["Overview", "skin tears older adults management"]],
+        "summary": "",
+    },
+    {
+        "name": "Burns fluid resuscitation",
+        "aliases": ["Parkland formula", "modified Parkland formula"],
+        "utd": [["Overview", "burn fluid resuscitation adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Malnutrition screening",
+        "aliases": ["Malnutrition Screening Tool", "nutrition screening"],
+        "utd": [["Overview", "nutritional assessment hospitalized adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Opioid tapering",
+        "aliases": ["opioid deprescribing", "opioid weaning"],
+        "utd": [["Overview", "opioid tapering discontinuation chronic pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Neuropathic pain",
+        "aliases": ["neuropathic pain syndrome"],
+        "utd": [["Overview", "neuropathic pain pharmacologic treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Doxycycline post-exposure prophylaxis",
+        "aliases": ["doxy-PEP", "doxycycline PEP"],
+        "utd": [["Overview", "doxycycline postexposure prophylaxis bacterial sexually transmitted infections"]],
+        "summary": "",
+    },
+    {
+        "name": "Blocked tracheostomy",
+        "aliases": ["tracheostomy emergency", "blocked tracheostomy tube", "displaced tracheostomy"],
+        "utd": [["Overview", "tracheostomy emergencies management"]],
+        "summary": "",
+    },
+    {
+        "name": "Certificate of capacity",
+        "aliases": ["workers compensation certificate", "certificate of fitness for work"],
+        "utd": [["Overview", "occupational medicine return to work disability"]],
+        "summary": "",
+    },
+    {
+        "name": "Braxton Hicks contractions",
+        "aliases": ["Braxton Hicks", "Braxton hicks contraction", "False labour", "False labor"],
+        "utd": [["Overview", "braxton hicks contractions false labor"]],
+        "summary": "",
+    },
+    {
+        "name": "Uterine tachysystole",
+        "aliases": ["Uterine hypertonus", "Tachysystole", "Uterine hyperstimulation"],
+        "utd": [["Overview", "uterine tachysystole hyperstimulation oxytocin"]],
+        "summary": "",
+    },
+    {
+        "name": "Ectopic beats",
+        "aliases": ["Ectopic beat", "Ectopic focus", "Premature complex"],
+        "utd": [["Overview", "premature atrial ventricular complexes ectopic beats"]],
+        "summary": "",
+    },
+    {
+        "name": "Limbic system",
+        "aliases": ["Limbic lobe", "Papez circuit"],
+        "utd": [["Overview", "limbic system anatomy memory emotion"]],
+        "summary": "",
+    },
+    {
+        "name": "Toxic neuropathy",
+        "aliases": ["Drug-induced neuropathy", "Toxic peripheral neuropathy"],
+        "utd": [["Overview", "toxic drug induced peripheral neuropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Malnutrition",
+        "aliases": ["Undernutrition", "Stunting", "Wasting malnutrition"],
+        "utd": [["Overview", "malnutrition undernutrition children definition"]],
+        "summary": "",
+    },
+    {
+        "name": "Oral rehydration solution",
+        "aliases": ["Oral rehydration therapy", "ORS", "Gastrolyte", "Hydralyte"],
+        "utd": [["Overview", "oral rehydration solution children gastroenteritis"]],
+        "summary": "",
+    },
+    {
+        "name": "Urine collection in children",
+        "aliases": ["Clean catch urine", "Clean catch", "Suprapubic aspirate", "Bag urine"],
+        "utd": [["Overview", "urine collection infants children urinary tract infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Obstructive lung disease",
+        "aliases": ["Obstructive ventilatory defect", "Airflow obstruction"],
+        "utd": [["Overview", "obstructive lung disease spirometry pattern"]],
+        "summary": "",
+    },
+    {
+        "name": "Anembryonic pregnancy",
+        "aliases": ["Blighted ovum", "Anembryonic gestation", "Empty sac"],
+        "utd": [["Overview", "anembryonic pregnancy blighted ovum diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Quick start contraception",
+        "aliases": ["Quick Start", "Quick starting contraception"],
+        "utd": [["Overview", "quick start hormonal contraception initiation"]],
+        "summary": "",
+    },
+    {
+        "name": "Parallel play",
+        "aliases": ["Parallel play stage"],
+        "utd": [["Overview", "stages of play development toddler"]],
+        "summary": "",
+    },
+    {
+        "name": "Grand multiparity",
+        "aliases": ["Grand multipara", "Grand multiparous"],
+        "utd": [["Overview", "grand multiparity obstetric outcomes"]],
+        "summary": "",
+    },
+    {
+        "name": "MMR vaccine",
+        "aliases": ["MMR", "MMRV", "Measles mumps rubella vaccine"],
+        "utd": [["Overview", "measles mumps rubella vaccine schedule contraindications"]],
+        "summary": "",
+    },
+    {
+        "name": "Fetal blood sampling",
+        "aliases": ["Foetal blood sampling", "Fetal scalp blood sampling", "Scalp lactate"],
+        "utd": [["Overview", "fetal scalp blood sampling lactate pH labour"]],
+        "summary": "",
+    },
+    {
+        "name": "Culturally and linguistically diverse",
+        "aliases": ["CALD", "CALD background"],
+        "utd": [["Overview", "cultural competence interpreter use clinical care"]],
+        "summary": "",
+    },
 ]
 
 
@@ -57688,6 +58042,1150 @@ RICH_SUMMARIES = {
         "erythropoietin for myelodysplasia. Note: a microcytic "
         "anaemia with a raised ferritin is not iron deficiency, and "
         "giving iron makes it worse."
+    ),
+
+    "Female reproductive anatomy": (
+        "The uterus, fallopian tubes, ovaries and vagina, slung in "
+        "the true pelvis on peritoneal folds and endopelvic fascia. "
+        "Sites: the uterus is fundus, body, isthmus and cervix, and "
+        "about 80 percent are anteverted on the vagina and anteflexed "
+        "on the cervix. The tube runs interstitial, isthmus, ampulla, "
+        "then infundibulum with fimbriae; fertilisation and roughly "
+        "70 percent of ectopics sit in the ampulla. Features: the "
+        "blood supply is dual and anastomoses in the broad ligament, "
+        "the uterine artery from the anterior division of the "
+        "internal iliac and the ovarian artery straight off the aorta "
+        "at L2, so ligating one uterine artery rarely devascularises "
+        "the uterus. Key point: the ureter passes beneath the uterine "
+        "artery about 1.5 to 2 cm lateral to the cervix, water under "
+        "the bridge, and is the structure at risk in hysterectomy and "
+        "in a lower segment tear at caesarean. Note: the pouch of "
+        "Douglas is the lowest peritoneal point, so blood or pus "
+        "collects there and it is sampled through the posterior "
+        "fornix."
+    ),
+    "Ovarian anatomy": (
+        "The paired almond-shaped gonads, about 3 by 2 by 1 cm in "
+        "reproductive life and shrinking below 2 cm after menopause, "
+        "so a palpable ovary in a postmenopausal woman is abnormal "
+        "until proven otherwise. Sites: each sits in the ovarian "
+        "fossa on the lateral pelvic wall, with the obturator nerve "
+        "running behind it, which is why ovarian pain refers to the "
+        "medial thigh. Features: the suspensory ligament, also called "
+        "the infundibulopelvic ligament, carries the ovarian artery, "
+        "vein, lymphatics and nerves and is the pedicle clamped at "
+        "oophorectomy; the ovarian ligament tethers it to the uterine "
+        "cornu and the mesovarium anchors it to the broad ligament. "
+        "Note: venous drainage is asymmetric, right ovarian vein to "
+        "the inferior vena cava and left to the left renal vein. "
+        "Lymph follows the artery to the para-aortic nodes at L2, not "
+        "the pelvic nodes. Key point: the surface is not covered by "
+        "true peritoneum, so ovulation ruptures into the peritoneal "
+        "cavity and ovarian cancer seeds it early."
+    ),
+    "Uterine ligaments": (
+        "The condensations of endopelvic fascia and peritoneal folds "
+        "around the uterus, only some of which actually support it. "
+        "Features: the transverse cervical or Mackenrodt ligament "
+        "runs from cervix and upper vagina to the lateral pelvic "
+        "wall, carries the uterine artery and has the ureter beneath "
+        "it, and is the main mechanical support. The uterosacral "
+        "ligaments hold the cervix back towards S2 to S4 and are "
+        "where endometriotic nodules are felt on rectovaginal "
+        "examination. The round ligament runs from the cornu, "
+        "anterior to the tube, through the deep inguinal ring to the "
+        "labium majus, is the gubernaculum remnant, maintains "
+        "anteversion and causes second trimester groin pain. Note: "
+        "the broad ligament is a peritoneal drape, not a support; it "
+        "contains the tube, round and ovarian ligaments, uterine "
+        "vessels and, at its base, the ureter. Key point: prolapse "
+        "follows failure of the cardinal and uterosacral complex and "
+        "of levator ani, not of the round ligament."
+    ),
+    "Antepartum fetal surveillance": (
+        "Testing for fetal compromise before labour in pregnancies at "
+        "raised risk of stillbirth. Indications: decreased fetal "
+        "movements, fetal growth restriction, pre-eclampsia, "
+        "pre-existing or gestational diabetes, cholestasis, "
+        "post-dates, multiple pregnancy and previous stillbirth. Ix: "
+        "a cardiotocograph is reactive after 32 weeks if there are "
+        "two accelerations of 15 bpm lasting 15 s in 20 min, on a "
+        "baseline of 110 to 160 with variability of 5 to 25. "
+        "Ultrasound adds serial growth every 2 to 4 weeks, liquor "
+        "volume with a normal deepest vertical pocket of 2 to 8 cm, "
+        "and umbilical artery Doppler, where a rising pulsatility "
+        "index is followed by absent then reversed end-diastolic "
+        "flow. Monitoring: the biophysical profile scores tone, "
+        "movement, breathing, liquor and the cardiotocograph out of "
+        "10, with 8 to 10 normal, 6 equivocal and 4 or less an "
+        "indication to deliver. Key point: umbilical artery Doppler "
+        "is the only one of these shown to reduce perinatal death in "
+        "high-risk pregnancy."
+    ),
+    "Vaginal birth after caesarean": (
+        "Planned labour in a woman with a previous caesarean, "
+        "successful in roughly 70 to 80 percent and nearer 90 percent "
+        "if she has also birthed vaginally before. Contraindications: "
+        "a previous classical, inverted T or high vertical uterine "
+        "incision, previous uterine rupture, previous myomectomy "
+        "entering the cavity, and any usual bar to vaginal birth such "
+        "as placenta praevia or transverse lie. Three or more "
+        "previous caesareans is a relative bar. Cautions: induction "
+        "roughly doubles to triples the rupture risk, so "
+        "prostaglandins are avoided and a mechanical balloon is "
+        "preferred; oxytocin augmentation is used cautiously. Mx: "
+        "birth in a unit with immediate theatre and blood bank "
+        "access, intravenous access with a group and hold, and "
+        "continuous cardiotocography throughout labour. Epidural is "
+        "permitted and does not mask rupture. Key point: rupture "
+        "occurs in about 1 in 200 with one lower segment scar, and a "
+        "sudden fetal bradycardia is its earliest and commonest sign, "
+        "ahead of scar pain, haematuria or loss of station."
+    ),
+    "Embryogenesis": (
+        "The staged development from zygote to fetus, which sets when "
+        "a teratogen or an insult matters. Phases: weeks 1 to 2 are "
+        "pre-embryonic, covering implantation and the bilaminar disc, "
+        "and an injury here is all or nothing, either lethal or fully "
+        "repaired. Weeks 3 to 8 are the embryonic period, with "
+        "gastrulation into three germ layers, neurulation with the "
+        "neural tube closing by about day 28, and organogenesis; this "
+        "is the window of maximum structural teratogenicity. Weeks 9 "
+        "to birth are the fetal period, dominated by growth and "
+        "functional maturation, when insults cause growth restriction "
+        "or functional damage rather than gross malformation. "
+        "Features: cardiac activity is visible on transvaginal "
+        "ultrasound from about 6 weeks, the palate closes by 12 "
+        "weeks, and type II pneumocytes make surfactant from 24 weeks "
+        "with mature levels by 34 to 36. Key point: the neural tube "
+        "shuts before most women know they are pregnant, so "
+        "periconceptional folate must start before conception."
+    ),
+    "Plasmin": (
+        "The serine protease that dissolves fibrin and so limits and "
+        "eventually clears a clot. Mechanism: it circulates as "
+        "inactive plasminogen, which binds lysine residues on fibrin "
+        "and is trapped in the clot as it forms, then is cleaved to "
+        "plasmin by tissue plasminogen activator released from "
+        "endothelium and by urokinase. Plasmin cuts cross-linked "
+        "fibrin into fibrin degradation products including D-dimer, "
+        "and also degrades fibrinogen and factors V and VIII. Note: "
+        "activity is restrained by alpha-2 antiplasmin, which "
+        "neutralises any plasmin escaping into the circulation, and "
+        "by plasminogen activator inhibitor 1, which blocks tissue "
+        "plasminogen activator. Uses: alteplase and tenecteplase are "
+        "recombinant tissue plasminogen activator and act by "
+        "generating plasmin. Tranexamic acid does the opposite, "
+        "occupying the lysine binding sites so plasminogen cannot "
+        "dock on fibrin. Key point: a raised D-dimer only shows that "
+        "fibrin has been formed and lysed, which is why it excludes "
+        "rather than confirms thrombosis."
+    ),
+    "Thrombopoietin": (
+        "The growth factor that drives megakaryocyte proliferation "
+        "and platelet release. Sites: made constitutively by the "
+        "liver, which is the dominant source, with small "
+        "contributions from the kidney and marrow stroma. Mechanism: "
+        "it is not regulated by transcription but by clearance. "
+        "Thrombopoietin binds the c-Mpl receptor on circulating "
+        "platelets and megakaryocytes and is destroyed with them, so "
+        "a large platelet mass mops up the hormone and a low platelet "
+        "mass leaves more free hormone to drive production. Note: "
+        "this is why thrombocytopenia in chronic liver disease is "
+        "doubly explained, less hormone made and splenic "
+        "sequestration from portal hypertension, and why immune "
+        "thrombocytopenia has only a modestly raised level despite "
+        "very low platelets, since the marrow is not failing. Uses: "
+        "romiplostim and eltrombopag are thrombopoietin receptor "
+        "agonists used in refractory immune thrombocytopenia. Key "
+        "point: platelets survive 7 to 10 days and a marrow response "
+        "takes about 5 days, so a count will not rise overnight."
+    ),
+    "GABA": (
+        "The main inhibitory neurotransmitter of the central nervous "
+        "system. Mechanism: it is made from glutamate, the main "
+        "excitatory transmitter, by glutamate decarboxylase, an "
+        "enzyme that needs pyridoxine as its cofactor. This is why "
+        "isoniazid, which antagonises pyridoxine, causes seizures "
+        "that respond to intravenous pyridoxine rather than to more "
+        "benzodiazepine alone. Targets: the GABA-A receptor is a "
+        "ligand-gated chloride channel giving fast inhibition and is "
+        "the site of action of benzodiazepines, which increase "
+        "channel opening frequency, barbiturates, which increase "
+        "opening duration, alcohol, propofol and volatile agents. The "
+        "GABA-B receptor is G protein coupled and is the target of "
+        "baclofen. Note: benzodiazepines need endogenous GABA present "
+        "to work, giving them a ceiling effect and much greater "
+        "safety in overdose than barbiturates, which open the channel "
+        "directly. Key point: withdrawal from alcohol or "
+        "benzodiazepines removes chronic GABA-A suppression and "
+        "leaves unopposed glutamate excitation, giving tremor, "
+        "seizures and delirium tremens."
+    ),
+    "Glutamate": (
+        "The principal excitatory neurotransmitter of the central "
+        "nervous system. Mechanism: it is made from glutamine by "
+        "glutaminase in the nerve terminal, released, then taken up "
+        "by astrocytes and recycled through the glutamine cycle. It "
+        "is also the substrate from which GABA is made, so the "
+        "excitatory and inhibitory systems share a precursor. "
+        "Targets: AMPA and kainate receptors are ionotropic and give "
+        "fast depolarisation. The NMDA receptor is both ligand and "
+        "voltage gated, blocked by magnesium at resting potential and "
+        "permeable to calcium, which underlies long-term potentiation "
+        "and memory formation. Note: excessive release floods neurons "
+        "with calcium and kills them, the mechanism of excitotoxicity "
+        "in the stroke penumbra, status epilepticus, traumatic brain "
+        "injury and motor neurone disease. Uses: riluzole reduces "
+        "glutamate release and extends survival in motor neurone "
+        "disease by a few months; memantine, ketamine, nitrous oxide "
+        "and magnesium all block the NMDA receptor."
+    ),
+    "Bladder capacity": (
+        "The volume the bladder holds before voiding becomes "
+        "involuntary, about 300 to 600 mL in an adult. Features: the "
+        "detrusor accommodates filling at almost no rise in pressure. "
+        "First sensation of filling comes at roughly 100 to 200 mL, a "
+        "normal desire to void at about 200 to 300 mL, and a strong "
+        "desire near capacity. Paediatric: expected capacity in mL is "
+        "approximately (age in years plus 2) multiplied by 30, which "
+        "is used to judge whether a child with daytime wetting has a "
+        "genuinely small functional capacity or simply defers "
+        "voiding. Note: a post-void residual above 100 mL is abnormal "
+        "in an adult and should be measured with a bladder scanner "
+        "rather than guessed. Acute retention is typically 500 to "
+        "1000 mL and painful, whereas chronic retention can exceed 1 "
+        "L painlessly and presents with overflow incontinence or a "
+        "raised creatinine. Key point: a bladder that is habitually "
+        "overdistended loses contractility, so persistent large "
+        "residuals need urology review, not repeated waiting."
+    ),
+    "Trimesters of pregnancy": (
+        "The three conventional thirds of pregnancy, dated from the "
+        "first day of the last menstrual period rather than from "
+        "conception, so gestational age runs about 2 weeks ahead of "
+        "embryonic age. Phases: the first trimester is 0 to 13 weeks "
+        "and 6 days, the second 14 to 26 weeks and 6 days, and the "
+        "third from 27 weeks until birth. Term is 37 to 41 weeks and "
+        "6 days, preterm is before 37 weeks and post-term is 42 weeks "
+        "or more. Screening: the dating scan and combined first "
+        "trimester screening fall at 11 to 13 weeks and 6 days, the "
+        "morphology scan at 18 to 20 weeks and 6 days, the glucose "
+        "tolerance test at 24 to 28 weeks, anti-D at 28 and 34 weeks "
+        "if the woman is Rh negative, and the group B streptococcus "
+        "swab at 35 to 37 weeks. Key point: most miscarriages occur "
+        "in the first trimester and the same window carries the "
+        "highest teratogenic risk, so drug and imaging decisions "
+        "hinge on which trimester she is in."
+    ),
+    "Ovarian cycle hormones": (
+        "The four curves plotted across a normal cycle and what each "
+        "one is doing. Phases: FSH rises late in the preceding luteal "
+        "phase as the corpus luteum dies and inhibin A falls, "
+        "recruiting a cohort of follicles, then falls again through "
+        "the follicular phase as rising oestradiol and inhibin B "
+        "suppress it, which starves all but the dominant follicle. "
+        "Features: oestradiol climbs to a peak around day 12, and "
+        "once it is high and sustained for about 2 days the feedback "
+        "flips from negative to positive and triggers the LH surge. "
+        "Ovulation follows about 36 h after the surge begins and "
+        "roughly 12 h after its peak. Progesterone stays low until "
+        "ovulation and peaks about day 21, seven days after it, so a "
+        "mid-luteal progesterone above about 30 nmol/L confirms that "
+        "ovulation occurred. Key point: the luteal phase is fixed at "
+        "about 14 days, so all variation in cycle length comes from "
+        "the follicular phase. Note: without hCG rescue the corpus "
+        "luteum regresses, both steroids fall and menstruation "
+        "follows."
+    ),
+    "Australasian Triage Scale": (
+        "Five-level urgency scale used in every Australian and New "
+        "Zealand emergency department to set the maximum acceptable "
+        "time to medical assessment. Classification: category 1 "
+        "immediate; category 2 within 10 minutes; category 3 within "
+        "30 minutes; category 4 within 60 minutes; category 5 within "
+        "120 minutes. Criteria: allocation reflects clinical urgency "
+        "alone, not expected resource use or how interesting the "
+        "diagnosis is, and is assigned within a few minutes from "
+        "presenting problem plus observations. Note: category 2 "
+        "captures severe pain, suspected sepsis, chest pain of likely "
+        "cardiac origin, stroke within the reperfusion window and "
+        "severe behavioural disturbance. Australian notes: "
+        "performance thresholds are 100 percent for category 1 and 80 "
+        "percent for category 2, and the scale drives national "
+        "emergency access targets. Mental health presentations have "
+        "their own descriptors so that agitation and self-harm risk "
+        "are not undertriaged into the lower categories."
+    ),
+    "Aeromedical retrieval": (
+        "Transfer of a critically ill or injured patient by "
+        "fixed-wing aircraft or helicopter to a facility with the "
+        "capability the referring site lacks. Indications: "
+        "time-critical illness beyond local capability, including "
+        "major trauma, myocardial infarction needing angioplasty, "
+        "stroke needing clot retrieval, high-risk obstetrics and sick "
+        "neonates. Note: cabin altitude lowers ambient pressure and "
+        "trapped gas expands. An untreated pneumothorax needs a chest "
+        "drain before flight, endotracheal cuffs are filled with "
+        "saline or rechecked in the air, and bowel obstruction needs "
+        "a nasogastric tube on free drainage. Management: secure the "
+        "airway on the ground rather than in flight, run infusions on "
+        "pumps, and carry oxygen and battery for twice the expected "
+        "trip. Australian notes: referral is a single call to the "
+        "state retrieval coordination service, which tasks the "
+        "platform and gives clinical advice during the wait. The "
+        "Royal Flying Doctor Service covers most remote inland "
+        "tasking."
+    ),
+    "Medical emergency team call": (
+        "New South Wales system-wide safety net for the deteriorating "
+        "ward patient, letting any staff member summon help without "
+        "going through the treating team. Criteria: standard "
+        "observation charts run two coloured tiers. A Yellow Zone "
+        "breach triggers clinical review by the home team within 30 "
+        "minutes. A Red Zone breach triggers an immediate rapid "
+        "response call. Red Zone thresholds are respiratory rate "
+        "under 5 or over 30, oxygen saturation under 90 percent, "
+        "systolic pressure under 90 mmHg, heart rate under 40 or over "
+        "140, a fall in conscious state, or seizure. Mx: the Clinical "
+        "Emergency Response System is the pathway that mobilises the "
+        "responding clinicians. While waiting, give oxygen, secure "
+        "intravenous access and take a venous gas. Note: clinical "
+        "concern is itself a valid trigger, so escalate on worry even "
+        "when every observation sits in the white zone. REACH is the "
+        "patient and family arm, letting a patient or carer call for "
+        "review directly. Australian notes: Between the Flags made "
+        "escalation mandatory rather than discretionary, and an "
+        "unactioned Red Zone observation is a reportable incident."
+    ),
+    "Damage control resuscitation": (
+        "Strategy for exsanguinating trauma that prioritises stopping "
+        "the bleeding and correcting coagulopathy over restoring "
+        "normal numbers. Mechanism: hypothermia, acidosis, "
+        "coagulopathy and hypocalcaemia reinforce each other, and "
+        "crystalloid dilution accelerates all four. Management: "
+        "control compressible haemorrhage first, then accept "
+        "permissive hypotension, targeting a palpable radial pulse or "
+        "a systolic near 90 mmHg until bleeding is controlled. This "
+        "does not apply in traumatic brain injury, where cerebral "
+        "perfusion must be defended. Give red cells, plasma and "
+        "platelets in balanced ratio rather than saline, replace "
+        "calcium after every few units, and keep the patient warm. "
+        "Dose: tranexamic acid 1 g intravenously within 3 hours of "
+        "injury then 1 g over 8 hours; given after 3 hours it "
+        "increases mortality. Note: the first operation is "
+        "abbreviated to packing and control, with definitive repair "
+        "deferred until the patient is warm and clotting."
+    ),
+    "Cardiac arrest in pregnancy": (
+        "Cardiac arrest in a pregnant woman, run as standard adult "
+        "resuscitation with modifications for aortocaval compression "
+        "and for the second patient. Causes: haemorrhage, amniotic "
+        "fluid embolism, pulmonary embolism, eclampsia, sepsis, local "
+        "anaesthetic toxicity and pre-existing cardiac disease. "
+        "Management: usual compression depth, rate and defibrillation "
+        "energies, with continuous manual left uterine displacement "
+        "rather than tilting the trolley, since tilt degrades "
+        "compression quality. Secure the airway early because "
+        "desaturation and aspiration risk are both increased. Note: "
+        "resuscitative hysterotomy is done for the mother, not the "
+        "baby. Begin by 4 minutes of arrest aiming for delivery by 5 "
+        "minutes whenever the fundus is at or above the umbilicus, "
+        "and do it where the arrest happened rather than moving to "
+        "theatre. Australian notes: ANZCOR sets these steps, and "
+        "every birthing unit should keep a scalpel and hysterotomy "
+        "pack on the resuscitation trolley."
+    ),
+    "Preoperative fasting": (
+        "Withholding oral intake before anaesthesia to reduce gastric "
+        "volume and the risk of aspiration at induction. Criteria: "
+        "adults stop solid food 6 hours and clear fluids 2 hours "
+        "before anaesthesia, and many Australian hospitals now allow "
+        "sips of water until called for theatre. Paediatric: children "
+        "stop solids and formula at 6 hours, breast milk at 4 hours "
+        "and clear fluids at 1 hour, a shorter window than the "
+        "traditional 2 hours because prolonged fasting causes "
+        "distress, ketosis and hypoglycaemia. Note: clear fluid means "
+        "water, black tea or coffee, pulp-free juice or a "
+        "carbohydrate drink. Adding milk makes it a solid. "
+        "Complications: over-fasting is the common error on surgical "
+        "wards, where a patient at the end of an all-day list can go "
+        "12 hours or more without fluid. Write a maintenance fluid "
+        "order and a revised fasting time rather than leaving a "
+        "blanket nil by mouth instruction."
+    ),
+    "Perioperative diabetes management": (
+        "Adjustment of glucose-lowering therapy around a procedure to "
+        "avoid hypoglycaemia, ketoacidosis and hyperglycaemic wound "
+        "complications. Management: put the patient first on the "
+        "list, withhold metformin, sulfonylureas and other oral "
+        "agents on the morning of surgery, reduce long-acting basal "
+        "insulin by about 20 percent the night before but continue "
+        "it, and withhold short-acting insulin while nil by mouth. "
+        "Indications: start a variable rate insulin infusion with "
+        "glucose-containing fluid for type 1 diabetes, prolonged "
+        "fasting, or glucose persistently above 12 mmol/L. "
+        "Monitoring: target blood glucose 5 to 10 mmol/L, checked "
+        "hourly while fasting and on return to the ward. Note: "
+        "sodium-glucose cotransporter 2 inhibitors are the trap. The "
+        "Australian Diabetes Society advises stopping them at least 2 "
+        "days before surgery because they cause euglycaemic "
+        "ketoacidosis, which is missed if only glucose is checked. "
+        "Measure ketones, not just glucose, in any unwell "
+        "perioperative patient taking one."
+    ),
+    "Antivenom": (
+        "Purified equine immunoglobulin that binds circulating venom, "
+        "and the only specific treatment for significant Australian "
+        "envenoming. Indications: systemic envenoming, meaning "
+        "coagulopathy, neurotoxicity, myotoxicity, thrombotic "
+        "microangiopathy or early collapse. A bite alone, local pain, "
+        "or a positive venom detection result without systemic "
+        "features does not justify it. Dose: one vial of the "
+        "appropriate monovalent antivenom treats almost every "
+        "Australian snakebite, diluted in 100 to 500 mL of sodium "
+        "chloride 0.9 percent and infused over 15 to 30 minutes. "
+        "Children receive the same dose as adults because venom load, "
+        "not body weight, determines requirement. Note: routine "
+        "premedication with adrenaline or antihistamine is no longer "
+        "recommended in Australia, unlike older overseas texts. Have "
+        "adrenaline drawn up and stop the infusion at the first sign "
+        "of anaphylaxis. Australian notes: use polyvalent antivenom "
+        "when the snake group cannot be determined, and discuss every "
+        "case with the Poisons Information Centre on 13 11 26."
+    ),
+    "Bluebottle sting": (
+        "Sting from Physalia, the bluebottle, and the commonest "
+        "marine envenomation on Australian surf beaches; intensely "
+        "painful but almost always benign. Clinical features: "
+        "immediate linear burning pain with a beaded blue tentacle "
+        "often still adherent, whip-like erythematous weals, pain "
+        "peaking within the hour and settling over several hours. "
+        "Systemic effects are rare. Management: pick adherent "
+        "tentacles off, rinse with seawater, then immerse the area in "
+        "hot water at about 45 degrees Celsius for 20 minutes, which "
+        "relieves pain better than any other measure. Use a cold pack "
+        "if hot water is unavailable. Note: vinegar is not "
+        "recommended for bluebottle stings. Vinegar is for tropical "
+        "box jellyfish, where it prevents further nematocyst "
+        "discharge. Do not rinse with fresh water either. Australian "
+        "notes: ANZCOR splits marine sting first aid by region, "
+        "tropical against non-tropical, rather than by species, "
+        "because identification at the beach is unreliable."
+    ),
+    "Tick-induced mammalian meat allergy": (
+        "Delayed allergy to the carbohydrate "
+        "galactose-alpha-1,3-galactose, acquired after bites from the "
+        "Australian paralysis tick. Mechanism: tick saliva sensitises "
+        "the person to alpha-gal, a sugar found in beef, lamb, pork "
+        "and kangaroo but not in poultry, fish or humans. Clinical "
+        "features: urticaria, angioedema or anaphylaxis starting 2 to "
+        "6 hours after eating red meat, which is why the link to the "
+        "meal is so often missed. Some also react to gelatine and to "
+        "mammalian-derived medicines. Investigations: serum specific "
+        "IgE to alpha-gal; skin prick testing with commercial meat "
+        "extracts is unreliable. Management: avoid mammalian meat and "
+        "gelatine, carry an adrenaline autoinjector, and kill ticks "
+        "in place with an ether-containing freezing spray rather than "
+        "grasping or scraping them, which injects more saliva. "
+        "Australian notes: cases cluster along the New South Wales "
+        "north coast and northern Sydney beaches where Ixodes "
+        "holocyclus lives, and are widely missed elsewhere."
+    ),
+    "Trachoma": (
+        "Chronic keratoconjunctivitis from repeated ocular infection "
+        "with Chlamydia trachomatis serovars A to C, and the leading "
+        "infectious cause of blindness worldwide. Clinical features: "
+        "recurrent follicular conjunctivitis in childhood, then "
+        "tarsal conjunctival scarring, entropion and trichiasis in "
+        "adult life, with inturned lashes abrading the cornea until "
+        "it opacifies decades later. Diagnosis: evert the upper lid "
+        "and apply the simplified grading system, which scores "
+        "follicles, intense inflammation, scarring, trichiasis and "
+        "corneal opacity separately. Management: surgery for "
+        "trichiasis, azithromycin 20 mg/kg as a single oral dose to a "
+        "maximum of 1 g given as community-wide treatment, facial "
+        "cleanliness and environmental improvement in water and "
+        "housing. Australian notes: Australia is the only high-income "
+        "country with endemic trachoma, confined to remote Aboriginal "
+        "and Torres Strait Islander communities in the Northern "
+        "Territory, South Australia and Western Australia."
+    ),
+    "Crusted scabies": (
+        "Hyperinfestation with Sarcoptes scabiei carrying thousands "
+        "to millions of mites, presenting as thick crusted plaques "
+        "rather than as an itchy rash. Risk factors: impaired "
+        "cell-mediated immunity, human T-lymphotropic virus 1 "
+        "infection, corticosteroids, intellectual disability and "
+        "household crowding. Itch is often absent, which delays the "
+        "diagnosis for months. Clinical features: thick grey warty "
+        "crust on hands, feet, elbows and scalp, generalised scale "
+        "and fissuring, and secondary staphylococcal or group A "
+        "streptococcal infection driving sepsis, glomerulonephritis "
+        "and acute rheumatic fever. Management: oral ivermectin 200 "
+        "microgram/kg in repeated doses set by disease grade, with "
+        "topical permethrin 5 percent and a keratolytic to lift crust "
+        "so the scabicide can reach the mites. Treat all household "
+        "contacts at the same time. Australian notes: a three-tier "
+        "grading scale developed in the Northern Territory sets the "
+        "number of ivermectin doses, and the condition is notifiable "
+        "there because one untreated case seeds community outbreaks."
+    ),
+    "Secondary prophylaxis of acute rheumatic fever": (
+        "Long-term antibiotic prophylaxis after acute rheumatic fever "
+        "to prevent recurrent group A streptococcal infection and "
+        "progressive valve damage. Dose: benzathine benzylpenicillin "
+        "G intramuscularly every 28 days, 1.2 million units for "
+        "people 20 kg and over and 600,000 units for those under 20 "
+        "kg. Twice-daily oral phenoxymethylpenicillin is second line "
+        "and less effective. Duration: at least 10 years from the "
+        "last episode or until age 21, whichever is longer, extended "
+        "to about age 35 with mild rheumatic heart disease and to 40 "
+        "or lifelong with moderate to severe disease. Note: adherence "
+        "is the entire intervention. Lidocaine as diluent, warming "
+        "the syringe and injecting slowly reduce the pain that drives "
+        "missed doses. Australian notes: rates in remote Aboriginal "
+        "and Torres Strait Islander communities are among the highest "
+        "in the world, and register-based recall through state "
+        "control programmes rather than opportunistic care is what "
+        "actually delivers the injections."
+    ),
+    "Aboriginal and Torres Strait Islander health assessment": (
+        "Structured Medicare-funded health check for Aboriginal and "
+        "Torres Strait Islander people of any age, claimed under item "
+        "715. Indications: any patient who identifies as Aboriginal "
+        "or Torres Strait Islander, claimable every 9 months, with no "
+        "requirement for symptoms or an existing chronic disease. "
+        "Screening: age-specific content covering growth and "
+        "development, ear health and hearing, vision, oral health, "
+        "sexual health, smoking, alcohol, and social and emotional "
+        "wellbeing, adding cardiovascular risk, diabetes and renal "
+        "function from adolescence. Note: the assessment unlocks the "
+        "follow-up items, including five allied health services and "
+        "up to ten practice nurse or Aboriginal health practitioner "
+        "visits each year, along with medicine co-payment relief. "
+        "Australian notes: identification must come from asking every "
+        "patient the standard question rather than from appearance, "
+        "because unrecorded status is the commonest reason the item "
+        "and everything downstream of it are never claimed."
+    ),
+    "Cultural safety": (
+        "Care in which the patient, not the clinician, decides "
+        "whether the encounter was respectful and safe. Note: "
+        "cultural awareness only asks clinicians to know about "
+        "difference and cultural competence implies a skill set that "
+        "can be completed, whereas cultural safety requires ongoing "
+        "reflection on one's own culture, assumptions and power, with "
+        "the recipient judging the result. Management: ask and record "
+        "Aboriginal and Torres Strait Islander identification for "
+        "every patient, offer an Aboriginal liaison officer or health "
+        "worker, use professional interpreters, ask who should be "
+        "present for decisions, and explain hospital processes that "
+        "are unfamiliar. Complications: discharge against medical "
+        "advice, missed appointments and refused treatment are "
+        "usually failures of the service rather than patient "
+        "non-compliance, and should prompt review of the encounter. "
+        "Australian notes: cultural safety sits in the Ahpra codes of "
+        "conduct and the national safety and quality standards, so it "
+        "is an accountability rather than an aspiration."
+    ),
+    "Refugee health assessment": (
+        "Systematic health check offered soon after arrival to people "
+        "of refugee background, looking for infection, nutritional "
+        "deficiency, immunisation gaps and untreated chronic disease. "
+        "Screening: full blood count and ferritin, vitamin D, "
+        "hepatitis B and C and HIV serology, syphilis serology, "
+        "Strongyloides serology, Schistosoma serology for African "
+        "arrivals, malaria testing after recent endemic exposure, and "
+        "testing for latent tuberculosis. Add faecal microscopy for "
+        "parasites and arrange vision, hearing and dental review. "
+        "Note: assume the vaccination record is unreliable and start "
+        "a catch-up schedule rather than guessing from serology, "
+        "apart from hepatitis B and varicella where serology is "
+        "cheaper. Management: book an interpreter, spread the work "
+        "over several visits, ask about torture and trauma exposure "
+        "without pressing for disclosure, and refer to the state "
+        "refugee health service. Australian notes: it is claimable "
+        "under the time-tiered Medicare health assessment items."
+    ),
+    "Working with an interpreter": (
+        "Use of a trained language interpreter so a patient with "
+        "limited English can give a history and consent; a safety "
+        "measure rather than a courtesy. Indications: any "
+        "consultation involving consent, diagnosis, discharge "
+        "instructions or bad news where English is limited, including "
+        "patients who chat easily but cannot follow clinical detail. "
+        "Management: brief the interpreter first, speak to the "
+        "patient in the first person and in short segments, allow "
+        "extra time, and finish by asking the patient to teach the "
+        "plan back. Note: family members and bilingual staff must not "
+        "be used except in an immediate emergency, because they "
+        "summarise, edit and cannot render clinical terms. Using a "
+        "child is never acceptable. Australian notes: the Translating "
+        "and Interpreting Service is free to public hospital patients "
+        "and, through the free interpreting service and the doctors "
+        "priority line, to private general practitioners for "
+        "Medicare-rebatable consultations. NSW Health requires an "
+        "accredited interpreter for consent."
+    ),
+    "Latent tuberculosis infection": (
+        "Persistent Mycobacterium tuberculosis infection without "
+        "clinical disease, not infectious, but carrying roughly a 5 "
+        "to 10 percent lifetime risk of reactivation. Screening: "
+        "targeted rather than universal, covering migrants from "
+        "high-incidence countries, contacts of an infectious case, "
+        "people with HIV, and patients about to start tumour necrosis "
+        "factor inhibitors or dialysis. Investigations: an interferon "
+        "gamma release assay or a tuberculin skin test, neither of "
+        "which separates latent from active disease, so every "
+        "positive result needs symptom review and a chest radiograph "
+        "to exclude active tuberculosis before treatment. Treatment: "
+        "isoniazid daily for 6 to 9 months, rifampicin daily for 4 "
+        "months, or weekly rifapentine with isoniazid for 3 months. "
+        "Add pyridoxine to isoniazid and monitor liver function. "
+        "Australian notes: state and territory tuberculosis services "
+        "run diagnosis, treatment and contact tracing and supply the "
+        "drugs free regardless of Medicare eligibility, so refer "
+        "rather than prescribe."
+    ),
+    "Group and screen": (
+        "Pretransfusion test that determines ABO and RhD group and "
+        "screens the plasma for clinically significant red cell "
+        "antibodies. Note: it does not reserve any blood. The "
+        "crossmatch, electronic or serological, is the step that "
+        "issues units, and it is quick once the antibody screen is "
+        "negative. Investigations: two separately collected and "
+        "separately labelled samples are required before a first "
+        "electronic crossmatch, because wrong blood in tube from "
+        "mislabelling is the leading cause of fatal ABO incompatible "
+        "transfusion. Label at the bedside from the wristband, never "
+        "in advance and never back at the desk. Duration: a sample "
+        "stays valid for 72 hours if the patient has been transfused "
+        "or pregnant in the preceding 3 months, since new antibodies "
+        "may have formed. Management: in catastrophic bleeding, use "
+        "emergency group O RhD negative units rather than waiting, "
+        "taking the pretransfusion sample first if it costs no time."
+    ),
+    "Iron infusion": (
+        "Parenteral iron replacement for iron deficiency when oral "
+        "iron has failed or is not tolerated, or when the deficit "
+        "must be corrected quickly. Indications: malabsorption, "
+        "inflammatory bowel disease, blood loss outpacing oral "
+        "absorption, chronic kidney disease, later pregnancy, and "
+        "anaemia found weeks before elective surgery. Dose: ferric "
+        "carboxymaltose 20 mg/kg to a maximum of 1000 mg infused over "
+        "at least 15 minutes; iron polymaltose needs several hours "
+        "and is now rarely chosen. Adverse effects: extravasation "
+        "causes permanent brown skin staining, so check the cannula "
+        "and tell the patient to report burning immediately. A "
+        "Fishbane reaction of flushing and back pain settles on "
+        "stopping the infusion and is not anaphylaxis. "
+        "Hypophosphataemia after ferric carboxymaltose is common and "
+        "can be symptomatic. Note: haemoglobin rises over 2 to 4 "
+        "weeks, and ferritin stays uninterpretable for roughly 8 "
+        "weeks afterwards."
+    ),
+    "Patient blood management": (
+        "Framework that treats the patient's own blood as the "
+        "resource to conserve rather than treating transfusion as the "
+        "default answer to a low haemoglobin. Management: find and "
+        "correct anaemia and iron deficiency weeks before elective "
+        "surgery, cut iatrogenic loss from repeated sampling, and use "
+        "tranexamic acid and cell salvage in theatre. Criteria: a "
+        "restrictive threshold of 70 g/L is as safe as a liberal one "
+        "in most stable inpatients, with about 80 g/L used in acute "
+        "coronary syndromes and after cardiac surgery. Note: "
+        "transfuse a single unit and reassess the patient clinically "
+        "before ordering another. The reflex two-unit order in a "
+        "stable patient is the commonest avoidable transfusion on any "
+        "ward. Australian notes: the National Blood Authority modules "
+        "set the framework, products are supplied at no cost to the "
+        "patient, and consent for transfusion must be documented "
+        "separately from operative consent."
+    ),
+    "Tetanus prophylaxis in wounds": (
+        "Decision about tetanus vaccine and immunoglobulin after "
+        "injury, driven by the nature of the wound and by the number "
+        "of previous tetanus doses. Classification: tetanus-prone "
+        "wounds are deep or penetrating, contaminated with soil, "
+        "manure or saliva, contain a foreign body or devitalised "
+        "tissue, or are more than 6 hours old. Burns, crush injuries "
+        "and compound fractures also count. Management: for a clean "
+        "minor wound, vaccinate only if fewer than 3 lifetime doses "
+        "or the last dose was over 10 years ago. For a tetanus-prone "
+        "wound, vaccinate if fewer than 3 doses or the last dose was "
+        "over 5 years ago. Dose: add tetanus immunoglobulin 250 IU "
+        "intramuscularly only for a tetanus-prone wound in someone "
+        "with fewer than 3 documented doses, an uncertain history, or "
+        "immunocompromise, rising to 500 IU if the wound is over 24 "
+        "hours old. Australian notes: the Australian Immunisation "
+        "Handbook sets these intervals and prefers a combination "
+        "vaccine over tetanus toxoid alone."
+    ),
+    "Skin tear": (
+        "Traumatic wound separating epidermis from dermis, typically "
+        "a shearing injury to the forearm or shin of an older person "
+        "with thin sun-damaged skin. Risk factors: age over 75, "
+        "long-term corticosteroids, senile purpura, oedema, dementia "
+        "and transfers using equipment. Most occur in hospital or "
+        "residential care and are regarded as preventable. "
+        "Classification: the international grading system scores them "
+        "as no skin loss with the flap fully replaceable, partial "
+        "flap loss, or total flap loss with the wound bed exposed. "
+        "Management: irrigate with saline, roll the flap back into "
+        "place using a moistened cotton tip, then hold it with a "
+        "silicone non-adherent contact layer and a soft retention "
+        "dressing. Draw an arrow on the dressing showing the safe "
+        "direction of removal. Note: never use adhesive strips, "
+        "sutures or ordinary tape on a skin tear, and leave the "
+        "contact layer in place for several days, because frequent "
+        "changes tear the flap off again."
+    ),
+    "Burns fluid resuscitation": (
+        "Calculated intravenous fluid for a major burn, replacing "
+        "plasma lost into burnt and oedematous tissue during the "
+        "first 24 hours. Indications: burns over 20 percent of total "
+        "body surface area in adults or over 10 percent in children. "
+        "Smaller burns need oral fluid and analgesia, not a formula. "
+        "Dose: the Australian and New Zealand Burn Association "
+        "teaches 3 mL per kg per percent burn of compound sodium "
+        "lactate over 24 hours, less than the 4 mL of the original "
+        "Parkland formula. Half is given in the first 8 hours counted "
+        "from the time of the burn rather than from arrival, so a "
+        "delayed presentation needs catch-up. Note: superficial "
+        "erythema is excluded from the area estimate, and children "
+        "need separate maintenance fluid containing glucose. "
+        "Monitoring: the formula only sets a starting rate. Titrate "
+        "to urine output of 0.5 mL/kg/h in adults and 1 mL/kg/h in "
+        "children, since over-resuscitation causes abdominal and limb "
+        "compartment syndromes."
+    ),
+    "Malnutrition screening": (
+        "Brief validated screen applied to every inpatient to find "
+        "those needing dietitian assessment, since malnutrition "
+        "affects roughly a third of Australian hospital admissions "
+        "and is usually missed. Screening: the Malnutrition Screening "
+        "Tool, developed in Australia, asks only about unintentional "
+        "weight loss and reduced appetite, and a score of 2 or more "
+        "triggers referral. It is required on admission and repeated "
+        "weekly under the national safety and quality standards. "
+        "Note: screening is not diagnosis. Confirmation uses "
+        "subjective global assessment or the international consensus "
+        "criteria, which combine weight loss or low body mass with a "
+        "disease or inflammatory driver. Complications: malnutrition "
+        "independently predicts pressure injury, falls, infection, "
+        "poor wound healing, longer stay and readmission. Management: "
+        "food first with fortification and mid-meal supplements, "
+        "treat reversible causes such as pain, nausea, dentition and "
+        "depression, and document the diagnosis so it is coded."
+    ),
+    "Opioid tapering": (
+        "Planned dose reduction of long-term opioids in chronic "
+        "non-cancer pain, where harm accumulates while analgesic "
+        "benefit does not. Indications: no meaningful gain in "
+        "function, a dose above roughly 50 mg oral morphine "
+        "equivalent daily, sedation or falls, concurrent "
+        "benzodiazepines, or the patient's own wish. Management: "
+        "reduce by about 10 percent of the total daily dose every 1 "
+        "to 4 weeks, and by about 10 percent per month for someone "
+        "who has taken opioids for years. Slow down or pause if "
+        "withdrawal is intolerable, and never stop abruptly unless "
+        "there is diversion or overdose. Note: pain usually does not "
+        "worsen and function often improves, but expect a transient "
+        "rise in pain and anxiety around each step. Australian notes: "
+        "real-time prescription monitoring flags concurrent "
+        "prescribing, opioid agonist treatment is the referral when "
+        "dependence rather than pain is driving use, and take-home "
+        "naloxone is free without a prescription."
+    ),
+    "Neuropathic pain": (
+        "Pain generated by disease or injury of the somatosensory "
+        "nervous system rather than by tissue damage, described as "
+        "burning, shooting or electric in an area that is also numb. "
+        "Causes: diabetic polyneuropathy, postherpetic neuralgia, "
+        "radiculopathy, chemotherapy toxicity, spinal cord injury, "
+        "central post-stroke pain and trigeminal neuralgia. "
+        "Diagnosis: pain in a plausible neuroanatomical distribution "
+        "with sensory signs, either loss or allodynia and "
+        "hyperalgesia. Imaging and nerve conduction support the "
+        "diagnosis rather than make it. Management: start with "
+        "amitriptyline 5 to 10 mg at night titrated slowly, or "
+        "duloxetine, particularly in diabetic neuropathy. Expect a 30 "
+        "to 50 percent reduction rather than abolition, and add "
+        "exercise and psychological therapy. Opioids are largely "
+        "ineffective. Australian notes: pregabalin is subsidised only "
+        "for refractory neuropathic pain, gabapentin is subsidised "
+        "for epilepsy and not for pain, and Australian trial data "
+        "show neither helps sciatica."
+    ),
+    "Doxycycline post-exposure prophylaxis": (
+        "Single dose of doxycycline taken after condomless sex to "
+        "prevent bacterial sexually transmissible infections. Dose: "
+        "doxycycline 200 mg orally as soon as possible and within 72 "
+        "hours of the exposure, with no more than one dose in any 24 "
+        "hours. Indications: offered to gay and bisexual men and to "
+        "trans women who have had a bacterial sexually transmissible "
+        "infection in the past year or who have multiple partners. It "
+        "is not currently recommended for cisgender women, in whom "
+        "trials have not shown benefit. Note: it substantially "
+        "reduces syphilis and chlamydia but does much less for "
+        "gonorrhoea, where tetracycline resistance is already "
+        "widespread in Australia. Adverse effects: photosensitivity, "
+        "oesophagitis if taken lying down, and gastrointestinal "
+        "upset. Australian notes: sexual health guidance treats it as "
+        "a targeted rather than universal measure, keeps "
+        "three-monthly testing going, and stresses that it replaces "
+        "neither condoms nor HIV pre-exposure prophylaxis."
+    ),
+    "Blocked tracheostomy": (
+        "Obstruction or displacement of a tracheostomy tube, an "
+        "immediately life-threatening emergency on general wards "
+        "where the tube is unfamiliar. Clinical features: respiratory "
+        "distress, no airflow at the tube, a suction catheter that "
+        "will not pass, falling saturations, and failure to ventilate "
+        "through the tube. Management: call for help and apply "
+        "high-flow oxygen to both the face and the stoma, because "
+        "most tracheostomy patients still have a patent upper airway. "
+        "Remove any speaking valve or cap, take out and replace the "
+        "inner cannula, then pass a suction catheter. If it will not "
+        "pass, deflate the cuff and reassess, and if the tube is "
+        "still obstructed remove it entirely and oxygenate from above "
+        "and below. Note: a patient after total laryngectomy has no "
+        "connection between mouth and trachea, so every breath must "
+        "go through the stoma. Australian notes: the bed should carry "
+        "an emergency algorithm, a spare tube of the same size and "
+        "one smaller, and a laryngectomy sign where relevant."
+    ),
+    "Certificate of capacity": (
+        "Statutory medical certificate recording an injured worker's "
+        "capacity for work, which drives insurer payments and the "
+        "return to work plan. Note: it replaced the old sickness "
+        "certificate because the question is what the person can "
+        "still do rather than whether they are unfit. Certify some "
+        "capacity with restrictions wherever possible, since a "
+        "blanket no capacity certificate predicts poorer recovery and "
+        "longer time away from work. Management: record the "
+        "diagnosis, capacity in hours and duties, specific "
+        "restrictions, current treatment and a review date, and "
+        "obtain the patient's consent before discussing the claim "
+        "with an insurer or employer. Duration: each certificate "
+        "normally covers a maximum of 28 days, and a single nominated "
+        "treating doctor coordinates the care and the certificates. "
+        "Australian notes: the schemes are state-based, with the "
+        "State Insurance Regulatory Authority governing the New South "
+        "Wales workers compensation certificate of capacity. Motor "
+        "accident injury claims use a separate certificate."
+    ),
+    "Braxton Hicks contractions": (
+        "Irregular, usually painless uterine tightenings that do not "
+        "produce cervical change. Onset: felt from about 20 weeks and "
+        "become more frequent towards term, although the uterus "
+        "contracts from early pregnancy. Features: each tightening "
+        "lasts up to about a minute and typically comes no more than "
+        "twice an hour, and does not build in frequency, intensity or "
+        "duration. Differential: true labour gives progressive "
+        "cervical effacement and dilatation with coordinated "
+        "contractions that lengthen and strengthen. Braxton Hicks are "
+        "uncoordinated, settle with rest, hydration or a change of "
+        "position, and leave the cervix unchanged, so the label false "
+        "labour is only ever applied in retrospect. Examination: "
+        "abdominal palpation plus vaginal examination for cervical "
+        "change. A single examination cannot separate the two, so "
+        "serial examination over a few hours is what settles it. Red "
+        "flags: regular painful contractions before 37 weeks, any "
+        "bleeding, ruptured membranes or reduced fetal movements need "
+        "assessment rather than reassurance."
+    ),
+    "Uterine tachysystole": (
+        "More than five contractions in ten minutes, averaged over 30 "
+        "minutes. Definition: uterine hypertonus is the related term "
+        "for a single contraction lasting more than two minutes, or "
+        "contractions coming within 60 seconds of each other, so the "
+        "uterus spends more time contracting than relaxed. Causes: "
+        "most often iatrogenic after induction or augmentation with "
+        "prostaglandin or oxytocin. Also placental abruption, and "
+        "less often spontaneous labour. Mechanism: inadequate "
+        "relaxation between contractions cuts intervillous perfusion, "
+        "so fetal oxygenation falls and the CTG deteriorates. Mx: "
+        "stop or halve the oxytocin, remove the prostaglandin pessary "
+        "or gel, turn to left lateral, give IV fluid and call for "
+        "senior review. If the CTG stays abnormal, give acute "
+        "tocolysis with terbutaline 250 micrograms subcutaneously and "
+        "prepare for expedited birth. Note: tachysystole is only "
+        "called hyperstimulation when it is accompanied by fetal "
+        "heart rate changes."
+    ),
+    "Ectopic beats": (
+        "Premature depolarisation from a focus outside the sinoatrial "
+        "node, giving an early beat followed by a compensatory pause. "
+        "Mechanism: subsidiary pacemaker tissue is normally "
+        "overdriven by the faster sinus node, but a focus that "
+        "depolarises early enough captures the heart first. "
+        "Classification: by origin into atrial, junctional and "
+        "ventricular. By focus into unifocal, where every ectopic "
+        "looks identical, and multifocal. Features: usually "
+        "asymptomatic, or felt as a skipped beat, a thump or a "
+        "flutter, and often more noticeable at rest. Triggers: "
+        "caffeine, alcohol, nicotine, stimulants, stress, sleep "
+        "deprivation, thyrotoxicosis, hypokalaemia and "
+        "hypomagnesaemia. Ix: ECG, electrolytes including magnesium, "
+        "TFTs, and Holter if frequent or symptomatic. "
+        "Echocardiography if the burden is high, or there is a murmur "
+        "or a family history of sudden death. Mx: reassure and remove "
+        "triggers. Beta blockers only for troublesome symptoms. Refer "
+        "if the ventricular ectopic burden exceeds roughly 10 to 15 "
+        "percent on Holter, since that can drive a reversible "
+        "cardiomyopathy."
+    ),
+    "Limbic system": (
+        "Interconnected medial temporal and midline structures that "
+        "generate emotion and lay down declarative memory. Sites: "
+        "hippocampus, amygdala, parahippocampal and cingulate gyri, "
+        "fornix, mammillary bodies, anterior thalamic nuclei, septal "
+        "nuclei and parts of orbitofrontal cortex. Mechanism: the "
+        "hippocampus consolidates new episodic memory, the amygdala "
+        "tags stimuli with fear and emotional value, and the Papez "
+        "circuit links hippocampus to mammillary bodies, anterior "
+        "thalamus and cingulate. Clinical features: bilateral "
+        "hippocampal damage gives dense anterograde amnesia with "
+        "intact working memory. Mammillary body and thalamic damage "
+        "from thiamine deficiency gives the confabulating amnesia of "
+        "Korsakoff syndrome. Medial temporal seizures give deja vu, a "
+        "rising epigastric aura, fear and olfactory hallucination. "
+        "Mnemonic: the five Fs, feeding, fleeing, fighting, feeling "
+        "and sexual behaviour, capture the range of limbic output."
+    ),
+    "Toxic neuropathy": (
+        "Peripheral neuropathy caused by a drug, a drug of abuse, or "
+        "an industrial or environmental chemical. Causes: "
+        "chemotherapy, above all vincristine and the platinums, is "
+        "the commonest culprit. Also isoniazid, metronidazole, "
+        "nitrofurantoin, amiodarone, phenytoin and linezolid. Chronic "
+        "alcohol use. Heavy metals and solvents including arsenic, "
+        "lead, thallium and n-hexane. Features: usually a "
+        "length-dependent symmetrical glove and stocking sensory or "
+        "sensorimotor neuropathy, with distal numbness, burning and "
+        "lost ankle reflexes. Vincristine and lead are the exceptions "
+        "that give prominent motor weakness, and lead classically "
+        "causes wrist drop. Ix: nerve conduction studies confirm it "
+        "and separate axonal from demyelinating patterns. Send B12, "
+        "HbA1c, EUC, LFTs and TFTs to exclude commoner causes, and "
+        "take an occupational, supplement and alcohol history. Mx: "
+        "withdraw the agent, which usually halts progression although "
+        "recovery is slow and often incomplete. Treat neuropathic "
+        "pain with amitriptyline, duloxetine or pregabalin."
+    ),
+    "Malnutrition": (
+        "Deficiency, excess or imbalance in a person's intake of "
+        "energy or nutrients. Types: undernutrition, covering wasting "
+        "which is low weight for height, stunting which is low height "
+        "for age, and underweight which is low weight for age. "
+        "Micronutrient deficiency or excess. Overweight or obesity. "
+        "Examination: plot weight, length or height and head "
+        "circumference on WHO charts to 2 years and CDC charts "
+        "thereafter, and work out weight as a percentage of expected "
+        "weight for height. Wasting marks acute malnutrition and "
+        "stunting marks chronic malnutrition. Causes: inadequate "
+        "intake, malabsorption such as coeliac disease or cystic "
+        "fibrosis, increased losses, and raised requirements from "
+        "chronic illness. In Australia food insecurity and neglect "
+        "matter, and remote Aboriginal and Torres Strait Islander "
+        "communities carry a disproportionate burden. Complications: "
+        "refeeding syndrome if nutrition is restarted too fast, so "
+        "check and replace phosphate, potassium and magnesium, and "
+        "give thiamine before feeding."
+    ),
+    "Oral rehydration solution": (
+        "Glucose and electrolyte solution that uses sodium-glucose "
+        "co-transport in the small bowel to pull water across, "
+        "first-line for mild to moderate dehydration in "
+        "gastroenteritis. Uses: Gastrolyte, Hydralyte and Pedialyte "
+        "are the Australian products. Sports drinks, undiluted juice "
+        "and flat lemonade hold too much sugar and too little sodium "
+        "and worsen osmotic diarrhoea. Dose: start at about 0.5 mL/kg "
+        "every 5 minutes and build up as tolerated, aiming to replace "
+        "the estimated deficit over roughly 4 hours, then add ongoing "
+        "losses. Route: oral, or nasogastric if the child refuses or "
+        "vomits. Nasogastric rehydration is preferred to intravenous "
+        "in most children and is better tolerated than repeated "
+        "cannulation. Note: keep breastfeeding throughout and feed "
+        "more often. Return to a normal diet once rehydrated. Routine "
+        "lactose-free formula is not needed, but consider it if stool "
+        "frequency climbs again on reintroduction. Red flags: shock, "
+        "reduced consciousness, ileus or failed nasogastric therapy "
+        "mean intravenous fluid."
+    ),
+    "Urine collection in children": (
+        "How urine is collected decides how far a positive culture "
+        "can be trusted in a child with suspected urinary tract "
+        "infection. Types: clean catch for pre-continent children, "
+        "midstream urine for toilet-trained children, in-out catheter "
+        "when the bladder holds little urine or clean catch has "
+        "failed, and suprapubic aspirate as the reference standard. "
+        "Note: bag and pad specimens are contaminated too often to "
+        "culture. A negative bag specimen helps exclude infection, "
+        "but a positive one must be confirmed by a better method "
+        "before treating. Ix: send microscopy, culture and "
+        "sensitivities. Dipstick is a screening aid only, and under 3 "
+        "months of age nitrite and leucocyte esterase are unreliable, "
+        "so culture is mandatory. Criteria: significant growth is any "
+        "growth on suprapubic aspirate, at least 10 to the 7 colony "
+        "forming units per litre on catheter, and at least 10 to the "
+        "8 per litre on clean catch or midstream urine. Mx: in an "
+        "unwell infant do not delay antibiotics waiting for a clean "
+        "catch. Catheterise or aspirate."
+    ),
+    "Obstructive lung disease": (
+        "Pattern of lung disease in which increased airway resistance "
+        "limits expiratory flow. Classification: obstruction is "
+        "defined on spirometry by a reduced FEV1/FVC ratio, in "
+        "contrast to restriction where the ratio is preserved or high "
+        "and both volumes fall together. Causes: asthma, COPD "
+        "including emphysema and chronic bronchitis, bronchiectasis, "
+        "cystic fibrosis, bronchiolitis obliterans, and large airway "
+        "obstruction. Ix: a post-bronchodilator FEV1/FVC below 0.7, "
+        "or below the lower limit of normal, confirms obstruction. "
+        "Significant reversibility is an FEV1 rise of at least 12 "
+        "percent and 200 mL and points towards asthma. Gas trapping "
+        "raises residual volume and total lung capacity, and DLCO "
+        "falls in emphysema but is normal or high in asthma. "
+        "Features: prolonged expiratory phase, wheeze, hyperinflation "
+        "with a barrel chest and reduced cricosternal distance, and "
+        "pursed-lip breathing. Note: fixed obstruction with poor "
+        "reversibility and a low DLCO favours COPD. Variable "
+        "obstruction with diurnal peak flow swings favours asthma."
+    ),
+    "Anembryonic pregnancy": (
+        "Early pregnancy failure in which a gestational sac forms but "
+        "no embryo is ever visible, historically called a blighted "
+        "ovum. Mechanism: the embryo either never forms or arrests "
+        "very early and is resorbed, leaving an empty sac that keeps "
+        "growing for a time because the trophoblast still makes hCG. "
+        "Criteria: on transvaginal ultrasound a mean sac diameter of "
+        "25 mm or more with no yolk sac or embryo is diagnostic, as "
+        "is a sac that stays empty on an interval scan 7 to 14 days "
+        "later. Below that threshold the finding is uncertain and "
+        "needs a repeat scan rather than intervention. Presentation: "
+        "often silent and found at a dating scan, or light bleeding "
+        "with loss of pregnancy symptoms. Mx: expectant, medical with "
+        "misoprostol, or surgical evacuation, guided by preference, "
+        "bleeding and infection risk. Give anti-D immunoglobulin 250 "
+        "IU to RhD negative women having surgical management or heavy "
+        "bleeding before 13 weeks. Note: recurrence risk after a "
+        "single loss is not raised."
+    ),
+    "Quick start contraception": (
+        "Starting a hormonal contraceptive on the day of the "
+        "consultation instead of waiting for the next period. "
+        "Indications: preferred whenever pregnancy can be reasonably "
+        "excluded, because it removes the delay and the risk that the "
+        "woman does not return. Mx: started within the first 5 days "
+        "of the cycle, no extra cover is needed. Started at any other "
+        "time, use condoms or abstain for 7 days for the combined "
+        "pill, ring, patch, implant, depot injection and "
+        "levonorgestrel intrauterine system, and for 2 days for the "
+        "progestogen-only pill. Ix: do a pregnancy test 4 weeks after "
+        "starting, because a very early pregnancy cannot be excluded "
+        "on the day of the quick start. This can be brought forward "
+        "to 3 weeks if there was no further unprotected sex during "
+        "the first week of use. Note: do the test whether or not a "
+        "bleed occurs. Hormonal contraception is not teratogenic, so "
+        "the chance of an unrecognised pregnancy is not a reason to "
+        "withhold a quick start."
+    ),
+    "Parallel play": (
+        "Stage of play where two or more toddlers play alongside each "
+        "other with similar toys but without directly interacting. "
+        "Onset: emerges around 2 years and stays typical through the "
+        "third year. Stages: solitary play in the first year, "
+        "onlooker play around 18 months, parallel play from 2 years, "
+        "associative play from 3 years where children share materials "
+        "but not goals, and cooperative play with shared rules from "
+        "about 4 years. Note: parallel play is a normal social "
+        "milestone, not a warning sign. What matters is failure to "
+        "move beyond it by school age, in a child who also lacks "
+        "joint attention and pretend play. Red flags: no pointing to "
+        "share interest by 18 months, no pretend play by 2 years, or "
+        "loss of previously acquired social or language skills at any "
+        "age, all warrant referral for autism assessment."
+    ),
+    "Grand multiparity": (
+        "Having given birth five or more times at 20 weeks or beyond. "
+        "Great grand multiparity means ten or more. Risk factors: "
+        "increasing maternal age, short interpregnancy intervals, and "
+        "cultural or religious factors favouring large families. "
+        "Complications: malpresentation and unstable lie from lax "
+        "abdominal and uterine muscle. Placenta praevia and placenta "
+        "accreta spectrum from repeated placental implantation. "
+        "Precipitate labour and uterine rupture. Postpartum "
+        "haemorrhage from uterine atony. Anaemia and gestational "
+        "diabetes are also more common. Mx: book for obstetrician-led "
+        "care, screen for anaemia and diabetes, confirm presentation "
+        "with ultrasound near term, and plan birth where blood "
+        "products and theatre are available. Active management of the "
+        "third stage with oxytocin 10 IU intramuscularly matters "
+        "here, with a low threshold for a prophylactic oxytocin "
+        "infusion. Note: parity counts births at 20 weeks or more, "
+        "not the number of living children."
+    ),
+    "MMR vaccine": (
+        "Live attenuated combined measles, mumps and rubella vaccine. "
+        "Dose: two doses on the National Immunisation Program, given "
+        "as MMR at 12 months and as MMRV, which adds varicella, at 18 "
+        "months. Route: subcutaneous or intramuscular. Note: it is "
+        "not given before 12 months because transplacental maternal "
+        "antibody neutralises the vaccine virus and blunts the "
+        "response. An early dose from 9 months is used for outbreak "
+        "control or travel to endemic areas, but does not count "
+        "towards the two-dose schedule. Contraindications: pregnancy, "
+        "and significant immunosuppression including a CD4 count "
+        "below 200 cells per microlitre, high-dose corticosteroids, "
+        "and anaphylaxis to a previous dose or to neomycin or "
+        "gelatin. Egg allergy is not a contraindication. Avoid "
+        "pregnancy for 28 days afterwards. Adverse effects: fever and "
+        "a measles-like rash 5 to 12 days after the first dose, "
+        "transient thrombocytopenia, and a higher febrile convulsion "
+        "risk with MMRV, which is why MMRV is not used for the first "
+        "dose."
+    ),
+    "Fetal blood sampling": (
+        "Capillary sampling from the fetal scalp in labour to measure "
+        "pH or lactate, used as a second-line test after an abnormal "
+        "CTG. Indications: abnormal or pathological CTG at term where "
+        "birth is not immediately indicated, the cervix is dilated "
+        "enough to reach the scalp and the membranes are ruptured. "
+        "Criteria: with the analysers in common Australian use, "
+        "lactate below 4.2 mmol/L is reassuring, 4.2 to 4.8 is "
+        "borderline and repeated within 30 minutes, and 4.8 or above "
+        "means expedite birth. For pH, 7.25 or above is normal, 7.21 "
+        "to 7.24 is borderline and 7.20 or below is abnormal. "
+        "Contraindications: gestation below 34 weeks, suspected fetal "
+        "bleeding disorder, maternal blood-borne virus such as HIV or "
+        "hepatitis, face presentation, and any situation where "
+        "sampling would delay a birth already indicated. Note: fetal "
+        "scalp electrodes are avoided for the same reasons below 34 "
+        "weeks, and vacuum extraction is contraindicated below 34 "
+        "weeks because of subgaleal and intracranial haemorrhage "
+        "risk."
+    ),
+    "Culturally and linguistically diverse": (
+        "Australian term for people whose cultural or language "
+        "background differs from the English-speaking majority, most "
+        "often defined by country of birth, language spoken at home "
+        "or English proficiency. Epidemiology: about a quarter of "
+        "Australians were born overseas and roughly a fifth speak a "
+        "language other than English at home. People from these "
+        "backgrounds are less likely to use alcohol and other drugs, "
+        "but those who do often present later and carry higher rates "
+        "of harm. Note: engage a professional interpreter whenever "
+        "English proficiency is limited, rather than a family member "
+        "and never a child. In NSW the Health Care Interpreter "
+        "Service is free to patients, and TIS National covers general "
+        "practice. Record the language and whether an interpreter was "
+        "used. Key point: cognitive screening tools are culturally "
+        "loaded, so use the RUDAS rather than the MMSE. Written "
+        "consent and health literacy material must be in the person's "
+        "own language."
     ),
 }
 
