@@ -401,6 +401,13 @@ def _marker_js() -> str:
         except Exception as exc:
             _log.error("read marker.js for dock", exc)
             src = ""
+        # `window.__tadDark` tells marker.js which way to style the
+        # popup. It cannot work that out for itself here: it reads
+        # Anki's `nightMode` body class, which exists on a card and
+        # never on an NCBI or DrugBank page, so without this the dock
+        # popup rendered light over a dark page every time. Re-read on
+        # each injection rather than baked into the cache, so a theme
+        # switch mid-session reaches the next page load.
         _MARKER_JS_CACHE = (
             "(function(){if(window.__tadMarkerLoaded)return;"
             "window.__tadMarkerLoaded=true;\n" + src + "\n})();"
@@ -1840,6 +1847,10 @@ class StatPearlsPanel(QWidget):
                 self._page.runJavaScript(
                     _HL_APPLY_JS % (json.dumps(edits), json.dumps(colour)))
                 self._page.runJavaScript(_HL_PYCMD_SHIM_JS)
+                # Before marker.js, so the flag is set by the time the
+                # first popup styles itself.
+                self._page.runJavaScript(
+                    "window.__tadDark=%s;" % json.dumps(bool(_theme.DARK)))
                 self._page.runJavaScript(_marker_js())
             except Exception as exc:
                 _log.error("dock highlight apply", exc)

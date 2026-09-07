@@ -459,6 +459,49 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
                     if g.lower() not in generics]
         self.assertEqual(orphaned, [])
 
+    def test_schema_constant_agrees_with_the_compiler(self):
+        """`SCHEMA` is declared twice and nothing checked they matched.
+
+        `pearls/_library.SCHEMA` is what a client will accept;
+        `tools/build_library.SCHEMA` is what the compiler stamps. If the
+        compiler's is higher, every existing install refuses the next
+        publish and falls back to its bundled copy. If it is lower, a
+        client that has moved on refuses it too. Either way the content
+        channel stops, and the only symptom is that nothing arrives.
+        """
+        src = (ROOT / "tools" / "build_library.py").read_text(encoding="utf-8")
+        m = re.search(r"^SCHEMA = (\d+)$", src, re.M)
+        self.assertIsNotNone(m, "tools/build_library.py declares no SCHEMA")
+        self.assertEqual(
+            int(m.group(1)), _library.SCHEMA,
+            f"build_library stamps schema {m.group(1)} but "
+            f"pearls/_library accepts only {_library.SCHEMA}")
+
+    def test_the_newer_library_copy_wins(self):
+        """The downloaded copy used to win regardless of its version, so
+        an add-on release carrying newer bundled content was masked by
+        an older download until the channel next published."""
+        older = {"content_version": "07.09.2026.1"}
+        newer = {"content_version": "08.09.2026.1"}
+        self.assertTrue(_library._version_newer(
+            newer["content_version"], older["content_version"]))
+        self.assertFalse(_library._version_newer(
+            older["content_version"], newer["content_version"]))
+        # Across a month rollover, which a string compare gets wrong.
+        self.assertTrue(_library._version_newer("01.10.2026", "30.09.2026"))
+        self.assertFalse(_library._version_newer("30.09.2026", "01.10.2026"))
+
+    def test_content_version_is_required(self):
+        """Without it `CONTENT_VERSION` is "unknown", which no remote
+        version sorts above, so updates stop permanently and silently."""
+        self.assertIn("content_version", _library._REQUIRED)
+        lib = _valid()
+        lib.pop("content_version", None)
+        self.assertNotEqual(
+            _library._validate(lib), "",
+            "a library with no content_version was accepted; it would "
+            "load and then never update again")
+
     def test_condition_aliases_reached_the_built_library(self):
         """The alias table is authoring source; the shipped library is
         the build artefact. An edit to `CONDITION_ALIASES` without a

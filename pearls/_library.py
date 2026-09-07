@@ -51,6 +51,13 @@ def log(msg):
 SCHEMA = 1
 
 _REQUIRED = {
+    # Required since 2.5. A library without it loads fine and then sets
+    # `CONTENT_VERSION` to "unknown", which no remote version sorts
+    # above - so the content channel switches off permanently and
+    # silently. Every library the publish script has ever built carries
+    # one, so requiring it strands nothing; it only rejects a file that
+    # would have quietly ended updates.
+    "content_version": str,
     "conditions": list,
     "new_conditions": list,
     "rich_summaries": dict,
@@ -349,7 +356,64 @@ def _quarantine(path: str, why: str) -> None:
         log(f"library: could not quarantine {path} ({exc})")
 
 
+
+def _parse_version(v):
+    """Return (year, month, day, counter) for a d.m.y[.N] or y.m.d[.N]
+    version, or None when the shape matches neither.
+
+    Lives here rather than in `_updater` because `_load` needs it and
+    `_updater` imports this module, not the other way round. `_updater`
+    imports it from here so there is one parser.
+    """
+    if not isinstance(v, str):
+        return None
+    parts = v.split(".")
+    counter = 0
+    if len(parts) == 4:
+        try:
+            counter = int(parts[3])
+        except ValueError:
+            return None
+        parts = parts[:3]
+    if len(parts) != 3:
+        return None
+    try:
+        nums = [int(p) for p in parts]
+    except ValueError:
+        return None
+    widths = [len(p) for p in parts]
+    if widths[0] == 4:
+        year, month, day = nums
+    elif widths[2] == 4:
+        day, month, year = nums
+    else:
+        return None
+    if not (1 <= month <= 12 and 1 <= day <= 31):
+        return None
+    return (year, month, day, counter)
+
+
+def _version_newer(candidate, current) -> bool:
+    """True when `candidate` is a later content version than `current`."""
+    if not (isinstance(candidate, str) and candidate):
+        return False
+    c, n = _parse_version(candidate), _parse_version(current)
+    if c is not None and n is not None:
+        return c > n
+    return candidate > (current or "")
+
+
 def _load():
+    """Load the newer of the downloaded and bundled copies.
+
+    The downloaded copy used to win unconditionally, on the assumption
+    that anything downloaded is newer than anything shipped. It is not:
+    installing an add-on release published after the user's last content
+    download hands them a newer bundled library, which the older
+    download then masked until the channel next published. Between
+    publishes they sat on stale content with nothing to indicate it.
+    """
+    usable = []
     for path, label in ((USER_COPY, "downloaded"), (BUNDLED, "bundled")):
         if not os.path.exists(path):
             continue
@@ -366,10 +430,24 @@ def _load():
             if label == "downloaded":
                 _quarantine(path, why)
             continue
-        if label == "downloaded":
+        usable.append((label, lib))
+
+    if usable:
+        # Ties go to the first entry, which is the downloaded copy - the
+        # same result as before when the versions match.
+        best_label, best = usable[0]
+        for label, lib in usable[1:]:
+            if _version_newer(lib.get("content_version"),
+                              best.get("content_version")):
+                best_label, best = label, lib
+        if len(usable) > 1 and best_label == "bundled":
+            log(f"library: bundled content {best.get('content_version')} is "
+                f"newer than the downloaded copy "
+                f"{usable[0][1].get('content_version')}; using bundled")
+        elif best_label == "downloaded":
             log(f"library: using downloaded content "
-                f"{lib.get('content_version')}")
-        return lib
+                f"{best.get('content_version')}")
+        return best
     raise RuntimeError(
         "no usable term library: neither data/library.json nor "
         "user_files/library.json loaded. The add-on install is damaged; "

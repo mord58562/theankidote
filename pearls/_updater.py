@@ -157,40 +157,10 @@ def _newer(remote: str, local: str) -> bool:
     return remote > local
 
 
-def _parse_version(v: str):
-    """Return (year, month, day, counter) for a d.m.y[.N] or y.m.d[.N]
-    version, or None if the shape does not match either.
-
-    The two forms are distinguished by which component is four digits:
-    2026.08.29 has the year first, 29.08.2026 has it last. Anything
-    else (missing components, wrong widths, non-numeric) returns None
-    so the caller falls back to string compare.
-    """
-    if not isinstance(v, str):
-        return None
-    parts = v.split(".")
-    counter = 0
-    if len(parts) == 4:
-        try:
-            counter = int(parts[3])
-        except ValueError:
-            return None
-        parts = parts[:3]
-    if len(parts) != 3:
-        return None
-    try:
-        a, b, c = int(parts[0]), int(parts[1]), int(parts[2])
-    except ValueError:
-        return None
-    if len(parts[0]) == 4:
-        year, month, day = a, b, c
-    elif len(parts[2]) == 4:
-        day, month, year = a, b, c
-    else:
-        return None
-    if not (1 <= month <= 12 and 1 <= day <= 31 and 1900 <= year <= 2999):
-        return None
-    return (year, month, day, counter)
+# `_parse_version` moved to `pearls/_library`, which needs it too and
+# cannot import this module - `_updater` imports `_library`. One parser,
+# imported rather than copied.
+_parse_version = _library._parse_version
 
 
 def _write_atomically(path: str, body: bytes) -> None:

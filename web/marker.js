@@ -203,17 +203,19 @@
       "<style>" +
         ":host{all:initial;}" +
         ".box{background:#162d45;color:#eaf3f8;padding:18px 22px;" +
+          "font-weight:400;" +
           "border-radius:9px;font-family:-apple-system,BlinkMacSystemFont," +
           "'Segoe UI',sans-serif;font-size:14px;line-height:1.55;" +
           "box-shadow:0 4px 22px rgba(0,0,0,.5);max-width:480px;" +
           "overflow-y:auto;overscroll-behavior:contain;" +
           "pointer-events:auto;box-sizing:border-box;}" +
-        ".label{font-weight:700;font-size:12px;letter-spacing:.07em;" +
-          "color:#5dd5df;text-transform:uppercase;margin:0 0 7px 0;}" +
-        ".label-db{color:#f4b942;}" +
-        ".label-utd{color:#5dca7f;}" +
-        ".label-pre{color:#9aa9ff;}" +
-        ".label-custom{color:#f291d6;}" +
+        ".label{font-weight:600;font-size:12px;letter-spacing:0;" +
+          "color:var(--src,#5dd5df);text-transform:none;margin:0 0 7px 0;}" +
+        ".box{--src:#5dd5df;}" +
+        ".box.src-db{--src:#f4b942;}" +
+        ".box.src-utd{--src:#5dca7f;}" +
+        ".box.src-pre{--src:#9aa9ff;}" +
+        ".box.src-custom{--src:#f291d6;}" +
         ".title{font-size:17px;font-weight:600;margin:0 0 9px 0;}" +
         ".summary{font-size:14px;opacity:.88;line-height:1.6;margin:0;}" +
         ".lede{margin:0 0 2px 0;}" +
@@ -227,38 +229,43 @@
         ".secbody{margin-top:1px;}" +
         ".cat{display:inline-block;margin-bottom:1px;" +
           "text-transform:uppercase;letter-spacing:.06em;" +
-          "color:#5dd5df;font-weight:700;font-size:10.5px;}" +
+          "color:var(--src,#5dd5df);font-weight:700;font-size:10.5px;}" +
         ".cat-link{cursor:pointer;" +
           "border-bottom:1px dotted rgba(93,213,223,.45);}" +
         ".cat-link:hover{color:#8fe9f1;border-bottom-color:#8fe9f1;}" +
         ".box.golden .cat,.box.diamond .cat{color:inherit;opacity:.85;}" +
         ".utd{margin-top:12px;padding-top:10px;" +
           "border-top:1px solid rgba(255,255,255,.09);}" +
-        ".utd-label{font-weight:700;font-size:10px;letter-spacing:.07em;" +
-          "color:#5dca7f;text-transform:uppercase;margin:0 0 6px 0;}" +
+        ".utd-label{font-weight:600;font-size:10px;letter-spacing:0;" +
+          "color:#5dca7f;text-transform:none;margin:0 0 6px 0;}" +
         ".utd-chips{display:flex;flex-wrap:wrap;gap:5px;}" +
         ".utd-chip{display:inline-block;padding:3px 10px;" +
           "background:rgba(93,202,127,.13);" +
-          "border:1px solid rgba(93,202,127,.4);border-radius:12px;" +
-          "color:#5dca7f;font-size:12px;font-weight:600;cursor:pointer;" +
+          "border:1px solid rgba(93,202,127,.4);border-radius:999px;" +
+          "color:#5dca7f;font-size:12px;font-weight:500;cursor:pointer;" +
           "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}" +
         ".utd-chip:hover{background:rgba(93,202,127,.27);" +
           "border-color:rgba(93,202,127,.7);}" +
         ".open{display:block;width:100%;margin-top:13px;" +
-          "background:rgba(15,202,212,.13);border:1px solid rgba(15,202,212,.4);" +
-          "border-radius:5px;color:#5dd5df;font-size:13px;font-weight:600;" +
+          "background:color-mix(in srgb,var(--src,#0fcad4) 13%,transparent);" +
+          "border:1px solid color-mix(in srgb,var(--src,#0fcad4) 40%,transparent);" +
+          "border-radius:4px;color:var(--src,#5dd5df);font-size:13px;font-weight:500;" +
           "cursor:pointer;padding:7px 12px;text-align:left;" +
           "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;" +
           "box-sizing:border-box;}" +
-        ".open:hover{background:rgba(15,202,212,.27);" +
-          "border-color:rgba(15,202,212,.7);}" +
+        ".open:hover{background:color-mix(in srgb,var(--src,#0fcad4) 27%,transparent);" +
+          "border-color:color-mix(in srgb,var(--src,#0fcad4) 70%,transparent);}" +
         ".box.sp-light{background:#ffffff;color:#1a2c3e;" +
-          "border:1px solid #c5e3ed;box-shadow:0 4px 18px rgba(0,0,0,.15);}" +
-        ".box.sp-light .label{color:#0a9ba3;}" +
-        ".box.sp-light .label.label-db{color:#c07400;}" +
-        ".box.sp-light .label.label-utd{color:#2c8a4f;}" +
-        ".box.sp-light .label.label-pre{color:#3a4fa8;}" +
-        ".box.sp-light .label.label-custom{color:#c9509e;}" +
+          "border:none;box-shadow:0 6px 24px rgba(13,33,55,.18);}" +
+        // Light mode redefines the accent itself rather than
+        // re-colouring each element, so the badge, the section markers
+        // and the button move together. These are the same five hues
+        // darkened for contrast on white.
+        ".box.sp-light{--src:#0a9ba3;}" +
+        ".box.sp-light.src-db{--src:#c07400;}" +
+        ".box.sp-light.src-utd{--src:#2c8a4f;}" +
+        ".box.sp-light.src-pre{--src:#3a4fa8;}" +
+        ".box.sp-light.src-custom{--src:#c9509e;}" +
         ".box.sp-light .summary{opacity:.92;}" +
         ".box.sp-light .cat{color:#0a9ba3;}" +
         ".box.sp-light .utd{border-top-color:rgba(0,0,0,.09);}" +
@@ -417,10 +424,7 @@
                               : (isPre ? "Preclinical"
                                 : (isCustom ? (badge || "Custom")
                                   : (isArticle ? "StatPearls" : "The AnkiDote"))));
-      _tipLabel.className   = isDb ? "label label-db"
-                            : (isUtd ? "label label-utd"
-                              : (isPre ? "label label-pre"
-                                : (isCustom ? "label label-custom" : "label")));
+      _tipLabel.className = "label";
     }
     // The button says what it will actually do. `isArticle` comes from
     // data-sp-link, which is "article" only when the entry carries a
@@ -438,7 +442,32 @@
     }
     var egg = _eggFor(el, _bumpPopupCounter());
     if (_tipBox) {
-      var isLight = !!(document.body && !document.body.classList.contains("nightMode"));
+      // One accent per source, set on the box so the badge, the section
+      // markers and the button all read as coming from the same place.
+      // The five hues were declared for the badge and then dropped
+      // everywhere else, so a DrugBank popup was gold-badged with a
+      // teal button.
+      _tipBox.classList.remove("src-db", "src-utd", "src-pre", "src-custom");
+      if (isDb)          _tipBox.classList.add("src-db");
+      else if (isUtd)    _tipBox.classList.add("src-utd");
+      else if (isPre)    _tipBox.classList.add("src-pre");
+      else if (isCustom) _tipBox.classList.add("src-custom");
+      // On a card, Anki puts `nightMode` on the body and that is the
+      // answer. On a StatPearls or DrugBank page in the dock there is
+      // no such class, so this used to read "light" every time and the
+      // popup rendered pale on a dark-themed page. The dock sets
+      // `window.__tadDark` when it injects this file; fall back to the
+      // OS preference only when neither signal is present.
+      var isLight;
+      if (document.body && document.body.classList.contains("nightMode")) {
+        isLight = false;
+      } else if (typeof window.__tadDark === "boolean") {
+        isLight = !window.__tadDark;
+      } else if (window.matchMedia) {
+        isLight = !window.matchMedia("(prefers-color-scheme: dark)").matches;
+      } else {
+        isLight = true;
+      }
       _tipBox.classList.toggle("sp-light", isLight);
       _tipBox.classList.remove("golden");
       _tipBox.classList.remove("diamond");
