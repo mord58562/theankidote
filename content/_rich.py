@@ -66984,6 +66984,14 @@ CONDITION_ALIASES = {
                                     "Use of interpreters"],
     # Letter order varies between style guides and both are in current use.
     "LGBTIQA+ mental health":   ["LGBTQIA+ mental health"],
+    # The framework names the field this way and a card written from it
+    # would too. The entry is titled for the model rather than the
+    # field, so without this the phrase reaches nothing.
+    "Social and emotional wellbeing": [
+        "Aboriginal and Torres Strait Islander mental health",
+        "Aboriginal social and emotional wellbeing",
+        "Social and emotional well-being",
+    ],
     # Named instruments. Rarely written out in full on a card, but when
     # they are, the entry that explains them is the screening one.
     "Osteoporosis screening":   ["FRAX fracture risk calculator",
