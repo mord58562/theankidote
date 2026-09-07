@@ -23,6 +23,24 @@ from . import _matcher
 _ROMAN_ACRONYMS = frozenset({
     "II", "III", "IV", "VI", "VII", "VIII", "IX", "XI", "XII",
 })
+# Acronyms that are also ordinary English words.
+#
+# Case-sensitive matching is what keeps most acronyms honest, but card
+# authors capitalise for emphasis and for structure - "1st line: X OR Y"
+# was expanding OR to Operating Room, and "ALL patients" to Acute
+# Lymphoblastic Leukaemia. Both had exactly one candidate expansion, and
+# a single-candidate acronym skips context scoring entirely, so nothing
+# stood between the word and the popup.
+#
+# These expand only when at least one of the expansion's own context
+# keywords is somewhere on the card. "Taken to OR under general
+# anaesthesia" still resolves; "nifedipine OR indomethacin" no longer
+# does.
+_ENGLISH_WORD_ACRONYMS = frozenset({
+    "OR", "ALL", "PET", "CAP", "AS", "TEN", "MEN", "ARM", "BED", "MAP",
+    "LAST",
+})
+
 _ROMAN_CLASSIFIERS = frozenset({
     "rome", "dsm", "icd", "type", "class", "grade", "stage", "phase",
     "chapter", "factor", "figure", "level", "generation", "gen",
@@ -122,6 +140,12 @@ def resolve(card_text: str) -> list:
                 if score > best_score:
                     best_score = score
                     best = cand
+        # An acronym that is also an English word has to earn its popup.
+        if acronym in _ENGLISH_WORD_ACRONYMS:
+            if text_lower is None:
+                text_lower = card_text.lower()
+            if not any(kw.lower() in text_lower for kw in best[1]):
+                continue
         expansion, _ctx, description = best
         out.append({
             "acronym": acronym,
