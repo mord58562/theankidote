@@ -8732,6 +8732,228 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "echocardiographic assessment of valve gradient aortic stenosis severity"]],
         "summary": "",
     },
+    {
+        "name": "Lichen striatus",
+        "aliases": ["blaschkitis", "linear lichenoid dermatosis"],
+        "utd": [["Overview", "lichen striatus blaschko linear dermatosis children"]],
+        "summary": "",
+    },
+    {
+        "name": "Pilomatricoma",
+        "aliases": ["pilomatrixoma", "calcifying epithelioma of Malherbe", "Malherbe tumour"],
+        "utd": [["Overview", "pilomatricoma calcifying epithelioma hair matrix tumour"]],
+        "summary": "",
+    },
+    {
+        "name": "Sebaceous hyperplasia",
+        "aliases": ["senile sebaceous hyperplasia"],
+        "utd": [["Overview", "sebaceous hyperplasia benign facial papules dermoscopy"]],
+        "summary": "",
+    },
+    {
+        "name": "Epidermoid cyst",
+        "aliases": ["epidermal inclusion cyst", "infundibular cyst", "keratin cyst"],
+        "utd": [["Overview", "epidermoid cyst epidermal inclusion cyst excision"]],
+        "summary": "",
+    },
+    {
+        "name": "Naevus sebaceus",
+        "aliases": ["nevus sebaceus", "naevus sebaceus of Jadassohn", "organoid naevus"],
+        "utd": [["Overview", "nevus sebaceus of Jadassohn scalp hamartoma management"]],
+        "summary": "",
+    },
+    {
+        "name": "Becker naevus",
+        "aliases": ["Becker nevus", "Becker melanosis", "pigmented hairy epidermal naevus"],
+        "utd": [["Overview", "Becker nevus pigmented hairy epidermal naevus androgen"]],
+        "summary": "",
+    },
+    {
+        "name": "Notalgia paraesthetica",
+        "aliases": ["notalgia paresthetica", "notalgia"],
+        "utd": [["Overview", "notalgia paresthetica neuropathic itch back capsaicin"]],
+        "summary": "",
+    },
+    {
+        "name": "Traction alopecia",
+        "aliases": ["traction hair loss", "hairstyle alopecia"],
+        "utd": [["Overview", "traction alopecia hairstyling tension fringe sign"]],
+        "summary": "",
+    },
+    {
+        "name": "Green nail syndrome",
+        "aliases": ["chloronychia", "green nail", "Pseudomonas nail infection"],
+        "utd": [["Overview", "green nail syndrome chloronychia pseudomonas onycholysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Median rhomboid glossitis",
+        "aliases": ["central papillary atrophy of tongue", "posterior midline atrophic candidiasis"],
+        "utd": [["Overview", "median rhomboid glossitis candida tongue midline"]],
+        "summary": "",
+    },
+    {
+        "name": "Burning mouth syndrome",
+        "aliases": ["glossodynia", "stomatodynia", "oral dysaesthesia"],
+        "utd": [["Overview", "burning mouth syndrome glossodynia oral burning management"]],
+        "summary": "",
+    },
+    {
+        "name": "Oral lichen planus",
+        "aliases": ["oral lichenoid reaction", "Wickham striae"],
+        "utd": [["Overview", "oral lichen planus diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Torus palatinus",
+        "aliases": ["palatal torus", "palatine torus"],
+        "utd": [["Overview", "torus palatinus palatal exostosis benign bony swelling"]],
+        "summary": "",
+    },
+    {
+        "name": "Nasal vestibulitis",
+        "aliases": ["nasal furunculosis", "nasal vestibular cellulitis"],
+        "utd": [["Overview", "nasal vestibulitis staphylococcal nasal vestibule infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Silent sinus syndrome",
+        "aliases": ["chronic maxillary atelectasis", "imploding antrum syndrome"],
+        "utd": [["Overview", "silent sinus syndrome enophthalmos maxillary atelectasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Frontal sinus mucocele",
+        "aliases": ["paranasal sinus mucocele", "mucopyocele"],
+        "utd": [["Overview", "frontal sinus mucocele expansile paranasal sinus lesion"]],
+        "summary": "",
+    },
+    {
+        "name": "Antrochoanal polyp",
+        "aliases": ["Killian polyp", "maxillary antral polyp"],
+        "utd": [["Overview", "antrochoanal polyp unilateral nasal obstruction surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Patulous eustachian tube",
+        "aliases": ["patulous eustachian tube syndrome", "patent eustachian tube"],
+        "utd": [["Overview", "patulous eustachian tube autophony diagnosis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Parapharyngeal abscess",
+        "aliases": ["parapharyngeal space infection", "lateral pharyngeal abscess"],
+        "utd": [["Overview", "parapharyngeal space abscess deep neck infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Sialadenosis",
+        "aliases": ["sialosis", "non inflammatory parotid enlargement"],
+        "utd": [["Overview", "sialadenosis sialosis bilateral parotid enlargement"]],
+        "summary": "",
+    },
+    {
+        "name": "Floppy eyelid syndrome",
+        "aliases": ["lax eyelid syndrome", "floppy lid"],
+        "utd": [["Overview", "floppy eyelid syndrome obstructive sleep apnoea eyelid laxity"]],
+        "summary": "",
+    },
+    {
+        "name": "Band keratopathy",
+        "aliases": ["calcific band keratopathy", "corneal calcification"],
+        "utd": [["Overview", "band keratopathy calcium deposition cornea EDTA chelation"]],
+        "summary": "",
+    },
+    {
+        "name": "Recurrent corneal erosion",
+        "aliases": ["recurrent corneal erosion syndrome", "recurrent erosion"],
+        "utd": [["Overview", "recurrent corneal erosion syndrome management"]],
+        "summary": "",
+    },
+    {
+        "name": "Retinal artery macroaneurysm",
+        "aliases": ["retinal arterial macroaneurysm", "macroaneurysm"],
+        "utd": [["Overview", "retinal arterial macroaneurysm haemorrhage management"]],
+        "summary": "",
+    },
+    {
+        "name": "Penile fracture",
+        "aliases": ["fractured penis", "rupture of tunica albuginea", "corporal rupture"],
+        "utd": [["Overview", "penile fracture tunica albuginea rupture surgical repair"]],
+        "summary": "",
+    },
+    {
+        "name": "Bladder diverticulum",
+        "aliases": ["vesical diverticulum", "Hutch diverticulum"],
+        "utd": [["Overview", "bladder diverticulum diagnosis and diverticulectomy"]],
+        "summary": "",
+    },
+    {
+        "name": "Xanthogranulomatous pyelonephritis",
+        "aliases": ["bear paw kidney"],
+        "utd": [["Overview", "xanthogranulomatous pyelonephritis diagnosis nephrectomy"]],
+        "summary": "",
+    },
+    {
+        "name": "Loin pain haematuria syndrome",
+        "aliases": ["loin pain hematuria syndrome"],
+        "utd": [["Overview", "loin pain haematuria syndrome diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Retractile testis",
+        "aliases": ["retractile testicle", "hypermobile testis"],
+        "utd": [["Overview", "retractile testis cremasteric reflex ascending testis"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypoactive sexual desire disorder",
+        "aliases": ["low sexual desire", "low libido", "female sexual interest arousal disorder"],
+        "utd": [["Overview", "hypoactive sexual desire disorder assessment treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Schatzki ring",
+        "aliases": ["lower oesophageal ring", "Schatzki B ring", "oesophageal mucosal ring"],
+        "utd": [["Overview", "Schatzki ring dysphagia oesophageal dilation"]],
+        "summary": "",
+    },
+    {
+        "name": "Solitary rectal ulcer syndrome",
+        "aliases": ["mucosal prolapse syndrome", "rectal prolapse ulcer"],
+        "utd": [["Overview", "solitary rectal ulcer syndrome diagnosis biofeedback"]],
+        "summary": "",
+    },
+    {
+        "name": "Proctalgia fugax",
+        "aliases": ["functional anorectal pain", "fleeting rectal pain"],
+        "utd": [["Overview", "proctalgia fugax functional anorectal pain management"]],
+        "summary": "",
+    },
+    {
+        "name": "Pruritus ani",
+        "aliases": ["anal itching", "perianal itch", "anal pruritus"],
+        "utd": [["Overview", "pruritus ani evaluation and treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Lymphangioleiomyomatosis",
+        "aliases": ["LAM", "pulmonary lymphangioleiomyomatosis"],
+        "utd": [["Overview", "lymphangioleiomyomatosis diagnosis sirolimus VEGF-D"]],
+        "summary": "",
+    },
+    {
+        "name": "Tracheomalacia",
+        "aliases": ["tracheobronchomalacia", "floppy trachea"],
+        "utd": [["Overview", "tracheomalacia diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Sideroblastic anaemia",
+        "aliases": ["sideroblastic anemia", "ring sideroblast anaemia"],
+        "utd": [["Overview", "sideroblastic anaemia ring sideroblasts causes management"]],
+        "summary": "",
+    },
 ]
 
 
@@ -56654,6 +56876,817 @@ RICH_SUMMARIES = {
         "low-gradient stenosis from pseudo-severe disease."
     ),
 
+    "Lichen striatus": (
+        "Self-limiting linear inflammatory dermatosis of childhood "
+        "that follows the lines of Blaschko, usually on one limb. "
+        "Aetiology: unknown, thought to be a T-cell response against "
+        "a mosaic clone of keratinocytes carrying a post-zygotic "
+        "mutation. Atopy is over-represented. Peak age is 2 to 5 "
+        "years and girls are affected more often. Clinical features: "
+        "a sudden band of small pink or skin-coloured flat-topped "
+        "papules sweeping down the arm or leg over days to weeks. "
+        "Scale is fine and itch is mild or absent. Nail involvement "
+        "causes longitudinal ridging or splitting when the streak "
+        "reaches a digit. Ix: clinical. Biopsy is reserved for "
+        "atypical cases and shows a lichenoid infiltrate tracking "
+        "around adnexa. Mx: reassurance is the main treatment because "
+        "it resolves spontaneously over 6 to 12 months. A moderate "
+        "topical corticosteroid or a calcineurin inhibitor helps "
+        "itch. Post-inflammatory hypopigmentation lingers longer than "
+        "the papules and settles over a further year. Note: linear "
+        "plus Blaschkoid plus a child equals lichen striatus. Linear "
+        "psoriasis and inflammatory linear verrucous epidermal naevus "
+        "persist rather than fade."
+    ),
+    "Pilomatricoma": (
+        "Benign tumour of hair matrix cells, the commonest deep skin "
+        "lump excised in children after the epidermoid cyst. "
+        "Aetiology: activating mutations in CTNNB1 drive beta-catenin "
+        "signalling in the hair follicle matrix. Multiple lesions "
+        "raise myotonic dystrophy, Gardner syndrome and Turner "
+        "syndrome. Clinical features: a firm, hard, mobile nodule 0.5 "
+        "to 3 cm in the head, neck or upper limb, often with a bluish "
+        "tinge. Stretching the overlying skin shows angulated facets, "
+        "the tent sign, and the lesion rocks like a pebble when "
+        "pressed at one edge. Ix: usually clinical. Ultrasound shows "
+        "a well-defined hypoechoic mass with internal calcification "
+        "and posterior shadowing. Fine needle aspiration is unhelpful "
+        "and is commonly misread as malignant. Mx: simple excision "
+        "with a narrow margin is curative and recurrence is rare. "
+        "Observation is reasonable if the diagnosis is secure and the "
+        "lesion is small. Note: a rock-hard blue nodule on a child's "
+        "cheek that tents the skin is a pilomatricoma until proven "
+        "otherwise, and it will not resolve on its own."
+    ),
+    "Sebaceous hyperplasia": (
+        "Benign enlargement of sebaceous glands producing small "
+        "yellow umbilicated papules on the face of middle-aged and "
+        "older adults. Aetiology: androgen-driven gland turnover "
+        "falls with age, so sebocytes accumulate. Ciclosporin is a "
+        "well-recognised trigger and lesions are common in transplant "
+        "recipients. Chronic sun exposure and a family history "
+        "contribute. Clinical features: soft yellow papules 2 to 4 mm "
+        "on the forehead, nose and cheeks, each with a central dell "
+        "and a rim of fine telangiectasia radiating around rather "
+        "than across the lesion. Multiple lesions are the rule. Ix: "
+        "dermoscopy shows the crown vessels and yellow lobules that "
+        "separate it from basal cell carcinoma. Biopsy only if the "
+        "distinction stays unclear. Mx: nothing is needed medically. "
+        "Cosmetic options are electrodessication, light cautery, "
+        "laser or trichloroacetic acid, all of which risk a small "
+        "scar. Oral isotretinoin shrinks lesions but they return on "
+        "stopping. Note: the vessels crown the lesion in sebaceous "
+        "hyperplasia and cross it in basal cell carcinoma, which is "
+        "the single most useful bedside discriminator."
+    ),
+    "Epidermoid cyst": (
+        "Common benign cyst lined by squamous epithelium and filled "
+        "with keratin, frequently and wrongly called a sebaceous "
+        "cyst. Aetiology: occlusion of a pilosebaceous unit, or "
+        "implantation of epidermis after trauma or surgery. Multiple "
+        "truncal cysts in a young person raise Gardner syndrome, so "
+        "ask about bowel polyps and family history. Clinical "
+        "features: a mobile dermal or subcutaneous nodule with a "
+        "central punctum, discharging foul cheesy keratin when "
+        "squeezed. Sites are the face, neck, trunk and scrotum. "
+        "Rupture into the dermis produces a hot, red, tender lesion "
+        "that mimics an abscess but is a foreign-body reaction rather "
+        "than infection. Ix: clinical. Ultrasound helps if the plane "
+        "is uncertain. Mx: leave alone if asymptomatic. Complete "
+        "excision of the cyst wall while quiet is the definitive "
+        "treatment. Incise and drain an acutely inflamed cyst, then "
+        "excise the residual wall 4 to 6 weeks later once "
+        "inflammation settles, because attempting excision hot leaves "
+        "wall behind and it recurs. Note: leaving any lining behind "
+        "guarantees recurrence, so the operation is a capsule "
+        "excision, not a drainage."
+    ),
+    "Naevus sebaceus": (
+        "Congenital hamartoma of skin, sebaceous glands and adnexa, "
+        "usually on the scalp or face, present from birth. Aetiology: "
+        "post-zygotic mosaic mutations in HRAS or KRAS confined to "
+        "the lesional skin. Extensive lesions with neurological or "
+        "ocular anomalies define naevus sebaceus syndrome. Clinical "
+        "features: a hairless, yellow-orange, slightly raised plaque "
+        "following Blaschko lines, smooth in infancy. It thickens and "
+        "becomes verrucous and greasy at puberty under androgen "
+        "drive, which alarms parents but is expected. Ix: clinical. "
+        "Biopsy any nodule arising within the plaque in adulthood. "
+        "Mx: observation is now standard. The historic policy of "
+        "prophylactic excision fell away once large series showed the "
+        "common secondary tumour is the benign trichoblastoma rather "
+        "than basal cell carcinoma, and true malignant change is "
+        "rare. Excise for cosmesis or for a new growing nodule. Note: "
+        "a yellow hairless scalp plaque in a newborn that turns warty "
+        "in adolescence is the classic course, and the bald patch "
+        "itself is the diagnostic clue."
+    ),
+    "Becker naevus": (
+        "Acquired hyperpigmented hairy patch, usually over the "
+        "shoulder or upper trunk, appearing around puberty in males. "
+        "Aetiology: a mosaic ACTB mutation producing androgen "
+        "hypersensitivity in the affected skin, which is why it "
+        "darkens and grows terminal hair at puberty. Clinical "
+        "features: a large irregular tan patch, often 10 cm or more, "
+        "with a geographic border and coarse dark hair developing "
+        "later within it. Acneiform papules may appear inside the "
+        "patch. Underlying smooth muscle hamartoma can give a subtle "
+        "textured feel. Ix: clinical. Examine for ipsilateral breast "
+        "hypoplasia, pectoral muscle absence and skeletal asymmetry, "
+        "which together define Becker naevus syndrome. Mx: benign, so "
+        "no treatment is required. Laser hair reduction handles the "
+        "hypertrichosis. Pigment responds poorly and unpredictably to "
+        "laser, and repigmentation is common, so counsel carefully "
+        "before treating. Note: unlike a congenital melanocytic "
+        "naevus it carries no increased melanoma risk, so the "
+        "discussion is cosmetic rather than oncological."
+    ),
+    "Notalgia paraesthetica": (
+        "Chronic localised itch of the upper back, medial to the "
+        "scapula, with a hyperpigmented patch from years of rubbing. "
+        "Aetiology: a sensory mononeuropathy of the dorsal rami of T2 "
+        "to T6 as they pierce the multifidus muscle. Degenerative "
+        "thoracic spine disease and poor posture are associated. "
+        "Clinical features: unilateral itch, burning or a crawling "
+        "sensation just inside the scapular border, worse with heat "
+        "and stress. A well-demarcated tan macule sits at the site, "
+        "and sensory testing shows reduced touch or pinprick over it. "
+        "Ix: clinical. Image the thoracic spine only if there are "
+        "motor signs, radicular pain or red flags. Mx: results are "
+        "modest and expectations should be set early. Topical "
+        "capsaicin depletes substance P over weeks and is the "
+        "best-supported option. Gabapentin, amitriptyline or "
+        "pregabalin help neuropathic itch. Physiotherapy for thoracic "
+        "mobility and paraspinal strength gives some patients lasting "
+        "benefit. Note: an itch that does not respond to "
+        "antihistamines and sits in one fixed unilateral patch is "
+        "neuropathic, and reaching for a stronger steroid will not "
+        "help."
+    ),
+    "Traction alopecia": (
+        "Hair loss caused by sustained tension on the follicle from "
+        "hairstyling, reversible early and scarring if prolonged. "
+        "Aetiology: tight braids, weaves, extensions, buns, turbans "
+        "and chemical relaxation. Risk is highest where tension is "
+        "applied to chemically processed hair. It is a common and "
+        "under-recognised cause of alopecia in women of African "
+        "ancestry. Clinical features: marginal recession at the "
+        "frontotemporal hairline and above the ears, with the fringe "
+        "sign, a retained row of fine hairs at the very margin. Early "
+        "disease shows perifollicular erythema and pustules. Late "
+        "disease is smooth and shiny with lost follicular ostia. Ix: "
+        "clinical with dermoscopy. Biopsy if frontal fibrosing "
+        "alopecia is a serious contender. Mx: stop the traction, "
+        "which is the only intervention that changes the outcome. "
+        "Topical or intralesional corticosteroids and topical "
+        "minoxidil help early inflammatory disease. Established "
+        "scarring needs surgical restoration. Note: the fringe sign "
+        "favours traction, while frontal fibrosing alopecia takes the "
+        "marginal hairs and the eyebrows with it."
+    ),
+    "Green nail syndrome": (
+        "Green-black discolouration of the nail from Pseudomonas "
+        "aeruginosa colonising the space under a detached nail plate. "
+        "Aetiology: pyocyanin and pyoverdine pigments produced by the "
+        "organism. It needs a pre-existing gap, so onycholysis, "
+        "chronic paronychia or trauma comes first. Wet work in "
+        "cleaners, bar staff, hairdressers and health workers is the "
+        "classic setting. Clinical features: a painless green, "
+        "blue-green or near-black discolouration of one or two nails, "
+        "usually with visible onycholysis and sometimes surrounding "
+        "paronychia. The colour is in the plate, not the bed, and "
+        "grows out distally. Ix: clinical. Swab under the plate if "
+        "diagnosis is doubtful and clip for fungal microscopy since "
+        "onychomycosis often coexists. Mx: keep the nail dry and trim "
+        "back the detached plate, which removes the moist niche and "
+        "does most of the work. Topical acetic acid soaks, or a "
+        "topical fluoroquinolone or aminoglycoside solution, clear "
+        "residual organism. Systemic antibiotics are rarely needed. "
+        "Note: treating the onycholysis matters more than killing the "
+        "Pseudomonas, because the gap is what lets it back in."
+    ),
+    "Median rhomboid glossitis": (
+        "Well-demarcated red depapillated patch on the midline dorsum "
+        "of the tongue, just anterior to the circumvallate papillae. "
+        "Aetiology: chronic Candida albicans infection rather than "
+        "the developmental defect once assumed. Inhaled "
+        "corticosteroids, smoking, dentures, diabetes, xerostomia and "
+        "immunosuppression are the drivers. Clinical features: a "
+        "smooth or slightly nodular red rhomboid or oval area, "
+        "usually asymptomatic and found incidentally. A matching red "
+        "patch on the apposing hard palate is the kissing lesion and "
+        "confirms the candidal mechanism. Ix: clinical. Swab for "
+        "Candida if uncertain. Biopsy only when the lesion is "
+        "indurated or off the midline, because midline glossitis "
+        "itself is benign. Mx: correct the drivers first, "
+        "particularly rinsing after inhaled steroids, denture hygiene "
+        "and smoking. Topical antifungals such as nystatin or "
+        "miconazole oral gel are used per eTG, with oral fluconazole "
+        "for resistant disease. Complete resolution of the "
+        "depapillation is not always achieved. Note: an inhaled "
+        "steroid without a spacer and without rinsing explains a "
+        "large share of these, and the fix is technique rather than a "
+        "prescription."
+    ),
+    "Burning mouth syndrome": (
+        "Chronic oral burning with a clinically normal mucosa and "
+        "normal investigations, lasting more than three months. "
+        "Aetiology: primary disease is a small-fibre and central "
+        "neuropathic condition. Secondary burning follows candidiasis "
+        "or xerostomia, haematinic deficiency (iron, folate, zinc or "
+        "B12), and drugs, particularly ACE inhibitors. It "
+        "predominates in peri- and post-menopausal women. Clinical "
+        "features: bilateral burning of the tongue tip and anterior "
+        "palate that builds through the day, typically with taste "
+        "disturbance and a subjective dry mouth despite normal flow. "
+        "Eating and drinking often relieve it, which is a distinctive "
+        "feature. Ix: a screen for secondary causes covering full "
+        "blood count, haematinics, HbA1c and thyroid function, plus a "
+        "Candida swab. Mx: treat any secondary cause found. Primary "
+        "disease is managed with topical clonazepam, alpha lipoic "
+        "acid or a low-dose tricyclic, alongside cognitive "
+        "behavioural therapy. Note: a normal-looking mouth does not "
+        "mean nothing is wrong, and dismissing the complaint is the "
+        "commonest management error."
+    ),
+    "Oral lichen planus": (
+        "Chronic T-cell mediated inflammatory disease of oral mucosa "
+        "affecting about 1 to 2% of adults, most often middle-aged "
+        "women. Aetiology: cytotoxic T cells attack basal "
+        "keratinocytes. Lichenoid reactions that look identical "
+        "follow amalgam contact, NSAIDs, ACE inhibitors, beta "
+        "blockers and antimalarials, and there is a genuine "
+        "association with hepatitis C. Clinical features: bilateral, "
+        "roughly symmetrical white lacy Wickham striae on the buccal "
+        "mucosa are the hallmark. Erosive and atrophic forms give "
+        "painful ulcers and desquamative gingivitis, with pain on "
+        "spicy or acidic food. Ix: biopsy from the edge of a lesion, "
+        "avoiding frankly ulcerated tissue. Direct immunofluorescence "
+        "separates it from mucous membrane pemphigoid. Mx: reticular "
+        "disease that is asymptomatic needs surveillance only. "
+        "Symptomatic disease gets topical corticosteroids as "
+        "mouthwash or gel, with topical tacrolimus or systemic "
+        "steroids for refractory erosive disease. Note: it carries a "
+        "small but real risk of oral squamous cell carcinoma, so any "
+        "solitary non-healing or indurated area needs biopsy rather "
+        "than another steroid course."
+    ),
+    "Torus palatinus": (
+        "Benign bony exostosis on the midline of the hard palate, "
+        "present in roughly 20% of adults. Aetiology: multifactorial "
+        "with strong genetic loading, plus masticatory stress and "
+        "bruxism. It is more common in women and in some East Asian "
+        "and Inuit populations. It enlarges slowly through adult life "
+        "and may stabilise or regress in old age. Clinical features: "
+        "a hard, immobile, midline swelling covered by normal pale "
+        "mucosa, flat, spindle, nodular or lobular in shape. It is "
+        "asymptomatic unless the thin overlying mucosa is traumatised "
+        "by hard food, which produces a slow-healing ulcer. Ix: "
+        "clinical. The rock-hard midline position and normal mucosa "
+        "are diagnostic and imaging is unnecessary. Mx: no treatment "
+        "for the vast majority. Surgical reduction is indicated when "
+        "it interferes with a denture, obstructs speech or suffers "
+        "repeated ulceration. Harvested torus bone is a useful "
+        "autologous graft source. Note: patients who suddenly notice "
+        "a lifelong torus are usually reporting new awareness rather "
+        "than new growth, and reassurance beats investigation."
+    ),
+    "Nasal vestibulitis": (
+        "Infection or inflammation of the hair-bearing skin lining "
+        "the nasal vestibule, usually staphylococcal. Aetiology: "
+        "Staphylococcus aureus entering through nose picking, "
+        "plucking or blowing, or irritation from prolonged "
+        "rhinorrhoea, nasal oxygen and topical drugs. EGFR inhibitors "
+        "and taxanes produce a characteristic drug-induced form. "
+        "Clinical features: tenderness, crusting, erythema and "
+        "fissuring just inside the nostril, sometimes with a discrete "
+        "furuncle. Pain on touching the nasal tip is prominent. "
+        "Spreading cellulitis of the nasal tip and upper lip signals "
+        "a more serious course. Ix: clinical. Swab recurrent or "
+        "non-responding cases and consider nasal carriage screening. "
+        "Mx: topical mupirocin for limited disease, with oral "
+        "flucloxacillin or di/cloxacillin per eTG for a furuncle or "
+        "cellulitis. Warm compresses and stopping the picking matter. "
+        "Incise a pointing abscess. Note: the nasal vestibule drains "
+        "into the cavernous sinus through the facial and ophthalmic "
+        "veins, which is the danger triangle, so vestibulitis with "
+        "fever, visual change or ophthalmoplegia is an emergency "
+        "rather than a minor skin infection."
+    ),
+    "Silent sinus syndrome": (
+        "Painless enophthalmos and hypoglobus from chronic maxillary "
+        "sinus collapse, without symptoms of sinusitis. Aetiology: "
+        "occlusion of the maxillary ostium creates a sealed, "
+        "negative-pressure sinus. Sustained resorption of gas thins "
+        "and retracts the orbital floor, so the globe sinks. It is "
+        "unilateral and usually presents in the third to fifth "
+        "decade. Clinical features: gradual facial asymmetry with a "
+        "deepened upper eyelid sulcus and a globe that sits lower and "
+        "further back on the affected side. Nasal symptoms are "
+        "typically absent, which is what makes it silent. Diplopia is "
+        "uncommon. Ix: CT sinuses is diagnostic and shows a small "
+        "opacified maxillary sinus, an inward-bowed and thinned "
+        "orbital floor, lateral retraction of the uncinate process "
+        "and an enlarged orbital volume. Mx: endoscopic uncinectomy "
+        "and middle meatal antrostomy restores ventilation and halts "
+        "progression. Orbital floor reconstruction is staged later if "
+        "the enophthalmos remains cosmetically significant. Note: the "
+        "referral usually comes from the optometrist or the patient's "
+        "photographs, not from a blocked nose."
+    ),
+    "Frontal sinus mucocele": (
+        "Expansile, epithelium-lined mucus-filled cyst that slowly "
+        "erodes the walls of an obstructed frontal sinus. Aetiology: "
+        "obstruction of the frontal recess by chronic rhinosinusitis, "
+        "polyps, prior trauma, previous sinus surgery or an osteoma. "
+        "Trapped secretions accumulate and bone remodels under "
+        "sustained pressure. The frontal sinus is the commonest site. "
+        "Clinical features: a slow-growing, painless swelling of the "
+        "supero-medial orbital rim displacing the globe down and out, "
+        "with frontal headache, diplopia and proptosis. Infection "
+        "converts it to a mucopyocele with acute pain, fever and "
+        "rapid orbital signs. Ix: CT shows a homogeneous expansile "
+        "opacity with thinned or dehiscent bone. MRI clarifies "
+        "intracranial extension and distinguishes retained mucus from "
+        "tumour. Mx: endoscopic marsupialisation to create wide "
+        "permanent drainage is preferred over obliteration, with an "
+        "external or combined approach for far lateral disease. "
+        "Antibiotics for a mucopyocele. Note: painless proptosis "
+        "pushing the eye down and out over months is a mucocele until "
+        "imaged, and complete excision of the lining is not the "
+        "modern goal."
+    ),
+    "Antrochoanal polyp": (
+        "Solitary benign polyp arising in the maxillary antrum that "
+        "prolapses through an accessory ostium into the choana. "
+        "Aetiology: uncertain, probably a maxillary mucous cyst "
+        "enlarging and herniating under pressure. It is the commonest "
+        "polyp in children and young adults and is not associated "
+        "with atopy the way bilateral polyposis is. Clinical "
+        "features: progressive unilateral nasal obstruction that is "
+        "worse on expiration, hyponasal voice, snoring and postnasal "
+        "drip. A pale mobile mass is visible in the nasal cavity or "
+        "behind the soft palate on oral inspection. Ix: nasendoscopy "
+        "plus CT sinuses showing a dumbbell mass with an antral "
+        "component, a narrow waist at the ostium and a choanal head. "
+        "Mx: complete endoscopic removal of the polyp with its antral "
+        "attachment, usually with middle meatal antrostomy. Leaving "
+        "the antral origin behind is the cause of recurrence, which "
+        "is why simple avulsion fails. Note: any unilateral nasal "
+        "mass deserves imaging and histology before it is called a "
+        "polyp, since inverted papilloma and juvenile angiofibroma "
+        "present the same way."
+    ),
+    "Patulous eustachian tube": (
+        "Abnormally patent eustachian tube that stays open at rest, "
+        "giving autophony and aural fullness. Aetiology: loss of "
+        "peritubal fat and tissue volume, so rapid weight loss, "
+        "dehydration, pregnancy, radiotherapy and stimulant or "
+        "oestrogen use are typical triggers. Chronic nasal "
+        "decongestant use contributes. Clinical features: hearing "
+        "one's own voice and breathing sounds boomingly loud in the "
+        "affected ear, worse when upright and relieved by lying down "
+        "or by a head-down position, which is close to pathognomonic. "
+        "Sniffing gives temporary relief. Ix: otoscopy shows a "
+        "tympanic membrane moving in and out with quiet nasal "
+        "breathing. Tympanometry with breathing manoeuvres shows "
+        "pressure swings. Mx: reassurance and rehydration first, plus "
+        "weight restoration where relevant. Nasal saline gel or "
+        "topical irritants such as dilute hydrochloric acid or "
+        "oestrogen drops cause mucosal swelling. Refractory cases get "
+        "tube plugging or a ventilation tube. Note: it is regularly "
+        "misdiagnosed as blocked eustachian tube and given "
+        "decongestants, which worsen it, so the positional relief is "
+        "the question that separates them."
+    ),
+    "Parapharyngeal abscess": (
+        "Deep neck space infection in the fat-filled compartment "
+        "lateral to the pharynx, bounded by skull base above and "
+        "hyoid below. Aetiology: spread from tonsillitis, "
+        "peritonsillar abscess, pharyngitis, dental infection or "
+        "parotid disease. Flora are polymicrobial with streptococci, "
+        "Staphylococcus aureus and oral anaerobes. Diabetes and "
+        "immunosuppression predispose. Clinical features: fever, "
+        "odynophagia, trismus and neck stiffness, with medial "
+        "displacement of the lateral pharyngeal wall and tonsil, and "
+        "swelling at the angle of the jaw. Trismus reflects pterygoid "
+        "irritation and is a useful early sign. Ix: contrast CT neck "
+        "defines the space and separates abscess from phlegmon. Blood "
+        "cultures and inflammatory markers. Do not delay airway "
+        "assessment for imaging. Mx: secure the airway, then "
+        "intravenous broad-spectrum antibiotics per eTG with "
+        "anaerobic cover, and surgical drainage for a defined "
+        "collection. Note: it abuts the carotid sheath, so "
+        "complications are internal jugular thrombophlebitis with "
+        "septic emboli, which is Lemierre syndrome, and carotid "
+        "erosion."
+    ),
+    "Sialadenosis": (
+        "Painless, bilateral, non-inflammatory enlargement of the "
+        "salivary glands, almost always the parotids. Aetiology: an "
+        "autonomic neuropathy of the gland with acinar hypertrophy. "
+        "It accompanies alcohol-related liver disease, diabetes and "
+        "eating disorders such as bulimia nervosa. It is a marker of "
+        "systemic disease rather than a gland disease. Clinical "
+        "features: soft, symmetrical, non-tender parotid swelling "
+        "developing over months, giving a squared-off jawline. "
+        "Salivary flow is normal or slightly reduced, there is no "
+        "erythema and no purulent duct discharge. Ix: directed at the "
+        "underlying cause with liver function tests, HbA1c and a "
+        "careful eating-disorder history. Ultrasound shows uniformly "
+        "enlarged homogeneous glands. Biopsy is rarely required. Mx: "
+        "treat the underlying condition, which is the only measure "
+        "that reduces the swelling, and it does so slowly. "
+        "Sialogogues and gland massage give minor benefit. "
+        "Parotidectomy for cosmesis is a last resort. Note: "
+        "bilateral, soft and painless points away from tumour and "
+        "infection and towards a systemic cause, so the history "
+        "matters more than the scan."
+    ),
+    "Floppy eyelid syndrome": (
+        "Easily everted, rubbery upper eyelids with a chronic "
+        "papillary conjunctivitis, strongly linked to obstructive "
+        "sleep apnoea. Aetiology: loss of elastin in the tarsal plate "
+        "with upregulated matrix metalloproteinases, made worse by "
+        "mechanical rubbing against bedding. Obesity and male sex "
+        "predominate. Keratoconus and eyelid rubbing are associated. "
+        "Clinical features: chronic red, irritable eyes worse on "
+        "waking, with mucoid discharge and a foreign body sensation, "
+        "typically worse on the side the patient sleeps on. The upper "
+        "lid everts with gentle superior traction and the tarsal "
+        "conjunctiva is velvety and papillary. Ix: clinical, with "
+        "corneal staining to look for exposure keratopathy. Every "
+        "patient needs sleep apnoea screening and polysomnography "
+        "referral. Mx: lubricants, taping or shielding the eye at "
+        "night, and sleeping supine. Treat the sleep apnoea, since "
+        "continuous positive airway pressure often improves the eye. "
+        "Horizontal lid-tightening surgery for refractory disease. "
+        "Note: the ophthalmic sign frequently precedes the sleep "
+        "apnoea diagnosis, so the eyelid is the reason to order the "
+        "sleep study."
+    ),
+    "Band keratopathy": (
+        "Deposition of calcium hydroxyapatite in Bowman layer "
+        "producing a horizontal band across the interpalpebral "
+        "cornea. Aetiology: chronic ocular inflammation, particularly "
+        "juvenile idiopathic arthritis-associated uveitis, plus "
+        "long-standing phthisis, silicone oil and repeated "
+        "intraocular surgery. Systemic hypercalcaemia from "
+        "hyperparathyroidism, sarcoidosis or vitamin D excess "
+        "produces it in otherwise healthy eyes. Clinical features: a "
+        "grey-white plaque beginning at the 3 and 9 o'clock limbus "
+        "with a clear lucid interval, then coalescing across the "
+        "cornea. Small holes where nerves pierce Bowman layer give "
+        "the classic Swiss cheese appearance. Vision falls and the "
+        "rough surface causes recurrent epithelial breakdown and "
+        "pain. Ix: slit lamp examination, plus serum calcium, "
+        "phosphate and parathyroid hormone when there is no ocular "
+        "explanation. Mx: treat the cause. Chelation with topical "
+        "EDTA after epithelial removal is the standard procedure, "
+        "with phototherapeutic keratectomy for deeper deposits. Note: "
+        "a band in a child with a quiet white eye should prompt "
+        "screening for juvenile idiopathic arthritis uveitis."
+    ),
+    "Recurrent corneal erosion": (
+        "Repeated spontaneous breakdown of corneal epithelium from "
+        "failed adhesion to the underlying basement membrane. "
+        "Aetiology: previous sharp or fingernail trauma is the "
+        "commonest antecedent, sometimes years earlier. Epithelial "
+        "basement membrane dystrophy is the other major group and "
+        "gives bilateral disease. Diabetes and prior refractive "
+        "surgery contribute. Clinical features: sudden severe eye "
+        "pain, watering and photophobia on waking or opening the "
+        "eyes, because the lid adheres to loose epithelium overnight "
+        "and pulls it off. Episodes last hours to days and recur over "
+        "months. Ix: slit lamp with fluorescein shows an epithelial "
+        "defect or loose heaped epithelium. Examine both eyes for "
+        "dystrophy with map, dot and fingerprint changes. Mx: "
+        "intensive preservative-free lubricants by day and an ocular "
+        "ointment at night for at least three months, which is the "
+        "mainstay. A bandage contact lens and hypertonic saline help. "
+        "Refractory disease gets anterior stromal puncture or "
+        "phototherapeutic keratectomy. Note: pain on waking after an "
+        "old scratch is the history that makes the diagnosis, and "
+        "patients stop the night ointment far too early."
+    ),
+    "Retinal artery macroaneurysm": (
+        "Acquired focal dilatation of a retinal arteriole, typically "
+        "at a bifurcation or arteriovenous crossing in the first "
+        "three orders of the vessel. Aetiology: chronic hypertension "
+        "with arteriolosclerosis weakening the vessel wall. It "
+        "affects older women predominantly and is usually unilateral "
+        "and solitary. Clinical features: often asymptomatic and "
+        "found incidentally. Sudden vision loss follows rupture, "
+        "which characteristically produces multilevel haemorrhage "
+        "that is subretinal, intraretinal and preretinal at once. "
+        "Slow leak instead gives macular oedema and a circinate lipid "
+        "ring. Ix: fundus examination with optical coherence "
+        "tomography for oedema. Fluorescein angiography shows the "
+        "saccular dilatation, though thrombosis or overlying blood "
+        "can mask it. Check blood pressure and cardiovascular risk. "
+        "Mx: observe, since many thrombose and involute "
+        "spontaneously. Intravitreal anti-VEGF or focal laser for "
+        "persistent macular oedema, and vitrectomy or pneumatic "
+        "displacement for dense submacular haemorrhage. Manage "
+        "hypertension. Note: haemorrhage at three retinal levels in "
+        "an older hypertensive patient is the signature, and the "
+        "finding is a prompt to assess systemic vascular risk."
+    ),
+    "Penile fracture": (
+        "Traumatic rupture of the tunica albuginea of an erect corpus "
+        "cavernosum, a urological emergency. Aetiology: blunt force "
+        "to the rigid penis, most often during intercourse when it "
+        "slips out and strikes the perineum or pubic bone, and in "
+        "some regions from forceful manual bending. The tunica thins "
+        "from 2 mm to under 0.5 mm with erection, which is why it "
+        "only happens erect. Clinical features: a sudden cracking or "
+        "popping sound, immediate detumescence, pain, and rapid "
+        "swelling with bruising giving the aubergine sign. The penis "
+        "deviates away from the tear. Blood at the meatus or "
+        "difficulty voiding suggests urethral injury, which coexists "
+        "in up to a fifth. Ix: clinical diagnosis and surgery should "
+        "not wait for imaging. Ultrasound or MRI localises the defect "
+        "when the history is atypical. Retrograde urethrogram or "
+        "flexible cystoscopy if urethral injury is suspected. Mx: "
+        "prompt surgical exploration, evacuation of haematoma and "
+        "repair of the tunica, with urethral repair as needed. Note: "
+        "delayed or conservative management gives far worse rates of "
+        "erectile dysfunction and penile curvature, so this is a "
+        "same-day theatre case."
+    ),
+    "Bladder diverticulum": (
+        "Herniation of bladder mucosa through the detrusor muscle, "
+        "forming a pouch that empties poorly. Aetiology: acquired "
+        "diverticula follow chronic bladder outflow obstruction, "
+        "usually prostatic, with sustained high voiding pressures and "
+        "detrusor trabeculation. Congenital Hutch diverticula sit "
+        "beside the ureteric orifice and appear in children. "
+        "Neuropathic bladder is another route. Clinical features: "
+        "often silent. Recurrent urinary infection, double voiding "
+        "where the patient passes urine twice in quick succession, "
+        "incomplete emptying, stones and haematuria. Large "
+        "diverticula can obstruct the bladder neck or the ureter. Ix: "
+        "ultrasound with pre- and post-void volumes, CT urography or "
+        "cystography showing the pouch, and cystoscopy to inspect the "
+        "interior and the neck. Urodynamics defines the obstruction. "
+        "Mx: relieve the outflow obstruction first, since that is the "
+        "cause. Diverticulectomy, open or robotic, for large "
+        "symptomatic pouches, recurrent infection, stones or tumour. "
+        "Note: urothelial carcinoma inside a diverticulum carries a "
+        "worse prognosis because the wall lacks muscle, so tumour "
+        "reaches perivesical fat early."
+    ),
+    "Xanthogranulomatous pyelonephritis": (
+        "Rare chronic destructive renal infection in which "
+        "lipid-laden macrophages replace functioning parenchyma. "
+        "Aetiology: chronic obstruction, usually by a staghorn "
+        "calculus, combined with chronic infection, classically "
+        "Proteus mirabilis or Escherichia coli. Middle-aged women and "
+        "people with diabetes are over-represented. Clinical "
+        "features: weeks to months of flank pain, fever, weight loss "
+        "and malaise with a palpable mass, on a background of "
+        "recurrent urinary infection. Anaemia and deranged liver "
+        "function are common, and it is often mistaken for "
+        "malignancy. Ix: CT shows an enlarged non-functioning kidney "
+        "with a central calculus and dilated calyces filled with "
+        "low-density material, the bear paw sign. Urine culture, "
+        "blood tests and, where diagnosis is unclear, histology after "
+        "removal. Mx: antibiotics and drainage stabilise the patient, "
+        "but diffuse disease needs nephrectomy, which is both "
+        "diagnostic and curative. Focal disease may be treated with "
+        "partial nephrectomy. Note: the bear paw kidney with a "
+        "staghorn stone in a diabetic woman losing weight is the "
+        "picture, and the surgery is harder than a routine "
+        "nephrectomy because of dense perinephric fibrosis."
+    ),
+    "Loin pain haematuria syndrome": (
+        "Chronic severe unilateral or bilateral loin pain with "
+        "glomerular haematuria and no obstructing or structural "
+        "cause. Aetiology: poorly understood. Proposed mechanisms "
+        "include red cell passage causing tubular obstruction, "
+        "abnormal glomerular basement membrane, intrarenal vasospasm "
+        "and central pain sensitisation. It predominantly affects "
+        "younger women. Clinical features: episodic or constant loin "
+        "pain, often severe enough to require repeated presentations "
+        "and opioids, with visible or microscopic haematuria and "
+        "low-grade fever during attacks. Renal function is preserved. "
+        "Ix: a diagnosis of exclusion. CT urography, cystoscopy, "
+        "urine cytology, coagulation screen and renal biopsy are used "
+        "to rule out stones, tumour, glomerulonephritis and clotting "
+        "disorders. Mx: multidisciplinary chronic pain management "
+        "with non-opioid analgesia, neuropathic agents and "
+        "psychological support. Nerve blocks and renal denervation "
+        "help some. Nephrectomy and autotransplantation are last "
+        "resorts with disappointing durable results. Note: the risk "
+        "is iatrogenic harm from escalating opioids and repeated "
+        "surgery, so early pain-service involvement changes the "
+        "trajectory more than another scan."
+    ),
+    "Retractile testis": (
+        "Testis that sits in the scrotum but is drawn up by an "
+        "overactive cremasteric reflex, and can be brought down to "
+        "remain there. Aetiology: a physiological exaggeration of the "
+        "cremasteric reflex, strongest between about 4 and 10 years "
+        "of age and absent in the first six months. It is a normal "
+        "variant rather than a disorder of descent. Clinical "
+        "features: a testis found high in the groin on casual "
+        "examination that can be manipulated into the scrotum without "
+        "tension and stays there at least briefly after release. The "
+        "scrotum is normally developed on that side, which "
+        "distinguishes it from a truly undescended testis. Ix: "
+        "clinical, examined in a warm room with warm hands, ideally "
+        "with the child cross-legged or squatting to damp the reflex. "
+        "Imaging has no role. Mx: annual review until puberty. A "
+        "proportion, around a fifth, ascend and become acquired "
+        "undescended testes needing orchidopexy, so follow-up is not "
+        "optional. Note: a well-formed scrotum and a testis that "
+        "stays down after release means retractile, while an "
+        "underdeveloped hemiscrotum means the testis has never lived "
+        "there."
+    ),
+    "Hypoactive sexual desire disorder": (
+        "Persistently absent or deficient sexual thoughts, fantasies "
+        "and desire causing marked personal distress. Distress is "
+        "essential, since low desire without it is not a disorder. "
+        "Aetiology: multifactorial. Relationship conflict, "
+        "depression, anxiety and fatigue interact with hypogonadism, "
+        "thyroid disease and hyperprolactinaemia, and with drugs such "
+        "as SSRIs, antipsychotics, combined oral contraceptives and "
+        "opioids. Clinical features: reduced interest and initiation "
+        "for at least six months, either lifelong or acquired, and "
+        "either generalised or situational. Distinguishing "
+        "generalised from situational reframes the problem and "
+        "directs treatment. Ix: history is the main tool. "
+        "Testosterone, prolactin, thyroid function, iron studies and "
+        "a depression screen where the picture suggests them. Review "
+        "the medication list carefully. Mx: address contributing "
+        "factors and change the offending drug where possible. "
+        "Psychosexual therapy, including cognitive behavioural and "
+        "mindfulness approaches, has the best evidence. Testosterone "
+        "for postmenopausal women is used off-label in Australia and "
+        "needs careful counselling. Note: treat the couple and the "
+        "context, not just the individual."
+    ),
+    "Schatzki ring": (
+        "Thin mucosal ring at the squamocolumnar junction of the "
+        "distal oesophagus, the commonest structural cause of "
+        "intermittent solid food dysphagia in adults. Aetiology: "
+        "association with gastro-oesophageal reflux and hiatus hernia "
+        "is strong, though whether reflux causes the ring remains "
+        "debated. It is a mucosal ring, unlike the muscular B ring of "
+        "similar location. Clinical features: episodic dysphagia to "
+        "solids, particularly bread and steak, with long asymptomatic "
+        "intervals. Acute food bolus obstruction with drooling and "
+        "chest discomfort is the steakhouse syndrome. Symptoms appear "
+        "once the lumen falls below about 13 mm. Ix: barium swallow "
+        "with a solid bolus is more sensitive than endoscopy for a "
+        "thin ring. Endoscopy allows biopsy to exclude eosinophilic "
+        "oesophagitis, which mimics it. Mx: endoscopic dilatation "
+        "with a bougie or balloon relieves symptoms in most, with "
+        "long-term proton pump inhibitor therapy to reduce "
+        "recurrence. Advise thorough chewing. Note: intermittent "
+        "dysphagia to solids only, with normal swallowing of liquids "
+        "and no weight loss, points to a ring rather than a stricture "
+        "or tumour."
+    ),
+    "Solitary rectal ulcer syndrome": (
+        "Chronic benign rectal condition with characteristic "
+        "histology, often neither solitary nor ulcerated despite the "
+        "name. Aetiology: chronic straining with paradoxical "
+        "puborectalis contraction causes internal rectal "
+        "intussusception and mucosal prolapse, so the anterior rectal "
+        "wall is repeatedly traumatised and rendered ischaemic. Young "
+        "adults with disordered defaecation are the typical group. "
+        "Clinical features: rectal bleeding, mucus discharge, "
+        "tenesmus, straining and a sense of incomplete evacuation, "
+        "sometimes with digitation to defaecate. Pain is variable. "
+        "Ix: sigmoidoscopy shows an anterior wall lesion 4 to 10 cm "
+        "from the anal verge, ranging from erythema to ulcer to "
+        "polypoid mass. Biopsy is the key test and shows "
+        "fibromuscular obliteration of the lamina propria with smooth "
+        "muscle extending between crypts. Defaecating proctography "
+        "demonstrates the intussusception. Mx: bulking agents, "
+        "adequate fluid and biofeedback to retrain defaecation is "
+        "first line and helps most. Surgery such as rectopexy is "
+        "reserved for overt prolapse or refractory disease. Note: it "
+        "is regularly misdiagnosed as malignancy or inflammatory "
+        "bowel disease, so the biopsy prevents a great deal of harm."
+    ),
+    "Proctalgia fugax": (
+        "Sudden severe fleeting anorectal pain with no structural "
+        "cause, one of the functional anorectal pain disorders. "
+        "Aetiology: unknown, probably spasm of the smooth muscle of "
+        "the anal canal or the pelvic floor. Associations include "
+        "irritable bowel syndrome, anxiety and stressful life events. "
+        "Some cases run in families with hereditary internal anal "
+        "sphincter myopathy. Clinical features: episodes of intense "
+        "cramping or stabbing pain in the rectum lasting seconds to a "
+        "few minutes, rarely longer than 20, often waking the patient "
+        "at night and resolving completely between attacks. Frequency "
+        "is usually a handful of episodes a year. Ix: examination "
+        "and, in the right age group, sigmoidoscopy or colonoscopy to "
+        "exclude fissure, abscess, thrombosed haemorrhoid and "
+        "malignancy. There is no positive test. Mx: reassurance and "
+        "explanation is the main treatment, since attacks are brief "
+        "and self-limiting. Warm baths, topical glyceryl trinitrate "
+        "or diltiazem, inhaled salbutamol and biofeedback are used "
+        "for frequent attacks. Note: pain lasting hours and worse "
+        "sitting suggests levator ani syndrome instead, which is "
+        "managed quite differently."
+    ),
+    "Pruritus ani": (
+        "Chronic itching of the perianal skin, a common and "
+        "under-reported complaint that patients delay raising. "
+        "Aetiology: idiopathic in about half. Secondary causes "
+        "include faecal soiling from haemorrhoids, fissure, skin tags "
+        "or lax sphincter, dermatoses such as psoriasis and lichen "
+        "sclerosus, infection with threadworm, Candida or "
+        "dermatophyte, and dietary triggers such as coffee, "
+        "chocolate, citrus and spice. Overzealous wiping and soap "
+        "perpetuate it. Clinical features: perianal itch worse at "
+        "night, with excoriation, lichenification and fissuring. A "
+        "scratch-itch cycle sustains the problem long after the "
+        "trigger has gone. Ix: inspection of the perianal skin and "
+        "digital rectal examination, with skin scrapings, a perianal "
+        "tape test for threadworm and biopsy for persistent or "
+        "asymmetrical change. Mx: break the cycle. Stop soap and wet "
+        "wipes, wash with water and dry gently, avoid scratching and "
+        "use a barrier ointment. A short course of mild topical "
+        "corticosteroid settles inflammation. Treat identified causes "
+        "and trial dietary exclusion. Note: any unilateral, fixed or "
+        "ulcerated area needs biopsy, since extramammary Paget "
+        "disease and anal intraepithelial neoplasia present as "
+        "chronic itch."
+    ),
+    "Lymphangioleiomyomatosis": (
+        "Rare cystic lung disease of women caused by proliferation of "
+        "abnormal smooth muscle-like LAM cells. Aetiology: "
+        "inactivating mutations in TSC1 or TSC2 release mTOR "
+        "signalling. It occurs sporadically or in up to a third of "
+        "women with tuberous sclerosis complex. Oestrogen appears to "
+        "drive progression, so it presents in women of reproductive "
+        "age and can worsen in pregnancy. Clinical features: "
+        "progressive breathlessness, recurrent spontaneous "
+        "pneumothorax and chylous pleural effusion. Extrapulmonary "
+        "features are renal angiomyolipoma and lymphangioleiomyomas. "
+        "Ix: high-resolution CT shows numerous thin-walled round "
+        "cysts distributed evenly through normal-looking lung. Serum "
+        "VEGF-D above 800 pg/mL is diagnostic in the right context "
+        "and can spare a biopsy. Lung function shows obstruction with "
+        "a low transfer factor. Mx: sirolimus stabilises lung "
+        "function and shrinks chylous collections and "
+        "angiomyolipomas. Bronchodilators, pleurodesis for recurrent "
+        "pneumothorax, avoidance of oestrogen and lung "
+        "transplantation for end-stage disease. Note: a young woman "
+        "with a second pneumothorax and diffuse cysts on CT should "
+        "prompt a VEGF-D rather than watchful waiting."
+    ),
+    "Tracheomalacia": (
+        "Weakness of the tracheal wall causing excessive expiratory "
+        "collapse and airflow limitation. Aetiology: congenital forms "
+        "are primary or secondary to tracheo-oesophageal fistula, "
+        "vascular ring or prolonged ventilation in prematurity. "
+        "Acquired disease follows prolonged intubation, chronic "
+        "obstructive pulmonary disease, relapsing polychondritis and "
+        "external compression by goitre or tumour. Clinical features: "
+        "a harsh barking cough, expiratory stridor or monophonic "
+        "wheeze, recurrent chest infections and difficulty clearing "
+        "secretions. Symptoms worsen with crying, feeding or exertion "
+        "and children are frequently misdiagnosed as asthmatic. Ix: "
+        "dynamic bronchoscopy during spontaneous breathing is the "
+        "reference test. Dynamic expiratory CT quantifies collapse, "
+        "with more than 50% reduction in lumen taken as significant. "
+        "Mx: most infants improve as cartilage stiffens by 1 to 2 "
+        "years, so physiotherapy and prompt treatment of infection "
+        "suffice. Continuous positive airway pressure stents the "
+        "airway. Aortopexy or tracheal stenting for severe disease. "
+        "Note: a barking cough and wheeze that fails to respond to "
+        "bronchodilators should raise malacia rather than more asthma "
+        "treatment."
+    ),
+    "Sideroblastic anaemia": (
+        "Anaemia of ineffective erythropoiesis in which iron "
+        "accumulates in mitochondria of erythroid precursors, forming "
+        "ring sideroblasts. Aetiology: inherited forms are usually "
+        "X-linked from ALAS2 mutation. Acquired causes are clonal, "
+        "chiefly myelodysplastic syndrome with ring sideroblasts, and "
+        "reversible causes are alcohol, isoniazid, linezolid, "
+        "chloramphenicol, copper deficiency and zinc excess. Clinical "
+        "features: fatigue and pallor with iron overload despite "
+        "anaemia, so hepatosplenomegaly and later cardiac or "
+        "endocrine consequences. Inherited disease presents young, "
+        "acquired clonal disease in older adults. Ix: blood film "
+        "shows a dimorphic population with hypochromic and normal "
+        "cells. Iron studies show high ferritin and high transferrin "
+        "saturation. Bone marrow with Perls stain shows ring "
+        "sideroblasts, and cytogenetics with SF3B1 testing defines "
+        "clonal disease. Mx: remove the offending drug or toxin and "
+        "correct copper. Pyridoxine helps many with X-linked disease. "
+        "Transfusion with iron chelation, and luspatercept or "
+        "erythropoietin for myelodysplasia. Note: a microcytic "
+        "anaemia with a raised ferritin is not iron deficiency, and "
+        "giving iron makes it worse."
+    ),
 }
 
 
