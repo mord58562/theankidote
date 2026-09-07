@@ -618,7 +618,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Specific phobia",
-        "aliases": ["Simple phobia"],
+        "aliases": ["Simple phobia", "Specific phobias"],
         "utd": [["Overview", "specific phobia in adults epidemiology "
                              "clinical manifestations and diagnosis"]],
         "summary": "",
@@ -2182,7 +2182,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Nelson syndrome",
-        "aliases": ["Nelson tumour"],
+        "aliases": ["Nelson tumour", "Nelson's syndrome"],
         "utd": [["Overview", "Nelson syndrome"]],
         "summary": "",
     },
@@ -2272,7 +2272,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Paraneoplastic syndrome",
-        "aliases": ["paraneoplastic phenomenon"],
+        "aliases": ["paraneoplastic phenomenon", "Paraneoplastic syndromes"],
         "utd": [["Overview", "paraneoplastic syndromes overview"]],
         "summary": "",
     },
@@ -2644,7 +2644,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": 'Conduct disorder',
-        "aliases": [],
+        "aliases": ["Conduct disorders"],
         "utd": [["Overview", 'conduct disorder']],
         "summary": "",
     },
@@ -2656,7 +2656,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": 'Acute leukaemia',
-        "aliases": ['acute leukemia'],
+        "aliases": ["acute leukemia", "Acute leukaemias"],
         "utd": [["Overview", 'acute leukemia']],
         "summary": "",
     },
@@ -3250,7 +3250,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Perineal tear",
-        "aliases": ["OASIS obstetric injury", "obstetric anal sphincter injury"],
+        "aliases": ["OASIS obstetric injury", "obstetric anal sphincter injury", "Perineal tears"],
         "utd": [['Mx', 'perineal laceration repair']],
         "summary": "",
     },
@@ -3670,7 +3670,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Toddler fracture",
-        "aliases": ["toddlers fracture tibial fracture"],
+        "aliases": ["toddlers fracture tibial fracture", "Toddler's fracture"],
         "utd": [["Overview", "toddler fracture"]],
         "summary": "",
     },
