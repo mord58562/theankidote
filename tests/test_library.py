@@ -525,6 +525,50 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
             "these names do not exist where they are used:\n"
             + "\n".join(offenders))
 
+    # Keys the add-on manages for itself. They are real config values and
+    # they are written to the user's config blob, but they are remembered
+    # state rather than something anyone sets, so they stay out of the
+    # `config.json` template that Anki shows in its config editor. They
+    # are documented under "Internal / managed flags" instead.
+    RUNTIME_STATE_KEYS = {
+        "sidebarArticlesCollapsed", "sidebarLastArticleUrl",
+    }
+
+    def test_config_template_and_docs_track_the_defaults(self):
+        """Three ways for these to drift, all silent.
+
+        A key in `_DEFAULTS` and not in `config.json` is a setting the
+        user cannot find. A key in `config.json` and not in `_DEFAULTS`
+        is one nothing reads - `autoSearch` sat there for three releases
+        after its reader was deleted. A key in neither document is one
+        that appears in the user's config blob with no explanation.
+        """
+        import re
+        cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+        src = (ROOT / "_config.py").read_text(encoding="utf-8")
+        m = re.search(r"_DEFAULTS\s*=\s*\{(.*?)\n\}", src, re.S)
+        self.assertIsNotNone(m, "_config.py declares no _DEFAULTS")
+        defaults = set(re.findall(r'^\s*"([^"]+)"\s*:', m.group(1), re.M))
+
+        missing = sorted(defaults - set(cfg) - self.RUNTIME_STATE_KEYS)
+        self.assertEqual(
+            missing, [],
+            f"these are settings the user cannot see or edit, because "
+            f"they are in _DEFAULTS but not in config.json: {missing}")
+
+        orphaned = sorted(set(cfg) - defaults)
+        self.assertEqual(
+            orphaned, [],
+            f"config.json ships these and nothing reads them: {orphaned}")
+
+        doc = (ROOT / "config.md").read_text(encoding="utf-8")
+        documented = set(re.findall(r"`([A-Za-z_][A-Za-z0-9_]*)`", doc))
+        undocumented = sorted(defaults - documented)
+        self.assertEqual(
+            undocumented, [],
+            f"these reach the user's config blob with nothing in "
+            f"config.md explaining them: {undocumented}")
+
     def test_schema_constant_agrees_with_the_compiler(self):
         """`SCHEMA` is declared twice and nothing checked they matched.
 

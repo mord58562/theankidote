@@ -1559,8 +1559,15 @@ class StatPearlsPanel(QWidget):
             "padding:34px 30px;line-height:1.6;\">"
             "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
             "Couldn\u2019t load this page</div>"
-            "<div style=\"opacity:.85;\">The request failed twice. NCBI rate-limits "
-            "rapid requests, so waiting a moment and retrying usually works.</div>"
+            # Named one cause and asserted it. NCBI rate-limiting is a
+            # real cause and not the commonest one - being offline is,
+            # and this panel loads DrugBank too, which does not
+            # rate-limit the way Entrez does. Listing what it could be,
+            # commonest first, beats confidently naming the wrong one.
+            "<div style=\"opacity:.85;\">Two attempts, both failed. Usually "
+            "that means no connection, or the site is briefly refusing "
+            "rapid requests. Waiting a moment and retrying works most of "
+            "the time.</div>"
             f"<div style=\"margin-top:18px;\"><a href=\"{safe}\" style=\"color:{_TEAL};\">"
             "Try again</a></div>"
             f"<div style=\"margin-top:22px;font-size:12px;opacity:.55;"

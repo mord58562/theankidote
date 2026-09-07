@@ -1,6 +1,7 @@
 {
     "enableHighlights": true,
     "enableHighlightsOnQuestions": true,
+    "enableDockHighlights": true,
     "enableArticleViewer": true,
     "highlightColor": "#0fcad4",
     "maxResults": 8,

@@ -30,6 +30,32 @@ acronyms that are also English words stop firing on the words.
 
 ### Fixed
 
+- **The same three module switches explained themselves in Settings and
+  not in the Tools menu.** The menu path wrote the value and stopped:
+  no toolbar redraw, and no word that switching a dock module off leaves
+  it in `sys.modules` with its shortcut bound and its dock open, so the
+  setting looked applied and was not. Both surfaces now say the same
+  thing.
+- **The sidebar's load-failure page named one cause and asserted it.**
+  It said NCBI rate-limits rapid requests. That is a real cause and not
+  the commonest - being offline is - and the panel loads DrugBank too,
+  which does not rate-limit the way Entrez does.
+- **Update failures said what happened and not what to do.** All eight
+  now name the next step and say plainly that the existing terms still
+  work, which matters more now that they reach the user instead of a
+  log file.
+- **Config drift.** `enableDockHighlights` had a Settings switch and a
+  documentation entry but was missing from `config.json`, so it never
+  appeared in Anki's config editor. `config.md` still described the
+  home-button dropdown that the site pills replaced, still documented
+  `tourSeen` after its removal, and never mentioned the two keys the
+  sidebar writes to remember its own state. A test now holds
+  `config.json`, `_config._DEFAULTS` and `config.md` together in all
+  three directions.
+- **"Reference popups" named two different controls** in Settings - a
+  module switch and, directly below it, the box holding that module's
+  options. The switch is now named for what it does.
+
 - **Opening an article from a popup made the list unreachable.** That
   path hid the whole section rather than collapsing it, taking the
   header with it - the header being the only thing on screen that

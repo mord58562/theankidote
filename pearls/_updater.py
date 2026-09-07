@@ -269,7 +269,9 @@ def _check(manifest_url: str) -> str:
             _fetch(manifest_url, 64 << 10, "manifest url").decode("utf-8"))
     except Exception as exc:                            # noqa: BLE001
         log(f"updater: manifest check failed ({exc})")
-        return "Could not reach the update server."
+        return ("Could not check for new terms - no connection to the "
+                "update server. Your terms still work; it will try "
+                "again next time Anki starts.")
 
     if manifest.get("schema") != _library.SCHEMA:
         log(f"updater: remote content is schema "
@@ -287,39 +289,52 @@ def _check(manifest_url: str) -> str:
     want = manifest.get("sha256")
     if not url or not want:
         log("updater: manifest lacks url/sha256; ignoring")
-        return "The update server returned an incomplete response."
+        return ("The update server sent an incomplete reply, so nothing "
+                "was downloaded. Your terms are unchanged.")
 
     try:
         body = _fetch(url, _library_limit(manifest.get("bytes")), "library url")
     except Exception as exc:                            # noqa: BLE001
         log(f"updater: download failed ({exc})")
-        return "Download failed."
+        return ("New terms were available but the download did not "
+                "finish. Your terms are unchanged; it will try again "
+                "next time Anki starts.")
 
     got = hashlib.sha256(body).hexdigest()
     if got != want:
         log(f"updater: checksum mismatch (got {got[:12]}, "
             f"expected {str(want)[:12]}); discarding")
-        return "Downloaded content failed its checksum; discarded."
+        return ("The downloaded terms did not match their checksum, so "
+                "they were discarded rather than used. Your existing "
+                "terms are untouched. If this repeats, report it.")
     if manifest.get("bytes") not in (None, len(body)):
         log("updater: length mismatch; discarding")
-        return "Downloaded content was the wrong size; discarded."
+        return ("The downloaded terms were the wrong size, so they were "
+                "discarded. Your existing terms are untouched. If "
+                "this repeats, report it.")
 
     try:
         lib = json.loads(body.decode("utf-8"))
     except Exception as exc:                            # noqa: BLE001
         log(f"updater: payload is not JSON ({exc}); discarding")
-        return "Downloaded content was unreadable; discarded."
+        return ("The downloaded terms could not be read, so they were "
+                "discarded. Your existing terms are untouched. If "
+                "this repeats, report it.")
 
     why = _library._validate(lib)
     if why:
         log(f"updater: payload rejected - {why}; discarding")
-        return "Downloaded content failed validation; discarded."
+        return ("The downloaded terms were not in a shape this version "
+                "understands, so they were discarded. Your existing "
+                "terms are untouched.")
 
     try:
         _write_atomically(_library.USER_COPY, body)
     except Exception as exc:                            # noqa: BLE001
         log(f"updater: could not write library ({exc})")
-        return "Could not save the downloaded content."
+        return ("New terms downloaded but could not be saved - check that "
+                "Anki can write to its add-on folder, and that the "
+                "disk is not full.")
 
     log(f"updater: content {remote} downloaded; active at next restart")
     return f"Downloaded {remote}. Restart Anki to apply."

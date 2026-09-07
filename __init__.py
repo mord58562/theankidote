@@ -871,6 +871,16 @@ def _setup() -> None:
     submenu = QMenu("The AnkiDote", mw)
     mw.form.menuTools.addMenu(submenu)
 
+    # Modules whose imports are gated at load time, so switching them
+    # either way only takes effect on restart. Switching one off is the
+    # half that looks applied and is not: the toolbar button goes, and
+    # the module stays in `sys.modules` with its shortcut still bound
+    # and any open dock still open.
+    _NEEDS_RESTART = {
+        "enableUpToDate": ("UpToDate", lambda: _utd_mod is not None),
+        "enableChat": ("AI chat", lambda: _chat_mod is not None),
+    }
+
     def _make_toggle(label, key, default_true=True):
         act = QAction(label, mw)
         act.setCheckable(True)
@@ -879,6 +889,25 @@ def _setup() -> None:
 
         def _on_toggle(checked):
             _config.set_value(key, bool(checked))
+            # These three settings have a second home in the Settings
+            # window, which redraws the toolbar and names the module
+            # that needs a restart. This surface wrote the value and
+            # said nothing, so the same switch explained itself in one
+            # place and not the other.
+            request_toolbar_redraw()
+            entry = _NEEDS_RESTART.get(key)
+            if not entry:
+                return
+            name, is_loaded = entry
+            try:
+                if bool(checked) == bool(is_loaded()):
+                    return          # already in the state it will be in
+                verb = "loads" if checked else "unloads"
+                from aqt.utils import tooltip
+                tooltip(f"{name} {verb} when you restart Anki.", period=4000)
+            except Exception as exc:                    # noqa: BLE001
+                _log.debug(f"module toggle note: {exc}")
+
         act.toggled.connect(_on_toggle)
         return act
 
@@ -1161,7 +1190,12 @@ def _build_modules_group(_w, first_run: bool):
     # Deliberately not quoting the old strings here: grepping the tree
     # for a caption is how you confirm one is gone, and a comment holding
     # it verbatim makes that check report a false positive.
-    pearls_cb = _row("Reference popups", "", pearls_default)
+    # Named the same as the group box directly below it, which holds
+    # this feature's options rather than its switch. Two controls with
+    # one name and different scopes. This row is the master switch for
+    # highlighting on cards, so it says that; the box below keeps the
+    # feature's name.
+    pearls_cb = _row("Highlight terms on cards", "", pearls_default)
     utd_cb    = _row("UpToDate sidebar", "", utd_default)
     chat_cb   = _row("AI chat sidebar", "", chat_default)
     return box, pearls_cb, utd_cb, chat_cb

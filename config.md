@@ -15,7 +15,7 @@ JSON, but both are supported.
 | --- | --- | --- | --- |
 | `enableHighlights` | bool | `true` | Master toggle for term highlighting in the reviewer. |
 | `enableHighlightsOnQuestions` | bool | `true` | Highlight on the question side, not just the answer. |
-| `pearlsHomePage` | string | `"statpearls"` | Which page the side panel's Home button loads. Accepts `"statpearls"` or `"drugbank"`. Toggleable from the dock's home-button dropdown. |
+| `pearlsHomePage` | string | `"statpearls"` | Which page the side panel's Home button loads. Accepts `"statpearls"` or `"drugbank"`. Set by the site pills in the dock header, which switch the page and the default together. |
 | `enableArticleViewer` | bool | `true` | If true, popup clicks open the side panel; if false, they open the user's external browser. |
 | `enableDockHighlights` | boolean | `true` | Highlight recognised terms on StatPearls and DrugBank pages in the reference sidebar, the same way cards are highlighted. |
 | `highlightColor` | hex string | `"#0fcad4"` | Underline colour for highlighted terms. |
@@ -168,7 +168,7 @@ profile cookie store keeps you signed in across restarts.
 | `minWidth` | int | `400` | Minimum dock width (pixels). |
 | `toolbarOrder` | list | `["chat", "uptodate"]` | Left-to-right display order of the chat and UpToDate toolbar buttons. Edited in Settings via a drag-list. The pearls crown sits separately at the toolbar's right edge. |
 | `rememberDockState` | bool | `false` | Reopen the same docks at the next Anki launch. |
-| `debug` | bool | `false` | Verbose logging to stderr. Enable when filing bug reports - full tracebacks land in Anki's debug console (`Help → Debug Console`). |
+| `debug` | bool | `false` | Verbose logging to stderr. Enable when filing bug reports - full tracebacks land in Anki's debug console (`Help → Debug Console`). Separate from `user_files/diagnostic.log`, which is always written and is what Settings > Advanced reveals. |
 
 On macOS, Anki maps `Ctrl` to `⌘` automatically - the bindings show
 as `⌘⇧S` etc. The macOS `Ctrl` modifier is reachable as `Meta` if
@@ -225,7 +225,8 @@ manually if you want to, but you usually don't need to.
 | Key | Type | Default | Description |
 | --- | --- | --- | --- |
 | `firstRunDone` | bool | `false` | Set to `true` after the welcome dialog has been completed. Toggle it back to `false` (or use Tools → The AnkiDote → "Run setup again…") to re-trigger the dialog. |
-| `tourSeen` | bool | `false` | Legacy flag from when the welcome dialog and the post-install tour were separate. Retained for forward-compatibility but no longer used. |
 | `lastSeenVersion` | string / null | `null` | Human version of the last release this install ran. Drives one-time upgrade notices; not intended for manual editing. |
 | `webInspectorPort` | int | `9222` | Port DevTools binds to when Anki is relaunched with the web inspector on (Settings > Advanced). Read only at that relaunch; the inspector is never persisted, so a normal restart leaves it off. |
+| `sidebarArticlesCollapsed` | bool | `false` | Whether the reference dock's article list is collapsed to its header. Set by the header toggle and by opening an article from a popup; persists across restarts. |
+| `sidebarLastArticleUrl` | string | `""` | The article the reader last chose, restored when the dock reopens on a page it is not already holding. Cleared by the Home button. |
 | `dockState_pearls` / `dockState_uptodate` / `dockState_chat` | bool | `false` | Last-seen visibility of each dock. Only consulted when `rememberDockState` is `true`. |
