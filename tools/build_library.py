@@ -75,7 +75,59 @@ def collect() -> dict:
     # override it replaces is already the base. The split has to survive
     # every rebuild or it is not a split.
     from pearls import _library
-    conditions = _library.get("conditions")
+    conditions = [dict(c) for c in _library.get("conditions")]
+
+    # Merge the alternate-name table into the condition entries, on the
+    # same terms as the drug aliases below: `aliases` is additive, schema
+    # stays 1, and the names travel over the content channel instead of
+    # waiting for an AnkiWeb release.
+    #
+    # A key that names no condition is a typo and a silent one - the
+    # alias would never match and nothing would say so - so fail the
+    # build. `NEW_CONDITIONS` counts as a target: those entries are part
+    # of the shipped vocabulary even though they are not in the base
+    # list yet.
+    by_condition = {}
+    for c in conditions:
+        by_condition.setdefault(c["name"].lower(), c)
+    new_conditions = [dict(c) for c in _rich.NEW_CONDITIONS]
+    for c in new_conditions:
+        by_condition.setdefault(c["name"].lower(), c)
+
+    unknown = [n for n in _rich.CONDITION_ALIASES
+               if n.lower() not in by_condition]
+    if unknown:
+        raise SystemExit(
+            f"CONDITION_ALIASES names {len(unknown)} condition(s) not in "
+            f"the library, so the aliases would never match: {unknown}")
+
+    # An alias already claimed by a different entry is worse than one
+    # that never matches: `_conditions._LOOKUP` is built first-occurrence
+    # wins, so the popup would silently keep showing whichever entry
+    # happened to index first and the new alias would look like it had
+    # simply been ignored.
+    claimed = {}
+    for c in conditions + new_conditions:
+        for key in [c["name"]] + list(c.get("aliases") or []):
+            claimed.setdefault(key.lower(), c["name"])
+    for name, aliases in _rich.CONDITION_ALIASES.items():
+        entry = by_condition[name.lower()]
+        merged = list(entry.get("aliases") or [])
+        have = {a.lower() for a in merged} | {entry["name"].lower()}
+        for a in aliases:
+            owner = claimed.get(a.lower())
+            if owner is not None and owner.lower() != name.lower():
+                raise SystemExit(
+                    f"CONDITION_ALIASES[{name!r}] claims {a!r}, which "
+                    f"already belongs to {owner!r}; the lookup is "
+                    f"first-occurrence wins, so the alias would never "
+                    f"reach {name!r}")
+            if a.lower() in have:
+                continue
+            have.add(a.lower())
+            merged.append(a)
+            claimed[a.lower()] = entry["name"]
+        entry["aliases"] = merged
 
     # Merge the spelling-variant table into the drug entries. Done here
     # rather than in `_drugs.py` so the aliases travel in library.json
@@ -283,7 +335,7 @@ def collect() -> dict:
     return {
         "schema": SCHEMA,
         "conditions": conditions,
-        "new_conditions": _rich.NEW_CONDITIONS,
+        "new_conditions": new_conditions,
         "rich_summaries": _rich.RICH_SUMMARIES,
         "drugs": drugs,
         "new_drugs": new_drugs,

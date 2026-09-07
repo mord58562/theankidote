@@ -63660,3 +63660,105 @@ NEW_PRECLINICAL = [
         ),
     },
 ]
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# Alternate names for conditions already in the library.
+# ═══════════════════════════════════════════════════════════════════════
+#
+# Keyed by the primary name already in the library; each value is a list
+# of other terms that mean the same entity. `tools/build_library.py`
+# merges these into the condition entries so they travel in
+# `library.json` and reach existing installs over the content channel,
+# rather than waiting for an AnkiWeb release.
+#
+# This is the last vocabulary with no authoring route. Conditions pass
+# through `collect()` untouched from the library on disk, so the only
+# way to add an alias to an existing condition was to hand-edit a build
+# artefact - which the next build would not have preserved as source.
+# `NEW_CONDITIONS` covers entries the library never had; this covers
+# names for entries it already has. Same shape and same validation as
+# `DRUG_ALIASES`: a key that names no condition fails the build, because
+# the alias would otherwise simply never match and nothing would say so.
+#
+# It lives at the end of the file rather than beside `RICH_SUMMARIES`
+# where it belongs, because the batch-merge script anchors on the close
+# of `RICH_SUMMARIES` followed by the first `# ═══` rule. A dict between
+# the two would capture that anchor and merged entries would land in the
+# wrong dictionary.
+#
+# What does NOT go here, learned from the pass that built it. Of 167
+# framework items triaged as needing an alias, 92 already resolved: the
+# matcher handles a qualified phrase against its entity on its own, so
+# 'Pneumonia (community, hospital, aspiration)' needs nothing. Of the
+# rest, most were curriculum phrasing that no card would ever carry
+# ('Emergency versus non-emergency management of arrhythmias'), and
+# several would have been wrong: 'Cancer screening programs in
+# Australia' is not bowel screening alone, 'Sedatives' is not
+# benzodiazepines, and 'Gender-affirming hormone therapy' is not the
+# feminising half of it. An alias must be a term a card actually uses
+# AND the same entity, not merely a related one.
+#
+# Bare common words stay out for the reason the blocklist exists:
+# 'Falls', 'Confusion' and 'Immunosuppression' each fire on ordinary
+# prose across the whole collection.
+
+CONDITION_ALIASES = {
+    # Spelling and singular/plural variants
+    "Thrombocytopenia":         ["Thrombocytopaenia"],
+    "Amoebic dysentery":        ["Amoebiasis", "Amebiasis"],
+    "Toxic neuropathy":         ["Toxic neuropathies",
+                                 "Alcohol-related neuropathy",
+                                 "Alcoholic neuropathy"],
+    "Diabetic peripheral neuropathy": ["Diabetic neuropathies"],
+    "Secondary immunodeficiency": ["Secondary hypogammaglobulinaemia",
+                                   "Secondary hypogammaglobulinemia"],
+
+    # The short form a card is far more likely to carry than the full one
+    "Typhoid fever":            ["Typhoid"],
+    "Dengue fever":             ["Dengue"],
+    "Carcinoid syndrome":       ["Carcinoid"],
+    "Acute psychosis":          ["Psychosis"],
+
+    # Australian and clinical synonyms the library held only one side of
+    "Coronary artery disease":  ["Cardiac ischaemia", "Cardiac ischemia"],
+    "Spirometry":               ["Pulmonary function testing",
+                                 "Pulmonary function tests",
+                                 "Pulmonary function test"],
+    "Chronic liver failure":    ["Decompensated liver disease"],
+    "Pyelonephritis":           ["Urosepsis"],
+    "Adrenal insufficiency":    ["Hypoadrenalism"],
+    "Peroneal nerve palsy":     ["Foot drop"],
+    "Antiepileptic drugs":      ["Antiseizure medications",
+                                 "Antiseizure medication"],
+    "Advance care directive":   ["Advance care planning"],
+    "Terminal agitation":       ["Agitation at the end of life"],
+
+    # Names a framework or a DSM edition uses for an entry filed under
+    # its clinical name
+    "Functional neurological disorder": ["Pseudoseizures", "Pseudoseizure",
+                                         "Psychogenic non-epileptic seizures"],
+    "Dementia":                 ["Neurocognitive disorders",
+                                 "Major neurocognitive disorder"],
+    "Somatic symptom disorder": ["Somatic symptom and related disorders"],
+
+    # Psychiatry teaching phrases that are how the concept is written on
+    # a card, not how the entry is titled
+    "Biopsychosocial formulation": ["Biopsychosocial framework",
+                                    "Problem formulation",
+                                    "Predisposing, precipitating, "
+                                    "perpetuating and protective factors"],
+    "Motivational interviewing": ["Motivation enhancement therapy",
+                                  "Motivational enhancement therapy"],
+    "Working with an interpreter": ["Working with interpreters",
+                                    "Use of interpreters"],
+    # Letter order varies between style guides and both are in current use.
+    "LGBTIQA+ mental health":   ["LGBTQIA+ mental health"],
+    # Named instruments. Rarely written out in full on a card, but when
+    # they are, the entry that explains them is the screening one.
+    "Osteoporosis screening":   ["FRAX fracture risk calculator",
+                                 "Garvan fracture risk calculator"],
+    # Rob practises in NSW, so the unqualified phrase should reach the
+    # NSW Act rather than nothing.
+    "NSW Mental Health Act 2007": ["Mental Health Act"],
+}

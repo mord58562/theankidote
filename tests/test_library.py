@@ -399,6 +399,48 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
                     if g.lower() not in generics]
         self.assertEqual(orphaned, [])
 
+    def test_condition_aliases_reached_the_built_library(self):
+        """The alias table is authoring source; the shipped library is
+        the build artefact. An edit to `CONDITION_ALIASES` without a
+        rebuild is a silent no-op - the add-on reads only the JSON - and
+        this is the test that says so.
+
+        Checked against the library on disk rather than against
+        `_conditions.resolve`, because that module merges at import and
+        would answer from the same authored dict it is meant to verify.
+        """
+        import _rich                                    # content/_rich.py
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        shipped = {}
+        for entry in lib["conditions"] + (lib.get("new_conditions") or []):
+            for key in [entry["name"]] + list(entry.get("aliases") or []):
+                shipped.setdefault(key.lower(), entry["name"])
+        missing = []
+        for name, aliases in _rich.CONDITION_ALIASES.items():
+            for alias in aliases:
+                if shipped.get(alias.lower(), "").lower() != name.lower():
+                    missing.append(f"{alias!r} -> {name!r} "
+                                   f"(library says {shipped.get(alias.lower())!r})")
+        self.assertEqual(
+            missing, [],
+            f"{len(missing)} condition alias(es) are in content/_rich.py "
+            f"but not in data/library.json; run tools/build_library.py "
+            f"and commit the artefact: {missing[:5]}")
+
+    def test_condition_aliases_target_a_real_condition(self):
+        """Same failure as an orphaned drug override: the alias never
+        matches and nothing reports it."""
+        import _rich                                    # content/_rich.py
+        lib = json.loads(
+            pathlib.Path(_library.BUNDLED).read_text(encoding="utf-8"))
+        names = {c["name"].lower() for c in lib["conditions"]}
+        names |= {c["name"].lower()
+                  for c in (lib.get("new_conditions") or [])}
+        orphaned = [n for n in _rich.CONDITION_ALIASES
+                    if n.lower() not in names]
+        self.assertEqual(orphaned, [])
+
     def test_new_drugs_do_not_shadow_an_existing_entry(self):
         """Two entries under one generic means whichever indexes first
         wins, silently and non-deterministically."""
