@@ -14,6 +14,7 @@ import hashlib
 import json
 import os
 import pathlib
+import re
 import sys
 import tempfile
 import unittest
@@ -210,6 +211,65 @@ class ShippedPackageContents(unittest.TestCase):
                       "data/ must be packaged or the add-on has no content")
         self.assertIn("content", script,
                       "content/ must be excluded from the package")
+
+    # Everything at the top level is either shipped on purpose or
+    # excluded on purpose. Listed here rather than inferred, so adding a
+    # directory is a decision someone makes rather than a default.
+    SHIPPED_TOP_LEVEL = {
+        "__init__.py", "_config.py", "_dock_layout.py", "_extras.py",
+        "_log.py", "_panel_pearls.py", "_theme.py", "_webengine.py",
+        "chat", "config.json", "config.md", "data", "install.sh",
+        "LICENSE", "manifest.json", "pearls", "README.md", "SECURITY.md",
+        "uptodate", "web", "CHANGELOG.md",
+    }
+    # User-facing release notes, one per version, so a pattern rather
+    # than a list that has to be edited on every release.
+    SHIPPED_PATTERNS = ("WHATS-NEW-*.md",)
+
+    def test_every_top_level_path_is_a_decision(self):
+        """A new directory of working notes must not ship by default.
+
+        The previous version of this class checked that the script
+        mentioned the strings "data" and "content", which is true of a
+        script that ships everything else in the tree. `docs/` and
+        `audit/` were added months after those exclusions were written
+        and went straight into every release - 1.16 MB of session
+        checkpoints, coverage measurements and audit transcripts,
+        including an 870 KB stale copy of summaries the package already
+        carries in `data/library.json`, and the author's name and home
+        directory in 24 places.
+
+        Greping for a known name cannot catch the next one. This asserts
+        the complement instead: every top-level path is either on the
+        shipped list above or matched by an exclusion in the script, so
+        a new one fails here until it is classified.
+        """
+        import fnmatch
+        script = (ROOT / "build_ankiaddon.sh").read_text(encoding="utf-8")
+        excludes = re.findall(r'-x "([^"]+)"', script)
+        self.assertTrue(excludes, "no -x patterns found in build_ankiaddon.sh")
+
+        unclassified = []
+        for path in sorted(ROOT.iterdir()):
+            name = path.name + ("/" if path.is_dir() else "")
+            if path.name.startswith(".git"):
+                continue
+            if path.name in self.SHIPPED_TOP_LEVEL:
+                continue
+            if any(fnmatch.fnmatch(path.name, pat)
+                   for pat in self.SHIPPED_PATTERNS):
+                continue
+            probe = path.name + "/x" if path.is_dir() else path.name
+            if any(fnmatch.fnmatch(probe, pat) or
+                   fnmatch.fnmatch(path.name, pat) for pat in excludes):
+                continue
+            unclassified.append(name)
+        self.assertEqual(
+            unclassified, [],
+            f"these top-level paths would be packaged but are not on the "
+            f"shipped list: {unclassified}. Either add them to "
+            f"SHIPPED_TOP_LEVEL, or add an exclusion to "
+            f"build_ankiaddon.sh.")
 
 
 class PublishingContract(unittest.TestCase):

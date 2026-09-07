@@ -5,6 +5,50 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.1] - 2026-09-07
+
+Stops packaging the working documents from the sessions that build the
+add-on.
+
+### Fixed
+
+- **1.16 MB of authoring notes shipped in every release.** `docs/`
+  (session checkpoints, coverage measurements, priority-gap lists),
+  `audit/` (audit transcripts plus an 870 KB uncompressed snapshot of
+  summaries the package already carries in `data/library.json`) and
+  `.remote-agent-context.md` (the brief the scheduled content agent
+  reads) were all inside the `.ankiaddon`. Nothing in the running
+  add-on opens any of them - the grep for a module reading `docs/` or
+  `audit/` returns one comment in an authoring file that is not
+  packaged - so they were pure download weight: 422 KB compressed of a
+  3,108 KB package, 13.6%.
+  They also carried the author's name and home directory in 24 places,
+  which the pseudonym this project publishes under exists to keep out
+  of a release. Excluded now, on the rule already applied to `content/`
+  and `tools/`: if no user runs it, it does not ship.
+
+  The reason it went unnoticed is worth recording, because it is the
+  part that would otherwise recur. The packaging test asserted that
+  `build_ankiaddon.sh` contained the strings `"data"` and `"content"`,
+  which is true of a script that ships everything else in the tree.
+  `docs/` and `audit/` were created months after those exclusions were
+  written and needed no change to make them ship. Greping for a name
+  you already know cannot catch the name you do not. The test now
+  asserts the complement - every top-level path is either on an
+  explicit shipped list or matched by an exclusion - so the next
+  directory fails the suite until someone classifies it. Proven to fail
+  when the three exclusions are reverted, naming all three.
+
+- **`DRY_RUN=1 tools/publish_content.sh` blocked the publish it was
+  meant to precede.** The dry run pushes nothing, correctly, but it
+  builds for real, because building is what checks the manifest against
+  the library - and the build writes `data/`. So it left the tree
+  carrying the version it had only pretended to publish, and the real
+  run of that same version was refused as not sorting after the
+  current. The documented workflow is "run the dry run first", so this
+  was the normal path, not an edge case. The dry run now snapshots
+  `data/` and restores it on exit.
+
 ## [2.5.0] - 2026-09-07
 
 Popups stop claiming sources and destinations they do not have, and

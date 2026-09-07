@@ -22,6 +22,17 @@
 # content/ and tools/ are NOT packaged: they are the authoring copy of
 # the vocabularies and the compiler that turns them into data/. Shipping
 # them would roughly double the download for files no user runs.
+#
+# docs/, audit/ and .remote-agent-context.md are NOT packaged, for the
+# same reason and one more. They are working notes - session
+# checkpoints, coverage measurements, audit transcripts and the brief
+# the scheduled agent reads - and 2.5.0 shipped 1.16 MB of them to every
+# user, 870 KB of it a stale snapshot of summaries the package already
+# carries in data/library.json. They also carried the author's name and
+# home directory in 24 places, which the pseudonym this project
+# publishes under exists to keep out of a release. The rule is the one
+# already applied to content/ and tools/: if no user runs it, it does
+# not ship.
 set -euo pipefail
 
 cd "$(dirname "$0")"
@@ -47,6 +58,9 @@ zip -r "$OUT" . \
     -x "data/manifest.json" \
     -x "content/*" \
     -x "tools/*" \
+    -x "docs/*" \
+    -x "audit/*" \
+    -x ".remote-agent-context.md" \
     -x "*.pyc" \
     -x ".vscode/*" \
     -x ".idea/*" \
