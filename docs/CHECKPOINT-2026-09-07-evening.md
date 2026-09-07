@@ -169,12 +169,42 @@ now in the files so the next audit does not re-raise them:
 
 ### Deliberately not done
 
-**The dock's per-node highlighting.** *Rob, 2026-09-07: underlining on
-StatPearls pages works well.* That is the common case, and it is what
-the numbers predict - the concern was always the tail, not correctness,
-so this is support for the deferral rather than a contradiction of it.
-The open question is whether the tail is reachable at all: a genuinely
-long chapter, not a short topic, is the test. Measured: `highlight_text` is
+**The dock's per-node highlighting - MEASURED AND DECLINED, 2026-09-08.**
+Once `pearls/_reviewer` became importable under test, the proposed
+rewrite was built and benchmarked instead of guessed at. It is slower
+at every node shape:
+
+| shape | nodes | chars | per-node | one-pass | |
+|---|---|---|---|---|---|
+| article | 105 | 116 KB | 38 ms | 138 ms | 0.28x |
+| paragraph | 400 | 48 KB | 25 ms | 52 ms | 0.48x |
+| sentence | 1200 | 143 KB | 58 ms | 315 ms | 0.18x |
+
+The 5.8 ms the audit compared against was a resolve sweep and nothing
+else. Substitution cost scales with the size of the match pattern, and
+the union of terms across a page is far larger than the terms in any
+one node, so resolving once buys resolve time and pays it back on every
+substitution. It also changed the output - acronym senses come from
+surrounding context, and page-wide context resolves acronyms a single
+node leaves alone, so 9 of 105 nodes differed. `highlight_many` was
+written, measured, and removed.
+
+The lesson is the one the deferral was already resting on: a
+recommendation with a number attached is still a recommendation. This
+one survived three sessions as "the largest remaining win" and was
+wrong.
+
+*Rob, 2026-09-07: underlining on StatPearls pages works well* - the
+common case, consistent with the per-node path being the fast one.
+
+One real defect did surface while building it, and is fixed:
+`_inject_highlights` prepended the stylesheet unconditionally, and the
+dock inserts each edit with `template.innerHTML`, so every marked node
+carried a `<style>` element into the article body - 105 of them on that
+page, all redundant against the single `#tad-hl-style` the apply script
+installs. Markup byte-identical, 19 KB off the payload.
+
+The original figures, for the record: `highlight_text` is
 called once per text node, 105 times on a 66 KB article, 16.9 ms
 against 5.8 ms for a single pass, and up to 620 ms of blocked main
 thread at the 4000-node cap. The fix is to resolve once over the joined
