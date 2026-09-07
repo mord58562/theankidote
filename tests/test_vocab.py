@@ -251,7 +251,7 @@ class NoNearDuplicateConditions(unittest.TestCase):
 
     Possessive and non-possessive forms of an eponym are the case that
     actually occurs, so they are normalised together here. House
-    convention is the non-possessive canonical name (Horner syndrome,
+    convention is the non-possessive primary name (Horner syndrome,
     Parkinson disease, Addison disease) with the possessive as an alias.
     """
 
@@ -273,7 +273,7 @@ class NoNearDuplicateConditions(unittest.TestCase):
                 f"spelling as an alias")
             seen[key] = entry["name"]
 
-    def test_no_canonical_name_is_also_an_alias_elsewhere(self):
+    def test_no_primary_name_is_also_an_alias_elsewhere(self):
         owner = {}
         for entry in _conditions._CONDITIONS:
             for alias in entry.get("aliases", []):
@@ -283,7 +283,7 @@ class NoNearDuplicateConditions(unittest.TestCase):
                       if n != entry["name"]]
             self.assertFalse(
                 others,
-                f"{entry['name']!r} is a canonical name and also an alias "
+                f"{entry['name']!r} is a primary name and also an alias "
                 f"of {others} - one of them is unreachable")
 
     def test_no_accession_serves_two_conditions(self):
@@ -723,7 +723,7 @@ class BulletWorthiness(unittest.TestCase):
 
 
 class RichSummaries(unittest.TestCase):
-    """`_rich.RICH_SUMMARIES` is applied by canonical name, so a typo or
+    """`_rich.RICH_SUMMARIES` is applied by primary name, so a typo or
     a renamed condition silently does nothing - the popup keeps its old
     summary and no error is raised anywhere."""
 
@@ -752,7 +752,7 @@ class RichSummaries(unittest.TestCase):
             missed, [],
             f"these overrides matched no condition and are dead: {missed}")
 
-    def test_overrides_are_keyed_on_the_canonical_name(self):
+    def test_overrides_are_keyed_on_the_primary_name(self):
         """An alias key applies, but titles the popup something else.
 
         `_LOOKUP` is keyed on every alias, so an override written under
@@ -773,7 +773,7 @@ class RichSummaries(unittest.TestCase):
             self.assertEqual(
                 entry["name"], name,
                 f"override keyed {name!r} but the popup titles it "
-                f"{entry['name']!r}; key it on the canonical name, or "
+                f"{entry['name']!r}; key it on the primary name, or "
                 f"the summary and the heading disagree")
 
     def test_overrides_actually_replaced_the_summary(self):

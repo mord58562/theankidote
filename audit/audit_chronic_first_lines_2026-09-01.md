@@ -158,7 +158,7 @@ Sources consulted:
 
 ## Notes
 
-- **Duplicate entries** — three near-duplicates found (Peripheral arterial disease vs Peripheral artery disease; Generalised vs Generalized anxiety disorder; Wolff-Parkinson-White vs Wolff-Parkinson-White syndrome). Not part of first-line audit but worth Rob's eyes for the deferred duplicate-audit work-stream flagged in memory. Confirms the coverage-check-via-canonical concern.
+- **Duplicate entries** — three near-duplicates found (Peripheral arterial disease vs Peripheral artery disease; Generalised vs Generalized anxiety disorder; Wolff-Parkinson-White vs Wolff-Parkinson-White syndrome). Not part of first-line audit but worth Rob's eyes for the deferred duplicate-audit work-stream flagged in memory. Confirms the coverage-check-via-primary concern.
 - **CHA2DS2-VA rule** is high-priority - Rob's memory explicitly flags this as an AU-specific exam and clinical point.
 - **Anti-amyloid drift** — the Alzheimer entry was correct 12-18 months ago; now stale. Worth adding a "check date" convention for anti-amyloid / DMARD / PBS references so drift is easier to spot.
 - **PBS is a moving target** — Migraine CGRP mAb list, biologic lists (UC/Crohn/RA/SLE), and SGLT2i CKD thresholds are the highest-drift areas. Rob may want a PBS-listing sweep as a separate pass.

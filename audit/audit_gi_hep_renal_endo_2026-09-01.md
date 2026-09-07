@@ -104,13 +104,13 @@ Sources consulted:
 
 - **Acromegaly** - `Somatostatin analogues (octreotide LAR, lanreotide) for residual disease; cabergoline for mild disease; pegvisomant for resistance` - correct. Consider adding **pasireotide** as a third-line SRL for tumours resistant to first-generation SSA (approved 2014 international; TGA-approved in AU).
 
-- **Phaeochromocytoma / Pheochromocytoma** - **These two entries are byte-for-byte identical duplicates** (same aliases, same summary). Should collapse to a single canonical `Phaeochromocytoma` entry with `Pheochromocytoma` / `pheo` as aliases (matches Rob's `coverage_check_via_canonical` memory rule).
+- **Phaeochromocytoma / Pheochromocytoma** - **These two entries are byte-for-byte identical duplicates** (same aliases, same summary). Should collapse to a single primary `Phaeochromocytoma` entry with `Pheochromocytoma` / `pheo` as aliases (matches Rob's `coverage_check_via_primary` memory rule).
 
 - **Hyperparathyroidism** - Surgical thresholds `calcium over 2.85, eGFR under 60, urinary calcium over 10 mmol/day, T-score at or below -2.5, age under 50, or fracture` - matches the AACE/AAES/BAETS 4th International Workshop (2014) - still current. However, current NICE 2019 (referenced in AU practice) also includes `nephrocalcinosis/nephrolithiasis on imaging` and `symptomatic renal or bone disease` explicitly, and the age threshold is `under 50 years`. The current summary is essentially correct - consider adding nephrolithiasis on imaging as an indication.
 
 - **Renal colic** - `IV NSAID first line, add opioid if needed` - correct and matches NHMRC / eTG. `stones under 5 mm usually pass spontaneously; medical expulsive therapy with tamsulosin for 5 to 10 mm stones` - correct. Recent evidence (SUSPEND trial and 2023 Cochrane) shows MET benefit is smaller than previously thought for stones under 5 mm but persists at 5-10 mm - the summary reflects this correctly.
 
-- **Nephrolithiasis** - Duplicated with Renal colic essentially. Same content, different framing. Consider one canonical entry with alias.
+- **Nephrolithiasis** - Duplicated with Renal colic essentially. Same content, different framing. Consider one primary entry with alias.
 
 - **Priapism** - `intracavernosal phenylephrine 200 microg every 5 min up to 1 mg` - correct AUA/EAU dosing. Current AU eTG (Urology) is consistent. Add: `intracavernosal phenylephrine 100-500 microg every 3-5 minutes; a diluted 100 microg/mL solution reduces overdose risk.` Currently unclear on dilution.
 
@@ -256,7 +256,7 @@ Achalasia (aside from POEM subtype note above), Anal fissure, Autoimmune hepatit
   - **Gastric outlet obstruction / gastroparesis** - missing distinct entries.
   - **Diabetes insipidus (central and nephrogenic)** - endocrine gap.
 - **Australian idioms handled correctly across the reviewed entries**: KHA-CARI referenced or aligned in CKD-adjacent entries; RCH CPG referenced for paediatric entries; PBS-Authority mentioned where relevant (tolvaptan, DAAs); AU-specific epidemiology called out for PSGN in Aboriginal and Torres Strait Islander communities. Aboriginal and Torres Strait Islander phrasing used correctly in diabetic nephropathy and PSGN entries (matches Rob's ban on ATSI abbreviation).
-- **AI-tells scan (75-item catalogue)**: no em-dashes detected in the 90 entries reviewed (all hyphenated per Rob's memory rule). No use of `canonical`. No proprietary-product name-drops. No `unlock` / `leverage` / `robust` / `journey` fluff. No `In conclusion` / meta-commentary. Language is clinically dense and AU-idiomatic.
+- **AI-tells scan (75-item catalogue)**: no em-dashes detected in the 90 entries reviewed (all hyphenated per Rob's memory rule). No use of `primary`. No proprietary-product name-drops. No `unlock` / `leverage` / `robust` / `journey` fluff. No `In conclusion` / meta-commentary. Language is clinically dense and AU-idiomatic.
 - **General strength**: hepatology and endocrinology entries are unusually strong on Australian PBS pathway detail (venesection app, LSDP references implicit, s85 vs S100 for DAAs). Renal entries track CARI/KDIGO carefully. GI entries are current on non-antibiotic diverticulitis management and adherent to eTG 2024 for appendicitis prophylaxis.
 - **Highest-drift categories to prioritise for a v2 rewrite**:
   1. **Hepatology nomenclature and drug landscape** (MASLD/MASH renaming, terlipressin PBS listing, obeticholic acid warning, DAA universal access).

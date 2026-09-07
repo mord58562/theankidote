@@ -70,7 +70,7 @@ migration required.
 
 - 27 em-dashes (U+2014) removed across README, WHATS-NEW-2.0/2.1/
   2.1.1, CHANGELOG, tests/test_security.
-- "canonical" replaced with "primary" / "core" across
+- The banned dead-metaphor word replaced with "primary" / "core" across
   `.remote-agent-context`, CHANGELOG, `_panel_pearls`, `__init__`,
   `_dock_layout`, `content/_rich`, `pearls/_ncbi`, `pearls/_drugs`,
   `pearls/_reviewer`, `pearls/_conditions`, `docs/CHECKPOINT`.

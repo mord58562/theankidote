@@ -47507,7 +47507,7 @@ RICH_SUMMARIES = {
 # `beclometasone` is the Australian Approved Name. It is on the TGA's
 # affected-ingredients list as a minor spelling change from
 # `beclomethasone`, so the form this file called non-Australian is the
-# only one a current Australian label may carry. The library's canonical
+# only one a current Australian label may carry. The library's primary
 # spelling is renamed below rather than aliased.
 #
 # `epinephrine` and `norepinephrine` are printed on Australian labels by
@@ -47741,7 +47741,7 @@ for _nc in NEW_CONDITIONS:
 # which is the real reason the drug backlog never moved while the
 # condition backlog did four batches.
 #
-# Keyed on the canonical generic AFTER any rename above, because that is
+# Keyed on the primary generic AFTER any rename above, because that is
 # what heads the popup. `tools/build_library.py` fails the build on a key
 # it cannot find, which is the guard against writing an override for a
 # name that was renamed out from under it.

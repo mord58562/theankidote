@@ -73,11 +73,11 @@ Adrenal crisis, Amniotic fluid embolism, Angioedema, Aortic dissection, Asthma, 
 
 ## Notes
 
-- **Duplicate entries: "Pre-eclampsia" and "Preeclampsia"** are byte-for-byte identical summaries. Recommend keeping "Pre-eclampsia" as the canonical entry and having "Preeclampsia" resolve to it via alias, not as a separate summary (already covered in Rob's "coverage check via canonical" memory rule).
+- **Duplicate entries: "Pre-eclampsia" and "Preeclampsia"** are byte-for-byte identical summaries. Recommend keeping "Pre-eclampsia" as the primary entry and having "Preeclampsia" resolve to it via alias, not as a separate summary (already covered in Rob's "coverage check via primary" memory rule).
 - **"Sepsis" and "Septicaemia"** overlap heavily. "Septicaemia" is retained explicitly as a historical alias and the summary flags this - reasonable.
 - **General strength**: emergency doses in this bank are consistently AU-flavoured (Poisons Info Centre 13 11 26 called out, Prothrombinex, PBS-listed lanadelumab, ASCIA action plan, NIP for epiglottitis / diphtheria). No US-only doses (e.g. no lorazepam 4 mg for status - which isn't stocked in most AU ED fridges - used as first-line). No dangerous inversions of drug order (bicarb before thionamide-first-then-iodine, adrenaline before airway control etc. are all correctly sequenced).
 - **Australian idioms handled correctly**: TXA within 3 h in PPH, thrombolysis 4.5 h + thrombectomy 24 h in stroke, MAP 65 in sepsis, calcium gluconate 10 mL 10% for K stabilisation, hydrocortisone before thyroxine in myxoedema.
-- **AI-tells scan**: no em-dashes detected in the audited entries (all are already hyphenated per Rob's memory rule); no "canonical", no "ATSI", no proprietary-product name-drops in these 56 entries.
+- **AI-tells scan**: no em-dashes detected in the audited entries (all are already hyphenated per Rob's memory rule); no "primary", no "ATSI", no proprietary-product name-drops in these 56 entries.
 - **What Rob might want to add**: none of the entries carries a Uterine rupture or Massive transfusion protocol standalone entry. Consider adding these for completeness of the emergency dose-critical bucket. Heat stroke also missing. ARDS and Bronchiolitis are present in the bank but not strictly dose-critical - fine.
 
 Summary line: 0 substantive errors, 15 minor issues (mostly wording/completeness), 39 verified accurate, 5 unverified pending eTG confirmation. Full bank of 56 entries reviewed 2026-09-01.

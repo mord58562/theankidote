@@ -64,7 +64,7 @@ Sources consulted (in order):
 
 - **Neonatal jaundice** - "conjugated above 17 micromol/L or over 20% is pathological cholestasis" - AU RCH Melbourne CPG uses **>17 micromol/L OR >20% of total** which matches. However the entry earlier says "conjugated hyperbilirubinaemia" as a category of pathological jaundice without stating the cutoff - fine. The Kasai cutoff is stated as "before 8 weeks" in the neonatal jaundice entry, but the Biliary atresia entry says "best under 60 days, worse after 90" - both are correct approximations of the same 60-90 day window. Consider harmonising to "before 60 days" (the Australian audit target).
 
-- **Placenta praevia / Placenta previa** - byte-for-byte identical summaries under two spellings. Rob's memory rule ("coverage check via canonical") applies - keep "Placenta praevia" (AU spelling) as primary, resolve "Placenta previa" via alias, not as a separate entry. Same for **Coarctation of aorta / Coarctation of the aorta** and **Transient tachypnea / Transient tachypnoea of the newborn** and **Generalised / Generalized anxiety disorder**.
+- **Placenta praevia / Placenta previa** - byte-for-byte identical summaries under two spellings. Rob's memory rule ("coverage check via primary") applies - keep "Placenta praevia" (AU spelling) as primary, resolve "Placenta previa" via alias, not as a separate entry. Same for **Coarctation of aorta / Coarctation of the aorta** and **Transient tachypnea / Transient tachypnoea of the newborn** and **Generalised / Generalized anxiety disorder**.
 
 - **Menopause** - "menopausal hormone therapy is the most effective treatment for vasomotor symptoms in women under 60 or within 10 years of the final menstrual period, absent contraindications" - correct per **RANZCOG / IMS 2016 window-of-opportunity**. But the entry omits mention of **micronised progesterone (Prometrium) as the preferred progestogen in AU when uterus intact** (evidence for lower breast-cancer signal vs medroxyprogesterone acetate per E3N/WHI-follow-up analyses; PBS-listed) - now standard AMS 2023 guidance. Suggested addition:
   `Oestrogen plus progestogen if uterus intact - micronised progesterone (Prometrium 100 mg nightly continuous, or 200 mg 12 nights/month cyclical) is preferred over medroxyprogesterone acetate per AMS 2023, driven by lower breast-cancer signal in observational data.`
@@ -230,7 +230,7 @@ Reviewed the 279 phase-2 candidates as a rapid pass. **The overwhelming majority
   - Coarctation of aorta / Coarctation of the aorta - substantially identical (small wording differences)
   - Transient tachypnea / Transient tachypnoea of the newborn - byte-for-byte identical
   - Generalised anxiety disorder / Generalized anxiety disorder - one covered in chronic, spelling variants
-  - Rheumatic fever / Acute rheumatic fever - substantial overlap; recommend canonicalising to "Acute rheumatic fever" and aliasing.
+  - Rheumatic fever / Acute rheumatic fever - substantial overlap; recommend primaryising to "Acute rheumatic fever" and aliasing.
   - Eating disorders / Eating disorder not otherwise specified - overlapping scope; "Eating disorders" is a summary umbrella and "Eating disorder not otherwise specified" is the DSM-5 OSFED entry - both defensible but risk of duplication in search.
   - Phaeochromocytoma / Pheochromocytoma (noted in original mechanical sweep - deferred to agent #6).
   - Peripheral arterial / artery disease (chronic audit already flagged).
@@ -238,7 +238,7 @@ Reviewed the 279 phase-2 candidates as a rapid pass. **The overwhelming majority
 
 - **Rob-memory rule compliance scan:**
   - No em-dashes in the audited entries (all hyphen-space-hyphen or space-hyphen-space per Rob's rule).
-  - No use of "canonical" in the audited content.
+  - No use of "primary" in the audited content.
   - "Aboriginal and Torres Strait Islander" used correctly (in full) in ARF/RHD/Hep-A/SIDS entries; the SIDS entry uses "Aboriginal infants" alone which should be updated to "Aboriginal and Torres Strait Islander infants" for AIHW terminology consistency.
   - No proprietary product name-drops that would violate the no-proprietary-refs memory rule.
   - Female infertility, PCOS, Menopause entries all appropriately AU-focused (RACGP / RANZCOG / AMS).
@@ -262,7 +262,7 @@ Reviewed the 279 phase-2 candidates as a rapid pass. **The overwhelming majority
 
 - **General strength:** the paediatric and obstetric entries are consistently AU-flavoured (Kleihauer, RANZCOG statements, RCH Melbourne CPG references, NIP integration, NDIS pathway calls, MARSIPAN, RHDAustralia). Psychiatric entries appropriately anchor on RANZCP / MHA. No US-only frames (SSRI-first for OCD before ERP is correctly avoided; ERP-plus-SSRI is stated). No dangerous inversions of urgency (SUFE, torsion, midgut volvulus, HIE all correctly flagged for same-hour action).
 
-- **AI-tells scan:** 141 audited entries; no em-dashes found in scope; no "canonical" usage; no "delve", "leverage", "streamlined" (checked - "streamlined" appears once in FASD context as a genuine policy term, not AI filler); no proprietary product name-drops in violation of memory. Ban list clean for these entries.
+- **AI-tells scan:** 141 audited entries; no em-dashes found in scope; no "primary" usage; no "delve", "leverage", "streamlined" (checked - "streamlined" appears once in FASD context as a genuine policy term, not AI filler); no proprietary product name-drops in violation of memory. Ban list clean for these entries.
 
 Summary line: **15 substantive errors** requiring change (mostly wording precision - Wernicke Pabrinex typo, Preterm labor 23+0 threshold, anti-D dosing granularity, ARF Australian-modified Jones for high-risk populations, sickle-cell hydroxycarbamide age update, plus duplicate collapse), **~30 minor issues** (mostly nice-to-have additions - Circadin TGA age, letrozole framing, state ADHD prescribing, ANZCOR chest-thrusts wording, MHT progesterone choice), **87 entries verified accurate**, **8 unverified pending Rob check against internal or paywalled AU sources**. Phase 1 = 142 audited. Phase 2 = 279 candidates reviewed (7 spot-audited for accuracy, all clean; 265 explicitly deferred to agents #6/#7 not written at audit time; 7 flagged as either duplicates or overlap-to-existing-audit). **Total audited: 149.**
 
