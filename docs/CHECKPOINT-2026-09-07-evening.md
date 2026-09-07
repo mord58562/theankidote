@@ -276,10 +276,21 @@ on any of them.
 
 ## What is left
 
-- **Rob's, and only Rob's**: the Qt runtime behaviour. The sidebar
-  collapse and restore, the remembered article, the shortcut binding
-  after the `_dock_layout` move, the popup positioning, and the two new
-  tooltip paths all want exercising from the built package.
+- **Rob's, and only Rob's**: the Qt runtime behaviour.
+
+  **Confirmed by Rob, 2026-09-07:** the Relevant articles section's
+  collapse and restore behaves well. That is the header-toggle path,
+  which shipped in the first 2.5.0, so it validates the pattern rather
+  than this session's change - the popup-click path was still calling
+  `hide()` and only collapses in the rebuilt package. Good evidence for
+  the change; not a test of it.
+
+  Still unexercised: the popup-click path collapsing rather than
+  hiding, the remembered article surviving a restart and being cleared
+  by Home, keyboard shortcuts still binding after the `_dock_layout`
+  move, popup positioning near the bottom of the window, and the two
+  new tooltip paths (a failed content update, and a module toggled from
+  the Tools menu).
 - The three deferred items: dock per-node highlighting, the popup's
   vertical rhythm, and signing the content manifest.
 - Four findings deliberately left, all of them Qt behaviour that cannot
