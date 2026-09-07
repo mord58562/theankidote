@@ -10845,6 +10845,192 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "alveolar osteitis dry socket"]],
         "summary": "",
     },
+    {
+        "name": "Blue-ringed octopus envenomation",
+        "aliases": ["Blue ringed octopus bite", "Hapalochlaena envenomation"],
+        "utd": [["Overview", "blue ringed octopus envenomation tetrodotoxin"]],
+        "summary": "",
+    },
+    {
+        "name": "Funnel-web spider envenomation",
+        "aliases": ["Funnel web spider bite", "Atrax envenomation"],
+        "utd": [["Overview", "funnel web spider envenomation antivenom"]],
+        "summary": "",
+    },
+    {
+        "name": "Propofol infusion syndrome",
+        "aliases": ["PRIS"],
+        "utd": [["Overview", "propofol infusion syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Poland syndrome",
+        "aliases": ["Poland anomaly", "Poland sequence"],
+        "utd": [["Overview", "Poland syndrome pectoralis agenesis"]],
+        "summary": "",
+    },
+    {
+        "name": "Sprengel deformity",
+        "aliases": ["Congenital high scapula"],
+        "utd": [["Overview", "Sprengel deformity congenital elevated scapula"]],
+        "summary": "",
+    },
+    {
+        "name": "Scheuermann kyphosis",
+        "aliases": ["Scheuermann disease", "Juvenile kyphosis"],
+        "utd": [["Overview", "Scheuermann kyphosis adolescent"]],
+        "summary": "",
+    },
+    {
+        "name": "Discitis",
+        "aliases": ["Spondylodiscitis", "Disc space infection"],
+        "utd": [["Overview", "discitis vertebral osteomyelitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Pott disease",
+        "aliases": ["Spinal tuberculosis", "Tuberculous spondylitis"],
+        "utd": [["Overview", "spinal tuberculosis Pott disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Jones fracture",
+        "aliases": ["Fifth metatarsal base fracture"],
+        "utd": [["Overview", "Jones fracture fifth metatarsal"]],
+        "summary": "",
+    },
+    {
+        "name": "Lisfranc injury",
+        "aliases": ["Lisfranc fracture dislocation", "Tarsometatarsal injury"],
+        "utd": [["Overview", "Lisfranc injury tarsometatarsal"]],
+        "summary": "",
+    },
+    {
+        "name": "Jefferson fracture",
+        "aliases": ["Atlas burst fracture", "C1 burst fracture"],
+        "utd": [["Overview", "Jefferson fracture atlas C1"]],
+        "summary": "",
+    },
+    {
+        "name": "Odontoid fracture",
+        "aliases": ["Dens fracture", "Odontoid peg fracture"],
+        "utd": [["Overview", "odontoid fracture dens type II"]],
+        "summary": "",
+    },
+    {
+        "name": "Facioscapulohumeral muscular dystrophy",
+        "aliases": ["FSHD", "Landouzy-Dejerine dystrophy"],
+        "utd": [["Overview", "facioscapulohumeral muscular dystrophy"]],
+        "summary": "",
+    },
+    {
+        "name": "Tinnitus",
+        "aliases": ["Ringing in the ears", "Subjective tinnitus"],
+        "utd": [["Overview", "tinnitus evaluation management"]],
+        "summary": "",
+    },
+    {
+        "name": "Yellow nail syndrome",
+        "aliases": ["Yellow nails lymphoedema syndrome"],
+        "utd": [["Overview", "yellow nail syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Swyer-James syndrome",
+        "aliases": ["Swyer-James-MacLeod syndrome", "Unilateral hyperlucent lung"],
+        "utd": [["Overview", "Swyer James MacLeod syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Middle lobe syndrome",
+        "aliases": ["Right middle lobe syndrome", "Brock syndrome"],
+        "utd": [["Overview", "right middle lobe syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Plastic bronchitis",
+        "aliases": ["Bronchial cast formation"],
+        "utd": [["Overview", "plastic bronchitis bronchial casts"]],
+        "summary": "",
+    },
+    {
+        "name": "Fibrothorax",
+        "aliases": ["Pleural fibrosis"],
+        "utd": [["Overview", "fibrothorax pleural fibrosis decortication"]],
+        "summary": "",
+    },
+    {
+        "name": "Byssinosis",
+        "aliases": ["Brown lung disease", "Cotton worker lung"],
+        "utd": [["Overview", "byssinosis cotton dust"]],
+        "summary": "",
+    },
+    {
+        "name": "Portopulmonary hypertension",
+        "aliases": ["Portopulmonary HTN"],
+        "utd": [["Overview", "portopulmonary hypertension"]],
+        "summary": "",
+    },
+    {
+        "name": "Pancreas divisum",
+        "aliases": ["Divided pancreas"],
+        "utd": [["Overview", "pancreas divisum"]],
+        "summary": "",
+    },
+    {
+        "name": "Thin basement membrane nephropathy",
+        "aliases": ["Thin basement membrane disease", "Benign familial haematuria"],
+        "utd": [["Overview", "thin basement membrane nephropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Page kidney",
+        "aliases": ["Page phenomenon"],
+        "utd": [["Overview", "Page kidney subcapsular haematoma hypertension"]],
+        "summary": "",
+    },
+    {
+        "name": "Gordon syndrome",
+        "aliases": ["Pseudohypoaldosteronism type 2", "Familial hyperkalaemic hypertension"],
+        "utd": [["Overview", "pseudohypoaldosteronism type 2 Gordon syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Mucopolysaccharidosis",
+        "aliases": ["Hurler syndrome", "Hunter syndrome"],
+        "utd": [["Overview", "mucopolysaccharidosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Maple syrup urine disease",
+        "aliases": ["MSUD", "Branched chain ketoaciduria"],
+        "utd": [["Overview", "maple syrup urine disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Ornithine transcarbamylase deficiency",
+        "aliases": ["OTC deficiency"],
+        "utd": [["Overview", "ornithine transcarbamylase deficiency urea cycle"]],
+        "summary": "",
+    },
+    {
+        "name": "Mitochondrial encephalomyopathy",
+        "aliases": ["MELAS syndrome", "Mitochondrial myopathy"],
+        "utd": [["Overview", "mitochondrial encephalomyopathy MELAS"]],
+        "summary": "",
+    },
+    {
+        "name": "Imperforate hymen",
+        "aliases": ["Hymenal atresia"],
+        "utd": [["Overview", "imperforate hymen haematocolpos"]],
+        "summary": "",
+    },
+    {
+        "name": "Depersonalisation derealisation disorder",
+        "aliases": ["Depersonalization disorder", "Derealisation disorder"],
+        "utd": [["Overview", "depersonalization derealization disorder"]],
+        "summary": "",
+    },
 ]
 
 
@@ -66196,6 +66382,701 @@ RICH_SUMMARIES = {
         "an extraction in an otherwise well patient is this until "
         "proven otherwise. Key point: prevention is smoking cessation "
         "and preoperative chlorhexidine."
+    ),
+    "Blue-ringed octopus envenomation": (
+        "Envenomation by Hapalochlaena species, small octopuses found "
+        "in rock pools and shallow reef around the whole Australian "
+        "coast. Mechanism: saliva carries tetrodotoxin, which blocks "
+        "voltage-gated sodium channels and produces a pure motor and "
+        "sensory neuropathy with no direct cardiac toxicity. Clinical "
+        "features: the bite is often painless and may go unnoticed. "
+        "Perioral and limb paraesthesia begin within minutes, "
+        "followed by progressive flaccid paralysis, ptosis, bulbar "
+        "weakness and respiratory arrest, typically within 30 to 90 "
+        "minutes. Consciousness is preserved throughout, so the "
+        "paralysed patient can hear and feel everything. Ix: clinical "
+        "diagnosis. There is no venom detection kit. Mx: there is no "
+        "antivenom. Treatment is airway support and mechanical "
+        "ventilation until the toxin clears, usually within 4 to 24 "
+        "hours, with full recovery expected if ventilation is timely. "
+        "Pressure immobilisation bandaging of the bitten limb is "
+        "advised by the Australian Resuscitation Council. Note: the "
+        "whole of management is a ventilator and patience. Treat a "
+        "suspected bite as a load-and-go emergency while the patient "
+        "still looks well, because the window to apnoea is short."
+    ),
+    "Funnel-web spider envenomation": (
+        "Envenomation by Atrax or Hadronyche species, concentrated in "
+        "coastal New South Wales and southern Queensland. The Sydney "
+        "funnel-web is the most dangerous, and males are more toxic "
+        "than females. Mechanism: delta-atracotoxin holds neuronal "
+        "sodium channels open, causing massive autonomic "
+        "catecholamine and acetylcholine release. Clinical features: "
+        "the bite itself is very painful with visible fang marks. A "
+        "cholinergic and adrenergic storm follows within 10 to 120 "
+        "minutes, with perioral tingling, fasciculation (classically "
+        "of the tongue), salivation, lacrimation, piloerection, "
+        "vomiting, hypertension and tachycardia. Severe cases "
+        "progress to pulmonary oedema and coma. Ix: clinical. Monitor "
+        "for at least 4 hours after pressure immobilisation is "
+        "removed. Mx: apply a pressure immobilisation bandage and "
+        "splint, then transfer. Give funnel-web spider antivenom (2 "
+        "vials, 4 if severe) for any systemic feature, repeated until "
+        "the syndrome resolves. Note: fasciculation of the tongue "
+        "after a painful spider bite in Sydney is antivenom until "
+        "proven otherwise. Antivenom has been so effective that no "
+        "death has occurred in Australia since it was introduced in "
+        "1981."
+    ),
+    "Propofol infusion syndrome": (
+        "A rare and often fatal complication of prolonged high-dose "
+        "propofol sedation, first described in children but now most "
+        "often seen in ventilated adults in intensive care. "
+        "Aetiology: risk rises with infusion above 4 mg/kg/hour, "
+        "duration beyond 48 hours, critical illness, catecholamine or "
+        "steroid coadministration, and low carbohydrate intake. "
+        "Mechanism: propofol impairs mitochondrial fatty acid "
+        "oxidation and the respiratory chain, so cells starved of "
+        "their usual substrate switch to anaerobic metabolism. "
+        "Clinical features: unexplained high anion gap metabolic "
+        "acidosis, rhabdomyolysis, hyperkalaemia, acute kidney "
+        "injury, lipaemic serum and hepatomegaly. Cardiac involvement "
+        "is the killer, with new Brugada-like ST elevation in V1 to "
+        "V3, bradycardia refractory to atropine and pacing, then "
+        "asystole. Ix: lactate, creatine kinase, potassium, "
+        "triglycerides and a 12-lead ECG. Mx: stop the propofol "
+        "immediately and switch to an alternative agent. Support with "
+        "carbohydrate, haemodialysis for acidosis and potassium, and "
+        "extracorporeal life support if the heart fails. Note: a "
+        "rising lactate in a stable ventilated patient on day three "
+        "of a propofol infusion is this until proven otherwise."
+    ),
+    "Poland syndrome": (
+        "A sporadic congenital anomaly of unilateral chest wall and "
+        "upper limb underdevelopment, affecting roughly 1 in 20000 "
+        "births and about twice as often in males. Aetiology: thought "
+        "to follow disruption of the embryonic subclavian artery "
+        "supply around week 6 of gestation. Nearly all cases are "
+        "sporadic and the right side is affected about twice as often "
+        "as the left. Clinical features: absence of the sternocostal "
+        "head of pectoralis major is the defining sign, producing an "
+        "absent anterior axillary fold and a flattened chest. "
+        "Variable additions include hypoplasia of the nipple and "
+        "breast, rib deficiency, and ipsilateral hand anomalies with "
+        "short webbed fingers. Ix: diagnosis is clinical. Chest "
+        "imaging or MRI defines rib and muscle involvement before any "
+        "reconstruction. Mx: most people need nothing beyond "
+        "reassurance, as strength is usually preserved by "
+        "compensating muscles. Surgery is offered for chest wall "
+        "instability from rib deficiency, or for cosmesis using "
+        "latissimus dorsi transfer or a custom implant, usually after "
+        "growth is complete. Note: an absent anterior axillary fold "
+        "on one side is the physical sign that makes the diagnosis in "
+        "seconds."
+    ),
+    "Sprengel deformity": (
+        "The most common congenital anomaly of the shoulder girdle, "
+        "in which the scapula fails to descend from its embryonic "
+        "cervical position, leaving it small, high and rotated. "
+        "Aetiology: arrested caudal migration of the scapula between "
+        "weeks 9 and 12 of gestation. Most cases are sporadic and "
+        "unilateral. About a third have an omovertebral bone, a "
+        "fibrous or bony bar tethering the scapula to a cervical "
+        "vertebra. Associations: Klippel-Feil syndrome, scoliosis, "
+        "rib anomalies and renal tract abnormalities, so screening "
+        "imaging is worthwhile. Clinical features: visible asymmetry "
+        "with the affected shoulder sitting higher, a palpable neck "
+        "web, and restricted abduction that is limited by scapular "
+        "rather than glenohumeral movement. Ix: plain radiographs of "
+        "the shoulder and cervical spine. Add renal ultrasound given "
+        "the association. Mx: observation and physiotherapy for mild "
+        "cases. Surgical scapular repositioning (Woodward or Green "
+        "procedure) is considered before age 8 for significant "
+        "cosmetic deformity or abduction below 110 degrees. Note: "
+        "shoulder abduction limited by a high fixed scapula rather "
+        "than a stiff joint points here, and always look at the "
+        "cervical spine and kidneys."
+    ),
+    "Scheuermann kyphosis": (
+        "A structural thoracic kyphosis of adolescence caused by "
+        "anterior wedging of the vertebral bodies, and the commonest "
+        "cause of a rigid kyphotic deformity in the young. Aetiology: "
+        "disordered endochondral ossification of the vertebral ring "
+        "apophysis. There is a strong hereditary component and it "
+        "more often affects adolescent boys during the growth spurt. "
+        "Clinical features: a sharp angular thoracic kyphosis that "
+        "does not correct on extension, distinguishing it from "
+        "postural round back. Aching interscapular pain is common and "
+        "worse with activity. Hamstring tightness and compensatory "
+        "lumbar lordosis are usual. Ix: standing lateral radiograph "
+        "showing anterior wedging of at least 5 degrees across three "
+        "consecutive vertebrae with a Cobb angle above 45 degrees. "
+        "Schmorl nodes and endplate irregularity support it. Mx: "
+        "physiotherapy and observation for curves under 60 degrees. "
+        "Bracing is used in skeletally immature patients with curves "
+        "of 60 to 75 degrees. Surgery is reserved for curves beyond "
+        "75 degrees or intractable pain. Note: ask the adolescent to "
+        "bend forward. A postural kyphosis smooths out and this one "
+        "stays as a fixed angular hump."
+    ),
+    "Discitis": (
+        "Infection of the intervertebral disc, almost always with "
+        "involvement of the adjacent vertebral endplates, so it is "
+        "best thought of as one disease with vertebral osteomyelitis. "
+        "Aetiology: haematogenous seeding is the usual route, with "
+        "Staphylococcus aureus causing about half. Consider "
+        "tuberculosis and Brucella in the right epidemiology. Risk "
+        "factors are injecting drug use, diabetes, dialysis, "
+        "immunosuppression, bacteraemia and recent spinal "
+        "instrumentation. Clinical features: insidious unremitting "
+        "back pain that is worse at night and at rest, with focal "
+        "spinal tenderness. Fever is present in fewer than half. New "
+        "neurological deficit suggests an epidural abscess. Ix: "
+        "inflammatory markers are raised and are the best marker of "
+        "response. Take blood cultures before antibiotics. MRI with "
+        "gadolinium is the imaging of choice and plain films are "
+        "normal for weeks. Image-guided biopsy is needed if cultures "
+        "are negative. Mx: targeted intravenous antibiotics for 6 "
+        "weeks per eTG, guided by culture, with surgery for "
+        "instability, deficit or abscess. Note: back pain that wakes "
+        "the patient and a raised CRP is an MRI, not a physiotherapy "
+        "referral."
+    ),
+    "Pott disease": (
+        "Tuberculosis of the spine, the commonest site of skeletal "
+        "tuberculosis and a major cause of preventable paraplegia "
+        "worldwide. Aetiology: haematogenous spread of Mycobacterium "
+        "tuberculosis to the anterior vertebral body, usually "
+        "thoracic or thoracolumbar, often years after primary "
+        "infection. In Australia it is largely seen in migrants from "
+        "high-prevalence countries and in immunosuppressed patients. "
+        "Clinical features: months of insidious back pain with night "
+        "sweats and weight loss. Anterior body collapse produces a "
+        "sharp angular gibbus deformity. Cold abscesses may track "
+        "along the psoas and present as a groin mass. Paraparesis is "
+        "the feared endpoint. Ix: MRI shows anterior body destruction "
+        "with relative disc sparing, which distinguishes it from "
+        "pyogenic infection. CT-guided biopsy for culture and "
+        "molecular testing (Xpert MTB/RIF) confirms and gives "
+        "sensitivities. Mx: standard antituberculous therapy for 9 to "
+        "12 months per Australian guidance, with surgery for "
+        "instability, deformity or cord compression. Note: relative "
+        "preservation of the disc space on MRI with a large "
+        "paraspinal collection is the radiological signature."
+    ),
+    "Jones fracture": (
+        "A transverse fracture at the metaphyseal-diaphyseal junction "
+        "of the fifth metatarsal, within about 1.5 cm of the base. It "
+        "matters because this zone has a watershed blood supply and "
+        "heals badly. Aetiology: an adduction or inversion load on a "
+        "plantarflexed foot, typically a cutting movement in sport. "
+        "It is distinct from the far commoner avulsion fracture of "
+        "the tuberosity, which is pulled off by peroneus brevis and "
+        "heals reliably in a boot. Clinical features: lateral midfoot "
+        "pain and swelling with point tenderness over the base of the "
+        "fifth metatarsal and difficulty weight bearing. Ix: foot "
+        "radiographs including an oblique view. Ottawa ankle rules "
+        "make fifth metatarsal base tenderness an indication to "
+        "image. Mx: non-weight-bearing cast for 6 to 8 weeks is "
+        "traditional, but nonunion approaches 25%. Early "
+        "intramedullary screw fixation is preferred for athletes and "
+        "for displaced or recurrent fractures. Note: the distinction "
+        "from an avulsion fracture is a centimetre and a half on the "
+        "radiograph, and it changes the conversation from a boot to "
+        "an orthopaedic referral."
+    ),
+    "Lisfranc injury": (
+        "Disruption of the tarsometatarsal joint complex, the "
+        "keystone of the midfoot arch. Up to a third are missed on "
+        "initial presentation, and a missed injury reliably produces "
+        "midfoot arthritis and a flat painful foot. Aetiology: "
+        "high-energy crush or axial load through a plantarflexed "
+        "foot, and low-energy twisting in sport. The Lisfranc "
+        "ligament runs from the medial cuneiform to the base of the "
+        "second metatarsal and is the key stabiliser. Clinical "
+        "features: midfoot swelling and inability to weight bear, "
+        "with pain on passive pronation and abduction of the "
+        "forefoot. Plantar ecchymosis across the midfoot arch is "
+        "highly suggestive. Ix: weight-bearing radiographs of both "
+        "feet, looking for widening between the first and second "
+        "metatarsal bases and the fleck sign of an avulsed ligament. "
+        "Non-weight-bearing films are frequently normal, so get CT or "
+        "MRI if suspicion is high. Mx: cast and non-weight-bearing if "
+        "truly stable. Anatomical open reduction and internal "
+        "fixation or primary fusion for any displacement. Note: "
+        "plantar bruising of the midfoot after a twisting injury "
+        "demands weight-bearing films before the patient goes home."
+    ),
+    "Jefferson fracture": (
+        "A burst fracture of the C1 ring, classically with four "
+        "breaks in the anterior and posterior arches. Because C1 is a "
+        "ring that widens rather than narrows as it breaks, the cord "
+        "is usually spared and patients often walk in. Aetiology: "
+        "axial load onto the vertex driving the occipital condyles "
+        "into the lateral masses, so diving into shallow water, a "
+        "fall onto the head, or a roof strike in a rollover. Clinical "
+        "features: upper neck pain and suboccipital tenderness with a "
+        "reluctance to move the head. Neurological deficit is "
+        "uncommon, which is exactly why the injury gets missed. "
+        "Vertebral artery injury and lower cranial nerve palsy occur. "
+        "Ix: CT cervical spine is the investigation. On an open mouth "
+        "odontoid view, lateral mass overhang beyond C2 totalling "
+        "more than 7 mm implies transverse ligament rupture and an "
+        "unstable injury. MRI assesses that ligament directly. Mx: "
+        "rigid collar for stable fractures. Halo immobilisation or C1 "
+        "to C2 fusion when the transverse ligament has failed. Note: "
+        "a neurologically intact patient with severe upper neck pain "
+        "after an axial load still needs a CT."
+    ),
+    "Odontoid fracture": (
+        "Fracture of the dens of C2, the commonest cervical spine "
+        "fracture in older adults and a frequent finding after a "
+        "simple fall from standing height. Classification: Anderson "
+        "and D'Alonzo type I is an avulsion of the tip and is stable. "
+        "Type II crosses the base of the dens, is the commonest and "
+        "has a high nonunion rate because of poor blood supply. Type "
+        "III extends into the C2 body and heals well. Clinical "
+        "features: upper neck pain, occipital neuralgia and a patient "
+        "who supports their own head. Many are neurologically intact. "
+        "In the elderly the mechanism can be trivial and the "
+        "presentation is often just neck pain after a fall. Ix: CT "
+        "cervical spine. Plain films miss these, and the NEXUS and "
+        "Canadian C-spine rules both make age over 65 an automatic "
+        "indication to image. MRI if there is deficit. Mx: collar for "
+        "type I and III. Type II needs surgical consideration, with "
+        "anterior odontoid screw or posterior C1 to C2 fusion, "
+        "weighed against collar treatment in frail patients. Note: "
+        "any older person with neck pain after a ground-level fall "
+        "needs a CT, not a reassurance and a script."
+    ),
+    "Facioscapulohumeral muscular dystrophy": (
+        "The third most common muscular dystrophy, with a distinctive "
+        "descending pattern of weakness beginning in the face and "
+        "shoulder girdle. Onset is usually in the second decade. "
+        "Genetics: autosomal dominant, from contraction of the D4Z4 "
+        "repeat array on chromosome 4q35, which allows aberrant "
+        "expression of the toxic DUX4 transcription factor. "
+        "Penetrance and severity vary widely within families. "
+        "Clinical features: facial weakness with inability to whistle "
+        "or bury the eyelashes, often noticed as sleeping with the "
+        "eyes open. Scapular winging with a characteristic step at "
+        "the shoulder, and difficulty raising the arms with relative "
+        "sparing of the deltoid. Weakness is strikingly asymmetric. "
+        "Foot drop and abdominal weakness follow. Retinal "
+        "telangiectasia and high-frequency hearing loss occur. Ix: "
+        "genetic testing of the D4Z4 repeat is diagnostic and has "
+        "largely replaced biopsy. Creatine kinase is normal or mildly "
+        "raised. Mx: no disease-modifying therapy. Physiotherapy, "
+        "ankle-foot orthoses, scapular fixation surgery for selected "
+        "patients, and audiology and retinal screening. Note: "
+        "asymmetric weakness with facial involvement separates this "
+        "from limb-girdle dystrophy."
+    ),
+    "Tinnitus": (
+        "The perception of sound without an external source, reported "
+        "by roughly one in six Australian adults and disabling for "
+        "about one in fifty. Aetiology: most is subjective and "
+        "accompanies cochlear damage from noise exposure, "
+        "presbycusis, otosclerosis or ototoxic drugs "
+        "(aminoglycosides, high-dose salicylates, cisplatin, loop "
+        "diuretics). Pulsatile tinnitus is a different problem and "
+        "suggests a vascular cause such as a dural fistula, carotid "
+        "stenosis or idiopathic intracranial hypertension. Red flags: "
+        "unilateral tinnitus, pulsatile quality, asymmetric hearing "
+        "loss and any neurological sign. These need imaging to "
+        "exclude vestibular schwannoma or a vascular lesion. Ix: "
+        "otoscopy and formal audiometry in everyone. MRI internal "
+        "auditory meatus for unilateral or asymmetric findings, and "
+        "vascular imaging for pulsatile tinnitus. Mx: treat the "
+        "hearing loss, because hearing aids relieve tinnitus in most "
+        "people with a deficit. Cognitive behavioural therapy has the "
+        "best evidence for distress, and sound enrichment helps. No "
+        "drug is approved for it. Note: bilateral symmetrical "
+        "tinnitus with matching hearing loss is reassurance and an "
+        "audiologist. Unilateral or pulsatile is a scan."
+    ),
+    "Yellow nail syndrome": (
+        "A rare acquired triad of yellow thickened nails, lymphoedema "
+        "and chronic respiratory disease, usually presenting after "
+        "age 50. Aetiology: unknown, but the unifying lesion is "
+        "thought to be functional lymphatic impairment. Associations "
+        "with hypoalbuminaemia, malignancy (particularly lung and "
+        "breast), rheumatoid arthritis and thiol drugs such as "
+        "penicillamine are described, so it warrants a look for an "
+        "underlying cause. Clinical features: nails grow very slowly, "
+        "thicken, turn yellow to green and lose the cuticle and "
+        "lunula, with onycholysis. Lymphoedema is usually of the "
+        "lower limbs. Respiratory features include recurrent pleural "
+        "effusions (typically exudative and lymphocyte rich), "
+        "bronchiectasis and chronic sinusitis. The full triad is "
+        "present in fewer than half. Ix: clinical diagnosis. Chest "
+        "imaging, pleural fluid analysis and a malignancy screen "
+        "where indicated. Mx: treat the respiratory complications, "
+        "with airway clearance and pleurodesis for recurrent "
+        "effusions. Compression for lymphoedema. Vitamin E and azole "
+        "antifungals have been tried for the nails with modest "
+        "results. Note: yellow nails plus a recurrent pleural "
+        "effusion should prompt a hunt for an occult cancer."
+    ),
+    "Swyer-James syndrome": (
+        "A unilateral hyperlucent lung caused by post-infectious "
+        "obliterative bronchiolitis acquired in early childhood, "
+        "often found incidentally on a chest film in an adult. "
+        "Aetiology: a severe lower respiratory infection before the "
+        "age of 8, classically adenovirus but also measles, "
+        "mycoplasma, pertussis and tuberculosis, damages the terminal "
+        "bronchioles. The affected lung then fails to develop its "
+        "alveolar bed and its pulmonary arterial supply regresses. "
+        "Clinical features: many are entirely asymptomatic. Others "
+        "have exertional breathlessness, recurrent chest infections "
+        "and bronchiectasis. Ix: chest radiograph shows a small "
+        "hyperlucent lung with a diminutive hilum. CT is diagnostic, "
+        "with air trapping accentuated on expiratory phase, reduced "
+        "vessel calibre and often bronchiectasis. This distinguishes "
+        "it from a foreign body, congenital lobar emphysema and "
+        "pulmonary embolism. Mx: no specific treatment. Manage as "
+        "bronchiectasis with airway clearance, prompt antibiotics and "
+        "vaccination. Resection is rarely needed for uncontrolled "
+        "sepsis. Note: a hyperlucent lung that is small rather than "
+        "large is the clue, because compensatory and obstructive "
+        "causes make the lung bigger."
+    ),
+    "Middle lobe syndrome": (
+        "Recurrent or chronic collapse and consolidation of the right "
+        "middle lobe, a consequence of its unfavourable anatomy. "
+        "Aetiology: the right middle lobe bronchus is long, narrow, "
+        "takes off at an acute angle and is surrounded by lymph "
+        "nodes, and the lobe has poor collateral ventilation. "
+        "Obstructive causes include tumour, an inhaled foreign body "
+        "and nodal compression from tuberculosis or sarcoidosis. "
+        "Non-obstructive cases follow asthma, bronchiectasis and "
+        "non-tuberculous mycobacterial infection, notably the Lady "
+        "Windermere pattern of Mycobacterium avium complex in older "
+        "women. Clinical features: chronic cough, recurrent "
+        "right-sided infection and haemoptysis. Ix: chest radiograph "
+        "with a lateral view showing a wedge of collapse overlying "
+        "the heart. CT chest defines the cause. Bronchoscopy is "
+        "indicated in adults to exclude tumour and in children to "
+        "retrieve a foreign body. Mx: treat the cause. Airway "
+        "clearance and targeted antibiotics, prolonged "
+        "macrolide-based therapy for mycobacterial disease, and "
+        "lobectomy for refractory sepsis or malignancy. Note: "
+        "persistent right middle lobe shadowing in an adult smoker is "
+        "a bronchoscopy, not another course of amoxicillin."
+    ),
+    "Plastic bronchitis": (
+        "A rare condition in which branching gelatinous or fibrinous "
+        "casts form in the airways and are coughed up as intact "
+        "bronchial trees. Aetiology: two broad groups. Lymphatic "
+        "casts occur after the Fontan procedure and in other causes "
+        "of elevated central venous pressure, where abnormal "
+        "pulmonary lymphatic flow leaks into the airway. Inflammatory "
+        "casts occur in asthma, cystic fibrosis and sickle cell acute "
+        "chest syndrome. Clinical features: paroxysmal cough and "
+        "escalating breathlessness, then dramatic expectoration of a "
+        "rubbery cast that relieves the symptoms. Large casts cause "
+        "lobar collapse and can be fatal by acute airway obstruction. "
+        "Ix: the cast itself is diagnostic and should go for "
+        "histology to separate fibrinous from eosinophilic types. "
+        "Dynamic contrast MR lymphangiography defines lymphatic "
+        "anatomy in Fontan patients. Mx: bronchoscopic removal of "
+        "obstructing casts, then nebulised tissue plasminogen "
+        "activator and treatment of the underlying disease. Lymphatic "
+        "embolisation is now definitive for Fontan-associated cases. "
+        "Note: a patient who coughs up a branching cast has made the "
+        "diagnosis for you."
+    ),
+    "Fibrothorax": (
+        "A thick fibrous rind encasing the visceral pleura, trapping "
+        "the lung and restricting its expansion. It is the end stage "
+        "of an unresolved pleural process rather than a disease in "
+        "itself. Aetiology: organisation of an untreated empyema or "
+        "complicated parapneumonic effusion, a retained haemothorax, "
+        "tuberculous pleuritis, asbestos exposure and uraemic or "
+        "rheumatoid pleuritis. Inadequate early drainage is the "
+        "common thread. Clinical features: progressive exertional "
+        "breathlessness with a restrictive pattern, reduced chest "
+        "wall expansion on the affected side, dull percussion and "
+        "absent breath sounds. Chronic cases show ipsilateral volume "
+        "loss and rib crowding. Ix: chest radiograph shows a small "
+        "hemithorax with pleural thickening and sometimes "
+        "calcification. CT measures rind thickness. Lung function "
+        "confirms restriction. Mx: prevention is the priority, with "
+        "early complete drainage and intrapleural fibrinolytics for "
+        "loculated empyema. Established fibrothorax needs surgical "
+        "decortication, best done after the process has matured over "
+        "several months. Note: a small hemithorax with rib crowding "
+        "tells you the pleura is pulling the lung in, not that the "
+        "lung has simply collapsed."
+    ),
+    "Byssinosis": (
+        "An occupational airways disease of workers exposed to raw "
+        "cotton, flax and hemp dust, historically called brown lung. "
+        "Aetiology: endotoxin from gram-negative bacteria "
+        "contaminating vegetable fibre drives an airway inflammatory "
+        "response. Risk relates to cumulative dust exposure, and "
+        "smoking multiplies it. Highest exposure is in the carding "
+        "and blowing rooms of a mill. Clinical features: the defining "
+        "pattern is chest tightness and breathlessness on the first "
+        "day back at work after a break, easing over the working "
+        "week. This Monday fever pattern reverses over years into "
+        "fixed airflow obstruction indistinguishable from COPD. Ix: "
+        "occupational history is the diagnosis. Spirometry across a "
+        "shift showing a fall in FEV1 on the first working day "
+        "supports it, with a chest radiograph typically normal. Mx: "
+        "exposure control is the only effective measure, with dust "
+        "suppression, ventilation and respiratory protection. "
+        "Bronchodilators and inhaled corticosteroids treat symptoms. "
+        "Smoking cessation and workers compensation referral matter. "
+        "Note: breathlessness that is worst on Monday and settles by "
+        "Friday is an occupational history waiting to be taken."
+    ),
+    "Portopulmonary hypertension": (
+        "Pulmonary arterial hypertension developing in a patient with "
+        "portal hypertension, present in about 5% of those assessed "
+        "for liver transplantation. Aetiology: portosystemic shunting "
+        "allows vasoactive mediators to bypass hepatic clearance and "
+        "reach the pulmonary circulation, driving vascular "
+        "remodelling. Severity does not track with the degree of "
+        "liver dysfunction. Clinical features: exertional "
+        "breathlessness, fatigue and syncope on a background of "
+        "chronic liver disease. Signs of right heart strain appear "
+        "late. It must be separated from hepatopulmonary syndrome, "
+        "which causes hypoxaemia through intrapulmonary shunting with "
+        "normal pressures. Ix: transthoracic echocardiography is the "
+        "screening test and is mandatory before transplant listing. "
+        "Right heart catheterisation confirms, requiring a mean "
+        "pulmonary artery pressure above 20 mmHg with raised vascular "
+        "resistance and a normal wedge pressure. Mx: pulmonary "
+        "vasodilators such as ambrisentan or sildenafil. Beta "
+        "blockers should stop. Severe disease contraindicates "
+        "transplantation until pressures respond. Note: high pressure "
+        "means this and low oxygen with normal pressure means "
+        "hepatopulmonary syndrome."
+    ),
+    "Pancreas divisum": (
+        "The commonest congenital pancreatic duct variant, present in "
+        "about 7% of people, in which the dorsal and ventral "
+        "pancreatic buds fail to fuse. Mechanism: the bulk of "
+        "exocrine drainage is left to pass through the small minor "
+        "papilla via the duct of Santorini rather than the major "
+        "papilla. In most people this is harmless. In a minority the "
+        "minor papilla is a relative obstruction and generates ductal "
+        "hypertension. Clinical features: the overwhelming majority "
+        "are asymptomatic and it is an incidental finding. A small "
+        "subgroup presents with recurrent acute pancreatitis or "
+        "chronic epigastric pain, particularly when a coexisting CFTR "
+        "or SPINK1 variant is present. Ix: magnetic resonance "
+        "cholangiopancreatography is the test of choice and secretin "
+        "enhancement improves duct visualisation. Endoscopic "
+        "retrograde cholangiopancreatography is now kept for "
+        "treatment. Mx: nothing when incidental. For recurrent "
+        "pancreatitis with no other cause, endoscopic minor papilla "
+        "sphincterotomy with stenting is first line. Note: finding it "
+        "does not explain the pain, since most carriers never have "
+        "pancreatitis, so exclude alcohol and gallstones first."
+    ),
+    "Thin basement membrane nephropathy": (
+        "The commonest cause of persistent isolated glomerular "
+        "haematuria, affecting around 1% of the population and "
+        "generally carrying an excellent prognosis. Genetics: "
+        "heterozygous variants in COL4A3 or COL4A4, the same genes "
+        "that cause autosomal recessive Alport syndrome, so a carrier "
+        "state is the underlying biology and inheritance appears "
+        "autosomal dominant. Clinical features: persistent or "
+        "intermittent microscopic haematuria found on a routine "
+        "dipstick, often with a family history of haematuria without "
+        "renal failure. Blood pressure, renal function and protein "
+        "excretion are normal, and there is no hearing loss or ocular "
+        "abnormality. Ix: urine microscopy shows dysmorphic red "
+        "cells. Diagnosis is usually clinical, with biopsy reserved "
+        "for proteinuria, hypertension or declining function, showing "
+        "diffuse thinning of the glomerular basement membrane on "
+        "electron microscopy. Mx: reassurance with annual blood "
+        "pressure, creatinine and albumin to creatinine ratio, adding "
+        "an ACE inhibitor if proteinuria develops. Note: haematuria "
+        "with a normal creatinine and a relative who also has blood "
+        "in the urine is this, not glomerulonephritis."
+    ),
+    "Page kidney": (
+        "Secondary hypertension caused by external compression of the "
+        "renal parenchyma, classically by a subcapsular haematoma, "
+        "reproducing the effect Irvine Page produced experimentally "
+        "by wrapping a kidney in cellophane. Aetiology: blunt renal "
+        "trauma including sporting injury and renal biopsy. "
+        "Anticoagulation and spontaneous haemorrhage from a renal "
+        "cyst also cause it. Mechanism: the compressed kidney becomes "
+        "ischaemic, activating the renin-angiotensin-aldosterone axis "
+        "and producing renin-dependent hypertension. Clinical "
+        "features: new or abruptly worsening hypertension days to "
+        "weeks after renal trauma or a procedure, often with flank "
+        "pain. It can present much later as resistant hypertension "
+        "with no obvious history. Ix: CT or ultrasound demonstrating "
+        "a subcapsular collection flattening the renal contour. "
+        "Plasma renin is raised. Mx: an ACE inhibitor or angiotensin "
+        "receptor blocker first, since the mechanism is renin driven. "
+        "Percutaneous drainage or surgical capsulotomy for refractory "
+        "cases. Note: new hypertension after a renal biopsy or a "
+        "football tackle is this until the CT says otherwise."
+    ),
+    "Gordon syndrome": (
+        "A rare inherited tubulopathy that is the mirror image of "
+        "Gitelman syndrome, producing hypertension with hyperkalaemia "
+        "and a normal glomerular filtration rate. Genetics: autosomal "
+        "dominant variants in WNK1, WNK4, KLHL3 or CUL3 that increase "
+        "activity of the thiazide-sensitive sodium chloride "
+        "cotransporter in the distal convoluted tubule. Mechanism: "
+        "excessive distal sodium chloride reabsorption expands volume "
+        "and simultaneously reduces the electrochemical driving force "
+        "for potassium and hydrogen secretion. Clinical features: "
+        "hypertension often from childhood, with hyperkalaemia out of "
+        "proportion to renal function, hyperchloraemic metabolic "
+        "acidosis, low or normal aldosterone and suppressed renin. "
+        "Muscle weakness, short stature and dental abnormalities "
+        "occur. Ix: biochemistry is the diagnosis once adrenal "
+        "insufficiency, renal failure and potassium-sparing drugs are "
+        "excluded. Genetic testing confirms. Mx: low-dose thiazide "
+        "diuretics correct both the hypertension and the potassium, "
+        "which is diagnostically satisfying. Dietary sodium "
+        "restriction helps. Note: hyperkalaemia with hypertension and "
+        "a normal creatinine is the combination that should bring "
+        "this to mind."
+    ),
+    "Mucopolysaccharidosis": (
+        "A group of lysosomal storage disorders in which deficient "
+        "glycosaminoglycan degradation causes progressive multisystem "
+        "accumulation. Genetics: all are autosomal recessive except "
+        "Hunter syndrome (type II), which is X-linked. Hurler "
+        "syndrome (type I) is the severe alpha-L-iduronidase "
+        "deficiency, and Sanfilippo (type III) is dominated by "
+        "neurodegeneration. Clinical features: children are normal at "
+        "birth then progressively decline. Coarse facies, corneal "
+        "clouding (absent in Hunter), macroglossia, "
+        "hepatosplenomegaly, umbilical and inguinal hernias, and "
+        "dysostosis multiplex with joint stiffness and a gibbus. "
+        "Airway narrowing, valvular heart disease, hearing loss and "
+        "carpal tunnel syndrome in a child are characteristic. Ix: "
+        "urinary glycosaminoglycan screening, then specific enzyme "
+        "assay in leucocytes and genetic confirmation. Skeletal "
+        "survey shows dysostosis multiplex. Mx: enzyme replacement "
+        "therapy is available for several subtypes on the Life Saving "
+        "Drugs Program in Australia. Haematopoietic stem cell "
+        "transplantation before 2 years of age preserves cognition in "
+        "severe type I. Anaesthesia is high risk. Note: carpal tunnel "
+        "syndrome in a child is close to pathognomonic."
+    ),
+    "Maple syrup urine disease": (
+        "An autosomal recessive defect of branched-chain amino acid "
+        "catabolism, named for the sweet caramel odour of the urine "
+        "and cerumen. Genetics: deficiency of the branched-chain "
+        "alpha-ketoacid dehydrogenase complex, so leucine, isoleucine "
+        "and valine and their ketoacids accumulate. Leucine is the "
+        "neurotoxic one. Clinical features: the classic form presents "
+        "in the first week of life once feeding is established, with "
+        "poor feeding, lethargy, the characteristic odour, then "
+        "opisthotonos, a boxing and bicycling movement pattern, "
+        "seizures and coma from cerebral oedema. Milder variants "
+        "decompensate only during catabolic stress such as infection "
+        "or surgery. Ix: plasma amino acids showing raised leucine "
+        "with the pathognomonic presence of alloisoleucine. It is on "
+        "the Australian newborn bloodspot screening panel. Mx: acute "
+        "decompensation needs aggressive dextrose and lipid to "
+        "reverse catabolism, protein removal, and haemodialysis for "
+        "severe leucine elevation. Lifelong branched-chain restricted "
+        "diet with specialised formula. Note: a term newborn who "
+        "feeds poorly on day four with an odd sweet smell needs amino "
+        "acids sent urgently."
+    ),
+    "Ornithine transcarbamylase deficiency": (
+        "The commonest urea cycle disorder and the only X-linked one, "
+        "causing hyperammonaemia because carbamoyl phosphate cannot "
+        "be converted to citrulline. Genetics: X-linked, so "
+        "hemizygous males present catastrophically in the neonatal "
+        "period while heterozygous females range from asymptomatic to "
+        "episodic hyperammonaemic crises depending on X-inactivation. "
+        "Clinical features: an affected male newborn is well for 24 "
+        "to 72 hours then develops poor feeding, vomiting, tachypnoea "
+        "from respiratory alkalosis, lethargy and coma from cerebral "
+        "oedema. Later presentations are triggered by protein loads, "
+        "illness, surgery or the postpartum period, with confusion, "
+        "ataxia and psychiatric symptoms that are easily "
+        "misattributed. Ix: plasma ammonia is the critical test and "
+        "must be sent on any encephalopathic child. Respiratory "
+        "alkalosis with a normal anion gap, low citrulline and raised "
+        "urinary orotic acid distinguish it from other urea cycle "
+        "defects. Mx: stop protein, give high-dose dextrose, and "
+        "start sodium benzoate and sodium phenylbutyrate with "
+        "arginine. Haemodialysis for ammonia above 500 micromol/L. "
+        "Note: check ammonia in any unexplained encephalopathy, at "
+        "any age."
+    ),
+    "Mitochondrial encephalomyopathy": (
+        "A group of disorders of oxidative phosphorylation affecting "
+        "the most energy-dependent tissues, principally brain and "
+        "muscle. MELAS is the best known phenotype. Genetics: usually "
+        "maternally inherited mitochondrial DNA variants, with the "
+        "m.3243A>G change in MT-TL1 accounting for most MELAS. "
+        "Heteroplasmy explains why severity varies enormously within "
+        "one family. Clinical features: stroke-like episodes before "
+        "age 40 that do not respect vascular territories, with "
+        "seizures and migraine. Systemic clues are lactic acidosis, "
+        "sensorineural deafness and diabetes, often with short "
+        "stature and exercise intolerance. Ptosis and external "
+        "ophthalmoplegia point to related phenotypes. Ix: raised "
+        "resting lactate and MRI showing occipital or parietal "
+        "lesions that cross arterial boundaries. Genetic testing goes "
+        "on urinary sediment or muscle rather than blood, since blood "
+        "heteroplasmy falls with age. Mx: no curative therapy. "
+        "Supportive care with anticonvulsants, avoiding valproate and "
+        "metformin, and screening for diabetes and cardiomyopathy. "
+        "Note: a young stroke that ignores vascular territories with "
+        "a raised lactate and deaf diabetic relatives is the pattern."
+    ),
+    "Imperforate hymen": (
+        "The commonest congenital obstructive anomaly of the female "
+        "genital tract, in which the hymenal membrane fails to "
+        "canalise, affecting about 1 in 1000 girls. Aetiology: "
+        "failure of the urogenital sinus to perforate the caudal end "
+        "of the vaginal plate during development. It is sporadic. "
+        "Clinical features: classically an adolescent with primary "
+        "amenorrhoea despite normal secondary sexual development, "
+        "cyclical lower abdominal pain over several months, and a "
+        "lower abdominal mass. Examination shows a bulging bluish "
+        "hymenal membrane. Retained blood may cause urinary retention "
+        "or constipation by mass effect. It can present in the "
+        "neonate as mucocolpos. Ix: diagnosis is on inspection. "
+        "Pelvic ultrasound confirms haematocolpos and excludes a "
+        "transverse vaginal septum or vaginal agenesis, which need "
+        "very different surgery. Mx: hymenotomy with a cruciate or "
+        "annular incision and excision of redundant membrane, done by "
+        "a gynaecologist. Simple needle drainage is contraindicated "
+        "because of infection risk. Note: an adolescent with cyclical "
+        "pain, no periods and urinary retention needs her perineum "
+        "inspected before she gets another abdominal scan."
+    ),
+    "Depersonalisation derealisation disorder": (
+        "A dissociative disorder of persistent detachment from the "
+        "self or surroundings, with intact reality testing "
+        "throughout, which is what separates it from psychosis. "
+        "Aetiology: strongly associated with childhood emotional "
+        "abuse and neglect, severe stress, panic attacks and cannabis "
+        "or ketamine use. Transient symptoms are very common in the "
+        "general population and only become a disorder when "
+        "persistent and distressing. Clinical features: "
+        "depersonalisation is feeling like an outside observer of "
+        "one's own thoughts, body or actions, often described as "
+        "robotic or as living behind glass. Derealisation is the "
+        "experience of the world as unreal, foggy or stage-like. "
+        "Emotional numbing and distorted time sense are usual, and "
+        "patients typically fear they are going mad. Ix: clinical "
+        "diagnosis. Exclude temporal lobe epilepsy, substance effects "
+        "and the more common secondary occurrence within panic "
+        "disorder, depression and post-traumatic stress disorder. Mx: "
+        "treat the primary disorder first, since most cases are "
+        "secondary. Psychological therapy is first line and no "
+        "medication is approved. Note: the preserved insight is the "
+        "point, because the patient knows it feels unreal rather than "
+        "believing it is."
     ),
 }
 
