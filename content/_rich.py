@@ -6287,6 +6287,228 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "ebola virus disease"]],
         "summary": "",
     },
+    {
+        "name": "Laryngeal cancer",
+        "aliases": ["Cancer of the larynx", "Glottic cancer", "Laryngeal carcinoma"],
+        "utd": [["Overview", "epidemiology risk factors and clinical manifestations of head and neck cancer"]],
+        "summary": "",
+    },
+    {
+        "name": "Nasal bone fracture",
+        "aliases": ["Fractured nose", "Nasal fracture"],
+        "utd": [["Overview", "nasal fractures"]],
+        "summary": "",
+    },
+    {
+        "name": "Eagle syndrome",
+        "aliases": ["Stylohyoid syndrome", "Elongated styloid process"],
+        "utd": [["Overview", "eagle syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Rhinophyma",
+        "aliases": ["Rosacea nose", "Phymatous rosacea"],
+        "utd": [["Overview", "rhinophyma"]],
+        "summary": "",
+    },
+    {
+        "name": "Blepharospasm",
+        "aliases": ["Benign essential blepharospasm", "Eyelid twitching disorder"],
+        "utd": [["Overview", "blepharospasm"]],
+        "summary": "",
+    },
+    {
+        "name": "Congenital glaucoma",
+        "aliases": ["Infantile glaucoma", "Primary congenital glaucoma", "Buphthalmos"],
+        "utd": [["Overview", "primary congenital glaucoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Urethral diverticulum",
+        "aliases": ["Female urethral diverticulum"],
+        "utd": [["Overview", "urethral diverticula in women"]],
+        "summary": "",
+    },
+    {
+        "name": "Ureterocele",
+        "aliases": ["Ureterocoele"],
+        "utd": [["Overview", "ureteroceles"]],
+        "summary": "",
+    },
+    {
+        "name": "Simple renal cyst",
+        "aliases": ["Simple renal cysts", "Bosniak I renal cyst"],
+        "utd": [["Overview", "simple renal cysts"]],
+        "summary": "",
+    },
+    {
+        "name": "Bronchiolitis obliterans",
+        "aliases": ["Obliterative bronchiolitis", "Popcorn lung", "Constrictive bronchiolitis"],
+        "utd": [["Overview", "bronchiolitis obliterans in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Diaphragmatic paralysis",
+        "aliases": ["Phrenic nerve palsy", "Diaphragm paralysis"],
+        "utd": [["Overview", "diaphragmatic paralysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Mallet finger",
+        "aliases": ["Baseball finger", "Drop finger"],
+        "utd": [["Overview", "mallet finger"]],
+        "summary": "",
+    },
+    {
+        "name": "Jersey finger",
+        "aliases": ["Rugby finger", "Flexor digitorum profundus avulsion"],
+        "utd": [["Overview", "flexor tendon injuries jersey finger"]],
+        "summary": "",
+    },
+    {
+        "name": "SLAP tear",
+        "aliases": ["Superior labral tear", "Superior labrum anterior to posterior tear"],
+        "utd": [["Overview", "slap lesions of the shoulder"]],
+        "summary": "",
+    },
+    {
+        "name": "Osteoid osteoma",
+        "aliases": ["Osteoid osteomas"],
+        "utd": [["Overview", "osteoid osteoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Giant cell tumour of bone",
+        "aliases": ["Giant cell tumor of bone", "Osteoclastoma"],
+        "utd": [["Overview", "giant cell tumor of bone"]],
+        "summary": "",
+    },
+    {
+        "name": "Charles Bonnet syndrome",
+        "aliases": ["Visual release hallucinations"],
+        "utd": [["Overview", "charles bonnet syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Spinocerebellar ataxia",
+        "aliases": ["SCA", "Hereditary spinocerebellar ataxias"],
+        "utd": [["Overview", "hereditary ataxia overview"]],
+        "summary": "",
+    },
+    {
+        "name": "Hoarding disorder",
+        "aliases": ["Compulsive hoarding"],
+        "utd": [["Overview", "hoarding disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Pyromania",
+        "aliases": [],
+        "utd": [["Overview", "impulse control disorders pyromania"]],
+        "summary": "",
+    },
+    {
+        "name": "Excoriation disorder",
+        "aliases": ["Skin picking disorder", "Dermatillomania", "Neurotic excoriation"],
+        "utd": [["Overview", "excoriation skin picking disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Cow's milk protein allergy",
+        "aliases": ["CMPA", "Cow milk allergy", "Milk protein intolerance"],
+        "utd": [["Overview", "milk allergy in infants and children"]],
+        "summary": "",
+    },
+    {
+        "name": "Rumination syndrome",
+        "aliases": ["Rumination disorder"],
+        "utd": [["Overview", "rumination syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Cyclic vomiting syndrome",
+        "aliases": ["CVS"],
+        "utd": [["Overview", "cyclic vomiting syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Faecal impaction",
+        "aliases": ["Fecal impaction", "Faecal loading"],
+        "utd": [["Overview", "fecal impaction"]],
+        "summary": "",
+    },
+    {
+        "name": "Nabothian cyst",
+        "aliases": ["Nabothian cysts", "Cervical mucous cyst"],
+        "utd": [["Overview", "nabothian cyst"]],
+        "summary": "",
+    },
+    {
+        "name": "Buruli ulcer",
+        "aliases": ["Mycobacterium ulcerans infection", "Bairnsdale ulcer", "Daintree ulcer"],
+        "utd": [["Overview", "buruli ulcer"]],
+        "summary": "",
+    },
+    {
+        "name": "Strongyloides hyperinfection syndrome",
+        "aliases": ["Disseminated strongyloidiasis"],
+        "utd": [["Overview", "strongyloidiasis hyperinfection"]],
+        "summary": "",
+    },
+    {
+        "name": "Amoebic dysentery",
+        "aliases": ["Intestinal amoebiasis", "Amoebic colitis"],
+        "utd": [["Overview", "intestinal amebiasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Baclofen withdrawal",
+        "aliases": ["Baclofen withdrawal syndrome"],
+        "utd": [["Overview", "baclofen withdrawal"]],
+        "summary": "",
+    },
+    {
+        "name": "Clonidine overdose",
+        "aliases": ["Clonidine toxicity", "Clonidine poisoning"],
+        "utd": [["Overview", "clonidine overdose"]],
+        "summary": "",
+    },
+    {
+        "name": "Metformin-associated lactic acidosis",
+        "aliases": ["MALA"],
+        "utd": [["Overview", "metformin associated lactic acidosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Richter transformation",
+        "aliases": ["Richter syndrome"],
+        "utd": [["Overview", "richter transformation of cll"]],
+        "summary": "",
+    },
+    {
+        "name": "Erdheim-Chester disease",
+        "aliases": ["Erdheim Chester disease"],
+        "utd": [["Overview", "erdheim chester disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Alien hand syndrome",
+        "aliases": ["Anarchic hand syndrome"],
+        "utd": [["Overview", "alien hand syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Boutonniere deformity",
+        "aliases": ["Boutonnière deformity"],
+        "utd": [["Overview", "boutonniere deformity"]],
+        "summary": "",
+    },
+    {
+        "name": "Swan neck deformity",
+        "aliases": ["Swan-neck deformity"],
+        "utd": [["Overview", "swan neck deformity"]],
+        "summary": "",
+    },
 ]
 
 
@@ -46494,6 +46716,766 @@ RICH_SUMMARIES = {
         "immediate isolation and public health notification before "
         "further workup, given the severe transmission risk to staff."
     ),
+    # ═══════ BATCH: ENT, OPHTHALMOLOGY, UROLOGY, RESPIRATORY, MSK, NEURO, PSYCH, PAEDS, GI, O&G, ID, TOX, ONC ═════════════════
+
+    "Laryngeal cancer": (
+        "Squamous cell carcinoma of the larynx, closely tied to "
+        "smoking and alcohol, with glottic tumours (the vocal cords) "
+        "making up the majority. Aetiology: tobacco and alcohol act "
+        "synergistically, older age and male sex are typical, HPV is "
+        "a minor contributor unlike oropharyngeal cancer. Clinical "
+        "features: progressive hoarseness beyond three weeks is the "
+        "cardinal glottic symptom, presenting late as dyspnoea, "
+        "stridor, dysphagia, referred otalgia or a neck lump for "
+        "supraglottic disease, which drains early to nodes. Ix: "
+        "flexible nasendoscopy visualises the cords directly, biopsy "
+        "under microlaryngoscopy confirms histology, CT or MRI stages "
+        "local extent, PET-CT stages nodal and distant disease. Mx: "
+        "early glottic disease responds well to radiotherapy or "
+        "transoral laser excision with voice preserved, advanced "
+        "disease needs chemoradiotherapy or total laryngectomy with a "
+        "permanent stoma, smoking cessation improves every outcome. "
+        "Note: any adult smoker with hoarseness past three weeks "
+        "needs nasendoscopy, not a course of antibiotics."
+    ),
+
+    "Nasal bone fracture": (
+        "The most common facial fracture, usually from a direct blow "
+        "in sport, assault or a fall. Clinical features: swelling, "
+        "bruising and tenderness over the bridge, epistaxis, and a "
+        "visible deformity once oedema settles. Always inspect for "
+        "septal haematoma, a bluish boggy swelling between the septum "
+        "and nasal floor. Ix: clinical diagnosis, plain films add "
+        "little; CT is reserved for suspected complex facial or "
+        "orbital fracture. Mx: control epistaxis first, ice and "
+        "analgesia for the first 48 to 72 hours, then reassess once "
+        "swelling has settled. Closed reduction under local or "
+        "general anaesthesia within one to two weeks if the nose is "
+        "deviated, sooner if a haematoma needs immediate drainage. "
+        "Note: a septal haematoma is a same-day surgical emergency - "
+        "untreated it causes septal cartilage necrosis and a "
+        "saddle-nose deformity within days."
+    ),
+
+    "Eagle syndrome": (
+        "Elongation of the styloid process or calcification of the "
+        "stylohyoid ligament causing recurrent throat and neck pain, "
+        "often after tonsillectomy or chronic pharyngeal irritation. "
+        "Clinical features: unilateral dull throat pain worse on "
+        "swallowing, turning the head or yawning, a foreign-body "
+        "sensation, referred otalgia, and sometimes vascular symptoms "
+        "from carotid compression such as syncope or transient "
+        "neurological deficit. Ix: a palpable elongated styloid tip "
+        "in the tonsillar fossa is suggestive, CT with 3D "
+        "reconstruction confirms length and angulation, ultrasound "
+        "can show carotid compression. Mx: NSAIDs and local "
+        "anaesthetic infiltration for mild cases, styloidectomy via "
+        "an intraoral or external approach for refractory pain. Note: "
+        "consider it in post-tonsillectomy throat pain persisting "
+        "well beyond the expected healing window, especially with "
+        "positional or rotational triggers."
+    ),
+
+    "Rhinophyma": (
+        "A late, phymatous complication of rosacea in which sebaceous "
+        "gland hyperplasia and fibrosis thicken and distort the skin "
+        "of the nose, almost exclusively in older men. Clinical "
+        "features: a bulbous, nodular, erythematous nose with dilated "
+        "pores and prominent telangiectasia, developing over years on "
+        "a background of longstanding rosacea, can obstruct the nares "
+        "in severe cases. Ix: clinical diagnosis, biopsy only if an "
+        "asymmetric or ulcerated area raises concern for basal cell "
+        "carcinoma, which occurs within phymatous tissue often enough "
+        "to warrant a low threshold. Mx: early topical or oral "
+        "rosacea therapy limits progression, established phymatous "
+        "change needs surgical debulking, laser ablation or "
+        "dermabrasion to recontour the nose. Note: patients often "
+        "present for the cosmetic change alone, unaware it began as "
+        "rosacea - ask about flushing and facial erythema history."
+    ),
+
+    "Blepharospasm": (
+        "A focal dystonia causing involuntary, bilateral, forceful "
+        "eyelid closure, distinct from a simple eyelid twitch. "
+        "Aetiology: idiopathic in most cases, thought to reflect "
+        "basal ganglia dysfunction, can be drug-induced or seen with "
+        "other dystonias. Clinical features: increased blink "
+        "frequency progressing to sustained spasm severe enough to "
+        "cause functional blindness, worsened by bright light, stress "
+        "and reading, relieved briefly by sensory tricks such as "
+        "touching the brow. Ix: clinical diagnosis, exclude a "
+        "structural or ocular cause such as dry eye or entropion "
+        "first. Mx: botulinum toxin injection to the orbicularis "
+        "oculi is first-line and highly effective, repeated every "
+        "three to four months, oral agents such as clonazepam are "
+        "second-line and less reliable, myectomy is reserved for "
+        "injection failures. Note: distinguish from hemifacial spasm, "
+        "which is unilateral and does not remit with sleep the way "
+        "blepharospasm classically does."
+    ),
+
+    "Congenital glaucoma": (
+        "Elevated intraocular pressure from a developmental anomaly "
+        "of the anterior chamber drainage angle, presenting in "
+        "infancy. Clinical features: the classic triad of epiphora, "
+        "photophobia and blepharospasm, with corneal clouding and "
+        "enlargement of the globe (buphthalmos) from a "
+        "still-distensible infant sclera. Ix: examination under "
+        "anaesthesia is usually needed, measuring intraocular "
+        "pressure, corneal diameter and axial length, and assessing "
+        "the angle by gonioscopy and the optic disc for cupping. Mx: "
+        "surgical, not medical - goniotomy or trabeculotomy is "
+        "first-line, with trabeculectomy or drainage devices for "
+        "failures, medical therapy only bridges to surgery. Note: "
+        "unlike adult glaucoma this is a surgical emergency in "
+        "evolution - untreated pressure permanently stretches the "
+        "infant eye and threatens vision within weeks, not years."
+    ),
+
+    "Urethral diverticulum": (
+        "An outpouching of the urethral wall in women, thought to "
+        "arise from repeated infection and obstruction of "
+        "periurethral glands. Clinical features: the classic triad of "
+        "dysuria, dyspareunia and post-void dribbling, plus a tender "
+        "anterior vaginal wall mass that expresses purulent or "
+        "blood-stained fluid on compression, often misdiagnosed for "
+        "years as recurrent urinary tract infection. Ix: examination "
+        "with gentle urethral massage, MRI is the most sensitive "
+        "imaging, voiding cystourethrogram is an alternative where "
+        "MRI is unavailable. Mx: surgical excision (diverticulectomy) "
+        "with layered closure for symptomatic disease, small "
+        "asymptomatic diverticula can be observed. Note: any woman "
+        "with recurrent dysuria unresponsive to repeated antibiotic "
+        "courses deserves an anterior vaginal wall examination for a "
+        "mass."
+    ),
+
+    "Ureterocele": (
+        "A cystic dilatation of the distal ureter as it enters the "
+        "bladder, from a congenital narrowing of the ureteric "
+        "orifice, often associated with a duplex collecting system. "
+        "Clinical features: antenatal hydronephrosis is now the "
+        "commonest presentation, older children or adults present "
+        "with urinary tract infection, obstruction or, rarely, the "
+        "ureterocele prolapsing through the urethra as an interlabial "
+        "mass. Ix: renal ultrasound shows the cystic structure within "
+        "the bladder, a voiding cystourethrogram assesses for reflux, "
+        "and a nuclear renogram assesses differential function of the "
+        "affected pole. Mx: endoscopic incision decompresses an "
+        "obstructing or infected ureterocele, definitive "
+        "reconstruction is planned once acute issues settle and "
+        "function is characterised. Note: always image the whole "
+        "urinary tract - a ureterocele is frequently the visible tip "
+        "of a duplex-system anomaly."
+    ),
+
+    "Simple renal cyst": (
+        "A benign, fluid-filled outpouching of renal cortex, the "
+        "commonest renal mass and increasingly common with age. "
+        "Clinical features: almost always an incidental finding on "
+        "imaging done for another reason, occasionally causing flank "
+        "discomfort or, rarely, haematuria or hypertension if large. "
+        "Ix: ultrasound characterises a simple cyst as anechoic, "
+        "thin-walled and without septa or solid components. The "
+        "Bosniak classification on CT or MRI grades any atypical "
+        "feature for malignant potential, from Bosniak I (simple, "
+        "benign) to Bosniak IV (clearly malignant). Mx: no follow-up "
+        "is needed for a classic Bosniak I cyst, aspiration or "
+        "excision is reserved for symptomatic cysts or those with "
+        "complex features, and any Bosniak III or IV lesion is "
+        "managed as a probable renal cell carcinoma. Note: the report "
+        "should always state the Bosniak category - it, not the word "
+        "cyst, determines what happens next."
+    ),
+
+    "Bronchiolitis obliterans": (
+        "Fibrosis and narrowing of the small airways causing fixed "
+        "airflow obstruction, distinct from viral bronchiolitis of "
+        "infancy. Aetiology: chronic graft-versus-host disease after "
+        "stem cell transplant and chronic lung allograft rejection "
+        "are the major causes, alongside connective tissue disease, "
+        "inhalational injury and, historically, diacetyl exposure in "
+        "flavouring workers. Clinical features: progressive dyspnoea "
+        "and dry cough over months with a normal chest X-ray, often "
+        "mistaken for asthma or deconditioning. Ix: spirogram shows "
+        "an obstructive pattern that does not reverse with "
+        "bronchodilator, high-resolution CT with expiratory views "
+        "shows mosaic attenuation and air trapping, biopsy is rarely "
+        "needed if the clinical context fits. Mx: no therapy reverses "
+        "established fibrosis, azithromycin and inhaled or systemic "
+        "corticosteroids may slow progression, lung transplantation "
+        "is considered in refractory cases. Note: think of it in any "
+        "transplant recipient with a falling FEV1 and a clear chest "
+        "film."
+    ),
+
+    "Diaphragmatic paralysis": (
+        "Loss of diaphragmatic movement from phrenic nerve injury or "
+        "dysfunction, unilateral or bilateral. Aetiology: iatrogenic "
+        "injury during cardiothoracic surgery or central line "
+        "insertion is common, alongside malignant infiltration by "
+        "lung or mediastinal tumour, cervical spine disease, "
+        "neuralgic amyotrophy and idiopathic cases. Clinical "
+        "features: unilateral palsy is often asymptomatic or causes "
+        "mild exertional dyspnoea, bilateral palsy causes severe "
+        "orthopnoea, since the diaphragm no longer counterbalances "
+        "gravity when supine, and can present as unexplained "
+        "hypercapnic respiratory failure. Ix: chest X-ray shows an "
+        "elevated hemidiaphragm, the sniff test under fluoroscopy or "
+        "ultrasound shows paradoxical upward movement on inspiration, "
+        "spirometry falls more supine than upright. Mx: treat the "
+        "underlying cause where identifiable, non-invasive "
+        "ventilation for symptomatic bilateral palsy, diaphragmatic "
+        "plication for unilateral disabling dyspnoea. Note: a fall in "
+        "vital capacity of more than 25% lying down is the classic "
+        "clue to bilateral diaphragmatic weakness."
+    ),
+
+    "Mallet finger": (
+        "Rupture or avulsion of the terminal extensor tendon at the "
+        "distal interphalangeal joint, usually from a sudden forced "
+        "flexion of an extended fingertip, classically a ball "
+        "striking the tip. Clinical features: an inability to "
+        "actively extend the DIP joint, which rests in flexion (a "
+        "droop deformity), with swelling and tenderness at the joint. "
+        "Ix: clinical diagnosis, lateral X-ray of the finger to "
+        "distinguish a tendinous injury from a bony mallet with an "
+        "avulsed fragment, which changes management if the fragment "
+        "is large or the joint subluxed. Mx: continuous extension "
+        "splinting of the DIP joint for six to eight weeks for "
+        "tendinous and small bony injuries, with the PIP joint left "
+        "free to move, surgical fixation for large fragments, joint "
+        "subluxation or a fracture involving more than a third of the "
+        "articular surface. Note: splinting must be continuous - even "
+        "a moment of unsupported flexion during healing resets the "
+        "clock."
+    ),
+
+    "Jersey finger": (
+        "Avulsion of the flexor digitorum profundus tendon from its "
+        "insertion at the distal phalanx, from forced extension of an "
+        "actively flexed finger, classically grabbing an opponent's "
+        "jersey while gripping. Clinical features: loss of active "
+        "flexion at the distal interphalangeal joint with the finger "
+        "otherwise resting in extension, tenderness along the flexor "
+        "tendon sheath, and sometimes a palpable tender lump in the "
+        "palm where the retracted tendon has lodged. Ix: clinical "
+        "examination isolating FDP function, X-ray to look for an "
+        "avulsed bony fragment, MRI or ultrasound to localise tendon "
+        "retraction before surgery. Mx: this is a surgical emergency, "
+        "not a splinting injury - the tendon must be repaired within "
+        "seven to ten days before it retracts and its blood supply "
+        "and length are lost, later presentations often need staged "
+        "tendon grafting. Note: unlike mallet finger, jersey finger "
+        "cannot be treated conservatively - urgent hand surgery "
+        "referral is the default."
+    ),
+
+    "SLAP tear": (
+        "A tear of the superior glenoid labrum extending from "
+        "anterior to posterior, at or around the biceps anchor, "
+        "common in overhead throwing athletes and after a fall on an "
+        "outstretched arm. Clinical features: deep shoulder pain with "
+        "overhead activity, a sense of catching, popping or "
+        "instability, and reduced throwing velocity in athletes. "
+        "Examination is notoriously unreliable, with dozens of "
+        "described tests and none highly sensitive or specific alone. "
+        "Ix: MR arthrogram is the investigation of choice, plain MRI "
+        "is less sensitive for labral detail, diagnosis is ultimately "
+        "confirmed at arthroscopy. Mx: physiotherapy focused on "
+        "scapular and rotator cuff strengthening is first-line and "
+        "successful in many cases, arthroscopic labral repair or "
+        "biceps tenodesis is reserved for those failing conservative "
+        "care, particularly younger athletes. Note: no single "
+        "clinical test rules a SLAP tear in or out - suspicion from "
+        "the history and imaging correlation matter more than any "
+        "special test result."
+    ),
+
+    "Osteoid osteoma": (
+        "A small, benign bone-forming tumour with a characteristic "
+        "nidus under 1.5cm, typically in the cortex of a long bone in "
+        "children and young adults. Clinical features: the hallmark "
+        "is dull, progressively worsening pain that is worse at night "
+        "and dramatically relieved by NSAIDs, the nidus produces "
+        "prostaglandins that drive both the pain and the relief "
+        "pattern, a nearby joint may show reactive synovitis or, in a "
+        "vertebra, painful scoliosis. Ix: plain X-ray may show a "
+        "lucent nidus with surrounding sclerosis, CT is the most "
+        "sensitive and defines the nidus precisely, bone scan shows "
+        "an intense focal double density sign. Mx: NSAIDs control "
+        "most cases and many resolve spontaneously over years, "
+        "radiofrequency ablation of the nidus is first-line for "
+        "definitive treatment, open surgical excision is reserved "
+        "where ablation is unsuitable. Note: night pain that resolves "
+        "completely with NSAIDs in a young patient is close to "
+        "pathognomonic."
+    ),
+
+    "Giant cell tumour of bone": (
+        "A locally aggressive, usually benign bone tumour of "
+        "osteoclast-like giant cells, arising in the epiphysis of a "
+        "long bone after physeal closure, most often around the knee. "
+        "Clinical features: pain, swelling and reduced range of "
+        "movement at the affected joint, occasionally a pathological "
+        "fracture is the first presentation. Ix: X-ray shows a lytic, "
+        "eccentric epiphyseal lesion abutting the subchondral bone "
+        "without a sclerotic margin, MRI defines soft tissue "
+        "extension, biopsy confirms histology. Mx: extended "
+        "intralesional curettage with an adjuvant (phenol, cement or "
+        "liquid nitrogen) is standard, denosumab downstages large or "
+        "difficult tumours before surgery and treats unresectable "
+        "disease, wide resection is reserved for extensively "
+        "destroyed bone. Note: about 1 to 2% metastasise to lung "
+        "despite a histologically benign appearance, so a baseline "
+        "chest X-ray or CT is part of staging even in presumed benign "
+        "disease."
+    ),
+
+    "Charles Bonnet syndrome": (
+        "Complex visual hallucinations occurring in a person with "
+        "significant vision loss and no cognitive impairment or other "
+        "psychiatric disease, thought to reflect cortical release "
+        "phenomena from reduced visual input. Clinical features: "
+        "vivid, often detailed hallucinations of people, animals or "
+        "patterns, usually well-formed and sometimes distressing, "
+        "with full retained insight that they are not real. Ix: a "
+        "diagnosis of exclusion once dementia, delirium, psychosis "
+        "and substance causes have been considered, the defining "
+        "feature is preserved insight alongside a clear visual "
+        "deficit such as macular degeneration or glaucoma. Mx: "
+        "reassurance and education are often sufficient once patients "
+        "understand the cause, treating any reversible visual "
+        "pathology helps, antipsychotics are rarely needed and "
+        "reserved for severe distress. Note: patients frequently "
+        "withhold these hallucinations for fear of being labelled "
+        "psychotic - ask directly in anyone with poor vision."
+    ),
+
+    "Spinocerebellar ataxia": (
+        "A genetically heterogeneous group of autosomal dominant, "
+        "progressive cerebellar ataxias, caused mostly by "
+        "trinucleotide repeat expansions, with numbered subtypes such "
+        "as SCA1, SCA2 and SCA3 (Machado-Joseph disease) being the "
+        "commonest. Clinical features: progressive gait and limb "
+        "ataxia, dysarthria and nystagmus, with subtype-specific "
+        "extras such as peripheral neuropathy, parkinsonism or "
+        "ophthalmoplegia depending on the gene involved. Ix: MRI "
+        "shows cerebellar and sometimes brainstem atrophy, genetic "
+        "testing identifies the specific repeat expansion and "
+        "confirms the diagnosis, genetic counselling for at-risk "
+        "relatives given anticipation in successive generations. Mx: "
+        "no disease-modifying therapy exists, management is "
+        "supportive with physiotherapy, speech therapy, walking aids "
+        "and treatment of specific features such as spasticity. Note: "
+        "a family history of progressive ataxia worsening at younger "
+        "onset across generations points strongly to a "
+        "repeat-expansion spinocerebellar ataxia."
+    ),
+
+    "Hoarding disorder": (
+        "A DSM-5 diagnosis of persistent difficulty discarding "
+        "possessions regardless of their value, driven by a perceived "
+        "need to save them and distress at the thought of parting "
+        "with them. Clinical features: accumulation that congests and "
+        "clutters living spaces to the point they can no longer be "
+        "used for their intended purpose, with insight often limited, "
+        "and functional consequences including fire risk, "
+        "infestation, falls and family conflict. Ix: clinical "
+        "diagnosis using DSM-5 criteria and functional impact, "
+        "distinguish from hoarding as a symptom of OCD, dementia or "
+        "psychotic illness, and from normal collecting where items "
+        "remain organised and usable. Mx: cognitive behavioural "
+        "therapy adapted for hoarding is first-line, SSRIs may help "
+        "comorbid anxiety or depression, harm-minimisation home "
+        "visits and multi-agency support are often needed for severe "
+        "cases. Note: insight is frequently poor and patients rarely "
+        "self-present - referral usually follows a housing, safety or "
+        "family complaint."
+    ),
+
+    "Pyromania": (
+        "A rare DSM-5 impulse-control disorder of deliberate, "
+        "repeated fire-setting for tension relief or gratification, "
+        "without another motive such as profit, revenge or ideology. "
+        "Clinical features: mounting tension before the act, "
+        "fascination with fire and its aftermath, and relief or "
+        "gratification afterward, with the behaviour not better "
+        "explained by conduct disorder, mania, psychosis or "
+        "antisocial personality disorder. Ix: clinical diagnosis "
+        "after excluding these more common explanations for "
+        "fire-setting, which account for the overwhelming majority of "
+        "cases seen clinically. Mx: cognitive behavioural therapy "
+        "targeting impulse control and relapse prevention is the "
+        "mainstay, SSRIs are used for comorbid anxiety or compulsive "
+        "features, forensic and fire-safety risk assessment is "
+        "essential given the risk to life and property. Note: true "
+        "pyromania is far rarer than deliberate fire-setting itself - "
+        "most fire-setters have an identifiable motive or another "
+        "primary diagnosis rather than pyromania."
+    ),
+
+    "Excoriation disorder": (
+        "A DSM-5 body-focused repetitive behaviour disorder of "
+        "recurrent skin picking causing lesions, despite repeated "
+        "attempts to stop. Clinical features: picking targets the "
+        "face, arms and hands most often, driven by tension relief, "
+        "boredom or a response to a perceived skin irregularity, "
+        "leaving excoriations, scarring and hyperpigmentation of "
+        "varying ages, often comorbid with anxiety, depression, OCD "
+        "or trichotillomania. Ix: clinical diagnosis by history, "
+        "since lesions themselves are non-specific, exclude a primary "
+        "dermatological or pruritic cause and substance-induced "
+        "formication as the driver. Mx: habit-reversal training and "
+        "other behavioural therapies are first-line, SSRIs or "
+        "N-acetylcysteine have modest evidence, treat comorbid "
+        "psychiatric disease. Note: patients frequently feel shame "
+        "and minimise the behaviour - ask directly about picking in "
+        "anyone with unexplained excoriations of varying age on "
+        "accessible skin."
+    ),
+
+    "Cow's milk protein allergy": (
+        "An immune-mediated adverse reaction to cow's milk protein, "
+        "the commonest food allergy in infancy, either IgE-mediated "
+        "or non-IgE (cell-mediated) in mechanism. Clinical features: "
+        "IgE-mediated disease causes urticaria, angioedema, vomiting "
+        "or anaphylaxis within minutes to two hours of exposure, "
+        "non-IgE disease causes delayed symptoms over hours to days "
+        "such as eczema flares, reflux, colic, blood-streaked stools "
+        "or faltering growth. Ix: skin prick testing and specific IgE "
+        "for suspected IgE-mediated disease, a supervised elimination "
+        "and re-challenge for non-IgE disease where testing is "
+        "unhelpful. Mx: strict avoidance of cow's milk protein, "
+        "extensively hydrolysed or amino acid formula for formula-fed "
+        "infants, breastfeeding mothers eliminate dairy from their "
+        "own diet, most children outgrow it by school age and require "
+        "periodic reassessment. Note: distinguish from lactose "
+        "intolerance, a non-immune enzyme deficiency causing bloating "
+        "and diarrhoea without allergic features."
+    ),
+
+    "Rumination syndrome": (
+        "Effortless, repetitive regurgitation of recently swallowed "
+        "food into the mouth, followed by re-chewing, re-swallowing "
+        "or spitting, from an unconscious increase in intra-abdominal "
+        "pressure rather than true vomiting. Clinical features: "
+        "regurgitation typically begins within minutes of eating, is "
+        "undigested and not acidic or preceded by nausea or retching, "
+        "and stops during sleep, distinguishing it from "
+        "gastro-oesophageal reflux. Ix: a clinical diagnosis by Rome "
+        "IV criteria once structural and metabolic causes are "
+        "excluded, high-resolution oesophageal manometry with "
+        "impedance can confirm the characteristic pressure pattern "
+        "where the diagnosis is uncertain. Mx: diaphragmatic "
+        "breathing training is first-line and highly effective, "
+        "addressing coexisting anxiety helps, anti-reflux surgery and "
+        "antiemetics are not helpful and should be avoided. Note: the "
+        "absence of nausea before the event and its cessation during "
+        "sleep separate rumination from reflux or a primary vomiting "
+        "disorder."
+    ),
+
+    "Cyclic vomiting syndrome": (
+        "Recurrent, stereotyped episodes of intense nausea and "
+        "vomiting separated by symptom-free intervals, most often "
+        "starting in childhood and linked to migraine biology. "
+        "Clinical features: episodes are typically similar in each "
+        "individual, in timing, duration and severity, often "
+        "triggered by stress, infection or lack of sleep, with "
+        "autonomic features such as pallor and lethargy during "
+        "attacks, a personal or family history of migraine is common. "
+        "Ix: a clinical diagnosis by Rome IV criteria after excluding "
+        "structural, metabolic and cyclical causes such as cannabis "
+        "hyperemesis syndrome, which mimics it closely. Mx: "
+        "prophylaxis with amitriptyline or propranolol for frequent "
+        "episodes, early abortive treatment with triptans or "
+        "antiemetics at the first sign of an episode, supportive care "
+        "with fluids and ondansetron during established attacks. "
+        "Note: always ask about cannabis use, since cannabis "
+        "hyperemesis syndrome is clinically near-identical and "
+        "resolves with abstinence rather than migraine prophylaxis."
+    ),
+
+    "Faecal impaction": (
+        "A large, hardened mass of stool retained in the rectum or "
+        "colon that cannot be passed normally, most often in older "
+        "adults, those with chronic constipation, opioid use or "
+        "reduced mobility. Clinical features: absolute or overflow "
+        "constipation, abdominal distension and pain, and "
+        "paradoxically liquid stool leaking around the mass, which "
+        "can be mistaken for diarrhoea. Ix: digital rectal "
+        "examination usually palpates the mass directly, abdominal "
+        "X-ray confirms extent and rules out obstruction when the "
+        "diagnosis is unclear. Mx: manual disimpaction or enemas for "
+        "a low rectal mass, osmotic laxatives such as macrogol once "
+        "cleared, addressing the underlying cause such as opioids, "
+        "immobility or hypothyroidism. A stimulant laxative alone "
+        "into an impacted rectum can worsen pain without clearing the "
+        "mass. Note: overflow incontinence in an older or "
+        "opioid-treated patient should prompt a rectal examination "
+        "before diarrhoea is assumed and treated with "
+        "antidiarrhoeals."
+    ),
+
+    "Nabothian cyst": (
+        "A benign, mucus-filled cyst on the cervix formed when "
+        "squamous epithelium overgrows and occludes a columnar gland "
+        "opening during normal cervical metaplasia. Clinical "
+        "features: almost always asymptomatic and found incidentally "
+        "on speculum examination as a smooth, pale or yellowish, "
+        "dome-shaped nodule on the ectocervix, large or multiple "
+        "cysts can occasionally cause a sensation of pressure. Ix: "
+        "clinical inspection is usually sufficient, transvaginal "
+        "ultrasound confirms a simple cystic appearance if there is "
+        "diagnostic doubt, colposcopy or biopsy only if the "
+        "appearance is atypical or there is a coexisting abnormal "
+        "smear. Mx: no treatment is needed for typical asymptomatic "
+        "cysts, drainage or cautery is reserved for large symptomatic "
+        "cysts or those obscuring the cervix during examination. "
+        "Note: reassurance is the main intervention - patients are "
+        "often alarmed to be told they have a cervical cyst, but it "
+        "carries no malignant potential."
+    ),
+
+    "Buruli ulcer": (
+        "A necrotising skin and soft tissue infection caused by "
+        "Mycobacterium ulcerans, endemic to specific regions "
+        "including coastal Victoria, producing a toxin (mycolactone) "
+        "that destroys tissue while suppressing the local immune "
+        "response and pain. Clinical features: begins as a painless "
+        "nodule or papule, progressing over weeks to a characteristic "
+        "ulcer with undermined edges and a necrotic base, often on an "
+        "exposed limb, notably painless relative to its size, which "
+        "delays presentation. Ix: swab or tissue PCR for M. ulcerans "
+        "DNA is the standard confirmatory test, culture is slow and "
+        "insensitive, biopsy shows characteristic necrosis with "
+        "extracellular acid-fast bacilli. Mx: combination "
+        "antibiotics, typically rifampicin with either clarithromycin "
+        "or a fluoroquinolone, for eight weeks, surgical debridement "
+        "or grafting for extensive necrosis. Note: consider it in "
+        "anyone from an endemic Victorian coastal area with a slowly "
+        "enlarging, painless skin lesion unresponsive to standard "
+        "antibiotics for cellulitis."
+    ),
+
+    "Strongyloides hyperinfection syndrome": (
+        "An accelerated, often fatal form of Strongyloides "
+        "stercoralis infection in which autoinfection escalates due "
+        "to impaired cell-mediated immunity, letting larvae "
+        "disseminate beyond the gut and lungs. Aetiology: "
+        "corticosteroid therapy is the classic precipitant, along "
+        "with HTLV-1 infection, transplant immunosuppression and "
+        "other causes of T-cell suppression, in a person with "
+        "unrecognised chronic strongyloidiasis, often decades after "
+        "original exposure to an endemic area. Clinical features: "
+        "abdominal pain, diarrhoea, respiratory symptoms and a "
+        "petechial or purpuric rash around the umbilicus and "
+        "buttocks, with concurrent gram-negative sepsis or meningitis "
+        "from larvae carrying gut bacteria into the bloodstream. Ix: "
+        "stool microscopy for larvae, though sensitivity is poor in a "
+        "single sample, larvae may also be seen in sputum. Mx: "
+        "ivermectin, often prolonged or repeated courses, alongside "
+        "treatment of concurrent bacterial sepsis. Note: screen for "
+        "strongyloides serology before starting corticosteroids in "
+        "anyone with relevant travel history, prevention is far safer "
+        "than treating established hyperinfection."
+    ),
+
+    "Amoebic dysentery": (
+        "Invasive intestinal infection with Entamoeba histolytica, "
+        "acquired via the faecal-oral route in areas of poor "
+        "sanitation. Clinical features: gradual onset of bloody, "
+        "mucoid diarrhoea with abdominal pain and tenesmus over one "
+        "to several weeks, generally less feverish and more insidious "
+        "than bacterial dysentery, occasionally progressing to toxic "
+        "megacolon or fulminant colitis. Ix: stool microscopy for "
+        "trophozoites containing ingested red cells is classic but "
+        "insensitive, stool antigen or PCR testing is more sensitive "
+        "and specific, serology supports invasive disease including "
+        "extraintestinal spread. Mx: tissue-active metronidazole or "
+        "tinidazole to clear invasive trophozoites, followed by a "
+        "luminal agent such as paromomycin to eradicate intraluminal "
+        "cysts and prevent relapse or transmission. Note: always "
+        "follow metronidazole with a luminal agent - treating only "
+        "the tissue infection leaves colonisation that can relapse or "
+        "seed a liver abscess later."
+    ),
+
+    "Baclofen withdrawal": (
+        "A withdrawal syndrome from abrupt cessation of baclofen, "
+        "most dangerous with intrathecal pumps but also seen after "
+        "high-dose oral therapy is stopped suddenly. Clinical "
+        "features: rebound spasticity and pruritus are early clues, "
+        "progressing to agitation, hallucinations, high fever, "
+        "autonomic instability and seizures, closely mimicking "
+        "serotonin syndrome or neuroleptic malignant syndrome, can "
+        "progress to rhabdomyolysis and multiorgan failure if "
+        "unrecognised. Ix: clinical diagnosis from the history of "
+        "baclofen cessation or pump malfunction, check pump reservoir "
+        "and catheter integrity, exclude other toxidromes and CNS "
+        "infection. Mx: reinstate baclofen promptly, oral or via a "
+        "temporary intrathecal or epidural route if the pump has "
+        "failed, benzodiazepines for symptom control while baclofen "
+        "is restarted, supportive care in a monitored setting. Note: "
+        "any patient with an intrathecal baclofen pump presenting "
+        "with fever, rigidity and altered mental state has a pump "
+        "problem until proven otherwise."
+    ),
+
+    "Clonidine overdose": (
+        "Toxicity from a centrally acting alpha-2 agonist, important "
+        "in paediatrics because a single tablet or patch can cause "
+        "severe toxicity in a toddler. Clinical features: a triad "
+        "resembling opioid toxicity - drowsiness or coma, bradycardia "
+        "and miosis - plus a paradoxical initial hypertension from "
+        "peripheral alpha effects before central hypotension and "
+        "bradycardia dominate, respiratory depression can occur. Ix: "
+        "clinical diagnosis and continuous cardiorespiratory "
+        "monitoring, ECG for bradyarrhythmia, blood glucose since "
+        "hypoglycaemia can occur in children. Mx: supportive care is "
+        "the mainstay - airway support and ventilation if needed, "
+        "atropine for symptomatic bradycardia, naloxone occasionally "
+        "partially reverses sedation despite no opioid being "
+        "involved, symptoms typically resolve within 24 hours. Note: "
+        "any toddler with unexplained drowsiness, bradycardia and "
+        "small pupils needs a history of grandparental medications - "
+        "clonidine patches are a common culprit."
+    ),
+
+    "Metformin-associated lactic acidosis": (
+        "A rare but serious complication of metformin therapy in "
+        "which accumulation of the drug, usually from acute kidney "
+        "injury, impairs hepatic lactate clearance and causes severe "
+        "lactic acidosis. Aetiology: acute kidney injury from "
+        "dehydration, contrast administration, sepsis or a new "
+        "nephrotoxic drug is the usual trigger in a patient on "
+        "chronic metformin, since the drug itself does not cause "
+        "lactic acidosis at normal renal clearance. Clinical "
+        "features: nausea, vomiting, abdominal pain, hyperventilation "
+        "and altered mental status, progressing to shock and "
+        "multiorgan failure in severe cases. Ix: markedly elevated "
+        "lactate with a high anion gap metabolic acidosis, renal "
+        "function to confirm acute kidney injury. Mx: supportive care "
+        "with fluids and correction of the precipitant, early renal "
+        "replacement therapy clears both lactate and metformin "
+        "efficiently for severe acidosis or renal failure. Note: "
+        "withhold metformin before iodinated contrast in patients "
+        "with reduced renal function or acute illness - this single "
+        "step prevents most cases."
+    ),
+
+    "Richter transformation": (
+        "Transformation of chronic lymphocytic leukaemia into an "
+        "aggressive lymphoma, most often diffuse large B-cell "
+        "lymphoma, in a small proportion of patients. Clinical "
+        "features: rapid, discordant growth of a single lymph node or "
+        "extranodal site, new B symptoms such as fever, weight loss "
+        "and night sweats, a rapidly rising LDH and sometimes a rapid "
+        "rise in a previously stable lymphocyte count. Ix: PET-CT "
+        "identifies the most metabolically active site to target for "
+        "biopsy, since a standard node biopsy may miss the "
+        "transformed clone, excisional biopsy of the PET-avid site "
+        "confirms histology. Mx: aggressive lymphoma-directed "
+        "chemoimmunotherapy, typically an R-CHOP-like regimen, with "
+        "allogeneic transplant considered in fit responders given "
+        "historically poor outcomes. Note: an asymmetrically "
+        "enlarging node or a sudden LDH rise in stable CLL should "
+        "trigger a PET scan before assuming simple disease "
+        "progression."
+    ),
+
+    "Erdheim-Chester disease": (
+        "A rare non-Langerhans cell histiocytosis in which mutated "
+        "histiocytes, frequently BRAF V600E-driven, infiltrate and "
+        "cause fibrosis in bone and multiple organs. Clinical "
+        "features: bilateral, symmetric long bone pain from cortical "
+        "infiltration is the commonest presentation, with a "
+        "periaortic sheath ('coated aorta'), perinephric infiltration "
+        "('hairy kidney'), diabetes insipidus from pituitary stalk "
+        "involvement, and cardiac or CNS infiltration in more severe "
+        "disease. Ix: technetium bone scan shows characteristic "
+        "symmetric long bone uptake, CT or MRI defines periaortic and "
+        "perinephric infiltration, biopsy confirms CD68-positive, "
+        "CD1a-negative foamy histiocytes, and molecular testing "
+        "identifies BRAF or other MAPK pathway mutations. Mx: BRAF "
+        "inhibitors such as vemurafenib for BRAF-mutant disease, "
+        "interferon-alfa historically used and still an option, MEK "
+        "inhibitors for other MAPK mutations. Note: long bone "
+        "sclerosis with a periaortic or perinephric soft tissue rind "
+        "is close to pathognomonic once seen."
+    ),
+
+    "Alien hand syndrome": (
+        "A rare disorder in which a limb, almost always the hand, "
+        "performs complex, purposeful movements the patient does not "
+        "intend and cannot control, most often after damage to the "
+        "corpus callosum, frontal or parietal cortex. Aetiology: "
+        "stroke, corpus callosotomy, tumour or neurodegenerative "
+        "disease such as corticobasal degeneration are the usual "
+        "causes, with the pattern varying by lesion site - callosal "
+        "lesions cause intermanual conflict, frontal lesions cause "
+        "grasping and groping behaviours. Clinical features: the "
+        "affected limb interferes with the other hand's actions or "
+        "performs unwanted, complex tasks, while the patient retains "
+        "full insight the movement is not willed, distinguishing it "
+        "from a delusion of control. Ix: MRI to localise the "
+        "causative lesion, clinical examination to characterise the "
+        "pattern and exclude a functional cause. Mx: no proven "
+        "treatment reverses the underlying lesion, visual and "
+        "behavioural strategies reduce interference, treat the "
+        "underlying cause where possible. Note: full retained insight "
+        "despite being unable to stop the movement is the defining "
+        "and unsettling feature."
+    ),
+
+    "Boutonniere deformity": (
+        "Flexion of the proximal interphalangeal joint with "
+        "hyperextension of the distal interphalangeal joint, from "
+        "disruption of the central slip of the extensor tendon over "
+        "the PIP joint. Aetiology: rheumatoid arthritis is the "
+        "classic chronic cause, from synovitis stretching and "
+        "eventually rupturing the central slip, acute traumatic "
+        "central slip injury from a direct blow or forced flexion of "
+        "an extended PIP joint gives the same deformity if missed. "
+        "Clinical features: the lateral bands migrate volarly and "
+        "become flexors of the PIP rather than extensors, driving the "
+        "fixed flexion posture over weeks if untreated, acute injury "
+        "initially shows only PIP extensor lag before the fixed "
+        "deformity develops. Ix: clinical examination, including the "
+        "Elson test, which isolates central slip integrity by "
+        "resisted PIP extension with the joint flexed over a table "
+        "edge. Mx: continuous PIP extension splinting for four to six "
+        "weeks for acute injury, leaving the DIP free to move, "
+        "surgical reconstruction for established rheumatoid deformity "
+        "or missed injury. Note: an acute central slip injury looks "
+        "deceptively mild at first - splint suspected cases "
+        "immediately."
+    ),
+
+    "Swan neck deformity": (
+        "Hyperextension of the proximal interphalangeal joint with "
+        "flexion of the distal interphalangeal joint, the mirror "
+        "image of a boutonniere deformity and its frequent "
+        "counterpart in the same rheumatoid hand. Aetiology: "
+        "rheumatoid arthritis with volar plate laxity and intrinsic "
+        "muscle tightness is the classic cause, also seen after an "
+        "untreated mallet finger injury, and in connective tissue "
+        "disorders with joint hyperlaxity. Clinical features: the "
+        "finger adopts an S-shaped posture, initially passively "
+        "correctable, becoming fixed as the volar plate and lateral "
+        "bands remodel, grip and fine motor function are impaired "
+        "well before the deformity looks severe. Ix: clinical "
+        "examination assessing whether the deformity is still "
+        "passively correctable, which determines whether splinting "
+        "can still help. Mx: a figure-of-eight or silver ring splint "
+        "blocks PIP hyperextension while allowing flexion for "
+        "correctable deformities, surgical soft tissue release or "
+        "arthrodesis for fixed disease. Note: check for an underlying "
+        "untreated mallet finger in any new swan neck deformity - the "
+        "two are commonly linked."
+    ),
+
 }
 
 
