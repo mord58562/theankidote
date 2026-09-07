@@ -367,7 +367,6 @@ _rebuild_qss()
 # Glyph optical sizes and header metrics live in `_theme` now - all
 # three docks draw from the same table so the same glyph is the same
 # size wherever it appears.
-_GLYPH_PX = _theme.GLYPH_PX
 
 
 def _nav_btn(parent: QWidget, text: str, tip: str,
@@ -380,10 +379,7 @@ def _nav_btn(parent: QWidget, text: str, tip: str,
     return b
 
 
-def _size_glyph(btn: QPushButton, text: str) -> None:
-    """Kept as a thin wrapper: callers pass the text explicitly, and the
-    shared helper reads it off the button."""
-    _theme.size_glyph(btn)
+
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -425,7 +421,7 @@ class _ResultsSection(QWidget):
         self._btn_dismiss.setCursor(Qt.CursorShape.PointingHandCursor)
         self._btn_dismiss.setToolTip("Hide this list for now")
         self._btn_dismiss.clicked.connect(self._on_dismiss)
-        _size_glyph(self._btn_dismiss, "\u2715")
+        _theme.size_glyph(self._btn_dismiss)
         hdr_lay.addWidget(self._btn_dismiss)
 
         self._style_header()
@@ -578,10 +574,11 @@ class StatPearlsPanel(QWidget):
         h_lay.setContentsMargins(*_theme.HEADER_MARGINS)
         h_lay.setSpacing(_theme.HEADER_SPACING)
 
-        self._btn_back     = _nav_btn(header, "←", "Back")
-        self._btn_forward  = _nav_btn(header, "→", "Forward")
-        self._btn_reload   = _nav_btn(header, "↻", "Reload")
-        self._btn_home     = _nav_btn(header, "⌂", "Home")
+        self._btn_back     = _nav_btn(header, _theme.GLYPH_BACK, "Back")
+        self._btn_forward  = _nav_btn(header, _theme.GLYPH_FORWARD, "Forward")
+        self._btn_reload   = _nav_btn(header, _theme.GLYPH_RELOAD, "Reload")
+        self._btn_home     = _nav_btn(header, _theme.GLYPH_HOME, "Home",
+                                     _theme.NAV_W_WIDE)
         self._btn_home.clicked.connect(self._go_home)
 
         # Segmented site switch.  Which site you are on is the single
@@ -608,12 +605,12 @@ class StatPearlsPanel(QWidget):
         self._style_segment()
         self._refresh_home_ui()
 
-        self._btn_external = _nav_btn(header, "↗",
+        self._btn_external = _nav_btn(header, _theme.GLYPH_EXTERNAL,
             "Open current page in system browser", 28)
         self._btn_back.setEnabled(False)
         self._btn_forward.setEnabled(False)
 
-        self._btn_close = _nav_btn(header, "✕", "Close sidebar")
+        self._btn_close = _nav_btn(header, _theme.GLYPH_CLOSE, "Close sidebar")
         self._btn_close.setStyleSheet(_CLOSE_BTN_QSS)
 
         h_lay.addWidget(self._btn_back)
@@ -1374,7 +1371,7 @@ class StatPearlsPanel(QWidget):
             ):
                 if btn is not None:
                     btn.setStyleSheet(qss)
-                    _size_glyph(btn, btn.text())
+                    _theme.size_glyph(btn)
             if getattr(self, "_btn_sp", None) is not None:
                 self._style_segment()
             if getattr(self, "_progress", None) is not None:

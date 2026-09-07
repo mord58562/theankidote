@@ -1063,20 +1063,19 @@ def _push(_w, text: str, tip: str = ""):
 
 
 def _version_label(_w):
-    """The add-on's own version, sitting bottom-right of Settings.
+    """The add-on's own version, anchoring the left end of the footer.
 
     Two version numbers exist in this window and they move
     independently: this one, which changes only when a build goes to
     AnkiWeb, and the reference library's, which changes whenever the
     content channel is rebuilt. The library's belongs inside the group
-    that owns it and stays there; this is the other one, kept where a
-    Mac app keeps it.
+    that owns it and stays there; this is the other one.
 
-    Fixed-pitch so the digits do not shift when the number gets longer,
-    dimmed to the caption colour so it reads as a mark rather than a
-    control, and selectable because the first thing anyone reporting a
-    problem is asked for is a version. Clicking copies all three numbers
-    a report actually needs.
+    Fixed-pitch so it reads as data rather than prose, dimmed to the
+    caption colour so it reads as a mark rather than a control, and
+    selectable because the first thing anyone reporting a problem is
+    asked for is a version. Clicking copies all three numbers a report
+    needs.
     """
     lab = _caption(_w, _ADDON_VERSION)
     try:
@@ -1102,29 +1101,51 @@ def _version_label(_w):
                 f"Library {lib}\n"
                 f"Anki {anki}")
 
-    lab.setToolTip(_versions() + "\n\nClick to copy")
+    def _refresh_tooltip(*_args):
+        # Rebuilt on hover rather than once at construction: "Check now"
+        # in the Reference database group can update the library version
+        # inside this same open dialog, and a tooltip baked at build
+        # time would then disagree with what clicking actually copies.
+        lab.setToolTip(_versions() + "\n\nClick to copy")
+
+    _refresh_tooltip()
     try:
         lab.setTextInteractionFlags(
             _w["_Qt"].TextInteractionFlag.TextSelectableByMouse)
     except Exception:
         pass
 
-    def _copy(_event):
+    _base_press = type(lab).mousePressEvent
+    _base_enter = type(lab).enterEvent
+
+    def _copy(event):
         try:
             mw.app.clipboard().setText(_versions())
-        except Exception as exc:
-            _log.error("copy versions", exc)
-            return
-        lab.setText("copied")
-        # Back to the number on its own, a beat slower than it left, so
-        # the change registers without the label flickering.
-        try:
+            lab.setText("copied")
+            # Back to the number a beat slower than it left, so the
+            # change registers without the label flickering.
             from aqt.qt import QTimer
             QTimer.singleShot(1400, lambda: lab.setText(_ADDON_VERSION))
-        except Exception:
+        except Exception as exc:
+            _log.error("copy versions", exc)
             lab.setText(_ADDON_VERSION)
+        # Hand the event on. Replacing the handler outright swallowed
+        # QLabel's own, so the drag-selection enabled just above could
+        # never start and the label was only ever click-to-copy.
+        try:
+            _base_press(lab, event)
+        except Exception:
+            pass
+
+    def _enter(event):
+        _refresh_tooltip()
+        try:
+            _base_enter(lab, event)
+        except Exception:
+            pass
 
     lab.mousePressEvent = _copy
+    lab.enterEvent = _enter
     return lab
 
 
@@ -1639,7 +1660,8 @@ def _build_advanced_group(_w):
     lay.addWidget(_caption(
         _w,
         f"Inspector is running on port {port}." if port else
-        "Inspector is available after the next Anki start.",
+        "Inspector is off. Qt reads the setting once at startup, so the "
+        "button above relaunches Anki with it enabled for that session.",
         wrap=True))
     return box, debug_cb
 
@@ -1784,15 +1806,26 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     restart_note = _caption(_w, "")
 
     def _refresh_restart_note(*_args):
-        pending = [name for name, cb in (("UpToDate", utd_cb), ("AI chat", chat_cb))
-                   if cb.isChecked() and not loaded[name]]
-        if not pending:
-            restart_note.setText("")
-        elif len(pending) == 1:
-            restart_note.setText(f"{pending[0]} loads when you restart Anki.")
-        else:
-            restart_note.setText(
-                f"{pending[0]} and {pending[1]} load when you restart Anki.")
+        # Both directions need a restart, and only one of them was
+        # covered at first. Switching a module off removes its toolbar
+        # button immediately, but the module stays in `sys.modules`, so
+        # `_rebind_shortcuts` keeps binding its shortcut and an open
+        # dock is never closed - the setting looks applied and is not.
+        on  = [n for n, cb in (("UpToDate", utd_cb), ("AI chat", chat_cb))
+               if cb.isChecked() and not loaded[n]]
+        off = [n for n, cb in (("UpToDate", utd_cb), ("AI chat", chat_cb))
+               if not cb.isChecked() and loaded[n]]
+
+        def _join(names):
+            return names[0] if len(names) == 1 else " and ".join(names)
+
+        parts = []
+        if on:
+            parts.append(f"{_join(on)} {'loads' if len(on) == 1 else 'load'}")
+        if off:
+            parts.append(f"{_join(off)} {'unloads' if len(off) == 1 else 'unload'}")
+        restart_note.setText(
+            f"{' and '.join(parts)} when you restart Anki." if parts else "")
 
     for _cb in (utd_cb, chat_cb):
         _cb.toggled.connect(_refresh_restart_note)

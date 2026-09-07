@@ -7,6 +7,37 @@ this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [2.4.1] - 2026-09-07
 
+### Fixed
+
+- **The add-on could fail to load entirely on Anki with Python 3.9.**
+  `pearls/_vocab.py` annotated `new_key: str | None`. A signature
+  annotation is evaluated when the `def` runs, so on any interpreter
+  below 3.10 that import raises `TypeError`, and four vocabularies
+  import `_vocab` at load. `manifest.json` claims support from Anki
+  2.1.50, which ships Python 3.9. It was the only PEP 604 annotation in
+  the shipped tree and no file carries
+  `from __future__ import annotations`.
+- **The Advanced tab claimed the web inspector needed a normal
+  restart.** It does not: Qt reads the setting once at startup, so the
+  button relaunches Anki with it enabled for that session only. The
+  caption now says so.
+- **The restart notice only covered switching a module on.** Switching
+  one off also needs a restart - the toolbar button goes immediately
+  but the module stays in `sys.modules`, so its shortcut keeps binding
+  and an open dock is never closed. Both directions are named now.
+- **Selecting the version text was impossible.** Assigning
+  `mousePressEvent` replaced `QLabel`'s own handler, so the drag
+  selection the label enables could never start. The base handler is
+  called through.
+- **The version tooltip could disagree with what clicking copied.** It
+  was built once at construction, but "Check now" can update the
+  library version inside the same open dialog. It rebuilds on hover.
+- **`test_australian_spelling` stopped catching half the US forms it
+  exists for.** Widening the `edema` lookbehind to `(?<![a-z])` to
+  clear "Beckwith-Wiedemann" also let `lymphedema`, `papilledema` and
+  `myxedema` through. Narrowed to `(?<![oai])`, which excludes the
+  surname and the Australian spellings while still catching all three.
+
 ### Changed
 
 - **The Settings version is part of a footer, not floating above one.**

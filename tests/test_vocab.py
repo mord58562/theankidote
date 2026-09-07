@@ -166,11 +166,14 @@ class EntriesAreWellFormed(unittest.TestCase):
         # "hemorrhage". The lookbehind excludes the vowel that makes the
         # word Australian, so only the genuinely US form matches.
         #
-        # `edema` uses the wider (?<![a-z]) rather than (?<![oa]): the
-        # narrow form flagged "Beckwith-Wiedemann", which contains the
-        # substring but is a surname, not a US spelling.
+        # `edema` excludes o, a and i rather than the whole alphabet.
+        # (?<![oa]) flagged "Beckwith-Wiedemann", where the preceding
+        # letter is an i; widening to (?<![a-z]) fixed the surname but
+        # silently stopped catching every US form with a letter in front
+        # of it - lymphedema, papilledema, myxedema all slipped through
+        # the guard that exists to catch exactly those.
         banned = [
-            (r"(?<![a-z])edema", "oedema"),
+            (r"(?<![oai])edema", "oedema"),
             (r"(?<![oa])emorrhag", "haemorrhage"),
             (r"(?<![oa])emoglobin", "haemoglobin"),
             (r"(?<![oa])ematolog", "haematolog"),
@@ -849,7 +852,7 @@ class RichSummaries(unittest.TestCase):
                 f"{canon} has fewer than 3 sections - not worth an override")
 
     def test_australian_spelling(self):
-        banned = [(r"(?<![a-z])edema", "oedema"), (r"\banemi", "anaemia"),
+        banned = [(r"(?<![oai])edema", "oedema"), (r"\banemi", "anaemia"),
                   (r"(?<![oa])esophag", "oesophag"), (r"\btumors?\b", "tumour"),
                   (r"diarrhea", "diarrhoea"), (r"leukemi", "leukaemia"),
                   (r"(?<![oa])ischemi", "ischaemi"), (r"\betiolog", "aetiolog"),
