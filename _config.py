@@ -107,6 +107,11 @@ _DEFAULTS = {
     "toolbarOrder": ["chat", "uptodate"],
 
     # Persist which docks were open at exit and reopen them next launch.
+    # Sidebar article list. The collapse is a standing judgement about
+    # whether the list earns its space, and the chosen article is where
+    # the reader left off, so both outlive the card that was up.
+    "sidebarArticlesCollapsed": False,
+    "sidebarLastArticleUrl":    "",
     "rememberDockState": False,
     "dockState_pearls":   False,
     "dockState_uptodate": False,

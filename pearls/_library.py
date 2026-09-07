@@ -109,7 +109,7 @@ _ENTRY_STR_LISTS = ("aliases", "brands")
 # deleted by hand, not a one-off import failure.
 _ENTRY_PAIR_LISTS = ("utd",)
 
-_ENTRY_STRS = ("nbk", "source", "category")
+_ENTRY_STRS = ("nbk", "source", "category", "search")
 
 # How many entries deep to check. The library is ~2,500 entries and this
 # runs at every launch and on every download, so the whole file is

@@ -7156,6 +7156,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Combined first trimester screening",
+        "search": "first trimester combined screening aneuploidy",
         "aliases": ["CFTS", "first trimester combined screening", "combined first-trimester screening", "nuchal translucency screening", "first trimester screen"],
         "utd": [["Overview", "first trimester combined screening aneuploidy"]],
         "summary": "",

@@ -160,11 +160,22 @@ def _url_for(entry: dict) -> str:
     """Primary URL for the condition.  Resolution order:
       1. `source == "uptodate"` and UTD entries → first UTD entry
       2. `nbk` set → direct NCBI bookshelf link
-      3. fallback → StatPearls in-book search
+      3. fallback → StatPearls in-book search, on `search` if the entry
+         gives one, otherwise on its name
 
     Note: `utd` alone does NOT make a condition UTD-primary - UTD chips are
     supplementary by default.  Set `"source": "uptodate"` explicitly to
-    promote UTD to primary (used for entries StatPearls doesn't cover)."""
+    promote UTD to primary (used for entries StatPearls doesn't cover).
+
+    `search` exists because the entry names are Australian and StatPearls
+    is American, so the name that belongs on the popup is sometimes not
+    the name that finds anything. "Combined first trimester screening" is
+    what the card says and what the reader needs to read; searching
+    StatPearls for it returns thirty loosely-related chapters, while
+    "first trimester combined screening aneuploidy" lands on the right
+    material. Only the outbound query changes - never the displayed name,
+    never what the term matches on.
+    """
     if entry.get("source") == "uptodate":
         utd = entry.get("utd")
         if utd:
@@ -172,7 +183,7 @@ def _url_for(entry: dict) -> str:
     nbk = entry.get("nbk")
     if nbk:
         return f"https://www.ncbi.nlm.nih.gov/books/{nbk}/"
-    return _term_search_url(entry["name"])
+    return _term_search_url(entry.get("search") or entry["name"])
 
 
 # Lookup keyed by lowercase form of name + each alias.

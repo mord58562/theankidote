@@ -508,10 +508,18 @@ def _nav_btn(parent: QWidget, text: str, tip: str,
 class _ResultsSection(QWidget):
     article_selected = pyqtSignal(str)
     dismissed = pyqtSignal()
+    collapsed_changed = pyqtSignal(bool)
 
     def __init__(self, parent=None):
         super().__init__(parent)
         self._results: list = []
+        # Collapsed keeps the header and drops the list, so the way back
+        # is the strip you just clicked rather than a toolbar button in
+        # another part of the window. Restored from config, because a
+        # judgement about whether this list earns its space is about the
+        # list, not about the card that happened to be up when it was
+        # made.
+        self._collapsed = bool(_config.get("sidebarArticlesCollapsed"))
 
         lay = QVBoxLayout(self)
         lay.setContentsMargins(0, 0, 0, 0)
@@ -533,13 +541,17 @@ class _ResultsSection(QWidget):
         hdr_lay.setSpacing(0)
 
         self._hdr = QLabel("RELEVANT ARTICLES")
+        self._hdr.setCursor(Qt.CursorShape.PointingHandCursor)
+        # A 22px glyph is a small target for something the reader will
+        # reach for repeatedly, and the strip is already the affordance
+        # it reads as, so the whole row toggles.
+        self._hdr_row.mousePressEvent = lambda _e: self._on_toggle()
         hdr_lay.addWidget(self._hdr, 1)
 
-        self._btn_dismiss = QPushButton("\u2715", self._hdr_row)
+        self._btn_dismiss = QPushButton(self._hdr_row)
         self._btn_dismiss.setFixedSize(22, 22)
         self._btn_dismiss.setCursor(Qt.CursorShape.PointingHandCursor)
-        self._btn_dismiss.setToolTip("Hide this list for now")
-        self._btn_dismiss.clicked.connect(self._on_dismiss)
+        self._btn_dismiss.clicked.connect(self._on_toggle)
         _theme.size_glyph(self._btn_dismiss)
         hdr_lay.addWidget(self._btn_dismiss)
 
@@ -600,9 +612,34 @@ class _ResultsSection(QWidget):
             }}
         """)
 
-    def _on_dismiss(self) -> None:
-        self.hide()
-        self.dismissed.emit()
+    def _on_toggle(self) -> None:
+        self.set_collapsed(not self._collapsed)
+
+    def set_collapsed(self, collapsed: bool) -> None:
+        self._collapsed = bool(collapsed)
+        _config.set_value("sidebarArticlesCollapsed", self._collapsed)
+        self._sync_collapse()
+        self.collapsed_changed.emit(self._collapsed)
+        if self._collapsed:
+            # Kept so the panel can still tell the two intents apart.
+            self.dismissed.emit()
+
+    def is_collapsed(self) -> bool:
+        return self._collapsed
+
+    def _sync_collapse(self) -> None:
+        """Match the list and the glyph to the collapsed flag.
+
+        The header stays put either way. Hiding the section outright was
+        what made a dismissal a dead end: nothing was left on screen to
+        click, so the only way back was a toolbar button in a different
+        part of the window, and that button also reloaded the page.
+        """
+        self._list.setVisible(not self._collapsed)
+        self._btn_dismiss.setText("\u25b8" if self._collapsed else "\u25be")
+        self._btn_dismiss.setToolTip(
+            "Show the articles matched on this card" if self._collapsed
+            else "Collapse to the header")
 
     def _style_header(self) -> None:
         self._hdr_row.setStyleSheet(f"""
@@ -649,6 +686,7 @@ class _ResultsSection(QWidget):
         row_h  = self._list.sizeHintForRow(0) if self._list.count() > 0 else 26
         height = min(n * row_h + 4, 185)
         self._list.setFixedHeight(height)
+        self._sync_collapse()
         self.show()
 
     def _on_click(self, item: QListWidgetItem):
@@ -671,6 +709,11 @@ class StatPearlsPanel(QWidget):
 
         self._last_results: list = []
         self._auto_loaded  = False
+        # The page the reader last picked on purpose. Restored across
+        # restarts, because "leave it where I put it" is not a property
+        # of one session: the sidebar is a reference surface and the
+        # last thing opened in it is usually still the thing being read.
+        self._chosen_url = _config.get("sidebarLastArticleUrl") or ""
         self._show_articles = False  # only true when opened via toolbar button
         # Set when the user dismisses the article list.  Scoped to the
         # current card so the next card gets a fresh list, and cleared
@@ -793,7 +836,7 @@ class StatPearlsPanel(QWidget):
 
         # ── results section ───────────────────────────────────────────────
         self._results = _ResultsSection(self)
-        self._results.article_selected.connect(self.load_url)
+        self._results.article_selected.connect(self._on_article_chosen)
         self._results.dismissed.connect(self._on_results_dismissed)
 
         outer.addWidget(self._results)
@@ -867,13 +910,30 @@ class StatPearlsPanel(QWidget):
             else:
                 self._results.hide()
 
+    def _on_article_chosen(self, url: str) -> None:
+        """The reader picked an article, so nothing may move the panel
+        off it again except another such choice."""
+        self._chosen_url = url or ""
+        _config.set_value("sidebarLastArticleUrl", self._chosen_url)
+        self.load_url(url)
+
     def reset_for_new_card(self) -> None:
-        """Called when toolbar button is pressed on a different card.
-        Navigates the webview to the StatPearls homepage and shows the list."""
+        """Toolbar button pressed while a different card is up.
+
+        This reloaded the StatPearls home page unconditionally, which
+        threw away whatever was being read: the one control that brings
+        the article list back was also the control that closed the
+        article. The list is what the button is for, so that is all it
+        does now. The webview moves only when it is holding nothing
+        worth keeping - blank, or already the page it would load.
+        """
         self._show_articles = True
         self._articles_dismissed = False
         self._auto_loaded = False
-        self._view.load(QUrl(self._current_home_url()))
+        here = (self._view.url().toString() or "").strip()
+        home = self._current_home_url()
+        if here in ("", "about:blank", home):
+            self._view.load(QUrl(self._chosen_url or home))
         if self._last_results:
             self._results.show_results(self._last_results)
 
@@ -888,10 +948,12 @@ class StatPearlsPanel(QWidget):
 
         Kept separate from `hide_article_list` (which is the popup-click
         path) so the two intents stay distinguishable: this one is a
-        judgement about the list's usefulness on this card, and it
-        should not survive to the next one."""
+        judgement about the list's usefulness rather than about this
+        card."""
         self._articles_dismissed = True
-        self._show_articles = False
+        # The header stays on screen when collapsed, so the section is
+        # itself the way back and has to keep being refreshed as cards
+        # change. Only the popup-click path hides it outright.
 
     def load_url(self, url: str, term: str = "", section: str = "") -> None:
         """Navigate the panel webview.
