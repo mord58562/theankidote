@@ -25,6 +25,36 @@ the change.
 
 This directory is **not** packaged into the `.ankiaddon`.
 
+## Authoring a batch
+
+Entries are usually written a topic at a time, often several batches in
+parallel, as JSON:
+
+    [{"name": ..., "aliases": [...], "utd": [["Overview", "..."]],
+      "summary": "..."}]
+
+Two scripts turn that into source, and they live in `tools/` because
+both have now been written from scratch twice after the working copy
+was left in a temp directory:
+
+    python3 tools/verify_batch.py drafts/*.json   # check before merging
+    python3 tools/merge_batch.py  drafts/*.json   # write into _rich.py
+
+`verify_batch.py` checks what the suite checks, but before the batch is
+inside a 3.5 MB source file where backing one entry out is a diff to
+unpick rather than a file to delete: the popup height and character
+budgets, the section-label whitelist, Australian spelling, banned
+characters, and names or aliases that two batches both claim. Its one
+check the suite cannot make is alias ambiguity - whether a short
+all-caps alias would shadow the acronym dictionary - which it answers
+against the running collection over AnkiConnect, pulled live every run.
+
+`merge_batch.py` is also the right tool for a conflict in `_rich.py`
+after the scheduled agent has pushed to this branch. Take the remote
+file whole and re-apply the local batch through it. Resolving the text
+by hand, or with a union merge, silently duplicates an entry both sides
+added.
+
 ## Publishing content
 
     bash tools/publish_content.sh              # version defaults to today

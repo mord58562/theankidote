@@ -49,14 +49,18 @@ nothing left untriaged in either module:
 
 ## Phases
 
-- [ ] 1. `CONDITION_ALIASES` overlay in `content/_rich.py`. Conditions
+- [x] 1. `CONDITION_ALIASES` overlay in `content/_rich.py`. Conditions
       pass through `build_library.collect()` untouched from
       `library.json`, so there is no authoring route for an alias on an
       existing condition - the same gap acronyms had until
       `content/_new_acronyms.py` was added earlier today. Same fix,
       same validation shape as `DRUG_ALIASES`.
-- [ ] 2. Apply the 167 alias additions through it.
-- [ ] 3. Merge the 124 new entries (10 parallel authoring agents, one
+- [x] 2. Alias additions applied - 43 over 27 entries, not 167. Of the
+      167 triaged rows, 92 already resolved (the matcher handles a
+      qualified framework phrase against its entity unaided), most of
+      the rest was curriculum phrasing no card carries, and several
+      were wrong targets. Committed as `f4fb4b7`.
+- [~] 3. Merge the new entries (10 parallel authoring agents, one
       per framework topic, drafts to `_extracted/drafts/*.json`).
 - [ ] 4. `verify_batch.py`, then `merge_batch.py`, then
       `build_library.py`, then `tests/test_vocab.py`.
