@@ -165,8 +165,12 @@ class EntriesAreWellFormed(unittest.TestCase):
         # "oedematous" contains "edema" and "haemorrhage" contains
         # "hemorrhage". The lookbehind excludes the vowel that makes the
         # word Australian, so only the genuinely US form matches.
+        #
+        # `edema` uses the wider (?<![a-z]) rather than (?<![oa]): the
+        # narrow form flagged "Beckwith-Wiedemann", which contains the
+        # substring but is a surname, not a US spelling.
         banned = [
-            (r"(?<![oa])edema", "oedema"),
+            (r"(?<![a-z])edema", "oedema"),
             (r"(?<![oa])emorrhag", "haemorrhage"),
             (r"(?<![oa])emoglobin", "haemoglobin"),
             (r"(?<![oa])ematolog", "haematolog"),
@@ -845,7 +849,7 @@ class RichSummaries(unittest.TestCase):
                 f"{canon} has fewer than 3 sections - not worth an override")
 
     def test_australian_spelling(self):
-        banned = [(r"(?<![oa])edema", "oedema"), (r"\banemi", "anaemia"),
+        banned = [(r"(?<![a-z])edema", "oedema"), (r"\banemi", "anaemia"),
                   (r"(?<![oa])esophag", "oesophag"), (r"\btumors?\b", "tumour"),
                   (r"diarrhea", "diarrhoea"), (r"leukemi", "leukaemia"),
                   (r"(?<![oa])ischemi", "ischaemi"), (r"\betiolog", "aetiolog"),
