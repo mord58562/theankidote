@@ -30,6 +30,16 @@ acronyms that are also English words stop firing on the words.
 
 ### Fixed
 
+- **Clozapine carried two contradictory monitoring schedules.** The
+  rich summary gave the Australian protocol - FBC weekly for 18 weeks
+  then 28-daily through a monitoring service, with amber and red
+  neutrophil thresholds - while the one-line summary in the `drugs`
+  vocabulary gave the American one (weekly for 26 weeks, then
+  fortnightly, then monthly, with ANC cut-offs). Whichever a reader hit
+  first decided what they learned. The short summary now matches
+  Australian practice, and its self-contradictory myocarditis window
+  ("first 6-8 weeks" in one clause, "first 4 weeks" in the next) is
+  resolved to weekly troponin and CRP for four weeks.
 - **Every term containing an apostrophe was unmatchable on a normally
   typed card.** The library writes `Addison's disease` with ASCII
   U+0027; card authors type with whatever their editor produces, which
