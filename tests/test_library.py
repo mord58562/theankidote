@@ -476,6 +476,55 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
                      "https://github.com/mord58562/theankidote/releases/x"):
             self.assertEqual(_updater._require_https(good, "manifest"), good)
 
+    # Names pyflakes cannot see because `_rebind_theme` writes them into
+    # the module's `globals()` when the palette is built, so they exist
+    # at runtime and not in the source. Listed rather than suppressed
+    # wholesale, so a genuine undefined name in that file still fails.
+    THEME_GLOBALS = {
+        # Written into `_panel_pearls` by its `_rebind_theme`.
+        "_NAV_BTN_QSS", "_CLOSE_BTN_QSS", "_RESULT_BG", "_ITEM_TXT",
+        "_RESULT_BDR", "_RESULT_HOVER_BG", "_RESULT_HOVER_TXT",
+        "_RESULT_SEL_BG", "_RESULT_SEL_TXT",
+        # Written into `_theme` itself by `refresh()`, which rebinds the
+        # palette in place so callers that captured a name at import
+        # time still read the current value.
+        "HEADER_TXT", "BODY_TXT", "MUTED", "TEAL", "TEAL_DIM",
+        "TEAL_BORDER", "NAVY", "NAVY_LIGHT", "BG_BOX", "QUOTE_TXT",
+    }
+
+    def test_no_undefined_names(self):
+        """A name that only exists in the author's head is a NameError
+        at runtime, and most of this tree cannot be imported under test
+        because it needs Anki - so nothing else catches it.
+
+        Written after moving a helper between modules and leaving its
+        `_log` reference behind: the suite passed, the package imported
+        nowhere, and the failure would have arrived the first time a
+        keyboard shortcut failed to bind.
+        """
+        try:
+            from pyflakes.api import check
+            from pyflakes.reporter import Reporter
+        except ImportError:
+            self.skipTest("pyflakes not installed")
+        import io
+        out, err = io.StringIO(), io.StringIO()
+        reporter = Reporter(out, err)
+        for path in sorted(ROOT.rglob("*.py")):
+            rel = path.relative_to(ROOT)
+            if rel.parts[0] in ("tests", "content", ".git"):
+                continue
+            check(path.read_text(encoding="utf-8"), str(rel), reporter)
+        offenders = [
+            line for line in out.getvalue().splitlines()
+            if "undefined name" in line
+            and not any(f"'{n}'" in line for n in self.THEME_GLOBALS)
+        ]
+        self.assertEqual(
+            offenders, [],
+            "these names do not exist where they are used:\n"
+            + "\n".join(offenders))
+
     def test_schema_constant_agrees_with_the_compiler(self):
         """`SCHEMA` is declared twice and nothing checked they matched.
 

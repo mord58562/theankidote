@@ -592,7 +592,14 @@
       top = r.bottom + _GAP;
     }
 
-    _tip.style.top = Math.max(_EDGE, top) + "px";
+    // Clamped at both ends, the way the horizontal line below already
+    // was. Only the top was held before, so on the last branch - term
+    // low on the page, more room below than above but not enough for
+    // the box - the popup ran off the bottom of the reviewer with
+    // nothing to indicate there was more. When the box is taller than
+    // the viewport the max wins and it starts at the edge and scrolls,
+    // which is the same resolution the horizontal case uses.
+    _tip.style.top = Math.max(_EDGE, Math.min(top, vh - h - _EDGE)) + "px";
     _tip.style.left = Math.max(_EDGE, Math.min(r.left, vw - w - _EDGE)) + "px";
     _tip.style.visibility = "";
   }

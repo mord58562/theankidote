@@ -325,8 +325,32 @@ def _check(manifest_url: str) -> str:
     return f"Downloaded {remote}. Restart Anki to apply."
 
 
-def check_in_background(manifest_url: str = DEFAULT_MANIFEST_URL) -> None:
-    """Start the check. Returns immediately; never raises."""
-    t = threading.Thread(target=check, args=(manifest_url,),
+# The one outcome that needs no telling. Everything else `check` can
+# return is either a failure or a change the reader would want to know
+# about, and all of them used to go to the log alone.
+QUIET_RESULT = "Up to date."
+
+
+def check_in_background(manifest_url: str = DEFAULT_MANIFEST_URL,
+                        on_result=None) -> None:
+    """Start the check. Returns immediately; never raises.
+
+    `on_result` is called with the outcome string, on the UI thread. It
+    is optional because the check must still work with nowhere to
+    report to, but the launch path passes one: without it a user who is
+    offline, behind a proxy, or being handed a payload that fails its
+    checksum saw nothing at all, and simply stopped receiving content.
+    """
+    def _run():
+        result = check(manifest_url)
+        if on_result is None:
+            return
+        try:
+            from aqt import mw
+            mw.taskman.run_on_main(lambda: on_result(result))
+        except Exception as exc:                        # noqa: BLE001
+            log(f"updater: could not report result ({exc})")
+
+    t = threading.Thread(target=_run,
                          name="theankidote-content-update", daemon=True)
     t.start()

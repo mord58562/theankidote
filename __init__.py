@@ -780,37 +780,9 @@ gui_hooks.webview_did_receive_js_message.append(_on_js_message)
 
 # ── Shortcut (re)binding ──────────────────────────────────────────────────
 
-def _make_shortcut(seq: str, slot, label: str = ""):
-    """Create a QShortcut that fires wherever focus happens to be.
-
-    The default context is `WindowShortcut`, which only fires when the
-    active window is the one the shortcut is parented to.  During review
-    the focused widget is a QWebEngineView, and Anki opens genuine
-    top-level windows (Browse, Stats, the add-on manager) that are not
-    children of `mw` - in both cases a window-context shortcut is simply
-    dead.  `ApplicationShortcut` fires regardless, which is what a
-    global binding is supposed to mean and what every one of these is
-    documented as doing.
-    """
-    try:
-        from PyQt6.QtGui import QShortcut
-    except (ImportError, AttributeError):
-        from PyQt5.QtWidgets import QShortcut
-    try:
-        sc = QShortcut(QKeySequence(seq), mw)
-        try:
-            sc.setContext(Qt.ShortcutContext.ApplicationShortcut)
-        except (AttributeError, TypeError):
-            # PyQt5 spells the enum unscoped.
-            try:
-                sc.setContext(Qt.ApplicationShortcut)
-            except Exception:
-                pass
-        sc.activated.connect(slot)
-        return sc
-    except Exception as exc:
-        _log.error(f"bind {label or seq}", exc)
-        return None
+# `_make_shortcut` lived here, and in the other two dock modules,
+# in three copies that differed only in how they explained
+# themselves. It is `_dock_layout.make_shortcut` now.
 
 
 def _rebind_shortcuts() -> None:
@@ -847,7 +819,7 @@ def _rebind_shortcuts() -> None:
             seq = default
         if not seq:
             continue
-        sc = _make_shortcut(seq, slot, key)
+        sc = _dock_layout.make_shortcut(seq, slot, key)
         if sc is not None:
             _shortcut_refs.append(sc)
 
@@ -2378,7 +2350,19 @@ def _check_for_library_update() -> None:
         from .pearls import _updater
         url = (_config.get("libraryManifestUrl")
                or _updater.DEFAULT_MANIFEST_URL)
-        _updater.check_in_background(url)
+        def _report(result: str) -> None:
+            # Silence is right for the common case and wrong for every
+            # other one. A failed check used to leave the user on stale
+            # content with nothing said.
+            if not result or result == _updater.QUIET_RESULT:
+                return
+            try:
+                from aqt.utils import tooltip
+                tooltip(f"The AnkiDote: {result}", period=6000)
+            except Exception as exc:                    # noqa: BLE001
+                _log.debug(f"could not show update result: {exc}")
+
+        _updater.check_in_background(url, on_result=_report)
     except Exception as exc:                            # noqa: BLE001
         _log.debug(f"library update check not started: {exc}")
 

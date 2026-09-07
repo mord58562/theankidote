@@ -104,5 +104,18 @@ Searching from an acronym's expansion used Australian spelling against
 a database that only indexes American, so "oesophageal varices" found
 nothing.
 
-And Settings has always offered to reveal a diagnostic log that was
-never being written. It is now.
+Opening an article by clicking a popup hid the article list entirely,
+and the header that brings it back went with it, so the only way back
+was to close the sidebar and open it again. It collapses now. That path
+also never remembered which article you were reading, while pressing
+Home did not forget the one you had just left - so the next card
+brought it back.
+
+A popup stayed on screen when you flipped a card over, hanging above
+content it no longer described, and one opened near the bottom of the
+window ran off the edge.
+
+If a content update fails - no network, a bad download - you are now
+told. Before, it went to a log file, which was itself not being
+written: Settings has always offered to reveal a diagnostic log that
+never existed. It does now.

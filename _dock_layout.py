@@ -21,11 +21,15 @@ Order constants are integers - lower numbers sit further left.
 
 from aqt import mw
 
+from . import _log
+
 try:
     from PyQt6.QtCore import Qt
+    from PyQt6.QtGui import QKeySequence
     from PyQt6.QtWidgets import QDockWidget
 except (ImportError, AttributeError):
     from PyQt5.QtCore import Qt
+    from PyQt5.QtGui import QKeySequence
     from PyQt5.QtWidgets import QDockWidget
 
 
@@ -103,3 +107,35 @@ def arrange(self_dock: QDockWidget, self_order: int) -> None:
         self_dock.raise_()
     except Exception as exc:
         print(f"[TheAnkiDote] dock arrange error: {exc}")
+
+def make_shortcut(seq: str, slot, label: str = ""):
+    """Create a QShortcut that fires wherever focus happens to be.
+
+    The default context is `WindowShortcut`, which only fires when the
+    active window is the one the shortcut is parented to.  During review
+    the focused widget is a QWebEngineView, and Anki opens genuine
+    top-level windows (Browse, Stats, the add-on manager) that are not
+    children of `mw` - in both cases a window-context shortcut is simply
+    dead.  `ApplicationShortcut` fires regardless, which is what a
+    global binding is supposed to mean and what every one of these is
+    documented as doing.
+    """
+    try:
+        from PyQt6.QtGui import QShortcut
+    except (ImportError, AttributeError):
+        from PyQt5.QtWidgets import QShortcut
+    try:
+        sc = QShortcut(QKeySequence(seq), mw)
+        try:
+            sc.setContext(Qt.ShortcutContext.ApplicationShortcut)
+        except (AttributeError, TypeError):
+            # PyQt5 spells the enum unscoped.
+            try:
+                sc.setContext(Qt.ApplicationShortcut)
+            except Exception:
+                pass
+        sc.activated.connect(slot)
+        return sc
+    except Exception as exc:
+        _log.error(f"bind {label or seq}", exc)
+        return None

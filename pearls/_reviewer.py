@@ -789,6 +789,21 @@ def _local_results_for_card(card) -> list:
     return results
 
 
+def _dismiss_popup() -> None:
+    """Close any popup still on screen.
+
+    The card's HTML is re-rendered on a flip and on a new card, so the
+    span the popup was anchored to is detached and the popup is left
+    hovering over content it no longer describes.
+    """
+    try:
+        if mw.reviewer and mw.reviewer.web:
+            mw.reviewer.web.eval(
+                "if(window.spAddon&&spAddon.dismissTip)spAddon.dismissTip();")
+    except Exception:
+        pass
+
+
 def _on_show_question(card) -> None:
     global _prev_card_id
 
@@ -798,13 +813,7 @@ def _on_show_question(card) -> None:
 
     # Dismiss any open popup immediately when progressing to a new card.
     if card_changed:
-        try:
-            if mw.reviewer and mw.reviewer.web:
-                mw.reviewer.web.eval(
-                    "if(window.spAddon&&spAddon.dismissTip)spAddon.dismissTip();"
-                )
-        except Exception:
-            pass
+        _dismiss_popup()
 
     # Drop any prior text cache on this card so re-shown cards re-strip lazily.
     try:
@@ -828,7 +837,12 @@ def _on_show_question(card) -> None:
 
 
 def _on_show_answer(card) -> None:
-    pass
+    """Flipping to the answer re-renders the card, so a popup opened on
+    the question is now anchored to a span that no longer exists. This
+    only fired on a card change before, which left the popup up across
+    every flip and, on a card shown twice in a session, never cleared
+    it at all."""
+    _dismiss_popup()
 
 
 # ── register hooks ────────────────────────────────────────────────────────────

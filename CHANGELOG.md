@@ -30,6 +30,33 @@ acronyms that are also English words stop firing on the words.
 
 ### Fixed
 
+- **Opening an article from a popup made the list unreachable.** That
+  path hid the whole section rather than collapsing it, taking the
+  header with it - the header being the only thing on screen that
+  brings the list back, and the fix already applied to the dismiss
+  path. With the toolbar button also absent while the dock is open,
+  closing and reopening the dock was the only way back. It collapses
+  now, and the two dead signals behind the old dismiss handler are
+  gone with it.
+- **The article you opened was not remembered, and the one you left
+  came back.** Only the list-click path recorded the chosen article, so
+  opening one from a popup - the commoner route - was forgotten across
+  restarts. Meanwhile leaving an article by pressing Home did not clear
+  it, and `reset_for_new_card` restored it on the next card.
+- **The popup outlived the card it described.** It was dismissed when
+  the card changed but not when the question flipped to the answer, so
+  it hung over re-rendered content anchored to a span that no longer
+  existed - and on a card shown twice in a session it was never cleared
+  at all.
+- **A popup near the bottom of the screen ran off it.** The position
+  was clamped at the top and not the bottom, unlike the horizontal
+  clamp on the line below it.
+- **A failing content update said nothing.** `check_in_background`
+  discarded its result, so all twelve outcomes - unreachable server,
+  failed checksum, wrong size, unreadable payload - reached the log and
+  nowhere else, and the user simply stopped receiving content. Non-quiet
+  outcomes now surface as a tooltip.
+
 - **The popup's honesty fix did not work.** The release notes below say
   the popup stopped claiming StatPearls articles it does not have. Two
   faults, either sufficient on its own, meant it never did.

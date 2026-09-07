@@ -64,7 +64,7 @@ except ImportError:
         QWebEngineView, QWebEnginePage, QWebEngineProfile, QWebEngineSettings,
     )
 
-from .. import _config, _theme, _webengine, _log
+from .. import _config, _theme, _webengine, _log, _dock_layout
 from .._extras import _QUOTES as _HOUSE_QUOTES
 
 # ── Constants ─────────────────────────────────────────────────────────────
@@ -1257,32 +1257,9 @@ def deliver_to_composer(text: str, on_done=None) -> None:
             on_done(False)
 
 
-def _make_shortcut(seq: str, slot, label: str = ""):
-    """QShortcut with `ApplicationShortcut` context.
-
-    The default `WindowShortcut` context only fires when the active
-    window is the one the shortcut is parented to, so a binding died
-    the moment focus sat in the reviewer's QWebEngineView or the user
-    had Browse open. See the same helper in the top-level package.
-    """
-    try:
-        from PyQt6.QtGui import QShortcut
-    except (ImportError, AttributeError):
-        from PyQt5.QtWidgets import QShortcut
-    try:
-        sc = QShortcut(QKeySequence(seq), mw)
-        try:
-            sc.setContext(Qt.ShortcutContext.ApplicationShortcut)
-        except (AttributeError, TypeError):
-            try:
-                sc.setContext(Qt.ApplicationShortcut)
-            except Exception:
-                pass
-        sc.activated.connect(slot)
-        return sc
-    except Exception as exc:
-        _log.error(f"bind {label or seq}", exc)
-        return None
+# `_make_shortcut` lived here, and in the other two dock modules,
+# in three copies that differed only in how they explained
+# themselves. It is `_dock_layout.make_shortcut` now.
 
 
 def rebind_shortcut() -> None:
@@ -1304,7 +1281,7 @@ def rebind_shortcut() -> None:
     seq = _config.get("shortcutToggleChat") or "Ctrl+Shift+A"
     if not seq:
         return
-    _shortcut_holder = _make_shortcut(seq, toggle_dock, "shortcutToggleChat")
+    _shortcut_holder = _dock_layout.make_shortcut(seq, toggle_dock, "shortcutToggleChat")
 
 
 def _close_dock(*_):

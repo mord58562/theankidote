@@ -522,8 +522,6 @@ def _nav_btn(parent: QWidget, text: str, tip: str,
 
 class _ResultsSection(QWidget):
     article_selected = pyqtSignal(str)
-    dismissed = pyqtSignal()
-    collapsed_changed = pyqtSignal(bool)
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -634,10 +632,6 @@ class _ResultsSection(QWidget):
         self._collapsed = bool(collapsed)
         _config.set_value("sidebarArticlesCollapsed", self._collapsed)
         self._sync_collapse()
-        self.collapsed_changed.emit(self._collapsed)
-        if self._collapsed:
-            # Kept so the panel can still tell the two intents apart.
-            self.dismissed.emit()
 
     def is_collapsed(self) -> bool:
         return self._collapsed
@@ -850,7 +844,6 @@ class StatPearlsPanel(QWidget):
         # ── results section ───────────────────────────────────────────────
         self._results = _ResultsSection(self)
         self._results.article_selected.connect(self._on_article_chosen)
-        self._results.dismissed.connect(self._on_results_dismissed)
 
         outer.addWidget(self._results)
         outer.addWidget(self._view, 1)
@@ -972,24 +965,18 @@ class StatPearlsPanel(QWidget):
             self._results.show_results(self._last_results)
 
     def hide_article_list(self) -> None:
-        """Called when user opens the panel via popup click - list stays out
-        of the way so the article body fills the pane."""
-        self._show_articles = False
-        self._results.hide()
+        """Opening from a popup click: the list gets out of the way so
+        the article body fills the pane.
 
-    def _on_results_dismissed(self) -> None:
-        """User hid the article list from its own header.
-
-        Kept separate from `hide_article_list` (which is the popup-click
-        path) so the two intents stay distinguishable: this one is a
-        judgement about the list's usefulness rather than about this
-        card.
-
-        The header stays on screen when collapsed, so the section is
-        itself the way back and has to keep being refreshed as cards
-        change. Only the popup-click path hides it outright, which is
-        why this handler now has nothing left to do.
+        Collapsed, not hidden. Hiding the section took its header with
+        it, and the header is the only thing on screen that brings the
+        list back - the same dead end the collapse work fixed on the
+        dismiss path, left untouched on this one. With the toolbar
+        button also gone while the dock is open, closing and reopening
+        the dock was the only way back.
         """
+        self._show_articles = False
+        self._results.set_collapsed(True)
 
     def load_url(self, url: str, term: str = "", section: str = "") -> None:
         """Navigate the panel webview.
@@ -1009,6 +996,15 @@ class StatPearlsPanel(QWidget):
         self._pending_url = url
         self._pending_section = section
         self._load_retries = 0
+        # Both callers of this - the article list and a popup click -
+        # are the reader choosing an article, so both should survive a
+        # restart. Only the list path recorded it, so opening an article
+        # the commoner way was forgotten.
+        self._chosen_url = url or ""
+        try:
+            _config.set_value("sidebarLastArticleUrl", self._chosen_url)
+        except Exception as exc:
+            _log.error("pearls remember article", exc)
         # A term we have resolved before goes straight to the article or
         # drug page; nothing else in this method needs to know how the
         # URL was obtained.
@@ -1213,6 +1209,15 @@ class StatPearlsPanel(QWidget):
         self._pending_url = ""
         self._pending_term = ""
         self._pending_section = ""
+        # The remembered article goes with it. `reset_for_new_card`
+        # restores `_chosen_url` whenever the view is sitting on home,
+        # so without this, pressing Home and moving to the next card
+        # brought back the article that was just deliberately left.
+        self._chosen_url = ""
+        try:
+            _config.set_value("sidebarLastArticleUrl", "")
+        except Exception as exc:
+            _log.error("pearls forget article", exc)
 
     def _go_home(self):
         self._clear_pending()

@@ -130,7 +130,7 @@ _last_user_activity = 0.0          # monotonic seconds; 0 = never seen
 # Config / theme helpers
 # ---------------------------------------------------------------------------
 
-from .. import _config, _theme, _webengine, _log
+from .. import _config, _theme, _webengine, _log, _dock_layout
 
 
 def _home_url() -> str:
@@ -945,32 +945,9 @@ def open_url_in_dock(url: str) -> bool:
 # Shortcuts
 # ---------------------------------------------------------------------------
 
-def _make_shortcut(seq: str, slot, label: str = ""):
-    """QShortcut with `ApplicationShortcut` context.
-
-    The default `WindowShortcut` context only fires when the active
-    window is the one the shortcut is parented to, so a binding died
-    the moment focus sat in the reviewer's QWebEngineView or the user
-    had Browse open. See the same helper in the top-level package.
-    """
-    try:
-        from PyQt6.QtGui import QShortcut
-    except (ImportError, AttributeError):
-        from PyQt5.QtWidgets import QShortcut
-    try:
-        sc = QShortcut(QKeySequence(seq), mw)
-        try:
-            sc.setContext(Qt.ShortcutContext.ApplicationShortcut)
-        except (AttributeError, TypeError):
-            try:
-                sc.setContext(Qt.ApplicationShortcut)
-            except Exception:
-                pass
-        sc.activated.connect(slot)
-        return sc
-    except Exception as exc:
-        _log.error(f"bind {label or seq}", exc)
-        return None
+# `_make_shortcut` lived here, and in the other two dock modules,
+# in three copies that differed only in how they explained
+# themselves. It is `_dock_layout.make_shortcut` now.
 
 
 def rebind_shortcuts() -> None:
@@ -997,14 +974,14 @@ def rebind_shortcuts() -> None:
     if toggle_seq is None:
         toggle_seq = "Ctrl+Shift+U"
     if toggle_seq:
-        _toggle_sc = _make_shortcut(toggle_seq, toggle_dock,
+        _toggle_sc = _dock_layout.make_shortcut(toggle_seq, toggle_dock,
                                     "shortcutToggleUptodate")
 
     search_seq = _config.get("shortcutSearchSelection")
     if search_seq is None:
         search_seq = "Ctrl+Shift+L"
     if search_seq:
-        _search_sc = _make_shortcut(search_seq, _search_selection,
+        _search_sc = _dock_layout.make_shortcut(search_seq, _search_selection,
                                     "shortcutSearchSelection")
 
 
