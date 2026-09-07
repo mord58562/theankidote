@@ -1065,5 +1065,69 @@ class BlocklistSuppressesAndOnlySuppresses(unittest.TestCase):
             _matcher.PhraseMatcher(["pneumonia"])
 
 
+class InjectedStylesheetColourIsNotACodePath(unittest.TestCase):
+    """`highlightColor` reaches injected JS, so it is attacker surface.
+
+    The dock highlighter builds a stylesheet inside the StatPearls or
+    DrugBank page and the colour came straight from config, unencoded.
+    Config is a file on disk that a hand edit or another add-on can
+    reach, and a value that ends the JS string literal early would have
+    run as script in the page holding those live sessions.
+    """
+
+    def _colour_fn(self):
+        src = (ROOT / "_panel_pearls.py").read_text(encoding="utf-8")
+        blk = src[src.index("_CSS_COLOUR_RE = re.compile("):
+                  src.index("def _nav_btn(")]
+        ns = {"re": re, "_TEAL": "#0fcad4"}
+        exec(blk, ns)                                    # noqa: S102
+        return ns["_safe_css_colour"]
+
+    def test_real_colours_survive(self):
+        f = self._colour_fn()
+        for good in ("#0fcad4", "#fff", "#0fcad4cc", "rgb(15,202,212)",
+                     "rgba(15,202,212,.18)", "teal"):
+            self.assertEqual(f(good), good)
+
+    def test_breakout_attempts_fall_back(self):
+        f = self._colour_fn()
+        for bad in ('red";document.location=\'https://evil\';var x="',
+                    "red;} body{display:none} .x{",
+                    "expression(alert(1))", "url(javascript:alert(1))",
+                    "#fff<script>", "", None, 0):
+            self.assertEqual(f(bad), "#0fcad4",
+                             f"{bad!r} reached the stylesheet")
+
+    def test_no_js_template_is_filled_without_encoding(self):
+        """Every value crossing into JS goes through json.dumps.
+
+        Written against the interpolation sites rather than the
+        `runJavaScript` lines: the call that prompted this test now
+        wraps across two lines, so a line-based scan would read as green
+        while checking nothing.
+        """
+        src = (ROOT / "_panel_pearls.py").read_text(encoding="utf-8")
+        bad = []
+        for m in re.finditer(r"_JS\s*%\s*", src):
+            arg, depth, i = "", 0, m.end()
+            while i < len(src):                     # to the end of the args
+                ch = src[i]
+                if ch in "([":
+                    depth += 1
+                elif ch in ")]":
+                    if depth == 0:
+                        break
+                    depth -= 1
+                elif ch == "\n" and depth == 0:
+                    break
+                arg += ch
+                i += 1
+            if arg.strip() and "json.dumps" not in arg:
+                line = src[:m.start()].count("\n") + 1
+                bad.append(f"line {line}: {arg.strip()[:60]}")
+        self.assertFalse(
+            bad, "these fill a JS template without encoding: " + str(bad))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

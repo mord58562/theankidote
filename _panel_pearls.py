@@ -459,7 +459,8 @@ _HL_APPLY_JS = r"""
     if (!document.getElementById("tad-hl-style")) {
       var s = document.createElement("style");
       s.id = "tad-hl-style";
-      s.textContent = ".sp-mark{border-bottom:2px solid %s;cursor:pointer;}" +
+      s.textContent = ".sp-mark{border-bottom:2px solid " + %s +
+                      ";cursor:pointer;}" +
                       ".sp-mark:hover{background:rgba(15,202,212,.18);}";
       document.head.appendChild(s);
     }
@@ -486,6 +487,28 @@ _HL_PYCMD_SHIM_JS = r"""
   };
 })();
 """
+
+
+_CSS_COLOUR_RE = re.compile(
+    r"^(?:#[0-9a-fA-F]{3,8}"
+    r"|rgba?\(\s*[0-9.]+\s*,\s*[0-9.]+\s*,\s*[0-9.]+\s*(?:,\s*[0-9.]+\s*)?\)"
+    r"|[a-zA-Z]{3,20})$")
+
+
+def _safe_css_colour(value) -> str:
+    """A colour safe to drop into the injected stylesheet, or the default.
+
+    `highlightColor` is config, and config is a file on disk that a hand
+    edit or another add-on can reach. It used to be interpolated into
+    the JS that builds this stylesheet without encoding, so a value
+    ending the string literal early ran as script in the StatPearls or
+    DrugBank page - the profile holding those live sessions. The value
+    is JSON-encoded at the call site now, which settles the script half;
+    this settles the other half, since a value is still landing inside a
+    CSS rule and could otherwise close it and write further rules.
+    """
+    text = str(value or "").strip()
+    return text if _CSS_COLOUR_RE.match(text) else _TEAL
 
 
 def _nav_btn(parent: QWidget, text: str, tip: str,
@@ -718,7 +741,6 @@ class StatPearlsPanel(QWidget):
         # Set when the user dismisses the article list.  Scoped to the
         # current card so the next card gets a fresh list, and cleared
         # by the toolbar button so re-opening the panel brings it back.
-        self._articles_dismissed = False
         # How many times we have let a Cloudflare challenge keep going
         # on the current navigation.
         self._challenge_waits = 0
@@ -882,7 +904,6 @@ class StatPearlsPanel(QWidget):
         """Called when user opens the panel via the toolbar button (same card).
         Shows the article-list; leaves the webview on whatever page is loaded."""
         self._show_articles = True
-        self._articles_dismissed = False
         if self._last_results:
             self._results.show_results(self._last_results)
         # Page is already loaded (no loadFinished event coming); fire the
@@ -903,12 +924,36 @@ class StatPearlsPanel(QWidget):
         self._last_results = results
         # A new card's results arrive here, so this is where a dismissal
         # scoped to the previous card expires.
-        self._articles_dismissed = False
         if self._show_articles:
             if results:
                 self._results.show_results(results)
             else:
                 self._results.hide()
+
+    def _safe_chosen(self) -> str:
+        """The remembered article, or "" if it no longer passes the check.
+
+        A config value handed to `view.load()` is a navigation target,
+        and config is a file on disk that another add-on, a sync or a
+        hand-edit can reach. A `javascript:` or `file:` URL left there
+        would load into the profile holding live NCBI, DrugBank and
+        UpToDate sessions, which is the capability the pycmd handler's
+        check exists to remove; the remembered URL has to clear the same
+        bar. Imported lazily because that check lives in the package
+        root, which imports this module, and it fails closed if it
+        cannot be reached.
+        """
+        url = self._chosen_url
+        if not url:
+            return ""
+        try:
+            from . import _is_safe_url
+        except Exception:
+            return ""
+        try:
+            return url if _is_safe_url(url) else ""
+        except Exception:
+            return ""
 
     def _on_article_chosen(self, url: str) -> None:
         """The reader picked an article, so nothing may move the panel
@@ -928,12 +973,11 @@ class StatPearlsPanel(QWidget):
         worth keeping - blank, or already the page it would load.
         """
         self._show_articles = True
-        self._articles_dismissed = False
         self._auto_loaded = False
         here = (self._view.url().toString() or "").strip()
         home = self._current_home_url()
         if here in ("", "about:blank", home):
-            self._view.load(QUrl(self._chosen_url or home))
+            self._view.load(QUrl(self._safe_chosen() or home))
         if self._last_results:
             self._results.show_results(self._last_results)
 
@@ -949,11 +993,13 @@ class StatPearlsPanel(QWidget):
         Kept separate from `hide_article_list` (which is the popup-click
         path) so the two intents stay distinguishable: this one is a
         judgement about the list's usefulness rather than about this
-        card."""
-        self._articles_dismissed = True
-        # The header stays on screen when collapsed, so the section is
-        # itself the way back and has to keep being refreshed as cards
-        # change. Only the popup-click path hides it outright.
+        card.
+
+        The header stays on screen when collapsed, so the section is
+        itself the way back and has to keep being refreshed as cards
+        change. Only the popup-click path hides it outright, which is
+        why this handler now has nothing left to do.
+        """
 
     def load_url(self, url: str, term: str = "", section: str = "") -> None:
         """Navigate the panel webview.
@@ -1804,9 +1850,10 @@ class StatPearlsPanel(QWidget):
             if not edits:
                 return
             _log.diag(f"dock highlight: {len(edits)} of {len(nodes)} nodes")
-            colour = _config.get("highlightColor") or _TEAL
+            colour = _safe_css_colour(_config.get("highlightColor"))
             try:
-                self._page.runJavaScript(_HL_APPLY_JS % (json.dumps(edits), colour))
+                self._page.runJavaScript(
+                    _HL_APPLY_JS % (json.dumps(edits), json.dumps(colour)))
                 self._page.runJavaScript(_HL_PYCMD_SHIM_JS)
                 self._page.runJavaScript(_marker_js())
             except Exception as exc:
