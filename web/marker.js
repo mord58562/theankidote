@@ -422,10 +422,16 @@
                               : (isPre ? "label label-pre"
                                 : (isCustom ? "label label-custom" : "label")));
     }
-    // The button says what it will actually do.
+    // The button says what it will actually do. `isArticle` comes from
+    // data-sp-link, which is "article" only when the entry carries a
+    // verified destination - an NBK chapter, a DrugBank monograph, a
+    // custom URL. Otherwise the button runs a search and says so.
     if (_tipOpenBtn) {
       _tipOpenBtn.textContent = isArticle
-        ? "Open article \u2192"
+        ? ("Open " + (isDb ? "DrugBank"
+                    : (isUtd ? "UpToDate"
+                      : (isPre ? "reference"
+                        : (isCustom ? "link" : "article")))) + " \u2192")
         : ("Search " + (isDb ? "DrugBank"
                       : (isUtd ? "UpToDate"
                         : (isPre ? "Wikipedia" : "StatPearls"))) + " \u2192");
@@ -483,12 +489,13 @@
       }
     }
 
+    // Visibility only. The label is set above, from `isArticle`; this
+    // block used to reassign it unconditionally and so silently undid
+    // that, which is how every popup came to promise "Open article"
+    // whether or not an article existed. The label line predates the
+    // isArticle work by four releases and was simply never removed.
     if (_tipOpenBtn) {
       _tipOpenBtn.style.display = _tipUrl ? "block" : "none";
-      _tipOpenBtn.textContent   = isUtd ? "Open UpToDate →"
-                                : (isDb ? "Open DrugBank →"
-                                  : (isPre ? "Open reference →"
-                                    : (isCustom ? "Open link →" : "Open article →")));
     }
     _position(el);
   }
@@ -1031,6 +1038,11 @@
   // Dismiss on Escape and on mousedown outside both the mark and the tip.
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && _tip && _tip.style.display !== "none") {
+      // Stop it here. Anki's reviewer also takes Escape, and takes it
+      // as "leave the reviewer", so dismissing a popup dropped the
+      // user back to the deck list.
+      e.preventDefault();
+      e.stopPropagation();
       _cancelDwell();
       _cancelHide();
       _hideTip();

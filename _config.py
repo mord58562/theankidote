@@ -16,6 +16,7 @@ every `set_value` call - reads are O(1) with no syscall after first
 load.
 """
 
+import re as _re
 from aqt import mw
 
 # Anki maps add-on configs by package name.  Resolve to the top-level
@@ -173,3 +174,37 @@ def invalidate() -> None:
     """Drop the cache; used by tests + on profile switch."""
     global _cache_val
     _cache_val = None
+
+
+# ──────────────────────────────────────────────────────────────────────
+# Validating a config value that lands inside injected CSS
+# ──────────────────────────────────────────────────────────────────────
+# `highlightColor` is written into a stylesheet that is injected into
+# two different webviews: the reference dock, and the reviewer itself.
+# Config is a file on disk that a hand edit, a pasted config or another
+# add-on can reach, so the value is not trusted.
+#
+# This lives here rather than beside either call site because it had
+# been fixed at one of them and not the other. The dock was hardened
+# and the reviewer - where `pycmd` is Anki's own bridge, so the higher
+# privilege of the two - kept interpolating the raw value into a
+# `<style>` block prepended to the card HTML. One copy, imported by
+# both, is the only version of this that stays fixed.
+
+DEFAULT_HIGHLIGHT = "#0fcad4"
+
+_CSS_COLOUR_RE = _re.compile(
+    r"^(?:#[0-9a-fA-F]{3,8}"
+    r"|rgba?\(\s*[0-9.]+\s*,\s*[0-9.]+\s*,\s*[0-9.]+\s*(?:,\s*[0-9.]+\s*)?\)"
+    r"|[a-zA-Z]{3,20})$")
+
+
+def safe_css_colour(value) -> str:
+    """A colour safe to drop into an injected stylesheet, or the default.
+
+    A value is still landing inside a CSS rule, so it must not be able
+    to close that rule and write further ones, or close the enclosing
+    `<style>` element and open a script.
+    """
+    text = str(value or "").strip()
+    return text if _CSS_COLOUR_RE.match(text) else DEFAULT_HIGHLIGHT

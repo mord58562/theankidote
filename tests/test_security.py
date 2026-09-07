@@ -1066,22 +1066,48 @@ class BlocklistSuppressesAndOnlySuppresses(unittest.TestCase):
 
 
 class InjectedStylesheetColourIsNotACodePath(unittest.TestCase):
-    """`highlightColor` reaches injected JS, so it is attacker surface.
+    """`highlightColor` reaches injected CSS, so it is attacker surface.
 
     The dock highlighter builds a stylesheet inside the StatPearls or
     DrugBank page and the colour came straight from config, unencoded.
     Config is a file on disk that a hand edit or another add-on can
     reach, and a value that ends the JS string literal early would have
     run as script in the page holding those live sessions.
+
+    The same value also reaches a second stylesheet: the one
+    `pearls/_reviewer.py` prepends to the card HTML. That site was
+    missed when the dock was fixed, and it is the worse of the two,
+    because the reviewer webview carries Anki's own `pycmd` bridge. Both
+    now call one implementation in `_config`, and
+    `test_every_injection_site_validates` below is what keeps it that
+    way - a third call site added without validation fails here.
     """
 
     def _colour_fn(self):
-        src = (ROOT / "_panel_pearls.py").read_text(encoding="utf-8")
-        blk = src[src.index("_CSS_COLOUR_RE = re.compile("):
-                  src.index("def _nav_btn(")]
-        ns = {"re": re, "_TEAL": "#0fcad4"}
+        src = (ROOT / "_config.py").read_text(encoding="utf-8")
+        blk = src[src.index("_CSS_COLOUR_RE = _re.compile("):]
+        ns = {"_re": re, "DEFAULT_HIGHLIGHT": "#0fcad4"}
         exec(blk, ns)                                    # noqa: S102
-        return ns["_safe_css_colour"]
+        return ns["safe_css_colour"]
+
+    def test_every_injection_site_validates(self):
+        """Every read of `highlightColor` must pass through the validator.
+
+        Written as a scan rather than as two hand-listed assertions
+        because the bug was a site nobody remembered to list.
+        """
+        unguarded = []
+        for rel in ("pearls/_reviewer.py", "_panel_pearls.py"):
+            for i, line in enumerate((ROOT / rel).read_text(
+                    encoding="utf-8").splitlines(), 1):
+                if 'highlightColor' not in line or line.lstrip().startswith("#"):
+                    continue
+                if "safe_css_colour" not in line:
+                    unguarded.append(f"{rel}:{i}: {line.strip()}")
+        self.assertEqual(
+            unguarded, [],
+            "these read highlightColor without validating it before it "
+            f"reaches a stylesheet: {unguarded}")
 
     def test_real_colours_survive(self):
         f = self._colour_fn()

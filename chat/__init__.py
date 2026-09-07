@@ -634,6 +634,18 @@ class ChatBrowser(QWidget):
         layout.addWidget(self.view)
         self.setMinimumWidth(_config.get("minWidth") or 400)
 
+        # Restore the user's last-selected provider URL across Anki
+        # restarts. Falls back to the configured chatHomeUrl (Claude by
+        # default) on a fresh install.
+        #
+        # This call used to sit in `resizeEvent`. The dock loaded at all
+        # only because showing it resizes it, and every later resize -
+        # dragging the splitter, resizing the window - renavigated the
+        # webview, discarding a half-typed message and the conversation
+        # above it. A drag fires resizeEvent continuously, so it was not
+        # one reload but a stream of them.
+        self.load(_last_or_home_url())
+
     def resizeEvent(self, event) -> None:
         super().resizeEvent(event)
         try:
@@ -644,11 +656,6 @@ class ChatBrowser(QWidget):
                     _set_house_quote(lab, full)
         except Exception as exc:
             _log.error("chat resize house quote", exc)
-
-        # Restore the user's last-selected provider URL across Anki
-        # restarts.  Falls back to the configured chatHomeUrl (Claude
-        # by default) on a fresh install.
-        self.load(_last_or_home_url())
 
     @staticmethod
     def _providers():

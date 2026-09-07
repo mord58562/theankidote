@@ -202,12 +202,16 @@ def _card_text(card) -> str:
 
 
 def _term_search_url(term: str) -> str:
-    """In-book StatPearls search URL.  Targets the StatPearls book
-    namespace (`/books/n/statpearls/`) so the term lands in the
-    'Search this book' input rather than the Bookshelf-wide search bar."""
-    from urllib.parse import quote_plus
-    return ("https://www.ncbi.nlm.nih.gov/books/n/statpearls/?term="
-            f"{quote_plus(term)}")
+    """In-book StatPearls search URL, via the one in `_conditions`.
+
+    This was a second copy that had drifted: it never applied
+    `_us_spelling`, and it is the builder used for acronym-expansion
+    searches. So expanding an acronym to an Australian spelling sent
+    "oesophageal varices" to a database that only indexes "esophageal",
+    which is the exact failure `_us_spelling` was written to prevent -
+    fixed at one of the two copies and not the other.
+    """
+    return _conditions._term_search_url(term)
 
 
 _AE_E_SWAPS = [
@@ -469,6 +473,15 @@ def _build_pattern(terms: list):
             "summary": _esc_attr(t.get("summary") or ""),
             "source":  _esc_attr(t.get("source") or "statpearls"),
             "badge":   _esc_attr(t.get("label") or ""),
+            # Carried through explicitly. Every term builder above sets
+            # `link`, and `_span` below reads it, but this dict sat
+            # between them and dropped it - so `data-sp-link` was always
+            # the "search" default, `isArticle` in web/marker.js was
+            # always false, and the 2.5 work that made the popup stop
+            # claiming articles it does not have could never take
+            # effect. The badge read "The AnkiDote" even on the ~1,000
+            # conditions with a real NBK chapter.
+            "link":    _esc_attr(t.get("link") or "search"),
             "utd":     _esc_attr(json.dumps(t.get("utd") or [],
                                             separators=(",", ":"))),
         }
@@ -487,6 +500,7 @@ def _build_pattern(terms: list):
                 "summary": _esc_attr(t.get("summary") or ""),
                 "source":  _esc_attr(t.get("source") or "statpearls"),
                 "badge":   _esc_attr(t.get("label") or ""),
+                "link":    _esc_attr(t.get("link") or "search"),
                 "utd":     _esc_attr(json.dumps(t.get("utd") or [],
                                                 separators=(",", ":"))),
             }
@@ -611,7 +625,7 @@ def highlight_text(text: str, color: str = "") -> str:
         return text
     if not results:
         return text
-    col = color or _config.get("highlightColor") or "#0fcad4"
+    col = _config.safe_css_colour(color or _config.get("highlightColor"))
     try:
         return _inject_highlights(text, results, col)
     except Exception as exc:
@@ -648,7 +662,7 @@ def _on_card_will_show(html: str, card, kind: str) -> str:
         all_terms   = acronyms + drugs + conditions + preclinical + custom
         if not all_terms:
             return html
-        color = _config.get("highlightColor") or "#0fcad4"
+        color = _config.safe_css_colour(_config.get("highlightColor"))
         return _inject_highlights(html, all_terms, color)
     except Exception as exc:
         _log.error("card_will_show", exc)

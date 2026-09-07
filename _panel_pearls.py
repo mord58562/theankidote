@@ -489,26 +489,11 @@ _HL_PYCMD_SHIM_JS = r"""
 """
 
 
-_CSS_COLOUR_RE = re.compile(
-    r"^(?:#[0-9a-fA-F]{3,8}"
-    r"|rgba?\(\s*[0-9.]+\s*,\s*[0-9.]+\s*,\s*[0-9.]+\s*(?:,\s*[0-9.]+\s*)?\)"
-    r"|[a-zA-Z]{3,20})$")
-
-
-def _safe_css_colour(value) -> str:
-    """A colour safe to drop into the injected stylesheet, or the default.
-
-    `highlightColor` is config, and config is a file on disk that a hand
-    edit or another add-on can reach. It used to be interpolated into
-    the JS that builds this stylesheet without encoding, so a value
-    ending the string literal early ran as script in the StatPearls or
-    DrugBank page - the profile holding those live sessions. The value
-    is JSON-encoded at the call site now, which settles the script half;
-    this settles the other half, since a value is still landing inside a
-    CSS rule and could otherwise close it and write further rules.
-    """
-    text = str(value or "").strip()
-    return text if _CSS_COLOUR_RE.match(text) else _TEAL
+# Moved to `_config.safe_css_colour` so the reviewer and the dock share
+# one implementation. This bug was fixed at the dock and missed at the
+# reviewer precisely because there were two places it could have lived.
+# Kept as a module-level alias for this file's call sites.
+_safe_css_colour = _config.safe_css_colour
 
 
 def _nav_btn(parent: QWidget, text: str, tip: str,

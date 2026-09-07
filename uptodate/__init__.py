@@ -229,8 +229,12 @@ class UpToDatePage(QWebEnginePage):
         super().__init__(profile, parent)
         try:
             self.certificateError.connect(self._on_cert_error)
-        except Exception:
-            pass
+        except Exception as exc:
+            # `certificateError` became a signal in Qt 6.5. On anything
+            # older this raises, and the institutional-proxy users this
+            # dock exists for then hit an unexplained blank page. Say so
+            # in the log rather than passing silently.
+            _log.error("uptodate: no certificateError signal on this Qt", exc)
 
     def _on_cert_error(self, error):
         """Accept certificate errors for known UTD domains and the user's
@@ -238,11 +242,22 @@ class UpToDatePage(QWebEnginePage):
         try:
             host = error.url().host()
             trusted = list(_TRUSTED_CERT_DOMAINS)
-            # Also trust whatever domain the user has configured as home
+            # Also trust whatever domain the user has configured as home,
+            # which is how an institutional proxy gets covered.
+            #
+            # Appended WITH a leading dot. Without one, the `endswith`
+            # below is a substring test rather than a domain test: a
+            # home host of `example.edu` also trusted
+            # `notexample.edu` - a domain an attacker can simply
+            # register - and this handler hands out certificate
+            # acceptance on the view holding the institutional session.
+            # The two constants in `_TRUSTED_CERT_DOMAINS` already
+            # carry their dot; this one did not.
             home_host = QUrl(_home_url()).host()
             if home_host:
-                trusted.append(home_host)
+                trusted.append("." + home_host.lstrip("."))
             if any(host == d.lstrip(".") or host.endswith(d) for d in trusted):
+                _log.diag(f"uptodate: accepting certificate error for {host}")
                 error.acceptCertificate()
         except Exception:
             pass

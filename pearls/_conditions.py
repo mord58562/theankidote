@@ -196,6 +196,17 @@ _NAMES:  list = []
 # matched is dead weight. Merged before the index is built so the new
 # names are matchable like any other.
 _NEW: list = _library.get("new_conditions")
+# `_NEW` is deliberately NOT deep-copied the way the base list above is,
+# and two separate audits have now flagged that as the same bug. It is
+# not. The rich merge below does write into these dicts in place, inside
+# `_library.LIBRARY` - but the consequence the base copy exists to
+# prevent cannot follow here, because nothing reads these back as
+# source. `tools/build_library.py` sources `new_conditions` from
+# `content/_rich.py`, where `NEW_CONDITIONS` stubs carry `summary: ""`
+# and are filled from `RICH_SUMMARIES` at import. So an edit to an
+# override still takes effect on the next build, which is the property
+# at stake. The in-place write only ever stores the text the popup would
+# have rendered anyway.
 _CONDITIONS = list(_CONDITIONS) + list(_NEW)
 
 for _c in _CONDITIONS:

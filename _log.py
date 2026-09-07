@@ -17,6 +17,7 @@ Intentionally minimal - no rotating files, no JSON, no levels beyond
 debug/warn/error.  This is an Anki addon, not a server.
 """
 
+import os
 import sys
 import traceback
 from typing import Optional
@@ -74,7 +75,6 @@ _DIAG_PATH = None
 def diag_path() -> str:
     global _DIAG_PATH
     if _DIAG_PATH is None:
-        import os
         base = os.path.dirname(os.path.abspath(__file__))
         d = os.path.join(base, "user_files")
         try:
@@ -113,3 +113,11 @@ def diag(msg: str) -> None:
             fh.write(f"{time.strftime('%H:%M:%S')} {msg}\n")
     except Exception:
         pass
+
+# `pearls/_library.py` and `pearls/_updater.py` import this name. It did
+# not exist, so their `from .._log import log` raised ImportError, which
+# their own guard swallowed - and every message the updater emits about
+# a refused schema, a failed checksum or a quarantined payload went
+# nowhere. The silence was the bug: those are the messages that explain
+# why content stopped arriving.
+log = diag
