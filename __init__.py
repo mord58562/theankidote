@@ -1035,6 +1035,99 @@ def _caption(_w, text: str, wrap: bool = False):
     return lab
 
 
+def _push(_w, text: str, tip: str = ""):
+    """A push button that does not try to be the dialog's default.
+
+    Qt gives every QPushButton inside a QDialog `autoDefault`, and the
+    first one it finds becomes the default button - which macOS paints
+    in the accent colour. That is how "Custom terms..." ended up filled
+    blue while "Check now", two groups further down, stayed a plain
+    button: nothing had chosen either of them, tab order had.
+
+    In a preferences window the accent belongs to the action that
+    commits the window, and this one commits on close, so it belongs to
+    nothing. Every button that lives in the content of a dialog goes
+    through here and opts out; the confirming button of a modal is set
+    by its QDialogButtonBox, which is the only place that decision is
+    made deliberately.
+    """
+    btn = _w["QPushButton"](text)
+    try:
+        btn.setAutoDefault(False)
+        btn.setDefault(False)
+    except Exception:
+        pass
+    if tip:
+        btn.setToolTip(tip)
+    return btn
+
+
+def _version_label(_w):
+    """The add-on's own version, sitting bottom-right of Settings.
+
+    Two version numbers exist in this window and they move
+    independently: this one, which changes only when a build goes to
+    AnkiWeb, and the reference library's, which changes whenever the
+    content channel is rebuilt. The library's belongs inside the group
+    that owns it and stays there; this is the other one, kept where a
+    Mac app keeps it.
+
+    Fixed-pitch so the digits do not shift when the number gets longer,
+    dimmed to the caption colour so it reads as a mark rather than a
+    control, and selectable because the first thing anyone reporting a
+    problem is asked for is a version. Clicking copies all three numbers
+    a report actually needs.
+    """
+    lab = _caption(_w, _ADDON_VERSION)
+    try:
+        from aqt.qt import QFontDatabase
+        f = QFontDatabase.systemFont(QFontDatabase.SystemFont.FixedFont)
+        f.setPointSizeF(lab.font().pointSizeF())
+        lab.setFont(f)
+    except Exception:
+        pass
+
+    def _versions() -> str:
+        try:
+            from .pearls import _library
+            lib = _library.CONTENT_VERSION
+        except Exception:
+            lib = "unknown"
+        try:
+            import aqt
+            anki = aqt.appVersion
+        except Exception:
+            anki = "unknown"
+        return (f"The AnkiDote {_ADDON_VERSION}\n"
+                f"Library {lib}\n"
+                f"Anki {anki}")
+
+    lab.setToolTip(_versions() + "\n\nClick to copy")
+    try:
+        lab.setTextInteractionFlags(
+            _w["_Qt"].TextInteractionFlag.TextSelectableByMouse)
+    except Exception:
+        pass
+
+    def _copy(_event):
+        try:
+            mw.app.clipboard().setText(_versions())
+        except Exception as exc:
+            _log.error("copy versions", exc)
+            return
+        lab.setText("copied")
+        # Back to the number on its own, a beat slower than it left, so
+        # the change registers without the label flickering.
+        try:
+            from aqt.qt import QTimer
+            QTimer.singleShot(1400, lambda: lab.setText(_ADDON_VERSION))
+        except Exception:
+            lab.setText(_ADDON_VERSION)
+
+    lab.mousePressEvent = _copy
+    return lab
+
+
 def _build_modules_group(_w, first_run: bool):
     """Module on/off switches.
 
@@ -1112,7 +1205,7 @@ def _build_recommendations_group(_w, first_run: bool):
     box = _w["QGroupBox"]("Suggested add-on")
     lay = _w["QVBoxLayout"](box)
     lay.setSpacing(6)
-    btn = _w["QPushButton"]("Install Image Occlusion Enhanced")
+    btn = _push(_w, "Install Image Occlusion Enhanced")
     btn.clicked.connect(lambda: _install_addon("1374772155", btn))
     lay.addWidget(btn)
     return box
@@ -1202,8 +1295,8 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
         _add_row(entry)
 
     row_btns = _w["QHBoxLayout"]()
-    add_btn = _w["QPushButton"]("Add")
-    del_btn = _w["QPushButton"]("Remove")
+    add_btn = _push(_w, "Add")
+    del_btn = _push(_w, "Remove")
     add_btn.clicked.connect(lambda: (_add_row({}),
                                      table.setCurrentCell(table.rowCount() - 1, 0),
                                      table.editItem(table.item(table.rowCount() - 1, 0))))
@@ -1296,7 +1389,7 @@ def _build_pearls_group(_w):
     # caller needing a widget handle to read back on close.
     state = {"raw": _config.get("customTerms") or ""}
     row = _w["QHBoxLayout"]()
-    btn = _w["QPushButton"]("Custom terms...")
+    btn = _push(_w, "Custom terms...")
     count_lab = _caption(_w, "")
 
     def _refresh_count():
@@ -1371,7 +1464,7 @@ def _build_chat_group(_w):
     # button the only way back was deleting a PNG from inside the
     # add-on folder.
     icon_row = _w["QHBoxLayout"]()
-    icon_btn = _w["QPushButton"]("Reset provider icons")
+    icon_btn = _push(_w, "Reset provider icons")
     icon_btn.setToolTip(
         "Discard the favicons captured from each provider and fall back\n"
         "to the bundled logos. They are re-captured next time you open\n"
@@ -1469,7 +1562,7 @@ def _build_shortcuts_group(_w):
     # A blank field is ambiguous - deliberately disabled, or lost to a
     # bad write? There was no way back to a working binding short of
     # remembering what the default had been, so give people the door.
-    reset = _w["QPushButton"]("Restore defaults")
+    reset = _push(_w, "Restore defaults")
 
     def _restore():
         for k, dflt, _lbl in _SHORTCUT_FIELDS:
@@ -1532,11 +1625,11 @@ def _build_advanced_group(_w):
     lay.addWidget(debug_cb)
 
     row = _w["QHBoxLayout"]()
-    log_btn = _w["QPushButton"]("Show log...")
+    log_btn = _push(_w, "Show log...")
     log_btn.clicked.connect(_reveal_diagnostic_log)
     row.addWidget(log_btn)
 
-    insp_btn = _w["QPushButton"]("Web inspector...")
+    insp_btn = _push(_w, "Web inspector...")
     insp_btn.clicked.connect(_open_web_inspector)
     row.addWidget(insp_btn)
     row.addStretch(1)
@@ -1546,7 +1639,7 @@ def _build_advanced_group(_w):
     lay.addWidget(_caption(
         _w,
         f"Inspector is running on port {port}." if port else
-        "Needs Anki to restart.",
+        "Inspector is available after the next Anki start.",
         wrap=True))
     return box, debug_cb
 
@@ -1578,10 +1671,10 @@ def _build_library_group(_w):
     except Exception:
         version = "unknown"
 
-    lay.addWidget(_caption(_w, f"Version {version}"))
+    lay.addWidget(_caption(_w, f"Library {version}"))
 
     row = _w["QHBoxLayout"]()
-    check_btn = _w["QPushButton"]("Check now")
+    check_btn = _push(_w, "Check now")
     status = _caption(_w, "", wrap=True)
 
     def _do_check():
@@ -1678,15 +1771,38 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     advanced_box, debug_cb = _build_advanced_group(_w)
     tabs.addTab(_tab(advanced_box), "Advanced")
 
-    # Anki states this once, quietly, and lets people restart when it
-    # suits them - rather than a modal asking permission to quit their
-    # app the moment they change a checkbox.
-    footer = _caption(_w, "Some settings take effect after you restart Anki.")
-    try:
-        footer.setAlignment(Qt_.AlignmentFlag.AlignCenter)
-    except Exception:
-        pass
-    outer.addWidget(footer)
+    # The footer used to state "Some settings take effect after you
+    # restart Anki" permanently, and the Advanced tab said the same
+    # thing again in its own words. Both were over-broad. Shortcuts
+    # rebind the moment you close this window, verbose logging is read
+    # per call, custom terms apply to the next card drawn, and the
+    # toolbar redraws itself. What genuinely cannot take effect now is a
+    # module switched back on, because those imports are gated at load
+    # time - so the line names that, when it is true, and is absent the
+    # rest of the time. One place, one voice, no standing hedge.
+    loaded = {"UpToDate": _utd_mod is not None, "AI chat": _chat_mod is not None}
+    restart_note = _caption(_w, "")
+
+    def _refresh_restart_note(*_args):
+        pending = [name for name, cb in (("UpToDate", utd_cb), ("AI chat", chat_cb))
+                   if cb.isChecked() and not loaded[name]]
+        if not pending:
+            restart_note.setText("")
+        elif len(pending) == 1:
+            restart_note.setText(f"{pending[0]} loads when you restart Anki.")
+        else:
+            restart_note.setText(
+                f"{pending[0]} and {pending[1]} load when you restart Anki.")
+
+    for _cb in (utd_cb, chat_cb):
+        _cb.toggled.connect(_refresh_restart_note)
+    _refresh_restart_note()
+
+    footer_row = _w["QHBoxLayout"]()
+    footer_row.addWidget(restart_note)
+    footer_row.addStretch(1)
+    footer_row.addWidget(_version_label(_w))
+    outer.addLayout(footer_row)
 
     btns = _w["QDialogButtonBox"](_w["QDialogButtonBox"].StandardButton.Close)
     btns.rejected.connect(dlg.reject)
