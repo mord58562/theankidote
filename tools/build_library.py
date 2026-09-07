@@ -47,11 +47,20 @@ sys.path.insert(0, str(ROOT / "content"))
 # The schema the *code* in this tree understands. A library published
 # with a higher number must be refused by older add-ons rather than
 # half-loaded, so bump this whenever the shape below changes.
+#
+# Adding an optional key is not such a change. `_library._validate`
+# walks the keys it knows and ignores the rest, and `_library.get`
+# takes a default for exactly this case, so an older client reads a
+# library carrying a new key and simply does not use it. Bumping for
+# an addition would instead make every older client refuse the whole
+# library and stop receiving content. Bump when an existing key
+# changes shape or meaning; do not bump to add one.
 SCHEMA = 1
 
 
 def collect() -> dict:
     import _rich                                        # content/_rich.py
+    import _blocklist                                   # content/_blocklist.py
     from pearls import (  # noqa: E402
         _acronyms, _conditions, _descriptive, _drugs, _preclinical,
         _psych, _signs,
@@ -228,6 +237,12 @@ def collect() -> dict:
             f"DRUG_SUMMARIES names {len(orphaned)} generic(s) not in the "
             f"library, so the text would never match: {orphaned}")
 
+    blocklist = sorted({
+        t.strip() for t in getattr(_blocklist, "BLOCKLIST", []) if t.strip()})
+    bad = [t for t in blocklist if not isinstance(t, str)]
+    if bad:
+        raise SystemExit(f"BLOCKLIST holds non-strings: {bad[:3]}")
+
     return {
         "schema": SCHEMA,
         "conditions": conditions,
@@ -244,6 +259,7 @@ def collect() -> dict:
         "preclinical": _library.get("preclinical"),
         "new_preclinical": new_preclinical,
         "psych": _psych.PSYCH_TERMS,
+        "blocklist": blocklist,
     }
 
 
@@ -297,7 +313,11 @@ def main() -> int:
     (out.parent / "manifest.json").write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
-    print(f"{out.relative_to(ROOT)}  {len(blob) / 1024:.0f} KB"
+    try:
+        shown = out.relative_to(ROOT)
+    except ValueError:                  # --out pointed outside the repo
+        shown = out
+    print(f"{shown}  {len(blob) / 1024:.0f} KB"
           f"  ({len(gzip.compress(blob)) / 1024:.0f} KB gzipped)")
     for key in ("conditions", "drugs", "acronyms", "rich_summaries",
                 "signs", "descriptive", "preclinical", "psych"):

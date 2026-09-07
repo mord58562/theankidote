@@ -30,6 +30,8 @@ of this file:
 import json
 import os
 
+from . import _matcher
+
 
 def log(msg):
     """Deferred, defensive shim around `.._log.log`.
@@ -400,3 +402,12 @@ def get(key, default=_MISSING):
     if default is _MISSING:
         return LIBRARY[key]
     return LIBRARY.get(key, default)
+
+
+# Vocabulary modules build their matchers at import time, and every one
+# of them imports this module first to read its base list, so installing
+# the blocklist here runs before any of those matchers exist. Absent key
+# means an empty blocklist, which is what every library published before
+# this shipped will carry.
+_blocked = LIBRARY.get("blocklist", [])
+_matcher.set_blocklist(_blocked if isinstance(_blocked, list) else [])

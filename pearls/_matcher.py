@@ -129,6 +129,32 @@ def _scan(text: str, ci: bool):
     return fold_apostrophes(text), cs_toks
 
 
+_BLOCKED: frozenset = frozenset()
+
+
+def set_blocklist(phrases) -> None:
+    """Install the phrases that must never match, whatever offers them.
+
+    A term that fires on the wrong word - "OR" read as operating theatre
+    inside ordinary "or", an alias that turns out to name two different
+    things - is the most visible defect this add-on has, and every one
+    of them was fixed by editing a set in Python and cutting an AnkiWeb
+    release. The list is data, so it travels on the content channel
+    instead and `_library` installs it before any vocabulary module
+    reaches its `PhraseMatcher(...)` line.
+
+    Suppression is all this can do. A blocklist switches a popup off; it
+    cannot add one, retarget one, or alter a word of any summary. So a
+    content host that is wrong, or in the wrong hands, costs a user a
+    feature and cannot reach past that - which is what makes shipping it
+    remotely worth doing at all.
+    """
+    global _BLOCKED
+    _BLOCKED = frozenset(
+        fold_apostrophes(str(p).strip().lower())
+        for p in (phrases or ()) if str(p).strip())
+
+
 class PhraseMatcher:
     """Case-insensitive, longest-wins, non-overlapping phrase finder."""
 
@@ -154,6 +180,11 @@ class PhraseMatcher:
                 continue
             low = fold_apostrophes(p.lower() if self._ci else p)
             if low in seen:
+                continue
+            # Case-sensitive matchers keep `low` cased, so fold again
+            # rather than comparing a brand name against a lower-cased
+            # blocklist and missing it.
+            if _BLOCKED and low.lower() in _BLOCKED:
                 continue
             seen.add(low)
             max_len = max(max_len, len(low))

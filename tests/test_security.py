@@ -27,7 +27,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "content"))
 
-from pearls import _library, _updater  # noqa: E402
+from pearls import _library, _matcher, _updater  # noqa: E402
 
 
 def _valid():
@@ -1014,6 +1014,55 @@ class DownloadCeilingTracksTheManifest(unittest.TestCase):
             len(blob), _updater._MAX_BYTES,
             "the library we ship exceeds our own backstop; no client "
             "could install it")
+
+
+class BlocklistSuppressesAndOnlySuppresses(unittest.TestCase):
+    """The content channel can switch a term off, and do nothing more.
+
+    Every false-positive fix so far - an acronym read inside an ordinary
+    word, an alias naming two unrelated things - meant editing Python
+    and cutting a release. The blocklist moves that fix onto the content
+    channel, so the power it grants a content host has to be bounded on
+    purpose: it can stop a phrase being indexed, and it cannot add a
+    phrase, retarget one, or change any text.
+    """
+
+    def setUp(self):
+        self.addCleanup(_matcher.set_blocklist, [])
+
+    def test_blocked_phrase_stops_matching(self):
+        _matcher.set_blocklist([])
+        live = _matcher.PhraseMatcher(["asthma", "acute asthma"])
+        self.assertTrue(live.find("acute asthma in a child"))
+        _matcher.set_blocklist(["asthma", "acute asthma"])
+        dead = _matcher.PhraseMatcher(["asthma", "acute asthma"])
+        self.assertEqual(dead.find("acute asthma in a child"), [])
+
+    def test_blocking_is_case_and_apostrophe_insensitive(self):
+        _matcher.set_blocklist(["crohn's disease"])
+        m = _matcher.PhraseMatcher(["Crohn\u2019s disease"])
+        self.assertEqual(m.find("a flare of Crohn\u2019s disease"), [],
+                         "one spelling in the list must cover the "
+                         "curly-apostrophe and cased variants")
+
+    def test_it_cannot_introduce_a_phrase(self):
+        _matcher.set_blocklist(["sarcoidosis"])
+        m = _matcher.PhraseMatcher(["asthma"])
+        self.assertEqual(m.find("sarcoidosis on the film"), [],
+                         "a blocklist entry must never become matchable")
+        self.assertTrue(m.find("asthma"), "unrelated terms keep working")
+
+    def test_absent_key_means_no_suppression(self):
+        self.assertIsInstance(_library.get("blocklist", []), list)
+        _matcher.set_blocklist([])
+        self.assertTrue(_matcher.PhraseMatcher(["asthma"]).find("asthma"),
+                        "a library published before the key existed must "
+                        "suppress nothing")
+
+    def test_malformed_blocklist_does_not_break_loading(self):
+        for junk in (None, [], ["", "   "], [0, "asthma"]):
+            _matcher.set_blocklist(junk)
+            _matcher.PhraseMatcher(["pneumonia"])
 
 
 if __name__ == "__main__":
