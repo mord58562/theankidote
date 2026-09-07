@@ -5,6 +5,39 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.2] - 2026-09-07
+
+### Fixed
+
+- **Acronyms that double as English words expanded on sight.**
+  `resolve()` skips context scoring when an acronym has one candidate
+  expansion, which 401 of 420 do, so `OR`, `ALL`, `PET`, `CAP`, `TEN`,
+  `MEN`, `ARM`, `BED`, `MAP` and `LAST` fired wherever they appeared in
+  capitals - and capitals are exactly how a card author writes them for
+  emphasis. `_ENGLISH_WORD_ACRONYMS` now requires one of the
+  expansion's own context keywords before any of these expand,
+  mirroring the existing Roman-numeral suppression. Measured on a
+  6,088-note collection: 110 wrong popups removed, 80 correct kept.
+- **The same fault existed outside the acronym dictionary, and was far
+  larger.** A sweep of all 11,687 matchable terms across every
+  vocabulary against a system word list found nine single-word aliases
+  that are ordinary English words. `OR` (odds ratio) and `IF`
+  (intrinsic factor) sat in `preclinical`, which matches
+  case-insensitively - so the conjunction "or" fired an odds-ratio
+  popup on 1,889 notes and "if" fired intrinsic factor on 1,101. `F`
+  for bioavailability fired on 584. Also `CAP`, `TEN`, `DID`, `MAP`,
+  `TI`, and `Affect` in `psych`, where the ordinary verb matched.
+  Each bare alias was removed and the token handed to the guarded
+  acronym dictionary, which now also carries Odds Ratio as a second
+  `OR` candidate so both senses resolve by context. `Affect` was
+  renamed to `Affect and mood`; blunted, flat, incongruent and labile
+  affect already had their own entries. Measured on the live
+  collection: **3,591 false popups removed**, with the correct matches
+  kept.
+- **`ALL` was carried by too broad a keyword.** `child` matched "at ALL
+  ages" and "for ALL infants". Replaced with `lymphoblastic`, `blasts`,
+  `marrow` and `remission`.
+
 ## [2.4.1] - 2026-09-07
 
 ### Fixed

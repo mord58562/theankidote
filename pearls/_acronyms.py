@@ -38,7 +38,7 @@ _ROMAN_ACRONYMS = frozenset({
 # does.
 _ENGLISH_WORD_ACRONYMS = frozenset({
     "OR", "ALL", "PET", "CAP", "AS", "TEN", "MEN", "ARM", "BED", "MAP",
-    "LAST",
+    "LAST", "IF", "DID", "TI",
 })
 
 _ROMAN_CLASSIFIERS = frozenset({
