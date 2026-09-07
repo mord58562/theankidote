@@ -170,12 +170,17 @@ def main() -> int:
             if re.search(pat, e["summary"], re.I):
                 fail.append(f'{e["name"]}: US spelling, want {want}')
 
-    from pearls import _conditions                       # noqa: E402
     from tests.test_vocab import PopupHeightBudget       # noqa: E402
     est = PopupHeightBudget()
     for e in entries:
-        px = est._estimate_px(e["summary"], e["name"],
-                              _conditions._LOOKUP.get(e["name"].lower()))
+        # Cost the chip row off the DRAFT, not off the library. Looking
+        # the name up there returns None for every entry in a new batch -
+        # they are not in it yet, which is the point - so the UpToDate
+        # chips were costed at zero and an entry could verify clean and
+        # then fail `test_over_cap_backlog_only_shrinks` on merge. That
+        # is exactly what "Cancer immunotherapy" did: 812px here, 914px
+        # once its one chip row was counted.
+        px = est._estimate_px(e["summary"], e["name"], e)
         if px > MAX_PX or len(e["summary"]) > MAX_CHARS:
             fail.append(f'{e["name"]}: over budget '
                         f'({len(e["summary"])} chars, {px:.0f} px)')

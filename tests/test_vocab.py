@@ -114,10 +114,38 @@ class NoCollisions(unittest.TestCase):
     # so a card mentioning thiamine gets the DrugBank monograph, which
     # is the right answer clinically. Recorded here so these stay
     # accepted while any *new* overlap fails.
+    #
+    # The signs entries below were the library's only answer for those
+    # terms until the Medicine-1 framework gapfill gave each of them a
+    # full condition entry. `_condition_terms` runs before
+    # `_preclinical_terms` in `_reviewer.highlight_text`, so the
+    # condition wins and the sign is now unreachable. That is the
+    # intended outcome rather than a regression: every one of these
+    # condition entries is a superset of the sign it displaced, carrying
+    # the same opening definition plus the differential and the workup,
+    # against a sign entry of 280 to 470 characters. Splenomegaly keeps
+    # the one thing the sign said that the condition does not - how to
+    # tell a spleen from a kidney on palpation - which is a bedside
+    # examination point rather than a definition, and it is folded into
+    # the condition entry.
+    #
+    # Recorded rather than deleted because the signs vocabulary has no
+    # authoring overlay: it was compiled into `library.json` once during
+    # the 2.0 split, so removing an entry means editing a build artefact
+    # that the next build reads back. Accepting the shadow costs six
+    # dead entries in the shipped JSON and nothing at runtime.
     ACCEPTED_SHADOWS = {
         ("preclinical", "drugs"): {
             "calcitriol", "folic acid", "glucagon", "pyridoxine",
             "thiamine", "vasopressin", "vitamin k",
+        },
+        ("signs", "conditions"): {
+            "aphasia", "dysphasia",
+            "dysphagia", "difficulty swallowing",
+            "ptosis", "drooping eyelid",
+            "heart murmur", "murmur", "murmurs",
+            "lymphadenopathy", "enlarged lymph nodes",
+            "splenomegaly", "enlarged spleen",
         },
     }
 

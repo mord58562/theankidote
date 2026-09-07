@@ -9945,6 +9945,702 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "adherence to medication in patients with chronic disease"]],
         "summary": "",
     },
+    {
+        "name": "Multidrug-resistant tuberculosis",
+        "aliases": ["MDR-TB", "MDR tuberculosis", "Multi-drug resistant tuberculosis", "Drug-resistant tuberculosis"],
+        "utd": [["Overview", "diagnosis treatment and prevention of drug resistant tuberculosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Heart murmur",
+        "aliases": ["Heart murmurs", "Cardiac murmur", "Murmur", "Murmurs"],
+        "utd": [["Overview", "auscultation of cardiac murmurs in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Troponin",
+        "aliases": ["Troponins", "Cardiac troponin", "High-sensitivity troponin", "Troponin I", "Troponin T"],
+        "utd": [["Overview", "troponin testing clinical use"]],
+        "summary": "",
+    },
+    {
+        "name": "Chest X-ray interpretation",
+        "aliases": ["Chest X-ray", "Chest radiograph", "Chest xray", "Chest X ray", "Chest radiography"],
+        "utd": [["Overview", "approach to interpretation of the chest radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Tuberculin skin test",
+        "aliases": ["Mantoux test", "Mantoux", "Tuberculin test", "TST", "Purified protein derivative test"],
+        "utd": [["Overview", "use of the tuberculin skin test for diagnosis of latent tuberculosis infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiovascular examination",
+        "aliases": ["Cardiac examination", "Precordial examination", "Cardiovascular exam"],
+        "utd": [["Overview", "examination of the cardiovascular system in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Respiratory examination",
+        "aliases": ["Chest examination", "Respiratory exam", "Lung examination", "Examination of the respiratory system"],
+        "utd": [["Overview", "physical examination of the lungs and chest"]],
+        "summary": "",
+    },
+    {
+        "name": "Inhaler technique",
+        "aliases": ["Inhaler devices", "Metered dose inhaler", "Dry powder inhaler", "Spacer", "Puffer technique"],
+        "utd": [["Overview", "delivery of inhaled medication in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulmonary rehabilitation",
+        "aliases": ["Pulmonary rehab", "Respiratory rehabilitation", "Pulmonary rehabilitation programme"],
+        "utd": [["Overview", "pulmonary rehabilitation in chronic obstructive pulmonary disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiac pacing",
+        "aliases": ["Pacemaker", "Pacemakers", "Cardiac pacemaker", "Permanent pacemaker", "Artificial pacing"],
+        "utd": [["Overview", "permanent cardiac pacing modes and indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Antiarrhythmics",
+        "aliases": ["Antiarrhythmic", "Antiarrhythmic drugs", "Anti-arrhythmic", "Anti-arrhythmics", "Antiarrhythmic agents"],
+        "utd": [["Overview", "major side effects of antiarrhythmic drugs"]],
+        "summary": "",
+    },
+    {
+        "name": "Antiplatelets",
+        "aliases": ["Antiplatelet", "Antiplatelet therapy", "Antiplatelet agents", "Dual antiplatelet therapy", "DAPT"],
+        "utd": [["Overview", "antiplatelet agents in cardiovascular disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Coagulopathy of liver disease",
+        "aliases": ["Coagulopathy in liver disease", "Hepatic coagulopathy", "Coagulopathy of chronic liver disease", "Rebalanced haemostasis"],
+        "utd": [["Overview", "hemostatic abnormalities in patients with liver disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Anaemia of chronic kidney disease",
+        "aliases": ["Anaemia of CKD", "Renal anaemia", "Anemia of chronic kidney disease", "Anaemia of renal disease"],
+        "utd": [["Overview", "treatment of anemia in nondialysis chronic kidney disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Fluid overload",
+        "aliases": ["Hypervolaemia", "Hypervolemia", "Volume overload", "Fluid retention"],
+        "utd": [["Overview", "general principles of disorders of water balance and volume overload"]],
+        "summary": "",
+    },
+    {
+        "name": "Renal function tests",
+        "aliases": ["Tests of renal function", "Kidney function tests", "Albumin-to-creatinine ratio", "Urine albumin-to-creatinine ratio", "Albumin creatinine ratio"],
+        "utd": [["Overview", "assessment of kidney function"]],
+        "summary": "",
+    },
+    {
+        "name": "Urinalysis interpretation",
+        "aliases": ["Urinalysis", "Urine dipstick", "Dipstick urinalysis", "Urine microscopy"],
+        "utd": [["Overview", "urinalysis in the diagnosis of kidney disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Bristol stool chart",
+        "aliases": ["Bristol stool scale", "Bristol stool form scale", "Bristol chart"],
+        "utd": [["Overview", "bristol stool form scale assessment of bowel habit"]],
+        "summary": "",
+    },
+    {
+        "name": "Abdominal examination",
+        "aliases": ["Examination of the abdomen", "Abdominal exam", "Gastrointestinal examination"],
+        "utd": [["Overview", "physical examination of the abdomen"]],
+        "summary": "",
+    },
+    {
+        "name": "Per rectum examination",
+        "aliases": ["Digital rectal examination", "Rectal examination", "Per rectal examination"],
+        "utd": [["Overview", "digital rectal examination technique and consent"]],
+        "summary": "",
+    },
+    {
+        "name": "Kidney transplantation",
+        "aliases": ["Renal transplantation", "Kidney transplant", "Renal transplant"],
+        "utd": [["Overview", "kidney transplantation in adults overview"]],
+        "summary": "",
+    },
+    {
+        "name": "Assessment of fluid status",
+        "aliases": ["Fluid status assessment", "Assessment of volume status", "Volume status assessment", "Fluid status"],
+        "utd": [["Overview", "clinical assessment of extracellular fluid volume status"]],
+        "summary": "",
+    },
+    {
+        "name": "Renal dose adjustment",
+        "aliases": ["Dose adjustment in renal impairment", "Prescribing in renal impairment", "Dosing in renal impairment", "Renal dosing"],
+        "utd": [["Overview", "drug dosing adjustments in patients with chronic kidney disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Alcohol brief intervention",
+        "aliases": ["Brief intervention for alcohol", "Brief alcohol intervention", "Alcohol brief advice"],
+        "utd": [["Overview", "brief intervention for unhealthy alcohol use"]],
+        "summary": "",
+    },
+    {
+        "name": "Cerebellar syndrome",
+        "aliases": ["Cerebellar syndromes", "Cerebellar signs", "Cerebellar ataxia", "Cerebellar dysfunction", "Cerebellar disease"],
+        "utd": [["Overview", "overview of cerebellar ataxia in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug-induced seizures",
+        "aliases": ["Drug induced seizure", "Toxic seizures", "Toxicological seizures", "Drug-induced seizure"],
+        "utd": [["Overview", "seizures caused by drugs and toxins"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug-induced hyperglycaemia",
+        "aliases": ["Drug-induced hyperglycemia", "Steroid-induced hyperglycaemia", "Steroid-induced diabetes", "Glucocorticoid-induced diabetes", "Drug induced hyperglycaemia"],
+        "utd": [["Overview", "drug induced hyperglycemia and diabetes mellitus"]],
+        "summary": "",
+    },
+    {
+        "name": "Aphasia",
+        "aliases": ["Aphasias", "Dysphasia", "Acquired language disorder"],
+        "utd": [["Overview", "approach to the patient with aphasia"]],
+        "summary": "",
+    },
+    {
+        "name": "Tremor",
+        "aliases": ["Tremors", "Tremor of the hands", "Shaking of the hands"],
+        "utd": [["Overview", "overview of tremor in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Approach to dizziness and vertigo",
+        "aliases": ["Dizziness", "Vertigo", "Disorders of balance", "Approach to the dizzy patient", "Acute vestibular syndrome"],
+        "utd": [["Overview", "evaluation of the patient with vertigo"]],
+        "summary": "",
+    },
+    {
+        "name": "Painful red eye",
+        "aliases": ["Red eye", "The painful eye", "Painful eye", "Acute red eye"],
+        "utd": [["Overview", "the red eye evaluation and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Ptosis",
+        "aliases": ["Drooping eyelid", "Blepharoptosis", "Eyelid droop"],
+        "utd": [["Overview", "approach to the patient with ptosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Wasting of the small muscles of the hand",
+        "aliases": ["Small muscle wasting of the hand", "Intrinsic hand muscle wasting", "Wasting of the intrinsic hand muscles"],
+        "utd": [["Overview", "clinical manifestations and diagnosis of ulnar neuropathy at the elbow"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroid ultrasound",
+        "aliases": ["Thyroid ultrasonography", "Ultrasound of the thyroid", "Thyroid sonography"],
+        "utd": [["Overview", "thyroid nodules diagnostic evaluation and ultrasound"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroid scintigraphy",
+        "aliases": ["Thyroid scan", "Radionuclide thyroid scan", "Technetium pertechnetate thyroid scan", "Radioiodine uptake scan", "Thyroid uptake scan"],
+        "utd": [["Overview", "thyroid scintigraphy and radioiodine uptake"]],
+        "summary": "",
+    },
+    {
+        "name": "Urine osmolality and specific gravity",
+        "aliases": ["Urine osmolality", "Urinary osmolality", "Urine specific gravity", "Urinary specific gravity", "Urine concentration"],
+        "utd": [["Overview", "urinalysis in the diagnosis of kidney disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Neurological examination",
+        "aliases": ["Neurologic examination", "Neuro examination", "Neurological exam", "Examination of the nervous system"],
+        "utd": [["Overview", "the detailed neurologic examination in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroid examination",
+        "aliases": ["Examination of the thyroid", "Thyroid exam", "Neck examination for goitre"],
+        "utd": [["Overview", "clinical evaluation of goiter and thyroid nodules"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute monoarthritis",
+        "aliases": ["Monoarthritis", "Monoarticular arthritis", "Acute monoarticular arthritis", "Hot swollen joint"],
+        "utd": [["Overview", "monoarthritis in adults etiology and evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Seizures at the end of life",
+        "aliases": ["Terminal seizure", "Terminal seizures", "Seizure in the dying patient", "End-of-life seizures"],
+        "utd": [["Overview", "overview of managing common non pain symptoms in palliative care"]],
+        "summary": "",
+    },
+    {
+        "name": "Autoantibody interpretation",
+        "aliases": ["Autoantibodies", "Autoantibody testing", "Autoimmune serology", "Antinuclear antibody", "Anti-nuclear antibody", "Extractable nuclear antigen panel", "ENA panel"],
+        "utd": [["Overview", "measurement and clinical significance of antinuclear antibodies"]],
+        "summary": "",
+    },
+    {
+        "name": "Blood gas interpretation",
+        "aliases": ["Acid-base interpretation", "Acid base interpretation", "Interpreting a blood gas", "Blood gas analysis"],
+        "utd": [["Overview", "simple and mixed acid base disorders"]],
+        "summary": "",
+    },
+    {
+        "name": "Rheumatological examination",
+        "aliases": ["Musculoskeletal examination", "Joint examination", "GALS screen", "Rheumatology examination"],
+        "utd": [["Overview", "evaluation of the adult with polyarticular pain"]],
+        "summary": "",
+    },
+    {
+        "name": "WHO analgesic ladder",
+        "aliases": ["Analgesic ladder", "WHO pain ladder", "WHO analgesic ladder for cancer pain"],
+        "utd": [["Overview", "cancer pain management with opioids optimizing analgesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Anticipatory prescribing",
+        "aliases": ["Anticipatory medicines", "Anticipatory prescribing at the end of life", "Just in case medicines", "End-of-life anticipatory medicines"],
+        "utd": [["Overview", "palliative care the last hours and days of life"]],
+        "summary": "",
+    },
+    {
+        "name": "Recognising the dying patient",
+        "aliases": ["Recognising dying", "Signs of dying", "Dying phase", "Last days of life", "Terminal phase"],
+        "utd": [["Overview", "palliative care the last hours and days of life"]],
+        "summary": "",
+    },
+    {
+        "name": "Common variable immunodeficiency",
+        "aliases": ["Common variable immunodeficiency disease", "Common variable immune deficiency", "CVID"],
+        "utd": [["Overview", "clinical manifestations diagnosis and treatment of common variable immunodeficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Adverse drug reaction",
+        "aliases": ["Adverse drug reactions", "Adverse medicine reaction", "Drug reaction", "ADR"],
+        "utd": [["Overview", "drug allergy classification and clinical features of adverse drug reactions"]],
+        "summary": "",
+    },
+    {
+        "name": "Allergy testing",
+        "aliases": ["Allergy tests", "Investigation of suspected allergy", "Skin prick testing", "Skin prick test", "Allergen specific IgE"],
+        "utd": [["Overview", "overview of skin testing for allergic disease"]],
+        "summary": "",
+    },
+    {
+        "name": "HLA testing before drug prescribing",
+        "aliases": ["HLA screening before drug prescribing", "HLA typing before prescribing", "Pharmacogenomic screening for drug hypersensitivity", "Genetic testing in drug reactions"],
+        "utd": [["Overview", "hla and genetic risk factors for severe cutaneous adverse drug reactions"]],
+        "summary": "",
+    },
+    {
+        "name": "Dermatological examination",
+        "aliases": ["Dermatologic examination", "Skin examination", "Full skin check", "Examination of the skin"],
+        "utd": [["Overview", "approach to the clinical dermatologic diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug desensitisation and allergen immunotherapy",
+        "aliases": ["Drug desensitisation", "Drug desensitization", "Allergen immunotherapy", "Desensitisation therapy", "Specific allergen immunotherapy"],
+        "utd": [["Overview", "rapid drug desensitization for immediate hypersensitivity reactions"]],
+        "summary": "",
+    },
+    {
+        "name": "Infection control precautions",
+        "aliases": ["Infection control", "Standard precautions", "Infection prevention and control", "Hand hygiene"],
+        "utd": [["Overview", "infection prevention precautions to prevent transmission of infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Transmission-based precautions",
+        "aliases": ["Transmission based precautions", "Isolation precautions", "Isolation protocols", "Contact precautions", "Droplet precautions", "Airborne precautions"],
+        "utd": [["Overview", "isolation precautions to prevent transmission of infection in health care settings"]],
+        "summary": "",
+    },
+    {
+        "name": "Pathological fracture",
+        "aliases": ["Pathological fractures", "Pathologic fracture", "Pathological bone fracture"],
+        "utd": [["Overview", "pathologic fracture evaluation and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Mediastinal mass",
+        "aliases": ["Mediastinal masses", "Mediastinal compression", "Mediastinal tumour", "Anterior mediastinal mass"],
+        "utd": [["Overview", "approach to the adult patient with a mediastinal mass"]],
+        "summary": "",
+    },
+    {
+        "name": "Secondary polycythaemia",
+        "aliases": ["Secondary polycythemia", "Secondary erythrocytosis", "Reactive polycythaemia"],
+        "utd": [["Overview", "diagnostic approach to the patient with erythrocytosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Prothrombin G20210A mutation",
+        "aliases": ["Prothrombin gene mutation", "Prothrombin gene variant", "Factor II mutation", "Prothrombin 20210A"],
+        "utd": [["Overview", "prothrombin g20210a gene mutation and thrombophilia"]],
+        "summary": "",
+    },
+    {
+        "name": "Approach to coagulopathy",
+        "aliases": ["Coagulopathy", "Bleeding disorder", "Bleeding diathesis", "Clotting disorder"],
+        "utd": [["Overview", "approach to the adult with a suspected bleeding disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Lymphadenopathy",
+        "aliases": ["Lymphadenopathies", "Enlarged lymph nodes", "Lymph node enlargement", "Generalised lymphadenopathy", "Cervical lymphadenopathy"],
+        "utd": [["Overview", "evaluation of peripheral lymphadenopathy in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Splenomegaly",
+        "aliases": ["Hepatosplenomegaly", "Enlarged spleen", "Splenic enlargement", "Massive splenomegaly"],
+        "utd": [["Overview", "approach to the adult patient with splenomegaly"]],
+        "summary": "",
+    },
+    {
+        "name": "Hoarseness",
+        "aliases": ["Hoarse voice", "Dysphonia", "Husky voice", "Voice change"],
+        "utd": [["Overview", "hoarseness in adults evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Breast lump",
+        "aliases": ["Breast lumps", "Triple assessment", "Breast mass", "Breast lump assessment"],
+        "utd": [["Overview", "clinical evaluation of a breast lump in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Dysphagia",
+        "aliases": ["Difficulty swallowing", "Swallowing difficulty", "Oesophageal dysphagia", "Oropharyngeal dysphagia"],
+        "utd": [["Overview", "approach to the evaluation of dysphagia in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Coagulation test interpretation",
+        "aliases": ["Coagulation profile", "Coagulation screen", "Coagulation studies", "Clotting screen"],
+        "utd": [["Overview", "clinical use of coagulation tests"]],
+        "summary": "",
+    },
+    {
+        "name": "Cancer staging",
+        "aliases": ["TNM staging", "TNM classification", "Tumour staging", "Staging investigations"],
+        "utd": [["Overview", "principles of cancer staging"]],
+        "summary": "",
+    },
+    {
+        "name": "Splenectomy",
+        "aliases": ["Splenectomies", "Surgical removal of the spleen", "Elective splenectomy"],
+        "utd": [["Overview", "elective and emergency splenectomy indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Chemotherapy",
+        "aliases": ["Cytotoxic chemotherapy", "Chemotherapeutic agents", "Cytotoxic drugs", "Traditional chemotherapy"],
+        "utd": [["Overview", "principles of cytotoxic chemotherapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Cancer immunotherapy",
+        "aliases": ["Immune checkpoint inhibitor", "Checkpoint inhibitor", "Checkpoint blockade"],
+        "utd": [["Overview", "principles of cancer immunotherapy"], ["Toxicity", "toxicities associated with immune checkpoint inhibitors"]],
+        "summary": "",
+    },
+    {
+        "name": "Monoclonal antibodies",
+        "aliases": ["Monoclonal antibody", "Monoclonal antibody therapy", "Monoclonal antibody agents"],
+        "utd": [["Overview", "therapeutic monoclonal antibodies overview"]],
+        "summary": "",
+    },
+    {
+        "name": "Familial cancer risk assessment",
+        "aliases": ["Cancer genetics referral", "Familial cancer clinic", "Hereditary cancer risk", "Cancer genetic counselling", "Family history of cancer"],
+        "utd": [["Overview", "cancer risk assessment and genetic counseling"]],
+        "summary": "",
+    },
+    {
+        "name": "Mood disorders",
+        "aliases": ["Mood disorder", "Affective disorders", "Affective disorder"],
+        "utd": [["Overview", "overview of mood disorders in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Substance-induced psychotic disorder",
+        "aliases": ["Drug-induced psychosis", "Substance-induced psychosis", "Stimulant psychosis", "Methamphetamine-induced psychosis"],
+        "utd": [["Overview", "substance induced psychotic disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Methamphetamine use disorder",
+        "aliases": ["Methamphetamine dependence", "Amphetamine use disorder", "Crystal methamphetamine use disorder"],
+        "utd": [["Overview", "methamphetamine use disorder treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Benzodiazepine dependence and tapering",
+        "aliases": ["Benzodiazepine dependence", "Benzodiazepine taper", "Benzodiazepine tapering", "Benzodiazepine deprescribing"],
+        "utd": [["Overview", "benzodiazepine tapering and discontinuation"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute stress disorder",
+        "aliases": [],
+        "utd": [["Overview", "acute stress disorder diagnosis and treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Social and emotional wellbeing",
+        "aliases": ["Social and emotional wellbeing framework", "Social and emotional wellbeing model"],
+        "utd": [["Overview", "aboriginal and torres strait islander social and emotional wellbeing"]],
+        "summary": "",
+    },
+    {
+        "name": "Carer burden",
+        "aliases": ["Caregiver burden", "Carer strain", "Carer stress"],
+        "utd": [["Overview", "supporting family caregivers of patients with serious illness"]],
+        "summary": "",
+    },
+    {
+        "name": "Lived experience workforce",
+        "aliases": ["Peer support worker", "Peer worker", "Lived experience worker", "Consumer peer worker"],
+        "utd": [["Overview", "peer support services in mental health"]],
+        "summary": "",
+    },
+    {
+        "name": "Mental health multidisciplinary team",
+        "aliases": ["Mental health MDT", "Psychiatric multidisciplinary team", "Mental health multidisciplinary team meeting"],
+        "utd": [["Overview", "multidisciplinary team mental health care"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychiatric history",
+        "aliases": ["Psychiatric history taking", "Psychiatric interview", "Psychiatric assessment interview"],
+        "utd": [["Overview", "the psychiatric interview and assessment of the adult patient"]],
+        "summary": "",
+    },
+    {
+        "name": "Kessler Psychological Distress Scale (K-10)",
+        "aliases": ["Kessler Psychological Distress Scale", "Kessler 10", "K-10", "K10", "Kessler distress scale"],
+        "utd": [["Overview", "screening for depression in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "SF-12 health survey",
+        "aliases": ["SF-12", "Short Form 12", "Short Form-12 Health Survey", "SF-12v2"],
+        "utd": [["Overview", "measurement of health related quality of life"]],
+        "summary": "",
+    },
+    {
+        "name": "Functional assessment in mental health",
+        "aliases": ["Assessment of functional impairment", "Functional assessment in psychiatry", "Functional impairment assessment"],
+        "utd": [["Overview", "assessment of functional status and disability in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Risk assessment in psychiatry",
+        "aliases": ["Psychiatric risk assessment", "Risk assessment in mental health", "Mental health risk assessment"],
+        "utd": [["Overview", "assessment of risk of violence and suicide in psychiatric patients"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute behavioural disturbance",
+        "aliases": ["Acute severe behavioural disturbance", "Behavioural emergency", "Acute agitation", "Agitated patient"],
+        "utd": [["Overview", "assessment and emergency management of the acutely agitated or violent adult"]],
+        "summary": "",
+    },
+    {
+        "name": "Telepsychiatry",
+        "aliases": ["Tele-psychiatry", "Telemental health", "Telehealth psychiatry"],
+        "utd": [["Overview", "telepsychiatry and telemental health"]],
+        "summary": "",
+    },
+    {
+        "name": "Shared decision making",
+        "aliases": ["Shared decision-making", "Shared decision making in mental health", "Collaborative decision making"],
+        "utd": [["Overview", "shared decision making in clinical practice"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychoeducation",
+        "aliases": ["Psycho-education", "Family psychoeducation", "Psychoeducational intervention"],
+        "utd": [["Overview", "psychoeducation for patients and families"]],
+        "summary": "",
+    },
+    {
+        "name": "ISBAR clinical handover",
+        "aliases": ["ISBAR", "ISBAR handover", "iSoBAR", "ISOBAR", "Clinical handover"],
+        "utd": [["Overview", "handoffs and communication among clinicians"]],
+        "summary": "",
+    },
+    {
+        "name": "Medication diversion",
+        "aliases": ["Drug diversion", "Prescription drug diversion", "Diversion of prescribed medicines"],
+        "utd": [["Overview", "prevention of prescription drug misuse and diversion"]],
+        "summary": "",
+    },
+    {
+        "name": "Cognitive behavioural therapy",
+        "aliases": ["Cognitive behavioral therapy", "Cognitive behaviour therapy", "Cognitive behavior therapy", "Cognitive-behavioural therapy", "Cognitive-behavioral therapy", "CBT"],
+        "utd": [["Overview", "cognitive behavioral therapy overview"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychodynamic psychotherapy",
+        "aliases": ["Psychodynamic therapy", "Psychoanalytic psychotherapy", "Psychodynamic psychotherapies"],
+        "utd": [["Overview", "psychodynamic psychotherapy overview"]],
+        "summary": "",
+    },
+    {
+        "name": "Supportive psychotherapy",
+        "aliases": ["Supportive therapy", "Supportive counselling", "Supportive counseling"],
+        "utd": [["Overview", "supportive psychotherapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Stages of change (transtheoretical model)",
+        "aliases": ["Stages of change", "Stages of change model", "Transtheoretical model", "Transtheoretical model of change"],
+        "utd": [["Overview", "stages of change model health behavior"]],
+        "summary": "",
+    },
+    {
+        "name": "Structured problem solving",
+        "aliases": ["Structured problem-solving", "Problem solving therapy", "Problem-solving therapy"],
+        "utd": [["Overview", "problem solving therapy depression"]],
+        "summary": "",
+    },
+    {
+        "name": "Lifestyle interventions in mental illness",
+        "aliases": ["Lifestyle intervention in mental illness", "Lifestyle interventions in mental health"],
+        "utd": [["Overview", "exercise and lifestyle interventions for depression"]],
+        "summary": "",
+    },
+    {
+        "name": "Behavioural activation",
+        "aliases": ["Behavioral activation", "Activity scheduling", "Behavioural activation therapy"],
+        "utd": [["Overview", "behavioral activation therapy for depression"]],
+        "summary": "",
+    },
+    {
+        "name": "E-mental health",
+        "aliases": ["E-mental health tools", "Digital mental health", "Internet-delivered CBT", "Internet delivered CBT"],
+        "utd": [["Overview", "internet based cognitive behavioral therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychiatric rehabilitation",
+        "aliases": ["Psychosocial rehabilitation", "Rehabilitation psychiatry"],
+        "utd": [["Overview", "psychosocial rehabilitation serious mental illness"]],
+        "summary": "",
+    },
+    {
+        "name": "Mood stabilisers",
+        "aliases": ["Mood stabiliser", "Mood stabilizers", "Mood stabilizer", "Mood-stabilising drugs"],
+        "utd": [["Overview", "bipolar disorder maintenance pharmacotherapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypnotics",
+        "aliases": ["Hypnotic", "Hypnotic drugs", "Sedative-hypnotics", "Sedative-hypnotic"],
+        "utd": [["Overview", "pharmacotherapy for insomnia in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Antidepressant switching and discontinuation",
+        "aliases": ["Antidepressant discontinuation", "Antidepressant discontinuation syndrome", "Antidepressant withdrawal", "Antidepressant switching"],
+        "utd": [["Overview", "discontinuing antidepressant medications in adults"], ["Switching", "switching antidepressant medications"]],
+        "summary": "",
+    },
+    {
+        "name": "Restraint and seclusion",
+        "aliases": ["Seclusion", "Physical restraint", "Mechanical restraint", "Chemical restraint"],
+        "utd": [["Overview", "assessment and management of the acutely agitated patient"]],
+        "summary": "",
+    },
+    {
+        "name": "Delirium versus dementia versus depression",
+        "aliases": ["Delirium vs dementia vs depression", "Three Ds", "Three Ds of cognitive impairment"],
+        "utd": [["Overview", "evaluation of cognitive impairment and dementia"]],
+        "summary": "",
+    },
+    {
+        "name": "Late-life depression",
+        "aliases": ["Depression in older adults", "Geriatric depression", "Depressive pseudodementia", "Pseudodementia"],
+        "utd": [["Overview", "diagnosis and management of late life unipolar depression"]],
+        "summary": "",
+    },
+    {
+        "name": "Family-based therapy",
+        "aliases": ["Family-based treatment", "Maudsley family-based treatment", "Maudsley approach", "Family based therapy"],
+        "utd": [["Overview", "anorexia nervosa in adults and adolescents family based treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Culturally appropriate mental health assessment",
+        "aliases": ["Culturally safe mental health assessment", "Cultural assessment in psychiatry"],
+        "utd": [["Overview", "cultural formulation in psychiatric assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Professional boundaries",
+        "aliases": ["Therapeutic boundaries", "Boundary violation", "Boundary crossing", "Dual relationship"],
+        "utd": [["Overview", "boundary violations in the physician patient relationship"]],
+        "summary": "",
+    },
+    {
+        "name": "Consultation-liaison psychiatry",
+        "aliases": ["Consultation liaison psychiatry", "Liaison psychiatry", "Psychological medicine"],
+        "utd": [["Overview", "psychiatric consultation in the general hospital"]],
+        "summary": "",
+    },
+    {
+        "name": "Organic causes of psychiatric symptoms",
+        "aliases": ["Organic psychiatric presentation", "Medical mimics of psychiatric illness", "Secondary psychiatric syndrome", "Organic psychosis"],
+        "utd": [["Overview", "medical causes of psychiatric symptoms in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychiatric presentations of epilepsy",
+        "aliases": ["Postictal psychosis", "Psychiatric complications of epilepsy", "Interictal dysphoric disorder"],
+        "utd": [["Overview", "psychiatric comorbidity in epilepsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-stroke depression",
+        "aliases": ["Depression after stroke", "Poststroke depression"],
+        "utd": [["Overview", "poststroke depression diagnosis and treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychiatric complications of Parkinson disease",
+        "aliases": ["Parkinson disease psychosis", "Parkinson's disease psychosis", "Parkinson disease dementia", "Psychiatric complications of Parkinson's disease"],
+        "utd": [["Overview", "management of nonmotor symptoms in parkinson disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Medication-induced psychiatric symptoms",
+        "aliases": ["Drug-induced psychiatric symptoms", "Iatrogenic psychiatric symptoms", "Steroid psychosis"],
+        "utd": [["Overview", "drug induced psychiatric symptoms in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Grief and bereavement",
+        "aliases": ["Bereavement", "Normal grief", "Prolonged grief disorder", "Complicated grief", "Anticipatory grief"],
+        "utd": [["Overview", "bereavement and grief in adults clinical features"]],
+        "summary": "",
+    },
 ]
 
 
@@ -62084,6 +62780,2540 @@ RICH_SUMMARIES = {
         "responsibility gradually in adolescence. Note: naming "
         "someone non-compliant describes the person instead of the "
         "problem."
+    ),
+
+    "Multidrug-resistant tuberculosis": (
+        "Tuberculosis resistant to at least rifampicin and isoniazid, "
+        "the two most active first-line drugs. Epidemiology: about "
+        "400,000 cases a year worldwide, concentrated in the former "
+        "Soviet states, India, China, Indonesia and Papua New Guinea; "
+        "Australia sees a few dozen, nearly all acquired overseas. "
+        "Aetiology: interrupted or inadequate treatment selects "
+        "resistance, but most cases here are primary transmitted "
+        "resistance, so a treatment-naive patient is not reassuring. "
+        "Ix: culture with phenotypic susceptibility testing is the "
+        "reference standard, while Xpert MTB/RIF reports rifampicin "
+        "resistance within hours and is the trigger to suspect MDR. "
+        "Mx: all-oral regimens under a specialist tuberculosis "
+        "service with directly observed therapy - six months of "
+        "bedaquiline, pretomanid, linezolid and moxifloxacin where "
+        "the patient is eligible, otherwise a longer regimen built "
+        "around bedaquiline, linezolid, a fluoroquinolone and "
+        "clofazimine. Notifiable, with contact tracing. Monitoring: "
+        "QT prolongation from bedaquiline, moxifloxacin and "
+        "clofazimine, and linezolid myelosuppression and optic "
+        "neuritis. Note: never add a single drug to a failing "
+        "regimen."
+    ),
+    "Heart murmur": (
+        "Sound made by turbulent flow across a valve or a shunt, "
+        "described by timing against the carotid pulse, site, "
+        "radiation, pitch and response to manoeuvres. Types: systolic "
+        "murmurs are ejection (aortic or pulmonary stenosis, or "
+        "flow), pansystolic (mitral or tricuspid regurgitation, "
+        "ventricular septal defect) or late systolic (mitral valve "
+        "prolapse); diastolic murmurs are early decrescendo (aortic "
+        "or pulmonary regurgitation) or mid-diastolic rumbling "
+        "(mitral or tricuspid stenosis); a continuous machinery "
+        "murmur suggests patent ductus arteriosus. Examination: "
+        "graded 1 to 6, with a palpable thrill from grade 4. "
+        "Right-sided murmurs are louder on inspiration and left-sided "
+        "on expiration; Valsalva and standing intensify hypertrophic "
+        "cardiomyopathy while softening almost everything else; "
+        "handgrip intensifies mitral and aortic regurgitation. Ix: "
+        "transthoracic echocardiography settles it. Note: every "
+        "diastolic or continuous murmur is pathological. A soft early "
+        "systolic murmur with a normal second heart sound, no thrill, "
+        "no radiation and no symptoms is usually innocent."
+    ),
+    "Troponin": (
+        "Regulatory protein of the cardiac sarcomere, released when "
+        "myocytes are injured; the biomarker of myocardial "
+        "infarction, but a marker of injury and not of its cause. Ix: "
+        "high-sensitivity assays detect troponin in most healthy "
+        "people and register a rise within one to two hours, so "
+        "Australian emergency departments use accelerated 0/1-hour or "
+        "0/2-hour pathways with assay-specific rule-out and rule-in "
+        "thresholds rather than a single value. Criteria: infarction "
+        "needs a rise or fall with one value above the 99th "
+        "percentile together with ischaemic symptoms, new ischaemic "
+        "ECG change, or imaging or angiographic evidence of a new "
+        "abnormality. Causes: raised without acute coronary syndrome "
+        "in type 2 infarction from supply-demand mismatch (sepsis, "
+        "tachyarrhythmia, anaemia, hypotension), and in myocarditis, "
+        "takotsubo, pulmonary embolism, decompensated heart failure, "
+        "chronic kidney disease and rhabdomyolysis. Note: the delta "
+        "matters more than the absolute number. A stable elevation "
+        "with no change between samples points to chronic injury, and "
+        "a normal result excludes infarction only if it was drawn "
+        "inside a validated pathway."
+    ),
+    "Chest X-ray interpretation": (
+        "Plain radiograph of the thorax, read in the same order every "
+        "time so that nothing is missed. Types: the erect PA film is "
+        "the standard; an AP or supine film magnifies the heart, "
+        "hides free subdiaphragmatic gas and layers an effusion "
+        "invisibly, and a lateral finds what the frontal view "
+        "conceals. Examination: confirm patient, date and projection, "
+        "then rotation (spinous process midway between the clavicular "
+        "heads), inspiration (five to six anterior ribs) and "
+        "penetration. Work through airway, breathing (both lung "
+        "fields zone by zone, and the pleura), circulation "
+        "(cardiothoracic ratio under half on a PA film, mediastinal "
+        "contours), diaphragm, and everything else meaning bones, "
+        "soft tissues, lines and tubes. Then return deliberately to "
+        "the apices, behind the heart and below the diaphragm. Signs: "
+        "loss of a normal border localises the abnormality to the "
+        "lobe touching it, so a blurred right heart border is right "
+        "middle lobe and a lost left hemidiaphragm is left lower "
+        "lobe; air bronchograms mean alveolar filling. Note: "
+        "cardiomegaly cannot be called on an AP film."
+    ),
+    "Tuberculin skin test": (
+        "Intradermal injection of purified protein derivative into "
+        "the forearm, read at 48 to 72 hours as the transverse "
+        "diameter of induration, not of erythema. Uses: detection of "
+        "latent tuberculosis infection in contacts, migrants from "
+        "high-incidence countries, people about to start "
+        "immunosuppression or a biologic, and health workers. "
+        "Criteria: the cut-off moves with pre-test risk - five "
+        "millimetres is positive in HIV, other immunosuppression, "
+        "recent close contacts and fibrotic change on chest x-ray; "
+        "ten millimetres in other at-risk groups; fifteen millimetres "
+        "in low-risk people who arguably should not have been tested. "
+        "Note: BCG vaccination and non-tuberculous mycobacteria cause "
+        "false positives, which is why an interferon gamma release "
+        "assay such as QuantiFERON is preferred in anyone "
+        "BCG-vaccinated. False negatives come from HIV, "
+        "immunosuppression, overwhelming disease, very recent "
+        "infection and extremes of age. Australian notes: the skin "
+        "test is still used in young children and where an assay is "
+        "unavailable. A positive result means infection, not disease, "
+        "so exclude active tuberculosis before treating."
+    ),
+    "Cardiovascular examination": (
+        "Structured bedside assessment of the heart and circulation, "
+        "run from the end of the bed down to the ankles. Examination: "
+        "general appearance, breathlessness at rest and any midline "
+        "sternotomy scar; hands for clubbing, splinter haemorrhages "
+        "and peripheral cyanosis, then radial pulse for rate and "
+        "rhythm, carotid for character, and blood pressure; jugular "
+        "venous pressure for height and waveform, and face for malar "
+        "flush, conjunctival pallor and central cyanosis; precordium "
+        "inspected and palpated for scars, apex beat, thrills and "
+        "parasternal heave; auscultation at the four areas with bell "
+        "and diaphragm, timing every sound against the carotid, then "
+        "dynamic manoeuvres and the axilla and carotids for "
+        "radiation; finish with the lung bases, sacral and ankle "
+        "oedema, and the peripheral pulses. Signs: a slow-rising "
+        "pulse suggests aortic stenosis and a collapsing pulse aortic "
+        "regurgitation. Note: the apex beat sits in the fifth "
+        "intercostal space at the midclavicular line - displaced and "
+        "diffuse means volume overload, heaving and undisplaced means "
+        "pressure overload, tapping means mitral stenosis."
+    ),
+    "Respiratory examination": (
+        "Structured bedside assessment of the lungs and chest wall, "
+        "comparing left with right at every step. Examination: "
+        "general appearance, respiratory rate, accessory muscle use, "
+        "pursed-lip breathing, and any oxygen or inhaler at the "
+        "bedside; hands for clubbing, tar staining, a carbon dioxide "
+        "retention flap and peripheral cyanosis; face and neck for "
+        "central cyanosis, Horner syndrome, lymphadenopathy and "
+        "tracheal deviation; then chest expansion, percussion, "
+        "tactile fremitus, auscultation and vocal resonance, front "
+        "and back. Signs: consolidation gives dullness, bronchial "
+        "breathing and increased vocal resonance; effusion gives "
+        "stony dullness with absent breath sounds and reduced vocal "
+        "resonance; pneumothorax gives hyperresonance with absent "
+        "breath sounds; fibrosis gives fine late inspiratory crackles "
+        "that do not clear on coughing. Ix: oxygen saturation, peak "
+        "flow, spirometry and chest x-ray. Note: the trachea "
+        "separates them - it is pulled towards a collapse and pushed "
+        "away from a large effusion or a tension pneumothorax."
+    ),
+    "Inhaler technique": (
+        "The delivery step that decides whether an inhaled drug "
+        "reaches the airway at all, and the commonest reversible "
+        "cause of apparently uncontrolled asthma or COPD. Types: "
+        "pressurised metered dose inhalers need a slow deep breath "
+        "coordinated with actuation and should almost always be used "
+        "with a spacer; dry powder inhalers need a fast forceful "
+        "breath and fail in anyone who cannot generate that flow; "
+        "soft mist inhalers are slower and more forgiving; nebulisers "
+        "offer no advantage over a spacer in acute asthma. Mx: shake, "
+        "breathe out gently, seal the lips, actuate at the start of a "
+        "slow deep inhalation, hold the breath for up to ten seconds, "
+        "wait about thirty seconds before a second dose, and rinse "
+        "and spit after any inhaled corticosteroid. With a spacer, "
+        "actuate once and take four to six tidal breaths. "
+        "Complications: oropharyngeal candidiasis, dysphonia and a "
+        "sore throat when the mouth is not rinsed. Note: check "
+        "technique at every visit and before every escalation. Most "
+        "patients make at least one critical error, and poor "
+        "technique is indistinguishable from poorly controlled "
+        "disease."
+    ),
+    "Pulmonary rehabilitation": (
+        "Supervised exercise training with education and "
+        "self-management support, delivered over six to eight weeks, "
+        "for people disabled by chronic lung disease. Indications: "
+        "COPD with breathlessness limiting daily activity, which is "
+        "the indication regardless of FEV1, and also bronchiectasis, "
+        "interstitial lung disease and assessment around lung "
+        "surgery. The largest benefit is in the weeks immediately "
+        "after an admission for an exacerbation. Features: two or "
+        "three supervised sessions a week of endurance and resistance "
+        "training for both legs and arms, plus an individualised home "
+        "programme, breathlessness management, inhaler technique "
+        "review, a written action plan, and nutritional and "
+        "psychosocial input. Mx: referral needs no formal exercise "
+        "test, and neither severe airflow limitation nor home oxygen "
+        "is a barrier, though unstable cardiac disease is. Gains fade "
+        "over six to twelve months without maintenance exercise. "
+        "Programmes run through public hospitals and community "
+        "health, and Lung Foundation Australia keeps the directory. "
+        "Note: it improves exercise capacity, dyspnoea and quality of "
+        "life more than any bronchodilator does, and changes FEV1 not "
+        "at all, so never judge it on spirometry."
+    ),
+    "Cardiac pacing": (
+        "Delivery of electrical impulses to the myocardium when the "
+        "intrinsic conduction system fails to generate or conduct "
+        "them. Types: temporary pacing is transcutaneous through pads "
+        "for immediate rescue of an unstable bradycardia, or "
+        "transvenous through a wire for hours to days; permanent "
+        "pacing is a transvenous single-chamber, dual-chamber or "
+        "biventricular device, or a leadless capsule. The "
+        "three-letter code reads as chamber paced, chamber sensed, "
+        "response to sensing, so VVI paces the ventricle alone and "
+        "DDD preserves atrioventricular synchrony. Indications: "
+        "symptomatic sinus node disease, complete heart block, Mobitz "
+        "type II block, symptomatic bradycardia with no reversible "
+        "cause, and alternating bundle branch block. Ix: the ECG "
+        "shows a narrow pacing spike before a broad "
+        "left-bundle-morphology QRS when a right ventricular lead "
+        "captures. Complications: lead displacement, pneumothorax, "
+        "pocket haematoma and infection, pacemaker syndrome from lost "
+        "atrioventricular synchrony, and cardiomyopathy from a high "
+        "right ventricular pacing burden."
+    ),
+    "Antiarrhythmics": (
+        "Drugs that alter cardiac conduction or refractoriness to "
+        "terminate or suppress an arrhythmia. Every one of them is "
+        "also potentially proarrhythmic. Classification: the Vaughan "
+        "Williams scheme runs class I sodium channel blockers (Ia "
+        "quinidine, Ib lidocaine, Ic flecainide and propafenone), "
+        "class II beta blockers, class III potassium channel blockers "
+        "(amiodarone, sotalol) and class IV non-dihydropyridine "
+        "calcium channel blockers (verapamil, diltiazem); digoxin and "
+        "adenosine sit outside it. Uses: adenosine terminates "
+        "atrioventricular nodal re-entrant tachycardia and unmasks "
+        "flutter; flecainide is the pill-in-the-pocket option for "
+        "atrial fibrillation in a structurally normal heart; "
+        "amiodarone is the fallback when the heart is not normal. CI: "
+        "flecainide in ischaemic or structurally abnormal hearts, and "
+        "verapamil in broad-complex tachycardia or alongside a beta "
+        "blocker. SE: amiodarone damages thyroid, lung, liver, cornea "
+        "and skin and needs thyroid and liver monitoring; the class "
+        "III agents prolong the QT interval and cause torsades de "
+        "pointes. Note: rhythm control has never beaten rate control "
+        "on mortality, so the indication is symptoms."
+    ),
+    "Antiplatelets": (
+        "Drugs that inhibit platelet activation and aggregation, and "
+        "so the mainstay of arterial rather than venous thrombosis "
+        "prevention. Classification: aspirin irreversibly inhibits "
+        "cyclo-oxygenase for the life of the platelet; the P2Y12 "
+        "inhibitors are clopidogrel, a prodrug with variable "
+        "activation by CYP2C19, and the more potent ticagrelor and "
+        "prasugrel; glycoprotein IIb/IIIa inhibitors are reserved for "
+        "the catheter laboratory. Uses: long-term single antiplatelet "
+        "therapy after acute coronary syndrome, ischaemic stroke or "
+        "transient ischaemic attack, and in peripheral arterial "
+        "disease; dual therapy with aspirin plus a P2Y12 inhibitor "
+        "for up to twelve months after an acute coronary syndrome or "
+        "a stent, shortened when bleeding risk is high. SE: "
+        "gastrointestinal and intracranial bleeding, and dyspepsia; "
+        "ticagrelor causes dyspnoea and pauses, and prasugrel is "
+        "contraindicated after stroke. Note: these are not "
+        "anticoagulants, and stacking the two multiplies bleeding. In "
+        "atrial fibrillation after a stent, Australian practice drops "
+        "aspirin early and continues a direct oral anticoagulant with "
+        "clopidogrel."
+    ),
+    "Coagulopathy of liver disease": (
+        "Haemostatic failure in liver disease, in which a prolonged "
+        "INR reflects lost synthetic function rather than a bleeding "
+        "tendency. Pathophysiology: the liver makes both the "
+        "procoagulant factors (II, VII, IX, X, fibrinogen) and the "
+        "natural anticoagulants (protein C, protein S, antithrombin), "
+        "so both arms fall together and haemostasis is rebalanced on "
+        "a narrow base. Thrombocytopenia from hypersplenism is offset "
+        "by raised von Willebrand factor, and cirrhotic patients "
+        "thrombose - portal vein thrombosis, venous thromboembolism - "
+        "as readily as they bleed. Ix: INR, APTT, fibrinogen, "
+        "platelets, and factor VIII, which is normal or high in liver "
+        "disease but low in disseminated intravascular coagulation. "
+        "Mx: do not correct a number - no prophylactic fresh frozen "
+        "plasma before paracentesis or line insertion. Vitamin K 10 "
+        "mg IV for cholestasis or malnutrition. For active bleeding, "
+        "fibrinogen concentrate or cryoprecipitate if fibrinogen is "
+        "low, platelets and tranexamic acid, and control of the "
+        "source. Note: the INR was validated to monitor warfarin, not "
+        "to predict bleeding in liver disease, so a cirrhotic with an "
+        "INR of 2 is neither anticoagulated nor protected from clot."
+    ),
+    "Anaemia of chronic kidney disease": (
+        "Normocytic normochromic anaemia arising as kidney function "
+        "declines, driven mainly by failure of erythropoietin "
+        "production. Epidemiology: uncommon above an eGFR of 60 and "
+        "close to universal in dialysis patients. Pathophysiology: "
+        "the peritubular interstitial cells that make erythropoietin "
+        "are lost; hepcidin excess traps iron and blocks its "
+        "absorption, giving a functional iron deficiency; uraemic "
+        "toxins shorten red cell survival and blood is lost in the "
+        "dialysis circuit. Ix: FBC, film, reticulocytes, iron "
+        "studies, B12 and folate, CRP. Attribute the anaemia to "
+        "kidney disease only when it is normocytic and the eGFR is "
+        "under 60, since a microcytic picture still needs an iron and "
+        "bleeding workup. Mx: replace iron first, targeting a "
+        "ferritin above 100 micrograms/L (above 200 on haemodialysis) "
+        "and a transferrin saturation above 20%, with intravenous "
+        "iron preferred in dialysis. Only then add an "
+        "erythropoiesis-stimulating agent, epoetin or darbepoetin, "
+        "which requires PBS authority. Note: the target haemoglobin "
+        "is 100 to 115 g/L, deliberately subnormal - normalising it "
+        "raised stroke, vascular access thrombosis and mortality in "
+        "the large trials."
+    ),
+    "Fluid overload": (
+        "Expansion of extracellular fluid volume, producing "
+        "interstitial oedema and, once it reaches the lungs, "
+        "breathlessness. Causes: heart failure, cirrhosis with portal "
+        "hypertension, nephrotic syndrome and advanced chronic kidney "
+        "disease account for most; iatrogenic intravenous fluid, high "
+        "sodium intake and drugs (NSAIDs, corticosteroids, "
+        "pioglitazone) do the rest. Clinical features: raised JVP, "
+        "pitting oedema that is sacral in the bedbound, bibasal "
+        "crackles, a third heart sound, orthopnoea, ascites, and a "
+        "rising daily weight. Ix: daily weight and an accurate fluid "
+        "balance chart are worth more than any test; EUC, albumin, "
+        "BNP and chest X-ray. Mx: treat the cause, restrict sodium, "
+        "and restrict fluid where the patient is also hyponatraemic. "
+        "An intravenous loop diuretic is titrated to weight loss and "
+        "urine output rather than to a set dose, with a thiazide "
+        "added for diuretic resistance and ultrafiltration when the "
+        "kidney will not respond. Note: one kilogram of weight change "
+        "is one litre of fluid, and oedema is not visible until "
+        "several litres have gathered, so the chart detects overload "
+        "long before the ankles do."
+    ),
+    "Renal function tests": (
+        "The panel used to measure kidney function - creatinine with "
+        "a reported eGFR, urea and electrolytes, and the urine "
+        "albumin-to-creatinine ratio. Types: creatinine comes from "
+        "muscle, so it overstates function in the elderly, the "
+        "cachectic and in women, and does not rise until roughly half "
+        "of filtration is lost. eGFR is calculated from creatinine, "
+        "age and sex by the CKD-EPI equation, reported automatically "
+        "by Australian laboratories and indexed to a body surface "
+        "area of 1.73 m2. Urea rises with dehydration, "
+        "gastrointestinal bleeding, high protein intake and "
+        "corticosteroids, so a disproportionate urea points to a "
+        "prerenal state or an upper gastrointestinal bleed. Uses: the "
+        "albumin-to-creatinine ratio on a first-morning void grades "
+        "kidney damage as A1 under 3, A2 3 to 30 and A3 over 30 "
+        "mg/mmol, confirmed on a second sample. Dose: drug dosing at "
+        "the extremes of body size uses Cockcroft-Gault creatinine "
+        "clearance, not the indexed eGFR. Note: the equations assume "
+        "a steady state and are invalid in acute kidney injury, where "
+        "a creatinine still inside the reference range but climbing "
+        "already means substantial loss of function."
+    ),
+    "Urinalysis interpretation": (
+        "Reading the urine dipstick alongside microscopy; the value "
+        "is in the combination of findings, not in any single pad. "
+        "Ix: nitrites are specific but insensitive, since only "
+        "Enterobacterales reduce nitrate and the urine must sit in "
+        "the bladder for hours; leucocyte esterase is the reverse, "
+        "sensitive but raised by any inflammation. Blood on dipstick "
+        "with no red cells on microscopy means myoglobin or "
+        "haemoglobin. Protein detects albumin only in gram quantities "
+        "and misses light chains, so quantify with an "
+        "albumin-to-creatinine ratio; ketones with glucose suggest "
+        "diabetic ketoacidosis, ketones alone starvation. "
+        "Differential: sterile pyuria - partially treated infection, "
+        "chlamydial urethritis, tuberculosis, interstitial nephritis, "
+        "and stones or catheters. Mx: eTG treats symptoms, not "
+        "dipsticks. Do not diagnose infection on a dipstick alone in "
+        "an older or catheterised patient, where asymptomatic "
+        "bacteriuria is common and treating it only causes harm. "
+        "Note: casts localise the lesion - red cell casts mean "
+        "glomerulonephritis, white cell casts pyelonephritis or "
+        "interstitial nephritis, muddy brown granular casts acute "
+        "tubular necrosis, and hyaline casts nothing at all."
+    ),
+    "Bristol stool chart": (
+        "Seven-point visual scale of stool form, used to describe "
+        "bowel habit objectively and to titrate laxatives and "
+        "antidiarrhoeals. Types: 1 and 2 are separate hard lumps or a "
+        "lumpy sausage and mean constipation, 3 and 4 (a cracked "
+        "sausage, then a smooth soft sausage) are normal, 5 is soft "
+        "blobs with clear-cut edges, and 6 and 7 - fluffy ragged "
+        "pieces, then entirely liquid with no solid pieces - mean "
+        "diarrhoea. Uses: aim at type 4 when titrating an osmotic "
+        "laxative or an opioid-induced constipation regimen, and when "
+        "subtyping irritable bowel syndrome by the Rome IV criteria, "
+        "which are defined by the proportion of days with type 1 to 2 "
+        "against type 6 to 7 stools. Recording the form rather than "
+        "the patient's word separates true stool water content from "
+        "the frequency and urgency that patients usually mean by "
+        "diarrhoea. Note: form tracks colonic transit time better "
+        "than frequency does, so someone opening their bowels every "
+        "day with type 1 stools is constipated. Type 6 to 7 stool in "
+        "an older inpatient known to be constipated is overflow "
+        "diarrhoea around an impaction until a rectal examination "
+        "says otherwise."
+    ),
+    "Abdominal examination": (
+        "Systematic inspection, palpation, percussion and "
+        "auscultation of the abdomen, worked from the periphery "
+        "inwards. Examination: start at the hands - clubbing, "
+        "leukonychia, palmar erythema, Dupuytren contracture, "
+        "asterixis - then the arms for bruising, scratch marks and an "
+        "arteriovenous fistula, the face for scleral jaundice and "
+        "conjunctival pallor, and the chest for spider naevi and "
+        "gynaecomastia. Expose the abdomen and inspect for "
+        "distension, scars, striae and caput medusae. Palpate lightly "
+        "then deeply through the nine regions while watching the "
+        "face, then the liver, spleen, kidneys and aorta. Percuss the "
+        "liver and spleen and test for shifting dullness, auscultate "
+        "bowel sounds and bruits, and finish at the hernial orifices, "
+        "genitalia and a rectal examination. Note: the spleen is "
+        "palpated from the right iliac fossa upwards because it "
+        "enlarges towards it, moves with respiration, has a notch and "
+        "is dull to percussion, and unlike the kidney it cannot be "
+        "balloted. Red flags: board-like rigidity with rebound "
+        "tenderness means peritonitis, and a pulsatile expansile mass "
+        "an abdominal aortic aneurysm - both need a surgeon rather "
+        "than more examination."
+    ),
+    "Per rectum examination": (
+        "Digital examination of the anal canal, rectum and prostate. "
+        "It is an intimate examination, so consent, a chaperone and "
+        "documentation are as much part of the procedure as the "
+        "finger. Indications: rectal bleeding, change in bowel habit, "
+        "suspected prostate disease, urinary retention, faecal "
+        "incontinence or impaction, anorectal pain, and anal tone in "
+        "suspected cauda equina syndrome or spinal injury. "
+        "Examination: explain what will be done and why, obtain "
+        "explicit verbal consent, and offer a chaperone, recording "
+        "the offer, the outcome and the chaperone's name and role. "
+        "Position the patient left lateral with hips and knees "
+        "flexed, expose only when ready, and inspect the perianal "
+        "skin for fissures, fistulas, skin tags, haemorrhoids and "
+        "excoriation. Pass a lubricated gloved finger, assess resting "
+        "and squeeze tone, sweep the rectum for masses, feel the "
+        "prostate anteriorly in men, then inspect the glove for stool "
+        "colour, blood and mucus. Note: consent can be withdrawn at "
+        "any point and the examination then stops. An intimate "
+        "examination with no documented chaperone offer is "
+        "indefensible if a complaint follows, because an absent note "
+        "is taken to mean it never happened."
+    ),
+    "Kidney transplantation": (
+        "Placement of a donor kidney in the iliac fossa, the "
+        "treatment of choice for end-stage kidney disease and better "
+        "than dialysis for survival and for quality of life. "
+        "Epidemiology: Australia performs roughly 1,000 to 1,400 "
+        "kidney transplants a year, about a third from living donors, "
+        "with a median deceased-donor wait of two to three years. "
+        "Types: living donor, which allows pre-emptive "
+        "transplantation before dialysis and gives the best graft "
+        "survival; deceased donor after brain or circulatory death; "
+        "and paired exchange for incompatible pairs. Mx: induction "
+        "with basiliximab, then lifelong triple maintenance with "
+        "tacrolimus, mycophenolate and prednisolone. Complications: "
+        "rejection may be hyperacute from preformed antibody (now "
+        "rare with crossmatching), acute cellular or "
+        "antibody-mediated, or chronic. Cytomegalovirus, BK virus and "
+        "Pneumocystis are pre-empted with valganciclovir and "
+        "cotrimoxazole, and skin cancer, post-transplant "
+        "lymphoproliferative disorder and new-onset diabetes follow "
+        "the immunosuppression. Note: a rising creatinine in a "
+        "transplant recipient is rejection until a biopsy says "
+        "otherwise, and immunosuppression is never stopped without "
+        "the transplant unit."
+    ),
+    "Assessment of fluid status": (
+        "Bedside judgement of whether a patient is hypovolaemic, "
+        "euvolaemic or overloaded, a synthesis rather than a test, "
+        "because no single sign is reliable alone. Hx: thirst, "
+        "dizziness on standing, oral intake, vomiting, diarrhoea, "
+        "stoma and drain losses, diuretic and dialysis history, "
+        "orthopnoea, and any weight the patient knows. Examination: "
+        "hypovolaemia gives dry mucous membranes, capillary refill "
+        "over 2 seconds, tachycardia, a postural drop of more than 20 "
+        "mmHg systolic, and a flat JVP with urine output under 0.5 "
+        "mL/kg/h. Overload gives a raised JVP, pitting oedema that is "
+        "sacral in a supine patient, bibasal crackles, a third heart "
+        "sound and ascites. Ix: daily weight and a fluid balance "
+        "chart that is actually completed, then EUC, the "
+        "urea-to-creatinine ratio, a urinary sodium under 20 mmol/L "
+        "in a prerenal state, and lactate. Bedside ultrasound of the "
+        "inferior vena cava and a passive leg raise test fluid "
+        "responsiveness. Note: the daily weight is the most sensitive "
+        "measure and the one most often not done, since one kilogram "
+        "is one litre. Skin turgor is unreliable in the elderly, and "
+        "the JVP with a postural blood pressure carries most of the "
+        "information."
+    ),
+    "Renal dose adjustment": (
+        "Reducing the dose or lengthening the interval for renally "
+        "cleared drugs as kidney function falls, so the drug does not "
+        "accumulate to toxicity. Dose: use creatinine clearance by "
+        "Cockcroft-Gault rather than the reported eGFR, which is "
+        "indexed to a body surface area of 1.73 m2 and misleads at "
+        "the extremes of body size. Cautions: aminoglycosides and "
+        "vancomycin (both dosed by levels), piperacillin-tazobactam, "
+        "cefepime, meropenem, aciclovir, fluconazole and "
+        "cotrimoxazole all need a lower dose or a longer interval, "
+        "and nitrofurantoin is avoided below 30 mL/min, where it is "
+        "both ineffective and neurotoxic. Doxycycline, azithromycin, "
+        "ceftriaxone, metronidazole and flucloxacillin need no "
+        "change. Contraindications: dabigatran is about 80% renally "
+        "cleared and contraindicated below a creatinine clearance of "
+        "30 mL/min; apixaban and rivaroxaban are dose-reduced and "
+        "avoided in severe impairment; enoxaparin is halved to 1 "
+        "mg/kg daily below 30, or replaced by unfractionated heparin, "
+        "which needs none. Monitoring: recheck EUC on starting, on "
+        "any dose change and during intercurrent illness. The AMH and "
+        "the eTG renal impairment tables carry the figures."
+    ),
+    "Alcohol brief intervention": (
+        "A short structured conversation, usually 5 to 15 minutes and "
+        "delivered opportunistically, that reduces consumption in "
+        "people drinking at risky levels but not dependent. "
+        "Screening: AUDIT-C or the full AUDIT, with a quantified "
+        "weekly and heaviest-day intake. The NHMRC advises healthy "
+        "adults drink no more than 10 standard drinks a week and no "
+        "more than 4 on any one day, and no alcohol at all in "
+        "pregnancy, when breastfeeding or under 18. Features: the "
+        "FRAMES structure - Feedback on personal risk, Responsibility "
+        "for the decision resting with the patient, clear Advice to "
+        "cut down, a Menu of options, Empathy rather than "
+        "confrontation, and support for Self-efficacy. Mx: agree a "
+        "specific and measurable goal, offer a drinking diary and "
+        "written information, and book a review rather than leaving "
+        "it open. Note: brief intervention is for risky and harmful "
+        "drinking, not for dependence. A dependent drinker simply "
+        "told to stop can seize or develop delirium tremens, so "
+        "screen for dependence first and arrange planned withdrawal "
+        "with diazepam and thiamine, relapse prevention with "
+        "naltrexone or acamprosate, and drug and alcohol referral."
+    ),
+    "Cerebellar syndrome": (
+        "Disordered coordination, balance and speech from disease of "
+        "the cerebellum or its connections. Causes: acute - "
+        "cerebellar infarct or haemorrhage, alcohol intoxication, "
+        "phenytoin or lithium toxicity, and Wernicke encephalopathy. "
+        "Chronic - alcohol-related vermian degeneration, multiple "
+        "sclerosis, posterior fossa tumour, hypothyroidism, coeliac "
+        "disease, paraneoplastic anti-Yo, Friedreich ataxia and the "
+        "spinocerebellar ataxias. Clinical features: a hemispheric "
+        "lesion gives ipsilateral limb signs - intention tremor and "
+        "past-pointing, dysdiadochokinesis, dysmetria, rebound and "
+        "hypotonia. A midline or vermian lesion gives truncal and "
+        "gait ataxia with a wide-based unsteady gait and few limb "
+        "signs. Speech is scanning and staccato, and nystagmus beats "
+        "towards the side of the lesion. Ix: MRI brain (CT misses the "
+        "posterior fossa); TSH, B1, coeliac serology and drug levels "
+        "before labelling it degenerative. Note: Romberg is negative "
+        "in cerebellar disease. It is positive in sensory ataxia, "
+        "where closing the eyes removes the visual compensation for "
+        "lost proprioception."
+    ),
+    "Drug-induced seizures": (
+        "A seizure provoked by a drug, a toxin or its withdrawal, "
+        "rather than by epilepsy. Causes: overdose of tramadol, "
+        "bupropion, venlafaxine, tricyclic antidepressants, "
+        "clozapine, theophylline or isoniazid; stimulants including "
+        "amfetamines, cocaine and synthetic cannabinoids; withdrawal "
+        "from alcohol, benzodiazepines or baclofen. A lowered "
+        "threshold from hyponatraemia, hypoglycaemia or missed "
+        "antiepileptic doses is often what tips it over. Clinical "
+        "features: generalised tonic-clonic, usually without aura or "
+        "lateralising features, in someone with no epilepsy history. "
+        "Look for the toxidrome - anticholinergic with tricyclics, "
+        "serotonergic with tramadol and venlafaxine, and "
+        "sympathomimetic with stimulants. Ix: bedside glucose first, "
+        "then EUC, calcium, magnesium, paracetamol level, ECG for QRS "
+        "widening and QT. Mx: a benzodiazepine is first-line for all "
+        "of them; phenytoin is ineffective and may worsen toxic "
+        "seizures. Sodium bicarbonate for QRS over 100 ms with "
+        "tricyclics, and pyridoxine gram-for-gram for isoniazid. "
+        "Note: ring the Poisons Information Centre on 13 11 26 early."
+    ),
+    "Drug-induced hyperglycaemia": (
+        "A rise in blood glucose caused by a medication, ranging from "
+        "a transient shift to frank diabetes. Causes: glucocorticoids "
+        "are the commonest and the most predictable; then "
+        "second-generation antipsychotics, olanzapine and clozapine "
+        "worst; thiazides, tacrolimus and ciclosporin, protease "
+        "inhibitors, and beta blockers, which also mask "
+        "hypoglycaemia. Pathophysiology: steroids drive hepatic "
+        "gluconeogenesis and peripheral insulin resistance, so the "
+        "rise is postprandial and afternoon-weighted. Morning "
+        "prednisolone gives a normal fasting glucose and a high "
+        "reading by mid-afternoon. Ix: a fasting glucose or HbA1c "
+        "misses it. Check glucose before the evening meal or 2 hours "
+        "after lunch, and remember HbA1c lags a course shorter than 3 "
+        "months. Mx: intermediate-acting isophane insulin in the "
+        "morning matches the prednisolone profile better than a "
+        "long-acting basal; metformin for milder or longer courses; "
+        "step the dose down as the steroid tapers or hypoglycaemia "
+        "follows. Monitoring: RANZCP advises glucose and lipids at "
+        "baseline, 3 months, then yearly on any antipsychotic."
+    ),
+    "Aphasia": (
+        "Acquired loss of language - production, comprehension, "
+        "naming or repetition - from damage to the dominant "
+        "hemisphere. Note: aphasia is a language disorder and "
+        "dysarthria a motor speech one. A dysarthric patient chooses "
+        "the right words and slurs them; an aphasic patient "
+        "articulates clearly and chooses the wrong ones. Types: Broca "
+        "is non-fluent, effortful and telegraphic with comprehension "
+        "preserved and the patient frustrated (inferior frontal). "
+        "Wernicke is fluent but empty, full of neologisms and "
+        "paraphasias, and comprehension is lost with the patient "
+        "unaware (superior temporal). Conduction spares comprehension "
+        "but repetition fails (arcuate fasciculus). Global loses "
+        "everything. Transcortical types spare repetition. Causes: "
+        "left middle cerebral artery stroke commonest, then tumour, "
+        "abscess, herpes encephalitis and the primary progressive "
+        "aphasias. Ix: isolated aphasia is a stroke syndrome - urgent "
+        "CT and CT angiography, and it is thrombolysis-eligible. Mx: "
+        "stroke unit care with early speech pathology assessment."
+    ),
+    "Tremor": (
+        "Rhythmic involuntary oscillation of a body part, classified "
+        "by what brings it out rather than by how it looks. "
+        "Classification: rest tremor appears when the limb is fully "
+        "supported and settles on movement - Parkinson disease, or "
+        "drug-induced parkinsonism from metoclopramide, "
+        "prochlorperazine or antipsychotics. Postural and kinetic "
+        "tremor appears on holding a posture or moving - essential "
+        "tremor, and exaggerated physiological tremor from anxiety, "
+        "caffeine, salbutamol, thyrotoxicosis, lithium, valproate or "
+        "alcohol withdrawal. Intention tremor worsens as the target "
+        "is approached and means cerebellar disease. Clinical "
+        "features: 4 to 6 Hz asymmetric pill-rolling with "
+        "bradykinesia and rigidity is Parkinson. Bilateral 6 to 12 Hz "
+        "action tremor, better after alcohol, with a family history, "
+        "is essential tremor. A distractible tremor that changes "
+        "frequency when the other hand taps a rhythm is functional. "
+        "Ix: TSH, EUC, LFT; caeruloplasmin and copper if under 50; "
+        "DaTscan only when Parkinson and essential tremor cannot be "
+        "separated clinically."
+    ),
+    "Approach to dizziness and vertigo": (
+        "Triage of the dizzy patient. The useful questions are timing "
+        "and trigger, not which word the patient chooses. "
+        "Classification: acute vestibular syndrome is continuous "
+        "vertigo over days with nausea and nystagmus - vestibular "
+        "neuritis or posterior circulation stroke. Triggered episodic "
+        "lasts seconds on head movement - BPPV, or orthostatic "
+        "hypotension on standing. Spontaneous episodic lasts minutes "
+        "to hours - vestibular migraine, Meniere disease, transient "
+        "ischaemic attack, panic. Examination: HINTS applies only to "
+        "continuous vertigo with nystagmus, never to an episodic or "
+        "currently well patient. A normal head impulse, "
+        "direction-changing nystagmus or skew deviation is central; a "
+        "corrective saccade with unidirectional nystagmus and no skew "
+        "is peripheral. Dix-Hallpike for triggered vertigo. Ix: lying "
+        "and standing BP, ECG, glucose; MRI with diffusion if any "
+        "central feature, since CT misses most posterior fossa "
+        "infarcts early. Red flags: new headache or neck pain, any "
+        "cranial nerve or limb sign, and inability to walk unaided."
+    ),
+    "Painful red eye": (
+        "A red eye with pain, photophobia or reduced acuity is "
+        "sight-threatening until proven otherwise; a painless red eye "
+        "with normal vision usually is not. Causes: acute "
+        "angle-closure glaucoma, anterior uveitis, keratitis "
+        "(bacterial, herpes simplex, or contact-lens related "
+        "pseudomonal and acanthamoeba), corneal ulcer or foreign "
+        "body, scleritis, and endophthalmitis after surgery or "
+        "intravitreal injection. Conjunctivitis, episcleritis and "
+        "subconjunctival haemorrhage are the benign, painless ones. "
+        "Clinical features: circumcorneal ciliary injection, "
+        "photophobia, reduced acuity and a sluggish pupil mark the "
+        "serious causes, and against them sit diffuse conjunctival "
+        "redness with normal vision and discharge. A fixed "
+        "mid-dilated pupil with a hazy cornea, haloes, vomiting and a "
+        "stony-hard globe is angle closure. Ix: visual acuity in "
+        "every red eye; fluorescein for dendritic or geographic "
+        "staining; slit lamp for cells, flare and hypopyon, then "
+        "tonometry. Mx: same-day ophthalmology for pain, visual loss, "
+        "photophobia or contact-lens wear. Never start a topical "
+        "steroid without a slit lamp - it perforates a herpetic "
+        "ulcer."
+    ),
+    "Ptosis": (
+        "Drooping of the upper eyelid, from failure of levator "
+        "palpebrae superioris (third nerve), of Muller muscle "
+        "(sympathetic), or of the aponeurosis itself. Causes: "
+        "unilateral - third nerve palsy with the eye down and out and "
+        "a dilated pupil if compressive; Horner syndrome with partial "
+        "ptosis, miosis and anhidrosis; myasthenia gravis, or "
+        "congenital. Bilateral - myasthenia gravis, myotonic "
+        "dystrophy, chronic progressive external ophthalmoplegia, and "
+        "senile aponeurotic dehiscence, which is much the commonest "
+        "of all. Clinical features: measure the palpebral aperture "
+        "and levator function. Fatiguable ptosis worsening on "
+        "sustained upgaze, variable through the day, is myasthenia. "
+        "Ptosis with a small pupil is Horner; with a large pupil and "
+        "diplopia it is a third nerve palsy. Ix: ice pack test and "
+        "acetylcholine receptor antibodies; apraclonidine for Horner; "
+        "CT or MR angiography for Horner with neck pain, or for any "
+        "painful third nerve palsy. Red flags: sudden painful ptosis "
+        "with a dilated pupil is a posterior communicating artery "
+        "aneurysm until imaged."
+    ),
+    "Wasting of the small muscles of the hand": (
+        "Loss of bulk in the interossei, thenar and hypothenar "
+        "muscles, seen as guttering between the metacarpals. It is a "
+        "lower motor neurone sign, and the lesion may sit anywhere "
+        "from anterior horn cell to muscle. Causes: T1 root or lower "
+        "brachial plexus - Pancoast tumour, cervical rib, trauma. "
+        "Anterior horn - motor neurone disease, syringomyelia, old "
+        "poliomyelitis. Peripheral nerve - ulnar neuropathy at the "
+        "elbow, which spares the thenar eminence and numbs the little "
+        "finger, or median at the wrist, which takes the thenar "
+        "alone. Also disuse and rheumatoid arthritis. Examination: "
+        "test index finger and thumb abduction, look for "
+        "fasciculation, map sensation as root against nerve, then "
+        "examine the neck, chest apex and reflexes. Fasciculation "
+        "with brisk reflexes and no sensory loss is motor neurone "
+        "disease; dissociated sensory loss with absent upper limb "
+        "reflexes is syringomyelia. Ix: nerve conduction studies and "
+        "EMG; MRI cervical spine; apical chest imaging. Note: a "
+        "Horner syndrome on the same side puts the lesion at T1."
+    ),
+    "Thyroid ultrasound": (
+        "First-line imaging of the thyroid, used to characterise a "
+        "nodule and to guide fine-needle aspiration. It says nothing "
+        "about thyroid function. Indications: a palpable nodule or "
+        "goitre, an incidental nodule found on other imaging, "
+        "cervical lymphadenopathy, and follow-up of known nodules. It "
+        "is not indicated for hyperthyroidism or hypothyroidism "
+        "alone, where the answer is a TSH. Features: risk is scored, "
+        "most often on TI-RADS, from composition, echogenicity, "
+        "shape, margin and echogenic foci. Solid, markedly "
+        "hypoechoic, taller-than-wide, irregular or lobulated "
+        "margins, and microcalcifications and extrathyroidal "
+        "extension are the suspicious ones. A purely cystic or "
+        "spongiform nodule is effectively benign. Ix: the size "
+        "threshold for FNA rises as risk falls, so a highly "
+        "suspicious nodule is sampled at about 1 cm and a mildly "
+        "suspicious one only when considerably larger. Abnormal "
+        "cervical nodes are biopsied whatever the nodule measures. "
+        "Note: check TSH first. A suppressed TSH raises a "
+        "hyperfunctioning nodule, which is a scintigraphy question, "
+        "not an FNA one."
+    ),
+    "Thyroid scintigraphy": (
+        "Nuclear imaging with technetium-99m pertechnetate or "
+        "radioiodine, showing which thyroid tissue is trapping "
+        "isotope and therefore functioning. Indications: a thyrotoxic "
+        "patient whose cause is unclear, and a nodule found alongside "
+        "a suppressed TSH. It answers a functional question, so it "
+        "does not replace ultrasound and has no role in a euthyroid "
+        "patient. Types: diffuse increased uptake is Graves disease. "
+        "A single hot focus with the rest of the gland suppressed is "
+        "a toxic adenoma, and multiple patchy foci a toxic "
+        "multinodular goitre. Near-absent uptake in a thyrotoxic "
+        "patient means the hormone was not made now - thyroiditis, "
+        "exogenous thyroxine, or an iodine load from contrast or "
+        "amiodarone. Contraindications: pregnancy and breastfeeding; "
+        "recent iodinated contrast blocks uptake for weeks. Note: a "
+        "hot nodule is almost never malignant and needs no FNA, "
+        "whereas a cold nodule carries the same 5 to 10% risk as any "
+        "nodule and is worked up on ultrasound and cytology."
+    ),
+    "Urine osmolality and specific gravity": (
+        "Two measures of how concentrated the urine is, asking "
+        "whether the kidney is handling water appropriately for the "
+        "plasma. Definition: osmolality counts particles directly and "
+        "runs 50 to 1200 mOsm/kg across the physiological range. "
+        "Specific gravity is a density estimate on the dipstick, "
+        "1.001 to 1.035, and tracks it only roughly - glucose, "
+        "protein and radiocontrast are heavy molecules that lift "
+        "specific gravity out of proportion to osmolality. Uses: in "
+        "hyponatraemia, a urine osmolality under 100 means "
+        "antidiuretic hormone is appropriately switched off - primary "
+        "polydipsia, beer potomania, and low solute intake. Anything "
+        "higher in a euvolaemic patient with urine sodium over 30 "
+        "points to SIADH. In polyuria, dilute urine that fails to "
+        "concentrate on fluid deprivation is arginine vasopressin "
+        "deficiency or resistance, formerly cranial and nephrogenic "
+        "diabetes insipidus. In acute kidney injury, concentrated "
+        "urine favours a prerenal cause. Note: it is uninterpretable "
+        "without a paired plasma osmolality and an assessment of "
+        "volume state."
+    ),
+    "Neurological examination": (
+        "Structured bedside assessment that localises a lesion before "
+        "anything is imaged. The question is always where first, then "
+        "what. Examination: start with higher function and speech - "
+        "orientation, naming, repetition, comprehension - then "
+        "cranial nerves two to twelve, and with them acuity, fields, "
+        "pupils, fundi and eye movements. Each limb is inspection, "
+        "tone, power graded 0 to 5, reflexes, coordination and "
+        "sensation. Gait and Romberg come last and are often the most "
+        "informative part. Classification: the pattern names the "
+        "level. Upper motor neurone gives increased tone, pyramidal "
+        "weakness with weak arm extensors and weak leg flexors, brisk "
+        "reflexes and an upgoing plantar. Lower motor neurone gives "
+        "wasting, fasciculation, hypotonia and lost reflexes. "
+        "Cerebellar gives ataxia and nystagmus with normal power. A "
+        "sensory level localises the cord, and glove-and-stocking "
+        "loss means neuropathy. Note: the eyes and speech carry most "
+        "of the localising information in a stroke and are the parts "
+        "most often skipped."
+    ),
+    "Thyroid examination": (
+        "Assessment of the thyroid gland itself and of the systemic "
+        "effects of thyroid hormone. Examination: inspect from the "
+        "front with the neck slightly extended, then give the patient "
+        "water. A thyroid mass rises on swallowing; a thyroglossal "
+        "cyst rises on swallowing and again on tongue protrusion; a "
+        "lymph node moves with neither. Palpate from behind with both "
+        "hands for size, symmetry, consistency, nodularity, "
+        "tenderness and mobility, then the cervical and "
+        "supraclavicular nodes. Percuss the manubrium and test "
+        "Pemberton sign, elevating the arms to look for facial "
+        "congestion, if retrosternal extension is suspected. "
+        "Auscultate for a bruit, which suggests Graves disease. "
+        "Features: finish peripherally - pulse and rhythm, tremor, "
+        "sweating, reflexes brisk in thyrotoxicosis and slow-relaxing "
+        "in hypothyroidism, proximal myopathy, pretibial myxoedema, "
+        "and the eye signs of lid lag, exophthalmos and "
+        "ophthalmoplegia. Red flags: a hard fixed mass, hoarseness or "
+        "stridor needs urgent imaging and referral."
+    ),
+    "Acute monoarthritis": (
+        "Pain, swelling and warmth in a single joint over hours to "
+        "days, treated as septic arthritis until an aspirate says "
+        "otherwise. Causes: septic arthritis, gout, calcium "
+        "pyrophosphate deposition, trauma or haemarthrosis, reactive "
+        "and gonococcal arthritis, and the first joint of an evolving "
+        "spondyloarthritis. Clinical features: a hot, red, "
+        "exquisitely tender joint held still, with pain through the "
+        "whole arc of passive movement. Fever is absent in about half "
+        "of septic joints while gout readily produces fever and a CRP "
+        "over 100, so neither separates them. Ix: aspirate before "
+        "antibiotics and send synovial fluid for urgent Gram stain, "
+        "culture, cell count and polarised microscopy; add blood "
+        "cultures, FBC, CRP, urate and a plain film. Serum urate is "
+        "normal or low during an acute attack and does not exclude "
+        "gout. Note: crystals do not exclude infection, since the two "
+        "coexist, so a crystal-positive aspirate from a "
+        "septic-looking joint still needs culture and antibiotics. "
+        "Red flags: a prosthetic joint, immunosuppression or "
+        "injecting drug use means urgent orthopaedic referral for "
+        "washout, not ward aspiration."
+    ),
+    "Seizures at the end of life": (
+        "A seizure in the terminal phase, when the oral route has "
+        "failed and the usual antiepileptic can no longer be "
+        "swallowed. Causes: loss of the oral antiepileptic as "
+        "swallowing fails, brain metastases or primary tumour, "
+        "hyponatraemia, hypoglycaemia, uraemia, hepatic "
+        "encephalopathy, and accumulating opioid metabolites or "
+        "tramadol in renal failure. Clinical features: a generalised "
+        "convulsion, but also myoclonic jerking and subtle focal "
+        "twitching easily read as terminal agitation. Mx: midazolam 5 "
+        "to 10 mg subcutaneously for the acute seizure, repeated as "
+        "needed, then a continuous subcutaneous infusion over 24 "
+        "hours if seizures recur or epilepsy is established. "
+        "Subcutaneous clonazepam suits where a longer duration is "
+        "wanted, and levetiracetam can be given subcutaneously if "
+        "seizures continue. Never simply stop an antiepileptic as "
+        "swallowing fails; convert it. Note: known epilepsy or brain "
+        "metastases means midazolam is written up as an anticipatory "
+        "PRN before the oral route goes, since a first seizure at "
+        "home without it is what sends a dying patient to the "
+        "emergency department."
+    ),
+    "Autoantibody interpretation": (
+        "Reading the antibody panel in suspected connective tissue "
+        "disease, where a result means little without the pre-test "
+        "probability. Screening: ANA is the entry test and is "
+        "positive in 5 to 15 per cent of healthy adults, rising with "
+        "age, so ordering it for fatigue or non-specific arthralgia "
+        "yields far more false positives than diagnoses. Types: the "
+        "pattern points to the antigen, homogeneous suggesting "
+        "double-stranded DNA, speckled the extractable nuclear "
+        "antigens, centromere limited scleroderma and nucleolar "
+        "diffuse scleroderma. Titre matters, 1:80 being weak and "
+        "common while 1:640 or above is meaningful. Ix: a positive "
+        "ANA is followed by anti-dsDNA and the ENA panel of Ro, La, "
+        "Sm, RNP, Scl-70 and Jo-1. Anti-dsDNA and anti-Sm are "
+        "specific for lupus, and the dsDNA titre tracks activity and "
+        "nephritis. Anti-CCP is far more specific than rheumatoid "
+        "factor for rheumatoid arthritis and predicts erosive "
+        "disease. Note: rheumatoid factor is also positive in Sjogren "
+        "syndrome, hepatitis C, endocarditis and about 5 per cent of "
+        "healthy adults, so it neither makes nor excludes rheumatoid "
+        "arthritis."
+    ),
+    "Blood gas interpretation": (
+        "A stepwise read of pH, PaCO2, bicarbonate and lactate that "
+        "names the primary disorder and asks whether the compensation "
+        "fits. Ix: a venous gas answers pH, bicarbonate, base excess "
+        "and lactate, so arterial sampling is reserved for "
+        "oxygenation and an accurate PaCO2. Diagnosis: take it in "
+        "order. pH below 7.35 is acidaemia and above 7.45 alkalaemia; "
+        "a PaCO2 above 45 with acidaemia is respiratory and a "
+        "bicarbonate below 22 with acidaemia is metabolic. Then test "
+        "the compensation. Winter's formula gives the expected PaCO2 "
+        "in a metabolic acidosis as 1.5 times the bicarbonate plus 8, "
+        "give or take 2, and a higher measured value means an added "
+        "respiratory acidosis. The anion gap is sodium minus chloride "
+        "and bicarbonate, normally 8 to 12, and a raised gap points "
+        "to lactate, ketones, renal failure, salicylate or ethylene "
+        "glycol, a normal gap to diarrhoea, renal tubular acidosis or "
+        "saline loading. Note: compensation never overshoots and "
+        "never fully corrects the pH, so a normal pH with a grossly "
+        "abnormal PaCO2 and bicarbonate is two disorders, not one. "
+        "Red flags: a normal or rising PaCO2 in an exhausted "
+        "asthmatic signals impending respiratory arrest."
+    ),
+    "Rheumatological examination": (
+        "The screening and then focused examination of joints, "
+        "muscles and periarticular tissues. Screening: the GALS "
+        "screen asks about pain or stiffness, difficulty dressing and "
+        "difficulty with stairs, then inspects Gait, Arms, Legs and "
+        "Spine; a normal GALS makes significant joint disease "
+        "unlikely. Examination: for each region look for swelling, "
+        "deformity, wasting and skin change, feel for warmth, "
+        "effusion and joint-line tenderness, then move actively and "
+        "passively against the other side and assess function. "
+        "Synovitis is boggy warm swelling with stress pain, distinct "
+        "from the hard bony swelling of osteoarthritis and the focal "
+        "tenderness of tendinopathy or bursitis. Signs: ulnar "
+        "deviation and swan-neck deformity in rheumatoid arthritis, "
+        "Heberden and Bouchard nodes in osteoarthritis, dactylitis "
+        "with nail pitting and onycholysis in psoriatic arthritis, "
+        "and a reduced Schober test with limited chest expansion in "
+        "axial spondyloarthritis. Note: examine the joint above and "
+        "below, and look at skin, nails, eyes and scalp, because the "
+        "extra-articular sign often names the disease before the "
+        "joints do."
+    ),
+    "WHO analgesic ladder": (
+        "A three-step frame for titrating analgesia to severity, "
+        "written for cancer pain and applied more broadly. Types: "
+        "step 1 is a non-opioid, paracetamol or an NSAID, with or "
+        "without an adjuvant; step 2 adds a weak opioid such as "
+        "codeine or tramadol; step 3 replaces that with a strong "
+        "opioid, morphine, oxycodone, hydromorphone or fentanyl. An "
+        "adjuvant belongs at every step, meaning an antidepressant or "
+        "gabapentinoid for neuropathic pain, a corticosteroid for "
+        "nerve or capsular compression, and radiotherapy or a "
+        "bisphosphonate for painful bone metastases. Mx: give by "
+        "mouth, by the clock and by the ladder, with a regular "
+        "background dose plus a breakthrough dose of about one sixth "
+        "of the 24-hour total; step up rather than adding a second "
+        "drug at the same rung, and start an aperient with every "
+        "opioid. Note: Australian practice frequently skips step 2, "
+        "since codeine and tramadol are unreliable prodrugs dependent "
+        "on CYP2D6 and a low-dose strong opioid is more predictable. "
+        "Key point: the ladder grades pain by severity, not "
+        "mechanism, so neuropathic pain that climbs it without relief "
+        "needs the adjuvant, not the next rung."
+    ),
+    "Anticipatory prescribing": (
+        "Writing up the core subcutaneous PRN medicines before they "
+        "are needed, so the last days at home or on the ward do not "
+        "wait on a prescription. Indications: any patient recognised "
+        "as entering the dying phase, ideally days ahead; in the "
+        "community the medicines are dispensed and left in the home "
+        "with an authorised administration sheet for the visiting "
+        "nurse. Mx: four symptoms and four drugs, being an opioid for "
+        "pain and dyspnoea (subcutaneous morphine, or hydromorphone "
+        "where renal function is poor), an antiemetic for nausea "
+        "(haloperidol or metoclopramide), midazolam for restlessness, "
+        "and an antimuscarinic for respiratory secretions "
+        "(glycopyrronium or hyoscine butylbromide). Doses are small, "
+        "written PRN with a maximum frequency, and lower again in the "
+        "opioid-naive, the frail and the renally impaired. "
+        "Deprescribe at the same visit, stopping statins, "
+        "antihypertensives and oral hypoglycaemics. Note: prescribing "
+        "them is permission, not a plan, and the nurse still assesses "
+        "before each dose. Key point: a syringe driver is for "
+        "continuous need, so give the PRN dose first and start an "
+        "infusion once two or more doses are needed in 24 hours."
+    ),
+    "Recognising the dying patient": (
+        "The clinical recognition that a patient is in the last days "
+        "of life, which is the trigger for everything else in "
+        "terminal care. Clinical features: increasing time asleep "
+        "with reduced consciousness, no longer able to swallow "
+        "tablets, minimal oral intake, profound weakness and "
+        "bed-bound, peripheral mottling and cyanosis, Cheyne-Stokes "
+        "or irregular breathing, noisy secretions, falling urine "
+        "output and a thready pulse. Differential: exclude the "
+        "reversible mimics first, since opioid toxicity, "
+        "hypercalcaemia, infection, dehydration, hyperactive delirium "
+        "and acute kidney injury can all look like the dying phase "
+        "and some are treatable. Mx: stop non-essential observations, "
+        "medicines and blood tests, convert what is still needed to "
+        "the subcutaneous route and write anticipatory PRN medicines, "
+        "review artificial hydration on comfort grounds rather than "
+        "by default, and attend to mouth care and family presence. "
+        "Note: recognition is a team judgement reviewed daily, not a "
+        "one-way door, and a small number of patients improve. Key "
+        "point: telling the family the patient is dying is part of "
+        "the diagnosis, since an unspoken recognition changes nothing "
+        "for them."
+    ),
+    "Common variable immunodeficiency": (
+        "Primary antibody deficiency defined by low IgG with low IgA "
+        "or IgM and impaired responses to vaccination, and the "
+        "commonest symptomatic primary immunodeficiency in adults. "
+        "Epidemiology: about 1 in 25 000, presenting most often "
+        "between 20 and 45 years, usually years after the first "
+        "infection. Clinical features: recurrent sinopulmonary "
+        "infection with encapsulated organisms progressing to "
+        "bronchiectasis, chronic diarrhoea from Giardia or "
+        "Campylobacter, and non-infective disease that is easily "
+        "missed - autoimmune cytopenias, granulomatous lung and liver "
+        "disease, and raised risk of lymphoma and gastric cancer. Ix: "
+        "serum IgG, IgA and IgM, with poor antibody response to "
+        "pneumococcal and tetanus test immunisation; exclude "
+        "secondary hypogammaglobulinaemia from myeloma, chronic "
+        "lymphocytic leukaemia, protein loss or rituximab. Mx: "
+        "immunoglobulin replacement intravenously or subcutaneously, "
+        "dosed to a trough that stops breakthrough infection, with "
+        "early antibiotics and lung function testing to track "
+        "bronchiectasis. Note: roughly a quarter present with "
+        "autoimmunity rather than infection, and live vaccines are "
+        "contraindicated."
+    ),
+    "Adverse drug reaction": (
+        "Harm from a medicine given at a dose used for prevention, "
+        "diagnosis or treatment, as distinct from a prescribing error "
+        "or an overdose. Epidemiology: medicine-related problems "
+        "cause around 250 000 Australian hospital admissions a year, "
+        "most of them preventable. Classification: type A (augmented) "
+        "reactions are dose-related and predictable from the "
+        "pharmacology, common and rarely fatal - bleeding on "
+        "warfarin, bradycardia on a beta blocker; type B (bizarre) "
+        "reactions are neither dose-related nor predictable, uncommon "
+        "but far more lethal - anaphylaxis, DRESS, Stevens-Johnson "
+        "syndrome; types C to F cover chronic use, delayed effects, "
+        "end-of-use withdrawal and failure of therapy. Hx: every "
+        "medicine including over-the-counter and complementary ones, "
+        "the interval from starting the drug to the reaction, whether "
+        "it settled on withdrawal, and previous exposure. Mx: stop or "
+        "substitute the suspect drug, treat the reaction, and record "
+        "what happened in the adverse reactions field rather than the "
+        "drug name alone. Note: report suspected reactions to the "
+        "TGA, particularly for medicines under additional monitoring "
+        "and for anything serious or unexpected."
+    ),
+    "Allergy testing": (
+        "Testing to confirm that a suspected trigger is genuinely "
+        "IgE-mediated; it supports a clinical history and never "
+        "replaces one. Indications: an immediate-type reaction where "
+        "the culprit is uncertain, or where confirming it would allow "
+        "safe reintroduction of a food or drug being avoided. Ix: "
+        "skin prick testing is first-line, read at 15 minutes and "
+        "positive if the weal is 3 mm or more larger than the "
+        "negative control, with antihistamines withheld for 5 days; "
+        "allergen-specific IgE (once called RAST) where the skin "
+        "cannot be tested or testing is unsafe. Serum tryptase 1 to 3 "
+        "hours after a suspected anaphylaxis, against a later "
+        "baseline sample, supports mast cell degranulation, and "
+        "supervised oral food challenge remains the reference "
+        "standard. Note: a positive test shows sensitisation, not "
+        "allergy, and weal size predicts the chance of a reaction "
+        "rather than its severity - which is why testing without a "
+        "history produces false positives and needless avoidance. IgG "
+        "food panels, hair analysis, cytotoxic testing and "
+        "kinesiology have no diagnostic value and ASCIA advises "
+        "against them."
+    ),
+    "HLA testing before drug prescribing": (
+        "Screening for a human leukocyte antigen allele that predicts "
+        "severe delayed drug hypersensitivity, so the drug is avoided "
+        "rather than the reaction treated. Indications: HLA-B*57:01 "
+        "before abacavir is mandatory and PBS-funded, and has all but "
+        "abolished abacavir hypersensitivity; HLA-B*15:02 before "
+        "carbamazepine in people of Han Chinese, Thai, Malay, "
+        "Indonesian or Indian ancestry predicts Stevens-Johnson "
+        "syndrome and toxic epidermal necrolysis; HLA-B*58:01 before "
+        "allopurinol predicts severe cutaneous reactions in Han "
+        "Chinese, Thai and Korean ancestry, and is advised for those "
+        "groups rather than universally. Mechanism: the risk allele "
+        "presents drug-modified self peptide to T cells, so the drug "
+        "is seen as foreign only in people carrying that molecule. "
+        "Note: these tests have high negative predictive value and "
+        "low positive predictive value, so a negative result means "
+        "the drug can be given while a positive one means choosing "
+        "something else, not that a reaction was certain. Ancestry "
+        "rather than self-identified race decides who is screened."
+    ),
+    "Dermatological examination": (
+        "Systematic inspection of the whole skin with hair, nails and "
+        "mucosae, describing what is there before naming it. "
+        "Examination: good lighting and full exposure including the "
+        "scalp, behind the ears, axillae, natal cleft, genitals, "
+        "soles and web spaces; palpate the lesions and the draining "
+        "nodes. Describe in a fixed order - site and distribution, "
+        "number, size, morphology (macule, papule, plaque, nodule, "
+        "vesicle, bulla, pustule, wheal), colour, border, surface "
+        "change such as scale, crust, excoriation or lichenification, "
+        "and configuration, whether annular, linear, grouped or "
+        "targetoid. Then read the overall pattern - flexural, "
+        "extensor, photodistributed, dermatomal or acral - since "
+        "distribution narrows the differential faster than morphology "
+        "does. Ix: dermoscopy for any pigmented lesion, judged "
+        "against the patient's own other lesions; Wood lamp and skin "
+        "scrapings for mycology where relevant; punch biopsy for "
+        "inflammatory dermatoses and excision biopsy where melanoma "
+        "is suspected. Note: the ugly duckling sign, the lesion "
+        "unlike its neighbours, outperforms the ABCDE criteria in "
+        "practice."
+    ),
+    "Drug desensitisation and allergen immunotherapy": (
+        "Inducing tolerance to something the immune system reacts "
+        "against - temporary for a drug, durable for an environmental "
+        "allergen. Types: drug desensitisation gives incrementally "
+        "increasing doses over hours, and unresponsiveness lasts only "
+        "while the drug is continued; allergen immunotherapy gives a "
+        "standardised extract subcutaneously or sublingually for 3 to "
+        "5 years and modifies the underlying disease. Indications: "
+        "desensitisation where the drug is the best or only option - "
+        "penicillin in syphilis in pregnancy, aspirin in "
+        "aspirin-exacerbated respiratory disease, co-trimoxazole for "
+        "Pneumocystis prophylaxis. Immunotherapy for allergic "
+        "rhinitis and asthma driven by house dust mite or grass "
+        "pollen, and for Hymenoptera venom allergy, where it is the "
+        "only treatment that prevents further systemic sting "
+        "reactions. Contraindications: desensitisation is unsafe and "
+        "ineffective in severe cutaneous adverse reactions such as "
+        "Stevens-Johnson syndrome or DRESS, and in drug-induced organ "
+        "toxicity; immunotherapy is withheld in unstable asthma, "
+        "where fatal reactions have occurred. Note: tolerance is lost "
+        "within days of stopping the drug, so the protocol is "
+        "repeated for every course."
+    ),
+    "Infection control precautions": (
+        "Standard precautions, used with every patient at every "
+        "contact on the assumption that infectious status is often "
+        "unknown. Types: standard precautions for everyone, with "
+        "transmission-based precautions added when a particular "
+        "organism or route is known or suspected. Prevention: hand "
+        "hygiene at the 5 moments - before touching a patient, before "
+        "a procedure, after a body fluid exposure risk, after "
+        "touching a patient and after touching their surroundings. "
+        "Alcohol-based rub is the default; soap and water are used "
+        "when hands are visibly soiled and after Clostridioides "
+        "difficile or norovirus, because alcohol does not kill "
+        "spores. Protective equipment is chosen by the anticipated "
+        "exposure rather than the diagnosis, and sharps go into the "
+        "container at the point of use and are never recapped. "
+        "Monitoring: hand hygiene compliance is audited and publicly "
+        "reported under the National Hand Hygiene Initiative, and "
+        "moments 1 and 4 are the ones most often missed. Red flags: a "
+        "needlestick or mucosal exposure needs washing, same-day "
+        "reporting and source testing, because HIV post-exposure "
+        "prophylaxis is time-critical."
+    ),
+    "Transmission-based precautions": (
+        "Precautions added to standard precautions when a patient is "
+        "known or suspected to carry an organism spread by a "
+        "particular route. Types: contact precautions (single room, "
+        "gloves and gown on entry, dedicated equipment) for "
+        "multi-resistant organisms, Clostridioides difficile, scabies "
+        "and uncontained wound drainage; droplet precautions (single "
+        "room, surgical mask within about a metre, patient masked "
+        "during transfer) for influenza, pertussis, Neisseria "
+        "meningitidis and mumps; airborne precautions (negative "
+        "pressure room with the door shut, fit-checked P2 or N95 "
+        "respirator) for tuberculosis, measles and varicella. Mx: "
+        "start on suspicion rather than confirmation, since the "
+        "infectious period usually precedes the result; sign the "
+        "door, brief visitors, and stop only when the clinical "
+        "criteria are met. Note: measles and chickenpox need airborne "
+        "and contact precautions together, and Clostridioides "
+        "difficile needs soap and water rather than alcohol rub. Red "
+        "flags: undiagnosed cough with weight loss or night sweats "
+        "belongs in airborne precautions before the sputum result, "
+        "not after it."
+    ),
+    "Pathological fracture": (
+        "A fracture through diseased bone, caused by force that would "
+        "not break a normal bone. Causes: osteoporosis is much the "
+        "commonest overall, but a focal lesion in an adult means "
+        "metastasis (breast, prostate, lung, kidney and thyroid "
+        "account for most), myeloma, primary bone tumour, Paget "
+        "disease or osteomalacia. Clinical features: trivial or "
+        "absent trauma, and pain in the bone for weeks before it "
+        "broke; ask about weight loss, night pain and previous "
+        "cancer. The proximal femur and the vertebrae are the usual "
+        "sites. Ix: plain films of the whole bone, then CT chest, "
+        "abdomen and pelvis with a bone scan to find the primary, "
+        "plus FBC, EUC, calcium, ALP, serum protein electrophoresis "
+        "with free light chains, and PSA in men. Mx: internal "
+        "fixation or arthroplasty, often prophylactically for an "
+        "impending fracture, with postoperative radiotherapy; "
+        "bisphosphonate or denosumab for bone metastases; treat the "
+        "primary. Note: biopsy before fixing anything that could be a "
+        "primary bone sarcoma, because instrumentation seeds the "
+        "tract and can cost the limb."
+    ),
+    "Mediastinal mass": (
+        "A mass in the mediastinum, classified by the compartment it "
+        "occupies, which largely predicts what it is. Types: anterior "
+        "lesions are thymoma, germ cell tumour, retrosternal thyroid "
+        "and lymphoma; middle lesions are lymph nodes, bronchogenic "
+        "cyst and aortic aneurysm; posterior lesions are neurogenic "
+        "tumours and oesophageal disease. Clinical features: often "
+        "incidental on a chest X-ray. Compression produces cough, "
+        "stridor and orthopnoea from the airway, dysphagia from the "
+        "oesophagus, hoarseness from the left recurrent laryngeal "
+        "nerve, hiccup with a raised hemidiaphragm from the phrenic, "
+        "and facial swelling with distended neck veins from superior "
+        "vena cava obstruction. Look for myasthenia with thymoma and "
+        "B symptoms with lymphoma. Ix: CT chest with contrast, then "
+        "alpha-fetoprotein and beta-hCG in a young man before any "
+        "biopsy, since a germ cell tumour can be treated on markers "
+        "alone; PET-CT, and core biopsy or mediastinoscopy for "
+        "tissue. Red flags: an anterior mass with orthopnoea or "
+        "stridor can obstruct completely once supine, so discuss with "
+        "anaesthetics before any sedation."
+    ),
+    "Secondary polycythaemia": (
+        "A raised red cell mass driven by erythropoietin rather than "
+        "by a clonal marrow disorder. Causes: hypoxic drive from "
+        "chronic lung disease, obstructive sleep apnoea, cyanotic "
+        "congenital heart disease, altitude or heavy smoking; "
+        "inappropriate erythropoietin from renal cell carcinoma, "
+        "hepatocellular carcinoma, cerebellar haemangioblastoma or "
+        "uterine fibroids; exogenous testosterone and erythropoietin "
+        "misuse. Apparent polycythaemia from a contracted plasma "
+        "volume raises the haematocrit with a normal red cell mass. "
+        "Ix: repeat the FBC, then JAK2 V617F, which is negative here, "
+        "and serum erythropoietin, which is suppressed in "
+        "polycythaemia vera but normal or high in secondary disease; "
+        "add oxygen saturation, carboxyhaemoglobin and a sleep study. "
+        "Mx: treat the cause, meaning continuous positive airway "
+        "pressure, smoking cessation or stopping testosterone; "
+        "venesect only for symptomatic hyperviscosity, and aspirin is "
+        "not routine. Note: splenomegaly, itch after a hot shower and "
+        "a rise in platelets and neutrophils point to polycythaemia "
+        "vera, which raises all three lineages."
+    ),
+    "Prothrombin G20210A mutation": (
+        "A point mutation in the untranslated tail of the prothrombin "
+        "(factor II) gene that raises circulating prothrombin by "
+        "about 30 per cent, and the second commonest inherited "
+        "thrombophilia after factor V Leiden. Epidemiology: carried "
+        "by about 2 per cent of people of European ancestry and rare "
+        "elsewhere; heterozygotes carry roughly a threefold relative "
+        "risk of venous thromboembolism, still under 1 per cent a "
+        "year in absolute terms. Clinical features: most carriers "
+        "never clot. It surfaces as an unprovoked or "
+        "oestrogen-associated venous thromboembolism, or as cerebral "
+        "venous sinus thrombosis on the combined oral contraceptive. "
+        "Ix: a DNA test, so unlike the protein C, protein S and "
+        "antithrombin assays it stays valid during acute clot and on "
+        "anticoagulant. Mx: anticoagulate the event as for any venous "
+        "thromboembolism; heterozygosity alone does not extend the "
+        "duration, which turns on whether the event was provoked. "
+        "Avoid combined hormonal contraception in known carriers. "
+        "Note: Australian pathology guidance advises against testing "
+        "asymptomatic relatives, since the result rarely changes "
+        "management."
+    ),
+    "Approach to coagulopathy": (
+        "Impaired clot formation from a platelet, coagulation factor "
+        "or vessel wall defect, and the pattern of bleeding says "
+        "which. Clinical features: platelet and vascular defects "
+        "bleed mucocutaneously, giving petechiae, purpura, epistaxis, "
+        "menorrhagia and immediate oozing from a cut; factor "
+        "deficiencies bleed deep, giving haemarthroses, muscle "
+        "haematomas and delayed bleeding after surgery. Causes: "
+        "acquired causes dominate, above all liver disease, vitamin K "
+        "deficiency and warfarin, disseminated intravascular "
+        "coagulation, dilution after massive transfusion, the direct "
+        "oral anticoagulants, and uraemia or antiplatelet drugs. "
+        "Inherited disease is mostly von Willebrand disease, then "
+        "haemophilia A and B. Ix: FBC and film, PT with INR, APTT, "
+        "fibrinogen, D-dimer, LFT and EUC, with von Willebrand and "
+        "factor assays if the history fits. Mx: treat the cause; "
+        "vitamin K for warfarin, with prothrombin complex concentrate "
+        "rather than fresh frozen plasma for major bleeding; "
+        "cryoprecipitate if fibrinogen is below 1.5 g/L; tranexamic "
+        "acid, and idarucizumab for dabigatran. Note: a normal PT and "
+        "APTT does not exclude a bleeding disorder."
+    ),
+    "Lymphadenopathy": (
+        "Enlarged lymph nodes. The two questions are whether they are "
+        "localised or generalised, and reactive or malignant. Causes: "
+        "localised nodes usually drain an infection in their field, "
+        "or represent tuberculous, cat-scratch or metastatic disease; "
+        "generalised nodes suggest Epstein-Barr virus, HIV "
+        "seroconversion, lymphoma, chronic lymphocytic leukaemia, "
+        "sarcoidosis, connective tissue disease, or drugs such as "
+        "phenytoin and allopurinol. Clinical features: reactive nodes "
+        "are under a centimetre, tender, soft, mobile and settle "
+        "within weeks, while malignant nodes are over two "
+        "centimetres, firm, painless, matted or fixed, and enlarge "
+        "steadily. A supraclavicular node is malignant until proven "
+        "otherwise, the left (Virchow) draining the abdomen and the "
+        "right the thorax. Ix: FBC and film, Epstein-Barr and HIV "
+        "serology, LDH, chest X-ray, and node ultrasound looking for "
+        "a lost fatty hilum. Red flags: a node over two centimetres, "
+        "supraclavicular, fixed, persisting past six weeks, or with "
+        "fever, night sweats or weight loss needs excision biopsy, "
+        "since fine needle aspiration cannot show nodal architecture."
+    ),
+    "Splenomegaly": (
+        "An enlarged spleen. A normal spleen is impalpable, so one "
+        "felt below the left costal margin is already about twice its "
+        "normal size. Causes: portal hypertension from cirrhosis is "
+        "the commonest in Australia; haematological causes include "
+        "myelofibrosis, chronic myeloid leukaemia, polycythaemia "
+        "vera, lymphoma and chronic haemolysis such as thalassaemia; "
+        "infective causes include Epstein-Barr virus, malaria, "
+        "endocarditis and tuberculosis. A spleen reaching past the "
+        "midline narrows the list to chronic myeloid leukaemia, "
+        "myelofibrosis, malaria, visceral leishmaniasis and hairy "
+        "cell leukaemia. Examination: the spleen enlarges towards the "
+        "right iliac fossa, moves with respiration, has a palpable "
+        "notch, is dull to percussion and you cannot get above it, "
+        "whereas a kidney is ballotable and resonant anteriorly. Ix: "
+        "FBC and film, LFT, malaria and Epstein-Barr testing as "
+        "travel dictates, abdominal ultrasound, and marrow or node "
+        "biopsy if a lymphoproliferative cause is likely. "
+        "Complications: hypersplenism causing cytopenias, and "
+        "rupture, so avoid contact sport while the spleen is "
+        "enlarged."
+    ),
+    "Hoarseness": (
+        "A change in voice quality from disordered vocal cord "
+        "vibration. Most is benign and settles, but hoarseness "
+        "lasting beyond three weeks is laryngeal cancer until the "
+        "cords have been seen. Causes: acute hoarseness is viral "
+        "laryngitis or voice overuse. Persistent causes include "
+        "laryngopharyngeal reflux, vocal cord nodules or polyps, "
+        "Reinke oedema in smokers, inhaled corticosteroid used "
+        "without rinsing, and hypothyroidism. The sinister group is "
+        "laryngeal or hypopharyngeal cancer, and recurrent laryngeal "
+        "nerve palsy from lung cancer at the left hilum, thyroid "
+        "malignancy or surgery, mediastinal nodes or aortic arch "
+        "aneurysm. Ix: flexible nasendoscopy is the test, and every "
+        "hoarseness past three weeks earns one; check thyroid "
+        "function, and image from skull base to diaphragm if a left "
+        "cord palsy is found, since that nerve loops under the aortic "
+        "arch. Mx: voice rest and hydration, speech pathology for "
+        "nodules and muscle tension, treat reflux, stop smoking, "
+        "surgery for polyps or malignancy. Red flags: hoarseness with "
+        "dysphagia, otalgia, stridor, haemoptysis, a neck lump or "
+        "weight loss needs urgent referral."
+    ),
+    "Breast lump": (
+        "A discrete lump in the breast, worked up the same way at any "
+        "age. Ix: triple assessment is clinical examination, imaging "
+        "and tissue sampling, and a lump is cleared only when all "
+        "three agree. Imaging is mammography plus ultrasound from "
+        "about 40 years and ultrasound alone below that, since dense "
+        "young tissue makes mammography unrewarding. Tissue means "
+        "core biopsy rather than fine needle aspiration, since core "
+        "shows invasion and receptor status. Differential: "
+        "fibroadenoma, firm and mobile in a woman in her twenties; "
+        "simple cyst, tender and cyclical, which vanishes on "
+        "aspiration; fat necrosis after trauma; lactational abscess; "
+        "and carcinoma, which is hard, irregular and fixed, with skin "
+        "dimpling, nipple retraction or peau d'orange. Note: "
+        "BreastScreen Australia screens asymptomatic women, actively "
+        "inviting those aged 50 to 74 for two-yearly mammography and "
+        "open to women from 40; a woman with a lump belongs in a "
+        "diagnostic clinic, not in screening. Red flags: a normal "
+        "mammogram never clears a clinically suspicious lump, and "
+        "bloody nipple discharge or nipple eczema needs referral."
+    ),
+    "Dysphagia": (
+        "Difficulty swallowing. The first split is oropharyngeal, "
+        "where the patient cannot start the swallow, from "
+        "oesophageal, where food sticks a few seconds later behind "
+        "the sternum. Causes: oropharyngeal disease is neuromuscular, "
+        "above all stroke, then Parkinson disease, motor neurone "
+        "disease and myasthenia gravis, or structural such as a "
+        "pharyngeal pouch or head and neck cancer. Oesophageal "
+        "disease is mechanical - carcinoma, peptic stricture, "
+        "eosinophilic oesophagitis, extrinsic compression - or a "
+        "motility disorder such as achalasia, systemic sclerosis or "
+        "oesophageal spasm. Clinical features: solids alone, "
+        "progressing over weeks with weight loss, is mechanical "
+        "obstruction and carcinoma until excluded; solids and liquids "
+        "equally from the outset means a motility problem; coughing, "
+        "nasal regurgitation and a wet voice mean an unsafe "
+        "oropharyngeal swallow. Ix: gastroscopy first for oesophageal "
+        "dysphagia, biopsying even normal-looking mucosa to exclude "
+        "eosinophilic oesophagitis; videofluoroscopy for "
+        "oropharyngeal; manometry when endoscopy is clear. Red flags: "
+        "new dysphagia at any age warrants urgent endoscopy."
+    ),
+    "Coagulation test interpretation": (
+        "Reading a clotting screen. Which test is prolonged localises "
+        "the defect. Mechanism: the prothrombin time and INR test the "
+        "extrinsic and common pathways, the APTT the intrinsic and "
+        "common pathways. Types: an isolated long prothrombin time "
+        "means factor VII deficiency, early liver disease, early "
+        "vitamin K deficiency or warfarin, since factor VII has the "
+        "shortest half-life and falls first; an isolated long APTT "
+        "means heparin, haemophilia A or B, factor XI deficiency, von "
+        "Willebrand disease, or a lupus anticoagulant, which prolongs "
+        "the APTT yet causes clotting rather than bleeding; both "
+        "prolonged means liver failure, disseminated intravascular "
+        "coagulation, warfarin excess, massive transfusion or a "
+        "common pathway factor deficiency. Ix: a mixing study "
+        "separates deficiency from inhibitor, correcting with normal "
+        "plasma when a factor is missing and not when an antibody is "
+        "present. Note: a normal screen does not exclude a bleeding "
+        "disorder, because von Willebrand disease, platelet function "
+        "defects and factor XIII deficiency all leave both normal, "
+        "and the direct oral anticoagulants can too at full dose."
+    ),
+    "Cancer staging": (
+        "Establishing the anatomical extent of a cancer before "
+        "treatment, because stage drives treatment intent and "
+        "prognosis more than any other variable. Classification: "
+        "solid tumours use TNM, where T is size or local invasion, N "
+        "the regional nodes and M distant metastasis, grouped into "
+        "stages I to IV. Lymphoma uses Ann Arbor, running from one "
+        "node region, to two or more on one side of the diaphragm, to "
+        "both sides, to disseminated disease, suffixed A or B for "
+        "absence or presence of B symptoms. Myeloma and chronic "
+        "lymphocytic leukaemia stage on blood markers instead, by the "
+        "revised International Staging System and by Binet or Rai. "
+        "Ix: CT of chest, abdomen and pelvis is the baseline; PET-CT "
+        "is standard in lymphoma and used in lung, oesophageal and "
+        "head and neck cancer; MRI for brain, rectal and prostate "
+        "local staging; sentinel node biopsy in breast cancer and "
+        "melanoma, and marrow biopsy in haematological disease. Note: "
+        "stage is only half the decision. ECOG performance status, 0 "
+        "fully active to 4 bedbound, decides what the patient can "
+        "tolerate, and ECOG 3 or worse usually rules out cytotoxic "
+        "chemotherapy."
+    ),
+    "Splenectomy": (
+        "Removal of the spleen, for trauma, for haematological "
+        "disease, or incidentally during upper abdominal surgery. "
+        "Indications: splenic rupture with haemodynamic instability, "
+        "though a stable patient is now usually managed without "
+        "operation, with angioembolisation if needed. Elective "
+        "indications are immune thrombocytopenia refractory to "
+        "corticosteroid and rituximab, hereditary spherocytosis with "
+        "symptomatic anaemia or gallstones, hypersplenism and splenic "
+        "lymphoma. Mx: laparoscopic where elective. Vaccinate at "
+        "least two weeks before an elective operation, or two weeks "
+        "after an emergency one, against pneumococcus, meningococcus "
+        "and Haemophilus influenzae type b, with annual influenza "
+        "thereafter. Complications: reactive thrombocytosis peaking "
+        "around day 7 to 14, portal vein thrombosis, left basal "
+        "atelectasis, subphrenic collection, pancreatic tail injury, "
+        "and lifelong risk of overwhelming post-splenectomy "
+        "infection. Note: Howell-Jolly bodies on the film confirm the "
+        "spleen is absent or non-functioning. Every patient needs "
+        "lifelong prophylaxis advice, an asplenia alert card and a "
+        "fever action plan."
+    ),
+    "Chemotherapy": (
+        "Cytotoxic drugs that kill dividing cells. Selectivity for "
+        "tumour is only relative, which is why the toxicity lands on "
+        "marrow, gut mucosa, hair follicles and gonads. "
+        "Classification: alkylating agents such as cyclophosphamide "
+        "and the platinums cross-link DNA at any point in the cycle; "
+        "antimetabolites such as methotrexate and fluorouracil act in "
+        "S phase; anthracyclines and etoposide poison topoisomerase, "
+        "and vinca alkaloids and taxanes hit the mitotic spindle in M "
+        "phase. Regimens combine non-overlapping toxicities in cycles "
+        "that let the marrow recover. Adverse effects: shared "
+        "toxicity is myelosuppression with a nadir at 7 to 14 days, "
+        "nausea and vomiting, mucositis, alopecia, fatigue and "
+        "infertility. Drug-specific toxicity includes anthracycline "
+        "cardiomyopathy, cisplatin nephrotoxicity and ototoxicity, "
+        "vincristine neuropathy, cyclophosphamide haemorrhagic "
+        "cystitis prevented by mesna, and bleomycin pulmonary "
+        "fibrosis. Red flags: fever during the nadir is febrile "
+        "neutropenia until proven otherwise and needs cultures and an "
+        "antipseudomonal beta-lactam within the hour. Vincristine is "
+        "fatal if given intrathecally."
+    ),
+    "Cancer immunotherapy": (
+        "Drugs that release the brakes on the patient's own T cells "
+        "so they attack the tumour, rather than killing tumour cells "
+        "directly. Mechanism: tumours exploit inhibitory checkpoints. "
+        "Antibodies against PD-1 (pembrolizumab, nivolumab) and PD-L1 "
+        "(atezolizumab) unblock the T cell at the tumour, while "
+        "anti-CTLA-4 (ipilimumab) acts earlier, at T cell priming in "
+        "the node. Uses: melanoma, where survival was transformed, "
+        "non-small cell lung, renal and urothelial cancer, and "
+        "mismatch repair deficient tumours of any site. Adverse "
+        "effects: immune-related and able to hit any organ, including "
+        "colitis, hepatitis, pneumonitis, thyroiditis, hypophysitis "
+        "and rash, starting weeks to months in and sometimes after "
+        "treatment stops. Mx: withhold the drug and give high-dose "
+        "corticosteroid for anything past grade 1, prednisolone 1 to "
+        "2 mg/kg daily, with infliximab for steroid-refractory "
+        "colitis. Endocrine toxicity is usually permanent and needs "
+        "hormone replacement, not steroid. Note: diarrhoea on a "
+        "checkpoint inhibitor is colitis until proven otherwise."
+    ),
+    "Monoclonal antibodies": (
+        "Laboratory-made antibodies aimed at a single target, given "
+        "parenterally because the molecule is far too large to absorb "
+        "orally. Classification: the syllable before -mab named the "
+        "source, chimeric in rituximab, humanised in trastuzumab, "
+        "fully human in adalimumab. Antibody-drug conjugates such as "
+        "trastuzumab emtansine carry a cytotoxic payload to the "
+        "target, and bispecifics such as blinatumomab bridge a T cell "
+        "to the tumour. Uses: rituximab against CD20 in B-cell "
+        "lymphoma and rheumatoid arthritis; trastuzumab against HER2 "
+        "in breast and gastric cancer; bevacizumab against VEGF, and "
+        "cetuximab against EGFR, useful only in RAS wild-type bowel "
+        "cancer. Adverse effects: infusion reactions from cytokine "
+        "release, worst with the first dose and blunted by "
+        "premedication; hepatitis B reactivation with anti-CD20, so "
+        "screen surface antigen and core antibody before rituximab; "
+        "hypogammaglobulinaemia and infection. Note: trastuzumab "
+        "cardiotoxicity is dose-independent and usually reversible, "
+        "needing an echocardiogram before and during treatment, "
+        "unlike the cumulative and permanent anthracycline "
+        "cardiomyopathy."
+    ),
+    "Familial cancer risk assessment": (
+        "Deciding from a family history whether an inherited cancer "
+        "syndrome is likely, and who needs a familial cancer service. "
+        "Risk factors: cancer diagnosed under 50, two primaries in "
+        "one person, bilateral disease in a paired organ, several "
+        "affected relatives on the same side of the family, a rare "
+        "tumour such as male breast cancer, and Ashkenazi Jewish "
+        "ancestry. Types: BRCA1 and BRCA2 give breast, ovarian, "
+        "prostate and pancreatic cancer; Lynch syndrome, from a "
+        "mismatch repair gene, gives bowel, endometrial and "
+        "urothelial cancer; familial adenomatous polyposis, "
+        "Li-Fraumeni and CDH1 gastric cancer are rarer. Mx: draw a "
+        "three-generation pedigree with tumour types and ages, verify "
+        "the key cancers against pathology reports, not family "
+        "recollection, and use the eviQ risk categories to sort "
+        "patients into population, moderately increased or "
+        "potentially high risk. High risk goes to a familial cancer "
+        "clinic for counselling, testing, intensified surveillance "
+        "such as annual breast MRI, and risk-reducing surgery. Note: "
+        "test an affected relative first, because a negative result "
+        "in an unaffected person means nothing unless the family "
+        "mutation is known."
+    ),
+    "Mood disorders": (
+        "Umbrella term for the disorders in which a sustained "
+        "disturbance of mood, rather than of thought or of anxiety, "
+        "is the primary problem. Epidemiology: affective disorders "
+        "affect about 7.5% of Australian adults in a 12-month period, "
+        "against 17.2% for anxiety disorders; onset is usually in the "
+        "teens or twenties and recurrence is the rule. Types: "
+        "unipolar - major depressive disorder, persistent depressive "
+        "disorder, premenstrual dysphoric disorder; bipolar spectrum "
+        "- bipolar I, bipolar II, cyclothymia. Criteria: episodes are "
+        "set by duration and impairment rather than by how bad the "
+        "mood feels. A depressive episode runs most of the day, most "
+        "days, for a fortnight; mania at least a week, or any length "
+        "if admission is needed; hypomania at least four days, "
+        "visible to others but without marked impairment or "
+        "psychosis. Differential: hypothyroidism, anaemia, "
+        "corticosteroids, substance use and withdrawal, bereavement. "
+        "Note: the question that changes management is whether there "
+        "has ever been hypomania or mania, because an antidepressant "
+        "given alone in unrecognised bipolar disorder can precipitate "
+        "a switch."
+    ),
+    "Substance-induced psychotic disorder": (
+        "Psychosis arising during or soon after intoxication or "
+        "withdrawal, out of proportion to what the substance "
+        "ordinarily does, and not better explained by a primary "
+        "psychotic illness. Causes: methamphetamine and other "
+        "stimulants, high-potency cannabis, cocaine, synthetic "
+        "cannabinoids and hallucinogens; also alcohol or "
+        "benzodiazepine withdrawal and corticosteroids. Criteria: "
+        "symptoms start in the context of use or withdrawal, were not "
+        "present before use began, and settle within about a month of "
+        "sustained abstinence. Clinical features: persecutory "
+        "delusions and vivid hallucinations with orientation "
+        "preserved; the stimulant picture is paranoid and "
+        "hyperaroused, often with tactile hallucinations, and "
+        "negative symptoms are conspicuously absent. Mx: abstinence "
+        "and a low-stimulus environment; a benzodiazepine for "
+        "agitation and a short course of a second-generation "
+        "antipsychotic, weaned once symptoms settle rather than "
+        "continued by default; drug and alcohol referral. Note: about "
+        "a quarter are later rediagnosed with schizophrenia, highest "
+        "after cannabis, so this earns psychiatric follow-up rather "
+        "than discharge once sober."
+    ),
+    "Methamphetamine use disorder": (
+        "Compulsive methamphetamine use with loss of control, "
+        "distinct from the acute toxidrome and the presentation that "
+        "dominates Australian drug and alcohol services. "
+        "Epidemiology: about 1% of Australians report use in the past "
+        "year, but crystal (ice), smoked or injected, accounts for "
+        "most dependent use. Phases: bingeing over days with no "
+        "sleep, then a crash of hypersomnia, hyperphagia and "
+        "dysphoria; acute withdrawal peaks in the first few days and "
+        "largely settles by 7 to 10 days, leaving anhedonia, craving "
+        "and disturbed sleep for weeks. Suicide risk is highest in "
+        "that early crash. Features: dental disease, weight loss, "
+        "skin excoriation, violence, and psychosis that can outlast "
+        "abstinence. Mx: no substitution therapy and no TGA-approved "
+        "pharmacotherapy exist. Contingency management has the best "
+        "evidence, then CBT, ACT and residential rehabilitation; "
+        "treat comorbid depression and psychosis; blood-borne virus "
+        "screening and needle and syringe access for injectors. Note: "
+        "the offer here is psychosocial, so a request for something "
+        "to take is the moment to explain that, not to prescribe."
+    ),
+    "Benzodiazepine dependence and tapering": (
+        "Dependence after regular benzodiazepine use, and the "
+        "structured dose reduction that ends it. Epidemiology: "
+        "tolerance develops within weeks of daily use, so most "
+        "dependence is iatrogenic and starts with a script written "
+        "for short-term use and never stopped. Features: interdose "
+        "anxiety and early-morning waking, read as the original "
+        "disorder returning and treated with more drug; falls, "
+        "cognitive dulling and flat mood; the dose is often stable "
+        "rather than escalating. Mx: taper only with the patient's "
+        "agreement, since an imposed reduction drives people to "
+        "illicit supply. Convert short-acting agents to diazepam - "
+        "roughly 5 mg of diazepam to temazepam 10 mg, oxazepam 15 mg, "
+        "nitrazepam 5 mg, alprazolam 0.5 mg or clonazepam 0.25 mg - "
+        "checking the equivalence table in eTG rather than working "
+        "from memory. Reduce by about a tenth of the current dose "
+        "every one to two weeks, slowing near the end; expect months. "
+        "Stay on oxazepam in liver disease and frailty. Red flags: "
+        "abrupt cessation after long-term or high-dose use causes "
+        "seizures and delirium, so never stop it in one step, "
+        "including on admission."
+    ),
+    "Acute stress disorder": (
+        "Trauma-related disorder with the same symptom domains as "
+        "PTSD, occurring in the first month after the event. "
+        "Criteria: exposure to actual or threatened death, serious "
+        "injury or sexual violence, then a substantial number of "
+        "symptoms drawn from intrusion, negative mood, dissociation, "
+        "avoidance and arousal, lasting more than three days and up "
+        "to four weeks, with impairment. Beyond a month the diagnosis "
+        "becomes PTSD. Epidemiology: about half of those diagnosed go "
+        "on to PTSD, but most people who develop PTSD never met "
+        "criteria for this - a poor screening test and a good "
+        "treatment indication. Mx: psychological first aid first - "
+        "safety, practical help, reconnection with supports, sleep, "
+        "and an explanation of the usual course; treat pain; screen "
+        "for suicide risk and substance use. Trauma-focused CBT from "
+        "around two weeks for persisting significant symptoms is the "
+        "treatment with evidence. Avoid benzodiazepines. Note: "
+        "single-session psychological debriefing is not indicated and "
+        "may worsen outcomes; the Australian guidelines from Phoenix "
+        "Australia recommend against it."
+    ),
+    "Social and emotional wellbeing": (
+        "The holistic Aboriginal and Torres Strait Islander "
+        "understanding of health, in which wellbeing is relational "
+        "rather than located inside the individual mind. Features: "
+        "seven interconnected domains of connection - to body, to "
+        "mind and emotions, to family and kinship, to community, to "
+        "culture, to Country, and to spirit and ancestors. Strength "
+        "in one buffers disruption in another. Causes: the "
+        "determinants are historical and political as much as social "
+        "- colonisation and dispossession, forced child removal and "
+        "the intergenerational trauma that followed, racism, "
+        "incarceration, and grief from repeated bereavement. Mx: "
+        "involve an Aboriginal health worker or liaison officer from "
+        "the outset, ask about connection to family, community and "
+        "Country as part of the history, and refer through Aboriginal "
+        "Community Controlled Health Services where they exist. Note: "
+        "a Western diagnostic frame under-reads distress here. What "
+        "looks like depression may be grief, loss and disconnection "
+        "that a symptom checklist scores as mild, and what looks like "
+        "a symptom may be cultural and expected, such as hearing a "
+        "deceased relative. Ask before labelling."
+    ),
+    "Carer burden": (
+        "The physical, emotional, social and financial strain of "
+        "caring unpaid for someone with chronic illness - a predictor "
+        "of the patient's outcome as much as the carer's. "
+        "Epidemiology: around 3 million Australians are unpaid "
+        "carers; in mental illness the carer is usually a parent or "
+        "partner, and usually the person who notices relapse first. "
+        "Features: exhaustion and sleep loss, their own depression "
+        "and anxiety, lost income, social isolation, grief for the "
+        "person as they were, and guilt about resenting any of it. "
+        "Ix: ask about the carer separately and explicitly; the Zarit "
+        "Burden Interview is the usual structured measure. Mx: name "
+        "and record the carer; psychoeducation on the illness and its "
+        "early warning signs; Carer Gateway for counselling, peer "
+        "groups and respite; Centrelink Carer Payment and Carer "
+        "Allowance; their own GP. The Carer Recognition Act 2010 "
+        "obliges services to consult carers. Note: confidentiality "
+        "limits what you disclose, never what you receive - a "
+        "collateral history and general information about the illness "
+        "and services are always available."
+    ),
+    "Lived experience workforce": (
+        "Mental health staff employed specifically for their own "
+        "experience of mental illness and recovery, or of caring for "
+        "someone who has one. Types: consumer peer workers draw on "
+        "their own illness and recovery; carer or family peer workers "
+        "draw on the caring experience. Roles run from ward-based "
+        "support and peer-led groups to consumer consultant positions "
+        "in service design and governance. Features: the work is the "
+        "disciplined, purposeful use of one's own story to build hope "
+        "and credibility - a professional skill with supervision, a "
+        "code of conduct and a vocational qualification behind it, "
+        "not friendship. Uses: peer contact improves engagement, hope "
+        "and empowerment, is associated with fewer readmissions, and "
+        "reaches people who have disengaged from clinical services. "
+        "Note: the role is not an unqualified assistant to the "
+        "nursing staff, and reassigning peer workers to observation "
+        "shifts and paperwork is the usual way a service wastes the "
+        "position. Australian notes: lived experience participation "
+        "is required by the National Standards for Mental Health "
+        "Services, and NSW services employ peer workers throughout."
+    ),
+    "Mental health multidisciplinary team": (
+        "The team that delivers mental health care in Australia, in "
+        "which day-to-day responsibility for a patient sits with an "
+        "allocated case manager who is often not the doctor. Types: "
+        "psychiatrist for diagnosis, prescribing and the medical "
+        "certification required under the NSW Mental Health Act 2007; "
+        "mental health nurse, the largest group, for assessment, risk "
+        "monitoring, depots and the ward environment; clinical "
+        "psychologist for psychometric assessment and structured "
+        "therapy such as CBT and DBT; social worker for housing, "
+        "income support, child protection, guardianship, family work "
+        "and NDIS access; occupational therapist for functional and "
+        "daily-living assessment, sensory modulation and vocational "
+        "rehabilitation; Aboriginal health worker for cultural "
+        "safety, engagement and the link to family and community. "
+        "Features: any discipline can hold the case manager role, so "
+        "community follow-up frequently sits with a nurse, social "
+        "worker or occupational therapist. Note: the question in a "
+        "case discussion is who is allocated, not who prescribes - a "
+        "discharge naming a medication but no care coordinator is not "
+        "a plan."
+    ),
+    "Psychiatric history": (
+        "The narrative half of a psychiatric assessment, covering "
+        "what has happened over time rather than what is observable "
+        "now. Features: presenting complaint in the patient's own "
+        "words, then the history of the presenting illness with "
+        "onset, course, precipitants, biological symptoms (sleep, "
+        "appetite, weight, energy, libido) and risk. Past psychiatric "
+        "history covers previous episodes, admissions and whether "
+        "they were voluntary, treatments tried and the response, "
+        "self-harm and previous attempts. Then medications and "
+        "adherence, alcohol and other drug use, medical history, "
+        "forensic history, family history, and a personal history "
+        "running from developmental milestones through schooling, "
+        "relationships, occupation, trauma and current housing and "
+        "finances. Premorbid personality asks what the person was "
+        "like when well. Key point: collateral history from family, "
+        "the GP, a case manager or old notes is part of the history "
+        "and is often the only reliable account in psychosis, mania "
+        "or cognitive impairment. Note: the history supplies the "
+        "predisposing, precipitating, perpetuating and protective "
+        "factors of the formulation; the mental state examination "
+        "records the present interview only."
+    ),
+    "Kessler Psychological Distress Scale (K-10)": (
+        "Ten-item self-report questionnaire measuring non-specific "
+        "psychological distress over the past four weeks, the "
+        "screening instrument used most widely in Australian primary "
+        "care and population health. Features: ten questions about "
+        "anxiety and depressive symptoms (nervousness, hopelessness, "
+        "restlessness, worthlessness, effort) each scored 1 to 5, "
+        "giving a total of 10 to 50. Two bandings circulate, so a "
+        "score needs its banding named: the sheet used in general "
+        "practice reads under 20 as likely to be well, 20 to 24 mild, "
+        "25 to 29 moderate and 30 up severe, while the Australian "
+        "Bureau of Statistics bands the same total 10 to 15 low, 16 "
+        "to 21 moderate, 22 to 29 high and 30 up very high. Uses: it "
+        "supports a GP Mental Health Treatment Plan under Medicare, "
+        "is repeated to track response to treatment, and is carried "
+        "in the national health surveys. A five-item version, the "
+        "K-5, is used with Aboriginal and Torres Strait Islander "
+        "respondents. Note: the K-10 measures distress, not "
+        "diagnosis. A high score says the person is unwell, not what "
+        "they have, and it asks nothing about psychosis, substance "
+        "use or suicidal thoughts, so risk must be asked separately."
+    ),
+    "SF-12 health survey": (
+        "Twelve-item generic questionnaire measuring health-related "
+        "quality of life, a shortened form of the SF-36 that keeps "
+        "its two summary scores. Features: twelve items sampling "
+        "eight domains - physical functioning, role limitation from "
+        "physical problems, bodily pain, general health, vitality, "
+        "social functioning, role limitation from emotional problems, "
+        "and mental health. Scoring yields a physical component "
+        "summary and a mental component summary, each normed to a "
+        "mean of 50 with a standard deviation of 10 in the general "
+        "population, so 40 is one standard deviation below average. "
+        "Uses: outcome measurement in trials and services, comparison "
+        "of disease burden across unrelated conditions, and "
+        "cost-utility analysis, since a health-state utility can be "
+        "derived from it for quality-adjusted life year calculations. "
+        "Note: being generic, it detects nothing on its own and is "
+        "less sensitive to change within a single condition than a "
+        "disease-specific measure. Its mental component summary "
+        "tracks distress but does not replace a purpose-built "
+        "distress measure such as the K-10."
+    ),
+    "Functional assessment in mental health": (
+        "Assessment of what a person can actually do day to day, "
+        "which predicts service need and outcome better than symptom "
+        "severity does. Features: the domains are self-care and "
+        "hygiene, stable accommodation, money management, activities "
+        "of daily living such as cooking, shopping and transport, "
+        "work or study, relationships and social contact, attention "
+        "to physical health, and parenting or caring "
+        "responsibilities. Examination: ask what a typical day looks "
+        "like rather than whether the person is coping, and seek "
+        "collateral, since insight into lost function is often poor. "
+        "Monitoring: instruments used in Australian services include "
+        "HoNOS (Health of the Nation Outcome Scales), twelve items "
+        "scored 0 to 4 and collected routinely in public mental "
+        "health; SOFAS, a single 0 to 100 rating of social and "
+        "occupational functioning independent of symptoms; and WHODAS "
+        "2.0, covering six domains of disability. Australian notes: "
+        "function, not diagnosis, determines NDIS access and "
+        "Disability Support Pension eligibility, so document it in "
+        "specifics. Note: function and symptoms dissociate - one "
+        "person works with residual voices while another who is "
+        "symptom-free cannot leave the house."
+    ),
+    "Risk assessment in psychiatry": (
+        "Structured assessment of the harms that could follow from a "
+        "person's mental state, covering considerably more than "
+        "suicide, and intended to produce a plan rather than a score. "
+        "Features: risk to self includes suicide, self-harm, "
+        "self-neglect (nutrition, hygiene, untreated physical "
+        "illness) and accidental harm through disinhibition or "
+        "intoxication. Risk to others includes violence, threats and "
+        "stalking, with previous violence the strongest predictor. "
+        "Risk from others covers vulnerability to financial, sexual "
+        "or drug-related exploitation and to elder or domestic abuse. "
+        "Risk to dependent children is always considered and, in New "
+        "South Wales, prompts a Child Protection Helpline report "
+        "where a child is at risk of significant harm. Absconding "
+        "matters for anyone who would need Mental Health Act "
+        "assessment if they left. Mx: record the risk, its likely "
+        "timeframe, what triggers it and what reduces it - means "
+        "restriction, supervision, treating the illness, engagement, "
+        "crisis contacts. Note: static factors do not change and "
+        "categories do not predict individual outcomes; it is the "
+        "plan that protects the patient, not the label."
+    ),
+    "Acute behavioural disturbance": (
+        "Agitation, aggression or grossly disorganised behaviour that "
+        "threatens the safety of the patient or those around them and "
+        "needs managing immediately, whatever the cause. Causes: "
+        "medical, including hypoglycaemia, hypoxia, sepsis, head "
+        "injury and delirium; intoxication or withdrawal from "
+        "alcohol, methamphetamine, cannabis or benzodiazepines; "
+        "psychosis, mania, dementia, intellectual disability and "
+        "autism. Mx: de-escalate first - a low-stimulus space, one "
+        "person speaking, an offer of food, drink or a nicotine "
+        "substitute, and a stated acceptable outcome. Offer oral "
+        "medication before parenteral, usually olanzapine or a "
+        "benzodiazepine such as diazepam or lorazepam, at reduced "
+        "dose in the elderly, the frail and the antipsychotic-naive. "
+        "Parenteral droperidol or olanzapine, adding midazolam if "
+        "needed, is for when oral has failed or is unsafe. "
+        "Monitoring: continuous observation after sedation of airway, "
+        "respiratory rate, oxygen saturation, blood pressure and "
+        "sedation score, with resuscitation equipment and flumazenil "
+        "to hand. Note: exclude hypoglycaemia and hypoxia before "
+        "calling it psychiatric. Restraint and seclusion are last "
+        "resorts, time-limited, documented and reviewed."
+    ),
+    "Telepsychiatry": (
+        "Psychiatric assessment and treatment delivered by video or "
+        "telephone, the routine means of reaching rural and remote "
+        "Australia and a permanent part of the Medicare telehealth "
+        "items. Uses: initial and review consultations, case "
+        "conferences, supervision of rural generalists, tribunal "
+        "hearings, and after-hours crisis assessment through state "
+        "services such as the NSW Mental Health Line. Features: video "
+        "is preferred to telephone because appearance, psychomotor "
+        "activity and affect remain observable, but subtle akathisia "
+        "and tremor are hard to see and no physical examination is "
+        "possible. Record consent, the patient's exact location, an "
+        "on-site contact and what will happen if the connection "
+        "drops. Note: a video consultation is a mental state "
+        "examination with less information in it, not an equivalent "
+        "one, so suspected catatonia, delirium, serious physical "
+        "comorbidity or high acute risk warrants face-to-face "
+        "assessment where one can be arranged. Examination by "
+        "audiovisual link is expressly permitted under the NSW Mental "
+        "Health Act 2007, but someone still has to be in the room to "
+        "examine the patient physically."
+    ),
+    "Shared decision making": (
+        "A consultation model treating the clinician's knowledge of "
+        "the options and the patient's knowledge of their own life as "
+        "equally necessary to a decision - neither paternalism nor a "
+        "menu handed over without guidance. Features: signal that "
+        "there is a decision to make, set out the reasonable options "
+        "including doing nothing, give benefits and harms in absolute "
+        "numbers rather than relative risk, ask what matters to this "
+        "person, then decide together and arrange to revisit it. It "
+        "fits preference-sensitive choices best: depot or oral "
+        "antipsychotic, continuing or stopping an antidepressant, "
+        "admission or home-based care. Mx: written decision aids, a "
+        "family member or carer present with the patient's consent, "
+        "an advance statement or psychiatric advance directive made "
+        "while well, and a nominated support person or designated "
+        "carer under mental health legislation. Note: it does not "
+        "require full capacity for every element. A person under a "
+        "community treatment order or an involuntary admission can "
+        "still choose agent, route, timing and supports, and being "
+        "involved predicts engagement once the order ends."
+    ),
+    "Psychoeducation": (
+        "Structured teaching of a patient and their family about the "
+        "illness, its treatment and its early warning signs, "
+        "delivered as a therapeutic intervention rather than as "
+        "information handed over. Features: what the condition is and "
+        "is not; the rationale and expected timeframe for treatment, "
+        "including that antidepressants and antipsychotics take "
+        "weeks; likely adverse effects and what to do about them; the "
+        "person's own relapse signature with an agreed action plan; "
+        "the role of sleep, alcohol and other drugs, and adherence; "
+        "and where to get help after hours. Family psychoeducation "
+        "additionally addresses expressed emotion - criticism, "
+        "hostility and emotional overinvolvement - which predicts "
+        "relapse in schizophrenia. Uses: a core part of management in "
+        "schizophrenia, bipolar disorder, depression, anxiety "
+        "disorders and ADHD, and named as such in RANZCP guidelines. "
+        "Note: family intervention of adequate duration has one of "
+        "the largest effect sizes of any psychosocial treatment in "
+        "schizophrenia and is also the element most often skipped. A "
+        "pamphlet handed across the desk is not psychoeducation."
+    ),
+    "ISBAR clinical handover": (
+        "Structured format for clinical handover and for any urgent "
+        "clinical conversation, mandated across NSW Health and used "
+        "by most Australian hospitals. Features: Identify yourself, "
+        "your role and where you are calling from, and the patient by "
+        "name, age and identifiers. Situation is the reason for the "
+        "call in one sentence, including how unwell the patient is "
+        "right now. Background gives the relevant history, working "
+        "diagnosis, comorbidities, medications and what has already "
+        "been done. Assessment gives observations, examination "
+        "findings, results and what you think is going on. "
+        "Recommendation states what you want, by when, and who is "
+        "doing it. Uses: shift-to-shift handover, transfer between "
+        "wards or hospitals, escalation of a deteriorating patient, "
+        "and calls to a consultant or a retrieval service. Note: "
+        "communication failure is among the most frequent "
+        "contributors to serious clinical incidents, and "
+        "Recommendation is the step most often dropped. A call that "
+        "ends without a stated request and an agreed timeframe has "
+        "not handed anything over, so read the plan back to close the "
+        "loop."
+    ),
+    "Medication diversion": (
+        "Supply of a prescribed medicine to someone other than the "
+        "person it was prescribed for, whether by sale, sharing, "
+        "theft or deception. Features: the medicines involved are "
+        "mostly opioids, benzodiazepines, pregabalin, quetiapine and "
+        "stimulants such as dexamfetamine and methylphenidate. "
+        "Concern is raised by repeated lost or stolen script claims, "
+        "early requests, insistence on one drug, brand and quantity, "
+        "refusal of non-drug options, attendance after hours or to "
+        "several prescribers, a urine drug screen negative for the "
+        "drug being prescribed, and reluctance to allow contact with "
+        "the previous prescriber. Mx: check real-time prescription "
+        "monitoring before prescribing a monitored medicine "
+        "(SafeScript in New South Wales and Victoria, QScript in "
+        "Queensland); one prescriber and one pharmacy; staged or "
+        "daily dispensing; smaller quantities; a written treatment "
+        "agreement; and treatment of any underlying dependence rather "
+        "than discharge from care. Note: suspicion is not proof, and "
+        "the pain or the ADHD may be genuine as well. Abrupt "
+        "cessation risks withdrawal and a switch to illicit supply, "
+        "so taper and keep the person in care."
+    ),
+    "Cognitive behavioural therapy": (
+        "Structured, time-limited talking therapy built on the link "
+        "between thoughts, feelings and behaviour - change the "
+        "unhelpful thinking and the avoidance, and mood follows. "
+        "Indications: depression, generalised anxiety, panic, social "
+        "anxiety, OCD, PTSD, insomnia, eating disorders, and as an "
+        "adjunct in psychosis. Features: a shared formulation and a "
+        "set agenda each session, thought records that catch "
+        "automatic thoughts and cognitive distortions, behavioural "
+        "experiments, and graded exposure with response prevention. "
+        "Between-session homework is the active ingredient, and a "
+        "typical course is 8 to 20 weekly sessions. Australian notes: "
+        "delivered by psychologists, mental health social workers and "
+        "occupational therapists, and by GPs trained in focussed "
+        "psychological strategies, under a GP Mental Health Treatment "
+        "Plan - Better Access rebates 10 individual sessions a "
+        "calendar year. Free guided internet courses through THIS WAY "
+        "UP and MindSpot. Note: eTG makes it first line for mild to "
+        "moderate depression and for most anxiety disorders, alone or "
+        "alongside an antidepressant, with lower relapse after "
+        "treatment stops than medication alone."
+    ),
+    "Psychodynamic psychotherapy": (
+        "Talking therapy that works on unconscious conflict, early "
+        "relationships and defence mechanisms, using the therapeutic "
+        "relationship itself as the material for change. Features: "
+        "the patient speaks freely rather than to an agenda; the "
+        "therapist attends to transference (feelings belonging to "
+        "earlier figures redirected onto the therapist) and to "
+        "countertransference, names defences, and links present "
+        "symptoms to recurring relational patterns. Brief dynamic "
+        "therapy runs 16 to 30 sessions; open-ended work continues "
+        "for years. Indications: depression or anxiety that has not "
+        "held with CBT, personality disorder, complicated grief, "
+        "repeated relationship difficulty, and the patient who wants "
+        "to understand a pattern rather than control a symptom. "
+        "Requires psychological mindedness and tolerance of distress "
+        "between sessions. Cautions: acute psychosis, active severe "
+        "substance use or an unstable crisis - stabilise and support "
+        "first. Note: the discriminator from CBT is the target, not "
+        "the depth. CBT changes current thoughts and behaviour "
+        "through homework and structure; psychodynamic work seeks "
+        "insight into why the pattern recurs, and sets none."
+    ),
+    "Supportive psychotherapy": (
+        "The default therapy of general practice and general "
+        "psychiatry - listening, validation, explanation, praise and "
+        "practical advice aimed at restoring function rather than "
+        "producing insight. Features: active listening and empathic "
+        "validation; ventilation of distress; psychoeducation about "
+        "the illness and its course; reinforcement of coping the "
+        "patient already uses and of existing social supports; direct "
+        "advice and help framing a problem; clear boundaries, with "
+        "defences left intact rather than interpreted. Indications: "
+        "adjustment disorder, bereavement, acute crisis, chronic "
+        "medical illness, and the acutely unwell or low-functioning "
+        "patient in whom uncovering work would destabilise - the "
+        "widest applicability of any psychotherapy, and deliverable "
+        "by any clinician. Mx: eTG puts brief supportive counselling "
+        "with watchful waiting and review as first line in adjustment "
+        "disorder, ahead of medication. Note: supportive therapy "
+        "strengthens defences where psychodynamic therapy dismantles "
+        "them, so choosing it for a fragile patient is a positive "
+        "decision, not a lesser form of treatment."
+    ),
+    "Stages of change (transtheoretical model)": (
+        "Prochaska and DiClemente's model of how people change a "
+        "health behaviour, used to match the intervention to where "
+        "the patient actually is. Stages: precontemplation - not "
+        "considering change and often not seeing a problem; "
+        "contemplation - ambivalent, weighing costs against benefits; "
+        "preparation - intending to act soon and making plans; action "
+        "- actively changing, within the first six months; "
+        "maintenance - sustaining the change beyond six months. "
+        "Relapse is expected and is re-entry into the cycle rather "
+        "than failure. Mx: fit the task to the stage - raise "
+        "awareness and offer information in precontemplation, work "
+        "the ambivalence with a decisional balance in contemplation, "
+        "set a date and a concrete plan in preparation, reinforce and "
+        "problem-solve in action, and rehearse high-risk situations "
+        "in maintenance. Note: pushing an action-stage intervention "
+        "such as a quit date or a rehabilitation referral at a "
+        "precontemplative patient produces resistance and "
+        "disengagement. Motivational interviewing is the technique "
+        "used to move a person along the stages; the model tells you "
+        "which move to make."
+    ),
+    "Structured problem solving": (
+        "A brief manualised technique that treats the stressors a "
+        "patient presents with as solvable problems and teaches a "
+        "repeatable method for working through them. Features: define "
+        "one problem in concrete specific terms; brainstorm every "
+        "possible solution without judging any of them; list "
+        "advantages and disadvantages of each; choose one and write a "
+        "step-by-step plan with a time frame; carry it out; review "
+        "what happened and start again on the next problem. Usually "
+        "four to six sessions with homework between. Indications: "
+        "adjustment disorder, mild to moderate depression, stress in "
+        "chronic illness, and the suicidal or self-harming patient "
+        "whose hopelessness is driven by concrete unresolved "
+        "problems. Australian notes: one of the focussed "
+        "psychological strategies a GP with mental health skills "
+        "training can deliver and bill under Medicare, and a core "
+        "Better Access item for psychologists. Note: it works because "
+        "it demands no insight and little cognitive work - the right "
+        "choice for the patient who is overwhelmed rather than "
+        "distorted in their thinking."
+    ),
+    "Lifestyle interventions in mental illness": (
+        "Exercise, sleep, diet, alcohol and smoking treated as "
+        "treatment for mental illness in their own right, not only as "
+        "cardiovascular risk reduction. Mx: structured aerobic or "
+        "resistance exercise, around 30 minutes on most days, has an "
+        "antidepressant effect comparable to medication in mild to "
+        "moderate depression and is endorsed in RANZCP mood disorder "
+        "guidance; regular sleep-wake timing and stimulus control "
+        "before any hypnotic; a Mediterranean-style diet has trial "
+        "support as an adjunct in depression; reducing alcohol "
+        "improves mood, sleep and antidepressant response; smoking "
+        "cessation improves mental health rather than worsening it, "
+        "and lowers clozapine and olanzapine metabolism, so doses "
+        "need review. Features: set specific measurable goals, pair "
+        "the plan with behavioural activation and motivational "
+        "interviewing, and refer to exercise physiology or dietetics "
+        "under a GP chronic disease management plan. Note: people "
+        "with severe mental illness die 15 to 20 years earlier, "
+        "mostly of cardiovascular disease - this work treats the "
+        "illness and the mortality gap at the same time."
+    ),
+    "Behavioural activation": (
+        "A treatment for depression that lifts mood by changing what "
+        "the person does, on the premise that withdrawal and "
+        "inactivity maintain low mood by removing every source of "
+        "reward. Features: baseline monitoring with an activity diary "
+        "rating mastery and pleasure hour by hour; scheduling "
+        "activities in advance rather than waiting to feel like doing "
+        "them; grading tasks from easy to hard so early attempts "
+        "succeed; reinstating routine, social contact and valued "
+        "activity; identifying avoidance and reversing it. "
+        "Indications: depression at any severity, including "
+        "inpatients, depression in dementia, and depression "
+        "complicating physical illness or somatic symptom disorder. "
+        "Can be delivered by a nurse, GP or trained non-specialist, "
+        "which is why it is the workhorse where CBT is unavailable. "
+        "Note: the discriminating idea is that action precedes "
+        "motivation - the patient acts first and the mood follows, "
+        "which inverts the wait-until-I-feel-better rule that "
+        "depression imposes. Trials find it as effective as full CBT "
+        "for depression and simpler to deliver."
+    ),
+    "E-mental health": (
+        "Structured psychological treatment delivered online or by "
+        "app, usually internet CBT, with or without clinician "
+        "guidance. Indications: mild to moderate depression and "
+        "anxiety as first-line or step-one care, support while "
+        "waiting for a psychologist, rural and remote patients, and "
+        "anyone who will not attend face to face. Australian notes: "
+        "THIS WAY UP runs clinician-supervised courses for "
+        "depression, anxiety, OCD and insomnia; MindSpot is a free "
+        "national online clinic offering assessment plus "
+        "therapist-guided courses for adults; moodgym is a "
+        "long-running self-guided CBT program; Head to Health is the "
+        "national gateway that points to the rest; eheadspace and "
+        "ReachOut cover young people; Beyond Blue, Lifeline and "
+        "13YARN provide support rather than therapy. Note: guided "
+        "courses with brief clinician contact roughly double "
+        "completion and outcome compared with unguided self-help, so "
+        "prescribe a specific course and review it like any other "
+        "treatment rather than handing over a web address. Not "
+        "appropriate alone for significant suicide risk, psychosis or "
+        "complex comorbidity."
+    ),
+    "Psychiatric rehabilitation": (
+        "Psychosocial work aimed at function and role rather than "
+        "symptoms - helping someone with severe and enduring mental "
+        "illness live, work and connect as they choose. Features: "
+        "supported accommodation and living skills training; "
+        "supported employment on the individual placement and support "
+        "model, which places the person in open competitive work "
+        "quickly and trains on the job; supported education; social "
+        "skills training; day and clubhouse programs offering "
+        "structure and peer contact; family psychoeducation; "
+        "assertive community treatment for those who disengage. "
+        "Australian notes: delivered through community mental health "
+        "teams and non-government providers, with NDIS psychosocial "
+        "disability supports for people whose impairment is "
+        "significant and enduring, and Disability Employment Services "
+        "for work. Note: individual placement and support outperforms "
+        "train-then-place prevocational programs on open employment, "
+        "and holding a job improves symptoms and self-esteem in turn. "
+        "Recovery here means a valued life alongside the illness, not "
+        "the absence of it."
+    ),
+    "Mood stabilisers": (
+        "Drugs that treat and prevent mood episodes in bipolar "
+        "disorder. Class: lithium; the anticonvulsants sodium "
+        "valproate, carbamazepine and lamotrigine; and the atypical "
+        "antipsychotics quetiapine, olanzapine, aripiprazole and "
+        "risperidone. Indications: lithium is first line for acute "
+        "mania and for maintenance and is the only agent with an "
+        "antisuicidal effect; valproate and the atypicals treat "
+        "mania; lamotrigine prevents the depressive pole but does not "
+        "treat mania; carbamazepine is second line. Monitoring: "
+        "lithium concentration 12 hours post-dose, 0.6 to 0.8 mmol/L "
+        "for maintenance, with EUC, TFT and calcium; FBC and LFT for "
+        "valproate and carbamazepine. CI: valproate in anyone of "
+        "childbearing potential unless nothing else works and "
+        "pregnancy prevention is in place - roughly 10% major "
+        "malformation and 30 to 40% neurodevelopmental impairment. "
+        "SE: lithium - tremor, polyuria, hypothyroidism, weight gain, "
+        "chronic kidney impairment; lamotrigine - rash progressing to "
+        "Stevens-Johnson syndrome if titration is rushed. Note: "
+        "titrate lamotrigine over weeks, and halve the dose alongside "
+        "valproate, which doubles its concentration."
+    ),
+    "Hypnotics": (
+        "Drugs prescribed to initiate or maintain sleep: "
+        "benzodiazepines such as temazepam, the Z-drugs zolpidem and "
+        "zopiclone, prolonged-release melatonin, and sedating agents "
+        "used off-label including low-dose doxepin, mirtazapine and "
+        "quetiapine. Mx: eTG puts sleep hygiene and cognitive "
+        "behavioural therapy for insomnia first, and CBT for insomnia "
+        "outperforms any hypnotic beyond about four weeks; a hypnotic "
+        "is an adjunct for short-term or situational insomnia only. "
+        "Prescribe the lowest effective dose for the shortest course, "
+        "ideally under two weeks and intermittently, with the stop "
+        "plan agreed at the first script. SE: next-day sedation and "
+        "impaired driving, tolerance within weeks, dependence with "
+        "rebound insomnia on cessation, falls, fracture and confusion "
+        "in older people, and complex sleep behaviours - "
+        "sleepwalking, sleep-driving, sleep-eating - with zolpidem, "
+        "which carries a TGA boxed warning. Cautions: obstructive "
+        "sleep apnoea, respiratory disease, past substance "
+        "dependence, pregnancy, and combination with alcohol or "
+        "opioids. Note: prolonged-release melatonin is approved for "
+        "insomnia from age 55 and carries the least dependence risk."
+    ),
+    "Antidepressant switching and discontinuation": (
+        "Stopping, swapping and restarting an antidepressant - the "
+        "part of the prescribing that causes most of the trouble. "
+        "Duration: continue at the dose that produced remission for "
+        "at least 6 to 12 months after a first episode and for years "
+        "after recurrent ones; most relapses follow a premature stop. "
+        "Features: discontinuation syndrome begins within days of "
+        "stopping or of a missed dose - flu-like malaise, dizziness, "
+        "electric-shock sensations, insomnia, vivid dreams, "
+        "irritability, nausea and sensory disturbance; worst with "
+        "paroxetine and venlafaxine because their half-lives are "
+        "short, and rare with fluoxetine. Mx: taper over at least "
+        "four weeks, and far more slowly after years of treatment; "
+        "switching within or between the SSRI and SNRI classes is "
+        "usually a cross-taper, or a direct switch starting low; "
+        "allow washout around an MAOI - two weeks either side, and "
+        "five weeks after fluoxetine - to avoid serotonin syndrome. "
+        "Note: discontinuation is fast, physical and settles within "
+        "hours of reinstating the drug, while relapse builds over "
+        "weeks and reproduces the original depressive symptoms. That "
+        "is the discriminator."
+    ),
+    "Restraint and seclusion": (
+        "Restriction of a person's freedom of movement to prevent "
+        "imminent serious harm when less restrictive options have "
+        "failed - a last resort, never a treatment and never a "
+        "punishment. Types: physical, meaning hands-on holding by "
+        "trained staff; mechanical, using devices, which is rare in "
+        "Australian mental health units; chemical or acute sedation, "
+        "medication given to control behaviour rather than to treat "
+        "illness; and seclusion, confinement alone in a room the "
+        "person cannot leave. Mx: de-escalate first with space, one "
+        "calm communicator, offered oral medication and attention to "
+        "unmet needs such as pain or a wish to phone family; if "
+        "restraint is used keep it as brief as possible and never "
+        "obstruct the airway, chest or neck. Monitoring: continuous "
+        "observation with regular vital signs, airway, hydration, "
+        "toileting and pressure areas, then debrief the patient, the "
+        "family and the staff and document the episode. Note: the "
+        "authority is the Mental Health Act 2007 (NSW), guardianship, "
+        "or the common law duty of care in an emergency - never staff "
+        "convenience. NSW Health requires the least restrictive "
+        "option and reporting of every episode."
+    ),
+    "Delirium versus dementia versus depression": (
+        "The three commonest causes of apparent cognitive impairment "
+        "in an older patient, separated at the bedside by onset, "
+        "course, attention and effort. Onset: delirium over hours to "
+        "days and fluctuating within the day, dementia over months to "
+        "years and progressive, depression over weeks with a stable "
+        "low mood. Clinical features: delirium impairs attention "
+        "first and clouds conscious level; dementia leaves attention "
+        "and consciousness intact until late, losing memory and "
+        "language first; depression leaves both intact but effort is "
+        "poor and the complaint of memory loss is louder than the "
+        "deficit. On testing, the depressed patient answers 'I don't "
+        "know' and stops trying, while the patient with dementia "
+        "near-misses, confabulates and is unconcerned. Insight is "
+        "preserved and distressing in depression, absent in dementia, "
+        "and fluctuating in delirium. Ix: 4AT or CAM first, MoCA or "
+        "MMSE only once delirium is excluded, GDS-15 for mood. Note: "
+        "the three coexist more often than they compete, and delirium "
+        "on a background of dementia is the commonest ward picture, "
+        "so a known diagnosis of dementia never explains an acute "
+        "change."
+    ),
+    "Late-life depression": (
+        "Depression with first onset or recurrence in later life, "
+        "presenting more with somatic and cognitive complaints than "
+        "with reported sadness. Epidemiology: common in residential "
+        "care and the medically ill; Australian men over 85 have the "
+        "highest suicide rate of any age and sex group. Clinical "
+        "features: unexplained pain, weight loss, fatigue and "
+        "insomnia, anxious agitation or hypochondriacal "
+        "preoccupation, poor concentration mistaken for dementia, and "
+        "nihilistic or somatic delusions with food refusal when "
+        "psychotic. Vascular depression, with white matter disease "
+        "and executive impairment, responds less well to drugs. Ix: "
+        "GDS-15, then TFT, B12, folate, EUC, calcium and a drug "
+        "review. Mx: sertraline or escitalopram at half the usual "
+        "starting dose and titrated slowly, with sodium checked at 2 "
+        "weeks for SIADH, or mirtazapine where insomnia and weight "
+        "loss dominate; avoid tricyclics and paroxetine for "
+        "anticholinergic load; ECT works well for psychotic "
+        "depression or food refusal. Note: depressive pseudodementia "
+        "is reversible cognitive impairment from depression, but a "
+        "substantial minority convert to dementia within a few years, "
+        "so retest cognition once mood is treated."
+    ),
+    "Family-based therapy": (
+        "Manualised outpatient treatment for adolescent anorexia "
+        "nervosa in which the parents, not the clinician, take charge "
+        "of refeeding. Indications: a medically stable adolescent "
+        "living at home; first line under 18 in RANZCP and Australian "
+        "eating disorder guidance, with the strongest evidence in "
+        "anorexia nervosa and growing evidence in bulimia nervosa. "
+        "Phases: phase 1 hands full control of eating to the parents, "
+        "with the illness externalised from the young person and no "
+        "blame apportioned to the family; phase 2 returns control of "
+        "eating to the adolescent as weight restores; phase 3 turns "
+        "to adolescent development, identity and relapse prevention. "
+        "Around 20 sessions over 12 months, with the whole family in "
+        "the room, siblings included as supporters rather than "
+        "enforcers. Mx: medical instability comes first, so admission "
+        "for refeeding and refeeding syndrome monitoring precedes it. "
+        "Note: parents taking over the meals is what distinguishes "
+        "this from family therapy in general, and it outperforms "
+        "individual therapy for adolescents at 12 months; exploring "
+        "family dynamics without taking charge of eating is a "
+        "different treatment."
+    ),
+    "Culturally appropriate mental health assessment": (
+        "Adapting the psychiatric assessment so an Aboriginal or "
+        "Torres Strait Islander patient's account is heard "
+        "accurately, and distress is not mistaken for illness nor "
+        "illness for culture. Examination: open with a yarn about "
+        "family, where the person is from and who should be present, "
+        "before symptom questions; expect indirect eye contact and "
+        "pauses, and avoid rapid closed questioning, which produces "
+        "agreement rather than fact. Offer an Aboriginal Mental "
+        "Health Worker as a cultural broker, and an interpreter where "
+        "a first language other than English is spoken. Ix: KICA-Cog "
+        "is the cognitive tool validated for older Aboriginal people "
+        "in rural and remote settings, and RUDAS for culturally and "
+        "linguistically diverse patients; the MMSE misreads both. "
+        "Differential: hearing or seeing a relative who has died, or "
+        "attributing illness to spiritual causes, can be normative, "
+        "particularly during Sorry Business. Mx: allow for kinship "
+        "and cultural obligations when scheduling and when judging "
+        "non-attendance, and ask directly about family separation and "
+        "racism. Note: whether an experience is out of keeping is "
+        "settled by a cultural informant, not by a longer mental "
+        "state examination."
+    ),
+    "Professional boundaries": (
+        "The limits that keep a clinical relationship therapeutic, "
+        "given that the power, information and dependency in it are "
+        "all one-sided. Classification: a crossing is a minor "
+        "deviation that may be harmless, such as a hug at the end of "
+        "palliative care, while a violation exploits the patient - "
+        "sexual contact, financial dealings, or meeting the "
+        "clinician's own emotional needs through them. Sexual contact "
+        "with a current patient is never acceptable under the Ahpra "
+        "Code of conduct and is grounds for a mandatory notification. "
+        "Risk factors: clinician illness, isolation, marital "
+        "breakdown or recent loss; a dependent, traumatised or "
+        "cognitively impaired patient; rural practice, where dual "
+        "relationships are unavoidable and must be managed openly "
+        "rather than denied. Mx: take gifts, self-disclosure and "
+        "social media contact to supervision and document the "
+        "reasoning, decline friend requests from current patients, "
+        "and do not treat yourself, family or friends outside an "
+        "emergency or prescribe them Schedule 8 medicines. Red flags: "
+        "appointments drifting to the end of the day, lengthening "
+        "without reason, contact outside working hours, and anything "
+        "a colleague must not know about."
+    ),
+    "Consultation-liaison psychiatry": (
+        "Psychiatric assessment and treatment of patients on medical "
+        "and surgical wards, and of psychiatric illness caused or "
+        "complicated by physical disease. Presentation: the commonest "
+        "referrals are delirium, assessment after self-harm, capacity "
+        "questions, depression and adjustment in serious illness, "
+        "somatic symptom and functional disorders, and substance "
+        "withdrawal. Examination: a useful referral asks a question - "
+        "is this delirium or depression, can this patient refuse the "
+        "amputation, is this patient safe to go home - rather than "
+        "asking for review of a behavioural problem. Ix: the organic "
+        "screen is part of the psychiatric assessment, so EUC, "
+        "calcium, glucose, LFT, TFT, urinalysis, the drug chart and a "
+        "collateral history come first. Mx: capacity is decision- and "
+        "time-specific and the treating team assesses it, with "
+        "psychiatry asked when mental illness or cognitive impairment "
+        "clouds it. Note: in NSW the Mental Health Act 2007 "
+        "authorises detention and treatment for mental illness only, "
+        "in a declared mental health facility; it does not authorise "
+        "medical treatment of a patient who lacks capacity, which "
+        "goes through the Guardianship Act 1987 and the person "
+        "responsible."
+    ),
+    "Organic causes of psychiatric symptoms": (
+        "Medical illness presenting as a psychiatric syndrome - the "
+        "diagnosis to exclude before a first presentation is treated "
+        "as primary. Causes: endocrine disease (thyroid disorder, "
+        "Cushing syndrome, Addison disease, hyperparathyroidism), "
+        "metabolic derangement (hypoglycaemia, hyponatraemia, hepatic "
+        "and uraemic encephalopathy, thiamine or B12 deficiency, "
+        "Wilson disease), neurological disease (delirium, dementia, "
+        "temporal lobe epilepsy, tumour, Huntington disease, "
+        "autoimmune encephalitis), infection (sepsis and urinary "
+        "infection in the old, HIV, neurosyphilis, encephalitis), and "
+        "drugs, including withdrawal states. Red flags: first "
+        "psychosis or mania after 40, fluctuating attention or "
+        "conscious level, visual or olfactory hallucinations, focal "
+        "neurology or seizures, gait change and incontinence, and "
+        "failure to respond to adequate treatment. Ix: FBC, EUC, LFT, "
+        "TFT, calcium, glucose, B12 and folate, CRP, urinalysis and "
+        "urine drug screen; CT or MRI brain, EEG and lumbar puncture "
+        "where those flags appear. Note: the miss that matters is "
+        "anti-NMDA receptor encephalitis in a young woman with new "
+        "psychosis, catatonia and orofacial dyskinesia, where a "
+        "normal CT excludes nothing."
+    ),
+    "Psychiatric presentations of epilepsy": (
+        "Psychiatric symptoms arising from epilepsy itself, from its "
+        "treatment, or from living with it. Classification: "
+        "peri-ictal symptoms are timed to seizures - preictal "
+        "irritability, ictal fear or deja vu in temporal lobe "
+        "seizures, and postictal psychosis - while interictal "
+        "depression and psychosis run independently. Clinical "
+        "features: postictal psychosis follows a cluster of seizures "
+        "after a lucid interval of about 12 to 72 hours, brings "
+        "affective, religious or grandiose delusions, lasts days to "
+        "weeks and remits, and carries a real suicide risk meanwhile. "
+        "Interictal dysphoric disorder is intermittent irritability, "
+        "low mood, anergia and pain between seizures. Depression "
+        "affects roughly a third of people with epilepsy and the risk "
+        "runs both ways. Adverse effects: levetiracetam causes "
+        "irritability, aggression or low mood in about one in ten, "
+        "topiramate and zonisamide cause cognitive slowing and "
+        "depression, and perampanel causes aggression. Ddx: "
+        "psychogenic non-epileptic seizures, suggested by long "
+        "duration, closed and resisted eyes, asynchronous thrashing, "
+        "preserved awareness and no postictal confusion, and "
+        "confirmed on video EEG rather than by response to treatment."
+    ),
+    "Post-stroke depression": (
+        "Depression after a stroke, in about a third of survivors, "
+        "and the strongest modifiable predictor of poor "
+        "rehabilitation outcome. Epidemiology: peaks between 3 and 6 "
+        "months, with risk rising with prior depression, greater "
+        "disability, aphasia and isolation. Clinical features: "
+        "fatigue, insomnia, poor appetite and poor concentration are "
+        "shared with the stroke itself, so weight hopelessness, "
+        "guilt, tearfulness and loss of interest in rehabilitation "
+        "more heavily. Ddx: emotionalism, or pseudobulbar affect, is "
+        "brief stereotyped crying or laughing triggered by trivia, "
+        "incongruent with mood and normal between episodes, and it "
+        "settles on a low-dose SSRI within days; apathy is loss of "
+        "drive without sadness, and expressive aphasia hides either. "
+        "Ix: PHQ-9, or an observer-rated scale where aphasia prevents "
+        "self-report. Mx: sertraline or citalopram while watching "
+        "falls, hyponatraemia and bleeding risk alongside "
+        "antithrombotics, with rehabilitation and psychological "
+        "therapy. Note: treat it when it appears, but do not give an "
+        "antidepressant prophylactically - the large fluoxetine "
+        "trials, the Australian AFFINITY trial among them, found no "
+        "functional benefit and more fractures."
+    ),
+    "Psychiatric complications of Parkinson disease": (
+        "The psychiatric syndromes of Parkinson disease, which decide "
+        "quality of life and residential care entry more than the "
+        "motor signs. Clinical features: depression and anxiety "
+        "affect around 40 per cent and often precede the tremor by "
+        "years; psychosis is formed visual hallucinations of people "
+        "or animals with passage and presence phenomena, insight "
+        "retained early and delusions later. Causes: psychosis is "
+        "precipitated by delirium and by dopaminergic drugs, in the "
+        "order anticholinergics, amantadine, agonists, then levodopa. "
+        "Mx: treat delirium and simplify the regimen first; if an "
+        "antipsychotic is still needed, low-dose quetiapine, or "
+        "clozapine, which alone has clear evidence and needs FBC "
+        "monitoring. Haloperidol, risperidone and olanzapine worsen "
+        "parkinsonism. Complications: impulse control disorders - "
+        "gambling, hypersexuality, binge eating, punding - occur in "
+        "up to one in six on dopamine agonists, are rarely "
+        "volunteered, and resolve on withdrawal; ask both patient and "
+        "partner. Note: dementia beginning more than a year after the "
+        "motor signs is Parkinson disease dementia, earlier than that "
+        "it is dementia with Lewy bodies, and rivastigmine is the "
+        "treatment with evidence."
+    ),
+    "Medication-induced psychiatric symptoms": (
+        "Psychiatric symptoms produced by a prescribed drug, a dose "
+        "increase or a withdrawal - a diagnosis made on timing rather "
+        "than on the picture itself. Causes: corticosteroids give "
+        "insomnia and elation early and depression later, with frank "
+        "psychosis mainly above about 40 mg of prednisolone a day; "
+        "levetiracetam gives irritability, aggression and low mood; "
+        "dopamine agonists give impulse control disorders. Also "
+        "implicated are interferon alfa, efavirenz, mefloquine, "
+        "montelukast in children, anticholinergics in older patients, "
+        "and benzodiazepines through disinhibition. Withdrawal from "
+        "alcohol, benzodiazepines, opioids or an antidepressant is as "
+        "common a cause as any drug started. Diagnosis: onset within "
+        "days to weeks of a new drug or a dose rise, an atypical "
+        "picture, no family history, and resolution on dechallenge. "
+        "Mx: stop or reduce the drug where the illness allows, never "
+        "stopping long-term corticosteroids abruptly; a short course "
+        "of olanzapine or risperidone covers steroid psychosis as the "
+        "dose comes down. Note: check the drug chart before "
+        "diagnosing a first psychiatric episode in a medical "
+        "inpatient - the treatable cause is more often on it than in "
+        "the history."
+    ),
+    "Grief and bereavement": (
+        "The response to loss - normal in most, a disorder in a "
+        "minority, and distinct from depression in ways that decide "
+        "whether it is treated. Clinical features: grief comes in "
+        "waves triggered by reminders, with yearning for the person, "
+        "preserved self-esteem and a returning capacity for pleasure "
+        "between them; briefly hearing or seeing the deceased is "
+        "normal. Most function recovers over 6 to 12 months, and "
+        "there are no fixed stages. Criteria: prolonged grief "
+        "disorder in DSM-5-TR is intense yearning or preoccupation on "
+        "most days for at least 12 months in an adult, with identity "
+        "disruption, disbelief, avoidance and difficulty re-engaging; "
+        "about one in ten bereaved. Ddx: major depression brings "
+        "pervasive low mood rather than pangs, worthlessness and "
+        "guilt not centred on the deceased, and suicidal thinking for "
+        "its own sake rather than a wish to join them; demoralisation "
+        "in life-threatening illness is hopelessness and subjective "
+        "incompetence with pleasure still possible. Mx: normal grief "
+        "needs practical support, not therapy or antidepressants; "
+        "prolonged grief disorder responds to grief-focused "
+        "psychological therapy, and comorbid depression is treated on "
+        "its own merits."
     ),
 }
 
