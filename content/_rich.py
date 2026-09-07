@@ -6982,7 +6982,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Menstrual cycle",
-        "aliases": ["Follicular phase", "Luteal phase", "Proliferative phase", "Secretory phase", "Ovarian cycle", "Menstrual cycles"],
+        "aliases": ["Follicular phase", "Luteal phase", "Proliferative phase", "Secretory phase", "Ovarian cycle", "Menstrual cycles", "Hormonal Changes in Menstruation"],
         "utd": [["Overview", "normal menstrual cycle physiology"]],
         "summary": "",
     },
@@ -7198,7 +7198,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Twin pregnancy",
-        "aliases": ["multiple pregnancy", "twin gestation", "chorionicity", "twin peak sign", "lambda sign", "DCDA", "MCDA", "dichorionic diamniotic", "monochorionic diamniotic", "Twin pregnancies"],
+        "aliases": ["multiple pregnancy", "twin gestation", "chorionicity", "twin peak sign", "lambda sign", "DCDA", "MCDA", "dichorionic diamniotic", "monochorionic diamniotic", "Twin pregnancies", "Twin Prenancy"],
         "utd": [["Overview", "twin pregnancy chorionicity management"]],
         "summary": "",
     },
@@ -7348,7 +7348,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Fetal station",
-        "aliases": ["foetal station", "station of the fetal head", "fetal engagement", "foetal engagement"],
+        "aliases": ["foetal station", "station of the fetal head", "fetal engagement", "foetal engagement", "station of the baby"],
         "utd": [["Overview", "fetal station engagement vaginal examination labor"]],
         "summary": "",
     },
@@ -7384,7 +7384,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Obstetric pelvis",
-        "aliases": ["gynaecoid pelvis", "android pelvis", "anthropoid pelvis", "platypelloid pelvis", "pelvic brim", "pelvic inlet", "pelvic outlet", "ischial spines"],
+        "aliases": ["gynaecoid pelvis", "android pelvis", "anthropoid pelvis", "platypelloid pelvis", "pelvic brim", "pelvic inlet", "pelvic outlet", "ischial spines", "Pelvis Anatomy"],
         "utd": [["Overview", "pelvic shape types obstetrics labor"]],
         "summary": "",
     },
@@ -8314,7 +8314,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Signs of placental separation",
-        "aliases": ["placental separation", "signs of separation of the placenta"],
+        "aliases": ["placental separation", "signs of separation of the placenta", "Normal Placental Detachment"],
         "utd": [["Overview", "management of the third stage of labor placental separation"]],
         "summary": "",
     },
