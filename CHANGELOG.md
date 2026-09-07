@@ -5,6 +5,16 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.1] - 2026-09-07
+
+### Changed
+
+- **The Settings version is part of a footer, not floating above one.**
+  It sat on its own row above the button row with nothing to align to.
+  One strip now, under a hairline `QFrame`: version, restart state,
+  Close - identity, state, action, which is the order a Mac sheet
+  footer reads in, and nothing alone on a row.
+
 ## [2.4.0] - 2026-09-07
 
 Quality release across popup UX, failure modes, and code shape. No

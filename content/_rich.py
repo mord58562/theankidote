@@ -246,8 +246,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Hand foot and mouth disease",
-        "aliases": ["HFMD", "Hand-foot-and-mouth disease",
-                    "Coxsackie A16 infection"],
+        "aliases": ["HFMD", "Hand-foot-and-mouth disease", "Coxsackie A16 infection", "hand, foot and mouth disease"],
         "utd": [["Overview", "hand foot and mouth disease and herpangina"]],
         "summary": "",
     },
@@ -562,7 +561,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Bipolar I disorder",
-        "aliases": ["Bipolar 1 disorder"],
+        "aliases": ["Bipolar 1 disorder", "Bipolar I"],
         "utd": [["Overview", "bipolar disorder in adults clinical "
                              "features"]],
         "summary": "",
@@ -604,7 +603,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Bipolar II disorder",
-        "aliases": ["Bipolar 2 disorder"],
+        "aliases": ["Bipolar 2 disorder", "Bipolar II"],
         "utd": [["Overview", "bipolar disorder in adults clinical "
                              "features"]],
         "summary": "",
@@ -7483,7 +7482,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Paediatric maintenance fluids",
-        "aliases": ["Holliday-Segar formula", "paediatric maintenance fluid", "maintenance fluids in children", "4-2-1 rule"],
+        "aliases": ["Holliday-Segar formula", "paediatric maintenance fluid", "maintenance fluids in children", "4-2-1 rule", "Fluid deficit"],
         "utd": [["Overview", "maintenance intravenous fluid therapy in children"]],
         "summary": "",
     },
@@ -7867,7 +7866,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Antiepileptic drugs",
-        "aliases": ["Antiseizure medication", "Anticonvulsants", "Antiepileptic medication", "Antiepileptic drug"],
+        "aliases": ["Antiseizure medication", "Anticonvulsants", "Antiepileptic medication", "Antiepileptic drug", "Anti-epileptic drugs"],
         "utd": [["Overview", "antiseizure medications mechanism of action and adverse effects"]],
         "summary": "",
     },
