@@ -9464,6 +9464,306 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "surgical hand antisepsis"]],
         "summary": "",
     },
+    {
+        "name": "Rash in children",
+        "aliases": ["Paediatric rash", "Childhood rash", "Exanthem", "Rash in the child"],
+        "utd": [["Overview", "approach to the child with fever and rash"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal respiratory distress",
+        "aliases": ["Respiratory distress in the newborn", "Respiratory distress of the newborn"],
+        "utd": [["Overview", "overview of neonatal respiratory distress and disorders of transition"]],
+        "summary": "",
+    },
+    {
+        "name": "Cough in children",
+        "aliases": ["Chronic cough in children", "Paediatric cough", "Protracted bacterial bronchitis"],
+        "utd": [["Overview", "approach to chronic cough in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Wheeze in children",
+        "aliases": ["Paediatric wheeze", "Wheezing in children", "Wheezy child"],
+        "utd": [["Overview", "approach to wheezing in infants and children"]],
+        "summary": "",
+    },
+    {
+        "name": "Upper airway obstruction in children",
+        "aliases": ["Stridor in children", "Paediatric stridor", "Airway obstruction in children"],
+        "utd": [["Overview", "approach to stridor in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Vomiting in infants and children",
+        "aliases": ["Paediatric vomiting", "Vomiting in children", "Bilious vomiting"],
+        "utd": [["Overview", "approach to the infant or child with nausea and vomiting"]],
+        "summary": "",
+    },
+    {
+        "name": "Abdominal pain in children",
+        "aliases": ["Paediatric abdominal pain", "Acute abdominal pain in children"],
+        "utd": [["Overview", "emergency evaluation of the child with acute abdominal pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Functional abdominal pain in children",
+        "aliases": ["Functional abdominal pain", "Functional abdominal pain disorder", "Recurrent abdominal pain in children"],
+        "utd": [["Overview", "functional abdominal pain in children and adolescents"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic diarrhoea in children",
+        "aliases": ["Toddler's diarrhoea", "Toddler diarrhoea", "Chronic non-specific diarrhoea of childhood"],
+        "utd": [["Overview", "approach to chronic diarrhea in children"]],
+        "summary": "",
+    },
+    {
+        "name": "The limping child",
+        "aliases": ["Limping child", "Limp in children", "Joint pain in children", "Paediatric limp"],
+        "utd": [["Overview", "approach to the child with a limp"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric advanced life support",
+        "aliases": ["Paediatric resuscitation", "Paediatric cardiac arrest", "PALS", "Advanced life support in children"],
+        "utd": [["Overview", "pediatric advanced life support algorithm"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric sepsis",
+        "aliases": ["Sepsis in children", "Paediatric sepsis red flags", "Sepsis in the child"],
+        "utd": [["Overview", "sepsis in children definitions and clinical manifestations"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric shock",
+        "aliases": ["Shock in children", "Compensated shock", "Shock in the child"],
+        "utd": [["Overview", "initial evaluation of shock in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Anaemia in children",
+        "aliases": ["Paediatric anaemia", "Childhood anaemia", "Anaemia in the child"],
+        "utd": [["Overview", "approach to the child with anemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Fatigue in children",
+        "aliases": ["Paediatric fatigue", "Tiredness in children", "Fatigue in the child"],
+        "utd": [["Overview", "approach to fatigue in children and adolescents"]],
+        "summary": "",
+    },
+    {
+        "name": "Preschool wheeze",
+        "aliases": ["Episodic viral wheeze", "Multiple-trigger wheeze", "Viral-induced wheeze", "Viral induced wheeze"],
+        "utd": [["Overview", "wheezing phenotypes and asthma in preschool children"]],
+        "summary": "",
+    },
+    {
+        "name": "Salbutamol burst therapy",
+        "aliases": ["Burst therapy", "Salbutamol burst", "Bronchodilator burst"],
+        "utd": [["Overview", "acute asthma exacerbations in children emergency department management"]],
+        "summary": "",
+    },
+    {
+        "name": "Asthma action plan",
+        "aliases": ["Written asthma action plan", "Asthma first aid", "Asthma management plan"],
+        "utd": [["Overview", "asthma self management education and action plans"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric community-acquired pneumonia",
+        "aliases": ["Pneumonia in children", "Childhood pneumonia", "Community-acquired pneumonia in children"],
+        "utd": [["Overview", "community acquired pneumonia in children clinical features and diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Bronchodilators",
+        "aliases": ["Bronchodilator", "Beta-2 agonist", "Beta-2 agonists", "Bronchodilator therapy"],
+        "utd": [["Overview", "beta agonists in asthma acute and long term use"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric airway anatomy",
+        "aliases": ["Paediatric airway", "Infant airway", "Paediatric airway differences"],
+        "utd": [["Overview", "emergency airway management in children unique pediatric considerations"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulse oximetry",
+        "aliases": ["Oxygen saturation monitoring", "SpO2 monitoring", "Pulse oximeter"],
+        "utd": [["Overview", "pulse oximetry principles and limitations"]],
+        "summary": "",
+    },
+    {
+        "name": "Cord and neonatal blood gas interpretation",
+        "aliases": ["Cord blood gas", "Umbilical cord blood gas", "Cord gas", "Umbilical artery blood gas"],
+        "utd": [["Overview", "umbilical cord blood acid base analysis at delivery"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal respiratory support",
+        "aliases": ["Nasal CPAP", "Neonatal CPAP", "Non-invasive ventilation in the newborn", "Nasal continuous positive airway pressure"],
+        "utd": [["Overview", "continuous positive airway pressure in the newborn"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal pneumothorax",
+        "aliases": ["Pneumothorax in the newborn", "Neonatal air leak", "Newborn pneumothorax"],
+        "utd": [["Overview", "pulmonary air leak in the newborn"]],
+        "summary": "",
+    },
+    {
+        "name": "Congenital pulmonary airway malformation",
+        "aliases": ["CPAM", "Congenital cystic adenomatoid malformation", "CCAM", "Congenital lung malformation", "Congenital lung cyst"],
+        "utd": [["Overview", "congenital pulmonary airway malformation prenatal diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Periviability",
+        "aliases": ["Extreme prematurity", "Threshold of viability", "Periviable birth", "Resuscitation at extreme prematurity"],
+        "utd": [["Overview", "periviable birth counseling and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Unrecognised oesophageal intubation",
+        "aliases": ["Oesophageal intubation", "Esophageal intubation", "No trace wrong place"],
+        "utd": [["Overview", "confirmation of endotracheal tube placement"]],
+        "summary": "",
+    },
+    {
+        "name": "Sepsis Kills pathway",
+        "aliases": ["Sepsis Kills", "CEC sepsis pathway", "NSW sepsis pathway"],
+        "utd": [["Overview", "sepsis quality improvement programs and bundles"]],
+        "summary": "",
+    },
+    {
+        "name": "NETS retrieval service",
+        "aliases": ["NETS", "Newborn and paediatric Emergency Transport Service", "Neonatal retrieval"],
+        "utd": [["Overview", "interfacility transport of the critically ill child"]],
+        "summary": "",
+    },
+    {
+        "name": "Infant and child nutrition",
+        "aliases": ["Infant feeding", "Introduction of solids", "Complementary feeding", "Infant nutrition"],
+        "utd": [["Overview", "introducing solid foods and vitamin and mineral supplementation during infancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Childhood obesity",
+        "aliases": ["Obesity in children", "Paediatric obesity", "Childhood overweight", "Weight management in children"],
+        "utd": [["Overview", "definition epidemiology and etiology of obesity in children and adolescents"]],
+        "summary": "",
+    },
+    {
+        "name": "Vaccine hesitancy",
+        "aliases": ["Vaccine refusal", "Immunisation hesitancy", "Vaccine confidence"],
+        "utd": [["Overview", "addressing vaccine hesitancy in patients and parents"]],
+        "summary": "",
+    },
+    {
+        "name": "Second-hand smoke exposure",
+        "aliases": ["Passive smoking", "Second-hand smoke", "Environmental tobacco smoke", "Household smoke exposure"],
+        "utd": [["Overview", "secondhand smoke exposure effects in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Antimicrobial resistance",
+        "aliases": ["Antibiotic resistance", "Multidrug resistance", "Multi-resistant organisms"],
+        "utd": [["Overview", "mechanisms of antibiotic resistance"]],
+        "summary": "",
+    },
+    {
+        "name": "CSF interpretation",
+        "aliases": ["Cerebrospinal fluid interpretation", "CSF analysis", "Cerebrospinal fluid analysis"],
+        "utd": [["Overview", "cerebrospinal fluid analysis interpretation meningitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute pain management in children",
+        "aliases": ["Paediatric analgesia", "Paediatric pain management", "Analgesia in children", "Pain relief in children"],
+        "utd": [["Overview", "management of acute pain in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric major trauma",
+        "aliases": ["Paediatric trauma", "Major trauma in children", "Paediatric multi-trauma"],
+        "utd": [["Overview", "trauma management in children unique considerations"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric chest X-ray interpretation",
+        "aliases": ["Paediatric chest X-ray", "Paediatric CXR", "Chest X-ray in children"],
+        "utd": [["Overview", "approach to the pediatric chest radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Respiratory pathogens by site",
+        "aliases": ["Respiratory tract pathogens", "Respiratory pathogens", "Causative organisms in respiratory infection"],
+        "utd": [["Overview", "microbiology of respiratory tract infections in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Polydipsia",
+        "aliases": ["Excessive thirst", "Increased thirst", "Polydipsia in children"],
+        "utd": [["Overview", "evaluation of polyuria and polydipsia"]],
+        "summary": "",
+    },
+    {
+        "name": "First 2000 Days Framework",
+        "aliases": ["First 2000 Days", "First 2000 days of life"],
+        "utd": [["Overview", "early childhood development and the role of the pediatrician"]],
+        "summary": "",
+    },
+    {
+        "name": "Cognitive bias in clinical reasoning",
+        "aliases": ["Anchoring bias", "Diagnostic error", "Cognitive bias", "Availability bias"],
+        "utd": [["Overview", "diagnostic errors and cognitive bias in clinical decision making"]],
+        "summary": "",
+    },
+    {
+        "name": "Family-centred care",
+        "aliases": ["Family centred care", "Family-centered care", "Partnership with families"],
+        "utd": [["Overview", "family centered care in pediatrics"]],
+        "summary": "",
+    },
+    {
+        "name": "Childhood epilepsy syndromes",
+        "aliases": ["Childhood absence epilepsy", "Juvenile myoclonic epilepsy", "Benign rolandic epilepsy", "Lennox-Gastaut syndrome", "Paediatric epilepsy syndromes"],
+        "utd": [["Overview", "overview of the classification of seizures and epilepsy syndromes in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Specific learning disorder",
+        "aliases": ["Dyslexia", "Specific learning difficulty", "Learning disorder", "Dyscalculia"],
+        "utd": [["Overview", "specific learning disabilities in children clinical features and evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "TEN-4-FACESp bruising rule",
+        "aliases": ["TEN-4-FACESp", "TEN-4 FACESp", "TEN-4 bruising rule", "TEN-4"],
+        "utd": [["Overview", "physical child abuse recognition of bruising"]],
+        "summary": "",
+    },
+    {
+        "name": "Childhood cancer survivorship",
+        "aliases": ["Cancer survivorship", "Late effects of childhood cancer", "Survivorship care"],
+        "utd": [["Overview", "overview of late effects in childhood cancer survivors"]],
+        "summary": "",
+    },
+    {
+        "name": "Adverse childhood experiences",
+        "aliases": ["Adverse childhood experience", "Childhood adversity", "ACE study"],
+        "utd": [["Overview", "adverse childhood experiences and long term health outcomes"]],
+        "summary": "",
+    },
+    {
+        "name": "Medication adherence",
+        "aliases": ["Non-adherence", "Medication non-adherence", "Treatment adherence"],
+        "utd": [["Overview", "adherence to medication in patients with chronic disease"]],
+        "summary": "",
+    },
 ]
 
 
@@ -59891,6 +60191,1100 @@ RICH_SUMMARIES = {
         "rubbed until dry, never wiped off. Key point: antisepsis "
         "reduces flora but never sterilises skin, which is why double "
         "gloving and prompt change after a puncture matter."
+    ),
+
+    "Rash in children": (
+        "Approach to the child with a rash, where the first two "
+        "questions are whether it blanches and whether the child is "
+        "well. Red flags: non-blanching rash with fever is "
+        "meningococcal septicaemia until excluded - benzylpenicillin "
+        "and blood cultures now; purpura spreading over minutes, skin "
+        "pain, mucosal blistering, or fever for 5 days or more. "
+        "Differential: non-blanching in an unwell child means "
+        "meningococcaemia; in a well child think Henoch-Schonlein "
+        "purpura (palpable purpura on buttocks and extensor legs, "
+        "check urine and blood pressure), immune thrombocytopenia, "
+        "leukaemia (pallor, bruising, nodes) or mechanical petechiae "
+        "above the nipple line after coughing. Blanching with fever "
+        "suggests a viral exanthem, measles, rubella, roseola (rash "
+        "as the fever settles), parvovirus, scarlet fever (sandpaper "
+        "rash, strawberry tongue) or Kawasaki disease. Afebrile "
+        "blanching rashes are eczema, urticaria, scabies, tinea, "
+        "impetigo and molluscum. Ix: none in a well afebrile child; "
+        "FBC, film, coagulation and cultures if non-blanching or "
+        "unwell. Note: press with a glass slide, and undress the "
+        "child fully."
+    ),
+    "Neonatal respiratory distress": (
+        "Tachypnoea over 60, grunting, nasal flaring, recession or "
+        "cyanosis in a newborn. Differential: gestation and timing "
+        "separate the causes. Respiratory distress syndrome is "
+        "preterm, starts at birth and worsens over hours, with "
+        "ground-glass lungs and air bronchograms. Transient "
+        "tachypnoea is term or late preterm, especially after "
+        "elective caesarean, peaks by 6 hours and settles in 24 to 72 "
+        "hours, with fluid in the fissure. Meconium aspiration "
+        "follows stained liquor in the term or post-term baby, with "
+        "patchy infiltrates and hyperinflation. Pneumonia and "
+        "early-onset sepsis mimic all of them at any gestation. "
+        "Persistent pulmonary hypertension gives labile cyanosis with "
+        "a pre-ductal to post-ductal saturation gap. Congenital "
+        "diaphragmatic hernia has a scaphoid abdomen and displaced "
+        "apex - intubate, do not bag-mask. Pneumothorax causes sudden "
+        "deterioration. Choanal atresia gives cyanosis relieved by "
+        "crying. Ix: pre-ductal and post-ductal saturations, blood "
+        "gas, glucose, chest X-ray, FBC and blood culture. Mx: "
+        "warmth, glucose, oxygen to 91 to 95 per cent, CPAP, "
+        "antibiotics until sepsis is excluded."
+    ),
+    "Cough in children": (
+        "Cough is chronic in a child at 4 weeks, not the adult 8. "
+        "Classification: acute under 2 weeks is almost always viral; "
+        "2 to 4 weeks is prolonged acute; over 4 weeks needs a cause. "
+        "Features: the wet or dry split does most of the work. "
+        "Chronic wet cough is protracted bacterial bronchitis until "
+        "proven otherwise, and is treated with "
+        "amoxicillin-clavulanate for 2 weeks, extended to 4 if only "
+        "partly better; a wet cough that keeps returning means "
+        "bronchiectasis until excluded, particularly in Aboriginal "
+        "and Torres Strait Islander children. Dry cough suggests "
+        "asthma, post-viral cough or habit cough, which disappears in "
+        "sleep. Paroxysms with whoop or post-tussive vomiting are "
+        "pertussis. Sudden onset after choking is an inhaled foreign "
+        "body needing bronchoscopy whatever the film shows. Staccato "
+        "cough in an afebrile infant of 4 to 12 weeks suggests "
+        "Chlamydia trachomatis. Red flags: faltering growth, "
+        "clubbing, haemoptysis, neonatal onset, feeding difficulty, "
+        "chest deformity. Note: cough and cold preparations are "
+        "contraindicated under 6 years."
+    ),
+    "Wheeze in children": (
+        "Continuous expiratory musical sound from intrathoracic "
+        "airway narrowing; not all of it is asthma. Differential: "
+        "under 12 months think bronchiolitis first (first episode, "
+        "coryza, crackles), then tracheobronchomalacia (monophonic, "
+        "from birth), heart failure from a left-to-right shunt "
+        "(sweating with feeds, hepatomegaly, murmur), aspiration and "
+        "reflux. From 1 to 5 years the usual answers are preschool "
+        "viral wheeze and asthma, with inhaled foreign body if onset "
+        "was sudden and signs are unilateral, and cystic fibrosis if "
+        "growth is faltering. Over 5 years asthma dominates; consider "
+        "inducible laryngeal obstruction, which is inspiratory, felt "
+        "in the throat and unresponsive to salbutamol. Anaphylaxis "
+        "causes wheeze at any age. Red flags: wheeze present from "
+        "birth, fixed monophonic wheeze, focal signs, clubbing, "
+        "chronic wet cough, faltering growth or no bronchodilator "
+        "response. Ix: clinical. Chest X-ray only for focal or "
+        "persistent signs; spirometry with reversibility from about 6 "
+        "years; sweat test if growth is poor."
+    ),
+    "Upper airway obstruction in children": (
+        "Obstruction above the thoracic inlet, signalled by stridor - "
+        "inspiratory when supraglottic, biphasic when subglottic or "
+        "tracheal. Differential: croup (6 months to 6 years, barking "
+        "cough, viral prodrome, worse at night), epiglottitis (rapid, "
+        "toxic, drooling, no cough, tripod posture, unimmunised), "
+        "bacterial tracheitis (croup that fails to improve, high "
+        "fever, toxic), retropharyngeal abscess (neck held still, "
+        "refusing to swallow), inhaled foreign body (abrupt onset in "
+        "a previously well child), anaphylaxis, angioedema, "
+        "inhalation burn, and laryngomalacia which is positional and "
+        "present from the early weeks. Management: do not distress "
+        "the child. No tongue depressor, no cannula, no bloods, no "
+        "lying flat; keep them on a parent's lap and give blow-by "
+        "oxygen only if tolerated. Call anaesthetics, ENT and "
+        "intensive care early. Dexamethasone 0.15 to 0.6 mg/kg for "
+        "croup, and nebulised adrenaline 0.5 mL/kg of 1:1000 to a "
+        "maximum of 5 mL buys about 2 hours. Red flags: exhaustion, "
+        "drowsiness, cyanosis, and stridor that quietens as distress "
+        "increases."
+    ),
+    "Vomiting in infants and children": (
+        "Vomiting in a child is age-banded, and bile is the single "
+        "most important word in the history. Differential: in the "
+        "neonate, bilious vomiting is malrotation with volvulus until "
+        "an upper gastrointestinal contrast study says otherwise; "
+        "also duodenal atresia, Hirschsprung disease, necrotising "
+        "enterocolitis, sepsis, salt-wasting congenital adrenal "
+        "hyperplasia and inborn errors. At 4 to 6 weeks, projectile "
+        "non-bilious vomiting in a hungry infant is hypertrophic "
+        "pyloric stenosis, with hypochloraemic hypokalaemic alkalosis "
+        "and a diagnostic ultrasound. At 6 to 9 months, colic with "
+        "pallor and later redcurrant jelly stool is intussusception. "
+        "At any age consider urinary tract infection, sepsis, raised "
+        "intracranial pressure (early morning vomiting, headache, "
+        "ataxia), diabetic ketoacidosis, appendicitis, testicular "
+        "torsion and poisoning. Red flags: bile, blood, distension, "
+        "altered conscious state, bulging fontanelle, weight loss. "
+        "Ix: glucose and ketones, electrolytes, urine culture, "
+        "ultrasound as directed. Note: vomiting without diarrhoea is "
+        "rarely gastroenteritis."
+    ),
+    "Abdominal pain in children": (
+        "Acute abdominal pain in a child, where age narrows the list "
+        "and serial examination outperforms any single test. "
+        "Differential: under 2 years think intussusception, "
+        "incarcerated hernia, malrotation, urinary tract infection "
+        "and non-accidental injury. From 2 to 5 years, constipation, "
+        "gastroenteritis, urinary tract infection, mesenteric "
+        "adenitis, Henoch-Schonlein purpura and appendicitis, which "
+        "perforates early at this age. Over 5 years, appendicitis, "
+        "constipation, functional pain, ovarian or testicular "
+        "torsion, pancreatitis, inflammatory bowel disease and, in "
+        "any post-menarchal girl, ectopic pregnancy. Causes outside "
+        "the abdomen catch people out - lower lobe pneumonia, "
+        "diabetic ketoacidosis, testicular torsion, streptococcal "
+        "pharyngitis, hepatitis and hip disease. Examination: expose "
+        "the groin and scrotum in every boy and the hips in every "
+        "child. Ix: urinalysis, glucose, pregnancy test where "
+        "relevant; ultrasound first for imaging, since computed "
+        "tomography carries real radiation cost. Note: analgesia does "
+        "not mask a surgical abdomen, so give it."
+    ),
+    "Functional abdominal pain in children": (
+        "Recurrent abdominal pain from disordered gut-brain "
+        "signalling and visceral hypersensitivity rather than "
+        "structural disease, affecting 10 to 15 per cent of "
+        "school-age children and peaking between 4 and 12 years. "
+        "Criteria: Rome IV requires symptoms at least 4 times a month "
+        "for at least 2 months with no other explanation after "
+        "appropriate evaluation, and covers functional dyspepsia, "
+        "irritable bowel syndrome, abdominal migraine and functional "
+        "abdominal pain. Features: periumbilical pain, normal growth "
+        "and examination, well between episodes, never woken from "
+        "sleep. This is a positive diagnosis, not one of exclusion. "
+        "Red flags: faltering growth, pain waking the child from "
+        "sleep, persistent right upper or right lower quadrant pain, "
+        "gastrointestinal bleeding, unexplained fever, arthritis, "
+        "delayed puberty, or a family history of coeliac or "
+        "inflammatory bowel disease. Ix: FBC, CRP, coeliac serology, "
+        "urinalysis, and faecal calprotectin only if inflammatory "
+        "bowel disease is suspected. Mx: name it, explain the "
+        "mechanism, return the child to school, and use cognitive "
+        "behavioural therapy or gut-directed hypnotherapy. Avoid "
+        "opioids and repeat testing."
+    ),
+    "Chronic diarrhoea in children": (
+        "Loose or frequent stools lasting 4 weeks or more in a child; "
+        "the growth chart is the pivot on which the differential "
+        "turns. Causes: toddler's diarrhoea is the commonest, in well "
+        "thriving children of 6 months to 5 years, with 3 to 10 loose "
+        "daytime stools containing recognisable food, no nocturnal "
+        "stools, and excess fruit juice or a low-fat diet behind it. "
+        "Pathological causes almost always come with faltering growth "
+        "- coeliac disease, cystic fibrosis with steatorrhoea and "
+        "chest disease, cow's milk protein allergy in the infant with "
+        "blood and mucus, post-infectious lactose intolerance, "
+        "giardiasis, inflammatory bowel disease in the older child, "
+        "and immunodeficiency. Overflow around faecal impaction is "
+        "the trap that looks like diarrhoea. Red flags: faltering "
+        "growth, nocturnal stools, blood, fever, perianal disease, "
+        "extraintestinal features. Ix: plot growth, then coeliac "
+        "serology with total IgA, FBC and ferritin, faecal culture "
+        "and Giardia PCR, faecal calprotectin, and a sweat test where "
+        "indicated. Mx: for toddler's diarrhoea, cut fruit juice, "
+        "restore normal dietary fat, moderate fibre and fluid. It "
+        "resolves by school age."
+    ),
+    "The limping child": (
+        "Refusal to weight-bear or an antalgic gait in a child, where "
+        "the job is to separate septic arthritis from everything "
+        "else. Differential: under 3 years think septic arthritis, "
+        "osteomyelitis, toddler's fracture, developmental dysplasia "
+        "and non-accidental injury. From 3 to 10 years, transient "
+        "synovitis is commonest, with septic arthritis, Perthes "
+        "disease, juvenile idiopathic arthritis, Henoch-Schonlein "
+        "purpura and leukaemia behind it. In adolescence, slipped "
+        "upper femoral epiphysis (often obese, knee pain, loss of "
+        "internal rotation), Osgood-Schlatter disease, "
+        "osteochondritis dissecans and bone tumours. Criteria: Kocher "
+        "predictors of septic arthritis rather than transient "
+        "synovitis are non-weight-bearing, temperature over 38.5 "
+        "degrees, ESR over 40 and white cell count over 12; "
+        "probability rises from about 3 per cent with one to over 90 "
+        "per cent with three or four. Ix: FBC, CRP, ESR, blood "
+        "culture; hip ultrasound for effusion; X-ray both hips with a "
+        "frog-leg lateral; MRI for osteomyelitis; ultrasound-guided "
+        "aspiration settles it. Red flags: fever, night pain, weight "
+        "loss, bruising or pallor, limp under 3 years. Note: a normal "
+        "X-ray excludes nothing early."
+    ),
+    "Paediatric advanced life support": (
+        "ANZCOR algorithm for cardiac arrest in the infant and child, "
+        "which differs from the adult version at almost every number. "
+        "Aetiology: arrest is usually the end of hypoxia or shock "
+        "rather than a primary arrhythmia, so asystole and pulseless "
+        "electrical activity predominate and airway and oxygenation "
+        "come first. Management: compressions at 100 to 120 a minute, "
+        "one third of chest depth, with a ratio of 15 compressions to "
+        "2 breaths for two rescuers and 30 to 2 for a lone lay "
+        "rescuer. Adrenaline 10 microgram/kg, that is 0.1 mL/kg of 1 "
+        "in 10,000, intravenous or intraosseous, repeated every "
+        "second loop. Defibrillate shockable rhythms at 4 J/kg. "
+        "Amiodarone 5 mg/kg after the third shock. Fluid bolus 10 to "
+        "20 mL/kg of sodium chloride 0.9 per cent. Dose: estimate "
+        "weight as (age + 4) x 2 kg from 1 to 10 years, or use a "
+        "length-based tape. Note: work through the 4 Hs and 4 Ts, "
+        "remembering hypoglycaemia in every collapsed child, and give "
+        "prostaglandin to the neonate with suspected duct-dependent "
+        "circulation."
+    ),
+    "Paediatric sepsis": (
+        "Life-threatening organ dysfunction from a dysregulated "
+        "response to infection in a child, recognised on age-band "
+        "vital signs rather than the adult qSOFA. Red flags: heart "
+        "rate or respiratory rate outside the age band, capillary "
+        "refill over 2 seconds or flash refill, mottled, cold or "
+        "vasodilated peripheries, altered behaviour or drowsiness, "
+        "reduced urine output, non-blanching rash, and a parent "
+        "saying this is not their child. Hypotension is late; a "
+        "systolic pressure below 70 plus twice the age in years is "
+        "already decompensation. Ix: venous gas with lactate and "
+        "glucose, FBC, CRP, blood culture, urine, coagulation, and "
+        "lumbar puncture if stable and meningitis is possible. Mx: "
+        "oxygen, then intravenous or intraosseous access and "
+        "antibiotics within 60 minutes of recognition, cultures first "
+        "only if they cause no delay. Fluid in 10 to 20 mL/kg boluses "
+        "with reassessment for hepatomegaly and crackles after each, "
+        "and start adrenaline rather than giving a fourth bolus. "
+        "Empirical cover follows local guidance, with ceftriaxone or "
+        "cefotaxime the usual choice, and benzylpenicillin with "
+        "gentamicin in the neonate. Note: correct hypoglycaemia and "
+        "escalate to a senior early."
+    ),
+    "Paediatric shock": (
+        "Circulatory failure with inadequate tissue oxygen delivery "
+        "in a child, where blood pressure is the last thing to fall. "
+        "Types: hypovolaemic is commonest, from gastroenteritis, "
+        "burns or trauma; distributive from sepsis, anaphylaxis or "
+        "spinal injury; cardiogenic from myocarditis, arrhythmia or a "
+        "duct-dependent lesion in the neonate; obstructive from "
+        "tension pneumothorax or tamponade. Features: compensated "
+        "shock shows tachycardia, delayed capillary refill, cool "
+        "mottled peripheries, narrow pulse pressure, reduced urine "
+        "output and irritability or lethargy, all with a normal blood "
+        "pressure, because vasoconstriction holds the pressure until "
+        "roughly a third of the circulating volume is gone. "
+        "Hypotension marks decompensation and imminent arrest. Ix: "
+        "gas with lactate and glucose, FBC, electrolytes, cultures; "
+        "consider echocardiography if the liver is enlarged or the "
+        "history does not fit hypovolaemia. Mx: oxygen, then 10 to 20 "
+        "mL/kg boluses of sodium chloride 0.9 per cent, reassessing "
+        "after each; move to adrenaline early in septic shock and "
+        "give blood in trauma. Note: in cardiogenic shock give 5 to "
+        "10 mL/kg cautiously and reassess."
+    ),
+    "Anaemia in children": (
+        "Haemoglobin below the age-specific reference range, which is "
+        "not the adult range. Criteria: anaemia is a haemoglobin "
+        "under 110 g/L from 6 months to 5 years, under 115 g/L from 5 "
+        "to 11 years, and adult sex-specific cut-offs after puberty. "
+        "A physiological nadir at 6 to 9 weeks of age is normal and "
+        "needs no treatment. Causes: dietary iron deficiency "
+        "dominates, driven by cow's milk as the main drink before 12 "
+        "months or more than about 500 mL a day after it, and by "
+        "delayed introduction of iron-rich solids. Microcytic anaemia "
+        "is otherwise thalassaemia trait, which has a normal ferritin "
+        "and a disproportionately high red cell count. Normocytic "
+        "anaemia suggests bleeding, haemolysis, marrow infiltration "
+        "or chronic disease; macrocytic suggests B12 or folate "
+        "deficiency or marrow failure. Ix: FBC with film and "
+        "reticulocytes, ferritin interpreted alongside CRP, coeliac "
+        "serology, and haemoglobin electrophoresis rather than "
+        "endoscopy in the child. Mx: elemental iron 3 to 6 mg/kg "
+        "daily with dietary change, recheck at 4 weeks, continue 3 "
+        "months past normalisation. Red flags: bruising, bone pain, "
+        "hepatosplenomegaly or lymphadenopathy mean a film before any "
+        "iron."
+    ),
+    "Fatigue in children": (
+        "Persistent tiredness disproportionate to activity in a child "
+        "or adolescent; most is behavioural or psychological, and the "
+        "job is to find the small organic group. Causes: insufficient "
+        "or fragmented sleep, delayed sleep phase in adolescents and "
+        "screens at night are commonest, then sleep-disordered "
+        "breathing with snoring and adenotonsillar hypertrophy, iron "
+        "deficiency, depression and anxiety, post-viral fatigue after "
+        "Epstein-Barr virus, obesity and overscheduling. Organic "
+        "causes worth excluding are coeliac disease, hypothyroidism, "
+        "type 1 diabetes, chronic kidney disease, inflammatory bowel "
+        "disease, myocarditis and medication effects. Red flags: "
+        "weight loss, night sweats, bone pain, lymphadenopathy, "
+        "pallor or bruising, exertional breathlessness or syncope, "
+        "and fever lasting weeks; leukaemia presents this way. Ix: "
+        "FBC with film, ferritin, electrolytes, liver and thyroid "
+        "function, coeliac serology, glucose, CRP and urinalysis. A "
+        "normal examination with a normal screen makes serious "
+        "disease unlikely. Mx: sleep timing and a screen curfew, "
+        "school attendance, treat the cause, and assess mood."
+    ),
+    "Preschool wheeze": (
+        "Wheeze in a child under 5, kept as its own label because "
+        "most preschool wheezers stop by school age and the asthma "
+        "diagnosis is deferred. Types: episodic viral wheeze occurs "
+        "only with viral infections, with the child entirely well "
+        "between episodes. Multiple-trigger wheeze is also provoked "
+        "by exercise, cold air, smoke or allergens, with symptoms "
+        "between infections. Children move between the two "
+        "phenotypes, which is why the label is unstable. Risk factors "
+        "for progression to asthma are eczema, food allergy, "
+        "aeroallergen sensitisation, parental asthma and blood "
+        "eosinophilia. Mx: salbutamol by metered dose inhaler with a "
+        "spacer and mask for episodes, with technique checked at "
+        "every visit. A preventer trial with inhaled corticosteroid "
+        "is reserved for frequent, severe or multiple-trigger "
+        "disease, with a review at 4 to 6 weeks and a decision to "
+        "stop if nothing changed. Montelukast has modest benefit and "
+        "a boxed warning for neuropsychiatric effects. Note: oral "
+        "corticosteroid does not help mild to moderate viral-induced "
+        "wheeze managed at home. Remove household smoke exposure."
+    ),
+    "Salbutamol burst therapy": (
+        "Repeated high-dose inhaled salbutamol in the first hour of "
+        "an acute asthma or wheeze exacerbation in a child, dosed by "
+        "puffs and age rather than by peak flow. Dose: by metered "
+        "dose inhaler with a spacer, 6 puffs for children under 6 "
+        "years and 12 puffs for those 6 years and over, given three "
+        "times at 20-minute intervals. Nebulised salbutamol 2.5 mg "
+        "under 6 years and 5 mg from 6 years is equivalent and is "
+        "reserved for the child too unwell for a spacer. Add "
+        "ipratropium 4 puffs under 6 years or 8 puffs from 6 years, "
+        "also 20-minutely for three doses, in severe disease. Give "
+        "oral prednisolone 1 mg/kg to a maximum of 50 mg for 3 days, "
+        "or intravenous methylprednisolone if vomiting. Magnesium "
+        "sulfate 50 mg/kg intravenously over 20 minutes for severe or "
+        "critical presentations. Monitoring: reassess before each "
+        "dose, then stretch the interval as the child improves. Watch "
+        "for tachycardia, tremor, hypokalaemia and lactic acidosis. "
+        "Note: a spacer beats a nebuliser in mild to moderate "
+        "disease."
+    ),
+    "Asthma action plan": (
+        "Written, individualised instructions given to every person "
+        "with asthma, telling them what to take when well, what to do "
+        "when symptoms worsen, and when to get help. Indications: "
+        "everyone with an asthma diagnosis, provided by the "
+        "prescriber, reviewed at least yearly and after every "
+        "exacerbation or hospital presentation. Features: National "
+        "Asthma Council templates are colour-banded or symptom-based "
+        "and name the patient's own medicines and doses, the trigger "
+        "for stepping up, when to start oral corticosteroid where "
+        "prescribed, when to call the doctor, and when to call an "
+        "ambulance. Children need a copy at school or childcare with "
+        "a spacer that stays there. Management: asthma first aid "
+        "follows 4 by 4 by 4. Sit the person upright, give 4 separate "
+        "puffs of blue reliever through a spacer with 4 breaths after "
+        "each puff, wait 4 minutes, and repeat 4 puffs if there is no "
+        "improvement. If still no better, call an ambulance and keep "
+        "giving 4 puffs every 4 minutes until it arrives. Note: "
+        "having a written plan reduces hospital admissions and "
+        "deaths."
+    ),
+    "Paediatric community-acquired pneumonia": (
+        "Pneumonia acquired outside hospital in a child, where the "
+        "aetiology, the severity tools and the antibiotic all differ "
+        "from the adult disease. Aetiology: viruses dominate under 5, "
+        "especially respiratory syncytial virus, influenza, "
+        "parainfluenza and human metapneumovirus. Streptococcus "
+        "pneumoniae is the commonest bacterial cause at every age, "
+        "with Mycoplasma pneumoniae from school age. Features: fever "
+        "with tachypnoea is the most useful sign, using thresholds of "
+        "60 a minute under 2 months, 50 from 2 to 12 months and 40 "
+        "from 1 to 5 years. Also grunting, recession, hypoxia, and "
+        "abdominal pain from a lower lobe. Ix: none routinely in the "
+        "child well enough for home. No chest X-ray unless the "
+        "diagnosis is unclear, the child is admitted, or effusion is "
+        "suspected. Mx: amoxicillin 30 mg/kg up to 1 g orally "
+        "8-hourly for 5 days, or intravenous benzylpenicillin if "
+        "unable to tolerate oral. Add or substitute a macrolide for "
+        "suspected atypical infection in the school-age child. Note: "
+        "doxycycline is contraindicated under 8 years, so the adult "
+        "answer does not transfer."
+    ),
+    "Bronchodilators": (
+        "Drugs that relax airway smooth muscle to reverse "
+        "bronchoconstriction. Class: short-acting beta-2 agonists "
+        "such as salbutamol and terbutaline; long-acting beta-2 "
+        "agonists such as salmeterol, formoterol and vilanterol; "
+        "short-acting antimuscarinics, ipratropium; long-acting "
+        "antimuscarinics, tiotropium and glycopyrronium; and "
+        "methylxanthines, theophylline and aminophylline. Moa: beta-2 "
+        "agonists raise cyclic AMP through Gs-coupled receptors; "
+        "antimuscarinics block M3 receptors and reduce vagal tone; "
+        "theophylline inhibits phosphodiesterase. Route: inhaled "
+        "wherever possible, and in children a metered dose inhaler "
+        "with a spacer works as well as a nebuliser in mild to "
+        "moderate disease. Adverse effects: tremor, tachycardia, "
+        "palpitations, hypokalaemia, hyperglycaemia and lactic "
+        "acidosis with high-dose beta-2 agonists; dry mouth and "
+        "blurred vision if nebulised ipratropium reaches the eyes; "
+        "theophylline has a narrow therapeutic index. Note: a "
+        "long-acting beta-2 agonist is never given without an inhaled "
+        "corticosteroid in asthma, and reliever overuse is a marker "
+        "of poor control."
+    ),
+    "Paediatric airway anatomy": (
+        "The anatomical and physiological differences that make a "
+        "child's airway behave unlike an adult's. Features: a large "
+        "occiput flexes the neck, so infants need a shoulder roll and "
+        "a neutral position rather than the adult sniffing position. "
+        "The tongue and adenotonsillar tissue are relatively large, "
+        "the larynx sits higher and more anterior, and the epiglottis "
+        "is long, floppy and omega-shaped, which is why a straight "
+        "blade is used in infants. The narrowest functional point is "
+        "at the cricoid in young children. The trachea is only about "
+        "4 to 5 cm in a neonate, so a tube is easily displaced or "
+        "advanced into a bronchus. Infants are largely nasal "
+        "breathers for the first months, so blocked nares or choanal "
+        "atresia cause real distress. Mechanism: resistance varies "
+        "with the fourth power of the radius, so 1 mm of oedema in an "
+        "infant trachea cuts the lumen area by about three quarters "
+        "and multiplies resistance many times, which is why croup is "
+        "dangerous in the small child. Note: higher oxygen "
+        "consumption and a lower functional residual capacity mean "
+        "children desaturate within seconds, not minutes."
+    ),
+    "Pulse oximetry": (
+        "Non-invasive estimate of arterial oxygen saturation from the "
+        "differential absorbance of red and infrared light by "
+        "oxygenated and deoxygenated haemoglobin in pulsatile blood. "
+        "Uses: continuous monitoring of oxygenation, severity "
+        "assessment in bronchiolitis, asthma and pneumonia, titration "
+        "of oxygen therapy, and newborn screening for critical "
+        "congenital heart disease at 24 hours of age using paired "
+        "pre-ductal and post-ductal readings. Cautions: the "
+        "oxyhaemoglobin dissociation curve is sigmoid, so a "
+        "saturation of 90 per cent already means a partial pressure "
+        "near 60 mmHg and further small falls are steep. Readings are "
+        "unreliable with poor perfusion, cold peripheries, shock, "
+        "movement, venous pulsation, nail polish and bright ambient "
+        "light. Carboxyhaemoglobin reads falsely high and "
+        "methaemoglobin pulls readings towards 85 per cent. Darker "
+        "skin pigmentation overestimates saturation and hides "
+        "hypoxaemia. Note: oximetry says nothing about ventilation, "
+        "so a normal saturation on supplemental oxygen can conceal a "
+        "rising carbon dioxide."
+    ),
+    "Cord and neonatal blood gas interpretation": (
+        "Acid-base analysis of paired umbilical arterial and venous "
+        "samples taken at birth, used to document fetal metabolic "
+        "status at delivery. Investigations: clamp a segment of cord "
+        "and sample both artery and vein. A difference in pH between "
+        "the two confirms the arterial sample is genuinely arterial; "
+        "two identical results usually mean both came from the vein. "
+        "Criteria: a normal cord arterial pH sits around 7.20 to 7.30 "
+        "with a base excess no worse than about minus 8. Significant "
+        "metabolic acidaemia is an arterial pH below 7.00 with a base "
+        "deficit of 12 mmol/L or more, and this is one of the "
+        "required criteria for attributing neonatal encephalopathy to "
+        "an acute intrapartum event. A low pH with a high carbon "
+        "dioxide and a normal base excess is respiratory and usually "
+        "reflects brief cord compression, so it carries a far better "
+        "outlook than the same pH with a large base deficit. "
+        "Indications: cooling for hypoxic ischaemic encephalopathy is "
+        "considered at 35 weeks or more, within 6 hours, when a gas "
+        "of this kind is accompanied by moderate or severe "
+        "encephalopathy. Note: lactate on a cord sample performs "
+        "similarly and needs less blood."
+    ),
+    "Neonatal respiratory support": (
+        "Non-invasive pressure support delivered to a newborn through "
+        "short binasal prongs or a mask, holding the alveoli open and "
+        "reducing the work of breathing. Indications: respiratory "
+        "distress syndrome, transient tachypnoea, apnoea of "
+        "prematurity, and post-extubation support. Starting "
+        "continuous positive airway pressure in the delivery room "
+        "reduces the need for intubation and surfactant in the "
+        "preterm infant. Dose: pressures of about 5 to 8 cm of water, "
+        "with oxygen titrated to a saturation of 91 to 95 per cent in "
+        "the preterm baby on oxygen. High-flow nasal cannula and "
+        "nasal intermittent positive pressure ventilation are "
+        "alternatives. Monitoring: rising oxygen requirement above "
+        "roughly 0.4, apnoea, worsening acidosis or exhaustion "
+        "signals failure and the need for intubation with surfactant, "
+        "or surfactant given less invasively through a fine catheter. "
+        "Complications: nasal septal trauma and pressure injury, "
+        "gastric distension needing an orogastric tube, and "
+        "pneumothorax. Note: caffeine citrate reduces apnoea, helps "
+        "extubation and improves neurodevelopmental outcome in the "
+        "preterm infant."
+    ),
+    "Neonatal pneumothorax": (
+        "Air in the pleural space of a newborn, either spontaneous "
+        "during the high transpulmonary pressures of the first "
+        "breaths or secondary to lung disease and positive pressure. "
+        "Epidemiology: a small spontaneous pneumothorax occurs in 1 "
+        "to 2 per cent of term newborns and most are asymptomatic. "
+        "Risk factors: respiratory distress syndrome, meconium "
+        "aspiration, pneumonia, congenital malformations, "
+        "resuscitation with positive pressure, and mechanical "
+        "ventilation with high pressures. Features: sudden "
+        "desaturation, bradycardia or hypotension in a ventilated "
+        "baby, with asymmetric chest movement, reduced air entry on "
+        "the affected side and displacement of the apex beat. Ix: "
+        "transillumination with a cold light source in a darkened "
+        "room gives a rapid bedside answer in a small baby; chest "
+        "X-ray confirms it, but do not wait for the film in a "
+        "collapsing infant. Mx: an asymptomatic pneumothorax in a "
+        "term baby usually needs only observation. Needle aspiration "
+        "through the second intercostal space in the midclavicular "
+        "line for tension, then an intercostal catheter if the leak "
+        "persists or the baby is ventilated."
+    ),
+    "Congenital pulmonary airway malformation": (
+        "Hamartomatous cystic lung lesion from abnormal airway "
+        "branching, usually found on the 18 to 20 week morphology "
+        "scan; previously called congenital cystic adenomatoid "
+        "malformation. Classification: Stocker types 0 to 4 by cyst "
+        "size. Type 1, with large cysts over 2 cm, is commonest and "
+        "does best; microcystic lesions look solid and are the ones "
+        "that cause hydrops. Related lesions are bronchopulmonary "
+        "sequestration, which has a systemic arterial supply from the "
+        "aorta, congenital lobar overinflation, and bronchogenic "
+        "cyst; hybrid lesions occur. Ix: serial antenatal ultrasound "
+        "for size, mediastinal shift, polyhydramnios and hydrops, "
+        "with a lesion volume ratio above about 1.6 predicting "
+        "hydrops. Postnatally get a contrast computed tomography even "
+        "when the chest X-ray looks normal, because the lesion often "
+        "appears to vanish on plain film. Complications: neonatal "
+        "respiratory distress, recurrent infection, pneumothorax, and "
+        "a small risk of pleuropulmonary blastoma. Mx: urgent "
+        "resection if symptomatic at birth; otherwise elective "
+        "lobectomy in the first year or surveillance, and practice "
+        "varies."
+    ),
+    "Periviability": (
+        "The gestational window of about 22 to 25 completed weeks in "
+        "which survival is possible but uncertain, and the decision "
+        "to start intensive care is genuinely a choice. Prognosis: "
+        "survival among live-born infants given active care rises "
+        "steeply with each completed week, from a minority at 22 "
+        "weeks to the large majority by 25 weeks, and the risk of "
+        "moderate or severe neurodevelopmental impairment among "
+        "survivors falls across the same range. Use current local "
+        "unit data rather than published averages when counselling. "
+        "Management: below 22 weeks, comfort care. At 22 to 23 weeks "
+        "the decision is shared with the parents, weighing their "
+        "values against the numbers. From 24 to 25 weeks, active care "
+        "is generally recommended. Where active care is planned, give "
+        "antenatal corticosteroids and magnesium sulfate for "
+        "neuroprotection, and transfer the mother before delivery to "
+        "a hospital with a tertiary neonatal unit. Note: counselling "
+        "is a conversation, not a single consent, and it is revisited "
+        "after birth once the baby's actual condition and response "
+        "are known. Offer a neonatologist, honest uncertainty, and "
+        "palliative care as a legitimate option."
+    ),
+    "Unrecognised oesophageal intubation": (
+        "Placement of a tracheal tube in the oesophagus that is not "
+        "detected, causing hypoxic brain injury or death within "
+        "minutes; a recognised never event with a simple governing "
+        "rule. Prevention: continuous waveform capnography is "
+        "mandatory for every intubation, everywhere it is performed, "
+        "and the rule is no trace, wrong place. If a sustained carbon "
+        "dioxide waveform is not seen over successive breaths, remove "
+        "the tube and ventilate by another means unless a second "
+        "person can immediately confirm placement by another method. "
+        "Diagnosis: confirmation rests on the capnograph waveform "
+        "plus direct visualisation of the tube passing between the "
+        "cords. Chest rise, auscultation, misting in the tube and a "
+        "reservoir bag that refills are all unreliable and have each "
+        "been present in fatal cases. Cautions: capnography can be "
+        "low or absent in cardiac arrest and severe bronchospasm, but "
+        "in doubt the tube still comes out, because oesophageal "
+        "placement is the more common and the more lethal "
+        "explanation. Note: the failures are human, not technical. "
+        "Everyone in the room must be able to say the words and be "
+        "heard."
+    ),
+    "Sepsis Kills pathway": (
+        "NSW Clinical Excellence Commission statewide program to "
+        "reduce sepsis deaths, built on paper or electronic pathways "
+        "for adult, paediatric, maternal and neonatal patients. "
+        "Screening: the pathway prompts the question in any patient "
+        "with suspected infection plus abnormal observations, using "
+        "trigger vital signs, risk factors and clinician or parental "
+        "concern rather than a single score. Its three steps are "
+        "recognise, resuscitate and refer. Management: on "
+        "recognition, take blood cultures and a lactate, give oxygen, "
+        "and give intravenous antibiotics within 60 minutes; do not "
+        "delay antibiotics for cultures if access is difficult. Fluid "
+        "resuscitation and hourly reassessment follow. Referral means "
+        "immediate senior clinician review, a documented plan with a "
+        "review time, and escalation to intensive care or retrieval "
+        "where needed. Note: the paediatric pathway uses age-banded "
+        "vital sign zones instead of adult tools, and the program "
+        "reduced time to antibiotics and sepsis mortality across NSW. "
+        "It now sits alongside the national Sepsis Clinical Care "
+        "Standard."
+    ),
+    "NETS retrieval service": (
+        "The NSW Newborn and paediatric Emergency Transport Service, "
+        "providing 24-hour telephone advice, bed finding and physical "
+        "retrieval for critically ill newborns, infants and children "
+        "across NSW and the ACT. Indications: any child whose illness "
+        "exceeds the referring hospital's capability, including "
+        "neonatal respiratory failure, suspected duct-dependent "
+        "congenital heart disease, sepsis, status epilepticus, major "
+        "trauma and surgical emergencies. Management: one call "
+        "reaches a retrieval consultant, who gives clinical advice "
+        "while you stabilise and arranges the receiving unit, so the "
+        "referring team does not ring hospitals separately. Call "
+        "early rather than when the child is peri-arrest; the "
+        "referring team keeps clinical responsibility until the "
+        "retrieval team arrives. Stabilise the airway and "
+        "oxygenation, gain vascular or intraosseous access, check and "
+        "correct glucose, give antibiotics if sepsis is possible, "
+        "start prostaglandin for suspected duct-dependent "
+        "circulation, keep the baby warm and give analgesia. Note: "
+        "this is a neonatal and paediatric service. Adult retrieval "
+        "in NSW is coordinated separately."
+    ),
+    "Infant and child nutrition": (
+        "Feeding from birth to childhood, following the NHMRC Infant "
+        "Feeding Guidelines and the Australian Dietary Guidelines. "
+        "Management: breast milk exclusively to around 6 months, or "
+        "standard cow's-milk-based infant formula made up exactly as "
+        "directed, at roughly 150 mL/kg a day in the term infant. "
+        "Start solids at around 6 months and never before 4 months, "
+        "beginning with iron-rich foods such as iron-fortified "
+        "cereal, pureed meat and legumes, because fetal iron stores "
+        "run out at about this age. Introduce common allergens "
+        "including egg and peanut in the first year and keep giving "
+        "them regularly, which reduces food allergy. Cautions: no "
+        "cow's milk as the main drink before 12 months, and no more "
+        "than about 500 mL a day afterwards, since it displaces "
+        "iron-rich food. No honey before 12 months. Avoid added salt, "
+        "added sugar and fruit juice, and avoid whole nuts and other "
+        "choking hazards until about 3 years. Monitoring: plot "
+        "weight, length and head circumference; a fall across two "
+        "major centiles needs assessment. Note: parents decide what "
+        "and when, the child decides whether and how much."
+    ),
+    "Childhood obesity": (
+        "Excess adiposity in a growing child, defined on centiles "
+        "rather than on an absolute body mass index. Criteria: plot "
+        "body mass index on an age- and sex-specific chart. "
+        "Overweight is at or above the 85th centile and obesity at or "
+        "above the 95th. About a quarter of Australian children are "
+        "above the healthy weight range. Examination: growth velocity "
+        "separates the causes. A tall child who is gaining weight "
+        "almost always has simple exogenous obesity; a short or "
+        "slowly growing child with obesity suggests hypothyroidism, "
+        "Cushing syndrome, growth hormone deficiency or a genetic "
+        "syndrome, particularly with developmental delay or "
+        "dysmorphism. Complications: insulin resistance and type 2 "
+        "diabetes, dyslipidaemia, fatty liver, obstructive sleep "
+        "apnoea, hypertension, slipped upper femoral epiphysis, "
+        "polycystic ovary syndrome, and the psychosocial burden of "
+        "bullying and low self-esteem. Ix: HbA1c or fasting glucose, "
+        "lipids, ALT, thyroid function, and a sleep study if snoring. "
+        "Mx: family-based change to eating, activity, screens and "
+        "sleep. In a growing child the goal is usually to hold weight "
+        "steady while height increases, not to lose weight."
+    ),
+    "Vaccine hesitancy": (
+        "Delay in accepting or refusal of vaccines despite "
+        "availability, sitting on a continuum rather than being a "
+        "fixed position. Epidemiology: Australian coverage exceeds 94 "
+        "per cent at 5 years and outright refusal is around 2 per "
+        "cent, so forgetting, access and cost explain more "
+        "under-vaccination than refusal does. Causes: usually grouped "
+        "as confidence, complacency and convenience. Concerns about "
+        "safety and ingredients, the discredited link with autism, "
+        "distrust of government or industry, misinformation on social "
+        "media, a previous bad experience, and complacency because "
+        "the diseases are no longer seen. Management: open with a "
+        "presumptive recommendation naming the vaccines due today "
+        "rather than an open question, since this measurably improves "
+        "uptake. If there is resistance, ask permission to discuss, "
+        "elicit specific concerns, reflect them, give tailored "
+        "information without repeating the myth, and affirm the "
+        "parent's autonomy. Do not lecture or dismiss the family from "
+        "the practice. Note: Australian levers are No Jab No Pay, "
+        "state No Jab No Play childcare rules and the Australian "
+        "Immunisation Register. Conscientious objection is no longer "
+        "an exemption."
+    ),
+    "Second-hand smoke exposure": (
+        "Involuntary inhalation of sidestream and exhaled smoke, with "
+        "no established safe level of exposure. Residue left on "
+        "surfaces, dust and clothing matters for crawling infants. "
+        "Epidemiology: exposure is concentrated in disadvantaged "
+        "households and in Aboriginal and Torres Strait Islander "
+        "communities. Complications: in children, sudden unexpected "
+        "death in infancy, more frequent and more severe lower "
+        "respiratory infection and bronchiolitis, worse asthma "
+        "control and more wheeze, otitis media with effusion and more "
+        "grommet surgery, meningococcal disease, reduced lung growth, "
+        "and a higher chance of taking up smoking later. Management: "
+        "ask about household smoking at every paediatric encounter "
+        "and record it. Advise a completely smoke-free home and car "
+        "rather than smoking in another room, since separation does "
+        "not prevent exposure. Treat the parent as the patient here "
+        "and offer Quitline, nicotine replacement therapy and "
+        "pharmacotherapy. Note: it is an offence in every Australian "
+        "state and territory to smoke in a car carrying a child, and "
+        "household vaping also exposes children to nicotine."
+    ),
+    "Antimicrobial resistance": (
+        "Loss of susceptibility of a micro-organism to an "
+        "antimicrobial it previously responded to. Mechanisms: "
+        "enzymatic inactivation, including beta-lactamases, "
+        "extended-spectrum beta-lactamases and carbapenemases; "
+        "alteration of the drug target, as with the altered "
+        "penicillin-binding protein of MRSA or ribosomal methylation; "
+        "reduced permeability through porin loss; active efflux "
+        "pumps; and target bypass, as in vancomycin-resistant "
+        "enterococci. Resistance arises by chromosomal mutation under "
+        "selection pressure or is acquired horizontally on plasmids, "
+        "transposons and integrons, which is why it crosses between "
+        "species. Risk factors: unnecessary prescribing, particularly "
+        "for viral respiratory illness, courses that are too long or "
+        "too broad, agricultural antibiotic use, poor infection "
+        "control and international travel. Prevention: prescribe by "
+        "guideline with the narrowest effective agent, review at 48 "
+        "hours and de-escalate on culture, keep courses short, and do "
+        "not treat viral illness. Hand hygiene, isolation and "
+        "vaccination all reduce transmission. Note: shorter courses "
+        "are as effective as longer ones for most common infections "
+        "and select less resistance."
+    ),
+    "CSF interpretation": (
+        "Reading the cell count, protein and glucose of cerebrospinal "
+        "fluid to separate bacterial from viral and tuberculous "
+        "meningitis. Criteria: normal fluid beyond the newborn period "
+        "is clear with fewer than 5 white cells and no neutrophils, "
+        "protein 0.15 to 0.45 g/L, and a cerebrospinal fluid to serum "
+        "glucose ratio above 0.6. A neonate normally has more cells "
+        "and higher protein. Bacterial meningitis gives turbid fluid "
+        "with hundreds to thousands of neutrophils, high protein and "
+        "a glucose ratio below 0.4. Viral meningitis gives tens to "
+        "low hundreds of lymphocytes, near-normal protein and normal "
+        "glucose, although neutrophils can predominate in the first "
+        "day. Tuberculous and cryptococcal meningitis give "
+        "lymphocytes with very high protein, very low glucose and a "
+        "high opening pressure. Ix: send cell count and differential, "
+        "protein, glucose with a paired serum glucose, Gram stain, "
+        "culture, and meningococcal, pneumococcal, enteroviral and "
+        "herpes simplex PCR. Note: a traumatic tap allows roughly one "
+        "white cell per 500 to 1000 red cells. Never delay "
+        "antibiotics for the puncture."
+    ),
+    "Acute pain management in children": (
+        "Assessment and treatment of acute pain in a child, using an "
+        "age-appropriate score and weight-based dosing. Examination: "
+        "FLACC observational scoring from about 2 months to 7 years, "
+        "a faces scale from about 4 years, and a numerical rating "
+        "from about 8 years. Score at rest and on movement, and "
+        "reassess after treatment. Dose: paracetamol 15 mg/kg to a "
+        "maximum of 1 g, 4- to 6-hourly, not exceeding 60 mg/kg a "
+        "day. Ibuprofen 10 mg/kg to a maximum of 400 mg, 6- to "
+        "8-hourly, avoided under 3 months and in dehydration, renal "
+        "impairment or varicella. Intranasal fentanyl 1.5 "
+        "microgram/kg to a maximum of 100 microgram gives rapid "
+        "analgesia in the child without a cannula. Intravenous "
+        "morphine is titrated in small increments. Management: use "
+        "sucrose and breastfeeding in young infants, topical "
+        "anaesthetic before cannulation, distraction, and a parent "
+        "present. Contraindications: codeine is contraindicated under "
+        "12 years and after tonsillectomy under 18. Note: "
+        "undertreated pain in a child is the norm, not the exception, "
+        "so prescribe regularly rather than as required."
+    ),
+    "Paediatric major trauma": (
+        "Severe injury in a child, where anatomy, physiology and "
+        "every dose differ from the adult. Mechanism: blunt injury "
+        "dominates, from motor vehicles, pedestrian impacts, falls "
+        "and bicycles, and head injury is the commonest cause of "
+        "death. Features: the head is relatively large and the neck "
+        "weak, so head and cervical spine injury predominate. "
+        "Compliant ribs transmit force without breaking, so pulmonary "
+        "contusion and major liver or splenic injury occur with a "
+        "normal chest and no fractures. Growth plates fail before "
+        "ligaments, so Salter-Harris injuries replace sprains. "
+        "Hypotension is very late, appearing only after roughly a "
+        "third of blood volume is lost, and children become "
+        "hypothermic and hypoglycaemic quickly. Mx: estimate weight "
+        "as (age + 4) x 2 kg from 1 to 10 years or use a length-based "
+        "tape. Give 10 to 20 mL/kg of warmed crystalloid, then move "
+        "early to blood 10 to 20 mL/kg rather than repeated "
+        "crystalloid, with tranexamic acid 15 mg/kg to a maximum of 1 "
+        "g. Ix: use ultrasound and selective computed tomography, not "
+        "a pan-scan, because lifetime radiation risk is far higher in "
+        "a child. Note: consider inflicted injury when the story does "
+        "not fit."
+    ),
+    "Paediatric chest X-ray interpretation": (
+        "Reading a child's chest film, which has normal appearances "
+        "and traps that do not exist in the adult. Features: the "
+        "thymus is normal to about 3 years and produces a sail sign "
+        "or a wavy border at the right upper mediastinum, and must "
+        "not be reported as a mass or as consolidation. The "
+        "cardiothoracic ratio may reach 60 per cent in infants rather "
+        "than the adult 50. Cautions: rotation is the commonest cause "
+        "of a false mediastinal shift or apparent cardiomegaly, so "
+        "check that the medial clavicles sit equally either side of "
+        "the spinous process. An expiratory film exaggerates the "
+        "heart and the lung markings; on inspiration you should see "
+        "about 6 to 8 posterior ribs above the diaphragm. Round "
+        "pneumonia occurs in young children and mimics a mass. "
+        "Bronchiolitis shows hyperinflation, flat diaphragms and "
+        "peribronchial thickening, with atelectasis easily read as "
+        "consolidation, which is why routine films are not indicated. "
+        "An inhaled foreign body is usually radiolucent, so look for "
+        "unilateral hyperinflation and shift away on an expiratory or "
+        "decubitus view. Note: posterior rib fractures are highly "
+        "specific for inflicted injury."
+    ),
+    "Respiratory pathogens by site": (
+        "The organisms that cause infection at each level of the "
+        "respiratory tract in children, which determines whether "
+        "antibiotics are indicated at all. Sites: nose and throat are "
+        "viral in the main, with rhinovirus, coronavirus, adenovirus, "
+        "influenza and parainfluenza; group A streptococcus causes "
+        "bacterial pharyngitis and Epstein-Barr virus mimics it. "
+        "Sinuses and middle ear follow a viral illness and are then "
+        "infected by Streptococcus pneumoniae, non-typeable "
+        "Haemophilus influenzae and Moraxella catarrhalis. The "
+        "epiglottis is Haemophilus influenzae type b, now rare after "
+        "immunisation. Croup comes from parainfluenza 1 and 3, and "
+        "bacterial tracheitis from Staphylococcus aureus. Bronchioles "
+        "are respiratory syncytial virus, rhinovirus and human "
+        "metapneumovirus. The alveoli are viral under 5, then "
+        "Streptococcus pneumoniae at any age and Mycoplasma "
+        "pneumoniae from school age; neonates get group B "
+        "streptococcus, Escherichia coli and Listeria. Associations: "
+        "cystic fibrosis moves from Staphylococcus aureus to "
+        "Pseudomonas aeruginosa. Note: non-typeable Haemophilus "
+        "influenzae drives otitis media and bronchiectasis in "
+        "Aboriginal and Torres Strait Islander children."
+    ),
+    "Polydipsia": (
+        "Excessive thirst and fluid intake, which in a child is "
+        "either an osmotic drive, a water-losing kidney, or a primary "
+        "drinking behaviour. Causes: new type 1 diabetes is the one "
+        "that must not be missed, presenting with polyuria, "
+        "polydipsia, weight loss and often secondary enuresis in a "
+        "previously dry child. Central diabetes insipidus follows "
+        "craniopharyngioma or other suprasellar tumour, head injury, "
+        "neurosurgery or Langerhans cell histiocytosis. Nephrogenic "
+        "diabetes insipidus is genetic in the infant boy, or acquired "
+        "from lithium, hypercalcaemia or hypokalaemia. Chronic kidney "
+        "disease, hypercalcaemia and primary polydipsia, including "
+        "anticholinergic dry mouth and psychogenic drinking, complete "
+        "the list. Ix: finger-prick glucose and ketones immediately "
+        "in every child, then paired serum and urine osmolality and "
+        "electrolytes with a fluid balance chart. A water deprivation "
+        "test with desmopressin separates central from nephrogenic "
+        "diabetes insipidus and both from primary polydipsia. Red "
+        "flags: weight loss, vomiting, deep sighing breathing, "
+        "headache, visual field loss or growth failure. Note: never "
+        "fluid-restrict a child before excluding diabetes insipidus."
+    ),
+    "First 2000 Days Framework": (
+        "NSW Health policy framework covering the period from "
+        "conception to a child's fifth birthday, roughly 2000 days, "
+        "on the evidence that this window shapes lifelong health, "
+        "learning and wellbeing more than any later period. "
+        "Mechanism: brain architecture, attachment and language "
+        "develop fastest in these years, and are most sensitive to "
+        "nutrition, responsive caregiving, safety and chronic stress. "
+        "Adversity here has effects that compound across the life "
+        "course. Management: it directs services to work as one "
+        "system across antenatal care, birth, the newborn period and "
+        "early childhood, with a universal offer for every family "
+        "plus additional support scaled to need. In practice that "
+        "means antenatal engagement, universal newborn checks, the "
+        "child personal health record, developmental and psychosocial "
+        "screening at scheduled visits, sustained nurse home visiting "
+        "for families with greater need, and Aboriginal-led programs "
+        "delivered through Aboriginal Community Controlled Health "
+        "Services. Note: every paediatric contact in these years is "
+        "an opportunity to check development, immunisation, feeding, "
+        "safety and parental mental health, not just the presenting "
+        "problem."
+    ),
+    "Cognitive bias in clinical reasoning": (
+        "Systematic errors in thinking that lead to diagnostic error, "
+        "understood through the dual process model of reasoning. "
+        "Mechanism: fast pattern recognition produces most correct "
+        "diagnoses efficiently, and slow analytic reasoning is meant "
+        "to check it. Errors occur when the pattern is triggered "
+        "wrongly and never checked, which is far more likely under "
+        "fatigue, interruption, cognitive load and time pressure. "
+        "Types: anchoring, holding to the first impression despite "
+        "new information. Premature closure, accepting a diagnosis "
+        "before it is verified, and the single commonest contributor "
+        "to diagnostic error. Availability, judging likelihood by how "
+        "easily a case comes to mind. Confirmation bias, seeking only "
+        "data that fit. Search satisficing, stopping at the first "
+        "finding and missing the second fracture. Diagnosis momentum, "
+        "where a label hardens as it is handed over. Attribution "
+        "bias, blaming the presentation on a known psychiatric or "
+        "substance history. Prevention: take a diagnostic time-out "
+        "and ask what else this could be, state the differential "
+        "aloud, review red flags, and rely on system supports such as "
+        "structured handover and results follow-up."
+    ),
+    "Family-centred care": (
+        "Model of paediatric care in which the family is the constant "
+        "in the child's life and a partner in care rather than a "
+        "visitor. Features: its four principles are dignity and "
+        "respect, information sharing, participation and "
+        "collaboration. Management: in practice this means "
+        "unrestricted parental presence, including at induction of "
+        "anaesthesia, procedures and resuscitation; parents present "
+        "and speaking at bedside handover and ward rounds; parents "
+        "doing the caring tasks they are able to do; honest, timely "
+        "information pitched to the family's health literacy; and "
+        "shared decision-making. The child's own voice is sought "
+        "according to their development, with assent as well as "
+        "parental consent. It also covers siblings, cultural safety "
+        "and interpreters, kinship structures in Aboriginal and "
+        "Torres Strait Islander families, a single point of contact "
+        "for complex care, and discharge planning that starts on "
+        "admission. Note: parental presence at resuscitation does not "
+        "impede the team and improves bereavement outcomes. "
+        "Family-centred care is not doing whatever the family asks, "
+        "since the child's best interests remain the standard."
+    ),
+    "Childhood epilepsy syndromes": (
+        "Age-defined patterns of seizure type, electroencephalogram "
+        "and outcome; naming the syndrome, not just the seizure, "
+        "picks the drug and predicts the future. Types: childhood "
+        "absence epilepsy starts at 4 to 10 years with many brief "
+        "absences a day, abrupt on and off, provoked by "
+        "hyperventilation, with 3 Hz generalised spike-and-wave; "
+        "ethosuximide is first line. Juvenile myoclonic epilepsy "
+        "starts in the teens with early-morning myoclonic jerks and "
+        "generalised tonic-clonic seizures, provoked by sleep "
+        "deprivation and alcohol. Self-limited epilepsy with "
+        "centrotemporal spikes, formerly benign rolandic, gives "
+        "nocturnal facial twitching, drooling and speech arrest "
+        "between 3 and 13 years. Lennox-Gastaut syndrome combines "
+        "tonic and atonic drop attacks with slow spike-and-wave and "
+        "intellectual disability. Prognosis: absence and "
+        "centrotemporal epilepsies usually remit, juvenile myoclonic "
+        "epilepsy usually needs lifelong treatment, and "
+        "Lennox-Gastaut is drug-resistant. Note: carbamazepine and "
+        "other sodium channel blockers worsen absences and myoclonus, "
+        "so the wrong label makes seizures worse. Valproate is "
+        "avoided in girls and women of childbearing potential."
+    ),
+    "Specific learning disorder": (
+        "Persistent difficulty acquiring reading, written expression "
+        "or mathematics that is well below the level expected for age "
+        "and does not respond to targeted teaching. Criteria: DSM-5 "
+        "requires difficulties for at least 6 months despite "
+        "intervention, onset during the school years, achievement "
+        "well below age expectation, and no better explanation from "
+        "intellectual disability, uncorrected vision or hearing, poor "
+        "teaching or language of instruction. Specify the domain and "
+        "the severity. Epidemiology: 5 to 15 per cent of school-age "
+        "children, reading disorder commonest. Features: slow "
+        "effortful decoding, avoidance of reading aloud and of "
+        "homework, poor spelling, and school-related behaviour "
+        "problems or abdominal pain as the presenting complaint. "
+        "Differential: intellectual disability is global with low "
+        "adaptive function; also developmental language disorder, "
+        "ADHD, hearing loss and poor attendance. Ix: hearing and "
+        "vision first, then psychoeducational assessment; screen for "
+        "ADHD and anxiety, which co-occur often. Mx: explicit "
+        "structured teaching, an individual education plan and "
+        "accommodations. Coloured lenses and vision training do not "
+        "work."
+    ),
+    "TEN-4-FACESp bruising rule": (
+        "Clinical decision rule identifying bruising that should "
+        "trigger evaluation for physical abuse in a child under 4 "
+        "years. Criteria: bruising of the Torso, Ear or Neck in a "
+        "child aged 4 years or under; bruising of the Frenulum, Angle "
+        "of the jaw, fleshy Cheek, Eyelid or Subconjunctiva; any "
+        "patterned bruise; and any bruise at all in an infant under "
+        "about 5 months of age. In the validation study it was "
+        "roughly 96 per cent sensitive and 87 per cent specific for "
+        "abuse. Investigations: a positive rule is a trigger, not a "
+        "diagnosis. Evaluate with a skeletal survey under 2 years, "
+        "neuroimaging in the young infant or with any neurological "
+        "sign, FBC and coagulation screen, liver enzymes and lipase, "
+        "and ophthalmology review. Cautions: it applies to bruising "
+        "in children under 4 and does not exclude abuse, so a "
+        "concerning history still warrants full evaluation. "
+        "Accidental bruises in a mobile child fall over bony "
+        "prominences, the shins and the forehead. Note: those who are "
+        "not yet cruising rarely bruise. All Australian clinicians "
+        "are mandatory reporters."
+    ),
+    "Childhood cancer survivorship": (
+        "Long-term follow-up of adults treated for cancer as "
+        "children, where about 85 per cent now survive 5 years and "
+        "most carry a chronic treatment effect. Complications: "
+        "anthracycline cardiomyopathy is dose-dependent and worsened "
+        "by chest radiotherapy, needing lifelong echocardiographic "
+        "surveillance. Second malignancies arise in radiotherapy "
+        "fields, notably breast cancer after chest irradiation, which "
+        "needs screening decades earlier than the population program. "
+        "Endocrine effects include growth hormone and other pituitary "
+        "deficiency after cranial radiotherapy, hypothyroidism after "
+        "neck radiotherapy, and gonadal failure from alkylating "
+        "agents and pelvic irradiation. Neurocognitive impairment in "
+        "attention, processing speed and working memory follows "
+        "cranial radiotherapy and intrathecal methotrexate, "
+        "especially in the youngest. Also cisplatin ototoxicity, "
+        "bleomycin lung fibrosis and steroid-related avascular "
+        "necrosis. Mx: a survivorship care plan setting out the "
+        "treatment summary with cumulative doses, a risk-based "
+        "surveillance schedule, and planned transition to adult care. "
+        "Note: discuss fertility preservation before treatment "
+        "starts, not afterwards."
+    ),
+    "Adverse childhood experiences": (
+        "Ten categories of childhood adversity described in the "
+        "original Kaiser Permanente study, covering physical, "
+        "emotional and sexual abuse, physical and emotional neglect, "
+        "and household dysfunction such as parental separation, "
+        "family violence, household substance use, household mental "
+        "illness and incarceration of a household member. "
+        "Epidemiology: about two-thirds of adults report at least "
+        "one, and they cluster, so having one predicts having others. "
+        "Mechanism: prolonged stress-response activation without a "
+        "buffering adult relationship alters the "
+        "hypothalamic-pituitary-adrenal axis, immune and inflammatory "
+        "regulation and brain development, and drives health-risk "
+        "behaviours as coping. Prognosis: risk of ischaemic heart "
+        "disease, chronic lung and liver disease, obesity, diabetes, "
+        "depression, suicide attempt, substance use and early death "
+        "rises with the number of categories, with four or more the "
+        "usual threshold. Note: routine scoring is not recommended as "
+        "screening, because the score is a population risk marker "
+        "with poor predictive value for an individual and screening "
+        "without a service to refer to can do harm. Ask about current "
+        "safety and function, and respond with trauma-informed care."
+    ),
+    "Medication adherence": (
+        "The extent to which a person takes a medicine as agreed with "
+        "the prescriber; roughly half of people on long-term "
+        "treatment do not. Causes: the World Health Organization "
+        "groups them into five. Condition factors such as "
+        "asymptomatic disease or depression; therapy factors such as "
+        "dose frequency, adverse effects, taste and tablet burden; "
+        "patient factors such as beliefs about necessity, concerns "
+        "about harm, health literacy and simple forgetting; "
+        "socioeconomic factors including cost, transport and caring "
+        "load; and health system factors such as access, continuity "
+        "and poor communication. Epidemiology: adolescents are the "
+        "lowest-adherence group in medicine, with peaks in transplant "
+        "rejection, poor glycaemic control and seizure recurrence. "
+        "The drivers are developmental rather than ignorance, and "
+        "adherence falls further when parents hand over "
+        "responsibility abruptly. Mx: ask non-judgementally and "
+        "normalise it, check dispensing intervals, simplify to once "
+        "daily or combination products, treat adverse effects, "
+        "address cost, use motivational interviewing, and transfer "
+        "responsibility gradually in adolescence. Note: naming "
+        "someone non-compliant describes the person instead of the "
+        "problem."
     ),
 }
 
