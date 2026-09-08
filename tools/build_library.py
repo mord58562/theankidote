@@ -75,6 +75,18 @@ def collect() -> dict:
     # override it replaces is already the base. The split has to survive
     # every rebuild or it is not a split.
     from pearls import _library
+    #
+    # WARNING, and this has cost content once: `data/library.json` is
+    # BOTH the output of this script and the source of the base
+    # vocabularies below. So `git checkout -- data/library.json` is
+    # harmless after a plain rebuild and destructive after a content
+    # edit - it silently reverts conditions, drugs, acronyms and
+    # preclinical to whatever was last published. 85 rewritten acronym
+    # glosses were lost that way, and the publish that followed shipped
+    # the reverted file without anything looking wrong. Edit it, build,
+    # test, then PUBLISH - `publish_content.sh` commits it. Never revert
+    # it to tidy up.
+    #
     # And they must come from the BUNDLED copy specifically.
     # `_library._load` prefers `user_files/library.json` when it carries
     # the newer content version, which is right at runtime and wrong
