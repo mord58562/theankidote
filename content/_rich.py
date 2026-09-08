@@ -13916,7 +13916,7 @@ RICH_SUMMARIES = {
 
     "Major depressive disorder": (
         "Persistent low mood or anhedonia with functional impairment for "
-        "at least two weeks. Dx: five or more of nine DSM-5 symptoms with "
+        "at least two weeks. Dx: five or more of nine DSM-5-TR symptoms with "
         "mood or anhedonia among them, near-daily for two weeks and causing "
         "dysfunction; SIGECAPS covers the rest - sleep, interest, guilt, "
         "energy, concentration, appetite, psychomotor and suicidality. "
@@ -14573,7 +14573,7 @@ RICH_SUMMARIES = {
         "threatened death, serious injury or sexual violence - "
         "experienced directly, witnessed, learned about happening to "
         "a close person, or repeated occupational exposure. Diagnosis: "
-        "symptoms for at least one month across four DSM-5 clusters "
+        "symptoms for at least one month across four DSM-5-TR clusters "
         "- intrusion (flashbacks, nightmares, memories); avoidance "
         "(of reminders, thoughts, feelings); negative alteration in "
         "cognition and mood (persistent negative beliefs, distorted "
@@ -14804,10 +14804,10 @@ RICH_SUMMARIES = {
         "Neurodevelopmental condition with persistent deficits in "
         "social communication and interaction, and restricted or "
         "repetitive patterns of behaviour, interests or activities, "
-        "present from early development. Diagnosis: DSM-5 requires "
+        "present from early development. Diagnosis: DSM-5-TR requires "
         "both domains, severity graded 1 to 3 by support needed; "
-        "sensory features (hyper- or hyporeactivity) are part of "
-        "the criteria. Clinical features: reduced social "
+        "sensory hyper- or hyporeactivity is part of the criteria. "
+        "Clinical features: reduced social "
         "reciprocity and joint attention, atypical eye contact, "
         "difficulty reading nonverbal cues, language delay or "
         "unusual patterns, insistence on sameness, stereotyped "
@@ -15263,7 +15263,7 @@ RICH_SUMMARIES = {
     ),
 
     "Binge eating disorder": (
-        "The most common eating disorder. Diagnosis (DSM-5): "
+        "The most common eating disorder. Diagnosis (DSM-5-TR): "
         "recurrent binge eating on average at least once a week for "
         "3 months, with marked distress and no regular compensatory "
         "behaviour (distinguishes from bulimia nervosa). Clinical "
@@ -15744,7 +15744,7 @@ RICH_SUMMARIES = {
         "themes); compulsions are repetitive behaviours or mental "
         "acts (washing, checking, counting, ordering, mental "
         "rituals) performed to reduce distress or prevent a "
-        "feared outcome. Diagnosis (DSM-5): obsessions or "
+        "feared outcome. Diagnosis (DSM-5-TR): obsessions or "
         "compulsions or both, time-consuming (over one hour per "
         "day) or causing significant distress or impairment, not "
         "attributable to another condition. Ix: no specific test; "
@@ -15914,7 +15914,7 @@ RICH_SUMMARIES = {
 
     "Attention deficit hyperactivity disorder": (
         "Neurodevelopmental disorder with persistent inattention "
-        "or hyperactivity-impulsivity. Diagnosis (DSM-5): six or "
+        "or hyperactivity-impulsivity. Diagnosis (DSM-5-TR): six or "
         "more inattentive OR hyperactive-impulsive symptoms (five "
         "if age at least 17), before age 12, in two or more "
         "settings, for at least 6 months, with functional "
@@ -15940,7 +15940,7 @@ RICH_SUMMARIES = {
 
     "Schizoaffective disorder": (
         "Chronic psychotic disorder with concurrent substantial "
-        "mood episodes. Diagnosis (DSM-5): uninterrupted illness "
+        "mood episodes. Diagnosis (DSM-5-TR): uninterrupted illness "
         "during which a major mood episode is concurrent with "
         "schizophrenia criterion A symptoms; delusions or "
         "hallucinations for at least 2 weeks in the absence of a "
@@ -16217,7 +16217,7 @@ RICH_SUMMARIES = {
 
     "Alcohol use disorder": (
         "Problematic pattern of alcohol use causing clinically "
-        "significant impairment or distress. Diagnosis (DSM-5): "
+        "significant impairment or distress. Diagnosis (DSM-5-TR): "
         "two or more of eleven criteria in 12 months across "
         "impaired control (using more or longer, cravings, "
         "unsuccessful cut-down attempts), social impairment "
@@ -16975,7 +16975,7 @@ RICH_SUMMARIES = {
     "Substance use disorder": (
         "Problematic pattern of use of any psychoactive "
         "substance causing clinically significant impairment "
-        "or distress. Diagnosis (DSM-5): two or more of "
+        "or distress. Diagnosis (DSM-5-TR): two or more of "
         "eleven criteria within 12 months across impaired "
         "control, social impairment, risky use, and "
         "pharmacological (tolerance, withdrawal). Substance-"
@@ -17247,7 +17247,7 @@ RICH_SUMMARIES = {
         "One or more distressing somatic symptoms plus "
         "excessive thoughts, feelings, or behaviours related "
         "to the symptoms - persisting for at least 6 months. "
-        "Diagnosis (DSM-5): one or more somatic symptoms "
+        "Diagnosis (DSM-5-TR): one or more somatic symptoms "
         "causing significant distress or disruption; "
         "excessive time and energy devoted to the symptoms; "
         "symptoms may or may not have a medical explanation "
@@ -17578,7 +17578,7 @@ RICH_SUMMARIES = {
     "Social anxiety disorder": (
         "Persistent marked fear or anxiety about one or more "
         "social situations in which the person is exposed to "
-        "possible scrutiny. Diagnosis (DSM-5): situations "
+        "possible scrutiny. Diagnosis (DSM-5-TR): situations "
         "almost always provoke fear or anxiety, are avoided "
         "or endured with intense distress, are out of "
         "proportion to actual threat, last at least 6 "
@@ -17975,7 +17975,7 @@ RICH_SUMMARIES = {
 
     "Postpartum depression": (
         "Depressive episode arising within 12 months of "
-        "delivery; onset within 4 weeks meets DSM-5 "
+        "delivery; onset within 4 weeks meets DSM-5-TR "
         "peripartum specifier. Distinct from baby blues "
         "(transient tearfulness days 2 to 5, self-"
         "limiting) and postpartum psychosis (florid "
@@ -18178,7 +18178,7 @@ RICH_SUMMARIES = {
         "persistent concern about future attacks or "
         "maladaptive behavioural change (typically "
         "avoidance, sometimes agoraphobia). Diagnosis "
-        "(DSM-5): at least one attack followed by 1 month "
+        "(DSM-5-TR): at least one attack followed by 1 month "
         "of worry about further attacks or significant "
         "avoidance. Clinical features: panic attack is an "
         "abrupt surge of intense fear peaking within "
@@ -19786,7 +19786,7 @@ RICH_SUMMARIES = {
         "Prevalence around 2%; female predominance in "
         "clinical samples. Aetiology combines "
         "heritability (~40%) with childhood adversity. "
-        "Sx (DSM-5 requires 5 of 9): frantic efforts "
+        "Sx (DSM-5-TR requires 5 of 9): frantic efforts "
         "to avoid abandonment; unstable intense "
         "relationships alternating idealisation and "
         "devaluation; identity disturbance; "
@@ -21431,7 +21431,7 @@ RICH_SUMMARIES = {
         "impairment. Lifetime prevalence around "
         "6%; female predominance (2:1); onset in "
         "20s to 30s; commonly comorbid with "
-        "depression and alcohol use. Sx (DSM-5 "
+        "depression and alcohol use. Sx (DSM-5-TR "
         "requires 3 of 6 for at least 6 months): "
         "restlessness, easy fatiguability, "
         "difficulty concentrating, irritability, "
@@ -21594,7 +21594,7 @@ RICH_SUMMARIES = {
     ),
 
     "Opioid use disorder": (
-        "DSM-5 pattern of opioid use causing "
+        "DSM-5-TR pattern of opioid use causing "
         "clinically significant impairment or "
         "distress, with 2 or more of 11 criteria "
         "over 12 months (tolerance, withdrawal, "
@@ -27756,7 +27756,7 @@ RICH_SUMMARIES = {
         "picking, reassurance-seeking) at least an hour daily; "
         "insight often poor, may be delusional. Comorbid depression, "
         "social anxiety, OCD, substance use. "
-        "Ix: DSM-5; screen 'Do you worry a lot about how you look "
+        "Ix: DSM-5-TR; screen 'Do you worry a lot about how you look "
         "and wish you could think about it less?'; BDDQ and Yale-"
         "Brown OCD-BDD. Exclude eating disorder, gender dysphoria, "
         "true disfigurement. "
@@ -27973,7 +27973,7 @@ RICH_SUMMARIES = {
         "suppressible at cost, worsened by stress, may follow "
         "premonitory urge. Comorbid ADHD (up to 60%), OCD (up to "
         "50%), anxiety, LD drive most functional impairment. "
-        "Ix: clinical DSM-5 diagnosis. Screen for comorbidities. "
+        "Ix: clinical DSM-5-TR diagnosis. Screen for comorbidities. "
         "Mx: psychoeducation first - most tics mild. Treat most "
         "impairing comorbidity first (methylphenidate not "
         "contraindicated in TS). CBIT with habit reversal first-line "
@@ -28013,7 +28013,7 @@ RICH_SUMMARIES = {
         "Aetiology: gene-environment interaction - childhood "
         "maltreatment, low SES, parental antisocial traits, "
         "callous-unemotional temperament, prenatal alcohol. "
-        "Clinical features (DSM-5): three or more of - failure to "
+        "Clinical features (DSM-5-TR): three or more of - failure to "
         "conform to social norms, deceitfulness, impulsivity, "
         "aggressiveness, reckless disregard for safety, "
         "irresponsibility, lack of remorse. Comorbid substance use, "
@@ -28349,7 +28349,7 @@ RICH_SUMMARIES = {
     ),
 
     "Eating disorder not otherwise specified": (
-        "DSM-5 OSFED (Other Specified Feeding or Eating Disorder) - "
+        "DSM-5-TR OSFED (Other Specified Feeding or Eating Disorder) - "
         "clinically significant eating disorder not meeting full "
         "criteria for AN, BN or binge-eating disorder. Commonest "
         "eating disorder presentation in primary care. "
@@ -28561,7 +28561,7 @@ RICH_SUMMARIES = {
         "weight, intense fear of weight gain and disturbed body image. "
         "Peak onset adolescence; female predominance about 10:1; "
         "highest mortality of any psychiatric disorder. "
-        "Criteria: DSM-5 requires energy restriction leading to "
+        "Criteria: DSM-5-TR requires energy restriction leading to "
         "significantly low weight, intense fear of weight gain or "
         "behaviour interfering with weight gain, and disturbance in "
         "self-perception; amenorrhoea criterion removed. Severity by "
@@ -33847,7 +33847,7 @@ RICH_SUMMARIES = {
         "persistent fear or avoidance of 2+ characteristic situations "
         "for 6+ months, endured with intense distress; often "
         "housebound in severe cases; commonly comorbid with panic, "
-        "depression and substance use. Ix: clinical (DSM-5); exclude "
+        "depression and substance use. Ix: clinical (DSM-5-TR); exclude "
         "panic mimics (thyrotoxicosis, phaeochromocytoma, arrhythmia, "
         "substance withdrawal); PHQ-9 for comorbid depression. Mx: "
         "SSRI (sertraline, escitalopram) first-line with low-start "
@@ -33869,7 +33869,7 @@ RICH_SUMMARIES = {
         "fatigue, poor concentration, irritability, muscle tension "
         "and sleep disturbance; free-floating rather than "
         "trigger-specific; somatic symptoms (headache, GI upset, "
-        "palpitations) common. Ix: clinical (DSM-5); GAD-7 for "
+        "palpitations) common. Ix: clinical (DSM-5-TR); GAD-7 for "
         "severity; exclude organic mimics (thyrotoxicosis, caffeine, "
         "medication, arrhythmia); PHQ-9 for comorbid depression. Mx: "
         "CBT first-line where accessible; SSRI (sertraline, "
@@ -33883,7 +33883,7 @@ RICH_SUMMARIES = {
     "Persistent depressive disorder": (
         "Chronic depressive syndrome with milder symptoms than MDD "
         "but lasting 2+ years (1+ year in children/adolescents). "
-        "Previously called dysthymia. DSM-5 merges dysthymia and "
+        "Previously called dysthymia. DSM-5-TR merges dysthymia and "
         "chronic MDD. Aetiology: strong genetic overlap with MDD; "
         "higher rates of childhood adversity; female:male 2:1; onset "
         "commonly teens or 20s; often unrecognised because low mood "
@@ -33892,7 +33892,7 @@ RICH_SUMMARIES = {
         "low energy, low self-esteem, poor concentration and "
         "hopelessness; symptom-free period never exceeds 2 months; "
         "'double depression' when an MDD episode superimposes. Ix: "
-        "clinical (DSM-5); PHQ-9 for severity; TFTs, iron, B12, "
+        "clinical (DSM-5-TR); PHQ-9 for severity; TFTs, iron, B12, "
         "vitamin D and substance-use screen to exclude organic "
         "contributors; suicide risk assessment. Mx: combined "
         "psychotherapy (CBT, IPT or CBASP) plus SSRI beats either "
@@ -33914,7 +33914,7 @@ RICH_SUMMARIES = {
         "grandiosity, reduced sleep need, pressured speech, flight of "
         "ideas, distractibility and goal-directed or risky behaviour. "
         "Psychotic features in over 50%; depressive episodes drive "
-        "most disability. Ix: clinical (DSM-5); exclude "
+        "most disability. Ix: clinical (DSM-5-TR); exclude "
         "thyrotoxicosis, steroid or stimulant use and delirium; TFTs, "
         "urine drug screen; baseline weight, lipids and EUC before "
         "medication. Mx: acute mania - lithium, valproate or SGA, "
@@ -34079,7 +34079,7 @@ RICH_SUMMARIES = {
         "is 4+ days of elevated or irritable mood plus 3+ manic "
         "symptoms but without psychosis or hospitalisation and with "
         "preserved function. Depressive episodes dominate and drive "
-        "disability; mixed features common. Ix: clinical (DSM-5); "
+        "disability; mixed features common. Ix: clinical (DSM-5-TR); "
         "careful history from collateral informant to detect "
         "hypomania (patients often report only depression); MDQ "
         "screening; exclude thyroid disease and substance use. Mx: "
@@ -34194,7 +34194,7 @@ RICH_SUMMARIES = {
         "symptoms over 2+ years with symptom-free intervals under 2 "
         "months and no full manic or MDD episode. Impaired "
         "relationships and impulsivity common; high comorbidity with "
-        "substance use. Ix: clinical (DSM-5); longitudinal mood "
+        "substance use. Ix: clinical (DSM-5-TR); longitudinal mood "
         "chart; collateral history; MDQ screen for bipolar spectrum; "
         "exclude thyroid, stimulant use and borderline personality "
         "disorder. Mx: psychoeducation and sleep-wake regulation "
@@ -34218,7 +34218,7 @@ RICH_SUMMARIES = {
         "actual danger, with avoidance or distressed endurance for 6+ "
         "months. Function impaired only if the stimulus is "
         "encountered; often untreated for years. Ix: clinical "
-        "(DSM-5); exclude panic disorder, agoraphobia, OCD and PTSD "
+        "(DSM-5-TR); exclude panic disorder, agoraphobia, OCD and PTSD "
         "which can also involve situational avoidance. Mx: graded "
         "exposure therapy is highly effective (one to several "
         "sessions for simple phobias); virtual-reality exposure "
@@ -35741,7 +35741,7 @@ RICH_SUMMARIES = {
         "anxiety and disproportionate behaviours (repeated checking, "
         "doctor shopping) or avoidance of medical care; somatic "
         "symptoms are absent or mild (distinguishes from somatic "
-        "symptom disorder). Ix: clinical (DSM-5); appropriate but not "
+        "symptom disorder). Ix: clinical (DSM-5-TR); appropriate but not "
         "excessive medical workup to exclude organic disease; PHQ-9 "
         "and GAD-7 for comorbid depression and anxiety. Mx: strong "
         "therapeutic alliance with one clinician; regular scheduled "
@@ -37873,7 +37873,7 @@ RICH_SUMMARIES = {
         "inadequate response. Assess response at 6 months."
     ),
     "Premenstrual dysphoric disorder": (
-        "Severe premenstrual mood disorder in DSM-5, causing "
+        "Severe premenstrual mood disorder in DSM-5-TR, causing "
         "significant impairment in the week before menses with "
         "resolution within days of onset. Affects around 3-8% of "
         "menstruating women. Aetiology: abnormal CNS response to "
@@ -45486,7 +45486,7 @@ RICH_SUMMARIES = {
     ),
     "Cannabis use disorder": (
         "A problematic pattern of cannabis use causing impairment or "
-        "distress, meeting DSM-5 criteria across tolerance, "
+        "distress, meeting DSM-5-TR criteria across tolerance, "
         "withdrawal, craving and continued use despite harm. "
         "Aetiology: risk rises with earlier age of first use, "
         "frequency and potency of use (high-THC products), and "
@@ -46175,7 +46175,7 @@ RICH_SUMMARIES = {
         "features: frequent temper outbursts, deliberate annoyance of "
         "others, blaming others for mistakes and persistent argument "
         "with adults, present across more than one setting for at "
-        "least six months. Ix: clinical diagnosis using DSM-5 "
+        "least six months. Ix: clinical diagnosis using DSM-5-TR "
         "criteria and collateral history from parents and teachers; "
         "screen for coexisting ADHD, anxiety and learning "
         "difficulties. Mx: parent management training is first-line, "
@@ -49686,7 +49686,7 @@ RICH_SUMMARIES = {
     "Vaginismus": (
         "Involuntary spasm of pelvic floor and vaginal introital "
         "muscles preventing or making penetration painful; a "
-        "genito-pelvic pain and penetration disorder in DSM-5. Types: "
+        "genito-pelvic pain and penetration disorder in DSM-5-TR. Types: "
         "primary (never able to tolerate penetration) or secondary "
         "(after trauma, infection, atrophy, birth). Sx: pain, burning "
         "or blockage at attempted penetration (intercourse, tampon, "
@@ -51465,7 +51465,7 @@ RICH_SUMMARIES = {
         "preoccupation with fantasies of success, sense of "
         "entitlement, exploitation of others, envy, and fragile "
         "self-esteem that reacts to criticism with rage or contempt. "
-        "Ix: clinical interview against DSM-5 criteria, collateral "
+        "Ix: clinical interview against DSM-5-TR criteria, collateral "
         "history is valuable since insight is often limited. Mx: "
         "long-term psychotherapy (schema therapy or "
         "transference-focused therapy) is the mainstay, treat "
@@ -51820,7 +51820,7 @@ RICH_SUMMARIES = {
         "unsuccessful efforts to cut back, chasing losses, lying to "
         "conceal the extent of gambling, and jeopardising "
         "relationships or employment. Ix: clinical interview against "
-        "DSM-5 criteria, screening tools such as the Problem Gambling "
+        "DSM-5-TR criteria, screening tools such as the Problem Gambling "
         "Severity Index, screen for comorbid depression and substance "
         "use. Mx: cognitive behavioural therapy is first-line, "
         "naltrexone has evidence particularly with a family history "
@@ -51839,7 +51839,7 @@ RICH_SUMMARIES = {
         "rising tension before the theft, gratification or relief "
         "during the act, followed by guilt or shame, items stolen are "
         "typically not needed and are often discarded, hoarded or "
-        "returned. Ix: clinical interview against DSM-5 criteria, "
+        "returned. Ix: clinical interview against DSM-5-TR criteria, "
         "distinguish from theft for material gain or organised crime, "
         "screen for comorbid psychiatric illness. Mx: cognitive "
         "behavioural therapy is first-line, SSRIs or naltrexone have "
@@ -51859,7 +51859,7 @@ RICH_SUMMARIES = {
         "physical outbursts lasting under 30 minutes, occurring at "
         "least twice weekly for three months or as three destructive "
         "episodes within a year, with rapid escalation and subsequent "
-        "regret. Ix: clinical interview against DSM-5 criteria, "
+        "regret. Ix: clinical interview against DSM-5-TR criteria, "
         "exclude a mood, psychotic or substance-induced cause, and "
         "exclude a general medical or neurological cause for the "
         "aggression. Mx: cognitive behavioural therapy focused on "
@@ -51880,7 +51880,7 @@ RICH_SUMMARIES = {
         "school refusal, nightmares with separation themes, and "
         "physical symptoms such as headache or abdominal pain before "
         "separation. Ix: clinical interview with the child and "
-        "caregivers against DSM-5 criteria, exclude a medical cause "
+        "caregivers against DSM-5-TR criteria, exclude a medical cause "
         "for physical symptoms, assess school attendance pattern. Mx: "
         "cognitive behavioural therapy with graded exposure is "
         "first-line, involve parents in treatment, SSRIs for moderate "
@@ -52454,7 +52454,7 @@ RICH_SUMMARIES = {
     ),
 
     "Hoarding disorder": (
-        "A DSM-5 diagnosis of persistent difficulty discarding "
+        "A DSM-5-TR diagnosis of persistent difficulty discarding "
         "possessions regardless of their value, driven by a perceived "
         "need to save them and distress at the thought of parting "
         "with them. Clinical features: accumulation that congests and "
@@ -52462,7 +52462,7 @@ RICH_SUMMARIES = {
         "used for their intended purpose, with insight often limited, "
         "and functional consequences including fire risk, "
         "infestation, falls and family conflict. Ix: clinical "
-        "diagnosis using DSM-5 criteria and functional impact, "
+        "diagnosis using DSM-5-TR criteria and functional impact, "
         "distinguish from hoarding as a symptom of OCD, dementia or "
         "psychotic illness, and from normal collecting where items "
         "remain organised and usable. Mx: cognitive behavioural "
@@ -52475,7 +52475,7 @@ RICH_SUMMARIES = {
     ),
 
     "Pyromania": (
-        "A rare DSM-5 impulse-control disorder of deliberate, "
+        "A rare DSM-5-TR impulse-control disorder of deliberate, "
         "repeated fire-setting for tension relief or gratification, "
         "without another motive such as profit, revenge or ideology. "
         "Clinical features: mounting tension before the act, "
@@ -52496,7 +52496,7 @@ RICH_SUMMARIES = {
     ),
 
     "Excoriation disorder": (
-        "A DSM-5 body-focused repetitive behaviour disorder of "
+        "A DSM-5-TR body-focused repetitive behaviour disorder of "
         "recurrent skin picking causing lesions, despite repeated "
         "attempts to stop. Clinical features: picking targets the "
         "face, arms and hands most often, driven by tension relief, "
@@ -58753,7 +58753,7 @@ RICH_SUMMARIES = {
     ),
     "Depression in children and adolescents": (
         "Depressive disorder in a person under 18, diagnosed on the "
-        "adult DSM-5 criteria with one change: irritable mood can "
+        "adult DSM-5-TR criteria with one change: irritable mood can "
         "replace depressed mood. Features: rather than describing "
         "sadness, children present as irritable, cranky, unhappy or "
         "miserable, with temper outbursts. Look for falling grades, "
@@ -63918,7 +63918,7 @@ RICH_SUMMARIES = {
     "Specific learning disorder": (
         "Persistent difficulty acquiring reading, written expression "
         "or mathematics that is well below the level expected for age "
-        "and does not respond to targeted teaching. Criteria: DSM-5 "
+        "and does not respond to targeted teaching. Criteria: DSM-5-TR "
         "requires difficulties for at least 6 months despite "
         "intervention, onset during the school years, achievement "
         "well below age expectation, and no better explanation from "
@@ -70806,7 +70806,7 @@ RICH_SUMMARIES = {
     "Cultural formulation": (
         "The part of a psychiatric formulation that asks how culture, "
         "migration, religion and community shape the problem, its "
-        "explanation and the help sought. Features: the DSM-5 "
+        "explanation and the help sought. Features: the DSM-5-TR "
         "Cultural Formulation Interview asks the patient to name the "
         "problem in their own words, then covers perceived cause, the "
         "role of family and community support, what has helped or "
