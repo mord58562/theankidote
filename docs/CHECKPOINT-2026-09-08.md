@@ -185,3 +185,60 @@ All of this is Qt surface, which cannot be tested from here:
 - A `>` inside an HTML comment still ends the tag early. Same as it has
   always been, and the only consequence is a mark landing somewhere
   invisible; fixing it means writing a comment/CDATA parser.
+
+
+## 2.6.0 shipped
+
+Rob pushed 2.6.0 to AnkiWeb as soon as it was packaged. The release is
+frozen at that build: 66 files, bundling content `08.09.2026.2`. Also
+published as a tagged GitHub release with the package attached, at
+`v2.6.0` - the asset is byte-identical to the uploaded file.
+
+**Everything after the package went out is not part of that release.**
+Content published since reaches installs through the content channel on
+their next launch, not through AnkiWeb.
+
+## Content, after the release
+
+`08.09.2026.3`: 48 entries across palliative care (17), dialysis and
+renal replacement (15), and anaesthesia and perioperative medicine (16).
+
+Two of the three drafting agents reported back that the brief I gave
+them was built on a bad coverage check. I had grepped entry NAMES for
+substrings, which said palliative care had five entries when it already
+held Advance care directive, WHO analgesic ladder, Malignant bowel
+obstruction, Opioid rotation and a couple of dozen more. Both agents
+re-mapped the real gaps themselves and wrote around them, so the batch
+is sound - but the method was wrong and produced a brief that was
+largely already covered.
+
+**The fix, and the rule for next time: ask the matcher, not the name
+list.** `~/Downloads/frameworks/_extracted/triage_gaps.py` runs every
+raw framework gap through `_reviewer.highlight_text` and asks the
+runtime question - if a card carried this curriculum phrase, would a
+popup appear? Three outcomes: MISSING (nothing fires), PARTIAL (only a
+generic fragment like "management" fires, so the popup would open on the
+wrong idea), COVERED.
+
+Against the library at `08.09.2026.3`:
+
+| module | raw gaps | genuinely missing | covered under another name |
+|---|---|---|---|
+| Medicine-1 | 163 | 59 | 104 |
+| O&G | 125 | 99 | 26 |
+| Paediatrics | 87 | 41 | 46 |
+| Psychiatry | 85 | 45 | 40 |
+| TOTAL | 460 | 244 | 216 |
+
+So the raw scorer over-reports by 47%, which is the inflation the
+2026-09-07 checkpoint warned about, now measured rather than asserted.
+O&G is the real weak point: 99 genuinely missing, and the only module
+where most of its gaps are true gaps.
+
+**Alias work is worth much more than it was yesterday.** Until this
+morning an alias only affected which entry a term resolved to; the
+highlighter built its pattern from the primary name, so the alias never
+underlined anything. Now it does. A card that says "dialysis" still
+matches nothing, though the library holds Haemodialysis, Peritoneal
+dialysis and Indications for dialysis - that class of gap is now cheap
+to close and immediately visible to the reader.
