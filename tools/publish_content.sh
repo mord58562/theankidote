@@ -107,7 +107,13 @@ if [ -n "$(git status --porcelain -- content/ pearls/ tools/)" ]; then
   die "uncommitted changes under content/, pearls/ or tools/ - commit them first, or you will publish something that is not in the repository"
 fi
 
-if git rev-parse "$TAG" >/dev/null 2>&1; then
+# Both refs. `gh release create` makes the tag on GitHub and never in
+# this clone, so `git rev-parse` can never see a tag this script created
+# - which left the explicit-version path unguarded: the build ran, the
+# suite ran, and `gh release create` failed at the very end, after
+# data/ had already been rewritten.
+if git rev-parse "$TAG" >/dev/null 2>&1 \
+   || [ -n "$(git ls-remote --tags origin "$TAG" 2>/dev/null)" ]; then
   die "tag $TAG already exists. Content versions are compared as strings and must increase; pick a later version."
 fi
 
@@ -191,13 +197,25 @@ step "Building library"
 # version it only pretended to publish, and the real run that follows
 # refuses it as "does not sort after the current". The documented
 # workflow is "run the dry run first", which made that a certainty.
-if [ "$DRY_RUN" = "1" ]; then
-  _DRY_STASH="$(mktemp -d)"
-  cp data/manifest.json data/library.json "$_DRY_STASH/"
-  # shellcheck disable=SC2064
-  trap "cp '$_DRY_STASH/manifest.json' '$_DRY_STASH/library.json' data/ \
-        && rm -rf '$_DRY_STASH'" EXIT
-fi
+#
+# This was gated on DRY_RUN, so it fixed the dry run and left the real
+# one carrying the same trap. A publish that dies after the build - a
+# failing test, a 404 on the asset, a rejected push - left data/ at the
+# version it had not published, and the retry then recomputed the same
+# version, compared it against itself, and refused it as "does not sort
+# after the current". The dry run died at the same check, so it could
+# not be used to diagnose it either; recovery needed a manual
+# `git checkout data/`. The stash is now unconditional and is disarmed
+# only once the publish has actually committed.
+_STASH="$(mktemp -d)"
+cp data/manifest.json data/library.json "$_STASH/"
+_restore_data() {
+  if [ -n "${_STASH:-}" ] && [ -d "$_STASH" ]; then
+    cp "$_STASH/manifest.json" "$_STASH/library.json" data/ 2>/dev/null || true
+    rm -rf "$_STASH"
+  fi
+}
+trap _restore_data EXIT
 
 ASSET_URL="https://github.com/${SLUG}/releases/download/${TAG}/library.json"
 python3 tools/build_library.py --version "$VERSION" --url "$ASSET_URL"
@@ -314,6 +332,10 @@ git commit -m "content: publish $VERSION
 library.json is committed for reproducibility of the shipped add-on;
 clients fetch the copy attached to $TAG rather than this one."
 git push origin "HEAD:$BRANCH"
+
+# Committed and pushed: data/ is now the published state and must stay.
+trap - EXIT
+rm -rf "$_STASH"
 
 MANIFEST_URL="https://raw.githubusercontent.com/${SLUG}/${BRANCH}/data/manifest.json"
 
