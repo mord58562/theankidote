@@ -39,6 +39,7 @@ Convenience features (all manual user actions, no automation):
 """
 
 import os
+import json as _json
 import base64
 import random
 
@@ -356,11 +357,23 @@ _CHAT_ADBLOCK_CSS = """
 """
 
 # JS that injects the CSS on document_start so banners never flash.
+#
+# `json.dumps`, not `repr(...).replace("'", '"')`. Python's repr picks
+# `\'` as its delimiter and escapes only that character, so swapping the
+# delimiters for `"` left every `"` inside the CSS unescaped - and this
+# CSS is almost entirely attribute selectors, so the very first one
+# closed the string. The emitted script was
+# `s.textContent="...[data-testid*="upgrade"]...` and Chromium refused
+# it with `SyntaxError: Unexpected identifier 'upgrade'`. It has been a
+# syntax error since it was written, on by default, failing silently on
+# every page load: the banners it advertises hiding were always visible.
+# JSON string syntax is a subset of JavaScript's, so `json.dumps` is
+# both correct and the standard way to do this.
 _CHAT_ADBLOCK_JS = (
     "(function(){"
     "var s=document.createElement('style');"
     "s.id='theankidote-chat-adblock';"
-    "s.textContent=" + repr(_CHAT_ADBLOCK_CSS).replace("'", '"') + ";"
+    "s.textContent=" + _json.dumps(_CHAT_ADBLOCK_CSS) + ";"
     "document.documentElement.appendChild(s);"
     "})();"
 )

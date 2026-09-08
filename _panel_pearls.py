@@ -884,7 +884,6 @@ class StatPearlsPanel(QWidget):
         self._btn_back.clicked.connect(self._view.back)
         self._btn_forward.clicked.connect(self._view.forward)
         self._btn_reload.clicked.connect(self._view.reload)
-        self._btn_home.clicked.connect(self._go_home)
         self._btn_external.clicked.connect(self._open_externally)
         self._view.urlChanged.connect(self._on_url_changed)
         self._view.loadFinished.connect(self._on_load_finished)
@@ -1369,7 +1368,7 @@ class StatPearlsPanel(QWidget):
     })();
     """
 
-    def _maybe_autojump(self, url: str) -> None:
+    def _maybe_autojump(self, url: str, pending_url: str = "") -> None:
         term = getattr(self, "_pending_term", "") or ""
         if not term:
             return
@@ -1378,7 +1377,13 @@ class StatPearlsPanel(QWidget):
         # at.  A DrugBank search page also matches the search patterns
         # below, so without this a leftover StatPearls term would drive
         # a jump inside DrugBank's results.
-        want_db = "drugbank" in (getattr(self, "_pending_url", "") or "").lower()
+        #
+        # Passed in rather than read from `self`: the only caller clears
+        # `_pending_url` before it gets here, which pinned `want_db` to
+        # False and made this return on every DrugBank page.
+        want_db = "drugbank" in (pending_url
+                                 or getattr(self, "_pending_url", "")
+                                 or "").lower()
         if want_db != ("drugbank.com" in low):
             return
         # NCBI redirects the in-book search URL to the book's own
@@ -1916,9 +1921,28 @@ class StatPearlsPanel(QWidget):
         paths drift apart.
         """
         self._crash_count = 0
+        # A page that loaded refills the retry budget. It was spent per
+        # session, not per navigation: one throttled request early on
+        # left `_load_retries` at 1 for the rest of the session, so the
+        # next failure - an in-page link, Home, Reload, none of which
+        # go through `load_url` - skipped its retry and went straight to
+        # an error page whose copy reads "Two attempts, both failed"
+        # after exactly one.
+        self._load_retries = 0
         # The intent that `load_url` recorded has now been satisfied.
         # Leaving it set turns it into a stale fallback for every later
         # navigation the user makes themselves.
+        #
+        # Read before it is cleared, because `_maybe_autojump` decides
+        # which site the pending term belongs to by looking at it. It ran
+        # after this clear, so `want_db` was always False, and on a
+        # DrugBank page `False != True` returned immediately - the
+        # auto-jump has never fired for DrugBank. The 47% of drugs with
+        # no DrugBank id land on the search page, and the reader had to
+        # pick the single exact match by hand every time, forever, since
+        # `_cache_resolved` skips URLs carrying a query string so the
+        # cache never filled either.
+        pending_url = getattr(self, "_pending_url", "") or ""
         if cur and not cur.startswith("chrome-error"):
             self._pending_url = ""
         _log.diag(f"loadFinished url={cur[:120]!r}")
@@ -1936,7 +1960,7 @@ class StatPearlsPanel(QWidget):
         self._probe_dom("afterLoad")
         self._force_repaint()
         try:
-            self._maybe_autojump(cur)
+            self._maybe_autojump(cur, pending_url)
         except Exception:
             pass
         try:

@@ -109,6 +109,45 @@ class SpanAttributes(unittest.TestCase):
                 self._attr(span, attr),
                 f"{attr} is absent from the span; marker.js reads it")
 
+    def test_a_condition_with_chips_actually_carries_them(self):
+        """Presence is not enough - this attribute shipped present and
+        empty.
+
+        `data-sp-utd` was `"[]"` on every span ever written. The chips
+        are built by `_conditions.resolve`, JSON-encoded by
+        `_build_pattern` and read by `web/marker.js`, but the dict
+        `_condition_terms` builds between them did not carry the key -
+        the same omission that had already cost `data-sp-link`. The
+        test above asserted the attribute was present, which it was, so
+        nothing failed while 824 of the 826 conditions in the library
+        rendered no UpToDate row at all.
+        """
+        import html as _html
+        import json as _json
+        entry = None
+        for name in ("hypertension", "heart failure", "asthma"):
+            cand = self.conditions._LOOKUP.get(name)
+            if cand and cand.get("utd"):
+                entry = (name, cand)
+                break
+        self.assertIsNotNone(entry, "no fixture condition carries utd chips")
+        name, _cand = entry
+        span = self._span_for(name.capitalize() + " is common.",
+                              name.capitalize())
+        raw = self._attr(span, "data-sp-utd")
+        self.assertIsNotNone(raw, "data-sp-utd is absent")
+        chips = _json.loads(_html.unescape(raw))
+        self.assertTrue(
+            chips,
+            f"{name!r} carries utd chips in the library but the span "
+            f"emitted an empty list")
+        for chip in chips:
+            # marker.js skips any entry missing either key, so a chip
+            # that lacks one is a chip that never draws.
+            self.assertIn("label", chip)
+            self.assertIn("url", chip)
+            self.assertTrue(chip["label"] and chip["url"])
+
     def test_the_dock_path_carries_no_stylesheet(self):
         """The card path is handed to Anki as one string and needs the
         rule travelling with it. The dock inserts each edit with

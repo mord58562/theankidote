@@ -345,6 +345,15 @@ def _condition_terms(card) -> list:
             "summary":        it["summary"],
             "source":         it.get("source") or "statpearls",
             "link":           it.get("link", "search"),
+            # The third key this dict has dropped, after `link` above and
+            # for the same reason: `_conditions.resolve` builds the chips,
+            # `_build_pattern` JSON-encodes whatever is under this key, and
+            # `_span` writes it to `data-sp-utd` - but this dict sits
+            # between them and did not carry it. `data-sp-utd` was always
+            # "[]", so marker.js hid the UpToDate row on every popup. 824
+            # of the 826 conditions in the library carry chips; none of
+            # them have ever been drawn.
+            "utd":            it.get("utd") or [],
             "case_sensitive": False,
         })
     return out
