@@ -71,3 +71,98 @@ rating-scale batch. **O&G is untouched at 99 and is the whole priority.**
 - [ ] 3. verify_batch, merge_batch, build, suites green.
 - [ ] 4. Publish the content channel; re-measure; refresh the routine
       snapshot if the numbers moved.
+
+## What the session actually found
+
+Phase 2 started as a content batch and turned up two live defects
+first, both from Rob's own diagnostic log rather than from the code.
+
+### The content channel has been dead for every install
+
+GitHub moved release-asset downloads to
+`release-assets.githubusercontent.com`. The updater pins the hosts it
+will follow a redirect to; that name was not among them; every client
+refused every download. Rob's copy is stranded at `08.09.2026.2` while
+the channel is now at `09.09.2026` - eleven publishes that reached
+nobody.
+
+Failing closed is right and the pin stays. The defect is that nothing
+noticed, and the reason is sharp: `publish_content.sh` verified the
+asset with `curl -sSL`, which follows a redirect anywhere, so it
+reported a healthy 200 throughout. The check and the client disagreed
+about what "reachable" means. Publishing now fetches through
+`_updater._fetch`, and a test follows the live redirect and asserts
+where it lands. Both were proven against the old code.
+
+**This is add-on code. It reaches users only through AnkiWeb, so until
+that upload the channel stays dead for everyone, Rob included.**
+
+### The dock diagnostic was reporting itself
+
+`visibilityChanged` arrives synchronously from inside Qt's show() and
+hide(), and both toggle paths set the mirror flag after the call - so
+every ordinary toggle looked like an outside change and logged a stack
+trace naming the function that had just called it. Four such pairs in
+eleven minutes last night. Fixed at three call sites; the test reads
+the real `__init__.py`, since a replica of an ordering constraint
+tests the replica.
+
+### The spelling rule for "fetal" was backwards
+
+`verify_batch` listed "fetal" as a US spelling wanting "foetal". It is
+RANZCOG's spelling and the library's own, 213 uses to none. The gate
+rejected every correctly-spelled obstetric batch, and three drafting
+agents resolved it three different ways in one afternoon.
+
+The deeper finding: `test_vocab`'s matching rule never fired, because
+`DATASETS` covers three small tables and does not reach
+`RICH_SUMMARIES` at all. The 2,800 entries that are the actual popup
+text had no spelling check, which is how a contradiction sat in two
+files with a green suite. The ban now runs against that table too, and
+it is clean under the full ruleset.
+
+## Content
+
+31 O&G entries merged and published as `09.09.2026`. Four agents
+drafted in parallel; all 31 verified clean together with the
+AnkiConnect alias check live.
+
+About half of roughly sixty candidates were dropped as already covered
+under another name. That is the matcher earning its place, and it is
+now written into both the brief and the routine as the expected rate.
+
+| module | before | after |
+|---|---|---|
+| O&G | 99 | **73** |
+| Medicine-1 | 59 | 59 |
+| Paediatrics | 41 | 41 |
+| Psychiatry | 29 | 29 |
+
+Paediatrics is the obvious next target: untouched recently, and now
+above psychiatry.
+
+## Cloud routine
+
+Digest refreshed twice, both times in the same turn as the edit -
+`b8d827de` this morning, `c4acce71` after the batch. `origin/main`
+matches. The prompt now carries the current gap ranking, the
+fetal/foetal ruling, the alias gaps this batch found, an explanation
+of the two manifest tests that fail between a source push and a
+publish, and an instruction never to touch the context file - a
+drafting agent edited it today despite being told not to, with a
+change that would not have run (`os.path.expanduser`, no `import os`)
+and that would have silently re-broken every fire.
+
+Per Rob, 2026-09-09: **when the Y4 work is done and the RANZCP pivot
+happens, this routine gets updated with it.** Recorded in memory
+against the pivot criteria, including the two things that need
+deciding then - the fellowship cartridge is private, so the routine
+cannot push it the way it pushes Y4 content, and whether Y4 batches
+continue in parallel, which would mean two routines.
+
+## Open for Rob
+
+- **2.6.2 is built and unreleased.** Rob is running 2.6.1. The
+  content-channel fix is not in either, so it needs a new build.
+- The dock-toggle and content-channel fixes are user-visible bugfixes
+  and earn a patch bump to **2.6.3**, on Rob's say-so.
