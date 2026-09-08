@@ -1184,6 +1184,30 @@ def _push(_w, text: str, tip: str = ""):
     return btn
 
 
+def _face_version() -> str:
+    """Both numbers, on the face of the label rather than in a tooltip.
+
+    The add-on version and the library version move independently and
+    answer different questions, and only the first was visible without
+    hovering. That is the one that changes least: content publishes
+    several times in a day, the package a few times a month.
+
+    It cost real confusion. Rob reported a fix as still broken while
+    running the previous build - correctly, since the fix was not in it
+    - and the window he checked showed a version that was accurate and
+    could not tell him it was the older one. Showing the pair makes
+    "which code and which content am I actually on" answerable at a
+    glance, which is the question anyone comparing a symptom against a
+    changelog is really asking.
+    """
+    try:
+        from .pearls import _library
+        lib = _library.CONTENT_VERSION or "unknown"
+    except Exception:
+        lib = "unknown"
+    return f"{_ADDON_VERSION}  \u00b7  content {lib}"
+
+
 def _version_label(_w):
     """The add-on's own version, anchoring the left end of the footer.
 
@@ -1199,7 +1223,7 @@ def _version_label(_w):
     asked for is a version. Clicking copies all three numbers a report
     needs.
     """
-    lab = _caption(_w, _ADDON_VERSION)
+    lab = _caption(_w, _face_version())
     try:
         from aqt.qt import QFontDatabase
         f = QFontDatabase.systemFont(QFontDatabase.SystemFont.FixedFont)
@@ -1247,10 +1271,10 @@ def _version_label(_w):
             # Back to the number a beat slower than it left, so the
             # change registers without the label flickering.
             from aqt.qt import QTimer
-            QTimer.singleShot(1400, lambda: lab.setText(_ADDON_VERSION))
+            QTimer.singleShot(1400, lambda: lab.setText(_face_version()))
         except Exception as exc:
             _log.error("copy versions", exc)
-            lab.setText(_ADDON_VERSION)
+            lab.setText(_face_version())
         # Hand the event on. Replacing the handler outright swallowed
         # QLabel's own, so the drag-selection enabled just above could
         # never start and the label was only ever click-to-copy.
