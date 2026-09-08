@@ -216,6 +216,14 @@
         ".box.src-utd{--src:#5dca7f;}" +
         ".box.src-pre{--src:#9aa9ff;}" +
         ".box.src-custom{--src:#f291d6;}" +
+        // Summaries written for this add-on carry the same badge
+        // distinction as a real StatPearls chapter and, until now,
+        // the identical teal - so the one thing the badge exists to
+        // say was said in words and contradicted by the colour.
+        // A slate blue: adjacent to the teal rather than competing
+        // with it, because these entries are the same KIND of thing
+        // as a StatPearls chapter and merely not from StatPearls.
+        ".box.src-tad{--src:#7fb2d9;}" +
         ".title{font-size:17px;font-weight:600;margin:0 0 9px 0;}" +
         ".summary{font-size:14px;opacity:.88;line-height:1.6;margin:0;}" +
         ".lede{margin:0 0 2px 0;}" +
@@ -282,6 +290,7 @@
         ".box.sp-light.src-utd{--src:#2c8a4f;}" +
         ".box.sp-light.src-pre{--src:#3a4fa8;}" +
         ".box.sp-light.src-custom{--src:#c9509e;}" +
+        ".box.sp-light.src-tad{--src:#33698f;}" +
         ".box.sp-light .summary{opacity:.92;}" +
         // There is deliberately no `.box.sp-light .cat` rule: .cat
         // already reads var(--src) and var(--src) is the light hue
@@ -503,11 +512,18 @@
       // The five hues were declared for the badge and then dropped
       // everywhere else, so a DrugBank popup was gold-badged with a
       // teal button.
-      _tipBox.classList.remove("src-db", "src-utd", "src-pre", "src-custom");
+      _tipBox.classList.remove("src-db", "src-utd", "src-pre",
+                               "src-custom", "src-tad");
       if (isDb)          _tipBox.classList.add("src-db");
       else if (isUtd)    _tipBox.classList.add("src-utd");
       else if (isPre)    _tipBox.classList.add("src-pre");
       else if (isCustom) _tipBox.classList.add("src-custom");
+      // Same source, different provenance. A StatPearls-sourced popup
+      // with a real chapter behind it keeps the teal; one whose summary
+      // was written for this add-on takes the slate. `isArticle` is
+      // already the thing the badge switches on, so the colour now
+      // agrees with the word instead of contradicting it.
+      else if (!isArticle) _tipBox.classList.add("src-tad");
       // On a card, Anki puts `nightMode` on the body and that is the
       // answer. On a StatPearls or DrugBank page in the dock there is
       // no such class, so this used to read "light" every time and the

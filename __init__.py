@@ -820,6 +820,60 @@ gui_hooks.webview_did_receive_js_message.append(_on_js_message)
 # themselves. It is `_dock_layout.make_shortcut` now.
 
 
+# Keys that must never become a binding, and why the check exists.
+#
+# Every one of these is created with `ApplicationShortcut` context, which
+# is documented on `_dock_layout.make_shortcut` as firing "wherever focus
+# happens to be" - that is the point, since the reviewer's focus is a
+# webview and Anki opens real top-level windows. It also means a binding
+# is global: it takes the key away from Anki, from the note editor and
+# from every dialog.
+#
+# `QKeySequenceEdit` records whatever is pressed, so pressing Escape to
+# dismiss the field records Escape. Rob did exactly that, `Esc` was
+# saved as `shortcutTogglePearls`, and from then on Escape in the note
+# editor toggled the reference sidebar instead of closing the editor. It
+# took a stack trace to find, because the behaviour looks nothing like a
+# shortcut and everything like a Qt bug.
+#
+# Two rules. A sequence with no modifier fires while the reader is
+# typing, so it is never acceptable. Escape is refused even with a
+# modifier: it is the universal cancel, and taking it is not a trade any
+# binding is worth.
+_RESERVED_KEYS = ("esc", "escape")
+
+
+def _is_safe_shortcut(seq: str) -> bool:
+    """Is this sequence one we may bind application-wide?"""
+    text = (seq or "").strip()
+    if not text:
+        return True                     # empty means deliberately off
+    low = text.lower()
+    last = low.split(",")[0].split("+")[-1].strip()
+    if last in _RESERVED_KEYS:
+        return False
+    return any(m in low for m in ("ctrl+", "meta+", "alt+", "shift+"))
+
+
+def _drop_unsafe_shortcuts() -> None:
+    """Clear any stored binding we would refuse to make.
+
+    Runs at setup, because the bad value is already on disk for anyone
+    who hit this before the guard existed, and there is no route back
+    from the interface: the field shows `Esc`, and pressing Escape to
+    change it re-enters `Esc`.
+    """
+    for key, _default, label in _SHORTCUT_FIELDS:
+        cur = _config.get(key)
+        if cur and not _is_safe_shortcut(str(cur)):
+            _log.warn(f"refusing unsafe shortcut {cur!r} for {label!r}; "
+                      f"clearing it")
+            try:
+                _config.set_value(key, "")
+            except Exception as exc:
+                _log.error(f"clear unsafe shortcut {key}", exc)
+
+
 def _rebind_shortcuts() -> None:
     """Build every user-editable binding from the current config.
 
@@ -937,6 +991,10 @@ def _setup() -> None:
         _pearls_dock.visibilityChanged.connect(_on_dock_visibility)
     except Exception as exc:
         _log.error("pearls dock visibility signal", exc)
+
+    # Clear anything unsafe already on disk before binding, since
+    # the interface offers no route back from it.
+    _drop_unsafe_shortcuts()
 
     # Keyboard shortcuts.  Anchored to mw so they fire whenever the
     # main window has focus, and built through `_rebind_shortcuts` so
@@ -2062,11 +2120,27 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     if order:
         _config.set_value("toolbarOrder", order)
 
+    rejected = []
     for key, seq in shortcut_edits.items():
         try:
-            _config.set_value(key, seq.keySequence().toString() or "")
+            text = seq.keySequence().toString() or ""
+            if not _is_safe_shortcut(text):
+                # Not stored, and the old value is left alone rather than
+                # cleared: the reader pressed Escape at a focused field,
+                # which almost always meant "leave this as it was".
+                rejected.append(text)
+                continue
+            _config.set_value(key, text)
         except Exception as exc:
             _log.error(f"save shortcut {key}", exc)
+    if rejected:
+        try:
+            from aqt.utils import tooltip
+            tooltip(f"{rejected[0]} cannot be a shortcut - it would be "
+                    f"taken from Anki everywhere. That binding is "
+                    f"unchanged.", period=5000)
+        except Exception as exc:                        # noqa: BLE001
+            _log.debug(f"unsafe shortcut notice: {exc}")
 
     # Apply the bindings now.  Until 1.4.1 they were only read at
     # launch, so a shortcut changed here appeared not to work at all
