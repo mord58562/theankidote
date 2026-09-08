@@ -75,6 +75,20 @@ def collect() -> dict:
     # override it replaces is already the base. The split has to survive
     # every rebuild or it is not a split.
     from pearls import _library
+    # And they must come from the BUNDLED copy specifically.
+    # `_library._load` prefers `user_files/library.json` when it carries
+    # the newer content version, which is right at runtime and wrong
+    # here: both paths resolve relative to this checkout, so a library
+    # downloaded for debugging and dropped into `user_files/` would
+    # silently become the base vocabulary for the next build, and the
+    # publish would ship it. `user_files/` is gitignored, so nothing in
+    # review would show it either.
+    if pathlib.Path(_library.USER_COPY).exists():
+        raise SystemExit(
+            f"{_library.USER_COPY} exists. The runtime loader prefers it "
+            f"over the bundled library when it is newer, so a build would "
+            f"take its base vocabulary from a downloaded file. Move it "
+            f"aside before building.")
     conditions = [dict(c) for c in _library.get("conditions")]
 
     # Merge the alternate-name table into the condition entries, on the
