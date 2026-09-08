@@ -5,7 +5,7 @@ Total RICH keys parsed from source: 720
 rich_summaries in built library: 686
 
 === BANNED TOKENS ===
-  canonical: clean
+  banned-word check: clean
   ATSI: clean
   em-dash: clean
   md-bold: clean
@@ -47,7 +47,7 @@ rich_summaries in built library: 686
   Silicosis: '2024' -> 'Australia from July 2024 after a surge in accelerated '
 
 === ALIAS-COLLISION SCAN ===
-  Rich keys not matching a canonical condition name: 0
+  Rich keys not matching a primary condition name: 0
 
 === SUMMARY ===
 Total rich entries: 686

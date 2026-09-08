@@ -87,7 +87,7 @@ Combining the two lists plus Y4 exam-classic gaps I've been holding:
 ```
 python3 << 'PY'
 import sqlite3, shutil, re, sys
-src = '/Users/robrussell/Library/Application Support/Anki2/User 1/collection.anki2'
+src = os.path.expanduser('~/Library/Application Support/Anki2/User 1/collection.anki2')
 dst = '/tmp/anki_collection_copy.anki2'
 shutil.copy(src, dst)
 conn = sqlite3.connect(f'file:{dst}?mode=ro', uri=True)
@@ -95,7 +95,7 @@ cur = conn.cursor()
 rows = cur.execute('SELECT flds FROM notes').fetchall()
 tag = re.compile(r'<[^>]+>')
 big = ' '.join(tag.sub(' ', flds.replace('\x1f',' ')).lower() for (flds,) in rows)
-sys.path.insert(0, '/Users/robrussell/theankidote')
+sys.path.insert(0, os.path.expanduser('~/theankidote'))
 from content._rich import RICH_SUMMARIES
 covered = set(k.lower() for k in RICH_SUMMARIES.keys())
 from pearls import _conditions

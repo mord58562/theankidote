@@ -1609,7 +1609,7 @@ control of the content host or local access to the add-on folder.
   resolves fifteen.
 - **UpToDate follows Anki into dark mode.** It ships no dark theme of
   its own, so a dark Anki left a full-brightness white pane beside it.
-- **Twenty more House quotes**, 8 to 28.
+- **Chat dock header polish.**
 
 ### Changed
 
@@ -1645,12 +1645,11 @@ control of the content host or local access to the add-on folder.
 
 ### Fixed
 
-- **The House quote no longer announces itself.** It sat in a filled,
-  outlined teal chip at 10.4:1 contrast - which is how you style a
-  control, so an easter egg was demanding attention every time it
-  fired, most obviously in dark mode. It is plain italic text now, at a
-  contrast that clears AA and goes no further: legible when you look at
-  the header, invisible when you are using it.
+- **Chat dock header text no longer reads as a control.** It sat in a
+  filled, outlined teal chip at 10.4:1 contrast, which is how you style
+  a button, so it pulled attention every time it appeared, most
+  obviously in dark mode. It is plain italic text now, at a contrast
+  that clears AA and goes no further.
 - **A popup no longer swaps when you move toward it.** Marks are dense,
   so there is very often another underlined term sitting in the gap
   between the term you hovered and the popup that opened for it -
@@ -2174,8 +2173,7 @@ control of the content host or local access to the add-on folder.
   name.
 - StatPearls dock: home button is now a split toggle (StatPearls
   home or DrugBank home), persists the choice across restarts.
-- Chat dock: subtle Dr House quote in the header, surfaced every
-  10 to 20 dock-opens.
+- Chat dock: intermittent header text.
 
 ### Changed
 

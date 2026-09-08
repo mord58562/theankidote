@@ -724,10 +724,10 @@
     return l.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
   }).join("|");
 
-  // Canonical spelling for each label, looked up case-insensitively.
+  // Primary spelling for each label, looked up case-insensitively.
   // Summaries are written by hand across several files and spell the
   // abbreviations inconsistently - "Ddx:" and "DDx:" both occur - so
-  // matching is case-insensitive and the *canonical* form is what gets
+  // matching is case-insensitive and the *primary* form is what gets
   // displayed. Before this, a case mismatch meant the label silently
   // rendered as body text, which is how "Ddx:" ended up buried
   // mid-paragraph inside the management section.
@@ -945,9 +945,9 @@
         _push(parts, pending, chunk);
       }
       var raw = m[2].replace(/[:\s]+$/, "");
-      // Split any qualifier off before canonicalising: "Sx (tetrad)"
+      // Split any qualifier off before normalising: "Sx (tetrad)"
       // must still resolve to the registered label "Sx", both so the
-      // canonical spelling is displayed and so the heading stays a
+      // primary spelling is displayed and so the heading stays a
       // working jump target.
       var qual = "";
       var qm = raw.match(/^(.*?)\s*(\([^()]*\))$/);
