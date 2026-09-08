@@ -12003,6 +12003,192 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "mentalization-based treatment borderline personality disorder"]],
         "summary": "",
     },
+    {
+        "name": "Placental development",
+        "aliases": ["Placentation", "Development of the placenta", "Trophoblast invasion"],
+        "utd": [["Overview", "placental development and physiology"]],
+        "summary": "",
+    },
+    {
+        "name": "Human chorionic gonadotrophin",
+        "aliases": ["Human chorionic gonadotropin", "Chorionic gonadotrophin", "Chorionic gonadotropin"],
+        "utd": [["Overview", "human chorionic gonadotropin in early pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Early pregnancy ultrasound",
+        "aliases": ["First trimester ultrasound", "Dating scan", "Early pregnancy scan", "Viability scan"],
+        "utd": [["Overview", "ultrasound examination in early pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Bleeding in early pregnancy",
+        "aliases": ["First trimester bleeding", "Early pregnancy bleeding", "Vaginal bleeding in early pregnancy"],
+        "utd": [["Overview", "vaginal bleeding in early pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Estimated date of delivery",
+        "aliases": ["Expected date of delivery", "Naegele's rule", "Naegele rule", "Estimated due date"],
+        "utd": [["Overview", "prenatal assessment of gestational age and estimated date of delivery"]],
+        "summary": "",
+    },
+    {
+        "name": "Antenatal booking bloods",
+        "aliases": ["Booking bloods", "Routine antenatal blood tests", "Antenatal booking blood tests", "Booking blood tests"],
+        "utd": [["Overview", "initial prenatal assessment and first trimester laboratory testing"]],
+        "summary": "",
+    },
+    {
+        "name": "Fetal growth and development",
+        "aliases": ["Foetal growth and development", "Fetal development", "Foetal development", "Normal fetal growth"],
+        "utd": [["Overview", "fetal growth and development normal"]],
+        "summary": "",
+    },
+    {
+        "name": "Customised fetal growth chart",
+        "aliases": ["Customised growth chart", "Customised centile chart", "GROW chart", "Growth Assessment Protocol"],
+        "utd": [["Overview", "customized fetal growth charts and growth surveillance"]],
+        "summary": "",
+    },
+    {
+        "name": "High-risk pregnancy",
+        "aliases": ["High risk pregnancy", "High-risk pregnancies"],
+        "utd": [["Overview", "prenatal care risk assessment high risk pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Perinatal infection screening",
+        "aliases": ["Antenatal infection screening", "Antenatal screening for infection", "Perinatal infections"],
+        "utd": [["Overview", "prenatal screening for infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Aboriginal and Torres Strait Islander cancer screening",
+        "aliases": ["Cancer screening in Aboriginal and Torres Strait Islander women", "Cancer screening for Aboriginal and Torres Strait Islander people"],
+        "utd": [["Overview", "cancer screening disparities in indigenous populations"]],
+        "summary": "",
+    },
+    {
+        "name": "Vulval disorders",
+        "aliases": ["Vulvar disorders", "Vulval dermatoses", "Vulvar dermatoses", "Vulval disease", "Vulvar disease"],
+        "utd": [["Overview", "approach to the patient with vulvar pruritus"]],
+        "summary": "",
+    },
+    {
+        "name": "Pelvic floor injury in childbirth",
+        "aliases": ["Obstetric pelvic floor injury", "Childbirth pelvic floor injury", "Pelvic floor trauma in childbirth"],
+        "utd": [["Overview", "effect of pregnancy and childbirth on the pelvic floor"]],
+        "summary": "",
+    },
+    {
+        "name": "Pelvic floor muscle training",
+        "aliases": ["Pelvic floor physiotherapy", "Pelvic floor physical therapy", "Pelvic floor exercises", "Kegel exercises", "Pelvic floor rehabilitation"],
+        "utd": [["Overview", "pelvic floor muscle exercises for urinary incontinence"]],
+        "summary": "",
+    },
+    {
+        "name": "Sexually transmitted infection testing",
+        "aliases": ["Sexually transmitted infection screening", "STI screening", "STI testing", "Sexual health screen", "Sexual health check"],
+        "utd": [["Overview", "screening for sexually transmitted infections"]],
+        "summary": "",
+    },
+    {
+        "name": "Mechanism of urinary continence",
+        "aliases": ["Urinary continence", "Continence mechanism", "Lower urinary tract function", "Physiology of continence"],
+        "utd": [["Overview", "physiology of the lower urinary tract"]],
+        "summary": "",
+    },
+    {
+        "name": "Female urethral catheterisation",
+        "aliases": ["Female urinary catheterisation", "Female catheterisation", "Catheterisation in women"],
+        "utd": [["Overview", "placement and management of urinary bladder catheters"]],
+        "summary": "",
+    },
+    {
+        "name": "Stages of labour",
+        "aliases": ["Stages of labor", "Stages of normal labour"],
+        "utd": [["Overview", "labor overview of normal labor and delivery"]],
+        "summary": "",
+    },
+    {
+        "name": "Normal vaginal birth",
+        "aliases": ["Normal vaginal delivery", "Spontaneous vaginal birth", "Spontaneous vaginal delivery", "Normal birth", "Normal delivery"],
+        "utd": [["Overview", "management of normal labor and delivery"]],
+        "summary": "",
+    },
+    {
+        "name": "Active management of labour",
+        "aliases": ["Active management of the first stage", "Dublin protocol", "O'Driscoll protocol"],
+        "utd": [["Overview", "labor dystocia active management of labor"]],
+        "summary": "",
+    },
+    {
+        "name": "Augmentation of labour",
+        "aliases": ["Augmentation of labor", "Oxytocin augmentation", "Labour augmentation", "Labor augmentation"],
+        "utd": [["Overview", "labor dystocia treatment with oxytocin augmentation"]],
+        "summary": "",
+    },
+    {
+        "name": "Intrapartum fetal compromise",
+        "aliases": ["Fetal distress", "Fetal compromise", "Foetal distress", "Non-reassuring fetal status", "Nonreassuring fetal status", "Suspected fetal compromise"],
+        "utd": [["Overview", "intrapartum category i ii iii fetal heart rate tracings management"]],
+        "summary": "",
+    },
+    {
+        "name": "Genital tract trauma",
+        "aliases": ["Birth canal trauma", "Vaginal tear", "Vaginal laceration", "Cervical tear", "Vulval haematoma", "Vaginal haematoma", "Paravaginal haematoma"],
+        "utd": [["Overview", "repair of vaginal and cervical lacerations after delivery"]],
+        "summary": "",
+    },
+    {
+        "name": "Maternal collapse",
+        "aliases": ["Obstetric collapse", "Collapse in pregnancy", "Peripartum collapse"],
+        "utd": [["Overview", "maternal cardiac arrest and resuscitation in pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Postnatal examination",
+        "aliases": ["Postnatal check", "Postnatal review", "Six-week postnatal check", "6 week postnatal check", "Postpartum check", "Postnatal visit"],
+        "utd": [["Overview", "overview of the postpartum period"]],
+        "summary": "",
+    },
+    {
+        "name": "Umbilical artery Doppler",
+        "aliases": ["Umbilical artery Dopplers", "Umbilical Doppler", "Umbilical artery Doppler velocimetry", "Umbilical artery pulsatility index"],
+        "utd": [["Overview", "doppler ultrasound of the umbilical artery"]],
+        "summary": "",
+    },
+    {
+        "name": "Prescribing in pregnancy",
+        "aliases": ["Medication safety in pregnancy", "Medicines in pregnancy", "Drugs in pregnancy", "TGA pregnancy category"],
+        "utd": [["Overview", "prescribing drugs during pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "First trimester teratogens",
+        "aliases": ["Teratogenic medicines", "Teratogenic drugs", "Teratogenesis", "Dysmorphogenic drugs"],
+        "utd": [["Overview", "teratogenic drug exposure in pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Second and third trimester drug risk",
+        "aliases": ["Late pregnancy drug risk", "Fetotoxicity", "Foetotoxicity", "Fetotoxic drugs", "Foetotoxic drugs"],
+        "utd": [["Overview", "drugs with fetal effects in late pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Postoperative assessment",
+        "aliases": ["Post-operative assessment", "Postoperative review", "Post-operative review", "Postoperative ward round"],
+        "utd": [["Overview", "overview of postoperative care and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Third trimester monitoring",
+        "aliases": ["Third trimester surveillance", "Third trimester review", "Third trimester antenatal visit"],
+        "utd": [["Overview", "prenatal care in the third trimester"]],
+        "summary": "",
+    },
 ]
 
 
@@ -71436,6 +71622,675 @@ RICH_SUMMARIES = {
         "disorder, alongside DBT and schema therapy, and the choice "
         "between them turns more on what is actually available than "
         "on evidence separating them."
+    ),
+
+    "Placental development": (
+        "The placenta forms as trophoblast invades the decidua, "
+        "taking over from the corpus luteum as the source of "
+        "progesterone by the end of the first trimester. Phases: "
+        "implantation at day 6 to 10, when syncytiotrophoblast erodes "
+        "decidua and lacunae fill with maternal blood; chorionic "
+        "villi form through weeks 3 to 5; extravillous trophoblast "
+        "then remodels the maternal spiral arteries in two waves, one "
+        "in the first trimester and a second at 14 to 20 weeks. "
+        "Mechanism: remodelling converts the spiral arteries into "
+        "wide low-resistance vessels, so flow into the intervillous "
+        "space is high and pressure is low. Full maternal perfusion "
+        "is not established until about 10 to 12 weeks, and the "
+        "embryo develops before that in a low-oxygen environment. "
+        "Note: failure of the second wave is the placental lesion "
+        "behind pre-eclampsia and early-onset growth restriction, "
+        "which is why aspirin 150 mg at night from 12 weeks is "
+        "offered to women at high risk. Complications: praevia, "
+        "accreta spectrum after a previous caesarean, abruption, and "
+        "vasa praevia with a velamentous cord insertion."
+    ),
+    "Human chorionic gonadotrophin": (
+        "Glycoprotein made by syncytiotrophoblast from implantation "
+        "onwards; it rescues the corpus luteum and is what a "
+        "pregnancy test detects. Mechanism: the alpha subunit is "
+        "shared with LH, FSH and TSH, so assays target the specific "
+        "beta subunit. It maintains corpus luteal progesterone until "
+        "the luteal-placental shift at about 8 to 10 weeks, after "
+        "which the placenta makes progesterone and the ovary is "
+        "dispensable. Dx: urine tests detect about 20 to 25 IU/L and "
+        "turn positive around the missed period; serum quantitative "
+        "measurement is used when the number itself matters. "
+        "Criteria: in a viable intrauterine pregnancy the serum level "
+        "rises by at least 66 percent over 48 hours, the doubling "
+        "rule; a suboptimal rise, plateau or fall points to an "
+        "ectopic or a failing pregnancy. An intrauterine sac should "
+        "be visible on transvaginal ultrasound above a discriminatory "
+        "level of roughly 1500 to 2000 IU/L. Note: a single value "
+        "never locates a pregnancy. Levels peak at 8 to 10 weeks then "
+        "fall, run higher in multiple and molar pregnancy, and drive "
+        "both hyperemesis and the physiological suppression of TSH."
+    ),
+    "Early pregnancy ultrasound": (
+        "Transvaginal scan in the first trimester to establish "
+        "location, viability and dates. Features: the gestational sac "
+        "appears at about 4.5 to 5 weeks, the yolk sac at about 5.5 "
+        "weeks, and a fetal pole with cardiac activity at about 6 "
+        "weeks; a true sac sits eccentrically within the decidua, "
+        "whereas the pseudosac of an ectopic sits centrally in the "
+        "cavity. Criteria: the pregnancy is non-viable when the mean "
+        "sac diameter is 25 mm or more with no embryo, or the "
+        "crown-rump length is 7 mm or more with no cardiac activity; "
+        "below those thresholds the scan is inconclusive and is "
+        "repeated in 7 to 14 days. Ix: dating is by crown-rump length "
+        "between about 7 and 13+6 weeks, the most accurate dating "
+        "available in pregnancy. Mx: a positive test with no sac seen "
+        "is a pregnancy of unknown location - serial beta subunit "
+        "levels and a repeat scan, not a diagnosis. Note: an "
+        "intrauterine pregnancy effectively excludes an ectopic, "
+        "except after assisted reproduction, where heterotopic "
+        "pregnancy is far commoner than its rare spontaneous "
+        "background rate."
+    ),
+    "Bleeding in early pregnancy": (
+        "Vaginal bleeding before 20 weeks, which affects about a "
+        "quarter of pregnancies and is a presentation rather than a "
+        "diagnosis. Ddx: miscarriage, threatened through to "
+        "inevitable, incomplete, complete or missed; ectopic "
+        "pregnancy; implantation bleeding and molar pregnancy; and "
+        "local causes such as an ectropion, polyp, cervicitis or, "
+        "rarely, cervical cancer. Ix: quantitative beta subunit "
+        "level, FBC, blood group with an antibody screen, and "
+        "transvaginal ultrasound for location and viability, with "
+        "speculum examination to see whether the os is open and to "
+        "exclude a local cause. Mx: resuscitate first; give anti-D "
+        "immunoglobulin to a Rh D negative woman who bleeds, 250 IU "
+        "up to 12 weeks and 625 IU after that; confirmed miscarriage "
+        "is then managed expectantly, medically or surgically by "
+        "informed choice. Red flags: collapse with unilateral or "
+        "shoulder-tip pain is an ectopic until proven otherwise, and "
+        "products sitting in the cervical os cause vagal cervical "
+        "shock, relieved by removing them with sponge forceps."
+    ),
+    "Estimated date of delivery": (
+        "The date 280 days from the first day of the last menstrual "
+        "period, which is 40+0 weeks of gestation. Criteria: "
+        "Naegele's rule takes the first day of the last period, adds "
+        "seven days, subtracts three months and adds a year. It "
+        "assumes a regular 28-day cycle ovulating on day 14, so add "
+        "the difference for a longer cycle. Ix: crown-rump length "
+        "between about 7 and 13+6 weeks dates a pregnancy to within "
+        "roughly five days and is the reference method; "
+        "second-trimester biometry is accurate to about a week and "
+        "third-trimester measurement only to two or three weeks, so a "
+        "late scan assesses growth and does not re-date. Key point: "
+        "ultrasound dating replaces the menstrual date when the two "
+        "differ by more than about five days in the first trimester "
+        "or about ten days in the second. Note: the date sets every "
+        "downstream window - the aneuploidy screening interval, "
+        "growth centiles, and when post-dates induction is offered at "
+        "41 to 42 weeks. About 4 percent of women give birth on the "
+        "date itself."
+    ),
+    "Antenatal booking bloods": (
+        "The panel taken at the first antenatal visit, ideally before "
+        "10 weeks. Ix: FBC and ferritin, blood group with Rh D status "
+        "and a red cell antibody screen, rubella IgG, syphilis "
+        "serology, HIV, hepatitis B surface antigen and hepatitis C "
+        "antibody, and a midstream urine for asymptomatic "
+        "bacteriuria; cervical screening is done at the same visit if "
+        "it is due. Screening: haemoglobin electrophoresis is added "
+        "where the red cell indices or family origin suggest a "
+        "haemoglobinopathy, and thyroid function, vitamin D or an "
+        "early HbA1c or glucose tolerance test where there are risk "
+        "factors. Mx: iron for anaemia; prophylactic anti-D at 28 and "
+        "34 weeks for a Rh D negative woman with a negative antibody "
+        "screen; MMR after birth rather than during pregnancy for a "
+        "non-immune woman, since it is a live vaccine; asymptomatic "
+        "bacteriuria is treated because it progresses to "
+        "pyelonephritis. Note: the FBC and the antibody screen are "
+        "repeated at 28 weeks, alongside the 75 g glucose tolerance "
+        "test."
+    ),
+    "Fetal growth and development": (
+        "Development runs as an embryonic period, weeks 3 to 8 after "
+        "conception, when the organs form and a teratogen does "
+        "structural damage, then a fetal period from week 9 that is "
+        "growth and functional maturation. Phases: cardiac activity "
+        "from about 6 weeks of gestation, limbs and face formed by 10 "
+        "weeks, sex visible on ultrasound from about 14 weeks, "
+        "movements felt at 18 to 20 weeks in a first pregnancy and "
+        "surfactant production adequate by about 34 weeks. Key point: "
+        "weight is roughly 500 g at 22 weeks, 1000 g at 28 weeks, "
+        "1800 g at 32 weeks and about 3400 g at term, so a large "
+        "share of birth weight is laid down after 32 weeks and "
+        "preterm infants have little glycogen or fat. Note: growth in "
+        "utero is driven by insulin and IGF-1 rather than growth "
+        "hormone, which is why maternal hyperglycaemia produces "
+        "macrosomia. Monitoring: symphysis-fundal height in "
+        "centimetres approximates the gestation in weeks from 24 "
+        "weeks, with an ultrasound estimated weight when it lags."
+    ),
+    "Customised fetal growth chart": (
+        "A growth chart adjusted for maternal height, weight, parity "
+        "and ethnicity and for the baby's sex, so the expected weight "
+        "reflects that pregnancy's own potential rather than a "
+        "population average. Mechanism: a chart is generated for the "
+        "individual pregnancy and used through a growth assessment "
+        "protocol, with symphysis-fundal height plotted from 24 weeks "
+        "and any ultrasound estimated weight plotted on the same "
+        "chart. Key point: population centiles misclassify in both "
+        "directions - the constitutionally small baby of a small "
+        "mother is investigated needlessly, while a growth-restricted "
+        "baby of a large mother stays above the 10th centile and is "
+        "missed, and that missed group carries much of the "
+        "preventable stillbirth. Mx: refer for ultrasound when fundal "
+        "height is more than 3 cm below the expected value, when "
+        "serial measurements plateau, or when a plotted weight "
+        "crosses centiles. Australian notes: better detection of "
+        "growth restriction is one element of the Safer Baby Bundle, "
+        "and each state maternity service sets its own chart and "
+        "thresholds."
+    ),
+    "High-risk pregnancy": (
+        "A pregnancy in which maternal, fetal or social factors raise "
+        "the chance of an adverse outcome enough to change the model "
+        "of care. Risk factors: pre-existing hypertension, diabetes, "
+        "epilepsy, renal, cardiac or autoimmune disease, "
+        "thrombophilia and significant mental illness; an obstetric "
+        "history of pre-eclampsia, growth restriction, stillbirth, "
+        "preterm birth or recurrent miscarriage; current findings "
+        "such as multiple pregnancy, assisted conception or placenta "
+        "praevia. Associations: age over 40 or under 18, raised BMI, "
+        "smoking, alcohol or other drug use, and family violence, "
+        "which Australian antenatal services screen for routinely. "
+        "Mx: risk is assessed at booking and again at every visit, "
+        "and it decides the model of care - midwifery-led, shared "
+        "care with the GP, or obstetric-led with a written plan. "
+        "Aspirin 150 mg at night from 12 weeks is offered where the "
+        "pre-eclampsia risk is high. Note: Aboriginal and Torres "
+        "Strait Islander women have higher rates of preterm birth and "
+        "perinatal mortality, and culturally safe models of care "
+        "improve both."
+    ),
+    "Perinatal infection screening": (
+        "The infections looked for in Australian antenatal care, and "
+        "what a positive result changes. Screening: rubella IgG, "
+        "syphilis serology, HIV, hepatitis B surface antigen and "
+        "hepatitis C antibody at booking, a midstream urine for "
+        "asymptomatic bacteriuria, and a low vaginal and rectal swab "
+        "for group B streptococcus at 35 to 37 weeks. Mx: hepatitis B "
+        "means viral load testing, an antiviral in the third "
+        "trimester when the load is high, and immunoglobulin plus "
+        "vaccine for the baby within 12 hours of birth; HIV means "
+        "antiretroviral therapy, and a suppressed viral load allows "
+        "vaginal birth; syphilis means benzathine penicillin, with "
+        "repeat testing later in pregnancy in higher-prevalence "
+        "regions. Note: group B streptococcus colonisation is treated "
+        "with intrapartum benzylpenicillin and not before labour, and "
+        "a non-immune rubella result means MMR after birth. "
+        "Prevention: cytomegalovirus and toxoplasmosis are not "
+        "screened for, so the intervention is advice about hand "
+        "hygiene around toddlers and avoiding undercooked meat, "
+        "unwashed produce and cat litter."
+    ),
+    "Aboriginal and Torres Strait Islander cancer screening": (
+        "Aboriginal and Torres Strait Islander women die of cervical "
+        "and breast cancer at higher rates than other Australian "
+        "women, and the gap is one of access rather than of biology. "
+        "Epidemiology: AIHW reporting shows higher cervical cancer "
+        "incidence and mortality than in non-Indigenous women, with "
+        "lower participation in the National Cervical Screening "
+        "Program, BreastScreen Australia and the National Bowel "
+        "Cancer Screening Program. Causes: distance and cost of "
+        "travel, no female or familiar practitioner, shame around "
+        "speculum examination, previous poor experiences of "
+        "mainstream services, and competing health and social "
+        "demands. Mx: self-collection under the cervical program "
+        "removes the speculum barrier and is open to every "
+        "participant. Uptake rises with screening delivered through "
+        "Aboriginal Community Controlled Health Services by "
+        "Aboriginal Health Workers and female clinicians, "
+        "opportunistic offers at the annual health assessment, and "
+        "recall through the National Cancer Screening Register. Note: "
+        "ask and record Aboriginal and Torres Strait Islander status "
+        "for every patient, since the health assessment, recall and "
+        "follow-up all depend on it."
+    ),
+    "Vulval disorders": (
+        "Chronic vulval itch, pain or a lesion, where the discipline "
+        "is to name the dermatosis and biopsy anything that does not "
+        "settle. Causes: infective (candidiasis, herpes simplex), the "
+        "dermatoses (contact and irritant dermatitis, lichen simplex "
+        "chronicus, lichen sclerosus, lichen planus), oestrogen "
+        "deficiency, neoplasia (vulval intraepithelial neoplasia, "
+        "extramammary Paget disease, squamous cell carcinoma), and "
+        "vulvodynia, where the skin is normal. Types: high-grade "
+        "squamous intraepithelial lesion is HPV-driven and occurs in "
+        "younger women, while differentiated vulval intraepithelial "
+        "neoplasia arises on established lichen sclerosus in older "
+        "women and carries the higher cancer risk. Ix: inspect in "
+        "good light including perianal skin, swab any discharge, "
+        "patch test for contact allergy, and biopsy any fixed, "
+        "ulcerated, pigmented or steroid-unresponsive lesion. Mx: "
+        "stop soaps and wipes, soap substitute and emollient, potent "
+        "topical corticosteroid for lichen sclerosus and lichen "
+        "planus, topical oestrogen for atrophy, and excision or "
+        "imiquimod for high-grade disease with long-term review. "
+        "Note: lichen planus involves the vagina and the mouth; "
+        "lichen sclerosus never involves the vagina."
+    ),
+    "Pelvic floor injury in childbirth": (
+        "Pregnancy and vaginal birth load, stretch and denervate the "
+        "pelvic floor, and this is the dominant risk factor for later "
+        "prolapse and stress incontinence. Mechanism: relaxin and "
+        "progesterone soften connective tissue while the gravid "
+        "uterus loads the levator hiatus, so leakage often begins "
+        "antenatally. In the second stage the levator ani stretches "
+        "to several times its resting length, giving pudendal nerve "
+        "stretch injury, fascial tearing and, in a minority, avulsion "
+        "of the levator from the pubic bone. Risk factors: forceps "
+        "delivery is the strongest, then prolonged second stage, "
+        "macrosomia, occipitoposterior position, older age at first "
+        "birth and obstetric anal sphincter injury. Clinical "
+        "features: stress incontinence, vaginal bulge or heaviness, "
+        "faecal urgency and dyspareunia; prolapse may not declare "
+        "itself for years. Mx: supervised pelvic floor muscle "
+        "training antenatally and from the early postnatal weeks, "
+        "review at the six-week check, and referral to a continence "
+        "physiotherapist for persistent symptoms. Note: caesarean "
+        "section reduces but does not abolish the risk, because much "
+        "of the change happens during pregnancy, and it is not "
+        "offered for pelvic floor protection alone."
+    ),
+    "Pelvic floor muscle training": (
+        "Supervised training of the levator ani to restore strength, "
+        "endurance and timing; first-line for stress and mixed "
+        "urinary incontinence and for mild prolapse. Mechanism: a "
+        "stronger and better-timed contraction raises urethral "
+        "closure pressure during effort and supports the anterior "
+        "vaginal wall. Much of the gain is motor learning, not "
+        "hypertrophy, which is why supervision beats a handout. "
+        "Indications: stress and mixed incontinence, stage 1 to 2 "
+        "prolapse, antenatal and postnatal prevention, and faecal "
+        "incontinence after sphincter injury. Down-training rather "
+        "than strengthening is used for a hypertonic painful floor. "
+        "Dose: commonly 8 to 12 near-maximal contractions three times "
+        "daily, mixing sustained holds with fast contractions, "
+        "continued for at least three months before judging benefit. "
+        "Note: confirm technique before prescribing, since a large "
+        "minority of women bear down or use gluteal and adductor "
+        "muscles when asked to squeeze; vaginal examination or a "
+        "physiotherapist's assessment settles it. Australian notes: "
+        "three months of supervised training precedes surgery for "
+        "stress incontinence, and a GP chronic condition management "
+        "plan gives rebated sessions."
+    ),
+    "Sexually transmitted infection testing": (
+        "Which specimen and which assay, chosen by organism, and the "
+        "window period that decides whether a negative result means "
+        "anything. Ix: nucleic acid amplification testing for "
+        "chlamydia, gonorrhoea, Mycoplasma genitalium and trichomonas "
+        "- first-pass urine in men, self-collected vulvovaginal swab "
+        "in women, and site-specific throat and rectal swabs where "
+        "there has been exposure. Add gonococcal culture for "
+        "susceptibility whenever gonorrhoea is likely. Serology "
+        "covers HIV, syphilis and hepatitis B, with hepatitis C where "
+        "there is injecting drug use or HIV. Note: window periods "
+        "matter. A fourth-generation laboratory HIV antigen-antibody "
+        "assay is reliable by about six weeks, a point-of-care test "
+        "needs longer, syphilis serology is repeated at six weeks and "
+        "three months after a known exposure, and chlamydia and "
+        "gonorrhoea are detectable within about two weeks. Key point: "
+        "genital herpes is diagnosed by PCR of a swab from a deroofed "
+        "lesion, not by serology, and type-specific serology has no "
+        "place in routine screening. Mx: treat a symptomatic person "
+        "presumptively rather than waiting for results, screen for "
+        "the rest at the same visit, and notify and trace contacts."
+    ),
+    "Mechanism of urinary continence": (
+        "Continence is storage of urine at low pressure with urethral "
+        "closure pressure exceeding bladder pressure at every moment; "
+        "voiding is the coordinated reversal of that. Mechanism: "
+        "during filling the detrusor stays relaxed through "
+        "sympathetic beta-3 tone and viscoelastic accommodation, so "
+        "pressure barely rises to 400 to 500 mL. The internal "
+        "sphincter is held closed by alpha-1 tone and the external "
+        "sphincter by pudendal somatic tone, which rises with bladder "
+        "volume as the guarding reflex. Features: the anterior "
+        "vaginal wall and its attachments to the arcus tendineus and "
+        "levator ani form a backstop against which a rise in "
+        "abdominal pressure compresses the urethra, so a cough raises "
+        "closure pressure as well as bladder pressure. Phases: "
+        "storage gives way to voiding once afferent stretch input "
+        "reaches threshold and the pontine micturition centre is "
+        "released by the cortex, firing detrusor contraction and "
+        "sphincter relaxation together. Note: each failure maps to a "
+        "type - loss of support or of closure gives stress "
+        "incontinence, failure of storage from detrusor overactivity "
+        "gives urgency, and a cord lesion above the sacral segments "
+        "uncouples the two into detrusor-sphincter dyssynergia."
+    ),
+    "Female urethral catheterisation": (
+        "The same procedure as in men, but on a short urethra with a "
+        "meatus that is often hard to see, so misplacement into the "
+        "vagina is the standard error. Features: the female urethra "
+        "is about 4 cm, running from the bladder neck to a meatus "
+        "just anterior to the vaginal introitus and below the "
+        "clitoris. A shorter female-length catheter exists, but a "
+        "standard-length one is safer where the perineum is bulky. "
+        "Mx: position supine with hips abducted and knees flexed, "
+        "with good light and an assistant. Separate the labia with "
+        "the non-dominant hand and hold them apart throughout, clean "
+        "front to back, instil lidocaine gel, advance until urine "
+        "flows and then a further 2 to 5 cm before inflating the "
+        "balloon with 10 mL of sterile water. Note: if the catheter "
+        "enters the vagina, leave it there as a landmark and pass a "
+        "second sterile catheter above it, then remove the first. "
+        "Cautions: atrophy, oedema, prolapse and previous surgery "
+        "hide the meatus - topical oestrogen, an assistant "
+        "retracting, or bladder ultrasound before repeating attempts. "
+        "Escalate rather than probing blindly. Complications: "
+        "catheter-associated infection rising with each day in situ, "
+        "so review the need daily."
+    ),
+    "Stages of labour": (
+        "The division of labour into defined stages, from established "
+        "contractions to the first hours after birth. Stages: the "
+        "first stage runs from established labour to full dilatation "
+        "at 10 cm, with a latent phase of slow dilatation and an "
+        "active phase from about 5 to 6 cm. The second stage runs "
+        "from full dilatation to the birth of the baby, with a "
+        "passive phase before the urge to push and then active "
+        "pushing. The third stage runs from birth to delivery of the "
+        "placenta and membranes, expected within 30 min under active "
+        "management. The fourth stage is the first hour or two "
+        "afterwards, when most primary postpartum haemorrhage happens "
+        "and observations stay frequent. Diagnosis: established "
+        "labour means regular painful contractions with demonstrated "
+        "cervical change, so contractions alone do not start the "
+        "clock. Duration: every stage is longer in a first labour, "
+        "and an epidural lengthens the second stage. Monitoring: "
+        "progress, maternal observations and the baby are charted "
+        "together on the partogram. Note: most women present in the "
+        "latent phase, where analgesia, reassurance and going home "
+        "again beat early admission."
+    ),
+    "Normal vaginal birth": (
+        "Spontaneous birth of a single baby presenting by the vertex "
+        "between 37 and 42 weeks, without forceps, vacuum or "
+        "caesarean. Management: continuous one-to-one support, "
+        "freedom to move and to choose upright positions, oral intake "
+        "as wanted, and pushing led by the woman's own urge rather "
+        "than directed from the moment of full dilatation. Warm "
+        "compresses to the perineum and a hands-on technique at "
+        "crowning reduce severe tearing. After the head is born, "
+        "check for a cord around the neck, allow restitution, then "
+        "deliver the anterior shoulder with gentle downward traction "
+        "and the posterior shoulder upward, and lift the baby to the "
+        "mother. Follow-up: skin to skin contact straight away, cord "
+        "clamping deferred at least 60 s, prophylactic oxytocin for "
+        "the third stage, a first feed within the hour, vitamin K for "
+        "the baby, and inspection of the perineum including a rectal "
+        "examination. Note: intact perineum, blood loss, analgesia "
+        "used and the baby's condition are all recorded, since normal "
+        "birth is a description of what happened rather than a plan "
+        "made in advance."
+    ),
+    "Active management of labour": (
+        "A defined package for nulliparous women in spontaneous "
+        "labour at term, from the Dublin protocol, intended to "
+        "shorten labour. Definition: strict diagnosis of labour "
+        "before admission; early amniotomy; vaginal examination every "
+        "2 h; oxytocin augmentation once dilatation falls behind "
+        "roughly 1 cm per hour; and continuous one-to-one midwifery "
+        "care throughout. Indications: nulliparous spontaneous labour "
+        "only. Contraindications: the same oxytocin thresholds "
+        "applied to a multipara or after a previous caesarean risk "
+        "uterine rupture, because a multiparous uterus ruptures where "
+        "a nulliparous one simply stops. Note: the trials show a "
+        "modestly shorter labour without a convincing fall in "
+        "caesarean rate, and continuous support is the component with "
+        "the strongest evidence on its own. Australian notes: units "
+        "here use the components selectively rather than the whole "
+        "protocol, and RANZCOG frames augmentation as a response to "
+        "confirmed delay rather than as routine care. Do not confuse "
+        "it with active management of the third stage, which means "
+        "prophylactic oxytocin, deferred clamping and controlled cord "
+        "traction."
+    ),
+    "Augmentation of labour": (
+        "Speeding up a labour that has begun but is progressing "
+        "slowly, by rupturing the membranes, infusing oxytocin, or "
+        "both. Indications: confirmed delay in the active first stage "
+        "or the second stage, with contractions that are weak or "
+        "incoordinate and no sign of obstruction. Contraindications: "
+        "obstructed labour, malpresentation and an abnormal CTG, with "
+        "real caution in a multipara or after a previous caesarean. "
+        "Management: reassess the abdomen, cervix, position and "
+        "station first, empty the bladder and offer analgesia, then "
+        "rupture the membranes if they are intact, since amniotomy "
+        "alone shortens labour and sometimes makes oxytocin "
+        "unnecessary. Start oxytocin as a titrated infusion, "
+        "increasing no more often than every 30 min, aiming for 3 to "
+        "4 contractions in 10 min with continuous cardiotocography. "
+        "Reassess at 4 h, and if there is still no cervical change "
+        "the answer is birth by caesarean or instrument rather than "
+        "more oxytocin. Complications: tachysystole with an abnormal "
+        "trace, uterine rupture, hyponatraemia from the antidiuretic "
+        "effect at high doses, and atonic postpartum haemorrhage "
+        "afterwards."
+    ),
+    "Intrapartum fetal compromise": (
+        "Failing oxygen delivery to the baby during labour, inferred "
+        "from the heart rate pattern rather than measured directly. "
+        "Causes: reduced uterine perfusion from tachysystole, "
+        "epidural hypotension or aortocaval compression; placental "
+        "causes such as abruption, pre-eclampsia and growth "
+        "restriction; cord compression or prolapse; uterine rupture; "
+        "and maternal sepsis, hypoxia or anaemia. Features: a rising "
+        "or falling baseline, reduced variability, late or "
+        "complicated variable decelerations, and a prolonged "
+        "deceleration. Meconium stained liquor is a risk marker, not "
+        "a diagnosis. Management: intrauterine resuscitation first, "
+        "meaning left lateral position, stopping the oxytocin, an "
+        "intravenous fluid bolus and correction of hypotension, and a "
+        "vaginal examination to exclude cord prolapse and check "
+        "progress. Consider terbutaline for tachysystole. Ix: scalp "
+        "lactate or pH where birth is not already indicated and the "
+        "cervix allows. Red flags: a deceleration beyond 3 min, or an "
+        "acute event such as abruption, prolapse or rupture, means "
+        "birth by the fastest safe route now."
+    ),
+    "Genital tract trauma": (
+        "Injury to the vulva, vagina, cervix or perineum during "
+        "birth, and the second commonest cause of primary postpartum "
+        "haemorrhage after uterine atony. Types: perineal tears "
+        "graded 1 to 4; vaginal wall and sulcus tears, which sit high "
+        "and are easily missed; cervical tears, usually at 3 and 9 "
+        "o'clock; labial and periurethral tears; and vulval or "
+        "paravaginal haematoma. Risk factors: instrumental birth, a "
+        "precipitate or prolonged second stage, macrosomia, "
+        "malposition and pushing against a cervix that is not fully "
+        "dilated. Features: bleeding that continues despite a well "
+        "contracted uterus is trauma until proven otherwise, while a "
+        "haematoma bleeds out of sight and presents with severe "
+        "perineal or rectal pain, unilateral swelling and a rising "
+        "pulse. Management: lithotomy, good light, good analgesia and "
+        "a systematic look with a speculum and an assistant, and "
+        "repair in theatre whenever the apex cannot be seen. Note: "
+        "secure the apex first, since a suture placed below a "
+        "bleeding apex leaves the bleeding running into the "
+        "paravaginal space."
+    ),
+    "Maternal collapse": (
+        "Sudden loss of consciousness or of cardiorespiratory "
+        "function in pregnancy or in the six weeks after birth. "
+        "Causes: haemorrhage, often concealed in abruption, uterine "
+        "rupture or intra-abdominal bleeding; amniotic fluid "
+        "embolism; pulmonary embolism; eclampsia; sepsis; "
+        "anaphylaxis; high block or local anaesthetic toxicity; "
+        "cardiac disease such as peripartum cardiomyopathy or aortic "
+        "dissection; and hypoglycaemia. Management: call obstetric, "
+        "anaesthetic, neonatal and blood bank help at once, then "
+        "ABCDE with high flow oxygen, two large cannulae, and bloods "
+        "including coagulation and cross match. Apply manual left "
+        "uterine displacement from 20 weeks, since the gravid uterus "
+        "obstructs venous return and tilting the trolley wrecks "
+        "compression quality. Treat the likely cause in parallel with "
+        "uterotonics and tranexamic acid, magnesium, adrenaline or "
+        "lipid emulsion as indicated. Red flags: with no cardiac "
+        "output, start compressions and perform a resuscitative "
+        "hysterotomy by 5 min if the fundus is at or above the "
+        "umbilicus, and do it where the woman is - it is done to save "
+        "her."
+    ),
+    "Postnatal examination": (
+        "Structured review of the mother after birth and again at "
+        "about six weeks, covering physical recovery, mood, feeding "
+        "and contraception, and arranging follow-up for whatever the "
+        "pregnancy revealed. Examination: blood pressure, the uterine "
+        "fundus and lochia, the perineum or caesarean wound, the "
+        "breasts if feeding hurts, and the calves and chest if "
+        "thrombosis is suspected. Screening: an EPDS at the postnatal "
+        "review is standard Australian practice; a 75 g OGTT six to "
+        "twelve weeks after gestational diabetes, then periodic "
+        "testing; cervical screening if it fell due; FBC after "
+        "haemorrhage. Mx: contraception is the main decision - "
+        "progestogen-only methods and the implant can start "
+        "immediately, an intrauterine device is usually placed at or "
+        "after six weeks, and combined hormonal contraception is "
+        "deferred while breastfeeding; non-immune women get MMR and "
+        "varicella before discharge. Note: pre-eclampsia and "
+        "gestational diabetes are markers of later cardiovascular and "
+        "metabolic risk, so this visit is where long-term follow-up "
+        "is arranged. Red flags: new headache or visual change, or a "
+        "blood pressure still raised - pre-eclampsia can first appear "
+        "after delivery."
+    ),
+    "Umbilical artery Doppler": (
+        "Waveform taken from a free loop of cord, measuring "
+        "resistance downstream in the placental villous bed - the "
+        "main test of placental function in a small or at-risk baby. "
+        "Mechanism: a healthy villous tree is low resistance, so flow "
+        "continues right through diastole; as villi are obliterated, "
+        "resistance rises and diastolic flow falls. Grading: a "
+        "pulsatility index above the 95th centile is the earliest "
+        "sign, then absent end-diastolic flow, then reversed flow, "
+        "each step carrying a steeper risk of acidaemia and "
+        "stillbirth. Ix: read alongside growth, liquor volume and "
+        "CTG, with middle cerebral artery Doppler and the "
+        "cerebroplacental ratio in late-onset restriction and the "
+        "ductus venosus a-wave to time delivery in severe early "
+        "disease. Note: this is a test for the growth-restricted or "
+        "high-risk pregnancy; as routine screening in low-risk "
+        "pregnancy it does not improve outcomes and is not offered. "
+        "Red flags: absent or reversed end-diastolic flow means care "
+        "in a unit with neonatal intensive care, corticosteroids, "
+        "magnesium sulfate for neuroprotection under 30 weeks, and "
+        "delivery timed by gestation."
+    ),
+    "Prescribing in pregnancy": (
+        "Deciding whether, what and when to prescribe for a pregnant "
+        "woman, with the risk of the untreated illness weighed on the "
+        "same page as the risk of the drug. Risk: about 3 to 5 "
+        "percent of all babies have a major malformation, so the "
+        "question is how far a drug moves that background figure. "
+        "Timing decides the kind of harm - organogenesis for "
+        "malformation, later exposure for growth, organ function and "
+        "the neonate. PK: pregnancy changes the drug as well. Plasma "
+        "volume and renal clearance rise and albumin falls, so "
+        "lamotrigine, levetiracetam and lithium commonly need dose "
+        "review through pregnancy and again after birth. Mx: treat "
+        "the illness, with the best-studied drug at the lowest "
+        "effective dose, one agent rather than three, plus folic "
+        "acid; review medicines preconception rather than at the "
+        "booking visit. Note: the TGA category letters are not a "
+        "ranking of safety - read the entry, not the letter. "
+        "Australian notes: the AMH pregnancy and breastfeeding "
+        "sections and Therapeutic Guidelines first, then the TGA "
+        "prescribing medicines in pregnancy database, then an "
+        "obstetric medicines service - MotherSafe in NSW - for what "
+        "the books do not settle."
+    ),
+    "First trimester teratogens": (
+        "Structural malformation caused by exposure during "
+        "organogenesis, roughly the third to eighth week after "
+        "conception, when organ primordia form; exposure before that "
+        "tends to be all or nothing. Causes: isotretinoin gives "
+        "craniofacial, cardiac and central nervous system defects; "
+        "sodium valproate gives neural tube defects, facial "
+        "dysmorphism and dose-related neurodevelopmental harm, and is "
+        "the highest-risk antiepileptic; warfarin at six to nine "
+        "weeks gives nasal hypoplasia and stippled epiphyses; "
+        "methotrexate and mycophenolate give craniofacial, ear and "
+        "limb defects with pregnancy loss; lithium carries a small "
+        "excess of Ebstein anomaly; thalidomide gives limb reduction. "
+        "Note: risk is a probability, not a certainty - most exposed "
+        "pregnancies end in a normal baby, so an exposure already "
+        "past calls for counselling and a detailed morphology scan. "
+        "Key point: isotretinoin and valproate both require a "
+        "documented pregnancy prevention discussion and effective "
+        "contraception before they are prescribed to anyone who could "
+        "become pregnant."
+    ),
+    "Second and third trimester drug risk": (
+        "Harm from a drug's pharmacological action on a formed baby "
+        "rather than malformation - the risks that matter once "
+        "organogenesis is over. Causes: NSAIDs constrict the ductus "
+        "arteriosus and cut fetal urine output with oligohydramnios, "
+        "so they are avoided from about 20 weeks and certainly in the "
+        "third trimester; low-dose aspirin for pre-eclampsia "
+        "prevention is the exception. ACE inhibitors and angiotensin "
+        "receptor blockers cause oligohydramnios, renal failure, "
+        "skull hypoplasia and limb contractures, and are swapped for "
+        "labetalol, methyldopa or nifedipine. SSRIs near term give a "
+        "self-limiting neonatal adaptation syndrome of jitteriness, "
+        "feeding difficulty and respiratory distress. Features: "
+        "tetracyclines stain developing teeth, aminoglycosides risk "
+        "ototoxicity, warfarin risks bleeding in mother and baby, "
+        "nitrofurantoin is avoided at term, opioids and "
+        "benzodiazepines near delivery cause respiratory depression "
+        "and withdrawal. Key point: an ACE inhibitor or an NSAID "
+        "given to a woman of reproductive age is the classic "
+        "prescribing error - ask about pregnancy first."
+    ),
+    "Postoperative assessment": (
+        "Structured review of a patient after surgery, aimed at "
+        "catching bleeding, sepsis, thrombosis and organ dysfunction "
+        "before they declare themselves. Hx: pain and whether the "
+        "analgesia works, nausea and oral intake, mobility, flatus "
+        "and bowels, passing urine once the catheter is out, and "
+        "vaginal loss after gynaecological surgery. Examination: the "
+        "observation chart and its trend rather than one set of "
+        "numbers, fluid balance and urine output, abdomen, wound and "
+        "drains, calves and chest. Complications: think by day - "
+        "haemorrhage and basal collapse in the first 48 hours, then "
+        "urinary and chest infection, then wound infection, "
+        "collection or ileus around day five; ureteric injury after "
+        "gynaecological surgery declares late, as flank pain or "
+        "watery vaginal loss. Mx: regular paracetamol with an NSAID "
+        "if not contraindicated, early mobilisation and oral intake, "
+        "and enoxaparin with stockings, extended after major pelvic "
+        "cancer surgery. Red flags: tachycardia precedes hypotension, "
+        "so a rising pulse with a falling haemoglobin is "
+        "intra-abdominal bleeding until excluded."
+    ),
+    "Third trimester monitoring": (
+        "The routine watching of mother and baby from 28 weeks, aimed "
+        "at the three things that present late: pre-eclampsia, growth "
+        "restriction and stillbirth. Monitoring: each visit records "
+        "blood pressure and urinalysis, symphysis fundal height on a "
+        "customised chart, how the baby is moving, and presentation "
+        "by palpation from 36 weeks; mood, haemoglobin and glucose "
+        "control are reviewed alongside. Features: reduced or changed "
+        "movements are the symptom that matters and earn same-day "
+        "assessment rather than reassurance; fundal height is "
+        "insensitive, so any risk factor for growth restriction means "
+        "serial growth ultrasound instead of measuring alone. Ix: a "
+        "CTG for reduced movements, bleeding or pain, and ultrasound "
+        "for growth, liquor volume and umbilical artery Doppler where "
+        "the baby is small or the pregnancy high-risk. Note: routine "
+        "third trimester ultrasound in an uncomplicated pregnancy is "
+        "not part of Australian antenatal care, since it has not been "
+        "shown to improve outcomes. Red flags: headache, visual "
+        "disturbance or epigastric pain; any bleeding; static fundal "
+        "height; absent movements."
     ),
 }
 
