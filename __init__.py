@@ -281,6 +281,29 @@ def _term_for_url(url: str) -> str:
     return ""
 
 
+def open_reference_url(url: str) -> None:
+    """Open a URL the pearls panel cannot show in its own profile.
+
+    Same policy as the card-click path, and deliberately in one place:
+    the UpToDate dock when that module is enabled - the enable check
+    first, because importing that module is what registers its hooks -
+    and otherwise the reader's own browser, where their own session is.
+
+    Callers have already cleared `_is_safe_url` and `_is_trusted_host`.
+    """
+    if "uptodate.com" in url and _config.get("enableUpToDate") is not False:
+        try:
+            from . import uptodate as _utd_mod
+            if _utd_mod.open_url_in_dock(url):
+                return
+        except Exception as exc:
+            _log.error("uptodate open_url_in_dock", exc)
+    try:
+        openLink(url)
+    except Exception as exc:
+        _log.error(f"openLink {url[:60]!r}", exc)
+
+
 def show_pearls_dock() -> None:
     global _pearls_dock_visible
     if _pearls_dock and not _pearls_dock_visible:
@@ -580,6 +603,11 @@ def _on_js_message(handled, message: str, context):
             # nothing composited - the panel then appears blank until it is
             # manually reloaded.
             show_pearls_dock()
+            # The list is a guess at what is relevant on this card; the
+            # article the reader just clicked is not. Collapse it to its
+            # header strip so the body gets the pane - transient, so the
+            # next card's results restore the stored preference.
+            _pearls_panel.hide_article_list()
             # Strip our own fragment before navigating: it is an
             # instruction to this add-on, not part of the target URL.
             section = ""

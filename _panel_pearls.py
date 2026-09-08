@@ -17,6 +17,8 @@ try:
     )
     _USER_ROLE  = Qt.ItemDataRole.UserRole
     _NO_HSCROLL = Qt.ScrollBarPolicy.ScrollBarAlwaysOff
+    _KEY_RETURN = Qt.Key.Key_Return
+    _KEY_ENTER  = Qt.Key.Key_Enter
 except (ImportError, AttributeError):
     from PyQt5.QtCore import Qt, QUrl, QSize, pyqtSignal
     from PyQt5.QtWidgets import (
@@ -28,6 +30,13 @@ except (ImportError, AttributeError):
     )
     _USER_ROLE  = Qt.UserRole
     _NO_HSCROLL = Qt.ScrollBarAlwaysOff
+    _KEY_RETURN = Qt.Key_Return
+    _KEY_ENTER  = Qt.Key_Enter
+
+# Second data role on a results row, for the term the row was matched
+# on. `int()` because PyQt6 hands out an enum member here and PyQt5 a
+# plain int, and only one of the two can be added to directly.
+_TERM_ROLE = int(_USER_ROLE) + 1
 
 import json
 import os
@@ -521,7 +530,13 @@ def _nav_btn(parent: QWidget, text: str, tip: str,
 # ──────────────────────────────────────────────────────────────────────────
 
 class _ResultsSection(QWidget):
-    article_selected = pyqtSignal(str)
+    # Carries the term as well as the URL. A row for one of the 183
+    # conditions with no NBK accession holds an in-book search URL, and
+    # loading that without the term it was built from lands the reader
+    # on a multi-hit results page instead of a chapter - the resolution
+    # the popup path gets for the same term. The results handed to
+    # `show_results` carry a `_term` key for exactly this.
+    article_selected = pyqtSignal(str, str)
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -565,7 +580,12 @@ class _ResultsSection(QWidget):
         self._btn_dismiss.setFixedSize(22, 22)
         self._btn_dismiss.setCursor(Qt.CursorShape.PointingHandCursor)
         self._btn_dismiss.clicked.connect(self._on_toggle)
-        _theme.size_glyph(self._btn_dismiss)
+        # No `_theme.size_glyph` here. It sizes by looking the button's
+        # text up in `_theme.GLYPH_PX`, and this button has no text yet
+        # when it is built; the chevrons `_sync_collapse` gives it later
+        # are not in that table either, so the call could only ever have
+        # been a no-op. The chevron takes its size from the header
+        # stylesheet like the rest of the row.
         hdr_lay.addWidget(self._btn_dismiss)
 
         self._style_header()
@@ -576,11 +596,22 @@ class _ResultsSection(QWidget):
         self._style_list()
 
         self._list.setMaximumHeight(185)
-        # itemClicked covers mouse; itemActivated also catches keyboard
-        # Enter / double-click, so the list is fully keyboard-navigable
-        # (↑/↓ to move, Enter to load) once focused.
+        # itemClicked covers the mouse. `itemActivated` used to be
+        # connected here as well, for the keyboard - but it also fires
+        # on a double-click, after `itemClicked` has already fired for
+        # the first of the two clicks, so every double-click loaded the
+        # article twice: two navigations, the first cancelled by the
+        # second (which paints as a blank panel), and two writes of
+        # `sidebarLastArticleUrl`.
+        #
+        # Enter is the only part of `itemActivated` this list needs, and
+        # taking it straight off the key press keeps the list fully
+        # keyboard-navigable (↑/↓ to move, Enter to load) without the
+        # mouse overlap. The default handler still runs for every other
+        # key, which is what arrow navigation and type-ahead are.
         self._list.itemClicked.connect(self._on_click)
-        self._list.itemActivated.connect(self._on_click)
+        self._list_key_default = self._list.keyPressEvent
+        self._list.keyPressEvent = self._on_list_key
         lay.addWidget(self._list)
 
         self.hide()
@@ -711,6 +742,9 @@ class _ResultsSection(QWidget):
         for r in results:
             item = QListWidgetItem("  " + r["title"])
             item.setData(_USER_ROLE, r["url"])
+            # `_term` rather than `title`: the drug rows carry a " - drug"
+            # suffix in their title and the resolver must not see it.
+            item.setData(_TERM_ROLE, r.get("_term") or "")
             item.setToolTip(r["url"])
             self._list.addItem(item)
         row_h  = self._list.sizeHintForRow(0) if self._list.count() > 0 else 26
@@ -722,7 +756,19 @@ class _ResultsSection(QWidget):
     def _on_click(self, item: QListWidgetItem):
         url = item.data(_USER_ROLE)
         if url:
-            self.article_selected.emit(url)
+            self.article_selected.emit(url, item.data(_TERM_ROLE) or "")
+
+    def _on_list_key(self, ev) -> None:
+        """Enter loads the highlighted row; everything else is Qt's."""
+        try:
+            if ev.key() in (_KEY_RETURN, _KEY_ENTER):
+                item = self._list.currentItem()
+                if item is not None:
+                    self._on_click(item)
+                    return
+        except Exception as exc:
+            _log.error("results key press", exc)
+        self._list_key_default(ev)
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -743,13 +789,21 @@ class StatPearlsPanel(QWidget):
         # of one session: the sidebar is a reference surface and the
         # last thing opened in it is usually still the thing being read.
         self._chosen_url = _config.get("sidebarLastArticleUrl") or ""
-        self._show_articles = False  # only true when opened via toolbar button
-        # Set when the user dismisses the article list.  Scoped to the
-        # current card so the next card gets a fresh list, and cleared
-        # by the toolbar button so re-opening the panel brings it back.
+        # `_show_articles` used to live here, written by four methods
+        # and read by none: whether the list is on screen is the list's
+        # own `_collapsed` plus whether `show_results` was given
+        # anything, and has been for a while. The comment it carried
+        # ("only true when opened via toolbar button") had not been true
+        # since `apply_local_results` started setting it on every card.
         # How many times we have let a Cloudflare challenge keep going
         # on the current navigation.
         self._challenge_waits = 0
+        # True from the moment this dock draws one of its own pages
+        # (`setHtml`) until the `loadFinished` that page emits. Those
+        # pages are not articles: nothing on them should be highlighted,
+        # auto-jumped or scrolled, and the crash page in particular must
+        # not reset the crash counter that put it on screen.
+        self._own_html = False
 
         outer = QVBoxLayout(self)
         outer.setContentsMargins(0, 0, 0, 0)
@@ -907,7 +961,6 @@ class StatPearlsPanel(QWidget):
     def show_article_list(self) -> None:
         """Called when user opens the panel via the toolbar button (same card).
         Shows the article-list; leaves the webview on whatever page is loaded."""
-        self._show_articles = True
         if self._last_results:
             self._results.show_results(self._last_results)
         # Page is already loaded (no loadFinished event coming); fire the
@@ -926,18 +979,19 @@ class StatPearlsPanel(QWidget):
         network search is performed - the popups already cover term lookup,
         and the webview loads articles directly when a popup is clicked."""
         self._last_results = results
-        # A new card's results arrive here, so this is where a dismissal
-        # scoped to the previous card expires.
+        # A new card's results arrive here, so this is where a collapse
+        # scoped to the previous card expires - `restore_collapse` puts
+        # the list back to the reader's stored preference, and the rows
+        # below are this card's.
         #
-        # It did not expire. `_show_articles` went False on a popup
-        # click and nothing set it back, so from the first article
-        # opened that way this method updated `_last_results` and left
-        # the widget alone: every later card showed the article list of
-        # the card the reader had opened an article from, under that
-        # card's count, until they pressed the toolbar button. Both this
-        # comment and the header's promise that the list "comes back on
-        # the next card" described behaviour the code did not have.
-        self._show_articles = True
+        # It did not expire for a long time, because the expiry was
+        # keyed on a flag (`_show_articles`) that a popup click set
+        # False and nothing set back: every later card showed the
+        # article list of the card the reader had opened an article
+        # from, under that card's count, until they pressed the toolbar
+        # button. Both this comment and the header's promise that the
+        # list "comes back on the next card" described behaviour the
+        # code did not have.
         self._results.restore_collapse()
         if results:
             self._results.show_results(results)
@@ -969,12 +1023,66 @@ class StatPearlsPanel(QWidget):
         except Exception:
             return ""
 
-    def _on_article_chosen(self, url: str) -> None:
-        """The reader picked an article, so nothing may move the panel
-        off it again except another such choice."""
-        self._chosen_url = url or ""
-        _config.set_value("sidebarLastArticleUrl", self._chosen_url)
-        self.load_url(url)
+    def _on_article_chosen(self, url: str, term: str = "") -> None:
+        """The reader picked a row in the article list.
+
+        A row is the same choice a popup click is, so it goes through
+        the same three gates the popup path gets in the package root and
+        this one had none of:
+
+        1. The safety check, imported lazily and failing closed for the
+           reason `_safe_chosen` sets out - the row's URL ends up in
+           `view.load()` on a profile holding live NCBI, DrugBank and
+           UpToDate sessions.
+        2. Term resolution. 183 of the 826 conditions have no NBK
+           accession and their row holds an in-book search URL; loading
+           that with no term lands on the multi-hit results page
+           `load_url` says does not render in this webview at all, while
+           the same term's popup resolves to the chapter. `load_url`
+           records the URL and does the resolving, so there is nothing
+           to remember here.
+        3. Sites this panel's profile is actually for. The 8
+           UpToDate-primary conditions put an uptodate.com URL in this
+           list, and this profile has no UpToDate session to show it
+           with.
+        """
+        if not url:
+            return
+        try:
+            from . import _is_safe_url, _is_trusted_host
+        except Exception:
+            _log.diag("pearls list: safety check unreachable; not loading")
+            return
+        try:
+            ok = _is_safe_url(url) and _is_trusted_host(url)
+        except Exception:
+            ok = False
+        if not ok:
+            _log.debug(f"pearls list: refused {url[:80]!r}")
+            return
+        if not _site_of(url):
+            self._open_off_site(url)
+            return
+        self.load_url(url, term=term)
+
+    def _open_off_site(self, url: str) -> None:
+        """A chosen row that belongs to neither of this panel's sites.
+
+        Today that is the UpToDate-primary conditions, whose proper
+        destination is the UpToDate dock, which holds the session that
+        makes them readable. That routing lives in the package root and
+        is shared with the popup-click path rather than copied here -
+        the enable check included, since importing that module is what
+        registers its hooks. This file's history is largely the cost of
+        things kept in two places.
+        """
+        try:
+            from . import open_reference_url
+            _log.diag(f"pearls list: off-site row, handing off "
+                      f"{url[:80]!r}")
+            open_reference_url(url)
+        except Exception as exc:
+            _log.error(f"pearls open off-site {url[:60]!r}", exc)
 
     def reset_for_new_card(self) -> None:
         """Toolbar button pressed while a different card is up.
@@ -986,7 +1094,6 @@ class StatPearlsPanel(QWidget):
         does now. The webview moves only when it is holding nothing
         worth keeping - blank, or already the page it would load.
         """
-        self._show_articles = True
         here = (self._view.url().toString() or "").strip()
         home = self._current_home_url()
         if here in ("", "about:blank", home):
@@ -1004,8 +1111,12 @@ class StatPearlsPanel(QWidget):
         dismiss path, left untouched on this one. With the toolbar
         button also gone while the dock is open, closing and reopening
         the dock was the only way back.
+
+        Nothing calls this yet - the popup-open path in the package root
+        shows the dock and loads the article without telling the panel,
+        so the promise above is not currently kept. One line where that
+        path calls `show_pearls_dock()` is all it needs.
         """
-        self._show_articles = False
         # Not persisted: see `set_collapsed`. This one lasts as long as
         # the article the reader just opened.
         self._results.set_collapsed(True, persist=False)
@@ -1109,9 +1220,11 @@ class StatPearlsPanel(QWidget):
             done(None)
 
     def _show_resolving(self, term: str) -> None:
+        self._own_html = True
         safe = (term or "").replace("&", "&amp;").replace("<", "&lt;")
         self._page.setHtml(
-            f"<html><body style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
+            f"<html><body id=\"tad-own-page\" "
+            f"style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
             "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
             "padding:34px 30px;line-height:1.6;\">"
             f"<div style=\"opacity:.75;\">Finding the StatPearls chapter for "
@@ -1120,14 +1233,22 @@ class StatPearlsPanel(QWidget):
 
     def _do_load(self, url: str) -> None:
         self._load_queued = False
+        # Whatever this dock last drew for itself is being navigated
+        # away from. The flag is normally consumed by that page's own
+        # loadFinished; clearing it here as well means a `setHtml` that
+        # never reported finishing cannot suppress the post-load work on
+        # the next real page.
+        self._own_html = False
         try:
             _log.diag(f"_do_load {url[:120]!r}")
             self._view.load(QUrl(url))
         except Exception as exc:
             _log.error(f"pearls load {url[:60]!r}", exc)
 
-    def get_last_results(self) -> list:
-        return self._last_results
+    # `get_last_results` was here: an accessor for `_last_results` with
+    # no caller anywhere in the add-on. The two things that want the
+    # list - the toolbar button and a new card's results - are both
+    # methods on this class and read the attribute directly.
 
     # ── private ───────────────────────────────────────────────────────────
 
@@ -1227,24 +1348,43 @@ class StatPearlsPanel(QWidget):
         # the page on screen actually belongs to the site just chosen.
         on_site = _site_of(cur)
         if on_site and choice == on_site:
-            self._clear_pending()
+            # The intent only. This branch is the one that keeps the
+            # reader on the page they are reading, so it must not also
+            # forget it: clicking the DrugBank pill while on a DrugBank
+            # monograph correctly stayed put and silently cleared
+            # `sidebarLastArticleUrl`, and the next Anki launch opened
+            # the panel on DrugBank's home page - the exact thing
+            # `_chosen_url` exists to prevent.
+            self._clear_intent()
             return
         self._go_home()
 
-    def _clear_pending(self) -> None:
-        """Drop the popup-click intent.
+    def _clear_intent(self) -> None:
+        """Drop the popup-click intent, keeping the remembered article.
 
-        Set by `load_url` and consumed by the resolve / autojump / scroll
-        handlers.  Any navigation the user drives themselves - home, a
-        site switch, a search on the site - is a different intent, and
-        leaving the old one in place makes those handlers act on it."""
+        Set by `load_url` and consumed by the resolve / autojump / cache
+        / scroll handlers.  Any navigation the user drives themselves -
+        home, a site switch, a search on the site - is a different
+        intent, and leaving the old one in place makes those handlers
+        act on it."""
         self._pending_url = ""
         self._pending_term = ""
         self._pending_section = ""
-        # The remembered article goes with it. `reset_for_new_card`
-        # restores `_chosen_url` whenever the view is sitting on home,
-        # so without this, pressing Home and moving to the next card
-        # brought back the article that was just deliberately left.
+
+    def _clear_pending(self) -> None:
+        """Drop the intent and forget the article along with it.
+
+        For Home, which is the reader saying they are done with what
+        they were reading. `reset_for_new_card` restores `_chosen_url`
+        whenever the view is sitting on home, so without the second
+        half, pressing Home and moving to the next card brought back the
+        article that was just deliberately left.
+
+        Anything that leaves a page on screen wants `_clear_intent`
+        instead - forgetting an article the reader is still looking at
+        is a different act entirely.
+        """
+        self._clear_intent()
         self._chosen_url = ""
         try:
             _config.set_value("sidebarLastArticleUrl", "")
@@ -1299,10 +1439,18 @@ class StatPearlsPanel(QWidget):
             _log.error("pearls post-crash reload", exc)
 
     def _show_crash_error(self, status, exit_code) -> None:
+        # `setHtml` emits loadFinished(ok=True) like any other load, and
+        # `_finish_good_load` sets `_crash_count` back to 0 - so drawing
+        # this page used to unsay the sentence it prints: "reloading has
+        # been given up on" stopped being true the moment the reader
+        # could read it, and the next crash started counting from one
+        # again. `_own_html` is what keeps loadFinished off it.
+        self._own_html = True
         url = (getattr(self, "_crash_url", "") or "").replace("&", "&amp;")
         url = url.replace("<", "&lt;").replace('"', "&quot;")
         self._page.setHtml(
-            f"<html><body style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
+            f"<html><body id=\"tad-own-page\" "
+            f"style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
             "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
             "padding:34px 30px;line-height:1.6;\">"
             "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
@@ -1329,6 +1477,14 @@ class StatPearlsPanel(QWidget):
     # page finishes loading, look for a single unambiguous exact match
     # and follow it.  The resulting primary URL is cached by
     # `_on_url_changed`, so it only ever happens once per term.
+    #
+    # The script reports the match rather than setting `location.href`
+    # itself. A jump made inside the page is indistinguishable, by the
+    # time it arrives at `urlChanged`, from the reader typing their own
+    # search into the site's box - both are just a navigation with
+    # nothing pending - and `_cache_resolved` has to tell those two
+    # apart. Handing the href back lets the panel make the navigation,
+    # which is what it is.
     _AUTOJUMP_JS = r"""
     (function () {
       try {
@@ -1357,12 +1513,12 @@ class StatPearlsPanel(QWidget):
           return arr.filter(function (h, i) { return arr.indexOf(h) === i; });
         };
         var e = uniq(exact);
-        if (e.length === 1) { window.location.href = e[0]; return; }
+        if (e.length === 1) return e[0];
         // Several equally-exact hits means the search page really is the
         // right answer; leave the reader on it.
         if (e.length === 0) {
           var p = uniq(prefix);
-          if (p.length === 1) window.location.href = p[0];
+          if (p.length === 1) return p[0];
         }
       } catch (e) {}
     })();
@@ -1399,14 +1555,64 @@ class StatPearlsPanel(QWidget):
             return
         try:
             _log.diag(f"autojump attempt term={term!r}")
-            self._page.runJavaScript(self._AUTOJUMP_JS % json.dumps(term))
+            self._page.runJavaScript(
+                self._AUTOJUMP_JS % json.dumps(term),
+                lambda href: self._do_autojump(href, url))
         except Exception as exc:
             _log.diag(f"autojump failed: {exc}")
 
+    def _do_autojump(self, href, from_url: str) -> None:
+        """Follow the single match the search page offered, if any.
+
+        The panel makes this navigation rather than the page, so that
+        `_pending_url` can say the jump is ours - see `_cache_resolved`,
+        which will only write the arrived URL to the term cache for a
+        navigation this panel started.
+
+        The href comes out of a page's DOM, so it is checked before it
+        is loaded into a profile holding live sessions: http(s) only,
+        and staying on the site the search page belongs to.
+        """
+        target = href if isinstance(href, str) else ""
+        if not target.startswith(("http://", "https://")):
+            return
+        site = _site_of(target)
+        if not site or site != _site_of(from_url) or target == from_url:
+            _log.diag(f"autojump target rejected: {target[:100]!r}")
+            return
+        _log.diag(f"autojump -> {target[:100]!r}")
+        self._pending_url = target
+        self._load_retries = 0
+        self._load_queued = True
+        QTimer.singleShot(0, lambda: self._do_load(target))
+
     def _cache_resolved(self, url: str) -> None:
-        """Remember a primary article/drug URL reached from a search."""
+        """Remember a primary article/drug URL reached from a search.
+
+        Only for a navigation this panel started. `_pending_term` is set
+        by `load_url` and survives every navigation the reader makes
+        themselves, and this runs off `urlChanged`, so without the
+        second gate any page they reached afterwards was attributed to
+        it: click the "Atrial fibrillation" popup, have it miss and land
+        on the in-book search page, type "warfarin" into StatPearls' own
+        box and open that chapter, and `sp:atrial fibrillation` was
+        written to the on-disk cache pointing at Warfarin. Permanently -
+        every later click on that term went straight there, across
+        restarts, with nothing in the UI to clear it.
+
+        `_pending_url` is the marker for "ours" because it spans exactly
+        the navigation the panel asked for, redirect chains included -
+        which is what this cache is for, NCBI redirecting the in-book
+        search URL to the chapter - and `_finish_good_load` clears it
+        once the page settles. The auto-jump runs after that clear and
+        its result must still be cached, so it re-arms `_pending_url`
+        with its own target (`_do_autojump`); that jump is a navigation
+        this panel started too.
+        """
         term = getattr(self, "_pending_term", "") or ""
         if not term:
+            return
+        if not getattr(self, "_pending_url", ""):
             return
         # A search-results URL carries a query string and resolves to the
         # book root, not the chapter - caching it would pin the term to
@@ -1568,10 +1774,19 @@ class StatPearlsPanel(QWidget):
         different: retrying inside the webview will hit the same check,
         whereas the system browser shares nothing with this profile and
         usually passes first time. Once it does, the cookie is not
-        shared back - so the honest advice is to read it there."""
+        shared back - so the honest advice is to read it there.
+
+        The real URL is deliberately kept as `setHtml`'s baseUrl: the
+        "Open in browser" button reads the view's URL, and it has to
+        offer the page that failed rather than about:blank. That does
+        mean `_site_of` recognises this page as DrugBank, so the id on
+        the body and `_own_html` are what keep the highlighter and the
+        rest of the post-load work off it."""
+        self._own_html = True
         safe = (url or "").replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
         self._page.setHtml(
-            f"<html><body style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
+            f"<html><body id=\"tad-own-page\" "
+            f"style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
             "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
             "padding:34px 30px;line-height:1.6;\">"
             "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
@@ -1589,10 +1804,16 @@ class StatPearlsPanel(QWidget):
         )
 
     def _show_load_error(self, url: str) -> None:
-        """Replace the blank grey rectangle with something actionable."""
+        """Replace the blank grey rectangle with something actionable.
+
+        Same baseUrl reasoning as `_show_challenge_error`, and the same
+        two guards against this page being mistaken for the article it
+        is standing in for."""
+        self._own_html = True
         safe = (url or "").replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
         self._page.setHtml(
-            f"<html><body style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
+            f"<html><body id=\"tad-own-page\" "
+            f"style=\"margin:0;background:{_BG_BOX};color:{_BODY_TXT};"
             "font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"
             "padding:34px 30px;line-height:1.6;\">"
             "<div style=\"font-size:15px;font-weight:600;margin-bottom:10px;\">"
@@ -1747,6 +1968,12 @@ class StatPearlsPanel(QWidget):
           url: location.href,
           title: t,
           len: b ? b.innerHTML.length : 0,
+          // One of this dock's own error pages. They are drawn with the
+          // failed URL as baseUrl and carry several hundred characters
+          // of body, so "Try again" failing again looked from here like
+          // a non-200 with real content - and the error page got
+          // accepted, highlighted and treated as the article.
+          own: !!(b && b.id === "tad-own-page"),
           challenge: /just a moment|checking your browser|attention required/i
                        .test(t)
                      || !!document.querySelector(
@@ -1805,11 +2032,18 @@ class StatPearlsPanel(QWidget):
             self._show_challenge_error(url)
             return
 
-        if length > 400 and not url.startswith(("chrome-error", "about:blank")):
-            # The body is real.  Treat this exactly like a good load.
+        if (length > 400 and not info.get("own")
+                and not url.startswith(("chrome-error", "about:blank"))):
+            # The body is real.  Treat this exactly like a good load -
+            # every step of it, which is the whole reason
+            # `_finish_good_load` exists. `_crash_count` and
+            # `_pending_url` were also reset here, in a second copy that
+            # had already drifted: clearing `_pending_url` first hid it
+            # from `_finish_good_load`, which reads it to decide which
+            # site the pending term belongs to, so the auto-jump was
+            # dead on exactly the path that carries Cloudflare-cleared
+            # DrugBank pages.
             _log.diag(f"non-200 with content, accepting: {url[:100]!r}")
-            self._crash_count = 0
-            self._pending_url = ""
             self._finish_good_load(url)
             return
 
@@ -1855,8 +2089,16 @@ class StatPearlsPanel(QWidget):
         """Mark up recognised terms on the article currently displayed.
 
         Runs only on StatPearls and DrugBank - `_site_of` returns "" for
-        anything else, including the error and placeholder pages this
-        dock draws itself, which must not be highlighted.
+        anything else. That is not on its own enough to exclude the
+        error pages this dock draws itself: two of the three pass the
+        real URL as `setHtml`'s baseUrl, deliberately, so that "Open in
+        browser" offers the page that failed rather than about:blank -
+        and `_site_of` reads them as DrugBank or StatPearls like any
+        other page. They are kept out by `_own_html`, which stops
+        `_on_load_finished` before this is reached, and by the
+        `tad-own-page` id on their body, which `_FAILED_PROBE_JS`
+        reports so the accept-a-non-200 path does not take one for an
+        article either.
 
         Three steps, all asynchronous so the page stays responsive:
         collect the text nodes, resolve them in Python with the same
@@ -1916,9 +2158,17 @@ class StatPearlsPanel(QWidget):
 
         Split out of `_on_load_finished` so the accept-a-non-200-with-
         a-body path runs exactly the same steps: a Cloudflare-cleared
-        DrugBank page still needs the auto-jump, the section scroll and
-        the banner cleanup, and duplicating that list is how the two
-        paths drift apart.
+        DrugBank page still needs the auto-jump, the section scroll, the
+        banner cleanup and the highlighting, and duplicating that list
+        is how the two paths drift apart.
+
+        They had drifted anyway, because the highlighting was left
+        behind in `_on_load_finished` when the rest moved here: a
+        DrugBank monograph that arrives as a 403-with-body rendered
+        correctly and carried no highlight spans and no marker.js, so
+        hovering a term on it did nothing, while the same page on a
+        clean 200 was fully interactive. It is the last step here now,
+        where the list cannot be got wrong by only reading one caller.
         """
         self._crash_count = 0
         # A page that loaded refills the retry budget. It was spent per
@@ -1991,6 +2241,10 @@ class StatPearlsPanel(QWidget):
                     self._page.runJavaScript(_HIDE_BOOKSHELF_BAR_JS)
         except Exception:
             pass
+        try:
+            self._highlight_page(cur)
+        except Exception as exc:
+            _log.error("dock highlight", exc)
 
     def _on_load_finished(self, _ok: bool):
         # A failed navigation leaves the view on chrome-error://chromewebdata/,
@@ -2001,6 +2255,18 @@ class StatPearlsPanel(QWidget):
             cur = self._view.url().toString()
         except Exception:
             cur = ""
+        # A page this dock drew itself arrives here like any other load,
+        # because `setHtml` emits loadFinished(ok=True). None of what
+        # follows belongs to it: it is not an article to highlight,
+        # auto-jump or scroll, and the crash page reset the very counter
+        # that had just given up on reloading. Consumed on the way past,
+        # and only on a successful load, so a navigation abandoned in
+        # favour of this page cannot eat the flag instead.
+        if _ok and self._own_html:
+            self._own_html = False
+            _log.diag(f"loadFinished for our own page, no post-load work "
+                      f"(url={cur[:100]!r})")
+            return
         if not _ok or cur.startswith("chrome-error"):
             # A navigation that was superseded - the home page still
             # loading when the user clicks a link, which is the common
@@ -2019,5 +2285,4 @@ class StatPearlsPanel(QWidget):
             self._probe_failed_load(cur)
             return
         self._finish_good_load(cur)
-        self._highlight_page(cur)
 
