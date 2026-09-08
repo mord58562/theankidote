@@ -11271,6 +11271,252 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "presbyoesophagus ageing oesophageal motility dysphagia"]],
         "summary": "",
     },
+    {
+        "name": "Rectus sheath haematoma",
+        "aliases": ["Rectus sheath hematoma", "Rectus sheath bleed"],
+        "utd": [["Overview", "rectus sheath hematoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Hallux rigidus",
+        "aliases": ["Great toe osteoarthritis", "First metatarsophalangeal joint arthritis"],
+        "utd": [["Overview", "hallux rigidus"]],
+        "summary": "",
+    },
+    {
+        "name": "Tarsal coalition",
+        "aliases": ["Calcaneonavicular coalition", "Talocalcaneal coalition", "Peroneal spastic flatfoot"],
+        "utd": [["Overview", "tarsal coalition"]],
+        "summary": "",
+    },
+    {
+        "name": "Quadrilateral space syndrome",
+        "aliases": ["Axillary nerve entrapment"],
+        "utd": [["Overview", "quadrilateral space syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Scapular winging",
+        "aliases": ["Winged scapula", "Long thoracic nerve palsy", "Serratus anterior palsy"],
+        "utd": [["Overview", "scapular winging"]],
+        "summary": "",
+    },
+    {
+        "name": "Sternoclavicular joint dislocation",
+        "aliases": ["Posterior sternoclavicular dislocation", "Sternoclavicular joint injury"],
+        "utd": [["Overview", "sternoclavicular joint dislocation"]],
+        "summary": "",
+    },
+    {
+        "name": "Acromioclavicular joint injury",
+        "aliases": ["AC joint separation", "Shoulder separation", "Rockwood classification"],
+        "utd": [["Overview", "acromioclavicular joint injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Hip labral tear",
+        "aliases": ["Acetabular labral tear"],
+        "utd": [["Overview", "acetabular labral tear"]],
+        "summary": "",
+    },
+    {
+        "name": "Coccydynia",
+        "aliases": ["Coccygodynia", "Tailbone pain"],
+        "utd": [["Overview", "coccydynia"]],
+        "summary": "",
+    },
+    {
+        "name": "Thumb ulnar collateral ligament injury",
+        "aliases": ["Skier thumb", "Gamekeeper thumb", "Stener lesion"],
+        "utd": [["Overview", "thumb ulnar collateral ligament injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Plantar fibromatosis",
+        "aliases": ["Ledderhose disease", "Plantar fibroma"],
+        "utd": [["Overview", "plantar fibromatosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Rotator cuff calcific tendinitis",
+        "aliases": ["Calcific tendinopathy of shoulder", "Shoulder calcific tendinopathy"],
+        "utd": [["Overview", "calcific tendinitis rotator cuff"]],
+        "summary": "",
+    },
+    {
+        "name": "Peroneal tendon subluxation",
+        "aliases": ["Fibularis tendon dislocation", "Peroneal tendon dislocation"],
+        "utd": [["Overview", "peroneal tendon subluxation"]],
+        "summary": "",
+    },
+    {
+        "name": "Failed back surgery syndrome",
+        "aliases": ["Post-laminectomy syndrome", "Persistent spinal pain syndrome"],
+        "utd": [["Overview", "failed back surgery syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Actinic cheilitis",
+        "aliases": ["Solar cheilitis", "Actinic keratosis of the lip"],
+        "utd": [["Overview", "actinic cheilitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Spider naevus",
+        "aliases": ["Spider angioma", "Spider telangiectasia", "Naevus araneus"],
+        "utd": [["Overview", "spider angioma"]],
+        "summary": "",
+    },
+    {
+        "name": "Asteatotic eczema",
+        "aliases": ["Eczema craquele", "Winter itch", "Xerotic eczema"],
+        "utd": [["Overview", "asteatotic eczema"]],
+        "summary": "",
+    },
+    {
+        "name": "Tinea incognito",
+        "aliases": ["Steroid-modified tinea", "Tinea incognita"],
+        "utd": [["Overview", "tinea incognito"]],
+        "summary": "",
+    },
+    {
+        "name": "Nail psoriasis",
+        "aliases": ["Psoriatic nail disease", "Nail pitting"],
+        "utd": [["Overview", "nail psoriasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Koilonychia",
+        "aliases": ["Spoon nails"],
+        "utd": [["Overview", "koilonychia"]],
+        "summary": "",
+    },
+    {
+        "name": "Melanonychia",
+        "aliases": ["Longitudinal melanonychia", "Pigmented nail band"],
+        "utd": [["Overview", "longitudinal melanonychia"]],
+        "summary": "",
+    },
+    {
+        "name": "Central centrifugal cicatricial alopecia",
+        "aliases": ["Hot comb alopecia", "Follicular degeneration syndrome"],
+        "utd": [["Overview", "central centrifugal cicatricial alopecia"]],
+        "summary": "",
+    },
+    {
+        "name": "Acne keloidalis nuchae",
+        "aliases": ["Folliculitis keloidalis"],
+        "utd": [["Overview", "acne keloidalis nuchae"]],
+        "summary": "",
+    },
+    {
+        "name": "Pseudofolliculitis barbae",
+        "aliases": ["Razor bumps", "Shaving bumps"],
+        "utd": [["Overview", "pseudofolliculitis barbae"]],
+        "summary": "",
+    },
+    {
+        "name": "Rosacea fulminans",
+        "aliases": ["Pyoderma faciale"],
+        "utd": [["Overview", "rosacea fulminans"]],
+        "summary": "",
+    },
+    {
+        "name": "Sleepwalking",
+        "aliases": ["Somnambulism", "Non-REM parasomnia"],
+        "utd": [["Overview", "sleepwalking"]],
+        "summary": "",
+    },
+    {
+        "name": "Night terrors",
+        "aliases": ["Sleep terrors", "Pavor nocturnus"],
+        "utd": [["Overview", "sleep terrors"]],
+        "summary": "",
+    },
+    {
+        "name": "Idiopathic hypersomnia",
+        "aliases": ["Primary hypersomnia"],
+        "utd": [["Overview", "idiopathic hypersomnia"]],
+        "summary": "",
+    },
+    {
+        "name": "Central sleep apnoea",
+        "aliases": ["Central sleep apnea", "Cheyne-Stokes respiration in heart failure"],
+        "utd": [["Overview", "central sleep apnea"]],
+        "summary": "",
+    },
+    {
+        "name": "Shift work sleep disorder",
+        "aliases": ["Shift work disorder", "Night shift sleep disturbance"],
+        "utd": [["Overview", "shift work sleep disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug-induced parkinsonism",
+        "aliases": ["Neuroleptic-induced parkinsonism", "Medication-induced parkinsonism"],
+        "utd": [["Overview", "drug induced parkinsonism"]],
+        "summary": "",
+    },
+    {
+        "name": "Synthetic cannabinoid toxicity",
+        "aliases": ["Spice toxicity", "Synthetic cannabinoid receptor agonist poisoning"],
+        "utd": [["Overview", "synthetic cannabinoid toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Methamphetamine-associated cardiomyopathy",
+        "aliases": ["Stimulant cardiomyopathy", "Amphetamine cardiomyopathy"],
+        "utd": [["Overview", "methamphetamine associated cardiomyopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Copper deficiency",
+        "aliases": ["Hypocupraemia", "Copper deficiency myeloneuropathy"],
+        "utd": [["Overview", "copper deficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Pressure injury staging",
+        "aliases": ["Pressure ulcer staging", "Pressure sore grading"],
+        "utd": [["Overview", "pressure injury staging"]],
+        "summary": "",
+    },
+    {
+        "name": "Carotid sinus hypersensitivity",
+        "aliases": ["Carotid sinus syndrome"],
+        "utd": [["Overview", "carotid sinus hypersensitivity"]],
+        "summary": "",
+    },
+    {
+        "name": "Postoperative atelectasis",
+        "aliases": ["Perioperative atelectasis", "Post-surgical lung collapse"],
+        "utd": [["Overview", "postoperative atelectasis"]],
+        "summary": "",
+    },
+    {
+        "name": "Escharotomy",
+        "aliases": ["Burn escharotomy", "Circumferential burn release"],
+        "utd": [["Overview", "escharotomy burns"]],
+        "summary": "",
+    },
+    {
+        "name": "Inhalation injury",
+        "aliases": ["Smoke inhalation injury", "Airway burn"],
+        "utd": [["Overview", "inhalation injury smoke"]],
+        "summary": "",
+    },
+    {
+        "name": "Tranexamic acid in trauma",
+        "aliases": ["TXA in trauma", "CRASH-2 protocol"],
+        "utd": [["Overview", "tranexamic acid trauma"]],
+        "summary": "",
+    },
+    {
+        "name": "Trauma in pregnancy",
+        "aliases": ["Obstetric trauma resuscitation", "Maternal trauma"],
+        "utd": [["Overview", "trauma in pregnancy"]],
+        "summary": "",
+    },
 ]
 
 
@@ -68188,6 +68434,922 @@ RICH_SUMMARIES = {
         "bisphosphonates. Note: never accept dysphagia in an older "
         "person as simply age, since cancer sits in the same "
         "differential."
+    ),
+    "Rectus sheath haematoma": (
+        "Bleeding into the rectus abdominis sheath from rupture of "
+        "the inferior epigastric vessels or the muscle itself, a "
+        "classic mimic of acute abdomen. Aetiology: anticoagulation "
+        "is the dominant risk, with violent coughing, straining, "
+        "abdominal trauma and recent injections or port placement as "
+        "triggers. Older women on warfarin or a DOAC are "
+        "over-represented. Clinical features: sudden unilateral "
+        "abdominal wall pain with a tender, non-pulsatile mass that "
+        "stays palpable when the patient tenses the abdominal wall "
+        "(Fothergill sign) and does not cross the midline below the "
+        "arcuate line. Bruising tracking to the flank appears late. "
+        "Ix: contrast CT abdomen is the test of choice and grades the "
+        "bleed. Ultrasound is useful bedside but misses active "
+        "extravasation. Check FBC and coagulation profile including "
+        "anti-Xa if relevant. Mx: most Grade I and II bleeds settle "
+        "with analgesia, rest and reversal or withholding of "
+        "anticoagulation. Large or expanding bleeds with haemodynamic "
+        "compromise need transfusion and interventional radiology "
+        "embolisation. Surgery is a last resort. Note: a tender "
+        "abdominal mass that persists on head lift is in the wall, "
+        "not the peritoneum."
+    ),
+    "Hallux rigidus": (
+        "Osteoarthritis of the first metatarsophalangeal joint "
+        "causing progressive loss of great toe dorsiflexion, the "
+        "second commonest forefoot complaint after hallux valgus. "
+        "Aetiology: repetitive dorsiflexion loading, prior turf toe "
+        "or intra-articular fracture, a long or elevated first "
+        "metatarsal and inflammatory arthropathy. Family history is "
+        "common in adolescent-onset disease. Clinical features: "
+        "dorsal joint pain worst on toe-off and in heeled shoes, a "
+        "palpable dorsal osteophyte and restricted dorsiflexion with "
+        "preserved plantar flexion. Pain on forced dorsiflexion with "
+        "a pain-free mid-range suggests earlier disease than pain "
+        "throughout arc. Ix: clinical diagnosis. Weightbearing foot "
+        "radiographs show dorsal osteophyte, joint space narrowing "
+        "and subchondral sclerosis, and grade severity. Mx: "
+        "stiff-soled or rocker-bottom footwear and a Morton extension "
+        "orthosis, with simple analgesia and activity modification "
+        "per eTG. Intra-articular corticosteroid gives short-term "
+        "relief. Cheilectomy suits retained joint space; arthrodesis "
+        "is the durable option for end-stage disease. Note: dorsal "
+        "bump plus lost dorsiflexion beats imaging for the diagnosis."
+    ),
+    "Tarsal coalition": (
+        "An abnormal fibrous, cartilaginous or bony bridge between "
+        "two tarsal bones, the leading cause of rigid flatfoot and "
+        "recurrent ankle sprain in adolescents. Aetiology: failure of "
+        "mesenchymal segmentation, usually autosomal dominant with "
+        "variable penetrance. Calcaneonavicular and talocalcaneal "
+        "bars account for almost all cases and are bilateral in about "
+        "half. Clinical features: activity-related hindfoot pain "
+        "emerging as the bar ossifies in later childhood, a flat "
+        "medial arch that does not restore on toe standing and loss "
+        "of subtalar inversion and eversion. Peroneal spasm gives the "
+        "historical label peroneal spastic flatfoot. Ix: "
+        "weightbearing foot radiographs with an oblique view show the "
+        "anteater nose sign of a calcaneonavicular bar. CT best "
+        "defines bony anatomy and MRI detects fibrous and "
+        "cartilaginous coalitions. Mx: activity modification, "
+        "orthoses and a period of immobilisation settle many cases. "
+        "Resection with fat or muscle interposition suits symptomatic "
+        "bars with preserved joints. Extensive talocalcaneal disease "
+        "with arthritis may need fusion. Note: a stiff flatfoot in a "
+        "teenager is a coalition until imaging says otherwise."
+    ),
+    "Quadrilateral space syndrome": (
+        "Compression of the axillary nerve and posterior circumflex "
+        "humeral artery within the quadrilateral space, bounded by "
+        "teres minor, teres major, triceps long head and the humeral "
+        "shaft. Aetiology: fibrous bands, paralabral cysts, "
+        "hypertrophy of teres minor and repetitive overhead abduction "
+        "with external rotation. Overhead throwers, swimmers and "
+        "volleyball players dominate the case series. Clinical "
+        "features: poorly localised posterior shoulder pain with "
+        "paraesthesia in a non-dermatomal lateral arm pattern, worse "
+        "in abduction and external rotation. Point tenderness over "
+        "the quadrilateral space and selective teres minor wasting on "
+        "inspection are useful signs. Vascular cases show hand "
+        "ischaemia or digital emboli. Ix: MRI shows teres minor "
+        "denervation oedema or fatty atrophy and identifies a cyst. "
+        "MR or CT angiography in abduction demonstrates arterial "
+        "compression. EMG is often normal. Mx: rest, scapular "
+        "stabilisation and posterior cuff stretching for at least six "
+        "months. Surgical decompression of fibrous bands is reserved "
+        "for failed conservative care or vascular compromise. Note: "
+        "isolated teres minor atrophy on MRI points here before it "
+        "points at the cuff."
+    ),
+    "Scapular winging": (
+        "Prominence of the medial scapular border from loss of "
+        "scapulothoracic stabilisation, usually neurogenic. "
+        "Aetiology: long thoracic nerve palsy paralysing serratus "
+        "anterior gives medial winging, while spinal accessory nerve "
+        "injury paralysing trapezius gives lateral winging. Causes "
+        "include neuralgic amyotrophy, traction or backpack injury, "
+        "and iatrogenic damage during posterior triangle lymph node "
+        "biopsy or axillary surgery. Clinical features: shoulder ache "
+        "with weak overhead elevation and visible winging accentuated "
+        "by a wall push-up in medial winging or by shoulder abduction "
+        "in lateral winging. Ask about a preceding painful shoulder "
+        "episode suggesting neuralgic amyotrophy. Ix: mainly "
+        "clinical. Nerve conduction studies and EMG at three to four "
+        "weeks localise the lesion and give prognosis. Imaging "
+        "excludes structural causes. Mx: analgesia, scapular "
+        "stabilisation physiotherapy and observation, since most "
+        "traction and post-viral palsies recover over twelve to "
+        "eighteen months. Persistent disabling winging is managed "
+        "with nerve transfer or tendon transfer such as pectoralis "
+        "major for serratus palsy. Note: which way the scapula wings "
+        "tells you which nerve to blame."
+    ),
+    "Sternoclavicular joint dislocation": (
+        "Displacement of the medial clavicle at the sternoclavicular "
+        "joint, uncommon but important because the posterior variant "
+        "threatens mediastinal structures. Aetiology: high-energy "
+        "direct or indirect force to the shoulder girdle in motor "
+        "vehicle crashes and contact sport. Anterior dislocation is "
+        "far commoner. In under 25s the medial physis is unfused, so "
+        "the injury is often a Salter-Harris epiphyseal separation "
+        "rather than true dislocation. Clinical features: focal pain "
+        "and deformity at the joint, arm held adducted. Posterior "
+        "dislocation may cause dyspnoea, stridor, dysphagia, "
+        "hoarseness or venous congestion of the arm, and demands "
+        "urgent attention. Ix: plain films are hard to interpret, so "
+        "CT with contrast is the test of choice and defines vascular "
+        "relations. Mx: anterior dislocation is usually managed with "
+        "closed reduction or sling and accepted instability. "
+        "Posterior dislocation requires urgent reduction in theatre "
+        "with cardiothoracic surgery available, given risk of great "
+        "vessel injury. Note: any posterior sternoclavicular injury "
+        "is a mediastinal emergency until CT clears it."
+    ),
+    "Acromioclavicular joint injury": (
+        "Sprain or disruption of the acromioclavicular joint and its "
+        "coracoclavicular ligaments, the classic shoulder separation "
+        "of contact sport. Aetiology: direct fall onto the point of "
+        "the shoulder with the arm adducted, common in rugby, cycling "
+        "and Australian football. Graded I to VI by the Rockwood "
+        "classification according to ligament disruption and clavicle "
+        "displacement. Clinical features: superior shoulder pain "
+        "localised to the joint, tenderness and a step deformity in "
+        "higher grades. Pain on cross-body adduction is sensitive. "
+        "Skin tenting or buttonholing through trapezius marks severe "
+        "injury. Ix: clinical diagnosis. Standing anteroposterior and "
+        "axillary views grade displacement, with the axillary view "
+        "essential to detect posterior type IV injury. Weighted "
+        "stress views are no longer routine. Mx: grades I to III are "
+        "managed conservatively with a sling for comfort, early range "
+        "of motion and graded strengthening, with good functional "
+        "outcomes even when the bump persists. Grades IV to VI and "
+        "selected overhead athletes with type III injury are referred "
+        "for reconstruction. Note: the cosmetic step rarely "
+        "correlates with function, so treat the patient rather than "
+        "the bump."
+    ),
+    "Hip labral tear": (
+        "A tear of the fibrocartilaginous acetabular labrum, an "
+        "increasingly recognised cause of mechanical hip and groin "
+        "pain in young adults. Aetiology: femoroacetabular "
+        "impingement is the commonest driver, along with hip "
+        "dysplasia, capsular laxity and repetitive rotational loading "
+        "in dancers and footballers. Degenerative tears accompany "
+        "early osteoarthritis. Clinical features: anterior groin pain "
+        "aggravated by sitting and pivoting, often with clicking or a "
+        "sense of giving way. The C sign, where the patient cups the "
+        "hip between thumb and fingers, is characteristic, and "
+        "impingement testing in flexion, adduction and internal "
+        "rotation reproduces the pain. Ix: pelvic and lateral hip "
+        "radiographs first to assess morphology and exclude "
+        "arthritis. MR arthrography is the most accurate test for the "
+        "labrum. Mx: physiotherapy targeting gluteal and core "
+        "control, activity modification and simple analgesia. "
+        "Arthroscopic labral repair with impingement correction is "
+        "offered after three to six months of failed rehabilitation. "
+        "Note: groin pain plus a positive impingement test in a young "
+        "athlete points to the joint, not the adductors."
+    ),
+    "Coccydynia": (
+        "Pain localised to the coccyx, typically provoked by sitting "
+        "and by rising from a seated position. Aetiology: direct "
+        "trauma from a fall onto the buttocks, childbirth, repetitive "
+        "microtrauma from cycling and coccygeal hypermobility or "
+        "subluxation. Obesity and rapid weight loss are risk factors, "
+        "and a minority reflect a pilonidal lesion, infection or "
+        "presacral tumour. Clinical features: well-localised "
+        "tenderness over the coccyx reproduced by palpation, worse "
+        "leaning back while sitting and eased by sitting forward or "
+        "standing. Bilateral buttock pain, night pain, weight loss or "
+        "neurological signs are red flags. Ix: clinical. Dynamic "
+        "sitting and standing lateral radiographs demonstrate "
+        "hypermobility, and MRI is reserved for red flags or failed "
+        "conservative care. Mx: a wedge or doughnut cushion, simple "
+        "analgesia, stool softeners and physiotherapy including "
+        "pelvic floor and manual coccygeal work. Local corticosteroid "
+        "injection or ganglion impar block helps refractory cases. "
+        "Coccygectomy is a last resort with variable results. Note: "
+        "pain only on sitting and on standing up, with a normal "
+        "neurological examination, is the pattern."
+    ),
+    "Thumb ulnar collateral ligament injury": (
+        "Rupture or sprain of the ulnar collateral ligament of the "
+        "thumb metacarpophalangeal joint, historically skier thumb "
+        "when acute and gamekeeper thumb when chronic. Aetiology: "
+        "forced radial deviation and hyperabduction of the thumb, "
+        "classically a fall onto an outstretched hand while gripping "
+        "a ski pole or handlebar. Clinical features: pain and "
+        "swelling on the ulnar side of the thumb metacarpophalangeal "
+        "joint with weak pinch grip. Laxity greater than 30 degrees "
+        "on radially stressing the joint in 30 degrees of flexion, or "
+        "more than 15 degrees asymmetry, indicates complete rupture. "
+        "A palpable proximal lump suggests a Stener lesion where "
+        "adductor aponeurosis is interposed. Ix: radiographs before "
+        "stress testing to exclude an avulsion fracture. Ultrasound "
+        "or MRI identifies a Stener lesion, which will not heal "
+        "without surgery. Mx: partial tears are treated in a thumb "
+        "spica for four to six weeks then rehabilitated. Complete "
+        "ruptures, displaced avulsion fractures and Stener lesions "
+        "are referred for early operative repair. Note: the pinch "
+        "grip is what is lost, and a Stener lesion never heals in "
+        "plaster."
+    ),
+    "Plantar fibromatosis": (
+        "Benign fibroblastic proliferation of the plantar aponeurosis "
+        "producing firm nodules in the arch, the foot analogue of "
+        "Dupuytren disease. Aetiology: unknown, with strong "
+        "associations to Dupuytren contracture, Peyronie disease, "
+        "diabetes, epilepsy medication and alcohol use. Northern "
+        "European ancestry and a positive family history are typical. "
+        "Clinical features: slow-growing firm nodules fixed to the "
+        "fascia in the medial arch, usually non-tender but painful "
+        "with prolonged standing or barefoot walking. Bilateral in a "
+        "quarter of cases. Unlike the hand, toe contracture is "
+        "uncommon. Ix: clinical. Ultrasound or MRI confirms a "
+        "fascial-based lesion and excludes sarcoma when the lesion is "
+        "large, rapidly growing or deep to the fascia. Mx: "
+        "reassurance, cushioned insoles with a nodule relief and "
+        "stretching. Intralesional corticosteroid or collagenase "
+        "reduces nodule size in some patients. Surgery risks "
+        "recurrence and painful scarring, so wide excision is "
+        "reserved for disabling disease. Note: nodules in the arch of "
+        "a patient with Dupuytren hands rarely need a biopsy."
+    ),
+    "Rotator cuff calcific tendinitis": (
+        "Deposition of basic calcium phosphate crystals within the "
+        "rotator cuff tendons, most often supraspinatus, causing "
+        "episodic severe shoulder pain. Aetiology: not degenerative "
+        "but a self-limiting cell-mediated process cycling through "
+        "formative, resting and resorptive phases. Peaks between 30 "
+        "and 60 years, commoner in women and associated with diabetes "
+        "and thyroid disease. Clinical features: chronic ache in the "
+        "formative phase, then agonising rest and night pain during "
+        "resorption with a near-frozen shoulder and inability to "
+        "sleep on the side. Presentation can mimic septic arthritis "
+        "without fever. Ix: anteroposterior shoulder radiographs show "
+        "a dense deposit in the cuff footprint. Ultrasound "
+        "characterises the deposit and guides intervention. Mx: "
+        "analgesia with NSAIDs per eTG, physiotherapy and subacromial "
+        "corticosteroid injection for the acute phase. "
+        "Ultrasound-guided barbotage or lavage of the deposit is "
+        "effective in resorptive disease, with shockwave therapy as "
+        "an alternative. Surgery is rarely required. Note: a fluffy "
+        "deposit on radiograph with a fiercely painful shoulder is "
+        "resorption, and it will settle."
+    ),
+    "Peroneal tendon subluxation": (
+        "Displacement of the peroneus brevis and longus tendons out "
+        "of the retromalleolar groove from failure of the superior "
+        "peroneal retinaculum. Aetiology: sudden dorsiflexion with "
+        "forceful peroneal contraction, classically in skiing, soccer "
+        "and basketball. Predisposing factors include a shallow or "
+        "convex fibular groove, hindfoot varus and prior ankle "
+        "sprain. Often mislabelled as a recurrent lateral ankle "
+        "sprain. Clinical features: a snapping or popping sensation "
+        "behind the lateral malleolus with instability on uneven "
+        "ground. Tenderness lies posterior to the fibula rather than "
+        "over the anterior talofibular ligament. Resisted eversion "
+        "with the ankle dorsiflexed reproduces the subluxation. Ix: "
+        "radiographs may show a fleck avulsion off the distal fibula, "
+        "which is nearly diagnostic. Dynamic ultrasound is the best "
+        "test and MRI defines tendon and retinacular damage. Mx: "
+        "acute injuries can be trialled in a non-weightbearing cast "
+        "in slight plantar flexion, though redislocation is common. "
+        "Retinacular repair with groove deepening gives reliable "
+        "results in athletes and recurrent cases. Note: pain behind "
+        "the fibula rather than in front of it separates this from "
+        "the ordinary sprain."
+    ),
+    "Failed back surgery syndrome": (
+        "Persistent or recurrent back and leg pain after technically "
+        "adequate spinal surgery, now more often called persistent "
+        "spinal pain syndrome type 2. Aetiology: multifactorial, "
+        "spanning wrong diagnosis or level, recurrent disc "
+        "herniation, epidural fibrosis and adjacent segment "
+        "degeneration. Central sensitisation, untreated mood disorder "
+        "and opioid dependence drive much of the disability. Clinical "
+        "features: pain that never resolved or returned after a "
+        "pain-free interval, often more neuropathic and diffuse than "
+        "the original radiculopathy. New progressive weakness, saddle "
+        "anaesthesia or sphincter change demands urgent reassessment. "
+        "Ix: MRI with contrast distinguishes recurrent disc from "
+        "enhancing epidural fibrosis. Flexion-extension films assess "
+        "instability and CT shows fusion status. Mx: a "
+        "multidisciplinary pain approach with graded exercise, "
+        "psychological therapy and rational analgesia, avoiding "
+        "opioid escalation per eTG. Neuropathic agents and spinal "
+        "cord stimulation help selected patients. Repeat surgery only "
+        "for a clear structural target. Note: the more diffuse the "
+        "pain, the less another operation will fix it."
+    ),
+    "Actinic cheilitis": (
+        "Chronic ultraviolet damage of the lip vermilion, the field "
+        "precursor to lip squamous cell carcinoma. Aetiology: "
+        "cumulative sun exposure, overwhelmingly of the lower lip, "
+        "with outdoor occupation, fair skin, smoking and "
+        "immunosuppression as risks. Australia has among the highest "
+        "incidence worldwide. Clinical features: a dry, scaly, pale "
+        "lip with loss of the sharp vermilion border, persistent "
+        "fissuring and rough white patches that recur after peeling. "
+        "Localised induration, ulceration or a persistent nodule "
+        "suggests invasive carcinoma has already developed. Ix: "
+        "clinical, with dermoscopy as an adjunct. Biopsy any "
+        "indurated, ulcerated or non-healing area since "
+        "transformation risk is higher than for skin actinic "
+        "keratosis. Mx: rigorous lip photoprotection with an SPF 50 "
+        "plus lip balm and behaviour change. Field treatment with "
+        "5-fluorouracil, imiquimod or photodynamic therapy clears "
+        "dysplasia, and cryotherapy suits discrete lesions. "
+        "Vermilionectomy or laser ablation is used for extensive or "
+        "recurrent disease. Note: a chronically scaly lower lip in an "
+        "outdoor worker is a field of dysplasia, not chapping."
+    ),
+    "Spider naevus": (
+        "A central arteriole with radiating capillary branches that "
+        "blanches on pressure and refills from the centre outward. "
+        "Aetiology: oestrogen-mediated vascular dilatation. A few "
+        "lesions are normal in children and healthy adults. Multiple "
+        "or new lesions occur in pregnancy, with the combined oral "
+        "contraceptive, and in chronic liver disease where impaired "
+        "oestrogen clearance is the mechanism. Clinical features: "
+        "small red lesions in the distribution of the superior vena "
+        "cava, meaning face, neck, upper trunk and arms. More than "
+        "five in an adult male suggests significant liver disease and "
+        "correlates with oesophageal varices. Look for palmar "
+        "erythema, gynaecomastia and Dupuytren contracture. Ix: none "
+        "needed if isolated and the patient is well. Otherwise liver "
+        "function tests, coagulation profile, viral hepatitis "
+        "serology and liver ultrasound with elastography. Mx: treat "
+        "the underlying cause. Cosmetic clearance is achieved with "
+        "vascular laser or fine-needle electrodesiccation of the "
+        "central feeding vessel. Note: counting spiders in a "
+        "jaundiced patient is quick evidence of chronicity."
+    ),
+    "Asteatotic eczema": (
+        "Dermatitis of dry, dehydrated skin with a cracked "
+        "crazy-paving surface, the usual cause of the itchy winter "
+        "shins of older people. Aetiology: impaired barrier function "
+        "from age-related lipid loss, low humidity in heated rooms, "
+        "over-washing with soap and hot water, and diuretic use. "
+        "Hypothyroidism, malnutrition and zinc deficiency are "
+        "secondary contributors. Clinical features: dry scaly plaques "
+        "with fine red fissures resembling a dry riverbed, typically "
+        "on the anterior shins, flanks and forearms. Itch is "
+        "prominent and worse at night after bathing. Widespread "
+        "abrupt onset in a previously well older patient warrants a "
+        "look for underlying malignancy. Ix: clinical. Consider "
+        "thyroid function and iron studies if diffuse or refractory, "
+        "and patch testing when topical treatments seem to aggravate "
+        "it. Mx: liberal thick emollient at least twice daily, soap "
+        "substitutes, shorter cooler showers and room humidification. "
+        "A short course of a moderately potent topical corticosteroid "
+        "such as methylprednisolone aceponate settles the "
+        "inflammatory component per eTG. Review any drug "
+        "contributors. Note: this is a barrier problem first, so the "
+        "emollient matters more than the steroid."
+    ),
+    "Tinea incognito": (
+        "Dermatophyte infection whose appearance has been altered by "
+        "topical or systemic corticosteroid or calcineurin inhibitor "
+        "treatment. Aetiology: a fungal rash is mistaken for eczema "
+        "or psoriasis and treated with steroid, which suppresses "
+        "inflammation while permitting fungal spread. Combined "
+        "steroid and antifungal creams and self-treatment with "
+        "leftover products are frequent culprits. Clinical features: "
+        "loss of the usual raised scaly advancing edge, leaving an "
+        "extensive, poorly demarcated erythematous patch that itches "
+        "less than expected. Pustules, follicular papules and skin "
+        "atrophy or striae from the steroid are common. It improves "
+        "while the steroid is applied and flares each time it stops. "
+        "Ix: skin scrapings for microscopy and fungal culture before "
+        "starting treatment, and dermoscopy is a useful adjunct. "
+        "Culture guides therapy where resistant Trichophyton "
+        "indotineae is a concern. Mx: stop the steroid and treat as "
+        "tinea. Extensive or follicular disease needs oral "
+        "terbinafine, with longer courses than usual, rather than "
+        "topical therapy alone. Treat contacts and any tinea pedis "
+        "reservoir. Note: a rash that improves on steroid but always "
+        "relapses deserves a scraping."
+    ),
+    "Nail psoriasis": (
+        "Psoriatic involvement of the nail matrix and nail bed, "
+        "present in up to half of people with psoriasis and a strong "
+        "marker for psoriatic arthritis. Aetiology: the same "
+        "immune-mediated process as cutaneous psoriasis, with the "
+        "nail unit anatomically continuous with the distal "
+        "interphalangeal joint enthesis, which explains the "
+        "association with distal joint disease. Clinical features: "
+        "matrix disease gives pitting, leukonychia and crumbling, "
+        "while nail bed disease gives oil drop discolouration, "
+        "onycholysis and subungual hyperkeratosis. Fingernails are "
+        "affected more than toenails and severity tracks with joint "
+        "disease. Ix: clinical, aided by dermoscopy. Take nail "
+        "clippings for fungal microscopy and culture, since "
+        "onychomycosis coexists in a third of cases and mimics the "
+        "changes. Screen for psoriatic arthritis. Mx: nail care and "
+        "trauma avoidance, with potent topical corticosteroid plus "
+        "calcipotriol or intralesional triamcinolone into the "
+        "proximal fold. Extensive or arthritis-associated disease "
+        "responds best to systemic therapy such as methotrexate or a "
+        "biologic under PBS criteria. Note: nail pitting plus a sore "
+        "distal finger joint is psoriatic arthritis until proven "
+        "otherwise."
+    ),
+    "Koilonychia": (
+        "Spoon-shaped nails where the plate becomes thin and concave, "
+        "able to hold a droplet of water. Aetiology: iron deficiency "
+        "with or without anaemia is the classic systemic cause. "
+        "Others include haemochromatosis, hypothyroidism, "
+        "Plummer-Vinson syndrome and occupational solvent exposure. "
+        "It is physiological in infants and resolves spontaneously. "
+        "Clinical features: flattening then central depression of the "
+        "nail plate with everted lateral edges, usually thumb and "
+        "index fingers first. Look for associated glossitis, angular "
+        "cheilitis and pallor. Ix: full blood count, iron studies and "
+        "ferritin first, then coeliac serology and faecal occult "
+        "blood testing to find the source of deficiency. Thyroid "
+        "function and iron overload studies where the history "
+        "suggests. Mx: treat the underlying deficiency, since the "
+        "plate regrows normally over six to twelve months once iron "
+        "stores are restored. Protect the hands from wet work and "
+        "chemicals. Note: koilonychia is a prompt to hunt for the "
+        "source of blood loss, not a nail diagnosis to treat."
+    ),
+    "Melanonychia": (
+        "A longitudinal pigmented band in the nail from increased "
+        "melanin in the nail plate, ranging from benign activation to "
+        "subungual melanoma. Aetiology: benign melanocytic activation "
+        "from trauma, friction, inflammatory nail disease, drugs such "
+        "as hydroxyurea and chemotherapy, and endocrine disease. "
+        "Physiological pigmentation is common and normal in people "
+        "with darker skin. A single new band in a light-skinned adult "
+        "raises concern for melanoma in situ. Clinical features: "
+        "apply the ABCDEF rule. Worrying features are a band wider "
+        "than 3 mm, irregular or blurred borders, colour variegation, "
+        "single digit involvement of thumb, index or great toe, "
+        "evolution or widening, and pigment spreading onto the "
+        "proximal fold known as the Hutchinson sign. Ix: dermoscopy "
+        "of the plate and free edge. A worrying band needs nail "
+        "matrix biopsy for histology, and reassurance without biopsy "
+        "is unsafe when features are atypical. Mx: observe and "
+        "photograph benign activation and remove any causative drug "
+        "or trauma. Refer atypical bands promptly for matrix biopsy "
+        "and definitive excision if melanoma is confirmed. Note: one "
+        "dark widening band on one finger is a referral, not a review "
+        "in six months."
+    ),
+    "Central centrifugal cicatricial alopecia": (
+        "A scarring alopecia beginning at the vertex and expanding "
+        "outward, the commonest form of scarring hair loss in women "
+        "of African ancestry. Aetiology: multifactorial, with "
+        "premature desquamation of the inner root sheath, genetic "
+        "susceptibility including PADI3 variants and contribution "
+        "from traction, chemical relaxers and thermal styling. "
+        "Clinical features: a shiny expanding patch at the crown with "
+        "loss of follicular ostia, tenderness or itch, and hair that "
+        "breaks easily at the margin. Early disease can look "
+        "non-scarring, which delays diagnosis. Ix: clinical with "
+        "trichoscopy showing peripilar white halos and loss of ostia. "
+        "A 4 mm punch biopsy from an active margin confirms the "
+        "diagnosis. Check ferritin, thyroid function and glucose. Mx: "
+        "stop traumatic styling practices immediately, since scarring "
+        "is irreversible. Potent topical or intralesional "
+        "corticosteroid controls active inflammation, with oral "
+        "doxycycline or hydroxychloroquine for progressive disease "
+        "and topical minoxidil to support remaining follicles. Note: "
+        "the goal is stopping progression, because scarred follicles "
+        "do not return."
+    ),
+    "Acne keloidalis nuchae": (
+        "Chronic scarring folliculitis of the occipital scalp and "
+        "posterior neck producing keloid-like papules and plaques. "
+        "Aetiology: a follicular inflammatory response to close hair "
+        "clipping, mechanical irritation from collars and helmets and "
+        "ingrowing hair, overwhelmingly in men of African ancestry "
+        "aged 14 to 25. Bacterial colonisation and metabolic syndrome "
+        "are contributing associations rather than primary causes. "
+        "Clinical features: firm itchy follicular papules and "
+        "pustules at the posterior hairline that coalesce into "
+        "hairless keloidal plaques with tufted hairs. Discharging "
+        "sinuses and abscesses occur in advanced disease. Not a true "
+        "keloid histologically. Ix: clinical. Swab pustules if "
+        "discharge or recurrent abscess, and biopsy only when a mimic "
+        "such as dissecting cellulitis or malignancy is suspected. "
+        "Mx: avoid close clipping, tight collars and helmet friction. "
+        "Potent topical corticosteroid with a topical retinoid or "
+        "antibiotic settles early papules, intralesional "
+        "triamcinolone flattens plaques, and prolonged oral "
+        "doxycycline helps inflammatory disease. Large plaques are "
+        "excised down to fascia or treated with laser. Note: "
+        "preventing the next crop is easier than removing the last "
+        "one."
+    ),
+    "Pseudofolliculitis barbae": (
+        "An inflammatory reaction to hairs re-entering the skin after "
+        "shaving, producing the razor bumps of the beard area. "
+        "Aetiology: tightly curled hair shafts re-enter the epidermis "
+        "either transfollicularly after close shaving or "
+        "extrafollicularly by curving back into adjacent skin. Close "
+        "shaving, stretching the skin and multi-blade razors worsen "
+        "it. Predominantly affects men of African ancestry. Clinical "
+        "features: firm painful papules and pustules over the beard "
+        "and neck sparing the upper lip, with visible embedded hairs, "
+        "postinflammatory hyperpigmentation and eventual hypertrophic "
+        "scarring. It is often mistaken for bacterial folliculitis. "
+        "Ix: clinical. Swab for Staphylococcus aureus if pustules "
+        "dominate or are recurrent, and consider tinea barbae in "
+        "unilateral or boggy disease. Mx: stop shaving for three to "
+        "four weeks to let hairs release, then move to clipping to a "
+        "1 mm length or a single-blade razor with the grain. Topical "
+        "retinoid or benzoyl peroxide with clindamycin reduces "
+        "papules, and topical eflornithine slows regrowth. Laser hair "
+        "reduction with a long-pulsed Nd:YAG is the definitive option "
+        "for darker skin. Note: the cure is changing the shave, not "
+        "adding another antibiotic."
+    ),
+    "Rosacea fulminans": (
+        "An abrupt severe eruption of confluent nodules, pustules and "
+        "draining sinuses on the central face, historically called "
+        "pyoderma faciale. Aetiology: uncertain, considered a "
+        "hyperactive variant of rosacea. Almost exclusively affects "
+        "women aged 20 to 40. Reported triggers include pregnancy and "
+        "the postpartum period, inflammatory bowel disease and "
+        "thyroid disease. Clinical features: explosive onset over "
+        "weeks with coalescing red-purple nodules and sinus tracts on "
+        "cheeks, chin and nose, sparing the trunk. Comedones are "
+        "absent, which separates it from acne conglobata. Scarring is "
+        "severe and the psychological impact major. Ix: clinical. "
+        "Swab for secondary infection and consider biopsy when "
+        "granulomatous or deep fungal infection is possible. Mx: "
+        "urgent dermatology referral. Oral prednisolone for two to "
+        "four weeks settles inflammation first, then low-dose "
+        "isotretinoin is introduced with overlap and continued for "
+        "months. Isotretinoin requires pregnancy prevention "
+        "counselling. Note: comedones absent and onset in weeks means "
+        "rosacea fulminans, not acne."
+    ),
+    "Sleepwalking": (
+        "A non-REM parasomnia of incomplete arousal from slow-wave "
+        "sleep with complex motor behaviour and no conscious "
+        "awareness. Aetiology: strong genetic predisposition, with "
+        "sleep deprivation, fever, alcohol, sedative hypnotics such "
+        "as zolpidem and obstructive sleep apnoea acting as "
+        "precipitants. Peak prevalence is age 8 to 12 with most "
+        "outgrowing it by adolescence. Clinical features: episodes in "
+        "the first third of the night with the eyes open but a blank "
+        "stare, clumsy purposeful-looking activity, difficulty "
+        "rousing, confusion if woken and complete amnesia the next "
+        "morning. Contrast with nightmares, which occur late in the "
+        "night with clear recall. Ix: clinical from a collateral "
+        "history. Polysomnography is reserved for atypical features, "
+        "injurious or violent behaviour, later onset in adults or "
+        "suspected nocturnal seizures. Mx: reassurance and safety "
+        "proofing, meaning locked windows, stair gates, keys removed "
+        "and clearing the bedroom floor. Enforce adequate sleep and "
+        "treat any obstructive sleep apnoea. Scheduled awakenings "
+        "help predictable timing, and clonazepam is reserved for "
+        "frequent dangerous events. Note: do not wake the sleepwalker "
+        "abruptly, just guide them back to bed."
+    ),
+    "Night terrors": (
+        "A non-REM disorder of arousal with sudden screaming, intense "
+        "autonomic activation and inconsolability during slow-wave "
+        "sleep. Aetiology: immaturity of arousal mechanisms with "
+        "familial predisposition, triggered by sleep deprivation, "
+        "fever, a full bladder and obstructive sleep apnoea. Peak age "
+        "is 3 to 7 years and most resolve by puberty. Clinical "
+        "features: an abrupt scream 60 to 120 minutes after sleep "
+        "onset with sitting up, flushing, sweating, tachycardia and a "
+        "terrified appearance, but the child does not recognise the "
+        "parent and cannot be comforted. The episode ends in minutes "
+        "with return to sleep and no memory of it. Ix: clinical. "
+        "Consider polysomnography if events are frequent or "
+        "associated with snoring, and consider nocturnal frontal lobe "
+        "epilepsy when episodes are brief, repetitive and identical "
+        "each time. Mx: parental reassurance that these are benign "
+        "and self-limiting, with advice not to wake or restrain the "
+        "child beyond preventing injury. Regularise the sleep "
+        "schedule and treat sleep-disordered breathing. Scheduled "
+        "awakenings 15 minutes before the usual event time are "
+        "effective. Note: the parent is more distressed than the "
+        "child, who remembers nothing."
+    ),
+    "Idiopathic hypersomnia": (
+        "A central disorder of hypersomnolence with excessive daytime "
+        "sleepiness despite normal or long sleep, without the "
+        "cataplexy or sleep-onset REM of narcolepsy. Aetiology: "
+        "unknown, with proposed enhanced GABA-A receptor signalling. "
+        "Onset is typically in adolescence or early adult life and "
+        "the course is chronic. Clinical features: unrefreshing sleep "
+        "of 9 hours or more, long unrefreshing daytime naps and "
+        "severe sleep inertia known as sleep drunkenness on waking. "
+        "Cognitive fog is common while cataplexy is absent, and "
+        "occupational impact is major. Ix: exclude the common causes "
+        "first, meaning insufficient sleep, obstructive sleep apnoea, "
+        "shift work and sedating drugs, using sleep diaries and "
+        "actigraphy. Polysomnography then multiple sleep latency "
+        "testing shows a mean latency under 8 minutes with fewer than "
+        "two sleep-onset REM periods. Mx: scheduled sleep with "
+        "realistic workplace accommodations. Modafinil is the usual "
+        "first-line agent with dexamfetamine as an alternative, "
+        "prescribed under specialist supervision and with driving "
+        "advice. Note: the sleep is long and the nap does not help, "
+        "which separates it from narcolepsy."
+    ),
+    "Central sleep apnoea": (
+        "Repetitive cessation of airflow during sleep from absent "
+        "respiratory drive, with no thoracoabdominal effort, in "
+        "contrast to obstructive events. Aetiology: high loop gain "
+        "instability of ventilatory control. Causes include heart "
+        "failure with reduced ejection fraction giving Cheyne-Stokes "
+        "respiration, opioid use, stroke and brainstem lesions, and "
+        "treatment-emergent apnoea after starting positive airway "
+        "pressure. Clinical features: witnessed apnoea without "
+        "snoring or with a crescendo and decrescendo breathing "
+        "pattern, nocturnal awakenings and less daytime sleepiness "
+        "than obstructive disease. Suspect it in any patient with "
+        "heart failure or on long-term opioids. Ix: attended "
+        "polysomnography showing central apnoeas with absent "
+        "respiratory effort. Follow with echocardiography and review "
+        "of the opioid regimen, and brain imaging if there are focal "
+        "signs. Mx: optimise heart failure therapy first, since that "
+        "alone often abolishes events. Reduce or rotate opioids. "
+        "Adaptive servo-ventilation is contraindicated when the "
+        "ejection fraction is 45 per cent or less because of excess "
+        "mortality. Note: apnoea without effort points at the pump or "
+        "the drugs, not the pharynx."
+    ),
+    "Shift work sleep disorder": (
+        "A circadian rhythm sleep disorder from work scheduled during "
+        "the normal sleep period, causing insomnia during rest and "
+        "sleepiness during work. Aetiology: misalignment between the "
+        "endogenous clock and the imposed roster, worsened by rapid "
+        "rotating shifts and light exposure at the wrong circadian "
+        "phase. Vulnerability rises with age and morning chronotype. "
+        "Clinical features: difficulty initiating and maintaining "
+        "sleep after shift, total sleep one to four hours below "
+        "baseline, and sleepiness at work with microsleeps and "
+        "impaired concentration. Associated with gastrointestinal "
+        "symptoms, mood disturbance and increased vehicle crash risk. "
+        "Ix: clinical, with a sleep diary and actigraphy over at "
+        "least seven days spanning work and rest days. Exclude "
+        "obstructive sleep apnoea, depression and substance use as "
+        "coexisting contributors. Mx: roster design with forward "
+        "rotation and adequate recovery, strategic napping before "
+        "night shift and bright light during it. Dark glasses on the "
+        "commute home protect the sleep window, and melatonin before "
+        "daytime sleep helps. Address fitness to drive after night "
+        "duty. Note: fixing the roster and the light exposure beats "
+        "prescribing hypnotics."
+    ),
+    "Drug-induced parkinsonism": (
+        "Parkinsonism caused by dopamine receptor blockade or "
+        "depletion, the commonest secondary parkinsonism and "
+        "frequently mistaken for Parkinson disease. Aetiology: "
+        "typical and atypical antipsychotics, metoclopramide and "
+        "prochlorperazine, and less often sodium valproate, lithium "
+        "and calcium channel blockers. Risk rises with age, female "
+        "sex and higher dose. Clinical features: symmetrical "
+        "bradykinesia and rigidity developing over weeks to months, "
+        "often with a postural or bilateral tremor rather than an "
+        "asymmetric rest tremor. Coexisting akathisia or orolingual "
+        "dyskinesia strongly supports a drug cause, and preserved "
+        "olfaction is a useful clue. Ix: review the medication chart "
+        "including recent depot injections and over-the-counter "
+        "antiemetics. DaTSCAN imaging is normal here and abnormal in "
+        "Parkinson disease when the distinction matters. Mx: stop or "
+        "reduce the offending drug, or switch to a lower-risk agent "
+        "such as quetiapine where antipsychotic therapy must "
+        "continue. Recovery takes weeks to months and may be "
+        "incomplete. Anticholinergics are avoided in older people. "
+        "Note: check the antiemetic history before diagnosing "
+        "Parkinson disease in an older patient."
+    ),
+    "Synthetic cannabinoid toxicity": (
+        "Poisoning from synthetic cannabinoid receptor agonists "
+        "sprayed on plant material and sold as Spice or Kronic, which "
+        "are full agonists far more potent than tetrahydrocannabinol. "
+        "Aetiology: full CB1 agonism without the ceiling effect of "
+        "natural cannabis, with unpredictable potency between and "
+        "within batches. Use concentrates in custodial settings and "
+        "among people avoiding urine drug screening. Clinical "
+        "features: agitation, psychosis, tachycardia and "
+        "hypertension, with vomiting, seizures and reduced conscious "
+        "state at the severe end. Effects not typical of cannabis "
+        "include acute kidney injury, myocardial ischaemia and "
+        "hyperthermia. Cases often cluster around a single batch. Ix: "
+        "clinical, since routine urine drug screens do not detect "
+        "these compounds. Check glucose, electrolytes, creatine "
+        "kinase, renal function and ECG, and image the brain if there "
+        "are focal signs. Mx: supportive care in a low-stimulus "
+        "environment with titrated benzodiazepines for agitation and "
+        "seizures, fluids and active cooling. Discuss with the "
+        "Poisons Information Centre on 13 11 26 and arrange drug and "
+        "alcohol follow-up. Note: a negative cannabis screen never "
+        "excludes this."
+    ),
+    "Methamphetamine-associated cardiomyopathy": (
+        "Dilated cardiomyopathy attributable to chronic "
+        "methamphetamine use, an increasingly common cause of heart "
+        "failure in Australians under 50. Aetiology: sustained "
+        "catecholamine excess causing myocyte injury, oxidative "
+        "stress and fibrosis, compounded by tachycardia and "
+        "hypertension. Risk rises with duration, dose and injecting "
+        "or smoking routes. Clinical features: heart failure with "
+        "reduced ejection fraction in a young patient with dyspnoea, "
+        "orthopnoea and oedema, often with arrhythmia. Presentation "
+        "is frequently late with severe left ventricular dilatation. "
+        "Dental disease, weight loss and psychosis support the "
+        "history. Ix: echocardiography confirms dilatation and "
+        "reduced ejection fraction. Add ECG, troponin, BNP and urine "
+        "drug screen, with cardiac MRI to assess fibrosis and exclude "
+        "alternatives. Mx: abstinence is the single most important "
+        "intervention and can produce substantial recovery of "
+        "function. Add guideline heart failure therapy with an ACE "
+        "inhibitor or ARNI, beta blocker, mineralocorticoid "
+        "antagonist and SGLT2 inhibitor. Engage drug and alcohol "
+        "services early. Note: reversibility depends almost entirely "
+        "on whether the patient stops using."
+    ),
+    "Copper deficiency": (
+        "An underdiagnosed micronutrient deficiency producing "
+        "haematological and neurological disease that closely mimics "
+        "vitamin B12 deficiency. Aetiology: bariatric surgery "
+        "particularly gastric bypass, malabsorption, prolonged "
+        "parenteral nutrition without supplementation, and excessive "
+        "zinc from supplements or denture adhesives, which induces "
+        "metallothionein and blocks copper absorption. Clinical "
+        "features: a microcytic or normocytic anaemia with "
+        "neutropenia that fails to respond to iron, plus a "
+        "myeloneuropathy with dorsal column sensory ataxia and "
+        "spastic gait. The picture is nearly identical to subacute "
+        "combined degeneration. Ix: serum copper and caeruloplasmin "
+        "are low, and serum and urinary zinc identify zinc excess. "
+        "Bone marrow may show ringed sideroblasts and vacuolated "
+        "precursors, and spinal MRI can show dorsal column signal "
+        "change. Mx: stop excess zinc and replace copper orally, or "
+        "intravenously if malabsorption is severe, then monitor "
+        "levels. Blood counts normalise within weeks but neurological "
+        "deficits often stabilise rather than reverse. Note: think of "
+        "it when B12 is normal but the cord picture is not."
+    ),
+    "Pressure injury staging": (
+        "The international classification of localised skin and soft "
+        "tissue damage over a bony prominence caused by pressure or "
+        "pressure with shear. Aetiology: sustained interface pressure "
+        "exceeding capillary closing pressure, with shear, moisture, "
+        "malnutrition and impaired sensation as accelerants. Sacrum, "
+        "heels and ischial tuberosities are the usual sites. Staging: "
+        "Stage 1 is intact skin with non-blanchable erythema. Stage 2 "
+        "is partial thickness loss with exposed dermis or a "
+        "serum-filled blister. Stage 3 exposes subcutaneous fat and "
+        "Stage 4 exposes fascia, muscle or bone. Unstageable means "
+        "slough or eschar obscures the base. Ix: clinical staging "
+        "with photography and measurement. Investigate for "
+        "osteomyelitis with imaging and inflammatory markers when "
+        "bone is probed or healing stalls, and assess nutrition. Mx: "
+        "pressure redistribution surfaces and repositioning, moisture "
+        "and continence management, optimised protein and energy "
+        "intake and stage-appropriate dressings. Debride devitalised "
+        "tissue except stable heel eschar. Note: stages describe "
+        "depth, they do not track healing backwards."
+    ),
+    "Carotid sinus hypersensitivity": (
+        "An exaggerated baroreceptor reflex response to carotid sinus "
+        "stimulation, causing syncope or unexplained falls in older "
+        "adults. Aetiology: age-related baroreflex dysfunction, often "
+        "with coexisting carotid atherosclerosis and hypertension. "
+        "Precipitants include head turning, tight collars, shaving "
+        "and neck extension. Clinical features: syncope or presyncope "
+        "with little or no prodrome, frequently presenting as an "
+        "unexplained fall with amnesia for the event. The "
+        "cardioinhibitory type causes asystole beyond 3 seconds and "
+        "the vasodepressor type a systolic drop over 50 mmHg. Ix: "
+        "carotid sinus massage for 5 to 10 seconds with continuous "
+        "ECG and blood pressure monitoring, supine then tilted, "
+        "avoided after recent stroke or with a carotid bruit. Add "
+        "tilt table testing and ambulatory ECG. Mx: avoid "
+        "precipitants, review vasoactive and antihypertensive drugs "
+        "and address other falls risks. Dual chamber pacing benefits "
+        "symptomatic cardioinhibitory disease, while the "
+        "vasodepressor type is managed with fluid, salt and "
+        "compression. Note: consider it in every older person with "
+        "unexplained falls and no witness."
+    ),
+    "Postoperative atelectasis": (
+        "Collapse of alveolar units after anaesthesia and surgery, "
+        "the commonest pulmonary complication after major operations. "
+        "Aetiology: general anaesthesia reduces functional residual "
+        "capacity and abolishes sighing, high inspired oxygen "
+        "promotes absorption collapse, and diaphragmatic dysfunction "
+        "after upper abdominal or thoracic surgery impairs deep "
+        "breathing. Pain, obesity and retained secretions compound "
+        "it. Clinical features: low-grade fever and hypoxia within "
+        "the first 48 hours with reduced chest expansion and basal "
+        "crackles. Often asymptomatic and found only on imaging. "
+        "Fever persisting beyond 72 hours suggests pneumonia rather "
+        "than simple collapse. Ix: pulse oximetry and chest "
+        "radiograph showing basal opacification with volume loss. "
+        "Consider CT and arterial blood gas if hypoxia is "
+        "disproportionate, and exclude pulmonary embolism when the "
+        "picture does not fit. Mx: adequate analgesia to allow deep "
+        "breathing, early mobilisation, incentive spirometry and "
+        "chest physiotherapy. Add CPAP or high-flow nasal oxygen for "
+        "refractory hypoxia. Bronchoscopy is reserved for lobar "
+        "collapse from a mucus plug. Note: the treatment is getting "
+        "the patient upright, comfortable and breathing deeply."
+    ),
+    "Escharotomy": (
+        "Surgical incision through full-thickness burn eschar to "
+        "relieve constriction caused by inelastic burnt skin. "
+        "Aetiology: circumferential or near-circumferential "
+        "full-thickness burns to a limb, digit, neck or chest. As "
+        "oedema accumulates during resuscitation, pressure rises "
+        "beneath the rigid eschar and causes distal ischaemia or "
+        "restricts chest wall excursion. Clinical features: a tense "
+        "cold pale limb with pain, paraesthesia, loss of capillary "
+        "refill and diminishing Doppler signals distally. Chest "
+        "involvement presents as rising airway pressures and "
+        "hypercapnia. Loss of pulses is a late and unreliable sign. "
+        "Ix: serial clinical assessment with handheld Doppler is the "
+        "mainstay, supported by compartment pressure measurement "
+        "where available. Mx: perform early at the bedside using "
+        "diathermy along the mid-medial and mid-lateral limb axes, "
+        "through eschar into subcutaneous fat until the wound gapes "
+        "and perfusion returns. Discuss with the state burns service "
+        "before or during transfer. Add fasciotomy if muscle "
+        "compartments are also tight, as in electrical injury. Note: "
+        "waiting for absent pulses means waiting too long."
+    ),
+    "Inhalation injury": (
+        "Airway and lung damage from thermal injury, asphyxiants and "
+        "chemical irritants in smoke, and the strongest independent "
+        "predictor of mortality in burns. Aetiology: enclosed space "
+        "fires producing supraglottic thermal injury, systemic carbon "
+        "monoxide and cyanide poisoning, and distal chemical injury "
+        "from aldehydes causing bronchospasm and mucosal sloughing. "
+        "Clinical features: facial burns, singed nasal hairs, "
+        "carbonaceous sputum, hoarseness and soot in the oropharynx, "
+        "with a history of enclosed space exposure or reduced "
+        "conscious state at the scene. Deterioration is progressive "
+        "over hours as oedema develops. Ix: arterial blood gas with "
+        "carboxyhaemoglobin and lactate, since a high lactate "
+        "suggests cyanide toxicity. Chest radiograph is often "
+        "initially normal and bronchoscopy grades injury. Mx: "
+        "high-flow 100 per cent oxygen immediately and early "
+        "intubation with an uncut large-bore tube before oedema "
+        "closes the airway. Give hydroxocobalamin for suspected "
+        "cyanide toxicity. Use lung-protective ventilation and refer "
+        "to the state burns unit. Note: intubate on the trajectory, "
+        "not once stridor arrives."
+    ),
+    "Tranexamic acid in trauma": (
+        "An antifibrinolytic lysine analogue that blocks plasminogen "
+        "binding to fibrin, reducing death from bleeding when given "
+        "early after major trauma. Aetiology: trauma-induced "
+        "coagulopathy involves hyperfibrinolysis driven by shock, "
+        "tissue injury, acidosis and hypothermia, and tranexamic acid "
+        "targets that fibrinolytic limb. Ix: use clinical criteria of "
+        "significant haemorrhage or risk of it, supported by "
+        "viscoelastic testing where available. Do not delay the dose "
+        "waiting for results. Mx: give 1 g intravenously over 10 "
+        "minutes as soon as possible after injury, then 1 g over 8 "
+        "hours, the CRASH-2 regimen used in NSW Ambulance and "
+        "hospital major haemorrhage protocols. Benefit falls with "
+        "every 15 minutes of delay, and treatment beyond 3 hours from "
+        "injury increased bleeding deaths. CRASH-3 supports use in "
+        "traumatic brain injury with a GCS above 8. Combine with "
+        "damage control resuscitation and rapid haemorrhage control. "
+        "Complications: seizures at high dose and a small thrombotic "
+        "risk, both modest against the mortality benefit. Note: early "
+        "or not at all, because the three hour window is the whole "
+        "point."
+    ),
+    "Trauma in pregnancy": (
+        "Injury to a pregnant patient, the leading non-obstetric "
+        "cause of maternal death and a situation where two patients "
+        "depend on resuscitating one. Aetiology: motor vehicle "
+        "crashes dominate, followed by falls and interpersonal "
+        "violence, which is under-reported and should be asked about "
+        "privately. Plasma volume rises by up to 50 per cent, so 1200 "
+        "to 1500 mL can be lost before hypotension appears while the "
+        "fetus is already compromised. Clinical features: the usual "
+        "trauma survey plus abdominal pain, uterine tenderness, "
+        "contractions and vaginal bleeding. Placental abruption is "
+        "the commonest cause of fetal death after blunt trauma and "
+        "occurs with minor mechanisms and no external bleeding. Ix: "
+        "do not withhold standard trauma imaging, as diagnostic doses "
+        "are well below the fetal threshold. Add cardiotocography for "
+        "at least four hours beyond 23 weeks, Kleihauer-Betke testing "
+        "and a group and antibody screen. Mx: resuscitate the mother "
+        "first with manual uterine displacement beyond 20 weeks, and "
+        "give anti-D to Rh negative women within 72 hours. Involve "
+        "obstetrics early. Note: the best fetal resuscitation is a "
+        "well-resuscitated mother."
     ),
 }
 
