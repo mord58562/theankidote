@@ -73103,14 +73103,571 @@ NEW_PRECLINICAL = [
 # the reader will trust it. `build_library.py` fails the build if a key
 # here names no condition in the library.
 ENTRY_REFS = {
-    "Pelvic organ prolapse": [
+    "Abdominal palpation in pregnancy": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK560814/#article-24190.s6"],
+    "Aboriginal and Torres Strait Islander maternal and perinatal health": [
+        "AIHW",
+        "https://www.aihw.gov.au/reports/mothers-babies/australias-moth"
+        "ers-babies/contents/about"],
+    "Amniotic fluid": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK541089/"],
+    "Amniotic fluid index": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK570623/#article-128643.s"
+        "7"],
+    "Anaesthesia for caesarean section": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK546707/#article-19265.s9"],
+    "Antenatal care schedule": [
         "RANZCOG",
-        "https://ranzcog.edu.au/wp-content/uploads/2022/05/"
-        "Pelvic-Organ-Prolapse.pdf"],
+        "https://ranzcog.edu.au/wp-content/uploads/Routine-Antenatal-As"
+        "sessment.pdf"],
+    "Antenatal corticosteroids": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Corticos"
+        "teroids-Use-of.pdf"],
+    "Antepartum haemorrhage": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/antepartum-haemorrhage-assessment-and"
+        "-management"],
+    "Anti-D immunoglobulin": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Anti-D-Guidelines.pd"
+        "f"],
+    "Arrest of labour": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Labour-F"
+        "irst-Stage-and-Management-of-Delay.pdf"],
+    "Australian pregnancy drug categories": [
+        "TGA",
+        "https://www.tga.gov.au/resources/health-professional-informati"
+        "on-and-resources/australian-categorisation-system-prescribing-"
+        "medicines-pregnancy/prescribing-medicines-pregnancy-database"],
+    "Barrier contraception": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Bartholin cyst": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK532271/"],
+    "Bimanual pelvic examination": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Gynaecological-Exami"
+        "nations-Procedures.pdf"],
+    "Breast lump": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK560757/"],
+    "Breast milk": [
+        "NHMRC",
+        "https://www.nhmrc.gov.au/about-us/publications/infant-feeding-"
+        "guidelines-information-health-workers"],
+    "BreastScreen Australia": [
+        "Department of Health",
+        "https://www.health.gov.au/our-work/breastscreen-australia-prog"
+        "ram"],
+    "Caesarean section": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Caesarea"
+        "n-Birth.pdf"],
+    "Cardiac arrest in pregnancy": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK534240/#article-23976.s4"],
+    "Cervical cancer screening": [
+        "Cancer Council",
+        "https://www.cancer.org.au/health-professionals/clinical-practi"
+        "ce-guidelines/cervical-cancer-screening"],
+    "Cervical effacement": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK544290/#article-29431.s6"],
+    "Cervical intraepithelial neoplasia": [
+        "Cancer Council",
+        "https://www.cancer.org.au/health-professionals/clinical-practi"
+        "ce-guidelines/cervical-cancer-screening"],
+    "Cervical length screening": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Measurement-Cervical"
+        "-Length-Preterm-Birth.pdf"],
+    "Cervical polyp": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Vaginal-"
+        "Procedures.pdf"],
+    "Cervical transformation zone": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK564514/#article-19748.s3"],
+    "Chickenpox in pregnancy": [
+        "Immunisation Handbook",
+        "https://immunisationhandbook.health.gov.au/contents/vaccine-pr"
+        "eventable-diseases/varicella-chickenpox"],
+    "Combined first trimester screening": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Fetal-Anomalies-Clin"
+        "ical-Guideline.pdf"],
+    "Combined oral contraceptive pill": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Congenital cytomegalovirus": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Prevention-CMV-Infec"
+        "tion.pdf"],
+    "Contraception": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Contraceptive diaphragm": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Contraceptive efficacy": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Contraceptive vaginal ring": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Copper intrauterine device": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Cord and neonatal blood gas interpretation": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/neonatal/blood-gas-interpretation-for-neonates"],
+    "Cow's milk protein allergy": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/mch/faltering-growth"],
+    "Decreased fetal movements": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/decreased-fetal-movements"],
+    "Depot medroxyprogesterone acetate": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Dysmenorrhoea": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK560834/"],
+    "Early-onset group B streptococcal disease": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/neonatal/group-b-streptococcus-sepsis-gbs-scree"
+        "ning-and-management"],
+    "Emergency contraception": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Endometrial thickness": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK525981/#article-21102.s8"],
+    "Erythema toxicum neonatorum": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK470222/"],
+    "Faecal incontinence": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459128/"],
+    "Fertile window": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK441996/"],
+    "Fetal blood sampling": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Fetal-sc"
+        "alp-blood-sampling.pdf"],
+    "Fetal heart rate decelerations": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Intrapartum-Fetal-Su"
+        "rveillance.pdf"],
+    "Fetal lie": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK560814/#article-24190.s2"],
+    "Fetal position": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK560814/#article-24190.s2"],
+    "Fetal presentation": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK560814/#article-24190.s2"],
+    "Fetal scalp electrode": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Intrapartum-Fetal-Su"
+        "rveillance.pdf"],
+    "Fetal station": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK544290/#article-29431.s6"],
+    "First stage of labour": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Labour-F"
+        "irst-Stage-and-Management-of-Delay.pdf"],
+    "Fourth stage of labour": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/care-during-labour-and-birth"],
+    "Galactorrhoea": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK537115/"],
+    "Group B streptococcus colonisation": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Maternal-Group-B-Str"
+        "eptococcus-in-Pregnancy-Screening-Management.pdf"],
+    "Group B streptococcus in pregnancy": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Maternal-Group-B-Str"
+        "eptococcus-in-Pregnancy-Screening-Management.pdf"],
+    "HPV vaccination Australia": [
+        "Immunisation Handbook",
+        "https://immunisationhandbook.health.gov.au/contents/vaccine-pr"
+        "eventable-diseases/human-papillomavirus-hpv"],
+    "Human placental lactogen": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK538332/#article-27261.s3"],
+    "Hydrops fetalis": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK563214/"],
+    "Hyperemesis in pregnancy": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/nausea-and-vomiting"],
+    "Hypothyroidism in pregnancy": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Hypothyroidism.pdf"],
+    "Hysterectomy": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK564366/#article-23320.s4"],
+    "Induction of labour": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/induction-of-labour"],
+    "Infertility": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK556033/"],
+    "Intermittent auscultation of the fetal heart": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Intrapartum-Fetal-Su"
+        "rveillance.pdf"],
+    "Intrahepatic cholestasis of pregnancy": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Cholesta"
+        "sis-In-Pregnancy.pdf"],
+    "Intrauterine growth restriction": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Small-fo"
+        "r-Gestational-Age-and-Intrauterine-Growth-Restriction-Manageme"
+        "nt-of.pdf"],
+    "Labour analgesia": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Pain-Man"
+        "agement---Obstetrics.pdf"],
+    "Lactation": [
+        "NHMRC",
+        "https://www.nhmrc.gov.au/about-us/publications/infant-feeding-"
+        "guidelines-information-health-workers"],
+    "Lactational mastitis": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/mch/localised-breast-inflammation-and-mastitis"],
+    "Levonorgestrel intrauterine system": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Listeriosis in pregnancy": [
+        "NSW Health",
+        "https://www.health.nsw.gov.au/Infectious/factsheets/Pages/list"
+        "eriosis.aspx"],
+    "Long-acting reversible contraception": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Mastitis": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/mch/localised-breast-inflammation-and-mastitis"],
+    "Maternal mortality": [
+        "AIHW",
+        "https://www.aihw.gov.au/reports/mothers-babies/maternal-deaths"
+        "-in-australia/contents/about"],
+    "Mechanisms of labour": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK544290/#article-29431.s5"],
+    "Medication abortion": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Clinical-Guideline-A"
+        "bortion-Care.pdf"],
+    "Menopausal hormone therapy": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Managing-Menopausal-"
+        "Symptoms.pdf"],
+    "Menorrhagia": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Menstrua"
+        "l-Bleeding-Heavy.pdf"],
+    "Menstrual cycle": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK500020/"],
+    "Myometrium": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK470297/#article-30903.s6"],
+    "Neonatal conjunctivitis": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK551572/"],
+    "Neonatal hypoglycaemia": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/neonatal/hypoglycaemia-in-neonates"],
+    "Neonatal lupus": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK526061/"],
+    "Neonatal pneumothorax": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/neonatal/pneumothorax-drainage-for-neonates"],
+    "Neonatal respiratory distress": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/neonatal/respiratory-distress-syndrome-rds-in-n"
+        "eonates"],
+    "Neonatal respiratory support": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/neonatal/nasal-continuous-positive-airway-press"
+        "ure-ncpap-for-neonates"],
+    "Neonatal resuscitation": [
+        "ANZCOR",
+        "https://www.anzcor.org/home/neonatal-resuscitation"],
+    "Nipple discharge": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK430938/"],
+    "Nipple thrush": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/mch/nipple-pain-and-damage"],
+    "Oestrogen": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK541051/"],
+    "Operative vaginal delivery": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Instrumental-Vaginal"
+        "-Birth.pdf"],
+    "Osteoporosis": [
+        "RACGP",
+        "https://www.racgp.org.au/clinical-resources/clinical-guideline"
+        "s/key-racgp-guidelines/view-all-racgp-guidelines/osteoporosis/"
+        "executive-summary"],
+    "Osteoporosis screening": [
+        "RACGP",
+        "https://www.racgp.org.au/clinical-resources/clinical-guideline"
+        "s/key-racgp-guidelines/view-all-racgp-guidelines/osteoporosis/"
+        "executive-summary"],
+    "Ovarian anatomy": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK545187/#article-26459.s2"],
+    "Ovarian cycle hormones": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK500020/#article-24987.s6"],
+    "Ovarian folliculogenesis": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK441996/#article-26475.s3"],
+    "Ovarian mass": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK567760/#article-95586.s8"],
+    "Ovarian reserve": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK556033/#article-23502.s7"],
+    "Overflow incontinence": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK559095/#article-30850.s3"],
+    "Paget disease of the nipple": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK563228/"],
+    "Paget disease of the vulva": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK493224/"],
+    "Pelvic pain in women": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Pain-Acu"
+        "te-on-Chronic-Pelvic-Pain-Management.pdf"],
+    "Perinatal mortality": [
+        "AIHW",
+        "https://www.aihw.gov.au/reports/mothers-babies/australias-moth"
+        "ers-babies/contents/about"],
+    "Perineal tear": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/RCOG-Management-Thir"
+        "d-Fourth-Degree-Perineal-Tears.pdf"],
+    "Physiology of labour onset": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK544290/#article-29431.s3"],
+    "Placenta praevia": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/antepartum-haemorrhage-assessment-and"
+        "-management"],
+    "Placental anatomy": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK538332/#article-27261.s2"],
+    "Placental drug transfer": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK538332/#article-27261.s3"],
+    "Polymorphic eruption of pregnancy": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK539700/"],
+    "Postpartum endometritis": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Infectio"
+        "n-Postnatal-Infection-Treatment.pdf"],
+    "Postpartum urinary retention": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Bladder-"
+        "Management.pdf"],
+    "Pre-eclampsia": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/hypertension-in-pregnancy"],
+    "Pregnancy of unknown location": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Miscarriage-Ectopic-"
+        "Pregnancy.pdf"],
+    "Premenstrual dysphoric disorder": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK532307/"],
+    "Premenstrual syndrome": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK532307/"],
+    "Preterm birth": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/preterm-labour"],
+    "Preterm prelabour rupture of membranes": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/preterm-pre-labour-rupture-of-membran"
+        "es"],
+    "Progestogen-only pill": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Prolonged pregnancy": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Prolonge"
+        "d-Pregnancy.pdf"],
+    "Puerperal sepsis": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Infectio"
+        "n-Postnatal-Infection-Treatment.pdf"],
+    "Puerperium": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Postnata"
+        "l-Care---Inpatient.pdf"],
+    "Quick start contraception": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinic"
+        "al-Guideline.pdf"],
+    "Recurrent vulvovaginal candidiasis": [
+        "STI Guidelines Australia",
+        "https://sti.guidelines.org.au/sexually-transmissible-infection"
+        "s/candidiasis/"],
+    "Retained placenta": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Labour-T"
+        "hird-Stage.pdf"],
+    "Rhesus isoimmunisation": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Anti-D-Guidelines.pd"
+        "f"],
+    "Second stage of labour": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Labour-S"
+        "econd-Stage-Management.pdf"],
+    "Second trimester maternal serum screening": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Fetal-Anomalies-Clin"
+        "ical-Guideline.pdf"],
+    "Serous cystadenocarcinoma of the ovary": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK567760/#article-95586.s6"],
+    "Signs of placental separation": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Labour-T"
+        "hird-Stage.pdf"],
+    "Smoking in pregnancy": [
+        "RACGP",
+        "https://www.racgp.org.au/clinical-resources/clinical-guideline"
+        "s/key-racgp-guidelines/view-all-racgp-guidelines/supporting-sm"
+        "oking-cessation"],
+    "Suspensory ligament of the ovary": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK545187/#article-26459.s4"],
+    "Termination of pregnancy": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Clinical-Guideline-A"
+        "bortion-Care.pdf"],
+    "Third stage of labour": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Labour-T"
+        "hird-Stage.pdf"],
+    "Trauma in pregnancy": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Abdomina"
+        "l-trauma-management-of-during-Pregnancy.pdf"],
+    "Tubal ligation": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK470377/"],
+    "Twin pregnancy": [
+        "KEMH (WA Health)",
+        "https://www.kemh.health.wa.gov.au/~/media/HSPs/NMHS/Hospitals/"
+        "WNHS/Documents/Clinical-guidelines/Obs-Gyn-Guidelines/Multiple"
+        "-Pregnancy.pdf"],
+    "Uterine artery": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK482267/"],
+    "Uterine fibroids": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK546680/"],
+    "Uterine ligaments": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK499943/"],
+    "Uterus": [
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK470297/"],
+    "Vaginal birth after caesarean": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/Birth-After-Caesarea"
+        "n.pdf"],
+    "Vaginal examination in labour": [
+        "Safer Care Victoria",
+        "https://www.safercare.vic.gov.au/best-practice-improvement/cli"
+        "nical-guidance/maternity/care-during-labour-and-birth"],
     "Vaginal pessary": [
-        "RANZCOG",
-        "https://ranzcog.edu.au/wp-content/uploads/2022/05/"
-        "Pelvic-Organ-Prolapse.pdf"],
+        "StatPearls",
+        "https://www.ncbi.nlm.nih.gov/books/NBK563229/#article-26869.s1"
+        "0"],
+    "Vulvovaginal candidiasis": [
+        "STI Guidelines Australia",
+        "https://sti.guidelines.org.au/sexually-transmissible-infection"
+        "s/candidiasis/"],
 }
 
 
