@@ -136,3 +136,52 @@ most of them proven with a repro:
 Still in flight when this was written: the matching engine (aliases
 never highlight; a literal `<` in text kills highlighting from that
 point on) and the remaining StatPearls panel findings.
+
+
+## Closed
+
+Every finding from the seven audit dimensions is either fixed or
+recorded as rejected with its evidence. 185 tests green, up from 164;
+21 of the new ones fail against the code as it stood this morning.
+
+`theankidote-2.5.0.ankiaddon` rebuilt: 65 files, bundling content
+`08.09.2026.2`. Manifest version deliberately unchanged at 2.5.0 -
+everything here folds into the re-upload that was already outstanding.
+
+Content published twice today: `08.09.2026.1` (the 81 entries the
+scheduled agent had pushed source-only) and `08.09.2026.2` (127
+en-dashes cleared out of the base vocabulary).
+
+### For Rob to exercise from the built package
+
+All of this is Qt surface, which cannot be tested from here:
+
+- A double-click on a row in RELEVANT ARTICLES loads once, not twice;
+  Enter on a keyboard-selected row still loads it; arrow keys still
+  move the selection.
+- Clicking the DrugBank pill while already reading a DrugBank
+  monograph, then restarting: the panel should reopen on the monograph.
+- A drug with no DrugBank id: the auto-jump now navigates from Python,
+  so the drug page should appear rather than its search results, and
+  should be cached for next time.
+- Opening an article from a popup should collapse the article list to
+  its header strip, and the next card should bring it back.
+- A condition popup should now show an UpToDate chip row.
+- Settings: "Open sources in" is two radios rather than a checkbox.
+- The Tools menu checkmarks should agree with Settings after changing a
+  module switch there.
+
+### Deliberately still open
+
+- The popup's vertical rhythm. Unchanged reasoning: fourteen spacing
+  values, a 900px cap, 29 summaries already over it, and a ratchet that
+  only lets the count fall.
+- Signing the content manifest. The host is pinned; a signature against
+  a key in the package is the real answer and is a larger change.
+- 387 short abbreviation aliases are still not underlined when written
+  alone, because matching them case-blind would light up ordinary words
+  ("DID" is an alias for dissociative identity disorder). The fix is
+  moving them into the acronym table, which is content work.
+- A `>` inside an HTML comment still ends the tag early. Same as it has
+  always been, and the only consequence is a mark landing somewhere
+  invisible; fixing it means writing a comment/CDATA parser.
