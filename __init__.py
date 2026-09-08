@@ -240,8 +240,16 @@ def toggle_pearls_dock() -> None:
     if _pearls_dock is None:
         return
     if _pearls_dock_visible:
-        _pearls_dock.hide()
+        # The mirror is set BEFORE the call, not after. Qt emits
+        # `visibilityChanged` synchronously from inside show()/hide(),
+        # so `_on_dock_visibility` runs while this function is still on
+        # the stack - and with the assignment afterwards it saw a flag
+        # that still held the old value, decided the change had come
+        # from outside, and logged a "without a toggle" line whose own
+        # stack trace pointed straight back here. Every ordinary toggle
+        # reported itself as the anomaly the diagnostic exists to find.
         _pearls_dock_visible = False
+        _pearls_dock.hide()
         try:
             mw.web.setFocus()
         except Exception:
@@ -254,8 +262,8 @@ def toggle_pearls_dock() -> None:
             else:
                 _pearls_panel.show_article_list()
         _last_opened_card_id = card_id
-        _pearls_dock.show()
         _pearls_dock_visible = True
+        _pearls_dock.show()
         _fix_pearls_dock()
     _persist_dock_state()
     request_toolbar_redraw()
@@ -307,8 +315,9 @@ def open_reference_url(url: str) -> None:
 def show_pearls_dock() -> None:
     global _pearls_dock_visible
     if _pearls_dock and not _pearls_dock_visible:
-        _pearls_dock.show()
+        # Set before the call; see `toggle_pearls_dock`.
         _pearls_dock_visible = True
+        _pearls_dock.show()
         _fix_pearls_dock()
         _persist_dock_state()
         request_toolbar_redraw()
@@ -984,6 +993,13 @@ def _setup() -> None:
     # closes. Rob sees the sidebar appear on Escape from the note
     # editor, and neither of those two functions is reachable from
     # there, so something outside this file is doing it.
+    #
+    # The signal also arrives synchronously from inside our own
+    # show()/hide(), so the two toggle paths set the mirror before they
+    # call, and the guard below is what makes that work: a change we
+    # caused finds the flag already agreeing and returns. Without that
+    # ordering this logged on every toggle and the real signal was
+    # buried in its own false positives.
     #
     # Following the signal fixes the consequence either way: the flag
     # stops disagreeing with the screen, so the toolbar button stops

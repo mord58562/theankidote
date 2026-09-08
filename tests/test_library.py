@@ -541,6 +541,64 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
                          "updater refuses, so no install can download "
                          "content")
 
+    def test_dock_visibility_mirror_is_set_before_the_qt_call(self):
+        """Qt emits `visibilityChanged` synchronously from inside
+        show()/hide(), so `_on_dock_visibility` runs with this function
+        still on the stack. Its guard is the only thing stopping a
+        toggle we caused from being treated as one we did not, and the
+        guard only works if the mirror already holds the new value when
+        the call is made.
+
+        With the assignment after the call, every ordinary toggle
+        logged a "pearls dock became visible without a toggle" line
+        whose own stack trace named `toggle_pearls_dock` - the
+        diagnostic added to find an unexplained show was reporting
+        itself, and the real signal was buried in the false positives.
+        Rob's log carried four such pairs in eleven minutes.
+
+        Source-level because `__init__.py` imports `aqt` and cannot be
+        imported under test. A replicated copy of the ordering would
+        test the copy.
+        """
+        import ast
+        import pathlib
+        root = pathlib.Path(__file__).resolve().parent.parent
+        tree = ast.parse((root / "__init__.py").read_text(encoding="utf-8"))
+        funcs = {n.name: n for n in ast.walk(tree)
+                 if isinstance(n, ast.FunctionDef)}
+        for name in ("toggle_pearls_dock", "show_pearls_dock"):
+            self.assertIn(name, funcs, f"{name} has been renamed")
+            fn = funcs[name]
+            # Walk the body in source order, recording each event as it
+            # appears: an assignment to the mirror, or a show/hide on
+            # the dock. Each show/hide must be preceded by an
+            # assignment, on any path.
+            events = []
+            for node in ast.walk(fn):
+                if isinstance(node, ast.Assign):
+                    for t in node.targets:
+                        if isinstance(t, ast.Name) and \
+                                t.id == "_pearls_dock_visible":
+                            events.append(("set", node.lineno))
+                elif isinstance(node, ast.Call) and \
+                        isinstance(node.func, ast.Attribute) and \
+                        node.func.attr in ("show", "hide") and \
+                        isinstance(node.func.value, ast.Name) and \
+                        node.func.value.id == "_pearls_dock":
+                    events.append(("call", node.lineno))
+            events.sort(key=lambda e: e[1])
+            for i, (kind, line) in enumerate(events):
+                if kind != "call":
+                    continue
+                prior = [k for k, _ in events[:i]]
+                self.assertIn(
+                    "set", prior,
+                    f"{name}: _pearls_dock.show()/hide() at line {line} "
+                    f"runs before _pearls_dock_visible is set. Qt emits "
+                    f"visibilityChanged synchronously from inside it, so "
+                    f"the handler will see a stale mirror and log the "
+                    f"toggle as an outside change.")
+
     # Names pyflakes cannot see because `_rebind_theme` writes them into
     # the module's `globals()` when the palette is built, so they exist
     # at runtime and not in the source. Listed rather than suppressed
