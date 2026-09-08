@@ -11805,6 +11805,90 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "intraoperative fluid management"]],
         "summary": "",
     },
+    {
+        "name": "Brief cognitive assessment",
+        "aliases": ["screening tool for cognitive impairment", "cognitive screening", "bedside cognitive testing", "brief cognitive assessments"],
+        "utd": [["Overview", "screening for cognitive impairment in older adults"], ["Tools", "mental status scales to detect delirium and dementia"]],
+        "summary": "",
+    },
+    {
+        "name": "Rowland Universal Dementia Assessment Scale",
+        "aliases": ["RUDAS"],
+        "utd": [["Overview", "cognitive screening tests culturally diverse older adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Anxiety screening",
+        "aliases": ["screening tool for anxiety", "anxiety screening tool", "anxiety screening tools"],
+        "utd": [["Overview", "screening for anxiety disorders in adults"], ["Tool", "GAD-7 generalized anxiety disorder scale"]],
+        "summary": "",
+    },
+    {
+        "name": "Baseline monitoring before psychotropic prescribing",
+        "aliases": ["baseline investigations before psychotropic prescribing", "psychotropic baseline monitoring", "baseline examination before psychotropic prescribing"],
+        "utd": [["Overview", "monitoring for metabolic adverse effects of antipsychotics"]],
+        "summary": "",
+    },
+    {
+        "name": "Neurostimulation in psychiatry",
+        "aliases": ["neurostimulation", "neurostimulation modalities", "brain stimulation therapies"],
+        "utd": [["Overview", "brain stimulation therapies for treatment resistant depression"]],
+        "summary": "",
+    },
+    {
+        "name": "Cultural formulation",
+        "aliases": ["cultural formulation interview", "socio-cultural and spiritual factors in formulation", "cultural assessment in psychiatry"],
+        "utd": [["Overview", "cultural assessment in psychiatric evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychiatric emergencies",
+        "aliases": ["psychiatric emergency"],
+        "utd": [["Overview", "emergency evaluation of the agitated or psychotic patient"]],
+        "summary": "",
+    },
+    {
+        "name": "Person-first language in mental health",
+        "aliases": ["patient-centred language in mental health", "person-first language", "non-stigmatising language"],
+        "utd": [["Overview", "stigma and language in mental health care"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychotropic prescribing in the older person",
+        "aliases": ["treatment considerations in the older person", "prescribing psychotropics in the older person", "psychotropics in the elderly"],
+        "utd": [["Overview", "psychiatric medication use in older adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Child and adolescent mental health",
+        "aliases": ["child and adolescent psychiatry", "common child and adolescent mental health problems", "child and adolescent mental health problems"],
+        "utd": [["Overview", "overview of psychiatric assessment in children and adolescents"]],
+        "summary": "",
+    },
+    {
+        "name": "Family therapy",
+        "aliases": ["systemic therapy", "family systems therapy", "structural family therapy"],
+        "utd": [["Overview", "family therapy indications and techniques"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychological reactions to serious illness",
+        "aliases": ["psychological reactions to medical illness", "psychological reactions to serious and life-threatening illness", "adjustment to serious illness"],
+        "utd": [["Overview", "psychological response to serious medical illness"]],
+        "summary": "",
+    },
+    {
+        "name": "Mental health promotion and prevention",
+        "aliases": ["mental wellbeing promotion", "prevention of mental illness", "mental health promotion"],
+        "utd": [["Overview", "prevention of mental disorders public health approach"]],
+        "summary": "",
+    },
+    {
+        "name": "Natural course of mental disorders",
+        "aliases": ["course of mental disorders", "age of onset of mental disorders", "natural history of mental disorders"],
+        "utd": [["Overview", "epidemiology and course of psychiatric disorders"]],
+        "summary": "",
+    },
 ]
 
 
@@ -70616,6 +70700,287 @@ RICH_SUMMARIES = {
         "for zero balance - the patient should leave theatre neither "
         "dry nor two kilograms heavier, since oedematous bowel is "
         "slow bowel."
+    ),
+
+    "Brief cognitive assessment": (
+        "Structured bedside testing that decides whether a memory or "
+        "behaviour complaint reflects measurable impairment and gives "
+        "a number that can be repeated. Indications: new confusion, "
+        "functional decline, suspected dementia, and before starting "
+        "an anticholinergic or psychotropic in an older person. "
+        "Types: the MMSE is scored out of 30 with a traditional "
+        "cut-off of 24, but it is biased by education and language "
+        "and has a ceiling effect. The MoCA is also out of 30 with a "
+        "cut-off below 26, adds executive and visuospatial items, and "
+        "gives one extra point for 12 or fewer years of schooling. "
+        "The RUDAS is out of 30 and was built to survive translation, "
+        "so it suits patients whose first language is not English. "
+        "The KICA-Cog is validated for older Aboriginal people in "
+        "remote communities. Note: exclude delirium and depression "
+        "first, since either flattens a score and both are "
+        "reversible. Key point: a brief test establishes that "
+        "impairment is present, not what caused it, so an abnormal "
+        "score buys collateral history, bloods and imaging rather "
+        "than a diagnosis."
+    ),
+    "Rowland Universal Dementia Assessment Scale": (
+        "An Australian six-item cognitive screen designed to be fair "
+        "across culture, language and years of schooling, scored out "
+        "of 30. Indications: cognitive screening where English is a "
+        "second language, where formal education was limited, or "
+        "where an interpreter is needed, which covers a large share "
+        "of patients presenting to NSW aged care and mental health "
+        "services. Features: it tests recall with a four-item "
+        "shopping list, body orientation, praxis with alternating "
+        "hand movements, visuoconstruction with a cube, judgement "
+        "about crossing a road, and animal fluency. The items were "
+        "chosen to survive translation, so it can be administered "
+        "through an accredited interpreter without invalidating the "
+        "result. Diagnosis: a score of 22 or less out of 30 suggests "
+        "cognitive impairment; it neither diagnoses dementia nor "
+        "identifies a cause. Note: choose it over the MMSE or MoCA "
+        "whenever poor English or limited schooling would otherwise "
+        "be scored as dementia."
+    ),
+    "Anxiety screening": (
+        "Brief questionnaires that detect and grade anxiety symptoms "
+        "and track response; they do not make the diagnosis. Types: "
+        "the GAD-7 scores seven items 0 to 3 for a total of 0 to 21, "
+        "with 5, 10 and 15 marking mild, moderate and severe. Ten or "
+        "more is the usual threshold for probable generalised anxiety "
+        "disorder, and the instrument also performs reasonably for "
+        "panic, social anxiety and post-traumatic stress disorder. "
+        "Screening: the GAD-2 is the first two items with a cut-off "
+        "of 3 and fits a short general practice consultation, a "
+        "positive result prompting the full seven. The K10 is the "
+        "Australian instrument for mixed anxiety and depressive "
+        "distress. Mx: a positive screen earns a diagnostic interview "
+        "covering duration, avoidance, functional impact, caffeine "
+        "and stimulant use, and a mood and suicide assessment. Note: "
+        "repeat the same instrument at review, since the change in "
+        "score carries more information than any single reading. Key "
+        "point: thyrotoxicosis and methamphetamine both score high "
+        "and stay high until treated."
+    ),
+    "Baseline monitoring before psychotropic prescribing": (
+        "The examination and bloods recorded before a psychotropic is "
+        "started, so that later abnormalities can be attributed "
+        "rather than argued about. Ix: before an antipsychotic take "
+        "weight, waist circumference, blood pressure, pulse, fasting "
+        "glucose or HbA1c, lipids, U&E, LFT, FBC and an ECG for QTc, "
+        "with a pregnancy test where relevant. Monitoring: repeat the "
+        "metabolic measures at 3 months and then at least annually, "
+        "weighing more often through the first 12 weeks, when most "
+        "antipsychotic weight gain occurs. Lithium adds eGFR, thyroid "
+        "function and calcium, a 12-hour trough level 5 to 7 days "
+        "after any dose change, and 6-monthly renal, thyroid and "
+        "calcium testing. Clozapine adds weekly FBC for 18 weeks then "
+        "monthly, with troponin, CRP and review weekly for the first "
+        "4 weeks for myocarditis. Note: a baseline that was never "
+        "taken cannot later exonerate the drug. Key point: people "
+        "with severe mental illness die a decade early of "
+        "cardiovascular disease, and this list is the part of that "
+        "gap a prescriber controls."
+    ),
+    "Neurostimulation in psychiatry": (
+        "Treatments that alter cortical or subcortical activity "
+        "directly rather than through a receptor. Types: "
+        "electroconvulsive therapy induces a generalised seizure "
+        "under general anaesthesia and muscle relaxant and remains "
+        "the most effective treatment for severe or psychotic "
+        "depression, catatonia and treatment-resistant mania. "
+        "Repetitive transcranial magnetic stimulation applies focal "
+        "magnetic pulses to the left dorsolateral prefrontal cortex "
+        "over a daily course of several weeks, needs no anaesthetic "
+        "and does not impair memory, and is Medicare-funded for "
+        "treatment-resistant major depression. Vagus nerve and deep "
+        "brain stimulation are implanted and remain rare and largely "
+        "investigational in psychiatry. Adverse effects: "
+        "electroconvulsive therapy causes retrograde and anterograde "
+        "amnesia, reduced by right unilateral electrode placement; "
+        "magnetic stimulation causes scalp discomfort and very rarely "
+        "a seizure. Note: in NSW, electroconvulsive therapy for a "
+        "patient who cannot consent requires Mental Health Review "
+        "Tribunal authorisation under the Mental Health Act 2007."
+    ),
+    "Cultural formulation": (
+        "The part of a psychiatric formulation that asks how culture, "
+        "migration, religion and community shape the problem, its "
+        "explanation and the help sought. Features: the DSM-5 "
+        "Cultural Formulation Interview asks the patient to name the "
+        "problem in their own words, then covers perceived cause, the "
+        "role of family and community support, what has helped or "
+        "hindered coping in the past, and what they expect from this "
+        "service. Hx: country of birth, language, migration route and "
+        "visa status, experience of war, torture or detention, "
+        "discrimination, and religious or spiritual practice as both "
+        "a source of meaning and a shaper of symptom content. Mx: use "
+        "an accredited interpreter rather than a relative, and "
+        "involve an Aboriginal mental health worker or transcultural "
+        "service where indicated. Note: distinguish a culturally "
+        "normative belief or experience from a delusion or "
+        "hallucination by asking whether others in the same community "
+        "share it. Key point: the explanatory model predicts "
+        "adherence better than the diagnosis does."
+    ),
+    "Psychiatric emergencies": (
+        "Presentations in which delay costs life, whether the cause "
+        "is the illness, its treatment or an untreated physical "
+        "problem. Types: neuroleptic malignant syndrome gives "
+        "lead-pipe rigidity, hyperthermia and a high creatine kinase "
+        "over days. Serotonin syndrome gives clonus and hyperreflexia "
+        "over hours. Lithium toxicity gives coarse tremor, ataxia and "
+        "confusion. Anticholinergic delirium gives a dry, flushed, "
+        "febrile patient. Clozapine-related myocarditis and "
+        "agranulocytosis complete the drug-related list. Ix: glucose, "
+        "sodium and calcium, creatine kinase, drug levels, an ECG and "
+        "a temperature in every one of them. Mx: stop the offending "
+        "agent, cool and rehydrate, benzodiazepines, and escalate to "
+        "intensive care early. Note: a first psychiatric presentation "
+        "with fever or new focal signs is a medical emergency until "
+        "proven otherwise. Imminent suicide risk and acute "
+        "behavioural disturbance sit alongside these, under the NSW "
+        "Mental Health Act 2007 when the person will not stay."
+    ),
+    "Person-first language in mental health": (
+        "Describing the person before the diagnosis, so that a "
+        "clinical record does not hand the next reader a judgement "
+        "dressed as a fact. Features: say a person with schizophrenia "
+        "rather than a schizophrenic, a person who uses "
+        "methamphetamine rather than an addict, died by suicide "
+        "rather than committed suicide, and has not been taking the "
+        "medication rather than non-compliant. Terms such as "
+        "absconded, drug seeker, manipulative and known to services "
+        "travel through handover and change how the next clinician "
+        "behaves before they meet the patient. Note: some people "
+        "prefer identity-first language, particularly autistic and "
+        "Deaf people, so ask rather than assume. Australian notes: "
+        "patients read their own notes through access requests and My "
+        "Health Record, and Mindframe guidance also governs how "
+        "method and means are described. Key point: the record "
+        "outlives the admission, and the words in it are inherited by "
+        "everyone who treats the person next."
+    ),
+    "Psychotropic prescribing in the older person": (
+        "Prescribing against reduced renal clearance, altered body "
+        "composition, polypharmacy and a brain with less reserve. "
+        "Cautions: SSRIs cause hyponatraemia, so check sodium two to "
+        "four weeks after starting, and they raise the risk of falls "
+        "and gastrointestinal bleeding. Tricyclics and other "
+        "anticholinergics worsen cognition and precipitate delirium "
+        "and urinary retention. Benzodiazepines cause falls and "
+        "confusion and should be short, low and time-limited. "
+        "Antipsychotics in dementia increase stroke and death, so "
+        "reserve them for severe distress or danger after non-drug "
+        "measures have failed. Dose: start at roughly half the adult "
+        "dose and titrate slowly, allowing a longer trial before "
+        "judging response. Australian notes: risperidone is the only "
+        "antipsychotic with a PBS listing for behavioural and "
+        "psychological symptoms of dementia and the listing is "
+        "time-limited. Note: electroconvulsive therapy is effective "
+        "and well tolerated in late-life depression. Key point: "
+        "review the whole list before adding to it."
+    ),
+    "Child and adolescent mental health": (
+        "Assessment framed by development, family and school rather "
+        "than by symptom lists borrowed from adults. Features: "
+        "neurodevelopmental disorders, separation anxiety and school "
+        "refusal dominate primary school; anxiety, depression, "
+        "self-harm, eating disorders and first-episode psychosis "
+        "emerge through adolescence. Hx: take collateral from a "
+        "parent and the school, see the young person alone for part "
+        "of the interview, and cover development, attachment, "
+        "bullying, online life and substance use. Mx: psychological "
+        "therapy is first line, with fluoxetine the antidepressant "
+        "with the best evidence under 18 and a requirement to review "
+        "closely in the early weeks for emerging suicidal ideation. "
+        "Australian notes: headspace and child and adolescent mental "
+        "health services take referrals, stimulant prescribing needs "
+        "a NSW authority, and suspected risk of significant harm goes "
+        "to the Child Protection Helpline. Note: a change in school "
+        "function is often the first measurable sign. Key point: "
+        "treat the system, not just the child."
+    ),
+    "Family therapy": (
+        "Psychological treatment in which the family or household, "
+        "not the individual, is the unit of intervention. Mechanism: "
+        "symptoms are read as maintained by patterns of interaction, "
+        "so the work targets boundaries, alliances, triangulation and "
+        "repeating sequences rather than insight in one person. "
+        "Indications: anorexia nervosa in adolescents, where "
+        "family-based treatment is first line; conduct and school "
+        "problems; early psychosis, where family intervention reduces "
+        "relapse; chronic illness and caregiving strain. Features: "
+        "high expressed emotion, meaning criticism, hostility or "
+        "emotional over-involvement from a relative, predicts relapse "
+        "in schizophrenia, and lowering it is a target in its own "
+        "right. Sessions may include the whole household, a couple or "
+        "a sibling group. Note: it does not require anyone to be "
+        "blamed, and saying so early prevents the parents "
+        "disengaging. Key point: when a child is the identified "
+        "patient, the referral question is usually about the system "
+        "that brought them."
+    ),
+    "Psychological reactions to serious illness": (
+        "The spectrum from expected distress to treatable disorder "
+        "after a diagnosis that threatens life or function. Types: "
+        "normal adjustment moves through shock and distress to "
+        "gradual accommodation over weeks, with function preserved. "
+        "Adjustment disorder is distress out of proportion to the "
+        "stressor with clear impairment. Demoralisation is "
+        "helplessness, meaninglessness and subjective incompetence "
+        "with the capacity for pleasure intact. Major depression adds "
+        "anhedonia, worthlessness, guilt and persistent suicidal "
+        "thoughts. Dx: weight the cognitive symptoms, since fatigue, "
+        "poor appetite and insomnia belong to the illness and its "
+        "treatment as readily as to depression. Mx: give information "
+        "at the patient's pace, treat pain and nausea, screen with "
+        "the K10 or distress thermometer, and involve social work and "
+        "pastoral care. Note: denial is worth leaving alone unless it "
+        "stops treatment. Key point: it would depress anyone is not a "
+        "reason to leave depression untreated, and it is treatable in "
+        "advanced illness."
+    ),
+    "Mental health promotion and prevention": (
+        "Population-level work aimed at reducing the incidence of "
+        "mental disorder rather than treating the people who already "
+        "have one. Classification: universal measures address the "
+        "whole population, selective measures target groups at raised "
+        "risk, and indicated measures target people with subthreshold "
+        "symptoms who do not yet meet criteria. Prevention: means "
+        "restriction on bridges, firearms and medication pack sizes, "
+        "responsible media reporting under Mindframe, alcohol pricing "
+        "and availability controls, and school-based social and "
+        "emotional programs. Risk factors: unstable housing, "
+        "unemployment, low income, discrimination, family violence "
+        "and out-of-home care, which sit outside the clinic and "
+        "account for much of the population risk. Australian notes: "
+        "headspace, perinatal screening and national suicide "
+        "prevention programs deliver most of the selective tier. "
+        "Note: means restriction has stronger evidence for reducing "
+        "suicide deaths than awareness campaigns. Key point: "
+        "prevalence falls when exposure falls, not when clinics get "
+        "busier."
+    ),
+    "Natural course of mental disorders": (
+        "When mental disorders begin, how long episodes last and what "
+        "recurrence looks like, which is what a prognosis "
+        "conversation actually needs. Onset: about half of lifetime "
+        "mental illness has begun by the mid-teens and three-quarters "
+        "by the mid-twenties. Neurodevelopmental disorders and the "
+        "childhood anxiety disorders come first, psychotic and "
+        "bipolar disorders cluster from the late teens to the "
+        "mid-twenties, depression appears across adult life, and the "
+        "neurocognitive disorders come last. Prognosis: most first "
+        "depressive episodes remit within six to twelve months, but "
+        "the risk of recurrence climbs with each episode, from around "
+        "half after one to the great majority after three. Bipolar "
+        "disorder and schizophrenia are relapsing conditions in which "
+        "maintenance treatment does most of the work. A longer "
+        "duration of untreated psychosis predicts a worse outcome, "
+        "which is the argument for early psychosis services. Note: "
+        "onset in adolescence and treatment in the thirties is the "
+        "usual gap."
     ),
 }
 
