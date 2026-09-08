@@ -386,20 +386,43 @@ def main() -> int:
     out.write_bytes(blob)
 
     digest = hashlib.sha256(blob).hexdigest()
-    manifest = {
-        "schema": SCHEMA,
-        "content_version": lib["content_version"],
-        "sha256": digest,
-        "bytes": len(blob),
-    }
-    # No url means no update: `_updater._check` bails rather than guess
-    # where the library lives. The bundled manifest ships without one on
-    # purpose, so a checkout that has never been published cannot point
-    # clients at a file that is not there.
+    manifest_path = out.parent / "manifest.json"
+    # `data/manifest.json` is not a build artefact. It is the live
+    # channel pointer: every installed client polls it on launch, and
+    # `_updater._check` bails with "the update server sent an incomplete
+    # reply" the moment it has no `url`.
+    #
+    # This rewrote it unconditionally and only put the url back when
+    # `--url` was passed, which only `publish_content.sh` does. A bare
+    # `python3 tools/build_library.py` - the documented usage, what
+    # `merge_batch.py` prints as the next step, and what the scheduled
+    # content agent runs - therefore stripped the url and the next
+    # commit shipped a dead channel. Nineteen of the last forty commits
+    # touching this file carried no url; updates were off for every user
+    # from each of those until the next publish restored the key.
+    #
+    # So a build that is not publishing leaves the pointer alone. It
+    # describes an asset that has been uploaded, and only the publish
+    # knows where that is; rewriting its version and sha to describe a
+    # library nobody can download is not an improvement on omitting the
+    # url, it is the same outage with a checksum failure in front of it.
     if args.url:
-        manifest["url"] = args.url
-    (out.parent / "manifest.json").write_text(
-        json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+        manifest_path.write_text(
+            json.dumps({
+                "schema": SCHEMA,
+                "content_version": lib["content_version"],
+                "sha256": digest,
+                "bytes": len(blob),
+                "url": args.url,
+            }, indent=2) + "\n", encoding="utf-8")
+        manifest_note = args.url
+    else:
+        try:
+            held = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest_note = (f"unchanged - still points at "
+                             f"{held.get('content_version', '?')}")
+        except Exception:
+            manifest_note = "unchanged (none on disk yet)"
 
     try:
         shown = out.relative_to(ROOT)
@@ -412,7 +435,7 @@ def main() -> int:
         print(f"  {key:16} {len(lib[key])}")
     print(f"  content_version  {lib['content_version']}")
     print(f"  sha256           {digest[:16]}...")
-    print(f"  url              {manifest.get('url', '(none - not publishable)')}")
+    print(f"  manifest         {manifest_note}")
     return 0
 
 

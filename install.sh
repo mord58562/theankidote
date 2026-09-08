@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Install TheAnkiDote 2.0.0 into the local Anki add-ons directory.
+# Install TheAnkiDote into the local Anki add-ons directory.
 #
 #   1. Quit Anki.
-#   2. Put this script next to theankidote-2.0.0.ankiaddon.
+#   2. Put this script next to the built .ankiaddon and manifest.json.
 #   3. bash install.sh
 #
 # Add-ons live in ONE directory shared by every profile:
@@ -19,7 +19,17 @@
 set -euo pipefail
 
 PKG="theankidote"
-ADDON="$(cd "$(dirname "$0")" && pwd)/theankidote-2.0.0.ankiaddon"
+HERE="$(cd "$(dirname "$0")" && pwd)"
+# Resolved from the manifest beside this script rather than written
+# out. It was pinned to 2.0.0 and stayed there through 2.1 to 2.5,
+# so anyone who ran it got "Not found:" and a version number three
+# releases stale in the closing message.
+VERSION="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["version"])' "$HERE/manifest.json" 2>/dev/null || echo "")"
+if [ -z "$VERSION" ]; then
+    echo "Cannot read the version from manifest.json beside this script." >&2
+    exit 1
+fi
+ADDON="$HERE/theankidote-$VERSION.ankiaddon"
 
 case "$(uname -s)" in
   Darwin) BASE="$HOME/Library/Application Support/Anki2" ;;
@@ -72,10 +82,10 @@ unzip -oq "$ADDON" -d "$DEST"
 [ -f "$DEST/manifest.json" ] || {
   echo "Install looks wrong: no manifest.json in $DEST" >&2; exit 1; }
 
-echo "Installed TheAnkiDote 2.0.0 to $DEST"
+echo "Installed TheAnkiDote $VERSION to $DEST"
 echo
 echo "Start Anki, then check Tools > Add-ons - it should be listed as"
-echo "The AnkiDote, version 2.0."
+echo "The AnkiDote, version $VERSION."
 echo
 echo "Content updates are off by default. Enable them under"
 echo "Tools > Add-ons > The AnkiDote > Config with \"libraryAutoUpdate\": true."

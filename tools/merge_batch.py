@@ -57,10 +57,28 @@ def stub(e):
 
 
 def fmt(name, text):
+    """Emit one wrapped `RICH_SUMMARIES` entry.
+
+    Every line goes through `json.dumps`, which is what the name beside
+    it has always done. Interpolating the body straight into a quoted
+    f-string meant a summary containing a straight double quote closed
+    the literal early and wrote a `content/_rich.py` that no longer
+    parses - `build_library.py` then dies on import and the batch has to
+    be unpicked out of a multi-megabyte diff, which is the exact cost
+    this tool exists to avoid. A backslash was worse in kind: it was
+    read as an escape, so `mg\\nkg` became a real newline inside a
+    shipped clinical summary with no error at all. Neither character is
+    in `verify_batch.BANNED_CHARS`, and neither should have to be.
+
+    JSON string syntax is a subset of Python's, so the output is a valid
+    Python literal.
+    """
     lines = textwrap.wrap(text, width=60, break_long_words=False,
                           break_on_hyphens=False)
-    body = "\n".join(f'        "{l} "' for l in lines[:-1])
-    body += ("\n" if body else "") + f'        "{lines[-1]}"'
+    body = "\n".join("        " + json.dumps(l + " ", ensure_ascii=False)
+                     for l in lines[:-1])
+    body += ("\n" if body else "") + "        " + json.dumps(
+        lines[-1], ensure_ascii=False)
     return f'    {json.dumps(name, ensure_ascii=False)}: (\n{body}\n    ),\n'
 
 

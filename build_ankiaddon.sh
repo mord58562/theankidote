@@ -49,7 +49,7 @@ zip -r "$OUT" . \
     -x "user_files/*" \
     -x "*/__pycache__/*" \
     -x "__pycache__/*" \
-    -x ".DS_Store" \
+    -x "*.DS_Store" \
     -x ".git/*" \
     -x ".gitignore" \
     -x "*.ankiaddon" \

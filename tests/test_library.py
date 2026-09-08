@@ -306,14 +306,29 @@ class PublishingContract(unittest.TestCase):
                 f"shipped - read library.json instead")
 
     def test_a_published_manifest_names_an_https_url(self):
+        """The url must be there, and must be https.
+
+        This asserted the scheme inside `if "url" in man:` - so the one
+        failure that matters, the key being absent, was the one case the
+        assertion could not run in. It was absent on nineteen of the
+        last forty commits that touched the file, because
+        `build_library.py` rewrote the manifest on every bare build and
+        only restored the url when publishing. Every client that polled
+        during those windows got "the update server sent an incomplete
+        reply" and stopped updating.
+        """
         man = json.loads(
             (pathlib.Path(_library.BUNDLED).parent / "manifest.json")
             .read_text(encoding="utf-8"))
-        if "url" in man:
-            self.assertTrue(
-                str(man["url"]).startswith("https://"),
-                f"manifest url is {man['url']!r}; content must travel "
-                f"over HTTPS or the checksum is the only integrity check")
+        self.assertIn(
+            "url", man,
+            "data/manifest.json has no url; this is the live channel "
+            "pointer and every installed client silently stops updating "
+            "until the next publish puts it back")
+        self.assertTrue(
+            str(man["url"]).startswith("https://"),
+            f"manifest url is {man['url']!r}; content must travel "
+            f"over HTTPS or the checksum is the only integrity check")
 
     def test_updater_ignores_a_manifest_without_a_url(self):
         src = (ROOT / "pearls" / "_updater.py").read_text(encoding="utf-8")

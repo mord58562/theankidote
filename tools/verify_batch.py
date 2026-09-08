@@ -124,6 +124,39 @@ def main() -> int:
                 fail.append(f"{e.get('name')}: missing key {k!r}")
         if not e.get("summary", "").strip():
             fail.append(f"{e.get('name')}: empty summary")
+        # Presence was checked; type was not. `merge_batch.stub` iterates
+        # `aliases`, so a bare string "PID" instead of ["PID"] is
+        # iterated character by character and emitted as ["P","I","D"].
+        # Those are genuine strings, so `_library._validate` accepts them
+        # and `_ENTRY_STR_LISTS` - written to stop exactly this on the
+        # download path - never fires. The matcher has no minimum phrase
+        # length, so every card containing a standalone "p", "i" or "d"
+        # would light up.
+        aliases = e.get("aliases")
+        if aliases is not None and not isinstance(aliases, list):
+            fail.append(f"{e.get('name')}: aliases must be a list, got "
+                        f"{type(aliases).__name__} - a bare string is "
+                        f"expanded one alias per character")
+        elif isinstance(aliases, list):
+            for a in aliases:
+                if not isinstance(a, str):
+                    fail.append(f"{e.get('name')}: alias {a!r} is not a string")
+                elif len(a.strip()) < 2:
+                    fail.append(f"{e.get('name')}: alias {a!r} is shorter "
+                                f"than two characters; it would match "
+                                f"across the whole collection")
+        utd = e.get("utd")
+        if utd is not None and not isinstance(utd, list):
+            fail.append(f"{e.get('name')}: utd must be a list of "
+                        f"[label, query] pairs, got {type(utd).__name__}")
+        elif isinstance(utd, list):
+            for pair in utd:
+                if (not isinstance(pair, (list, tuple)) or len(pair) != 2
+                        or not all(isinstance(x, str) and x.strip()
+                                   for x in pair)):
+                    fail.append(f"{e.get('name')}: utd entry {pair!r} is "
+                                f"not a [label, query] pair of "
+                                f"non-empty strings")
     if fail:
         report(fail, warn)
         return 1
