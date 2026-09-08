@@ -992,6 +992,7 @@ def _qt_imports():
             QListWidget, QListWidgetItem, QAbstractItemView,
             QScrollArea, QWidget, QGridLayout, QKeySequenceEdit, QTabWidget,
             QFormLayout, QTableWidget, QTableWidgetItem, QHeaderView,
+            QRadioButton, QButtonGroup,
         )
         from PyQt6.QtGui import QKeySequence
     except (ImportError, AttributeError):
@@ -1002,6 +1003,7 @@ def _qt_imports():
             QListWidget, QListWidgetItem, QAbstractItemView,
             QScrollArea, QWidget, QGridLayout, QKeySequenceEdit, QTabWidget,
             QFormLayout, QTableWidget, QTableWidgetItem, QHeaderView,
+            QRadioButton, QButtonGroup,
         )
         from PyQt5.QtGui import QKeySequence
     return locals()
@@ -1407,10 +1409,29 @@ def _build_pearls_group(_w):
     pearls_qcb = _w["QCheckBox"]("Also highlight on question side")
     pearls_qcb.setChecked(_config.get("enableHighlightsOnQuestions") is not False)
     lay.addWidget(pearls_qcb)
-    articleview_cb = _w["QCheckBox"]("Open in side panel")
-    articleview_cb.setChecked(_config.get("enableArticleViewer") is not False)
-    articleview_cb.setToolTip("Off: open the source in your default browser.")
-    lay.addWidget(articleview_cb)
+    # Two radios, not a checkbox. A checkbox says "this happens or it
+    # does not"; both states here do something, and the one this used to
+    # leave unnamed - clicking a source opens your browser instead - was
+    # legible only by hovering the label. A control whose off-state
+    # lives in a tooltip has not told the user what it does.
+    open_in_row = _w["QHBoxLayout"]()
+    open_in_row.addWidget(_w["QLabel"]("Open sources in:"))
+    articleview_rb = _w["QRadioButton"]("The side panel")
+    browser_rb = _w["QRadioButton"]("My default browser")
+    # Explicit group rather than Qt's auto-exclusivity, which is scoped
+    # to the parent widget and would silently pair these with any radio
+    # added to this box later.
+    open_in_group = _w["QButtonGroup"](box)
+    open_in_group.addButton(articleview_rb)
+    open_in_group.addButton(browser_rb)
+    if _config.get("enableArticleViewer") is not False:
+        articleview_rb.setChecked(True)
+    else:
+        browser_rb.setChecked(True)
+    open_in_row.addWidget(articleview_rb)
+    open_in_row.addWidget(browser_rb)
+    open_in_row.addStretch(1)
+    lay.addLayout(open_in_row)
 
     dockhl_cb = _w["QCheckBox"]("Highlight terms in the sidebar too")
     dockhl_cb.setChecked(_config.get("enableDockHighlights") is not False)
@@ -1443,7 +1464,7 @@ def _build_pearls_group(_w):
     row.addWidget(count_lab)
     row.addStretch(1)
     lay.addLayout(row)
-    return box, pearls_qcb, articleview_cb, dockhl_cb, state
+    return box, pearls_qcb, articleview_rb, dockhl_cb, state
 
 
 def _build_utd_group(_w):
@@ -1789,7 +1810,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
         return page
 
     modules_box, pearls_cb, utd_cb, chat_cb = _build_modules_group(_w, False)
-    pearls_box, pearls_qcb, articleview_cb, dockhl_cb, terms_state = _build_pearls_group(_w)
+    pearls_box, pearls_qcb, articleview_rb, dockhl_cb, terms_state = _build_pearls_group(_w)
     order_box, toolbar_order_list = _build_order_group(_w)
     library_box, library_update_cb = _build_library_group(_w)
     misc_box, remember_cb, _ = _build_misc_group(_w)
@@ -1878,7 +1899,7 @@ def _open_settings_dialog(first_run: bool = False) -> bool:
     _config.set_value("enableUpToDate",   utd_cb.isChecked())
     _config.set_value("enableChat",       chat_cb.isChecked())
     _config.set_value("enableHighlightsOnQuestions", pearls_qcb.isChecked())
-    _config.set_value("enableArticleViewer", articleview_cb.isChecked())
+    _config.set_value("enableArticleViewer", articleview_rb.isChecked())
     _config.set_value("enableDockHighlights", dockhl_cb.isChecked())
     _config.set_value("uptodateHomeUrl", utd_url_edit.text().strip() or None)
     _config.set_value("chatCustomProviderUrl", chat_url_edit.text().strip() or None)

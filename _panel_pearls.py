@@ -628,10 +628,31 @@ class _ResultsSection(QWidget):
     def _on_toggle(self) -> None:
         self.set_collapsed(not self._collapsed)
 
-    def set_collapsed(self, collapsed: bool) -> None:
+    def set_collapsed(self, collapsed: bool, persist: bool = True) -> None:
+        """Collapse or expand the list.
+
+        `persist` separates the two callers, which mean different
+        things. The header toggle is the reader deciding whether this
+        list earns its space - a judgement about the list, which
+        outlives the card, and is stored. A popup click collapsing the
+        list to give the article body the pane is about that article
+        only. Storing that one left the list collapsed on every later
+        card and across restarts, which is the opposite of what the
+        header comment promises.
+        """
         self._collapsed = bool(collapsed)
-        _config.set_value("sidebarArticlesCollapsed", self._collapsed)
+        if persist:
+            _config.set_value("sidebarArticlesCollapsed", self._collapsed)
         self._sync_collapse()
+
+    def restore_collapse(self) -> None:
+        """Drop a transient collapse, returning to the stored preference.
+
+        Called when a new card's results arrive, which is where a
+        collapse scoped to the previous card expires.
+        """
+        self.set_collapsed(bool(_config.get("sidebarArticlesCollapsed")),
+                           persist=False)
 
     def is_collapsed(self) -> bool:
         return self._collapsed
@@ -908,11 +929,21 @@ class StatPearlsPanel(QWidget):
         self._last_results = results
         # A new card's results arrive here, so this is where a dismissal
         # scoped to the previous card expires.
-        if self._show_articles:
-            if results:
-                self._results.show_results(results)
-            else:
-                self._results.hide()
+        #
+        # It did not expire. `_show_articles` went False on a popup
+        # click and nothing set it back, so from the first article
+        # opened that way this method updated `_last_results` and left
+        # the widget alone: every later card showed the article list of
+        # the card the reader had opened an article from, under that
+        # card's count, until they pressed the toolbar button. Both this
+        # comment and the header's promise that the list "comes back on
+        # the next card" described behaviour the code did not have.
+        self._show_articles = True
+        self._results.restore_collapse()
+        if results:
+            self._results.show_results(results)
+        else:
+            self._results.hide()
 
     def _safe_chosen(self) -> str:
         """The remembered article, or "" if it no longer passes the check.
@@ -976,7 +1007,9 @@ class StatPearlsPanel(QWidget):
         the dock was the only way back.
         """
         self._show_articles = False
-        self._results.set_collapsed(True)
+        # Not persisted: see `set_collapsed`. This one lasts as long as
+        # the article the reader just opened.
+        self._results.set_collapsed(True, persist=False)
 
     def load_url(self, url: str, term: str = "", section: str = "") -> None:
         """Navigate the panel webview.
