@@ -71,9 +71,15 @@ repository's permanent history by that much per edit; the manifest is
 250 bytes and needs a URL that never moves, which is what the branch is
 for.
 
-Content versions are compared as strings, so they must sort upwards.
-`YYYY.MM.DD` does. Anything that sorts below what a client already holds
-publishes fine and reaches nobody, which is why the script refuses it.
+Content versions are `DD.MM.YYYY`, with `.1`, `.2` and so on appended
+from the second publish of a day onward. They are not compared as
+strings: `_library._parse_version` reads both that shape and the
+`YYYY.MM.DD` one used before 2026-08-28 into a `(year, month, day,
+counter)` tuple, and `_updater._newer` compares the tuples. A version
+that does not sort strictly after the one in `data/manifest.json`
+publishes fine and reaches nobody, which is why the script refuses it -
+except on the very first publish, where re-using the current version
+seeds the channel deliberately.
 
 Nothing here reviews the content. AnkiWeb is out of the loop by design,
 so the test suite is the only gate, and the script will not push if it

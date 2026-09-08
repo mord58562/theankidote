@@ -124,7 +124,6 @@ to `false` in config and restart.
 | `chatLastUrl` | string / null | `null` | Internal: the user's last-selected provider URL. Persisted across restarts so the dock reopens to the same provider. |
 | `chatOpenCount` | int | `0` | Internal: number of times the chat dock has been opened. |
 | `_card_count` | int | `0` | Internal: number of cards answered since the addon was installed. |
-| `_quoteTick` | float | `0` | Internal: timestamp marker used to pace an occasional reviewer tooltip. |
 | `chatProviders` | list of `[label, url]` / null | `null` | Override the built-in provider list. `null` uses the bundled set (Claude, Perplexity, ChatGPT, Gemini, Copilot, DeepSeek, Grok, Duck). When more than five providers are configured the surplus collapses into a `▾` overflow menu. |
 | `chatAutoPaste` | bool | `true` | When a send-to-chat shortcut fires, focus the provider's message box and paste the text into it rather than leaving it on the clipboard. Never submits - you still press Enter. Falls back to clipboard-only if the composer can't be found. |
 | `chatAdblockEnabled` | bool | `true` | Inject a small CSS-only rule that hides upgrade-banner / paywall selectors on chat sites. Pure CSS, no filter list, no network calls. |
@@ -140,10 +139,12 @@ The "Open externally" `↗` button in each dock header opens the current
 page in the system browser. Useful for passkey / Touch ID sign-in,
 video DRM, or any other feature an embedded webview can't trigger.
 
-The "send selection to chat" shortcut (`Ctrl+Shift+P`) writes the
+The "send selection to chat" shortcut (`Ctrl+Shift+K`) writes the
 reviewer's current text selection to the system clipboard and opens
-the chat dock. Paste manually into the chat input. The addon never
-submits messages programmatically.
+the chat dock, and `Ctrl+Shift+J` does the same with everything
+visible on the current card. With `chatAutoPaste` on, the text is
+also pasted into the provider's message box. The addon never submits
+messages programmatically.
 
 ### Passkey limitation
 
@@ -164,7 +165,7 @@ profile cookie store keeps you signed in across restarts.
 | `shortcutSendSelectionToChat` | string | `"Ctrl+Shift+K"` | Copy the current selection and open the chat dock. Was `Ctrl+Shift+P`, which is Anki's Switch Profile shortcut. |
 | `shortcutSendCardToChat` | string | `"Ctrl+Shift+J"` | Copy everything visible on the current card and open the chat dock. |
 | `sendShortcutMigrated` | bool | `false` | Internal: whether the one-time prompt about the changed send-to-chat shortcut has been shown. |
-| `dockSide` | `"right"` / `"left"` | `"right"` | Which side all docks appear on. |
+| `dockSide` | `"right"` / `"left"` | `"right"` | Which side the UpToDate and AI chat docks appear on. The reference dock is always on the right, so `"left"` splits the three across both sides. Config only; there is no Settings control. |
 | `minWidth` | int | `400` | Minimum dock width (pixels). |
 | `toolbarOrder` | list | `["chat", "uptodate"]` | Left-to-right display order of the chat and UpToDate toolbar buttons. Edited in Settings via a drag-list. The pearls crown sits separately at the toolbar's right edge. |
 | `rememberDockState` | bool | `false` | Reopen the same docks at the next Anki launch. |

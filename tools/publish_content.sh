@@ -114,7 +114,7 @@ fi
 # data/ had already been rewritten.
 if git rev-parse "$TAG" >/dev/null 2>&1 \
    || [ -n "$(git ls-remote --tags origin "$TAG" 2>/dev/null)" ]; then
-  die "tag $TAG already exists. Content versions are compared as strings and must increase; pick a later version."
+  die "tag $TAG already exists. Content versions must increase; pick a later version."
 fi
 
 # Is this the first publish? If no content tag exists on the remote,
