@@ -247,7 +247,95 @@ def main() -> int:
                                     f'the collection - check every context '
                                     f'means this entry')
 
+    # Would any of these already fire? Asked of the matcher, which is
+    # what decides at runtime, rather than by comparing names.
+    #
+    # This lived in a session's head rather than in the tool, and it
+    # cost an entry: "Restraint" was drafted, verified, merged, and only
+    # then found to duplicate "Restraint and seclusion", which already
+    # owned physical, mechanical and chemical restraint as aliases.
+    # Unpicking it out of a 3.5 MB file is exactly the cost this script
+    # exists to avoid, so the check belongs here - before the merge -
+    # and not in whatever the author remembers to run afterwards.
+    fail += _already_covered(entries)
+
     return report(fail, warn)
+
+
+# Terms so general that a hit on one of them says nothing about whether
+# this entry's subject is covered. A popup opening on "management" when
+# the reader hovered a specific procedure is a miss, not a duplicate.
+_GENERIC = {
+    "management", "treatment", "assessment", "investigation", "diagnosis",
+    "screening", "prevention", "therapy", "history", "examination",
+    "monitoring", "referral", "prognosis", "complications", "risk",
+    "consent", "surgery", "imaging", "pregnancy", "labour", "delivery",
+    "scale", "score", "admission", "restraint", "capacity", "alliance",
+}
+
+_MARK_RE = re.compile(r'<span class="sp-mark"[^>]*>(.*?)</span>')
+
+
+def _already_covered(entries) -> list:
+    """Names and aliases the shipped library already answers."""
+    import types
+    out = []
+    try:
+        class _Hook:
+            def append(self, *a, **k):
+                pass
+
+            def remove(self, *a, **k):
+                pass
+
+        class _Hooks:
+            def __getattr__(self, _n):
+                return _Hook()
+
+        aqt = sys.modules.get("aqt") or types.ModuleType("aqt")
+        if not hasattr(aqt, "gui_hooks"):
+            aqt.gui_hooks = _Hooks()
+        if not hasattr(aqt, "mw"):
+            aqt.mw = None
+        sys.modules["aqt"] = aqt
+        if "theankidote" not in sys.modules:
+            pkg = types.ModuleType("theankidote")
+            pkg.__path__ = [str(ROOT)]
+            sys.modules["theankidote"] = pkg
+        from theankidote.pearls import _reviewer
+    except Exception as exc:                            # noqa: BLE001
+        print(f"  NOTE: could not load the matcher ({exc}); the "
+              f"already-covered check did not run")
+        return out
+
+    for e in entries:
+        for key in [e.get("name", "")] + list(e.get("aliases") or []):
+            if not isinstance(key, str) or not key.strip():
+                continue
+            try:
+                marked = _reviewer.highlight_text(key, with_css=False)
+            except Exception:
+                continue
+            k = key.strip().lower()
+            hits = []
+            for m in _MARK_RE.findall(marked):
+                hit = m.strip().lower()
+                if hit in _GENERIC:
+                    continue
+                # A hit only means "already covered" when it answers the
+                # whole name. A longer new name that happens to contain
+                # an existing term is a different subject, not a
+                # duplicate: "Zolpidem-induced complex sleep behaviour"
+                # matching "Zolpidem" is the drug entry firing on a word,
+                # and refusing that would block most specific entries
+                # this library still needs.
+                if hit == k or len(hit) >= 0.8 * len(k):
+                    hits.append(m)
+            if hits:
+                out.append(f'{e.get("name")}: {key!r} already resolves to '
+                           f'{hits} in the shipped library - merge it as an '
+                           f'alias or a rewrite, not as a new entry')
+    return out
 
 
 def report(fail, warn):
