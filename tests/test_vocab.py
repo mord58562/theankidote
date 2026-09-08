@@ -227,6 +227,7 @@ class EntriesAreWellFormed(unittest.TestCase):
             # still match, which is why this checks summary prose only.
             (r"\bfoetal\b", "fetal"),
         ]
+        self.__class__._BANNED = banned
         for label, terms in self.DATASETS:
             for t in terms:
                 low = t["summary"].lower()
@@ -234,6 +235,31 @@ class EntriesAreWellFormed(unittest.TestCase):
                     self.assertIsNone(
                         re.search(pat, low),
                         f"{label}: {t['name']} matches /{pat}/ - use '{good}'")
+
+    def test_rich_summaries_use_australian_spelling(self):
+        """The same ban, against the table it was never applied to.
+
+        `DATASETS` covers descriptive, psych and signs - three small
+        tables. `RICH_SUMMARIES` is 2,769 entries and is the text that
+        actually appears in a popup, and nothing checked its spelling
+        at all. That gap is how a rule could sit in this file demanding
+        "foetal" while 213 shipped summaries said "fetal" and the suite
+        stayed green: the rule and the content never met.
+
+        The table is clean today, so this starts as a ratchet rather
+        than a backlog.
+        """
+        banned = getattr(self.__class__, "_BANNED", None)
+        if banned is None:
+            self.test_summaries_use_australian_spelling()
+            banned = self.__class__._BANNED
+        bad = []
+        for name, text in _rich.RICH_SUMMARIES.items():
+            low = text.lower()
+            for pat, good in banned:
+                if re.search(pat, low):
+                    bad.append(f"{name} matches /{pat}/ - use '{good}'")
+        self.assertEqual(bad, [], "\n".join(bad))
 
     def test_section_labels_are_recognised_by_the_renderer(self):
         """A `Label:` the popup renderer doesn't know renders as body
