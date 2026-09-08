@@ -11517,6 +11517,294 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "trauma in pregnancy"]],
         "summary": "",
     },
+    {
+        "name": "Syringe driver",
+        "aliases": ["syringe drivers", "continuous subcutaneous infusion", "subcutaneous infusion pump"],
+        "utd": [["Overview", "subcutaneous infusion palliative care symptom control"], ["Dosing", "opioid subcutaneous infusion dose conversion"]],
+        "summary": "",
+    },
+    {
+        "name": "Opioid-induced neurotoxicity",
+        "aliases": ["opioid neurotoxicity"],
+        "utd": [["Overview", "opioid induced neurotoxicity myoclonus hyperalgesia palliative"]],
+        "summary": "",
+    },
+    {
+        "name": "Opioids in renal impairment",
+        "aliases": ["opioid choice in renal impairment", "opioids in kidney failure", "opioid prescribing in renal impairment"],
+        "utd": [["Overview", "opioid selection chronic kidney disease dose adjustment"]],
+        "summary": "",
+    },
+    {
+        "name": "Nausea and vomiting in palliative care",
+        "aliases": ["palliative nausea", "nausea in advanced cancer", "antiemetic choice in palliative care"],
+        "utd": [["Overview", "assessment and management of nausea and vomiting in palliative care"]],
+        "summary": "",
+    },
+    {
+        "name": "Clinically assisted hydration",
+        "aliases": ["artificial hydration", "assisted hydration at the end of life", "hypodermoclysis", "subcutaneous fluids"],
+        "utd": [["Overview", "artificial hydration at the end of life"]],
+        "summary": "",
+    },
+    {
+        "name": "Mouth care at the end of life",
+        "aliases": ["oral care at the end of life", "xerostomia in palliative care", "dry mouth at the end of life"],
+        "utd": [["Overview", "oral care and xerostomia in palliative care"]],
+        "summary": "",
+    },
+    {
+        "name": "Malignant ascites",
+        "aliases": ["ascites in advanced cancer", "peritoneal carcinomatosis ascites"],
+        "utd": [["Overview", "malignant ascites diagnosis and management"], ["Adult Mx", "large volume paracentesis indwelling peritoneal catheter"]],
+        "summary": "",
+    },
+    {
+        "name": "Fungating wound",
+        "aliases": ["malignant fungating wound", "fungating tumour", "malignant wound"],
+        "utd": [["Overview", "management of malignant fungating cutaneous wounds"]],
+        "summary": "",
+    },
+    {
+        "name": "Corticosteroids in palliative care",
+        "aliases": ["dexamethasone in palliative care", "palliative corticosteroids", "steroids in palliative care"],
+        "utd": [["Overview", "glucocorticoid use in palliative care symptom management"]],
+        "summary": "",
+    },
+    {
+        "name": "Resuscitation plan",
+        "aliases": ["resuscitation plans", "not for resuscitation order", "treatment limitation order"],
+        "utd": [["Overview", "do not resuscitate orders and limitation of treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Person responsible",
+        "aliases": ["person responsible hierarchy", "substitute decision-maker in NSW"],
+        "utd": [["Overview", "surrogate decision making incapacitated adult"]],
+        "summary": "",
+    },
+    {
+        "name": "Prognostication in advanced illness",
+        "aliases": ["surprise question", "estimating prognosis", "prognostication"],
+        "utd": [["Overview", "survival estimates in advanced illness prognostic tools"]],
+        "summary": "",
+    },
+    {
+        "name": "Palliative care in heart failure",
+        "aliases": ["end-stage heart failure", "palliative heart failure care"],
+        "utd": [["Overview", "palliative care for patients with advanced heart failure"]],
+        "summary": "",
+    },
+    {
+        "name": "Palliative care in advanced dementia",
+        "aliases": ["end-stage dementia", "advanced dementia care", "palliative care in dementia"],
+        "utd": [["Overview", "palliative care of patients with advanced dementia"]],
+        "summary": "",
+    },
+    {
+        "name": "Palliative care in COPD",
+        "aliases": ["end-stage COPD", "palliative care in advanced respiratory disease", "palliative care in chronic obstructive pulmonary disease"],
+        "utd": [["Overview", "palliative care for patients with advanced COPD"]],
+        "summary": "",
+    },
+    {
+        "name": "Withdrawal of dialysis",
+        "aliases": ["dialysis withdrawal", "stopping dialysis"],
+        "utd": [["Overview", "withdrawal of dialysis and conservative kidney management"]],
+        "summary": "",
+    },
+    {
+        "name": "Palliative radiotherapy",
+        "aliases": ["radiotherapy for bone metastases", "palliative radiation", "single fraction radiotherapy"],
+        "utd": [["Overview", "radiation therapy for palliation of bone metastases"]],
+        "summary": "",
+    },
+    {
+        "name": "Haemodialysis",
+        "aliases": ["hemodialysis", "home haemodialysis", "nocturnal haemodialysis", "maintenance haemodialysis"],
+        "utd": [["Overview", "prescribing and assessing chronic hemodialysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Peritoneal dialysis",
+        "aliases": ["CAPD", "continuous ambulatory peritoneal dialysis", "automated peritoneal dialysis", "Tenckhoff catheter"],
+        "utd": [["Overview", "peritoneal dialysis prescription and adequacy"]],
+        "summary": "",
+    },
+    {
+        "name": "Haemodialysis vascular access",
+        "aliases": ["dialysis vascular access", "vascular access for dialysis", "arteriovenous graft", "AV graft", "tunnelled dialysis catheter", "vascath"],
+        "utd": [["Overview", "approach to vascular access for hemodialysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Dialysis catheter-related bloodstream infection",
+        "aliases": ["haemodialysis catheter infection", "dialysis line infection", "tunnelled catheter bacteraemia", "dialysis catheter sepsis", "dialysis catheter exit site infection"],
+        "utd": [["Overview", "tunneled hemodialysis catheter related bloodstream infection"], ["Adult Mx", "treatment of hemodialysis catheter infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Intradialytic hypotension",
+        "aliases": ["dialysis hypotension", "hypotension on dialysis", "intra-dialytic hypotension"],
+        "utd": [["Overview", "intradialytic hypotension in chronic hemodialysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Dialysis adequacy",
+        "aliases": ["Kt/V", "urea reduction ratio", "dialysis dose", "adequacy of dialysis"],
+        "utd": [["Overview", "prescribing and assessing adequate hemodialysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Uraemic bleeding",
+        "aliases": ["uraemic platelet dysfunction", "uremic bleeding", "platelet dysfunction of uraemia"],
+        "utd": [["Overview", "platelet dysfunction in uremia"]],
+        "summary": "",
+    },
+    {
+        "name": "Hyperkalaemia in the dialysis patient",
+        "aliases": ["hyperkalaemia on dialysis", "dialysis hyperkalaemia", "high potassium on dialysis"],
+        "utd": [["Overview", "hyperkalemia in patients on dialysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Diet and fluid restriction in dialysis",
+        "aliases": ["renal diet", "dialysis diet", "fluid restriction in dialysis", "interdialytic weight gain"],
+        "utd": [["Overview", "dietary and fluid recommendations in maintenance dialysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug removal by dialysis",
+        "aliases": ["dialysable drugs", "dialysability", "drug clearance by dialysis", "dialysable poisons"],
+        "utd": [["Overview", "extracorporeal treatment for poisoning"], ["Dosing", "drug removal by hemodialysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Continuous renal replacement therapy",
+        "aliases": ["CRRT", "CVVHDF", "continuous veno-venous haemodiafiltration", "continuous haemofiltration"],
+        "utd": [["Overview", "continuous renal replacement therapy in acute kidney injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Kidney transplant rejection",
+        "aliases": ["renal transplant rejection", "graft rejection kidney", "acute rejection kidney transplant", "antibody mediated rejection"],
+        "utd": [["Overview", "clinical features and diagnosis of acute kidney transplant rejection"], ["Adult Mx", "treatment of acute kidney allograft rejection"]],
+        "summary": "",
+    },
+    {
+        "name": "Transplant immunosuppression",
+        "aliases": ["immunosuppression after transplant", "maintenance immunosuppression", "anti-rejection medication", "transplant immunosuppressants"],
+        "utd": [["Overview", "maintenance immunosuppressive therapy in kidney transplantation"]],
+        "summary": "",
+    },
+    {
+        "name": "Conservative kidney management",
+        "aliases": ["conservative management of kidney failure", "renal supportive care", "non-dialytic management", "conservative care kidney"],
+        "utd": [["Overview", "conservative kidney management in advanced chronic kidney disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Encapsulating peritoneal sclerosis",
+        "aliases": ["sclerosing encapsulating peritonitis", "sclerosing peritonitis", "abdominal cocoon"],
+        "utd": [["Overview", "encapsulating peritoneal sclerosis in peritoneal dialysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Preoperative assessment",
+        "aliases": ["Pre-operative assessment", "Preoperative evaluation", "Pre-anaesthetic assessment", "Preoperative investigations"],
+        "utd": [["Overview", "preoperative medical evaluation of the healthy adult patient"], ["Cardiac risk", "evaluation of cardiac risk prior to noncardiac surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Perioperative medication management",
+        "aliases": ["Preoperative medication management", "Perioperative drug management", "Medications to withhold before surgery"],
+        "utd": [["Overview", "perioperative medication management"]],
+        "summary": "",
+    },
+    {
+        "name": "Perioperative corticosteroid management",
+        "aliases": ["Steroid cover for surgery", "Perioperative steroid cover", "Perioperative glucocorticoid replacement"],
+        "utd": [["Overview", "the surgical patient taking glucocorticoids"]],
+        "summary": "",
+    },
+    {
+        "name": "Intravenous induction agents",
+        "aliases": ["Anaesthetic induction agents", "Induction of anaesthesia", "Induction agent"],
+        "utd": [["Overview", "general anesthesia induction agents"]],
+        "summary": "",
+    },
+    {
+        "name": "Volatile anaesthetic agents",
+        "aliases": ["Inhalational anaesthetic agents", "Volatile agents", "Minimum alveolar concentration", "Inhalational anaesthesia"],
+        "utd": [["Overview", "inhalation anesthetic agents clinical effects and uses"]],
+        "summary": "",
+    },
+    {
+        "name": "Neuromuscular blocking drugs",
+        "aliases": ["Muscle relaxants", "Neuromuscular blockers", "Depolarising neuromuscular blocker", "Non-depolarising neuromuscular blocker"],
+        "utd": [["Overview", "clinical use of neuromuscular blocking agents in anesthesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Supraglottic airway",
+        "aliases": ["Laryngeal mask airway", "Supraglottic airway device", "LMA"],
+        "utd": [["Overview", "supraglottic airway devices for airway management"]],
+        "summary": "",
+    },
+    {
+        "name": "Capnography",
+        "aliases": ["Waveform capnography", "End-tidal carbon dioxide", "End tidal CO2", "Capnograph"],
+        "utd": [["Overview", "carbon dioxide monitoring capnography"]],
+        "summary": "",
+    },
+    {
+        "name": "Intraoperative monitoring standards",
+        "aliases": ["Anaesthetic monitoring", "Minimum monitoring standards", "Intraoperative monitoring"],
+        "utd": [["Overview", "basic patient monitoring during anesthesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulmonary aspiration under anaesthesia",
+        "aliases": ["Mendelson syndrome", "Perioperative aspiration", "Aspiration under anaesthesia"],
+        "utd": [["Overview", "aspiration of gastric contents during anesthesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Perioperative hypothermia",
+        "aliases": ["Inadvertent perioperative hypothermia", "Intraoperative hypothermia"],
+        "utd": [["Overview", "perioperative temperature management"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-anaesthesia care unit",
+        "aliases": ["Recovery room", "PACU", "Post anaesthetic recovery"],
+        "utd": [["Overview", "overview of post anesthetic care for adult patients"]],
+        "summary": "",
+    },
+    {
+        "name": "Multimodal analgesia",
+        "aliases": ["Opioid-sparing analgesia", "Balanced analgesia", "Multimodal pain management"],
+        "utd": [["Overview", "management of acute perioperative pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Neuraxial anaesthesia and anticoagulation",
+        "aliases": ["Neuraxial block and anticoagulants", "Anticoagulation and spinal anaesthesia", "Epidural and anticoagulation"],
+        "utd": [["Overview", "neuraxial anesthesia in the patient receiving anticoagulation"]],
+        "summary": "",
+    },
+    {
+        "name": "Anaesthesia for caesarean section",
+        "aliases": ["Caesarean section anaesthesia", "Obstetric anaesthesia", "Anaesthesia for caesarean delivery"],
+        "utd": [["Overview", "anesthesia for cesarean delivery"]],
+        "summary": "",
+    },
+    {
+        "name": "Perioperative fluid therapy",
+        "aliases": ["Intraoperative fluid management", "Perioperative fluid management"],
+        "utd": [["Overview", "intraoperative fluid management"]],
+        "summary": "",
+    },
 ]
 
 
@@ -69350,6 +69638,984 @@ RICH_SUMMARIES = {
         "give anti-D to Rh negative women within 72 hours. Involve "
         "obstetrics early. Note: the best fetal resuscitation is a "
         "well-resuscitated mother."
+    ),
+
+    "Syringe driver": (
+        "A battery-powered pump delivering a continuous subcutaneous "
+        "infusion over 24 hours, used when the oral route has failed "
+        "and symptoms need steady control rather than repeated PRN "
+        "doses. Indications: unable to swallow, persistent vomiting, "
+        "malabsorption or reduced consciousness in the dying phase, "
+        "or two or more PRN doses needed in 24 hours. Mx: convert the "
+        "24-hour oral requirement to its subcutaneous equivalent and "
+        "dilute in water for injections. Combinations usually pair an "
+        "opioid with an antiemetic (haloperidol or metoclopramide), "
+        "midazolam and an antimuscarinic. Keep to three drugs and "
+        "check compatibility, since dexamethasone and cyclizine "
+        "precipitate with many partners and prochlorperazine and "
+        "chlorpromazine are too irritant to give subcutaneously. Site "
+        "the cannula on the anterior chest, abdomen or outer upper "
+        "arm, avoiding oedematous, broken or irradiated skin, and "
+        "inspect daily for erythema or leak. Keep PRN breakthrough "
+        "charted alongside. Note: the infusion takes hours to reach "
+        "steady state, so give a stat subcutaneous dose when starting "
+        "it. Key point: a driver is a route, not a decision to hasten "
+        "death, and the family should hear that before they ask."
+    ),
+    "Opioid-induced neurotoxicity": (
+        "A syndrome of central nervous system excitation from "
+        "accumulated opioid and active metabolite, distinct from the "
+        "sedation and respiratory depression of overdose. Aetiology: "
+        "renal impairment and dehydration allow "
+        "morphine-3-glucuronide and related neuroexcitatory "
+        "metabolites to accumulate. Rapid dose escalation, high "
+        "doses, advanced age and intercurrent infection precipitate "
+        "it. Clinical features: myoclonic jerks, new confusion or "
+        "visual hallucinations, and allodynia or hyperalgesia, so "
+        "pain appears to escalate despite a rising dose. Sedation may "
+        "be absent and the pupils are often normal. Mx: rehydrate, "
+        "reduce the opioid by 25-50% where pain allows, and rotate to "
+        "fentanyl or buprenorphine if renal function is poor. "
+        "Midazolam or clonazepam settles the myoclonus and "
+        "haloperidol the delirium. Note: naloxone does not treat it "
+        "and buys a withdrawal syndrome and a pain crisis. Key point: "
+        "pain that worsens as the dose rises, with jerking, is the "
+        "cue to go down rather than up."
+    ),
+    "Opioids in renal impairment": (
+        "Choice and dosing of opioid once the kidney can no longer "
+        "clear active metabolites, the commonest avoidable cause of "
+        "opioid toxicity in palliative and geriatric practice. "
+        "Mechanism: morphine is metabolised to "
+        "morphine-6-glucuronide, which is analgesic and sedating, and "
+        "morphine-3-glucuronide, which is neuroexcitatory. Both are "
+        "renally cleared and accumulate once eGFR falls below about "
+        "30. Codeine, and to a lesser degree oxycodone and "
+        "hydromorphone, behave the same way. Mx: avoid morphine and "
+        "codeine below an eGFR of 30 and prefer fentanyl or "
+        "buprenorphine, whose metabolites are inactive. Oxycodone or "
+        "hydromorphone may be used at reduced dose with close review "
+        "where fentanyl is impractical. Cut the starting dose, "
+        "lengthen the interval and titrate with immediate-release "
+        "preparations, since a long-acting product cannot be taken "
+        "back. Note: dialysis does not make morphine safe, because "
+        "metabolites re-accumulate between sessions. Key point: the "
+        "first sign is myoclonus or a new delirium, not a falling "
+        "respiratory rate."
+    ),
+    "Nausea and vomiting in palliative care": (
+        "Nausea in advanced disease, managed by working out which "
+        "receptor pathway is driving it rather than reaching for the "
+        "same antiemetic each time. Aetiology: drugs, uraemia and "
+        "hypercalcaemia act on the chemoreceptor trigger zone. "
+        "Gastric stasis from tumour, opioids or autonomic failure "
+        "acts on the gut. Raised intracranial pressure, anxiety and "
+        "vestibular causes act elsewhere again. Mx: haloperidol "
+        "0.5-1.5 mg orally or subcutaneously is first line for the "
+        "chemically mediated group. Metoclopramide is the prokinetic "
+        "for gastric stasis, withheld in complete obstruction and in "
+        "colic. Cyclizine or hyoscine suits vestibular and "
+        "obstructive nausea, dexamethasone raised intracranial "
+        "pressure, and ondansetron chemotherapy or radiotherapy. "
+        "Olanzapine or levomepromazine covers several receptors when "
+        "the cause is mixed or unclear. Give by a non-oral route "
+        "while vomiting persists and review at 24-48 hours. Note: "
+        "opioid-induced nausea usually settles within a week, so the "
+        "antiemetic is a short course, while the constipation it "
+        "comes with does not settle at all."
+    ),
+    "Clinically assisted hydration": (
+        "Fluid given by subcutaneous, intravenous or enteral route to "
+        "a dying patient who is no longer drinking, and the most "
+        "contested decision at most bedsides. Trials in the last days "
+        "of life show no gain in survival, delirium or thirst, while "
+        "excess fluid worsens respiratory secretions, peripheral "
+        "oedema, ascites and vomiting. Indications: a time-limited "
+        "trial is reasonable where dehydration is plausibly driving "
+        "something reversible such as opioid toxicity or "
+        "hypercalcaemia, or where withholding it is intolerable to "
+        "the patient or family. Mx: hypodermoclysis of around 1 litre "
+        "over 24 hours into the abdomen or thigh is the usual "
+        "palliative route and can run at home. Set a review point at "
+        "24-48 hours, state in advance what improvement would look "
+        "like, and stop if it does not appear or if secretions "
+        "increase. The decision is reversible in both directions. "
+        "Note: thirst and dry mouth in the dying come from mouth "
+        "breathing and drugs, not fluid deficit, so mouth care "
+        "relieves them and a drip does not. Key point: frame it as a "
+        "treatment with benefits and burdens, never as food and water "
+        "being taken away."
+    ),
+    "Mouth care at the end of life": (
+        "Care of the mouth in a patient who can no longer drink, chew "
+        "or clean their own teeth, and the single intervention that "
+        "does most for comfort in the last days. Aetiology: mouth "
+        "breathing, oxygen, dehydration and drying drugs "
+        "(antimuscarinics, opioids, diuretics, antidepressants) strip "
+        "the mucosa. Candidiasis, ulceration and ill-fitting dentures "
+        "add pain. Mx: moisten with water or saline on a soft swab or "
+        "spray every 1-2 hours, brush with a small soft brush twice "
+        "daily, lubricate the lips with a water-based product, and "
+        "leave dentures out overnight. Treat candidiasis with "
+        "nystatin or miconazole oral gel, or fluconazole if "
+        "extensive. Teach the family to do it, since it gives them a "
+        "task when there is nothing else left to do. Note: lemon and "
+        "glycerine swabs dry the mucosa further and chlorhexidine is "
+        "no substitute for mechanical cleaning. Key point: miconazole "
+        "oral gel markedly potentiates warfarin, so use nystatin in "
+        "an anticoagulated patient."
+    ),
+    "Malignant ascites": (
+        "Peritoneal fluid caused by malignancy, most often ovarian, "
+        "colorectal, gastric, pancreatic or breast primary, and "
+        "usually a marker of advanced disease with a prognosis in "
+        "months. Aetiology: peritoneal carcinomatosis raises "
+        "capillary permeability through VEGF and obstructs lymphatic "
+        "drainage. Massive hepatic metastasis or portal vein "
+        "thrombosis instead produces a portal hypertensive ascites "
+        "that behaves quite differently. Clinical features: "
+        "distension, early satiety, reflux, breathlessness and pain, "
+        "with dependent oedema. Ix: ultrasound to confirm and mark a "
+        "site, then a diagnostic tap for cytology, cell count, "
+        "albumin and culture. A serum-ascites albumin gradient of 11 "
+        "g/L or more indicates the portal hypertensive mechanism. Mx: "
+        "therapeutic paracentesis relieves symptoms within hours and "
+        "is the mainstay, and routine albumin cover is not required "
+        "as it is in cirrhosis. Spironolactone helps only the "
+        "high-gradient group. Offer a tunnelled indwelling peritoneal "
+        "catheter once taps are needed more often than fortnightly. "
+        "Note: the albumin gradient is what tells you whether "
+        "diuretics are worth trying at all."
+    ),
+    "Fungating wound": (
+        "A tumour that has broken through the skin, usually from "
+        "breast, head and neck or cutaneous malignancy, producing "
+        "odour, exudate, bleeding and pain in disease that is rarely "
+        "curable. Mx: odour comes from anaerobic colonisation and "
+        "responds to metronidazole, topically as a gel to the wound "
+        "bed or orally at 400 mg three times daily, with charcoal "
+        "dressings and an aired room. Control exudate with alginate "
+        "or foam dressings changed on a schedule the patient can "
+        "tolerate, soaked off rather than pulled. Manage bleeding "
+        "with non-adherent dressings, topical tranexamic acid or "
+        "adrenaline-soaked gauze, and palliative radiotherapy for "
+        "recurrent oozing. Premedicate with a breakthrough opioid "
+        "timed to peak at the dressing change. Note: odour is what "
+        "stops the family visiting and the patient eating, so it is "
+        "treated first and treated hard. Key point: the goal is "
+        "containment, not healing, so the plan is judged on smell, "
+        "leakage and dressing frequency rather than on wound size."
+    ),
+    "Corticosteroids in palliative care": (
+        "Dexamethasone given for a defined indication in advanced "
+        "disease, effective and heavily overused because it is easy "
+        "to start and easy to forget. Indications: raised "
+        "intracranial pressure from cerebral metastases and malignant "
+        "spinal cord compression at 8-16 mg daily. Malignant bowel "
+        "obstruction, liver capsule pain and nerve compression pain "
+        "at 4-8 mg. Anorexia or fatigue at 2-4 mg as a short trial "
+        "only. Dose: a single morning dose limits insomnia, and every "
+        "course is written with a stop date. Mx: set a response "
+        "deadline of 5-7 days for the symptom being treated and stop "
+        "if it is not met. Taper once a course has run beyond about 3 "
+        "weeks. Adverse effects: hyperglycaemia needing glucose "
+        "monitoring, oral candidiasis, insomnia and agitation, "
+        "proximal myopathy and skin fragility. Note: dexamethasone is "
+        "incompatible with most syringe driver mixtures and is given "
+        "as a separate subcutaneous injection. Key point: the "
+        "appetite and mood benefit fades over a few weeks while the "
+        "myopathy does not, so the indication is re-earned at every "
+        "review."
+    ),
+    "Resuscitation plan": (
+        "A medical order recording which resuscitation and "
+        "life-sustaining treatments will and will not be given. In "
+        "NSW it is a standard NSW Health form, signed by a medical "
+        "officer, that travels with the patient between wards, "
+        "facilities and ambulance transfers. Indications: any patient "
+        "in whom cardiopulmonary resuscitation or escalation would be "
+        "non-beneficial or unwanted, written on admission rather than "
+        "overnight in a patient who is already deteriorating. Mx: "
+        "address each intervention separately, since CPR, intubation, "
+        "ICU admission, vasopressors, antibiotics and transfer to "
+        "hospital are distinct decisions. Discuss with the patient "
+        "where they have capacity and otherwise with the person "
+        "responsible, document the conversation, and escalate "
+        "unresolved disagreement to a senior clinician rather than "
+        "settling it at the bedside. Review whenever the clinical "
+        "picture changes. Note: this is a clinician's order, unlike "
+        "an advance care directive, which the patient makes. Key "
+        "point: a limitation on resuscitation is not a limitation on "
+        "care, so the form should state what is being given as "
+        "plainly as what is not."
+    ),
+    "Person responsible": (
+        "The person who consents to medical and dental treatment for "
+        "an adult in NSW who lacks decision-making capacity, defined "
+        "by the Guardianship Act 1987. Criteria: the hierarchy runs "
+        "in order - a guardian with the function of consenting to "
+        "treatment, including an enduring guardian the person "
+        "appointed themselves. Then the spouse or de facto partner in "
+        "a close continuing relationship. Then an unpaid carer who "
+        "provides or arranges domestic support. Then a close friend "
+        "or relative. The first willing and available person on the "
+        "list is the person responsible. Mx: they consent to "
+        "treatment that promotes health and wellbeing. They cannot "
+        "demand treatment that is not clinically indicated, and "
+        "cannot consent to special treatment such as sterilisation. "
+        "Urgent treatment to save life or prevent serious damage "
+        "proceeds without consent. Where the patient objects, "
+        "authority generally rests with the Guardianship Division of "
+        "NCAT rather than with the person responsible. Note: next of "
+        "kin has no standing in NSW law, and the person at the top of "
+        "the list is often not the person at the bedside."
+    ),
+    "Prognostication in advanced illness": (
+        "Estimating remaining life in order to trigger planning, not "
+        "in order to produce a number. Mx: screen with the surprise "
+        "question - would you be surprised if this patient died in "
+        "the next 12 months - and confirm with a tool such as SPICT. "
+        "Functional status is the strongest single predictor in "
+        "cancer, so an ECOG of 3 or 4, or a decline measurable month "
+        "on month, indicates weeks to a few months. Three "
+        "trajectories separate the populations. Cancer holds function "
+        "then falls steeply over weeks. Organ failure steps down "
+        "through exacerbations with incomplete recovery between them. "
+        "Frailty and dementia dwindle over years. Ix: exclude the "
+        "reversible before committing to a trajectory, since anaemia, "
+        "hypercalcaemia, infection, depression and drug toxicity all "
+        "imitate terminal decline. Note: clinicians systematically "
+        "overestimate survival, and more so the longer they have "
+        "known the patient. Key point: speak in ranges - hours to "
+        "days, days to weeks, weeks to months - and say what should "
+        "be done now in case the shorter end is right."
+    ),
+    "Palliative care in heart failure": (
+        "Symptom-directed care in advanced heart failure, where "
+        "decline is stepwise through exacerbations against a constant "
+        "background risk of sudden death, so the final admission is "
+        "rarely recognisable in advance. Clinical features: "
+        "breathlessness and fatigue dominate, but pain, nausea, low "
+        "mood and broken sleep are as prevalent as in advanced cancer "
+        "and far less often asked about. Mx: continue "
+        "disease-modifying therapy while it is tolerated, because "
+        "beta-blockers, renin-angiotensin blockade, mineralocorticoid "
+        "antagonists and SGLT2 inhibitors are also symptom therapy "
+        "here. Move frusemide to the subcutaneous or intravenous "
+        "route once gut oedema blocks absorption. Low-dose oral or "
+        "subcutaneous morphine relieves refractory breathlessness, "
+        "and a handheld fan works before any drug does. Note: "
+        "deactivate the shock function of an implantable "
+        "defibrillator once comfort is the goal, and raise it during "
+        "planning rather than in the last hours. Key point: a "
+        "defibrillator shocking a dying patient is the harm specific "
+        "to this disease and it is entirely avoidable."
+    ),
+    "Palliative care in advanced dementia": (
+        "Care in the final stage of dementia, marked by loss of "
+        "ambulation, near-absent speech, dependence for all "
+        "activities of daily living and the arrival of eating "
+        "problems. Prognosis: recurrent pneumonia, febrile episodes "
+        "and difficulty eating each carry a median survival under a "
+        "year, and it is these complications rather than the "
+        "cognitive decline that identify the terminal phase. Mx: "
+        "treat dementia as the terminal illness it is and name it in "
+        "the family conversation. Careful hand feeding is preferred "
+        "to a feeding tube, which does not prolong survival, prevent "
+        "aspiration or heal pressure injuries at this stage. Assess "
+        "pain with an observational scale such as PAINAD or Abbey, "
+        "since agitation and resistance to care are commonly "
+        "untreated pain. Treat pneumonia only where it fits the "
+        "agreed goals, as antibiotics buy modest survival at the cost "
+        "of a less comfortable death. Note: antipsychotics increase "
+        "mortality in dementia, so agitation is worked up as pain, "
+        "retention, constipation or delirium before it is sedated. "
+        "Key point: eating problems are a prognostic marker, "
+        "routinely mistaken for a nutrition problem."
+    ),
+    "Palliative care in COPD": (
+        "Symptom-directed care in advanced chronic obstructive "
+        "pulmonary disease, where prognostic uncertainty delays "
+        "referral although symptom burden matches lung cancer. "
+        "Clinical features: markers of the advanced phase are an FEV1 "
+        "under 30% predicted, breathlessness that leaves the patient "
+        "housebound, repeated admissions or non-invasive ventilation, "
+        "long-term oxygen, low body mass index and right heart "
+        "failure. Mx: optimise inhaled therapy and pulmonary "
+        "rehabilitation first, since both are symptom treatments. Add "
+        "a handheld fan across the face, breathing control and "
+        "activity pacing. Low-dose oral morphine reduces refractory "
+        "breathlessness without measurable respiratory depression at "
+        "palliative doses. Treat the anxiety driving the "
+        "panic-breathlessness cycle. Plan the next exacerbation in "
+        "advance, recording whether non-invasive ventilation, "
+        "intubation and admission are wanted. Note: oxygen relieves "
+        "hypoxaemia, not breathlessness, and does nothing for a "
+        "breathless patient whose saturations are normal. Key point: "
+        "the trigger for palliative involvement is symptom burden and "
+        "admission pattern, not a prognosis anyone can state."
+    ),
+    "Withdrawal of dialysis": (
+        "A planned decision to stop or never start dialysis, and one "
+        "of the commonest routes into end-of-life care in nephrology. "
+        "Indications: intolerable treatment burden, progressive "
+        "frailty or dementia, or a competing terminal illness. "
+        "Conservative kidney management chosen instead of ever "
+        "starting gives comparable quality of life in the frail "
+        "elderly, with only modestly shorter survival and far fewer "
+        "days in hospital. Prognosis: death usually follows within "
+        "1-2 weeks of the last session, sooner where there is no "
+        "residual urine output, and the decision can be reversed if "
+        "the patient changes their mind. Clinical features: uraemic "
+        "pruritus, restless legs, nausea, drowsiness and myoclonus, "
+        "with breathlessness from fluid overload. Mx: fentanyl or "
+        "buprenorphine rather than morphine for pain and "
+        "breathlessness, low-dose gabapentin for pruritus and "
+        "restless legs, haloperidol for nausea, and an opioid with a "
+        "fan rather than escalating diuretics once the patient is "
+        "anuric. Note: refer early enough that anticipatory medicines "
+        "and a preferred place of death are agreed before the final "
+        "session."
+    ),
+    "Palliative radiotherapy": (
+        "Radiotherapy given to relieve a symptom rather than to cure, "
+        "at low total dose and few fractions so that a frail patient "
+        "makes few trips. Indications: painful bone metastasis, "
+        "impending or actual pathological fracture, malignant spinal "
+        "cord compression, haemoptysis or obstructing endobronchial "
+        "tumour, bleeding from a fungating or pelvic tumour, and "
+        "symptomatic cerebral metastases. Dose: a single 8 Gy "
+        "fraction relieves uncomplicated bone pain as effectively as "
+        "a multi-fraction course, gives useful relief in around 60% "
+        "of patients, and can be repeated at the same site. Onset: "
+        "partial relief over 1-2 weeks and maximal effect at 4-6 "
+        "weeks, so it is planned alongside analgesia rather than "
+        "instead of it. Adverse effects: a pain flare in up to a "
+        "third of patients within days, settled with a short course "
+        "of dexamethasone or extra breakthrough analgesia. "
+        "Site-specific fatigue, nausea and mucositis otherwise. Note: "
+        "what most often costs a dying patient the benefit is waiting "
+        "on full staging or a tissue diagnosis that will not change "
+        "the plan."
+    ),
+    "Haemodialysis": (
+        "Definition: extracorporeal clearance in which solute moves "
+        "by diffusion across a semipermeable membrane into "
+        "countercurrent dialysate, and fluid is removed by "
+        "ultrafiltration across a pressure gradient. Indications: "
+        "established kidney failure, usually started on symptoms "
+        "around an eGFR of 5-10, and acute kidney injury meeting the "
+        "AEIOU indications. Mx: the standard Australian prescription "
+        "is 4 hours three times a week in a satellite or hospital "
+        "unit through a fistula or tunnelled catheter, with heparin "
+        "in the circuit and blood flows of 250-400 mL/min. Home and "
+        "nocturnal haemodialysis give longer and more frequent "
+        "treatment with better phosphate control, fewer "
+        "antihypertensives and better survival. Complications: "
+        "intradialytic hypotension and cramps, access failure and "
+        "infection, disequilibrium syndrome at first sessions, and "
+        "beta-2 microglobulin amyloidosis after years. Note: "
+        "clearance is intermittent, so the patient is at their most "
+        "fluid overloaded and hyperkalaemic at the end of the long "
+        "weekend gap, which is where dialysis deaths cluster."
+    ),
+    "Peritoneal dialysis": (
+        "Definition: home dialysis using the peritoneum as the "
+        "membrane. Dialysate instilled through a Tenckhoff catheter "
+        "clears solute by diffusion and removes water by osmosis, "
+        "driven by dextrose or by icodextrin for the long dwell. "
+        "Types: CAPD uses about four manual 2 L exchanges a day. APD "
+        "uses an overnight cycler, leaving the day free. Mx: suits "
+        "patients wanting home therapy, needle phobia, poor veins, or "
+        "significant residual urine output, which peritoneal dialysis "
+        "preserves longer than haemodialysis. Fluid and potassium "
+        "restrictions are looser and potassium supplements are "
+        "sometimes needed. Complications: peritonitis and exit-site "
+        "infection, hernias, dialysate leak, catheter malposition or "
+        "constipation-related outflow failure, ultrafiltration "
+        "failure, glucose absorption causing weight gain and "
+        "hyperglycaemia, and encapsulating peritoneal sclerosis. "
+        "Note: technique survival is limited, and most patients "
+        "transfer to haemodialysis or are transplanted within about "
+        "five years."
+    ),
+    "Haemodialysis vascular access": (
+        "Definition: the three routes for haemodialysis, chosen in "
+        "order of durability. Types: an arteriovenous fistula is "
+        "first choice, usually radiocephalic then brachiocephalic, "
+        "with the lowest infection and thrombosis rates but 3-6 "
+        "months to mature. An arteriovenous graft uses prosthetic "
+        "conduit when veins are inadequate and is usable in 2-4 "
+        "weeks. A tunnelled cuffed catheter is for urgent starts and "
+        "exhausted options and carries the worst infection and "
+        "mortality figures. Mx: refer for access creation around an "
+        "eGFR of 20, or when dialysis is expected within a year. "
+        "Protect the vessels from CKD stage 4 onward with no "
+        "venepuncture, cannulation, PICC line or blood pressure cuff "
+        "in the planned arm, and put a wristband on the patient. Ix: "
+        "duplex ultrasound for vein mapping before creation and for "
+        "suspected stenosis after. Note: examine every fistula. A "
+        "soft thrill and a continuous machinery bruit mean flow, "
+        "while a pulsatile fistula with no thrill means outflow "
+        "stenosis and needs same-day referral."
+    ),
+    "Dialysis catheter-related bloodstream infection": (
+        "Definition: bacteraemia arising from a haemodialysis "
+        "catheter, the leading infectious cause of death in dialysis. "
+        "Aetiology: Staphylococcus aureus and coagulase-negative "
+        "staphylococci predominate, with gram-negatives and Candida "
+        "less common. Clinical features: rigors and fever during or "
+        "shortly after a dialysis run, often with no local sign. "
+        "Exit-site infection gives discharge and erythema at the skin "
+        "exit, while tunnel infection gives tenderness and erythema "
+        "tracking along the cuff. Ix: paired peripheral and "
+        "catheter-lumen blood cultures before antibiotics, plus "
+        "echocardiography for any Staphylococcus aureus bacteraemia. "
+        "Mx: empirical vancomycin with gram-negative cover, dosed to "
+        "be given at dialysis, then narrowed to culture. Remove the "
+        "line for Staphylococcus aureus, Pseudomonas or Candida, "
+        "tunnel infection, haemodynamic instability, or bacteraemia "
+        "persisting past 48-72 hours. Note: reserve antibiotic lock "
+        "therapy for salvage of an uncomplicated infection when "
+        "access options are running out."
+    ),
+    "Intradialytic hypotension": (
+        "Definition: a symptomatic fall in blood pressure during "
+        "haemodialysis, complicating up to a quarter of sessions and "
+        "the commonest reason a run is cut short. Aetiology: "
+        "ultrafiltration removing fluid faster than the plasma can "
+        "refill from the interstitium. Contributors include a large "
+        "interdialytic weight gain, a dry weight set too low, "
+        "antihypertensives taken before dialysis, eating during the "
+        "session, autonomic neuropathy and diastolic dysfunction. "
+        "Always exclude sepsis, bleeding, arrhythmia, tamponade and "
+        "myocardial infarction. Clinical features: yawning, cramps, "
+        "nausea, dizziness, then collapse. Mx: stop ultrafiltration, "
+        "lie the patient flat with legs raised and give a small "
+        "saline bolus. Then fix the cause by reassessing dry weight, "
+        "lengthening or splitting sessions, cooling the dialysate, "
+        "moving antihypertensives to after dialysis, and midodrine if "
+        "refractory. Note: repeated episodes stun the myocardium and "
+        "hasten loss of residual kidney function, so treating each "
+        "one with saline and moving on is not management."
+    ),
+    "Dialysis adequacy": (
+        "Definition: whether the delivered dose of dialysis meets the "
+        "minimum linked to acceptable outcomes, quantified by urea "
+        "clearance. Ix: single-pool Kt/V per treatment, from pre- and "
+        "post-dialysis urea, and the simpler urea reduction ratio. "
+        "Targets: for three-times-weekly haemodialysis a minimum "
+        "single-pool Kt/V of 1.2 and a urea reduction ratio of about "
+        "65%, with most units aiming above that. For peritoneal "
+        "dialysis a total weekly Kt/V of at least 1.7, counting "
+        "residual renal clearance. Mx: raise the dose with longer or "
+        "more frequent sessions, higher blood and dialysate flows, a "
+        "larger dialyser, or by fixing the real cause, which is "
+        "usually access recirculation, a clotting circuit or missed "
+        "and shortened treatments. Note: urea kinetics say nothing "
+        "about volume, phosphate, nutrition or symptoms, and a "
+        "peritoneal patient whose weekly Kt/V drifts down has usually "
+        "just lost their residual urine output."
+    ),
+    "Uraemic bleeding": (
+        "Definition: acquired platelet dysfunction in advanced kidney "
+        "failure causing mucocutaneous bleeding despite a normal "
+        "platelet count and normal coagulation screen. Mechanism: "
+        "retained uraemic toxins impair platelet activation and "
+        "adhesion to von Willebrand factor, nitric oxide production "
+        "is excessive, and anaemia keeps platelets away from the "
+        "vessel wall by removing the red cell mass that margins them "
+        "there. Clinical features: bruising, epistaxis, gum and "
+        "gastrointestinal bleeding, prolonged oozing from cannulation "
+        "sites, and haemorrhagic pericardial effusion. Mx: dialyse, "
+        "since dialysis partly corrects the defect. Before a "
+        "procedure give desmopressin 0.3 microgram/kg intravenously, "
+        "which works within an hour and lasts 4-8 hours but shows "
+        "tachyphylaxis on repeat dosing. Cryoprecipitate and "
+        "conjugated oestrogens give a longer effect, and correcting "
+        "anaemia helps directly. Note: the platelet count, INR and "
+        "APTT are all normal, so a normal coagulation screen is no "
+        "reassurance here."
+    ),
+    "Hyperkalaemia in the dialysis patient": (
+        "Definition: potassium above 5.5 mmol/L in a patient with "
+        "little or no urinary excretion, so intake, cell shift and "
+        "dialysis timing set the level. Aetiology: a missed or "
+        "shortened session is the commonest cause. Others are dietary "
+        "indiscretion, constipation (the colon is the main remaining "
+        "excretory route), acidosis, gastrointestinal bleeding, "
+        "tissue breakdown, and an ACE inhibitor, spironolactone or "
+        "trimethoprim left on the chart after dialysis started. Ix: "
+        "ECG before the formal potassium returns, and repeat any "
+        "haemolysed sample. Mx: 10 mL of 10% calcium gluconate for "
+        "ECG changes, repeated as needed. Insulin with dextrose and "
+        "nebulised salbutamol shift potassium for only a few hours, "
+        "and delayed hypoglycaemia is common because insulin "
+        "clearance is lost, so cover with dextrose and recheck "
+        "glucose. Definitive treatment is dialysis, so call the renal "
+        "unit early rather than repeating shifts. Note: potassium "
+        "rebounds in the hours after a session, so do not trust an "
+        "end-of-dialysis value."
+    ),
+    "Diet and fluid restriction in dialysis": (
+        "Definition: the intake limits that keep a patient safe "
+        "between intermittent treatments. Mx: fluid on haemodialysis "
+        "is usually restricted to around 500-800 mL plus the previous "
+        "day's urine output, aiming for an interdialytic weight gain "
+        "under about 4% of body weight. Salt is capped near 5 g a "
+        "day, which controls thirst and blood pressure far better "
+        "than tightening fluid alone. Potassium is limited by "
+        "avoiding bananas, potatoes, tomato, chocolate and salt "
+        "substitutes, and by boiling vegetables and discarding the "
+        "water. Phosphate control targets processed foods and cola "
+        "containing phosphate additives, which are almost fully "
+        "absorbed, with binders taken with food rather than after it. "
+        "Note: protein restriction belongs to pre-dialysis CKD. Once "
+        "dialysis starts, protein requirements rise to about 1.2 g/kg "
+        "a day, and protein-energy wasting predicts death more "
+        "strongly than any single electrolyte, so never tell a "
+        "dialysis patient to eat less protein."
+    ),
+    "Drug removal by dialysis": (
+        "Definition: whether dialysis clears a given drug or toxin, "
+        "which decides both the management of poisoning and the "
+        "timing of maintenance drugs around a session. Mechanism: the "
+        "circuit only reaches what is in plasma, so removal needs a "
+        "small molecule that is water soluble, minimally protein "
+        "bound and confined to a small volume of distribution. High "
+        "protein binding or wide tissue distribution makes a drug "
+        "effectively undialysable however toxic it is. Indications: "
+        "the classically dialysable poisons are lithium, salicylate, "
+        "methanol, ethylene glycol, metformin with lactic acidosis, "
+        "theophylline, barbiturates and valproate in massive "
+        "overdose. Sotalol and atenolol are also cleared, unlike most "
+        "beta-blockers. Note: amiodarone, digoxin, warfarin, "
+        "phenytoin, tricyclics and benzodiazepines are not removed, "
+        "so dialysis is not a rescue in those overdoses. Mx: give "
+        "renally cleared drugs and antibiotics after haemodialysis "
+        "rather than before. Continuous therapy in intensive care "
+        "clears steadily, so beta-lactams and vancomycin are more "
+        "often underdosed than accumulated."
+    ),
+    "Continuous renal replacement therapy": (
+        "Definition: extracorporeal replacement run continuously in "
+        "intensive care through a vascath, usually as continuous "
+        "veno-venous haemodiafiltration, removing solute and fluid "
+        "slowly over 24 hours. Indications: the standard indications "
+        "for dialysis in a patient too haemodynamically unstable for "
+        "an intermittent run, plus raised intracranial pressure or "
+        "acute brain injury, where slow solute removal avoids the "
+        "osmotic shift that drives cerebral oedema. Mx: a delivered "
+        "effluent dose of 20-25 mL/kg/h, prescribed higher to allow "
+        "for downtime, with regional citrate anticoagulation "
+        "preferred over heparin for filter life and bleeding risk. "
+        "Complications: hypophosphataemia and hypokalaemia from "
+        "continuous clearance, hypothermia, filter clotting, and "
+        "antibiotic underdosing. Citrate accumulates in liver failure "
+        "and shows as a rising total to ionised calcium ratio with "
+        "metabolic acidosis. Note: continuous therapy has never been "
+        "shown to beat intermittent dialysis for survival. It is a "
+        "modality choice for haemodynamic tolerance, not an "
+        "escalation."
+    ),
+    "Kidney transplant rejection": (
+        "Definition: immune-mediated allograft injury, graded on "
+        "transplant biopsy by the Banff classification. Types: "
+        "hyperacute rejection from preformed antibody within minutes, "
+        "now almost abolished by crossmatching. Acute T-cell mediated "
+        "rejection over weeks to months, showing tubulitis and "
+        "interstitial infiltrate, usually steroid responsive. "
+        "Antibody-mediated rejection driven by donor-specific "
+        "antibody, with peritubular capillaritis and C4d staining. "
+        "Chronic rejection presents as slow graft loss with "
+        "transplant glomerulopathy. Clinical features: usually a "
+        "silent creatinine rise on surveillance bloods, sometimes "
+        "graft tenderness, fever, oliguria or worsening hypertension. "
+        "Ix: exclude the mimics first with volume assessment, "
+        "ultrasound and Doppler for obstruction or renal artery "
+        "stenosis, a tacrolimus level, and BK virus and CMV testing. "
+        "Send donor-specific antibodies and biopsy. Mx: pulse "
+        "methylprednisolone, antithymocyte globulin if steroid "
+        "resistant, and plasma exchange with immunoglobulin for "
+        "antibody-mediated disease. Note: ask about adherence."
+    ),
+    "Transplant immunosuppression": (
+        "Class: induction with basiliximab, or antithymocyte globulin "
+        "for high immunological risk, then lifelong triple "
+        "maintenance with a calcineurin inhibitor (tacrolimus), an "
+        "antimetabolite (mycophenolate) and prednisolone. Adverse "
+        "effects: tacrolimus causes nephrotoxicity, tremor, "
+        "hypertension, hypomagnesaemia and post-transplant diabetes. "
+        "Mycophenolate causes marrow suppression and diarrhoea and is "
+        "teratogenic. Across the regimen the dominant harms are "
+        "infection and malignancy, particularly squamous cell "
+        "carcinoma and post-transplant lymphoproliferative disorder. "
+        "Interactions: tacrolimus and ciclosporin are CYP3A4 "
+        "substrates. Azoles, macrolides other than azithromycin, "
+        "diltiazem and grapefruit push levels up, while rifampicin, "
+        "carbamazepine, phenytoin and St John's wort drop them and "
+        "precipitate rejection. Monitoring: trough tacrolimus levels "
+        "against targets that fall over the first year, plus FBC, "
+        "glucose, lipids and annual skin checks. Note: never add or "
+        "stop a drug in a transplant recipient without checking it "
+        "against the calcineurin inhibitor."
+    ),
+    "Conservative kidney management": (
+        "Definition: planned active treatment of kidney failure "
+        "without dialysis, covering symptom control, anaemia and "
+        "mineral management, and advance care planning. It is a "
+        "chosen pathway, not withdrawal of care. Indications: "
+        "typically over 75 with heavy comorbidity, frailty or "
+        "dementia, where dialysis buys little survival and costs "
+        "independence, transport time and hospital-free days. Median "
+        "survival is often one to two years, and in the very old with "
+        "cardiovascular disease it approaches what dialysis achieves. "
+        "Mx: high-dose loop diuretic while urine output persists, "
+        "phosphate binders and erythropoiesis-stimulating agents "
+        "continued for symptoms, and treatment of pruritus, restless "
+        "legs, nausea, breathlessness and fatigue. Avoid morphine, "
+        "since metabolites accumulate. Refer early to renal "
+        "supportive care, which in NSW is a defined Agency for "
+        "Clinical Innovation service model alongside palliative care. "
+        "Note: the decision is revisited rather than final, and a "
+        "patient who declines dialysis today can still start it "
+        "later."
+    ),
+    "Encapsulating peritoneal sclerosis": (
+        "Definition: a thick fibrotic membrane encasing the bowel "
+        "after long-term peritoneal dialysis, uncommon but with "
+        "mortality in the range of 25-50%. Risk factors: duration of "
+        "peritoneal dialysis is the dominant one, with risk climbing "
+        "steeply beyond five years. Severe or recurrent peritonitis, "
+        "high glucose exposure and ultrafiltration failure add to it, "
+        "and presentation is often triggered by stopping peritoneal "
+        "dialysis or by transplantation. Clinical features: insidious "
+        "anorexia, weight loss, nausea and abdominal pain, "
+        "progressing to recurrent small bowel obstruction. "
+        "Blood-stained effluent and loss of ultrafiltration precede "
+        "it. Ix: CT abdomen showing peritoneal thickening and "
+        "calcification, tethered encased bowel loops and loculated "
+        "fluid. Mx: stop peritoneal dialysis and convert to "
+        "haemodialysis, support nutrition including parenteral "
+        "feeding, and refer to a centre doing surgical enterolysis. "
+        "Tamoxifen and corticosteroids are used on weak evidence. "
+        "Note: suspect it in unexplained weight loss years after "
+        "peritoneal dialysis ended."
+    ),
+    "Preoperative assessment": (
+        "Structured review before anaesthesia to grade risk, optimise "
+        "treatable disease and plan the anaesthetic. Hx: exercise "
+        "tolerance, previous anaesthetics and any family history of "
+        "anaesthetic problems, reflux, obstructive sleep apnoea, "
+        "smoking and alcohol, and a full medication and allergy list. "
+        "Examination: airway (mouth opening, Mallampati, thyromental "
+        "distance, neck movement, dentition), cardiorespiratory "
+        "examination and venous access. Ix: order what changes "
+        "management rather than by protocol. ECG for known cardiac "
+        "disease or a risk factor. Full blood count and group and "
+        "hold where blood loss is expected. Creatinine and "
+        "electrolytes for renal disease or diuretics. Routine chest "
+        "radiograph and coagulation screen are not indicated. Risk: "
+        "ASA grade plus functional capacity, where inability to climb "
+        "two flights of stairs (under 4 METs) predicts perioperative "
+        "cardiac events. Note: the anaesthetic questions are the ones "
+        "a surgical term forgets - airway, reflux, and family history "
+        "of malignant hyperthermia or prolonged paralysis after "
+        "suxamethonium."
+    ),
+    "Perioperative medication management": (
+        "Deciding which regular drugs to continue, withhold or "
+        "substitute around surgery. Mx: continue beta blockers, "
+        "statins, inhalers, antiepileptics, antiparkinsonian drugs "
+        "and thyroid replacement, since abrupt withdrawal does more "
+        "harm than the operation. Withhold ACE inhibitors and "
+        "angiotensin receptor blockers on the morning of surgery, "
+        "because they blunt the vasoconstrictor response and produce "
+        "refractory intraoperative hypotension. Withhold diuretics "
+        "and NSAIDs on the day. Cautions: do not start a beta blocker "
+        "in the days before surgery, since POISE showed fewer "
+        "infarcts but more strokes and deaths. Lithium, clozapine and "
+        "monoamine oxidase inhibitors need explicit anaesthetic and "
+        "psychiatric advice rather than a blanket stop. Note: "
+        "anticoagulants, antiplatelets and glucose-lowering drugs "
+        "each run to their own rules. The SGLT2 inhibitors are the "
+        "ones most often missed and must be stopped days ahead, not "
+        "on the morning of the list."
+    ),
+    "Perioperative corticosteroid management": (
+        "Supplementary glucocorticoid around surgery for a patient "
+        "whose hypothalamic-pituitary-adrenal axis is suppressed by "
+        "exogenous steroid. Risk factors: prednisolone 5 mg daily or "
+        "more for over three weeks, or any such course within the "
+        "past three months. High-dose inhaled or topical steroid can "
+        "do it too. Clinical features: without cover the patient "
+        "develops hypotension unresponsive to fluid and vasopressor, "
+        "with hyponatraemia, hypoglycaemia, vomiting and drowsiness "
+        "in recovery. Mx: give the usual oral dose on the morning of "
+        "surgery. A minor procedure under local anaesthesia usually "
+        "needs nothing more. For major surgery give hydrocortisone "
+        "100 mg IV at induction, then about 200 mg over the following "
+        "24 hours by infusion or in divided doses, halving daily back "
+        "to maintenance as the patient recovers. Note: the error here "
+        "is nearly always under-treatment. A few days of "
+        "hydrocortisone harms almost nobody, whereas an unrecognised "
+        "adrenal crisis in recovery kills."
+    ),
+    "Intravenous induction agents": (
+        "Drugs given as a single bolus to produce unconsciousness "
+        "within one arm-brain circulation time. Class: propofol 1.5 "
+        "to 2.5 mg/kg is the default - fast, smooth and antiemetic, "
+        "but it drops systemic vascular resistance and blunts the "
+        "baroreflex, so it causes hypotension in the hypovolaemic and "
+        "the elderly. Thiopentone 3 to 5 mg/kg acts faster and holds "
+        "cardiac output better, but accumulates and causes tissue "
+        "necrosis if it extravasates. Ketamine 1 to 2 mg/kg is the "
+        "agent for shock and severe asthma, releasing catecholamines "
+        "and preserving airway tone, at the cost of emergence "
+        "phenomena. Dose: reduce by a third or more in the elderly, "
+        "shocked or frail, and titrate to effect rather than to "
+        "weight. Adverse effects: apnoea, loss of airway tone, and "
+        "pain on injection with propofol. Note: ketamine raises blood "
+        "pressure through sympathetic outflow but is a direct "
+        "myocardial depressant, so it too can crash a "
+        "catecholamine-depleted patient."
+    ),
+    "Volatile anaesthetic agents": (
+        "Halogenated ethers vaporised into the fresh gas flow to "
+        "maintain anaesthesia. Sevoflurane is the Australian "
+        "standard, desflurane has the fastest offset but irritates "
+        "the airway, and isoflurane is cheap for long cases. Dose: "
+        "potency is expressed as minimum alveolar concentration, the "
+        "end-tidal concentration at which half of patients do not "
+        "move to skin incision. MAC falls with age, opioids, nitrous "
+        "oxide and hypothermia, and is higher in children. Adverse "
+        "effects: dose-dependent vasodilation and myocardial "
+        "depression, respiratory depression, uterine relaxation, "
+        "postoperative nausea, and raised cerebral blood flow. "
+        "Contraindications: every volatile agent triggers malignant "
+        "hyperthermia in a susceptible patient. That is the one "
+        "absolute contraindication, and the alternative is a "
+        "vapour-free machine with total intravenous anaesthesia. "
+        "Note: sevoflurane is the only agent smooth enough for gas "
+        "induction, which is why paediatric and shared-airway "
+        "inductions use it."
+    ),
+    "Neuromuscular blocking drugs": (
+        "Drugs acting at the postsynaptic nicotinic receptor to give "
+        "intubating conditions and surgical relaxation. They produce "
+        "no sedation and no analgesia. Class: suxamethonium 1 to 1.5 "
+        "mg/kg is the depolarising agent, with onset under a minute "
+        "and offset by plasma cholinesterase in about five minutes. "
+        "Rocuronium 0.6 mg/kg (1.2 mg/kg for rapid sequence "
+        "induction), vecuronium and atracurium are non-depolarising "
+        "and last 30 to 60 minutes. Adverse effects: suxamethonium "
+        "causes fasciculations, myalgia, bradycardia on a repeat "
+        "dose, and a rise in serum potassium of roughly 0.5 mmol/L. "
+        "Contraindications: suxamethonium after burns, denervation or "
+        "prolonged immobility beyond about 24 hours, and in "
+        "established hyperkalaemia, because upregulated "
+        "extrajunctional receptors release enough potassium to arrest "
+        "the heart. Also malignant hyperthermia susceptibility. Note: "
+        "sugammadex reverses rocuronium and vecuronium at 2 mg/kg "
+        "once the second twitch returns, 4 mg/kg for deep block and "
+        "16 mg/kg for immediate rescue after an intubating dose."
+    ),
+    "Supraglottic airway": (
+        "Device seated in the hypopharynx that seals around the "
+        "laryngeal inlet without passing the cords. Indications: "
+        "elective surgery in a fasted patient at low aspiration risk, "
+        "and rescue ventilation when facemask ventilation and "
+        "intubation have both failed. Contraindications: a full "
+        "stomach or significant reflux, obstruction at or below the "
+        "cords, poor lung compliance needing high airway pressures, "
+        "and prone or shared-airway surgery unless a "
+        "second-generation device is used. Mx: size on weight (4 for "
+        "most women, 5 for most men), insert at an adequate depth of "
+        "anaesthesia, and inflate to the lowest sealing pressure, "
+        "under 60 cmH2O. Confirm with chest rise and a square "
+        "capnography waveform. Complications: sore throat, "
+        "malposition with gastric insufflation, laryngospasm from "
+        "insertion at light anaesthesia, and aspiration. Note: "
+        "second-generation devices with a gastric drain port give a "
+        "higher seal pressure and allow a gastric tube, and are the "
+        "default where either matters."
+    ),
+    "Capnography": (
+        "Continuous measurement of exhaled carbon dioxide displayed "
+        "as a waveform, the most informative single monitor in "
+        "anaesthesia and resuscitation. Uses: confirms tracheal "
+        "rather than oesophageal placement, detects disconnection, "
+        "apnoea and obstruction, and tracks pulmonary blood flow. "
+        "Monitoring: normal end-tidal value is 35 to 45 mmHg, sitting "
+        "a few mmHg below arterial CO2. The normal trace has a sharp "
+        "upstroke, a flat alveolar plateau and a rapid return to a "
+        "zero baseline. Red flags: sudden loss of the trace means "
+        "disconnection, oesophageal intubation or cardiac arrest "
+        "until proven otherwise. A progressive fall means falling "
+        "cardiac output or pulmonary embolism, an upsloping plateau "
+        "means bronchospasm or an obstructed tube, and a baseline "
+        "above zero means rebreathing. Note: in cardiac arrest an "
+        "abrupt rise is the earliest sign of return of spontaneous "
+        "circulation, and a value under 10 mmHg after 20 minutes of "
+        "good compressions predicts failure to resuscitate."
+    ),
+    "Intraoperative monitoring standards": (
+        "The minimum monitoring required whenever a patient is "
+        "anaesthetised, set out for Australia and New Zealand in "
+        "ANZCA professional document PS18. Monitoring: a trained "
+        "anaesthetist present throughout, with continuous pulse "
+        "oximetry, capnography and ECG, blood pressure at least every "
+        "five minutes, an inspired oxygen analyser and an agent "
+        "monitor. Temperature and neuromuscular monitoring must be "
+        "available, and are used whenever blockade is given or the "
+        "case is long. Indications: invasive arterial and central "
+        "venous pressure, cardiac output monitoring and processed EEG "
+        "are added for major surgery, poor cardiac reserve, or total "
+        "intravenous anaesthesia in a paralysed patient. Note: "
+        "capnography on every instrumented airway is what makes an "
+        "unrecognised oesophageal intubation avoidable. Alarms are "
+        "set and audible, the machine is checked before every list, "
+        "and none of it substitutes for someone watching the patient "
+        "and the surgical field."
+    ),
+    "Pulmonary aspiration under anaesthesia": (
+        "Inhalation of gastric contents during anaesthesia, usually "
+        "at induction or emergence when airway reflexes are obtunded. "
+        "Risk factors: emergency surgery on a full stomach, pregnancy "
+        "beyond the first trimester, reflux, bowel obstruction, "
+        "gastroparesis and depressed consciousness. The classic "
+        "Mendelson threshold is gastric fluid over roughly 25 mL at "
+        "pH below 2.5. Prevention: adequate fasting, rapid sequence "
+        "induction with a cuffed tube in the at-risk patient, a "
+        "gastric tube in obstruction, and antacid prophylaxis in "
+        "obstetrics. Clinical features: coughing or laryngospasm at "
+        "the time, then hypoxia, wheeze and dependent infiltrates "
+        "over hours. Mx: head down and lateral, suction the pharynx "
+        "before positive pressure, then intubate and ventilate with "
+        "oxygen and PEEP. Antibiotics and steroids are not routine "
+        "and bronchoscopy is only for particulate matter. Note: the "
+        "chemical injury settles over 24 to 48 hours, so fever beyond "
+        "that means secondary infection - which is when antibiotics "
+        "start."
+    ),
+    "Perioperative hypothermia": (
+        "Core temperature below 36 degrees around surgery, usually "
+        "established within 30 minutes of induction. Aetiology: "
+        "anaesthesia lowers the vasoconstriction and shivering "
+        "thresholds, so heat redistributes from core to periphery. A "
+        "cold theatre, an exposed body cavity and unwarmed fluids "
+        "sustain the loss. Complications: three times the rate of "
+        "surgical site infection, coagulopathy with greater "
+        "transfusion need, prolonged drug action and delayed "
+        "emergence, shivering that raises oxygen consumption, and "
+        "myocardial ischaemia. Prevention: prewarm with forced air "
+        "for 30 minutes before induction, warm intravenous and "
+        "irrigation fluids, continue forced-air warming "
+        "intraoperatively, and raise theatre temperature for "
+        "neonates. Monitoring: measure core temperature for any "
+        "anaesthetic beyond 30 minutes and do not transfer to the "
+        "ward below 36 degrees. Note: regional anaesthesia conceals "
+        "it, because the patient does not feel cold and nobody "
+        "measures a temperature during a spinal."
+    ),
+    "Post-anaesthesia care unit": (
+        "Monitored area where patients regain airway reflexes, "
+        "haemodynamic stability and consciousness after anaesthesia. "
+        "Monitoring: one-to-one nursing until the airway is patent "
+        "and protected, with continuous oximetry, supplemental oxygen "
+        "and regular blood pressure, after a structured handover of "
+        "the procedure, anaesthetic, analgesia and fluid balance. "
+        "Complications: airway obstruction from residual anaesthesia "
+        "or blockade, hypoxaemia and hypotension (with pain, nausea, "
+        "shivering, delirium and urinary retention the common lesser "
+        "problems). Bleeding after neck or tonsillar surgery declares "
+        "itself here and threatens the airway. Mx: sit up and give "
+        "oxygen, jaw thrust or an airway adjunct for obstruction, "
+        "titrated intravenous opioid for pain, and a cause-directed "
+        "approach to hypotension rather than reflex fluid. Criteria: "
+        "discharge on a scored assessment of consciousness, airway, "
+        "oxygenation, circulation and pain, never on elapsed time. "
+        "Note: a falling saturation in recovery is hypoventilation "
+        "until proven otherwise."
+    ),
+    "Multimodal analgesia": (
+        "Combining analgesics with different mechanisms so each is "
+        "used at a lower dose, giving better pain relief with fewer "
+        "opioid adverse effects. Mx: regular paracetamol 1 g "
+        "six-hourly is the backbone for almost everyone. Add an NSAID "
+        "unless renal impairment, bleeding risk or another "
+        "contraindication. Add regional block or local infiltration "
+        "whenever the operation allows, since a working block "
+        "outperforms any systemic drug. Opioids are for breakthrough, "
+        "stepped down as the wound settles. Uses: adjuncts include "
+        "low-dose ketamine in the opioid-tolerant, a single "
+        "intraoperative dose of dexamethasone, and lignocaine "
+        "infusion in some centres. Gabapentinoids are no longer "
+        "routine - sedation without benefit in unselected patients. "
+        "Cautions: codeine is unpredictable and avoided in children "
+        "and breastfeeding, tramadol is serotonergic and lowers the "
+        "seizure threshold, and slow-release opioids are not started "
+        "for acute pain. Note: every discharge opioid script needs a "
+        "quantity, a stop date and a plan."
+    ),
+    "Neuraxial anaesthesia and anticoagulation": (
+        "Timing rules for spinal, epidural and deep block procedures "
+        "in an anticoagulated patient, because a vertebral canal "
+        "haematoma leaves permanent paraplegia unless it is "
+        "decompressed early. Criteria: wait 12 hours after a "
+        "prophylactic dose of low molecular weight heparin and 24 "
+        "hours after a treatment dose, and give the next dose no "
+        "sooner than four hours after the block or after catheter "
+        "removal. Clopidogrel is withheld for seven days and the "
+        "direct oral anticoagulants for about three, longer in renal "
+        "impairment. Warfarin needs an INR of 1.5 or less. Aspirin "
+        "alone is not a contraindication. Cautions: remove a catheter "
+        "at a trough level and never during therapeutic "
+        "anticoagulation. Work from the ANZCA or ASRA table rather "
+        "than from memory, since each drug has its own interval. Red "
+        "flags: new back pain, a block denser or longer than "
+        "expected, or leg weakness and bladder dysfunction after the "
+        "catheter is out. Urgent MRI and neurosurgical review."
+    ),
+    "Anaesthesia for caesarean section": (
+        "Spinal anaesthesia is the default for elective and most "
+        "urgent caesarean sections, since general anaesthesia carries "
+        "the higher maternal risk. Mx: a single-shot spinal of "
+        "hyperbaric bupivacaine with intrathecal fentanyl and "
+        "preservative-free morphine gives a block to T4, tested to "
+        "cold and light touch before incision. Tilt the table 15 "
+        "degrees to the left to relieve aortocaval compression, "
+        "co-load with crystalloid, and run a phenylephrine or "
+        "metaraminol infusion, since spinal hypotension is "
+        "near-universal and causes nausea and neonatal acidosis. "
+        "Indications: general anaesthesia for maternal refusal, "
+        "coagulopathy, haemorrhage or a true crash delivery, using "
+        "rapid sequence induction with aspiration prophylaxis and a "
+        "difficult-airway plan. Complications: high or total spinal, "
+        "post-dural-puncture headache, and awareness, which is "
+        "commoner in obstetric general anaesthesia than anywhere "
+        "else. Note: from the second trimester assume a full stomach, "
+        "a harder airway and rapid desaturation."
+    ),
+    "Perioperative fluid therapy": (
+        "Replacing deficit, maintenance and ongoing losses around "
+        "surgery without tipping into salt and water overload. Mx: a "
+        "balanced crystalloid such as Hartmann or Plasma-Lyte is the "
+        "default, since large volumes of 0.9% sodium chloride produce "
+        "hyperchloraemic acidosis and acute kidney injury. Give "
+        "maintenance by the 4-2-1 rule and replace blood loss with "
+        "about three times its volume of crystalloid, or with blood "
+        "when the trigger is reached. Cautions: hydroxyethyl starches "
+        "are no longer used, having caused renal failure and death in "
+        "the critically ill. Albumin offers nothing over crystalloid "
+        "in routine surgery. Hypotonic maintenance fluid causes "
+        "postoperative hyponatraemia, because surgery drives "
+        "antidiuretic hormone release. Monitoring: judge on urine "
+        "output, lactate, perfusion and the response to a fluid "
+        "challenge rather than on central venous pressure. Note: aim "
+        "for zero balance - the patient should leave theatre neither "
+        "dry nor two kilograms heavier, since oedematous bowel is "
+        "slow bowel."
     ),
 }
 
