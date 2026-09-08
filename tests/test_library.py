@@ -501,8 +501,45 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
                 _updater._require_https(evil, "manifest")
         for good in (_updater.DEFAULT_MANIFEST_URL,
                      "https://objects.githubusercontent.com/x",
+                     "https://release-assets.githubusercontent.com/x",
                      "https://github.com/mord58562/theankidote/releases/x"):
             self.assertEqual(_updater._require_https(good, "manifest"), good)
+
+    def test_the_live_asset_redirect_lands_on_an_allowed_host(self):
+        """The allowlist is a guess about someone else's infrastructure.
+
+        GitHub moved release downloads from objects.githubusercontent.com
+        to release-assets.githubusercontent.com, and because the updater
+        fails closed the whole content channel went dead - silently, for
+        every install, while the publish script's own `curl -L` check
+        still reported the asset healthy. The only way to notice is to
+        follow the real redirect and ask where it lands, so this test
+        does, against the manifest the fleet is actually polling.
+
+        Skipped without a network. A failure here means the channel is
+        broken for users right now, not that the test is flaky.
+        """
+        import json
+        import urllib.error
+        import urllib.request
+        from pearls import _updater
+        try:
+            with urllib.request.urlopen(
+                    _updater.DEFAULT_MANIFEST_URL, timeout=15) as r:
+                url = json.loads(r.read().decode())["url"]
+            req = urllib.request.Request(url, method="HEAD",
+                                         headers={"User-Agent": "test"})
+            with urllib.request.urlopen(req, timeout=15) as r:
+                landed = r.url
+        except (urllib.error.URLError, OSError, TimeoutError) as exc:
+            self.skipTest(f"no network: {exc}")
+        except (KeyError, ValueError) as exc:
+            self.fail(f"published manifest is not readable: {exc}")
+        self.assertEqual(_updater._require_https(landed, "live asset"),
+                         landed,
+                         "the published asset redirects somewhere the "
+                         "updater refuses, so no install can download "
+                         "content")
 
     # Names pyflakes cannot see because `_rebind_theme` writes them into
     # the module's `globals()` when the palette is built, so they exist

@@ -68,10 +68,18 @@ DEFAULT_MANIFEST_URL = (
 # survives restarts. Pinning the host is the cheap half of the fix; the
 # other half is signing the manifest against a key shipped in the
 # package, which is the real answer and a larger change.
+# GitHub has renamed the host it redirects release downloads to at
+# least once, and the rename broke every client silently: the updater
+# refused the new host, logged one line, and kept serving whatever copy
+# it already had, while `publish_content.sh` verified the same asset
+# with `curl -L` and saw a healthy 200. Both hosts are listed because
+# the rollover is not atomic, and the publish check now runs through
+# `_fetch` so the next rename fails a publish instead of the fleet.
 _ALLOWED_HOSTS = frozenset({
-    "raw.githubusercontent.com",      # the manifest
-    "github.com",                     # release asset, before the redirect
-    "objects.githubusercontent.com",  # release asset, after it
+    "raw.githubusercontent.com",              # the manifest
+    "github.com",                             # release asset, pre-redirect
+    "objects.githubusercontent.com",          # where it used to land
+    "release-assets.githubusercontent.com",   # where it lands now
 })
 
 _TIMEOUT = 8          # seconds; a check that cannot finish is not worth having
@@ -127,10 +135,11 @@ def _fetch(url: str, limit: int = _MAX_BYTES, what: str = "url") -> bytes:
     _require_https(url, what)
     req = urllib.request.Request(url, headers={"User-Agent": _UA})
     with urllib.request.urlopen(req, timeout=_TIMEOUT) as resp:
-        # A redirect chain is allowed to move us between hosts - GitHub
-        # release downloads go to objects.githubusercontent.com and the
+        # A redirect chain is allowed to move us between hosts - a
+        # GitHub release download lands on a separate asset CDN and the
         # asset URL is useless without following that - but it is not
-        # allowed to drop us onto plain http on the way.
+        # allowed to drop us onto plain http, or onto a host outside
+        # the allowlist, on the way.
         final = getattr(resp, "url", None) or url
         _require_https(final, f"{what} after redirect")
         body = resp.read(limit + 1)

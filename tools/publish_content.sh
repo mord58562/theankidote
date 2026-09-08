@@ -313,17 +313,33 @@ Requires schema $(python3 -c 'import json;print(json.load(open("data/manifest.js
 
 sha256: \`$(python3 -c 'import json;print(json.load(open("data/manifest.json"))["sha256"])')\`"
 
-step "Confirming the asset is reachable"
-# GitHub redirects release downloads; -L follows it. A 404 here means
-# the manifest would ship pointing at nothing.
-HTTP="$(curl -sSL -o /dev/null -w '%{http_code}' "$ASSET_URL")"
-[ "$HTTP" = "200" ] || die "asset URL returned HTTP $HTTP - not publishing the manifest"
+step "Confirming the asset is reachable the way a client reaches it"
+# This deliberately does NOT use curl. `curl -L` follows a redirect to
+# anywhere, so it reported a healthy 200 for the entire period GitHub
+# was redirecting release downloads to a host the add-on's allowlist
+# did not contain - the channel was dead for every install and the
+# publish step said it was fine. Fetching through the updater's own
+# `_fetch` means the check exercises `_require_https`, the byte ceiling
+# and the redirect rule that clients exercise, so the next time GitHub
+# renames that host this fails here instead of in the field.
+python3 - "$ASSET_URL" <<'VERIFY' || die "asset is not fetchable by the add-on - not publishing the manifest"
+import hashlib, json, pathlib, sys
+sys.path.insert(0, str(pathlib.Path.cwd()))
+from pearls import _updater
 
-REMOTE_SHA="$(curl -sSL "$ASSET_URL" | shasum -a 256 | cut -d' ' -f1)"
-LOCAL_SHA="$(python3 -c 'import json;print(json.load(open("data/manifest.json"))["sha256"])')"
-[ "$REMOTE_SHA" = "$LOCAL_SHA" ] \
-  || die "uploaded asset hashes to $REMOTE_SHA, manifest says $LOCAL_SHA"
-echo "  asset verified end-to-end"
+url = sys.argv[1]
+man = json.load(open("data/manifest.json"))
+declared = man["sha256"]
+try:
+    blob = _updater._fetch(url, _updater._library_limit(man.get("bytes")),
+                           "published asset")
+except Exception as exc:
+    sys.exit(f"  {type(exc).__name__}: {exc}")
+got = hashlib.sha256(blob).hexdigest()
+if got != declared:
+    sys.exit(f"  uploaded asset hashes to {got}, manifest says {declared}")
+print(f"  asset verified end-to-end through the client path ({len(blob)} bytes)")
+VERIFY
 
 step "Publishing manifest to $BRANCH"
 git add data/manifest.json data/library.json
