@@ -320,6 +320,10 @@ def resolve(text: str) -> list:
             "source":         "uptodate" if utd_primary else "statpearls",
             "link":           _link_kind(c),
             "utd":            utd_chips(c),
+            # Where the popup's button should send the reader when this
+            # entry has no StatPearls chapter of its own. Empty for most
+            # entries, and the button keeps its old behaviour for those.
+            "ref":            c.get("ref") or [],
             "case_sensitive": False,
         }
         seen[canon] = item

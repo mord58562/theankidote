@@ -72600,6 +72600,37 @@ NEW_PRECLINICAL = [
 # 'Falls', 'Confusion' and 'Immunosuppression' each fire on ordinary
 # prose across the whole collection.
 
+# ── Where a popup's button should send the reader ─────────────────────
+#
+# The button on a reference popup opens the entry's StatPearls chapter
+# when there is one. 2,099 of the summaries have no chapter, and for
+# those it fell back to a search inside the StatPearls book - which for
+# "Vaginal pessary" returned Stress Urinary Incontinence, Pelvic Organ
+# Prolapse, Rectocele and Vaginal Foreign Body, and nothing about
+# pessaries. A search that reliably answers the wrong question is worse
+# than no button.
+#
+# An entry here names a real destination instead: `[label, url]`, where
+# the label is what the button says after "Open". Australian sources
+# first and freely accessible ones by preference, since most readers
+# will not have an institutional login.
+#
+# Every URL in this table has been checked to return 200. A link that
+# is confidently wrong is worse than the search it replaces, because
+# the reader will trust it. `build_library.py` fails the build if a key
+# here names no condition in the library.
+ENTRY_REFS = {
+    "Pelvic organ prolapse": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/2022/05/"
+        "Pelvic-Organ-Prolapse.pdf"],
+    "Vaginal pessary": [
+        "RANZCOG",
+        "https://ranzcog.edu.au/wp-content/uploads/2022/05/"
+        "Pelvic-Organ-Prolapse.pdf"],
+}
+
+
 CONDITION_ALIASES = {
     # Spelling and singular/plural variants
     "Thrombocytopenia":         ["Thrombocytopaenia"],

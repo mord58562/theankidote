@@ -143,6 +143,33 @@ def collect() -> dict:
             claimed[a.lower()] = entry["name"]
         entry["aliases"] = merged
 
+    # Merge the reference-destination table. A condition with no NBK
+    # chapter falls back to a search inside the StatPearls book, and for
+    # most of the 2,099 summaries without a chapter that search answers
+    # a different question than the one asked. An entry here names a
+    # real destination for the popup's button instead.
+    #
+    # Validated the same way as the aliases above: a key naming no
+    # condition is a typo, and a silent one, because the popup would
+    # simply keep its old button.
+    unknown_refs = [n for n in _rich.ENTRY_REFS
+                    if n.lower() not in by_condition]
+    if unknown_refs:
+        raise SystemExit(
+            f"ENTRY_REFS names {len(unknown_refs)} condition(s) not in "
+            f"the library: {unknown_refs[:8]}")
+    for name, ref in _rich.ENTRY_REFS.items():
+        if (not isinstance(ref, (list, tuple)) or len(ref) != 2
+                or not all(isinstance(x, str) and x.strip() for x in ref)):
+            raise SystemExit(
+                f"ENTRY_REFS[{name!r}] must be [label, url]; got {ref!r}")
+        label, url = ref
+        if not url.startswith("https://"):
+            raise SystemExit(
+                f"ENTRY_REFS[{name!r}] url is {url!r}; a reference the "
+                f"reader is asked to trust travels over HTTPS")
+        by_condition[name.lower()]["ref"] = [label.strip(), url.strip()]
+
     # Merge the spelling-variant table into the drug entries. Done here
     # rather than in `_drugs.py` so the aliases travel in library.json
     # and reach existing installs over the content channel, instead of

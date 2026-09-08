@@ -239,13 +239,49 @@ class SpanAttributes(unittest.TestCase):
                 if "title" not in literal:
                     continue        # not a term dict
                 missing = {k for k in ("url", "summary", "source", "link",
-                                       "utd")} - literal
+                                       "utd", "ref")} - literal
                 self.assertFalse(
                     missing,
                     f"{name} builds a term dict without {sorted(missing)}; "
                     f"`_span` reads those and falls back to a default that "
                     f"looks like an answer. Set them explicitly, even to "
                     f"an empty value.")
+
+    def test_a_named_reference_reaches_the_span(self):
+        """`ENTRY_REFS` exists so the button can name a real source.
+
+        2,099 summaries have no StatPearls chapter, and the button fell
+        back to a search inside the StatPearls book. On the entry that
+        prompted this - Vaginal pessary - that search returned Stress
+        Urinary Incontinence, Pelvic Organ Prolapse, Rectocele and
+        Vaginal Foreign Body, and nothing about pessaries.
+
+        Checked at the span, because the value has to survive four hops
+        - the build, `resolve`, the term builder and the pattern's
+        lookup record - and this tree has lost a key on exactly that
+        journey three times.
+        """
+        import html as _html
+        import json as _json
+        span = self._span_for("Manage pelvic organ prolapse today.",
+                              "pelvic organ prolapse")
+        raw = self._attr(span, "data-sp-ref")
+        self.assertIsNotNone(raw, "data-sp-ref is absent from the span")
+        ref = _json.loads(_html.unescape(raw))
+        self.assertEqual(len(ref), 2, f"ref is not [label, url]: {ref!r}")
+        self.assertTrue(ref[0], "the ref carries no label")
+        self.assertTrue(ref[1].startswith("https://"),
+                        f"a reference the reader is asked to trust must be "
+                        f"https, got {ref[1]!r}")
+
+    def test_an_entry_without_a_reference_says_so_explicitly(self):
+        """An empty list, not a missing attribute.
+
+        marker.js falls back to the old button when the ref is empty, so
+        both states have to be distinguishable at the span.
+        """
+        span = self._span_for("Consider asthma today.", "asthma")
+        self.assertEqual(self._attr(span, "data-sp-ref"), "[]")
 
     def test_the_dock_path_carries_no_stylesheet(self):
         """The card path is handed to Anki as one string and needs the

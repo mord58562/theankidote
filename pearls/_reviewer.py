@@ -78,6 +78,11 @@ def _custom_terms() -> list:
             # `utd` was lost twice and `link` once. This database has
             # no UpToDate chips; saying so is the point.
             "utd": [],
+            # The popup button's destination when this entry has no
+            # chapter of its own. Only conditions carry one today; the
+            # others say so explicitly rather than by omission, which is
+            # the distinction that cost `utd` twice.
+            "ref": [],
             "case_sensitive": bool(entry.get("case_sensitive")),
             "user_defined": True,
         })
@@ -335,6 +340,11 @@ def _acronym_terms(card) -> list:
                                and cond.get("utd") else "statpearls"),
                 "link":       _conditions._link_kind(cond),
                 "utd":        _conditions.utd_chips(cond),
+                # The popup button's destination when this entry has no
+                # chapter of its own. Only conditions carry one today; the
+                # others say so explicitly rather than by omission, which is
+                # the distinction that cost `utd` twice.
+                "ref": [],
                 "case_sensitive": True,
             })
             continue
@@ -353,6 +363,11 @@ def _acronym_terms(card) -> list:
             # `utd` was lost twice and `link` once. This database has
             # no UpToDate chips; saying so is the point.
             "utd": [],
+            # The popup button's destination when this entry has no
+            # chapter of its own. Only conditions carry one today; the
+            # others say so explicitly rather than by omission, which is
+            # the distinction that cost `utd` twice.
+            "ref": [],
             "case_sensitive": True,
         })
     return out
@@ -386,6 +401,11 @@ def _drug_terms(card) -> list:
             # `utd` was lost twice and `link` once. This database has
             # no UpToDate chips; saying so is the point.
             "utd": [],
+            # The popup button's destination when this entry has no
+            # chapter of its own. Only conditions carry one today; the
+            # others say so explicitly rather than by omission, which is
+            # the distinction that cost `utd` twice.
+            "ref": [],
             "case_sensitive": it.get("case_sensitive", False),
         })
     return out
@@ -416,6 +436,11 @@ def _condition_terms(card) -> list:
             # of the 826 conditions in the library carry chips; none of
             # them have ever been drawn.
             "utd":            it.get("utd") or [],
+            # The popup button's destination when this entry has no
+            # chapter of its own. Only conditions carry one today; the
+            # others say so explicitly rather than by omission, which is
+            # the distinction that cost `utd` twice.
+            "ref": it.get("ref") or [],
             # The alias the card was written in, which is what has to be
             # underlined. `title` stays the primary name so the popup is
             # unchanged - but it is also what the pattern was built from,
@@ -466,6 +491,11 @@ def _preclinical_terms(card) -> list:
             # `utd` was lost twice and `link` once. This database has
             # no UpToDate chips; saying so is the point.
             "utd": [],
+            # The popup button's destination when this entry has no
+            # chapter of its own. Only conditions carry one today; the
+            # others say so explicitly rather than by omission, which is
+            # the distinction that cost `utd` twice.
+            "ref": [],
             "case_sensitive": False,
         })
     return out
@@ -577,6 +607,8 @@ def _build_pattern(terms: list):
             # conditions with a real NBK chapter.
             "link":    _esc_attr(t.get("link") or "search"),
             "utd":     _esc_attr(json.dumps(t.get("utd") or [],
+                                            separators=(",", ":"))),
+            "ref":     _esc_attr(json.dumps(t.get("ref") or [],
                                             separators=(",", ":"))),
         }
 
@@ -789,7 +821,8 @@ def _inject_highlights(html: str, results: list, color: str,
                 f'data-sp-source="{t.get("source", "statpearls")}" '
                 f'data-sp-badge="{t.get("badge", "")}" '
                 f'data-sp-link="{t.get("link", "search")}" '
-                f'data-sp-utd="{t.get("utd", "[]")}">')
+                f'data-sp-utd="{t.get("utd", "[]")}" '
+                f'data-sp-ref="{t.get("ref", "")}">')
 
     def _span(m):
         # ONE pass over the text using the combined regex. No risk of a

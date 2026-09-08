@@ -462,15 +462,39 @@
     // data-sp-link, which is "article" only when the entry carries a
     // verified destination - an NBK chapter, a DrugBank monograph, a
     // custom URL. Otherwise the button runs a search and says so.
+    // A named destination, where the entry has one. Most conditions have
+    // no StatPearls chapter, and the fallback was a search inside the
+    // StatPearls book - which for "Vaginal pessary" returned Stress
+    // Urinary Incontinence, Pelvic Organ Prolapse, Rectocele and Vaginal
+    // Foreign Body, and nothing about pessaries. A search that reliably
+    // answers a different question is worse than no button. `data-sp-ref`
+    // carries ["label", "url"] for the entries that have been given a
+    // real source; everything else keeps the behaviour above.
+    var refRaw = el.getAttribute("data-sp-ref") || "";
+    var ref = null;
+    if (refRaw) {
+      try {
+        var parsed = JSON.parse(refRaw);
+        if (parsed && parsed.length === 2 && parsed[0] && parsed[1]) {
+          ref = { label: parsed[0], url: parsed[1] };
+        }
+      } catch (e) {}
+    }
+    // The ref replaces the destination as well as the label, so the
+    // button cannot say one thing and do another - which is the fault
+    // this whole attribute exists to fix.
+    if (ref) _tipUrl = ref.url;
     if (_tipOpenBtn) {
-      _tipOpenBtn.textContent = isArticle
-        ? ("Open " + (isDb ? "DrugBank"
-                    : (isUtd ? "UpToDate"
-                      : (isPre ? "reference"
-                        : (isCustom ? "link" : "article")))) + " \u2192")
-        : ("Search " + (isDb ? "DrugBank"
+      _tipOpenBtn.textContent = ref
+        ? ("Open " + ref.label + " \u2192")
+        : (isArticle
+          ? ("Open " + (isDb ? "DrugBank"
                       : (isUtd ? "UpToDate"
-                        : (isPre ? "Wikipedia" : "StatPearls"))) + " \u2192");
+                        : (isPre ? "reference"
+                          : (isCustom ? "link" : "article")))) + " \u2192")
+          : ("Search " + (isDb ? "DrugBank"
+                        : (isUtd ? "UpToDate"
+                          : (isPre ? "Wikipedia" : "StatPearls"))) + " \u2192"));
     }
     var egg = _eggFor(el, _bumpPopupCounter());
     if (_tipBox) {
