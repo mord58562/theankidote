@@ -355,8 +355,21 @@ class PublishingContract(unittest.TestCase):
         src = (ROOT / "tools" / "publish_content.sh").read_text(encoding="utf-8")
         self.assertIn("tests/test_*.py", src)
         self.assertIn("refusing to publish", src)
+        # Anchored on the command itself, not on any mention of it. A
+        # plain `src.index("gh release create")` found the first
+        # occurrence anywhere, so a COMMENT naming the command - written
+        # while fixing something else entirely - moved the "release"
+        # position above the gate and failed this test. The same trap
+        # `_build_modules_group` documents about grepping for captions:
+        # a literal in prose breaks a check that looks for the code.
+        import re as _re
+        gate = _re.search(r"^\s*\[ \"\$FAILED\".*refusing to publish",
+                          src, _re.M)
+        release = _re.search(r"^\s*gh release create\b", src, _re.M)
+        self.assertIsNotNone(gate, "the publish script has no test gate")
+        self.assertIsNotNone(release, "the publish script creates no release")
         self.assertLess(
-            src.index("refusing to publish"), src.index("gh release create"),
+            gate.start(), release.start(),
             "the test gate must come before anything is pushed")
 
 
