@@ -892,6 +892,44 @@ def _setup() -> None:
     mw.addDockWidget(_RIGHT_AREA, _pearls_dock)
     _pearls_dock.hide()
 
+    # `_pearls_dock_visible` mirrors the dock's state because Qt's
+    # show()/hide() are asynchronous and `isVisible()` reports stale for
+    # about an event-loop tick after a toggle. A mirror is only right
+    # while it is actually mirroring: everything here assumed the dock
+    # could only change visibility through `toggle_pearls_dock` or
+    # `show_pearls_dock`, and Qt can change it on its own - restoring
+    # main-window state, or re-showing a dock when a child window
+    # closes. Rob sees the sidebar appear on Escape from the note
+    # editor, and neither of those two functions is reachable from
+    # there, so something outside this file is doing it.
+    #
+    # Following the signal fixes the consequence either way: the flag
+    # stops disagreeing with the screen, so the toolbar button stops
+    # showing the wrong state and the next toggle does what it says.
+    # The diagnostic line names the caller, which is what will identify
+    # the cause - it is one line per real visibility change, not per
+    # event, so it stays cheap.
+    def _on_dock_visibility(visible: bool) -> None:
+        global _pearls_dock_visible
+        if bool(visible) == _pearls_dock_visible:
+            return
+        import traceback
+        who = [f.strip().replace("\n", " ")
+               for f in traceback.format_stack(limit=8)[:-1]]
+        _log.diag(f"pearls dock became visible={visible} without a toggle; "
+                  f"stack: {' <- '.join(reversed(who))[:600]}")
+        _pearls_dock_visible = bool(visible)
+        try:
+            _persist_dock_state()
+            request_toolbar_redraw()
+        except Exception as exc:
+            _log.error("dock visibility resync", exc)
+
+    try:
+        _pearls_dock.visibilityChanged.connect(_on_dock_visibility)
+    except Exception as exc:
+        _log.error("pearls dock visibility signal", exc)
+
     # Keyboard shortcuts.  Anchored to mw so they fire whenever the
     # main window has focus, and built through `_rebind_shortcuts` so
     # Settings can re-apply them without a restart.
