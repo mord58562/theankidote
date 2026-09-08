@@ -259,8 +259,16 @@ def check(manifest_url: str = None) -> str:
     try:
         return _check(manifest_url)
     except Exception as exc:                            # noqa: BLE001
+        # The exception goes to the log; the reader gets a sentence.
+        # This string is shown in a launch toast and in the Settings
+        # window, so someone with no network was being told "Check
+        # failed: <urlopen error [Errno 8] nodename nor servname
+        # provided, or not known>" - an internal cause they cannot act
+        # on, from the one surface here that did not say what happened
+        # in plain words.
         log(f"updater: check failed ({exc})")
-        return f"Check failed: {exc}"
+        return ("Could not reach the content server. Usually that means "
+                "no connection.")
 
 
 def _check(manifest_url: str) -> str:

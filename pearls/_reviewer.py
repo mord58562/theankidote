@@ -2,7 +2,7 @@
 # Copyright (C) 2025 mord58562
 # This file is part of TheAnkiDote. See LICENSE for details.
 
-"""Reviewer integration - mirrors AMBOSS ReviewerCardPhraseUpdater.
+"""Reviewer integration: marking up card text as it is shown.
 
 Two-phase highlighting:
   Phase 1 (synchronous): card_will_show hook injects sp-mark spans + CSS
