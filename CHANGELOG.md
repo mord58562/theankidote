@@ -5,6 +5,171 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.0] - 2026-09-08
+
+Three shipped features run for the first time, and the content channel
+stops switching itself off. Found by auditing the add-on against itself
+across seven dimensions; roughly forty defects, most of them verified
+with a repro before being touched.
+
+### Fixed
+
+- **Aliases were never highlighted.** `resolve()` returns the primary
+  name so the popup title stays consistent, the term builders used it as
+  the title, and `_build_pattern` escaped that title into the regex - so
+  a card written as "heart attack" had nothing to match. 5,457 of 6,044
+  condition aliases and 38 of 42 drug aliases do not contain their
+  primary name as a substring, so none of them could ever be marked.
+  `resolve()` now also reports the surface forms it matched, carried
+  through the term builders as `_surfaces` and added to the pattern as
+  alternatives mapping to one lookup record, so title and URL are still
+  the primary entry's. Surfaces under four characters are skipped for
+  case-insensitive terms, the same rule titles already had: 387 short
+  abbreviation aliases stay unmatched rather than lighting up ordinary
+  words, and moving those into `_acronyms` is content work.
+- **`data-sp-utd` was `"[]"` on every span ever written.**
+  `_condition_terms` did not carry the key between
+  `_conditions.resolve`, which builds the chips, and `_span`, which
+  writes them. 824 of 826 conditions carry chips; the popup's UpToDate
+  row had never been drawn. The third key this same dict has dropped,
+  after `link`. `_acronym_terms` dropped it too, on the branch that
+  enriches an acronym from a condition (169 expansions), and hard-coded
+  `source` to `statpearls` while `_url_for` returned an UpToDate link.
+- **A literal `<` in text ended highlighting from that point on.** The
+  HTML walker treated every `<` as a tag opener and, finding no `>`,
+  appended the remainder unmarked - so `Sodium < 130 in SIADH` marked
+  nothing. The dock hits this on every page: it passes decoded text, and
+  StatPearls prose carries `sodium <135` throughout. The inverse
+  corrupted the DOM on cards, where a `>` inside an attribute value
+  ended the tag early and a span was written inside `alt=""`. The walk
+  now follows HTML5's rule for what opens a tag, and finding the close
+  respects quoted attribute values.
+- **The content channel was dead between publishes.** `build_library.py`
+  rewrote `data/manifest.json` on every run and only wrote the `url`
+  back when `--url` was passed, which only `publish_content.sh` does. A
+  bare build is the documented usage, is what `merge_batch.py` prints as
+  the next step, and is what the scheduled content agent runs, so 19 of
+  the last 40 commits touching that file shipped without a url and
+  `_updater._check` answered every client with "the update server sent
+  an incomplete reply". A build that is not publishing now leaves the
+  pointer alone.
+- **The chat adblock was a syntax error.** `repr(css).replace("'", '"')`
+  swapped the delimiters without escaping the CSS's own quotes, and the
+  CSS is almost entirely attribute selectors, so the first one closed
+  the string. On by default, refused by Chromium on every page load,
+  silently, since it was written. Now `json.dumps`.
+- **The DrugBank auto-jump could never fire.** `_finish_good_load`
+  cleared `_pending_url` four lines before `_maybe_autojump` read it to
+  decide which site the term belonged to, pinning `want_db` to False.
+  The 47% of drugs with no DrugBank id landed on the search page and had
+  to be picked by hand every time, permanently, since the resolver cache
+  skips URLs carrying a query string. `_judge_failed_load` killed it a
+  second way by clearing the same field itself.
+- **`_cache_resolved` poisoned its own cache.** A stale `_pending_term`
+  outlived every navigation, so an unrelated URL reached later was
+  persisted as that term's answer. Caching is now bounded to navigations
+  the panel started; `_AUTOJUMP_JS` reports its match and `_do_autojump`
+  performs the jump from Python with the real target.
+- **`_extras._on_answer` rewrote Anki's `meta.json` on every card.**
+  `_config.set_value` is `getConfig` + `writeConfig`, which Anki
+  implements as two reads and a truncating rewrite; at 500 cards a day
+  that is a thousand non-atomic rewrites of the file holding every
+  setting the add-on has. The pacing marker is no longer persisted at
+  all and the counter flushes every 25 cards and on profile close.
+- **Two paths imported modules the user had disabled.** Importing is the
+  enable gate here - neither subpackage checks its own flag, and both
+  register hooks at import - so `_on_theme_change` and the UpToDate
+  branch of `_on_js_message` loaded a disabled module and the toolbar
+  redraw painted back a button that does nothing, because `_setup()`
+  never ran for it. Both ask `sys.modules` now.
+- Longest-match-wins did not hold across the case-sensitive boundary:
+  `parts` was `[sensitive..., "(?i:insensitive...)"]` joined into one
+  alternation, so any case-sensitive term beat every case-insensitive
+  one at the same position regardless of length. One flat,
+  stably length-sorted list with per-alternative scoped flags.
+- 23 terms ending in a non-word character could only match at
+  end-of-text, because both the matcher and the pattern asserted a
+  closing word boundary unconditionally.
+- Cross-database name collisions were resolved last-writer-wins, and the
+  last writer was always preclinical: `splenomegaly` went to a Wikipedia
+  search instead of StatPearls, `glucagon` instead of DrugBank.
+  Precedence is now stated and enforced with `setdefault`.
+- `_AE_E_SWAPS` held two pairs whose American form is a substring of the
+  British one, so `_normalise_for_lookup("Pulmonary oedema")` returned
+  `pulmonary ooedema`.
+- `_updater` never checked the payload's own `content_version` against
+  the version the manifest advertised, which would re-download the same
+  file on every launch while telling the user to restart.
+- Chat: a selection of 8 characters or fewer was pasted twice, the
+  predicate having an absolute floor of 8; provider matching was a
+  substring test against the whole URL, so `attacker.example/claude.ai`
+  read as Claude and was persisted and auto-loaded into the profile
+  holding every provider's session cookies; the button tooltipped
+  "Reload" returned early on exactly the reload case; the dock never
+  called `_dock_layout.arrange`; and `QWebEngineProfile` was created
+  before the pages using it and so destroyed first.
+- UpToDate: its own older copy of the tiling logic split against other
+  add-ons' docks, and `_PopupShunt` handed an unvalidated URL to the
+  system browser and self-destructed on `about:blank`.
+- The article list did not follow the card after a popup click, and that
+  click wrote a transient collapse into a stored preference. A row in
+  the list bypassed both term resolution and the URL safety check, and
+  could load UpToDate into the pearls profile. Clicking the pill for the
+  site already on screen forgot the remembered article.
+- The dock's own error pages were highlighted and, carrying a few
+  hundred characters of body at the failed URL, could be accepted as a
+  non-200-with-content and treated as the article. The give-up message
+  reset the crash counter it was reporting.
+- `web/marker.js`: light mode overrode the per-source accent so only the
+  badge took it; `_aimUntil` was not reset by `_hideTip`, silently
+  disabling the hover corridor; a double-click on a term opened the
+  article twice.
+- The retry budget was spent per session rather than per navigation, so
+  one throttled request made every later failure show "Two attempts,
+  both failed" after one. Home was connected to its slot twice.
+- The Tools menu ticks were set once and never refreshed while Settings
+  wrote the same keys; the restart-needed tooltip closed over `_setup`
+  locals and raised NameError in the direction it was written for; the
+  config cache was never invalidated, so an edit in Anki's own config
+  editor did nothing and was then overwritten.
+
+### Changed
+
+- "Open in side panel" is two labelled options rather than a checkbox:
+  both states do something and the off state was written only in a
+  tooltip.
+- One name per surface. "side panel", "dock" and "panel" are all
+  "sidebar" where a user can see them; the UpToDate session controls no
+  longer say "UTD"; the Tools menu calls the highlighting switch what
+  Settings calls it.
+- The update check reports a failure in plain words instead of the raw
+  exception.
+- 127 en-dashes removed from base clinical text, and 181 em-dashes from
+  the repository.
+
+### Tooling and tests
+
+- `merge_batch.fmt` interpolated summaries into a quoted f-string, so a
+  straight double quote wrote a `_rich.py` that does not parse and a
+  backslash was read as an escape. `verify_batch` checked that `aliases`
+  was present but not that it was a list, so a bare `"PID"` became
+  `["P","I","D"]`. The scheduled agent's brief carried the same recipe.
+- A failed publish left `data/` at the version it had not published, so
+  the retry refused itself as stale; the duplicate-tag guard read local
+  refs, which `gh release create` never writes.
+- The build refuses to run while `user_files/library.json` exists, which
+  the runtime loader would prefer as the base vocabulary.
+- `.DS_Store` was excluded only at the root, so a nested one would ship
+  and AnkiWeb would reject the upload with no local repro. `install.sh`
+  was pinned to 2.0.0 across five releases and reads the manifest now.
+- The undefined-name guard read only pyflakes' `out` stream, so a file
+  that fails to PARSE passed it - in a tree where most files cannot be
+  imported under test. It asserts the error stream, and a new
+  `compile()` pass needs nothing installed and cannot skip itself.
+- The manifest-url test asserted the scheme inside `if "url" in man:`,
+  so the failure that mattered was the case it could not run in.
+- 164 tests to 185. 21 of the new ones fail against 2.5.0.
+
 ## [2.5.0] - 2026-09-07
 
 Popups stop claiming sources and destinations they do not have, and
@@ -1982,7 +2147,7 @@ Pre-publication content + UX cleanup.
 
 - **Per-card NCBI auto-search.** The previous flow made three
   sequential PubMed E-utilities round trips (esearch + esummary +
-  efetch) every time a card was shown, taking 1–4 seconds and showing
+  efetch) every time a card was shown, taking 1-4 seconds and showing
   a "SEARCHING STATPEARLS…" stub the whole time. The article-list
   section in the side panel is now fed exclusively by instant
   local-database matches (StatPearls and DrugBank entries already
@@ -2068,7 +2233,7 @@ AnkiDate addons into a single package and adds a third AI-chat module.
 
 - **Per-card NCBI auto-search.** The previous version made three
   sequential PubMed E-utilities round trips (esearch + esummary +
-  efetch) every time a card was shown, taking 1–4 seconds and showing
+  efetch) every time a card was shown, taking 1-4 seconds and showing
   a "SEARCHING STATPEARLS…" stub the whole time. The article-list
   section in the side panel is now fed exclusively by instant
   local-database matches (StatPearls and DrugBank entries already
