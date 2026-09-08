@@ -755,6 +755,13 @@ class ChatBrowser(QWidget):
         return ""
 
     def load(self, url: str):
+        # `shutdown` sets `view` to None before the widget is deleted, so
+        # anything still queued when the profile switches - a crash
+        # recovery timer, a provider switch - arrives after the view has
+        # gone. Every other method that touches it is inside a try; this
+        # one was not, and it is the one two of those timers call.
+        if self.view is None:
+            return
         self.view.load(QUrl(url))
 
     def _on_url_changed(self, q_url):
