@@ -217,7 +217,15 @@ class EntriesAreWellFormed(unittest.TestCase):
             (r"\bestrogen", "oestrogen"),
             (r"\betiolog", "aetiolog"),
             (r"(?<![oa])ynecolog", "gynaecolog"),
-            (r"\bfetal\b", "foetal or fetal - be consistent"),
+            # Reversed on 2026-09-09. This banned "fetal" and asked for
+            # consistency without saying which way, which is not a rule.
+            # It also never fired: DATASETS does not reach
+            # RICH_SUMMARIES, where all 213 uses live, so the suite was
+            # green while `verify_batch` failed every batch that spelled
+            # it correctly. "fetal" is RANZCOG's spelling and the
+            # library's; aliases keep "foetal" so old-spelling cards
+            # still match, which is why this checks summary prose only.
+            (r"\bfoetal\b", "fetal"),
         ]
         for label, terms in self.DATASETS:
             for t in terms:

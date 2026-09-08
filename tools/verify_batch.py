@@ -49,8 +49,20 @@ US_SPELLINGS = [
     (r"\bleukemi", "leukaemia"), (r"(?<![a-z])ischemi", "ischaemia"),
     (r"\betiolog", "aetiolog"), (r"\bpediatric", "paediatric"),
     (r"(?<![a-z])hemorrhag", "haemorrhag"), (r"\bcesarean", "caesarean"),
-    (r"\bfetal\b", "foetal"), (r"\bhematolog", "haematolog"),
+    (r"\bhematolog", "haematolog"),
 ]
+
+# Not a US spelling, and the rule that said so was backwards. Australian
+# obstetric practice writes "fetal" - it is RANZCOG's own word, in the
+# title of Intrapartum Fetal Surveillance among others - and "foetal" is
+# a hypercorrection of a Latin stem that never had the o. The shipped
+# library agrees without exception: 213 uses of "fetal" in summary prose
+# and none of "foetal". This rule demanded the opposite, so it failed
+# every correctly-spelled obstetric batch, and two drafting agents
+# working the same list resolved it two different ways - one wrote
+# "foetal" prose, the other contorted its sentences to avoid the word.
+# "foetal" survives where it belongs, as an alias, so a card that spells
+# it the old way still matches.
 
 MAX_CHARS = 1200
 MAX_PX = 900
