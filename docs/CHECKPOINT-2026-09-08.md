@@ -101,3 +101,38 @@ be imported under test.
 AI-tells: 181 em-dashes in `audit/` (public repo, not packaged); a raw
 exception string reaches a user-facing toast; the panel docstring names
 a paid competitor; one switch has two different names.
+
+
+## Progress, end of the fixing phase
+
+Committed and pushed so far, each verified before it was acted on and
+most of them proven with a repro:
+
+- The content channel was dead between publishes. A bare
+  `build_library.py` stripped the url from `data/manifest.json`, which
+  is the live pointer every client polls; 19 of the last 40 commits
+  touching that file carried none. The build no longer writes the
+  manifest unless it is publishing, and the test that guarded it - whose
+  assertion sat inside `if "url" in man:` - now fails when the key is
+  absent.
+- Three features that had never once run: the UpToDate chip row on every
+  condition popup (824 of 826 entries), the chat adblock (a JavaScript
+  syntax error since it was written), and the DrugBank auto-jump.
+- `_extras` rewrote Anki's `meta.json` on every answered card.
+- Two paths imported modules the user had disabled, leaving a toolbar
+  button that does nothing for the rest of the session.
+- The docks: an 8-character-or-shorter selection was pasted twice; a
+  substring test decided which provider a URL belonged to; the reload
+  button could not reload; the profile was destroyed before its pages.
+- The authoring pipeline could write a `_rich.py` that does not parse,
+  and could turn a bare `"PID"` into three one-character aliases.
+- A failed publish left `data/` poisoned so the retry refused itself.
+- The undefined-name guard passed any file that failed to PARSE, in a
+  tree where most files cannot be imported under test at all.
+- 181 em-dashes, the residue of an earlier pass, one paid competitor
+  named in a docstring, four names for one surface, and a toast that
+  showed the reader a urlopen traceback.
+
+Still in flight when this was written: the matching engine (aliases
+never highlight; a literal `<` in text kills highlighting from that
+point on) and the remaining StatPearls panel findings.

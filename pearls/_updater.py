@@ -328,6 +328,33 @@ def _check(manifest_url: str) -> str:
                 "understands, so they were discarded. Your existing "
                 "terms are untouched.")
 
+    # The payload has to be the version the manifest advertised.
+    #
+    # Nothing downstream re-reads this. `_library._load` picks whichever
+    # of the bundled and downloaded copies carries the newer
+    # `content_version`, so a payload stamped older than the bundled
+    # library is written to disk, ignored at every launch, and leaves
+    # `CONTENT_VERSION` where it was - which is exactly the value the
+    # check at the top of this function compares the manifest against.
+    # The result is a download on every single launch, each one ending
+    # with a message telling the user to restart to apply an update
+    # that can never apply.
+    #
+    # `tools/publish_content.sh` asserts the two agree, so a mismatch
+    # cannot come from a normal publish; it means a stale file behind
+    # the manifest URL, a half-finished upload, or a host that is not
+    # ours. Those are the cases the rest of this module is written
+    # against, and the answer is the same one the checksum branch
+    # gives: keep what works.
+    payload_version = lib.get("content_version")
+    if payload_version != remote:
+        log(f"updater: manifest advertised content {remote!r} but the "
+            f"payload is {payload_version!r}; discarding")
+        return ("The update server described the terms it sent "
+                "incorrectly, so they were discarded rather than used. "
+                "Your existing terms are untouched. If this repeats, "
+                "report it.")
+
     try:
         _write_atomically(_library.USER_COPY, body)
     except Exception as exc:                            # noqa: BLE001
