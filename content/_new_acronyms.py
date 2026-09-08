@@ -32,6 +32,64 @@ Merge rules, enforced in `build_library.collect`:
 """
 
 NEW_ACRONYMS: dict = {
+    # Written as three letters, these two never underline: the matcher
+    # skips surfaces under four characters for case-insensitive terms,
+    # so that ordinary words are not lit up. The acronym table is
+    # case-sensitive, which is the right home for them.
+    #
+    # Checked against the collection before adding rather than assumed:
+    # every uppercase occurrence of both is the psychotherapy sense,
+    # 6 each. "ACT" is deliberately NOT here - it appears in 1,499 notes,
+    # almost all of them the ordinary word or the territory, and the
+    # "ACT therapy" alias on the full entry covers the safe case.
+    "DBT": [
+        ("Dialectical Behaviour Therapy",
+         ["borderline", "personality", "self-harm", "suicidality",
+          "emotion regulation", "distress tolerance", "mindfulness",
+          "skills group", "Linehan", "psychotherapy"],
+         "Structured cognitive behavioural treatment for chronic "
+         "suicidality and self-harm, and the best-evidenced "
+         "psychotherapy for borderline personality disorder. Four "
+         "skills modules with individual therapy, a skills group and "
+         "phone coaching."),
+    ],
+    # The two commonest of all, and neither fired: 71 and 47 uppercase
+    # occurrences in the collection, both unambiguous. Their full-name
+    # entries already exist, so this only supplies the route from the
+    # abbreviation a card actually writes.
+    "CBT": [
+        ("Cognitive Behavioural Therapy",
+         ["depression", "anxiety", "psychotherapy", "thought", "behaviour",
+          "exposure", "insomnia", "first-line", "sessions", "psychological"],
+         "Structured, time-limited psychotherapy targeting the "
+         "relationship between thoughts, feelings and behaviour. "
+         "First-line psychological treatment for depression and for "
+         "most anxiety disorders in Australian practice, and "
+         "PBS-subsidised under a mental health treatment plan."),
+    ],
+    "ECT": [
+        ("Electroconvulsive Therapy",
+         ["depression", "catatonia", "psychosis", "treatment-resistant",
+          "anaesthetic", "seizure", "bilateral", "unilateral", "memory",
+          "mania"],
+         "Induction of a generalised seizure under general anaesthesia. "
+         "The most effective acute treatment for severe depression, and "
+         "first-line where there is catatonia, food refusal, high "
+         "suicide risk or psychotic depression. Main adverse effect is "
+         "anterograde and retrograde memory disturbance, usually "
+         "transient."),
+    ],
+    "IPT": [
+        ("Interpersonal Psychotherapy",
+         ["depression", "psychotherapy", "grief", "role transition",
+          "role dispute", "perinatal", "bulimia", "CBT", "sessions"],
+         "Time-limited psychotherapy for depression that works on the "
+         "relationships around the illness rather than on cognition. "
+         "One of four problem areas - grief, role dispute, role "
+         "transition or interpersonal deficits - is agreed at the "
+         "outset. As well evidenced as CBT and less often offered."),
+    ],
+
     # "PCR" in an obstetric card is the urine protein:creatinine ratio,
     # not amplification. Both senses are common in this collection, so
     # neither can simply win: 31 notes mean the molecular sense and the
