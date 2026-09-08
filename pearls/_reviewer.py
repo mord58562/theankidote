@@ -599,19 +599,17 @@ def _build_pattern(terms: list):
     # Stable, so terms of equal length keep the precedence order above.
     alts.sort(key=lambda a: len(a[0]), reverse=True)
 
-    # Boundaries per alternative rather than one `\b(?:...)\b` around
-    # the lot. `\b` after a phrase ending in punctuation asserts a WORD
-    # character next, so the 23 library terms ending in ")" - "Vitamin
-    # B12 (cobalamin)", "Epidemic polyarthritis (Australian)" - matched
-    # only at the very end of the text. `_matcher.boundary_wrap` asserts
-    # a boundary only at the edges the phrase does not already separate
-    # itself at, which is what `\b` was standing in for.
-    parts = [_matcher.boundary_wrap(
-                 form, re.escape(form) if sensitive
-                 else "(?i:" + re.escape(form) + ")")
-             for form, sensitive in alts]
-
-    rx = re.compile("|".join(parts))
+    # `_matcher.alternation` puts the word boundaries where each form
+    # needs them rather than wrapping the lot in `\b(?:...)\b`, which
+    # asserted a WORD character after a phrase ending in punctuation and
+    # so confined the 23 library terms ending in ")" - "Vitamin B12
+    # (cobalamin)", "Epidemic polyarthritis (Australian)" - to matching
+    # at the very end of the text. Same builder as the matcher's own
+    # punctuation fallback, so the two agree on what a boundary is.
+    rx = re.compile(_matcher.alternation(
+        (form, re.escape(form) if sensitive
+         else "(?i:" + re.escape(form) + ")")
+        for form, sensitive in alts))
     result = rx, lookup, sens_titles
     if len(_pattern_cache) >= _PATTERN_CACHE_MAX:
         _pattern_cache.pop(next(iter(_pattern_cache)))
@@ -619,21 +617,20 @@ def _build_pattern(terms: list):
     return result
 
 
-def _opens_a_tag(html: str, i: int) -> bool:
-    """Whether the `<` at `i` begins a tag rather than being ordinary text.
-
-    HTML5's tokeniser opens a tag only on `<` followed by a letter, `/`,
-    `!` or `?`; anything else is a literal less-than sign. The walker
-    below used to treat every `<` as a tag opener and then look for the
-    matching `>`, so "Sodium < 130 in SIADH" swallowed the rest of the
-    node as if it were one enormous tag and highlighted nothing after
-    it - and on `-1` it appended the whole remainder untouched and
-    broke out of the loop. This is guaranteed on the dock path, where
-    `_panel_pearls` hands us decoded text and StatPearls and DrugBank
-    prose is full of "sodium <135" and "FEV1/FVC <0.70".
-    """
-    nxt = html[i + 1:i + 2]
-    return bool(nxt) and (nxt.isalpha() or nxt in ('/', '!', '?'))
+# What opens a tag: `<` followed by an ASCII letter, `/`, `!` or `?`,
+# which is HTML5's own rule. Any other `<` is a literal less-than sign.
+# The walker below used to treat every `<` as a tag opener and go
+# looking for the matching `>`, so "Sodium < 130 in SIADH" swallowed the
+# rest of the node as one enormous tag, and on finding no `>` appended
+# the whole remainder unhighlighted and gave up. That is guaranteed on
+# the dock path, where `_panel_pearls` hands us decoded text and
+# StatPearls and DrugBank prose is full of "sodium <135" and
+# "FEV1/FVC <0.70".
+#
+# A compiled search rather than a per-character test: this runs on every
+# text node up to the dock's 4,000-node cap, and skipping to the next
+# real tag in C beats stepping over the false ones in Python.
+_TAG_OPEN_RE = re.compile(r"<[A-Za-z/!?]")
 
 
 def _tag_end(html: str, i: int) -> int:
@@ -642,23 +639,42 @@ def _tag_end(html: str, i: int) -> int:
     A plain `html.find('>', i)` stops at the first `>` anywhere, quoted
     or not, so `<img alt="a > b">` "ended" inside the alt text and the
     walker then treated `b">` as character data - which is how a span
-    came to be injected inside an attribute value, destroying the tag.
-    Attribute values are the only place a `>` can hide, so tracking the
-    quote character is the whole of what is needed here; this stays a
+    came to be injected inside an attribute value, destroying the
+    element. An attribute value is the only place a `>` can hide, so
+    tracking quotes is the whole of what is needed; this stays a
     scanner, not a parser.
+
+    The character loop only runs on tags that carry a quote at all. A
+    tag without one - which is most of them, and all of `<p>`, `<b>`,
+    `<br>`, `</div>` - takes the same single `str.find` it always did,
+    which matters because this is called for every tag of every text
+    node, up to the dock's 4,000-node cap.
+
+    A quote is only a quote where an attribute value can start, ie.
+    after `=`. Otherwise `<img alt=Crohn's>` opens a value that never
+    closes, and the function returns -1 for a tag that plainly ends -
+    the same class of failure as the `>` it was written to fix.
     """
+    j = html.find('>', i)
+    if j == -1:
+        return -1
+    if '"' not in html[i:j] and "'" not in html[i:j]:
+        return j
     quote = ""
-    j = i + 1
+    after_eq = False
     n = len(html)
+    j = i + 1
     while j < n:
         ch = html[j]
         if quote:
             if ch == quote:
                 quote = ""
-        elif ch in ('"', "'"):
-            quote = ch
         elif ch == '>':
             return j
+        elif after_eq and (ch == '"' or ch == "'"):
+            quote = ch
+        if not ch.isspace():
+            after_eq = (ch == '=')
         j += 1
     return -1
 
@@ -714,43 +730,35 @@ def _inject_highlights(html: str, results: list, color: str,
     skip = False
     i = 0
     n = len(html)
+    search = _TAG_OPEN_RE.search
     while i < n:
-        if html[i] == '<' and _opens_a_tag(html, i):
-            j = _tag_end(html, i)
-            if j == -1:
-                result.append(html[i:])
-                break
-            tag = html[i:j + 1]
-            # Sniff the tag name without splitting twice.
-            k = 1
-            if k < len(tag) and tag[k] == '/':
-                k += 1
-            tag_name_end = k
-            while tag_name_end < len(tag) and tag[tag_name_end].isalpha():
-                tag_name_end += 1
-            tname = tag[k:tag_name_end].lower()
-            if tname in ('script', 'style'):
-                # Detect closing form; tag[1] == '/' ⇒ closing tag.
-                skip = (tag[1] != '/')
-            result.append(tag)
-            i = j + 1
-        else:
-            # Scan to the next `<` that actually opens a tag; a bare one
-            # is part of the text and stays in this chunk.
-            j = i + 1 if html[i] == '<' else i
-            while True:
-                j = html.find('<', j)
-                if j == -1:
-                    j = n
-                    break
-                if _opens_a_tag(html, j):
-                    break
-                j += 1
-            chunk = html[i:j]
+        m = search(html, i)
+        start = m.start() if m else n
+        if start > i:
+            chunk = html[i:start]
             if not skip and chunk.strip():
                 chunk = _replace_text(chunk)
             result.append(chunk)
-            i = j
+        if m is None:
+            break
+        j = _tag_end(html, start)
+        if j == -1:
+            result.append(html[start:])
+            break
+        tag = html[start:j + 1]
+        # Sniff the tag name without splitting twice.
+        k = 1
+        if tag[k] == '/':
+            k += 1
+        tag_name_end = k
+        while tag_name_end < len(tag) and tag[tag_name_end].isalpha():
+            tag_name_end += 1
+        tname = tag[k:tag_name_end].lower()
+        if tname in ('script', 'style'):
+            # Detect closing form; tag[1] == '/' ⇒ closing tag.
+            skip = (tag[1] != '/')
+        result.append(tag)
+        i = j + 1
 
     marked = ''.join(result)
     # The card path needs the rule travelling with the HTML,

@@ -15,6 +15,7 @@ Several checks that were adequate for a file shipped inside the
 """
 import ast
 import copy
+import hashlib
 import json
 import os
 import pathlib
@@ -1016,6 +1017,77 @@ class DownloadCeilingTracksTheManifest(unittest.TestCase):
             len(blob), _updater._MAX_BYTES,
             "the library we ship exceeds our own backstop; no client "
             "could install it")
+
+
+class PayloadMustBeTheVersionAdvertised(unittest.TestCase):
+    """A manifest that lies about its own payload is a download loop.
+
+    `_library._load` takes whichever of the bundled and downloaded
+    copies carries the newer `content_version`, so a payload stamped
+    older than the bundled library is written to disk, ignored at every
+    launch, and leaves `CONTENT_VERSION` exactly where it was - which is
+    the value `_check` compares the manifest against next time. The
+    add-on then re-downloads the same file on every single launch, each
+    time telling the user to restart to apply an update that can never
+    apply.
+
+    `tools/publish_content.sh` asserts the two agree, so this can only
+    come from a stale file behind the manifest URL, a half-finished
+    upload, or a host that is not ours - which is what the rest of
+    `_updater` is written against.
+    """
+
+    def _serve(self, payload: dict, advertised: str):
+        """Run `_check` against a manifest advertising `advertised` and
+        a payload that is `payload`, with the network stubbed out."""
+        body = json.dumps(payload).encode("utf-8")
+        manifest = {
+            "schema": _library.SCHEMA,
+            "content_version": advertised,
+            "url": "https://raw.githubusercontent.com/x/library.json",
+            "sha256": hashlib.sha256(body).hexdigest(),
+            "bytes": len(body),
+        }
+        calls = []
+
+        def _fake_fetch(url, limit, label):
+            calls.append(label)
+            if label == "manifest url":
+                return json.dumps(manifest).encode("utf-8")
+            return body
+
+        writes = []
+        real_fetch = _updater._fetch
+        real_write = _updater._write_atomically
+        _updater._fetch = _fake_fetch
+        _updater._write_atomically = lambda path, b: writes.append(path)
+        try:
+            return _updater._check("https://example.invalid/manifest.json"), writes
+        finally:
+            _updater._fetch = real_fetch
+            _updater._write_atomically = real_write
+
+    def _newer_library(self, version: str) -> dict:
+        lib = json.loads(
+            (ROOT / "data" / "library.json").read_text(encoding="utf-8"))
+        lib["content_version"] = version
+        return lib
+
+    def test_a_matching_payload_is_installed(self):
+        ahead = "99.99.9999.99"
+        result, writes = self._serve(self._newer_library(ahead), ahead)
+        self.assertIn(ahead, result)
+        self.assertTrue(writes, "a well-formed payload was not written")
+
+    def test_a_payload_stamped_differently_is_discarded(self):
+        result, writes = self._serve(
+            self._newer_library("00.00.0000.01"), "99.99.9999.99")
+        self.assertFalse(
+            writes,
+            "a payload whose version disagrees with the manifest was "
+            "written; every launch will download it again and every "
+            "launch will ignore it")
+        self.assertIn("discarded", result.lower())
 
 
 class BlocklistSuppressesAndOnlySuppresses(unittest.TestCase):

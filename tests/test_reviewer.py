@@ -173,6 +173,176 @@ class SpanAttributes(unittest.TestCase):
         self.assertNotIn("oesophageal", url.lower())
 
 
+class WhatGetsUnderlined(unittest.TestCase):
+    """The mark has to land on the words the reader actually wrote."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rv = _load_reviewer()
+        from theankidote.pearls import _conditions, _drugs
+        cls.conditions = _conditions
+        cls.drugs = _drugs
+
+    def _marks(self, text):
+        out = self.rv.highlight_text(text, with_css=False)
+        return re.findall(r'<span class="sp-mark"[^>]*>(.*?)</span>', out)
+
+    def _span_for(self, text, word):
+        out = self.rv.highlight_text(text, with_css=False)
+        m = re.search(r'<span class="sp-mark"[^>]*>' + re.escape(word)
+                      + r"</span>", out)
+        self.assertIsNotNone(m, f"{word!r} was not highlighted at all")
+        return m.group(0)
+
+    def test_a_condition_written_as_an_alias_is_underlined(self):
+        """`resolve` reports the primary name so the popup title is
+        stable, and the pattern was built from that name - so a card
+        that says "heart attack" and never "myocardial infarction"
+        resolved the entry and then marked nothing. 5,457 of the
+        library's 6,044 condition aliases do not contain their primary
+        name, so this was most of them."""
+        entry = self.conditions._LOOKUP.get("heart attack")
+        self.assertIsNotNone(entry, "the fixture alias is gone")
+        self.assertNotIn("heart attack", entry["name"].lower(),
+                         "fixture alias now contains its primary name")
+        self.assertIn("heart attack",
+                      self._marks("Patient reports a heart attack in 2019."))
+
+    def test_the_popup_still_names_the_primary_entry(self):
+        """Only the underline follows the reader's wording. The title
+        and the URL stay those of the entry, or the alias would open an
+        article under a heading nobody wrote."""
+        span = self._span_for("Patient reports a heart attack in 2019.",
+                              "heart attack")
+        entry = self.conditions._LOOKUP.get("heart attack")
+        m = re.search(r'data-sp-title="([^"]*)"', span)
+        self.assertEqual(m.group(1), entry["name"])
+        self.assertIn("data-sp-url=\"" + self.conditions._url_for(entry),
+                      span)
+
+    def test_a_drug_written_as_a_spelling_variant_is_underlined(self):
+        """`frusemide` is what NSW Health, the PBS and most Australian
+        cards call furosemide. 38 of the 42 drug aliases do not contain
+        their generic."""
+        self.assertIn("frusemide", self._marks("Give frusemide 40 mg IV."))
+        self.assertIn("furosemide", self._marks("Give furosemide 40 mg IV."))
+
+    def test_two_spellings_of_one_entry_both_light_up(self):
+        """`resolve` reports an entry once however many ways the card
+        spells it, so the surfaces have to accumulate rather than the
+        first one winning."""
+        marks = self._marks("A heart attack: the myocardial infarction "
+                            "was anterior.")
+        self.assertIn("heart attack", marks)
+        self.assertIn("myocardial infarction", marks)
+
+    def test_a_bare_less_than_does_not_stop_highlighting(self):
+        """The HTML walker treated every `<` as a tag opener, looked for
+        the matching `>`, and on not finding one appended the whole
+        remainder unhighlighted. StatPearls and DrugBank prose is full
+        of "sodium <135", and the dock hands this decoded text."""
+        marks = self._marks("Sodium < 130 in SIADH suggests hyponatraemia.")
+        self.assertIn("SIADH", marks)
+        self.assertIn("hyponatraemia", marks)
+
+    def test_a_bare_less_than_mid_sentence_loses_nothing_after_it(self):
+        marks = self._marks(
+            "FEV1/FVC < 0.70 confirms asthma on spirometry.")
+        self.assertIn("asthma", marks)
+        self.assertIn("spirometry", marks)
+
+    def test_a_greater_than_inside_an_attribute_does_not_break_the_tag(self):
+        """A `>` in an attribute value ended the "tag" early, so the
+        rest of the attribute was treated as character data and a span
+        was injected inside it - which destroys the element."""
+        html = '<img src="x.png" alt="a > b asthma here">Asthma is common.'
+        out = self.rv.highlight_text(html, with_css=False)
+        self.assertIn('<img src="x.png" alt="a > b asthma here">', out,
+                      "the img tag was rewritten")
+        self.assertRegex(out, r'<span class="sp-mark"[^>]*>Asthma</span>')
+
+    def test_an_unquoted_apostrophe_in_a_tag_is_not_a_quote(self):
+        """Tracking quotes without asking where an attribute value can
+        start turns `<img alt=Crohn's>` into a value that never closes,
+        so the tag never ends and the whole rest of the node goes
+        unhighlighted - the same failure the quote tracking exists to
+        fix, one step along."""
+        out = self.rv.highlight_text("<img alt=Crohn's>Asthma is common.",
+                                     with_css=False)
+        self.assertIn("<img alt=Crohn's>", out, "the img tag was rewritten")
+        self.assertRegex(out, r'<span class="sp-mark"[^>]*>Asthma</span>')
+
+    def test_the_longer_term_wins_across_the_case_boundary(self):
+        """Every case-sensitive alternative used to sit ahead of every
+        case-insensitive one, and `re` alternation is first-match-wins -
+        so the acronym G6PD beat the condition "G6PD deficiency"
+        whatever their lengths. 37 such pairs ship in the library."""
+        self.assertIn("G6PD deficiency",
+                      self._marks("G6PD deficiency causes haemolysis."))
+        self.assertIn("CURB-65 score",
+                      self._marks("The CURB-65 score guides admission."))
+
+    def test_a_term_ending_in_punctuation_matches_mid_sentence(self):
+        """`\\b` after a phrase ending in ")" asserts a WORD character
+        next, so the 23 library terms that end that way only ever
+        matched at the very end of a text."""
+        marks = self._marks(
+            "Vitamin B12 (cobalamin) deficiency causes macrocytosis.")
+        self.assertIn("Vitamin B12 (cobalamin)", marks)
+
+    def test_an_acronym_expansion_carries_the_conditions_chips(self):
+        """The branch that enriches an acronym from a matching condition
+        copies url, summary and link across and used to drop `utd`, so
+        `data-sp-utd` was "[]" and marker.js hid the chip row on all 169
+        acronym expansions whose condition carries chips."""
+        import html as _html
+        import json as _json
+        term = None
+        for t in self.rv._acronym_terms(
+                "Mild and subclinical PID causes tubal infertility."):
+            if t["title"] == "PID":
+                term = t
+        self.assertIsNotNone(term, "the fixture acronym no longer resolves")
+        self.assertTrue(term.get("utd"),
+                        "the acronym term dict carries no chips")
+        span = self._span_for(
+            "Mild and subclinical PID causes tubal infertility.", "PID")
+        raw = re.search(r'data-sp-utd="([^"]*)"', span).group(1)
+        chips = _json.loads(_html.unescape(raw))
+        self.assertTrue(chips, "the span emitted an empty chip list")
+        for chip in chips:
+            self.assertTrue(chip.get("label") and chip.get("url"))
+
+    def test_a_shared_name_keeps_its_better_destination(self):
+        """`splenomegaly` is both a condition and a preclinical term,
+        `glucagon` both a drug and a preclinical term, and the lookup is
+        keyed on the lowercased title - so whichever database was
+        written last took the name. Preclinical links to a Wikipedia
+        search; it used to be written last and won all thirteen."""
+        span = self._span_for("The patient has splenomegaly today.",
+                              "splenomegaly")
+        self.assertIn("ncbi.nlm.nih.gov", span,
+                      "splenomegaly lost its StatPearls entry")
+        span = self._span_for("Glucagon was given for the hypoglycaemia.",
+                              "Glucagon")
+        self.assertIn("drugbank.com", span,
+                      "glucagon lost its DrugBank entry")
+
+    def test_british_spelling_survives_normalisation(self):
+        """"oedema" contains "edema" and "oesophag" contains "esophag",
+        so the American-to-British swap rewrote text that was already
+        British and produced a key that can never match."""
+        self.assertEqual(
+            self.rv._normalise_for_lookup("Pulmonary oedema"),
+            "pulmonary oedema")
+        self.assertEqual(
+            self.rv._normalise_for_lookup("Pulmonary edema"),
+            "pulmonary oedema")
+        self.assertEqual(
+            self.rv._normalise_for_lookup("Oesophageal varices"),
+            "oesophageal varices")
+
+
 class MarkerJsReadsThoseAttributes(unittest.TestCase):
     """The other half of the same contract, checked against the file
     rather than against a memory of it."""

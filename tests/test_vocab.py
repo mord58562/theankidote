@@ -1032,5 +1032,56 @@ class AmbiguousAcronymsCanBeTold(unittest.TestCase):
                           f"wrong sense for: {text}")
 
 
+class PhraseEdgesThatArePunctuation(unittest.TestCase):
+    """23 library terms end in ")". They matched almost nowhere.
+
+    `PhraseMatcher` reproduced `\\b(?:...)\\b`, and `\\b` beside a
+    closing bracket asserts a WORD character on the far side - so
+    "Vitamin B12 (cobalamin) deficiency" matched nothing while "his
+    Vitamin B12 (cobalamin)" matched, purely because the second ends
+    there. The assertion belongs at word-character edges only.
+    """
+
+    def _terms_ending_in_punctuation(self):
+        out = []
+        for names in (_conditions._NAMES, _preclinical._NAMES,
+                      _descriptive._NAMES, _psych._NAMES, _signs._NAMES,
+                      list(_drugs._GENERIC_LOOKUP),
+                      list(_drugs._BRAND_LOOKUP)):
+            out += [n for n in names
+                    if n and not (n[-1].isalnum() or n[-1] == "_")]
+        return out
+
+    def test_the_library_still_has_such_terms(self):
+        """If it ever stops having them this test is measuring nothing,
+        so say so rather than passing quietly."""
+        self.assertTrue(self._terms_ending_in_punctuation(),
+                        "no term ends in punctuation any more; this "
+                        "class no longer tests anything")
+
+    def test_such_a_phrase_matches_mid_sentence(self):
+        m = _matcher.PhraseMatcher(["vitamin b12 (cobalamin)"])
+        self.assertTrue(
+            m.find("vitamin b12 (cobalamin) deficiency causes anaemia"),
+            "a phrase ending in a bracket matched nothing mid-sentence")
+        self.assertTrue(
+            m.find("he is low on vitamin b12 (cobalamin)"),
+            "the end-of-text case regressed")
+
+    def test_the_closing_boundary_still_holds_for_word_endings(self):
+        """Dropping the assertion where it is not needed must not drop
+        it where it is: "asthma" must not match inside "asthmatic"."""
+        m = _matcher.PhraseMatcher(["asthma"])
+        self.assertFalse(m.find("asthmatic children wheeze"))
+        self.assertTrue(m.find("asthma is common"))
+
+    def test_every_shipped_punctuation_ending_term_matches_mid_sentence(self):
+        for name in self._terms_ending_in_punctuation():
+            m = _matcher.PhraseMatcher([name])
+            self.assertTrue(
+                m.find(name + " was documented on the chart"),
+                f"{name!r} matches only at the end of a text")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
