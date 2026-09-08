@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2025 mord58562
+#
+# Refuse a commit that changes .remote-agent-context.md without the
+# author having seen its new digest.
+#
+# The scheduled routine pins the sha256 of that file in its own config,
+# deliberately outside the repo, so a repo compromise cannot rewrite the
+# brief and the hash together. The cost is that a legitimate edit
+# silently breaks every fire until the hash is pasted back into the
+# routine. That happened on 2026-09-08 and cost six consecutive fires -
+# an entire day of content - because nothing at commit time said so.
+#
+# Install: bash tools/git-hooks/install.sh
+#
+# Bypass, once you have refreshed the routine: ANKIDOTE_CONTEXT_OK=1 git commit ...
+# (or --no-verify, which also skips every other hook.)
+
+set -euo pipefail
+
+if ! git diff --cached --name-only | grep -qx '\.remote-agent-context\.md'; then
+  exit 0
+fi
+
+if [ "${ANKIDOTE_CONTEXT_OK:-}" = "1" ]; then
+  exit 0
+fi
+
+DIGEST=$(git show ":.remote-agent-context.md" | shasum -a 256 | cut -d' ' -f1)
+
+cat >&2 <<MSG
+
+  .remote-agent-context.md is staged, so the routine's expected hash is
+  now stale and every scheduled fire will abort at its integrity check.
+
+  New digest (of the staged content):
+
+      $DIGEST
+
+  Paste that into EXPECTED_CONTEXT_SHA in the routine prompt at
+  https://claude.ai/code, then commit again with:
+
+      ANKIDOTE_CONTEXT_OK=1 git commit ...
+
+MSG
+exit 1
