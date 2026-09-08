@@ -15,6 +15,7 @@ import json
 import os
 import re
 import time
+from bisect import bisect_right
 from html.parser import HTMLParser
 from typing import Any
 
@@ -633,6 +634,39 @@ def _build_pattern(terms: list):
 _TAG_OPEN_RE = re.compile(r"<[A-Za-z/!?]")
 
 
+# What a phrase may run through, and what ends it.
+#
+# The walker below matches over the characters BETWEEN tags, and for
+# most of this add-on's life it matched over each such run on its own.
+# So `of an&nbsp;<b>ectopic</b>&nbsp;pregnancy?` - which is how the card
+# that prompted this is actually written - offered it "of an&nbsp;",
+# "ectopic" and "&nbsp;pregnancy?" one at a time, and "Ectopic
+# pregnancy" could not be seen at all. 60% of the library is multi-word
+# (2,360 of 3,899 terms) and 4,869 of one user's 6,088 notes carry a
+# `<b>` - students bold the key term, which is exactly the term we want
+# to mark - so this was most of the vocabulary failing on most of the
+# cards, silently, with nothing to notice except an absence.
+#
+# An inline element does not interrupt the sentence it sits in: a
+# reader of `<b>ectopic</b> pregnancy` sees two words of one phrase. So
+# text either side of one is joined into a single run before matching.
+# A block element does interrupt it, and joining across one would be a
+# worse bug than the one being fixed - "Signs of pregnancy</li><li>
+# Temperature" would underline a phrase spanning two list items that
+# share no sentence, and the popup would explain a term the card never
+# used.
+#
+# Hence an allow-list rather than a deny-list of blocks. A tag not
+# named here ends the run, so `<img>`, `<details>`, `<hr>`, an HTML
+# comment, a doctype and whatever an editor invents next all fail
+# safe: at worst a phrase around one of them stays unmarked, which is
+# the status quo, rather than a phrase being invented across it.
+_INLINE_TAGS = frozenset((
+    "b", "i", "u", "em", "strong", "span", "font", "mark", "small",
+    "sub", "sup", "s", "strike", "big", "a",
+))
+
+
 def _tag_end(html: str, i: int) -> int:
     """Index of the `>` closing the tag that starts at `i`, or -1.
 
@@ -706,36 +740,124 @@ def _inject_highlights(html: str, results: list, color: str,
     if rx is None:
         return html
 
-    def _replace_text(text: str) -> str:
-        # ONE pass over the text using the combined regex.  No risk of a
-        # later pass corrupting an earlier pass's injected HTML.
-        def _span(m):
-            word = m.group(0)
-            # The pattern lets a term's spaces match `&nbsp;` and the
-            # exotic space characters an editor inserts, so the matched
-            # text is not always the form the lookup was keyed on. Key
-            # on the same normalised shape the pattern was built from,
-            # or every one of those matches finds nothing here and is
-            # written back unmarked - which is the bug this whole change
-            # is about, moved one step later.
-            key = _matcher.normalise_separators(word)
-            t = (lookup.get(key) if key in sens_titles
-                 else lookup.get(key.lower()))
-            if not t:
-                return word
-            return (f'<span class="sp-mark" '
-                    f'data-sp-url="{t["url"]}" '
-                    f'data-sp-title="{t["article"]}" '
-                    f'data-sp-summary="{t["summary"]}" '
-                    f'data-sp-source="{t.get("source", "statpearls")}" '
-                    f'data-sp-badge="{t.get("badge", "")}" '
-                    f'data-sp-link="{t.get("link", "search")}" '
-                    f'data-sp-utd="{t.get("utd", "[]")}">{word}</span>')
-        return rx.sub(_span, text)
+    def _open_span(word: str):
+        """The opening tag for a match, or None if nothing claims it."""
+        # The pattern lets a term's spaces match `&nbsp;` and the
+        # exotic space characters an editor inserts, so the matched
+        # text is not always the form the lookup was keyed on. Key
+        # on the same normalised shape the pattern was built from,
+        # or every one of those matches finds nothing here and is
+        # written back unmarked - which is the bug this whole change
+        # is about, moved one step later.
+        key = _matcher.normalise_separators(word)
+        t = (lookup.get(key) if key in sens_titles
+             else lookup.get(key.lower()))
+        if not t:
+            return None
+        return (f'<span class="sp-mark" '
+                f'data-sp-url="{t["url"]}" '
+                f'data-sp-title="{t["article"]}" '
+                f'data-sp-summary="{t["summary"]}" '
+                f'data-sp-source="{t.get("source", "statpearls")}" '
+                f'data-sp-badge="{t.get("badge", "")}" '
+                f'data-sp-link="{t.get("link", "search")}" '
+                f'data-sp-utd="{t.get("utd", "[]")}">')
 
-    # Walk the HTML string, replacing text outside <tag> blocks and
-    # skipping <script> / <style> content.
-    result = []
+    def _span(m):
+        # ONE pass over the text using the combined regex. No risk of a
+        # later pass corrupting an earlier pass's injected HTML.
+        word = m.group(0)
+        open_tag = _open_span(word)
+        return word if open_tag is None else open_tag + word + "</span>"
+
+    # Walk the HTML string, marking the text between tags and skipping
+    # `<script>` / `<style>` content.
+    #
+    # Every text run is appended to `result` verbatim as it is met and
+    # rewritten in place later, once the sentence it belongs to has
+    # ended. That is what lets a match reach across an inline tag the
+    # walker has already emitted: `run_at` remembers where each run was
+    # put, `run_tx` what it said, and `_flush` goes back and edits them.
+    result: list = []
+    run_at: list = []
+    run_tx: list = []
+    append = result.append
+
+    def _mark_across() -> None:
+        """Match over several runs joined, then mark each run's share.
+
+        A match that starts inside an element and ends outside it -
+        `<b>ectopic</b> pregnancy` - has no single well-formed span:
+        `<span><b>ectopic</b> pregnancy</span>` is fine only because the
+        `<b>` closes inside it, and the moment the match starts inside
+        the `<b>` instead, one span would have to cross the element's
+        boundary and produce `<span>..<b>..</span>..</b>`. So each run
+        gets its own span, all of them carrying the same `data-sp-*`
+        attributes: the whole term underlines, hovering any part of it
+        opens the same popup, and the nesting is valid whatever shape
+        the card is written in.
+        """
+        joined = "".join(run_tx)
+        if not joined.strip():
+            return
+        # Cumulative end offset of each run within `joined`, so a match
+        # can be mapped back onto the runs it covers with a bisect
+        # rather than a walk - a card is one segment per sentence, but
+        # a page of `<span>`-wrapped prose is one segment of hundreds.
+        ends: list = []
+        p = 0
+        for t in run_tx:
+            p += len(t)
+            ends.append(p)
+        # Collected before anything is rewritten, because one run can
+        # hold pieces of two different matches and is rebuilt once.
+        pieces: dict = {}
+        for m in rx.finditer(joined):
+            open_tag = _open_span(m.group(0))
+            if open_tag is None:
+                continue
+            ms, me = m.span()
+            k = bisect_right(ends, ms)
+            base = ends[k - 1] if k else 0
+            while k < len(ends) and base < me:
+                a = ms - base
+                if a < 0:
+                    a = 0
+                b = me - base
+                if b > len(run_tx[k]):
+                    b = len(run_tx[k])
+                pieces.setdefault(k, []).append((a, b, open_tag))
+                base = ends[k]
+                k += 1
+        for k, plist in pieces.items():
+            text = run_tx[k]
+            parts: list = []
+            prev = 0
+            for a, b, open_tag in plist:
+                if a > prev:
+                    parts.append(text[prev:a])
+                parts.append(open_tag)
+                parts.append(text[a:b])
+                parts.append("</span>")
+                prev = b
+            parts.append(text[prev:])
+            result[run_at[k]] = "".join(parts)
+
+    def _flush() -> None:
+        """End the current sentence: mark its runs and start a new one."""
+        if run_tx:
+            if len(run_tx) == 1:
+                # A text node with no inline markup in it, which is most
+                # of them, takes the same single `sub` it always did and
+                # none of the offset bookkeeping above.
+                one = run_tx[0]
+                if one.strip():
+                    result[run_at[0]] = rx.sub(_span, one)
+            else:
+                _mark_across()
+            del run_at[:]
+            del run_tx[:]
+
     skip = False
     i = 0
     n = len(html)
@@ -745,14 +867,16 @@ def _inject_highlights(html: str, results: list, color: str,
         start = m.start() if m else n
         if start > i:
             chunk = html[i:start]
-            if not skip and chunk.strip():
-                chunk = _replace_text(chunk)
-            result.append(chunk)
+            if not skip:
+                run_at.append(len(result))
+                run_tx.append(chunk)
+            append(chunk)
         if m is None:
             break
         j = _tag_end(html, start)
         if j == -1:
-            result.append(html[start:])
+            _flush()
+            append(html[start:])
             break
         tag = html[start:j + 1]
         # Sniff the tag name without splitting twice.
@@ -763,11 +887,14 @@ def _inject_highlights(html: str, results: list, color: str,
         while tag_name_end < len(tag) and tag[tag_name_end].isalpha():
             tag_name_end += 1
         tname = tag[k:tag_name_end].lower()
-        if tname in ('script', 'style'):
-            # Detect closing form; tag[1] == '/' ⇒ closing tag.
-            skip = (tag[1] != '/')
-        result.append(tag)
+        if tname not in _INLINE_TAGS:
+            _flush()
+            if tname in ('script', 'style'):
+                # Detect closing form; tag[1] == '/' means a closing tag.
+                skip = (tag[1] != '/')
+        append(tag)
         i = j + 1
+    _flush()
 
     marked = ''.join(result)
     # The card path needs the rule travelling with the HTML,

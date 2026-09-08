@@ -16,6 +16,8 @@ Two stubs are enough to reach the matcher: a fake `aqt`, and a synthetic
 parent package so `_reviewer`'s `from .. import _config, _log` resolves.
 Nothing on this path needs a running Anki.
 """
+import json
+import os
 import re
 import sys
 import types
@@ -409,6 +411,370 @@ class MarkerJsReadsThoseAttributes(unittest.TestCase):
             js.count("_tipOpenBtn.textContent"), 1,
             "_tipOpenBtn.textContent is assigned more than once; a later "
             "assignment silently undoes the isArticle branch")
+
+
+# ── A corpus to hold the walker to ────────────────────────────────────
+#
+# The invariant below - strip the spans and get the input back - is only
+# worth anything over markup that actually varies. Three hand-written
+# cases prove nothing about a walker; the shapes that break one are the
+# ones nobody thought to write down.
+#
+# So the corpus is generated, from a fixed seed, out of the tag and
+# attribute inventory of a real 6,088-note collection: `b` 36,331
+# occurrences, `div` 26,486, `br` 22,600, `li` 16,764, `u` 11,908, `i`
+# 10,515, then `ul`, `img`, `span`, `td`, `a`, `font`, `ol`, `tr`,
+# `summary`, `p`, `strong`, `table`, `sup`, `sub`, `blockquote`, `em`,
+# `th`, `mark`; `&nbsp;` 10,761 times, `&gt;` 1,902, `&lt;` 774, and
+# seven fields carrying a bare `<` that is not a tag at all. The
+# attribute strings are the ones that collection actually uses.
+#
+# Generated rather than a dump of the collection because those cards are
+# a student's own notes and a good deal of licensed deck material, and
+# this repository is public. The structure is what this test is about,
+# and the structure is not anybody's copy. The real cards were run
+# through the same assertion while the fix was written - all 13,206
+# non-empty fields, zero mismatches - and `TAD_CARD_CORPUS` below lets
+# anyone repeat that against their own collection without the corpus
+# ever entering the tree.
+
+_CORPUS_INLINE = ("b", "i", "u", "em", "strong", "span", "font", "mark",
+                  "small", "sub", "sup", "s", "big", "a")
+_CORPUS_BLOCK = ("div", "p", "li", "ul", "ol", "td", "th", "tr", "table",
+                 "blockquote", "h3", "summary", "pre")
+_CORPUS_VOID = ("<br>", "<br />", "<hr>", '<img src="paste-1.jpg">',
+                '<img src="x.png" alt="a > b asthma here">',
+                "<img alt=Crohn's>", "<!-- a note -->")
+_CORPUS_ATTRS = ("", ' style=""', ' class="toggle"', ' data-au-notes="v2"',
+                 ' style="background-color: rgb(255, 229, 243);"',
+                 ' color="#ff0000"',
+                 ' style="width:50%;  padding: 2px; border: 1px solid;"')
+# Half library terms, half the words that sit between them. The terms
+# are multi-word on purpose: a single word never needed a run joined.
+_CORPUS_WORDS = (
+    "ectopic pregnancy", "deep vein thrombosis", "myocardial infarction",
+    "urinary tract infection", "chronic kidney disease",
+    "placental abruption", "postpartum haemorrhage", "asthma", "sepsis",
+    "Addison's disease", "warfarin", "metformin",
+    "the", "is", "of", "a", "Define:", "risk factor", "management",
+    "in children", "{{c1::two}}", "Sodium < 130", "loss &gt;500ml",
+    "salt &amp; water", "an&nbsp;", " ", "&nbsp;", "&lt;135",
+)
+
+
+# Terms a card can put a tag through the middle of. Written as the
+# library writes them, so a split of one is recognisable by its title.
+_CORPUS_SPLITTABLE = (
+    "ectopic pregnancy", "deep vein thrombosis", "myocardial infarction",
+    "chronic kidney disease", "placental abruption",
+    "postpartum haemorrhage",
+)
+
+
+def _corpus(count=600):
+    """`count` card-shaped documents, deterministic for a given count."""
+    import random
+    rnd = random.Random(20260908)
+    docs = []
+
+    def text():
+        return " ".join(rnd.choice(_CORPUS_WORDS)
+                        for _ in range(rnd.randint(1, 6)))
+
+    def split_term(depth):
+        """A term with a tag through the middle of it, which is how a
+        student who bolds the key word writes one."""
+        term = rnd.choice(_CORPUS_SPLITTABLE)
+        words = term.split()
+        cut = rnd.randint(1, len(words) - 1)
+        head, tail = " ".join(words[:cut]), " ".join(words[cut:])
+        sep = rnd.choice((" ", "&nbsp;", "\u00a0", " "))
+        wrap = rnd.choice(_CORPUS_INLINE)
+        attr = rnd.choice(_CORPUS_ATTRS)
+        if rnd.random() < 0.5:
+            return "<%s%s>%s</%s>%s%s" % (wrap, attr, head, wrap, sep, tail)
+        if rnd.random() < 0.5 or depth > 2:
+            return "%s%s<%s%s>%s</%s>" % (head, sep, wrap, attr, tail, wrap)
+        inner = rnd.choice(_CORPUS_INLINE)
+        return ("<%s%s><%s>%s</%s></%s>%s<%s>%s</%s>"
+                % (wrap, attr, inner, head, inner, wrap, sep,
+                   inner, tail, inner))
+
+    def frag(depth):
+        out = []
+        for _ in range(rnd.randint(1, 4)):
+            roll = rnd.random()
+            if roll < 0.25 or depth > 3:
+                out.append(text())
+            elif roll < 0.36:
+                out.append(split_term(depth))
+            elif roll < 0.40:
+                # The same terms broken by a block tag instead, which
+                # must never come back joined.
+                term = rnd.choice(_CORPUS_SPLITTABLE).split()
+                cut = rnd.randint(1, len(term) - 1)
+                t = rnd.choice(("li", "div", "p", "td"))
+                out.append("<%s>%s</%s>%s<%s>%s</%s>"
+                           % (t, " ".join(term[:cut]), t,
+                              rnd.choice(("", "<br>", "\n")),
+                              t, " ".join(term[cut:]), t))
+            elif roll < 0.55:
+                out.append(rnd.choice(_CORPUS_VOID))
+            elif roll < 0.80:
+                t = rnd.choice(_CORPUS_INLINE)
+                out.append("<%s%s>%s</%s>"
+                           % (t, rnd.choice(_CORPUS_ATTRS), frag(depth + 1), t))
+            else:
+                t = rnd.choice(_CORPUS_BLOCK)
+                out.append("<%s%s>%s</%s>"
+                           % (t, rnd.choice(_CORPUS_ATTRS), frag(depth + 1), t))
+        return "".join(out)
+
+    for _ in range(count):
+        docs.append(frag(0))
+    return docs
+
+
+# Named here rather than read off `_reviewer._INLINE_TAGS`, so that
+# quietly moving one of these onto the inline list fails this test
+# instead of passing it.
+_BLOCK_TAGS = frozenset((
+    "div", "p", "li", "ol", "ul", "br", "td", "tr", "th", "table",
+    "blockquote", "pre", "hr", "section", "article", "figure",
+    "details", "summary", "img", "h1", "h2", "h3", "h4", "h5", "h6",
+))
+
+
+_SP_SPAN_RE = re.compile(r'<span class="sp-mark"[^>]*?>(.*?)</span>', re.S)
+_ANY_TAG_RE = re.compile(r"<[A-Za-z/!?][^>]*>")
+
+
+def _unmark(html):
+    """The output with every sp-mark span unwrapped, text kept.
+
+    An sp-mark span holds one run of character data and never a tag, so
+    the `</span>` that closes it is always the next one in the string -
+    which is what makes this a safe inverse rather than a guess.
+    """
+    return _SP_SPAN_RE.sub(r"\1", html)
+
+
+class MatchesAcrossInlineMarkup(unittest.TestCase):
+    """A term the card puts in bold is still one term.
+
+    `_inject_highlights` matched within each run of characters between
+    two tags, so `<b>ectopic</b>&nbsp;pregnancy` was offered to the
+    pattern as "ectopic" and "&nbsp;pregnancy" separately and "Ectopic
+    pregnancy" could not be seen. 60% of the library is multi-word and
+    4,869 of one collection's 6,088 notes carry a `<b>`, almost always
+    around the key term.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rv = _load_reviewer()
+
+    def _inject(self, html):
+        """The card path: resolve from the stripped text, inject into
+        the raw HTML. The two see different strings, which is half of
+        why this class of bug survives so long."""
+        rv = self.rv
+        text = rv._strip_html(html)
+        results = (rv._acronym_terms(text) + rv._condition_terms(text)
+                   + rv._drug_terms(text) + rv._preclinical_terms(text))
+        return rv._inject_highlights(html, results, "#0fcad4",
+                                     with_css=False)
+
+    def _marks(self, html):
+        return _SP_SPAN_RE.findall(self._inject(html))
+
+    def _titles(self, html):
+        return re.findall(r'<span class="sp-mark"[^>]*data-sp-title='
+                          r'"([^"]*)"', self._inject(html))
+
+    def test_the_card_that_prompted_this_underlines_its_term(self):
+        """Verbatim from the card the user sent."""
+        html = "of an&nbsp;<b>ectopic</b>&nbsp;pregnancy?"
+        marks = self._marks(html)
+        self.assertTrue(marks, "nothing was underlined at all")
+        self.assertEqual(
+            "".join(marks).replace("&nbsp;", " "), "ectopic pregnancy",
+            "the mark does not cover the term the card wrote")
+        self.assertEqual(set(self._titles(html)), {"Ectopic pregnancy"})
+
+    def test_a_term_split_by_a_bold_tag_matches(self):
+        self.assertEqual(
+            "".join(self._marks("an <b>ectopic</b> pregnancy today")),
+            "ectopic pregnancy")
+
+    def test_a_term_split_by_a_styled_span_matches(self):
+        html = ('an <span style="background-color: rgb(255, 229, 243);">'
+                'ectopic</span> pregnancy today')
+        self.assertEqual("".join(self._marks(html)), "ectopic pregnancy")
+
+    def test_a_term_split_by_nested_inline_tags_matches(self):
+        html = "an <b><i>ectopic</i></b> <u>pregnancy</u> today"
+        self.assertEqual("".join(self._marks(html)), "ectopic pregnancy")
+
+    def test_every_piece_of_a_split_term_opens_the_same_popup(self):
+        """One span per text run, all carrying the same attributes, so
+        hovering either half opens one popup. A single span cannot be
+        written here: a match that starts inside the `<b>` and ends
+        outside it would have to close across the element boundary."""
+        out = self._inject("an <b>ectopic</b> pregnancy today")
+        spans = re.findall(r'<span class="sp-mark"[^>]*>', out)
+        self.assertEqual(len(spans), 2, "expected one span per text run")
+        self.assertEqual(spans[0], spans[1],
+                         "the two halves would open different popups")
+
+    def test_a_term_does_not_match_across_a_block_boundary(self):
+        """The failure mode worth more than the bug being fixed.
+
+        Joining every run would let "Signs of pregnancy</li><li>
+        Temperature" underline a phrase spanning two list items that
+        share no sentence, and the popup would explain a term the card
+        never used. Anything not on the inline list ends the run,
+        including tags nobody has thought about yet.
+        """
+        for html in ("<li>ectopic</li><li>pregnancy</li>",
+                     "<ul><li>ectopic</li>\n<li>pregnancy</li></ul>",
+                     "ectopic<br>pregnancy",
+                     "ectopic<br />pregnancy",
+                     "<div>ectopic</div><div>pregnancy</div>",
+                     "<p>ectopic</p><p>pregnancy</p>",
+                     "<td>ectopic</td><td>pregnancy</td>",
+                     "ectopic<hr>pregnancy",
+                     '<h3>ectopic</h3>pregnancy',
+                     'ectopic<img src="x.png">pregnancy',
+                     "<blockquote>ectopic</blockquote>pregnancy"):
+            with self.subTest(html=html):
+                self.assertEqual(self._marks(html), [],
+                                 "a phrase was invented across a break")
+
+    def test_script_and_style_content_is_still_skipped(self):
+        for tag in ("script", "style"):
+            with self.subTest(tag=tag):
+                html = ("<%s>var s = 'ectopic pregnancy';</%s>"
+                        "an <b>ectopic</b> pregnancy" % (tag, tag))
+                out = self._inject(html)
+                self.assertIn("var s = 'ectopic pregnancy';", out,
+                              "the %s body was rewritten" % tag)
+                self.assertEqual(
+                    "".join(_SP_SPAN_RE.findall(out)), "ectopic pregnancy")
+
+    def test_an_existing_mark_is_not_marked_again(self):
+        """The self-heal strips a previous run's spans before the walk,
+        so a re-render cannot nest a span inside a span."""
+        once = self._inject("an <b>ectopic</b> pregnancy today")
+        twice = self._inject(once)
+        self.assertEqual(twice, once)
+        self.assertNotIn('<span class="sp-mark" data-sp-url="'
+                         'https://www.ncbi.nlm.nih.gov/books/NBK539860/" '
+                         'data-sp-title="Ectopic pregnancy"'
+                         ' data-sp-summary', twice.replace(once, ""))
+
+    def test_a_tag_is_never_written_into(self):
+        """A `>` inside an attribute value once ended the tag early and
+        a span was injected into an `alt`, destroying the element."""
+        html = '<img src="x.png" alt="a > b ectopic pregnancy here">an ' \
+               '<b>ectopic</b> pregnancy'
+        out = self._inject(html)
+        self.assertIn('<img src="x.png" alt="a > b ectopic pregnancy here">',
+                      out, "the img tag was rewritten")
+        for tag in _ANY_TAG_RE.findall(_unmark(out)):
+            self.assertNotIn("sp-mark", tag,
+                             "a mark was written inside a tag")
+
+
+class StrippingTheMarksGivesBackTheCard(unittest.TestCase):
+    """One assertion that catches text loss, duplication, reordering and
+    a mangled tag at once.
+
+    The walker now edits runs it emitted several tags ago, which is
+    exactly the kind of change that drops or repeats a character
+    somewhere nobody is looking. Removing every `<span class="sp-mark"
+    ...>` and its matching `</span>` has to give the input back byte
+    for byte - no weaker check would notice a swapped pair of runs.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rv = _load_reviewer()
+        cls.docs = _corpus()
+
+    def _mark(self, html):
+        return self.rv.highlight_text(html, with_css=False)
+
+    def test_the_corpus_is_actually_exercising_the_walker(self):
+        """A vacuous corpus would pass the invariant perfectly."""
+        norm = self.rv._matcher.normalise_separators
+        span_re = re.compile(r'<span class="sp-mark"[^>]*data-sp-title='
+                             r'"([^"]*)"[^>]*>(.*?)</span>', re.S)
+        marked = split = 0
+        for doc in self.docs:
+            out = self._mark(doc)
+            if "sp-mark" not in out:
+                continue
+            marked += 1
+            spans = [(m.start(), m.end(), m.group(1), m.group(2))
+                     for m in span_re.finditer(out)]
+            for (_s1, e1, t1, w1), (s2, _e2, t2, w2) in zip(spans, spans[1:]):
+                # One term, one span per run. Three things have to hold
+                # for a pair of spans to be that rather than two
+                # separate hits on the same term: the same title; a gap
+                # holding markup and nothing else, not even a space,
+                # because a space between two words of the term belongs
+                # to a run and lands inside the second span; and the two
+                # pieces spelling the term when put together.
+                if t1 != t2 or _ANY_TAG_RE.sub("", out[e1:s2]) != "":
+                    continue
+                if norm(w1 + w2).lower() != norm(t1).lower():
+                    continue
+                # The gap is the markup the term was written through,
+                # and only an inline element may appear in it. A block
+                # tag here would mean a phrase invented across two list
+                # items or two table cells, which is a worse defect
+                # than the one this walker was changed to fix.
+                for gap_tag in re.findall(r"</?([A-Za-z][A-Za-z0-9]*)",
+                                          out[e1:s2]):
+                    self.assertNotIn(
+                        gap_tag.lower(), _BLOCK_TAGS,
+                        "a term was joined across <%s> in:\n  %s"
+                        % (gap_tag, doc))
+                split += 1
+                break
+        self.assertGreater(marked, len(self.docs) // 4,
+                           "the corpus barely marks anything")
+        self.assertGreater(split, 20,
+                           "no document in the corpus has a term split "
+                           "across inline markup, so the invariant is "
+                           "not testing the new path")
+
+    def test_the_generated_corpus_survives_a_round_trip(self):
+        for i, doc in enumerate(self.docs):
+            out = self._mark(doc)
+            if _unmark(out) != doc:
+                self.fail("document %d lost, gained or moved text\n"
+                          "  in : %r\n  out: %r" % (i, doc, _unmark(out)))
+
+    def test_a_real_collection_survives_a_round_trip(self):
+        """Opt-in, because a real collection cannot live in this tree.
+
+        Point `TAD_CARD_CORPUS` at a JSON array of field HTML strings -
+        an `ankiconnect notesInfo` dump will do - and the same assertion
+        runs against the cards as written.
+        """
+        path = os.environ.get("TAD_CARD_CORPUS")
+        if not path:
+            self.skipTest("TAD_CARD_CORPUS is not set")
+        docs = json.loads(pathlib.Path(path).read_text(encoding="utf-8"))
+        for i, doc in enumerate(docs):
+            if not isinstance(doc, str) or not doc.strip():
+                continue
+            out = self._mark(doc)
+            if _unmark(out) != doc:
+                self.fail("field %d lost, gained or moved text\n"
+                          "  in : %r\n  out: %r" % (i, doc, _unmark(out)))
 
 
 if __name__ == "__main__":
