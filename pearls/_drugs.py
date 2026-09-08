@@ -142,8 +142,10 @@ for _d in _DRUGS:
     # of one would not.
     #
     # `resolve` reports `d["generic"]`, so an aliased match still shows
-    # the INN spelling in the popup heading. The alias only affects what
-    # the matcher recognises, never what the user is shown.
+    # the INN spelling in the popup heading. The alias decides what the
+    # matcher recognises and which word gets underlined on the card -
+    # `frusemide` written on a card is `frusemide` underlined - but
+    # never what the popup calls it.
     for _a in _d.get("aliases", []) or []:
         if isinstance(_a, str) and _a.strip():
             _GENERIC_LOOKUP.setdefault(_a.lower(), _d)
@@ -173,30 +175,41 @@ _BRAND_MATCHER = (_matcher.PhraseMatcher(list(_BRAND_LOOKUP), case_sensitive=Tru
 
 def resolve(text: str) -> list:
     """Find drug mentions in `text`. Returns a list of dicts:
-        {name, summary, url, case_sensitive}
+        {name, surfaces, summary, url, case_sensitive}
     name preserves the case as it appeared in the text for brand matches and
     uses the primary generic spelling for generic matches.
+    `surfaces` is every distinct spelling the entry was matched on here -
+    the alias the card actually used. 38 of the 42 spelling aliases do not
+    contain their generic as a substring, so the highlighter had nothing
+    to mark: a card written in `frusemide` resolved furosemide and then
+    underlined nothing. The mark follows the card, the heading stays INN.
     """
     if not text:
         return []
     out = []
-    seen: set = set()
+    seen: dict = {}
 
     if _GENERIC_MATCHER:
         for _s, _e, key in _GENERIC_MATCHER.find(text):
-            if key in seen:
-                continue
             d = _GENERIC_LOOKUP.get(key)
             if not d:
                 continue
-            seen.add(key)
-            out.append({
+            surface = _matcher.surface_form(text, _s, _e, key)
+            prev = seen.get(key)
+            if prev is not None:
+                if surface and surface not in prev["surfaces"]:
+                    prev["surfaces"].append(surface)
+                continue
+            item = {
                 "name":           d["generic"],
+                "surfaces":       [surface] if surface else [],
                 "summary":        d["summary"],
                 "url":            _drugbank_url(d),
                 "link":           _drug_link_kind(d),
                 "case_sensitive": False,
-            })
+            }
+            seen[key] = item
+            out.append(item)
 
     if _BRAND_MATCHER:
         for _s, _e, brand in _BRAND_MATCHER.find(text):
@@ -205,13 +218,17 @@ def resolve(text: str) -> list:
             d = _BRAND_LOOKUP.get(brand)
             if not d:
                 continue
-            seen.add(brand)
-            out.append({
+            # A case-sensitive matcher reports the phrase as written, so
+            # the brand is already its own surface form.
+            item = {
                 "name":           brand,
+                "surfaces":       [brand],
                 "summary":        d["summary"],
                 "url":            _drugbank_url(d),
                 "link":           _drug_link_kind(d),
                 "case_sensitive": True,
-            })
+            }
+            seen[brand] = item
+            out.append(item)
 
     return out

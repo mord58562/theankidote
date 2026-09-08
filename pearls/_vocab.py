@@ -72,20 +72,27 @@ def build_vocab(base_key: str, default_category: str = "",
     matcher = _matcher.PhraseMatcher(names) if names else None
 
     def resolve(text: str) -> list:
+        """`surfaces` carries the spellings actually found in `text`, so
+        the highlighter can underline the alias the reader wrote while
+        the popup keeps the primary name - see `_conditions.resolve`."""
         if not text or matcher is None:
             return []
         out: list = []
-        seen: set = set()
+        seen: dict = {}
         for _s, _e, key in matcher.find(text):
             t = lookup.get(key)
             if t is None:
                 continue
             canon = t["name"]
-            if canon in seen:
+            surface = _matcher.surface_form(text, _s, _e, key)
+            prev = seen.get(canon)
+            if prev is not None:
+                if surface and surface not in prev["surfaces"]:
+                    prev["surfaces"].append(surface)
                 continue
-            seen.add(canon)
-            out.append({
+            item = {
                 "name":           canon,
+                "surfaces":       [surface] if surface else [],
                 "summary":        t["summary"],
                 "url":            _wikipedia_url(canon),
                 "source":         "preclinical",
@@ -95,7 +102,9 @@ def build_vocab(base_key: str, default_category: str = "",
                 "link":           "search",
                 "category":       t.get("category", default_category),
                 "case_sensitive": False,
-            })
+            }
+            seen[canon] = item
+            out.append(item)
         return out
 
     return terms, names, resolve

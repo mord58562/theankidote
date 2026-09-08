@@ -273,7 +273,7 @@ if [ "$DRY_RUN" = "1" ]; then
   echo "Would upload    data/library.json"
   echo "Would commit    data/manifest.json to $BRANCH"
   echo "Asset URL       $ASSET_URL"
-  echo "data/ restored  - the tree is unchanged, so the real run of this"
+  echo "data/ restored - the tree is unchanged, so the real run of this"
   echo "                  same version will not be refused as stale"
   exit 0
 fi

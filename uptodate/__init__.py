@@ -138,7 +138,7 @@ def _home_url() -> str:
     url = _config.get("uptodateHomeUrl") or UPTODATE_HOME
     q = QUrl(url)
     if not q.isValid() or q.scheme() not in ("http", "https"):
-        print("[TheAnkiDote.uptodate] Invalid uptodateHomeUrl - using default")
+        _log.error("uptodate: invalid uptodateHomeUrl - using the default")
         return UPTODATE_HOME
     return url
 
@@ -208,17 +208,40 @@ def _nav_btn_qss() -> str:
 # ---------------------------------------------------------------------------
 
 class _PopupShunt(QWebEnginePage):
-    """Throwaway page: captures the first URL of a popup, opens it in the
+    """Throwaway page: captures the popup's destination, opens it in the
     system browser, then self-destructs."""
     def __init__(self, profile, parent=None):
         super().__init__(profile, parent)
         self.urlChanged.connect(self._open_externally)
 
     def _open_externally(self, url: QUrl):
+        """Hand the popup's real destination to the system browser.
+
+        Two things this must not do.  It must not pass a non-http(s)
+        URL to `QDesktopServices.openUrl`, which will hand a `file:` or
+        a custom-scheme URL to whatever the OS has registered for it -
+        both of the dock `_open_externally` methods in this add-on
+        check the scheme first for that reason, and this one is
+        reached by whatever a page passes to `window.open()`.
+
+        And it must not treat `about:blank` as the destination.  An IdP
+        that calls `window.open()` and then assigns `location` on the
+        window it got back emits `about:blank` first, so shunting that
+        would open an empty tab and strand the sign-in.  Waiting for a
+        real URL means a popup that never navigates anywhere is never
+        shunted at all; it costs nothing, because the page is parented
+        to the opener and goes when that does.
+        """
         try:
+            if url is None or url.toString() == "about:blank":
+                return
+            if url.scheme().lower() not in ("http", "https"):
+                return
             QDesktopServices.openUrl(url)
-        finally:
-            self.deleteLater()
+        except Exception as exc:
+            _log.error("UTD popup shunt", exc)
+            return
+        self.deleteLater()
 
 
 class UpToDatePage(QWebEnginePage):
@@ -368,6 +391,38 @@ class UpToDateBrowser(QWidget):
         self.setMinimumWidth(_config.get("minWidth") or 400)
 
         self.view.load(QUrl(_home_url()))
+
+    def shutdown(self) -> None:
+        """Delete the webview stack before the profile it runs on.
+
+        Qt requires a QWebEngineProfile to outlive every page created
+        on it, and warns "Release of profile requested but
+        WebEnginePage still not deleted. Expect troubles !" when it
+        doesn't.  The profile has to be constructed first here because
+        the page takes it as a constructor argument, and a QObject
+        destroys its children in the order they were added - so left to
+        this widget's own destructor the profile goes first, while its
+        page is still alive.  `QWebEngineView::setPage` only adopts a
+        page that has no parent yet, so ours stays a sibling of the
+        profile rather than moving under the view.
+
+        Deleting the view and the page here, before anything deletes
+        the widget, puts the order back the way Qt wants it:
+        `deleteLater` events are delivered in the order they were
+        posted, so the profile (which goes with the widget) is last.
+        `_close_dock` already deletes the keepalive page - also on this
+        profile - ahead of all of it.
+        """
+        for name in ("view", "page"):
+            obj = getattr(self, name, None)
+            if obj is None:
+                continue
+            setattr(self, name, None)
+            try:
+                obj.setParent(None)
+                obj.deleteLater()
+            except Exception as exc:
+                _log.error(f"UTD shutdown {name}", exc)
 
     # ------------------------------------------------------------------
     # Downloads
@@ -521,7 +576,8 @@ class UpToDateBrowser(QWidget):
     def _on_render_crash(self, status, exit_code):
         """The WebEngine renderer process has died.  Save the URL we were on
         and schedule a reload so the dock recovers without an Anki restart."""
-        print(f"[TheAnkiDote] renderer terminated (status={status}) - recovering in 2 s")
+        _log.warn(f"UTD renderer terminated (status={status}, "
+                  f"exit={exit_code}) - recovering in 2 s")
         try:
             self._crash_url = self.view.url().toString()
         except Exception:
@@ -577,7 +633,7 @@ def toggle_dock():
     else:
         _dock.show()
         _enforce_dock_area()
-        _arrange_with_siblings()
+        _dock_layout.arrange(_dock, _dock_layout.ORDER_UPTODATE)
         _health_check_browser()
         try:
             _config.set_value("dockState_uptodate", True)
@@ -594,32 +650,21 @@ def _enforce_dock_area():
         _dock.show()
 
 
-def _arrange_with_siblings():
-    """Split side-by-side with any other visible dock in the same area,
-    instead of letting Qt tab them together."""
-    if _dock is None:
-        return
-    try:
-        area = _dock_area()
-        for child in mw.findChildren(QDockWidget):
-            if child is _dock or not child.isVisible():
-                continue
-            if mw.dockWidgetArea(child) != area:
-                continue
-            mw.splitDockWidget(child, _dock, Qt.Orientation.Horizontal)
-            _dock.show()
-            return
-    except Exception as e:
-        print(f"[TheAnkiDote] dock arrange error: {e}")
-
-
 def _show_dock() -> None:
-    """Make the dock visible, enforce its configured area, and tile siblings."""
+    """Make the dock visible, enforce its configured area, and tile siblings.
+
+    Tiling is `_dock_layout.arrange`, shared with the chat and pearls
+    docks.  The local version this replaced split against any visible
+    QDockWidget in the area, other add-ons' included, and had no notion
+    of the left-to-right order the three panels are supposed to keep -
+    so UpToDate and StatPearls swapped sides depending on which the
+    user happened to open first.
+    """
     if _dock is None:
         return
     _dock.show()
     _enforce_dock_area()
-    _arrange_with_siblings()
+    _dock_layout.arrange(_dock, _dock_layout.ORDER_UPTODATE)
 
 
 def _close_dock(*_args):
@@ -638,6 +683,11 @@ def _close_dock(*_args):
             _keepalive_page = None
     except Exception:
         pass
+    # Before the dock goes: the browser's view and page have to be
+    # queued for deletion ahead of the widget that owns the profile
+    # they run on - see `UpToDateBrowser.shutdown`.
+    if _browser is not None:
+        _browser.shutdown()
     if _dock is not None:
         _dock.close()
         _dock.deleteLater()
@@ -736,7 +786,7 @@ def _on_keepalive_crash(*_):
     global _keepalive_page
     if _browser is None:
         return
-    print("[TheAnkiDote] keepalive renderer crashed - recreating")
+    _log.warn("UTD keepalive renderer crashed - recreating")
     try:
         if _keepalive_page is not None:
             _keepalive_page.deleteLater()
@@ -880,7 +930,7 @@ def _add_toolbar_link(links: list, toolbar: Toolbar) -> None:
         f'href=# onclick="return pycmd(\'{TOGGLE_CMD}\')">'
         f'{_toolbar_label()}</a>'
     )
-    # Position relative to chat's link if already inserted (defensive  - 
+    # Position relative to chat's link if already inserted (defensive - 
     # UTD's hook normally fires first so chat won't be present yet, but
     # if hook order ever changes this still does the right thing).
     order = _config.get("toolbarOrder") or ["chat", "uptodate"]

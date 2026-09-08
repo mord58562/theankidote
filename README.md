@@ -54,7 +54,7 @@ A dock on the right of the reviewer, with three modes:
 
 `Ctrl+Shift+K` sends the current text selection to the chat and
 `Ctrl+Shift+J` sends the whole visible card: the dock opens, the message
-box is focused, and the text is pasted into it. **Nothing is submitted  - 
+box is focused, and the text is pasted into it. **Nothing is submitted - 
 pressing Enter is always your keystroke.**
 
 ### Relevant articles
@@ -127,7 +127,7 @@ setting also has a config key; see [config.md](config.md).
   message box and paste. They never press Enter.
 - **Your collection stays local.** Card text is read to find terms and
   is never transmitted anywhere.
-- **Network access** is limited to the sites you are browsing  - 
+- **Network access** is limited to the sites you are browsing - 
   StatPearls, DrugBank, UpToDate and your chosen chat provider - plus
   NCBI when resolving an article link.
 
@@ -179,7 +179,7 @@ at 2.2.
 GPL-3.0-or-later. See [LICENSE](LICENSE).
 
 Clinical content is compiled from public sources and is intended for
-study. It is not a clinical decision tool and carries no warranty  - 
+study. It is not a clinical decision tool and carries no warranty - 
 check current guidance before acting on anything you read here.
 
 Version history is in [CHANGELOG.md](CHANGELOG.md).

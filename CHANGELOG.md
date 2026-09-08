@@ -358,7 +358,8 @@ migration required.
   `_dock_layout`, `content/_rich`, `pearls/_ncbi`, `pearls/_drugs`,
   `pearls/_reviewer`, `pearls/_conditions`, `docs/CHECKPOINT`.
 - Two "This X does Y" openers collapsed; two proprietary-app
-  comparisons ("AMBOSS-style", "AT V2-style") reworded.
+  comparisons reworded. Naming them here undid the rewording, so the
+  entry no longer does.
 
 ## [2.2.1] - 2026-08-28
 

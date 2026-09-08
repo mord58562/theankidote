@@ -121,12 +121,12 @@
   /* ── egg persistence ─────────────────────────────────────────────────
    * Two different scopes, deliberately:
    *
-   *   rarity  - per CARD.  Gold is a property of the card you're on, so
+   *   rarity - per CARD.  Gold is a property of the card you're on, so
    *             every term on it shares the treatment and the card reads
    *             as a single object rather than a patchwork of one gold
    *             popup among five ordinary ones.  Rolled once, at the
    *             first popup opened on that card.
-   *   trivia  - per TERM.  It's a line of text inside one popup, so
+   *   trivia - per TERM.  It's a line of text inside one popup, so
    *             stamping the same fake fact onto every term of a card
    *             would expose it as canned immediately.
    *
@@ -1044,13 +1044,13 @@
     if (!r.width || !r.height) return false;
     var p = 8;   // pad, so clipping the popup's corner still counts
     var x1, y1, x2, y2;
-    if (x <= r.left)        { x1 = r.left  - p; y1 = r.top - p;
-                              x2 = r.left  - p; y2 = r.bottom + p; }
+    if (x <= r.left)        { x1 = r.left - p; y1 = r.top - p;
+                              x2 = r.left - p; y2 = r.bottom + p; }
     else if (x >= r.right)  { x1 = r.right + p; y1 = r.top - p;
                               x2 = r.right + p; y2 = r.bottom + p; }
-    else if (y <= r.top)    { x1 = r.left  - p; y1 = r.top - p;
+    else if (y <= r.top)    { x1 = r.left - p; y1 = r.top - p;
                               x2 = r.right + p; y2 = r.top - p; }
-    else                    { x1 = r.left  - p; y1 = r.bottom + p;
+    else                    { x1 = r.left - p; y1 = r.bottom + p;
                               x2 = r.right + p; y2 = r.bottom + p; }
     return _inTriangle(x, y, _px, _py, x1, y1, x2, y2);
   }

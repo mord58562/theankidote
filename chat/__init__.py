@@ -42,6 +42,7 @@ import os
 import json as _json
 import base64
 import random
+from urllib.parse import urlparse
 
 from aqt import mw, gui_hooks
 from aqt.toolbar import Toolbar
@@ -461,7 +462,7 @@ def _ensure_key_filter():
         _key_filter = _ChatKeyFilter()
         app.installEventFilter(_key_filter)
     except Exception as exc:
-        print(f"[TheAnkiDote.chat] key filter install error: {exc}")
+        _log.error("chat key filter install", exc)
 
 
 # ── Page + popup window ──────────────────────────────────────────────────
@@ -514,7 +515,7 @@ class _ChatPage(QWebEnginePage):
             popup.show()
             return popup.page
         except Exception as exc:
-            print(f"[TheAnkiDote.chat] popup window error: {exc}")
+            _log.error("chat popup window", exc)
             return None
 
 
@@ -659,6 +660,38 @@ class ChatBrowser(QWidget):
         # one reload but a stream of them.
         self.load(_last_or_home_url())
 
+    def shutdown(self) -> None:
+        """Delete the webview stack before the profile it runs on.
+
+        Qt requires a QWebEngineProfile to outlive every page created
+        on it, and says so in as many words when it doesn't: "Release
+        of profile requested but WebEnginePage still not deleted.
+        Expect troubles !".  The profile has to be constructed first
+        here because the page takes it as a constructor argument, and a
+        QObject destroys its children in the order they were added - so
+        left to this widget's own destructor, the profile goes first
+        while its page is still alive.  `QWebEngineView::setPage` only
+        adopts a page that has no parent yet, so ours stays a sibling
+        of the profile rather than moving under the view.
+
+        Deleting the view and the page here, before anything deletes
+        the widget, puts the order back the way Qt wants it:
+        `deleteLater` events are delivered in the order they were
+        posted, so the profile (which goes with the widget) is last.
+        The UpToDate dock already tears its keepalive page down this
+        way for the same reason.
+        """
+        for name in ("view", "page"):
+            obj = getattr(self, name, None)
+            if obj is None:
+                continue
+            setattr(self, name, None)
+            try:
+                obj.setParent(None)
+                obj.deleteLater()
+            except Exception as exc:
+                _log.error(f"chat shutdown {name}", exc)
+
     def resizeEvent(self, event) -> None:
         super().resizeEvent(event)
         try:
@@ -695,6 +728,30 @@ class ChatBrowser(QWidget):
             if q.isValid() and q.scheme() in ("http", "https"):
                 providers.append(("Custom", custom))
         return providers
+
+    def _configured_label(self, url: str) -> str:
+        """Label from the configured provider list for `url`, or "".
+
+        The provider list is the authority on what a provider is
+        called: a user-supplied `chatProviders` entry carries its own
+        name, and `_provider_for_url` only knows the built-in hosts and
+        falls back to the first of them for everything else.  That
+        fallback is how a custom provider came to wear Claude's logo
+        and tooltip - and the button's click handler then looked up
+        "Claude" in a list that did not contain it and loaded the home
+        URL instead of the provider the user had just picked.
+
+        Matched on host rather than on the entry URL, so a page deeper
+        inside the provider still resolves to the entry the user
+        configured.
+        """
+        host = _host_of(url)
+        if not host:
+            return ""
+        for label, p_url in self._providers():
+            if _host_matches(host, _host_of(p_url)):
+                return label
+        return ""
 
     def load(self, url: str):
         self.view.load(QUrl(url))
@@ -806,8 +863,12 @@ class ChatBrowser(QWidget):
             current = self.view.url().toString()
         except Exception:
             current = ""
-        target_label = _provider_for_url(url)
-        if current and _provider_for_url(current) == target_label \
+        # Both labels come off the same derivation, so a provider the
+        # user configured themselves compares as itself rather than as
+        # the built-in fallback.
+        target_label = self._configured_label(url) or _provider_for_url(url)
+        current_label = self._configured_label(current) or _provider_for_url(current)
+        if current and current_label == target_label \
                 and current.split("?")[0].rstrip("/") == url.split("?")[0].rstrip("/"):
             return
         try:
@@ -923,10 +984,15 @@ class ChatBrowser(QWidget):
             current = self.view.url().toString()
         except Exception:
             current = ""
-        explicit = _explicit_provider_for_url(current) if current else None
-        if explicit is not None:
-            return explicit
-        return _provider_for_url(_config.get("chatLastUrl") or _home_url())
+        if current:
+            configured = self._configured_label(current)
+            if configured:
+                return configured
+            explicit = _explicit_provider_for_url(current)
+            if explicit is not None:
+                return explicit
+        last = _config.get("chatLastUrl") or _home_url()
+        return self._configured_label(last) or _provider_for_url(last)
 
     def _refresh_inline_provider_button(self, label: str = ""):
         """Update the single inline provider button's icon + tooltip to
@@ -948,7 +1014,9 @@ class ChatBrowser(QWidget):
                 self._btn_active.setIcon(QIcon())
                 self._btn_active.setText(label[:1])
             self._btn_active.setToolTip(f"Reload {label}")
-            # Re-wire click to reload the active provider's URL.
+            # Re-wire click to reload the active provider.  The URL is
+            # only the fallback for a view that isn't on that provider
+            # yet - see `_reload_active`.
             try:
                 self._btn_active.clicked.disconnect()
             except Exception:
@@ -961,10 +1029,40 @@ class ChatBrowser(QWidget):
             if target_url is None:
                 target_url = _last_or_home_url()
             self._btn_active.clicked.connect(
-                lambda _=False, u=target_url: self.switch_provider(u)
+                lambda _=False, u=target_url: self._reload_active(u)
             )
         except Exception as exc:
             _log.error("refresh inline provider button", exc)
+
+    def _reload_active(self, fallback_url: str):
+        """Reload whatever the dock is showing.
+
+        This button carries the active provider - switching provider is
+        what the `▾` menu is for, and it excludes the active one - so
+        its job is the reload the dock otherwise had no control for.
+        It used to call `switch_provider` with the provider's entry
+        URL, which returns early when that is already the current URL:
+        exactly the case where the user is pressing it to reload.  The
+        tooltip has said "Reload" throughout.
+
+        `view.reload()` rather than a fresh load of the entry URL,
+        because a reload is what the user asked for and re-navigating
+        would throw away the conversation they are looking at.  Only a
+        view that is not on a recognised provider at all - a cold dock,
+        a load that failed to an error page - falls back to loading the
+        provider's entry URL, which doubles as the recovery path.
+        """
+        try:
+            current = self.view.url().toString()
+        except Exception:
+            current = ""
+        if _is_web_url(current):
+            try:
+                self.view.reload()
+                return
+            except Exception as exc:
+                _log.error("chat reload", exc)
+        self.switch_provider(fallback_url)
 
     def _open_overflow_menu(self):
         """Build and exec the overflow menu containing every provider
@@ -1128,6 +1226,7 @@ def toggle_dock():
                 _dock.show()
         except Exception as exc:
             _log.error("chat dock area enforcement", exc)
+        _dock_layout.arrange(_dock, _dock_layout.ORDER_CHAT)
         _roll_house_quote()
     try:
         _config.set_value("dockState_chat", _dock_visible)
@@ -1228,6 +1327,7 @@ def toggle_dock_show_only():
         return
     _dock.show()
     _dock_visible = True
+    _dock_layout.arrange(_dock, _dock_layout.ORDER_CHAT)
     try:
         _config.set_value("dockState_chat", True)
     except Exception:
@@ -1298,8 +1398,15 @@ def rebind_shortcut() -> None:
 
 
 def _close_dock(*_):
-    """Hard teardown on profile switch."""
+    """Hard teardown on profile switch.
+
+    Order matters: the browser's view and page have to be queued for
+    deletion before the widget that owns the profile they run on - see
+    `ChatBrowser.shutdown`.
+    """
     global _dock, _browser, _dock_visible
+    if _browser is not None:
+        _browser.shutdown()
     if _dock is not None:
         _dock.close()
         _dock.deleteLater()
@@ -1352,25 +1459,71 @@ _PROVIDER_HOSTS = (
 )
 
 
+def _host_of(url: str) -> str:
+    """Lowercased hostname of `url`, or "" if it has none."""
+    try:
+        return (urlparse(url).hostname or "").lower()
+    except Exception:
+        return ""
+
+
+def _is_web_url(url: str) -> bool:
+    """True for an http(s) URL that has a host - a real page, as
+    opposed to `about:blank`, a `data:` URL or the
+    `chrome-error://chromewebdata/` the view shows after a failed
+    load."""
+    try:
+        parts = urlparse(url or "")
+    except Exception:
+        return False
+    return ((parts.scheme or "").lower() in ("http", "https")
+            and bool(parts.hostname))
+
+
+def _host_matches(host: str, domain: str) -> bool:
+    """Is `host` the domain itself or a subdomain of it?
+
+    The same test, and for the same reason, as `_is_trusted_host` in
+    the top-level module: a bare `in` is a substring test, and a
+    substring of a URL is not a host.
+    """
+    return bool(host) and bool(domain) and (
+        host == domain or host.endswith("." + domain))
+
+
 def _explicit_provider_for_url(url: str) -> "str | None":
     """Match URL to a known provider label.  Returns None for empty,
-    blank, opaque (about:/data:/blob:/chrome://) or otherwise
+    blank, opaque (about:/data:/blob:/chrome-error:) or otherwise
     unrecognised URLs.
+
+    Matched on the parsed host, not on a substring of the whole URL.
+    The substring test also matched the path and the query, so
+    `https://attacker.example/claude.ai` read as Claude: the header
+    repainted as Claude, the URL was persisted as `chatLastUrl` and
+    reloaded on the next launch into the profile that holds every
+    provider's live session cookies, and the page's own favicon was
+    cached over the bundled brand logo.  Anything that can put a link
+    in front of the user can pick the URL, so this has to be decided
+    by the host and nothing else.
 
     This is the host-derived truth; `_provider_for_url` wraps it with
     a Claude fallback for callers that need a non-None label (e.g.
     rendering the toolbar icon at startup before any navigation)."""
-    if not url:
+    # Only a real web page can be a provider.  A positive test rather
+    # than a list of schemes to refuse, so `about:blank`, `data:`,
+    # `blob:`, `chrome-error://chromewebdata/` and anything else the
+    # view passes through mid-load all fall out as None without having
+    # to be enumerated.
+    if not _is_web_url(url):
         return None
-    u = url.lower()
-    if u.startswith(("about:", "data:", "blob:", "chrome:", "qrc:", "file:")):
-        return None
-    for label, host in _PROVIDER_HOSTS:
-        if host in u:
+    host = _host_of(url)
+    for label, domain in _PROVIDER_HOSTS:
+        if _host_matches(host, domain):
             return label
     custom = _config.get("chatCustomProviderUrl")
-    if isinstance(custom, str) and custom and url.startswith(custom):
-        return "Custom"
+    if isinstance(custom, str) and custom.strip():
+        if _host_matches(host, _host_of(custom)):
+            return "Custom"
     return None
 
 
@@ -1502,4 +1655,4 @@ def _setup():
     try:
         rebind_shortcut()
     except Exception as exc:
-        print(f"[TheAnkiDote.chat] setup error: {exc}")
+        _log.error("chat setup", exc)

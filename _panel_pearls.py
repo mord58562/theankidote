@@ -730,7 +730,7 @@ class _ResultsSection(QWidget):
 # ──────────────────────────────────────────────────────────────────────────
 
 class StatPearlsPanel(QWidget):
-    """AMBOSS-inspired side panel: nav header + results + webview."""
+    """Side panel: nav header, matched-article list, article webview."""
 
     closed = pyqtSignal()
 

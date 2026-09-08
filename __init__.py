@@ -954,8 +954,12 @@ def _setup() -> None:
         act.toggled.connect(_on_toggle)
         return act
 
+    # Named to match the Settings row for the same key. The rename there
+    # was deliberate and reasoned; this surface was not updated with it,
+    # so one switch had two names in two places a user meets minutes
+    # apart.
     submenu.addAction(_make_toggle(
-        "StatPearls + DrugBank", "enableHighlights", default_true=True))
+        "Highlight terms on cards", "enableHighlights", default_true=True))
     submenu.addAction(_make_toggle(
         "UpToDate sidebar", "enableUpToDate", default_true=True))
     submenu.addAction(_make_toggle(
@@ -1330,7 +1334,7 @@ def _custom_terms_dialog(parent, raw) -> "str | None":
     _w = _qt_imports()
     Qt_ = _w["_Qt"]
     dlg = _w["QDialog"](parent)
-    dlg.setWindowTitle("Custom Terms")
+    dlg.setWindowTitle("Custom terms")
     dlg.resize(680, 340)
     lay = _w["QVBoxLayout"](dlg)
 

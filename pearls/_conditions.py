@@ -257,40 +257,71 @@ for _canon, _text in _RICH.items():
         _RICH_APPLIED.add(_canon)
 
 
+def utd_chips(entry: dict) -> list:
+    """The `{label, url}` chips the popup footer draws for `entry`.
+
+    Split out of `resolve` because the acronym path in `_reviewer.py`
+    needs the same list. That branch enriches an acronym from the
+    condition its expansion names and copies the condition's url,
+    summary and link across - but it built the term dict by hand and
+    had no way to produce chips, so `data-sp-utd` was "[]" and
+    marker.js hid the chip row on all 169 acronyms whose condition
+    carries chips. One builder, used by both.
+    """
+    utd_entries = entry.get("utd") or []
+    # When UTD is primary, the first chip's URL is reused for "Open
+    # UpToDate →" - drop it from the chip list to avoid duplication.
+    if entry.get("source") == "uptodate" and utd_entries:
+        utd_entries = utd_entries[1:]
+    return [{"label": lbl, "url": _utd_url(q)} for lbl, q in utd_entries]
+
+
 def resolve(text: str) -> list:
     """Find condition mentions in `text`. Returns a list of dicts:
-        {name, summary, url, source, utd, case_sensitive=False}
+        {name, surfaces, summary, url, source, utd, case_sensitive=False}
     `name` is the primary name (regardless of which form was matched in the
     text), so the popup title is consistent.
+    `surfaces` is every distinct spelling this entry was actually matched
+    on in `text` - the alias the reader wrote, not the primary name. The
+    highlighter marks those, because a card that says "heart attack" and
+    never says "myocardial infarction" gives the primary name nothing to
+    match; 5,457 of the 6,044 aliases in the library do not contain their
+    primary name, so before this they resolved and then failed to
+    highlight. Only the mark follows the reader's wording - the popup
+    title and URL stay those of the primary entry.
     `utd` is a list of {label, url} chip dicts for the popup footer.  When
     a condition has no NBK but has UTD entries, the first UTD slot powers
     the primary URL and is dropped from the chip list to avoid duplication."""
     if not text or _CONDITION_MATCHER is None:
         return []
     out  = []
-    seen: set = set()
+    seen: dict = {}
     for _s, _e, key in _CONDITION_MATCHER.find(text):
         c = _LOOKUP.get(key)
         if c is None:
             continue
         canon = c["name"]
-        if canon in seen:
+        # One entry, several spellings: a card can say "MI" in the
+        # question and "heart attack" in the answer, and both have to
+        # light up even though the entry is reported once.
+        surface = _matcher.surface_form(text, _s, _e, key)
+        prev = seen.get(canon)
+        if prev is not None:
+            if surface and surface not in prev["surfaces"]:
+                prev["surfaces"].append(surface)
             continue
-        seen.add(canon)
-        utd_entries  = c.get("utd") or []
-        utd_primary  = c.get("source") == "uptodate" and bool(utd_entries)
-        # When UTD is primary, the first chip's URL is reused for "Open
-        # UpToDate →" - drop it from the chip list to avoid duplication.
-        chip_source  = utd_entries[1:] if utd_primary else utd_entries
-        utd_chips    = [{"label": lbl, "url": _utd_url(q)}
-                        for lbl, q in chip_source]
-        out.append({
+        utd_primary = (c.get("source") == "uptodate"
+                       and bool(c.get("utd")))
+        item = {
             "name":           canon,
+            "surfaces":       [surface] if surface else [],
             "summary":        c["summary"],
             "url":            _url_for(c),
             "source":         "uptodate" if utd_primary else "statpearls",
             "link":           _link_kind(c),
-            "utd":            utd_chips,
+            "utd":            utd_chips(c),
             "case_sensitive": False,
-        })
+        }
+        seen[canon] = item
+        out.append(item)
     return out

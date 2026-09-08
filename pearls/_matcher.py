@@ -21,7 +21,7 @@ checked. Cost becomes O(text + matches), independent of database size,
 so the databases can keep growing - which is the point, given 2.0
 expands them - without the reviewer getting slower.
 
-Semantics are deliberately identical to the regex being replaced, not
+Semantics were deliberately identical to the regex being replaced, not
 merely similar:
 
   * matching is case-insensitive;
@@ -29,11 +29,20 @@ merely similar:
     sorted alternatives longest-first;
   * matches cannot overlap - scanning resumes after the match, as
     `finditer` does;
-  * both ends must fall on a `\\b` boundary, including the awkward case
-    of a phrase that starts or ends with a non-word character.
+  * a phrase edge that is a word character must fall on a `\\b`
+    boundary.
 
-Those properties were verified against the original alternation over
-every string in the shipped library before the alternations were
+The last of those is where this deliberately stopped being identical.
+`\\b(?:...)\\b` also asserts a boundary at an edge made of
+punctuation, and a boundary there means a WORD character on the far
+side - so "Vitamin B12 (cobalamin)" and the 22 other library terms
+ending in ")" matched only at the very end of a text, and a phrase
+opening with punctuation could not match at all. The assertion is now
+made at word-character edges only, which is what `\\b` was standing in
+for.
+
+The remaining properties were verified against the original alternation
+over every string in the shipped library before the alternations were
 deleted at 2.2. `verify_against_regex` went with them: it existed
 only for that comparison, and there is no longer a second
 implementation to compare against.
@@ -101,6 +110,48 @@ _APOSTROPHE_TABLE = str.maketrans(_APOSTROPHES)
 def fold_apostrophes(s: str) -> str:
     """Normalise every apostrophe variant to ASCII, preserving length."""
     return s.translate(_APOSTROPHE_TABLE)
+
+
+def surface_form(text: str, start: int, end: int, phrase: str,
+                 ci: bool = True):
+    """The characters `find` matched, exactly as the reader wrote them.
+
+    `find` returns offsets into a haystack that, in case-insensitive
+    mode, is `text` lower-cased and apostrophe-folded. Folding preserves
+    length; `str.lower()` does not for every code point - U+0130
+    lower-cases to two - so on a text carrying one of those the offsets
+    address the haystack and not the original, and the slice would be a
+    character or two out. Returns None in that case rather than hand
+    back a mis-aligned span, so a caller can fall back to the name it
+    would have shown before.
+
+    Callers want this because the highlighter has to mark the words on
+    the card, not the primary name of whatever those words resolve to:
+    a card that says "heart attack" and never says "myocardial
+    infarction" has nothing for the primary name to match.
+    """
+    got = text[start:end]
+    if not ci:
+        return got
+    return got if fold_apostrophes(got.lower()) == phrase else None
+
+
+def boundary_wrap(phrase: str, escaped: str) -> str:
+    """`escaped` with the word boundaries the phrase actually needs.
+
+    `\\b` is a boundary between a word and a non-word character, so
+    `\\b(?:...)\\b` around a phrase that ENDS in punctuation demands a
+    word character straight after it - "Vitamin B12 (cobalamin)" then
+    matched only at the very end of the text, and "Epidemic
+    polyarthritis (Australian) is notifiable" matched nowhere at all.
+    23 library terms end that way. A phrase whose own last character is
+    punctuation already separates itself from what follows, so the
+    assertion is simply dropped at that edge; the same holds in
+    reverse for a phrase that opens with punctuation.
+    """
+    pre  = r"(?<!\w)" if _is_word(phrase[:1]) else ""
+    post = r"(?!\w)"  if _is_word(phrase[-1:]) else ""
+    return pre + escaped + post
 
 
 def _scan(text: str, ci: bool):
@@ -211,8 +262,15 @@ class PhraseMatcher:
             bucket.sort(key=_by_len, reverse=True)
 
         self._by_first = by_first
+        # Per-alternative boundaries rather than one `\b(?:...)\b`
+        # around the lot. Every phrase that lands here opens with
+        # punctuation - that is what disqualified it from the index -
+        # so a leading `\b` would have required a word character in
+        # front of it, and the fallback could never have fired at all.
+        # `boundary_wrap` asserts a boundary only at the edges where
+        # the phrase's own characters do not already provide one.
         self._odd_re = (
-            re.compile(r"\b(?:" + "|".join(re.escape(o) for o in odd) + r")\b",
+            re.compile("|".join(boundary_wrap(o, re.escape(o)) for o in odd),
                        re.IGNORECASE if self._ci else 0)
             if odd else None
         )
@@ -253,14 +311,21 @@ class PhraseMatcher:
                 # and most candidates are tried only to be rejected.
                 if end > n or not starts_with(cand, start):
                     continue
-                # Closing `\b`: a boundary exists when the last character
-                # of the phrase and the next character of the text differ
-                # in word-ness. End of text is always a boundary. The
-                # opening boundary is free - `start` is a token start, so
-                # what precedes it is never a word character.
-                if end < n:
+                # Closing `\b`, but only where a phrase ending in a word
+                # character needs one: the next character of the text
+                # must then be a non-word character, or the text must
+                # end. A phrase whose own last character is punctuation
+                # separates itself from whatever follows, and demanding
+                # a `\b` there demanded the opposite - a word character
+                # straight after the punctuation. That is what confined
+                # the 23 library terms ending in ")" to matching at the
+                # very end of a card: "Vitamin B12 (cobalamin) is low"
+                # matched nothing, "his Vitamin B12 (cobalamin)" did.
+                # The opening boundary is free - `start` is a token
+                # start, so what precedes it is never a word character.
+                if ends_word and end < n:
                     nxt = low[end]
-                    if ends_word == (nxt.isalnum() or nxt == "_"):
+                    if nxt.isalnum() or nxt == "_":
                         continue
                 append((start, end, cand))
                 pos = end

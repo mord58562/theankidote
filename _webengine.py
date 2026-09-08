@@ -22,7 +22,7 @@ So this module deliberately keeps things minimal.  Mirroring AT V2:
     session cookie and persisting it cuts repeat challenges.
   * Disk HTTP cache so a fresh-as-snow profile doesn't look like a
     bot on every load.
-  * Standard JS / clipboard / localContent / autoplay settings  - 
+  * Standard JS / clipboard / localContent / autoplay settings - 
     same set AT V2 enables.
   * No User-Agent override.  Qt 6 QtWebEngine's default UA is
     Chrome-flavoured ("Mozilla/5.0 ... Chrome/X.Y ... Safari/537.36
@@ -49,7 +49,7 @@ def apply_to_profile(profile: "QWebEngineProfile") -> None:
     Perplexity, and similar Cloudflare-fronted endpoints.
     """
     # ── Cookie + cache persistence ───────────────────────────────────
-    # ForcePersistentCookies (NOT just AllowPersistentCookies)  - 
+    # ForcePersistentCookies (NOT just AllowPersistentCookies) - 
     # forces even session-only cookies to persist to disk.  This is
     # what AT V2 uses; the docs note it is "for testing purposes".
     # In practice it makes Cloudflare's session cookies (cf_clearance,

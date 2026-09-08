@@ -236,6 +236,14 @@ def _insert_js(text: str) -> str:
 """.replace("__TEXT__", json.dumps(text))
 
 
+def _norm_len(text: str) -> int:
+    """Length of `text` with every run of whitespace collapsed to one
+    space.  A rich editor rewrites newlines as paragraph nodes and
+    squeezes repeated spaces, so this is the only length the composer
+    and the source string can be expected to agree on."""
+    return len(" ".join((text or "").split()))
+
+
 def _selectors_for(url: str) -> list:
     host = ""
     try:
@@ -360,9 +368,20 @@ def paste_into_composer(browser, text: str, on_done=None) -> None:
         if done["fired"]:
             return
         # A rich editor may normalise whitespace on paste, so compare on
-        # length rather than equality - anything meaningfully longer than
-        # what was there means the paste landed.
-        if len(after.strip()) > len(before.strip()) + max(8, len(text) // 4):
+        # length rather than equality.  Normalisation can only ever
+        # shrink what lands, never grow it, so the test is against the
+        # pasted text's own normalised length: the box has to have
+        # grown by most of it.
+        #
+        # This used to carry an absolute floor of eight characters,
+        # which meant no selection of eight characters or fewer could
+        # ever be judged to have landed - ECG, T2DM, PMOS, sepsis and
+        # warfarin all failed it - and `_fallback` then inserted the
+        # text a second time on top of the paste that had worked.  Most
+        # of what gets sent to a chat from a card is a single term, so
+        # that was the common case rather than the edge one.
+        grew = _norm_len(after) - _norm_len(before)
+        if grew >= max(1, (_norm_len(text) * 3) // 4):
             _finish(True)
             return
         _fallback(idx)
