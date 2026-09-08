@@ -148,6 +148,46 @@ class SpanAttributes(unittest.TestCase):
             self.assertIn("url", chip)
             self.assertTrue(chip["label"] and chip["url"])
 
+    def test_a_non_breaking_space_does_not_stop_a_match(self):
+        """Anki's editor writes `&nbsp;`, and it broke every two-word term.
+
+        From a card the user sent: `of an&nbsp;<b>ectopic</b>&nbsp;
+        pregnancy` underlined nothing, though Ectopic pregnancy is in
+        the library. 60% of library terms are multi-word, and 3,277 of
+        that user's 6,088 notes contain `&nbsp;`, so this was most of
+        the vocabulary failing on most of the cards - silently, with
+        nothing to notice except an absence.
+
+        Two halves, and both are checked here: resolution runs on the
+        stripped text, where the entity has decoded to U+00A0, and
+        highlighting runs on the raw HTML, where it is still an entity.
+        """
+        html = "of an&nbsp;ectopic&nbsp;pregnancy?"
+        results = self.rv._condition_terms(self.rv._strip_html(html))
+        self.assertTrue(results, "the term did not even resolve")
+        out = self.rv._inject_highlights(html, results, "#0fcad4",
+                                         with_css=False)
+        marks = re.findall(r'<span class="sp-mark"[^>]*>(.*?)</span>', out)
+        self.assertEqual(marks, ["ectopic&nbsp;pregnancy"],
+                         "the entity form was not marked")
+        # The span must wrap what the card actually says, entity and
+        # all - normalising is only ever for the lookup key.
+        self.assertIn("&nbsp;", out)
+
+    def test_a_unicode_space_does_not_stop_a_match(self):
+        """The dock passes decoded text, so it meets the character."""
+        for sep in ("\u00a0", "\u202f", "\u2009"):
+            with self.subTest(sep=repr(sep)):
+                marked = self.rv.highlight_text(f"an ectopic{sep}pregnancy",
+                                                with_css=False)
+                self.assertIn("sp-mark", marked)
+
+    def test_a_missing_space_is_still_not_a_match(self):
+        """The separator is flexible, not optional."""
+        self.assertNotIn(
+            "sp-mark",
+            self.rv.highlight_text("ectopicpregnancy", with_css=False))
+
     def test_the_dock_path_carries_no_stylesheet(self):
         """The card path is handed to Anki as one string and needs the
         rule travelling with it. The dock inserts each edit with

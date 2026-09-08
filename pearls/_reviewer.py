@@ -607,8 +607,8 @@ def _build_pattern(terms: list):
     # at the very end of the text. Same builder as the matcher's own
     # punctuation fallback, so the two agree on what a boundary is.
     rx = re.compile(_matcher.alternation(
-        (form, re.escape(form) if sensitive
-         else "(?i:" + re.escape(form) + ")")
+        (form, _matcher.escape_phrase(form) if sensitive
+         else "(?i:" + _matcher.escape_phrase(form) + ")")
         for form, sensitive in alts))
     result = rx, lookup, sens_titles
     if len(_pattern_cache) >= _PATTERN_CACHE_MAX:
@@ -711,7 +711,16 @@ def _inject_highlights(html: str, results: list, color: str,
         # later pass corrupting an earlier pass's injected HTML.
         def _span(m):
             word = m.group(0)
-            t = lookup.get(word) if word in sens_titles else lookup.get(word.lower())
+            # The pattern lets a term's spaces match `&nbsp;` and the
+            # exotic space characters an editor inserts, so the matched
+            # text is not always the form the lookup was keyed on. Key
+            # on the same normalised shape the pattern was built from,
+            # or every one of those matches finds nothing here and is
+            # written back unmarked - which is the bug this whole change
+            # is about, moved one step later.
+            key = _matcher.normalise_separators(word)
+            t = (lookup.get(key) if key in sens_titles
+                 else lookup.get(key.lower()))
             if not t:
                 return word
             return (f'<span class="sp-mark" '

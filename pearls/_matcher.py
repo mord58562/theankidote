@@ -104,12 +104,43 @@ _APOSTROPHES = {
     "\u00b4": "'",   # acute accent, used as an apostrophe by some editors
     "\u2032": "'",   # prime
 }
-_APOSTROPHE_TABLE = str.maketrans(_APOSTROPHES)
+# Every space a card can put between two words of a phrase. Anki's
+# editor emits `&nbsp;` on almost every space you type after another
+# space, and `_strip_html` decodes that to U+00A0 before resolution sees
+# it - so "ectopic pregnancy" was indexed with an ASCII space, the card
+# read `ectopic\u00a0pregnancy`, and `startswith` failed. The term
+# resolved on no card written that way, which is most of them.
+#
+# These all fold to a plain space, and every one is a single character,
+# so the haystack keeps its length and `find`'s offsets keep addressing
+# the original text. That is the whole reason this is a translate table
+# and not a `replace` of the `&nbsp;` entity.
+_MATCH_SPACES = {
+    0x00A0: " ",   # no-break space, what &nbsp; decodes to
+    0x2007: " ",   # figure space
+    0x202F: " ",   # narrow no-break space
+    0x2009: " ",   # thin space
+    0x2002: " ",   # en space
+    0x2003: " ",   # em space
+    0x200B: " ",   # zero-width space, seen in pasted text
+    0xFEFF: " ",   # zero-width no-break space (BOM), likewise
+}
+
+_FOLD_TABLE = str.maketrans({**_APOSTROPHES, **_MATCH_SPACES})
 
 
-def fold_apostrophes(s: str) -> str:
-    """Normalise every apostrophe variant to ASCII, preserving length."""
-    return s.translate(_APOSTROPHE_TABLE)
+def fold_for_match(s: str) -> str:
+    """Normalise apostrophes and exotic spaces, preserving length.
+
+    Length matters: `find` returns offsets into the folded haystack and
+    `surface_form` slices the ORIGINAL text with them, so a fold that
+    changed length would hand back a mis-aligned span.
+    """
+    return s.translate(_FOLD_TABLE)
+
+
+# The old name, kept because it is the one the comments elsewhere use.
+fold_apostrophes = fold_for_match
 
 
 def surface_form(text: str, start: int, end: int, phrase: str,
@@ -133,7 +164,45 @@ def surface_form(text: str, start: int, end: int, phrase: str,
     got = text[start:end]
     if not ci:
         return got
-    return got if fold_apostrophes(got.lower()) == phrase else None
+    return got if fold_for_match(got.lower()) == phrase else None
+
+
+# A space in a library term has to match whatever the card actually
+# puts between those two words. Anki's editor inserts `&nbsp;` on almost
+# every keystroke that follows a space, so the card path (raw HTML) sees
+# the entity and the dock path (decoded text) sees U+00A0 - and a plain
+# escaped space matched neither. "ectopic pregnancy" is in the library
+# and did not underline on a card reading `an ectopic&nbsp;pregnancy`.
+#
+# Written as a class rather than by normalising the text, because the
+# highlighter substitutes back into the ORIGINAL string: rewriting the
+# text to match would move every offset after it.
+_SEP = r"(?:\s|&nbsp;|&#160;|&#xa0;|\u00a0)+"
+_SEP_RE = re.compile(_SEP)
+
+
+def normalise_separators(text: str) -> str:
+    """Collapse whatever separated two words back to a single space.
+
+    The inverse of `escape_phrase`: that lets a term's space match an
+    `&nbsp;` entity or a Unicode space in the card, and this turns such
+    a match back into the form the lookup tables are keyed on. Length is
+    NOT preserved, so this is only for building a dictionary key, never
+    for anything that carries an offset.
+    """
+    return " ".join(_SEP_RE.split(fold_for_match(text)))
+
+
+def escape_phrase(phrase: str) -> str:
+    """`re.escape`, but a run of spaces matches any real-world separator.
+
+    Splitting on whitespace and rejoining also means a term written with
+    two spaces, or with a newline where the card wrapped, still matches.
+    """
+    parts = [re.escape(p) for p in phrase.split()]
+    if not parts:
+        return re.escape(phrase)
+    return _SEP.join(parts)
 
 
 def alternation(alts) -> str:
@@ -189,18 +258,18 @@ def _scan(text: str, ci: bool):
         key, low, ci_toks, cs_toks = text, None, None, None
     if ci:
         if ci_toks is None:
-            low = fold_apostrophes(text.lower())
+            low = fold_for_match(text.lower())
             ci_toks = [(m.start(), m.group(0))
                        for m in _TOKEN_RE.finditer(low)]
             _scan_cache = (key, low, ci_toks, cs_toks)
         return low, ci_toks
     if cs_toks is None:
-        folded = fold_apostrophes(text)
+        folded = fold_for_match(text)
         cs_toks = [(m.start(), m.group(0))
                    for m in _TOKEN_RE.finditer(folded)]
         _scan_cache = (key, low, ci_toks, cs_toks)
         return folded, cs_toks
-    return fold_apostrophes(text), cs_toks
+    return fold_for_match(text), cs_toks
 
 
 _BLOCKED: frozenset = frozenset()
@@ -225,7 +294,7 @@ def set_blocklist(phrases) -> None:
     """
     global _BLOCKED
     _BLOCKED = frozenset(
-        fold_apostrophes(str(p).strip().lower())
+        fold_for_match(str(p).strip().lower())
         for p in (phrases or ()) if str(p).strip())
 
 
@@ -251,7 +320,7 @@ class PhraseMatcher:
         for p in phrases:
             if not p:
                 continue
-            low = fold_apostrophes(p.lower() if self._ci else p)
+            low = fold_for_match(p.lower() if self._ci else p)
             if low in seen:
                 continue
             # Case-sensitive matchers keep `low` cased, so fold again
@@ -293,7 +362,7 @@ class PhraseMatcher:
         # `alternation` asserts a boundary only at the edges where the
         # phrase's own characters do not already provide one.
         self._odd_re = (
-            re.compile(alternation((o, re.escape(o)) for o in odd),
+            re.compile(alternation((o, escape_phrase(o)) for o in odd),
                        re.IGNORECASE if self._ci else 0)
             if odd else None
         )
