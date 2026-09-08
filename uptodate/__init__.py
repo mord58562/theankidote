@@ -378,6 +378,11 @@ class UpToDateBrowser(QWidget):
         """)
         self.view.loadStarted.connect(
             lambda: (self.progress_bar.setValue(0), self.progress_bar.show()))
+        self.view.loadStarted.connect(lambda: _log.diag("utd loadStarted"))
+        self.view.loadFinished.connect(
+            lambda ok: _log.diag(
+                f"utd loadFinished ok={ok} "
+                f"url={self.view.url().toString()[:110]!r}"))
         self.view.loadProgress.connect(self.progress_bar.setValue)
         self.view.loadFinished.connect(lambda _ok: self.progress_bar.hide())
 
@@ -423,6 +428,50 @@ class UpToDateBrowser(QWidget):
                 obj.deleteLater()
             except Exception as exc:
                 _log.error(f"UTD shutdown {name}", exc)
+
+    # ------------------------------------------------------------------
+    # Loading
+    # ------------------------------------------------------------------
+
+    def show_loading(self, url: str) -> None:
+        """Say that something is happening, before UpToDate answers.
+
+        UpToDate's search can take several seconds, and until it paints
+        the dock is a white rectangle with a favicon in the middle of
+        it. That reads as broken - it was reported as a crash - and the
+        2px progress bar along the top is not enough to say otherwise.
+        """
+        try:
+            term = ""
+            if "search=" in url:
+                from urllib.parse import parse_qs, urlparse, unquote_plus
+                q = parse_qs(urlparse(url).query).get("search") or []
+                term = unquote_plus(q[0]) if q else ""
+            # Escaped: the term comes out of a URL and lands in the DOM.
+            import html as _html
+            what = (f"<b>{_html.escape(term)}</b>") if term else "UpToDate"
+            self.page.setHtml(
+                f'<html><body style="margin:0;background:{_theme.BG_BOX};'
+                f'color:{_theme.BODY_TXT};font:14px -apple-system,'
+                f'BlinkMacSystemFont,\'Segoe UI\',sans-serif;'
+                f'padding:34px 30px;line-height:1.6;">'
+                f'<div style="opacity:.75;">Asking UpToDate about '
+                f'{what}\u2026</div></body></html>')
+        except Exception as exc:                        # noqa: BLE001
+            _log.diag(f"utd placeholder failed: {exc}")
+
+    def load_url(self, url: str) -> None:
+        """Navigate, with the diagnostics this module had none of.
+
+        A report that clicking a popup chip broke the dock could not be
+        investigated at all, because nothing here wrote a line: the
+        diagnostic file had zero UpToDate entries across the whole day.
+        """
+        try:
+            _log.diag(f"utd load {url[:120]!r}")
+            self.view.load(QUrl(url))
+        except Exception as exc:                        # noqa: BLE001
+            _log.error(f"utd load {url[:60]!r}", exc)
 
     # ------------------------------------------------------------------
     # Downloads
@@ -978,16 +1027,33 @@ if not globals().get("_hooks_registered"):
 
 def open_url_in_dock(url: str) -> bool:
     """Load `url` in the UpToDate dock and show it.  Returns False if the
-    dock has not yet been initialised (e.g. profile still loading)."""
+    dock has not yet been initialised (e.g. profile still loading).
+
+    Shows the dock BEFORE starting the load, and puts a line of text in
+    it while UpToDate answers. Rob clicked a popup's UpToDate chip and
+    got a blank white pane with a favicon in the middle of it for long
+    enough to report it as a crash; the page did arrive. UpToDate's
+    search is simply slow, and a 2px progress bar at the top of an empty
+    white rectangle is not enough to say "working" - the reference panel
+    learned the same lesson and draws a placeholder for exactly this.
+
+    Showing the dock first also avoids handing the renderer a 0x0
+    viewport, which can finish a load with nothing composited.
+    """
     _mark_user_active()
     if _browser is None or _dock is None:
         return False
     try:
-        _browser.view.load(QUrl(url))
+        _log.diag(f"utd open_url_in_dock {url[:120]!r}")
         if not _dock.isVisible():
             _show_dock()
+        _browser.show_loading(url)
+        # One tick, so the show and the layout land before the
+        # navigation starts and the placeholder is actually seen.
+        QTimer.singleShot(0, lambda: _browser.load_url(url))
         return True
-    except Exception:
+    except Exception as exc:                            # noqa: BLE001
+        _log.error(f"utd open_url_in_dock {url[:60]!r}", exc)
         return False
 
 

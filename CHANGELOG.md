@@ -5,6 +5,48 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.2] - 2026-09-08
+
+2.6.1's shortcut migration announced itself as a crash.
+
+### Fixed
+
+- **Clearing an unsafe shortcut raised Anki's critical-error dialog.**
+  `_drop_unsafe_shortcuts` reported through `_log.warn`, which prints to
+  stderr, and Anki turns anything on stderr into a modal error report.
+  So the housekeeping that fixed the Escape binding greeted the reader
+  at launch with what reads as a crash - on a build whose headline fix
+  was that same binding. It goes to the diagnostic file now, with a
+  deferred tooltip saying which binding was cleared and why, since the
+  reader has genuinely lost one and should hear it in words.
+  `_panel_pearls` already documents this exact trap for its retry path;
+  I walked into it anyway, one file away.
+- **The UpToDate dock showed a blank white pane while loading.** Rob
+  clicked a popup's UpToDate chip and got an empty rectangle with a
+  favicon in the middle of it, for long enough to report it as a crash.
+  The page did arrive; UpToDate's search is simply slow, and a 2px
+  progress bar along the top of an empty white pane does not say
+  "working". `open_url_in_dock` now shows the dock first - which also
+  avoids handing the renderer a 0x0 viewport - draws a line naming what
+  it is asking about, and navigates on the next tick so the placeholder
+  is actually seen.
+- **The UpToDate module wrote nothing to the diagnostic file.** That
+  report could not be investigated at all: the log held zero UpToDate
+  lines across an entire day of use. It now records the navigation, the
+  load start and the load result, as the reference panel does.
+
+### Changed
+
+- `_utd_url`'s docstring described a `slug:` discovery pass producing
+  direct article links. **No chip has ever used it**: all 4,265 are
+  searches, and the `tools/utd_slug_finder.py` it names is not in this
+  repository. The docstring now says so, and records why direct links
+  are hard - a topic slug is not derivable from a title (a plausible
+  guess 404s), UpToDate renders its table-of-contents links in
+  JavaScript so a fetch yields none, and neither `selectedTitle` nor
+  `topicRef` makes the search page auto-navigate. A guessed slug would
+  be a 404, which is worse than the search it replaced.
+
 ## [2.6.1] - 2026-09-08
 
 Escape could be bound as a global shortcut, and 85 abbreviation popups

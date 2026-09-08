@@ -863,15 +863,43 @@ def _drop_unsafe_shortcuts() -> None:
     from the interface: the field shows `Esc`, and pressing Escape to
     change it re-enters `Esc`.
     """
+    cleared = []
     for key, _default, label in _SHORTCUT_FIELDS:
         cur = _config.get(key)
         if cur and not _is_safe_shortcut(str(cur)):
-            _log.warn(f"refusing unsafe shortcut {cur!r} for {label!r}; "
-                      f"clearing it")
+            # `_log.diag`, not `_log.warn`. Warn and error print to
+            # stderr, and Anki turns anything on stderr into a modal
+            # "critical error" report - so clearing a bad binding at
+            # startup, which is housekeeping and not a fault, greeted
+            # the reader with what looks like a crash. This file
+            # already documents that trap for the panel's retry path
+            # and I walked into it anyway.
+            _log.diag(f"cleared unsafe shortcut {cur!r} for {label!r}")
+            cleared.append((cur, label))
             try:
                 _config.set_value(key, "")
             except Exception as exc:
                 _log.error(f"clear unsafe shortcut {key}", exc)
+    if cleared:
+        # The reader has lost a binding and should hear so once, in
+        # words - not silently, and not through a crash dialog. Deferred
+        # because this runs inside `_setup`, before the main window can
+        # show anything.
+        seq, label = cleared[0]
+        def _say() -> None:
+            try:
+                from aqt.utils import tooltip
+                tooltip(f"The AnkiDote: {seq} could not stay as the "
+                        f"{label} shortcut - it would be taken from Anki "
+                        f"everywhere. That binding is off; set a new one "
+                        f"in Settings.", period=7000)
+            except Exception as exc:                    # noqa: BLE001
+                _log.debug(f"unsafe shortcut notice: {exc}")
+        try:
+            from aqt.qt import QTimer as _QT
+            _QT.singleShot(2500, _say)
+        except Exception as exc:                        # noqa: BLE001
+            _log.debug(f"unsafe shortcut notice timer: {exc}")
 
 
 def _rebind_shortcuts() -> None:

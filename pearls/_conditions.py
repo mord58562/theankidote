@@ -120,10 +120,24 @@ def _utd_url(query: str) -> str:
         (e.g. `slug:treatment-of-acute-pancreatitis`).
       * anything else → search URL with the input as the search term.
 
-    The slug form is produced by `tools/utd_slug_finder.py apply` after
-    a ToS-clean Brave/Google search-API discovery pass.  Direct slugs
-    save the user one click; if a slug ever 404s, UTD's own search page
-    is the natural fallback (the chip user can re-run the same query).
+    STATUS, checked 2026-09-08: **no chip uses the slug form.** All
+    4,265 of them are searches, `tools/utd_slug_finder.py` is not in
+    this repository, and the discovery pass this docstring described has
+    never been run - so the paragraph promised a capability the library
+    does not exercise, which is why every UpToDate chip opens a search.
+
+    The mechanism itself is sound and worth populating. What blocks it
+    is that a topic slug is not derivable from a topic title: a
+    plausible guess returns 404, UpToDate's table-of-contents pages
+    render their links in JavaScript so a fetch yields none, and neither
+    `selectedTitle` nor `topicRef` makes the search page auto-navigate
+    to the first result. Real slugs therefore have to come from a search
+    index or be curated by hand, one at a time.
+
+    A 404 is worse than a search, so a guessed slug must never be
+    written here. Until slugs exist, the search fallback is the honest
+    behaviour, and a well-chosen search phrase generally puts the
+    intended topic first.
 
     No content is ever scraped - slugs are public URL metadata returned
     by search engines that have explicit robots.txt permission to crawl
