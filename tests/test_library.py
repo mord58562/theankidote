@@ -507,6 +507,31 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
         "TEAL_BORDER", "NAVY", "NAVY_LIGHT", "BG_BOX", "QUOTE_TXT",
     }
 
+    def test_every_shipped_file_parses(self):
+        """`compile()` over the package, with no dependencies.
+
+        The undefined-name guard below is the only static check on the
+        Qt surface, and it skips itself when pyflakes is absent -
+        silently, since `publish_content.sh` discards test output, so a
+        skip and a pass look identical at the publish gate. It also read
+        only pyflakes' `out` stream, and a file that fails to PARSE is
+        reported on `err`. So a syntax error in `_panel_pearls.py`,
+        `chat/` or `uptodate/` - none of which can be imported under
+        test - would ship with the whole suite green.
+
+        This needs nothing installed and cannot be skipped.
+        """
+        for path in sorted(ROOT.rglob("*.py")):
+            rel = path.relative_to(ROOT)
+            if rel.parts[0] in ("tests", ".git"):
+                continue
+            src = path.read_text(encoding="utf-8")
+            try:
+                compile(src, str(rel), "exec")
+            except SyntaxError as exc:
+                self.fail(f"{rel} does not parse: line {exc.lineno}: "
+                          f"{exc.msg}")
+
     def test_no_undefined_names(self):
         """A name that only exists in the author's head is a NameError
         at runtime, and most of this tree cannot be imported under test
@@ -525,16 +550,33 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
         import io
         out, err = io.StringIO(), io.StringIO()
         reporter = Reporter(out, err)
+        # Only these two files write names into `globals()`, so the
+        # allowlist applies only to them. It used to be matched against
+        # every line from every file, which exempted a bare `TEAL` or
+        # `NAVY` typo anywhere in the package.
+        allowlisted_files = ("_theme.py", "_panel_pearls.py")
         for path in sorted(ROOT.rglob("*.py")):
             rel = path.relative_to(ROOT)
             if rel.parts[0] in ("tests", "content", ".git"):
                 continue
             check(path.read_text(encoding="utf-8"), str(rel), reporter)
-        offenders = [
-            line for line in out.getvalue().splitlines()
-            if "undefined name" in line
-            and not any(f"'{n}'" in line for n in self.THEME_GLOBALS)
-        ]
+        offenders = []
+        for line in out.getvalue().splitlines():
+            if "undefined name" not in line:
+                continue
+            in_allowlisted_file = any(line.startswith(f)
+                                      or f"/{f}:" in line.split(":")[0] + ":"
+                                      or line.split(":")[0].endswith(f)
+                                      for f in allowlisted_files)
+            if in_allowlisted_file and any(f"'{n}'" in line
+                                           for n in self.THEME_GLOBALS):
+                continue
+            offenders.append(line)
+        self.assertEqual(
+            err.getvalue().strip(), "",
+            "pyflakes could not analyse a file - a syntax error is "
+            "reported on its error stream, which this test used to "
+            "ignore entirely:\n" + err.getvalue())
         self.assertEqual(
             offenders, [],
             "these names do not exist where they are used:\n"

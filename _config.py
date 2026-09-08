@@ -170,9 +170,31 @@ def set_value(key: str, value) -> None:
 
 
 def invalidate() -> None:
-    """Drop the cache; used by tests + on profile switch."""
+    """Drop the cache, so the next read comes from disk."""
     global _cache_val
     _cache_val = None
+
+
+def watch_for_external_edits() -> None:
+    """Notice edits made in Anki's own add-on config editor.
+
+    The cache was filled once at load and never dropped: `invalidate`
+    existed but nothing called it, and the docstring's "on profile
+    switch" caller did not exist. That matters because `config.md`
+    points the user at raw JSON for the eight keys with no control in
+    the Settings window - `maxResults`, `dockSide`, `minWidth`,
+    `chatProviders` and the rest. Editing one in Tools > Add-ons >
+    Config and saving it changed nothing in the running session, and
+    opening the Settings window and closing it then wrote the stale
+    cached value back over the edit, because every checkbox in there had
+    been built from the cache.
+
+    Anki calls the registered action after it writes the new config.
+    """
+    try:
+        mw.addonManager.setConfigUpdatedAction(_PKG, lambda *_a: invalidate())
+    except Exception as exc:                            # noqa: BLE001
+        print(f"[TheAnkiDote] config watch not installed: {exc}")
 
 
 # ──────────────────────────────────────────────────────────────────────

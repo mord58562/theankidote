@@ -116,21 +116,70 @@ def _fires(dt: float, tau: float) -> bool:
     return dt > 0 and random.random() < (1.0 - math.exp(-dt / tau))
 
 
+# How often the lifetime counter reaches disk.
+#
+# Both of these used to be written through `_config.set_value` on every
+# single answered card. That call is `getConfig` + `writeConfig`, and
+# Anki implements those as a read of `config.json`, a read of
+# `meta.json`, and a truncating rewrite of `meta.json` - so a reviewer
+# doing 500 cards a day was making a thousand non-atomic rewrites of the
+# file holding every setting this add-on has. A crash or a force-quit
+# during any one of them leaves it unparseable, Anki swallows the
+# JSONDecodeError and returns {}, and the user's shortcuts, custom
+# terms, institution URL and module switches are all silently back to
+# defaults. It also put disk latency on the answer key.
+#
+# The counter is a lifetime total gating an easter egg at 200 cards, so
+# losing the last few on an unclean exit costs nothing that matters.
+_COUNT_FLUSH = 25
+
+# In-memory, and deliberately not persisted at all. `_quoteTick` paces a
+# Poisson hazard against elapsed real time; across a restart the very
+# first armed card seeds it and fires nothing, which is the behaviour
+# the `prev <= 0` branch below already had to implement anyway.
+_tick = 0.0
+_count = None
+_count_unflushed = 0
+
+
 def _on_answer(_reviewer, _card, _ease):
+    global _tick, _count, _count_unflushed
     try:
         from . import _config
-        n = int(_config.get("_card_count") or 0) + 1
-        _config.set_value("_card_count", n)
-        if n < _QUOTE_FLOOR:
+        if _count is None:
+            _count = int(_config.get("_card_count") or 0)
+        _count += 1
+        _count_unflushed += 1
+        if _count_unflushed >= _COUNT_FLUSH:
+            _config.set_value("_card_count", _count)
+            _count_unflushed = 0
+        if _count < _QUOTE_FLOOR:
             return
         now = time.time()
-        prev = float(_config.get("_quoteTick") or 0.0)
-        _config.set_value("_quoteTick", now)
+        prev = _tick
+        _tick = now
         # First armed card (or a clock that has gone backwards) only
         # seeds the marker - never fires off an uninitialised interval.
         dt = 0.0 if (prev <= 0 or prev > now) else min(now - prev, _DT_CAP)
         if _QUOTES and _fires(dt, _TAU_QUOTE):
             _show_quote(random.choice(_QUOTES))
+    except Exception:
+        pass
+
+
+def flush_counters() -> None:
+    """Write the pending card count out.
+
+    Called when the profile is closing, so an ordinary quit keeps the
+    total exact and only an unclean exit can lose up to `_COUNT_FLUSH`.
+    """
+    global _count_unflushed
+    try:
+        if _count is None or not _count_unflushed:
+            return
+        from . import _config
+        _config.set_value("_card_count", _count)
+        _count_unflushed = 0
     except Exception:
         pass
 
@@ -153,5 +202,11 @@ def register() -> None:
         pass
     try:
         gui_hooks.reviewer_did_show_question.append(_on_show_question)
+    except Exception:
+        pass
+    try:
+        # An ordinary quit or profile switch writes the pending count
+        # out, so only an unclean exit can lose any of it.
+        gui_hooks.profile_will_close.append(flush_counters)
     except Exception:
         pass

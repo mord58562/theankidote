@@ -560,13 +560,20 @@ def _on_js_message(handled, message: str, context):
 
         # UpToDate URLs go to the UTD subpackage's authenticated dock.
         if "uptodate.com" in url:
-            try:
-                from . import uptodate as _utd_mod
-                if _config.get("enableUpToDate") is not False \
-                        and _utd_mod.open_url_in_dock(url):
-                    return (True, None)
-            except Exception as exc:
-                _log.error("uptodate open_url_in_dock", exc)
+            # The check comes first. It used to sit after the import, and
+            # importing this module is what registers its hooks and puts
+            # its toolbar button back - so clicking an UpToDate chip with
+            # the module switched off loaded it anyway, added
+            # `_auto_search_card` to every question shown, and left a
+            # toolbar button that does nothing because `_setup()` never
+            # ran.
+            if _config.get("enableUpToDate") is not False:
+                try:
+                    from . import uptodate as _utd_mod
+                    if _utd_mod.open_url_in_dock(url):
+                        return (True, None)
+                except Exception as exc:
+                    _log.error("uptodate open_url_in_dock", exc)
         if _pearls_panel is not None and _config.get("enableArticleViewer"):
             # Show first, then load.  Loading into a hidden dock hands the
             # renderer a 0x0 viewport, and the page can finish loading with
@@ -876,16 +883,52 @@ def _setup() -> None:
     # half that looks applied and is not: the toolbar button goes, and
     # the module stays in `sys.modules` with its shortcut still bound
     # and any open dock still open.
+    #
+    # Asked of `sys.modules`, not of `_utd_mod` / `_chat_mod`. Further
+    # down this same function, `from . import uptodate as _utd_mod`
+    # makes that name a LOCAL of `_setup` for the whole body, so these
+    # lambdas closed over `_setup`'s cell rather than the module global.
+    # When a module is disabled that import never executes, the cell is
+    # never filled, and calling the lambda raises NameError - swallowed
+    # by the `except Exception` below and logged at debug. So the note
+    # worked only for a module that was already loaded, and was silent
+    # in the direction it was written for: ticking a switched-off module
+    # back on wrote the value and said nothing at all.
     _NEEDS_RESTART = {
-        "enableUpToDate": ("UpToDate", lambda: _utd_mod is not None),
-        "enableChat": ("AI chat", lambda: _chat_mod is not None),
+        "enableUpToDate": (
+            "UpToDate",
+            lambda: _sys.modules.get(f"{__name__}.uptodate") is not None),
+        "enableChat": (
+            "AI chat",
+            lambda: _sys.modules.get(f"{__name__}.chat") is not None),
     }
+
+    # Every toggle this menu owns, so the menu can re-read them when it
+    # opens. The check states were set once, here, and never again -
+    # while the Settings window writes the same three keys on close. So
+    # unticking "UpToDate sidebar" in Settings left this menu still
+    # showing it ticked, the two surfaces contradicting each other, and
+    # the user's next click on the menu item wrote False a second time
+    # (a no-op) and only unticked the box: two clicks to turn it back on.
+    _toggle_actions = []
+
+    def _refresh_toggles():
+        for act, key, default_true in _toggle_actions:
+            current = _config.get(key)
+            want = current is not False if default_true else current is True
+            if act.isChecked() != want:
+                # `setChecked` emits `toggled`, which would write the
+                # value straight back and re-fire the restart note.
+                act.blockSignals(True)
+                act.setChecked(want)
+                act.blockSignals(False)
 
     def _make_toggle(label, key, default_true=True):
         act = QAction(label, mw)
         act.setCheckable(True)
         current = _config.get(key)
         act.setChecked(current is not False if default_true else current is True)
+        _toggle_actions.append((act, key, default_true))
 
         def _on_toggle(checked):
             _config.set_value(key, bool(checked))
@@ -927,7 +970,13 @@ def _setup() -> None:
     rerun_action.triggered.connect(_force_first_run)
     submenu.addAction(rerun_action)
 
+    try:
+        submenu.aboutToShow.connect(_refresh_toggles)
+    except Exception as exc:                            # noqa: BLE001
+        _log.debug(f"tools menu refresh: {exc}")
+
     _reviewer.register_hooks()
+    _config.watch_for_external_edits()
     _extras.register()
 
     # Deferred so it lands after the first-run dialog rather than
@@ -2334,13 +2383,23 @@ def _on_theme_change() -> None:
     # The UpToDate and chat docks own their own module-level browser
     # objects; reach them through their modules rather than duplicating
     # the state here.
+    #
+    # `sys.modules`, not `import_module`. Importing is what enables a
+    # module here - neither subpackage checks its own enable flag,
+    # because "not imported" IS the gate - and both register their hooks
+    # at import, including `top_toolbar_did_init_links`. So a theme
+    # switch used to import whichever dock the user had turned off, and
+    # the `request_toolbar_redraw()` at the end of this same function
+    # then painted its button back. Because `_setup()` had never run for
+    # it, `_dock` was None and `toggle_dock` returned immediately: a
+    # button that did nothing at all, for the rest of the session.
+    #
+    # A module that is not loaded has no panel to re-theme, so there is
+    # nothing to reach for anyway.
     for name in ("uptodate", "chat"):
-        try:
-            import importlib
-            mod = importlib.import_module(f"{__name__}.{name}")
+        mod = _sys.modules.get(f"{__name__}.{name}")
+        if mod is not None:
             panels.append(getattr(mod, "_browser", None))
-        except Exception:
-            pass
     for panel in panels:
         try:
             if panel is not None and hasattr(panel, "apply_theme"):

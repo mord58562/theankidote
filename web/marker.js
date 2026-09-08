@@ -230,9 +230,19 @@
         ".cat{display:inline-block;margin-bottom:1px;" +
           "text-transform:uppercase;letter-spacing:.06em;" +
           "color:var(--src,#5dd5df);font-weight:700;font-size:10.5px;}" +
+        // The underline is the accent at 45%, mixed the same way the
+        // button's wash is rather than through a second custom
+        // property, so a source only ever declares one colour.  It
+        // mixes var(--src) and not currentcolor: the var() form is
+        // already proven in this webview by .open below, and if
+        // currentcolor-in-color-mix were not understood the whole
+        // border-bottom would drop and the link would lose its
+        // affordance entirely.  On hover currentColor is safe, because
+        // there it is a plain border-bottom-color value.
         ".cat-link{cursor:pointer;" +
-          "border-bottom:1px dotted rgba(93,213,223,.45);}" +
-        ".cat-link:hover{color:#8fe9f1;border-bottom-color:#8fe9f1;}" +
+          "border-bottom:1px dotted color-mix(in srgb,var(--src,#5dd5df) 45%,transparent);}" +
+        ".cat-link:hover{color:color-mix(in srgb,var(--src,#5dd5df) 70%,#ffffff);" +
+          "border-bottom-color:currentColor;}" +
         ".box.golden .cat,.box.diamond .cat{color:inherit;opacity:.85;}" +
         ".utd{margin-top:12px;padding-top:10px;" +
           "border-top:1px solid rgba(255,255,255,.09);}" +
@@ -260,24 +270,46 @@
         // Light mode redefines the accent itself rather than
         // re-colouring each element, so the badge, the section markers
         // and the button move together. These are the same five hues
-        // darkened for contrast on white.
+        // darkened for contrast on white. Nothing below may hardcode
+        // one of them: a light rule that named the teal directly beat
+        // the var(--src) rule on specificity, and that is exactly how
+        // a DrugBank popup ended up amber-badged with teal headings
+        // and a teal button. Light rules exist here only where the
+        // wash or the hover direction differs on white, and they mix
+        // against var(--src).
         ".box.sp-light{--src:#0a9ba3;}" +
         ".box.sp-light.src-db{--src:#c07400;}" +
         ".box.sp-light.src-utd{--src:#2c8a4f;}" +
         ".box.sp-light.src-pre{--src:#3a4fa8;}" +
         ".box.sp-light.src-custom{--src:#c9509e;}" +
         ".box.sp-light .summary{opacity:.92;}" +
-        ".box.sp-light .cat{color:#0a9ba3;}" +
+        // There is deliberately no `.box.sp-light .cat` rule: .cat
+        // already reads var(--src) and var(--src) is the light hue
+        // here, so the override that used to sit on this line only
+        // ever pinned the teal. Dropping it also lets
+        // .cat-link:hover through, which it outranked 3 classes to
+        // 2. The hover does have to be restated, because on white
+        // the accent has to deepen where on the dark ground it
+        // brightens.
+        ".box.sp-light .cat-link:hover{" +
+          "color:color-mix(in srgb,var(--src,#0a9ba3) 75%,#000000);}" +
         ".box.sp-light .utd{border-top-color:rgba(0,0,0,.09);}" +
         ".box.sp-light .utd-label{color:#2c8a4f;}" +
         ".box.sp-light .utd-chip{background:rgba(44,138,79,.1);" +
           "border-color:rgba(44,138,79,.4);color:#2c8a4f;}" +
         ".box.sp-light .utd-chip:hover{background:rgba(44,138,79,.22);" +
           "border-color:rgba(44,138,79,.65);}" +
-        ".box.sp-light .open{background:rgba(10,155,163,.1);" +
-          "border-color:rgba(10,155,163,.4);color:#0a9ba3;}" +
-        ".box.sp-light .open:hover{background:rgba(10,155,163,.22);" +
-          "border-color:rgba(10,155,163,.65);}" +
+        // Kept rather than deleted because the wash reads heavier on
+        // white: 10/40 at rest and 22/65 on hover, against dark mode's
+        // 13/40 and 27/70. Only the percentages are light-specific -
+        // the hue is var(--src) like everywhere else.
+        ".box.sp-light .open{" +
+          "background:color-mix(in srgb,var(--src,#0a9ba3) 10%,transparent);" +
+          "border-color:color-mix(in srgb,var(--src,#0a9ba3) 40%,transparent);" +
+          "color:var(--src,#0a9ba3);}" +
+        ".box.sp-light .open:hover{" +
+          "background:color-mix(in srgb,var(--src,#0a9ba3) 22%,transparent);" +
+          "border-color:color-mix(in srgb,var(--src,#0a9ba3) 65%,transparent);}" +
         /* Rare cosmetic variants - deliberately over-the-top. */
         ".box.golden{" +
           /* Seamless wave palette tonally locked to the A to E project's
@@ -607,6 +639,15 @@
   function _hideTip() {
     if (_tip) _tip.style.display = "none";
     _tipAnchor = null;
+    // The corridor claim belongs to the popup that was open, so it has
+    // to go with it. Left behind it is a truthy timestamp already in
+    // the past, and the arming test below is `if (!_aimUntil)` - so
+    // the next flight towards a popup never re-arms, `now < _aimUntil`
+    // is false, and the corridor quietly stops guarding anything until
+    // some later mouseover happens to clear it. Declared with `var`
+    // further down but hoisted to this scope, so this assignment is
+    // the same variable.
+    _aimUntil = 0;
   }
 
   // Labels that open a section of a summary.  Ordered longest-first
@@ -1067,6 +1108,32 @@
     var m = _closest(e.target, "sp-mark");
     if (!m) return;
     e.stopPropagation();
+
+    // Clicking a highlight opens its article - that is the feature -
+    // but not every click on one is a request to open it. Two are
+    // requests to copy the word instead, and both used to fire
+    // `tad_open`: the repeat clicks of a double-click, and the click
+    // that ends a drag across the term. Inside the dock that is worse
+    // than a stray tab, because there the shim turns the same command
+    // into a `window.location.href` assignment and the page the reader
+    // was selecting from navigates out from under them.
+    //
+    // `detail` is the click count, so it is 2 and 3 for the later
+    // clicks of a double- or triple-click, and 1 for a plain one. The
+    // very first click of a double-click is indistinguishable from a
+    // single click at the moment it arrives and still opens; the only
+    // way to catch it would be to hold every open back by the
+    // double-click interval, which would put a few hundred
+    // milliseconds of lag on the path this whole delegate exists for.
+    if (e.detail > 1) return;
+
+    // A drag-select leaves the selection uncollapsed at mouseup, when
+    // the click fires. An ordinary click has already collapsed it to a
+    // caret on mousedown, so this does not catch the normal path.
+    var sel = (typeof window.getSelection === "function")
+                ? window.getSelection() : null;
+    if (sel && !sel.isCollapsed && String(sel).length) return;
+
     var url = m.getAttribute("data-sp-url");
     if (url && typeof pycmd !== "undefined") pycmd("tad_open:" + url);
   });
