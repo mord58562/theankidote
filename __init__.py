@@ -920,7 +920,15 @@ def _setup() -> None:
                   f"stack: {' <- '.join(reversed(who))[:600]}")
         _pearls_dock_visible = bool(visible)
         try:
-            _persist_dock_state()
+            # Deliberately NOT persisting here. `visibilityChanged` fires
+            # on a minimise and again on the restore, on tabbing, and on
+            # a workspace switch - all real changes, so none of them are
+            # caught by the guard above - and `_persist_dock_state` is a
+            # `writeConfig`, which rewrites Anki's meta.json. That is the
+            # same churn that was taken off the answer key this morning,
+            # and putting it on the window manager instead is no better.
+            # The two toggle paths persist when the reader actually
+            # chooses; this only keeps the flag and the toolbar honest.
             request_toolbar_redraw()
         except Exception as exc:
             _log.error("dock visibility resync", exc)
