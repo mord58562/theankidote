@@ -71,6 +71,13 @@ def _custom_terms() -> list:
             "source": entry.get("source") or "custom",
             "link": "article",
             "label": (entry.get("label") or "").strip(),
+            # Explicit, not omitted. `_span` reads this key and falls
+            # back to "[]" when it is absent, which is the same value
+            # a real empty list gives - so a builder that simply forgot
+            # it looked identical to one that meant it. That is how
+            # `utd` was lost twice and `link` once. This database has
+            # no UpToDate chips; saying so is the point.
+            "utd": [],
             "case_sensitive": bool(entry.get("case_sensitive")),
             "user_defined": True,
         })
@@ -339,6 +346,13 @@ def _acronym_terms(card) -> list:
             "summary":    it["description"],
             "source":     "statpearls",
             "link":       "search",
+            # Explicit, not omitted. `_span` reads this key and falls
+            # back to "[]" when it is absent, which is the same value
+            # a real empty list gives - so a builder that simply forgot
+            # it looked identical to one that meant it. That is how
+            # `utd` was lost twice and `link` once. This database has
+            # no UpToDate chips; saying so is the point.
+            "utd": [],
             "case_sensitive": True,
         })
     return out
@@ -365,6 +379,13 @@ def _drug_terms(card) -> list:
             # pattern underlines, so a card written in `frusemide` gets
             # `frusemide` marked rather than nothing at all.
             "_surfaces":      it.get("surfaces") or [],
+            # Explicit, not omitted. `_span` reads this key and falls
+            # back to "[]" when it is absent, which is the same value
+            # a real empty list gives - so a builder that simply forgot
+            # it looked identical to one that meant it. That is how
+            # `utd` was lost twice and `link` once. This database has
+            # no UpToDate chips; saying so is the point.
+            "utd": [],
             "case_sensitive": it.get("case_sensitive", False),
         })
     return out
@@ -438,6 +459,13 @@ def _preclinical_terms(card) -> list:
             "source":         "preclinical",
             "link":           it.get("link", "search"),
             "_surfaces":      it.get("surfaces") or [],
+            # Explicit, not omitted. `_span` reads this key and falls
+            # back to "[]" when it is absent, which is the same value
+            # a real empty list gives - so a builder that simply forgot
+            # it looked identical to one that meant it. That is how
+            # `utd` was lost twice and `link` once. This database has
+            # no UpToDate chips; saying so is the point.
+            "utd": [],
             "case_sensitive": False,
         })
     return out

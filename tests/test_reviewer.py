@@ -190,6 +190,63 @@ class SpanAttributes(unittest.TestCase):
             "sp-mark",
             self.rv.highlight_text("ectopicpregnancy", with_css=False))
 
+    def test_every_builder_carries_every_key_the_span_writes(self):
+        """The structural guard for a bug this tree has shipped three times.
+
+        `_span` reads a fixed set of keys. Five builders produce the
+        dicts it reads them from, and each time one of them was written
+        or edited, a key got left out - `link` first, so every popup
+        claimed an article it did not have; then `utd` in
+        `_condition_terms`, so 824 conditions never drew their UpToDate
+        row; then `utd` again in `_acronym_terms`, one branch away from
+        the fix. Each was invisible, because a missing key falls back to
+        a default that reads like a real answer.
+
+        Reading the source rather than the output, because the failure
+        is a builder that CAN produce a dict without the key, not a
+        particular card that happens to. A builder legitimately without
+        a key - the drug tables carry no `utd` - must say so with an
+        explicit default rather than by omission, which is exactly the
+        distinction that was missing.
+        """
+        import ast
+        src = (ROOT / "pearls" / "_reviewer.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+
+        # The keys `_span` interpolates, read off the source so this
+        # cannot drift from the writer it is guarding.
+        span_keys = set(re.findall(r't\.get\("(\w+)"|t\["(\w+)"\]',
+                                  src))
+        keys = {a or b for a, b in span_keys}
+        keys.discard("badge")           # optional by design, blank is fine
+        self.assertIn("link", keys, "the span writer no longer reads link")
+        self.assertIn("utd", keys, "the span writer no longer reads utd")
+
+        builders = ["_custom_terms", "_acronym_terms", "_drug_terms",
+                    "_condition_terms", "_preclinical_terms"]
+        for name in builders:
+            fn = next((n for n in ast.walk(tree)
+                       if isinstance(n, ast.FunctionDef) and n.name == name),
+                      None)
+            self.assertIsNotNone(fn, f"{name} is gone; update this test")
+            # Every dict literal this builder appends is a term dict.
+            for node in ast.walk(fn):
+                if not isinstance(node, ast.Dict):
+                    continue
+                literal = {k.value for k in node.keys
+                           if isinstance(k, ast.Constant)
+                           and isinstance(k.value, str)}
+                if "title" not in literal:
+                    continue        # not a term dict
+                missing = {k for k in ("url", "summary", "source", "link",
+                                       "utd")} - literal
+                self.assertFalse(
+                    missing,
+                    f"{name} builds a term dict without {sorted(missing)}; "
+                    f"`_span` reads those and falls back to a default that "
+                    f"looks like an answer. Set them explicitly, even to "
+                    f"an empty value.")
+
     def test_the_dock_path_carries_no_stylesheet(self):
         """The card path is handed to Anki as one string and needs the
         rule travelling with it. The dock inserts each edit with
