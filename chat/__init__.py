@@ -629,7 +629,8 @@ class ChatBrowser(QWidget):
         h_lay.addWidget(self._btn_external)
 
         # Close
-        self._btn_close = self._nav_btn(_theme.GLYPH_CLOSE, toggle_dock, "Close", _theme.NAV_W)
+        self._btn_close = self._nav_btn(_theme.GLYPH_CLOSE, toggle_dock,
+                                       "Close sidebar", _theme.NAV_W)
         h_lay.addWidget(self._btn_close)
 
         # URL changes refresh the inline provider button (icon + tooltip)

@@ -62,8 +62,9 @@ pressing Enter is always your keystroke.**
 The sidebar lists articles matching terms found on the current card,
 ranked by how central each term is to it: whether it appears in the
 card's first field, how often, how early, and how specific it is. It is
-a guess, so it has a close button; dismissing it hides it for that card
-only.
+a guess, so its header collapses to a strip you can click to bring it
+back. That is a judgement about the list rather than about one card, so
+it is remembered until you expand it again.
 
 ---
 

@@ -21,7 +21,7 @@ from typing import Any
 from aqt import mw, gui_hooks
 
 from .. import _config, _log
-from . import (_acronyms, _drugs, _conditions, _preclinical,
+from . import (_acronyms, _drugs, _conditions, _matcher, _preclinical,
                _descriptive, _psych, _signs)
 
 
@@ -228,14 +228,37 @@ _AE_E_SWAPS = [
 ]
 
 
+def _nesting_guard(am: str, br: str):
+    """A regex matching `am` except where it is already part of `br`.
+
+    Two of the pairs above nest: "oedema" contains "edema" and
+    "oesophag" contains "esophag". A plain `str.replace` therefore
+    rewrote text that was already British, and
+    `_normalise_for_lookup("Pulmonary oedema")` came back as "pulmonary
+    ooedema" - a key that can match nothing. It never showed, because
+    the un-normalised form is looked up first and hits, but it is a
+    lookup that could only ever miss. The lookbehind is whatever the
+    British form puts in front of the American one, so the same
+    construction covers any later pair that nests the same way.
+    """
+    at = br.find(am)
+    lead = re.escape(br[:at]) if at > 0 else ""
+    return re.compile((f"(?<!{lead})" if lead else "") + re.escape(am))
+
+
+_AE_E_RE = [(am, br, _nesting_guard(am, br)) for am, br in _AE_E_SWAPS]
+
+
 def _normalise_for_lookup(s: str) -> str:
     """Lowercase + American->British spelling normalisation so acronym
     expansions like 'Acute Lymphoblastic Leukemia' match the condition
     entry 'Acute lymphoblastic leukaemia'."""
     n = (s or "").strip().lower()
-    for am, br in _AE_E_SWAPS:
+    for am, br, rx in _AE_E_RE:
+        # The substring test is the cheap gate; the regex only runs when
+        # there is something to rewrite.
         if am in n:
-            n = n.replace(am, br)
+            n = rx.sub(br, n)
     return n
 
 
@@ -290,8 +313,20 @@ def _acronym_terms(card) -> list:
                 "_expansion": it["expansion"],
                 "url":        _conditions._url_for(cond),
                 "summary":    (cond.get("summary", "") or "").strip(),
-                "source":     "statpearls",
+                # Both of these come from the condition, and both were
+                # being invented here instead. `source` was the literal
+                # "statpearls" even where `_url_for` had just returned an
+                # UpToDate link, and `utd` was absent altogether - so
+                # `data-sp-utd` was "[]" and marker.js hid the chip row
+                # on all 169 acronym expansions whose condition carries
+                # chips. Same dropped-key shape as `link` in
+                # `_build_pattern` and `utd` in `_condition_terms`: the
+                # data existed, the dict in the middle did not carry it.
+                "source":     ("uptodate"
+                               if cond.get("source") == "uptodate"
+                               and cond.get("utd") else "statpearls"),
                 "link":       _conditions._link_kind(cond),
+                "utd":        _conditions.utd_chips(cond),
                 "case_sensitive": True,
             })
             continue
@@ -324,6 +359,11 @@ def _drug_terms(card) -> list:
             "summary":        it["summary"],
             "source":         "drugbank",
             "link":           it.get("link", "search"),
+            # The spellings this card used. `title` is the INN generic
+            # and is what the popup is headed with; these are what the
+            # pattern underlines, so a card written in `frusemide` gets
+            # `frusemide` marked rather than nothing at all.
+            "_surfaces":      it.get("surfaces") or [],
             "case_sensitive": it.get("case_sensitive", False),
         })
     return out
@@ -354,6 +394,13 @@ def _condition_terms(card) -> list:
             # of the 826 conditions in the library carry chips; none of
             # them have ever been drawn.
             "utd":            it.get("utd") or [],
+            # The alias the card was written in, which is what has to be
+            # underlined. `title` stays the primary name so the popup is
+            # unchanged - but it is also what the pattern was built from,
+            # and 5,457 of the library's 6,044 aliases do not contain
+            # their primary name, so "heart attack" resolved Myocardial
+            # infarction and then marked nothing.
+            "_surfaces":      it.get("surfaces") or [],
             "case_sensitive": False,
         })
     return out
@@ -389,6 +436,7 @@ def _preclinical_terms(card) -> list:
             "summary":        it["summary"],
             "source":         "preclinical",
             "link":           it.get("link", "search"),
+            "_surfaces":      it.get("surfaces") or [],
             "case_sensitive": False,
         })
     return out
@@ -430,6 +478,36 @@ def _esc_attr(s: str) -> str:
              .replace("<", "&lt;").replace(">", "&gt;").replace("'", "&#39;"))
 
 
+def _forms(t: dict) -> list:
+    """Every spelling of `t` that should be underlined.
+
+    The title first - it is what the popup is headed with and, on a
+    card that uses the primary name, what is written. Then any surface
+    form `resolve()` reports having actually matched in this text, which
+    is what makes an alias visible: the pattern is built from these
+    strings, so before surfaces were carried through, a card that said
+    "heart attack" and never "myocardial infarction" resolved the entry
+    and then had nothing to mark. All the forms map to one lookup
+    record, so the popup title and URL are unaffected by which one hit.
+
+    A surface under four characters is dropped for case-insensitive
+    terms, the same rule `_inject_highlights` applies to titles and for
+    the same reason: the library carries 387 abbreviation aliases and
+    marking them without regard to case would light up "did" wherever
+    it appears in prose. Case-sensitive terms are exempt - their casing
+    is the discrimination - and so are user-defined ones.
+    """
+    forms = [t["title"]]
+    short_ok = bool(t.get("case_sensitive") or t.get("user_defined"))
+    for extra in t.get("_surfaces") or ():
+        if not extra or extra in forms:
+            continue
+        if len(extra) < 4 and not short_ok:
+            continue
+        forms.append(extra)
+    return forms
+
+
 def _build_pattern(terms: list):
     """Build ONE combined regex that handles both case-sensitive and
     case-insensitive terms in a single pass.  Returns (regex, lookup,
@@ -441,30 +519,20 @@ def _build_pattern(terms: list):
     Results are cached by term fingerprint - re.compile is expensive.
     """
     # Cache key covers only fields that affect the regex/lookup - title,
-    # case-sensitivity, and URL (which can change via _upgrade_*_urls).
-    # Summaries and sources are static and excluded so hashing stays fast
-    # even as descriptions grow long.
+    # the surface forms found in this text, case-sensitivity, and URL
+    # (which can change via _upgrade_*_urls). Summaries and sources are
+    # static and excluded so hashing stays fast even as descriptions
+    # grow long.
     cache_key = frozenset(
-        (t["title"], bool(t.get("case_sensitive")), t.get("url", ""))
+        (t["title"], bool(t.get("case_sensitive")), t.get("url", ""),
+         tuple(t.get("_surfaces") or ()))
         for t in terms
     )
     if cache_key in _pattern_cache:
         return _pattern_cache[cache_key]
 
-    sensitive   = sorted([t for t in terms if t.get("case_sensitive")],
-                         key=lambda r: len(r["title"]), reverse=True)
-    insensitive = sorted([t for t in terms if not t.get("case_sensitive")],
-                         key=lambda r: len(r["title"]), reverse=True)
-
-    parts = []
-    lookup = {}
-    sens_titles = set()
-
-    # Case-sensitive alternatives first (regex tries these as-is)
-    for t in sensitive:
-        title = t["title"]
-        parts.append(re.escape(title))
-        lookup[title] = {
+    def _record(t: dict, title: str) -> dict:
+        return {
             "url":     _esc_attr(t["url"]),
             "article": _esc_attr(t.get("_article") or title),
             "summary": _esc_attr(t.get("summary") or ""),
@@ -482,37 +550,117 @@ def _build_pattern(terms: list):
             "utd":     _esc_attr(json.dumps(t.get("utd") or [],
                                             separators=(",", ":"))),
         }
-        sens_titles.add(title)
 
-    # Case-insensitive alternatives wrapped in (?i:…) - scoped flag, only this
-    # branch ignores case while sensitive branches above stay case-sensitive.
-    if insensitive:
-        ins_parts = []
-        for t in insensitive:
-            title = t["title"]
-            ins_parts.append(re.escape(title))
-            lookup[title.lower()] = {
-                "url":     _esc_attr(t["url"]),
-                "article": _esc_attr(t.get("_article") or title),
-                "summary": _esc_attr(t.get("summary") or ""),
-                "source":  _esc_attr(t.get("source") or "statpearls"),
-                "badge":   _esc_attr(t.get("label") or ""),
-                "link":    _esc_attr(t.get("link") or "search"),
-                "utd":     _esc_attr(json.dumps(t.get("utd") or [],
-                                                separators=(",", ":"))),
-            }
-        parts.append("(?i:" + "|".join(ins_parts) + ")")
+    # One flat list of alternatives rather than a case-sensitive block
+    # followed by a case-insensitive one.
+    #
+    # `re` alternation is first-match-wins, so with every sensitive
+    # alternative ahead of every insensitive one, a sensitive term beat
+    # an insensitive term at the same start position however much
+    # shorter it was: "G6PD" won over "G6PD deficiency", "CURB-65" over
+    # "CURB-65 score", "FEV1" over "FEV1/FVC ratio". 37 such pairs ship
+    # in the library, and the longer entry was resolved, cost a pattern
+    # slot and could never win. Sorting the two together by length -
+    # which is what longest-match-wins means - is the whole fix; the
+    # case-insensitive ones each carry their own scoped `(?i:...)`
+    # instead of sharing one group.
+    alts: list = []
+    lookup: dict = {}
+    sens_titles: set = set()
+    seen_sens: set = set()
+    seen_ins:  set = set()
 
-    if not parts:
+    for t in terms:
+        sensitive = bool(t.get("case_sensitive"))
+        title = t["title"]
+        rec = _record(t, title)
+        for form in _forms(t):
+            if sensitive:
+                if form in seen_sens:
+                    continue
+                seen_sens.add(form)
+                # First writer wins: `terms` arrives in precedence
+                # order, so an earlier database keeps a name a later one
+                # also claims. See `_on_card_will_show`.
+                lookup.setdefault(form, rec)
+                sens_titles.add(form)
+            else:
+                key = form.lower()
+                if key in seen_ins:
+                    continue
+                seen_ins.add(key)
+                lookup.setdefault(key, rec)
+            alts.append((form, sensitive))
+
+    if not alts:
         _pattern_cache[cache_key] = (None, None, None)
         return None, None, None
 
-    rx = re.compile(r"\b(?:" + "|".join(parts) + r")\b")
+    # Stable, so terms of equal length keep the precedence order above.
+    alts.sort(key=lambda a: len(a[0]), reverse=True)
+
+    # Boundaries per alternative rather than one `\b(?:...)\b` around
+    # the lot. `\b` after a phrase ending in punctuation asserts a WORD
+    # character next, so the 23 library terms ending in ")" - "Vitamin
+    # B12 (cobalamin)", "Epidemic polyarthritis (Australian)" - matched
+    # only at the very end of the text. `_matcher.boundary_wrap` asserts
+    # a boundary only at the edges the phrase does not already separate
+    # itself at, which is what `\b` was standing in for.
+    parts = [_matcher.boundary_wrap(
+                 form, re.escape(form) if sensitive
+                 else "(?i:" + re.escape(form) + ")")
+             for form, sensitive in alts]
+
+    rx = re.compile("|".join(parts))
     result = rx, lookup, sens_titles
     if len(_pattern_cache) >= _PATTERN_CACHE_MAX:
         _pattern_cache.pop(next(iter(_pattern_cache)))
     _pattern_cache[cache_key] = result
     return result
+
+
+def _opens_a_tag(html: str, i: int) -> bool:
+    """Whether the `<` at `i` begins a tag rather than being ordinary text.
+
+    HTML5's tokeniser opens a tag only on `<` followed by a letter, `/`,
+    `!` or `?`; anything else is a literal less-than sign. The walker
+    below used to treat every `<` as a tag opener and then look for the
+    matching `>`, so "Sodium < 130 in SIADH" swallowed the rest of the
+    node as if it were one enormous tag and highlighted nothing after
+    it - and on `-1` it appended the whole remainder untouched and
+    broke out of the loop. This is guaranteed on the dock path, where
+    `_panel_pearls` hands us decoded text and StatPearls and DrugBank
+    prose is full of "sodium <135" and "FEV1/FVC <0.70".
+    """
+    nxt = html[i + 1:i + 2]
+    return bool(nxt) and (nxt.isalpha() or nxt in ('/', '!', '?'))
+
+
+def _tag_end(html: str, i: int) -> int:
+    """Index of the `>` closing the tag that starts at `i`, or -1.
+
+    A plain `html.find('>', i)` stops at the first `>` anywhere, quoted
+    or not, so `<img alt="a > b">` "ended" inside the alt text and the
+    walker then treated `b">` as character data - which is how a span
+    came to be injected inside an attribute value, destroying the tag.
+    Attribute values are the only place a `>` can hide, so tracking the
+    quote character is the whole of what is needed here; this stays a
+    scanner, not a parser.
+    """
+    quote = ""
+    j = i + 1
+    n = len(html)
+    while j < n:
+        ch = html[j]
+        if quote:
+            if ch == quote:
+                quote = ""
+        elif ch in ('"', "'"):
+            quote = ch
+        elif ch == '>':
+            return j
+        j += 1
+    return -1
 
 
 def _inject_highlights(html: str, results: list, color: str,
@@ -567,8 +715,8 @@ def _inject_highlights(html: str, results: list, color: str,
     i = 0
     n = len(html)
     while i < n:
-        if html[i] == '<':
-            j = html.find('>', i)
+        if html[i] == '<' and _opens_a_tag(html, i):
+            j = _tag_end(html, i)
             if j == -1:
                 result.append(html[i:])
                 break
@@ -587,9 +735,17 @@ def _inject_highlights(html: str, results: list, color: str,
             result.append(tag)
             i = j + 1
         else:
-            j = html.find('<', i)
-            if j == -1:
-                j = n
+            # Scan to the next `<` that actually opens a tag; a bare one
+            # is part of the text and stays in this chunk.
+            j = i + 1 if html[i] == '<' else i
+            while True:
+                j = html.find('<', j)
+                if j == -1:
+                    j = n
+                    break
+                if _opens_a_tag(html, j):
+                    break
+                j += 1
             chunk = html[i:j]
             if not skip and chunk.strip():
                 chunk = _replace_text(chunk)
@@ -626,9 +782,9 @@ def highlight_text(text: str, color: str = "",
     if not text or not text.strip():
         return text
     try:
-        results = (_acronym_terms(text) + _drug_terms(text)
-                   + _condition_terms(text) + _preclinical_terms(text)
-                   + _custom_term_matches(text))
+        results = (_custom_term_matches(text) + _acronym_terms(text)
+                   + _condition_terms(text) + _drug_terms(text)
+                   + _preclinical_terms(text))
     except Exception as exc:
         _log.error("highlight_text resolve", exc)
         return text
@@ -656,20 +812,26 @@ def _on_card_will_show(html: str, card, kind: str) -> str:
     if _panel_ref is None:
         return html
     try:
-        acronyms    = _acronym_terms(card)
-        drugs       = _drug_terms(card)
-        conditions  = _condition_terms(card)
-        preclinical = _preclinical_terms(card)
+        # Concatenated in precedence order, because `_build_pattern`
+        # keys its lookup by lowercased title and the first database to
+        # claim a name keeps it. Six names are held by both a condition
+        # and a preclinical entry - splenomegaly, dysphagia,
+        # lymphadenopathy, ptosis, aphasia, heart murmur - and seven by
+        # both a drug and a preclinical entry, glucagon and vitamin K
+        # among them. Preclinical links to a Wikipedia search and the
+        # other two to a StatPearls chapter or a DrugBank monograph, so
+        # preclinical goes last and all thirteen keep the better
+        # destination; it used to be written last, and won every one of
+        # them. Custom terms go first: the user typed those in
+        # deliberately, which outranks anything shipped. Conditions and
+        # drugs share no name at all, so their order settles nothing and
+        # is only here to be stated rather than discovered again.
         custom      = _custom_term_matches(card)
-        # Stash the two lists the sidebar builder will need, so
-        # `_local_results_for_card` doesn't re-run the same matchers
-        # on the same card a moment later.
-        try:
-            card._ap_cond = conditions
-            card._ap_drug = drugs
-        except Exception:
-            pass
-        all_terms   = acronyms + drugs + conditions + preclinical + custom
+        acronyms    = _acronym_terms(card)
+        conditions  = _condition_terms(card)
+        drugs       = _drug_terms(card)
+        preclinical = _preclinical_terms(card)
+        all_terms   = custom + acronyms + conditions + drugs + preclinical
         if not all_terms:
             return html
         color = _config.safe_css_colour(_config.get("highlightColor"))
@@ -771,9 +933,17 @@ def _local_results_for_card(card) -> list:
     one at least stays out of the way."""
     results = []
     seen: set = set()
-    conds = getattr(card, "_ap_cond", None)
-    if conds is None:
-        conds = _condition_terms(card)
+    # `_on_card_will_show` used to stash its condition and drug lists on
+    # the card here for this function to reuse. It was never read once:
+    # Anki fires `card_will_show` first, and the loop above - which runs
+    # before this call, in the same function - deleted both names as
+    # part of dropping the stale text cache. So every call took the
+    # recompute branch, at a measured 0.03 ms per card. Deleted rather
+    # than repaired: keeping the stash alive across the cache drop would
+    # mean serving a condition list derived from text the same function
+    # has just declared stale, and 0.03 ms is not worth a staleness
+    # window.
+    conds = _condition_terms(card)
     for t in conds:
         key = t["url"]
         if key and key not in seen:
@@ -785,9 +955,7 @@ def _local_results_for_card(card) -> list:
                 "url":     t["url"],
                 "summary": t.get("summary", ""),
             })
-    drugs = getattr(card, "_ap_drug", None)
-    if drugs is None:
-        drugs = _drug_terms(card)
+    drugs = _drug_terms(card)
     for t in drugs:
         key = t["url"]
         if key and key not in seen:
@@ -839,9 +1007,8 @@ def _on_show_question(card) -> None:
 
     # Drop any prior text cache on this card so re-shown cards re-strip lazily.
     try:
-        for attr in ("_ap_text", "_ap_cond", "_ap_drug"):
-            if hasattr(card, attr):
-                delattr(card, attr)
+        if hasattr(card, "_ap_text"):
+            delattr(card, "_ap_text")
     except Exception:
         pass
 

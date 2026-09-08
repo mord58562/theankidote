@@ -1469,7 +1469,7 @@ def _build_pearls_group(_w):
     # lives in a tooltip has not told the user what it does.
     open_in_row = _w["QHBoxLayout"]()
     open_in_row.addWidget(_w["QLabel"]("Open sources in:"))
-    articleview_rb = _w["QRadioButton"]("The side panel")
+    articleview_rb = _w["QRadioButton"]("The sidebar")
     browser_rb = _w["QRadioButton"]("My default browser")
     # Explicit group rather than Qt's auto-exclusivity, which is scoped
     # to the parent widget and would silently pair these with any radio
@@ -1555,7 +1555,7 @@ def _build_chat_group(_w):
     chat_url_edit.setPlaceholderText("https://my-self-hosted-llm.example.com/")
     chat_url_edit.setToolTip(
         "Self-hosted OpenWebUI / LibreChat / llama.cpp.\n"
-        "Adds a 'Custom' button to the dock.")
+        "Adds a 'Custom' button to the sidebar.")
     lay.addWidget(chat_url_edit)
     passkey_note = _caption(
         _w, "Passkey / Touch ID sign-in won't work in an embedded webview.",
@@ -1788,7 +1788,7 @@ def _build_library_group(_w):
 
     def _do_check():
         check_btn.setEnabled(False)
-        status.setText("Checking...")
+        status.setText("Checking for new reference content")
 
         def _work():
             from .pearls import _updater
@@ -1798,7 +1798,16 @@ def _build_library_group(_w):
             try:
                 status.setText(fut.result())
             except Exception as exc:
-                status.setText(f"Check failed: {exc}")
+                # The exception goes to the log, not to the label. A
+                # reader who cannot reach the network was being shown
+                # "Check failed: <urlopen error [Errno 8] nodename nor
+                # servname provided, or not known>", which names an
+                # internal cause they cannot act on. Every other failure
+                # surface in this add-on says what happened in plain
+                # words and what to do; this one did not.
+                _log.error("library check", exc)
+                status.setText("Could not reach the content server. "
+                               "Usually that means no connection.")
             check_btn.setEnabled(True)
 
         # On the UI thread this would freeze Anki for the length of a

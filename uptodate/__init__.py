@@ -346,7 +346,7 @@ class UpToDateBrowser(QWidget):
         self._btn_home     = self._nav_btn(_theme.GLYPH_HOME,
                                 lambda: self.view.load(QUrl(_home_url())), "Home")
         self._btn_clear    = self._nav_btn(_theme.GLYPH_CLEAR, self._clear_session,
-                                "Clear UTD session and reload "
+                                "Clear the UpToDate session and reload "
                                 "(use if stuck on a login / SSO error)")
         self._btn_external = self._nav_btn(_theme.GLYPH_EXTERNAL, self._open_externally,
                                 "Open current page in system browser")
@@ -539,7 +539,7 @@ class UpToDateBrowser(QWidget):
                 "home URL fresh. You will need to log in again.\n\n"
                 "Use this if you're stuck on a login or SSO error page.",
                 defaultno=True,
-                title="Clear UTD session",
+                title="Clear the UpToDate session",
             ):
                 return
         except Exception:
