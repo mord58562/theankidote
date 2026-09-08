@@ -79,6 +79,19 @@ NEW_ACRONYMS: dict = {
          "anterograde and retrograde memory disturbance, usually "
          "transient."),
     ],
+    # Three occurrences in the collection, all unambiguous, and it now
+    # has a full entry to point at - which it did not when CBT and ECT
+    # went in.
+    "MBT": [
+        ("Mentalisation-Based Therapy",
+         ["borderline", "personality", "psychotherapy", "attachment",
+          "mentalise", "Bateman", "Fonagy", "DBT", "schema", "group"],
+         "Psychodynamically grounded therapy for borderline personality "
+         "disorder, aimed at the capacity to hold in mind that behaviour "
+         "arises from mental states that can be misread. One of the three "
+         "structured psychotherapies named first-line in Australian "
+         "practice, alongside DBT and schema therapy."),
+    ],
     "IPT": [
         ("Interpersonal Psychotherapy",
          ["depression", "psychotherapy", "grief", "role transition",

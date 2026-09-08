@@ -10565,7 +10565,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Restraint and seclusion",
-        "aliases": ["Seclusion", "Physical restraint", "Mechanical restraint", "Chemical restraint"],
+        "aliases": ["Seclusion", "Restraint", "Physical restraint", "Mechanical restraint", "Chemical restraint"],
         "utd": [["Overview", "assessment and management of the acutely agitated patient"]],
         "summary": "",
     },
@@ -11977,6 +11977,30 @@ NEW_CONDITIONS = [
         "name": "Positive and Negative Syndrome Scale",
         "aliases": ["PANSS"],
         "utd": [["Overview", "rating scales for schizophrenia"]],
+        "summary": "",
+    },
+    {
+        "name": "Young Mania Rating Scale",
+        "aliases": ["YMRS"],
+        "utd": [["Overview", "rating scales for bipolar disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Edinburgh Postnatal Depression Scale",
+        "aliases": [],
+        "utd": [["Overview", "screening for perinatal depression"]],
+        "summary": "",
+    },
+    {
+        "name": "Vagus nerve stimulation",
+        "aliases": ["VNS", "vagal nerve stimulation"],
+        "utd": [["Overview", "vagus nerve stimulation"]],
+        "summary": "",
+    },
+    {
+        "name": "Mentalisation-based therapy",
+        "aliases": ["MBT", "mentalization-based treatment", "mentalisation based therapy"],
+        "utd": [["Overview", "mentalization-based treatment borderline personality disorder"]],
         "summary": "",
     },
 ]
@@ -71347,6 +71371,72 @@ RICH_SUMMARIES = {
         "question from the p value. It is proprietary and licensed; "
         "describe it and cite scores rather than reproducing items."
     ),
+
+    "Young Mania Rating Scale": (
+        "Definition: clinician-rated measure of manic symptom "
+        "severity, eleven items scored from a short interview and "
+        "from observation during it, with four items weighted double "
+        "because they are hardest to rate in an unwell patient. Uses: "
+        "the standard efficacy endpoint in trials of treatments for "
+        "acute mania, so it is the number behind most of the evidence "
+        "quoted for antimanic drugs, and used clinically to track "
+        "response over days. Note: it is a severity measure, not a "
+        "diagnostic or screening instrument, and it says nothing "
+        "about depression - a patient with a mixed presentation can "
+        "score low on it while remaining severely unwell. Rated on "
+        "the past 48 hours, which is why it is repeated so often in "
+        "inpatient practice."
+    ),
+    "Edinburgh Postnatal Depression Scale": (
+        "Definition: ten-item self-report screen for depression in "
+        "pregnancy and the year after birth, deliberately excluding "
+        "somatic symptoms such as fatigue and sleep disturbance, "
+        "which are near-universal around childbirth and would "
+        "otherwise inflate every score. Uses: recommended in "
+        "Australian perinatal practice for screening at least once "
+        "antenatally and once postnatally, and free to use, unlike "
+        "most instruments of its kind. A score of 13 or more is the "
+        "usual threshold for further assessment, and the self-harm "
+        "item is acted on whatever the total. Note: it screens, it "
+        "does not diagnose. A positive score obliges a clinical "
+        "assessment rather than a prescription, and a negative score "
+        "in a woman you are worried about obliges the assessment "
+        "anyway."
+    ),
+    "Vagus nerve stimulation": (
+        "Definition: an implanted device delivering intermittent "
+        "electrical stimulation to the left cervical vagus nerve. "
+        "Uses: drug-resistant focal epilepsy, where it reduces "
+        "seizure frequency rather than abolishing seizures, and "
+        "treatment-resistant depression, where the effect builds over "
+        "months rather than weeks. Adverse effects: hoarseness, "
+        "cough, throat discomfort and dyspnoea, all during "
+        "stimulation and all improving as the current is titrated. "
+        "Note: the epilepsy indication is the established one. In "
+        "depression it sits well down the line after medication, "
+        "psychological treatment and ECT have failed, and its slow "
+        "onset makes it unsuitable for anyone acutely at risk. A "
+        "magnet lets the patient trigger an extra burst, which is "
+        "worth knowing if one arrives in an emergency department "
+        "mid-seizure."
+    ),
+    "Mentalisation-based therapy": (
+        "Definition: psychodynamically grounded therapy for "
+        "borderline personality disorder, developed by Bateman and "
+        "Fonagy, aimed at the capacity to mentalise - to hold in mind "
+        "that behaviour, one's own and other people's, arises from "
+        "mental states that can be misread. Mechanism: emotional "
+        "arousal in attachment relationships is treated as what "
+        "collapses that capacity, which is why the same patient can "
+        "reason well when calm and not at all in crisis. Uses: "
+        "borderline personality disorder, delivered as combined "
+        "individual and group therapy over a defined course. Note: it "
+        "is one of the three structured psychotherapies Australian "
+        "practice names as first-line for borderline personality "
+        "disorder, alongside DBT and schema therapy, and the choice "
+        "between them turns more on what is actually available than "
+        "on evidence separating them."
+    ),
 }
 
 
@@ -72979,6 +73069,34 @@ NEW_PRECLINICAL = [
 # the label is what the button says after "Open". Australian sources
 # first and freely accessible ones by preference, since most readers
 # will not have an institutional login.
+#
+# Choosing a destination: three constraints established 2026-09-08.
+#
+# 1. Do NOT point anything at a RANZCP clinical practice guideline.
+#    Every one of them is archived - the College withdrew them against
+#    the NHMRC five-year lifespan rule, and the 2020 mood disorders
+#    revision went in December 2025. The live successor for
+#    schizophrenia is not a College CPG at all but the ANZJP GRADE
+#    guidelines (Suetani et al., ANZJP 2026;60(4):367-404). The
+#    College's own pages contradict each other on this; the archiving
+#    announcement is the later and more specific one.
+#
+# 2. Linking is always fine; quoting is not. health.gov.au, tga.gov.au
+#    and pbs.gov.au are all-rights-reserved with explicit
+#    no-commercial-use terms - the assumption that Australian
+#    government material defaults to CC BY is policy the health
+#    portfolio does not follow. The genuinely CC BY 4.0 Australasian
+#    tier is Health New Zealand, NSW Health, AIHW and the Federal
+#    Register of Legislation. Therapeutic Guidelines states that
+#    requests to reuse ADAPTED content are more likely to be refused,
+#    and UpToDate's licence assigns them the rights in any
+#    modification made to their text. This matters for the summaries,
+#    which must be written from the underlying medicine rather than
+#    paraphrased from a guideline.
+#
+# 3. Prefer freely accessible pages. Most readers have no institutional
+#    login, so a paywalled link is a dead end for them even when it is
+#    the better document.
 #
 # Every URL in this table has been checked to return 200. A link that
 # is confidently wrong is worse than the search it replaces, because
