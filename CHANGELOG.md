@@ -5,6 +5,61 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.1] - 2026-09-08
+
+Escape could be bound as a global shortcut, and 85 abbreviation popups
+carried a definition without the number that is the point of it.
+
+### Fixed
+
+- **Escape could be taken from Anki entirely.** Every binding here is
+  created with `ApplicationShortcut` context - deliberately, since the
+  reviewer's focus is a webview and Anki opens real top-level windows -
+  so a binding is global. `QKeySequenceEdit` records whatever is
+  pressed, and pressing Escape to dismiss a focused shortcut field
+  recorded Escape. From then on Escape toggled the reference sidebar
+  instead of closing the note editor, in every window, with no route
+  back: the field showed `Esc`, and pressing Escape to change it
+  entered `Esc` again. `_is_safe_shortcut` now refuses a sequence with
+  no modifier, and refuses Escape with or without one; `_drop_unsafe_
+  shortcuts` clears anything already stored, because the people
+  affected cannot fix it from the interface. A rejected capture leaves
+  the previous binding alone and says so.
+  Found from the `visibilityChanged` instrumentation added the same
+  day - reading the code did not find it, because the behaviour looks
+  like a Qt fault and not like a shortcut.
+- **A popup badged "The AnkiDote" was the same colour as one badged
+  "StatPearls."** The badge exists to distinguish written-for-this-
+  add-on content from a real chapter, and every other element
+  contradicted it. A sixth accent, slate, adjacent to the teal rather
+  than competing with it: 6.2:1 on the dark ground, 5.9:1 on light.
+- The Settings footer briefly repeated the library version, which was
+  already on screen in the group that owns it.
+- `ChatBrowser.load` was the one method touching `view` without a guard
+  or a try, and the one both the crash-recovery timer and the provider
+  switch call, so a profile switch with either pending raised into Qt.
+- The dock visibility handler wrote config on every fire. `visibility
+  Changed` fires on a minimise and again on the restore, so that put
+  a `meta.json` rewrite on the window manager - the same churn taken
+  off the answer key earlier the same day.
+
+### Changed
+
+- **85 abbreviation glosses carry their numbers**, in Australian units
+  and against Australian thresholds. Six were not merely thin:
+  hypertension gave the American 130/80 against the condition entry's
+  140/90; FBE was described as the American name for the full blood
+  count when it is the Australian one; PSA gave 4.0 rather than the
+  Australian 3.0 repeat threshold and no testing interval; atrial
+  fibrillation used CHA2DS2-VASc rather than CHA2DS2-VA; community-
+  acquired pneumonia pointed at CURB-65 rather than SMART-COP; and the
+  haemoglobin reference interval appeared twice with two different sets
+  of numbers.
+  Where a value is genuinely assay-dependent it now says so rather than
+  implying a precision it does not have, and roughly a dozen entries
+  were left alone because no defensible Australian figure could be
+  sourced.
+
 ## [2.6.0] - 2026-09-08
 
 Three shipped features run for the first time, and the content channel
