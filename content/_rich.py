@@ -11889,6 +11889,96 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "epidemiology and course of psychiatric disorders"]],
         "summary": "",
     },
+    {
+        "name": "Dialectical behaviour therapy",
+        "aliases": ["DBT", "dialectical behavior therapy"],
+        "utd": [["Overview", "dialectical behavior therapy for borderline personality disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Acceptance and commitment therapy",
+        "aliases": ["ACT therapy", "acceptance and commitment therapies"],
+        "utd": [["Overview", "acceptance and commitment therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Interpersonal psychotherapy",
+        "aliases": ["IPT"],
+        "utd": [["Overview", "interpersonal psychotherapy for depression"]],
+        "summary": "",
+    },
+    {
+        "name": "Eye movement desensitisation and reprocessing",
+        "aliases": ["EMDR", "eye movement desensitization and reprocessing"],
+        "utd": [["Overview", "eye movement desensitization and reprocessing for PTSD"]],
+        "summary": "",
+    },
+    {
+        "name": "Schema therapy",
+        "aliases": ["schema-focused therapy", "schema therapies"],
+        "utd": [["Overview", "schema therapy for personality disorders"]],
+        "summary": "",
+    },
+    {
+        "name": "Defence mechanisms",
+        "aliases": ["defence mechanism", "defense mechanisms", "ego defences"],
+        "utd": [["Overview", "defense mechanisms"]],
+        "summary": "",
+    },
+    {
+        "name": "Transference",
+        "aliases": ["transferences"],
+        "utd": [["Overview", "transference in psychotherapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Countertransference",
+        "aliases": ["counter-transference", "countertransferences"],
+        "utd": [["Overview", "countertransference in psychotherapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Therapeutic alliance",
+        "aliases": ["working alliance", "therapeutic relationship"],
+        "utd": [["Overview", "therapeutic alliance psychotherapy outcome"]],
+        "summary": "",
+    },
+    {
+        "name": "Attachment theory",
+        "aliases": ["attachment style", "attachment styles", "attachment"],
+        "utd": [["Overview", "attachment theory"]],
+        "summary": "",
+    },
+    {
+        "name": "Involuntary admission",
+        "aliases": ["involuntary patient", "scheduling", "sectioned", "detained under the Mental Health Act"],
+        "utd": [["Overview", "involuntary psychiatric hospitalisation"]],
+        "summary": "",
+    },
+    {
+        "name": "Guardianship",
+        "aliases": ["guardian", "financial management order", "guardianship order"],
+        "utd": [["Overview", "guardianship for adults lacking capacity"]],
+        "summary": "",
+    },
+    {
+        "name": "Health of the Nation Outcome Scales",
+        "aliases": ["HoNOS", "HoNOSCA", "HoNOS 65+"],
+        "utd": [["Overview", "routine outcome measurement mental health"]],
+        "summary": "",
+    },
+    {
+        "name": "Montgomery-Asberg Depression Rating Scale",
+        "aliases": ["MADRS"],
+        "utd": [["Overview", "rating scales for depression"]],
+        "summary": "",
+    },
+    {
+        "name": "Positive and Negative Syndrome Scale",
+        "aliases": ["PANSS"],
+        "utd": [["Overview", "rating scales for schizophrenia"]],
+        "summary": "",
+    },
 ]
 
 
@@ -70981,6 +71071,281 @@ RICH_SUMMARIES = {
         "which is the argument for early psychosis services. Note: "
         "onset in adolescence and treatment in the thirties is the "
         "usual gap."
+    ),
+
+    "Dialectical behaviour therapy": (
+        "Structured cognitive behavioural treatment developed by "
+        "Marsha Linehan for chronic suicidality and self-harm, and "
+        "the best-evidenced psychotherapy for borderline personality "
+        "disorder. Mechanism: balances acceptance of the patient as "
+        "they are against the demand for change, which is the "
+        "dialectic the name refers to. Types: four skills modules - "
+        "mindfulness, distress tolerance, emotion regulation and "
+        "interpersonal effectiveness - delivered as weekly individual "
+        "therapy plus a skills group, with between-session phone "
+        "coaching and a consultation team for the therapists. Uses: "
+        "borderline personality disorder, recurrent self-harm, and "
+        "adapted programs for eating disorders and substance use. "
+        "Evidence is strongest for reducing self-harm, hospital use "
+        "and treatment dropout rather than for mood symptoms. Note: "
+        "the consultation team is part of the treatment, not "
+        "supervision of it. DBT delivered without it, or as a skills "
+        "group alone, is not DBT and should not be described as such "
+        "in a referral."
+    ),
+    "Acceptance and commitment therapy": (
+        "Third-wave behavioural therapy aiming at psychological "
+        "flexibility rather than symptom reduction: the capacity to "
+        "hold difficult thoughts and feelings while still acting on "
+        "what matters. Mechanism: six processes - acceptance, "
+        "cognitive defusion, contact with the present moment, self as "
+        "context, values, and committed action. Note: it does not "
+        "dispute the content of a thought, as classical cognitive "
+        "therapy does, but changes the patient's relationship to it. "
+        "Uses: chronic pain, anxiety, depression, and long-term "
+        "conditions where the symptom will not fully remit; "
+        "PBS-subsidised sessions under a mental health treatment plan "
+        "cover it as they do CBT. The point of difference matters "
+        "when choosing between them. A patient who has already failed "
+        "thought-challenging, or whose distress is a reasonable "
+        "response to a real and unchangeable situation, is the one "
+        "ACT suits."
+    ),
+    "Interpersonal psychotherapy": (
+        "Time-limited structured psychotherapy for depression, "
+        "working on the relationships around the illness rather than "
+        "on cognition. Mechanism: symptoms are treated as arising in "
+        "an interpersonal context, so changing that context relieves "
+        "them. Types: one of four problem areas is agreed at the "
+        "outset - grief, role dispute, role transition, or "
+        "interpersonal deficits - and the work stays there for the "
+        "course, usually 12 to 16 sessions. Uses: major depression, "
+        "including perinatal depression where the role transition "
+        "frame fits well, and adapted for bulimia nervosa and "
+        "adolescent depression. Note: it is as well evidenced as CBT "
+        "for depression and much less often offered, largely because "
+        "fewer Australian therapists are trained in it. Worth naming "
+        "explicitly on a referral rather than writing 'psychotherapy' "
+        "and leaving the choice to whoever has a vacancy."
+    ),
+    "Eye movement desensitisation and reprocessing": (
+        "Trauma-focused therapy in which the patient holds a "
+        "traumatic memory in mind while attending to a bilateral "
+        "stimulus, usually the therapist's moving finger. Uses: "
+        "post-traumatic stress disorder, where the Australian "
+        "guidelines from Phoenix Australia recommend it alongside "
+        "trauma-focused CBT as a first-line psychological treatment. "
+        "Mechanism: disputed. Dismantling studies suggest the eye "
+        "movements themselves add little and that the active "
+        "ingredients are repeated exposure to the memory and the "
+        "taxing of working memory; the treatment works whether or not "
+        "its stated mechanism does. Note: recommending it does not "
+        "require believing its theory, which is worth knowing when a "
+        "patient asks. What it does require is a trained therapist "
+        "and a stable enough patient, since it is an exposure "
+        "treatment and can worsen things if started during acute "
+        "crisis or ongoing danger."
+    ),
+    "Schema therapy": (
+        "Integrative therapy for entrenched patterns that have not "
+        "responded to standard cognitive behavioural work, developed "
+        "by Jeffrey Young. Mechanism: early maladaptive schemas laid "
+        "down when childhood needs went unmet - abandonment, "
+        "defectiveness, mistrust, emotional deprivation - are "
+        "reactivated in adult life and drive the same responses "
+        "repeatedly. Work is done through limited reparenting, "
+        "imagery rescripting and chair work rather than by thought "
+        "records alone. Types: schemas are grouped into domains, and "
+        "the moment-to-moment states patients switch between are "
+        "described as modes. Uses: borderline and other personality "
+        "disorders, and chronic depression with a strong "
+        "developmental component. Note: it is one of the two "
+        "personality-disorder psychotherapies with randomised "
+        "evidence, the other being DBT, and it is the one to consider "
+        "when the problem is a lifelong pattern rather than crisis "
+        "and self-harm."
+    ),
+    "Defence mechanisms": (
+        "Definition: automatic, largely unconscious ways of managing "
+        "conflict and "
+        "distress. Naming them describes how a patient copes without "
+        "implying a diagnosis. Types: mature defences are adaptive "
+        "and cost little - humour, sublimation, altruism, "
+        "anticipation, suppression. Neurotic defences trade insight "
+        "for comfort, as in intellectualisation, reaction formation, "
+        "displacement and repression. Immature defences distort "
+        "reality or draw others in, as in projection, denial, "
+        "splitting, acting out, somatisation and passive aggression. "
+        "Note: they are not pathological in themselves. Everyone uses "
+        "them, they shift under stress, and the clinically useful "
+        "observation is a change in a person's usual pattern rather "
+        "than the presence of any one defence. Splitting is the one "
+        "most often noticed on a ward, where a team finds itself "
+        "divided into those who see the patient as entirely "
+        "reasonable and those who do not."
+    ),
+    "Transference": (
+        "The patient's redirection onto the clinician of feelings and "
+        "expectations that belong to earlier significant "
+        "relationships. Presentation: unexplained warmth, deference, "
+        "hostility or eroticised feeling that arrives too fast for "
+        "the length of the relationship, or a reaction out of "
+        "proportion to what was said. Uses: in psychodynamic therapy "
+        "it is worked with directly as the main material; in general "
+        "practice and on the wards the value is simply recognising "
+        "it, so that a strong reaction is understood rather than "
+        "taken personally or acted on. Note: it is not confined to "
+        "therapy and not a sign that anything has gone wrong. A "
+        "patient who treats you as the parent who never listened is "
+        "telling you something about their history, and often about "
+        "why previous clinical relationships have broken down. See "
+        "also countertransference, which is the other half of the "
+        "same phenomenon."
+    ),
+    "Countertransference": (
+        "The clinician's own emotional reaction to a patient, "
+        "including what the patient's transference evokes. "
+        "Presentation: dreading or looking forward to one name on the "
+        "list, cutting a consultation short, bending a rule you would "
+        "not bend for anyone else, or feeling unaccountably angry, "
+        "protective or hopeless. Uses: treated as data rather than as "
+        "a lapse. A reaction that is out of character is often the "
+        "clearest available information about how the patient affects "
+        "people, and about the pattern that has cost them "
+        "relationships elsewhere. Note: unexamined, it is where "
+        "boundary violations begin, and it is also why the sickest "
+        "patients attract both the most special treatment and the "
+        "most rejection from the same team. Supervision exists "
+        "largely for this. Noticing it is clinical skill; acting on "
+        "it without noticing is the risk."
+    ),
+    "Therapeutic alliance": (
+        "Definition: the collaborative bond between patient and clinician, "
+        "conventionally described after Bordin as three components: "
+        "an emotional bond, agreement on the goals of treatment, and "
+        "agreement on the tasks that will get there. Note: across "
+        "psychotherapy research the alliance predicts outcome more "
+        "consistently than the choice of modality does, and it "
+        "predicts it early - alliance measured in the first few "
+        "sessions forecasts the result of the course. "
+        "Uses: diagnostic as much as therapeutic. A course that is "
+        "not working is more often a course in which goals were never "
+        "actually agreed than one in which the wrong technique was "
+        "chosen, and asking directly what the patient thinks the "
+        "treatment is for will usually find it. In Australian "
+        "practice the same holds for a mental health treatment plan: "
+        "a plan written without the patient's own goals in it tends "
+        "to produce attendance rather than change."
+    ),
+    "Attachment theory": (
+        "Bowlby's account of the child's bond to a caregiver as a "
+        "biologically driven system for seeking safety, extended by "
+        "Ainsworth's observational work into described patterns. "
+        "Types: secure, where distress is shown and comfort accepted; "
+        "insecure-avoidant, where distress is minimised and closeness "
+        "not sought; insecure-ambivalent, where distress is amplified "
+        "and comfort does not settle it; and disorganised, where the "
+        "caregiver is both the source of fear and the only refuge, "
+        "which is the pattern most associated with maltreatment. "
+        "Uses: understanding help-seeking. The avoidant patient who "
+        "declines follow-up and the ambivalent patient who attends "
+        "constantly and is never reassured are showing the same "
+        "system under different settings. Note: an attachment pattern "
+        "is not a diagnosis and is not fixed for life. It is a way of "
+        "predicting how someone will behave towards a clinician "
+        "offering care, which is worth knowing before deciding they "
+        "are difficult."
+    ),
+    "Involuntary admission": (
+        "Detention and treatment in hospital without consent, in New "
+        "South Wales under the Mental Health Act 2007. Criteria: the "
+        "person must be a mentally ill or mentally disordered person "
+        "as the Act defines those, and no less restrictive care must "
+        "be reasonably available - both limbs are required, and a "
+        "diagnosis alone never suffices. Mx: a medical practitioner "
+        "or accredited person completes the certificate that allows "
+        "the person to be taken to a declared mental health facility, "
+        "where an authorised medical officer must examine them, and a "
+        "second examination by a different practitioner, one of whom "
+        "is a psychiatrist, is required before they can be detained "
+        "further. The Mental Health Review Tribunal reviews the "
+        "detention. Note: the mentally disordered category is the "
+        "short one, intended for brief detention where the risk is "
+        "clear and the diagnosis is not, and it carries tighter time "
+        "limits than the mentally ill category. Legislation differs "
+        "between states; do not apply Victorian or Queensland process "
+        "in New South Wales."
+    ),
+    "Guardianship": (
+        "Definition: a substitute decision-maker appointed for an adult "
+        "who lacks "
+        "capacity, in New South Wales under the Guardianship Act 1987 "
+        "and made by the Guardianship Division of NCAT. Types: a "
+        "guardianship order covers personal and health decisions such "
+        "as accommodation and treatment; a financial management order "
+        "covers money and property and is a separate order. An order "
+        "is made only where there is a decision that actually needs "
+        "making and no less restrictive arrangement will do. Note: "
+        "most health decisions never reach a tribunal. The Act's "
+        "person responsible hierarchy - guardian, then spouse, then "
+        "unpaid carer, then close relative or friend - authorises "
+        "ordinary treatment without any order, and urgent treatment "
+        "to save life or prevent significant distress needs no "
+        "consent at all. Reach for guardianship when the decision is "
+        "contested, the hierarchy is empty, or the person objects, "
+        "not as a routine response to impaired capacity."
+    ),
+    "Health of the Nation Outcome Scales": (
+        "Definition: clinician-rated measure of the problems and "
+        "functioning of a "
+        "person with mental illness, covering behaviour, impairment, "
+        "symptoms and social domains. Uses: it is the routine outcome "
+        "measure of Australian public mental health services, "
+        "collected at admission, review and discharge across every "
+        "state, which makes it the instrument a junior doctor is most "
+        "likely to be asked to complete. Versions exist for children "
+        "and adolescents and for older people. Note: it measures the "
+        "period just past rather than the moment of interview, and it "
+        "is a service outcome measure rather than a diagnostic or "
+        "screening tool - a score does not make or exclude a "
+        "diagnosis and should not be used as though it did. Its value "
+        "is in change over time for one person, and in comparing "
+        "populations, not in a single number at one visit."
+    ),
+    "Montgomery-Asberg Depression Rating Scale": (
+        "Definition: clinician-rated scale of depressive symptom "
+        "severity, ten "
+        "items, each scored zero to six from a semi-structured "
+        "interview. Uses: the standard severity and change measure in "
+        "antidepressant and neurostimulation trials, and used "
+        "clinically to track response where a number is wanted. It "
+        "was designed to be sensitive to change with treatment, and "
+        "deliberately weights the psychological symptoms of "
+        "depression over the somatic ones. Note: that weighting is "
+        "why it is often preferred to the older Hamilton scale in "
+        "physically unwell patients, whose sleep, appetite and "
+        "fatigue scores can be driven by their medical illness rather "
+        "than their mood. Like every rating scale it measures "
+        "severity and not diagnosis. Reproducing the items is a "
+        "copyright question separate from using the instrument, so "
+        "quote a score, not the sheet."
+    ),
+    "Positive and Negative Syndrome Scale": (
+        "Definition: clinician-rated measure of symptom severity in "
+        "schizophrenia, thirty items rated from a semi-structured "
+        "interview and grouped into a positive scale, a negative "
+        "scale and a general psychopathology scale. Uses: the "
+        "standard efficacy endpoint in antipsychotic trials, where "
+        "response is usually defined as a percentage reduction in "
+        "total score, so it is the number behind most of the evidence "
+        "quoted for these drugs. Note: it is a research instrument "
+        "and is rarely used in Australian routine practice, where "
+        "HoNOS is the measure collected. Knowing what it is matters "
+        "mostly for reading trials critically - a statistically "
+        "significant PANSS reduction can be a small change in a long "
+        "scale, and the clinically meaningful threshold is a separate "
+        "question from the p value. It is proprietary and licensed; "
+        "describe it and cite scores rather than reproducing items."
     ),
 }
 
