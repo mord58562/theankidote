@@ -5,6 +5,53 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.3] - 2026-09-09
+
+The content channel had been refusing every download.
+
+### Fixed
+
+- **No install could download a term-library update.** GitHub moved
+  release-asset downloads to `release-assets.githubusercontent.com`.
+  `_updater` pins the hosts it will follow a redirect to - the manifest
+  hash proves the payload was not corrupted in transit but says nothing
+  about who wrote it, so the host list is what stops a moved link
+  replacing the clinical content of every popup. The new name was not
+  on it, so every client failed closed, kept its existing copy and
+  logged a line. Eleven content publishes reached nobody. Both asset
+  hosts are now listed, since the rollover is not atomic.
+- **`publish_content.sh` could not see the outage.** It verified the
+  uploaded asset with `curl -sSL`, which follows a redirect anywhere,
+  and so reported a healthy 200 for the whole period no client could
+  fetch the same file. The check and the client disagreed about what
+  "reachable" means. It now fetches through `_updater._fetch`, which
+  exercises the same host rule, byte ceiling and redirect handling a
+  client does, so the next rename fails a publish rather than the
+  fleet. A test follows the live redirect from the published manifest
+  and asserts where it lands; it fails against the previous allowlist
+  with the exact production error.
+- **Every dock toggle logged itself as an unexplained one.** Qt emits
+  `visibilityChanged` synchronously from inside `show()` and `hide()`,
+  so `_on_dock_visibility` ran with `toggle_pearls_dock` still on the
+  stack, read a mirror flag that had not been updated yet, and filed
+  the change as coming from outside - printing a stack trace that named
+  the function which had just called it. The diagnostic exists to catch
+  a genuine unexplained show and could not be read while every
+  deliberate toggle produced the same report. The mirror is now set
+  before the call at all three sites.
+
+### Changed
+
+- `verify_batch` listed "fetal" as a US spelling wanting "foetal". It
+  is not one: RANZCOG writes "fetal" and so does the library, 213 uses
+  in summary prose against none. The gate rejected every correctly
+  spelled obstetric batch. `test_vocab` carried the matching rule and
+  never fired it, because `DATASETS` reaches three small tables and not
+  `RICH_SUMMARIES` - so the 2,800 entries that are the popup text had
+  no spelling check at all, and the contradiction sat in two files with
+  a green suite. Both rules reversed, and the ban now runs against that
+  table. "foetal" stays as an alias so old-spelling cards still match.
+
 ## [2.6.2] - 2026-09-08
 
 2.6.1's shortcut migration announced itself as a crash.
