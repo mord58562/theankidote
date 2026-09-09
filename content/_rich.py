@@ -12189,6 +12189,168 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "prenatal care in the third trimester"]],
         "summary": "",
     },
+    {
+        "name": "Abnormal uterine bleeding",
+        "aliases": ["Abnormal uterine bleeding in reproductive age", "Intermenstrual bleeding", "Postcoital bleeding", "Irregular uterine bleeding"],
+        "utd": [["Overview", "abnormal uterine bleeding in nonpregnant reproductive age patients"]],
+        "summary": "",
+    },
+    {
+        "name": "Asymptomatic bacteriuria in pregnancy",
+        "aliases": ["Asymptomatic bacteriuria", "Significant bacteriuria in pregnancy", "Bacteriuria in pregnancy"],
+        "utd": [["Overview", "urinary tract infections and asymptomatic bacteriuria in pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Prenatal screening for fetal abnormality",
+        "aliases": ["Prenatal screening", "Prenatal diagnosis", "Antenatal screening for fetal abnormality", "Screening tests for fetal abnormality", "Aneuploidy screening", "Fetal anomaly screening"],
+        "utd": [["Overview", "prenatal screening and diagnosis of chromosomal abnormalities"]],
+        "summary": "",
+    },
+    {
+        "name": "Intrauterine device",
+        "aliases": ["Intrauterine devices", "Intrauterine contraception", "Intra-uterine device", "Coil"],
+        "utd": [["Overview", "intrauterine contraception device types and selection"]],
+        "summary": "",
+    },
+    {
+        "name": "Squamous intraepithelial lesion",
+        "aliases": ["Low-grade squamous intraepithelial lesion", "High-grade squamous intraepithelial lesion", "LSIL", "HSIL", "Cervical cytology", "Bethesda system"],
+        "utd": [["Overview", "cervical cytology reporting terminology and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypertension in pregnancy",
+        "aliases": ["Hypertensive disorders of pregnancy", "Gestational hypertension"],
+        "utd": [["Overview", "hypertensive disorders of pregnancy classification and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Breech presentation",
+        "aliases": ["Breech", "Breech birth", "Frank breech", "Complete breech", "Footling breech", "Podalic presentation"],
+        "utd": [["Overview", "breech presentation management at term"]],
+        "summary": "",
+    },
+    {
+        "name": "Meconium-stained liquor",
+        "aliases": ["Meconium stained liquor", "Meconium-stained amniotic fluid", "Meconium stained amniotic fluid", "Meconium in labour"],
+        "utd": [["Overview", "meconium stained amniotic fluid intrapartum management"]],
+        "summary": "",
+    },
+    {
+        "name": "Nuchal translucency",
+        "aliases": ["Nuchal translucency scan", "Nuchal translucency measurement", "Increased nuchal translucency"],
+        "utd": [["Overview", "nuchal translucency increased measurement significance"]],
+        "summary": "",
+    },
+    {
+        "name": "Fetal structural abnormality",
+        "aliases": ["Fetal abnormality", "Fetal anomaly", "Structural fetal anomaly", "Congenital anomaly", "Congenital abnormality"],
+        "utd": [["Overview", "prenatal diagnosis of fetal structural anomaly counselling"]],
+        "summary": "",
+    },
+    {
+        "name": "Perinatal mental health",
+        "aliases": ["Perinatal mental health screening", "Perinatal mental illness", "Perinatal psychiatry"],
+        "utd": [["Overview", "perinatal mental health screening and assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychotropic medicines in pregnancy and breastfeeding",
+        "aliases": ["Psychotropic drugs in pregnancy", "Psychotropic prescribing in pregnancy", "Psychotropic medicines in breastfeeding"],
+        "utd": [["Overview", "psychotropic medication use during pregnancy and lactation"]],
+        "summary": "",
+    },
+    {
+        "name": "Sexual history",
+        "aliases": ["Sexual history taking", "Sexual health history"],
+        "utd": [["Overview", "taking a sexual history"]],
+        "summary": "",
+    },
+    {
+        "name": "Antimicrobial susceptibility testing",
+        "aliases": ["Antibiotic sensitivity testing", "Antibiotic susceptibility testing", "Culture and sensitivity"],
+        "utd": [["Overview", "antimicrobial susceptibility testing methods"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric intravenous fluids",
+        "aliases": ["Intravenous fluids in children", "Paediatric fluid therapy", "Maintenance fluids", "Fluid therapy in children"],
+        "utd": [["Overview", "maintenance intravenous fluid therapy in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Growth chart",
+        "aliases": ["Growth charts", "Centile chart", "Growth monitoring", "Plotting growth"],
+        "utd": [["Overview", "measurement of growth in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Short stature",
+        "aliases": ["Poor linear growth", "Growth failure", "Abnormal growth pattern"],
+        "utd": [["Overview", "diagnostic approach to short stature in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Procalcitonin",
+        "aliases": ["Serum procalcitonin"],
+        "utd": [["Overview", "procalcitonin use in lower respiratory tract infections and sepsis"]],
+        "summary": "",
+    },
+    {
+        "name": "Viral upper respiratory tract infection",
+        "aliases": ["Upper respiratory tract infection", "Common cold", "Coryza"],
+        "utd": [["Overview", "the common cold in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Immunodeficiency in children",
+        "aliases": ["Paediatric immunodeficiency", "Immunocompromised child"],
+        "utd": [["Overview", "approach to the child with recurrent infections"]],
+        "summary": "",
+    },
+    {
+        "name": "Serious infection in Aboriginal and Torres Strait Islander children",
+        "aliases": ["Invasive bacterial infection in Aboriginal and Torres Strait Islander children"],
+        "utd": [["Overview", "invasive bacterial infection in indigenous australian children"]],
+        "summary": "",
+    },
+    {
+        "name": "Growing pains",
+        "aliases": ["Benign nocturnal limb pains", "Benign nocturnal limb pain of childhood", "Recurrent limb pain of childhood", "Growing pain"],
+        "utd": [["Overview", "growing pains in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Mesenteric adenitis",
+        "aliases": ["Mesenteric lymphadenitis", "Acute mesenteric adenitis", "Mesenteric adenitis in children"],
+        "utd": [["Overview", "mesenteric adenitis in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Antidiarrhoeals",
+        "aliases": ["Antidiarrhoeal agents", "Antidiarrheals", "Antidiarrhoeal drugs", "Antimotility agents"],
+        "utd": [["Overview", "antimotility agents for acute diarrhoea"]],
+        "summary": "",
+    },
+    {
+        "name": "Immunisation in the immunocompromised child",
+        "aliases": ["Vaccination in the immunocompromised child", "Immunisation after chemotherapy", "Vaccines in immunosuppressed children", "Live vaccines in immunosuppression"],
+        "utd": [["Overview", "immunisations in children with immunodeficiency or immunosuppression"]],
+        "summary": "",
+    },
+    {
+        "name": "Children with medical complexity",
+        "aliases": ["Chronic complex illness in childhood", "Medically complex child", "Complex chronic illness in children", "Chronic complex conditions in children"],
+        "utd": [["Overview", "children with medical complexity"]],
+        "summary": "",
+    },
+    {
+        "name": "Intergenerational trauma",
+        "aliases": ["Transgenerational trauma", "Intergenerational trauma in Aboriginal and Torres Strait Islander communities", "Collective trauma", "Historical trauma"],
+        "utd": [["Overview", "intergenerational transmission of trauma"]],
+        "summary": "",
+    },
 ]
 
 
@@ -72291,6 +72453,596 @@ RICH_SUMMARIES = {
         "shown to improve outcomes. Red flags: headache, visual "
         "disturbance or epigastric pain; any bleeding; static fundal "
         "height; absent movements."
+    ),
+
+    "Abnormal uterine bleeding": (
+        "Bleeding from the uterus that departs from normal in "
+        "frequency, regularity, duration or volume, or that occurs "
+        "between periods or after intercourse, in a non-pregnant "
+        "woman of reproductive age. Causes are grouped by the FIGO "
+        "PALM-COEIN system into structural and non-structural. Key "
+        "point: the pattern narrows the cause before any test does. "
+        "Heavy but regular predictable bleeding suggests a structural "
+        "lesion or a coagulopathy; irregular unpredictable bleeding "
+        "suggests ovulatory dysfunction or a hormonal contraceptive; "
+        "intermenstrual and postcoital bleeding point at the cervix "
+        "and need a speculum examination and a sexual health screen, "
+        "not an ultrasound alone. Ix: exclude pregnancy first in "
+        "every case, then FBC and ferritin, TSH, transvaginal "
+        "ultrasound, cervical screening if due, and a coagulation "
+        "screen with von Willebrand studies if heavy bleeding dates "
+        "from menarche. Criteria: sample the endometrium from age 45, "
+        "and younger where there is unopposed oestrogen exposure such "
+        "as obesity or polycystic ovary syndrome, tamoxifen, Lynch "
+        "syndrome, persistent bleeding or failed medical treatment. "
+        "Red flags: a visible cervical lesion is biopsied whatever "
+        "the screening result says."
+    ),
+    "Asymptomatic bacteriuria in pregnancy": (
+        "Significant growth on urine culture with no urinary symptoms "
+        "- the one setting outside urological surgery in which "
+        "asymptomatic bacteriuria is sought and treated. "
+        "Epidemiology: 2 to 7 per cent of pregnancies, most often "
+        "Escherichia coli, then group B streptococcus, Klebsiella and "
+        "Proteus. Criteria: 10^8 colony forming units per litre of a "
+        "single organism on a clean-catch midstream specimen. "
+        "Screening: a midstream urine at the booking visit for every "
+        "pregnant woman, part of the Australian antenatal schedule. "
+        "Mx: treat on susceptibilities per eTG, usually "
+        "nitrofurantoin, cefalexin or amoxicillin with clavulanate; "
+        "nitrofurantoin is avoided near term for neonatal haemolysis "
+        "and trimethoprim in the first trimester as a folate "
+        "antagonist. Send a test of cure afterwards. Note: untreated, "
+        "20 to 30 per cent progress to pyelonephritis, and treating "
+        "reduces both pyelonephritis and preterm birth - that is the "
+        "whole reason for screening. Key point: group B streptococcus "
+        "grown from urine at any point in pregnancy signifies heavy "
+        "genital colonisation, so treat it and give intrapartum "
+        "benzylpenicillin regardless of the 35 to 37 week swab."
+    ),
+    "Prenatal screening for fetal abnormality": (
+        "The pathway offered in every pregnancy for chromosomal and "
+        "structural abnormality, in which screening tests estimate a "
+        "risk and diagnostic tests give an answer. Screening: "
+        "combined first trimester screening at 11 to 13+6 weeks pairs "
+        "nuchal translucency with PAPP-A and free beta-hCG, detects "
+        "about 85 to 90 per cent of trisomy 21 and is Medicare "
+        "rebated; non-invasive prenatal testing from 10 weeks "
+        "analyses cell-free DNA and exceeds 99 per cent detection but "
+        "is not rebated, so it costs several hundred dollars; second "
+        "trimester maternal serum screening covers late bookings; the "
+        "18 to 22 week morphology scan finds structural anomalies. "
+        "Dx: chorionic villus sampling at 11 to 14 weeks or "
+        "amniocentesis from 15 weeks, both with chromosomal "
+        "microarray, each carrying a procedure-related loss of "
+        "roughly 0.1 to 0.3 per cent. Key point: no screening test "
+        "diagnoses anything. A high-risk result needs sampling before "
+        "any irreversible decision, because positive predictive value "
+        "falls sharply for the rarer trisomies and in a woman whose "
+        "prior risk was low. Note: cell-free DNA testing says nothing "
+        "about neural tube or structural defects, so it never "
+        "replaces the morphology scan."
+    ),
+    "Intrauterine device": (
+        "Long-acting reversible contraception sited in the uterine "
+        "cavity - either a copper device or a "
+        "levonorgestrel-releasing system. Both fail in well under 1 "
+        "per cent a year and fertility returns immediately on "
+        "removal. Types: copper is hormone-free, works at once, lasts "
+        "5 or 10 years by device, and is the most effective emergency "
+        "contraception up to 5 days after intercourse; levonorgestrel "
+        "systems last 8 years for Mirena and 5 for Kyleena and also "
+        "treat heavy menstrual bleeding. Key point: choose on "
+        "bleeding. Copper makes periods heavier and more painful "
+        "while levonorgestrel makes them lighter and often absent. "
+        "Complications: perforation in 1 to 2 per 1000 insertions and "
+        "commoner while breastfeeding; expulsion mostly in the first "
+        "year; the rise in pelvic infection is confined to the 3 "
+        "weeks after insertion and does not warrant routine "
+        "antibiotic cover. Mx: missing strings means ultrasound to "
+        "locate the device, and an abdominal film if it is not in the "
+        "uterus. Note: a positive pregnancy test with a device in "
+        "situ is an ectopic until imaging says otherwise."
+    ),
+    "Squamous intraepithelial lesion": (
+        "The Bethesda grading of cervical squamous abnormality on "
+        "cytology - a prediction of what the histology will show, not "
+        "a diagnosis in itself. Classification: negative; atypical "
+        "squamous cells of undetermined significance; low-grade "
+        "squamous intraepithelial lesion, corresponding to CIN 1 and "
+        "to productive human papillomavirus infection; high-grade "
+        "squamous intraepithelial lesion, corresponding to CIN 2 or "
+        "CIN 3; and squamous cell carcinoma. Glandular abnormality is "
+        "reported separately as atypical glandular cells or "
+        "adenocarcinoma in situ. Key point: cytology grades on two "
+        "tiers and histology on three, so a high-grade cytology "
+        "report cannot separate CIN 2 from CIN 3 and never decides "
+        "treatment - the colposcopic biopsy does. Australian notes: "
+        "under the National Cervical Screening Program cytology is a "
+        "reflex test, run only when the primary HPV test finds an "
+        "oncogenic type other than 16 or 18. HPV 16 or 18 goes "
+        "straight to colposcopy whatever the cytology shows. Note: "
+        "any glandular abnormality is referred urgently, because the "
+        "endocervical canal sits above the transformation zone and "
+        "neither colposcopy nor excision samples it reliably."
+    ),
+    "Hypertension in pregnancy": (
+        "Umbrella for blood pressure of 140/90 or above in pregnancy, "
+        "complicating roughly one pregnancy in ten. Classification: "
+        "chronic hypertension, present before pregnancy or before 20 "
+        "weeks; gestational hypertension, new after 20 weeks with no "
+        "maternal organ dysfunction, resolving within 12 weeks of "
+        "birth; pre-eclampsia, which adds organ dysfunction or "
+        "uteroplacental insufficiency; and pre-eclampsia superimposed "
+        "on chronic hypertension. Key point: the label is "
+        "provisional. About a quarter of women with gestational "
+        "hypertension progress to pre-eclampsia and the earlier it "
+        "appears the higher that risk, so every category is followed "
+        "with serial pressures, protein-creatinine ratio, bloods and "
+        "fetal growth rather than diagnosed once. Mx: SOMANZ advises "
+        "treating at 140/90 or above with labetalol, methyldopa or "
+        "oral nifedipine; ACE inhibitors and ARBs are stopped as soon "
+        "as pregnancy is recognised. Aspirin 100 to 150 mg at night "
+        "from 12 weeks where pre-eclampsia risk is high. Follow-up: a "
+        "hypertensive pregnancy is a lifelong cardiovascular risk "
+        "factor and warrants ongoing review in general practice. Red "
+        "flags: 160/110 or above needs treatment within the hour."
+    ),
+    "Breech presentation": (
+        "Buttocks or feet occupying the lower pole of the uterus, in "
+        "3 to 4 per cent at term and far more preterm, since most "
+        "babies turn spontaneously by 36 weeks. Types: frank or "
+        "extended, hips flexed and knees extended, is the commonest; "
+        "complete has both hips and knees flexed; footling has a foot "
+        "presenting and carries the highest cord prolapse risk. "
+        "Causes: prematurity, uterine anomaly or fibroids, placenta "
+        "praevia, oligohydramnios or polyhydramnios, multiple "
+        "pregnancy, fetal anomaly and a previous breech. Examination: "
+        "a hard ballottable head at the fundus with the heart heard "
+        "higher than expected; confirm on ultrasound, which also "
+        "checks growth, liquor and placental site. Mx: RANZCOG "
+        "supports offering external cephalic version from 36 weeks in "
+        "a first pregnancy and 37 weeks after, succeeding about half "
+        "the time. If it fails or is declined, counsel planned "
+        "caesarean at 39 weeks against vaginal breech birth with an "
+        "experienced accoucheur - the Term Breech Trial made "
+        "caesarean the default here, though outcomes at two years "
+        "were no different. Note: breech at term is an indication for "
+        "hip ultrasound at about 6 weeks whatever the mode of birth, "
+        "because of developmental dysplasia."
+    ),
+    "Meconium-stained liquor": (
+        "Amniotic fluid discoloured green or brown by fetal passage "
+        "of meconium, seen in around one labour in ten at term and "
+        "more often past 41 weeks. Causes: gut maturity alone in "
+        "many, so it is not by itself proof of hypoxia; hypoxic or "
+        "infective stress causing vagal-mediated passage; and breech, "
+        "where it may simply be squeezed out. Types: thin and lightly "
+        "stained, against thick particulate meconium, which carries "
+        "the higher risk and matters most when the fluid volume is "
+        "low. Mx: RANZCOG intrapartum fetal surveillance guidance "
+        "treats significant meconium as an indication for continuous "
+        "CTG; notify the neonatal team to attend the birth, and have "
+        "resuscitation equipment ready. Suctioning on the perineum is "
+        "not done, and a vigorous baby is not intubated to suction. "
+        "Complications: meconium aspiration syndrome with chemical "
+        "pneumonitis, airway obstruction and persistent pulmonary "
+        "hypertension of the newborn. Note: meconium with a normal "
+        "CTG is not an indication to deliver. It is meconium plus an "
+        "abnormal trace that signals compromise, and the two are "
+        "assessed together."
+    ),
+    "Nuchal translucency": (
+        "The sonographic fluid layer at the back of the fetal neck, "
+        "measured between 11+0 and 13+6 weeks as the ultrasound half "
+        "of combined first trimester screening. Mechanism: transient "
+        "delay in lymphatic drainage, cardiac dysfunction or altered "
+        "extracellular matrix all widen it, which is why it flags "
+        "structural as well as chromosomal disease. Criteria: "
+        "measured in a midsagittal view with the neck neutral and a "
+        "crown-rump length of 45 to 84 mm; it grows with the fetus, "
+        "so risk is calculated from the measurement against the "
+        "expected value for that length rather than a fixed cut-off. "
+        "Associations: trisomy 21, 18 and 13, Turner syndrome, "
+        "congenital heart disease, Noonan syndrome, diaphragmatic "
+        "hernia and skeletal dysplasia. Mx: 3.5 mm or more prompts "
+        "referral for diagnostic testing with chromosomal microarray, "
+        "a detailed morphology scan and fetal echocardiography, "
+        "whatever the combined risk figure. Note: non-invasive "
+        "prenatal testing does not replace this scan, because "
+        "cell-free DNA reads chromosomes and cannot see a structural "
+        "anomaly."
+    ),
+    "Fetal structural abnormality": (
+        "A structural defect of fetal development, present in about 3 "
+        "per cent of births and a leading cause of perinatal death "
+        "and childhood disability. Causes: chromosomal and copy "
+        "number changes, single gene disorders, teratogens including "
+        "sodium valproate, isotretinoin and alcohol, poorly "
+        "controlled pregestational diabetes, and congenital "
+        "infection; most have no cause identified. Ix: combined first "
+        "trimester screening and nuchal translucency, then the "
+        "morphology scan at 18 to 22 weeks, with fetal "
+        "echocardiography where the risk is raised. An anomaly found "
+        "on scan is investigated with chromosomal microarray on "
+        "chorionic villus sampling or amniocentesis, which detects "
+        "deletions and duplications a karyotype misses. Mx: refer to "
+        "a tertiary fetal medicine service for multidisciplinary "
+        "counselling. Options are continuing with birth planned at a "
+        "centre with neonatal surgery, a palliative pathway, or "
+        "termination, which in NSW is available on request to 22 "
+        "weeks and beyond that on the assessment of two specialist "
+        "practitioners. Prevention: folic acid before conception, "
+        "glycaemic control, rubella immunity and review of "
+        "teratogenic medicines."
+    ),
+    "Perinatal mental health": (
+        "Mental illness arising or continuing in pregnancy and the "
+        "first postnatal year, screened for rather than waited for, "
+        "because low mood and broken sleep are read as normal new "
+        "parenthood. Epidemiology: depression or anxiety affects "
+        "about one in five women perinatally, and suicide is a "
+        "leading cause of maternal death in Australia in the year "
+        "after birth. Risk factors: previous depression or anxiety, "
+        "and bipolar disorder or previous postpartum psychosis as the "
+        "strongest single predictors; also intimate partner violence, "
+        "substance use and poor social support. Screening: the Centre "
+        "of Perinatal Excellence pairs the Edinburgh Postnatal "
+        "Depression Scale, at least once antenatally and once "
+        "postnatally, with a structured psychosocial assessment - in "
+        "NSW the SAFE START assessment at booking and postnatally. "
+        "Mx: a positive screen obliges clinical assessment, not a "
+        "prescription; mild illness responds to CBT or interpersonal "
+        "therapy, moderate to severe adds an antidepressant. Red "
+        "flags: bipolar disorder or previous postpartum psychosis "
+        "needs a written perinatal plan before delivery, since "
+        "relapse risk peaks in the first two weeks."
+    ),
+    "Psychotropic medicines in pregnancy and breastfeeding": (
+        "Choosing psychiatric treatment when both the drug and the "
+        "untreated illness carry risk to mother and baby. Key point: "
+        "stopping a working medicine is not the safe option - relapse "
+        "after abrupt cessation is common, and untreated illness is "
+        "itself linked to preterm birth, growth restriction and "
+        "impaired attachment. Mx: sertraline is the usual first-line "
+        "SSRI in pregnancy and breastfeeding, with low milk transfer, "
+        "while paroxetine is generally avoided. Quetiapine and "
+        "olanzapine are the better-studied antipsychotics, with a "
+        "gestational diabetes screen. Sodium valproate is "
+        "contraindicated in anyone who could become pregnant, for "
+        "neural tube defects and neurodevelopmental impairment. "
+        "Lithium carries a small absolute risk of Ebstein anomaly and "
+        "needs frequent levels, because clearance rises through "
+        "pregnancy and falls abruptly at delivery. Complications: an "
+        "SSRI continued to term can give a self-limiting neonatal "
+        "adaptation syndrome - jitteriness, poor feeding, "
+        "irritability - over the first days. Australian notes: use "
+        "the AMH pregnancy and breastfeeding entries, then an "
+        "obstetric medicines service such as MotherSafe in NSW. TGA "
+        "category letters are not a safety ranking."
+    ),
+    "Sexual history": (
+        "A targeted history that decides which sites to swab, which "
+        "serology to send and who else needs testing - not a general "
+        "enquiry. Hx: partners in the last three to twelve months and "
+        "their gender; practices, since oral and anal exposure decide "
+        "whether throat and rectal swabs are collected; protection "
+        "used and when it failed; past sexually transmitted "
+        "infections, HIV status, PrEP and vaccination; pregnancy "
+        "intention and contraception. Add injecting drug use, sex "
+        "work, travel and sex overseas, and any symptoms in the "
+        "patient or a partner. Examination: offer it, but "
+        "asymptomatic screening is done on self-collected swabs and "
+        "urine and needs no examination. Ix: risk drives the panel, "
+        "per the ASHM sexually transmitted infection management "
+        "guidelines and the RACGP preventive activities guidance - "
+        "annual testing for men who have sex with men, more often "
+        "with higher risk, and for young Aboriginal and Torres Strait "
+        "Islander people in high-prevalence communities. Note: "
+        "normalise the questions by explaining that you ask everyone, "
+        "and confirm confidentiality first. Red flags: in a patient "
+        "under 16, assess capacity and consider child protection "
+        "obligations, which are state-based."
+    ),
+    "Antimicrobial susceptibility testing": (
+        "Laboratory testing of whether an isolate will respond to a "
+        "given antibiotic at concentrations achievable in the "
+        "patient. Mechanism: the organism is first cultured, then "
+        "tested by disc diffusion or automated broth microdilution to "
+        "give a minimum inhibitory concentration, the lowest "
+        "concentration that stops visible growth. Ix: the laboratory "
+        "compares the minimum inhibitory concentration with a "
+        "breakpoint and reports susceptible, susceptible at increased "
+        "exposure, or resistant. Take specimens before the first "
+        "antibiotic dose, since culture needs viable organisms and a "
+        "single dose can render a sample sterile. Note: susceptible "
+        "is a statement about the drug reaching the infected site at "
+        "standard dosing, not about the organism in isolation, so the "
+        "same result changes with the site and the dose - which is "
+        "why meningitis and endocarditis have their own breakpoints. "
+        "Key point: nucleic acid amplification testing is more "
+        "sensitive than culture but says nothing about "
+        "susceptibility. Gonorrhoea is diagnosed by that assay and "
+        "still cultured, to keep track of ceftriaxone resistance. Mx: "
+        "start empirically per Therapeutic Guidelines: Antibiotic, "
+        "then narrow the spectrum when sensitivities return."
+    ),
+    "Paediatric intravenous fluids": (
+        "Intravenous fluid in a child is prescribed as three separate "
+        "things - resuscitation boluses, a maintenance rate, and "
+        "replacement of the deficit. Mx: maintenance by the 4-2-1 "
+        "rule, 4 mL/kg/h for the first 10 kg, 2 mL/kg/h for the next "
+        "10, then 1 mL/kg/h, which is 100, 50 and 20 mL/kg/day. Use "
+        "an isotonic fluid, sodium chloride 0.9 per cent with glucose "
+        "5 per cent, adding potassium once the child is passing "
+        "urine. Deficit is per cent dehydration x weight in kg x 10 "
+        "mL, replaced over 24 hours on top of maintenance. Boluses "
+        "are 10 to 20 mL/kg of sodium chloride 0.9 per cent, "
+        "reassessed after each. Cautions: hypotonic maintenance fluid "
+        "caused fatal hyponatraemic encephalopathy and is no longer "
+        "used; where antidiuretic hormone is high, run maintenance at "
+        "two thirds rate rather than reaching for a hypotonic bag. "
+        "Monitoring: weight, fluid balance and electrolytes at least "
+        "daily. Note: in bacterial meningitis do not routinely fluid "
+        "restrict - keep the child normovolaemic and treat shock with "
+        "boluses. Red flags: headache, vomiting or drowsiness on "
+        "intravenous fluid means measure the sodium now."
+    ),
+    "Growth chart": (
+        "Serial plotting of weight, length or height and head "
+        "circumference against age- and sex-specific centiles; the "
+        "trajectory over time is the measurement, not any single "
+        "point. Screening: Australia uses the WHO charts from birth "
+        "to 2 years, which describe how breastfed infants grow, and "
+        "the CDC charts from 2 to 18 years. Correct for gestational "
+        "age in a preterm infant until about 2 years before plotting. "
+        "Examination: measure length lying on a length board until 2 "
+        "years and standing height after that, since the switch "
+        "itself loses about a centimetre; weigh infants undressed and "
+        "take the largest of three occipitofrontal head "
+        "circumferences. Note: mid-parental height is the average of "
+        "the parents' heights plus 6.5 cm for a boy or minus 6.5 cm "
+        "for a girl, with a target range about 8 cm either side. Key "
+        "point: crossing two major centile lines in either direction "
+        "is the trigger to investigate. Weight falls up to 10 per "
+        "cent in the first week and should be back to birth weight by "
+        "day 10 to 14, so early loss is read against that rather than "
+        "against the centile."
+    ),
+    "Short stature": (
+        "Height below the 3rd centile for age and sex, or a height "
+        "velocity taking a child downward across centiles. Causes: "
+        "familial short stature and constitutional delay account for "
+        "most, both with a normal height velocity, the second with "
+        "delayed bone age, delayed puberty and a parent who developed "
+        "late. Pathological causes are chronic disease (coeliac, "
+        "inflammatory bowel disease, chronic kidney disease, cystic "
+        "fibrosis), endocrine disease (hypothyroidism, growth hormone "
+        "deficiency, Cushing syndrome), syndromes (Turner, Noonan, "
+        "Prader-Willi), skeletal dysplasia, and small for gestational "
+        "age without catch-up. Ix: height velocity over 6 to 12 "
+        "months, mid-parental height, bone age on a left hand and "
+        "wrist film; FBC, EUC, LFT, coeliac serology, thyroid "
+        "function, IGF-1; karyotype in every short girl. Mx: treat "
+        "the cause; growth hormone is subsidised through the "
+        "Commonwealth program only for defined indications such as "
+        "growth hormone deficiency, Turner syndrome and Prader-Willi "
+        "syndrome. Note: systemic disease makes a child short and "
+        "thin, endocrine disease makes them short and overweight."
+    ),
+    "Procalcitonin": (
+        "Precursor of calcitonin released by tissues throughout the "
+        "body in response to bacterial endotoxin, and more specific "
+        "for bacterial infection than C-reactive protein. Features: "
+        "rises within 2 to 4 hours, peaks at 6 to 12 hours and has a "
+        "half-life near 24 hours, so it moves faster than C-reactive "
+        "protein in both directions. Ix: below 0.5 microgram/L makes "
+        "invasive bacterial infection unlikely and above 2 suggests "
+        "systemic bacterial infection or sepsis; viral illness raises "
+        "it little. It also rises without infection after major "
+        "surgery, trauma, burns, cardiac arrest and prolonged shock, "
+        "and in medullary thyroid carcinoma. Uses: febrile infant "
+        "pathways combine it with C-reactive protein and urinalysis "
+        "to identify infants under 3 months at low risk of invasive "
+        "bacterial infection, and intensive care units use serial "
+        "values to stop antibiotics earlier. Australian notes: it is "
+        "not on the routine bench in most Australian hospitals, so "
+        "assessment here still rests on appearance, urinalysis, "
+        "C-reactive protein and culture. Note: a normal result never "
+        "overrides an unwell-looking infant."
+    ),
+    "Viral upper respiratory tract infection": (
+        "Self-limiting viral infection of the nose, throat and "
+        "sinuses, and the commonest cause of fever in a child. "
+        "Epidemiology: 6 to 12 episodes a year in a preschool child "
+        "and more in childcare, which is normal and is not by itself "
+        "immunodeficiency. Causes: rhinovirus most often, then "
+        "respiratory syncytial virus, parainfluenza, influenza, "
+        "adenovirus, human metapneumovirus and seasonal "
+        "coronaviruses. Clinical features: coryza, sore throat and "
+        "cough with fever for 3 to 5 days, the child alert, feeding "
+        "and playing between fevers; cough alone can last 2 to 4 "
+        "weeks. Mx: no antibiotics, which neither shorten a cold nor "
+        "prevent otitis media or pneumonia. Paracetamol 15 mg/kg per "
+        "dose 4 to 6 hourly to a maximum of four doses a day, or "
+        "ibuprofen 10 mg/kg 6 to 8 hourly, given for discomfort "
+        "rather than for the number on the thermometer; fluids and "
+        "nasal saline. Cough and cold preparations are not "
+        "recommended under 6 years. Red flags: fever beyond 5 days, "
+        "tachypnoea or recession, reduced wet nappies, drowsiness, or "
+        "a non-blanching rash. Note: green nasal discharge is a "
+        "normal stage of a cold, not evidence of bacterial infection."
+    ),
+    "Immunodeficiency in children": (
+        "Failure of one arm of the immune system, where the organism "
+        "and the pattern point to the defect rather than the sheer "
+        "number of infections. Types: neutrophil defect or "
+        "neutropenia gives Staphylococcus aureus, Gram negatives and "
+        "Aspergillus, with deep abscesses and little pus. Antibody "
+        "defect (X-linked agammaglobulinaemia, common variable "
+        "immunodeficiency) declares itself after 6 months as maternal "
+        "IgG wanes, with recurrent sinopulmonary infection by "
+        "encapsulated bacteria. T cell defect (severe combined "
+        "immunodeficiency, HIV) presents in the first months with "
+        "thrush, Pneumocystis jirovecii pneumonia, cytomegalovirus, "
+        "chronic diarrhoea and failure to thrive. Terminal complement "
+        "deficiency and asplenia give Neisseria and fulminant "
+        "encapsulated sepsis. Red flags: two or more pneumonias in a "
+        "year, infection needing intravenous antibiotics to clear, "
+        "thrush persisting past 12 months, deep abscesses, failure to "
+        "thrive, or a family history of infant death. Ix: FBC with "
+        "film, immunoglobulins, lymphocyte subsets, vaccine "
+        "responses, complement, HIV serology."
+    ),
+    "Serious infection in Aboriginal and Torres Strait Islander children": (
+        "Invasive bacterial infection is commoner, presents later and "
+        "does worse in Aboriginal and Torres Strait Islander "
+        "children, driven by crowded housing, distance from care and "
+        "the wider social determinants. Epidemiology: higher rates of "
+        "invasive pneumococcal disease, Haemophilus influenzae, "
+        "invasive group A streptococcus, and skin sepsis with its "
+        "sequelae of acute post-streptococcal glomerulonephritis and "
+        "acute rheumatic fever; bronchiectasis follows repeated "
+        "pneumonia. Causes: in the tropical north in the wet season, "
+        "melioidosis (Burkholderia pseudomallei) has to be covered, "
+        "and ceftriaxone does not cover it - use meropenem or "
+        "ceftazidime. Prevention: the National Immunisation Program "
+        "funds extra doses for these children, including "
+        "meningococcal B, additional pneumococcal, influenza from 6 "
+        "months, and hepatitis A in Queensland, the Northern "
+        "Territory, South Australia and Western Australia. Mx: lower "
+        "the threshold to admit and treat, and involve the Aboriginal "
+        "Health Practitioner or Liaison Officer early. Note: a family "
+        "who left before being seen last time is higher risk, not "
+        "lower."
+    ),
+    "Growing pains": (
+        "Recurrent benign limb pain of childhood, misnamed since it "
+        "has nothing to do with growth. Epidemiology: 3 to 12 years, "
+        "up to a third of children, boys and girls equally, often "
+        "with a family history. Clinical features: bilateral deep "
+        "aching in the calves, shins or behind the knees, never in a "
+        "joint, in the late afternoon or evening and sometimes waking "
+        "the child, gone by morning. The child is well between "
+        "episodes, plays normally, does not limp, and examination and "
+        "growth are normal. Massage, heat and paracetamol settle an "
+        "episode. Ix: none if that picture is complete; otherwise FBC "
+        "with film, ESR and CRP, and imaging of the painful site. Red "
+        "flags: unilateral or joint pain, morning pain or pain "
+        "persisting through the day, limp or refusal to weight-bear, "
+        "swelling, fever, weight loss or pallor. Note: bone pain from "
+        "acute lymphoblastic leukaemia is the mimic that matters - it "
+        "is unremitting, wakes the child most nights, and comes with "
+        "cytopenias on the film."
+    ),
+    "Mesenteric adenitis": (
+        "Inflammation of mesenteric lymph nodes causing right iliac "
+        "fossa pain in a child, and the condition most often mistaken "
+        "for appendicitis. Causes: usually viral, commonly "
+        "adenovirus, during or just after an upper respiratory "
+        "illness; Yersinia enterocolitica and Campylobacter cause a "
+        "bacterial form. Clinical features: a preceding sore throat, "
+        "coryza or cervical lymphadenopathy; fever is often higher "
+        "than in appendicitis; the pain is more diffuse, waxes and "
+        "wanes, and shifts with position rather than settling on one "
+        "point; guarding and rebound are usually absent and the child "
+        "looks better than the abdomen suggests. Ix: urinalysis, FBC "
+        "and CRP do not separate it from appendicitis. Ultrasound "
+        "showing a cluster of enlarged mesenteric nodes with a normal "
+        "appendix supports it, but if the appendix is not visualised "
+        "the diagnosis is not made. Mx: analgesia, oral fluids, and "
+        "active observation with serial examination over hours; it "
+        "settles within a few days. Note: this is never a diagnosis "
+        "made once and closed. Every perforated appendix was "
+        "something else first, and re-examination is the safeguard."
+    ),
+    "Antidiarrhoeals": (
+        "Drugs that reduce stool frequency and volume, used for "
+        "symptom control and never as treatment of the cause. Class: "
+        "opioid antimotility agents (loperamide, diphenoxylate with "
+        "atropine), bulking agents such as psyllium that firm stool "
+        "in ileostomy output and irritable bowel syndrome, and "
+        "octreotide for high-output secretory diarrhoea. MOA: "
+        "loperamide is a peripherally restricted mu-opioid agonist "
+        "that slows small bowel transit, increases water absorption "
+        "and raises anal sphincter tone. Contraindications: eTG and "
+        "the Australian Medicines Handbook advise against "
+        "antimotility agents in children with gastroenteritis, where "
+        "oral rehydration is the treatment; also bloody diarrhoea or "
+        "fever, suspected Clostridioides difficile or Shiga "
+        "toxin-producing Escherichia coli, and acute severe colitis. "
+        "Adverse effects: constipation, ileus and toxic megacolon; "
+        "loperamide in overdose prolongs the QT interval; "
+        "diphenoxylate causes central opioid and anticholinergic "
+        "toxicity in small children. Note: in a child the correct "
+        "prescribing decision is almost always not to."
+    ),
+    "Immunisation in the immunocompromised child": (
+        "Vaccination of a child on chemotherapy, high-dose "
+        "corticosteroids, biologics or after transplant, governed in "
+        "Australia by the Australian Immunisation Handbook. "
+        "Contraindications: live vaccines - measles-mumps-rubella, "
+        "varicella, rotavirus, BCG, yellow fever - are withheld "
+        "during significant immunosuppression and for at least six "
+        "months after chemotherapy finishes. Uses: inactivated "
+        "vaccines are safe at any point but may not produce "
+        "protective titres, so a revaccination course follows immune "
+        "recovery; annual influenza vaccine is recommended for the "
+        "child and the whole household. Household contacts should "
+        "otherwise be fully vaccinated, and measles-mumps-rubella and "
+        "varicella are safe for them, since neither is transmitted in "
+        "any way that matters. Prevention: after significant measles "
+        "or varicella exposure the child needs urgent immunoglobulin, "
+        "not vaccine. Asplenia carries its own schedule of "
+        "pneumococcal, meningococcal and Haemophilus influenzae type "
+        "b vaccines plus antibiotic prophylaxis. Red flags: fever in "
+        "a child on chemotherapy is febrile neutropenia until proven "
+        "otherwise."
+    ),
+    "Children with medical complexity": (
+        "Children with severe chronic conditions, substantial "
+        "functional limitation, high healthcare use and often "
+        "technology dependence; a small group accounting for a large "
+        "share of paediatric bed days. Causes: severe neurological "
+        "impairment - cerebral palsy, genetic syndromes, acquired "
+        "brain injury - is the largest group, then congenital heart "
+        "disease, chronic lung disease of prematurity and inborn "
+        "errors of metabolism. Clinical features: the same problems "
+        "recur - aspiration and dysphagia, seizures, constipation, "
+        "hip subluxation and scoliosis, faltering growth, and pain in "
+        "a child who cannot report it. Devices add their own failures "
+        "through the gastrostomy, tracheostomy, shunt or central "
+        "line. Mx: a written care plan recording baseline conscious "
+        "state, tone, secretions and oxygen saturation, so "
+        "deterioration is recognisable to staff who have never met "
+        "the child; regular medication review; one named coordinator; "
+        "NDIS funding; and paediatric palliative care alongside "
+        "active treatment where the condition is life-limiting. Note: "
+        "the parent saying the child is not themselves outperforms "
+        "the observation chart."
+    ),
+    "Intergenerational trauma": (
+        "Trauma passed from the people who lived it to later "
+        "generations who did not, through disrupted attachment, "
+        "parenting under chronic stress, silence and shame, "
+        "continuing racism, and the effect of early stress on a "
+        "developing brain. Australian notes: for Aboriginal and "
+        "Torres Strait Islander families this follows colonisation, "
+        "dispossession of land, and the forced removal of children "
+        "documented in the Bringing Them Home report; their "
+        "descendants carry higher rates of psychological distress, "
+        "substance use, and contact with child protection and justice "
+        "systems. Clinical features: it presents as its effects, not "
+        "its name - anxiety, depression, complex post-traumatic "
+        "symptoms, substance use, suicidality, difficulty trusting "
+        "services, and non-attendance recorded as disengagement. Mx: "
+        "trauma-informed and culturally safe practice; ask what has "
+        "happened rather than what is wrong; work with Aboriginal "
+        "Community Controlled Health Services and Link-Up; use the "
+        "social and emotional wellbeing model, which holds family, "
+        "community, Country, culture and spirituality alongside the "
+        "individual. Note: healing is collective, so an individual "
+        "therapy referral on its own addresses very little."
     ),
 }
 
