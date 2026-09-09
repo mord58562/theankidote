@@ -333,8 +333,32 @@ reset at 09:40 UTC, one at 04:20.
 This is contention with the local sessions, not a defect, and it is the
 same cause as the single 2026-09-08 failure - the other five that day
 were the stale digest, which is fixed. No content has come from the
-cloud since 2026-09-08. Nothing to repair; the fires resume when the
-local window is not consuming the budget.
+cloud since 2026-09-08.
+
+### Fixed by moving the fires, not by touching the code
+
+Both routines' run histories separate cleanly on the clock, and the
+boundary is the same for both. Runs that got a turn: TheAnkiDote at
+12:26, 15:23 and 18:23 UTC on 2026-09-08; the MCQ routine at 10:10,
+13:24, 16:13, 19:08 and 22:12 UTC, each an hour of real work. Runs
+rejected inside ten seconds: TheAnkiDote at 00:23, 03:23, 06:26 and
+09:23 UTC; the MCQ routine at 01:09, 04:08 and 07:17. In local terms
+the free band is roughly 20:00 to 08:00 AEST and the starved band is
+08:00 to 20:00, which is simply Rob's working day drawing on the same
+five-hour budget.
+
+The schedule was uniform across all 24 hours, so more than half the
+fires were spending a quota slot to be told no. It is now
+`23 11,13,15,17,19,21 * * *` - six fires from 21:23 to 07:23 AEST, two
+hours apart, so a fire caught by a late-night local session is picked
+up by the next one rather than waiting three hours. Quota use falls
+from 7 slots to 6, which with the MCQ routine's 8 leaves one spare for
+a manual run.
+
+The routine prompt still reads "this trigger fires 7x/day = 7/15
+slots". A cron-only update leaves the prompt untouched, which is what
+kept the pinned digest safe; correcting that line means re-sending the
+whole 13.9 KB prompt, so it can wait for the next digest refresh.
 
 ## Open for Rob
 
