@@ -394,6 +394,16 @@ def _drug_terms(card) -> list:
             # pattern underlines, so a card written in `frusemide` gets
             # `frusemide` marked rather than nothing at all.
             "_surfaces":      it.get("surfaces") or [],
+            # How the matched form relates to the entry, when the two
+            # are not the same word: "Clopine is an Australian brand of
+            # clozapine." Carried explicitly rather than left to a
+            # `.get` further down, for the reason the comment below
+            # gives about `utd` - a key this builder forgets is
+            # indistinguishable from one it meant to leave empty, and
+            # that is how `utd` was dropped twice. An empty string means
+            # the matched form IS the entry's own name, which is the
+            # common case and renders nothing.
+            "relation":       it.get("relation", ""),
             # Explicit, not omitted. `_span` reads this key and falls
             # back to "[]" when it is absent, which is the same value
             # a real empty list gives - so a builder that simply forgot
@@ -606,6 +616,11 @@ def _build_pattern(terms: list):
             # effect. The badge read "The AnkiDote" even on the ~1,000
             # conditions with a real NBK chapter.
             "link":    _esc_attr(t.get("link") or "search"),
+            # Same reasoning as `link` directly above: this dict is the
+            # choke point between the term builders and `_span`, and a
+            # key it does not name is a key the popup never sees, however
+            # carefully the builder set it.
+            "relation": _esc_attr(t.get("relation") or ""),
             "utd":     _esc_attr(json.dumps(t.get("utd") or [],
                                             separators=(",", ":"))),
             "ref":     _esc_attr(json.dumps(t.get("ref") or [],
@@ -821,6 +836,7 @@ def _inject_highlights(html: str, results: list, color: str,
                 f'data-sp-source="{t.get("source", "statpearls")}" '
                 f'data-sp-badge="{t.get("badge", "")}" '
                 f'data-sp-link="{t.get("link", "search")}" '
+                f'data-sp-relation="{t.get("relation", "")}" '
                 f'data-sp-utd="{t.get("utd", "[]")}" '
                 f'data-sp-ref="{t.get("ref", "")}">')
 

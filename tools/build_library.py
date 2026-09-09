@@ -35,6 +35,7 @@ import gzip
 import hashlib
 import json
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -384,6 +385,54 @@ def collect() -> dict:
     bad = [t for t in blocklist if not isinstance(t, str)]
     if bad:
         raise SystemExit(f"BLOCKLIST holds non-strings: {bad[:3]}")
+
+    # An alias must not be this entry's own name joined to another
+    # entry's name by a connective.
+    #
+    # The matcher is longest-form-wins and non-overlapping, so such an
+    # alias does not merely add a surface - it eats its neighbour. The
+    # entry "Positive symptoms" carried the alias "positive symptoms of
+    # schizophrenia", so on a card reading "the 3 positive symptoms of
+    # schizophrenia" the 33-character form won, consumed the word
+    # schizophrenia, and Schizophrenia's own entry never resolved at
+    # all. Every one of those runs then rendered the Positive symptoms
+    # popup, including the run that was literally the word
+    # schizophrenia. Four more had the same shape: the Ranson, Light and
+    # Duke criteria each swallowed the disease they score, and Negative
+    # symptoms swallowed schizophrenia the same way its sibling did.
+    #
+    # The rule is deliberately narrow, because most relational aliases
+    # are correct and must survive. "dementia with Lewy bodies" contains
+    # the primary name "Dementia" and SHOULD win the whole phrase, since
+    # the phrase names one disease. What separates the harmful case is
+    # that the left half is already this entry's own name, so the alias
+    # adds no surface the primary name did not already match - it can
+    # only take words away from a neighbour. Nothing is lost by refusing
+    # it: "Ranson criteria" still matches on its own.
+    connective = r"(?:\s+(?:of|in|with|for|after|versus|vs|during)\s+)"
+    primaries = {}
+    for e in conditions + new_conditions:
+        primaries[e["name"].lower()] = e["name"]
+    swallowing = []
+    for e in conditions + new_conditions:
+        own = e["name"].lower()
+        for a in (e.get("aliases") or []):
+            m = re.fullmatch(r"(.+?)" + connective + r"(.+)", a.lower().strip())
+            if not m:
+                continue
+            left, right = m.group(1).strip(), m.group(2).strip()
+            if left == own and right in primaries and right != own:
+                swallowing.append((e["name"], a, primaries[right]))
+    if swallowing:
+        lines = "\n".join(f"  {n!r} alias {a!r} swallows {v!r}"
+                          for n, a, v in swallowing)
+        raise SystemExit(
+            f"{len(swallowing)} alias(es) are this entry's own name joined "
+            f"to another entry's name, which makes the matcher consume the "
+            f"neighbour instead of resolving it:\n{lines}\n"
+            f"Drop the alias - the primary name already matches its first "
+            f"half. If a case here is genuinely one concept rather than "
+            f"two, rename the entry instead of aliasing across the join.")
 
     return {
         "schema": SCHEMA,

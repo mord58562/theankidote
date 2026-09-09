@@ -891,6 +891,46 @@ def _utd_search_base() -> str:
     return "https://www.uptodate.com/contents/search"
 
 
+def _on_home_host(url: str) -> str:
+    """Move a public `www.uptodate.com` URL onto the configured host.
+
+    The popup's UpToDate chips are built in `pearls/_conditions.py`,
+    which knows nothing about this module's configuration and so writes
+    the public host every time. For a reader whose session lives on an
+    institutional proxy that is the one path in the add-on that leaves
+    it: the chip loaded `www.uptodate.com`, the proxy cookies did not
+    follow, and UpToDate answered with an abstract and a sign-in wall.
+    Pressing Home worked, which is what made it look like an
+    authentication failure rather than a URL fault - Home goes through
+    `_home_url` and the chips did not. This module's own docstring
+    describes the symptom at the top of the file; nothing was applying
+    the lesson to this path.
+
+    The rewrite is a host swap and nothing else, so the article path,
+    the topic id and any query survive intact. HCN's proxy host embeds
+    the origin host (`www.uptodate.com.acs.hcn.com.au`), and OpenAthens
+    and Shibboleth entry points are handled by leaving the URL alone:
+    for those the cookies really are set on `www.uptodate.com` after
+    first login, which is the same reasoning `_utd_search_base` gives
+    for searching the public host directly.
+    """
+    if not url:
+        return url
+    q = QUrl(url)
+    host = q.host()
+    if host != "www.uptodate.com":
+        return url
+    home_host = QUrl(_home_url()).host()
+    # Only a proxy that embeds the origin host is a safe swap. Anything
+    # else is a redirect-style entry point whose cookies end up on the
+    # public host anyway, and rewriting onto it would break a URL that
+    # already worked.
+    if not home_host or not home_host.startswith("www.uptodate.com."):
+        return url
+    q.setHost(home_host)
+    return q.toString()
+
+
 def _do_search(term: str):
     """Load a UpToDate search for *term*, showing the dock if it is hidden."""
     term = term.strip()
@@ -1044,6 +1084,11 @@ def open_url_in_dock(url: str) -> bool:
     if _browser is None or _dock is None:
         return False
     try:
+        # Every caller of this function hands over a URL built without
+        # any knowledge of which UpToDate host this reader's session
+        # lives on, so the correction belongs here rather than in each
+        # of them. See `_on_home_host`.
+        url = _on_home_host(url)
         _log.diag(f"utd open_url_in_dock {url[:120]!r}")
         if not _dock.isVisible():
             _show_dock()

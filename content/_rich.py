@@ -6586,7 +6586,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Ranson criteria",
-        "aliases": ["Ranson score", "Ranson criteria for pancreatitis", "Ransons criteria"],
+        "aliases": ["Ranson score", "Ransons criteria"],
         "utd": [["Overview", "predicting the severity of acute pancreatitis Ranson criteria"]],
         "summary": "",
     },
@@ -6628,13 +6628,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Light criteria",
-        "aliases": ["Light's criteria", "Lights criteria", "Light criteria for pleural effusion"],
+        "aliases": ["Light's criteria", "Lights criteria"],
         "utd": [["Overview", "diagnostic evaluation of a pleural effusion in adults Light criteria"]],
         "summary": "",
     },
     {
         "name": "Duke criteria",
-        "aliases": ["Modified Duke criteria", "Duke criteria for infective endocarditis", "Duke-ISCVID criteria"],
+        "aliases": ["Modified Duke criteria", "Duke-ISCVID criteria"],
         "utd": [["Overview", "clinical manifestations and diagnosis of infective endocarditis Duke criteria"]],
         "summary": "",
     },
@@ -8579,13 +8579,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Negative symptoms",
-        "aliases": ["negative symptoms of schizophrenia"],
+        "aliases": [],
         "utd": [["Overview", "evaluation and management of negative symptoms in schizophrenia"]],
         "summary": "",
     },
     {
         "name": "Positive symptoms",
-        "aliases": ["positive symptoms of schizophrenia"],
+        "aliases": [],
         "utd": [["Schizophrenia", "schizophrenia in adults clinical features assessment and diagnosis"]],
         "summary": "",
     },
@@ -12349,6 +12349,12 @@ NEW_CONDITIONS = [
         "name": "Intergenerational trauma",
         "aliases": ["Transgenerational trauma", "Intergenerational trauma in Aboriginal and Torres Strait Islander communities", "Collective trauma", "Historical trauma"],
         "utd": [["Overview", "intergenerational transmission of trauma"]],
+        "summary": "",
+    },
+    {
+        "name": "Anorexia",
+        "aliases": ["loss of appetite", "inappetence", "appetite loss"],
+        "utd": [["Overview", "approach to the adult with anorexia and weight loss"]],
         "summary": "",
     },
 ]
@@ -73043,6 +73049,28 @@ RICH_SUMMARIES = {
         "community, Country, culture and spirituality alongside the "
         "individual. Note: healing is collective, so an individual "
         "therapy referral on its own addresses very little."
+    ),
+
+    "Anorexia": (
+        "Loss of appetite as a symptom, which is not the same thing "
+        "as anorexia nervosa even though cards write the bare word "
+        "for both. Causes: almost anything systemic - malignancy, "
+        "chronic infection, heart or renal failure, chronic liver "
+        "disease, hypercalcaemia and uraemia, depression; drugs, "
+        "particularly opioids, SSRIs, chemotherapy, digoxin and "
+        "metformin. In older people add poor dentition, constipation "
+        "and polypharmacy. Clinical features: appetite loss with "
+        "early satiety and unintentional weight loss is the "
+        "combination that carries weight; isolated appetite change "
+        "during an acute illness rarely does. Ix: directed by the "
+        "company it keeps - FBC, EUC, LFT, calcium, CRP, TFT, glucose "
+        "and coeliac serology, with imaging or endoscopy where weight "
+        "loss is unexplained. Mx: treat the cause rather than the "
+        "appetite. Note: unintentional loss of more than 5 percent of "
+        "body weight in six months alongside anorexia warrants a "
+        "malignancy workup. Anorexia nervosa is a separate "
+        "psychiatric diagnosis needing restriction, fear of weight "
+        "gain and body-image disturbance."
     ),
 }
 

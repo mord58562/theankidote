@@ -155,7 +155,32 @@ for _d in _DRUGS:
     for _b in _d.get("brands", []) or []:
         if _b.lower() == _g_lower:
             continue
-        _BRAND_LOOKUP[_b] = _d
+        # `setdefault`, not assignment. 21 brand strings are claimed by
+        # more than one generic, and a plain assignment let the last
+        # entry in list order win in silence: Buscopan resolved to
+        # whichever of `hyoscine` and `hyoscine butylbromide` happened to
+        # sit later. Most of the 21 are combination products where each
+        # component entry lists the same trade name - Entresto against
+        # both `sacubitril` and `sacubitril/valsartan`, Malarone against
+        # `atovaquone` and `proguanil` - so first-wins is not obviously
+        # right either, but it is at least stable across a rebuild, and
+        # `_COMBINATION_BRANDS` below names the ones where the combined
+        # entry is the one the reader wants.
+        _BRAND_LOOKUP.setdefault(_b, _d)
+
+
+# Brands whose popup must resolve to the combined-product entry rather
+# than to whichever single component was listed first. Each of these is
+# sold only as the combination, so a popup headed with one component
+# describes something the patient is not taking.
+_COMBINATION_BRANDS = {
+    "Entresto": "sacubitril/valsartan",
+    "Buscopan": "hyoscine butylbromide",
+}
+for _b, _want in _COMBINATION_BRANDS.items():
+    _pref = _GENERIC_LOOKUP.get(_want.lower())
+    if _pref is not None and _b in _BRAND_LOOKUP:
+        _BRAND_LOOKUP[_b] = _pref
 
 
 # Matched by first-word index rather than by a single alternation over
@@ -171,6 +196,42 @@ _GENERIC_MATCHER = (_matcher.PhraseMatcher(list(_GENERIC_LOOKUP))
                     if _GENERIC_LOOKUP else None)
 _BRAND_MATCHER = (_matcher.PhraseMatcher(list(_BRAND_LOOKUP), case_sensitive=True)
                   if _BRAND_LOOKUP else None)
+
+
+def _brand_relation(brand: str, entry: dict) -> str:
+    """One sentence saying how a trade name relates to its generic.
+
+    Australian wording where the entry says the brand is sold here, and
+    neutral wording otherwise. The distinction is not guessed: only an
+    explicit `brands_au` list earns "an Australian brand of", because
+    the corpus carries American trade names authored directly alongside
+    Australian ones and nothing distinguishes Lipitor from Clopine by
+    inspection. Guessing wrong here would put a false claim about
+    Australian availability in front of a student who is going to act on
+    it, which is worse than the weaker sentence.
+    """
+    generic = entry.get("generic") or ""
+    if not generic:
+        return ""
+    if brand in (entry.get("brands_au") or []):
+        return f"{brand} is an Australian brand of {generic}."
+    return f"{brand} is a brand name for {generic}."
+
+
+def _spelling_relation(surface: str, entry: dict) -> str:
+    """The same sentence for a generic reached through a spelling alias.
+
+    Frusemide and furosemide are the same INN spelled two ways, and the
+    popup heading shows the entry's own spelling, so a reader who typed
+    the Australian form saw a heading that silently disagreed with the
+    card. Naming the relationship is the same fix as for brands, and the
+    two are the same defect: the matched form was resolved and then
+    thrown away.
+    """
+    generic = entry.get("generic") or ""
+    if not generic or surface.lower() == generic.lower():
+        return ""
+    return f"{surface} is another spelling of {generic}."
 
 
 def resolve(text: str) -> list:
@@ -204,6 +265,10 @@ def resolve(text: str) -> list:
                 "name":           d["generic"],
                 "surfaces":       [surface] if surface else [],
                 "summary":        d["summary"],
+                "relation":       _spelling_relation(surface, d),
+                "form_kind":      ("spelling" if surface
+                                   and surface.lower() != d["generic"].lower()
+                                   else "primary"),
                 "url":            _drugbank_url(d),
                 "link":           _drug_link_kind(d),
                 "case_sensitive": False,
@@ -220,10 +285,28 @@ def resolve(text: str) -> list:
                 continue
             # A case-sensitive matcher reports the phrase as written, so
             # the brand is already its own surface form.
+            #
+            # `relation` is the whole point of this branch. Until it
+            # existed the brand popup was the generic's popup with a
+            # different heading: hovering Clopine showed clozapine's
+            # text under the word Clopine and never said the two were
+            # the same drug. The reader who has just seen Clopine on a
+            # ward drug chart is exactly the reader who does not yet
+            # know that. It is derived from the lookup that resolved the
+            # brand rather than authored per brand, so it cannot drift
+            # from the entry it describes, and it costs nothing for the
+            # 1,672 brand strings that would otherwise each need a line
+            # written by hand.
+            #
+            # `url` and `link` still key on `d["generic"]`, because
+            # DrugBank indexes generics and a chip pointing at a trade
+            # name lands nowhere.
             item = {
                 "name":           brand,
                 "surfaces":       [brand],
                 "summary":        d["summary"],
+                "relation":       _brand_relation(brand, d),
+                "form_kind":      "brand",
                 "url":            _drugbank_url(d),
                 "link":           _drug_link_kind(d),
                 "case_sensitive": True,

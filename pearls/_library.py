@@ -105,7 +105,18 @@ _ENTRY_EMPTY_OK = {
 # belongs iterates character by character rather than raising, which is
 # the worst outcome - thousands of one-character phrases enter the
 # matcher and every card lights up.
-_ENTRY_STR_LISTS = ("aliases", "brands")
+# `brands_au` is a subset of `brands` naming the trade names sold in
+# Australia, and it exists so a brand popup can say "Clopine is an
+# Australian brand of clozapine" rather than the weaker "a brand name
+# for". Nothing infers it: the shipped corpus mixes Australian trade
+# names with American ones authored directly, and only two entries ever
+# came through `DRUG_US_MERGES`, so there is no provenance to recover.
+# It is additive under schema 1 and validates by the same rule as
+# `brands`, which means a client older than the field ignores it and an
+# entry without it falls back to the neutral wording. That is what lets
+# the list be authored a few drugs at a time over the content channel
+# instead of all 1,672 brand strings before anything ships.
+_ENTRY_STR_LISTS = ("aliases", "brands", "brands_au")
 
 # `utd` is not a list of strings. Each element is a [label, query] pair,
 # and `_conditions._primary_url` reaches straight into it as
