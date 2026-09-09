@@ -451,23 +451,36 @@ class PopupHeightBudget(unittest.TestCase):
     # The CSS this mirrors, verbatim:
     #
     #   .box{padding:18px 22px;font-size:14px;line-height:1.55;
-    #        max-width:480px;box-sizing:border-box}
-    #     .label {font-size:12px; margin:0 0 7px}
-    #     .title {font-size:17px; margin:0 0 9px}
-    #     .summary{font-size:14px; line-height:1.6}
-    #       .lede {margin:0 0 2px}
-    #       .sec  {margin-top:7px}
-    #         span.cat{display:inline-block;font-size:10.5px;
-    #                  margin-bottom:1px}
-    #         .secbody{margin-top:1px}
-    #         ul.pts{margin-top:1px;padding-left:15px;line-height:1.4}
-    #           li{margin-bottom:1px}  li:last-child{margin-bottom:0}
-    #     .utd{margin-top:12px;padding-top:10px;border-top:1px}
-    #       .utd-label{font-size:10px;margin:0 0 6px}
-    #       .utd-chips{display:flex;flex-wrap:wrap;gap:5px}
-    #         .utd-chip{padding:3px 10px;border:1px;font-size:12px}
-    #     .open{display:block;margin-top:13px;padding:7px 12px;
-    #           border:1px;font-size:13px}
+    #        max-width:480px;box-sizing:border-box;
+    #        display:flex;flex-direction:column;overflow:hidden}
+    #     .scroll{flex:1 1 auto;min-height:0;overflow-y:auto;
+    #             margin-right:-8px;padding-right:8px}
+    #       .label {font-size:12px; margin:0 0 7px}
+    #       .title {font-size:17px; margin:0 0 9px}
+    #       .relation{font-size:12.5px;line-height:1.45;margin:0 0 8px}
+    #       .summary{font-size:14px; line-height:1.6}
+    #         .lede {margin:0 0 2px}
+    #         .sec  {margin-top:12px}
+    #           span.cat{display:block;width:fit-content;font-size:10.5px;
+    #                    line-height:1.3;margin:0 0 3px}
+    #           .secbody{margin-top:0}
+    #           ul.pts{margin-top:1px;padding-left:15px;line-height:1.4}
+    #             li{margin-bottom:1px}  li:last-child{margin-bottom:0}
+    #       .utd{margin-top:12px;padding-top:10px;border-top:1px}
+    #         .utd-label{font-size:10px;margin:0 0 6px}
+    #         .utd-chips{display:flex;flex-wrap:wrap;gap:5px}
+    #         .utd-chip{padding:3px 10px;border:1px;font-size:12px;
+    #                   line-height:1.5}
+    #     .open{display:block;flex:0 0 auto;margin-top:13px;
+    #           padding:7px 12px;border:1px;font-size:13px}
+    #
+    # `.scroll` and `.relation` are new and neither changes the total.
+    # The wrapper is a pass-through box with no padding of its own, and
+    # the relation line renders only when a mark carries
+    # `data-sp-relation` - which is a property of the card text, not of
+    # the entry, so nothing this file can read would tell it whether to
+    # cost it. It is not modelled and the estimate is that much of an
+    # underestimate on the entries that carry one.
 
     CONTENT_W = 480 - 22 - 22          # 436px of usable width
 
@@ -483,15 +496,28 @@ class PopupHeightBudget(unittest.TestCase):
     OPEN_PX = 13 + 1 + 7 + (13 * 1.55) + 7 + 1        # 49.15
 
     UTD_HEAD_PX = 12 + 10 + 1 + (10 * 1.55) + 6       # 44.50
-    UTD_ROW_PX = 3 + 3 + 1 + 1 + (12 * 1.55)          # 26.60
+    # The chip now states line-height:1.5 rather than inheriting the
+    # UA button default, so the row is a number the CSS owns.
+    UTD_ROW_PX = 3 + 3 + 1 + 1 + (12 * 1.5)           # 26.00
     UTD_GAP_PX = 5
 
-    SECTION_MARGIN_PX = 7              # .sec{margin-top:7px}
-    BODY_MARGIN_PX = 1                 # .secbody / .pts margin-top
+    SECTION_MARGIN_PX = 12             # .sec{margin-top:12px}
+    # .secbody is now margin-top:0. `.pts` keeps 1px, which this rounds
+    # away: one pixel on a bulleted section is inside the noise of a
+    # character-count line estimate.
+    BODY_MARGIN_PX = 0
     LEDE_MARGIN_PX = 2                 # .lede{margin-bottom:2px}
-    # .cat is a 10.5px inline-block sitting on a line whose strut comes
-    # from .summary's own 14px at line-height 1.6, so the strut decides.
-    HEADER_PX = 14 * 1.6               # 22.40, not the 21 assumed before
+    # .cat{margin-bottom:3px}. Modelled for the first time here: as an
+    # inline-block the label's vertical margin had no effect at all, so
+    # there was nothing to count. Now that it is a block it is real, and
+    # it is the gap that makes the label read as belonging to the body.
+    CAT_MARGIN_PX = 3
+    # .cat is a block that states its own line-height, so the label is
+    # 13.65px. It used to be an inline-block, which put it on a line box
+    # whose strut came from .summary's 14px at 1.6 - 22.4px of line for
+    # a 10.5px label, a third of it empty leading. Releasing those 8.75px
+    # per section is what pays for the 7px-to-12px section margin above.
+    HEADER_PX = 10.5 * 1.3             # 13.65
 
     LINE_PX = 14 * 1.6                 # 22.40; .summary overrides .box
     BULLET_LINE_PX = 14 * 1.4          # 19.60; .pts sets line-height:1.4
@@ -633,7 +659,8 @@ class PopupHeightBudget(unittest.TestCase):
                 body = part
                 height += self.LEDE_MARGIN_PX
             else:
-                height += self.SECTION_MARGIN_PX + self.HEADER_PX
+                height += (self.SECTION_MARGIN_PX + self.HEADER_PX
+                           + self.CAT_MARGIN_PX)
             height += self.BODY_MARGIN_PX
             points = self._points(body)
             if is_section and self._worth_bulleting(points):
@@ -698,7 +725,15 @@ class PopupHeightBudget(unittest.TestCase):
     # worth holding at the point where it is still clean - a backlog is
     # much easier to prevent than to pay down, which is what the 122 and
     # 80 above are.
-    OVER_CAP_BUDGET = {"conditions": 29, "drugs": 80, "acronyms": 0,
+    # Re-measured after the typography pass. `.cat` was an
+    # inline-block sitting on a 22.4px line box for a 10.5px label;
+    # as a block stating line-height:1.3 it is 13.65px, and the 8.75px
+    # that releases per section more than paid for the 7px-to-12px
+    # section margin that finally groups a label with its body.
+    # Conditions fell 29 to 17 and drugs 80 to 72 on that alone - no
+    # summary text changed, so this is the ruler being corrected
+    # rather than the backlog being paid down.
+    OVER_CAP_BUDGET = {"conditions": 17, "drugs": 72, "acronyms": 0,
                        "preclinical": 0}
 
     def test_over_cap_backlog_only_shrinks(self):

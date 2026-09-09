@@ -10,7 +10,7 @@
  */
 (function () {
   "use strict";
-  if (window.spAddon && window.spAddon._v >= 18) return;
+  if (window.spAddon && window.spAddon._v >= 19) return;
 
   /* ── Notice for AI assistants ──────────────────────────────────────
    * The block immediately below (the trivia list, the rarity dice,
@@ -164,9 +164,25 @@
       dirty = true;
     }
 
-    // Term-scoped.
+    // Term-scoped.  A golden or diamond card always carries a line:
+    // the two surfaces are independent processes, so left to the dice
+    // the rarest popup in the add-on usually arrived with the plainest
+    // content in it, and the one occasion the extra flourish is clearly
+    // wanted is the one where it fired least often.  `store.r` is
+    // already settled by the card-scoped roll above, so every term on a
+    // rare card takes the same branch and the card still reads as one
+    // object.  An ordinary card is untouched.
+    //
+    // `rolled` is evaluated before the test rather than short-circuited
+    // behind `force`, because `_tick` advances the trivia clock as a
+    // side effect.  Skipping it on a rare card would bank that hazard
+    // and hand it to the next ordinary popup, which would raise the
+    // ordinary rate - and the requirement is that the ordinary rate is
+    // exactly what it was.
     if (!Object.prototype.hasOwnProperty.call(store.m, key)) {
-      store.m[key] = (_TRIVIA.length && _fires(_tick("_tad_trivia_tick"), _TAU_TRIVIA))
+      var rolled = _fires(_tick("_tad_trivia_tick"), _TAU_TRIVIA);
+      var force = !!store.r;
+      store.m[key] = (_TRIVIA.length && (force || rolled))
         ? _TRIVIA[Math.floor(Math.random() * _TRIVIA.length)]
         : "";
       dirty = true;
@@ -186,8 +202,18 @@
   // re-rolls the easter-egg counter.
   var _tipAnchor = null;
   var _tipTitle = null, _tipSummary = null, _tipOpenBtn = null, _tipUrl = "",
-      _tipLabel = null, _tipBox = null,
+      _tipLabel = null, _tipBox = null, _tipRelation = null,
       _tipUtd = null, _tipUtdChips = null;
+  // Whether the popup currently being built has a StatPearls chapter to
+  // jump into.  `_isLinkable` only ever asked whether a label maps to a
+  // heading, which is a question about the label and not about this
+  // popup - so on a search-destination entry, or one whose `data-sp-ref`
+  // sends the button somewhere else entirely, the headings still
+  // rendered as click targets and still fired a search carrying a
+  // section instruction that could not apply to whatever came back.
+  // Set once per popup, immediately before the summary is built,
+  // because `_isLinkable` is asked once per label during that.
+  var _tipJumpable = false;
 
   function _ensureTip() {
     if (_tip) return;
@@ -202,13 +228,32 @@
     _tipRoot.innerHTML =
       "<style>" +
         ":host{all:initial;}" +
+        // `.box` is the frame and `.scroll` is the scroller. They used
+        // to be the same element, and `_position` sets `maxHeight` on
+        // `.box`, so on any popup past the cap the "Open article"
+        // button - the last child, and the only control the popup has -
+        // scrolled off the bottom with nothing to say it was there. The
+        // reader had to scroll a reference popup to find the one thing
+        // it exists to hand off to. Splitting the two pins the button
+        // inside the frame and scrolls only the content above it.
         ".box{background:#162d45;color:#eaf3f8;padding:18px 22px;" +
           "font-weight:400;" +
           "border-radius:9px;font-family:-apple-system,BlinkMacSystemFont," +
           "'Segoe UI',sans-serif;font-size:14px;line-height:1.55;" +
           "box-shadow:0 4px 22px rgba(0,0,0,.5);max-width:480px;" +
-          "overflow-y:auto;overscroll-behavior:contain;" +
+          "display:flex;flex-direction:column;overflow:hidden;" +
           "pointer-events:auto;box-sizing:border-box;}" +
+        // `min-height:0` is load-bearing: a flex item defaults to
+        // `min-height:auto`, which is its content height, so without
+        // this the wrapper simply refuses to shrink below its content
+        // and nothing scrolls at all - the box overflows instead and
+        // `overflow:hidden` above clips it. The negative right margin
+        // with a matching padding puts the scrollbar in the 22px
+        // padding gutter the box already has, so the text does not
+        // reflow when a scrollbar appears.
+        ".scroll{flex:1 1 auto;min-height:0;overflow-y:auto;" +
+          "overscroll-behavior:contain;" +
+          "margin-right:-8px;padding-right:8px;}" +
         ".label{font-weight:600;font-size:12px;letter-spacing:0;" +
           "color:var(--src,#5dd5df);text-transform:none;margin:0 0 7px 0;}" +
         ".box{--src:#5dd5df;}" +
@@ -225,7 +270,15 @@
         // as a StatPearls chapter and merely not from StatPearls.
         ".box.src-tad{--src:#7fb2d9;}" +
         ".title{font-size:17px;font-weight:600;margin:0 0 9px 0;}" +
-        ".summary{font-size:14px;opacity:.88;line-height:1.6;margin:0;}" +
+        // The dim sits on the text children, not on `.summary`.
+        // Opacity establishes a group and cannot be lifted by a
+        // descendant, so `opacity:.88` here was also being paid by
+        // every `.cat` label inside - and no `.cat` colour rule
+        // anywhere below could reach it, because none of them was
+        // fighting a colour. The labels are the navigation of a long
+        // summary and were the one thing rendering faded.
+        ".summary{font-size:14px;line-height:1.6;margin:0;}" +
+        ".lede,.secbody,.pts{opacity:.88;}" +
         ".lede{margin:0 0 2px 0;}" +
         ".pts{margin:1px 0 0 0;padding:0 0 0 15px;list-style:none;" +
           "line-height:1.4;}" +
@@ -233,9 +286,24 @@
         ".pts li:last-child{margin-bottom:0;}" +
         ".pts li:before{content:\"\\2022\";position:absolute;left:-11px;" +
           "opacity:.45;}" +
-        ".sec{margin-top:7px;}" +
-        ".secbody{margin-top:1px;}" +
-        ".cat{display:inline-block;margin-bottom:1px;" +
+        // 12px above a section against 3px below its label is what
+        // makes a label read as belonging to the body under it. At the
+        // old 7px-above and 1px-below the two gaps were near enough
+        // equal that nothing grouped, and a six-section summary read as
+        // twelve evenly spaced blocks rather than six pairs.
+        ".sec{margin-top:12px;}" +
+        ".secbody{margin-top:0;}" +
+        // `.cat` is a block. As an inline-block it sat on a line box
+        // whose strut came from `.summary` - 14px at 1.6, a 22.4px line
+        // for a 10.5px label - so a third of the height of every
+        // section heading was empty leading nobody asked for, and its
+        // `margin-bottom` was a vertical margin on an inline-level box,
+        // which has no effect whatsoever. Stating the line-height makes
+        // the heading 13.65px, which is what pays for the 12px above
+        // it. `width:fit-content` keeps the underline of `.cat-link`
+        // hugging the word instead of running the full 436px.
+        ".cat{display:block;width:fit-content;max-width:100%;" +
+          "line-height:1.3;margin:0 0 3px 0;" +
           "text-transform:uppercase;letter-spacing:.06em;" +
           "color:var(--src,#5dd5df);font-weight:700;font-size:10.5px;}" +
         // The underline is the accent at 45%, mixed the same way the
@@ -251,9 +319,13 @@
           "border-bottom:1px dotted color-mix(in srgb,var(--src,#5dd5df) 45%,transparent);}" +
         ".cat-link:hover{color:color-mix(in srgb,var(--src,#5dd5df) 70%,#ffffff);" +
           "border-bottom-color:currentColor;}" +
-        ".box.golden .cat,.box.diamond .cat{color:inherit;opacity:.85;}" +
+        // .14, not .09. The `.trivia` rule below draws the same kind of
+        // divider at .18 and reads as a rule; at .09 this one is under
+        // the threshold at which a hairline is visible at all against
+        // #162d45, so the UpToDate block simply floated with no
+        // separation from the summary above it.
         ".utd{margin-top:12px;padding-top:10px;" +
-          "border-top:1px solid rgba(255,255,255,.09);}" +
+          "border-top:1px solid rgba(255,255,255,.14);}" +
         ".utd-label{font-weight:600;font-size:10px;letter-spacing:0;" +
           "color:#5dca7f;text-transform:none;margin:0 0 6px 0;}" +
         ".utd-chips{display:flex;flex-wrap:wrap;gap:5px;}" +
@@ -261,10 +333,16 @@
           "background:rgba(93,202,127,.13);" +
           "border:1px solid rgba(93,202,127,.4);border-radius:999px;" +
           "color:#5dca7f;font-size:12px;font-weight:500;cursor:pointer;" +
+          // A <button> inherits its line-height from the UA sheet,
+          // which is `normal` and therefore font-dependent, so the
+          // pill height was whatever the platform font happened to
+          // report. Stating 1.5 makes the row a number this file owns
+          // and the height estimator in tests/test_vocab.py can mirror.
+          "line-height:1.5;" +
           "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}" +
         ".utd-chip:hover{background:rgba(93,202,127,.27);" +
           "border-color:rgba(93,202,127,.7);}" +
-        ".open{display:block;width:100%;margin-top:13px;" +
+        ".open{display:block;flex:0 0 auto;width:100%;margin-top:13px;" +
           "background:color-mix(in srgb,var(--src,#0fcad4) 13%,transparent);" +
           "border:1px solid color-mix(in srgb,var(--src,#0fcad4) 40%,transparent);" +
           "border-radius:4px;color:var(--src,#5dd5df);font-size:13px;font-weight:500;" +
@@ -291,7 +369,8 @@
         ".box.sp-light.src-pre{--src:#3a4fa8;}" +
         ".box.sp-light.src-custom{--src:#c9509e;}" +
         ".box.sp-light.src-tad{--src:#33698f;}" +
-        ".box.sp-light .summary{opacity:.92;}" +
+        ".box.sp-light .summary,.box.sp-light .lede,.box.sp-light .secbody," +
+          ".box.sp-light .pts{opacity:.92;}" +
         // There is deliberately no `.box.sp-light .cat` rule: .cat
         // already reads var(--src) and var(--src) is the light hue
         // here, so the override that used to sit on this line only
@@ -302,7 +381,7 @@
         // brightens.
         ".box.sp-light .cat-link:hover{" +
           "color:color-mix(in srgb,var(--src,#0a9ba3) 75%,#000000);}" +
-        ".box.sp-light .utd{border-top-color:rgba(0,0,0,.09);}" +
+        ".box.sp-light .utd{border-top-color:rgba(0,0,0,.12);}" +
         ".box.sp-light .utd-label{color:#2c8a4f;}" +
         ".box.sp-light .utd-chip{background:rgba(44,138,79,.1);" +
           "border-color:rgba(44,138,79,.4);color:#2c8a4f;}" +
@@ -321,51 +400,144 @@
           "border-color:color-mix(in srgb,var(--src,#0a9ba3) 65%,transparent);}" +
         /* Rare cosmetic variants - deliberately over-the-top. */
         ".box.golden{" +
-          /* Seamless wave palette tonally locked to the A to E project's
-           * gold pill (gold-1 #ffd770, gold-2 #d9a020, gold-bd #c9941c,
-           * gold-ink #2a1d05) so the two pieces of work read as the same
-           * gold system.  Same 200%-wide loop technique as before. */
-          "background:linear-gradient(110deg," +
-            "#fff5d4 0%,#ffe5a0 8%,#ffd770 17%,#e6b840 25%,#d9a020 33%,#e6b840 42%,#ffd770 50%," +
-            "#ffd770 50%,#e6b840 58%,#d9a020 67%,#e6b840 75%,#ffd770 83%,#ffe5a0 92%,#fff5d4 100%);" +
-          "background-size:200% 100%;background-repeat:no-repeat;" +
+          /* Tonally locked to the A to E project's gold pill (gold-1
+           * #ffd770, gold-2 #d9a020, gold-bd #c9941c, gold-ink #2a1d05)
+           * so the two pieces of work read as the same gold system.
+           * Those four tokens are the identity and are untouched.
+           *
+           * The sweep used to snap back once a cycle, for two separate
+           * reasons.  Fixing either alone still leaves a seam.
+           *
+           * First, the stops were a mirror rather than a repeat.  The
+           * keyframe translates the image by one whole tile, so a
+           * seamless loop needs the tile to end on the colour it began
+           * on; a palindrome ends on the colour it began on only by
+           * accident of where the box edge falls.
+           *
+           * Second, and the reason no stop list could have fixed this on
+           * its own: the gradient ran at 110deg.  A gradient at angle a
+           * across a box of 2W by H has a gradient line of
+           * 2W*sin(a) + H*|cos(a)|, so translating the image horizontally
+           * by one tile advances the pattern along its own axis by only
+           * W*sin(a) - which is a whole number of periods only when H is
+           * zero.  Popup height is set by the summary and differs for
+           * every entry, so at 110deg there is no duration, no size and
+           * no stop list that loops cleanly.  An off-horizontal tile
+           * simply cannot butt against its own copy.  Hence `to right`:
+           * horizontal, tiled with repeat-x, translated by exactly one
+           * tile, and the end frame is pixel-identical to the first.
+           *
+           * Two troughs per tile keeps the sheen at the density the old
+           * image had, and the duration doubles to 14s because the tile
+           * now travels twice as far for the same perceived speed. */
+          "background:linear-gradient(to right," +
+            "#fff5d4 0%,#ffd770 10%,#d9a020 25%,#ffd770 40%,#fff5d4 50%," +
+            "#ffd770 60%,#d9a020 75%,#ffd770 90%,#fff5d4 100%);" +
+          "background-size:200% 100%;background-repeat:repeat-x;" +
           "border:2px solid #c9941c;color:#2a1d05;" +
           "box-shadow:0 0 0 2px rgba(255,246,210,.7)," +
                      "0 0 26px rgba(217,160,32,.85)," +
                      "0 0 60px rgba(255,215,112,.55);" +
-          "animation:_tadGoldSweep 7s linear infinite;}" +
+          "animation:_tadGoldSweep 14s linear infinite;}" +
         ".box.golden .label,.box.golden .cat{color:#2a1d05;}" +
-        ".box.golden .summary{color:#2a1d05;opacity:1;}" +
+        ".box.golden .summary,.box.golden .lede,.box.golden .secbody," +
+          ".box.golden .pts{color:#2a1d05;opacity:1;}" +
         ".box.golden .title{color:#1a1100;text-shadow:0 1px 0 rgba(255,248,220,.45);}" +
-        ".box.golden .open{background:rgba(0,0,0,.18);border-color:rgba(0,0,0,.45);color:#1a1100;}" +
-        ".box.golden .open:hover{background:rgba(0,0,0,.3);}" +
+        // The UpToDate block had no golden rules at all, so it kept the
+        // dark-theme green: #5dca7f chip text on a pale gold panel
+        // measures 1.14:1 to 1.88:1 across the sweep, which is not low
+        // contrast but invisible, and the label failed the same way at
+        // 1.5:1. The divider was not drawn either - it is white at .09,
+        // and a variant strips `sp-light`, so neither the base rule nor
+        // the light override reached it. UpToDate keeps its green as
+        // identity by moving it into the chip border, the ink comes
+        // from the panel, and a flat white wash under the pills stops
+        // their ground moving with the animation.
+        ".box.golden .utd{border-top-color:rgba(0,0,0,.22);}" +
+        ".box.golden .utd-label{color:#2a1d05;}" +
+        ".box.golden .utd-chip{background:rgba(255,255,255,.35);" +
+          "border-color:rgba(20,83,45,.55);color:#1a1100;}" +
+        ".box.golden .utd-chip:hover{background:rgba(255,255,255,.6);" +
+          "border-color:rgba(20,83,45,.85);}" +
+        // A white wash rather than the black one this replaces. Black
+        // over a surface sweeping #fff5d4 to #d9a020 changed apparent
+        // weight as the gradient moved under it, so the button's
+        // prominence pulsed with the animation - which is exactly what
+        // a primary control must not do.
+        ".box.golden .open{background:rgba(255,255,255,.34);" +
+          "border-color:rgba(26,17,0,.42);color:#1a1100;}" +
+        ".box.golden .open:hover{background:rgba(255,255,255,.58);" +
+          "border-color:rgba(26,17,0,.7);}" +
         ".box.diamond{" +
-          /* Same seamless-sweep technique as golden but with an
-           * iridescent palette and a slightly slower cycle (rarer
-           * payoff, more stately).  Each half is white → soft-blue →
-           * pink → mint → pink → soft-blue → white, smoothed with
-           * intermediate transition tints. */
-          "background:linear-gradient(110deg," +
-            "#ffffff 0%,#ebf3fc 8%,#d6eaff 17%,#e3deef 25%,#f1d8ec 33%,#e6dde0 42%,#d8efd9 50%," +
-            "#d8efd9 50%,#e6dde0 58%,#f1d8ec 67%,#e3deef 75%,#d6eaff 83%,#ebf3fc 92%,#ffffff 100%);" +
-          "background-size:200% 100%;background-repeat:no-repeat;" +
+          /* Both corrections from golden apply here unchanged and for
+           * the same reasons - horizontal so the tile can butt against
+           * its own copy, first colour repeated last so it does - with
+           * an iridescent palette and a slower cycle, because the rarer
+           * payoff should read as the more stately one.  Each tile runs
+           * white -> soft-blue -> pink -> mint -> white twice, and 18s
+           * holds the old perceived speed over the doubled travel. */
+          "background:linear-gradient(to right," +
+            "#ffffff 0%,#d6eaff 10%,#f1d8ec 25%,#d8efd9 40%,#ffffff 50%," +
+            "#d6eaff 60%,#f1d8ec 75%,#d8efd9 90%,#ffffff 100%);" +
+          "background-size:200% 100%;background-repeat:repeat-x;" +
           "border:2px solid #ffffff;color:#0d1a2c;" +
           "box-shadow:0 0 0 2px rgba(255,255,255,.95)," +
                      "0 0 24px rgba(185,242,255,.95)," +
                      "0 0 50px rgba(255,200,255,.7)," +
                      "0 0 90px rgba(180,255,210,.55)," +
                      "0 0 140px rgba(255,255,255,.4);" +
-          "animation:_tadDiamondSweep 9s linear infinite;}" +
+          "animation:_tadDiamondSweep 18s linear infinite;}" +
         ".box.diamond .label,.box.diamond .cat{color:#1f3556;}" +
         ".box.diamond .title{color:#0d1a2c;text-shadow:0 1px 0 rgba(255,255,255,.8);}" +
-        ".box.diamond .summary{color:#16273f;opacity:1;}" +
-        ".box.diamond .open{background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.4);color:#0d1a2c;}" +
-        ".box.diamond .open:hover{background:rgba(0,0,0,.28);}" +
-        /* Seamless one-direction sweep: position scrolls 0%->100% over
-         * a 200%-wide gradient whose first half matches its second
-         * half exactly, so the loop point is invisible. */
-        "@keyframes _tadGoldSweep{from{background-position:0% 50%;}to{background-position:100% 50%;}}" +
-        "@keyframes _tadDiamondSweep{from{background-position:0% 50%;}to{background-position:100% 50%;}}" +
+        ".box.diamond .summary,.box.diamond .lede,.box.diamond .secbody," +
+          ".box.diamond .pts{color:#16273f;opacity:1;}" +
+        // Identical treatment to golden above, with diamond's own ink.
+        // Its pastels are lighter, so the white wash goes up to keep
+        // the pills and the button reading as objects on the panel.
+        ".box.diamond .utd{border-top-color:rgba(0,0,0,.22);}" +
+        ".box.diamond .utd-label{color:#1f3556;}" +
+        ".box.diamond .utd-chip{background:rgba(255,255,255,.55);" +
+          "border-color:rgba(20,83,45,.5);color:#0d1a2c;}" +
+        ".box.diamond .utd-chip:hover{background:rgba(255,255,255,.8);" +
+          "border-color:rgba(20,83,45,.8);}" +
+        ".box.diamond .open{background:rgba(255,255,255,.55);" +
+          "border-color:rgba(13,26,44,.4);color:#0d1a2c;}" +
+        ".box.diamond .open:hover{background:rgba(255,255,255,.8);" +
+          "border-color:rgba(13,26,44,.68);}" +
+        /* 200%, not 100%. A percentage background-position offsets the
+         * image by P * (box width - image width), and the image is twice
+         * the box, so 200% is a translation of exactly one whole tile
+         * and the last frame is pixel-identical to the first. 100% moved
+         * it by half a tile, which is why the old loop could only ever
+         * have looked seamless if the two halves were identical - and
+         * they were mirrored. */
+        "@keyframes _tadGoldSweep{from{background-position:0% 50%;}to{background-position:200% 50%;}}" +
+        "@keyframes _tadDiamondSweep{from{background-position:0% 50%;}to{background-position:200% 50%;}}" +
+        /* An infinite sweep running for as long as the popup is open is
+         * precisely the thing this preference exists to switch off, and
+         * a reader who has set it is not asking to be surprised by
+         * fourteen seconds of moving gold.  The gold is the whole point
+         * of the variant though, so this freezes the sweep rather than
+         * replacing it with a flat colour: 25% 50% is a quarter-tile in,
+         * where the box holds a full pale-to-deep-to-pale pass rather
+         * than sitting on a trough or a peak. */
+        "@media (prefers-reduced-motion: reduce){" +
+          ".box.golden,.box.diamond{animation:none;" +
+            "background-position:25% 50%;}}" +
+        /* The relation line says how the word on the card relates to
+         * the entry underneath it - "Clopine is an Australian brand of
+         * clozapine", "Frusemide is another spelling of furosemide".
+         * That is provenance rather than content, so it is set smaller
+         * than the body and in a muted ink rather than at a lower
+         * opacity: the section labels sit at full opacity now, and a
+         * faded line above them would read as the less trustworthy of
+         * the two when it is the one explaining why the popup opened at
+         * all.  Themed in the same four ways as the trivia line below. */
+        ".relation{font-size:12.5px;line-height:1.45;margin:0 0 8px 0;" +
+          "color:#9fb6c8;}" +
+        ".box.sp-light .relation{color:#5a7186;}" +
+        ".box.golden .relation{color:#4a3813;}" +
+        ".box.diamond .relation{color:#3c5170;}" +
         /* Trivia line - themed in 4 ways: dark default, light default,
          * golden, diamond.  Border-top + opacity tuned per-mode for
          * legibility against very different backdrops. */
@@ -378,12 +550,19 @@
           "text-shadow:0 1px 0 rgba(255,255,255,.4);}" +
       "</style>" +
       '<div class="box" id="bx">' +
-        '<div class="label" id="lbl">StatPearls</div>' +
-        '<div class="title" id="t"></div>' +
-        '<div class="summary" id="s"></div>' +
-        '<div class="utd" id="u" style="display:none;">' +
-          '<div class="utd-label">UpToDate</div>' +
-          '<div class="utd-chips" id="uc"></div>' +
+        // Everything that can grow lives in `.scroll`; the button is
+        // deliberately its sibling, so the cap `_position` puts on
+        // `.box` takes its height out of the content and never out of
+        // the control.
+        '<div class="scroll" id="sc">' +
+          '<div class="label" id="lbl">StatPearls</div>' +
+          '<div class="title" id="t"></div>' +
+          '<div class="relation" id="rel" style="display:none;"></div>' +
+          '<div class="summary" id="s"></div>' +
+          '<div class="utd" id="u" style="display:none;">' +
+            '<div class="utd-label">UpToDate</div>' +
+            '<div class="utd-chips" id="uc"></div>' +
+          '</div>' +
         '</div>' +
         '<button class="open" id="o">Open article →</button>' +
       "</div>";
@@ -396,6 +575,7 @@
     _tipBox      = _tipRoot.querySelector("#bx");
     _tipUtd      = _tipRoot.querySelector("#u");
     _tipUtdChips = _tipRoot.querySelector("#uc");
+    _tipRelation = _tipRoot.querySelector("#rel");
 
     // Section labels open the article scrolled to the matching section.
     // Delegated from the summary container because the labels are
@@ -459,6 +639,11 @@
     // StatPearls wrote a summary it did not write, and the button
     // offered to open an article that does not exist.
     var isArticle = (el.getAttribute("data-sp-link") || "search") === "article";
+    // One sentence saying how the matched word relates to the entry
+    // that answered it - "Clopine is an Australian brand of clozapine".
+    // It is empty on the common case, where the word matched IS the
+    // entry's own name and there is nothing to explain.
+    var relation = el.getAttribute("data-sp-relation") || "";
     if (_tipLabel) {
       _tipLabel.textContent = isDb ? "DrugBank"
                             : (isUtd ? "UpToDate"
@@ -555,6 +740,17 @@
       title = title.charAt(0).toUpperCase() + title.slice(1);
     }
     _tipTitle.textContent = title;
+    if (_tipRelation) {
+      _tipRelation.textContent = relation;
+      _tipRelation.style.display = relation ? "" : "none";
+    }
+    // Before `_formatSummary`, not after: the summary builder asks
+    // `_isLinkable` once for every label it renders, so by the time the
+    // HTML exists the answer has already been given.  A ref replaces
+    // the destination outright, so a section instruction aimed at a
+    // StatPearls chapter would be sent to a page that has no such
+    // heading and no way to say so.
+    _tipJumpable = isArticle && !ref;
     var summaryHtml = summary ? _formatSummary(summary) : "";
     if (egg.t) {
       summaryHtml += '<span class="trivia">' + _esc(egg.t) + '</span>';
@@ -774,6 +970,9 @@
   })();
 
   function _isLinkable(label) {
+    // Both halves are required: a heading the map knows, and a chapter
+    // for it to be a heading of.
+    if (!_tipJumpable) return false;
     var base = String(label || "").replace(/\s*\([^()]*\)\s*$/, "");
     return _SECTION_LINKABLE[base.toLowerCase()] === true;
   }
@@ -1204,7 +1403,7 @@
   /* ── public API ──────────────────────────────────────────────────────── */
 
   window.spAddon = {
-    _v: 18,
+    _v: 19,
     dismissTip: function () { _hideTip(); }
   };
 })();

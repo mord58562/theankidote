@@ -66,6 +66,11 @@ _PROFILE_NAME  = "theankidote-pearls"
 # by clicking a term on a card, never by scrolling an A-Z list.
 _AP_HOME       = "https://www.ncbi.nlm.nih.gov/books/n/statpearls/"
 _DRUGBANK_HOME = "https://go.drugbank.com/"
+# StatPearls' own accession. NCBI answers the in-book search URL with a
+# 303 to this accession carrying the query through
+# (/books/n/statpearls/?term=X -> /books/NBK430685/?term=X), so it is
+# the path the reader actually lands on, not the one they asked for.
+_AP_BOOK_ID    = "nbk430685"
 
 
 def _is_statpearls_search_landing(url: str) -> bool:
@@ -81,10 +86,26 @@ def _is_statpearls_search_landing(url: str) -> bool:
     box already does the same job. On a chapter page that same bar is
     the only way to search across the book from where you're reading,
     so it must not be hidden there.
+
+    Both forms of the results page count. NCBI now answers
+    `/books/n/statpearls/?term=X` with a 303 to `/books/NBK430685/?term=X`,
+    so testing the pre-redirect stem alone returned False on the page
+    the reader is actually looking at and left NCBI's whole top chrome -
+    the database dropdown, Display Settings, "Send to", pagination -
+    stacked above the hits in a dock only ~520 px wide. A bare
+    accession with no query is the book's title page, which is a
+    perfectly ordinary chapter-shaped URL, so it is the `term=`
+    parameter and not the accession that makes this the results view.
     """
     low = (url or "").lower().split("#", 1)[0]
-    path = low.split("?", 1)[0]
-    return path.rstrip("/") == _AP_HOME.rstrip("/").lower()
+    path, _, query = low.partition("?")
+    if path.rstrip("/") == _AP_HOME.rstrip("/").lower():
+        return True
+    if not path.rstrip("/").endswith("/" + _AP_BOOK_ID):
+        return False
+    # Matched as a whole parameter, not as a substring: `searchterm=`
+    # and friends are not the in-book search and must not count.
+    return any(p.startswith("term=") for p in query.split("&"))
 
 
 def _site_of(url: str) -> str:
@@ -106,6 +127,35 @@ def _site_of(url: str) -> str:
     if "ncbi.nlm.nih.gov/books" in low:
         return "statpearls"
     return ""
+
+
+# The accession in a DrugBank monograph path. Matched to the end of the
+# segment so `/drugs/DB00921` and `/drugs/DB00921/spectra` both read as
+# the same drug, and a longer id can never be truncated into a shorter
+# one's match.
+_DB_ACCESSION_RE = re.compile(r"/drugs/(db\d+)(?:[/?#]|$)", re.I)
+
+
+def _drugbank_monograph_id(url: str) -> str:
+    """The DrugBank accession a monograph URL names, or "" for any other page.
+
+    Empty for the `unearth` search endpoint, for DrugBank's home page
+    and for every StatPearls URL, which is exactly what scopes the
+    self-unmarking pass to the one page where it makes sense: a
+    monograph is the only page whose subject is a single drug the
+    reader is already looking at.
+
+    The accession is the reliable key because `_drugbank_url` builds
+    the popup's link from the same table the monograph URL comes from,
+    and every alias and brand name resolves through one generic to one
+    accession - so matching on it covers "Panadol", "paracetamol" and
+    "acetaminophen" at once without anyone maintaining a list of them.
+    """
+    low = (url or "").lower().split("#", 1)[0].split("?", 1)[0]
+    if "drugbank.com" not in low:
+        return ""
+    m = _DB_ACCESSION_RE.search(low)
+    return m.group(1).upper() if m else ""
 
 # JavaScript injected into every DrugBank page after load.
 #
@@ -206,6 +256,102 @@ _DRUGBANK_BANNER_JS = r"""
             childList: true, subtree: true
         });
     } catch(e) {}
+})();
+"""
+
+
+# One stylesheet carrying the two rules that tidy DrugBank's own chrome
+# out of a narrow dock.
+#
+# `header nav.banner-bar` is the dark strip DrugBank runs across the top
+# of every page - currently "Access DrugBank in your AI workflows with
+# MCP / Learn More", but the copy rotates, so the container is matched
+# and never the wording. The `<nav>` is hidden rather than the
+# `.mini-banner.banner-holder` inside it for two reasons: DrugBank pins
+# that child with `display:flex !important`, and the nav IS the whole
+# promotion. `#main-nav`, the site's real navigation, is a sibling and
+# is deliberately left alone.
+#
+# `.turbo-progress-bar` is Hotwire Turbo's own 3 px loading bar, fixed
+# to the top of the viewport. DrugBank is a Turbo application, so it
+# paints one directly under this dock's 2 px teal bar and the panel
+# appears to grow two loading bars. Ours is the one that stays, because
+# ours is the one that covers the whole wait: Turbo cannot paint during
+# the first document load or during a Cloudflare challenge, and that
+# pause is the reason the dock has a bar at all.
+#
+# Both selectors fail safe. Each names a class that exists only on the
+# element being hidden, so if DrugBank renames either one the rule
+# simply matches nothing: the worst case is the banner coming back, not
+# a blank panel.
+_DRUGBANK_CHROME_CSS_JS = r"""
+(function () {
+  try {
+    if (document.getElementById("tad-db-chrome")) return;
+    var s = document.createElement("style");
+    s.id = "tad-db-chrome";
+    s.textContent =
+      "header nav.banner-bar{display:none !important}" +
+      ".turbo-progress-bar{display:none !important}";
+    (document.head || document.documentElement).appendChild(s);
+  } catch (e) {}
+})();
+"""
+
+
+# Unmark the drug whose monograph this is.
+#
+# The highlight matcher runs over the whole document with no idea which
+# page it is on, so on a DrugBank monograph the drug's own name in the
+# h1 and throughout the body was marked like any other term - and
+# hovering it popped a summary of the drug the reader is already
+# reading. Every OTHER drug the monograph mentions stays marked, which
+# is the useful half of the behaviour.
+#
+# Two keys, tried in that order. A span whose `data-sp-url` carries an
+# accession is judged on the accession alone, so aliases and brand
+# names are handled without naming any of them. Roughly half of drugs
+# have no DrugBank id in our table and get a search URL instead; for
+# those the normalised `data-sp-title` is compared against the page's
+# h1. That comparison is EXACT after normalising and never a substring,
+# so Codeine's monograph does not swallow the mark on Dihydrocodeine.
+# An h1 that reads as anything but the bare drug name normalises to
+# something no title equals, and then nothing is unwrapped - the old
+# behaviour, which is the safe direction to fail in.
+_DRUGBANK_UNMARK_SELF_JS = r"""
+(function () {
+  try {
+    var pageId = %s;
+    function norm(s) {
+      return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    }
+    function accession(u) {
+      var m = /\/drugs\/(db\d+)(?:[\/?#]|$)/i.exec(u || "");
+      return m ? m[1].toUpperCase() : "";
+    }
+    var h1 = document.querySelector("h1");
+    var pageName = norm(h1 ? h1.textContent : "");
+    var marks = document.querySelectorAll(
+      'span.sp-mark[data-sp-source="drugbank"]');
+    var gone = 0;
+    for (var i = 0; i < marks.length; i++) {
+      var el = marks[i], parent = el.parentNode;
+      if (!parent) continue;
+      var own = accession(el.getAttribute("data-sp-url"));
+      var mine = own
+        ? (own === pageId)
+        : (pageName !== "" &&
+           norm(el.getAttribute("data-sp-title")) === pageName);
+      if (!mine) continue;
+      while (el.firstChild) parent.insertBefore(el.firstChild, el);
+      parent.removeChild(el);
+      // Rejoin the text either side of the span it replaced, so the
+      // paragraph is left as one text node rather than three.
+      try { parent.normalize(); } catch (e) {}
+      gone++;
+    }
+    return gone;
+  } catch (e) { return -1; }
 })();
 """
 
@@ -881,6 +1027,19 @@ class StatPearlsPanel(QWidget):
         self._progress.hide()
         self._style_progress()
         outer.addWidget(self._progress)
+        # A floor under the one path that leaves the bar visible with
+        # nothing still coming: `hide()` hangs off loadFinished, and
+        # `renderProcessTerminated` fires INSTEAD of loadFinished, so a
+        # renderer death froze the bar part-filled forever. This is not
+        # a timeout on the load - it cancels nothing and only ever
+        # hides the bar - and a minute is chosen so it cannot fire
+        # ahead of a slow Cloudflare challenge that is still going to
+        # win. Restarted by every load, so a long session of ordinary
+        # navigation never accumulates a stale deadline.
+        self._progress_watchdog = QTimer(self)
+        self._progress_watchdog.setSingleShot(True)
+        self._progress_watchdog.setInterval(60000)
+        self._progress_watchdog.timeout.connect(self._hide_progress)
 
         # ── webview ───────────────────────────────────────────────────────
         self._profile = QWebEngineProfile(_PROFILE_NAME, self)
@@ -941,10 +1100,9 @@ class StatPearlsPanel(QWidget):
         self._btn_external.clicked.connect(self._open_externally)
         self._view.urlChanged.connect(self._on_url_changed)
         self._view.loadFinished.connect(self._on_load_finished)
-        self._view.loadStarted.connect(
-            lambda: (self._progress.setValue(0), self._progress.show()))
+        self._view.loadStarted.connect(self._show_progress)
         self._view.loadProgress.connect(self._progress.setValue)
-        self._view.loadFinished.connect(lambda _ok: self._progress.hide())
+        self._view.loadFinished.connect(lambda _ok: self._hide_progress())
 
         self._view.load(QUrl(self._current_home_url()))
 
@@ -1271,6 +1429,36 @@ class StatPearlsPanel(QWidget):
             f"QProgressBar::chunk {{ background: {_TEAL}; }}"
         )
 
+    def _show_progress(self) -> None:
+        """Start the loading bar and arm the watchdog that will end it.
+
+        Paired with `_hide_progress` rather than left as two lambdas on
+        the signals, so that every other place that has to end the bar -
+        the renderer-crash handler above all - has one thing to call
+        and cannot forget the watchdog half of it.
+        """
+        self._progress.setValue(0)
+        self._progress.show()
+        try:
+            # `start()` on a running single-shot timer restarts it, so
+            # the deadline always belongs to the newest load.
+            self._progress_watchdog.start()
+        except Exception as exc:
+            _log.error("pearls progress watchdog start", exc)
+
+    def _hide_progress(self) -> None:
+        """Take the loading bar down and disarm the watchdog.
+
+        Safe to call more than once and safe to call when the bar is
+        already hidden, which is what lets the crash handler call it
+        without first working out whether a load was in flight.
+        """
+        try:
+            self._progress_watchdog.stop()
+        except Exception:
+            pass
+        self._progress.hide()
+
     def _style_segment(self) -> None:
         """Pill pair sharing one outline, active half filled."""
         base = (
@@ -1416,6 +1604,11 @@ class StatPearlsPanel(QWidget):
             self._crash_url = None
         n = getattr(self, "_crash_count", 0) + 1
         self._crash_count = n
+        # This signal fires INSTEAD of loadFinished, so nothing else
+        # will ever take the loading bar down for this navigation and
+        # it would sit frozen part-filled underneath either the crash
+        # message or the reload that follows.
+        self._hide_progress()
         _log.diag(f"RENDERER TERMINATED status={status} exit={exit_code} attempt={n}")
         if n > 2:
             # Only the give-up case reaches stderr, since Anki surfaces
@@ -2139,6 +2332,15 @@ class StatPearlsPanel(QWidget):
             try:
                 self._page.runJavaScript(
                     _HL_APPLY_JS % (json.dumps(edits), json.dumps(colour)))
+                # Between the apply and the shim on purpose. After the
+                # apply because the marks it removes do not exist until
+                # then, and before anything that makes a mark
+                # interactive, so the drug's own name is already plain
+                # text by the time it could be hovered or clicked.
+                db_id = _drugbank_monograph_id(url)
+                if db_id:
+                    self._page.runJavaScript(
+                        _DRUGBANK_UNMARK_SELF_JS % json.dumps(db_id))
                 self._page.runJavaScript(_HL_PYCMD_SHIM_JS)
                 # Before marker.js, so the flag is set by the time the
                 # first popup styles itself.
@@ -2227,6 +2429,15 @@ class StatPearlsPanel(QWidget):
             host = self._view.url().host()
             if "drugbank.com" in host:
                 self._page.runJavaScript(_DRUGBANK_BANNER_JS)
+                # Injected on load rather than installed on the profile
+                # as a DocumentCreation QWebEngineScript. This profile
+                # deliberately carries no document-creation scripts:
+                # they are one of the patterns Cloudflare's tamper
+                # detection watches for, and DrugBank access depends on
+                # clearing that challenge. A stylesheet that arrives a
+                # moment late costs a flash of the banner; one that
+                # arrives early costs the whole site.
+                self._page.runJavaScript(_DRUGBANK_CHROME_CSS_JS)
             if "ncbi.nlm.nih.gov" in host:
                 # Auto-focus the "Search this book" input on the StatPearls
                 # home page so the user can start typing immediately.  No-op
