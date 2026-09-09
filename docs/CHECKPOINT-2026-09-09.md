@@ -296,3 +296,62 @@ ones are the ones Rob sees on a drug chart.
   worsen the below-the-fold problem that was just fixed.
 - `brands_au` authoring, above.
 - Medicine-1 is now the worst module at 163 raw.
+
+---
+
+# Third session, 2026-09-09 evening
+
+Rob: complete anything in progress or outstanding, no new major work or
+content generation.
+
+## State found
+
+- `main` clean and level with `origin/main` at 184cb58, the 2.7.0 bump.
+- 207 tests green across the five suites, run as scripts.
+- `theankidote-2.7.0.ankiaddon` built at 15:37 and unreleased.
+- Content channel at `09.09.2026.2`; `data/manifest.json` matches the
+  bundled library.
+- Routine digest `9d5e8d8c` matches `.remote-agent-context.md` on disk
+  and the value pinned in the routine prompt.
+
+## Finished
+
+- **The CHANGELOG had no 2.7.0 entry.** The version was bumped, the
+  notes written and the package built without one. Written from the two
+  code commits and the config-key commit, in the file's own style.
+- **The package was rebuilt** after that commit, since `CHANGELOG.md`
+  ships inside the `.ankiaddon`. Verified file by file against the
+  working tree: 64 files, no difference.
+
+## The overnight routine is being starved, not broken
+
+Every fire today failed within eight seconds: 00:23, 03:23, 06:26 and
+09:23 UTC, all `rate_limit: rejected (five_hour)`. The integrity check
+never ran, because the process never got a turn. Two of the four cite a
+reset at 09:40 UTC, one at 04:20.
+
+This is contention with the local sessions, not a defect, and it is the
+same cause as the single 2026-09-08 failure - the other five that day
+were the stale digest, which is fixed. No content has come from the
+cloud since 2026-09-08. Nothing to repair; the fires resume when the
+local window is not consuming the budget.
+
+## Open for Rob
+
+- **v2.7.0 is not on GitHub.** The package is built and verified and the
+  release notes are ready, but creating the release was refused by the
+  permission classifier in this session. It needs Rob's go-ahead, and
+  then the AnkiWeb upload, which is his call in any case. 2.6.3 is what
+  is on AnkiWeb, so every 2.7.0 fix is still unreleased.
+- The Qt-surface checks from the afternoon session are unchanged and
+  still want a running Anki: that `.scroll` scrolls with the button
+  pinned, that the tiled sweep has no seam, that the DrugBank banner
+  selector matches, and that an UpToDate chip lands signed in through
+  the HCN proxy.
+
+## Not done, deliberately
+
+No content this session. The next content jobs are unchanged:
+`brands_au` authoring, the roughly 100 thin high-frequency drug entries,
+and Medicine-1, which is the worst module at 163 raw and has not been
+worked in this cycle.
