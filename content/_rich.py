@@ -12561,6 +12561,216 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "clinical frailty scale Rockwood scoring prognosis"]],
         "summary": "",
     },
+    {
+        "name": "Serum ascites albumin gradient",
+        "aliases": ["SAAG", "ascites albumin gradient", "ascitic albumin gradient"],
+        "utd": [["Overview", "serum ascites albumin gradient"]],
+        "summary": "",
+    },
+    {
+        "name": "Serum protein electrophoresis",
+        "aliases": ["SPEP", "protein electrophoresis", "paraprotein screen"],
+        "utd": [["Overview", "serum protein electrophoresis monoclonal paraprotein"]],
+        "summary": "",
+    },
+    {
+        "name": "Winter formula",
+        "aliases": ["Winters formula", "expected PaCO2", "respiratory compensation formula"],
+        "utd": [["Overview", "winter formula expected PaCO2 metabolic acidosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Delta ratio",
+        "aliases": ["delta gap", "delta delta ratio"],
+        "utd": [["Overview", "delta ratio delta gap anion gap acidosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Brain natriuretic peptide",
+        "aliases": ["natriuretic peptide", "BNP level", "NT proBNP level"],
+        "utd": [["Overview", "brain natriuretic peptide NT-proBNP heart failure"]],
+        "summary": "",
+    },
+    {
+        "name": "D-dimer",
+        "aliases": ["D dimer", "d-dimer assay"],
+        "utd": [["Overview", "d-dimer venous thromboembolism exclusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Erythrocyte sedimentation rate",
+        "aliases": ["sedimentation rate", "sed rate"],
+        "utd": [["Overview", "erythrocyte sedimentation rate interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Rheumatoid factor",
+        "aliases": ["rheumatoid factor test", "RF antibody"],
+        "utd": [["Overview", "rheumatoid factor anti-CCP interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Right bundle branch block",
+        "aliases": ["right bundle branch delay", "rsR pattern in V1"],
+        "utd": [["Overview", "right bundle branch block ecg"]],
+        "summary": "",
+    },
+    {
+        "name": "Bifascicular block",
+        "aliases": ["bifascicular", "bifascicular conduction block"],
+        "utd": [["Overview", "bifascicular block pacing syncope"]],
+        "summary": "",
+    },
+    {
+        "name": "First degree heart block",
+        "aliases": ["first degree AV block", "prolonged PR interval", "first degree atrioventricular block"],
+        "utd": [["Overview", "first degree atrioventricular block prolonged PR"]],
+        "summary": "",
+    },
+    {
+        "name": "Mobitz type 1 block",
+        "aliases": ["Wenckebach", "Mobitz I", "Wenckebach phenomenon"],
+        "utd": [["Overview", "mobitz type 1 wenckebach second degree block"]],
+        "summary": "",
+    },
+    {
+        "name": "Mobitz type 2 block",
+        "aliases": ["Mobitz II", "high grade AV block"],
+        "utd": [["Overview", "mobitz type 2 second degree block pacemaker"]],
+        "summary": "",
+    },
+    {
+        "name": "Left ventricular hypertrophy",
+        "aliases": ["LVH", "ventricular hypertrophy", "Sokolow-Lyon criteria"],
+        "utd": [["Overview", "left ventricular hypertrophy ecg criteria"]],
+        "summary": "",
+    },
+    {
+        "name": "Hyperkalaemia ECG changes",
+        "aliases": ["peaked T waves", "sine wave ECG"],
+        "utd": [["Overview", "hyperkalemia ecg changes peaked t waves"]],
+        "summary": "",
+    },
+    {
+        "name": "Digoxin effect on ECG",
+        "aliases": ["digoxin effect", "reverse tick sign", "sagging ST depression"],
+        "utd": [["Overview", "digoxin effect ecg reverse tick"]],
+        "summary": "",
+    },
+    {
+        "name": "Osborn wave",
+        "aliases": ["J wave", "hypothermia J wave", "Osborn J wave"],
+        "utd": [["Overview", "osborn wave hypothermia ecg"]],
+        "summary": "",
+    },
+    {
+        "name": "Posterior myocardial infarction",
+        "aliases": ["posterior MI", "posterior STEMI", "isolated posterior infarct"],
+        "utd": [["Overview", "posterior myocardial infarction posterior leads"]],
+        "summary": "",
+    },
+    {
+        "name": "Right ventricular infarction",
+        "aliases": ["RV infarct", "right ventricular myocardial infarction", "right sided infarct"],
+        "utd": [["Overview", "right ventricular infarction V4R inferior stemi"]],
+        "summary": "",
+    },
+    {
+        "name": "De Winter T waves",
+        "aliases": ["de Winter pattern", "de Winter sign"],
+        "utd": [["Overview", "de winter t waves LAD occlusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Atrioventricular nodal re-entrant tachycardia",
+        "aliases": ["AV nodal re-entrant tachycardia", "AV nodal reentry tachycardia", "slow fast tachycardia"],
+        "utd": [["Overview", "avnrt supraventricular tachycardia management"]],
+        "summary": "",
+    },
+    {
+        "name": "Multifocal atrial tachycardia",
+        "aliases": ["multifocal atrial rhythm", "chaotic atrial tachycardia"],
+        "utd": [["Overview", "multifocal atrial tachycardia copd management"]],
+        "summary": "",
+    },
+    {
+        "name": "Kussmaul sign",
+        "aliases": ["Kussmaul's sign", "paradoxical rise in JVP"],
+        "utd": [["Overview", "kussmaul sign constrictive pericarditis"]],
+        "summary": "",
+    },
+    {
+        "name": "Beck triad",
+        "aliases": ["Beck's triad", "tamponade triad"],
+        "utd": [["Overview", "beck triad cardiac tamponade"]],
+        "summary": "",
+    },
+    {
+        "name": "Courvoisier law",
+        "aliases": ["Courvoisier's law", "Courvoisier sign", "palpable gallbladder"],
+        "utd": [["Overview", "courvoisier law painless jaundice"]],
+        "summary": "",
+    },
+    {
+        "name": "Virchow node",
+        "aliases": ["Virchow's node", "Troisier sign", "left supraclavicular node"],
+        "utd": [["Overview", "virchow node supraclavicular lymphadenopathy malignancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Trousseau sign",
+        "aliases": ["Trousseau's sign", "carpopedal spasm sign"],
+        "utd": [["Overview", "trousseau sign hypocalcaemia carpopedal spasm"]],
+        "summary": "",
+    },
+    {
+        "name": "Chvostek sign",
+        "aliases": ["Chvostek's sign", "facial nerve tap sign"],
+        "utd": [["Overview", "chvostek sign hypocalcaemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Osler nodes",
+        "aliases": ["Osler's nodes", "painful finger pulp nodules"],
+        "utd": [["Overview", "osler nodes infective endocarditis stigmata"]],
+        "summary": "",
+    },
+    {
+        "name": "Asterixis",
+        "aliases": ["flapping tremor", "liver flap", "negative myoclonus"],
+        "utd": [["Overview", "asterixis hepatic encephalopathy flapping tremor"]],
+        "summary": "",
+    },
+    {
+        "name": "Renal replacement therapy",
+        "aliases": ["dialysis", "kidney replacement therapy"],
+        "utd": [["Overview", "renal replacement therapy indications dialysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Anticoagulation reversal",
+        "aliases": ["reversal of anticoagulation", "warfarin reversal", "reversal agents"],
+        "utd": [["Overview", "anticoagulation reversal bleeding prothrombin complex"]],
+        "summary": "",
+    },
+    {
+        "name": "Fluid resuscitation",
+        "aliases": ["fluid bolus", "volume resuscitation", "intravenous fluid resuscitation"],
+        "utd": [["Overview", "fluid resuscitation balanced crystalloid shock"]],
+        "summary": "",
+    },
+    {
+        "name": "Transjugular intrahepatic portosystemic shunt",
+        "aliases": ["portosystemic shunt", "intrahepatic portosystemic shunt"],
+        "utd": [["Overview", "transjugular intrahepatic portosystemic shunt indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Thoracentesis",
+        "aliases": ["pleural aspiration", "pleural tap", "chest aspiration"],
+        "utd": [["Overview", "thoracentesis technique complications"]],
+        "summary": "",
+    },
 ]
 
 
@@ -73991,6 +74201,716 @@ RICH_SUMMARIES = {
         "about goals of care. Note: it is not validated in younger "
         "adults with stable single-system disability, where a low "
         "functional level is not frailty."
+    ),
+
+    "Serum ascites albumin gradient": (
+        "Serum albumin minus ascitic fluid albumin on samples taken "
+        "the same day, which separates portal hypertensive ascites "
+        "from other causes far better than the older exudate and "
+        "transudate split. Criteria: a gradient of 11 g/L or more "
+        "means portal hypertension. Below 11 g/L means the ascites is "
+        "not portal hypertensive. Aetiology: high gradient causes are "
+        "cirrhosis, cardiac ascites and Budd-Chiari syndrome. Low "
+        "gradient causes are peritoneal malignancy, tuberculous "
+        "peritonitis and pancreatic ascites. Ix: always send an "
+        "ascitic neutrophil count, protein, culture in blood culture "
+        "bottles and cytology when malignancy is possible. Mx: a high "
+        "gradient with ascitic protein below 15 g/L marks high risk "
+        "of spontaneous bacterial peritonitis and supports "
+        "norfloxacin prophylaxis. Cardiac ascites is the exception, "
+        "with a high gradient and a high ascitic protein. Note: "
+        "neutrophils above 250 per microlitre diagnose spontaneous "
+        "bacterial peritonitis whatever the gradient shows."
+    ),
+    "Serum protein electrophoresis": (
+        "Separation of serum proteins by charge to detect a "
+        "monoclonal band, the first line test when myeloma or another "
+        "plasma cell disorder is suspected. Ix: request "
+        "electrophoresis with immunofixation and serum free light "
+        "chains. Add urine electrophoresis for Bence Jones protein. "
+        "Immunofixation types the band as IgG, IgA or light chain "
+        "only. Clinical features: a discrete spike in the gamma "
+        "region is monoclonal. A broad polyclonal rise instead "
+        "suggests chronic infection, liver disease or connective "
+        "tissue disease. Criteria: a paraprotein under 30 g/L with "
+        "under 10 per cent marrow plasma cells and no end organ "
+        "damage is monoclonal gammopathy of undetermined "
+        "significance. Mx: pair an abnormal result with calcium, "
+        "renal function, a full blood count and skeletal imaging to "
+        "look for the CRAB features. Note: light chain only myeloma "
+        "can show a normal electrophoresis, so free light chains must "
+        "be requested alongside it."
+    ),
+    "Winter formula": (
+        "A bedside calculation of the PaCO2 expected from full "
+        "respiratory compensation for a metabolic acidosis, used to "
+        "detect a second acid base disorder hiding behind the first. "
+        "Criteria: the expected PaCO2 in mmHg equals 1.5 times the "
+        "bicarbonate plus 8, give or take 2. Clinical features: a "
+        "measured PaCO2 matching the prediction means compensation is "
+        "appropriate and there is a single disorder. A higher "
+        "measured value means a coexisting respiratory acidosis from "
+        "fatigue or sedation. A lower value means a coexisting "
+        "respiratory alkalosis, classically salicylate toxicity or "
+        "sepsis. Ix: apply it to every metabolic acidosis before "
+        "calling the picture simple, then calculate the anion gap and "
+        "delta ratio to finish the assessment. Mx: an inappropriately "
+        "high PaCO2 in diabetic ketoacidosis signals exhaustion and "
+        "impending arrest. That is an intensive care call rather than "
+        "a reason for more insulin. Note: compensation is a response "
+        "and never an overshoot, so a compensated pH is never quite "
+        "normal."
+    ),
+    "Delta ratio": (
+        "The ratio of the rise in anion gap to the fall in "
+        "bicarbonate, used to detect a second metabolic disorder "
+        "alongside a raised anion gap acidosis. Criteria: the delta "
+        "ratio is the anion gap minus 12 divided by 24 minus the "
+        "bicarbonate. A value between 1 and 2 is a pure raised anion "
+        "gap acidosis. Clinical features: a ratio under 1 means "
+        "bicarbonate has fallen further than the gap has risen. A "
+        "normal anion gap acidosis coexists, typically from diarrhoea "
+        "or saline loading. A ratio above 2 means a metabolic "
+        "alkalosis coexists, classically from vomiting or diuretics. "
+        "Ix: calculate it only once a raised anion gap is confirmed, "
+        "and use the measured bicarbonate rather than the base "
+        "excess. Mx: the finding changes the differential rather than "
+        "the immediate treatment, which stays directed at the cause. "
+        "Note: in diabetic ketoacidosis a low ratio is common late, "
+        "because saline resuscitation adds a hyperchloraemic acidosis "
+        "while the ketones clear."
+    ),
+    "Brain natriuretic peptide": (
+        "A neurohormone released by ventricular myocytes in response "
+        "to wall stress, measured as BNP or the longer lived "
+        "NT-proBNP, used mainly to rule out heart failure in "
+        "undifferentiated breathlessness. Criteria: a normal level in "
+        "an untreated symptomatic patient makes heart failure "
+        "unlikely and carries a high negative predictive value. "
+        "Rising values track severity rather than aetiology. Ix: use "
+        "it alongside ECG and chest radiograph to decide who needs "
+        "echocardiography, which remains the diagnostic test. "
+        "Clinical features: levels rise with age, renal impairment "
+        "and atrial fibrillation. Obesity lowers them so a mid range "
+        "value in a very obese patient does not exclude heart "
+        "failure. Mx: a raised level in a breathless patient supports "
+        "diuresis and expedited echocardiography. Sacubitril with "
+        "valsartan raises BNP while lowering NT-proBNP, so use "
+        "NT-proBNP for monitoring on that drug. Note: it answers "
+        "whether the heart is stressed and never why, so it does not "
+        "replace imaging."
+    ),
+    "D-dimer": (
+        "A fibrin degradation product released whenever cross linked "
+        "fibrin is broken down, used to exclude venous "
+        "thromboembolism in patients already assessed as low risk. "
+        "Ix: apply it only after a validated pretest probability such "
+        "as the Wells score. A negative result in a low probability "
+        "patient excludes deep vein thrombosis or pulmonary embolism "
+        "without imaging. Do not order it when probability is high, "
+        "because a negative result will not change the plan. Clinical "
+        "features: it rises non-specifically with age, pregnancy, "
+        "infection and malignancy so specificity is poor. Criteria: "
+        "age adjusted cut-offs above 50 years, calculated as age "
+        "times 10 in standard assay units, improve specificity "
+        "without missing events. Mx: a positive result mandates "
+        "imaging rather than treatment. Empirical anticoagulation "
+        "while awaiting a scan is reasonable when probability is high "
+        "and bleeding risk is low. Note: the test earns its keep by "
+        "ruling out and never by ruling in."
+    ),
+    "Erythrocyte sedimentation rate": (
+        "The distance red cells fall in an hour, an indirect measure "
+        "of acute phase proteins, chiefly fibrinogen, that alter red "
+        "cell rouleaux formation. Clinical features: it rises and "
+        "falls over days to weeks, unlike CRP which moves within "
+        "hours. That makes it better for tracking chronic "
+        "inflammation and worse for acute change. Aetiology: it is "
+        "raised by age, female sex, anaemia and pregnancy independent "
+        "of any inflammation. Ix: its main modern uses are suspected "
+        "giant cell arteritis and polymyalgia rheumatica, myeloma "
+        "screening alongside electrophoresis, and monitoring "
+        "established rheumatoid arthritis. Mx: in suspected giant "
+        "cell arteritis start prednisolone immediately on clinical "
+        "suspicion and do not wait for the result, because vision "
+        "loss is irreversible. Note: a value above 100 mm per hour "
+        "narrows the differential sharply to infection, malignancy or "
+        "vasculitis, but around a fifth of giant cell arteritis "
+        "presents with a normal value."
+    ),
+    "Rheumatoid factor": (
+        "An autoantibody, usually IgM, directed against the Fc "
+        "portion of IgG, historically the first serological marker of "
+        "rheumatoid arthritis. Clinical features: it is present in "
+        "roughly two thirds of rheumatoid arthritis at diagnosis, so "
+        "a negative result never excludes the disease. Higher titres "
+        "predict erosive disease and features outside the joints such "
+        "as nodules and lung involvement. Aetiology: it is also "
+        "positive in Sjogren syndrome, hepatitis C with "
+        "cryoglobulinaemia, chronic infection and up to a tenth of "
+        "healthy older adults. Ix: pair it with anti-cyclic "
+        "citrullinated peptide antibodies, which have similar "
+        "sensitivity but far better specificity and can appear years "
+        "before symptoms. Both feed the current classification "
+        "criteria alongside joint count and acute phase reactants. "
+        "Mx: seropositive disease warrants early referral and prompt "
+        "disease modifying therapy, with methotrexate first line per "
+        "eTG. Note: the test supports a clinical diagnosis, and "
+        "treating a positive result in an asymptomatic patient is a "
+        "common trap."
+    ),
+    "Right bundle branch block": (
+        "Delayed conduction down the right bundle, so the right "
+        "ventricle depolarises late through myocardium rather than "
+        "through the conduction system. Criteria: a QRS of 120 ms or "
+        "more with an rsR pattern in V1 and a wide slurred S wave in "
+        "V6 and lead I. T wave inversion in V1 to V3 is expected and "
+        "does not indicate ischaemia. Aetiology: it is common and "
+        "often benign in young people. Acquired causes include "
+        "pulmonary embolism, cor pulmonale, ischaemic heart disease "
+        "and degenerative conduction disease. Clinical features: "
+        "usually asymptomatic and found incidentally. A new block "
+        "with chest pain raises the possibility of a proximal left "
+        "anterior descending occlusion. Mx: no treatment for the "
+        "block itself. Investigate a new block, and assess for pacing "
+        "when it accompanies syncope or sits alongside left axis "
+        "deviation and a long PR interval. Note: unlike a left sided "
+        "block it does not obscure the ECG diagnosis of infarction, "
+        "so ST elevation can still be read normally."
+    ),
+    "Bifascicular block": (
+        "Right bundle branch block combined with block of either the "
+        "left anterior or the left posterior fascicle, leaving "
+        "conduction dependent on a single remaining fascicle. "
+        "Criteria: right bundle branch block with left axis deviation "
+        "beyond minus 45 degrees is the left anterior form. Right "
+        "bundle branch block with right axis deviation beyond plus "
+        "120 degrees is the posterior form, which is rarer and more "
+        "often pathological. Aetiology: ischaemic heart disease, "
+        "hypertension, aortic stenosis and degenerative fibrosis of "
+        "the conduction system. Clinical features: asymptomatic in "
+        "most, though progression to complete heart block occurs in a "
+        "small proportion each year. Mx: asymptomatic disease needs "
+        "no pacing. With syncope, admit and investigate, since "
+        "intermittent complete heart block is the concern and "
+        "ambulatory monitoring or an implantable loop recorder is "
+        "often needed. Note: adding a long PR interval does not make "
+        "it trifascicular in any useful sense, because that delay "
+        "usually sits in the atrioventricular node rather than in a "
+        "third fascicle."
+    ),
+    "First degree heart block": (
+        "Prolonged conduction through the atrioventricular node with "
+        "every atrial impulse still reaching the ventricles. "
+        "Criteria: a PR interval above 200 ms, constant from beat to "
+        "beat, with a QRS complex after every P wave. Aetiology: high "
+        "vagal tone in athletes, ageing conduction tissue and rate "
+        "limiting drugs such as beta blockers or verapamil. "
+        "Electrolyte disturbance and acute rheumatic fever also "
+        "prolong it. Clinical features: almost always asymptomatic "
+        "and found incidentally. Intervals above 300 ms can produce a "
+        "pacemaker like syndrome, with atrial contraction against a "
+        "closed mitral valve causing fatigue and dyspnoea. Mx: none "
+        "for the usual finding beyond reviewing rate limiting drugs. "
+        "Escalate only when it is markedly prolonged and symptomatic, "
+        "or when it accompanies bifascicular block with syncope. "
+        "Note: it is a delay rather than a block, since nothing is "
+        "actually dropped. In acute rheumatic fever a prolonged PR "
+        "interval is a minor criterion and resolves with the illness."
+    ),
+    "Mobitz type 1 block": (
+        "Second degree atrioventricular block in which the PR "
+        "interval lengthens beat by beat until one P wave fails to "
+        "conduct. The block sits within the atrioventricular node and "
+        "the QRS is usually narrow. Criteria: progressive PR "
+        "prolongation, then a dropped QRS, with the pause shorter "
+        "than two preceding cycles and the PR after the pause the "
+        "shortest of the group. Aetiology: high vagal tone, inferior "
+        "myocardial infarction, myocarditis and rate limiting drugs. "
+        "It is a normal nocturnal finding in trained athletes. "
+        "Clinical features: usually asymptomatic, with occasional "
+        "light headedness when the dropped beats cluster. Mx: none "
+        "when asymptomatic. Withhold nodal blocking drugs, treat "
+        "reversible causes, and give atropine with pacing standby "
+        "only if the bradycardia is symptomatic. Note: nodal block "
+        "responds to atropine and rarely progresses. That is the "
+        "practical difference from Mobitz type 2, which sits below "
+        "the node, can worsen with atropine and earns a permanent "
+        "pacemaker."
+    ),
+    "Mobitz type 2 block": (
+        "Second degree atrioventricular block in which conducted "
+        "beats keep a constant PR interval and a P wave drops without "
+        "warning. The lesion sits below the atrioventricular node in "
+        "the His Purkinje system, so the QRS is often broad. "
+        "Criteria: a constant PR interval on conducted beats with "
+        "intermittent non-conducted P waves. Fixed ratios such as 2 "
+        "to 1 conduction are common and can be hard to separate from "
+        "type 1. Aetiology: anterior myocardial infarction, "
+        "degenerative conduction disease, cardiac surgery, or "
+        "infiltration by sarcoid or amyloid. Clinical features: "
+        "syncope, presyncope and fatigue. Progression to complete "
+        "heart block is common and often abrupt. Mx: admit with "
+        "continuous monitoring and stop atrioventricular nodal "
+        "blocking drugs. Arrange transcutaneous pacing standby, then "
+        "a permanent pacemaker, which is indicated regardless of "
+        "symptoms. Note: atropine can worsen block below the node by "
+        "speeding the atrial rate without improving His Purkinje "
+        "conduction, so pacing rather than atropine is the answer "
+        "here."
+    ),
+    "Left ventricular hypertrophy": (
+        "Increased left ventricular muscle mass, most often a "
+        "response to chronic pressure overload, and an independent "
+        "predictor of cardiovascular death. Aetiology: hypertension "
+        "is the commonest cause. Aortic stenosis, coarctation and "
+        "hypertrophic cardiomyopathy account for most of the rest. "
+        "Criteria: Sokolow-Lyon adds the S wave in V1 to the R wave "
+        "in V5 or V6 and is positive above 35 mm. Cornell criteria "
+        "use the R wave in aVL plus the S wave in V3. Downsloping ST "
+        "depression with asymmetric T inversion in the lateral leads "
+        "is the strain pattern. Ix: the ECG is specific but "
+        "insensitive, so echocardiography is the test of choice and "
+        "gives wall thickness and mass index. Cardiac MRI "
+        "distinguishes hypertrophic cardiomyopathy and infiltration. "
+        "Mx: treat the cause. Blood pressure control regresses "
+        "hypertrophy, with ACE inhibitors and angiotensin receptor "
+        "blockers most effective per eTG. Note: voltage criteria "
+        "over-read in thin young people and under-read in obesity, so "
+        "echocardiography settles it."
+    ),
+    "Hyperkalaemia ECG changes": (
+        "The sequence of electrocardiographic change as serum "
+        "potassium rises, used to decide who needs immediate "
+        "treatment rather than to estimate a level. Clinical "
+        "features: tall peaked symmetrical T waves come first, then "
+        "PR prolongation with flattening and loss of P waves. QRS "
+        "widening follows, and finally a sine wave pattern preceding "
+        "asystole. Any new broad complex rhythm in a dialysis patient "
+        "is hyperkalaemia until proven otherwise. Criteria: change "
+        "usually appears above 6.5 mmol/L, but the rate of rise "
+        "matters more than the absolute value and a normal ECG never "
+        "excludes dangerous hyperkalaemia. Mx: intravenous calcium "
+        "gluconate first to stabilise the myocardium, which works "
+        "within minutes and is repeated if change persists. Then "
+        "insulin with dextrose and salbutamol to shift potassium, "
+        "then removal with a binding resin or dialysis. Note: calcium "
+        "does not lower potassium and buys about half an hour, so the "
+        "shifting and removal steps must follow immediately."
+    ),
+    "Digoxin effect on ECG": (
+        "The characteristic repolarisation change seen at therapeutic "
+        "digoxin levels, which is expected and does not by itself "
+        "indicate toxicity. Clinical features: downsloping sagging ST "
+        "depression with a reverse tick shape, flattened or inverted "
+        "T waves and a short QT interval. The changes are most "
+        "obvious in leads with tall R waves. Criteria: the effect "
+        "tracks the drug being present rather than its concentration, "
+        "so it cannot diagnose toxicity. Toxicity instead produces "
+        "arrhythmia such as atrial tachycardia with block or "
+        "bidirectional ventricular tachycardia. Ix: measure the level "
+        "at least six hours post dose, and check potassium, magnesium "
+        "and renal function, since hypokalaemia potentiates toxicity. "
+        "Mx: no action for the effect alone. For toxicity with "
+        "arrhythmia or a potassium above 5 mmol/L give digoxin "
+        "specific antibody fragments and correct electrolytes per "
+        "eTG. Note: sagging ST depression is not ischaemia, and "
+        "reading it as such is a common way to send a stable patient "
+        "to the catheter laboratory."
+    ),
+    "Osborn wave": (
+        "A positive deflection at the junction of the QRS and the ST "
+        "segment, best seen in the inferior and lateral leads, and "
+        "the classic electrocardiographic sign of hypothermia. "
+        "Aetiology: hypothermia is the usual cause, with amplitude "
+        "rising as the core temperature falls below 32 degrees. "
+        "Hypercalcaemia, subarachnoid haemorrhage and early "
+        "repolarisation produce similar deflections. Clinical "
+        "features: accompanied by bradycardia, tremor artefact from "
+        "shivering and prolongation of all intervals. Atrial "
+        "fibrillation is common and usually reverts with rewarming "
+        "alone. Ix: measure a true core temperature with a low "
+        "reading or oesophageal probe, since standard thermometers do "
+        "not read low enough. Check glucose, potassium and thyroid "
+        "function. Mx: handle the patient gently because the cold "
+        "myocardium is irritable and rough movement precipitates "
+        "ventricular fibrillation. Rewarm actively and continue "
+        "resuscitation until warm. Note: survival after prolonged "
+        "hypothermic arrest is well described, so nobody is dead "
+        "until they are warm and dead."
+    ),
+    "Posterior myocardial infarction": (
+        "Infarction of the posterior left ventricular wall, usually "
+        "from occlusion of the right coronary or left circumflex "
+        "artery, which produces reciprocal rather than direct change "
+        "on a standard twelve lead ECG. Criteria: horizontal ST "
+        "depression in V1 to V3 with tall broad R waves, an R to S "
+        "ratio above 1 in V2, and upright T waves. Posterior leads V7 "
+        "to V9 show ST elevation of 0.5 mm or more and confirm it. "
+        "Clinical features: presents as an acute coronary syndrome. "
+        "Around a fifth accompany an inferior infarct, so right sided "
+        "leads should be recorded as well. Ix: record posterior and "
+        "right sided leads in every inferior infarct and in any "
+        "anterior ST depression. Troponin and urgent angiography "
+        "follow. Mx: treat as a STEMI equivalent, with primary "
+        "percutaneous coronary intervention as the reperfusion "
+        "strategy of choice. Note: anterior ST depression is "
+        "posterior infarction until posterior leads say otherwise, "
+        "and reading it as anterior ischaemia denies the patient "
+        "reperfusion."
+    ),
+    "Right ventricular infarction": (
+        "Infarction of the right ventricle, complicating up to half "
+        "of inferior infarcts, caused by proximal right coronary "
+        "occlusion before the right ventricular marginal branch. "
+        "Criteria: ST elevation in lead V4R on right sided leads is "
+        "the diagnostic finding. Suspect it whenever an inferior "
+        "infarct shows ST elevation greater in lead III than lead II "
+        "with ST depression in lead I. Clinical features: hypotension "
+        "with a raised jugular venous pressure and clear lung fields "
+        "is the classic triad. Kussmaul sign and bradyarrhythmia from "
+        "atrioventricular nodal ischaemia are common. Mx: the right "
+        "ventricle is preload dependent, so give fluid boluses and "
+        "avoid nitrates, morphine and diuretics, any of which can "
+        "precipitate profound hypotension. Reperfuse urgently with "
+        "primary percutaneous coronary intervention. Add dobutamine "
+        "if fluid alone fails. Note: hypotension after glyceryl "
+        "trinitrate in an inferior infarct is the bedside clue, so "
+        "right sided leads belong on the chart before the first "
+        "nitrate is given."
+    ),
+    "De Winter T waves": (
+        "An electrocardiographic pattern of proximal left anterior "
+        "descending occlusion that does not meet standard ST "
+        "elevation criteria, present in roughly two per cent of "
+        "anterior occlusions. Criteria: upsloping ST depression of 1 "
+        "to 3 mm at the J point in V1 to V6, continuing into tall "
+        "symmetrical peaked T waves, with slight ST elevation in aVR. "
+        "Clinical features: the pattern is static rather than "
+        "evolving and persists until the vessel is opened, so serial "
+        "tracings do not show it turn into classic elevation. "
+        "Patients present with ongoing ischaemic chest pain. Ix: "
+        "repeat the tracing and compare with any old one, and take "
+        "troponin, though the decision to reperfuse should not wait "
+        "for it. Mx: treat as a STEMI equivalent with immediate "
+        "activation of the catheter laboratory for primary "
+        "percutaneous coronary intervention. Note: it belongs to a "
+        "small group of STEMI equivalents alongside Wellens syndrome "
+        "and posterior infarction, all of which are missed by "
+        "criteria based reading alone."
+    ),
+    "Atrioventricular nodal re-entrant tachycardia": (
+        "The commonest regular narrow complex tachycardia in adults, "
+        "caused by a re-entry circuit using slow and fast pathways "
+        "within the atrioventricular node. Clinical features: abrupt "
+        "onset and offset palpitations at 140 to 250 beats per "
+        "minute, often with neck pulsation from atrial contraction "
+        "against closed valves. It typically affects otherwise "
+        "healthy young adults and is more common in women. Criteria: "
+        "a regular narrow QRS with no visible P waves, or a pseudo R "
+        "wave in V1 and a pseudo S wave in the inferior leads "
+        "representing the retrograde P buried in the QRS. Mx: vagal "
+        "manoeuvres first, with the modified Valsalva more effective "
+        "than the standard version. Then adenosine 6 mg by rapid "
+        "intravenous push with a flush, escalating to 12 mg. "
+        "Verapamil is an alternative when adenosine is "
+        "contraindicated, and synchronised cardioversion is used if "
+        "the patient is unstable. Note: definitive cure is slow "
+        "pathway ablation with a success rate above 95 per cent, and "
+        "it should be offered to anyone with recurrent or poorly "
+        "tolerated episodes."
+    ),
+    "Multifocal atrial tachycardia": (
+        "An irregular narrow complex tachycardia arising from at "
+        "least three separate atrial foci, most often in "
+        "decompensated chronic lung disease. Criteria: an atrial rate "
+        "above 100 with three or more distinct P wave morphologies in "
+        "one lead and varying PP, PR and RR intervals. Below 100 the "
+        "same picture is a wandering atrial pacemaker. Aetiology: "
+        "exacerbations of COPD are the usual setting. Also hypoxia, "
+        "theophylline toxicity, hypokalaemia and sepsis. Clinical "
+        "features: often asymptomatic and found on a monitor. It is "
+        "easily mistaken for atrial fibrillation, but organised P "
+        "waves are visible before each QRS. Mx: treat the lung "
+        "disease and correct hypoxia and electrolytes, especially "
+        "magnesium. Rate control with verapamil or diltiazem when "
+        "needed, since beta blockers are often poorly tolerated in "
+        "obstructive disease. Cardioversion does not work because the "
+        "rhythm is automatic rather than re-entrant. Note: it marks "
+        "severe underlying illness rather than primary arrhythmia, "
+        "and mortality reflects the lung disease."
+    ),
+    "Kussmaul sign": (
+        "A paradoxical rise in the jugular venous pressure on "
+        "inspiration, the opposite of the normal inspiratory fall. "
+        "Mechanism: inspiration normally drops intrathoracic pressure "
+        "and augments right sided filling. When the right heart "
+        "cannot accept that extra volume, the pressure backs up into "
+        "the neck veins instead. Aetiology: constrictive pericarditis "
+        "is the classic cause. Also restrictive cardiomyopathy, right "
+        "ventricular infarction, severe tricuspid regurgitation and "
+        "massive pulmonary embolism. Clinical features: examine the "
+        "venous waveform with the patient at 45 degrees during quiet "
+        "breathing. Associated findings include a pericardial knock "
+        "in constriction and hypotension with clear lungs in right "
+        "ventricular infarction. Ix: echocardiography first, then "
+        "cardiac MRI or CT for pericardial thickening, with "
+        "catheterisation showing equalised diastolic pressures. Mx: "
+        "directed at the cause, with pericardiectomy for symptomatic "
+        "constriction. Note: it is characteristically absent in "
+        "cardiac tamponade, where pulsus paradoxus appears instead, "
+        "and that pairing separates the two at the bedside."
+    ),
+    "Beck triad": (
+        "Three signs of cardiac tamponade described by Claude Beck. "
+        "They are hypotension, a raised jugular venous pressure and "
+        "muffled heart sounds. Mechanism: pericardial fluid raises "
+        "intrapericardial pressure above right sided filling "
+        "pressure, so the ventricles cannot fill and stroke volume "
+        "falls. Clinical features: the full triad is present in a "
+        "minority, so its absence never excludes tamponade. Pulsus "
+        "paradoxus above 10 mmHg, tachycardia and reduced ECG voltage "
+        "with electrical alternans are more sensitive. Aetiology: "
+        "malignancy, uraemia and viral pericarditis in the subacute "
+        "setting. Trauma and aortic dissection cause the rapid form, "
+        "where as little as 150 mL is enough. Ix: bedside "
+        "echocardiography is the test, showing an effusion with "
+        "diastolic right sided collapse and a dilated inferior vena "
+        "cava. Do not delay it for a chest radiograph. Mx: urgent "
+        "pericardiocentesis, ideally echocardiography guided. Give "
+        "fluid while preparing, and avoid positive pressure "
+        "ventilation until it is drained. Note: tamponade is a "
+        "clinical and echocardiographic diagnosis, not a volume of "
+        "fluid."
+    ),
+    "Courvoisier law": (
+        "The observation that a palpable non-tender gallbladder in a "
+        "jaundiced patient makes gallstones an unlikely cause, so "
+        "malignant obstruction should be assumed. Mechanism: chronic "
+        "stone disease scars and shrinks the gallbladder so it cannot "
+        "distend. A gallbladder obstructed for the first time by "
+        "tumour distends freely. Aetiology: pancreatic head "
+        "adenocarcinoma is the usual finding, followed by "
+        "cholangiocarcinoma and ampullary carcinoma. Clinical "
+        "features: painless progressive jaundice with pale stools, "
+        "dark urine and weight loss. Pruritus is common and often the "
+        "most distressing symptom. Ix: liver function tests showing "
+        "an obstructive pattern, then abdominal ultrasound for duct "
+        "dilatation, then pancreatic protocol CT for staging. "
+        "Endoscopic ultrasound with biopsy defines resectability. Mx: "
+        "refer to a hepatopancreatobiliary unit. Biliary stenting "
+        "relieves the obstruction and pancreaticoduodenectomy offers "
+        "the only cure in resectable disease. Note: the rule fails in "
+        "Mirizzi syndrome and where a stone forms in a previously "
+        "healthy duct, so it guides suspicion rather than settling "
+        "the diagnosis."
+    ),
+    "Virchow node": (
+        "An enlarged left supraclavicular lymph node, the terminal "
+        "drainage point of the thoracic duct, whose enlargement "
+        "signals intra-abdominal or thoracic malignancy. Aetiology: "
+        "gastric carcinoma is the classic cause. Also pancreatic, "
+        "oesophageal and ovarian primaries, and lymphoma. Clinical "
+        "features: a hard fixed painless node in the angle between "
+        "the clavicle and sternocleidomastoid, best appreciated while "
+        "the patient performs a Valsalva manoeuvre. The finding named "
+        "as Troisier sign is the same node. Ix: any supraclavicular "
+        "node in an adult warrants imaging and tissue. Core biopsy or "
+        "excision is preferred over fine needle aspiration because "
+        "architecture is needed to exclude lymphoma. CT of chest, "
+        "abdomen and pelvis follows. Mx: directed at the primary, and "
+        "the node itself implies advanced disease in carcinoma. Note: "
+        "supraclavicular nodes are never dismissed as reactive. Left "
+        "sided points to abdominal primaries and right sided to "
+        "mediastinal, lung and oesophageal disease."
+    ),
+    "Trousseau sign": (
+        "Carpopedal spasm provoked by inflating a sphygmomanometer "
+        "cuff above systolic pressure for three minutes, a bedside "
+        "sign of hypocalcaemia. Mechanism: low ionised calcium lowers "
+        "the threshold for nerve depolarisation and limb ischaemia "
+        "under the cuff exaggerates it, producing flexion at the "
+        "wrist and metacarpophalangeal joints with the fingers "
+        "extended. Clinical features: more sensitive and specific "
+        "than Chvostek sign. Other features include perioral "
+        "paraesthesia, tetany, seizures and a prolonged QT interval. "
+        "Aetiology: hypoparathyroidism after thyroidectomy, vitamin D "
+        "deficiency, chronic kidney disease and hypomagnesaemia. Ix: "
+        "corrected or ionised calcium alongside magnesium, phosphate "
+        "and parathyroid hormone. Add vitamin D and renal function, "
+        "and check the QT interval. Mx: intravenous calcium gluconate "
+        "with cardiac monitoring for severe or symptomatic "
+        "hypocalcaemia, then oral calcium and calcitriol. Correct "
+        "magnesium first or calcium will not rise. Note: the "
+        "Trousseau sign of malignancy is a different eponym entirely, "
+        "meaning migratory thrombophlebitis in occult cancer."
+    ),
+    "Chvostek sign": (
+        "Twitching of the ipsilateral facial muscles when the facial "
+        "nerve is tapped just anterior to the ear, a bedside sign of "
+        "neuromuscular irritability from hypocalcaemia. Mechanism: "
+        "reduced ionised calcium destabilises the nerve membrane and "
+        "lowers the depolarisation threshold, so a mechanical "
+        "stimulus triggers a motor response. Clinical features: "
+        "graded from an upper lip twitch to contraction of the whole "
+        "hemiface. It is positive in up to a quarter of people with "
+        "normal calcium, so it is sensitive but not specific. "
+        "Aetiology: hypoparathyroidism after thyroid or parathyroid "
+        "surgery, vitamin D deficiency, hypomagnesaemia and "
+        "respiratory alkalosis from hyperventilation. Ix: corrected "
+        "or ionised calcium with magnesium, phosphate and parathyroid "
+        "hormone. Check the ECG for QT prolongation. Mx: oral calcium "
+        "and calcitriol for mild cases. Give intravenous calcium "
+        "gluconate with monitoring for tetany, seizures or a long QT "
+        "interval. Replace magnesium first, since hypomagnesaemia "
+        "blocks parathyroid hormone release. Note: a negative sign "
+        "does not exclude hypocalcaemia, and a positive one in a well "
+        "patient usually means nothing."
+    ),
+    "Osler nodes": (
+        "Tender raised violaceous nodules on the finger and toe "
+        "pulps, a peripheral stigma of infective endocarditis. "
+        "Mechanism: immune complex deposition with a small vessel "
+        "vasculitis, which explains both the tenderness and the "
+        "delayed appearance in subacute disease. Clinical features: "
+        "painful and lasting hours to days, unlike Janeway lesions "
+        "which are painless flat haemorrhagic macules on the palms "
+        "and soles. Other stigmata include splinter haemorrhages, "
+        "Roth spots and clubbing in longstanding disease. Ix: three "
+        "sets of blood cultures from separate sites before "
+        "antibiotics, then transthoracic echocardiography with "
+        "transoesophageal imaging when views are poor or prosthetic "
+        "material is present. Criteria: the modified Duke criteria "
+        "count them among the minor immunological phenomena. Mx: "
+        "prolonged intravenous antibiotics guided by culture per eTG, "
+        "with surgical referral for heart failure, abscess or large "
+        "mobile vegetations. Note: peripheral stigmata are now "
+        "uncommon because endocarditis is diagnosed earlier, so their "
+        "absence carries no weight."
+    ),
+    "Asterixis": (
+        "A brief loss of postural tone producing a flapping movement "
+        "of the outstretched hands, correctly a negative myoclonus "
+        "rather than a tremor. Mechanism: transient interruption of "
+        "the motor signal that maintains posture, arising from "
+        "metabolic disturbance of the reticular formation and "
+        "thalamus. Clinical features: elicited with the arms "
+        "extended, wrists dorsiflexed and fingers spread for around "
+        "thirty seconds. The movement is irregular and bilateral and "
+        "it disappears when the limb relaxes. Unilateral asterixis "
+        "suggests a contralateral thalamic or midbrain lesion. "
+        "Aetiology: hepatic encephalopathy is the classic cause. Also "
+        "carbon dioxide retention, uraemia and drugs such as "
+        "phenytoin or lithium. Ix: ammonia adds little to a clinical "
+        "diagnosis, so look instead for the precipitant with bloods, "
+        "cultures and a septic screen. Mx: treat the precipitant, "
+        "with lactulose titrated to two or three soft stools daily "
+        "and rifaximin added for recurrence. Note: it appears in the "
+        "intermediate grades of encephalopathy and fades as coma "
+        "deepens, so its loss can mean deterioration rather than "
+        "improvement."
+    ),
+    "Renal replacement therapy": (
+        "The umbrella term for treatments replacing kidney function, "
+        "comprising haemodialysis, peritoneal dialysis and "
+        "transplantation, with continuous modalities used in "
+        "intensive care. Indications: the acute indications are "
+        "refractory hyperkalaemia, refractory acidosis, fluid "
+        "overload unresponsive to diuretics and uraemic pericarditis "
+        "or encephalopathy. Certain dialysable poisons qualify as "
+        "well. Clinical features: in chronic kidney disease planning "
+        "starts at stage four so access exists before it is needed. "
+        "Symptoms rather than a fixed number usually decide the "
+        "start. Mx: haemodialysis is usually three sessions a week "
+        "through an arteriovenous fistula, which outperforms a "
+        "catheter for infection and patency. Peritoneal dialysis "
+        "suits home therapy and preserves residual function. "
+        "Transplantation gives the best survival and quality of life. "
+        "Note: conservative kidney management is a legitimate choice "
+        "for frail elderly patients, in whom dialysis may not extend "
+        "life and can worsen it, so that conversation belongs early."
+    ),
+    "Anticoagulation reversal": (
+        "Urgent restoration of haemostasis in a patient on "
+        "anticoagulants who is bleeding or needs emergency surgery. "
+        "Mx: for warfarin with major bleeding give prothrombin "
+        "complex concentrate 25 to 50 units per kilogram plus vitamin "
+        "K 5 to 10 mg intravenously. A high INR without bleeding "
+        "needs only the warfarin withheld and oral vitamin K per eTG. "
+        "Dabigatran is reversed with idarucizumab and the factor Xa "
+        "inhibitors with andexanet alfa where available. Protamine "
+        "reverses unfractionated heparin fully and low molecular "
+        "weight heparin only partly. Ix: send an INR, coagulation "
+        "profile, full blood count and fibrinogen. Record the time of "
+        "the last direct oral anticoagulant dose and the renal "
+        "function, since both govern clearance. Complications: "
+        "thrombosis after reversal is real, particularly with a "
+        "mechanical valve or recent venous thromboembolism. Note: "
+        "reversal restores clotting but not the reason for "
+        "anticoagulation, so plan when to restart before the patient "
+        "leaves the resuscitation bay."
+    ),
+    "Fluid resuscitation": (
+        "Rapid intravenous volume expansion to restore tissue "
+        "perfusion in shock, distinct from maintenance and "
+        "replacement fluid. Mx: give a balanced crystalloid such as "
+        "Hartmann solution in 250 to 500 mL boluses, reassessing "
+        "after each. Balanced solutions are preferred over 0.9 per "
+        "cent sodium chloride, which causes hyperchloraemic acidosis "
+        "and worse renal outcomes in large volumes. Albumin has a "
+        "role in cirrhosis and after large volume paracentesis. "
+        "Starches are not used. Clinical features: reassess after "
+        "every bolus using mental state, capillary refill, urine "
+        "output and lactate clearance rather than a single blood "
+        "pressure reading. Ix: lactate and a venous gas to track "
+        "response, with bedside ultrasound of the inferior vena cava "
+        "and heart when the response is poor. Note: in septic shock "
+        "start vasopressors early rather than chasing perfusion with "
+        "litre after litre, and in haemorrhagic shock the fluid is "
+        "blood, with crystalloid kept minimal until product arrives."
+    ),
+    "Transjugular intrahepatic portosystemic shunt": (
+        "A stent placed under radiological guidance between a hepatic "
+        "vein and a portal vein branch, decompressing the portal "
+        "system without laparotomy. Indications: refractory ascites, "
+        "refractory or recurrent variceal bleeding, hepatic "
+        "hydrothorax and Budd-Chiari syndrome. Early placement within "
+        "72 hours of a variceal bleed in high risk patients improves "
+        "survival. Contraindications: heart failure, severe pulmonary "
+        "hypertension, active sepsis and advanced hepatic "
+        "encephalopathy. Complications: new or worsened "
+        "encephalopathy in around a quarter, since portal blood "
+        "bypasses the liver. Also shunt stenosis, haemolysis and "
+        "right heart strain from the sudden rise in preload. Ix: "
+        "assess with echocardiography, cross sectional imaging of the "
+        "portal vein and a Child-Pugh or MELD score, since outcomes "
+        "are poor at high scores. Mx: monitor patency with Doppler "
+        "ultrasound. Treat encephalopathy with lactulose and "
+        "rifaximin, and reduce the shunt diameter if it is "
+        "refractory. Note: it lowers portal pressure at the cost of "
+        "hepatic function, so patient selection does most of the "
+        "work."
+    ),
+    "Thoracentesis": (
+        "Needle aspiration of pleural fluid for diagnosis or for "
+        "relief of breathlessness, performed under ultrasound "
+        "guidance. Indications: any undiagnosed effusion, and "
+        "symptomatic drainage of a large effusion. A bilateral "
+        "effusion with clear heart failure may be treated first and "
+        "tapped only if it fails to settle. Mx: mark the site with "
+        "real time ultrasound rather than by percussion, since blind "
+        "aspiration misses and hits the diaphragm. Insert above the "
+        "upper border of the rib to avoid the neurovascular bundle. "
+        "Remove no more than 1.5 litres in one sitting. "
+        "Complications: pneumothorax, re-expansion pulmonary oedema "
+        "after rapid large volume drainage, bleeding and infection. "
+        "Stop if the patient coughs persistently or the chest "
+        "tightens. Ix: send protein and LDH with paired serum, plus "
+        "pH, cell count, cytology and culture. Request a chest "
+        "radiograph only if the patient is symptomatic afterwards. "
+        "Note: coagulopathy is a relative rather than absolute "
+        "contraindication, and ultrasound guidance matters more than "
+        "the INR."
     ),
 }
 
