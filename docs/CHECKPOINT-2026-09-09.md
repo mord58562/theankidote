@@ -214,3 +214,85 @@ turned up are cheap value and are named in the routine prompt:
 "cervical screening", "intrauterine device", "sterilisation",
 "abnormal uterine bleeding", "failure to progress", "perineal repair",
 "ventouse" all resolve to nothing though the concept is covered.
+
+---
+
+# Second session, 2026-09-09 afternoon
+
+Rob: continue content generation, then a list of popup, dock and
+matching defects from live use with screenshots.
+
+## Content
+
+27 entries across O&G and Paediatrics, published as `09.09.2026.1`.
+Six drafting agents ran the curriculum gap list; three drafts were
+deleted as duplicates the agents could not see, and "Hypertension in
+pregnancy" was rebuilt because its first draft restated Pre-eclampsia's
+investigation panel. Gestational and chronic hypertension in pregnancy
+had been falling through to the generic Hypertension entry, which is
+non-pregnant Australian cardiovascular risk guidance.
+
+Then `Anorexia` and 60 acronyms, published as `09.09.2026.2`.
+
+Anorexia had no popup at all. Aliasing it to Anorexia nervosa would have
+been wrong: of 20 bare uses in Rob's collection, most are the symptom,
+sitting in lists beside malaise and weight loss. It has its own entry
+naming both senses.
+
+The acronyms came from a scan of the live collection - 6,088 notes,
+2.38 MB of text, 517 capitalised tokens no vocabulary resolved. The
+largest group is the Australian bodies the cards cite, which are
+frequent precisely because they are the sources.
+
+## The defect class
+
+Four of Rob's reports were one shape: the pipeline resolves a surface
+form, keeps the entry and throws the form away, so the popup can say
+"here is an entry" but never "here is why this text resolved to it".
+Brand and generic collapsed because the popup could not say which form
+it matched; the schizophrenia run mislabelled because the span could not
+say the form it covered was not the entry's. Both now carry the form.
+
+`brands_au` is authored, not inferred, and is empty today. The corpus
+mixes Australian trade names with American ones authored directly and
+only two entries ever came through `DRUG_US_MERGES`, so there is no
+provenance to recover. Absent means the neutral wording, so the list can
+grow over the content channel a few drugs at a time. **This is the
+obvious next content job**: 1,672 brand strings, of which the Australian
+ones are the ones Rob sees on a drug chart.
+
+## Measured, not guessed
+
+- 63 relational aliases contain another entry's primary name, but only
+  5 are harmful. The rest are single concepts - "dementia with Lewy
+  bodies" should win its whole phrase. The build gate is narrow for
+  that reason.
+- Fixing `.cat` to a block released 8.75px a section, so the popup
+  spacing went up while the over-cap backlog went DOWN: 29 conditions to
+  17, 80 drugs to 72, with no content touched.
+- 1,161 drugs, none with a rich override, median summary 571 chars
+  against 1,048 for conditions. 223 thin entries under 400 chars appear
+  in the collection and they are the common ones - prednisolone 215
+  chars at 108 mentions, ceftriaxone 253, aspirin 279.
+
+## Open for Rob
+
+- **These are add-on code changes and are not in any released build.**
+  Popup button, section links, typography, StatPearls chrome, DrugBank
+  banner and self-suppression, the loading-bar watchdog, the golden and
+  diamond sweeps and chips, the brand relation line, the UpToDate proxy
+  fix. They earn a **minor bump to 2.7.0** on Rob's say-so. 2.6.3 is
+  what is on AnkiWeb.
+- Several conclusions need a running Anki: that `.scroll` scrolls and
+  the button stays pinned in the Qt webview, that the tiled sweep has no
+  seam, that `header nav.banner-bar` matches the live DrugBank banner,
+  and that the UpToDate chip now lands signed in through the HCN proxy.
+
+## Not done
+
+- Extending the thin high-frequency drug entries. The recommendation is
+  frequency-weighted: about 100 that are both thin and common, to
+  roughly 600-750 chars, leaving the long tail. A blanket rewrite would
+  worsen the below-the-fold problem that was just fixed.
+- `brands_au` authoring, above.
+- Medicine-1 is now the worst module at 163 raw.
