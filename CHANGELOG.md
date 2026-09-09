@@ -5,6 +5,97 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.0] - 2026-09-09
+
+Everything here was found by using the add-on rather than by reading it.
+
+### Fixed
+
+- **The action button scrolled out of view** on any popup past the
+  height cap, which is most of them. `.box` was both the frame and the
+  scroller and the button was its last child; it is now a flex column
+  with the overflow on an inner wrapper, so the button is pinned
+  without moving, resizing or changing what it says. A sticky footer
+  needs an opaque backing the animated gradient variants cannot supply
+  without a seam, and raising the cap fixes nothing because the
+  viewport decides before the cap does.
+- **Section headings ran a plain search on entries with no chapter**
+  and threw the section away, so the click looked broken because it
+  was. They are gated on the destination now and kept where the
+  destination is a real chapter.
+- **Section labels rendered dimmed, and the spacing they claimed to set
+  was fiction.** `opacity:.88` sat on `.summary`, the ancestor of the
+  labels as well as the body, and ancestor opacity cannot be lifted by
+  a child, so no `.cat` colour rule had ever reached them. `.cat` was
+  also inline-block, which made its `margin-bottom` a vertical margin
+  on an inline box, with no effect at all. Blocking it releases 8.75px
+  a section, which is what pays for the reworked spacing: the over-cap
+  backlog falls rather than rises, 29 conditions to 17 and 80 drugs to
+  72, with no content touched.
+- **A brand name showed the generic's summary under the brand's
+  heading** and nothing anywhere said the two were the same drug.
+  1,672 brand strings across 1,131 entries were silent. Every brand and
+  every alternate spelling now states the relation in a line of its
+  own, derived from the lookup that resolved it rather than authored
+  per brand, so it cannot drift. 21 brand strings are claimed by more
+  than one generic and were resolving to whichever entry sorted later;
+  first-wins and stable now, with the two combination products that
+  need the combined entry named explicitly.
+- **Five aliases swallowed a neighbouring entry.** The matcher is
+  longest-form-wins and non-overlapping, so "positive symptoms of
+  schizophrenia" on Positive symptoms consumed the word schizophrenia
+  and Schizophrenia never resolved on that card at all. Ranson, Light
+  and Duke each ate the disease they score. `build_library.py` now
+  refuses the pattern. The rule is narrow on purpose: "dementia with
+  Lewy bodies" contains "Dementia" and should win its whole phrase,
+  because that phrase names one disease.
+- **UpToDate chips opened the public site** rather than the address
+  configured in settings, so a session held through an institutional
+  proxy did not follow and the article arrived as an abstract behind a
+  sign-in wall, while Home worked normally. The swap is host-only and
+  confined to proxies that embed the origin host, leaving OpenAthens
+  and Shibboleth entry points alone, since their cookies really do land
+  on the public host.
+- **StatPearls in-book search arrived with the site furniture.** NCBI
+  now answers that URL with a 303 to the book's accession, query
+  preserved. `_maybe_autojump` knew that and the landing predicate did
+  not, so the chrome-hiding pass never fired on the page the reader
+  lands on and a 520px dock carried the database dropdown, Display
+  Settings, "Send to" and pagination above the hits.
+- **A DrugBank monograph popped up the drug whose page it is.** Matched
+  on the accession rather than the text, which is the key that survives
+  aliasing: every brand and spelling resolves to one generic and one
+  DBxxxxx, and the page URL carries the same one, so a Subutex mark on
+  the Buprenorphine monograph is caught without a brand list. Other
+  drugs the page mentions stay marked.
+- **The dock's loading bar could stay on screen at a partial fill.**
+  Hiding hung off `loadFinished` only, and a renderer death emits
+  `renderProcessTerminated` instead; a watchdog now puts a floor under
+  it. DrugBank's own 3px Turbo bar and its promotional nav are hidden
+  in the dock, ours kept, because ours is the one that covers the whole
+  wait.
+- **The golden and diamond sweeps reset visibly**, for two reasons. The
+  stops were a mirror where the comment claimed a repeat, so the end
+  frame was the reversed sequence; and the 110deg axis meant a
+  horizontal shift never advanced the pattern by a whole period,
+  because the gradient line length depends on the popup's height, which
+  varies per entry. Horizontal tiles now, translated by exactly one
+  tile. The UpToDate chips measured 1.14:1 on gold, where a rare
+  variant strips the light class and inherits dark-theme colours onto a
+  pale panel; the ink now comes from the panel over a flat white wash.
+
+### Added
+
+- The sweep yields to `prefers-reduced-motion`, frozen rather than
+  flattened, since the gold is the point of the variant.
+- Every `_config.get` in the shipped tree must now declare a default or
+  be named in `CALLER_DEFAULTED_KEYS` with the reason, enforced by a
+  scanning test that fails with the offending file and line. Nothing
+  was broken; nothing was checking either, and a boolean falling
+  through to a missing default reads as "off" whatever the user set.
+  `pearlsHomePage` is declared in `_DEFAULTS` now rather than left to
+  its caller, behaviour unchanged.
+
 ## [2.6.3] - 2026-09-09
 
 The content channel had been refusing every download.
