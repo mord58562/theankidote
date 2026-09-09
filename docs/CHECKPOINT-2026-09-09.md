@@ -166,3 +166,51 @@ continue in parallel, which would mean two routines.
   content-channel fix is not in either, so it needs a new build.
 - The dock-toggle and content-channel fixes are user-visible bugfixes
   and earn a patch bump to **2.6.3**, on Rob's say-so.
+
+## 2.6.3 shipped
+
+Released as `v2.6.3` on GitHub with the package attached, and **Rob
+pushed it to AnkiWeb on 2026-09-09**. The released asset is
+byte-identical to the local build (`500ae53f`), 69 files, bundling
+content `09.09.2026`.
+
+Both fixes were verified in the shipped bytes rather than only in the
+tree: the allowlist carries `release-assets.githubusercontent.com`,
+and the mirror flag is set before `hide()` in the packaged
+`__init__.py`.
+
+**The content channel is unblocked for users from this release.** An
+install picks the library up in the background on one launch and
+applies it on the next, so Settings should read `09.09.2026` after two.
+
+Routine digest refreshed to `439bc418` in the same turn as the version
+bump, since the bump made the context file's version line stale.
+Verified against `origin/main`.
+
+## Handover from the parallel session
+
+A second session was doing a GitHub-wide tidy-up and pushed six
+commits here (README, manifest description, config.md, content/README,
+changelog wording, marker.js comments). All landed before mine and
+broke nothing. It has stopped writing to this tree.
+
+It also committed my in-flight working-tree edits as `eeba07a` under
+its own message. Nothing was lost, the merged state is coherent and
+not duplicated, and history was left alone rather than rewritten - a
+slightly wrong author line is the better trade. Both sessions have
+written the lesson into memory: stage by explicit path in any repo Rob
+may have two sessions on, and account for every modified file in
+`git status` before committing.
+
+Two findings it handed over were checked and **neither is a defect** -
+see the config-key commit. The real gap was that nothing was checking,
+which is now a scanning test.
+
+## Next
+
+O&G is still the worst module at 73. Paediatrics at 41 is the second
+target and has not been worked recently. The alias gaps the batch
+turned up are cheap value and are named in the routine prompt:
+"cervical screening", "intrauterine device", "sterilisation",
+"abnormal uterine bleeding", "failure to progress", "perineal repair",
+"ventouse" all resolve to nothing though the concept is covered.
