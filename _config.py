@@ -129,6 +129,13 @@ _DEFAULTS = {
     # predating the key (i.e. anything below 1.4.1); the two are told
     # apart by `firstRunDone`.  Drives the one-time upgrade notice.
     "lastSeenVersion": None,
+    # config.md has always documented this with a default of
+    # "statpearls". It was delivered by `_current_home_choice`
+    # normalising anything that is not "drugbank", so the
+    # behaviour was right while the declared default did not
+    # exist - and a reader checking _DEFAULTS for what the docs
+    # promise found nothing. Declared here so the two agree.
+    "pearlsHomePage": "statpearls",
 }
 
 

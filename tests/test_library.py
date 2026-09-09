@@ -697,7 +697,61 @@ class DrugSummariesAreNotBakedIn(unittest.TestCase):
     # are documented under "Internal / managed flags" instead.
     RUNTIME_STATE_KEYS = {
         "sidebarArticlesCollapsed", "sidebarLastArticleUrl",
+        # Set by the site pills in the dock header, not by hand.
+        "pearlsHomePage",
     }
+
+    # Keys read through `_config.get` that deliberately have no
+    # `_DEFAULTS` entry, each with the reason. Anything not listed here
+    # must declare a default, because `get` falls through to
+    # `_DEFAULTS.get(key)` and returns None when there is nothing there
+    # - which for a boolean reads as "off" whatever the user set.
+    CALLER_DEFAULTED_KEYS = {
+        # None is the sentinel for "never recorded", and the toast
+        # logic depends on it: a fresh install records the version and
+        # deliberately stays quiet. A default would break that.
+        "lastSeenContentVersion",
+        # Counters, read as `int(_config.get(...) or 0)`.
+        "_card_count", "chatOpenCount",
+    }
+
+    def test_every_config_key_read_has_a_default(self):
+        """The gap the test above leaves open.
+
+        `test_new_keys_exist_everywhere` checks three keys by name, so
+        it is a regression guard for those three and not a check on
+        anything added since. Four keys are read today with no
+        `_DEFAULTS` entry; all four happen to be safe, because every
+        caller normalises the None. The fifth will not necessarily be,
+        and the failure is silent - a flag that reads as off no matter
+        what the user set.
+
+        This scans instead of listing, so a new `_config.get` either
+        declares a default or gets named above with a reason.
+        """
+        import re
+        src_cfg = (ROOT / "_config.py").read_text(encoding="utf-8")
+        m = re.search(r"_DEFAULTS\s*=\s*\{(.*?)\n\}", src_cfg, re.S)
+        self.assertIsNotNone(m, "_config.py declares no _DEFAULTS")
+        defaults = set(re.findall(r'^\s*"([^"]+)"\s*:', m.group(1), re.M))
+        offenders = []
+        for path in sorted(ROOT.rglob("*.py")):
+            rel = path.relative_to(ROOT)
+            if rel.parts[0] in ("tests", "audit", "tools", ".git"):
+                continue
+            src = path.read_text(encoding="utf-8")
+            for m in re.finditer(r'_config\.get\(\s*"([^"]+)"', src):
+                key = m.group(1)
+                if key in defaults or key in self.CALLER_DEFAULTED_KEYS:
+                    continue
+                line = src[:m.start()].count("\n") + 1
+                offenders.append(f"{rel}:{line} reads {key!r}")
+        self.assertEqual(
+            offenders, [],
+            "these are read through _config.get with no default, so they "
+            "return None on a fresh install. Add a _DEFAULTS entry, or "
+            "list the key in CALLER_DEFAULTED_KEYS with the reason:\n"
+            + "\n".join(offenders))
 
     def test_config_template_and_docs_track_the_defaults(self):
         """Three ways for these to drift, all silent.
