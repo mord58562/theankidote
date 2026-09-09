@@ -12357,6 +12357,210 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "approach to the adult with anorexia and weight loss"]],
         "summary": "",
     },
+    {
+        "name": "Left bundle branch block",
+        "aliases": ["left bundle branch block pattern", "complete left bundle branch block"],
+        "utd": [["Overview", "left bundle branch block diagnosis and significance"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiac resynchronisation therapy",
+        "aliases": ["biventricular pacing", "cardiac resynchronization therapy", "CRT-D", "CRT-P"],
+        "utd": [["Overview", "cardiac resynchronization therapy heart failure indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Resistant hypertension",
+        "aliases": ["treatment-resistant hypertension", "refractory hypertension"],
+        "utd": [["Overview", "resistant hypertension evaluation and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Ambulatory blood pressure monitoring",
+        "aliases": ["ABPM", "24 hour blood pressure monitoring", "ambulatory blood pressure monitor"],
+        "utd": [["Overview", "ambulatory blood pressure monitoring interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Coronary artery calcium score",
+        "aliases": ["calcium score", "Agatston score", "coronary calcium scoring", "CAC score"],
+        "utd": [["Overview", "coronary artery calcium score cardiovascular risk"]],
+        "summary": "",
+    },
+    {
+        "name": "Stress echocardiography",
+        "aliases": ["stress echo", "dobutamine stress echocardiogram", "exercise stress echocardiogram"],
+        "utd": [["Overview", "stress echocardiography indications and interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Ankle brachial index",
+        "aliases": ["ABI", "ankle-brachial pressure index", "toe brachial index"],
+        "utd": [["Overview", "ankle brachial index peripheral artery disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Non-invasive ventilation",
+        "aliases": ["NIV", "bilevel positive airway pressure", "BiPAP", "non invasive positive pressure ventilation"],
+        "utd": [["Overview", "noninvasive ventilation acute respiratory failure"]],
+        "summary": "",
+    },
+    {
+        "name": "Home oxygen therapy",
+        "aliases": ["long-term oxygen therapy", "LTOT", "domiciliary oxygen"],
+        "utd": [["Overview", "long term oxygen therapy chronic hypoxemia criteria"]],
+        "summary": "",
+    },
+    {
+        "name": "Polysomnography",
+        "aliases": ["sleep study", "PSG", "home sleep apnoea test"],
+        "utd": [["Overview", "polysomnography sleep study indications interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Diffusing capacity of the lung",
+        "aliases": ["gas transfer", "carbon monoxide transfer factor"],
+        "utd": [["Overview", "diffusing capacity carbon monoxide DLCO interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Pleurodesis",
+        "aliases": ["talc pleurodesis", "chemical pleurodesis"],
+        "utd": [["Overview", "pleurodesis malignant pleural effusion pneumothorax"]],
+        "summary": "",
+    },
+    {
+        "name": "Estimated glomerular filtration rate",
+        "aliases": ["estimated GFR", "CKD-EPI"],
+        "utd": [["Overview", "estimated glomerular filtration rate interpretation CKD staging"]],
+        "summary": "",
+    },
+    {
+        "name": "Anion gap metabolic acidosis",
+        "aliases": ["high anion gap metabolic acidosis", "raised anion gap"],
+        "utd": [["Overview", "high anion gap metabolic acidosis approach"]],
+        "summary": "",
+    },
+    {
+        "name": "Arteriovenous fistula",
+        "aliases": ["AV fistula", "dialysis fistula", "radiocephalic fistula"],
+        "utd": [["Overview", "arteriovenous fistula hemodialysis access complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Glycated haemoglobin",
+        "aliases": ["haemoglobin A1c", "glycosylated haemoglobin"],
+        "utd": [["Overview", "hemoglobin A1c diagnosis monitoring diabetes"]],
+        "summary": "",
+    },
+    {
+        "name": "Continuous glucose monitoring",
+        "aliases": ["CGM", "flash glucose monitoring", "continuous glucose monitor"],
+        "utd": [["Overview", "continuous glucose monitoring time in range targets"]],
+        "summary": "",
+    },
+    {
+        "name": "Short synacthen test",
+        "aliases": ["synacthen test", "ACTH stimulation test", "tetracosactrin test"],
+        "utd": [["Overview", "short synacthen ACTH stimulation test adrenal insufficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Dexamethasone suppression test",
+        "aliases": ["overnight dexamethasone suppression test", "low dose dexamethasone suppression test"],
+        "utd": [["Overview", "dexamethasone suppression test Cushing syndrome screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroid function tests",
+        "aliases": ["thyroid function test", "TSH test"],
+        "utd": [["Overview", "thyroid function tests TSH free T4 interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Helicobacter pylori eradication",
+        "aliases": ["H pylori eradication", "Helicobacter pylori treatment"],
+        "utd": [["Overview", "helicobacter pylori eradication regimens"]],
+        "summary": "",
+    },
+    {
+        "name": "Transient elastography",
+        "aliases": ["FibroScan", "liver stiffness measurement", "liver elastography"],
+        "utd": [["Overview", "transient elastography liver stiffness fibrosis staging"]],
+        "summary": "",
+    },
+    {
+        "name": "Faecal calprotectin",
+        "aliases": ["calprotectin", "stool calprotectin"],
+        "utd": [["Overview", "fecal calprotectin inflammatory bowel disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Endovascular thrombectomy",
+        "aliases": ["mechanical thrombectomy", "clot retrieval", "endovascular clot retrieval"],
+        "utd": [["Overview", "endovascular thrombectomy large vessel occlusion stroke"]],
+        "summary": "",
+    },
+    {
+        "name": "Carotid endarterectomy",
+        "aliases": ["carotid revascularisation", "carotid revascularization"],
+        "utd": [["Overview", "carotid endarterectomy symptomatic stenosis timing"]],
+        "summary": "",
+    },
+    {
+        "name": "National Institutes of Health Stroke Scale",
+        "aliases": ["NIH stroke scale"],
+        "utd": [["Overview", "NIH stroke scale scoring interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Direct antiglobulin test",
+        "aliases": ["Coombs test", "direct Coombs test", "direct antiglobulin"],
+        "utd": [["Overview", "direct antiglobulin Coombs test hemolytic anemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Iron studies",
+        "aliases": ["transferrin saturation", "total iron binding capacity"],
+        "utd": [["Overview", "iron studies ferritin transferrin saturation interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Interferon gamma release assay",
+        "aliases": ["IGRA", "QuantiFERON", "interferon-gamma release assay"],
+        "utd": [["Overview", "interferon gamma release assay latent tuberculosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Six minute walk test",
+        "aliases": ["6 minute walk test", "6MWT", "six minute walk distance"],
+        "utd": [["Overview", "six minute walk test interpretation chronic lung disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Bronchoalveolar lavage",
+        "aliases": ["BAL", "bronchial lavage", "bronchoalveolar washing"],
+        "utd": [["Overview", "bronchoalveolar lavage indications cell count"]],
+        "summary": "",
+    },
+    {
+        "name": "Blood cultures",
+        "aliases": ["blood culture", "peripheral blood cultures"],
+        "utd": [["Overview", "blood culture collection technique yield contamination"]],
+        "summary": "",
+    },
+    {
+        "name": "Reticulocyte count",
+        "aliases": ["reticulocytes", "absolute reticulocyte count", "reticulocyte index"],
+        "utd": [["Overview", "reticulocyte count anemia interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Clinical frailty scale",
+        "aliases": ["CFS score", "Rockwood frailty scale", "frailty score"],
+        "utd": [["Overview", "clinical frailty scale Rockwood scoring prognosis"]],
+        "summary": "",
+    },
 ]
 
 
@@ -73071,6 +73275,722 @@ RICH_SUMMARIES = {
         "malignancy workup. Anorexia nervosa is a separate "
         "psychiatric diagnosis needing restriction, fear of weight "
         "gain and body-image disturbance."
+    ),
+
+    "Left bundle branch block": (
+        "Left bundle branch block (LBBB) is a conduction delay in the "
+        "left bundle producing a QRS of 120 ms or more with a broad "
+        "notched R wave in V5-V6 and a deep S wave in V1. Aetiology: "
+        "it usually signals structural disease. Ischaemic heart "
+        "disease, hypertensive or dilated cardiomyopathy and calcific "
+        "conduction disease account for most, and isolated LBBB in a "
+        "young person is rare enough to warrant an echocardiogram. "
+        "Clinical features: usually asymptomatic, with reversed "
+        "splitting of the second heart sound sometimes audible. Ix: "
+        "the ECG defines it and echocardiography assesses ventricular "
+        "size and function. LBBB obscures ST analysis, so ischaemia "
+        "is judged by troponin and the Sgarbossa criteria rather than "
+        "by the ST segments themselves. Mx: treat the underlying "
+        "disease. New LBBB with ischaemic chest pain is managed as an "
+        "acute coronary syndrome, not dismissed as an old finding. "
+        "QRS of 150 ms or more with LBBB morphology and an ejection "
+        "fraction of 35% or less despite optimal therapy is the "
+        "strongest indication for cardiac resynchronisation. Note: "
+        "right bundle branch block is often benign, left bundle "
+        "branch block rarely is."
+    ),
+    "Cardiac resynchronisation therapy": (
+        "Cardiac resynchronisation therapy is biventricular pacing "
+        "that restores coordinated left ventricular contraction in "
+        "heart failure with electrical dyssynchrony. Mechanism: a "
+        "lead passed through the coronary sinus paces the lateral "
+        "wall in step with the septum, improving stroke volume and "
+        "reversing adverse remodelling. Indications: an ejection "
+        "fraction of 35% or less with QRS of 150 ms or more and left "
+        "bundle branch block morphology, in sinus rhythm and still "
+        "symptomatic on optimal medical therapy, gives the clearest "
+        "benefit. QRS 130-149 ms or non-LBBB morphology gives less, "
+        "and QRS under 130 ms gives none. Ix: ECG for QRS width and "
+        "morphology, echocardiography for ejection fraction, and "
+        "honest confirmation that guideline therapy is genuinely "
+        "optimised first. Mx: a pacing-only device suits those "
+        "without arrhythmic risk, while adding a defibrillator is "
+        "chosen when sudden death risk justifies it. Aim for "
+        "biventricular pacing above 98%, since rapidly conducted "
+        "atrial fibrillation is the usual reason for losing capture. "
+        "Note: about a third of recipients do not respond, and "
+        "non-LBBB morphology is the strongest predictor of that."
+    ),
+    "Resistant hypertension": (
+        "Resistant hypertension is blood pressure above target "
+        "despite three antihypertensives at maximally tolerated "
+        "doses, one of which is a diuretic. Confirming it before "
+        "escalating matters, because most apparent resistance is not "
+        "true resistance. Causes: non-adherence, white-coat effect "
+        "and undertreatment account for the majority. The secondary "
+        "causes worth chasing are primary aldosteronism, obstructive "
+        "sleep apnoea, renal artery stenosis and chronic kidney "
+        "disease. Ix: confirm with ambulatory or home monitoring and "
+        "review adherence and interfering agents such as NSAIDs, "
+        "decongestants and liquorice. Then screen with an "
+        "aldosterone-to-renin ratio, electrolytes, eGFR and urine "
+        "albumin-creatinine ratio. Mx: optimise the diuretic first by "
+        "switching a thiazide to indapamide or chlorthalidone, or to "
+        "frusemide once eGFR falls below 30. Spironolactone 25 mg is "
+        "the fourth-line agent of choice and outperforms "
+        "beta-blockers and alpha-blockers here. Refer if still "
+        "uncontrolled. Note: primary aldosteronism is found in up to "
+        "one in five, so screen before settling for the label of "
+        "essential hypertension."
+    ),
+    "Ambulatory blood pressure monitoring": (
+        "Ambulatory blood pressure monitoring records blood pressure "
+        "at intervals across 24 hours of ordinary activity and sleep, "
+        "and predicts cardiovascular outcomes better than clinic "
+        "readings do. Indications: suspected white-coat or masked "
+        "hypertension, borderline clinic readings and resistant "
+        "hypertension. It also clarifies symptomatic hypotension and "
+        "episodic pressures. Criteria: a daytime average of 135/85 or "
+        "more, a 24-hour average of 130/80 or more and a night-time "
+        "average of 120/70 or more define hypertension. Each "
+        "threshold sits below the clinic figure of 140/90. Ix: at "
+        "least 70% of readings must be usable with two or more per "
+        "waking hour, or the study is repeated. A symptom diary "
+        "anchors dizziness or headache to actual readings. Mx: "
+        "white-coat hypertension needs absolute cardiovascular risk "
+        "assessment and repeat testing rather than drugs. Masked "
+        "hypertension, normal in clinic but high out of it, carries "
+        "risk close to sustained hypertension and is treated. Note: "
+        "loss of the normal 10-20% nocturnal dip is independently "
+        "associated with events and should prompt a look for "
+        "obstructive sleep apnoea."
+    ),
+    "Coronary artery calcium score": (
+        "The coronary artery calcium score quantifies calcified "
+        "atherosclerotic plaque on a non-contrast gated CT and is "
+        "reported as an Agatston score. Uses: it reclassifies "
+        "absolute cardiovascular risk when the calculated risk sits "
+        "in the intermediate band and the decision to start a statin "
+        "is genuinely uncertain. Criteria: zero predicts a very low "
+        "event rate over the next decade. A score of 1-99 is mild, "
+        "100-399 moderate and 400 or more indicates severe disease "
+        "warranting intensive risk reduction, read alongside age and "
+        "sex percentiles. Ix: radiation dose is around 1 mSv, with no "
+        "contrast and no beta-blockade needed. It is not a test for "
+        "symptomatic chest pain, where CT coronary angiography or "
+        "functional testing belongs. Mx: a raised score prompts "
+        "statin therapy, blood pressure control and lifestyle change "
+        "rather than revascularisation, because the score says "
+        "nothing about stenosis or ischaemia. Note: it is not "
+        "MBS-rebated for primary prevention in Australia, so the "
+        "patient pays, and zero does not exclude soft non-calcified "
+        "plaque in a young smoker."
+    ),
+    "Stress echocardiography": (
+        "Stress echocardiography detects inducible ischaemia by "
+        "imaging regional wall motion at rest and at peak stress, "
+        "provoked by exercise or dobutamine. Mechanism: ischaemic "
+        "myocardium becomes hypokinetic before the ECG changes or "
+        "chest pain appears, so a new or worsening wall motion "
+        "abnormality is the positive finding. Indications: "
+        "intermediate pre-test probability of coronary disease, an "
+        "uninterpretable exercise ECG such as left bundle branch "
+        "block or paced rhythm, and assessment of valve severity or "
+        "myocardial viability. Ix: dobutamine is infused in "
+        "escalating doses, with atropine added if the target heart "
+        "rate is not reached. Contrast improves endocardial "
+        "definition in poor acoustic windows. Contraindications: "
+        "uncontrolled arrhythmia and severe outflow obstruction for "
+        "dobutamine, and acute coronary syndrome for any stress test. "
+        "Mx: a positive study localises the territory and guides "
+        "angiography, while a negative study carries a low event rate "
+        "over the following two years. Note: it uses no ionising "
+        "radiation, which makes it the preferred functional test in "
+        "younger patients and in women."
+    ),
+    "Ankle brachial index": (
+        "The ankle brachial index is the ratio of the highest ankle "
+        "systolic pressure to the highest brachial systolic pressure, "
+        "measured with a Doppler probe and a sphygmomanometer. Uses: "
+        "it diagnoses peripheral arterial disease, grades severity "
+        "and flags generalised atherosclerosis in a patient with no "
+        "leg symptoms at all. Criteria: 0.9 to 1.3 is normal and 0.4 "
+        "to 0.9 indicates mild to moderate disease, typically with "
+        "claudication. Below 0.4 means severe disease with rest pain "
+        "or tissue loss. Above 1.3 means incompressible calcified "
+        "vessels, typical of diabetes and chronic kidney disease, and "
+        "calls for a toe pressure instead. Ix: measuring after "
+        "exercise unmasks disease when the resting value is normal "
+        "but the history is classical. Mx: any abnormal result is a "
+        "cardiovascular risk equivalent and earns a statin, "
+        "antiplatelet, blood pressure control and smoking cessation. "
+        "Supervised exercise therapy is first-line for claudication, "
+        "with revascularisation kept for limiting symptoms or "
+        "threatened limbs. Note: a normal index never excludes "
+        "disease in a calcified diabetic leg."
+    ),
+    "Non-invasive ventilation": (
+        "Non-invasive ventilation delivers positive pressure through "
+        "a mask, giving inspiratory pressure support and expiratory "
+        "pressure without an artificial airway. Mechanism: "
+        "inspiratory support unloads the respiratory muscles and "
+        "augments tidal volume to clear carbon dioxide, while "
+        "expiratory pressure splints the airway and recruits "
+        "collapsed alveoli. Indications: acute hypercapnic "
+        "respiratory failure in COPD with pH 7.25 to 7.35, acute "
+        "cardiogenic pulmonary oedema, and hypoventilation from "
+        "obesity or neuromuscular disease. Contraindications: reduced "
+        "consciousness with an unprotected airway, facial trauma, "
+        "active vomiting and untreated pneumothorax. Ix: an arterial "
+        "blood gas before starting and again at one and four hours "
+        "decides whether it is working. Failure of the pH or carbon "
+        "dioxide to improve is the trigger to escalate. Mx: start "
+        "near 12/5 cmH2O and titrate inspiratory pressure to tidal "
+        "volume and comfort. Document a ceiling-of-care decision "
+        "before starting, because for many patients this is the "
+        "ceiling. Note: a pH below 7.25 predicts failure, so it "
+        "belongs where intubation is available."
+    ),
+    "Home oxygen therapy": (
+        "Long-term home oxygen therapy improves survival in chronic "
+        "hypoxaemia, and only in chronic hypoxaemia. It does not "
+        "relieve breathlessness in a patient whose oxygen levels are "
+        "normal. Indications: a resting PaO2 of 55 mmHg or less on "
+        "room air when clinically stable, or 59 mmHg or less with cor "
+        "pulmonale, pulmonary hypertension or polycythaemia. The "
+        "patient must be stable for at least four weeks on optimal "
+        "therapy and must have stopped smoking. Ix: an arterial blood "
+        "gas on room air at rest is the qualifying test and is "
+        "repeated to confirm. Oximetry screens but does not qualify. "
+        "Mx: prescribe the flow that lifts PaO2 above 60 mmHg or "
+        "saturation above 90%, used at least 15 hours a day including "
+        "sleep, since the benefit is dose-dependent. Australian "
+        "notes: state and territory schemes fund the equipment and "
+        "their eligibility criteria differ between jurisdictions. "
+        "Note: smoking near oxygen causes facial burns and house "
+        "fires and is a contraindication rather than a caution. "
+        "Short-burst oxygen for breathlessness alone confers no "
+        "survival benefit."
+    ),
+    "Polysomnography": (
+        "Polysomnography is attended overnight recording of brain "
+        "activity, airflow, respiratory effort and oximetry, used to "
+        "diagnose and grade sleep-disordered breathing. Indications: "
+        "suspected obstructive sleep apnoea, and any suspected "
+        "central apnoea, hypoventilation, narcolepsy or parasomnia "
+        "that a simplified home study cannot answer. Criteria: the "
+        "apnoea-hypopnoea index grades severity as mild at 5-15, "
+        "moderate at 15-30 and severe above 30 events per hour. "
+        "Oxygen desaturation index and time spent below 90% "
+        "saturation add prognostic weight. Ix: home sleep apnoea "
+        "testing is cheaper and adequate when the pre-test "
+        "probability of moderate or severe obstructive apnoea is high "
+        "and comorbidity is minimal. Mx: results drive CPAP "
+        "titration, mandibular advancement splinting or upper airway "
+        "surgery, alongside weight loss and reduced evening alcohol. "
+        "Australian notes: MBS rebate requires a validated "
+        "questionnaire and clinical criteria to be documented first. "
+        "Note: the Epworth and STOP-Bang scores are part of the "
+        "referral rather than decoration, and a normal study in a "
+        "sleepy patient still needs an explanation."
+    ),
+    "Diffusing capacity of the lung": (
+        "Diffusing capacity for carbon monoxide measures gas transfer "
+        "across the alveolar-capillary membrane during a single "
+        "ten-second breath hold, reflecting membrane area, membrane "
+        "thickness and the haemoglobin available to bind it. Uses: it "
+        "separates causes of breathlessness when spirometry is "
+        "equivocal and is the lung function test most sensitive to "
+        "early interstitial and pulmonary vascular disease. Causes: "
+        "it falls in emphysema, interstitial lung disease and "
+        "pulmonary vascular disease. It rises in alveolar "
+        "haemorrhage, polycythaemia and left-to-right shunt. Ix: "
+        "correct the measured value for haemoglobin before "
+        "interpreting it, since anaemia lowers it independently of "
+        "lung disease. Report the transfer coefficient alongside to "
+        "separate loss of lung units from loss of transfer per unit. "
+        "Mx: an isolated low value with normal spirometry should "
+        "prompt high-resolution CT and consideration of pulmonary "
+        "hypertension. Note: carboxyhaemoglobin from a recent "
+        "cigarette lowers the result, so ask when the patient last "
+        "smoked before calling the number disease."
+    ),
+    "Pleurodesis": (
+        "Pleurodesis obliterates the pleural space by inducing "
+        "inflammation and adhesion between visceral and parietal "
+        "pleura, so fluid or air cannot reaccumulate. Indications: "
+        "recurrent malignant pleural effusion, and recurrent or "
+        "persistent pneumothorax, provided the lung can fully "
+        "re-expand. Types: chemical pleurodesis uses sterile graded "
+        "talc given as a slurry through an intercostal catheter or as "
+        "poudrage at thoracoscopy. Mechanical abrasion or pleurectomy "
+        "at surgery achieves the lowest recurrence rate. Ix: confirm "
+        "full re-expansion on chest radiograph after drainage, "
+        "because a trapped lung will never appose the pleural "
+        "surfaces and the procedure will fail. Mx: analgesia and "
+        "drain management dominate the first few days. An indwelling "
+        "pleural catheter is the better option for trapped lung or a "
+        "short prognosis and can be drained at home. Complications: "
+        "pain, fever and rarely acute respiratory distress syndrome "
+        "after talc. Note: fever and pleuritic pain in the first 48 "
+        "hours are expected inflammation rather than infection, and "
+        "suction is not required for success."
+    ),
+    "Estimated glomerular filtration rate": (
+        "Estimated glomerular filtration rate is calculated from "
+        "serum creatinine, age and sex, and is reported automatically "
+        "with every creatinine result in Australia using the CKD-EPI "
+        "equation. Uses: it stages chronic kidney disease, guides "
+        "renal drug dosing and triggers specialist referral. "
+        "Criteria: staging runs from G1 above 90 down to G5 below 15, "
+        "and is only meaningful alongside albuminuria, which drives "
+        "risk at least as strongly. Cautions: the estimate assumes "
+        "steady state, so it means little during acute kidney injury. "
+        "It is unreliable at extremes of muscle mass, after "
+        "amputation, and in pregnancy or advanced liver disease, "
+        "where cystatin C is the alternative. Ix: repeat before "
+        "acting on an isolated abnormal value, then establish "
+        "chronicity over three months with a urine albumin-creatinine "
+        "ratio. Mx: refer for eGFR below 30, rapid decline, or heavy "
+        "albuminuria at any level of function. Note: Australian "
+        "laboratories cap the reported figure above 90 rather than "
+        "giving a precise number, because the equation is imprecise "
+        "there, yet a fall from 120 to 95 still matters."
+    ),
+    "Anion gap metabolic acidosis": (
+        "A raised anion gap metabolic acidosis means unmeasured "
+        "anions have accumulated. The gap is sodium minus the sum of "
+        "chloride and bicarbonate, and is normally 8 to 12 mmol/L. "
+        "Causes: the list worth remembering is ketoacidosis, lactic "
+        "acidosis, renal failure and toxic alcohols, with salicylate "
+        "and metformin-associated lactic acidosis close behind. Ix: a "
+        "blood gas with lactate, ketones and glucose, adding an "
+        "osmolar gap and salicylate level when the history is "
+        "unclear. Correct the gap for albumin by adding 2.5 mmol/L "
+        "for every 10 g/L that albumin sits below 40, or "
+        "hypoalbuminaemia will hide a real gap. Criteria: apply the "
+        "Winter formula, where expected carbon dioxide equals 1.5 "
+        "times the bicarbonate plus 8, to judge whether respiratory "
+        "compensation is adequate or a second disorder is present. "
+        "Mx: treat the cause. Bicarbonate is reserved for severe "
+        "acidaemia, hyperkalaemia or toxic ingestion rather than "
+        "given for the number itself. Note: a normal gap points "
+        "instead to gastrointestinal or renal bicarbonate loss, and "
+        "the urine anion gap separates those two."
+    ),
+    "Arteriovenous fistula": (
+        "An arteriovenous fistula is a surgically created connection "
+        "between an artery and a vein, usually radiocephalic or "
+        "brachiocephalic, that arterialises the vein so it can be "
+        "needled repeatedly for haemodialysis. Uses: it is the "
+        "preferred permanent access, with lower infection and "
+        "thrombosis rates and better long-term patency than a graft "
+        "or a tunnelled catheter. Ix: vein mapping with duplex "
+        "ultrasound precedes creation. Assess a mature fistula by "
+        "look, feel and listen, expecting a soft compressible pulse, "
+        "a continuous thrill and a low-pitched machinery bruit. Mx: "
+        "create it months before dialysis is expected, since "
+        "maturation takes six to twelve weeks. Preserve the veins in "
+        "advance by banning cannulation and blood pressure cuffs on "
+        "that arm. Complications: stenosis and thrombosis, steal "
+        "syndrome with a cold painful hand, and high-output cardiac "
+        "failure with very large fistulae. Note: a water-hammer pulse "
+        "with loss of the thrill means outflow stenosis and needs an "
+        "urgent fistulogram, and bleeding from an aneurysm is "
+        "controlled with direct pressure and treated as an emergency."
+    ),
+    "Glycated haemoglobin": (
+        "Glycated haemoglobin reflects average glycaemia over the "
+        "preceding 8 to 12 weeks, weighted towards the most recent "
+        "month. Uses: it diagnoses and monitors type 2 diabetes, and "
+        "in Australia is rebated for diagnostic use once a year in "
+        "asymptomatic at-risk adults. Criteria: 6.5% or 48 mmol/mol "
+        "and above is diagnostic on two separate occasions, 5.7 to "
+        "6.4% marks high risk, and a general treatment target is 7% "
+        "or below, individualised to the patient. Cautions: it is "
+        "unreliable whenever red cell lifespan is altered, as in "
+        "haemolysis, recent transfusion, advanced chronic kidney "
+        "disease and haemoglobinopathy. Use fasting glucose or an "
+        "oral glucose tolerance test instead in those settings and in "
+        "pregnancy. Mx: recheck three-monthly while therapy is being "
+        "adjusted and six-monthly once stable. Relax the target "
+        "towards 8% in frailty, limited life expectancy or "
+        "hypoglycaemia unawareness. Note: it cannot diagnose type 1 "
+        "or gestational diabetes, and a normal value in a patient "
+        "with classic osmotic symptoms should never reassure."
+    ),
+    "Continuous glucose monitoring": (
+        "Continuous glucose monitoring measures interstitial glucose "
+        "every few minutes through a subcutaneous sensor, showing "
+        "trend and rate of change rather than isolated points. Uses: "
+        "it replaces most fingerprick testing in type 1 diabetes and "
+        "reduces both hypoglycaemia and glycated haemoglobin, "
+        "particularly where awareness of hypoglycaemia is impaired. "
+        "Criteria: the standard targets are time in range 3.9 to 10 "
+        "mmol/L above 70%, time below 3.9 under 4%, and time below "
+        "3.0 under 1%. The glucose management indicator approximates "
+        "a laboratory HbA1c. Cautions: interstitial glucose lags "
+        "blood by five to fifteen minutes, so confirm with a "
+        "fingerprick when the reading contradicts symptoms or when "
+        "treating hypoglycaemia. Mx: teach patients to act on trend "
+        "arrows rather than react to numbers, and pair the sensor "
+        "with a pump for automated insulin delivery. Australian "
+        "notes: sensors are fully subsidised for everyone with type 1 "
+        "diabetes through the National Diabetes Services Scheme. "
+        "Note: poor sensor performance usually means it was sited "
+        "over muscle or scar rather than fat."
+    ),
+    "Short synacthen test": (
+        "The short synacthen test assesses adrenal cortisol reserve "
+        "by measuring the response to synthetic ACTH. Indications: "
+        "suspected adrenal insufficiency, and assessment of the axis "
+        "after prolonged glucocorticoid exposure. Ix: take a baseline "
+        "cortisol, give 250 micrograms of tetracosactrin "
+        "intravenously or intramuscularly, then sample cortisol at 30 "
+        "and 60 minutes. A peak above roughly 450 to 500 nmol/L "
+        "excludes primary adrenal insufficiency, though the cut-off "
+        "is assay-specific and the reporting laboratory governs. "
+        "Criteria: a paired ACTH separates the causes, with a high "
+        "ACTH and low cortisol indicating primary adrenal failure and "
+        "a low or inappropriately normal ACTH indicating pituitary "
+        "disease. Mx: never delay hydrocortisone in a shocked patient "
+        "in order to complete the test. Dexamethasone does not "
+        "cross-react in the cortisol assay, so it can cover the "
+        "patient while testing proceeds. Note: the result can be "
+        "falsely normal in acute pituitary failure because the "
+        "adrenal has not yet atrophied, so repeat it after four to "
+        "six weeks if suspicion remains high."
+    ),
+    "Dexamethasone suppression test": (
+        "The dexamethasone suppression test screens for endogenous "
+        "cortisol excess by asking whether exogenous glucocorticoid "
+        "suppresses the axis as it should. Ix: the overnight 1 mg "
+        "test is standard, with dexamethasone at 11 pm and cortisol "
+        "at 8 am, and suppression below 50 nmol/L makes Cushing "
+        "syndrome unlikely. The 48-hour low-dose test and late-night "
+        "salivary cortisol are the alternatives, and two abnormal "
+        "tests of different types are wanted before proceeding. "
+        "Criteria: once excess is confirmed, ACTH separates pituitary "
+        "or ectopic disease from adrenal disease, and high-dose "
+        "testing suppresses a pituitary adenoma but not an ectopic "
+        "source. Cautions: false positives are common with "
+        "oestrogen-containing contraceptives, which raise "
+        "cortisol-binding globulin, and with enzyme-inducing drugs, "
+        "alcohol excess, depression and obesity. Mx: refer confirmed "
+        "cases for source localisation before any treatment. Note: "
+        "the commonest cause of Cushing syndrome is prescribed "
+        "steroid, so take a full drug history including joint "
+        "injections and potent topical preparations before testing at "
+        "all."
+    ),
+    "Thyroid function tests": (
+        "Thyroid function tests comprise TSH with free T4, adding "
+        "free T3 where thyrotoxicosis is suspected. TSH is the most "
+        "sensitive first-line test in ambulatory patients because the "
+        "pituitary responds log-linearly to small changes in T4. "
+        "Criteria: a high TSH with low free T4 is primary "
+        "hypothyroidism, a low TSH with high free T4 is "
+        "thyrotoxicosis, and a high TSH with normal free T4 is "
+        "subclinical hypothyroidism. A low TSH with low free T4 "
+        "points instead to pituitary disease. Ix: measure antibodies "
+        "when the cause is unclear, using TPO antibodies for "
+        "Hashimoto disease and TSH receptor antibodies for Graves "
+        "disease. A radionuclide uptake scan separates Graves disease "
+        "from thyroiditis. Cautions: TSH is unreliable in acute "
+        "illness, soon after a dose change and in the first "
+        "trimester, and biotin supplements produce spurious results "
+        "in many assays. Mx: recheck six to eight weeks after any "
+        "levothyroxine dose change, as the axis takes that long to "
+        "re-equilibrate. Note: never chase a single abnormal TSH in "
+        "an unwell inpatient."
+    ),
+    "Helicobacter pylori eradication": (
+        "Helicobacter pylori eradication cures most peptic ulcer "
+        "disease and lowers gastric cancer risk. It is indicated in "
+        "every proven infection with ulcer disease, investigated "
+        "dyspepsia, gastric MALT lymphoma or a first-degree family "
+        "history of gastric cancer. Ix: urea breath test or stool "
+        "antigen, taken off proton pump inhibitors for two weeks and "
+        "off antibiotics for four, or gastric biopsy at endoscopy. "
+        "Serology cannot separate current from past infection. Mx: "
+        "standard triple therapy is esomeprazole 20 mg, amoxicillin 1 "
+        "g and clarithromycin 500 mg, each twice daily for seven "
+        "days, dispensed as a combination pack on the PBS. Substitute "
+        "metronidazole for amoxicillin in penicillin allergy. Salvage "
+        "regimens use bismuth quadruple therapy or levofloxacin, "
+        "guided by susceptibility where testing is available. "
+        "Follow-up: confirm eradication with a breath test at least "
+        "four weeks after finishing. Note: clarithromycin resistance "
+        "is the main cause of failure, so never repeat a regimen that "
+        "has already failed. Change the antibiotics instead."
+    ),
+    "Transient elastography": (
+        "Transient elastography measures liver stiffness by timing a "
+        "shear wave through the parenchyma, giving a non-invasive "
+        "estimate of fibrosis in kilopascals. Uses: it stages "
+        "fibrosis in hepatitis B and C, alcohol-related liver disease "
+        "and metabolic dysfunction-associated fatty liver disease, "
+        "and has largely replaced biopsy for this purpose. Controlled "
+        "attenuation parameter estimates steatosis at the same "
+        "sitting. Criteria: below 8 kPa makes advanced fibrosis "
+        "unlikely and above 12 to 15 kPa suggests cirrhosis, though "
+        "the thresholds shift with the underlying aetiology. "
+        "Cautions: results are unreliable with ascites, morbid "
+        "obesity or narrow intercostal spaces, and are falsely raised "
+        "by acute hepatitis, cholestasis, cardiac congestion and "
+        "recent food. Fast for at least three hours. Mx: stiffness "
+        "above 20 kPa with a low platelet count warrants variceal "
+        "screening, and confirmed cirrhosis enters six-monthly "
+        "hepatocellular carcinoma surveillance. Note: a high reading "
+        "during acute hepatitis reflects inflammation rather than "
+        "fibrosis, so repeat it once the transaminases settle."
+    ),
+    "Faecal calprotectin": (
+        "Faecal calprotectin is a neutrophil cytosolic protein shed "
+        "into stool, and it rises in proportion to intestinal mucosal "
+        "inflammation. Uses: it separates inflammatory bowel disease "
+        "from irritable bowel syndrome in young patients with chronic "
+        "diarrhoea, sparing a great many colonoscopies. Criteria: "
+        "below 50 micrograms per gram makes inflammatory bowel "
+        "disease unlikely and above 250 makes active inflammation "
+        "likely. The band between is indeterminate and is repeated "
+        "rather than acted on. Cautions: it is not specific, and it "
+        "rises with NSAIDs, gastrointestinal infection, coeliac "
+        "disease and colorectal cancer. Ix: it does not replace "
+        "colonoscopy where alarm features are present, so weight "
+        "loss, rectal bleeding, anaemia or age above 50 still mandate "
+        "direct visualisation. Mx: in established inflammatory bowel "
+        "disease it tracks mucosal healing and predicts relapse "
+        "months ahead, which is what makes treat-to-target strategies "
+        "workable. Note: it is not MBS-rebated in Australia, so the "
+        "patient pays, and it earns its keep only when the pre-test "
+        "probability is genuinely intermediate."
+    ),
+    "Endovascular thrombectomy": (
+        "Endovascular thrombectomy is mechanical clot retrieval by "
+        "stent retriever or aspiration for acute ischaemic stroke "
+        "caused by large vessel occlusion. It is the single most "
+        "effective stroke treatment available, with a number needed "
+        "to treat near three for reduced disability. Indications: "
+        "occlusion of the intracranial internal carotid or proximal "
+        "middle cerebral artery within 6 hours of onset, extending to "
+        "24 hours where perfusion imaging shows salvageable brain. "
+        "Ix: non-contrast CT excludes haemorrhage, CT angiography "
+        "identifies the occlusion, and CT perfusion selects late "
+        "presenters on core-to-penumbra mismatch. Mx: give "
+        "thrombolysis first if the patient is eligible, since it does "
+        "not replace thrombectomy and must not delay transfer. "
+        "Regional bypass protocols move the patient directly to a "
+        "comprehensive stroke centre. Complications: symptomatic "
+        "intracranial haemorrhage, vessel perforation and dissection. "
+        "Note: basilar occlusion is treated on a wider time window "
+        "because the alternative is almost uniformly fatal."
+    ),
+    "Carotid endarterectomy": (
+        "Carotid endarterectomy removes atheromatous plaque from the "
+        "carotid bifurcation to prevent recurrent stroke in "
+        "symptomatic carotid stenosis. Indications: 70 to 99% "
+        "stenosis on the side of a transient ischaemic attack or "
+        "non-disabling stroke gives the clearest benefit. Stenosis of "
+        "50 to 69% gives modest benefit, greater in men and in older "
+        "patients, while near-occlusion and asymptomatic disease "
+        "benefit little. Ix: duplex ultrasound screens, with CT or MR "
+        "angiography confirming the degree and excluding tandem "
+        "lesions. Grade the stenosis by the NASCET method. Mx: "
+        "operate within two weeks of the index event, when recurrence "
+        "risk is highest, because benefit falls away sharply after "
+        "that. Continue antiplatelet therapy and a high-intensity "
+        "statin throughout. Stenting is reserved for surgically "
+        "hostile necks and younger patients. Complications: "
+        "perioperative stroke, cranial nerve injury causing "
+        "hoarseness or tongue deviation, and neck haematoma "
+        "threatening the airway. Note: the operation prevents the "
+        "next stroke and does nothing for the deficit already "
+        "present."
+    ),
+    "National Institutes of Health Stroke Scale": (
+        "The National Institutes of Health Stroke Scale is a 15-item "
+        "bedside score running from 0 to 42 that quantifies "
+        "neurological deficit in acute stroke. Uses: it informs "
+        "reperfusion decisions, tracks deterioration, predicts "
+        "outcome and gives the emergency department and the stroke "
+        "unit a shared language. Criteria: 1 to 4 is minor, 5 to 15 "
+        "moderate, 16 to 20 moderate to severe and above 20 severe. A "
+        "score of 6 or more predicts large vessel occlusion and "
+        "prompts urgent angiography. Ix: score before thrombolysis, "
+        "again at 24 hours, and at any change in conscious state. Mx: "
+        "a low score does not exclude a disabling deficit. Isolated "
+        "aphasia or hemianopia scores few points yet changes a life, "
+        "and such patients are still considered for reperfusion. "
+        "Note: the scale is weighted towards the left hemisphere by "
+        "its language items, so right hemisphere strokes with neglect "
+        "are systematically underscored and must be judged clinically "
+        "as well."
+    ),
+    "Direct antiglobulin test": (
+        "The direct antiglobulin test detects immunoglobulin or "
+        "complement already bound to circulating red cells, using "
+        "anti-human globulin reagent to agglutinate them. Uses: it is "
+        "the pivotal test in suspected haemolysis, separating immune "
+        "from non-immune causes. Causes: it is positive in autoimmune "
+        "haemolytic anaemia, haemolytic disease of the newborn, "
+        "haemolytic transfusion reaction and drug-induced haemolysis. "
+        "Criteria: IgG positivity suggests warm autoimmune "
+        "haemolysis, while complement-only positivity suggests cold "
+        "agglutinin disease. The indirect test instead looks for free "
+        "antibody in plasma and underpins crossmatching and antenatal "
+        "screening. Ix: pair it with reticulocytes, lactate "
+        "dehydrogenase, haptoglobin and a blood film, because a "
+        "positive test alone does not prove haemolysis is happening. "
+        "Mx: warm autoimmune haemolysis is treated with prednisolone, "
+        "with rituximab as the usual second agent. Note: a low-titre "
+        "positive result is common in the well elderly and in "
+        "paraproteinaemia, so treat the patient rather than the "
+        "result."
+    ),
+    "Iron studies": (
+        "Iron studies comprise serum ferritin, serum iron, "
+        "transferrin or total iron-binding capacity, and transferrin "
+        "saturation, and they are interpreted together rather than "
+        "singly. Criteria: a low ferritin with low saturation and "
+        "high transferrin indicates iron deficiency, and a ferritin "
+        "below 30 micrograms per litre is diagnostic whatever the "
+        "blood count shows. A saturation above 45% with a high "
+        "ferritin raises haemochromatosis. Cautions: ferritin is an "
+        "acute phase reactant that rises with infection, "
+        "inflammation, liver disease and malignancy, so a normal "
+        "value never excludes deficiency in an inflamed patient. "
+        "Check CRP alongside and raise the threshold towards 100. Ix: "
+        "iron deficiency in an adult man or a postmenopausal woman is "
+        "gastrointestinal blood loss until proven otherwise and "
+        "warrants endoscopy in both directions. Mx: oral iron on "
+        "alternate days is absorbed better than daily dosing, because "
+        "hepcidin blocks the next dose. Note: reticulocyte "
+        "haemoglobin content detects deficiency earlier and is "
+        "unaffected by inflammation."
+    ),
+    "Interferon gamma release assay": (
+        "An interferon gamma release assay measures interferon gamma "
+        "released by T cells re-exposed to Mycobacterium tuberculosis "
+        "antigens, and is used to detect latent infection. Uses: it "
+        "is preferred over the tuberculin skin test in people who "
+        "have had BCG, because the antigens are absent from BCG and "
+        "from most environmental mycobacteria. Indications: screening "
+        "before biologic therapy or transplant immunosuppression, "
+        "contact tracing, and screening of health workers and new "
+        "migrants. Ix: it needs a single blood sample and no return "
+        "visit, and is reported as positive, negative or "
+        "indeterminate. An indeterminate result usually reflects "
+        "immunosuppression or a sample handling problem and is "
+        "repeated. Mx: a positive result requires chest radiograph "
+        "and symptom review to exclude active disease before latent "
+        "treatment begins, since treating active tuberculosis with "
+        "monotherapy breeds resistance. Note: neither this assay nor "
+        "the skin test can diagnose or exclude active tuberculosis, "
+        "so a sick patient with a negative assay may still have it."
+    ),
+    "Six minute walk test": (
+        "The six minute walk test measures the distance covered on a "
+        "flat corridor in six minutes at the patient's own pace, with "
+        "oximetry and Borg breathlessness scores before and after. "
+        "Uses: it is a submaximal functional test used in chronic "
+        "lung disease, pulmonary hypertension, heart failure and "
+        "pre-transplant assessment, and it reflects daily activity "
+        "better than spirometry does. Criteria: distance is compared "
+        "against reference equations for age, sex and height, and a "
+        "change of roughly 30 metres is the smallest that patients "
+        "actually notice. Desaturation to 88% or below identifies "
+        "exercise-induced hypoxaemia and supports assessment for "
+        "ambulatory oxygen. Ix: standardise the corridor length, the "
+        "encouragement given and the use of usual walking aids, or "
+        "serial tests cannot be compared. Mx: results guide pulmonary "
+        "rehabilitation prescription, oxygen assessment and "
+        "transplant listing. Note: the test measures the whole "
+        "patient rather than the lungs, so hip arthritis, "
+        "deconditioning and motivation all shorten it, and a falling "
+        "distance always deserves an explanation."
+    ),
+    "Bronchoalveolar lavage": (
+        "Bronchoalveolar lavage samples the distal airspaces by "
+        "instilling and aspirating warmed saline through a wedged "
+        "bronchoscope, returning cells and organisms from the alveoli "
+        "rather than from the airway. Indications: suspected "
+        "opportunistic infection in an immunosuppressed patient, "
+        "diffuse interstitial disease of unclear cause, and suspected "
+        "alveolar haemorrhage or eosinophilic pneumonia. Ix: send "
+        "fluid for microscopy and culture including fungi and "
+        "mycobacteria, for Pneumocystis and viral PCR, and for a "
+        "differential cell count. A progressively bloodier return "
+        "across sequential aliquots confirms alveolar haemorrhage. "
+        "Criteria: lymphocytosis suggests hypersensitivity "
+        "pneumonitis or sarcoidosis, neutrophilia suggests infection "
+        "or fibrosis, and eosinophilia above 25% is close to "
+        "diagnostic of eosinophilic pneumonia. Mx: the result narrows "
+        "antimicrobial therapy and may spare a surgical lung biopsy. "
+        "Note: transient fever and a new infiltrate on the "
+        "post-procedure film are expected, and hypoxaemia is the main "
+        "risk in an already hypoxaemic patient."
+    ),
+    "Blood cultures": (
+        "Blood cultures detect bacteraemia and fungaemia and remain "
+        "the single most important microbiological test in suspected "
+        "sepsis, endocarditis and unexplained fever. Ix: collect two "
+        "sets from separate venepuncture sites before antibiotics, "
+        "putting 8 to 10 mL into each bottle in an adult, because "
+        "volume is the strongest determinant of yield. Disinfect the "
+        "skin and let it dry. Draw a set through any long-standing "
+        "vascular catheter alongside a peripheral set when line "
+        "infection is suspected. Criteria: three sets across 24 hours "
+        "are recommended for suspected endocarditis, where persistent "
+        "bacteraemia in separately timed samples is itself a "
+        "diagnostic criterion. Mx: never delay antibiotics in septic "
+        "shock beyond the minutes needed to draw the cultures. Time "
+        "to positivity and the organism guide the switch from "
+        "empirical to directed therapy. Note: a coagulase-negative "
+        "staphylococcus in one of several sets usually means skin "
+        "contamination, yet the same organism in every set from a "
+        "patient with a prosthetic valve or line means the opposite."
+    ),
+    "Reticulocyte count": (
+        "The reticulocyte count measures newly released red cells "
+        "still carrying residual RNA, and is the direct readout of "
+        "marrow erythropoietic response. Uses: it is the first branch "
+        "point in the anaemia algorithm, separating failure of "
+        "production from loss or destruction. Criteria: report the "
+        "absolute count rather than the percentage, since the "
+        "percentage rises simply because the total red cell count has "
+        "fallen. Roughly 100 x 10^9/L or more is an appropriate "
+        "response, while under 50 in an anaemic patient indicates "
+        "hypoproliferation. Causes: a high count follows haemolysis, "
+        "bleeding and the treatment of a deficiency. A low count "
+        "follows iron, B12 or folate deficiency, marrow infiltration "
+        "and chronic kidney disease. Ix: pair it with a blood film, "
+        "iron studies, lactate dehydrogenase and bilirubin before "
+        "committing to a cause. Mx: a rising count a few days after "
+        "starting iron confirms the diagnosis was right and precedes "
+        "any rise in haemoglobin. Note: reticulocytopenia in "
+        "established haemolysis suggests parvovirus B19 aplastic "
+        "crisis."
+    ),
+    "Clinical frailty scale": (
+        "The clinical frailty scale is a nine-point judgement-based "
+        "scale running from very fit to terminally ill, scored on the "
+        "patient's baseline function two weeks before the acute "
+        "illness. Uses: it predicts mortality, length of stay, "
+        "delirium and new institutional care better than age or "
+        "diagnosis alone, and it now informs intensive care triage "
+        "and escalation decisions. Criteria: 1 to 3 is not frail, 4 "
+        "marks very mild frailty, 5 to 6 covers mild to moderate "
+        "frailty where help is needed first with instrumental and "
+        "then with personal activities, and 7 to 9 runs from severe "
+        "frailty to terminal illness. Ix: score from the pre-morbid "
+        "history given by the patient and a carer, not from how the "
+        "patient looks in bed on day two of an admission. Mx: a score "
+        "of 5 or more should trigger comprehensive geriatric "
+        "assessment, medication review and an early conversation "
+        "about goals of care. Note: it is not validated in younger "
+        "adults with stable single-system disability, where a low "
+        "functional level is not frailty."
     ),
 }
 
