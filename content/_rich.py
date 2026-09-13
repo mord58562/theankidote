@@ -12771,6 +12771,216 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "thoracentesis technique complications"]],
         "summary": "",
     },
+    {
+        "name": "Implantable cardioverter defibrillator",
+        "aliases": ["implantable defibrillator", "cardioverter defibrillator", "defibrillator implant"],
+        "utd": [["Overview", "implantable cardioverter defibrillator indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiac rehabilitation",
+        "aliases": ["cardiac rehab", "cardiac rehabilitation programme"],
+        "utd": [["Overview", "cardiac rehabilitation after myocardial infarction"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute decompensated heart failure",
+        "aliases": ["decompensated heart failure", "acute heart failure"],
+        "utd": [["Overview", "acute decompensated heart failure management"]],
+        "summary": "",
+    },
+    {
+        "name": "Heart failure with preserved ejection fraction",
+        "aliases": ["diastolic heart failure", "preserved ejection fraction heart failure"],
+        "utd": [["Overview", "heart failure with preserved ejection fraction"]],
+        "summary": "",
+    },
+    {
+        "name": "White coat hypertension",
+        "aliases": ["white coat effect", "isolated clinic hypertension"],
+        "utd": [["Overview", "white coat hypertension diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Implantable loop recorder",
+        "aliases": ["loop recorder", "implantable cardiac monitor"],
+        "utd": [["Overview", "implantable loop recorder syncope"]],
+        "summary": "",
+    },
+    {
+        "name": "Transoesophageal echocardiography",
+        "aliases": ["transoesophageal echo", "transesophageal echocardiography", "oesophageal echo"],
+        "utd": [["Overview", "transesophageal echocardiography indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiac magnetic resonance imaging",
+        "aliases": ["cardiac MRI", "cardiovascular magnetic resonance"],
+        "utd": [["Overview", "cardiac magnetic resonance imaging indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Right heart catheterisation",
+        "aliases": ["right heart catheter", "pulmonary artery catheterisation", "Swan-Ganz catheter"],
+        "utd": [["Overview", "right heart catheterization pulmonary hypertension"]],
+        "summary": "",
+    },
+    {
+        "name": "Capsule endoscopy",
+        "aliases": ["video capsule endoscopy", "pill camera", "small bowel capsule"],
+        "utd": [["Overview", "video capsule endoscopy small bowel bleeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Peripherally inserted central catheter",
+        "aliases": ["PICC line", "peripherally inserted central line"],
+        "utd": [["Overview", "peripherally inserted central catheter complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Pancreatic exocrine insufficiency",
+        "aliases": ["exocrine pancreatic insufficiency", "pancreatic enzyme replacement therapy"],
+        "utd": [["Overview", "pancreatic exocrine insufficiency diagnosis treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Percutaneous endoscopic gastrostomy",
+        "aliases": ["gastrostomy tube", "PEG feeding", "PEG insertion"],
+        "utd": [["Overview", "percutaneous endoscopic gastrostomy indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Insulin pump therapy",
+        "aliases": ["insulin pump", "continuous subcutaneous insulin infusion", "hybrid closed loop"],
+        "utd": [["Overview", "insulin pump therapy type 1 diabetes"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypoglycaemia unawareness",
+        "aliases": ["impaired awareness of hypoglycaemia", "hypoglycemia unawareness"],
+        "utd": [["Overview", "impaired awareness of hypoglycemia diabetes"]],
+        "summary": "",
+    },
+    {
+        "name": "Diabetes sick day management",
+        "aliases": ["sick day rules", "diabetes sick day plan", "sick day action plan"],
+        "utd": [["Overview", "diabetes sick day management rules"]],
+        "summary": "",
+    },
+    {
+        "name": "Antibiotic allergy delabelling",
+        "aliases": ["penicillin allergy delabelling", "penicillin allergy label", "antibiotic allergy label"],
+        "utd": [["Overview", "penicillin allergy delabeling assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Candidaemia",
+        "aliases": ["candidemia", "candida bloodstream infection", "invasive candidiasis"],
+        "utd": [["Overview", "candidemia management echinocandin"]],
+        "summary": "",
+    },
+    {
+        "name": "Prosthetic joint infection",
+        "aliases": ["periprosthetic joint infection", "infected joint replacement"],
+        "utd": [["Overview", "prosthetic joint infection diagnosis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Methotrexate monitoring",
+        "aliases": ["methotrexate safety monitoring", "weekly methotrexate", "methotrexate bloods"],
+        "utd": [["Overview", "low dose methotrexate monitoring toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Biologic DMARD therapy",
+        "aliases": ["biologic DMARD", "biological disease modifying drug", "targeted synthetic DMARD"],
+        "utd": [["Overview", "biologic dmard safety screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Immune-related adverse events",
+        "aliases": ["immune related adverse event", "checkpoint inhibitor toxicity", "irAE"],
+        "utd": [["Overview", "immune related adverse events checkpoint inhibitors"]],
+        "summary": "",
+    },
+    {
+        "name": "Clozapine monitoring",
+        "aliases": ["clozapine titration", "clozapine blood monitoring", "clozapine protocol"],
+        "utd": [["Overview", "clozapine monitoring neutropenia myocarditis"]],
+        "summary": "",
+    },
+    {
+        "name": "Antipsychotic metabolic monitoring",
+        "aliases": ["metabolic monitoring", "antipsychotic weight gain", "metabolic screening in mental illness"],
+        "utd": [["Overview", "antipsychotic metabolic monitoring guidelines"]],
+        "summary": "",
+    },
+    {
+        "name": "Long-acting injectable antipsychotic",
+        "aliases": ["depot antipsychotic", "long acting injectable antipsychotic", "antipsychotic depot"],
+        "utd": [["Overview", "long acting injectable antipsychotic schizophrenia"]],
+        "summary": "",
+    },
+    {
+        "name": "Lithium monitoring",
+        "aliases": ["lithium level", "serum lithium", "lithium levels"],
+        "utd": [["Overview", "lithium monitoring levels toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Opioid agonist therapy",
+        "aliases": ["opioid substitution therapy", "opioid replacement therapy", "methadone maintenance", "buprenorphine maintenance"],
+        "utd": [["Overview", "opioid agonist treatment methadone buprenorphine"]],
+        "summary": "",
+    },
+    {
+        "name": "Take-home naloxone",
+        "aliases": ["naloxone kit", "intranasal naloxone", "naloxone for overdose"],
+        "utd": [["Overview", "take home naloxone opioid overdose"]],
+        "summary": "",
+    },
+    {
+        "name": "Mental Health Review Tribunal",
+        "aliases": ["mental health tribunal", "psychiatric tribunal"],
+        "utd": [["Overview", "mental health review tribunal involuntary treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Early psychosis intervention",
+        "aliases": ["early intervention in psychosis", "early psychosis service", "duration of untreated psychosis"],
+        "utd": [["Overview", "early intervention first episode psychosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Clinical Institute Withdrawal Assessment",
+        "aliases": ["CIWA-Ar", "alcohol withdrawal scale", "alcohol withdrawal score"],
+        "utd": [["Overview", "ciwa-ar alcohol withdrawal scale"]],
+        "summary": "",
+    },
+    {
+        "name": "Apnoea of prematurity",
+        "aliases": ["apnea of prematurity", "preterm apnoea", "neonatal apnoea"],
+        "utd": [["Overview", "apnea of prematurity caffeine"]],
+        "summary": "",
+    },
+    {
+        "name": "Constipation in children",
+        "aliases": ["childhood constipation", "paediatric constipation", "functional constipation in children"],
+        "utd": [["Overview", "functional constipation children disimpaction"]],
+        "summary": "",
+    },
+    {
+        "name": "Ankyloglossia",
+        "aliases": ["tongue tie", "tongue-tie", "frenotomy"],
+        "utd": [["Overview", "ankyloglossia tongue tie breastfeeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Gastro-oesophageal reflux in infants",
+        "aliases": ["infant reflux", "infant regurgitation", "posseting"],
+        "utd": [["Overview", "infant gastroesophageal reflux management"]],
+        "summary": "",
+    },
 ]
 
 
@@ -74911,6 +75121,691 @@ RICH_SUMMARIES = {
         "Note: coagulopathy is a relative rather than absolute "
         "contraindication, and ultrasound guidance matters more than "
         "the INR."
+    ),
+
+    "Implantable cardioverter defibrillator": (
+        "An implanted device that senses ventricular arrhythmia and "
+        "terminates it with antitachycardia pacing or a shock. "
+        "Indications: secondary prevention after cardiac arrest or "
+        "sustained ventricular tachycardia without a reversible "
+        "cause. Primary prevention is offered in ischaemic or dilated "
+        "cardiomyopathy with ejection fraction 35% or less despite 3 "
+        "months of optimal therapy, and in selected channelopathies. "
+        "Ix: echocardiography for ejection fraction, ischaemia "
+        "assessment and correction of reversible drivers before "
+        "implant. Complications: lead displacement, infection, "
+        "pneumothorax and inappropriate shocks from atrial "
+        "fibrillation or lead fracture. Mx: a subcutaneous device "
+        "suits patients who need no pacing. Device checks run 6 to 12 "
+        "monthly or by remote monitoring, and Austroads fitness to "
+        "drive rules impose 6 months off private driving after "
+        "implant for secondary prevention with permanent loss of a "
+        "commercial licence. Note: the device prevents arrhythmic "
+        "death but does nothing for pump failure, so it is added to "
+        "optimal medical therapy and never substituted for it."
+    ),
+    "Cardiac rehabilitation": (
+        "A structured programme of supervised exercise, risk factor "
+        "modification and psychosocial support after an acute "
+        "coronary event or in chronic heart failure. Indications: "
+        "after myocardial infarction, percutaneous intervention, "
+        "bypass surgery or valve surgery, and in heart failure with "
+        "reduced ejection fraction. Mx: the outpatient phase starts "
+        "within weeks of discharge and runs 6 to 8 weeks, combining "
+        "aerobic and resistance training with smoking cessation, "
+        "lipid and blood pressure targets and medication adherence "
+        "work. Home based and telehealth programmes are non-inferior "
+        "for lower risk patients and lift uptake in rural Australia. "
+        "Australian notes: referral is a Heart Foundation quality "
+        "indicator and programmes are listed in the national "
+        "directory of cardiovascular health and rehabilitation "
+        "services. Note: attendance cuts cardiovascular mortality by "
+        "roughly a quarter, yet fewer than a third of eligible "
+        "Australians enrol, so the referral made at discharge is the "
+        "intervention that actually moves outcomes."
+    ),
+    "Acute decompensated heart failure": (
+        "Acute worsening of heart failure needing urgent therapy, "
+        "driven far more often by congestion than by low output. "
+        "Aetiology: the usual precipitants are medication or salt "
+        "non-adherence, arrhythmia (especially atrial fibrillation) "
+        "and ischaemia. Infection, anaemia and NSAIDs do the rest. "
+        "Clinical features: orthopnoea, raised jugular venous "
+        "pressure, crackles and rapid weight gain. Cool peripheries "
+        "with a narrow pulse pressure signal low output. Ix: chest "
+        "radiograph, ECG, troponin, electrolytes and NT-proBNP. "
+        "Bedside echocardiography and lung ultrasound clarify the "
+        "phenotype quickly. Mx: sit the patient up, give oxygen only "
+        "if hypoxic and give intravenous frusemide at or above the "
+        "usual home dose. Non-invasive ventilation for pulmonary "
+        "oedema and nitrates when hypertensive, withheld if "
+        "hypotensive or in severe aortic stenosis. Daily weights and "
+        "early resumption of disease modifying therapy before "
+        "discharge. Note: classify wet or dry and warm or cold at the "
+        "bedside, because that judgement decides diuretic against "
+        "inotrope."
+    ),
+    "Heart failure with preserved ejection fraction": (
+        "Heart failure symptoms with an ejection fraction of 50% or "
+        "more plus objective evidence of raised filling pressures. It "
+        "is about half of all heart failure and commonest in older "
+        "women with hypertension, obesity and atrial fibrillation. "
+        "Aetiology: diastolic stiffening from hypertension and "
+        "ageing, with obesity, chronic kidney disease and amyloid "
+        "contributing. Ix: echocardiography showing diastolic "
+        "dysfunction and left atrial enlargement, raised NT-proBNP, "
+        "and the H2FPEF score when the picture is unclear. Exclude "
+        "constriction, cardiac amyloidosis and high output states. "
+        "Mx: SGLT2 inhibitors reduce hospitalisation and are the only "
+        "therapy with consistent benefit. Diuretics relieve "
+        "congestion, hypertension is treated to target, rhythm "
+        "control helps in atrial fibrillation and weight loss with "
+        "exercise training improves symptoms. Note: a normal ejection "
+        "fraction never excludes heart failure. The more useful "
+        "negative is a normal NT-proBNP measured while the patient is "
+        "congested."
+    ),
+    "White coat hypertension": (
+        "Clinic blood pressure at or above 140/90 mmHg with normal "
+        "readings away from the clinic, found in roughly one in five "
+        "people labelled hypertensive on office readings. Ix: "
+        "ambulatory monitoring is the reference standard, with a "
+        "daytime average below 135/85 mmHg confirming the pattern. "
+        "Home readings twice daily for 7 days, discarding day one, "
+        "are an acceptable alternative. Mx: no antihypertensive drug "
+        "is indicated for the isolated pattern. Lifestyle change, "
+        "absolute risk assessment using the Australian CVD Risk "
+        "calculator and annual reassessment, since about a third "
+        "progress to sustained hypertension within a decade. The same "
+        "pattern in a treated patient is called white coat effect and "
+        "is not a reason to escalate therapy. Note: the mirror image "
+        "is the dangerous one. Masked hypertension reads normal in "
+        "clinic and high at home, carries the risk of sustained "
+        "hypertension, and is found only if out of office readings "
+        "are requested."
+    ),
+    "Implantable loop recorder": (
+        "A subcutaneous single lead monitor sited over the left "
+        "parasternal area that records the ECG continuously for up to "
+        "3 years. Indications: unexplained syncope with suspected "
+        "arrhythmia after a negative initial workup, infrequent but "
+        "significant palpitations, and rhythm surveillance after "
+        "cryptogenic stroke or ablation. Ix: fit one only after ECG, "
+        "echocardiography and ambulatory monitoring have failed to "
+        "explain the events, with tilt testing first where reflex "
+        "syncope is likely. Mx: insertion is a minor procedure under "
+        "local anaesthetic. Data arrive by remote transmission "
+        "alongside patient activated recordings, and false positives "
+        "from undersensing or myopotentials are common enough that "
+        "every alert is reviewed against the stored electrogram. "
+        "Note: the device answers one question, whether symptoms "
+        "coincide with arrhythmia. Fit it when events are too "
+        "infrequent for a Holter and the cost of missing complete "
+        "heart block or ventricular tachycardia is high."
+    ),
+    "Transoesophageal echocardiography": (
+        "Cardiac ultrasound from a probe in the oesophagus, giving "
+        "resolution of posterior structures that no transthoracic "
+        "window can match. Indications: suspected endocarditis with a "
+        "negative or equivocal surface study, prosthetic valve "
+        "assessment, left atrial appendage thrombus before "
+        "cardioversion or ablation, aortic dissection and cardiac "
+        "sources of embolism. It also guides valve surgery and "
+        "structural intervention. Ix: fast for 6 hours, consent for "
+        "sedation and oesophageal injury, and ask about dysphagia or "
+        "known oesophageal disease first. Contraindications: "
+        "oesophageal stricture, recent oesophageal surgery, "
+        "perforation and an unstable cervical spine. Complications: "
+        "sore throat is common and perforation occurs in about 1 in "
+        "10,000. Note: a normal transthoracic study excludes neither "
+        "endocarditis nor appendage thrombus, which is precisely when "
+        "the oesophageal window earns its sedation."
+    ),
+    "Cardiac magnetic resonance imaging": (
+        "Non-ionising imaging that is the reference standard for "
+        "ventricular volumes and function and adds tissue "
+        "characterisation available from no other modality. Uses: "
+        "viability and scar with late gadolinium enhancement, "
+        "cardiomyopathy phenotyping, myocarditis, iron overload by T2 "
+        "star and adult congenital disease. Ix: the enhancement "
+        "pattern names the disease. Subendocardial enhancement in a "
+        "coronary territory means infarction, subepicardial "
+        "enhancement means myocarditis, and diffuse enhancement with "
+        "raised extracellular volume suggests infiltration or "
+        "amyloid. Contraindications: most current pacemakers and "
+        "defibrillators are conditional rather than prohibited, so "
+        "check the device card. Severe renal impairment limits "
+        "gadolinium and claustrophobia limits tolerance. Note: reach "
+        "for it when echocardiography shows an abnormal ventricle "
+        "without an explanation, because that is where tissue "
+        "characterisation changes the diagnosis rather than "
+        "confirming it."
+    ),
+    "Right heart catheterisation": (
+        "A catheter passed from a central vein through the right "
+        "heart into the pulmonary artery to measure pressures, oxygen "
+        "saturations and cardiac output. Indications: confirming "
+        "pulmonary hypertension and assigning its group, shock of "
+        "unclear mechanism, transplant and mechanical support "
+        "assessment, and shunt quantification. Criteria: pulmonary "
+        "hypertension is a mean pulmonary artery pressure above 20 "
+        "mmHg. A wedge pressure of 15 mmHg or less with raised "
+        "pulmonary vascular resistance defines precapillary disease. "
+        "Ix: vasoreactivity testing with inhaled nitric oxide "
+        "identifies the minority of idiopathic pulmonary arterial "
+        "hypertension patients who respond to calcium channel "
+        "blockers. Complications: arrhythmia during passage, "
+        "pulmonary artery rupture, infection and pneumothorax. Note: "
+        "echocardiography estimates pulmonary pressure but cannot "
+        "separate precapillary from postcapillary disease, and that "
+        "distinction decides between pulmonary vasodilators and "
+        "treating the left heart."
+    ),
+    "Capsule endoscopy": (
+        "A swallowed wireless camera that images the small bowel over "
+        "8 to 12 hours, reaching mucosa that gastroscopy and "
+        "colonoscopy cannot. Indications: obscure gastrointestinal "
+        "bleeding after negative upper and lower endoscopy, suspected "
+        "small bowel Crohn disease, refractory coeliac disease and "
+        "polyposis surveillance. Contraindications: known or "
+        "suspected stricture, because a retained capsule may need "
+        "retrieval or surgery. A dissolvable patency capsule is "
+        "swallowed first when obstruction is a concern. Ix: bowel "
+        "preparation and fasting raise completion rates. Retention "
+        "runs at about 1 to 2 percent overall and higher in Crohn "
+        "disease. Mx: a positive study is followed by device assisted "
+        "enteroscopy, approached orally or rectally depending on the "
+        "transit time at which the lesion appeared. Note: the capsule "
+        "finds lesions but cannot biopsy or treat them, so it is a "
+        "triage test rather than a therapeutic one."
+    ),
+    "Peripherally inserted central catheter": (
+        "A central venous catheter placed under ultrasound into a "
+        "basilic or brachial vein with the tip at the cavoatrial "
+        "junction. Indications: intravenous therapy expected to run "
+        "beyond 2 weeks, vesicant or irritant infusions such as "
+        "chemotherapy and vancomycin, parenteral nutrition and "
+        "exhausted peripheral access. Ix: confirm tip position "
+        "radiographically or by ECG guidance before first use. "
+        "Complications: upper limb deep vein thrombosis, which is "
+        "more frequent than with tunnelled lines, catheter related "
+        "bloodstream infection, occlusion and phlebitis. Mx: avoid "
+        "the device in advanced chronic kidney disease, where "
+        "preserving veins for a future fistula takes priority. Remove "
+        "it the day the indication ends and treat occlusion with an "
+        "alteplase lock rather than replacement. Note: line "
+        "associated bacteraemia is a device decision as much as an "
+        "antibiotic one. Staphylococcus aureus in a patient with a "
+        "line means the line comes out."
+    ),
+    "Pancreatic exocrine insufficiency": (
+        "Failure to secrete enough pancreatic enzyme to digest fat, "
+        "which appears once secretory capacity falls below roughly a "
+        "tenth of normal. Aetiology: chronic pancreatitis and cystic "
+        "fibrosis are the classic causes, with pancreatic cancer, "
+        "pancreatic resection and long standing diabetes also "
+        "implicated. Clinical features: steatorrhoea, bloating, "
+        "weight loss and deficiency of fat soluble vitamins. Milder "
+        "cases are routinely mistaken for irritable bowel syndrome. "
+        "Ix: faecal elastase-1 on a formed stool is the practical "
+        "test, with values below 200 micrograms per gram supporting "
+        "the diagnosis. Imaging characterises the underlying "
+        "pancreatic disease. Mx: enzyme replacement with meals, "
+        "starting near 25,000 to 40,000 units of lipase per main meal "
+        "and half that with snacks, taken through the meal rather "
+        "than beforehand. Replace fat soluble vitamins and avoid a "
+        "low fat diet. Note: non-response usually means underdosing "
+        "or acid inactivation, so raise the dose and add acid "
+        "suppression before doubting the diagnosis."
+    ),
+    "Percutaneous endoscopic gastrostomy": (
+        "An endoscopically placed feeding tube passing through the "
+        "abdominal wall into the stomach, for enteral feeding "
+        "expected to be needed beyond about 4 weeks. Indications: "
+        "neurological dysphagia after stroke, motor neurone disease, "
+        "head and neck cancer during radiotherapy and severe brain "
+        "injury. Contraindications: uncorrected coagulopathy, "
+        "significant ascites, peritonitis and failure to "
+        "transilluminate the abdominal wall. Complications: site "
+        "infection, tube dislodgement, buried bumper syndrome and "
+        "peristomal leak. Aspiration pneumonia is not prevented by "
+        "the tube. Mx: feeding can usually begin within 4 hours. "
+        "Watch for refeeding syndrome in the malnourished and flush "
+        "before and after every use. Note: in advanced dementia "
+        "gastrostomy feeding does not prolong survival, prevent "
+        "aspiration or heal pressure injury, so the discussion "
+        "belongs to goals of care rather than to technique."
+    ),
+    "Insulin pump therapy": (
+        "Continuous subcutaneous infusion of rapid acting insulin as "
+        "a programmed basal rate with user directed boluses. "
+        "Indications: type 1 diabetes with suboptimal control or "
+        "impaired hypoglycaemia awareness on multiple daily "
+        "injections, marked dawn phenomenon, and pregnancy planning. "
+        "Uses: hybrid closed loop systems link the pump to continuous "
+        "glucose monitoring and adjust basal delivery automatically, "
+        "improving time in range and reducing nocturnal "
+        "hypoglycaemia. Mx: the user must count carbohydrate and hold "
+        "a written sick day and pump failure plan, because there is "
+        "no long acting depot and any interruption produces ketosis "
+        "within hours. Backup pens and ketone strips travel with the "
+        "patient. Australian notes: pumps and consumables are "
+        "subsidised through the National Diabetes Services Scheme, "
+        "and continuous glucose monitoring is fully subsidised for "
+        "type 1 diabetes. Note: a pump amplifies self management in "
+        "both directions, rewarding good site care and punishing "
+        "neglected sites with ketoacidosis."
+    ),
+    "Hypoglycaemia unawareness": (
+        "Loss of the autonomic warning symptoms that normally precede "
+        "neuroglycopenia, so the first sign of a low glucose is "
+        "confusion or collapse. Aetiology: recurrent hypoglycaemia "
+        "blunts counterregulation, a self perpetuating cycle worsened "
+        "by long diabetes duration, autonomic neuropathy, alcohol and "
+        "overly tight targets. Clinical features: lows occurring "
+        "without tremor or sweating, often overnight, graded with the "
+        "Gold or Clarke score. Ix: continuous glucose monitoring "
+        "quantifies time below range and nocturnal events far better "
+        "than finger prick testing. Mx: deliberately relax glucose "
+        "targets for several weeks, because scrupulous avoidance of "
+        "any hypoglycaemia restores awareness in most people. Add "
+        "structured education, continuous glucose monitoring with "
+        "alarms and a move to pump or hybrid closed loop therapy. "
+        "Australian notes: impaired awareness must be declared under "
+        "Austroads fitness to drive standards, with glucose checked "
+        "before driving. Note: the treatment is counterintuitive, "
+        "higher targets for a while rather than tighter adherence to "
+        "the old ones."
+    ),
+    "Diabetes sick day management": (
+        "Structured plan for managing diabetes during intercurrent "
+        "illness, when counterregulatory hormones raise glucose and "
+        "ketosis risk. Mx: insulin is never stopped, and the dose "
+        "usually rises. Check glucose every 2 to 4 hours and ketones "
+        "whenever glucose exceeds 15 mmol/L or the person feels "
+        "unwell. Increase rapid acting doses by 10 to 20 percent for "
+        "hyperglycaemia with ketones, keep carbohydrate and fluid "
+        "intake going and treat the underlying illness. Cautions: "
+        "withhold the medicines that become dangerous in dehydration, "
+        "namely metformin and SGLT2 inhibitors along with ACE "
+        "inhibitors, diuretics and NSAIDs. Red flags: vomiting, "
+        "ketones above 1.5 mmol/L despite extra insulin, drowsiness "
+        "or inability to keep fluids down all warrant hospital "
+        "assessment. Note: SGLT2 inhibitors cause euglycaemic "
+        "ketoacidosis, so a normal glucose in an unwell patient "
+        "taking one never excludes it. Ketones must be measured."
+    ),
+    "Antibiotic allergy delabelling": (
+        "Systematic reassessment of a recorded antibiotic allergy, "
+        "usually penicillin, to remove labels that do not represent "
+        "true allergy. Around one in ten people carry the label and "
+        "over 90 percent are not allergic when tested. Aetiology: "
+        "childhood viral rashes attributed to the drug, intolerance "
+        "such as nausea, and waning immunity, since most true IgE "
+        "mediated allergy is lost within a decade. Ix: a structured "
+        "history sorts low risk reactions (benign delayed rash, "
+        "remote or unknown reaction) from high risk ones "
+        "(anaphylaxis, severe cutaneous reaction, organ involvement). "
+        "Low risk labels can be removed by direct oral challenge, "
+        "with skin testing reserved for intermediate risk. Mx: never "
+        "rechallenge after Stevens-Johnson syndrome, DRESS or "
+        "anaphylaxis. Update the record everywhere, including the "
+        "dispensing pharmacy and My Health Record. Note: the label "
+        "itself causes harm, driving broader agents with worse "
+        "outcomes and more Clostridioides difficile."
+    ),
+    "Candidaemia": (
+        "Candida species in the bloodstream, a healthcare associated "
+        "infection carrying mortality near one third. Risk factors: "
+        "central venous catheters, broad spectrum antibiotics, "
+        "abdominal surgery, parenteral nutrition and prolonged "
+        "intensive care. Clinical features: fever that does not "
+        "respond to antibacterials, sometimes with shock. Skin "
+        "lesions and visual symptoms point to dissemination. Ix: "
+        "blood cultures are positive in only about half of invasive "
+        "disease, so take repeat sets and speciate every isolate, "
+        "because Candida glabrata and Candida krusei resist "
+        "fluconazole. Mx: an echinocandin such as caspofungin or "
+        "anidulafungin is first line, stepping down to fluconazole "
+        "once susceptibility and response allow. Remove or replace "
+        "the central line, arrange dilated fundoscopy within the "
+        "first week and treat for 14 days beyond the first negative "
+        "culture. Note: clearance is measured by repeat cultures "
+        "rather than by defervescence, so daily cultures until "
+        "negative define the treatment clock."
+    ),
+    "Prosthetic joint infection": (
+        "Infection of a joint replacement, complicating about 1 "
+        "percent of primary hips and knees and more after revision. "
+        "Classification: early infection within 3 months from "
+        "virulent organisms such as Staphylococcus aureus, delayed "
+        "infection from 3 to 24 months from low virulence skin flora, "
+        "and late haematogenous seeding. Clinical features: early "
+        "disease shows wound discharge and warmth, while delayed "
+        "disease presents as persistent pain and radiographic "
+        "loosening without fever. Ix: inflammatory markers, plain "
+        "radiographs and joint aspiration for cell count and culture "
+        "before antibiotics. Take at least 3 tissue samples at "
+        "surgery and hold cultures for 14 days. Mx: surgery decides "
+        "the outcome. Debridement with implant retention suits a "
+        "stable prosthesis with recent symptoms, otherwise one or two "
+        "stage exchange, followed by prolonged directed therapy using "
+        "rifampicin combinations for staphylococci. Note: a "
+        "persistently painful prosthesis is infected until proven "
+        "otherwise."
+    ),
+    "Methotrexate monitoring": (
+        "Low dose weekly methotrexate anchors treatment of rheumatoid "
+        "arthritis and psoriasis, and almost all its serious harm is "
+        "preventable by dosing discipline and blood monitoring. Ix: "
+        "before starting, check full blood count, liver and renal "
+        "function, hepatitis B and C serology and a chest radiograph. "
+        "Monitoring: bloods every 2 to 4 weeks until the dose is "
+        "stable, then 3 monthly thereafter. Adverse effects: "
+        "cytopenias, transaminitis, oral ulceration, pneumonitis and "
+        "dose limiting nausea. Renal impairment raises levels, and "
+        "trimethoprim and NSAIDs add toxicity. Mx: dose once weekly "
+        "and never daily, with folic acid 5 mg on a different day to "
+        "reduce mucositis and nausea. Contraindications: pregnancy is "
+        "absolute, requiring effective contraception and a washout "
+        "before conception. Note: the fatal error is daily dosing. "
+        "Mouth ulcers, sore throat or breathlessness in anyone taking "
+        "methotrexate means a full blood count and a check of how the "
+        "tablets are actually taken."
+    ),
+    "Biologic DMARD therapy": (
+        "Targeted protein and small molecule therapies used when "
+        "conventional disease modifying drugs fail in rheumatoid "
+        "arthritis, spondyloarthritis, psoriasis and inflammatory "
+        "bowel disease. Class: tumour necrosis factor inhibitors, "
+        "interleukin blockers, B cell depletion, costimulation "
+        "blockade and the oral Janus kinase inhibitors. Ix: screen "
+        "before the first dose for latent tuberculosis with an "
+        "interferon gamma release assay and chest radiograph, "
+        "hepatitis B and C, HIV and immunisation status. Mx: give "
+        "live vaccines beforehand and never during therapy. Withhold "
+        "during serious infection and around major surgery, and "
+        "expect blunted vaccine responses. Adverse effects: infection "
+        "including tuberculosis reactivation, infusion and injection "
+        "site reactions, and demyelination or worsening heart failure "
+        "with tumour necrosis factor inhibitors. Australian notes: "
+        "PBS access requires documented failure of conventional "
+        "therapy and demonstrated response at review. Note: fever in "
+        "a patient on a biologic is not a routine viral illness until "
+        "the serious causes are excluded."
+    ),
+    "Immune-related adverse events": (
+        "Autoimmune toxicity from immune checkpoint inhibitors, which "
+        "release the brakes on T cells and can inflame any organ. "
+        "Aetiology: CTLA-4 blockade causes more frequent and severe "
+        "toxicity than PD-1 or PD-L1 blockade, and combination "
+        "therapy is worst. Clinical features: colitis, hepatitis, "
+        "dermatitis, thyroiditis and hypophysitis are common, while "
+        "myocarditis, pneumonitis and neurological events are rare "
+        "and dangerous. Onset is usually within 12 weeks but may "
+        "follow months after the last dose. Ix: exclude infection and "
+        "disease progression first, then check thyroid function, "
+        "morning cortisol, liver and renal function, and troponin "
+        "with ECG where myocarditis is possible. Mx: grade the "
+        "toxicity. Grade 2 pauses the drug and starts prednisolone, "
+        "grade 3 or 4 needs high dose corticosteroid and usually "
+        "permanent cessation, with infliximab or mycophenolate for "
+        "steroid refractory disease. Note: endocrine toxicity is the "
+        "exception, replaced with hormone rather than suppressed, and "
+        "the drug often continues."
+    ),
+    "Clozapine monitoring": (
+        "Clozapine is the only antipsychotic proven effective in "
+        "treatment resistant schizophrenia, and its use is defined by "
+        "a mandatory monitoring programme. Indications: failure of "
+        "two adequate trials of other antipsychotics, or persistent "
+        "suicidality or tardive dyskinesia. Monitoring: full blood "
+        "count weekly for 18 weeks, fortnightly to week 52 and "
+        "monthly thereafter, with dispensing tied to the result. "
+        "Australian protocols add troponin and CRP weekly for the "
+        "first 4 weeks to detect myocarditis. Adverse effects: "
+        "neutropenia and agranulocytosis, myocarditis in the first 8 "
+        "weeks, seizures, constipation progressing to ileus, "
+        "hypersalivation and weight gain. Mx: smoking cessation "
+        "raises clozapine concentrations sharply and can precipitate "
+        "toxicity, so levels are checked whenever smoking changes. "
+        "Any break beyond 48 hours requires retitration. Note: "
+        "constipation kills more clozapine patients than "
+        "agranulocytosis, so ask about bowels at every review and "
+        "prescribe laxatives early."
+    ),
+    "Antipsychotic metabolic monitoring": (
+        "Antipsychotics, olanzapine and clozapine above all, cause "
+        "weight gain, dyslipidaemia and diabetes, and people with "
+        "severe mental illness die 15 to 20 years early mostly from "
+        "cardiovascular disease. Monitoring: weight and waist "
+        "circumference at baseline then monthly for 3 months, with "
+        "blood pressure, fasting glucose or HbA1c and lipids at "
+        "baseline, 3 months and annually. Ix: ECG for the QT interval "
+        "with higher risk agents, prolactin when symptomatic, and "
+        "liver function. Mx: prefer a lower risk agent such as "
+        "aripiprazole where the illness allows, start lifestyle "
+        "intervention with the prescription rather than after the "
+        "weight gain, and consider metformin early for antipsychotic "
+        "associated gain. Treat cardiovascular risk factors as "
+        "actively as in anyone else. Note: this monitoring is well "
+        "described and poorly delivered. Naming who does the bloods, "
+        "the general practitioner or the mental health service, is "
+        "what makes it happen."
+    ),
+    "Long-acting injectable antipsychotic": (
+        "A depot antipsychotic given every 2 to 12 weeks, which "
+        "removes the daily adherence decision that drives most "
+        "relapse. Indications: schizophrenia or schizoaffective "
+        "disorder with relapse related to non-adherence, patient "
+        "preference, and frequently as part of a community treatment "
+        "order. Class: first generation decanoates such as "
+        "zuclopenthixol and flupentixol, and second generation agents "
+        "including paliperidone palmitate, aripiprazole and "
+        "risperidone formulations. Mx: tolerability is established "
+        "with the oral drug first, because a depot cannot be "
+        "withdrawn quickly. A test dose and product specific loading "
+        "follow, with oral cover during the overlap for agents that "
+        "load slowly. Monitoring: extrapyramidal effects, metabolic "
+        "parameters and injection site reactions at every visit. "
+        "Note: the depot makes relapse slower and disengagement "
+        "visible sooner, but it does not replace the therapeutic "
+        "relationship that keeps someone in care."
+    ),
+    "Lithium monitoring": (
+        "Lithium remains the most effective mood stabiliser and the "
+        "only agent with an antisuicidal effect, with a narrow "
+        "therapeutic index that makes monitoring inseparable from "
+        "treatment. Monitoring: serum lithium 12 hours post dose, "
+        "taken 5 to 7 days after starting or changing a dose and 3 "
+        "monthly once stable. Renal and thyroid function with calcium "
+        "every 6 months. Targets: 0.6 to 0.8 mmol/L for maintenance, "
+        "up to 1.0 mmol/L in acute mania, and lower in older "
+        "patients. Adverse effects: tremor, polyuria from nephrogenic "
+        "diabetes insipidus, hypothyroidism, hyperparathyroidism and "
+        "chronic interstitial nephritis. Interactions: thiazides, ACE "
+        "inhibitors and NSAIDs all raise levels, as does dehydration "
+        "from any cause. Note: sick day advice is the practical "
+        "safeguard. Vomiting, diarrhoea or fever means withhold, "
+        "hydrate and check a level, since toxicity shows as coarse "
+        "tremor, ataxia and confusion rather than as mood change."
+    ),
+    "Opioid agonist therapy": (
+        "Maintenance treatment of opioid dependence with methadone or "
+        "buprenorphine, which suppresses withdrawal and craving and "
+        "roughly halves mortality. Indications: opioid dependence of "
+        "any origin, including pharmaceutical opioid dependence, "
+        "continued for years rather than weeks. Mx: methadone starts "
+        "low, near 20 to 30 mg daily, and titrates slowly, because "
+        "accumulation makes the first 2 weeks the highest risk period "
+        "for overdose. Buprenorphine requires moderate withdrawal "
+        "before the first dose to avoid precipitated withdrawal, and "
+        "depot formulations remove daily dosing altogether. "
+        "Australian notes: prescribing requires state or territory "
+        "authority, with supervised dosing at a community pharmacy "
+        "and takeaway doses earned through stability. Adverse "
+        "effects: QT prolongation with methadone, constipation, and "
+        "dangerous sedation when combined with benzodiazepines or "
+        "alcohol. Note: tolerance falls within days, so release from "
+        "custody or discharge from hospital without restarting the "
+        "dose is when people die."
+    ),
+    "Take-home naloxone": (
+        "Opioid antagonist supplied in advance to people at risk of "
+        "overdose and to those around them, reversing respiratory "
+        "depression within minutes. Indications: high dose opioid "
+        "use, opioids combined with sedatives, recent release from "
+        "custody or detoxification, previous overdose, and family "
+        "members or peers of anyone in those groups. Mx: supplied in "
+        "Australia as a prefilled syringe or intranasal spray, free "
+        "and without prescription through the Take Home Naloxone "
+        "programme at participating pharmacies and services. Training "
+        "covers recognition of unresponsiveness with slow breathing "
+        "and pinpoint pupils, calling an ambulance, giving naloxone, "
+        "repeating after 2 to 3 minutes and providing rescue breaths. "
+        "Note: naloxone has a shorter half-life than most opioids, so "
+        "the person can re-sedate and must be observed, particularly "
+        "after methadone or slow release preparations. Precipitated "
+        "withdrawal is unpleasant but not dangerous and is never a "
+        "reason to withhold it."
+    ),
+    "Mental Health Review Tribunal": (
+        "The independent statutory body that reviews compulsory "
+        "psychiatric treatment and provides the legal check on "
+        "detention. Uses: reviewing involuntary patient orders, "
+        "making and revoking community treatment orders, authorising "
+        "electroconvulsive therapy and hearing appeals against a "
+        "person's legal status. Criteria: the hearing tests whether "
+        "the person has a mental illness, whether they need care that "
+        "cannot be given in a less restrictive way, and whether the "
+        "proposed plan is the least restrictive option available. Mx: "
+        "hearings are inquisitorial rather than adversarial, the "
+        "person may have representation and an advocate, and the "
+        "treating team gives evidence. Australian notes: each state "
+        "and territory legislates separately, with the NSW Mental "
+        "Health Act 2007 and its tribunal the reference in New South "
+        "Wales. Note: the tribunal reviews compulsion rather than "
+        "clinical judgement, so whether the person would accept "
+        "treatment voluntarily remains the first question at every "
+        "hearing."
+    ),
+    "Early psychosis intervention": (
+        "Specialist multidisciplinary care delivered in the first "
+        "years of psychotic illness, the window in which outcome is "
+        "most modifiable. Aetiology: a longer duration of untreated "
+        "psychosis predicts poorer symptomatic and functional "
+        "recovery, which is the whole rationale for rapid access. Mx: "
+        "a low dose second generation antipsychotic titrated "
+        "carefully, because first episode patients respond at lower "
+        "doses and are more sensitive to extrapyramidal and metabolic "
+        "effects. Add family psychoeducation, cognitive behavioural "
+        "therapy for psychosis, vocational support and assertive "
+        "follow-up over 2 to 5 years. Screen for and treat substance "
+        "use, present in around half. Australian notes: headspace and "
+        "youth focused early psychosis services provide access, with "
+        "clinical staging guiding the intensity of care. Note: "
+        "continuing the antipsychotic for at least 12 months after "
+        "remission is the evidence based default, and any trial of "
+        "stopping is planned with a relapse plan rather than "
+        "happening by attrition."
+    ),
+    "Clinical Institute Withdrawal Assessment": (
+        "A ten item scale scoring the severity of alcohol withdrawal, "
+        "used to drive symptom triggered benzodiazepine dosing. Uses: "
+        "guiding diazepam dosing, tracking response and flagging "
+        "escalation towards delirium tremens. Criteria: scores below "
+        "10 usually need no medication, 10 to 18 indicate moderate "
+        "withdrawal and above 18 severe withdrawal with high risk of "
+        "seizures and delirium. Mx: symptom triggered dosing gives "
+        "less total benzodiazepine over a shorter course than fixed "
+        "schedules, with fixed dosing reserved for patients who "
+        "cannot be assessed reliably. Give parenteral thiamine before "
+        "any glucose load to prevent Wernicke encephalopathy. Note: "
+        "the scale assumes the symptoms are withdrawal. Sepsis, head "
+        "injury, hepatic encephalopathy and anticholinergic toxicity "
+        "all raise the score, so a climbing result in a patient who "
+        "is not improving is a prompt to look for another diagnosis "
+        "rather than to give more diazepam."
+    ),
+    "Apnoea of prematurity": (
+        "Cessation of breathing for more than 20 seconds, or briefer "
+        "with bradycardia or desaturation, in an infant born before "
+        "37 weeks. Incidence rises as gestation falls and it affects "
+        "nearly every infant born below 28 weeks. Aetiology: immature "
+        "central respiratory drive with an exaggerated laryngeal "
+        "reflex, usually mixed with an obstructive component. "
+        "Clinical features: episodes start in the first days of life "
+        "and settle by about 36 to 40 weeks corrected age. Ix: apnoea "
+        "beginning after the first week, or a sudden increase in "
+        "frequency, is not prematurity. Look for sepsis, necrotising "
+        "enterocolitis, intracranial haemorrhage, anaemia or "
+        "hypoglycaemia. Mx: caffeine citrate is the treatment of "
+        "choice and also lowers rates of bronchopulmonary dysplasia "
+        "and cerebral palsy. Add nasal CPAP or high flow for "
+        "obstructive events, position the neck neutrally and treat "
+        "anaemia. Note: resolution guides discharge, with most units "
+        "observing an apnoea free period of 5 to 7 days off caffeine."
+    ),
+    "Constipation in children": (
+        "Functional constipation accounts for more than 95 percent of "
+        "childhood constipation and usually begins with one painful "
+        "stool and a withholding cycle. Clinical features: infrequent "
+        "hard stools, painful defecation, withholding posture and "
+        "overflow soiling that parents report as diarrhoea. A "
+        "palpable faecal mass and an anal fissure are common. Red "
+        "flags: delayed meconium beyond 48 hours, ribbon stools, "
+        "faltering growth, abnormal lower limb neurology or an "
+        "abnormally sited anus suggest Hirschsprung disease, "
+        "hypothyroidism or spinal dysraphism. Ix: the diagnosis is "
+        "clinical, and abdominal radiographs neither confirm nor "
+        "exclude it. Mx: disimpaction with escalating oral macrogol "
+        "over 3 to 7 days, then maintenance macrogol for months "
+        "rather than weeks. Add toilet sitting after meals, a reward "
+        "chart and explanation that relapse follows early withdrawal "
+        "of treatment. Note: overflow soiling is not behavioural, and "
+        "treating it as though it were is the commonest management "
+        "error."
+    ),
+    "Ankyloglossia": (
+        "A short or tight lingual frenulum restricting tongue "
+        "movement, present in 4 to 11 percent of newborns and often "
+        "entirely asymptomatic. Clinical features: the diagnosis is "
+        "functional rather than anatomical. Persistent nipple pain, "
+        "poor latch, clicking, slipping off the breast and poor "
+        "weight gain matter more than the appearance of the frenulum. "
+        "Ix: observe a full feed with a lactation consultant before "
+        "considering any procedure, since most feeding problems "
+        "resolve with positioning and attachment support. Mx: "
+        "frenotomy is a brief office procedure with small risks of "
+        "bleeding and recurrence. Trials show improvement in maternal "
+        "nipple pain with less consistent effect on infant feeding "
+        "measures, and the baby feeds immediately afterwards. "
+        "Australian notes: professional bodies caution against the "
+        "rise in private frenotomy performed without a feeding "
+        "assessment. Note: posterior tongue tie and upper lip tie are "
+        "contested entities, and division for speech or dental "
+        "concerns is not supported by evidence."
+    ),
+    "Gastro-oesophageal reflux in infants": (
+        "Physiological regurgitation affecting about half of infants "
+        "under 6 months, peaking near 4 months and resolving by 12 to "
+        "18 months as the lower oesophageal sphincter matures. "
+        "Clinical features: effortless posseting in a thriving, "
+        "comfortable baby is reflux rather than disease. Reflux "
+        "disease implies feed refusal, faltering growth, arching with "
+        "distress, haematemesis or recurrent aspiration. Red flags: "
+        "bilious or projectile vomiting, onset after 6 months, fever, "
+        "a bulging fontanelle or blood in the stool point to "
+        "obstruction, infection or cow's milk protein allergy. Ix: "
+        "none is needed for uncomplicated regurgitation. Mx: "
+        "explanation and reassurance, smaller more frequent feeds, "
+        "upright positioning after feeds and review of feeding "
+        "technique. A 2 to 4 week trial of maternal dairy exclusion "
+        "or an extensively hydrolysed formula is reasonable when "
+        "allergy is suspected. Note: acid suppression does not reduce "
+        "crying or regurgitation in infants and raises rates of "
+        "gastroenteritis and chest infection, so it is reserved for "
+        "proven oesophagitis."
     ),
 }
 
