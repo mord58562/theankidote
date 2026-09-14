@@ -317,7 +317,9 @@ def _acronym_terms(card) -> list:
     if not text:
         return []
     out = []
+    by_acronym = {}
     for it in _acronyms.resolve(text):
+        by_acronym[it["acronym"]] = it
         cond = _acronym_to_condition(it["expansion"])
         if cond is not None:
             out.append({
@@ -370,6 +372,37 @@ def _acronym_terms(card) -> list:
             "ref": [],
             "case_sensitive": True,
         })
+    return _split_spelled_out(out, by_acronym)
+
+
+def _split_spelled_out(terms: list, by_acronym: dict) -> list:
+    """Turn each acronym term into the forms the card actually wrote.
+
+    A card can carry the acronym, the expansion, or both, and the two
+    need different matching. Acronyms are case-sensitive - lower-casing
+    "ALL" turns it into the English word - while expansions are written
+    in sentence case on cards and Title Case in the dictionary, so they
+    have to be matched case-insensitively or they will not match at all.
+    One term cannot be both, so a card that spells the acronym out gets
+    a second term carrying the expansion.
+
+    The expansion term keeps the acronym term's `_article`, so the popup
+    is still headed "CRP - C-reactive protein" however the card wrote
+    it, and its `title` is the expansion because `title` is a matching
+    form here and "CRP" must not be matched case-insensitively.
+    """
+    out = []
+    for t in terms:
+        it = by_acronym.get(t["title"]) or {}
+        surfaces = it.get("surfaces") or ()
+        if it.get("acronym_present", True):
+            out.append(t)
+        for surface in surfaces:
+            twin = dict(t)
+            twin["title"] = surface
+            twin["case_sensitive"] = False
+            twin.pop("_surfaces", None)
+            out.append(twin)
     return out
 
 

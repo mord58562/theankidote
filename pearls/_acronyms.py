@@ -87,6 +87,76 @@ _ACRONYMS: dict = {k: [tuple(c) for c in v]
 _KEYS_BY_LEN = sorted(_ACRONYMS, key=len, reverse=True)
 _MATCHER = _matcher.PhraseMatcher(_KEYS_BY_LEN, case_sensitive=True)
 
+# A card that spells an acronym out got nothing. 272 of the 485
+# expansions in this dictionary never fired, because the matcher above
+# is built from the keys alone - so "CRP" opened a popup and
+# "C-reactive protein" did not, on the same card, with the same content
+# sitting behind it. Same shape as the other never-executed features
+# found in this tree: the data was there, nothing looked at it.
+#
+# Expansions are matched case-insensitively, unlike the acronyms. The
+# dictionary stores them in Title Case ("C-Reactive Protein") and cards
+# write sentence case, so case-sensitive matching would close the gap
+# on paper and leave it open in practice.
+#
+# Phrases that carry no information the reader lacks, or that appear in
+# ordinary clinical prose often enough that underlining them is noise
+# rather than help. "Emergency Department" is on every second card;
+# "Carcinoembryonic Antigen" is on the ones that want explaining. The
+# test is not whether the phrase is medical - it is whether a popup on
+# it would ever be opened on purpose.
+_EXPANSION_BLOCKLIST = frozenset(x.lower() for x in (
+    # Places, units and routes
+    "Emergency Department", "Intensive Care Unit",
+    "Neonatal Intensive Care Unit", "Paediatric Intensive Care Unit",
+    "Operating Room", "New South Wales", "Northern Territory",
+    "International Units", "Nil Per Os", "Per Os", "Per Rectum",
+    "Per Vaginam", "Pro Re Nata", "Four Times Daily", "Three Times Daily",
+    "Twice Daily", "Once Daily",
+    # Observations and anatomy a reader is not looking up
+    "Heart Rate", "Respiratory Rate", "Blood Pressure",
+    "Systolic Blood Pressure", "Fetal Heart Rate", "Cranial Nerve",
+    "Left Atrium", "Right Atrium", "Left Ventricle", "Right Ventricle",
+    "Cardiovascular System", "Range of Motion", "Direct Current",
+    "Red Blood Cell", "White Blood Cell", "Blood Sugar Level",
+    "Blood Glucose Level",
+    # Statistics and process words that are not the entity
+    "Odds Ratio", "Risk Ratio", "Clinical Practice Guideline",
+    "Multidisciplinary Team", "Do Not Resuscitate", "PR Interval",
+))
+
+
+def _expansion_forms():
+    """Expansion -> acronym, for the expansions worth underlining.
+
+    Skips anything carrying a parenthetical or a slash: those are
+    editorial notes to the reader of this file ("EGD in US terminology",
+    "Toxoplasmosis/Rubella/CMV/Herpes/Other"), not phrases a card
+    contains. Single words are skipped too - they are either the acronym
+    again or an ordinary word.
+
+    Where two acronyms claim one expansion - TOE and TEE are the same
+    echocardiogram either side of the Pacific - the first listed wins,
+    which is the same tie-break `resolve` already uses for candidates.
+    """
+    forms = {}
+    for acronym, cands in _ACRONYMS.items():
+        for expansion, _ctx, _desc in cands:
+            if not expansion or "(" in expansion or "/" in expansion:
+                continue
+            if len(expansion.split()) < 2 or len(expansion) < 8:
+                continue
+            key = expansion.lower()
+            if key in _EXPANSION_BLOCKLIST or key == acronym.lower():
+                continue
+            forms.setdefault(key, (acronym, expansion))
+    return forms
+
+
+_EXPANSIONS = _expansion_forms()
+_EXP_MATCHER = _matcher.PhraseMatcher(
+    sorted(_EXPANSIONS, key=len, reverse=True), case_sensitive=False)
+
 # Lower-case each candidate's context list once at import.
 _CONTEXTS = {
     k: [(exp, [w.lower() for w in ctx], desc) for (exp, ctx, desc) in cands]
@@ -106,7 +176,15 @@ def resolve(card_text: str) -> list:
     rather than computed for every card whether or not it is used.
     """
     matches = _MATCHER.find(card_text)
-    if not matches:
+    # Expansions spelled out in full. Kept separate from `matches`
+    # because they identify their own candidate - "Free Thyroxine" is
+    # FT4 and nothing else - so they skip the context scoring the
+    # ambiguous acronym keys need.
+    spelled = {}
+    for start, end, key in _EXP_MATCHER.find(card_text):
+        acronym, expansion = _EXPANSIONS[key]
+        spelled.setdefault(acronym, set()).add(card_text[start:end])
+    if not matches and not spelled:
         return []
     # Suppress Roman-numeral false positives: if every occurrence of a
     # numeral acronym sits after a classifier (Rome, DSM, type, grade,
@@ -118,13 +196,22 @@ def resolve(card_text: str) -> list:
             if _prev_token_lower(card_text, start) in _ROMAN_CLASSIFIERS:
                 continue
         found.add(k)
-    if not found:
+    if not found and not spelled:
         return []
     text_lower = None
     out = []
-    for acronym in found:
+    for acronym in found | set(spelled):
         candidates = _CONTEXTS[acronym]
-        if len(candidates) == 1:
+        named = None
+        if acronym in spelled:
+            want = {s_.lower() for s_ in spelled[acronym]}
+            for cand in candidates:
+                if cand[0].lower() in want:
+                    named = cand
+                    break
+        if named is not None:
+            best = named
+        elif len(candidates) == 1:
             best = candidates[0]
         else:
             if text_lower is None:
@@ -141,7 +228,7 @@ def resolve(card_text: str) -> list:
                     best_score = score
                     best = cand
         # An acronym that is also an English word has to earn its popup.
-        if acronym in _ENGLISH_WORD_ACRONYMS:
+        if acronym in _ENGLISH_WORD_ACRONYMS and acronym not in spelled:
             if text_lower is None:
                 text_lower = card_text.lower()
             if not any(kw.lower() in text_lower for kw in best[1]):
@@ -151,5 +238,13 @@ def resolve(card_text: str) -> list:
             "acronym": acronym,
             "expansion": expansion,
             "description": description,
+            # The spelled-out forms actually present in this card, so
+            # the reviewer can underline them. Empty when only the
+            # acronym itself appeared.
+            "surfaces": sorted(spelled.get(acronym, ())),
+            # False when the card never wrote the acronym itself, which
+            # is what stops `_acronym_terms` marking a three-letter key
+            # that is not on the card.
+            "acronym_present": acronym in found,
         })
     return out

@@ -870,5 +870,87 @@ class StrippingTheMarksGivesBackTheCard(unittest.TestCase):
                           "  in : %r\n  out: %r" % (i, doc, _unmark(out)))
 
 
+class SpelledOutAcronyms(unittest.TestCase):
+    """A card that writes the acronym out in full gets the same popup.
+
+    272 of the 485 expansions in the acronym dictionary never fired,
+    because the matcher was built from the keys alone. "CRP" opened a
+    popup and "C-reactive protein" did not, on the same card, with the
+    same content sitting behind it.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rv = _load_reviewer()
+        from theankidote.pearls import _acronyms
+        cls.ac = _acronyms
+
+    def _marks(self, text):
+        out = self.rv.highlight_text(text, with_css=False)
+        return re.findall(r'<span class="sp-mark"[^>]*>(.*?)</span>', out)
+
+    def test_the_expansion_is_underlined(self):
+        self.assertIn("C-reactive protein",
+                      self._marks("C-reactive protein was 40"))
+
+    def test_sentence_case_matches_a_title_case_dictionary(self):
+        """Expansions are stored Title Case and written sentence case.
+
+        Matching them case-sensitively would close the gap on paper and
+        leave it open on every real card.
+        """
+        self.assertIn("free thyroxine",
+                      self._marks("the free thyroxine was low"))
+
+    def test_both_forms_on_one_card_are_both_marked(self):
+        marks = self._marks("CRP (C-reactive protein) rose to 40")
+        self.assertIn("CRP", marks)
+        self.assertIn("C-reactive protein", marks)
+
+    def test_the_acronym_is_not_marked_when_only_spelled_out(self):
+        """The acronym term is case-sensitive and three letters long.
+
+        Emitting it for a card that never wrote it is how a
+        case-insensitive three-letter key gets loose in prose.
+        """
+        out = self.rv.highlight_text("C-reactive protein was 40",
+                                     with_css=False)
+        self.assertNotRegex(out, r'<span class="sp-mark"[^>]*>CRP</span>')
+
+    def test_the_popup_is_still_headed_by_the_acronym(self):
+        """`title` is a matching form here; the heading is `_article`."""
+        terms = [t for t in self.ac.resolve("C-reactive protein was 40")]
+        self.assertTrue(terms, "the fixture expansion no longer resolves")
+        self.assertEqual(terms[0]["acronym"], "CRP")
+        self.assertFalse(terms[0]["acronym_present"])
+
+    def test_ordinary_prose_is_left_alone(self):
+        """The blocklist is the whole reason this is safe to turn on."""
+        for phrase in ("the emergency department review",
+                       "his heart rate was 80",
+                       "seen in the intensive care unit"):
+            self.assertEqual([], self._marks(phrase), phrase)
+
+    def test_a_spelled_out_form_picks_its_own_candidate(self):
+        """An ambiguous key does not need context scoring when the card
+        names the expansion itself."""
+        got = {r["expansion"] for r in self.ac.resolve("positron emission "
+                                                      "tomography scan")}
+        self.assertIn("Positron Emission Tomography", got)
+
+    def test_the_dictionary_is_mostly_reachable_in_full(self):
+        """A floor, so the blocklist cannot quietly grow back into one."""
+        dead = 0
+        for acronym, cands in self.ac._ACRONYMS.items():
+            for expansion, _ctx, _desc in cands:
+                if len(expansion.split()) < 2:
+                    continue
+                if expansion.lower() not in self.ac._EXPANSIONS:
+                    dead += 1
+        self.assertLess(dead, 80,
+                        f"{dead} expansions are unmatchable; the "
+                        f"blocklist or the filters have grown")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
