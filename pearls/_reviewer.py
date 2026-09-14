@@ -375,6 +375,45 @@ def _acronym_terms(card) -> list:
     return _split_spelled_out(out, by_acronym)
 
 
+_owned_cache: set = None
+
+
+def _owned_by_another_database(phrase: str) -> bool:
+    """Does a richer vocabulary already own this exact phrase?
+
+    The acronym dictionary is a fallback. Its entries are one or two
+    sentences with a StatPearls search behind them, which is the right
+    answer for "CCB" and the wrong one for a phrase that has a real
+    entry somewhere else. 2.8.0 made expansions matchable and, because
+    `_acronym_terms` runs first and first writer wins, they started
+    taking phrases off the databases that answer them better: a card
+    saying "tranexamic acid" got the TXA blurb and a StatPearls search
+    instead of the drug entry and its DrugBank page.
+
+    Conditions never showed the problem, which is why it survived the
+    first pass: `_acronym_to_condition` already copies the condition's
+    summary, url, chips and link kind onto the acronym term, so the
+    reader saw the same popup either way. Drugs, preclinical and psych
+    have no such bridge, and lost content silently.
+
+    Exact membership, not resolution. `_preclinical.resolve` answers
+    "tricyclic antidepressant" with its broader "Antidepressants"
+    entry, and handing the phrase over on the strength of that would
+    trade a specific popup for a general one. Only an outright owner -
+    the phrase as somebody's name or alias - takes it back.
+    """
+    global _owned_cache
+    if _owned_cache is None:
+        owned = set()
+        owned |= {k for k in getattr(_conditions, "_LOOKUP", {})}
+        owned |= {k.lower() for k in getattr(_drugs, "_GENERIC_LOOKUP", {})}
+        owned |= {k.lower() for k in getattr(_drugs, "_BRAND_LOOKUP", {})}
+        for mod in (_preclinical, _psych):
+            owned |= {n.lower() for n in getattr(mod, "_NAMES", ())}
+        _owned_cache = owned
+    return phrase.strip().lower() in _owned_cache
+
+
 def _split_spelled_out(terms: list, by_acronym: dict) -> list:
     """Turn each acronym term into the forms the card actually wrote.
 
@@ -398,6 +437,10 @@ def _split_spelled_out(terms: list, by_acronym: dict) -> list:
         if it.get("acronym_present", True):
             out.append(t)
         for surface in surfaces:
+            # A phrase another database owns outright is marked by that
+            # database; the acronym must not take it first.
+            if _owned_by_another_database(surface):
+                continue
             twin = dict(t)
             twin["title"] = surface
             twin["case_sensitive"] = False

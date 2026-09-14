@@ -938,6 +938,44 @@ class SpelledOutAcronyms(unittest.TestCase):
                                                       "tomography scan")}
         self.assertIn("Positron Emission Tomography", got)
 
+    def test_a_drug_keeps_its_own_entry(self):
+        """The regression 2.8.0 shipped, found on real cards.
+
+        `_acronym_terms` runs first and first writer wins, so a
+        matchable expansion took "tranexamic acid" off the drug
+        database - the reader got the TXA blurb and a StatPearls search
+        instead of the drug entry and its DrugBank page. 25 cards in
+        one collection.
+        """
+        out = self.rv.highlight_text("Tranexamic acid for postpartum "
+                                     "haemorrhage", with_css=False)
+        m = re.search(r'<span class="sp-mark"([^>]*)>Tranexamic acid</span>',
+                      out)
+        self.assertIsNotNone(m, "tranexamic acid is no longer highlighted")
+        self.assertIn('data-sp-source="drugbank"', m.group(1))
+
+    def test_preclinical_keeps_its_own_entry(self):
+        out = self.rv.highlight_text("Parathyroid hormone regulates calcium",
+                                     with_css=False)
+        m = re.search(r'<span class="sp-mark"([^>]*)>Parathyroid hormone'
+                      r'</span>', out)
+        self.assertIsNotNone(m)
+        self.assertIn('data-sp-source="preclinical"', m.group(1))
+
+    def test_an_expansion_nobody_else_owns_is_still_matched(self):
+        """The fix must not undo the feature.
+
+        Ownership is exact membership, not resolution: `_preclinical`
+        answers "tricyclic antidepressant" with its broader
+        "Antidepressants" entry, and yielding to that would trade a
+        specific popup for a general one.
+        """
+        for phrase in ("calcium channel blocker",
+                       "interstitial lung disease",
+                       "C-reactive protein"):
+            self.assertIn(phrase, self._marks(f"note: {phrase} here"),
+                          phrase)
+
     def test_the_dictionary_is_mostly_reachable_in_full(self):
         """A floor, so the blocklist cannot quietly grow back into one."""
         dead = 0
