@@ -5,6 +5,40 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.8.1] - 2026-09-14
+
+### Fixed
+
+- **2.8.0 took phrases off the databases that answered them better.**
+  Making acronym expansions matchable put them ahead of the drug,
+  preclinical and psych vocabularies, because `_acronym_terms` runs
+  first and first writer wins. A card saying "tranexamic acid" stopped
+  getting the drug entry and its DrugBank page and started getting the
+  TXA blurb over a StatPearls search; "parathyroid hormone" and eleven
+  other phrases did the same. Conditions never showed it, which is why
+  it survived release: `_acronym_to_condition` already copies the
+  condition's summary, url, chips and link kind onto the acronym term,
+  so those popups were identical either way. An expansion now yields to
+  a database that owns the phrase outright. Found by running the
+  matcher over 6,088 real notes and diffing against the same run with
+  the feature off.
+- Ownership is exact membership, with two morphological exceptions: a
+  salt carried in one list and not the other ("Ulipristal Acetate"
+  against "ulipristal"), and -gram against -graphy. Nothing looser.
+  Six of the eight measured near-misses had to stay with the acronym,
+  and a rule that trusted resolution alone would have opened diabetes
+  mellitus on a card naming the Australian Diabetes Society.
+
+### Content
+
+- Polycystic ovary syndrome carries its 2026 name, polyendocrine
+  metabolic ovarian syndrome, as an alias and in its opening lines. The
+  new name had existed only in the acronym list, so a card using
+  current terminology got a note about the rename instead of the entry.
+- `Falls in older adults` and `Falls in the elderly` were two entries
+  for one thing. Merged, keeping both of the facts only one of them
+  had.
+
 ## [2.8.0] - 2026-09-14
 
 ### Added
