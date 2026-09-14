@@ -13035,6 +13035,126 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "maternal mortality and perinatal mortality definitions"]],
         "summary": "",
     },
+    {
+        "name": "Infective dysentery",
+        "aliases": ["Dysenteric illness", "Invasive infectious colitis"],
+        "utd": [["Overview", "approach to the adult with acute diarrhea in resource rich settings"]],
+        "summary": "",
+    },
+    {
+        "name": "Abdominal distension",
+        "aliases": ["Distended abdomen", "Abdominal swelling", "Abdominal distention"],
+        "utd": [["Overview", "evaluation of the adult with abdominal distension"]],
+        "summary": "",
+    },
+    {
+        "name": "Unintentional weight loss",
+        "aliases": ["Unexplained weight loss", "Involuntary weight loss", "Unintentional loss of weight"],
+        "utd": [["Overview", "approach to the patient with unintentional weight loss"]],
+        "summary": "",
+    },
+    {
+        "name": "Liver function test interpretation",
+        "aliases": ["Liver function tests", "Deranged liver function tests", "Abnormal liver function tests", "Abnormal LFTs"],
+        "utd": [["Overview", "approach to the patient with abnormal liver biochemical and function tests"]],
+        "summary": "",
+    },
+    {
+        "name": "Proton pump inhibitors",
+        "aliases": ["Acid suppression therapy", "Proton-pump inhibitors"],
+        "utd": [["Overview", "proton pump inhibitors overview of use and adverse effects"]],
+        "summary": "",
+    },
+    {
+        "name": "Fatigue in adults",
+        "aliases": ["Approach to fatigue", "Persistent tiredness", "Tired all the time", "Adult fatigue"],
+        "utd": [["Overview", "approach to the adult patient with fatigue"]],
+        "summary": "",
+    },
+    {
+        "name": "Health literacy",
+        "aliases": ["Low health literacy", "Teach-back", "Teach-back method"],
+        "utd": [["Overview", "health literacy and patient education"]],
+        "summary": "",
+    },
+    {
+        "name": "Gender-affirming hormone therapy",
+        "aliases": ["Gender affirming hormone therapy", "Cross-sex hormone therapy"],
+        "utd": [["Overview", "gender affirming hormone therapy in transgender adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Pain at the end of life",
+        "aliases": ["Terminal pain", "Pain in the dying patient"],
+        "utd": [["Overview", "pain management in the last days of life"]],
+        "summary": "",
+    },
+    {
+        "name": "Aboriginal and Torres Strait Islander end-of-life care",
+        "aliases": ["Sorry Business", "Returning to Country"],
+        "utd": [["Overview", "cultural issues in end of life care"]],
+        "summary": "",
+    },
+    {
+        "name": "Herd immunity",
+        "aliases": ["Population immunity", "Community immunity", "Herd immunity threshold"],
+        "utd": [["Overview", "herd immunity and vaccination programs"]],
+        "summary": "",
+    },
+    {
+        "name": "Cutaneous paraneoplastic syndromes",
+        "aliases": ["Skin signs of internal malignancy", "Paraneoplastic dermatoses"],
+        "utd": [["Overview", "cutaneous manifestations of internal malignancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Change in bowel habit",
+        "aliases": ["Altered bowel habit", "Change in bowel habits"],
+        "utd": [["Overview", "evaluation of a change in bowel habits in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Cancer screening programs in Australia",
+        "aliases": ["National cancer screening programs", "Cancer screening in Australia"],
+        "utd": [["Overview", "overview of cancer screening in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Growth and nutrition in Aboriginal and Torres Strait Islander children",
+        "aliases": ["Growth restriction in Aboriginal and Torres Strait Islander children", "Nutrition in Aboriginal and Torres Strait Islander children", "Faltering growth in Aboriginal and Torres Strait Islander children"],
+        "utd": [["Overview", "failure to thrive in indigenous children growth and nutrition"]],
+        "summary": "",
+    },
+    {
+        "name": "Intellectual disability",
+        "aliases": ["Intellectual developmental disorder", "Intellectual disability in children"],
+        "utd": [["Overview", "intellectual disability in children diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Joint pain and swelling in children",
+        "aliases": ["Swollen joint in a child", "Paediatric joint swelling", "Arthritis in children"],
+        "utd": [["Overview", "evaluation of joint pain and swelling in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Hearing loss in children",
+        "aliases": ["Childhood hearing loss", "Chronic hearing disorders", "Paediatric hearing loss", "Deafness in children"],
+        "utd": [["Overview", "hearing loss in children etiology and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Older persons mental health",
+        "aliases": ["Older person's mental health", "Old age psychiatry", "Psychogeriatrics", "Psychological distress in old age", "Mental health in older adults"],
+        "utd": [["Overview", "psychiatric assessment of the older adult"]],
+        "summary": "",
+    },
+    {
+        "name": "Screening for psychological distress",
+        "aliases": ["Screening for psychological distress in medical patients", "Distress thermometer", "Distress screening"],
+        "utd": [["Overview", "screening for distress in patients with cancer"]],
+        "summary": "",
+    },
 ]
 
 
@@ -76044,6 +76164,436 @@ RICH_SUMMARIES = {
         "alone. Key point: these figures exist for state and national "
         "committee review of preventable factors, not for comparing "
         "individual clinicians."
+    ),
+
+    "Infective dysentery": (
+        "Bloody mucoid stool with fever and tenesmus - invasion of "
+        "the colonic mucosa, as opposed to the watery secretory "
+        "diarrhoea of viral and toxin-mediated illness. Causes: "
+        "Shigella, Campylobacter, non-typhoidal Salmonella, Shiga "
+        "toxin-producing Escherichia coli and Entamoeba histolytica; "
+        "viruses do not cause true dysentery. Clinical features: "
+        "frequent small-volume bloody stool, cramping pain and "
+        "tenesmus with fever; amoebic illness is more insidious over "
+        "weeks and may seed a liver abscess. Ix: stool microscopy, "
+        "culture and sensitivities with faecal PCR, blood cultures if "
+        "systemically unwell, and FBC with EUC to watch for "
+        "haemolytic uraemic syndrome. Mx: rehydration first, oral "
+        "where tolerated; eTG reserves empirical antibiotics for "
+        "severe or systemic illness, usually azithromycin, and treats "
+        "amoebiasis with metronidazole then a luminal agent. "
+        "Antibiotics are avoided where Shiga toxin-producing E. coli "
+        "is suspected because they raise the risk of haemolytic "
+        "uraemic syndrome, and loperamide is avoided in any bloody "
+        "stool. Note: notifiable in Australia - notify the public "
+        "health unit and exclude food handlers, childcare and "
+        "healthcare workers until cleared."
+    ),
+    "Abdominal distension": (
+        "Increased abdominal girth. The six Fs are fat, fluid, "
+        "flatus, faeces, fetus and a large tumour. Examination: "
+        "shifting dullness and a fluid thrill for ascites, "
+        "generalised tympany for gas, succussion splash for gastric "
+        "outlet obstruction, indentable palpable masses for faecal "
+        "loading, and a mass arising from the pelvis that you cannot "
+        "get below for a gravid uterus, fibroid or ovarian tumour. "
+        "Ix: beta-hCG in every woman of reproductive age before "
+        "anything else; erect and supine abdominal X-ray, or CT where "
+        "obstruction is suspected; ultrasound for ascites, pelvic "
+        "mass and liver disease; diagnostic ascitic tap for cell "
+        "count, culture and albumin. Note: the serum-ascites albumin "
+        "gradient sorts the fluid - 11 g/L or more means portal "
+        "hypertension (cirrhosis, cardiac failure), under 11 means "
+        "peritoneal disease (malignancy, tuberculosis, pancreatitis). "
+        "Red flags: distension with absolute constipation, vomiting "
+        "and pain is bowel obstruction; ascites with fever, pain or "
+        "encephalopathy is spontaneous bacterial peritonitis - tap "
+        "before antibiotics, and treat at 250 neutrophils per cubic "
+        "millimetre or above."
+    ),
+    "Unintentional weight loss": (
+        "Loss of more than 5 per cent of body weight over 6 to 12 "
+        "months without dieting - a symptom with a defined workup, "
+        "not a diagnosis. Causes: roughly a third malignancy "
+        "(gastrointestinal, lung, lymphoma, renal), a third other "
+        "organic disease (COPD, heart failure, diabetes, "
+        "thyrotoxicosis, coeliac disease, inflammatory bowel disease, "
+        "chronic kidney disease, HIV and tuberculosis), and a third "
+        "psychiatric or social - depression, dementia, alcohol, "
+        "polypharmacy, food insecurity and poor dentition in older "
+        "adults. Ix: FBC, EUC, LFT, CRP, HbA1c, TFT, coeliac "
+        "serology, HIV serology where risk exists, urinalysis, chest "
+        "X-ray, and bowel, breast and cervical screening brought up "
+        "to date for age. Mx: treat what is found, involve a "
+        "dietitian, and review medications that suppress appetite. "
+        "Note: when history, examination and first-pass tests are all "
+        "normal, documented reweighing at 3 and 6 months finds more "
+        "than further blind investigation does, and most of these "
+        "patients prove not to have cancer. Undirected whole-body CT "
+        "and tumour marker panels are not indicated."
+    ),
+    "Liver function test interpretation": (
+        "Read the pattern before the number: the first question is "
+        "hepatitic or cholestatic. Types: ALT and AST dominant is "
+        "hepatocellular, ALP and GGT dominant is cholestatic. The R "
+        "ratio is ALT divided by its upper limit of normal, over ALP "
+        "divided by its upper limit; above 5 is hepatocellular, below "
+        "2 cholestatic, 2 to 5 mixed. Ix: an isolated raised ALP goes "
+        "to GGT - a raised GGT confirms hepatobiliary origin and "
+        "earns an ultrasound, a normal GGT points to bone (Paget "
+        "disease, metastases, osteomalacia, healing fracture) or to "
+        "placenta in pregnancy. Splitting the bilirubin separates "
+        "further, an unconjugated rise with normal enzymes suggesting "
+        "Gilbert syndrome or haemolysis and a conjugated rise meaning "
+        "hepatocellular or biliary disease. Note: AST to ALT above 2 "
+        "with a raised GGT suggests alcohol-related liver disease, "
+        "while ALT above 1000 narrows to viral hepatitis, ischaemic "
+        "hepatitis or paracetamol toxicity. Key point: transaminases "
+        "measure hepatocyte injury, not function. Albumin, INR and "
+        "bilirubin are the synthetic and excretory tests - a falling "
+        "albumin or rising INR marks a failing liver."
+    ),
+    "Proton pump inhibitors": (
+        "Irreversible inhibitors of the gastric parietal cell H+/K+ "
+        "ATPase - omeprazole, esomeprazole, pantoprazole, rabeprazole "
+        "and lansoprazole. MOA: prodrugs activated in the acid "
+        "canaliculus that bind the pump covalently, so acid secretion "
+        "returns only as new pumps are made and the effect far "
+        "outlasts the plasma half-life. Dose: taken 30 to 60 minutes "
+        "before food, when the pumps are active. Indications: GORD "
+        "and oesophagitis, peptic ulcer disease, Helicobacter pylori "
+        "eradication, NSAID ulcer prophylaxis in at-risk patients, "
+        "and upper gastrointestinal bleeding. Adverse effects: "
+        "hypomagnesaemia, B12 and iron malabsorption, Clostridioides "
+        "difficile and other enteric infection, acute interstitial "
+        "nephritis, a small fracture risk, and rebound acid "
+        "hypersecretion on abrupt cessation. Interactions: omeprazole "
+        "and esomeprazole inhibit CYP2C19 and reduce activation of "
+        "clopidogrel - AMH prefers pantoprazole or rabeprazole in "
+        "that pairing. Note: the Australian emphasis is step-down and "
+        "deprescribing - review at 4 to 8 weeks, halve the dose or "
+        "move to on-demand use, then taper rather than stop abruptly."
+    ),
+    "Fatigue in adults": (
+        "Persistent tiredness not relieved by rest. Most fatigue is "
+        "not organic disease; the workup exists to find the minority "
+        "that is. Causes: sleep disorders (obstructive sleep apnoea, "
+        "insufficient or shift-work sleep), depression and anxiety, "
+        "alcohol and medications such as beta blockers, "
+        "antihistamines and opioids, anaemia and iron deficiency, "
+        "thyroid disease, diabetes, coeliac disease, chronic kidney "
+        "or liver disease, chronic infection and malignancy; a third "
+        "have no cause found. Ix: history first - sleep, mood, "
+        "alcohol and a full medication review; then screening bloods "
+        "of FBC, ferritin, EUC, LFT, CRP, HbA1c, TFT, coeliac "
+        "serology, vitamin D and HIV serology where risk exists, with "
+        "imaging only where a finding directs it. Red flags: "
+        "unintentional weight loss, night sweats or lymphadenopathy "
+        "alongside the fatigue warrants investigation for malignancy; "
+        "so does new bone pain or a focal neurological sign. Note: "
+        "chronic fatigue syndrome criteria apply only after 6 months "
+        "of disabling fatigue with post-exertional malaise, "
+        "unrefreshing sleep and either cognitive impairment or "
+        "orthostatic intolerance, with alternative causes excluded; "
+        "management is pacing and energy conservation."
+    ),
+    "Health literacy": (
+        "How well a person can find, understand and act on health "
+        "information, and how hard the service makes that - literacy "
+        "is a property of the system as much as the person. "
+        "Epidemiology: Australian survey data place a majority of "
+        "adults below the level needed to manage their own health, "
+        "and it is usually invisible, since few people volunteer that "
+        "they did not understand. Risk factors: older age, limited "
+        "schooling, English as a second language, cognitive "
+        "impairment, and acute illness or distress, which lowers "
+        "everyone's functional literacy. Features: missed "
+        "appointments, medicines taken wrongly, forms left blank, "
+        "saying the glasses were forgotten, and agreement without a "
+        "single question. Mx: plain language, one or two ideas at a "
+        "time with chunk-and-check, teach-back asking the patient to "
+        "say the plan back in their own words, absolute rather than "
+        "relative risk, written material at about a grade 8 reading "
+        "level, and a professional interpreter rather than a family "
+        "member. Note: teach-back tests the explanation, not the "
+        "patient, so frame it as checking yourself."
+    ),
+    "Gender-affirming hormone therapy": (
+        "Hormone treatment aligning secondary sex characteristics "
+        "with a person's gender, in two arms: feminising oestradiol "
+        "with an androgen blocker, and masculinising testosterone. "
+        "Mx: AusPATH supports an informed consent model in which a GP "
+        "with relevant knowledge assesses and prescribes, with "
+        "endocrine or specialist referral for those under 18, "
+        "significant comorbidity or diagnostic uncertainty, rather "
+        "than requiring a psychiatric gatekeeper. Ix: baseline "
+        "history and mental health, blood pressure, weight, FBC, UEC, "
+        "LFT, lipids, glucose or HbA1c, and baseline sex hormones. "
+        "Criteria: document informed consent and offer fertility "
+        "preservation counselling with gamete storage before the "
+        "first dose, since both arms reduce fertility and some "
+        "effects do not reverse. Monitoring: hormone levels to "
+        "target, FBC and haematocrit, lipids, LFT and blood pressure "
+        "at 3, 6 and 12 months then annually, with screening "
+        "continued for whatever organs are present. Note: fat "
+        "redistribution, skin and libido changes reverse on stopping, "
+        "but voice deepening and clitoral growth on testosterone and "
+        "breast development on oestradiol do not."
+    ),
+    "Pain at the end of life": (
+        "Analgesia in the last days, when swallowing has failed and "
+        "the aim is comfort rather than function. Mx: convert the "
+        "total 24-hour oral opioid to its subcutaneous equivalent and "
+        "run it in a syringe driver, giving a stat dose at the start "
+        "because the infusion takes hours to reach steady state. "
+        "Chart breakthrough subcutaneously at one-sixth of the total "
+        "daily dose, as often as hourly, and add the breakthrough "
+        "used into the next day's infusion. Renal: eTG Palliative "
+        "Care favours fentanyl or hydromorphone in renal impairment, "
+        "since morphine's active metabolites accumulate and cause "
+        "myoclonus, drowsiness and delirium. Treatment: adjuvants for "
+        "pain the opioid does not cover - dexamethasone for nerve or "
+        "capsular compression, an antineuropathic agent, and for bone "
+        "pain an NSAID plus radiotherapy referral. Ddx: not all "
+        "terminal distress is pain, so examine for urinary retention, "
+        "constipation and faecal loading, and delirium before "
+        "escalating the dose. Note: worsening agitation and myoclonus "
+        "on a rising dose is opioid toxicity, not undertreated pain."
+    ),
+    "Aboriginal and Torres Strait Islander end-of-life care": (
+        "End-of-life care for Aboriginal and Torres Strait Islander "
+        "people, where finishing up on Country can matter more than "
+        "the place with the best medical services. Mx: ask early "
+        "where the person wants to die and plan the transfer while "
+        "they can still travel, since returning to Country may mean "
+        "leaving a tertiary hospital for a remote community, with "
+        "medicines, syringe driver and retrieval arranged in advance. "
+        "Involve the Aboriginal Liaison Officer and Aboriginal Health "
+        "Practitioner from admission rather than at the crisis. Key "
+        "point: decision-making runs through family and kinship far "
+        "beyond the legal next of kin, so ask who speaks for the "
+        "person and who must be present, and treat a large number of "
+        "visitors as an obligation rather than a ward problem. "
+        "Australian notes: Sorry Business, the obligations of "
+        "mourning, ceremony and travel, outranks appointments and "
+        "work, and may take family away from another patient's "
+        "bedside. Note: in many communities the name and image of a "
+        "person who has died are avoided for a period, so ask the "
+        "family before using either in a notice, a handover or a "
+        "photograph."
+    ),
+    "Herd immunity": (
+        "Indirect protection of the non-immune once enough of a "
+        "population is immune that each case infects fewer than one "
+        "further person. Mechanism: the threshold is 1 minus 1 over "
+        "R0, so the more transmissible the organism the higher the "
+        "bar - measles needs about 95 per cent coverage and polio "
+        "about 80 to 85 per cent. Features: it is what protects "
+        "infants too young to be vaccinated, the immunosuppressed, "
+        "people with a genuine contraindication, and the small "
+        "fraction in whom the vaccine did not take. Australian notes: "
+        "coverage is tracked on the Australian Immunisation Register, "
+        "and No Jab No Pay ties family assistance payments to being "
+        "up to date, with state No Jab No Play rules for childcare "
+        "entry. Note: elimination is the absence of endemic "
+        "transmission in one country and is undone by importation, "
+        "whereas eradication is global and permanent, achieved only "
+        "for smallpox. Key point: mixing is not random, so pockets of "
+        "low coverage sustain outbreaks even when the national figure "
+        "looks adequate."
+    ),
+    "Cutaneous paraneoplastic syndromes": (
+        "Skin changes driven by a malignancy at a distance, without "
+        "tumour in the skin itself. Features: malignant acanthosis "
+        "nigricans is abrupt, extensive and itchy, involves the "
+        "mucosae and palms, and appears in a thin adult, pointing to "
+        "gastric adenocarcinoma, as does the sign of Leser-Trelat, an "
+        "eruptive crop of seborrhoeic keratoses. Associations: "
+        "dermatomyositis with heliotrope rash, Gottron papules and "
+        "proximal weakness carries ovarian and lung cancer risk in "
+        "adults, necrolytic migratory erythema with glossitis and "
+        "diabetes indicates glucagonoma, Sweet syndrome with tender "
+        "plaques, fever and neutrophilia accompanies acute myeloid "
+        "leukaemia, and acquired ichthyosis in an adult suggests "
+        "lymphoma. Ix: directed by the pattern rather than a blanket "
+        "search - gastroscopy for acanthosis nigricans or "
+        "Leser-Trelat, and for adult dermatomyositis CT chest, "
+        "abdomen and pelvis with pelvic imaging and CA125. Note: the "
+        "skin sign can precede the cancer by months, so a negative "
+        "first search is repeated, not treated as reassurance."
+    ),
+    "Change in bowel habit": (
+        "A persistent change in stool frequency, consistency or "
+        "calibre - a presentation rather than a diagnosis, in which "
+        "colorectal cancer is the one to exclude. Red flags: rectal "
+        "bleeding, iron deficiency anaemia, unintentional weight "
+        "loss, symptoms waking the patient at night, a palpable mass, "
+        "and a first-degree relative with bowel cancer - any of these "
+        "takes the patient to colonoscopy, not to an immunochemical "
+        "faecal occult blood test. Ddx: irritable bowel syndrome "
+        "(younger, long history, pain eased by defaecation, no red "
+        "flags), inflammatory bowel disease, coeliac disease, thyroid "
+        "disease, diabetes with autonomic neuropathy, and medicines "
+        "including opioids, iron, anticholinergics and laxatives. Ix: "
+        "FBC and iron studies, coeliac serology, TSH, CRP and faecal "
+        "calprotectin where inflammatory disease is plausible, with "
+        "colonoscopy for a persistent change over about 45 to 50, or "
+        "at any age with a red flag. Note: iFOBT is a screening test "
+        "for the asymptomatic, and a negative result in a symptomatic "
+        "patient neither excludes cancer nor justifies delaying "
+        "colonoscopy."
+    ),
+    "Cancer screening programs in Australia": (
+        "Four national programmes offering a test to an asymptomatic "
+        "age band on a fixed interval, not to anyone with symptoms. "
+        "Screening: BreastScreen gives biennial two-view mammography, "
+        "actively inviting women 50-74 and eligible from 40. The "
+        "National Cervical Screening Program is a five-yearly HPV "
+        "test from 25 to 74, with self-collection open to all "
+        "participants. The National Bowel Cancer Screening Program "
+        "mails a biennial immunochemical faecal occult blood test to "
+        "those 50-74, available from 45 on request. The National Lung "
+        "Cancer Screening Program, from 2025, offers biennial "
+        "low-dose CT to high-risk smokers and recent quitters. "
+        "Criteria: Wilson and Jungner asked for an important "
+        "condition with a recognisable latent stage, an acceptable "
+        "and accurate test, a treatment that works better early, an "
+        "agreed policy on whom to treat, and cost proportionate to "
+        "benefit. Note: participation sits below target in every "
+        "programme and lowest in remote areas, so the gap now is "
+        "uptake rather than the evidence."
+    ),
+    "Growth and nutrition in Aboriginal and Torres Strait Islander children": (
+        "Faltering growth, stunting and micronutrient deficiency "
+        "occur at higher rates in Aboriginal and Torres Strait "
+        "Islander children than in the wider Australian population, "
+        "and the gap is widest in remote communities. Epidemiology: "
+        "higher prevalence of low weight-for-age and stunting, iron "
+        "deficiency anaemia and vitamin D deficiency. Causes: food "
+        "insecurity, with fresh food costing more and keeping worse "
+        "where supply lines are long, crowded housing, and a heavy "
+        "infection load - gastroenteritis, skin infection and "
+        "recurrent otitis media - which raises energy demand and "
+        "blunts weight gain in the same children. Monitoring: weight, "
+        "length and head circumference plotted at every child health "
+        "check and at the annual Aboriginal and Torres Strait "
+        "Islander health assessment, with faltering read as crossing "
+        "centiles over time rather than one low point. Mx: led by the "
+        "community controlled health service, with food security and "
+        "supplementation programmes, iron and vitamin D replacement, "
+        "and treatment of the infection load. Note: individual "
+        "dietary advice alone does not move population growth - the "
+        "modifiable factors are food supply and infection, not family "
+        "behaviour."
+    ),
+    "Intellectual disability": (
+        "Significant limitation in both intellectual function and "
+        "adaptive behaviour, beginning in the developmental period. "
+        "Definition: the term used from about age five, where global "
+        "developmental delay is used below that age. Classification: "
+        "graded mild to profound on adaptive function across "
+        "conceptual, social and practical domains, not on IQ alone. "
+        "Causes: chromosomal and genetic including Down syndrome, "
+        "Fragile X and copy number variants, prenatal causes "
+        "including fetal alcohol spectrum disorder and congenital "
+        "infection, perinatal hypoxic-ischaemic injury or extreme "
+        "prematurity, and postnatal meningitis or head injury; no "
+        "cause is found in a large minority. Ix: chromosomal "
+        "microarray as the first-line genetic test and Fragile X "
+        "testing in both sexes, with thyroid, vision and hearing "
+        "assessment guided by the history. Mx: NDIS access, school "
+        "learning support, allied health, and treatment of comorbid "
+        "epilepsy, autism, ADHD and mental illness. Note: diagnostic "
+        "overshadowing - reading new behaviour change as the "
+        "disability rather than as pain, constipation or delirium - "
+        "is the commonest error; capacity is decision-specific, "
+        "reassessed in adolescence rather than assumed absent."
+    ),
+    "Joint pain and swelling in children": (
+        "Joint pain with or without swelling in a child, where septic "
+        "arthritis is excluded first and malignancy second, before "
+        "anything is called inflammatory. Causes: septic arthritis "
+        "and osteomyelitis, transient synovitis after a viral "
+        "illness, juvenile idiopathic arthritis - six weeks of "
+        "arthritis with onset before sixteen, carrying a silent "
+        "anterior uveitis that needs scheduled slit lamp screening "
+        "whatever the joints are doing - reactive arthritis, IgA "
+        "vasculitis, acute rheumatic fever, still common in "
+        "Aboriginal and Torres Strait Islander children in northern "
+        "Australia, and acute lymphoblastic leukaemia presenting as "
+        "bone or joint pain. Ix: FBC with film, CRP, ESR and blood "
+        "culture, ultrasound and aspiration where sepsis is possible, "
+        "streptococcal serology and echocardiography where rheumatic "
+        "fever is; ANA stratifies uveitis risk and does not diagnose. "
+        "Red flags: fever with a hot, held, unweightbearing joint is "
+        "septic arthritis until aspirated. Note: night pain that "
+        "wakes the child, weight loss, bruising or cytopenias with a "
+        "high ESR point to leukaemia, not arthritis."
+    ),
+    "Hearing loss in children": (
+        "Conductive or sensorineural hearing loss in childhood, "
+        "important less for the ear than for the speech, language, "
+        "behaviour and schooling that depend on it. Causes: "
+        "conductive loss is much the commoner - otitis media with "
+        "effusion and chronic suppurative otitis media, which begin "
+        "earlier in infancy, persist longer and perforate more often "
+        "in Aboriginal and Torres Strait Islander children. "
+        "Sensorineural loss follows congenital cytomegalovirus, "
+        "genetic causes (about half, mostly non-syndromic), "
+        "prematurity and kernicterus, bacterial meningitis and "
+        "ototoxic exposure. Clinical features: unclear or delayed "
+        "speech, mishearing and inattention, behaviour difficulty, "
+        "rising television volume, school progress that stalls. Mx: "
+        "refer for grommets where effusion and hearing loss persist "
+        "beyond about three months with speech or learning affected, "
+        "aural toilet and topical treatment for a discharging "
+        "perforation, amplification which can be fitted in infancy, "
+        "early intervention and classroom sound field systems. Note: "
+        "a passed newborn screen excludes congenital sensorineural "
+        "loss and nothing later. See Hearing assessment in children "
+        "for the testing itself."
+    ),
+    "Older persons mental health": (
+        "Psychiatry of people over about sixty-five, the counterpart "
+        "of child and adolescent mental health, distinguished less by "
+        "which disorders occur than by what surrounds them. "
+        "Presentation: somatic and cognitive complaint rather than "
+        "reported sadness - pain, fatigue, poor sleep, appetite loss, "
+        "memory trouble - against a background of physical "
+        "comorbidity and polypharmacy, sensory impairment, isolation "
+        "and bereavement. Differential: delirium and dementia are the "
+        "first two considerations in any change of mental state, and "
+        "depression, delirium and dementia coexist as often as they "
+        "compete. Epidemiology: Australian men in the oldest age "
+        "groups have the highest suicide rate of any age and sex "
+        "group. Mx: in New South Wales, specialist mental health "
+        "services for older people, in-reach to residential aged "
+        "care, and ACAT for care needs; the Mental Health Act 2007 "
+        "applies on the same criteria at any age. Note: see Late-life "
+        "depression, Delirium, Elder abuse and Psychotropic "
+        "prescribing in the older person for the detail."
+    ),
+    "Screening for psychological distress": (
+        "Routine use of a brief instrument to find psychological "
+        "distress in people with medical illness, who mostly do not "
+        "raise it themselves. Screening: offer it in cancer and other "
+        "serious or chronic illness and to hospital inpatients, at "
+        "diagnosis and at every transition - treatment change, "
+        "recurrence, discharge, referral to palliative care - rather "
+        "than once. Two instruments are used in Australia: the "
+        "Kessler Psychological Distress Scale, a ten-item self-report "
+        "with its own entry here, and the distress thermometer, a "
+        "nought to ten visual scale with an accompanying problem list "
+        "covering practical, family, emotional, spiritual and "
+        "physical concerns, on which a score of about four or more is "
+        "the usual trigger for assessment. Mx: a positive screen is "
+        "followed by clinical assessment for depression, anxiety, "
+        "adjustment disorder and suicide risk, then stepped referral "
+        "- psychosocial support, psychology, social work or "
+        "psychiatry by severity. Note: a positive screen is distress, "
+        "not a diagnosis; and screening with no referral pathway "
+        "attached does not improve outcomes, so the pathway is part "
+        "of the decision to screen."
     ),
 }
 
