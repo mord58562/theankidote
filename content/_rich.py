@@ -2671,7 +2671,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": 'Falls in older adults',
-        "aliases": ['geriatric falls', "Falls prevention", "Falls prevention in and out of hospital", "Falls risk assessment"],
+        "aliases": ['geriatric falls', "Falls prevention", "Falls prevention in and out of hospital", "Falls risk assessment", "Falls in the elderly", "Falls risk in the elderly"],
         "utd": [["Overview", 'falls in older persons']],
         "summary": "",
     },
@@ -5784,12 +5784,6 @@ NEW_CONDITIONS = [
         "name": "Peroneal nerve palsy",
         "aliases": ["Common peroneal nerve palsy", "Fibular nerve palsy"],
         "utd": [["Overview", "peroneal fibular neuropathy"]],
-        "summary": "",
-    },
-    {
-        "name": "Falls in the elderly",
-        "aliases": ["Falls risk in the elderly"],
-        "utd": [["Overview", "falls prevention in community dwelling older persons"]],
         "summary": "",
     },
     {
@@ -14398,7 +14392,9 @@ RICH_SUMMARIES = {
         "Common endocrine disorder of hyperandrogenism and ovulatory "
         "dysfunction, diagnosed on the Rotterdam criteria - two of three: "
         "oligo-ovulation, clinical or biochemical hyperandrogenism, "
-        "polycystic ovarian morphology. Pathophysiology: insulin resistance "
+        "polycystic ovarian morphology. Renamed polyendocrine metabolic "
+        "ovarian syndrome in 2026, with the criteria unchanged. "
+        "Pathophysiology: insulin resistance "
         "drives ovarian androgen production and lowers SHBG, raising free "
         "testosterone. Clinical features: oligomenorrhoea, hirsutism, acne, "
         "subfertility, acanthosis nigricans. Ix: testosterone and SHBG with "
@@ -41704,8 +41700,10 @@ RICH_SUMMARIES = {
         "polypharmacy (especially sedatives), visual impairment, gait "
         "and balance disorders, and environmental hazards. Clinical "
         "features: recurrent falls, near misses or a fear of falling "
-        "all warrant assessment even without injury. Ix: lying and "
-        "standing blood pressure, medication review, gait and balance "
+        "all warrant assessment even without injury, and the risk of "
+        "another fall is highest in the months after one. Ix: lying "
+        "and standing blood pressure, medication review, gait and "
+        "balance "
         "testing (Timed Up and Go), and vision check; imaging only if "
         "a specific injury or red flag is suspected. Mx: eTG-aligned "
         "approach - deprescribe high-risk medications, vitamin D and "
@@ -51823,23 +51821,6 @@ RICH_SUMMARIES = {
         "loss confined to the lateral shin and foot dorsum, sparing "
         "the sole, localises to the peroneal nerve rather than the "
         "sciatic nerve or L5 root."
-    ),
-    "Falls in the elderly": (
-        "Unintentional loss of an upright position, arising from the "
-        "interaction of multiple risk factors rather than any single "
-        "cause, and a leading cause of injury-related death in older "
-        "people. Ix: ask about falls at every review. After a fall, "
-        "assess gait and balance, postural blood pressure, vision, "
-        "cognition, footwear and home hazards, and review medications "
-        "for sedatives and antihypertensives. Mx: individualised "
-        "exercise programs targeting strength and balance give the "
-        "strongest evidence for reducing falls. Deprescribe "
-        "psychotropics where possible, treat orthostatic hypotension, "
-        "correct vitamin D deficiency and arrange a home safety "
-        "assessment. Note: a fall is rarely mechanical bad luck alone "
-        "- it is a sentinel event that should prompt a multifactorial "
-        "assessment, since the risk of a further fall is highest in "
-        "the following months."
     ),
     "Deep sternal wound infection": (
         "Mediastinitis or deep infection of the sternal wound after "
@@ -78830,6 +78811,14 @@ ENTRY_REFS = {
 
 
 CONDITION_ALIASES = {
+    # The 2026 rename. The acronym list carries PMOS and explains the
+    # change; the full new name belongs on the condition itself, or a
+    # card using current terminology gets a two-line blurb instead of
+    # the entry.
+    "Polycystic ovary syndrome": [
+        "Polyendocrine metabolic ovarian syndrome",
+        "Polyendocrine metabolic ovarian syndrome (PMOS)"],
+
     # Medicine-1 curriculum wording for base-library entries.
     "Prosthetic valve disease": ["Complications of prosthetic heart valves", "Prosthetic heart valve", "Prosthetic heart valves"],
     "Torsades de pointes": ["Drugs that cause arrhythmias", "QT-prolonging drugs", "Drug-induced QT prolongation"],

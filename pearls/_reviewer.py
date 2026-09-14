@@ -411,7 +411,39 @@ def _owned_by_another_database(phrase: str) -> bool:
         for mod in (_preclinical, _psych):
             owned |= {n.lower() for n in getattr(mod, "_NAMES", ())}
         _owned_cache = owned
-    return phrase.strip().lower() in _owned_cache
+    key = phrase.strip().lower()
+    return any(f in _owned_cache for f in _same_entity_forms(key))
+
+
+# A salt or ester in the name does not make it a different drug, and the
+# databases do not agree on whether to carry one: the drug list has
+# "ulipristal" where the acronym list spells out "Ulipristal Acetate".
+_SALTS = ("acetate", "hydrochloride", "sodium", "potassium", "calcium",
+          "succinate", "tartrate", "maleate", "mesylate", "besylate",
+          "fumarate", "citrate", "phosphate", "sulfate", "sulphate",
+          "bromide", "chloride", "nitrate", "valerate", "propionate")
+
+
+def _same_entity_forms(key: str):
+    """Spellings of `key` that mean the same thing to another database.
+
+    Deliberately only two, and both morphological. Anything looser
+    hands specific entries to general ones: `_preclinical` answers
+    "tricyclic antidepressant" with "Antidepressants", "syndrome of
+    inappropriate antidiuretic hormone" with "Antidiuretic hormone",
+    and - worst of the set - `_conditions` answers "Australian Diabetes
+    Society" with "Diabetes mellitus". Six of the eight near-misses
+    measured on a real collection had to stay with the acronym; these
+    two are the pair that genuinely name one entity twice.
+    """
+    yield key
+    head = key.rsplit(" ", 1)
+    if len(head) == 2 and head[1] in _SALTS:
+        yield head[0]
+    if key.endswith("gram"):
+        yield key[:-4] + "graphy"
+    elif key.endswith("graphy"):
+        yield key[:-6] + "gram"
 
 
 def _split_spelled_out(terms: list, by_acronym: dict) -> list:

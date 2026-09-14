@@ -976,6 +976,29 @@ class SpelledOutAcronyms(unittest.TestCase):
             self.assertIn(phrase, self._marks(f"note: {phrase} here"),
                           phrase)
 
+    def test_a_salt_in_the_name_is_still_the_same_drug(self):
+        """The drug list says "ulipristal", the acronym list spells out
+        "Ulipristal Acetate", and the reader should get the drug."""
+        self.assertTrue(
+            self.rv._owned_by_another_database("ulipristal acetate"))
+
+    def test_gram_and_graphy_are_one_entity(self):
+        self.assertTrue(
+            self.rv._owned_by_another_database("transthoracic echocardiogram"))
+
+    def test_normalisation_does_not_hand_over_a_specific_entry(self):
+        """Six of the eight near-misses measured on a real collection had
+        to stay with the acronym. An organisation is not the disease it
+        is named after, and a drug class is not its parent class."""
+        for phrase in ("australian diabetes society",
+                       "clozapine patient monitoring service",
+                       "lower respiratory tract infection",
+                       "syndrome of inappropriate antidiuretic hormone",
+                       "tricyclic antidepressant",
+                       "herpes simplex virus"):
+            self.assertFalse(self.rv._owned_by_another_database(phrase),
+                             phrase)
+
     def test_the_dictionary_is_mostly_reachable_in_full(self):
         """A floor, so the blocklist cannot quietly grow back into one."""
         dead = 0
