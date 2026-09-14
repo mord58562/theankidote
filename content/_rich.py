@@ -13149,6 +13149,222 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "screening for distress in patients with cancer"]],
         "summary": "",
     },
+    {
+        "name": "Intravenous fluid prescribing",
+        "aliases": ["IV fluid prescribing", "Adult intravenous fluids", "Fluid prescription in adults", "Prescribing intravenous fluids"],
+        "utd": [["Overview", "intravenous fluid therapy in adults maintenance and resuscitation"]],
+        "summary": "",
+    },
+    {
+        "name": "Enteral feeding",
+        "aliases": ["Nasogastric feeding", "NG feeding", "Tube feeding", "Feeding tube nutrition"],
+        "utd": [["Overview", "enteral tube feeding indications complications refeeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Postoperative fever",
+        "aliases": ["Post-operative fever", "Fever after surgery", "Fever in the postoperative patient"],
+        "utd": [["Overview", "postoperative fever evaluation timing differential"]],
+        "summary": "",
+    },
+    {
+        "name": "Terminal phase care",
+        "aliases": ["Care in the last days of life", "Terminal care", "Dying patient care"],
+        "utd": [["Overview", "care of the dying patient last days of life anticipatory medicines"]],
+        "summary": "",
+    },
+    {
+        "name": "Breathlessness in palliative care",
+        "aliases": ["Refractory breathlessness", "Palliative dyspnoea", "Breathlessness at the end of life"],
+        "utd": [["Overview", "refractory breathlessness palliative care opioids fan"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug allergy assessment",
+        "aliases": ["Drug allergy history", "Antibiotic allergy assessment", "Drug allergy label", "Allergy delabelling"],
+        "utd": [["Overview", "drug allergy evaluation delabelling penicillin allergy"]],
+        "summary": "",
+    },
+    {
+        "name": "Renal biopsy",
+        "aliases": ["Kidney biopsy", "Percutaneous renal biopsy", "Native kidney biopsy"],
+        "utd": [["Overview", "percutaneous renal biopsy indications complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Kidney transplant recipient care",
+        "aliases": ["Renal transplant follow-up", "Kidney transplant follow-up", "Care of the transplant recipient"],
+        "utd": [["Overview", "kidney transplant recipient long term management immunosuppression"]],
+        "summary": "",
+    },
+    {
+        "name": "Insulin initiation",
+        "aliases": ["Starting insulin", "Basal insulin initiation", "Commencing insulin"],
+        "utd": [["Overview", "initiating insulin therapy type 2 diabetes basal titration"]],
+        "summary": "",
+    },
+    {
+        "name": "Sick day management in diabetes",
+        "aliases": ["Diabetes sick day rules", "Sick day plan", "Sick day management", "Sick day medicines"],
+        "utd": [["Overview", "diabetes sick day management ketones SGLT2 inhibitor withhold"]],
+        "summary": "",
+    },
+    {
+        "name": "Outpatient parenteral antimicrobial therapy",
+        "aliases": ["Hospital in the home antibiotics", "Home intravenous antibiotics", "Outpatient intravenous antibiotics"],
+        "utd": [["Overview", "outpatient parenteral antimicrobial therapy patient selection monitoring"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-exposure prophylaxis",
+        "aliases": ["Needlestick prophylaxis", "Occupational exposure prophylaxis", "Prophylaxis after exposure"],
+        "utd": [["Overview", "post exposure prophylaxis needlestick HIV hepatitis B"]],
+        "summary": "",
+    },
+    {
+        "name": "Adverse drug reaction reporting",
+        "aliases": ["Pharmacovigilance reporting", "Adverse event reporting", "Reporting an adverse drug reaction"],
+        "utd": [["Overview", "adverse drug reaction reporting therapeutic goods administration pharmacovigilance"]],
+        "summary": "",
+    },
+    {
+        "name": "Discharge planning",
+        "aliases": ["Discharge summary", "Hospital discharge process", "Planning for discharge"],
+        "utd": [["Overview", "discharge planning hospital transition of care discharge summary"]],
+        "summary": "",
+    },
+    {
+        "name": "Opioid stewardship",
+        "aliases": ["Safe opioid prescribing", "Opioid prescribing safety", "Opioid discharge prescribing"],
+        "utd": [["Overview", "opioid stewardship acute pain prescribing duration real time monitoring"]],
+        "summary": "",
+    },
+    {
+        "name": "Stroke rehabilitation",
+        "aliases": ["Rehabilitation after stroke", "Post-stroke rehabilitation"],
+        "utd": [["Overview", "stroke rehabilitation multidisciplinary stroke unit recovery"]],
+        "summary": "",
+    },
+    {
+        "name": "Bone marrow biopsy",
+        "aliases": ["Bone marrow aspirate", "Trephine biopsy", "Bone marrow aspirate and trephine", "Marrow biopsy"],
+        "utd": [["Overview", "bone marrow aspiration and trephine biopsy indications technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Lipid management",
+        "aliases": ["Lipid lowering therapy", "Cholesterol management", "Dyslipidaemia management"],
+        "utd": [["Overview", "lipid lowering therapy absolute cardiovascular risk statin ezetimibe"]],
+        "summary": "",
+    },
+    {
+        "name": "Biologic therapy screening",
+        "aliases": ["Pre-biologic screening", "Screening before biologic therapy", "Baseline screening for biologics"],
+        "utd": [["Overview", "screening before biologic therapy latent tuberculosis hepatitis B"]],
+        "summary": "",
+    },
+    {
+        "name": "Steroid-induced complications",
+        "aliases": ["Corticosteroid adverse effects", "Glucocorticoid complications", "Steroid side effects", "Corticosteroid harms"],
+        "utd": [["Overview", "systemic glucocorticoid adverse effects prevention bone protection"]],
+        "summary": "",
+    },
+    {
+        "name": "Blood culture collection",
+        "aliases": ["Taking blood cultures", "Blood culture technique", "Collecting blood cultures"],
+        "utd": [["Overview", "blood culture collection technique contamination volume"]],
+        "summary": "",
+    },
+    {
+        "name": "Troponin interpretation",
+        "aliases": ["High sensitivity troponin", "Interpreting troponin", "Troponin rise and fall"],
+        "utd": [["Overview", "high sensitivity cardiac troponin interpretation myocardial injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Chest pain risk stratification",
+        "aliases": ["Chest pain pathway", "Accelerated chest pain pathway", "Risk stratification of chest pain"],
+        "utd": [["Overview", "chest pain risk stratification accelerated diagnostic pathway troponin"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic wound management",
+        "aliases": ["Chronic wound care", "Wound dressing selection", "Non-healing wound"],
+        "utd": [["Overview", "chronic wound management leg ulcer compression debridement dressings"]],
+        "summary": "",
+    },
+    {
+        "name": "Bone protection therapy",
+        "aliases": ["Antiresorptive therapy", "Bone protection", "Fracture prevention therapy"],
+        "utd": [["Overview", "osteoporosis pharmacotherapy bisphosphonate denosumab fracture prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Antibiotic duration",
+        "aliases": ["Duration of antibiotic therapy", "Short course antibiotics", "Length of antibiotic course"],
+        "utd": [["Overview", "antibiotic duration short course therapy stop date stewardship"]],
+        "summary": "",
+    },
+    {
+        "name": "Asplenia vaccination",
+        "aliases": ["Vaccination after splenectomy", "Post-splenectomy vaccination", "Hyposplenism vaccination", "Splenectomy immunisation"],
+        "utd": [["Overview", "asplenia hyposplenism vaccination antibiotic prophylaxis overwhelming infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Vaccination in immunocompromised patients",
+        "aliases": ["Immunisation in immunosuppression", "Vaccinating the immunosuppressed", "Vaccines in the immunosuppressed adult"],
+        "utd": [["Overview", "vaccination immunocompromised live vaccines timing immunosuppression"]],
+        "summary": "",
+    },
+    {
+        "name": "Occupational lung disease",
+        "aliases": ["Work-related lung disease", "Occupational respiratory disease", "Work-related respiratory disease"],
+        "utd": [["Overview", "occupational lung disease silicosis engineered stone occupational asthma"]],
+        "summary": "",
+    },
+    {
+        "name": "Tumour markers",
+        "aliases": ["Serum tumour markers", "Tumour marker interpretation", "Cancer markers"],
+        "utd": [["Overview", "tumour markers interpretation monitoring limitations screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Arterial line insertion",
+        "aliases": ["Arterial cannulation", "Arterial line", "Inserting an arterial line"],
+        "utd": [["Overview", "arterial line insertion radial artery cannulation complications waveform"]],
+        "summary": "",
+    },
+    {
+        "name": "Organ donation",
+        "aliases": ["Deceased organ donation", "Organ and tissue donation", "Donation after brain death"],
+        "utd": [["Overview", "deceased organ and tissue donation consent brain death circulatory death"]],
+        "summary": "",
+    },
+    {
+        "name": "Escalation of care",
+        "aliases": ["Clinical deterioration escalation", "Rapid response escalation", "Escalating a deteriorating patient"],
+        "utd": [["Overview", "recognising and responding to clinical deterioration rapid response escalation"]],
+        "summary": "",
+    },
+    {
+        "name": "Childhood immunisation catch-up",
+        "aliases": ["Catch-up immunisation", "Catch-up vaccination", "Immunisation catch-up schedule"],
+        "utd": [["Overview", "childhood immunisation catch up schedule national immunisation program"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric fever without focus",
+        "aliases": ["Fever without source in children", "Febrile child without focus", "Fever without focus in a child"],
+        "utd": [["Overview", "fever without focus in children traffic light serious bacterial infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Gestational diabetes screening",
+        "aliases": ["Screening for gestational diabetes", "Glucose tolerance test in pregnancy", "Pregnancy glucose tolerance test"],
+        "utd": [["Overview", "gestational diabetes screening oral glucose tolerance test pregnancy"]],
+        "summary": "",
+    },
 ]
 
 
@@ -76575,6 +76791,726 @@ RICH_SUMMARIES = {
         "not a diagnosis; and screening with no referral pathway "
         "attached does not improve outcomes, so the pathway is part "
         "of the decision to screen."
+    ),
+
+    "Intravenous fluid prescribing": (
+        "Prescribing intravenous fluid for an adult means answering "
+        "three separate questions - resuscitation, maintenance, and "
+        "replacement of ongoing losses - and writing each on its own "
+        "line. Indications: the patient cannot meet needs orally, or "
+        "is hypovolaemic. Mx: resuscitate with 500 mL of a balanced "
+        "crystalloid such as compound sodium lactate over 15 minutes "
+        "and reassess before repeating, to 2000 mL before seeking "
+        "help. Maintenance for a stable adult is roughly 25 to 30 "
+        "mL/kg/day of water with 1 mmol/kg/day each of sodium, "
+        "potassium and chloride plus 50 to 100 g of glucose to limit "
+        "ketosis. Sodium chloride 0.9 per cent alone at maintenance "
+        "rates delivers far more sodium than this and causes "
+        "hyperchloraemic acidosis. Monitoring: daily weight, fluid "
+        "balance chart and electrolytes; review the prescription "
+        "every 24 hours rather than rewriting it. Note: the commonest "
+        "prescribing error is continuing resuscitation-rate fluid as "
+        "maintenance, which is how a euvolaemic ward patient ends up "
+        "oedematous and hyponatraemic."
+    ),
+    "Enteral feeding": (
+        "Delivering nutrition into a functioning gut through a tube "
+        "when oral intake is unsafe or insufficient. Indications: "
+        "unsafe swallow after stroke, prolonged critical illness, "
+        "head and neck cancer, or intake under 60 per cent of needs "
+        "for more than five days. Types: nasogastric for under four "
+        "weeks, gastrostomy beyond that, and postpyloric feeding "
+        "where gastric feeding fails or aspiration risk is high. "
+        "Contraindications: mechanical obstruction, bowel ischaemia "
+        "and high output fistula. Mx: confirm nasogastric tip "
+        "position with pH under 5.5 on aspirate, and by chest "
+        "radiograph if pH is unobtainable, before the first feed. "
+        "Start at 20 to 30 mL/h and build to target with dietitian "
+        "input. Complications: aspiration, tube blockage and "
+        "displacement, diarrhoea from formula or concurrent "
+        "antibiotics, and refeeding syndrome in the malnourished. "
+        "Monitoring: daily electrolytes including phosphate and "
+        "magnesium for the first three days. Note: auscultating for a "
+        "bubble does not confirm placement and has killed patients."
+    ),
+    "Postoperative fever": (
+        "Fever after surgery is common and mostly benign, but the "
+        "timing narrows the differential faster than any test. "
+        "Aetiology: day 0 to 2 is usually the inflammatory response "
+        "to tissue injury or atelectasis. Day 3 to 5 suggests urinary "
+        "tract or line infection. Day 5 to 7 points to surgical site "
+        "infection, and beyond a week to deep collection, anastomotic "
+        "leak or venous thromboembolism. Drug fever and transfusion "
+        "reaction can occur at any point. Ix: examine the wound and "
+        "every line before ordering anything. Then urinalysis and "
+        "culture, blood cultures if unwell, chest radiograph, and "
+        "cross-sectional imaging when a collection is suspected. Mx: "
+        "treat the cause rather than the number. Remove or change an "
+        "infected line, drain a collection, and give antimicrobials "
+        "guided by eTG once cultures are taken. Red flags: fever with "
+        "tachycardia and rising lactate, wound erythema tracking "
+        "beyond the incision, or fever after day 5 with an ileus. "
+        "Note: a fever on the first postoperative night with clear "
+        "lungs and a clean wound rarely needs a septic screen."
+    ),
+    "Terminal phase care": (
+        "Care in the last days of life, once the goal has shifted "
+        "entirely to comfort and the dying process is recognised "
+        "rather than resisted. Features: increasing sleep, reduced "
+        "oral intake, peripheral mottling, Cheyne-Stokes breathing "
+        "and terminal secretions. Mx: stop observations, blood tests "
+        "and non-essential medicines, and convert what remains to the "
+        "subcutaneous route. Rx: chart anticipatory medicines before "
+        "they are needed - morphine 2.5 mg subcutaneously for pain or "
+        "breathlessness, midazolam 2.5 mg for terminal restlessness, "
+        "haloperidol 0.5 mg for nausea and glycopyrronium 200 "
+        "micrograms for secretions. A syringe driver delivers the "
+        "same drugs continuously when more than two or three doses a "
+        "day are required. Note: hydration and nutrition are offered "
+        "as comfort rather than prescribed as treatment, and a "
+        "documented resuscitation plan spares the family a crash "
+        "call. Explain the mottling and the noisy breathing before "
+        "the family ask, because both are far more distressing to "
+        "watch than to experience."
+    ),
+    "Breathlessness in palliative care": (
+        "Refractory breathlessness is the subjective sensation, not "
+        "the oxygen saturation, and it responds to opioids at doses "
+        "well below those used for pain. Aetiology: the tumour "
+        "itself, an effusion or lymphangitis, anaemia, or pulmonary "
+        "embolism - often several at once and some still reversible. "
+        "Ix: keep it proportionate to how much time and function the "
+        "patient has. A chest radiograph, haemoglobin and a bedside "
+        "ultrasound answer most questions. Mx: treat what is "
+        "reversible first - drain the effusion, transfuse, "
+        "anticoagulate. Then low dose oral morphine 2.5 mg four "
+        "hourly as required and titrated upward, the best evidenced "
+        "intervention available. A handheld fan directed at the face "
+        "works through the trigeminal nerve and is genuinely "
+        "effective. Benzodiazepines help only where anxiety drives "
+        "the cycle. Note: oxygen benefits the hypoxaemic and nobody "
+        "else, so a saturation of 95 per cent on air means the answer "
+        "is not a mask."
+    ),
+    "Drug allergy assessment": (
+        "Most reported drug allergies are not allergies, and the "
+        "label itself causes harm by pushing prescribers to broader, "
+        "more toxic and more expensive alternatives. Hx: what "
+        "happened, how long after the dose, how it was treated, and "
+        "whether the drug or a relative has been taken since. "
+        "Classification: immediate reactions within an hour suggest "
+        "IgE mediated anaphylaxis. Delayed rashes at days 4 to 14 are "
+        "usually T cell mediated and often benign. Isolated nausea, "
+        "diarrhoea or a family history are intolerances, not "
+        "allergies. Ix: tryptase during an acute reaction, then "
+        "referral for skin prick or intradermal testing and, where "
+        "appropriate, supervised oral challenge. Mx: delabel low risk "
+        "penicillin allergy through a direct oral challenge, which is "
+        "safe in the large majority and restores first line therapy. "
+        "Document the reaction itself in the record, not just the "
+        "word allergy. Red flags: blistering, mucosal involvement or "
+        "organ dysfunction mark a severe cutaneous adverse reaction, "
+        "and that drug is never rechallenged."
+    ),
+    "Renal biopsy": (
+        "Percutaneous sampling of the kidney under ultrasound "
+        "guidance, taken when the histology will change management "
+        "rather than merely name the disease. Indications: nephrotic "
+        "syndrome in an adult, glomerulonephritis with an active "
+        "urinary sediment, unexplained acute kidney injury, and "
+        "dysfunction of a transplanted kidney. Contraindications: "
+        "uncontrolled hypertension, a solitary native kidney, active "
+        "urinary infection, or uncorrected coagulopathy. Ix: full "
+        "blood count, coagulation profile, blood group and hold, and "
+        "imaging confirming two kidneys of adequate size. Mx: "
+        "withhold antiplatelets and anticoagulants beforehand "
+        "according to local protocol, control blood pressure, then "
+        "observe supine for six hours with serial observations and a "
+        "post-procedure haemoglobin. Complications: visible "
+        "haematuria in about 3 per cent, perinephric haematoma, "
+        "arteriovenous fistula, and loss of the kidney or death in "
+        "well under 1 in 1000. Note: bleeding is the risk that "
+        "matters, and almost all of it declares itself within 24 "
+        "hours."
+    ),
+    "Kidney transplant recipient care": (
+        "Shared care of a functioning renal allograft, where the "
+        "general physician sees the patient far more often than the "
+        "transplant unit does. Mx: lifelong immunosuppression, "
+        "typically tacrolimus with mycophenolate and low dose "
+        "prednisolone, is never stopped or interrupted without "
+        "transplant unit advice. Monitoring: creatinine and "
+        "tacrolimus trough at every visit, with blood pressure, "
+        "lipids, glucose and urine protein at least quarterly. A "
+        "creatinine rise above 20 per cent from baseline is rejection "
+        "until proven otherwise and needs same day discussion. "
+        "Complications: infection dominates the first year "
+        "(cytomegalovirus, BK virus and Pneumocystis) and "
+        "cardiovascular disease thereafter. Skin cancer and "
+        "post-transplant lymphoproliferative disease follow the "
+        "cumulative immunosuppressive burden. Interactions: azoles, "
+        "macrolides, diltiazem and grapefruit all raise tacrolimus "
+        "levels sharply, while rifampicin and carbamazepine collapse "
+        "them. Note: annual skin checks and rigorous sun protection "
+        "matter more here than in almost any other outpatient group."
+    ),
+    "Insulin initiation": (
+        "Starting insulin in type 2 diabetes, usually once oral "
+        "agents and a GLP-1 receptor agonist have failed to reach "
+        "target. Indications: HbA1c persistently above target despite "
+        "maximal oral therapy, symptomatic hyperglycaemia, or "
+        "intercurrent illness and surgery. Mx: begin with basal "
+        "insulin at bedtime, 10 units or 0.1 to 0.2 units/kg, most "
+        "often isophane or a long acting analogue. Titrate by 2 units "
+        "every three days against the fasting glucose aiming 4 to 7 "
+        "mmol/L. Continue metformin. Stop sulfonylureas as insulin "
+        "doses rise, because that combination drives hypoglycaemia "
+        "and weight gain. Add prandial insulin only when fasting "
+        "glucose is at target but HbA1c is not. Monitoring: "
+        "fingerprick glucose, hypoglycaemia frequency, weight and "
+        "injection sites at each review. PBS: insulin and needles are "
+        "subsidised, and the National Diabetes Services Scheme "
+        "supplies strips at low cost once registered. Note: the "
+        "fasting reading titrates the basal dose, so a patient who "
+        "only tests after dinner cannot be titrated safely."
+    ),
+    "Sick day management in diabetes": (
+        "Any intercurrent illness raises counter-regulatory hormones "
+        "and insulin requirements, so the dose usually goes up while "
+        "the appetite goes down. This is the conversation that "
+        "prevents most avoidable admissions with ketoacidosis. Mx: "
+        "never stop insulin, even when not eating. Check glucose "
+        "every 2 to 4 hours and ketones whenever glucose exceeds 15 "
+        "mmol/L or the patient feels unwell. Maintain carbohydrate "
+        "and fluid intake using sugary drinks if solids are not "
+        "tolerated. Dose: give supplemental rapid acting insulin at "
+        "roughly 10 to 20 per cent of the total daily dose for "
+        "hyperglycaemia with ketones. Cautions: withhold the sick day "
+        "medicines - metformin, SGLT2 inhibitors, ACE inhibitors, "
+        "sartans and diuretics - while dehydrated. Red flags: "
+        "vomiting that prevents fluid intake, ketones above 3 mmol/L, "
+        "drowsiness or breathlessness all mean present to hospital "
+        "now. Note: SGLT2 inhibitors cause euglycaemic ketoacidosis, "
+        "so a normal glucose in an unwell patient on one of them does "
+        "not exclude it."
+    ),
+    "Outpatient parenteral antimicrobial therapy": (
+        "Delivering intravenous antimicrobials outside hospital, "
+        "usually through a Hospital in the Home service, for "
+        "infections that need parenteral therapy but not a bed. "
+        "Indications: cellulitis, osteomyelitis and septic arthritis, "
+        "endocarditis in the stable consolidation phase, and "
+        "complicated urinary or intra-abdominal infection after "
+        "source control. Criteria: the patient must be clinically "
+        "stable and afebrile for 24 hours, have reliable venous "
+        "access and a safe home with a telephone, and be able to "
+        "consent and cooperate. Mx: choose an agent whose dosing "
+        "suits the model - ceftriaxone daily, or a continuous "
+        "infusion of flucloxacillin through an elastomeric device. A "
+        "peripherally inserted central catheter is standard beyond a "
+        "week. Monitoring: weekly full blood count, electrolytes, "
+        "liver function and C-reactive protein, plus line site review "
+        "at every visit. Note: the failure mode is not the antibiotic "
+        "but the line, so any fever in a patient on this pathway is a "
+        "line infection until proven otherwise."
+    ),
+    "Post-exposure prophylaxis": (
+        "Antimicrobial or immunisation given after a defined exposure "
+        "to prevent established infection, where the window is "
+        "measured in hours. Indications: occupational needlestick, "
+        "sexual exposure or assault, and non-occupational blood "
+        "contact. Mx: wash the site, do not squeeze it, and take "
+        "source and recipient serology for HIV, hepatitis B and "
+        "hepatitis C. Rx: for HIV a 28 day course of tenofovir with "
+        "emtricitabine plus dolutegravir starts ideally within 2 "
+        "hours and is not offered beyond 72 hours. For hepatitis B "
+        "give immunoglobulin within 72 hours plus vaccine to the "
+        "unvaccinated or non-responder. There is no prophylaxis for "
+        "hepatitis C, which is managed by early testing and treatment "
+        "instead. Follow-up: repeat serology at 6 and 12 weeks, with "
+        "counselling on barrier protection meanwhile. Note: risk is "
+        "stratified by the source viral load and the injury depth, "
+        "and a hollow bore needle from a viraemic source is the high "
+        "risk case. Most Australian states run a 24 hour clinician "
+        "hotline for these decisions."
+    ),
+    "Adverse drug reaction reporting": (
+        "Reporting suspected adverse drug reactions to the "
+        "Therapeutic Goods Administration, which is how signals "
+        "absent from pre-marketing trials are ever detected. "
+        "Indications: report all suspected reactions to new medicines "
+        "and vaccines, all serious or unexpected reactions to any "
+        "medicine, and reactions to complementary or herbal products. "
+        "Certainty is not required, and suspicion is the threshold. "
+        "Mx: submit online through the TGA reporting form, or through "
+        "the Black Triangle Scheme for medicines under additional "
+        "monitoring. Include the medicine and dose, the reaction and "
+        "its timing, concomitant medicines and the outcome. Notify "
+        "the general practitioner and record the reaction in the "
+        "discharge summary and the medical record. Note: report "
+        "severe cutaneous reactions, anaphylaxis and unexpected "
+        "deaths as a priority, and remember that a reaction to a "
+        "vaccine goes to the state adverse events following "
+        "immunisation service as well. Under-reporting rather than "
+        "over-reporting is the systemic problem."
+    ),
+    "Discharge planning": (
+        "Discharge planning starts on admission, not on the morning "
+        "the bed is needed, and the discharge summary is the only "
+        "part of an admission most general practitioners will ever "
+        "read. Mx: identify the expected date of discharge and the "
+        "criteria for it within 24 hours of admission, then work "
+        "backwards. Book the equipment, the package of care and the "
+        "transport early because these are the rate-limiting steps "
+        "rather than the medicine. Refer to social work, occupational "
+        "therapy or geriatric services on the day the need appears. "
+        "Complete medication reconciliation against the pre-admission "
+        "list and explain every change. Follow-up: the summary must "
+        "reach the general practitioner within 48 hours and should "
+        "state the diagnosis, what changed in the medicines and why, "
+        "results still pending, and who is following them up. Note: "
+        "the two failures that readmit patients are a medicine "
+        "changed without explanation and a pending result nobody "
+        "owns."
+    ),
+    "Opioid stewardship": (
+        "Prescribing opioids so that the benefit is real, the "
+        "exposure is bounded, and the patient is not left on them by "
+        "default. Australian data show most persistent opioid use "
+        "begins with an acute prescription that was never reviewed. "
+        "Mx: prescribe immediate release opioids only, for the "
+        "shortest duration that fits the injury - typically three "
+        "days and rarely beyond seven. Slow release opioids have no "
+        "role in acute pain and are associated with more harm. Give a "
+        "quantity, a stop date and a plan, then pair every opioid "
+        "with regular paracetamol and a non-steroidal where safe. "
+        "Cautions: benzodiazepines, gabapentinoids and alcohol "
+        "multiply respiratory depression. Reduce doses in the "
+        "elderly, in renal impairment and in sleep apnoea. "
+        "Monitoring: check SafeScript or the equivalent state real "
+        "time prescription monitoring before prescribing. Review "
+        "anyone still taking opioids at four weeks. Note: discharge "
+        "is where the habit forms, so a script for 100 tablets with "
+        "no review date is the most consequential thing on the page."
+    ),
+    "Stroke rehabilitation": (
+        "Structured multidisciplinary recovery after stroke, which "
+        "produces more functional gain than any acute intervention "
+        "other than reperfusion. Mx: begin as soon as the patient is "
+        "medically stable on a dedicated stroke unit, which by itself "
+        "reduces death and dependency. Avoid very early high dose "
+        "mobilisation within 24 hours - the AVERT trial found it "
+        "worse than usual care. Deliver at least three hours a day of "
+        "active task-specific practice five days a week, with "
+        "physiotherapy, occupational therapy and speech pathology "
+        "each addressing a distinct deficit. Complications: shoulder "
+        "subluxation and pain, spasticity, aspiration from dysphagia "
+        "and post-stroke depression in about a third. Screen "
+        "swallowing before any oral intake. Follow-up: secondary "
+        "prevention runs in parallel with rehabilitation rather than "
+        "after it, and driving is not permitted for four weeks after "
+        "ischaemic stroke under Austroads guidance. Note: recovery "
+        "continues for months, so a plateau at six weeks is not the "
+        "ceiling."
+    ),
+    "Bone marrow biopsy": (
+        "Aspirate and trephine sampling of the posterior iliac crest, "
+        "giving both cellular morphology and marrow architecture. "
+        "Indications: unexplained cytopenias, suspected "
+        "haematological malignancy, staging of lymphoma, and "
+        "investigation of pyrexia of unknown origin or suspected "
+        "marrow infiltration. Contraindications: none absolute at "
+        "this site. Correct severe coagulopathy first, and "
+        "haemophilia requires factor cover. Mx: local anaesthetic to "
+        "periosteum, then aspirate for morphology, flow cytometry and "
+        "cytogenetics, followed by the trephine core for cellularity "
+        "and fibrosis. Sternal aspiration gives no core and carries a "
+        "mediastinal risk so the iliac crest is preferred. "
+        "Complications: pain, bleeding and rarely infection. Note: a "
+        "dry tap is a result rather than a failure, and points to "
+        "fibrosis or a packed marrow, which is exactly when the "
+        "trephine core carries the diagnosis."
+    ),
+    "Lipid management": (
+        "Lowering atherogenic lipoproteins to reduce cardiovascular "
+        "events, with the intensity of treatment set by absolute risk "
+        "rather than by the cholesterol number alone. Ix: a "
+        "non-fasting lipid profile is adequate for screening. "
+        "Calculate absolute risk with the Australian CVD Risk "
+        "calculator in anyone aged 45 to 79 without established "
+        "disease, and from 30 in Aboriginal and Torres Strait "
+        "Islander people. Mx: lifestyle change first, then a statin "
+        "for anyone at high absolute risk, with established "
+        "cardiovascular disease or with LDL above 5 mmol/L. "
+        "Atorvastatin 40 to 80 mg or rosuvastatin 20 to 40 mg is high "
+        "intensity therapy. Add ezetimibe when the target is not met, "
+        "then a PCSK9 inhibitor under PBS criteria in familial "
+        "hypercholesterolaemia or established disease. Targets: LDL "
+        "below 1.8 mmol/L in secondary prevention and below 2.0 in "
+        "high risk primary prevention. Note: muscle symptoms are "
+        "common and true myopathy is rare, so rechallenge or switch "
+        "rather than abandoning statins outright."
+    ),
+    "Biologic therapy screening": (
+        "Screening before a biologic or targeted synthetic "
+        "disease-modifying drug, because these agents unmask latent "
+        "infection and the screen cannot be done retrospectively. Ix: "
+        "interferon gamma release assay or tuberculin skin test plus "
+        "chest radiograph for latent tuberculosis. Hepatitis B "
+        "surface antigen, core antibody and surface antibody. "
+        "Hepatitis C antibody and HIV serology. Full blood count, "
+        "liver and renal function, and immunoglobulins. Screening: "
+        "check varicella immunity and update the vaccination "
+        "schedule, since live vaccines are contraindicated once "
+        "treatment starts. Mx: treat latent tuberculosis with "
+        "isoniazid before or alongside the first dose, and give "
+        "antiviral prophylaxis to anyone hepatitis B core antibody "
+        "positive, who can reactivate even when the surface antigen "
+        "is negative. Monitoring: full blood count and liver function "
+        "every one to three months, with vigilance for infection and, "
+        "for tumour necrosis factor inhibitors, demyelination and "
+        "heart failure. Note: an unwell patient on a biologic can be "
+        "septic without a fever or a raised white cell count."
+    ),
+    "Steroid-induced complications": (
+        "The predictable harms of systemic glucocorticoids, which "
+        "scale with dose and cumulative duration and begin far "
+        "earlier than most prescribers assume. Adverse effects: "
+        "hyperglycaemia within days, with insomnia, mood disturbance "
+        "and increased appetite almost immediately. Beyond a few "
+        "weeks come weight gain with central fat redistribution, "
+        "hypertension and skin thinning. Complications: past three "
+        "months expect bone loss, cataract, proximal myopathy and "
+        "adrenal suppression. Prevention: use the lowest effective "
+        "dose and a defined stopping plan. Give calcium and vitamin "
+        "D, and add an oral bisphosphonate for anyone expected to "
+        "take 7.5 mg of prednisolone daily for three months or more. "
+        "Consider Pneumocystis prophylaxis above 20 mg daily for a "
+        "month. Monitoring: glucose, blood pressure and weight at "
+        "each review, with bone density every one to two years and "
+        "annual eye review. Note: adrenal suppression means a course "
+        "over three weeks needs tapering and a sick day plan, with "
+        "hydrocortisone cover if the patient becomes acutely unwell."
+    ),
+    "Blood culture collection": (
+        "How blood cultures are taken determines whether the result "
+        "can be believed, and contamination rates above 3 per cent "
+        "make the whole set uninterpretable. Indications: suspected "
+        "bacteraemia or sepsis, endocarditis, unexplained fever in "
+        "the immunocompromised, or before starting antimicrobials in "
+        "any serious infection. Mx: take two sets from two separate "
+        "peripheral venepuncture sites before the first antimicrobial "
+        "dose. Disinfect the skin with chlorhexidine in alcohol and "
+        "let it dry for 30 seconds. Fill each aerobic and anaerobic "
+        "bottle to 8 to 10 mL, because volume is the single strongest "
+        "determinant of yield. Do not draw from an existing "
+        "peripheral cannula. Paired peripheral and line cultures with "
+        "differential time to positivity are how line infection is "
+        "proven. Ix: three sets over 24 hours where endocarditis is "
+        "suspected. Note: a single positive coagulase-negative "
+        "staphylococcus in one of two sets is contamination until the "
+        "clinical picture says otherwise, and treating it costs the "
+        "patient a line and a week of vancomycin."
+    ),
+    "Troponin interpretation": (
+        "High sensitivity cardiac troponin detects myocardial injury, "
+        "not the mechanism of it, so the result is a starting point "
+        "rather than a diagnosis. Criteria: myocardial infarction "
+        "requires a rise or fall of troponin with at least one value "
+        "above the 99th centile, plus ischaemic symptoms, ECG change, "
+        "imaging evidence or thrombus. Ix: sample at presentation and "
+        "at 1 to 3 hours depending on the local assay pathway. A very "
+        "low initial value with a delayed presentation rules out "
+        "infarction. A change of more than 50 per cent between "
+        "samples suggests acute injury, while a flat elevated value "
+        "suggests chronic injury. Ddx: elevated without infarction in "
+        "heart failure, renal impairment, sepsis, pulmonary embolism "
+        "and myocarditis. Mx: type 1 infarction from plaque rupture "
+        "needs antiplatelets, anticoagulation and revascularisation. "
+        "Type 2 from supply-demand mismatch needs the precipitant "
+        "treated. Note: sex-specific 99th centile thresholds matter, "
+        "and using the male cut-off in women under-diagnoses "
+        "infarction."
+    ),
+    "Chest pain risk stratification": (
+        "Sorting undifferentiated chest pain into who can go home, "
+        "who needs admission and who is having an infarction now, "
+        "which is the commonest emergency decision in Australian "
+        "hospitals. Ix: ECG within 10 minutes of arrival, repeated if "
+        "pain recurs, plus high sensitivity troponin on an "
+        "accelerated pathway. Hx: character, radiation and duration "
+        "matter more than any single risk factor, and a pain "
+        "reproduced by palpation or lasting seconds is rarely "
+        "ischaemic. Ddx: always exclude aortic dissection, pulmonary "
+        "embolism, tension pneumothorax and oesophageal rupture "
+        "before settling on a low risk label. Mx: ST elevation goes "
+        "straight to reperfusion. A rising troponin without ST "
+        "elevation is treated as non-ST-elevation acute coronary "
+        "syndrome with antiplatelets, anticoagulation and inpatient "
+        "angiography. Low risk patients with two negative troponins "
+        "and a normal ECG can be discharged with outpatient "
+        "assessment. Note: a normal troponin never excludes unstable "
+        "angina, and the ECG is normal in a quarter of infarctions at "
+        "first presentation."
+    ),
+    "Chronic wound management": (
+        "A wound that has not healed in four weeks is not simply a "
+        "slow acute wound, and dressing it without addressing the "
+        "cause guarantees it will not close. Aetiology: venous "
+        "insufficiency accounts for most leg ulcers, then arterial "
+        "disease, diabetic neuropathy and pressure. Mixed disease is "
+        "common. Ix: ankle brachial pressure index before any "
+        "compression, and a wound swab only when infection is "
+        "clinically suspected. Check glucose, albumin and iron "
+        "studies where healing is delayed. Image for osteomyelitis if "
+        "bone is probed. Mx: treat the cause first - graduated "
+        "compression for venous disease, revascularisation for "
+        "arterial, offloading for the neuropathic foot. Then debride "
+        "devitalised tissue and choose a dressing by exudate level "
+        "rather than brand, keeping the wound bed moist and the "
+        "surrounding skin dry. Antibiotics treat cellulitis rather "
+        "than colonisation. Note: an ankle brachial index below 0.8 "
+        "makes compression unsafe, so the index is checked before the "
+        "bandage, not after the ulcer fails to heal."
+    ),
+    "Bone protection therapy": (
+        "Antiresorptive or anabolic treatment to reduce fragility "
+        "fracture, given to people whose fracture risk is high rather "
+        "than to everyone with a low bone density number. "
+        "Indications: any minimal trauma fracture over 50, a T-score "
+        "of minus 2.5 or below, or planned long term glucocorticoids. "
+        "In Australia a prior minimal trauma fracture over 70 "
+        "attracts PBS subsidy without densitometry. Mx: correct "
+        "vitamin D and calcium intake first, and check renal function "
+        "and dental status. Oral alendronate or risedronate weekly is "
+        "first line. Zoledronic acid yearly by infusion suits poor "
+        "adherence or intolerance. Denosumab six monthly is renally "
+        "safe but must never be stopped abruptly, as rebound "
+        "vertebral fractures follow within months. Monitoring: "
+        "densitometry every two years, with a treatment holiday "
+        "considered after five years of oral bisphosphonate in those "
+        "no longer at high risk. Note: atypical femoral fracture and "
+        "jaw osteonecrosis are real but rare, and the fractures "
+        "prevented outnumber them by orders of magnitude."
+    ),
+    "Antibiotic duration": (
+        "Duration is the part of an antimicrobial prescription most "
+        "often wrong, and shorter courses match longer ones for "
+        "outcome across most common infections while causing less "
+        "resistance and less harm. Mx: write a stop or review date on "
+        "every antimicrobial order at the time of prescribing. "
+        "Community acquired pneumonia responds to five days if "
+        "afebrile and stable at 48 to 72 hours. Uncomplicated "
+        "cellulitis needs five to seven days. Uncomplicated cystitis "
+        "in a woman needs three days of trimethoprim or five of "
+        "nitrofurantoin. Pyelonephritis needs seven days, and "
+        "intra-abdominal infection four days after source control. "
+        "Indications: longer courses remain necessary in "
+        "endocarditis, osteomyelitis, prosthetic joint infection and "
+        "tuberculosis. Monitoring: review every antimicrobial at 48 "
+        "to 72 hours against culture results and switch from "
+        "intravenous to oral as soon as the patient is improving and "
+        "absorbing. Note: eTG gives the duration for each indication, "
+        "and lengthening a course because the patient still feels "
+        "tired treats the doctor rather than the infection."
+    ),
+    "Asplenia vaccination": (
+        "People without a functioning spleen face a lifelong risk of "
+        "overwhelming post-splenectomy infection with encapsulated "
+        "organisms, which can kill within hours. Aetiology: surgical "
+        "splenectomy, trauma, sickle cell disease, coeliac disease "
+        "and portal hypertension all cause hyposplenism. Prevention: "
+        "vaccinate against pneumococcus, meningococcus (both ACWY and "
+        "B) and Haemophilus influenzae type b, ideally two weeks "
+        "before elective splenectomy or two weeks after an emergency "
+        "one. Give annual influenza vaccine. Pneumococcal and "
+        "meningococcal boosters follow a defined schedule rather than "
+        "a single dose. Mx: many Australian patients also take daily "
+        "prophylactic amoxicillin or phenoxymethylpenicillin, at "
+        "least for the first three years and lifelong in the highest "
+        "risk. Every patient carries standby antibiotics for "
+        "immediate self-treatment of fever and a medical alert card. "
+        "Note: register the patient with Spleen Australia, which "
+        "recalls them for boosters. Any fever is an emergency until "
+        "proven otherwise."
+    ),
+    "Vaccination in immunocompromised patients": (
+        "Immunosuppression changes both which vaccines are safe and "
+        "how well any of them work, and the window to vaccinate is "
+        "usually before treatment starts rather than during it. "
+        "Contraindications: live vaccines are contraindicated in "
+        "significant immunosuppression - measles-mumps-rubella, "
+        "varicella, yellow fever and oral typhoid. Immunosuppression "
+        "here means prednisolone 20 mg daily for two weeks or more, "
+        "most biologics, or the first months after transplant. Mx: "
+        "vaccinate at least two weeks before starting "
+        "immunosuppression and four weeks ahead for live vaccines. "
+        "Prioritise annual influenza, COVID-19 boosters, pneumococcal "
+        "and the recombinant zoster vaccine, which is not live. Add "
+        "hepatitis B for the non-immune. Note: household contacts "
+        "should be fully vaccinated, since cocooning protects the "
+        "patient better than a poorly immunogenic dose does. "
+        "Rotavirus vaccine in an infant household contact is safe. "
+        "Antibody responses are blunted, so serological confirmation "
+        "is worthwhile for hepatitis B and measles."
+    ),
+    "Occupational lung disease": (
+        "Lung disease caused or aggravated by workplace exposure, and "
+        "the diagnosis is missed whenever the occupational history is "
+        "not taken. Aetiology: silica from engineered stone "
+        "benchtops, which has produced an Australian epidemic of "
+        "accelerated silicosis in young workers. Also asbestos, coal "
+        "dust, isocyanates in spray painting and flour dust. Hx: ask "
+        "what the patient makes and what they breathe, whether "
+        "symptoms improve on days off and holidays, and whether "
+        "workmates are affected too. Ix: spirometry with serial peak "
+        "flow across work and rest periods for occupational asthma. "
+        "High resolution computed tomography rather than plain "
+        "radiograph for pneumoconiosis, plus specific IgE or "
+        "challenge testing where relevant. Mx: remove the exposure, "
+        "which is the only intervention that alters the course, then "
+        "treat as for the equivalent non-occupational disease. Note: "
+        "notify and refer for workers compensation early, and "
+        "remember that mesothelioma and asbestosis appear decades "
+        "after an exposure the patient may have forgotten."
+    ),
+    "Tumour markers": (
+        "Serum proteins used to monitor known malignancy, and almost "
+        "never to diagnose one, because sensitivity and specificity "
+        "are both too poor for screening an unselected population. "
+        "Uses: CA-125 in ovarian cancer follow-up, CEA in colorectal, "
+        "PSA in prostate, and AFP with beta-hCG in germ cell tumours. "
+        "Thyroglobulin after thyroidectomy and calcitonin in "
+        "medullary thyroid cancer are the closest to reliable. Ix: "
+        "measure a baseline before treatment, then serially in the "
+        "same laboratory, since assay differences make "
+        "cross-laboratory comparison meaningless. Cautions: benign "
+        "elevation is common - CA-125 rises with endometriosis, "
+        "ascites and heart failure, and CEA with smoking. A normal "
+        "marker never excludes cancer and an isolated rise never "
+        "confirms recurrence, so imaging follows a rising trend "
+        "rather than a single value. Note: the exception is AFP and "
+        "beta-hCG in testicular cancer, where the markers genuinely "
+        "drive staging and treatment decisions."
+    ),
+    "Arterial line insertion": (
+        "Cannulation of a peripheral artery for continuous blood "
+        "pressure measurement and repeated arterial sampling. "
+        "Indications: haemodynamic instability or vasoactive "
+        "infusions, frequent blood gas sampling in respiratory "
+        "failure, and major surgery. Contraindications: infection or "
+        "burn over the site, absent collateral circulation, and "
+        "severe peripheral vascular disease in that limb. Mx: the "
+        "radial artery is first choice, then dorsalis pedis, brachial "
+        "or femoral. Use ultrasound guidance, full aseptic technique "
+        "and a dedicated arterial set. Confirm the waveform before "
+        "use and label the line clearly. Never inject anything into "
+        "an arterial line. Complications: temporary occlusion is "
+        "common and permanent ischaemia rare. Haematoma, infection, "
+        "and inadvertent drug injection causing distal necrosis are "
+        "the ones that matter. Note: the trace itself carries "
+        "information - a swinging trace with respiration suggests "
+        "hypovolaemia, and an overdamped trace reads a falsely narrow "
+        "pulse pressure, so check the transducer before treating the "
+        "number."
+    ),
+    "Organ donation": (
+        "Deceased organ and tissue donation in Australia, coordinated "
+        "nationally through the DonateLife network, with consent "
+        "rates rather than donor numbers the limiting factor. Types: "
+        "donation after brain death gives the widest range of organs. "
+        "Donation after circulatory death follows planned withdrawal "
+        "of treatment and yields kidneys, liver and lungs. Tissue "
+        "donation has far wider eligibility, including after death at "
+        "home. Criteria: few absolute contraindications remain. Age "
+        "alone excludes nobody, and active malignancy, untreated "
+        "systemic sepsis and some transmissible infections are the "
+        "main bars. Mx: raise donation only after the family accepts "
+        "that death has occurred or that treatment will be withdrawn, "
+        "and let the specialist donation nurse lead the conversation, "
+        "which roughly doubles consent. Check the Australian Organ "
+        "Donor Register. Note: registration is not legally binding "
+        "and the family is always asked, so the conversation the "
+        "patient had at home matters more than the box they ticked."
+    ),
+    "Escalation of care": (
+        "Recognising and acting on clinical deterioration, which in "
+        "New South Wales runs on the Between the Flags system and its "
+        "standard observation charts. Criteria: the observation chart "
+        "itself sets the trigger. Yellow zone observations require a "
+        "clinical review by the treating team within 30 minutes. Red "
+        "zone observations or any serious concern trigger a rapid "
+        "response call, regardless of who is worried. Features: "
+        "deterioration is usually visible for hours beforehand, most "
+        "often as rising respiratory rate, then tachycardia, then "
+        "falling conscious state. Respiratory rate is the earliest "
+        "sign and the most often unrecorded. Mx: call early rather "
+        "than waiting for certainty, then use a structured handover "
+        "of situation, background, assessment and recommendation. "
+        "Families can call a rapid response directly. Note: a "
+        "documented resuscitation plan changes what a rapid response "
+        "does, not whether it is called, and the commonest failure is "
+        "not the missed observation but the recorded observation "
+        "nobody escalated."
+    ),
+    "Childhood immunisation catch-up": (
+        "Bringing a child up to date with the National Immunisation "
+        "Program when doses have been missed, delayed or given "
+        "overseas without records. Indications: any child under 20 "
+        "who is behind schedule, and refugee or newly arrived "
+        "children, who are eligible for free catch-up vaccines. Mx: "
+        "use the Australian Immunisation Handbook catch-up calculator "
+        "rather than working from memory, because minimum intervals "
+        "differ by vaccine and by age. A dose given even a day early "
+        "is invalid and must be repeated. Only written records count, "
+        "and self-reported history does not. Give multiple vaccines "
+        "at the same visit using separate sites. Criteria: catch-up "
+        "is completed within a defined timeframe rather than "
+        "indefinitely, and the number of doses needed falls as the "
+        "child gets older. Note: check the Australian Immunisation "
+        "Register for every child and record every dose in it, "
+        "because family assistance payments and childcare entry "
+        "depend on the register rather than on the practice file."
+    ),
+    "Paediatric fever without focus": (
+        "Fever in a child with no localising signs after full "
+        "examination, where the task is separating the many with a "
+        "self-limiting viral illness from the few with serious "
+        "bacterial infection. Classification: the traffic light "
+        "system sorts children into green, amber and red by "
+        "appearance, respiratory effort, circulation and hydration. "
+        "Age drives the threshold. Ix: any infant under 1 month with "
+        "fever gets a full septic screen, admission and empirical "
+        "antibiotics. From 1 to 3 months, screen and observe with a "
+        "low threshold for treating. Over 3 months and well "
+        "appearing, urinalysis and culture is the highest yield test, "
+        "since urinary infection is the commonest occult bacterial "
+        "source. Mx: empirical treatment for red features. Discharge "
+        "with clear return advice and a review point for green "
+        "features. Red flags: non-blanching rash, reduced conscious "
+        "state, respiratory distress or a parent who says this "
+        "illness is different. Note: fever height alone predicts "
+        "poorly, but a fever over five days raises Kawasaki disease."
+    ),
+    "Gestational diabetes screening": (
+        "Universal screening for glucose intolerance first recognised "
+        "in pregnancy, which carries risk of macrosomia, shoulder "
+        "dystocia, neonatal hypoglycaemia and later maternal type 2 "
+        "diabetes. Screening: a 75 g oral glucose tolerance test at "
+        "24 to 28 weeks for everyone, and in the first trimester as "
+        "well where risk factors are present. Risk factors: previous "
+        "gestational diabetes, body mass index over 30, a first "
+        "degree relative with diabetes, and Aboriginal and Torres "
+        "Strait Islander, South Asian or Pacific Islander background. "
+        "Criteria: diagnosis on any one of fasting 5.1 mmol/L or "
+        "above, one hour 10.0 or above, or two hour 8.5 or above. Mx: "
+        "dietitian review and glucose monitoring first, with "
+        "metformin or insulin added if targets are not met. "
+        "Follow-up: repeat an oral glucose tolerance test at 6 to 12 "
+        "weeks postpartum and then every one to three years for life. "
+        "Note: about half develop type 2 diabetes within a decade, so "
+        "the postpartum test is the part of the pathway most often "
+        "missed."
     ),
 }
 
