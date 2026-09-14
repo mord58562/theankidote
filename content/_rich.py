@@ -1951,7 +1951,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": 'Bowel cancer screening',
-        "aliases": ['NBCSP', 'Colorectal cancer screening', 'NBOCSP'],
+        "aliases": ['NBCSP', 'Colorectal cancer screening', 'NBOCSP', "Faecal occult blood test", "Immunochemical faecal occult blood test", "Faecal immunochemical test"],
         "utd": [["Overview", 'bowel cancer screening Australia FOBT FIT']],
         "summary": "",
     },
@@ -2671,7 +2671,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": 'Falls in older adults',
-        "aliases": ['geriatric falls'],
+        "aliases": ['geriatric falls', "Falls prevention", "Falls prevention in and out of hospital", "Falls risk assessment"],
         "utd": [["Overview", 'falls in older persons']],
         "summary": "",
     },
@@ -7715,7 +7715,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Tachyarrhythmia",
-        "aliases": ["tachyarrhythmias", "tachydysrhythmia"],
+        "aliases": ["tachyarrhythmias", "tachydysrhythmia", "Emergency management of arrhythmias", "Emergency versus non-emergency management of arrhythmias"],
         "utd": [["Overview", "narrow qrs complex tachycardias evaluation and management"]],
         "summary": "",
     },
@@ -8687,13 +8687,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Arthritis",
-        "aliases": ["arthritides"],
+        "aliases": ["arthritides", "Inflammatory versus non-inflammatory joint pathology", "Inflammatory versus mechanical joint pain"],
         "utd": [["Overview", "approach to the adult with polyarticular joint pain"]],
         "summary": "",
     },
     {
         "name": "Recurrent infection",
-        "aliases": ["recurrent infections"],
+        "aliases": ["recurrent infections", "Recurrent or unusually severe infection", "Unusually severe infection"],
         "utd": [["Overview", "approach to the adult with recurrent infections"]],
         "summary": "",
     },
@@ -10331,7 +10331,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Coagulation test interpretation",
-        "aliases": ["Coagulation profile", "Coagulation screen", "Coagulation studies", "Clotting screen"],
+        "aliases": ["Coagulation profile", "Coagulation screen", "Coagulation studies", "Clotting screen", "Interpretation of coagulation tests", "Coagulation tests"],
         "utd": [["Overview", "clinical use of coagulation tests"]],
         "summary": "",
     },
@@ -10367,7 +10367,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Familial cancer risk assessment",
-        "aliases": ["Cancer genetics referral", "Familial cancer clinic", "Hereditary cancer risk", "Cancer genetic counselling", "Family history of cancer"],
+        "aliases": ["Cancer genetics referral", "Familial cancer clinic", "Hereditary cancer risk", "Cancer genetic counselling", "Family history of cancer", "Cancer genetics assessment", "Cancer genetics assessment and referral for genetic counselling", "Genetic counselling for cancer risk"],
         "utd": [["Overview", "cancer risk assessment and genetic counseling"]],
         "summary": "",
     },
@@ -11537,7 +11537,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Nausea and vomiting in palliative care",
-        "aliases": ["palliative nausea", "nausea in advanced cancer", "antiemetic choice in palliative care"],
+        "aliases": ["palliative nausea", "nausea in advanced cancer", "antiemetic choice in palliative care", "Nausea at the end of life", "End-of-life nausea", "Terminal nausea"],
         "utd": [["Overview", "assessment and management of nausea and vomiting in palliative care"]],
         "summary": "",
     },
@@ -11573,7 +11573,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Resuscitation plan",
-        "aliases": ["resuscitation plans", "not for resuscitation order", "treatment limitation order"],
+        "aliases": ["resuscitation plans", "not for resuscitation order", "treatment limitation order", "Goals of care", "Goals of care discussion", "Ceiling of treatment"],
         "utd": [["Overview", "do not resuscitate orders and limitation of treatment"]],
         "summary": "",
     },
@@ -78280,6 +78280,13 @@ ENTRY_REFS = {
 
 
 CONDITION_ALIASES = {
+    # Medicine-1 curriculum wording for base-library entries.
+    "Prosthetic valve disease": ["Complications of prosthetic heart valves", "Prosthetic heart valve", "Prosthetic heart valves"],
+    "Torsades de pointes": ["Drugs that cause arrhythmias", "QT-prolonging drugs", "Drug-induced QT prolongation"],
+    "Irritable bowel syndrome": ["Abdominal bloating with loose bowel motions", "Diarrhoea-predominant IBS"],
+    "Hypokalaemia": ["Oral versus intravenous potassium replacement", "Potassium replacement", "Intravenous potassium replacement"],
+    "Delirium": ["Acute confusion", "New confusion", "Confusional state"],
+
     # The curriculum's wording for two entries that live in the base
     # library rather than in NEW_CONDITIONS, so they cannot carry their
     # own alias list.
