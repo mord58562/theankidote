@@ -1957,7 +1957,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": 'Cervical cancer screening',
-        "aliases": ['NCSP', 'HPV cervical screening', 'Cervical screening test'],
+        "aliases": ['NCSP', 'HPV cervical screening', 'Cervical screening test', "Cervical screening"],
         "utd": [["Overview", 'cervical cancer screening Australia HPV primary']],
         "summary": "",
     },
@@ -2071,7 +2071,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": 'Urethritis',
-        "aliases": [],
+        "aliases": ["Urethral discharge"],
         "utd": [["Overview", 'urethritis diagnosis treatment']],
         "summary": "",
     },
@@ -3247,7 +3247,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Perineal tear",
-        "aliases": ["OASIS obstetric injury", "obstetric anal sphincter injury", "Perineal tears"],
+        "aliases": ["OASIS obstetric injury", "obstetric anal sphincter injury", "Perineal tears", "Perineal laceration", "Perineal lacerations", "Perineal repair"],
         "utd": [['Mx', 'perineal laceration repair']],
         "summary": "",
     },
@@ -6982,7 +6982,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Menstrual cycle",
-        "aliases": ["Follicular phase", "Luteal phase", "Proliferative phase", "Secretory phase", "Ovarian cycle", "Menstrual cycles", "Hormonal Changes in Menstruation"],
+        "aliases": ["Follicular phase", "Luteal phase", "Proliferative phase", "Secretory phase", "Ovarian cycle", "Menstrual cycles", "Hormonal Changes in Menstruation", "Physiology of normal menstruation", "Physiology of menstruation", "Normal menstruation"],
         "utd": [["Overview", "normal menstrual cycle physiology"]],
         "summary": "",
     },
@@ -7235,19 +7235,19 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Physiological changes of pregnancy",
-        "aliases": ["physiological changes in pregnancy", "maternal physiological changes", "maternal adaptation to pregnancy", "cardiovascular changes in pregnancy", "haemodynamic changes of pregnancy"],
+        "aliases": ["physiological changes in pregnancy", "maternal physiological changes", "maternal adaptation to pregnancy", "cardiovascular changes in pregnancy", "haemodynamic changes of pregnancy", "Cardiovascular and respiratory changes of pregnancy", "Respiratory changes of pregnancy", "Cardiovascular changes of pregnancy", "Anatomical and physiological changes of early pregnancy", "Physiological changes of early pregnancy"],
         "utd": [["Overview", "maternal physiologic adaptations pregnancy"]],
         "summary": "",
     },
     {
         "name": "Placental insufficiency",
-        "aliases": ["uteroplacental insufficiency", "placental dysfunction", "utero-placental insufficiency"],
+        "aliases": ["uteroplacental insufficiency", "placental dysfunction", "utero-placental insufficiency", "Altered placental blood flow"],
         "utd": [["Overview", "placental insufficiency fetal growth restriction management"]],
         "summary": "",
     },
     {
         "name": "Placental drug transfer",
-        "aliases": ["transplacental drug transfer", "placental transfer of drugs", "drug transfer across the placenta"],
+        "aliases": ["transplacental drug transfer", "placental transfer of drugs", "drug transfer across the placenta", "Placental transfer of medications"],
         "utd": [["Overview", "placental drug transfer pharmacology pregnancy"]],
         "summary": "",
     },
@@ -7319,19 +7319,19 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Cervical effacement",
-        "aliases": ["effacement in obstetrics", "cervical effacement in labour"],
+        "aliases": ["effacement in obstetrics", "cervical effacement in labour", "Effacement"],
         "utd": [["Overview", "cervical ripening and effacement in labor"]],
         "summary": "",
     },
     {
         "name": "Partogram",
-        "aliases": ["partograph", "alert line", "action line"],
+        "aliases": ["partograph", "alert line", "action line", "Routine intrapartum observations", "Intrapartum observations"],
         "utd": [["Overview", "partogram labor progress graphical record"]],
         "summary": "",
     },
     {
         "name": "Mechanisms of labour",
-        "aliases": ["mechanism of labour", "mechanisms of labor", "cardinal movements of labour", "cardinal movements of labor"],
+        "aliases": ["mechanism of labour", "mechanisms of labor", "cardinal movements of labour", "cardinal movements of labor", "Mechanisms of normal childbirth", "Mechanism of normal childbirth"],
         "utd": [["Overview", "cardinal movements mechanism of labor vertex"]],
         "summary": "",
     },
@@ -7391,7 +7391,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Cardiotocography",
-        "aliases": ["cardiotocograph", "electronic fetal monitoring", "intrapartum fetal surveillance"],
+        "aliases": ["cardiotocograph", "electronic fetal monitoring", "intrapartum fetal surveillance", "Fetal monitoring in labour"],
         "utd": [["Overview", "intrapartum fetal heart rate monitoring interpretation"]],
         "summary": "",
     },
@@ -7415,7 +7415,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Labour analgesia",
-        "aliases": ["labour pain", "labor pain", "epidural analgesia in labour", "epidural in labour", "labour epidural"],
+        "aliases": ["labour pain", "labor pain", "epidural analgesia in labour", "epidural in labour", "labour epidural", "Pain relief in labour"],
         "utd": [["Overview", "pharmacologic management of pain during labor"]],
         "summary": "",
     },
@@ -7427,7 +7427,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Arrest of labour",
-        "aliases": ["failure to progress", "labour dystocia", "arrest of labor", "second stage arrest", "prolonged labour", "prolonged second stage"],
+        "aliases": ["failure to progress", "labour dystocia", "arrest of labor", "second stage arrest", "prolonged labour", "prolonged second stage", "Primary dysfunctional labour", "Dysfunctional labour", "Slow progress in labour"],
         "utd": [["Overview", "labor dystocia protraction arrest disorders management"]],
         "summary": "",
     },
@@ -7445,7 +7445,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Operative vaginal delivery",
-        "aliases": ["instrumental delivery", "instrumental vaginal delivery", "forceps delivery", "ventouse delivery", "vacuum extraction", "assisted vaginal birth"],
+        "aliases": ["instrumental delivery", "instrumental vaginal delivery", "forceps delivery", "ventouse delivery", "vacuum extraction", "assisted vaginal birth", "Instrumental birth", "Operative delivery", "Instrumental vaginal birth"],
         "utd": [["Overview", "operative vaginal delivery forceps vacuum indications"]],
         "summary": "",
     },
@@ -7991,7 +7991,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Infertility",
-        "aliases": ["Subfertility", "Couple infertility"],
+        "aliases": ["Subfertility", "Couple infertility", "Evaluation of the infertile couple", "Infertility evaluation", "Investigation of infertility"],
         "utd": [["Overview", "overview of infertility evaluation of the infertile couple"]],
         "summary": "",
     },
@@ -8087,7 +8087,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Contraceptive efficacy",
-        "aliases": ["Perfect use", "Typical use", "Pearl Index", "Contraceptive failure rate"],
+        "aliases": ["Perfect use", "Typical use", "Pearl Index", "Contraceptive failure rate", "Contraceptive failure rates"],
         "utd": [["Overview", "contraceptive efficacy typical use failure rates counseling"]],
         "summary": "",
     },
@@ -8309,7 +8309,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Abdominal palpation in pregnancy",
-        "aliases": ["abdominal palpation", "obstetric abdominal examination", "Leopold manoeuvres", "Leopold maneuvers"],
+        "aliases": ["abdominal palpation", "obstetric abdominal examination", "Leopold manoeuvres", "Leopold maneuvers", "Obstetric examination"],
         "utd": [["Overview", "obstetric abdominal examination fetal lie presentation"]],
         "summary": "",
     },
@@ -9299,7 +9299,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Fetal blood sampling",
-        "aliases": ["Foetal blood sampling", "Fetal scalp blood sampling", "Scalp lactate"],
+        "aliases": ["Foetal blood sampling", "Fetal scalp blood sampling", "Scalp lactate", "Fetal scalp sampling"],
         "utd": [["Overview", "fetal scalp blood sampling lactate pH labour"]],
         "summary": "",
     },
@@ -9311,7 +9311,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Stillbirth",
-        "aliases": ["stillborn", "intrauterine fetal death", "fetal death in utero", "IUFD", "FDIU"],
+        "aliases": ["stillborn", "intrauterine fetal death", "fetal death in utero", "IUFD", "FDIU", "Fetal death"],
         "utd": [["Overview", "stillbirth incidence risk factors etiology"], ["Evaluation", "evaluation of stillbirth"]],
         "summary": "",
     },
@@ -9353,7 +9353,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Bimanual pelvic examination",
-        "aliases": ["bimanual examination", "pelvic examination", "cervical excitation", "cervical motion tenderness"],
+        "aliases": ["bimanual examination", "pelvic examination", "cervical excitation", "cervical motion tenderness", "Gynaecological examination"],
         "utd": [["Overview", "pelvic examination technique"]],
         "summary": "",
     },
@@ -9413,7 +9413,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Aboriginal and Torres Strait Islander maternal and perinatal health",
-        "aliases": ["Birthing on Country", "Aboriginal maternal health"],
+        "aliases": ["Birthing on Country", "Aboriginal maternal health", "Maternal and perinatal health in Aboriginal and Torres Strait Islander women"],
         "utd": [["Overview", "indigenous maternal health disparities"]],
         "summary": "",
     },
@@ -12017,13 +12017,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Early pregnancy ultrasound",
-        "aliases": ["First trimester ultrasound", "Dating scan", "Early pregnancy scan", "Viability scan"],
+        "aliases": ["First trimester ultrasound", "Dating scan", "Early pregnancy scan", "Viability scan", "Ultrasound assessment of early pregnancy"],
         "utd": [["Overview", "ultrasound examination in early pregnancy"]],
         "summary": "",
     },
     {
         "name": "Bleeding in early pregnancy",
-        "aliases": ["First trimester bleeding", "Early pregnancy bleeding", "Vaginal bleeding in early pregnancy"],
+        "aliases": ["First trimester bleeding", "Early pregnancy bleeding", "Vaginal bleeding in early pregnancy", "Bleeding and pain in early pregnancy"],
         "utd": [["Overview", "vaginal bleeding in early pregnancy"]],
         "summary": "",
     },
@@ -12035,7 +12035,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Antenatal booking bloods",
-        "aliases": ["Booking bloods", "Routine antenatal blood tests", "Antenatal booking blood tests", "Booking blood tests"],
+        "aliases": ["Booking bloods", "Routine antenatal blood tests", "Antenatal booking blood tests", "Booking blood tests", "Antenatal blood tests", "Common antenatal blood tests"],
         "utd": [["Overview", "initial prenatal assessment and first trimester laboratory testing"]],
         "summary": "",
     },
@@ -12059,7 +12059,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Perinatal infection screening",
-        "aliases": ["Antenatal infection screening", "Antenatal screening for infection", "Perinatal infections"],
+        "aliases": ["Antenatal infection screening", "Antenatal screening for infection", "Perinatal infections", "Antenatal microbiology screening"],
         "utd": [["Overview", "prenatal screening for infection"]],
         "summary": "",
     },
@@ -12077,7 +12077,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Pelvic floor injury in childbirth",
-        "aliases": ["Obstetric pelvic floor injury", "Childbirth pelvic floor injury", "Pelvic floor trauma in childbirth"],
+        "aliases": ["Obstetric pelvic floor injury", "Childbirth pelvic floor injury", "Pelvic floor trauma in childbirth", "Effect of pregnancy and childbirth on the pelvic floor"],
         "utd": [["Overview", "effect of pregnancy and childbirth on the pelvic floor"]],
         "summary": "",
     },
@@ -12089,7 +12089,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Sexually transmitted infection testing",
-        "aliases": ["Sexually transmitted infection screening", "STI screening", "STI testing", "Sexual health screen", "Sexual health check"],
+        "aliases": ["Sexually transmitted infection screening", "STI screening", "STI testing", "Sexual health screen", "Sexual health check", "Laboratory diagnosis of sexually transmitted infections"],
         "utd": [["Overview", "screening for sexually transmitted infections"]],
         "summary": "",
     },
@@ -12173,7 +12173,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Second and third trimester drug risk",
-        "aliases": ["Late pregnancy drug risk", "Fetotoxicity", "Foetotoxicity", "Fetotoxic drugs", "Foetotoxic drugs"],
+        "aliases": ["Late pregnancy drug risk", "Fetotoxicity", "Foetotoxicity", "Fetotoxic drugs", "Foetotoxic drugs", "Medications with pharmacological risk in the second and third trimesters"],
         "utd": [["Overview", "drugs with fetal effects in late pregnancy"]],
         "summary": "",
     },
@@ -12185,13 +12185,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Third trimester monitoring",
-        "aliases": ["Third trimester surveillance", "Third trimester review", "Third trimester antenatal visit"],
+        "aliases": ["Third trimester surveillance", "Third trimester review", "Third trimester antenatal visit", "Third-trimester monitoring", "Third-trimester maternal and fetal monitoring", "Third trimester maternal and fetal monitoring"],
         "utd": [["Overview", "prenatal care in the third trimester"]],
         "summary": "",
     },
     {
         "name": "Abnormal uterine bleeding",
-        "aliases": ["Abnormal uterine bleeding in reproductive age", "Intermenstrual bleeding", "Postcoital bleeding", "Irregular uterine bleeding"],
+        "aliases": ["Abnormal uterine bleeding in reproductive age", "Intermenstrual bleeding", "Postcoital bleeding", "Irregular uterine bleeding", "Disorders of menstruation", "Menstrual disorders", "Investigations in disorders of menstruation"],
         "utd": [["Overview", "abnormal uterine bleeding in nonpregnant reproductive age patients"]],
         "summary": "",
     },
