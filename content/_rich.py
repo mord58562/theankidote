@@ -6892,7 +6892,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Notifiable disease",
-        "aliases": ["notifiable condition", "disease notification", "notifiable diseases"],
+        "aliases": ["notifiable condition", "disease notification", "notifiable diseases", "Notifiable infectious disease", "Notifiable infectious diseases"],
         "utd": [["Overview", "public health reporting of communicable diseases"]],
         "summary": "",
     },
@@ -6910,7 +6910,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Immunisation schedule",
-        "aliases": ["National Immunisation Program", "NIP", "vaccination schedule", "childhood immunisation schedule"],
+        "aliases": ["National Immunisation Program", "NIP", "vaccination schedule", "childhood immunisation schedule", "Immunisation schedules for Aboriginal and Torres Strait Islander children", "Aboriginal and Torres Strait Islander immunisation schedule"],
         "utd": [["Overview", "standard childhood immunization schedule"]],
         "summary": "",
     },
@@ -6934,7 +6934,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Developmental milestones",
-        "aliases": ["milestones", "child development milestones", "developmental screening"],
+        "aliases": ["milestones", "child development milestones", "developmental screening", "Developmental assessment", "Developmental assessment in children"],
         "utd": [["Overview", "developmental surveillance and screening in children"]],
         "summary": "",
     },
@@ -7643,7 +7643,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "NDIS",
-        "aliases": ["National Disability Insurance Scheme"],
+        "aliases": ["National Disability Insurance Scheme", "Early childhood approach", "NDIS early childhood approach", "Early childhood early intervention"],
         "utd": [["Overview", "disability support services adults"]],
         "summary": "",
     },
@@ -8483,7 +8483,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Six-week baby check",
-        "aliases": ["6 week check", "Six week check", "6 to 8 week check"],
+        "aliases": ["6 week check", "Six week check", "6 to 8 week check", "Six-week check", "6-8 week check"],
         "utd": [["Overview", "the pediatric physical examination infant"]],
         "summary": "",
     },
@@ -8597,7 +8597,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "LGBTIQA+ mental health",
-        "aliases": ["LGBTIQ", "LGBTIQA", "sexual orientation", "gender identity"],
+        "aliases": ["LGBTIQ", "LGBTIQA", "sexual orientation", "gender identity", "Inclusive care for LGBTQIA+ populations", "LGBTQIA+ inclusive care"],
         "utd": [["Care", "primary care of lesbian gay bisexual and transgender adults"]],
         "summary": "",
     },
@@ -9689,13 +9689,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Abdominal pain in children",
-        "aliases": ["Paediatric abdominal pain", "Acute abdominal pain in children"],
+        "aliases": ["Paediatric abdominal pain", "Acute abdominal pain in children", "Abdominal pain in infants and children", "Abdominal pain in infants"],
         "utd": [["Overview", "emergency evaluation of the child with acute abdominal pain"]],
         "summary": "",
     },
     {
         "name": "Functional abdominal pain in children",
-        "aliases": ["Functional abdominal pain", "Functional abdominal pain disorder", "Recurrent abdominal pain in children"],
+        "aliases": ["Functional abdominal pain", "Functional abdominal pain disorder", "Recurrent abdominal pain in children", "Chronic abdominal pain in children", "Chronic abdominal pain in childhood"],
         "utd": [["Overview", "functional abdominal pain in children and adolescents"]],
         "summary": "",
     },
@@ -9833,7 +9833,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Infant and child nutrition",
-        "aliases": ["Infant feeding", "Introduction of solids", "Complementary feeding", "Infant nutrition"],
+        "aliases": ["Infant feeding", "Introduction of solids", "Complementary feeding", "Infant nutrition", "Nutrition in infants and children", "Nutrition in children", "Child nutrition"],
         "utd": [["Overview", "introducing solid foods and vitamin and mineral supplementation during infancy"]],
         "summary": "",
     },
@@ -9935,7 +9935,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Adverse childhood experiences",
-        "aliases": ["Adverse childhood experience", "Childhood adversity", "ACE study"],
+        "aliases": ["Adverse childhood experience", "Childhood adversity", "ACE study", "Childhood trauma and adversity", "Early life adversity"],
         "utd": [["Overview", "adverse childhood experiences and long term health outcomes"]],
         "summary": "",
     },
@@ -10385,7 +10385,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Methamphetamine use disorder",
-        "aliases": ["Methamphetamine dependence", "Amphetamine use disorder", "Crystal methamphetamine use disorder"],
+        "aliases": ["Methamphetamine dependence", "Amphetamine use disorder", "Crystal methamphetamine use disorder", "Stimulant (methamphetamine) use disorder", "Ice use disorder", "Crystal meth use disorder"],
         "utd": [["Overview", "methamphetamine use disorder treatment"]],
         "summary": "",
     },
@@ -10403,19 +10403,19 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Social and emotional wellbeing",
-        "aliases": ["Social and emotional wellbeing framework", "Social and emotional wellbeing model"],
+        "aliases": ["Social and emotional wellbeing framework", "Social and emotional wellbeing model", "Aboriginal and Torres Strait Islander psychological wellbeing", "Aboriginal and Torres Strait Islander wellbeing"],
         "utd": [["Overview", "aboriginal and torres strait islander social and emotional wellbeing"]],
         "summary": "",
     },
     {
         "name": "Carer burden",
-        "aliases": ["Caregiver burden", "Carer strain", "Carer stress"],
+        "aliases": ["Caregiver burden", "Carer strain", "Carer stress", "Impact of mental illness on carers and families", "Mental health carer", "Carer of a person with mental illness"],
         "utd": [["Overview", "supporting family caregivers of patients with serious illness"]],
         "summary": "",
     },
     {
         "name": "Lived experience workforce",
-        "aliases": ["Peer support worker", "Peer worker", "Lived experience worker", "Consumer peer worker"],
+        "aliases": ["Peer support worker", "Peer worker", "Lived experience worker", "Consumer peer worker", "Lived experience participation in mental health service planning", "Lived experience participation", "Consumer participation in mental health services"],
         "utd": [["Overview", "peer support services in mental health"]],
         "summary": "",
     },
@@ -10451,7 +10451,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Risk assessment in psychiatry",
-        "aliases": ["Psychiatric risk assessment", "Risk assessment in mental health", "Mental health risk assessment"],
+        "aliases": ["Psychiatric risk assessment", "Risk assessment in mental health", "Mental health risk assessment", "Psychiatric risk management plan", "Mental health risk management plan"],
         "utd": [["Overview", "assessment of risk of violence and suicide in psychiatric patients"]],
         "summary": "",
     },
@@ -10601,13 +10601,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Consultation-liaison psychiatry",
-        "aliases": ["Consultation liaison psychiatry", "Liaison psychiatry", "Psychological medicine"],
+        "aliases": ["Consultation liaison psychiatry", "Liaison psychiatry", "Psychological medicine", "Referral for psychiatric opinion in the medical setting", "Referral for psychiatric opinion", "Consultation-liaison referral"],
         "utd": [["Overview", "psychiatric consultation in the general hospital"]],
         "summary": "",
     },
     {
         "name": "Organic causes of psychiatric symptoms",
-        "aliases": ["Organic psychiatric presentation", "Medical mimics of psychiatric illness", "Secondary psychiatric syndrome", "Organic psychosis"],
+        "aliases": ["Organic psychiatric presentation", "Medical mimics of psychiatric illness", "Secondary psychiatric syndrome", "Organic psychosis", "Medical conditions presenting with psychiatric symptoms", "Medical causes of psychiatric symptoms", "Organic illness presenting as psychiatric illness", "Organic illness presenting as psychiatric symptoms"],
         "utd": [["Overview", "medical causes of psychiatric symptoms in adults"]],
         "summary": "",
     },
@@ -11825,7 +11825,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Baseline monitoring before psychotropic prescribing",
-        "aliases": ["baseline investigations before psychotropic prescribing", "psychotropic baseline monitoring", "baseline examination before psychotropic prescribing"],
+        "aliases": ["baseline investigations before psychotropic prescribing", "psychotropic baseline monitoring", "baseline examination before psychotropic prescribing", "Baseline examination and investigations before psychotropic prescribing"],
         "utd": [["Overview", "monitoring for metabolic adverse effects of antipsychotics"]],
         "summary": "",
     },
@@ -11861,7 +11861,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Child and adolescent mental health",
-        "aliases": ["child and adolescent psychiatry", "common child and adolescent mental health problems", "child and adolescent mental health problems"],
+        "aliases": ["child and adolescent psychiatry", "common child and adolescent mental health problems", "child and adolescent mental health problems", "Systems approach to assessment and treatment of a child or adolescent", "Systems approach to the child or adolescent", "Mental health problems in children and adolescents", "Mental health in children and adolescents"],
         "utd": [["Overview", "overview of psychiatric assessment in children and adolescents"]],
         "summary": "",
     },
@@ -12275,13 +12275,13 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Paediatric intravenous fluids",
-        "aliases": ["Intravenous fluids in children", "Paediatric fluid therapy", "Maintenance fluids", "Fluid therapy in children"],
+        "aliases": ["Intravenous fluids in children", "Paediatric fluid therapy", "Maintenance fluids", "Fluid therapy in children", "Intravenous fluid charting in children", "Fluid charting in children", "Fluid prescribing in children"],
         "utd": [["Overview", "maintenance intravenous fluid therapy in children"]],
         "summary": "",
     },
     {
         "name": "Growth chart",
-        "aliases": ["Growth charts", "Centile chart", "Growth monitoring", "Plotting growth"],
+        "aliases": ["Growth charts", "Centile chart", "Growth monitoring", "Plotting growth", "Measuring and charting growth", "Charting growth", "Measuring growth in children", "Measurement and charting of growth", "Charting of growth"],
         "utd": [["Overview", "measurement of growth in children"]],
         "summary": "",
     },
@@ -78280,6 +78280,15 @@ ENTRY_REFS = {
 
 
 CONDITION_ALIASES = {
+    # The curriculum's wording for two entries that live in the base
+    # library rather than in NEW_CONDITIONS, so they cannot carry their
+    # own alias list.
+    "Neonatal respiratory distress syndrome": [
+        "Respiratory distress syndrome of the newborn",
+        "Newborn respiratory distress syndrome"],
+    "Dehydration": ["Assessment of hydration status", "Hydration status",
+                    "Hydration status assessment"],
+
     # Spelling and singular/plural variants
     "Thrombocytopenia":         ["Thrombocytopaenia"],
     "Amoebic dysentery":        ["Amoebiasis", "Amebiasis"],
