@@ -13365,6 +13365,210 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "gestational diabetes screening oral glucose tolerance test pregnancy"]],
         "summary": "",
     },
+    {
+        "name": "Febrile non-haemolytic transfusion reaction",
+        "aliases": ["FNHTR", "febrile transfusion reaction", "febrile non haemolytic transfusion reaction"],
+        "utd": [["Overview", "febrile nonhemolytic transfusion reaction"]],
+        "summary": "",
+    },
+    {
+        "name": "Delayed haemolytic transfusion reaction",
+        "aliases": ["DHTR", "delayed transfusion reaction", "delayed haemolysis after transfusion"],
+        "utd": [["Overview", "delayed hemolytic transfusion reaction"]],
+        "summary": "",
+    },
+    {
+        "name": "Irradiated blood components",
+        "aliases": ["irradiated blood products", "irradiated red cells", "gamma irradiated blood"],
+        "utd": [["Overview", "irradiated blood components indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Selective IgA deficiency",
+        "aliases": ["IgA deficiency", "selective immunoglobulin A deficiency"],
+        "utd": [["Overview", "selective IgA deficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Allergic bronchopulmonary aspergillosis",
+        "aliases": ["allergic bronchopulmonary aspergillosis"],
+        "utd": [["Overview", "allergic bronchopulmonary aspergillosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Mercury poisoning",
+        "aliases": ["mercury toxicity", "methylmercury poisoning", "elemental mercury exposure"],
+        "utd": [["Overview", "mercury toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Gestational diabetes insipidus",
+        "aliases": ["gestational arginine vasopressin deficiency", "transient diabetes insipidus of pregnancy"],
+        "utd": [["Overview", "gestational diabetes insipidus"]],
+        "summary": "",
+    },
+    {
+        "name": "Subacute combined degeneration of the cord",
+        "aliases": ["SACD", "subacute combined degeneration", "B12 myelopathy"],
+        "utd": [["Overview", "subacute combined degeneration spinal cord"]],
+        "summary": "",
+    },
+    {
+        "name": "Exposure and response prevention",
+        "aliases": ["ERP", "exposure response prevention", "graded exposure with response prevention"],
+        "utd": [["Overview", "exposure and response prevention OCD"]],
+        "summary": "",
+    },
+    {
+        "name": "Hamilton Depression Rating Scale",
+        "aliases": ["HAM-D", "HDRS", "Hamilton rating scale for depression"],
+        "utd": [["Overview", "Hamilton depression rating scale"]],
+        "summary": "",
+    },
+    {
+        "name": "Ketamine for treatment-resistant depression",
+        "aliases": ["ketamine infusion for depression", "ketamine for depression"],
+        "utd": [["Overview", "ketamine treatment resistant depression"]],
+        "summary": "",
+    },
+    {
+        "name": "Psychiatric advance directive",
+        "aliases": ["advance statement of preferences", "psychiatric advance statement", "mental health advance directive"],
+        "utd": [["Overview", "psychiatric advance directives"]],
+        "summary": "",
+    },
+    {
+        "name": "Electrical storm",
+        "aliases": ["VT storm", "ventricular tachycardia storm", "arrhythmic storm"],
+        "utd": [["Overview", "electrical storm ventricular arrhythmia"]],
+        "summary": "",
+    },
+    {
+        "name": "Prosthetic valve thrombosis",
+        "aliases": ["valve thrombosis", "stuck valve", "obstructive prosthetic valve thrombosis"],
+        "utd": [["Overview", "prosthetic valve thrombosis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Permissive hypercapnia",
+        "aliases": ["low tidal volume ventilation", "lung protective ventilation"],
+        "utd": [["Overview", "permissive hypercapnia lung protective ventilation"]],
+        "summary": "",
+    },
+    {
+        "name": "Extracorporeal membrane oxygenation",
+        "aliases": ["ECMO", "extracorporeal life support", "VV ECMO", "VA ECMO"],
+        "utd": [["Overview", "extracorporeal membrane oxygenation adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Fluid responsiveness",
+        "aliases": ["passive leg raise", "stroke volume variation", "preload responsiveness"],
+        "utd": [["Overview", "assessment of fluid responsiveness"]],
+        "summary": "",
+    },
+    {
+        "name": "Sedation interruption",
+        "aliases": ["sedation holiday", "daily sedation interruption", "spontaneous awakening trial"],
+        "utd": [["Overview", "daily interruption of sedation"]],
+        "summary": "",
+    },
+    {
+        "name": "Tracheostomy care",
+        "aliases": ["tracheostomy management", "tracheostomy suction", "inner cannula care"],
+        "utd": [["Overview", "tracheostomy care and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Vasopressor support",
+        "aliases": ["vasopressor choice", "inotrope and vasopressor therapy", "vasopressors in shock"],
+        "utd": [["Overview", "vasopressors in septic shock"]],
+        "summary": "",
+    },
+    {
+        "name": "Massive haemoptysis",
+        "aliases": ["life threatening haemoptysis", "massive hemoptysis"],
+        "utd": [["Overview", "massive hemoptysis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Pneumothorax ex vacuo",
+        "aliases": ["trapped lung", "ex vacuo pneumothorax"],
+        "utd": [["Overview", "trapped lung pneumothorax ex vacuo"]],
+        "summary": "",
+    },
+    {
+        "name": "Haematopoietic stem cell transplantation",
+        "aliases": ["bone marrow transplant", "stem cell transplant", "HSCT", "allogeneic transplant", "autologous transplant"],
+        "utd": [["Overview", "hematopoietic cell transplantation overview"]],
+        "summary": "",
+    },
+    {
+        "name": "CAR T-cell therapy",
+        "aliases": ["chimeric antigen receptor T cell therapy", "CAR T", "CAR-T cells"],
+        "utd": [["Overview", "chimeric antigen receptor T cell therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Anthracycline cardiotoxicity",
+        "aliases": ["doxorubicin cardiomyopathy", "anthracycline induced cardiomyopathy"],
+        "utd": [["Overview", "anthracycline cardiotoxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Bleomycin lung toxicity",
+        "aliases": ["bleomycin pneumonitis", "bleomycin induced pulmonary fibrosis"],
+        "utd": [["Overview", "bleomycin induced lung injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Chemotherapy-induced nausea and vomiting",
+        "aliases": ["CINV", "chemotherapy induced nausea and vomiting", "anticipatory nausea"],
+        "utd": [["Overview", "prevention of chemotherapy induced nausea and vomiting"]],
+        "summary": "",
+    },
+    {
+        "name": "Cancer of unknown primary",
+        "aliases": ["CUP", "occult primary malignancy", "carcinoma of unknown primary"],
+        "utd": [["Overview", "carcinoma of unknown primary site"]],
+        "summary": "",
+    },
+    {
+        "name": "Trauma primary survey",
+        "aliases": ["ABCDE trauma assessment", "primary survey", "advanced trauma life support survey"],
+        "utd": [["Overview", "initial evaluation of the adult trauma patient"]],
+        "summary": "",
+    },
+    {
+        "name": "Lead time bias",
+        "aliases": ["lead-time bias", "lead time effect in screening"],
+        "utd": [["Overview", "lead time bias screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Chaperone",
+        "aliases": ["chaperone for intimate examination", "observer for physical examination"],
+        "utd": [["Overview", "use of a chaperone during examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Telehealth consultation",
+        "aliases": ["telehealth", "video consultation", "telemedicine consult"],
+        "utd": [["Overview", "telemedicine clinical practice"]],
+        "summary": "",
+    },
+    {
+        "name": "My Health Record",
+        "aliases": ["MyHealthRecord", "personally controlled electronic health record"],
+        "utd": [["Overview", "shared electronic health records Australia"]],
+        "summary": "",
+    },
+    {
+        "name": "Bladder outlet obstruction",
+        "aliases": ["BOO", "bladder outflow obstruction", "obstructive uropathy of the lower tract"],
+        "utd": [["Overview", "bladder outlet obstruction in men"]],
+        "summary": "",
+    },
 ]
 
 
@@ -77511,6 +77715,752 @@ RICH_SUMMARIES = {
         "Note: about half develop type 2 diabetes within a decade, so "
         "the postpartum test is the part of the pathway most often "
         "missed."
+    ),
+
+    "Febrile non-haemolytic transfusion reaction": (
+        "The commonest transfusion reaction: a temperature rise of 1 "
+        "degree or more, with rigors, during or within four hours of "
+        "a transfusion, in the absence of haemolysis or sepsis. "
+        "Aetiology: recipient antibodies against donor leucocytes, "
+        "and cytokines accumulated in the stored component. Universal "
+        "leucodepletion in Australia has made it much less common, "
+        "and platelets cause it more often than red cells. Clinical "
+        "features: fever, chills and rigors with a well-looking "
+        "patient. No hypotension, no back or cannula-site pain, no "
+        "dark urine. Ix: stop the transfusion and treat it as "
+        "haemolysis or bacterial contamination until those are "
+        "excluded. Recheck the patient and pack identity, send a "
+        "direct antiglobulin test, repeat group and hold, and culture "
+        "patient and pack. Mx: paracetamol and observation. Once the "
+        "serious causes are excluded the transfusion may usually be "
+        "resumed or the next unit given. Routine premedication does "
+        "not prevent it. Note: the diagnosis is one of exclusion, so "
+        "the reflex is stop and check, not reassure and continue."
+    ),
+    "Delayed haemolytic transfusion reaction": (
+        "Extravascular haemolysis appearing three to fourteen days "
+        "after a transfusion that seemed uneventful. Aetiology: an "
+        "anamnestic response. A previous pregnancy or transfusion "
+        "primed a red cell alloantibody (Kidd, Rh, Duffy or Kell) "
+        "that had fallen below detection at crossmatch, so the new "
+        "unit boosts it and the transfused cells are cleared by the "
+        "spleen. Clinical features: the haemoglobin falls back to or "
+        "below the pre-transfusion level, with jaundice, low-grade "
+        "fever and dark urine. Sickle cell disease patients may "
+        "present as a painful crisis. Ix: rising bilirubin and "
+        "lactate dehydrogenase, low haptoglobin, reticulocytosis, and "
+        "a newly positive direct antiglobulin test with an antibody "
+        "screen that is now positive where it was negative. Notify "
+        "the transfusion service. Mx: supportive, with transfusion of "
+        "antigen-negative units if more blood is needed. Issue the "
+        "patient an antibody card so future crossmatching allows for "
+        "it. Note: an unexplained failure to maintain the haemoglobin "
+        "a week after transfusion is this until disproved."
+    ),
+    "Irradiated blood components": (
+        "Cellular components exposed to gamma or X-irradiation to "
+        "inactivate residual donor T lymphocytes, given to prevent "
+        "transfusion-associated graft versus host disease. Mechanism: "
+        "viable donor T cells in a component engraft in a recipient "
+        "who cannot reject them and attack marrow, skin, gut and "
+        "liver. The resulting disease is almost always fatal, so the "
+        "whole strategy is prevention. Indications: Hodgkin lymphoma "
+        "at any stage, purine analogue and related therapy such as "
+        "fludarabine or bendamustine, allogeneic or autologous stem "
+        "cell transplant recipients, congenital T cell "
+        "immunodeficiency, intrauterine transfusion and neonatal "
+        "exchange transfusion, and any directed donation from a "
+        "relative. Note: irradiation damages the red cell membrane, "
+        "so potassium leaks and the unit's shelf life is shortened. "
+        "HIV infection and standard chemotherapy are not indications. "
+        "Fresh frozen plasma and cryoprecipitate contain no viable "
+        "lymphocytes and are never irradiated."
+    ),
+    "Selective IgA deficiency": (
+        "The commonest primary immunodeficiency, affecting roughly "
+        "one in five hundred people of European ancestry: serum IgA "
+        "below 0.07 g/L with normal IgG and IgM beyond four years of "
+        "age. Clinical features: most are found incidentally and stay "
+        "well. The rest get recurrent sinopulmonary and "
+        "gastrointestinal infection, and there is a strong "
+        "association with coeliac disease, autoimmune conditions and "
+        "atopy. Ix: serum immunoglobulins with IgG subclasses. "
+        "Coeliac serology is unreliable because the usual tissue "
+        "transglutaminase test is IgA-based, so use IgG-based "
+        "serology or check total IgA alongside it. Repeat at age four "
+        "before labelling a child. Mx: no replacement therapy. Treat "
+        "infections promptly, consider prophylactic antibiotics if "
+        "they are frequent, and monitor for evolution into common "
+        "variable immunodeficiency. Note: a small number make "
+        "anti-IgA antibodies and can react anaphylactically to "
+        "plasma-containing blood products, so flag it on the "
+        "transfusion request and discuss washed components with the "
+        "blood service."
+    ),
+    "Allergic bronchopulmonary aspergillosis": (
+        "A hypersensitivity reaction to Aspergillus fumigatus "
+        "colonising the airway, seen in poorly controlled asthma and "
+        "in cystic fibrosis. Clinical features: asthma that will not "
+        "settle, with brown mucus plugs, wheeze, fever and "
+        "haemoptysis. Untreated it scars the proximal airways into "
+        "central bronchiectasis. Ix: total IgE above 1000 IU/mL is "
+        "the entry point, plus Aspergillus-specific IgE or a positive "
+        "skin prick, and Aspergillus-specific IgG. Eosinophilia is "
+        "usual. High-resolution CT shows central bronchiectasis and "
+        "mucoid impaction, classically a finger in glove opacity. Mx: "
+        "oral prednisolone for several months tapered against "
+        "symptoms and total IgE, which is also the marker used to "
+        "monitor relapse. Add itraconazole as a steroid-sparing "
+        "agent, checking drug interactions and levels. Optimise "
+        "inhaled therapy throughout. Note: consider it in any "
+        "asthmatic whose control deteriorates with fleeting "
+        "infiltrates on chest imaging. Treating it as recurrent "
+        "pneumonia with repeated antibiotics is the usual missed "
+        "path."
+    ),
+    "Mercury poisoning": (
+        "Toxicity from elemental, inorganic or organic mercury, with "
+        "the clinical picture set by the form and the route. "
+        "Aetiology: elemental vapour from spills and industry, "
+        "inorganic salts from batteries and some skin-lightening "
+        "creams, and methylmercury accumulated through large "
+        "predatory fish such as shark, marlin and swordfish. Clinical "
+        "features: inhaled vapour causes an acute chemical "
+        "pneumonitis and later tremor, gingivitis and erethism, the "
+        "irritable and withdrawn personality change of the hatters. "
+        "Inorganic salts are corrosive and cause acute tubular "
+        "necrosis. Methylmercury is neurotoxic, with paraesthesiae, "
+        "constricted visual fields, ataxia and dysarthria, and it "
+        "crosses the placenta. Ix: whole blood mercury for recent "
+        "organic exposure and a 24-hour urinary mercury for elemental "
+        "and inorganic. Correlate with occupational and dietary "
+        "history. Mx: remove the source. Succimer or dimercaprol "
+        "chelation for symptomatic inorganic or elemental poisoning, "
+        "discussed with the Poisons Information Centre on 13 11 26. "
+        "Chelation helps methylmercury little. Note: swallowed "
+        "elemental mercury from a thermometer is poorly absorbed and "
+        "rarely needs treatment."
+    ),
+    "Gestational diabetes insipidus": (
+        "Polyuria and polydipsia arising in the third trimester from "
+        "excessive placental vasopressinase clearing circulating "
+        "vasopressin faster than the pituitary can replace it. "
+        "Aetiology: vasopressinase is produced by the placenta and "
+        "cleared by the liver, so it runs highest in multiple "
+        "pregnancy, pre-eclampsia, acute fatty liver of pregnancy and "
+        "HELLP syndrome. An occult partial central or nephrogenic "
+        "defect may be unmasked by the same load. Clinical features: "
+        "thirst and dilute polyuria of several litres a day appearing "
+        "late in pregnancy, resolving within a few weeks of delivery. "
+        "Ix: paired serum and urine osmolality with sodium. Do not "
+        "use a water deprivation test in pregnancy. Copeptin is low. "
+        "Check liver function and the pre-eclampsia screen, since the "
+        "association matters more than the polyuria. Mx: "
+        "desmopressin, which vasopressinase does not degrade, at the "
+        "lowest effective dose with free access to water and sodium "
+        "monitoring. Stop it after delivery and reassess. Note: new "
+        "polyuria in late pregnancy is a prompt to look at the liver "
+        "and blood pressure, not just the fluid balance chart."
+    ),
+    "Subacute combined degeneration of the cord": (
+        "Demyelination of the dorsal columns and corticospinal tracts "
+        "from vitamin B12 deficiency, with the posterior columns "
+        "affected first. Aetiology: pernicious anaemia, gastric or "
+        "ileal surgery, strict vegan diet without supplementation, "
+        "and long-term metformin or proton pump inhibitor use. "
+        "Nitrous oxide abuse inactivates methylcobalamin and produces "
+        "the same picture over weeks in a young person. Clinical "
+        "features: symmetrical paraesthesiae and loss of vibration "
+        "and joint position sense, then a broad-based sensory ataxia "
+        "with a positive Romberg test. Extensor plantars with absent "
+        "ankle jerks is the giveaway combination. Cognitive change "
+        "and optic atrophy may accompany it. Ix: serum B12 with "
+        "active B12 or methylmalonic acid and homocysteine when the "
+        "level is borderline, plus folate, intrinsic factor and "
+        "parietal cell antibodies. Macrocytosis may be absent, and a "
+        "normal blood film never excludes it. MRI shows T2 signal in "
+        "the dorsal columns. Mx: intramuscular hydroxocobalamin "
+        "without waiting for confirmation, alternate days then "
+        "maintenance. Replace folate only after B12 has started. "
+        "Note: treat on suspicion. Deficits present beyond a few "
+        "months often do not fully reverse."
+    ),
+    "Exposure and response prevention": (
+        "The behavioural therapy of choice for obsessive compulsive "
+        "disorder: graded, prolonged contact with the feared trigger "
+        "while the compulsion is deliberately not performed. "
+        "Mechanism: compulsions relieve anxiety and so are negatively "
+        "reinforced, which keeps the obsession alive. Blocking the "
+        "ritual lets anxiety fall on its own and disconfirms the "
+        "feared outcome, so the belief rather than the habit is what "
+        "changes. Indications: OCD including contamination, checking "
+        "and intrusive-thought subtypes, body dysmorphic disorder, "
+        "and specific phobias. It is used alone in mild disease and "
+        "alongside a selective serotonin reuptake inhibitor at the "
+        "higher doses OCD needs in moderate to severe disease. Mx: "
+        "build a hierarchy of triggers rated by distress, work upward "
+        "from a manageable step, stay in each exposure until distress "
+        "falls by about half, and set daily homework. Reassurance "
+        "seeking, mental rituals and covert avoidance are treated as "
+        "responses to be prevented too. Note: family accommodation "
+        "predicts relapse, so the people who supply the reassurance "
+        "need to be part of the plan. Distress rising before it falls "
+        "is the expected course and not a sign to stop."
+    ),
+    "Hamilton Depression Rating Scale": (
+        "A clinician-administered scale that measures the severity of "
+        "an already diagnosed depressive episode and tracks response "
+        "to treatment. It is not a screening or diagnostic "
+        "instrument. Features: the 17-item version is the one most "
+        "used, scoring the last week, with common bands of 0 to 7 "
+        "remission, 8 to 16 mild, 17 to 23 moderate and 24 or more "
+        "severe. Response in trials is a fall of at least 50 per "
+        "cent, remission a score of 7 or less. Note: it is weighted "
+        "towards somatic items such as sleep, appetite and agitation, "
+        "so sedating or activating drugs can shift the total without "
+        "changing mood, and medical illness inflates it. Only one "
+        "item covers suicide, so the score never substitutes for a "
+        "risk assessment. Mx: use it serially with the same rater to "
+        "follow an episode rather than as a single number. The "
+        "Montgomery Asberg scale is less somatically weighted, and "
+        "the self-rated PHQ-9 or K10 is what Australian primary care "
+        "uses under a mental health treatment plan."
+    ),
+    "Ketamine for treatment-resistant depression": (
+        "A glutamatergic option for depression that has failed "
+        "adequate trials of at least two antidepressants, notable for "
+        "antidepressant and antisuicidal effects within hours rather "
+        "than weeks. Mechanism: NMDA receptor antagonism with "
+        "downstream AMPA throughput and synaptogenesis, a different "
+        "pathway from the monoamine drugs. Indications: "
+        "treatment-resistant unipolar depression, usually twice "
+        "weekly for a month then tapered in frequency. Intranasal "
+        "esketamine is registered in Australia and must be given in a "
+        "certified clinic with two hours of observation. Racemic "
+        "ketamine given subcutaneously or intravenously is used "
+        "off-label. Adverse effects: dissociation, transient rise in "
+        "blood pressure and heart rate, nausea, sedation and "
+        "headache. Watch for misuse, and for urinary symptoms and "
+        "hepatic effects with repeated exposure. Avoid in psychosis, "
+        "in uncontrolled hypertension and in aneurysmal disease. "
+        "Note: the effect fades over days to weeks without "
+        "maintenance, so it buys time and must be paired with an "
+        "ongoing plan. Neither product is subsidised for this use on "
+        "the PBS and cost is a real barrier."
+    ),
+    "Psychiatric advance directive": (
+        "A document written by a person with capacity setting out "
+        "their treatment preferences for a future episode of mental "
+        "illness in which they may lose it. Features: typically "
+        "records preferred and refused medications, past adverse "
+        "effects, preferred hospital, who to contact, who to care for "
+        "dependants and pets, and early warning signs. A nominated "
+        "support person or carer may be named to receive information "
+        "and be consulted. Note: the legal weight varies by state. "
+        "Victoria's advance statement of preferences must be "
+        "considered and a departure from it explained in writing, and "
+        "NSW, Queensland and the other jurisdictions each frame it "
+        "differently under their own mental health legislation. A "
+        "directive generally cannot compel a treatment that is not "
+        "clinically indicated, and compulsory treatment under an "
+        "order can still override a refusal, though the reasons must "
+        "be documented. Mx: write it while well, ideally with the "
+        "treating team, give copies to the person, the carer, the GP "
+        "and the service, and review it after every episode. Note: "
+        "the value is as much in the conversation and the recorded "
+        "history of what has helped as in the legal standing."
+    ),
+    "Electrical storm": (
+        "Three or more separate episodes of ventricular tachycardia "
+        "or fibrillation in 24 hours, or in a device patient three or "
+        "more appropriate shocks or antitachycardia pacing therapies. "
+        "Aetiology: acute ischaemia, decompensated heart failure, "
+        "electrolyte depletion of potassium and magnesium, a "
+        "proarrhythmic drug or a long QT, thyrotoxicosis, and "
+        "sympathetic surge from pain or anxiety. In a device patient "
+        "check also for lead failure and inappropriate therapy. Ix: "
+        "12-lead ECG between episodes and device interrogation, "
+        "troponin, electrolytes with magnesium, thyroid function, "
+        "drug chart review and echocardiography. Mx: treat the "
+        "trigger, and use sedation to break the sympathetic cycle, "
+        "which is often the single most effective step. Intravenous "
+        "amiodarone with a beta blocker, propranolol being better "
+        "than metoprolol here, and correct potassium and magnesium. "
+        "Consider overdrive pacing, deep sedation or intubation, "
+        "stellate ganglion block, and urgent transfer for catheter "
+        "ablation or mechanical support. Reprogram the device to "
+        "reduce shocks. Note: escalating sedation is treatment, not "
+        "comfort care. Polymorphic VT points to ischaemia or QT "
+        "prolongation, monomorphic to scar."
+    ),
+    "Prosthetic valve thrombosis": (
+        "Thrombus on a prosthetic heart valve obstructing the "
+        "occluder or embolising, a mechanical-valve emergency usually "
+        "driven by a lapse in anticoagulation. Aetiology: "
+        "subtherapeutic INR, interruption for surgery or pregnancy, a "
+        "mitral rather than aortic position, an older prosthesis and "
+        "hypercoagulable states. Bioprosthetic thrombosis is rarer "
+        "and often subclinical. Clinical features: rapid "
+        "breathlessness, a muffled or absent prosthetic click, a new "
+        "murmur, systemic embolism or stroke. It can present as "
+        "sudden pulmonary oedema or cardiogenic shock. Ix: urgent "
+        "transthoracic then transoesophageal echocardiography for "
+        "gradient, effective orifice area and thrombus burden, with "
+        "fluoroscopy or CT to see leaflet motion. Check INR and full "
+        "blood count. Distinguishing thrombus from pannus changes the "
+        "treatment. Mx: involve cardiothoracic surgery immediately. "
+        "Surgery is favoured for large obstructive thrombus in a "
+        "patient fit to operate, fibrinolysis for a poor surgical "
+        "candidate or a right-sided valve, and heparin with warfarin "
+        "optimisation for small non-obstructive thrombus. Note: a "
+        "mechanical valve patient who stopped warfarin and is now "
+        "breathless has this until echo says otherwise."
+    ),
+    "Permissive hypercapnia": (
+        "Accepting a raised arterial carbon dioxide and a mild "
+        "respiratory acidosis as the price of small tidal volumes and "
+        "low plateau pressures. Mechanism: ventilator-induced lung "
+        "injury comes from overdistension and repeated opening and "
+        "closing of alveoli. Limiting tidal volume to about 6 mL/kg "
+        "of predicted body weight and plateau pressure to 30 cmH2O "
+        "reduces that injury, at the cost of less minute ventilation. "
+        "Indications: acute respiratory distress syndrome, and severe "
+        "asthma or COPD where dynamic hyperinflation makes normal "
+        "ventilation dangerous. Mx: set tidal volume on predicted "
+        "body weight from height and sex, not actual weight. A pH "
+        "down to about 7.20 is generally tolerated. Reduce dead "
+        "space, increase rate within the limits of expiratory time, "
+        "and consider buffering or renal support only if the acidosis "
+        "itself is causing harm. Contraindications: raised "
+        "intracranial pressure, since hypercapnia raises cerebral "
+        "blood flow, and severe pulmonary hypertension or right "
+        "ventricular failure, where acidosis worsens pulmonary "
+        "vascular resistance. Note: a pH of 7.22 on 6 mL/kg is a "
+        "treatment decision, not a ventilator problem to correct."
+    ),
+    "Extracorporeal membrane oxygenation": (
+        "Extracorporeal circulation through a pump and membrane "
+        "oxygenator that supports gas exchange, circulation, or both, "
+        "while a reversible problem is treated. Types: venovenous "
+        "supports the lungs only and leaves the native circulation to "
+        "perfuse, used in severe ARDS and status asthmaticus. "
+        "Venoarterial supports both and is used for refractory "
+        "cardiogenic shock, massive pulmonary embolism, refractory "
+        "cardiac arrest and post-cardiotomy failure. Indications: a "
+        "reversible or otherwise treatable process with a destination "
+        "such as recovery, transplant or a device. Referral is to a "
+        "designated centre, and in Australia the ECMO retrieval "
+        "services are regionalised. Complications: bleeding and "
+        "thrombosis on anticoagulation, cannula-site and bloodstream "
+        "infection, haemolysis, stroke and intracranial haemorrhage. "
+        "Venoarterial support adds limb ischaemia distal to the "
+        "arterial cannula, left ventricular distension and the "
+        "north-south syndrome, where the recovering heart sends "
+        "deoxygenated blood to the head while the circuit perfuses "
+        "the lower body. Note: it buys time and does not treat "
+        "anything. A patient with no exit strategy should not be "
+        "cannulated."
+    ),
+    "Fluid responsiveness": (
+        "Whether a fluid bolus will actually increase cardiac output, "
+        "usually defined as a 10 to 15 per cent rise in stroke "
+        "volume. Only about half of haemodynamically unstable "
+        "patients are responsive, so the question is worth asking "
+        "before every bolus. Mechanism: the Frank-Starling curve. A "
+        "ventricle on the steep part gains output from added preload, "
+        "one on the flat part gains only oedema. Ix: a passive leg "
+        "raise with the trunk lowered from semirecumbent, measuring "
+        "stroke volume by echocardiography or pulse contour analysis "
+        "before and within a minute, is the most broadly valid test "
+        "because it is reversible and works in spontaneous breathing "
+        "and arrhythmia. Pulse pressure and stroke volume variation "
+        "require a sinus rhythm, full ventilation with tidal volumes "
+        "of 8 mL/kg or more and no spontaneous effort. Inferior vena "
+        "cava distensibility is a weaker guide. Note: central venous "
+        "pressure does not predict response and should not be used "
+        "for the decision. Being responsive is not the same as "
+        "needing fluid, since a normal heart on the steep part still "
+        "responds."
+    ),
+    "Sedation interruption": (
+        "A daily planned cessation of sedative infusion in the "
+        "ventilated patient until they are awake and following "
+        "commands, then restarting at a reduced dose only if needed. "
+        "Mechanism: continuous infusion accumulates in tissue and "
+        "prolongs ventilation, delirium and length of stay. "
+        "Interrupting daily reveals the true neurological state and "
+        "exposes the lowest effective dose. Mx: pair it with a "
+        "spontaneous breathing trial as the awakening and breathing "
+        "coordination bundle, done each morning by the bedside nurse "
+        "against a target such as the Richmond Agitation-Sedation "
+        "Scale. Screen for delirium with the CAM-ICU, mobilise early "
+        "and involve the family. Failure is agitation, distress, a "
+        "rise in respiratory rate or haemodynamic instability, which "
+        "prompts restarting at half the previous rate. "
+        "Contraindications: neuromuscular blockade, raised "
+        "intracranial pressure, active seizure control, severe "
+        "alcohol withdrawal, and ongoing procedural or palliative "
+        "sedation. Note: the aim is a calm patient who can be roused, "
+        "not an unconscious one. Analgesia comes first, and an "
+        "opioid-first approach spares sedatives."
+    ),
+    "Tracheostomy care": (
+        "Routine and emergency management of a tracheostomy, covering "
+        "suction, inner cannula care, cuff pressure, humidification "
+        "and stoma hygiene. Mx: keep the inner cannula clean and "
+        "change it as scheduled, suction only to a set depth and for "
+        "a limited time with preoxygenation, hold cuff pressure "
+        "between 20 and 30 cmH2O, and humidify every inspired gas. At "
+        "the bedside keep spare tubes of the same and one smaller "
+        "size, a tracheal dilator, suction and a bag-valve device. "
+        "Complications: blockage by secretions, accidental "
+        "decannulation, stomal infection, granulation, tracheal "
+        "stenosis, and rarely a tracheo-innominate fistula, in which "
+        "a herald bleed precedes catastrophic haemorrhage. Note: in "
+        "an emergency the algorithm is airway first. Apply oxygen to "
+        "face and stoma, remove the inner cannula, pass a suction "
+        "catheter, and if it will not pass then deflate the cuff and "
+        "reassess. A patent upper airway can be ventilated from above "
+        "with the stoma occluded. An immature tract under a week old "
+        "must not be blindly reinserted. A laryngectomy stoma is the "
+        "exception, since there is no route from above at all."
+    ),
+    "Vasopressor support": (
+        "Drugs that raise blood pressure by vasoconstriction, given "
+        "when fluid alone will not maintain perfusion. The usual mean "
+        "arterial pressure target is 65 mmHg, individualised upwards "
+        "for chronic hypertension. Types: noradrenaline is first line "
+        "in septic, cardiogenic and most undifferentiated shock, "
+        "acting mainly on alpha-1 with modest beta-1 support. "
+        "Vasopressin is added to spare noradrenaline dose. Adrenaline "
+        "is preferred in anaphylaxis and in cardiac arrest, and "
+        "metaraminol is the common Australian peripheral bridge. "
+        "Dobutamine and milrinone are inotropes, not vasopressors, "
+        "and will drop the blood pressure. Mx: fill the tank first "
+        "but do not delay the infusion for a central line. Peripheral "
+        "noradrenaline through a good proximal cannula is accepted "
+        "practice for a short bridge, with regular site checks and "
+        "phentolamine available for extravasation. Insert an arterial "
+        "line, since non-invasive readings are unreliable in shock. "
+        "Note: a rising requirement is a signal to re-examine for an "
+        "untreated source, tamponade, pneumothorax, adrenal "
+        "insufficiency or hidden bleeding, not just a reason to turn "
+        "the dial up."
+    ),
+    "Massive haemoptysis": (
+        "Haemoptysis large enough to threaten the airway, variably "
+        "defined but practically any bleed causing gas exchange "
+        "failure or haemodynamic compromise. Patients drown before "
+        "they exsanguinate. Aetiology: bronchiectasis including "
+        "cystic fibrosis, tuberculosis and aspergilloma in an old "
+        "cavity, bronchial carcinoma, and vasculitis or "
+        "anticoagulation. Over 90 per cent comes from the "
+        "high-pressure bronchial arteries, not the pulmonary "
+        "circulation. Mx: the airway is the priority. Give high-flow "
+        "oxygen, and lie the patient bleeding side down so the good "
+        "lung stays dry. Reverse anticoagulation, cross-match, and "
+        "involve interventional radiology, respiratory and "
+        "cardiothoracic surgery early. Intubate with a large tube for "
+        "suction and bronchoscopic access, and consider selective "
+        "intubation of the unaffected lung. Bronchial artery "
+        "embolisation is the definitive treatment for most, with "
+        "rigid bronchoscopy for tamponade, cold saline or topical "
+        "measures as a bridge. Ix: CT angiography of the chest before "
+        "or alongside embolisation identifies the vessel and the "
+        "cause, and is more useful than plain film. Note: lying the "
+        "patient on the wrong side spills blood into the only lung "
+        "still working."
+    ),
+    "Pneumothorax ex vacuo": (
+        "Air in the pleural space appearing after drainage of a "
+        "pleural effusion, not from a leak but from a lung that "
+        "cannot expand to fill the space it left. Mechanism: a "
+        "visceral pleural peel or an obstructed bronchus stops "
+        "re-expansion, so pleural pressure falls steeply and gas "
+        "comes out of solution from surrounding tissue to fill the "
+        "vacuum. Clinical features: a hydropneumothorax on the "
+        "post-drainage film with an unexpanded lung, and chest "
+        "discomfort during aspiration as pressure falls. The patient "
+        "is usually not distressed and the mediastinum is not "
+        "shifted. Ix: pleural manometry during drainage shows a sharp "
+        "fall in pleural pressure, and pleural elastance above about "
+        "14.5 cmH2O per litre confirms trapped lung. CT shows a "
+        "thickened visceral pleura. Mx: do not insert a chest drain "
+        "reflexively and do not apply suction, since neither "
+        "re-expands a trapped lung and both prolong the air leak "
+        "picture. Stop the aspiration when pressure falls or chest "
+        "discomfort develops. Treat the underlying cause, and "
+        "consider decortication or an indwelling pleural catheter for "
+        "recurrent symptomatic effusion. Note: pain on aspirating an "
+        "effusion means stop, not pull harder."
+    ),
+    "Haematopoietic stem cell transplantation": (
+        "Infusion of haematopoietic stem cells after conditioning "
+        "chemotherapy, used to rescue marrow after high-dose "
+        "treatment or to replace a diseased marrow with a donor "
+        "immune system. Types: autologous uses the patient's own "
+        "cells and is standard in myeloma and relapsed lymphoma, with "
+        "the benefit coming from the dose intensity. Allogeneic uses "
+        "a matched sibling, unrelated or haploidentical donor and "
+        "adds a graft versus tumour effect, used in acute leukaemia, "
+        "myelodysplasia and marrow failure. Phases: conditioning, "
+        "then aplasia for two to four weeks with mucositis, febrile "
+        "neutropenia and transfusion dependence, then engraftment, "
+        "then immune reconstitution over a year or more. "
+        "Complications: graft versus host disease acute and chronic "
+        "in allogeneic recipients, cytomegalovirus and fungal "
+        "infection, sinusoidal obstruction syndrome, graft failure, "
+        "infertility and secondary malignancy. Allogeneic recipients "
+        "need irradiated cellular blood products and revaccination "
+        "from scratch. Note: an allogeneic recipient with fever is "
+        "neutropenic sepsis until proved otherwise, and a rash with "
+        "diarrhoea and rising bilirubin in the first hundred days is "
+        "acute graft versus host disease."
+    ),
+    "CAR T-cell therapy": (
+        "Autologous T cells engineered to express a receptor against "
+        "a tumour antigen, expanded and reinfused after "
+        "lymphodepleting chemotherapy. Indications: relapsed or "
+        "refractory B cell acute lymphoblastic leukaemia and diffuse "
+        "large B cell lymphoma with CD19-directed products, and "
+        "myeloma with BCMA-directed products. Delivered in Australia "
+        "only at accredited centres. Complications: cytokine release "
+        "syndrome in the first week with fever, hypotension and "
+        "hypoxia, graded and treated with tocilizumab and "
+        "corticosteroids. Immune effector cell-associated "
+        "neurotoxicity follows, with tremor, dysgraphia, expressive "
+        "dysphasia, confusion and seizure, graded by the ICE score "
+        "and treated with corticosteroids, since tocilizumab does not "
+        "cross well. Prolonged cytopenias and B cell aplasia follow, "
+        "needing immunoglobulin replacement and prophylaxis. Note: "
+        "fever after infusion is cytokine release syndrome and sepsis "
+        "at once until proved otherwise, so cultures and antibiotics "
+        "run alongside the tocilizumab. Handwriting is the cheapest "
+        "daily neurotoxicity screen there is."
+    ),
+    "Anthracycline cardiotoxicity": (
+        "Dose-dependent left ventricular dysfunction from "
+        "doxorubicin, daunorubicin and epirubicin, the reason "
+        "cumulative dose is tracked across a lifetime. Mechanism: "
+        "topoisomerase 2-beta inhibition in cardiomyocytes with "
+        "oxidative injury and myocyte loss. Injury is largely "
+        "irreversible, so surveillance beats treatment. Risk factors: "
+        "cumulative dose above about 400 mg/m2 doxorubicin "
+        "equivalent, age under 18 or over 65, pre-existing cardiac "
+        "disease, mediastinal radiotherapy and concurrent "
+        "trastuzumab. Clinical features: usually an asymptomatic fall "
+        "in ejection fraction within the first year, later overt "
+        "heart failure. Childhood cancer survivors may present "
+        "decades on. Ix: baseline echocardiography with global "
+        "longitudinal strain, repeated during and after treatment. A "
+        "relative fall in strain of more than 15 per cent precedes "
+        "the ejection fraction drop. Mx: discuss with cardio-oncology "
+        "rather than stopping chemotherapy unilaterally. Start an ACE "
+        "inhibitor and beta blocker for a confirmed fall, and "
+        "consider liposomal formulations or dexrazoxane in high-risk "
+        "patients. Note: strain change is the early warning, and "
+        "waiting for symptoms wastes the window."
+    ),
+    "Bleomycin lung toxicity": (
+        "Pneumonitis progressing to fibrosis in up to a tenth of "
+        "patients given bleomycin, most familiar from germ cell "
+        "tumour and Hodgkin lymphoma regimens. Mechanism: the lung "
+        "lacks the hydrolase that inactivates the drug elsewhere, so "
+        "free radical injury concentrates there, subpleural and basal "
+        "first. Risk factors: cumulative dose above 300 units, age "
+        "over 40, renal impairment which slows clearance, smoking, "
+        "mediastinal or chest radiotherapy, and high inspired oxygen. "
+        "Clinical features: dry cough and exertional breathlessness "
+        "weeks to months into treatment, with fine basal crackles. "
+        "Chest imaging shows bilateral basal and subpleural "
+        "reticulation and ground glass, and high-resolution CT is far "
+        "more sensitive than plain film. Ix: serial lung function "
+        "with the transfer factor, which falls before symptoms. "
+        "Exclude infection, particularly Pneumocystis, and "
+        "lymphangitis carcinomatosis. Mx: stop bleomycin, and give "
+        "corticosteroids for symptomatic pneumonitis with a slow "
+        "taper. Note: flag it to every anaesthetist, since high "
+        "inspired oxygen can precipitate fatal deterioration and the "
+        "lowest saturation-guided FiO2 is used deliberately in these "
+        "patients for life."
+    ),
+    "Chemotherapy-induced nausea and vomiting": (
+        "Nausea and vomiting caused by cytotoxic therapy, classified "
+        "as acute within 24 hours, delayed from day two to five, "
+        "anticipatory before the next cycle, and breakthrough or "
+        "refractory. Mechanism: serotonin release from gut "
+        "enterochromaffin cells drives the acute phase through 5-HT3 "
+        "receptors, substance P at neurokinin-1 receptors drives the "
+        "delayed phase, and conditioning drives anticipatory "
+        "symptoms. Risk factors: the regimen's emetogenic rating is "
+        "the main determinant, cisplatin and anthracycline with "
+        "cyclophosphamide being highly emetogenic. Patient risk rises "
+        "with younger age, female sex, low alcohol intake and a "
+        "history of motion or pregnancy sickness. Mx: prophylaxis is "
+        "matched to the regimen's rating and given before every "
+        "cycle, since it is far easier to prevent than to rescue. "
+        "Highly emetogenic regimens get a 5-HT3 antagonist, "
+        "dexamethasone and an NK-1 antagonist such as aprepitant, "
+        "with olanzapine added for high risk. Metoclopramide or "
+        "prochlorperazine covers breakthrough. Anticipatory symptoms "
+        "respond to a benzodiazepine and to better control of the "
+        "previous cycle. Note: constipation from 5-HT3 antagonists is "
+        "the commonest reason control looks like it is failing."
+    ),
+    "Cancer of unknown primary": (
+        "Metastatic malignancy confirmed on biopsy with no primary "
+        "site identified after a standard evaluation, a few per cent "
+        "of cancer diagnoses and carrying a poor prognosis overall. "
+        "Ix: history and examination including breast, skin, thyroid, "
+        "nodes, testes and a rectal and pelvic examination, then CT "
+        "of chest, abdomen and pelvis, and tissue. "
+        "Immunohistochemistry is the workhorse, separating "
+        "adenocarcinoma, squamous, neuroendocrine, lymphoma, melanoma "
+        "and germ cell tumours. Targeted markers follow the pattern, "
+        "such as TTF-1 for lung and thyroid, CK7 and CK20 pairs for "
+        "gut, and GATA3 for breast and urothelium. Mx: identify the "
+        "favourable subsets, which are treated as the presumed "
+        "primary with much better outcomes. These include isolated "
+        "axillary nodes in a woman treated as breast cancer, midline "
+        "nodal disease in a young man treated as germ cell, and "
+        "peritoneal carcinomatosis in a woman treated as ovarian. The "
+        "rest get empirical platinum-based therapy, molecular "
+        "profiling and early palliative care input. Note: chasing the "
+        "primary indefinitely delays treatment that does not depend "
+        "on finding it."
+    ),
+    "Trauma primary survey": (
+        "The sequence that finds and treats the injuries that kill "
+        "first, worked in order and repeated whenever the patient "
+        "changes. Features: catastrophic haemorrhage control comes "
+        "first where present, then Airway with cervical spine "
+        "protection, Breathing, Circulation with haemorrhage control, "
+        "Disability, and Exposure with temperature control. Each step "
+        "is treated before moving on. Mx: airway means talking to the "
+        "patient and looking for obstruction, with a definitive "
+        "airway if it is threatened. Breathing means treating tension "
+        "pneumothorax by decompression on clinical suspicion, not "
+        "after a film, plus open pneumothorax and massive "
+        "haemothorax. Circulation means direct pressure, pelvic "
+        "binder, long bone splinting, two large cannulas, blood "
+        "rather than crystalloid, and tranexamic acid within three "
+        "hours. Disability is pupils and the Glasgow Coma Scale. "
+        "Exposure is log roll, full inspection and active warming. "
+        "Ix: adjuncts run alongside, not after, with extended FAST, "
+        "chest and pelvic films, blood gas and cross-match. Note: "
+        "hypotension in trauma is haemorrhage until proved otherwise, "
+        "and the reassessment after every intervention catches what "
+        "the first pass missed."
+    ),
+    "Lead time bias": (
+        "The apparent gain in survival produced by diagnosing a "
+        "disease earlier without changing when the patient dies. "
+        "Mechanism: survival is measured from diagnosis. Shifting "
+        "diagnosis earlier lengthens the measured interval "
+        "automatically, so a screened cohort can show better "
+        "five-year survival with identical mortality. Features: it is "
+        "one of three biases that flatter screening. Length time bias "
+        "is the tendency for screening to preferentially detect "
+        "slow-growing disease, since fast tumours surface between "
+        "rounds. Overdiagnosis is the extreme form, finding disease "
+        "that would never have caused harm, prostate cancer and "
+        "thyroid microcarcinoma being the usual examples. Healthy "
+        "volunteer bias adds that people who attend screening are "
+        "healthier to begin with. Note: the only measure immune to "
+        "all of these is disease-specific mortality, or better still "
+        "all-cause mortality, in a randomised trial. This is why "
+        "Australian screening programmes for bowel, breast and "
+        "cervical cancer cite mortality reduction, and why a claim "
+        "that survival improved after a new test was introduced says "
+        "nothing on its own."
+    ),
+    "Chaperone": (
+        "A trained third person present during an intimate "
+        "examination, protecting the patient's dignity and the "
+        "clinician's position equally. Features: Australian "
+        "regulatory guidance from the Medical Board expects an offer "
+        "of a chaperone for intimate examinations of the breast, "
+        "genitalia or rectum, and for any examination the patient may "
+        "reasonably find intimate. A family member or friend is a "
+        "support person, not a chaperone. The chaperone should be a "
+        "health practitioner or trained staff member who can see the "
+        "examination and understands what is being done. Mx: explain "
+        "what the examination involves and why, obtain consent, offer "
+        "a chaperone and record the offer, the name of the chaperone, "
+        "and a declined offer with equal care. Keep the patient "
+        "covered other than the part being examined, stop if they "
+        "ask, and never continue after consent is withdrawn. Anyone "
+        "under a chaperone condition imposed by the regulator has "
+        "that condition published. Note: documenting a declined offer "
+        "protects both parties, and a clinician who feels a chaperone "
+        "is needed may decline to proceed without one even where the "
+        "patient does not want one."
+    ),
+    "Telehealth consultation": (
+        "A consultation by video or telephone, entrenched in "
+        "Australian practice since 2020 and now a permanent part of "
+        "the Medicare Benefits Schedule. Features: MBS telehealth "
+        "items generally require an existing relationship, meaning a "
+        "face-to-face consultation with that practice in the previous "
+        "twelve months, with exemptions including patients in rural "
+        "modified Monash areas, children under twelve months, people "
+        "who are homeless, and specific services such as blood-borne "
+        "virus and sexual and reproductive health. Video is preferred "
+        "and telephone items are more limited. Mx: confirm identity "
+        "and location at the start, ask who else is present, check "
+        "the patient is somewhere private, and agree a plan for a "
+        "dropped connection before starting. Record that the "
+        "consultation was by telehealth and which modality. Have a "
+        "local escalation plan, since you cannot examine or "
+        "resuscitate down a line. Note: the limits are clinical, not "
+        "technical. Anything needing examination, a procedure or an "
+        "acutely unwell assessment needs a face-to-face review, and "
+        "electronic prescribing plus a regular pharmacy closes the "
+        "loop on the prescription."
+    ),
+    "My Health Record": (
+        "Australia's national online summary of a person's health "
+        "information, operating on an opt-out basis since 2019 and "
+        "holding shared health summaries, discharge summaries, "
+        "pathology and imaging reports, PBS and Medicare data, "
+        "immunisation history and advance care planning documents. "
+        "Features: the patient controls access, and may set a record "
+        "access code, hide individual documents or cancel the record "
+        "entirely. A treating clinician may override a code in an "
+        "emergency where there is a serious threat to life or health, "
+        "and every such access is audited. Uploading is governed by "
+        "the My Health Records Act, and unauthorised access carries "
+        "civil and criminal penalties. Mx: it supplements and never "
+        "replaces the local record or a direct handover. Treat the "
+        "medicines list as a prompt to reconcile rather than a source "
+        "of truth, since it reflects dispensing rather than current "
+        "intent, and note that the patient may have hidden documents "
+        "so an absence proves nothing. Note: the Australian "
+        "Immunisation Register view and the advance care planning "
+        "section are where it most often changes management, "
+        "particularly for a patient who arrives without a history."
+    ),
+    "Bladder outlet obstruction": (
+        "Obstruction to urine flow at or below the bladder neck, the "
+        "commonest structural cause of lower urinary tract symptoms "
+        "in older men. Aetiology: benign prostatic hyperplasia in "
+        "most, then urethral stricture, bladder neck stenosis and "
+        "prostate cancer. Constipation and anticholinergic drugs "
+        "precipitate acute decompensation. Clinical features: voiding "
+        "symptoms of hesitancy, weak stream, straining and incomplete "
+        "emptying, with storage symptoms from detrusor overactivity. "
+        "Late disease brings a palpable bladder, overflow "
+        "incontinence and high-pressure chronic retention with renal "
+        "impairment. Ix: prostate and neurological examination, "
+        "urinalysis, creatinine, post-void residual on bladder scan "
+        "and a symptom score such as IPSS. Pressure flow urodynamics "
+        "separates obstruction from a weak detrusor when surgery is "
+        "considered. Mx: an alpha blocker such as tamsulosin, adding "
+        "a 5-alpha reductase inhibitor for a large prostate, with "
+        "transurethral resection for failure or complications. Note: "
+        "high-pressure chronic retention with a rising creatinine "
+        "needs catheterisation and a watch for post-obstructive "
+        "diuresis, not an outpatient appointment."
     ),
 }
 
