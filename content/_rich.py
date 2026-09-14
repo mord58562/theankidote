@@ -13569,6 +13569,234 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "bladder outlet obstruction in men"]],
         "summary": "",
     },
+    {
+        "name": "Fregoli delusion",
+        "aliases": ["Fregoli syndrome", "Fregoli phenomenon"],
+        "utd": [["Overview", "Fregoli delusion misidentification syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Folie a deux",
+        "aliases": ["folie à deux", "shared psychotic disorder", "induced delusional disorder", "shared delusional disorder"],
+        "utd": [["Overview", "shared psychotic disorder folie a deux"]],
+        "summary": "",
+    },
+    {
+        "name": "Couvade syndrome",
+        "aliases": ["sympathetic pregnancy", "male pregnancy symptoms", "phantom pregnancy in men"],
+        "utd": [["Overview", "couvade syndrome sympathetic pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Diogenes syndrome",
+        "aliases": ["senile squalor syndrome", "severe self neglect", "domestic squalor", "gross self neglect"],
+        "utd": [["Overview", "Diogenes syndrome severe self neglect squalor"]],
+        "summary": "",
+    },
+    {
+        "name": "Running commentary",
+        "aliases": ["running commentary hallucination", "voices commenting on actions", "commentary voices"],
+        "utd": [["Overview", "running commentary auditory hallucination first rank symptom"]],
+        "summary": "",
+    },
+    {
+        "name": "Uterine involution",
+        "aliases": ["involution of the uterus", "fundal descent", "subinvolution"],
+        "utd": [["Overview", "uterine involution puerperium fundal height"]],
+        "summary": "",
+    },
+    {
+        "name": "Breast engorgement",
+        "aliases": ["engorged breasts", "milk coming in", "breast fullness postpartum"],
+        "utd": [["Overview", "breast engorgement lactation"]],
+        "summary": "",
+    },
+    {
+        "name": "Galactocele",
+        "aliases": ["milk retention cyst", "milk cyst", "lacteal cyst"],
+        "utd": [["Overview", "galactocele breast milk retention cyst"]],
+        "summary": "",
+    },
+    {
+        "name": "Lactational amenorrhoea",
+        "aliases": ["lactational amenorrhea method", "breastfeeding as contraception", "LAM method"],
+        "utd": [["Overview", "lactational amenorrhoea method contraception breastfeeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Puerperal pyrexia",
+        "aliases": ["puerperal fever", "postpartum fever", "postnatal pyrexia", "childbed fever"],
+        "utd": [["Overview", "puerperal fever postpartum endometritis"]],
+        "summary": "",
+    },
+    {
+        "name": "Engagement of the fetal head",
+        "aliases": ["engagement", "head engaged", "fifths palpable", "foetal head engagement", "engaged head"],
+        "utd": [["Overview", "engagement fetal head fifths palpable station"]],
+        "summary": "",
+    },
+    {
+        "name": "Bloody show",
+        "aliases": ["show", "mucus plug", "operculum", "loss of the mucus plug"],
+        "utd": [["Overview", "bloody show mucus plug labour"]],
+        "summary": "",
+    },
+    {
+        "name": "Zavanelli manoeuvre",
+        "aliases": ["cephalic replacement", "Zavanelli procedure"],
+        "utd": [["Overview", "Zavanelli manoeuvre cephalic replacement shoulder dystocia"]],
+        "summary": "",
+    },
+    {
+        "name": "Manual removal of placenta",
+        "aliases": ["manual removal of the placenta", "retained placenta removal", "MROP"],
+        "utd": [["Overview", "manual removal retained placenta third stage"]],
+        "summary": "",
+    },
+    {
+        "name": "Bakri balloon",
+        "aliases": ["intrauterine balloon tamponade", "uterine balloon", "tamponade balloon", "balloon tamponade test"],
+        "utd": [["Overview", "intrauterine balloon tamponade postpartum haemorrhage"]],
+        "summary": "",
+    },
+    {
+        "name": "Uterine artery embolisation",
+        "aliases": ["uterine fibroid embolisation", "uterine artery embolization", "UFE", "pelvic artery embolisation"],
+        "utd": [["Overview", "uterine artery embolisation fibroids postpartum haemorrhage"]],
+        "summary": "",
+    },
+    {
+        "name": "Perineal massage",
+        "aliases": ["antenatal perineal massage", "intrapartum perineal massage", "perineal stretching"],
+        "utd": [["Overview", "perineal massage prevention perineal trauma"]],
+        "summary": "",
+    },
+    {
+        "name": "Fetal fibronectin",
+        "aliases": ["foetal fibronectin", "fFN test", "fibronectin swab"],
+        "utd": [["Overview", "fetal fibronectin preterm labour prediction"]],
+        "summary": "",
+    },
+    {
+        "name": "Kleihauer test",
+        "aliases": ["Kleihauer Betke test", "Kleihauer", "fetomaternal haemorrhage test", "acid elution test"],
+        "utd": [["Overview", "Kleihauer Betke test fetomaternal haemorrhage anti D"]],
+        "summary": "",
+    },
+    {
+        "name": "Primitive reflexes",
+        "aliases": ["Moro reflex", "rooting reflex", "palmar grasp reflex", "stepping reflex", "sucking reflex", "asymmetric tonic neck reflex", "plantar grasp reflex", "newborn reflexes"],
+        "utd": [["Overview", "primitive reflexes newborn neurological examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Ballard score",
+        "aliases": ["New Ballard score", "Ballard assessment", "gestational age assessment"],
+        "utd": [["Overview", "Ballard score gestational age assessment newborn"]],
+        "summary": "",
+    },
+    {
+        "name": "Congenital dermal melanocytosis",
+        "aliases": ["Mongolian spot", "Mongolian blue spot", "slate grey naevus", "dermal melanocytosis"],
+        "utd": [["Overview", "congenital dermal melanocytosis Mongolian spot newborn birthmark"]],
+        "summary": "",
+    },
+    {
+        "name": "Newborn vitamin K prophylaxis",
+        "aliases": ["vitamin K prophylaxis", "vitamin K at birth", "neonatal vitamin K", "vitamin K injection newborn"],
+        "utd": [["Overview", "vitamin K prophylaxis newborn deficiency bleeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Red reflex",
+        "aliases": ["red reflex test", "Bruckner test", "leukocoria screen"],
+        "utd": [["Overview", "red reflex test newborn leukocoria"]],
+        "summary": "",
+    },
+    {
+        "name": "Ortolani and Barlow tests",
+        "aliases": ["Ortolani test", "Barlow test", "Ortolani manoeuvre", "Barlow manoeuvre", "Ortolani sign", "hip examination newborn"],
+        "utd": [["Overview", "Ortolani Barlow developmental dysplasia hip newborn examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Gowers sign",
+        "aliases": ["Gower sign", "Gowers manoeuvre", "climbing up the legs"],
+        "utd": [["Overview", "Gowers sign proximal muscle weakness Duchenne"]],
+        "summary": "",
+    },
+    {
+        "name": "Kangaroo care",
+        "aliases": ["skin to skin contact", "skin-to-skin care", "kangaroo mother care"],
+        "utd": [["Overview", "kangaroo mother care skin to skin preterm"]],
+        "summary": "",
+    },
+    {
+        "name": "Delayed passage of meconium",
+        "aliases": ["failure to pass meconium", "delayed meconium", "no meconium in 48 hours"],
+        "utd": [["Overview", "delayed passage meconium newborn Hirschsprung"]],
+        "summary": "",
+    },
+    {
+        "name": "Sweat chloride test",
+        "aliases": ["sweat test", "pilocarpine iontophoresis", "sweat conductivity test"],
+        "utd": [["Overview", "sweat chloride test cystic fibrosis diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Incident reporting",
+        "aliases": ["clinical incident report", "adverse event report", "incident management system", "near miss reporting"],
+        "utd": [["Overview", "clinical incident reporting patient safety governance"]],
+        "summary": "",
+    },
+    {
+        "name": "Informed financial consent",
+        "aliases": ["financial consent", "out of pocket costs", "gap fee disclosure", "informed financial consent form"],
+        "utd": [["Overview", "informed financial consent out of pocket costs Australia"]],
+        "summary": "",
+    },
+    {
+        "name": "Nipple fissure",
+        "aliases": ["cracked nipples", "sore nipples", "nipple trauma", "nipple pain in breastfeeding"],
+        "utd": [["Overview", "nipple fissure cracked nipples breastfeeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Afterpains",
+        "aliases": ["after pains", "uterine cramping postpartum", "involution cramps"],
+        "utd": [["Overview", "afterpains postpartum uterine cramping"]],
+        "summary": "",
+    },
+    {
+        "name": "Umbilical granuloma",
+        "aliases": ["cord granuloma", "umbilical granulation tissue", "granuloma of the umbilicus"],
+        "utd": [["Overview", "umbilical granuloma newborn cord"]],
+        "summary": "",
+    },
+    {
+        "name": "Positional plagiocephaly",
+        "aliases": ["deformational plagiocephaly", "flat head syndrome", "positional head deformity", "flattened occiput"],
+        "utd": [["Overview", "positional plagiocephaly infant head shape"]],
+        "summary": "",
+    },
+    {
+        "name": "Safe sleeping",
+        "aliases": ["safe sleep advice", "back to sleep", "safe sleeping recommendations", "infant sleep safety"],
+        "utd": [["Overview", "safe infant sleep sudden unexpected death in infancy prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Amnioinfusion",
+        "aliases": ["amnio-infusion", "transcervical amnioinfusion", "intrapartum amnioinfusion"],
+        "utd": [["Overview", "amnioinfusion variable decelerations labour"]],
+        "summary": "",
+    },
+    {
+        "name": "Breast milk jaundice",
+        "aliases": ["breastmilk jaundice", "late onset breastfeeding jaundice", "prolonged neonatal jaundice"],
+        "utd": [["Overview", "breast milk jaundice prolonged neonatal hyperbilirubinaemia"]],
+        "summary": "",
+    },
 ]
 
 
@@ -78461,6 +78689,799 @@ RICH_SUMMARIES = {
         "high-pressure chronic retention with a rising creatinine "
         "needs catheterisation and a watch for post-obstructive "
         "diuresis, not an outpatient appointment."
+    ),
+
+    "Fregoli delusion": (
+        "Fregoli delusion is a delusional misidentification syndrome "
+        "in which the patient believes that different people they "
+        "meet are really one familiar persecutor in disguise. It is "
+        "the mirror image of Capgras, where a familiar person is held "
+        "to be an impostor. Aetiology: most often schizophrenia or "
+        "schizoaffective disorder, though it also follows right "
+        "frontal and temporal injury from trauma or stroke. Frontal "
+        "dysfunction is thought to uncouple face recognition from the "
+        "sense of familiarity. Clinical features: hyperfamiliarity, "
+        "so strangers are recognised as the persecutor despite no "
+        "physical resemblance. The belief is fixed and often drives "
+        "stalking complaints or aggression toward the misidentified "
+        "person. Ix: mental state examination with collateral history "
+        "and a cognitive screen. Image the brain on first "
+        "presentation, at late onset or with any focal sign. Mx: "
+        "treat the underlying psychosis with an antipsychotic per eTG "
+        "and address any structural lesion. Risk assessment matters "
+        "because the delusion names a target. Note: strangers are all "
+        "one persecutor in Fregoli, while a familiar face is a fake "
+        "in Capgras."
+    ),
+    "Folie a deux": (
+        "Folie a deux is a shared psychotic disorder in which a "
+        "delusion held by a dominant person is transmitted to a close "
+        "contact who would not otherwise be psychotic. The pair are "
+        "usually socially isolated and emotionally dependent. "
+        "Aetiology: prolonged close contact with a psychotic primary, "
+        "relative isolation from outside correction and often a "
+        "submissive or cognitively impaired secondary. Sisters living "
+        "together are the classic pair and parent with child the "
+        "next. Clinical features: both hold the same delusion, most "
+        "often persecutory, but only the primary shows other "
+        "psychotic features. The secondary has no hallucinations or "
+        "thought disorder. Ix: interview each person separately, with "
+        "collateral history and a cognitive screen in the secondary. "
+        "Exclude an organic cause in either. Mx: separate the two. "
+        "The secondary's belief commonly fades within weeks without "
+        "medication, while the primary needs antipsychotic treatment "
+        "per eTG. Note: the diagnosis is made by separating them and "
+        "seeing whose delusion survives."
+    ),
+    "Couvade syndrome": (
+        "Couvade syndrome is the appearance of pregnancy related "
+        "physical symptoms in an expectant father, resolving after "
+        "the birth. It is not a DSM-5 diagnosis and is best framed as "
+        "a somatic expression of anticipatory distress. Aetiology: "
+        "hormonal and psychodynamic explanations both have support. "
+        "Falling testosterone with rising prolactin and cortisol has "
+        "been measured in expectant fathers, and anxiety about the "
+        "pregnancy or a history of infertility raises risk. Clinical "
+        "features: nausea, appetite change and weight gain are "
+        "commonest, with backache and disturbed sleep also reported. "
+        "Symptoms cluster in the first and third trimesters and stop "
+        "abruptly at delivery. Ix: history and examination to exclude "
+        "real pathology. Do not over investigate a well man whose "
+        "symptoms track his partner's gestation. Mx: reassurance, "
+        "explanation and antenatal involvement. Screen for paternal "
+        "depression and anxiety, which are common perinatally and "
+        "answer to treatment. Note: a man with third trimester nausea "
+        "and a pregnant partner needs a history, not a gastroscopy."
+    ),
+    "Diogenes syndrome": (
+        "Diogenes syndrome is severe self neglect with domestic "
+        "squalor, hoarding and refusal of help, usually in an older "
+        "person living alone. Shame is characteristically absent, "
+        "which separates it from depression driven neglect. "
+        "Aetiology: frontal and executive impairment is the common "
+        "thread, arising from frontotemporal dementia, stroke or "
+        "alcohol related brain injury. Around half have no "
+        "psychiatric diagnosis at all and show a lifelong aloof "
+        "personality. Clinical features: a squalid home with hoarded "
+        "rubbish, malnutrition and untreated skin or dental disease. "
+        "Presentation is triggered by a neighbour complaint or a "
+        "crisis admission rather than by the patient. Ix: cognitive "
+        "assessment with executive testing, bloods for nutritional "
+        "and thyroid causes and brain imaging. Assess capacity for "
+        "the specific decision about accommodation. Mx: "
+        "multidisciplinary and slow. Arrange aged care assessment, "
+        "clean with consent and treat any medical cause, involving "
+        "guardianship only where capacity is genuinely absent. Note: "
+        "absence of distress about the squalor is the diagnostic clue "
+        "and the main obstacle to treatment."
+    ),
+    "Running commentary": (
+        "Running commentary is an auditory hallucination in which "
+        "voices describe the patient's actions as they happen, in the "
+        "third person. It is one of Schneider's first rank symptoms "
+        "and points strongly to a primary psychotic illness. "
+        "Aetiology: schizophrenia and schizoaffective disorder "
+        "account for most cases, with mania, psychotic depression and "
+        "drug induced psychosis the rest. Temporal lobe pathology can "
+        "mimic it. Clinical features: voices narrate what the patient "
+        "is doing, heard as external and outside their control. "
+        "Voices arguing about the patient belong to the same family, "
+        "and both differ from the second person command voices of "
+        "severe depression. Ix: mental state examination with "
+        "collateral history, urine drug screen and bloods. Image "
+        "where onset is late or a focal sign appears. Mx: "
+        "antipsychotic treatment per eTG alongside psychological "
+        "therapy, with clozapine considered after two adequate trials "
+        "fail. Note: first rank symptoms are suggestive rather than "
+        "diagnostic, and they appear in mania too."
+    ),
+    "Uterine involution": (
+        "Uterine involution is the return of the uterus to its pre "
+        "pregnant size and position over the six weeks after birth. "
+        "The fundus falls roughly a finger breadth per day and is no "
+        "longer palpable abdominally by day ten. Mechanism: "
+        "myometrial fibres contract and undergo autolysis rather than "
+        "losing cells, while the placental bed is shed and re "
+        "epithelialised. Oxytocin released with breastfeeding drives "
+        "the process, which is why afterpains are worse during feeds "
+        "and in multiparas. Clinical features: a firm central fundus "
+        "at the umbilicus immediately after birth, then daily "
+        "descent, with lochia changing from rubra through serosa to "
+        "alba. Ix: measure fundal height and tone at each postnatal "
+        "check. A boggy high uterus with heavy or offensive lochia "
+        "calls for full blood count, cultures and pelvic ultrasound. "
+        "Mx: normal involution needs only observation and feeding "
+        "support. Subinvolution from retained products or "
+        "endometritis needs uterotonics and antibiotics per eTG, "
+        "sometimes with evacuation. Note: a uterus that is not "
+        "shrinking is retaining something or infected until proven "
+        "otherwise."
+    ),
+    "Breast engorgement": (
+        "Breast engorgement is painful overfilling of the breasts "
+        "with milk, blood and lymph, typically on day three to five "
+        "postpartum as the milk comes in. It is bilateral and self "
+        "limiting, unlike mastitis. Aetiology: delayed or infrequent "
+        "feeding, poor attachment or separation of mother and baby. "
+        "Oedema from intravenous fluids given in labour worsens it. "
+        "Clinical features: both breasts are hard, shiny and tender, "
+        "with flattened nipples that make attachment harder and so "
+        "perpetuate the problem. A low grade fever is common and "
+        "settles within 24 hours. Ix: clinical. Consider ultrasound "
+        "and culture only where a localised hot tender wedge or "
+        "rigors suggest mastitis or abscess. Mx: feed frequently and "
+        "effectively. Reverse pressure softening or brief hand "
+        "expression before the feed softens the areola enough to "
+        "attach, and cold packs between feeds reduce oedema. "
+        "Ibuprofen is safe in lactation per AMH. Note: engorgement is "
+        "bilateral and settles with milk removal, whereas a "
+        "unilateral hot wedge with rigors is mastitis."
+    ),
+    "Galactocele": (
+        "Galactocele is a milk retention cyst of the breast and the "
+        "commonest benign breast lump in a lactating or recently "
+        "lactating woman. A blocked duct traps milk behind it. "
+        "Aetiology: duct obstruction from inspissated milk, pressure "
+        "from a tight bra or sling, or abrupt weaning. Rarely one "
+        "appears in an infant or in a man through "
+        "hyperprolactinaemia. Clinical features: a smooth mobile non "
+        "tender lump, often subareolar, that may fluctuate with "
+        "feeding. Overlying skin is normal and there is no fever, "
+        "which separates it from an abscess. Ix: ultrasound is the "
+        "test of choice and shows a cyst with a fat fluid level or "
+        "fine internal echoes. Aspiration yields milky fluid and is "
+        "both diagnostic and therapeutic. Send fluid for cytology "
+        "only if bloodstained. Mx: continue breastfeeding, aspirate "
+        "for symptoms and excise only the few that recur repeatedly "
+        "or have suspicious imaging. Antibiotics are unnecessary "
+        "unless it becomes infected. Note: a painless milky cyst in a "
+        "feeding woman, whereas a hot tender lump is an abscess."
+    ),
+    "Lactational amenorrhoea": (
+        "Lactational amenorrhoea is the absence of menses during "
+        "exclusive breastfeeding, and used deliberately it is a "
+        "contraceptive method with about 98 per cent efficacy. All "
+        "three conditions must hold, namely fully breastfeeding, "
+        "amenorrhoeic and under six months postpartum. Mechanism: "
+        "suckling suppresses pulsatile gonadotrophin releasing "
+        "hormone through prolactin and altered opioid tone, so "
+        "follicular development and ovulation do not occur. Night "
+        "feeds matter most because the prolactin surge is largest "
+        "then. Clinical features: no bleeding beyond the first eight "
+        "weeks of lochia, with return of menses signalling loss of "
+        "protection. Ovulation can precede the first period, so the "
+        "method fails silently. Mx: counsel that failure of any one "
+        "of the three conditions ends the protection. Offer a "
+        "progestogen only pill, implant or intrauterine device, all "
+        "compatible with breastfeeding. Combined oral contraceptives "
+        "are usually deferred until six weeks in Australian practice. "
+        "Note: it works only while all three conditions hold, and the "
+        "first ovulation is unannounced."
+    ),
+    "Puerperal pyrexia": (
+        "Puerperal pyrexia is a temperature of 38 degrees or more on "
+        "any two of the first ten days after birth, excluding the "
+        "first 24 hours. It is a screening definition that forces a "
+        "source to be found rather than a diagnosis in itself. "
+        "Aetiology: endometritis is commonest, then wound or perineal "
+        "infection, urinary infection and mastitis. Retained products "
+        "and caesarean birth are the main risk factors. Clinical "
+        "features: offensive lochia with a tender bulky uterus points "
+        "to endometritis, while a hot tender breast wedge, dysuria or "
+        "a red wound localise the others. Calf or pleuritic chest "
+        "pain suggests venous thromboembolism, which is easily missed "
+        "here. Ix: full blood count, cultures of blood and urine, and "
+        "a high vaginal swab. Pelvic ultrasound for retained products "
+        "and imaging for suspected thromboembolism. Mx: resuscitate "
+        "and start broad spectrum intravenous antibiotics per eTG for "
+        "suspected endometritis, then narrow to culture. Evacuate "
+        "retained products and drain collections. Note: day three "
+        "fever with an offensive tender uterus is endometritis until "
+        "cultures say otherwise."
+    ),
+    "Engagement of the fetal head": (
+        "Engagement is the passage of the widest diameter of the "
+        "fetal head, the biparietal diameter, through the pelvic "
+        "inlet. It is recorded abdominally as fifths of the head "
+        "palpable above the brim, with engaged meaning two fifths or "
+        "less. Mechanism: the head must flex and negotiate a "
+        "transverse inlet, so engagement usually occurs in the "
+        "occipito transverse position. It happens from 36 weeks in "
+        "nulliparas but often only in labour in multiparas, whose "
+        "pelvis has been proven. Clinical features: a settled fundal "
+        "height with easier breathing and increased urinary frequency "
+        "as the head presses on the bladder. Vaginal examination "
+        "finds the presenting part at or below the ischial spines, "
+        "which is station zero. Ix: abdominal palpation in fifths at "
+        "every late antenatal visit. Ultrasound clarifies "
+        "presentation and excludes placenta praevia when the head "
+        "will not engage. Mx: a high head at term in a nullipara "
+        "warrants review for praevia, pelvic mass or malpresentation "
+        "before labour. Note: fifths palpable is an abdominal finding "
+        "and station is a vaginal one."
+    ),
+    "Bloody show": (
+        "Bloody show is the passage of blood stained mucus as the "
+        "cervical operculum is released, a normal herald of labour "
+        "within days. The volume is small and mixed with mucus, which "
+        "is what separates it from antepartum haemorrhage. Mechanism: "
+        "cervical effacement and early dilatation shear small "
+        "decidual vessels and expel the mucus plug that has sealed "
+        "the canal through pregnancy. Clinical features: pink or "
+        "brown tenacious mucus, often after a vaginal examination or "
+        "membrane sweep, with or without irregular tightenings. Frank "
+        "red bleeding or soaking a pad is not show. Ix: none where "
+        "the history is typical, the woman is term and the fetal "
+        "heart is normal. Any doubt warrants cardiotocography and a "
+        "speculum examination, with ultrasound to exclude praevia "
+        "before any digital examination. Mx: reassure, and advise "
+        "presentation for regular painful contractions, ruptured "
+        "membranes or reduced fetal movements. Note: show is mucus "
+        "with streaks of blood, whereas bleeding that runs or clots "
+        "is a haemorrhage until proven otherwise."
+    ),
+    "Zavanelli manoeuvre": (
+        "The Zavanelli manoeuvre is cephalic replacement, in which "
+        "the delivered fetal head is flexed and pushed back into the "
+        "vagina and the baby is delivered by immediate caesarean. It "
+        "is the last resort for shoulder dystocia. Indications: "
+        "dystocia unresolved after the full internal manoeuvre "
+        "sequence, and some cases of locked twins or a trapped "
+        "aftercoming head. It is rare enough that most obstetricians "
+        "never perform one. Mx: stop traction and give a tocolytic "
+        "such as terbutaline or glyceryl trinitrate to relax the "
+        "uterus. Flex and rotate the head back to occipito anterior, "
+        "then push it steadily back through the introitus and hold it "
+        "there while theatre is readied. General anaesthesia is "
+        "usual. Complications: uterine rupture, fetal cervical spine "
+        "and hypoxic injury, and high rates of neonatal "
+        "encephalopathy reflecting both the manoeuvre and the "
+        "preceding dystocia. Note: decide early, because the longer "
+        "the head has been out the harder replacement becomes."
+    ),
+    "Manual removal of placenta": (
+        "Manual removal of the placenta is operative extraction of a "
+        "retained placenta by a hand introduced into the uterine "
+        "cavity. It is required when the third stage exceeds 30 "
+        "minutes with active management or 60 minutes "
+        "physiologically, and earlier if there is bleeding. "
+        "Aetiology: retention follows a placenta trapped behind a "
+        "closed cervix, uterine atony or morbid adherence as accreta. "
+        "Prior caesarean, praevia and curettage raise the accreta "
+        "risk. Ix: confirm the placenta is undelivered and assess "
+        "blood loss. Take a full blood count, coagulation screen and "
+        "crossmatch. Mx: resuscitate, secure intravenous access and "
+        "go to theatre for regional or general anaesthesia. Give "
+        "antibiotic prophylaxis per eTG, develop a plane with the "
+        "ulnar border of the hand, then give a uterotonic and check "
+        "the placenta is complete. Stop and call for help if no plane "
+        "develops. Complications: haemorrhage, uterine perforation or "
+        "inversion, and Asherman syndrome later. Note: no cleavage "
+        "plane means accreta, so stop rather than persist."
+    ),
+    "Bakri balloon": (
+        "The Bakri balloon is an intrauterine tamponade device "
+        "inflated with warm saline to arrest postpartum haemorrhage "
+        "from atony or a bleeding placental bed. It sits between "
+        "medical and surgical management in the haemorrhage "
+        "algorithm. Indications: atonic or placental site haemorrhage "
+        "not controlled by uterotonics and bimanual compression. "
+        "Contraindications: arterial bleeding needing laparotomy, "
+        "uterine rupture and sepsis. Mx: continue resuscitation and "
+        "uterotonics. Insert the balloon vaginally or at caesarean "
+        "and inflate with 300 to 500 mL of warm saline until bleeding "
+        "slows, then pack the vagina to prevent expulsion and keep an "
+        "indwelling catheter. Give antibiotics per eTG and leave the "
+        "balloon 12 to 24 hours before staged deflation with theatre "
+        "available. Monitoring: drainage port output, fundal height "
+        "and serial haemoglobin. A positive tamponade test, meaning "
+        "the bleeding stops, predicts that laparotomy will be avoided "
+        "in about 85 per cent. Note: it buys time and transfer, so a "
+        "balloon that keeps filling the drain is a failed test "
+        "needing surgery."
+    ),
+    "Uterine artery embolisation": (
+        "Uterine artery embolisation occludes both uterine arteries "
+        "with particles under interventional radiology guidance, used "
+        "for fibroids and for obstetric haemorrhage. It preserves the "
+        "uterus where surgery would not. Indications: symptomatic "
+        "fibroids with bleeding or bulk symptoms in a woman wanting "
+        "to avoid hysterectomy, and adenomyosis. It is also used for "
+        "postpartum or secondary haemorrhage that has failed medical "
+        "and tamponade measures. Contraindications: pregnancy, active "
+        "pelvic infection and suspected leiomyosarcoma. Mx: femoral "
+        "or radial access under sedation with bilateral "
+        "catheterisation and particle embolisation to stasis. "
+        "Fibroids infarct and shrink by around 40 per cent over six "
+        "months, with bleeding improved in roughly 85 per cent. In "
+        "haemorrhage it is used where the woman is stable enough for "
+        "transfer. Complications: post embolisation syndrome with "
+        "pain and fever, fibroid expulsion and premature ovarian "
+        "insufficiency in a minority. Note: fertility after "
+        "embolisation is less well established than after myomectomy, "
+        "so counsel a woman planning pregnancy toward surgery."
+    ),
+    "Perineal massage": (
+        "Perineal massage is deliberate stretching of the posterior "
+        "vaginal wall and perineum, done antenatally from 34 weeks or "
+        "by the accoucheur during the second stage. It is one of the "
+        "few interventions shown to reduce perineal trauma. Uses: "
+        "antenatal self massage reduces the chance of needing an "
+        "episiotomy, with the benefit clearest in nulliparas. "
+        "Intrapartum massage during crowning reduces third and fourth "
+        "degree tears. Mx: antenatally, five to ten minutes on most "
+        "days from 34 weeks with a lubricant, sweeping the lower "
+        "vaginal wall side to side until a stretching sensation is "
+        "felt. Intrapartum, two lubricated fingers sweep the "
+        "posterior wall between contractions. Combine this with a "
+        "warm compress and a hands on flexed head at crowning, which "
+        "is the package Australian units teach for reducing severe "
+        "tears. Contraindications: placenta praevia, ruptured "
+        "membranes and active genital infection. Note: the antenatal "
+        "benefit is mostly for a first baby, while the intrapartum "
+        "benefit is for the anal sphincter."
+    ),
+    "Fetal fibronectin": (
+        "Fetal fibronectin is a glycoprotein at the choriodecidual "
+        "interface, measured on a vaginal swab to predict preterm "
+        "birth. Its value lies almost entirely in its negative "
+        "predictive value. Mechanism: it leaks into cervicovaginal "
+        "secretions when the choriodecidual junction is disrupted, "
+        "which normally happens only before 22 weeks and again at "
+        "term. A positive result between 22 and 34 weeks therefore "
+        "signals separation. Indications: symptomatic threatened "
+        "preterm labour with intact membranes and cervical dilatation "
+        "under 3 cm. Ix: swab the posterior fornix before any digital "
+        "examination, and avoid it within 24 hours of intercourse, "
+        "bleeding or a vaginal examination. Quantitative assays and "
+        "cervical length measurement add accuracy. Mx: a negative "
+        "result makes birth within 14 days very unlikely, around 1 "
+        "per cent, so the woman can be reassured and sent home. A "
+        "positive result prompts corticosteroids, magnesium sulfate "
+        "for neuroprotection under 30 weeks and transfer to a unit "
+        "with the right nursery. Note: it rules out far better than "
+        "it rules in."
+    ),
+    "Kleihauer test": (
+        "The Kleihauer Betke test quantifies fetomaternal haemorrhage "
+        "by acid elution of a maternal blood film, counting fetal "
+        "cells that resist elution. Its main use is sizing the anti D "
+        "dose after a sensitising event in an RhD negative woman. "
+        "Mechanism: fetal haemoglobin resists acid, so fetal cells "
+        "stay pink while adult cells become ghosts. Flow cytometry is "
+        "more accurate and is replacing it in Australian "
+        "laboratories. Indications: any potentially sensitising event "
+        "after 20 weeks in an RhD negative woman, including trauma, "
+        "antepartum haemorrhage and birth. It also helps investigate "
+        "stillbirth or unexplained fetal anaemia. Ix: take the sample "
+        "at least 15 minutes after the event and before further anti "
+        "D. The laboratory reports the percentage of fetal cells and "
+        "the estimated bleed volume. Mx: give 625 IU anti D within 72 "
+        "hours and add further doses calculated from the Kleihauer "
+        "estimate. Repeat testing confirms clearance. Note: the test "
+        "sizes the dose rather than deciding whether to give anti D, "
+        "so give it first and adjust after."
+    ),
+    "Primitive reflexes": (
+        "Primitive reflexes are brainstem mediated motor responses "
+        "present at birth that disappear as cortical control matures. "
+        "Their presence, symmetry and timely disappearance form a "
+        "core part of the newborn and infant neurological "
+        "examination. Clinical features: Moro is a symmetrical "
+        "startle with abduction then adduction of the arms and is "
+        "gone by four to six months. Rooting and sucking support "
+        "feeding and fade by four months, while palmar grasp and the "
+        "asymmetric tonic neck reflex go by six months. Stepping "
+        "disappears by two months. Ix: examine a settled warm infant. "
+        "Persistence beyond the expected age, asymmetry or absence "
+        "prompts hip, brachial plexus and central nervous system "
+        "assessment with imaging as indicated. Mx: refer to "
+        "developmental paediatrics or neurology. An asymmetrical Moro "
+        "suggests clavicular fracture or Erb palsy on the quiet side, "
+        "and reflexes persisting past a year suggest cerebral palsy. "
+        "Note: present at the wrong time and absent at the wrong time "
+        "are both abnormal, and asymmetry usually means a birth "
+        "injury."
+    ),
+    "Ballard score": (
+        "The Ballard score estimates gestational age from physical "
+        "and neuromuscular maturity in the newborn, used where dating "
+        "is unknown or disputed. The New Ballard extends validity "
+        "down to 20 weeks. Uses: assigning gestational age when "
+        "antenatal dating is absent or unreliable, and classifying "
+        "the baby as preterm, term or post term for care planning. It "
+        "is most accurate within 12 hours of birth in very preterm "
+        "infants. Criteria: six neuromuscular items covering posture "
+        "and joint mobility plus six physical items covering skin "
+        "maturity, lanugo and plantar creases. Scores sum to a "
+        "maturity rating from 20 to 44 weeks. Ix: score the baby "
+        "quiet and unwrapped, then plot weight, length and head "
+        "circumference against the assigned age to classify growth. "
+        "Mx: use the assigned age to guide feeding, retinopathy of "
+        "prematurity screening and immunisation timing, which in "
+        "Australia follows chronological rather than corrected age. "
+        "Note: it is accurate to about two weeks either way, so "
+        "ultrasound dating beats it whenever it exists."
+    ),
+    "Congenital dermal melanocytosis": (
+        "Congenital dermal melanocytosis is a blue grey macular "
+        "birthmark over the lumbosacral area, present at birth and "
+        "fading through childhood. The older name Mongolian spot is "
+        "being retired. Aetiology: melanocytes arrested in the dermis "
+        "during migration from the neural crest, so pigment sits deep "
+        "and scatters light to look blue. It is commonest in infants "
+        "with more pigmented skin and occurs in most Aboriginal and "
+        "Torres Strait Islander, Asian and African infants. Clinical "
+        "features: ill defined blue grey patches over the sacrum, "
+        "buttocks or shoulders, non palpable and unchanged by "
+        "pressure. Most fade by school age. Ix: none for typical "
+        "lesions. Extensive or extrasacral lesions that persist "
+        "warrant review for a lysosomal storage disorder such as "
+        "Hurler syndrome. Mx: reassurance and documentation. "
+        "Photograph and record the lesions in the newborn record, "
+        "because they are repeatedly mistaken for bruising and have "
+        "triggered child protection referrals. Note: document it at "
+        "birth, so nobody later reads a birthmark as a bruise."
+    ),
+    "Newborn vitamin K prophylaxis": (
+        "Newborn vitamin K prophylaxis is a single intramuscular dose "
+        "given at birth to prevent vitamin K deficiency bleeding. It "
+        "is recommended for every baby in Australia and needs "
+        "parental consent. Mechanism: vitamin K is a cofactor for "
+        "carboxylation of factors II, VII, IX and X. Newborns are "
+        "deficient because placental transfer is poor, breast milk "
+        "contains little and the gut is not yet colonised. Clinical "
+        "features: untreated deficiency bleeding is early within 24 "
+        "hours, classical on days two to seven with gastrointestinal "
+        "or umbilical bleeding, or late at two to twelve weeks. The "
+        "late form carries the worst outcomes because half present "
+        "with intracranial haemorrhage. Dose: 1 mg intramuscularly at "
+        "birth, or 0.5 mg under 1500 g. An oral schedule at birth, "
+        "day three to five and week four exists for families refusing "
+        "injection but is less effective. Mx: exclusively breastfed "
+        "babies and those with cholestasis are highest risk. Note: "
+        "refusal is why late bleeding still happens, and it presents "
+        "as an intracranial bleed in a previously well baby."
+    ),
+    "Red reflex": (
+        "The red reflex is the orange red glow seen through the pupil "
+        "on direct ophthalmoscopy, produced by light reflecting off "
+        "the retina. Testing it in every newborn is the screen for "
+        "sight and life threatening eye disease. Mechanism: light "
+        "passes through a clear cornea, lens and vitreous, reflects "
+        "off the choroid and returns. Any opacity or mass in that "
+        "path blocks or alters the reflex. Ix: darken the room and "
+        "hold the ophthalmoscope at 30 to 50 cm set to zero, viewing "
+        "both eyes together then each separately. Compare the two for "
+        "symmetry of colour and brightness. Clinical features: an "
+        "absent or white reflex, called leukocoria, suggests "
+        "cataract, retinoblastoma or retinopathy of prematurity. "
+        "Asymmetry suggests unilateral cataract or refractive error. "
+        "Mx: any abnormal or asymmetrical reflex is an urgent "
+        "ophthalmology referral, same day for leukocoria, because "
+        "congenital cataract needs surgery within weeks. Note: a "
+        "white pupil in a child is retinoblastoma until an "
+        "ophthalmologist says otherwise, including one noticed only "
+        "in a photograph."
+    ),
+    "Ortolani and Barlow tests": (
+        "The Ortolani and Barlow tests are the newborn clinical "
+        "screen for developmental dysplasia of the hip. Barlow tries "
+        "to dislocate a reduced hip while Ortolani tries to relocate "
+        "a dislocated one. Ix: examine a warm settled baby supine "
+        "with the nappy off. Flex the hips to 90 degrees and hold "
+        "each thigh between thumb and fingers. Barlow adducts and "
+        "pushes posteriorly to feel the head slip out. Ortolani "
+        "abducts while lifting the greater trochanter forward to feel "
+        "a clunk as the head returns. Clinical features: a palpable "
+        "clunk is positive, while a high pitched click without "
+        "movement is usually ligamentous. Asymmetrical thigh creases "
+        "and limited abduction matter more after three months, when "
+        "the tests lose sensitivity. Mx: a positive test warrants "
+        "urgent ultrasound and orthopaedic referral, with a Pavlik "
+        "harness correcting most cases over six to twelve weeks. Risk "
+        "factors prompting ultrasound despite a normal examination "
+        "include breech presentation and family history. Note: a "
+        "clunk is a hip moving and a click is not, and after three "
+        "months you trust abduction rather than Ortolani."
+    ),
+    "Gowers sign": (
+        "Gowers sign is the use of the hands to walk up the thighs "
+        "when rising from the floor, a marker of proximal lower limb "
+        "weakness. It is classically described in Duchenne muscular "
+        "dystrophy but occurs in any proximal myopathy. Mechanism: "
+        "weak hip and knee extensors cannot extend the trunk against "
+        "gravity, so the child turns prone, pushes into a bear "
+        "position and climbs up the legs to bring the trunk upright. "
+        "Aetiology: Duchenne and Becker dystrophy, limb girdle "
+        "myopathy and spinal muscular atrophy. In a boy aged two to "
+        "five it is Duchenne until excluded. Ix: creatine kinase "
+        "first, which is grossly elevated in dystrophinopathy, then "
+        "genetic testing for dystrophin deletions and duplications. "
+        "Muscle biopsy only where genetics is uninformative. Mx: "
+        "refer to paediatric neurology. Corticosteroids slow decline "
+        "in Duchenne, and cardiac, respiratory and orthopaedic "
+        "surveillance follows. Note: a boy who climbs up himself to "
+        "stand needs a creatine kinase that day, not a referral to "
+        "physiotherapy."
+    ),
+    "Kangaroo care": (
+        "Kangaroo care is prolonged skin to skin contact between a "
+        "baby, usually preterm, and a parent's bare chest. It is one "
+        "of the highest value low cost interventions in neonatal "
+        "care. Mechanism: contact stabilises temperature by thermal "
+        "synchrony and steadies heart rate and oxygenation. Maternal "
+        "oxytocin rises, which supports milk supply and bonding, "
+        "while infant cortisol falls. Uses: in preterm and low "
+        "birthweight babies it reduces mortality, sepsis and length "
+        "of stay, and immediate kangaroo care from birth is now "
+        "recommended by the World Health Organization even before "
+        "stabilisation. At term it supports early breastfeeding. Mx: "
+        "place the naked baby prone and upright on the bare chest "
+        "with a hat and a covering wrap. Aim for at least an hour at "
+        "a time and as many hours a day as tolerated. Continuous "
+        "monitoring allows it in intubated and line dependent babies "
+        "in Australian units. Note: the benefit is dose dependent, so "
+        "an hour beats twenty minutes, and it is the parent who "
+        "provides the incubator."
+    ),
+    "Delayed passage of meconium": (
+        "Delayed passage of meconium is failure to pass the first "
+        "stool within 24 to 48 hours of birth, a red flag for distal "
+        "bowel obstruction. About 99 per cent of term babies pass "
+        "meconium by 24 hours. Aetiology: Hirschsprung disease is the "
+        "concern, alongside cystic fibrosis causing meconium ileus, "
+        "anorectal malformation and hypothyroidism. Prematurity and "
+        "maternal magnesium or opioid exposure delay it benignly. "
+        "Clinical features: abdominal distension with bilious "
+        "vomiting and feed intolerance points to obstruction. Examine "
+        "for an imperforate or ectopic anus and a sacral dimple, and "
+        "note an explosive stool on withdrawing the examining finger, "
+        "which suggests Hirschsprung. Ix: abdominal radiograph, then "
+        "contrast enema showing a transition zone or microcolon. "
+        "Rectal suction biopsy confirms Hirschsprung by absent "
+        "ganglion cells, and newborn screening with sweat testing "
+        "covers cystic fibrosis. Mx: nil by mouth with nasogastric "
+        "decompression and fluids, then surgical referral. Note: no "
+        "meconium by 48 hours with distension is Hirschsprung or "
+        "meconium ileus until a biopsy or sweat test says otherwise."
+    ),
+    "Sweat chloride test": (
+        "The sweat chloride test measures chloride in pilocarpine "
+        "stimulated sweat and is the diagnostic standard for cystic "
+        "fibrosis. It confirms or excludes the diagnosis after a "
+        "positive newborn screen. Mechanism: defective CFTR cannot "
+        "reabsorb chloride from sweat duct fluid, so sweat chloride "
+        "is high. Sodium follows, which is why affected infants taste "
+        "salty and are prone to hyponatraemic dehydration. "
+        "Indications: a positive newborn bloodspot screen, an "
+        "affected sibling, or clinical suspicion from meconium ileus "
+        "or malabsorption. Ix: pilocarpine iontophoresis with a "
+        "minimum sweat weight, done at an accredited laboratory from "
+        "about two weeks of age. Chloride of 60 mmol per litre or "
+        "more is positive, 30 to 59 intermediate and under 30 normal. "
+        "Mx: repeat an intermediate or inadequate result and proceed "
+        "to CFTR genotyping. Confirmed cases go to a paediatric "
+        "cystic fibrosis centre, with modulator therapy PBS listed by "
+        "genotype in Australia. Note: an intermediate result needs "
+        "genetics rather than reassurance, and a normal test does not "
+        "exclude CFTR related disease."
+    ),
+    "Incident reporting": (
+        "Incident reporting is formal notification of any event that "
+        "harmed a patient or could have, entered into the health "
+        "service's incident management system. It exists to find "
+        "system failures rather than to attribute blame. "
+        "Classification: incidents are rated by actual or potential "
+        "harm, with the most serious grouped as sentinel events that "
+        "trigger mandatory external notification and a structured "
+        "review. Near misses are reported too, because they reveal "
+        "the same latent faults without the harm. Uses: aggregated "
+        "reports drive medication safety changes, equipment recalls "
+        "and process redesign. They are also the evidence base for "
+        "local audit and accreditation. Mx: make the patient safe "
+        "first, then notify within the local timeframe, usually 24 "
+        "hours for serious harm. Record facts rather than opinion, "
+        "complete the clinical record separately and inform the "
+        "treating team. Open disclosure to the patient runs in "
+        "parallel as a separate obligation. Note: the report is a "
+        "safety record and not a disciplinary one, and the commonest "
+        "failure is not reporting the near miss that would have "
+        "prevented the harm."
+    ),
+    "Informed financial consent": (
+        "Informed financial consent is a patient's documented "
+        "agreement to the costs of their care, given before treatment "
+        "and in writing. It is an expectation of Australian practice "
+        "and part of the Medical Board's code of conduct. "
+        "Indications: any private treatment carrying an out of pocket "
+        "cost, especially surgery where several providers bill "
+        "separately. It applies to the surgeon, the anaesthetist and "
+        "the hospital, which is why patients are blindsided by bills "
+        "nobody discussed. Mx: give an itemised written estimate "
+        "showing item numbers, the Medicare rebate and the expected "
+        "gap. Explain that the estimate changes if the procedure "
+        "does, and offer time to consider or to seek another opinion. "
+        "Record that the discussion happened. The government's "
+        "Medical Costs Finder publishes typical fees for comparison. "
+        "Note: financial consent is separate from clinical consent "
+        "and must precede the booking. The commonest complaint is not "
+        "the size of the gap but that nobody mentioned it."
+    ),
+    "Nipple fissure": (
+        "Nipple fissure is a crack or erosion of the nipple or areola "
+        "in a breastfeeding woman, and it is the commonest reason "
+        "given for early weaning. Pain that persists through the "
+        "whole feed is never normal. Aetiology: shallow attachment "
+        "causes most cases, so the nipple is compressed against the "
+        "hard palate rather than drawn back to the junction of hard "
+        "and soft palate. Tongue tie, misuse of a nipple shield, "
+        "thrush and dermatitis account for the rest. Clinical "
+        "features: a wedge or line of broken skin at the base or tip, "
+        "with pain throughout the feed and a flattened or lipstick "
+        "shaped nipple on detaching. Bleeding may colour the baby's "
+        "vomit. Ix: watch a full feed, which is the single most "
+        "useful assessment. Swab for Staphylococcus aureus where "
+        "there is exudate or spreading redness, and examine the "
+        "baby's palate. Mx: correct the attachment first, which "
+        "resolves most cases. Express a little milk onto the nipple, "
+        "apply purified lanolin and treat proven infection with "
+        "topical mupirocin per eTG. Note: pain lasting the whole feed "
+        "means the attachment is wrong until someone has actually "
+        "watched a feed."
+    ),
+    "Afterpains": (
+        "Afterpains are cramping uterine contractions in the days "
+        "after birth, felt most intensely during breastfeeding. They "
+        "signal normal involution rather than a complication. "
+        "Mechanism: suckling releases oxytocin, which contracts the "
+        "myometrium to occlude placental bed vessels and shrink the "
+        "uterus. A multiparous uterus contracts and relaxes in waves "
+        "rather than staying tonically contracted, which is why "
+        "multiparas feel them far more. Clinical features: "
+        "intermittent lower abdominal cramping for two to three days, "
+        "timed to feeds and sometimes with a gush of lochia. They are "
+        "usually mild after a first baby and severe after a fourth. "
+        "Ix: none where the uterus is firm, the lochia is normal and "
+        "the woman is afebrile. Persistent pain with fever or "
+        "offensive lochia needs assessment for endometritis or "
+        "retained products. Mx: reassure and empty the bladder before "
+        "feeds. Give regular paracetamol with ibuprofen, which is "
+        "preferred here and compatible with breastfeeding per AMH, "
+        "and offer a heat pack. Note: worse pain with each subsequent "
+        "baby is expected, and pain that outlasts a week is not "
+        "afterpains."
+    ),
+    "Umbilical granuloma": (
+        "Umbilical granuloma is a small mass of granulation tissue at "
+        "the umbilicus after cord separation, and it is the commonest "
+        "umbilical lesion of infancy. It is benign but must be "
+        "distinguished from an embryological remnant. Aetiology: "
+        "incomplete epithelialisation after the cord falls off, with "
+        "low grade inflammation leaving overgranulation. Delayed cord "
+        "separation and mild omphalitis are risks. Clinical features: "
+        "a soft pink pedunculated nodule a few millimetres across, "
+        "moist with serous discharge that stains the singlet. It does "
+        "not bleed briskly and the surrounding skin is normal. Ix: "
+        "clinical. Periumbilical redness, a firm bright red mass, or "
+        "faeculent or urinary discharge suggests a patent urachus or "
+        "omphalomesenteric duct remnant and needs ultrasound with "
+        "surgical referral. Mx: keep the area clean and dry. Topical "
+        "salt applied briefly on consecutive days resolves most "
+        "lesions, with silver nitrate cautery an alternative that "
+        "burns surrounding skin if applied carelessly. Note: pink, "
+        "soft and weeping serous fluid is a granuloma, while firm, "
+        "bright red and discharging bowel content or urine is a "
+        "remnant."
+    ),
+    "Positional plagiocephaly": (
+        "Positional plagiocephaly is flattening of one side of the "
+        "occiput from sustained external pressure, producing a "
+        "parallelogram head shape. It has been far commoner since "
+        "supine sleeping was recommended and is cosmetic rather than "
+        "neurological. Aetiology: prolonged supine positioning, "
+        "limited head rotation from congenital muscular torticollis, "
+        "and restricted intrauterine space as in multiple pregnancy. "
+        "Prematurity adds risk because the skull is softer. Clinical "
+        "features: occipital flattening on one side with the "
+        "ipsilateral ear and forehead pushed forward, giving a "
+        "parallelogram viewed from above. Sutures are open and there "
+        "is no palpable ridge. Ix: clinical, with the head inspected "
+        "from above. A ridge, a trapezoid shape or a fused suture "
+        "suggests lambdoid craniosynostosis and needs imaging with "
+        "craniofacial referral. Assess neck rotation for torticollis. "
+        "Mx: repositioning and supervised tummy time while awake from "
+        "birth. Physiotherapy treats torticollis, and helmet therapy "
+        "is reserved for severe cases between four and eight months "
+        "and is not PBS funded. Note: a parallelogram with open "
+        "sutures is positional, while a trapezoid with a ridge is "
+        "synostosis."
+    ),
+    "Safe sleeping": (
+        "Safe sleeping is the set of infant sleep practices that "
+        "reduce sudden unexpected death in infancy, promoted in "
+        "Australia by Red Nose. Deaths fell by around 85 per cent "
+        "after the first campaigns. Mechanism: prone and side "
+        "sleeping, head covering and soft shared surfaces impair "
+        "arousal and allow rebreathing of carbon dioxide in an infant "
+        "with immature autonomic control. Tobacco exposure compounds "
+        "this. Prevention: sleep the baby on the back from birth, "
+        "keep the head and face uncovered and use a firm flat "
+        "mattress in a safe cot. Keep the baby in the parents' room "
+        "for the first six to twelve months and keep the environment "
+        "smoke free before and after birth. Clinical features: risk "
+        "peaks between two and four months. Sofa sharing, sleeping "
+        "beside an adult who has used alcohol or sedatives, and loose "
+        "bedding are the highest risk practices. Mx: give the advice "
+        "at every newborn and immunisation visit, and discuss it "
+        "without blame where parents already bed share, because safer "
+        "bed sharing advice reduces harm more than prohibition does. "
+        "Note: back, face uncovered, smoke free and a safe space of "
+        "their own in the parents' room."
+    ),
+    "Amnioinfusion": (
+        "Amnioinfusion is instillation of warmed normal saline into "
+        "the uterine cavity through a transcervical catheter during "
+        "labour, used to relieve cord compression. Its role has "
+        "narrowed considerably. Indications: repetitive variable "
+        "decelerations from cord compression with ruptured membranes, "
+        "particularly where there is oligohydramnios. It is no longer "
+        "recommended for diluting meconium, because trials showed no "
+        "reduction in meconium aspiration syndrome. "
+        "Contraindications: intact membranes, chorioamnionitis and "
+        "any trace needing immediate birth. Mx: pass an intrauterine "
+        "pressure catheter and give warmed saline as a bolus of "
+        "around 500 mL, then a maintenance infusion while monitoring "
+        "fundal height and drainage. Stop for tachysystole or a "
+        "deteriorating trace. Complications: cord prolapse, uterine "
+        "overdistension with raised resting tone, infection and "
+        "rarely amniotic fluid embolism. Note: it treats cord "
+        "compression rather than meconium, and a trace that does not "
+        "improve promptly is answered by delivery rather than more "
+        "saline."
+    ),
+    "Breast milk jaundice": (
+        "Breast milk jaundice is prolonged unconjugated "
+        "hyperbilirubinaemia in a thriving breastfed baby, peaking in "
+        "the second week and settling slowly over up to twelve weeks. "
+        "It is distinct from breastfeeding jaundice, which is early "
+        "and caused by underfeeding. Mechanism: factors in mature "
+        "milk, probably beta glucuronidase and free fatty acids, "
+        "increase enterohepatic recirculation of bilirubin and "
+        "inhibit hepatic conjugation. Up to a third of breastfed "
+        "infants are affected to some degree. Clinical features: a "
+        "well baby feeding and growing normally, with jaundice "
+        "persisting beyond day fourteen. Stools are yellow and urine "
+        "is pale, which is the observation that matters. Ix: "
+        "prolonged jaundice screen with total and conjugated "
+        "bilirubin, blood group and direct antiglobulin test, plus "
+        "thyroid function and urine culture. A conjugated fraction "
+        "above 20 per cent means biliary atresia until excluded. Mx: "
+        "continue breastfeeding. Interrupting it is not recommended, "
+        "and phototherapy is needed only where levels approach "
+        "treatment thresholds. Note: pale stools with dark urine in a "
+        "jaundiced baby is an urgent referral, because surgery before "
+        "60 days changes the outcome in biliary atresia."
     ),
 }
 
