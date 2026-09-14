@@ -14013,6 +14013,222 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "alcohol associated liver disease hepatitis cirrhosis"]],
         "summary": "",
     },
+    {
+        "name": "Palliative care",
+        "aliases": ["Palliative approach", "Supportive care"],
+        "utd": [["Overview", "palliative care approach to symptom management"]],
+        "summary": "",
+    },
+    {
+        "name": "Prescribing in liver disease",
+        "aliases": ["Prescribing in hepatic impairment", "Hepatic dose adjustment"],
+        "utd": [["Overview", "drug dosing in patients with liver disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Bariatric surgery",
+        "aliases": ["Weight loss surgery", "Metabolic surgery", "Sleeve gastrectomy", "Gastric bypass"],
+        "utd": [["Overview", "bariatric surgery indications and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Obesity pharmacotherapy",
+        "aliases": ["Weight loss medication", "Anti-obesity medication"],
+        "utd": [["Overview", "pharmacotherapy for obesity management"]],
+        "summary": "",
+    },
+    {
+        "name": "Infective endocarditis prophylaxis",
+        "aliases": ["Endocarditis prophylaxis", "Antibiotic prophylaxis for dental procedures"],
+        "utd": [["Overview", "antibiotic prophylaxis for infective endocarditis"]],
+        "summary": "",
+    },
+    {
+        "name": "Deconditioning",
+        "aliases": ["Hospital associated deconditioning", "Hospital acquired deconditioning"],
+        "utd": [["Overview", "hospital associated deconditioning in older patients"]],
+        "summary": "",
+    },
+    {
+        "name": "Bowel preparation",
+        "aliases": ["Bowel prep", "Colonoscopy preparation"],
+        "utd": [["Overview", "bowel preparation before colonoscopy"]],
+        "summary": "",
+    },
+    {
+        "name": "Large volume paracentesis",
+        "aliases": ["Therapeutic paracentesis", "Albumin cover for paracentesis"],
+        "utd": [["Overview", "large volume paracentesis albumin replacement"]],
+        "summary": "",
+    },
+    {
+        "name": "Neck lump",
+        "aliases": ["Neck mass", "Neck lump assessment"],
+        "utd": [["Overview", "evaluation of a neck mass in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Food allergy",
+        "aliases": ["IgE mediated food allergy", "Nut allergy"],
+        "utd": [["Overview", "food allergy diagnosis and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Food intolerance",
+        "aliases": ["Food sensitivity", "Non-allergic food reaction"],
+        "utd": [["Overview", "food intolerance versus food allergy"]],
+        "summary": "",
+    },
+    {
+        "name": "Travellers diarrhoea",
+        "aliases": ["Travelers diarrhea", "Traveller diarrhoea"],
+        "utd": [["Overview", "travellers diarrhoea prevention and treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Malaria prophylaxis",
+        "aliases": ["Antimalarial prophylaxis", "Malaria chemoprophylaxis"],
+        "utd": [["Overview", "malaria chemoprophylaxis for travellers"]],
+        "summary": "",
+    },
+    {
+        "name": "Spider bite",
+        "aliases": ["Spider envenomation", "Arachnidism"],
+        "utd": [["Overview", "spider bite management in australia"]],
+        "summary": "",
+    },
+    {
+        "name": "Marine envenomation",
+        "aliases": ["Marine sting", "Marine envenoming"],
+        "utd": [["Overview", "marine envenomation australia jellyfish stings"]],
+        "summary": "",
+    },
+    {
+        "name": "Fitness to fly",
+        "aliases": ["Air travel fitness", "Medical clearance for air travel"],
+        "utd": [["Overview", "medical fitness for commercial air travel"]],
+        "summary": "",
+    },
+    {
+        "name": "Workers compensation",
+        "aliases": ["Workcover claim", "Return to work plan"],
+        "utd": [["Overview", "workers compensation certification and return to work"]],
+        "summary": "",
+    },
+    {
+        "name": "Medical negligence",
+        "aliases": ["Clinical negligence", "Breach of duty of care"],
+        "utd": [["Overview", "medical negligence elements duty of care"]],
+        "summary": "",
+    },
+    {
+        "name": "Enduring power of attorney",
+        "aliases": ["EPOA", "Enduring guardian"],
+        "utd": [["Overview", "enduring power of attorney substitute decision making"]],
+        "summary": "",
+    },
+    {
+        "name": "Residential aged care",
+        "aliases": ["Nursing home", "Residential aged care facility", "RACF"],
+        "utd": [["Overview", "residential aged care placement and medical care"]],
+        "summary": "",
+    },
+    {
+        "name": "Home care package",
+        "aliases": ["Home Care Packages Program", "Community aged care package"],
+        "utd": [["Overview", "home care packages australia aged care"]],
+        "summary": "",
+    },
+    {
+        "name": "Aged Care Assessment Team",
+        "aliases": ["ACAT assessment", "Aged care assessment"],
+        "utd": [["Overview", "aged care assessment team eligibility australia"]],
+        "summary": "",
+    },
+    {
+        "name": "Delirium prevention",
+        "aliases": ["Delirium prevention bundle", "Multicomponent delirium prevention"],
+        "utd": [["Overview", "multicomponent delirium prevention hospitalised older adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Continence assessment",
+        "aliases": ["Bladder diary", "Continence review"],
+        "utd": [["Overview", "assessment of urinary incontinence in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Respite care",
+        "aliases": ["Carer respite", "Planned respite"],
+        "utd": [["Overview", "respite care for carers aged care"]],
+        "summary": "",
+    },
+    {
+        "name": "Likelihood ratio",
+        "aliases": ["Positive likelihood ratio", "Negative likelihood ratio"],
+        "utd": [["Overview", "likelihood ratio diagnostic test interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Sensitivity and specificity",
+        "aliases": ["Test sensitivity", "Test specificity"],
+        "utd": [["Overview", "sensitivity specificity diagnostic accuracy"]],
+        "summary": "",
+    },
+    {
+        "name": "Absolute risk reduction",
+        "aliases": ["Risk difference", "Number needed to treat calculation"],
+        "utd": [["Overview", "absolute risk reduction number needed to treat"]],
+        "summary": "",
+    },
+    {
+        "name": "Intention to treat analysis",
+        "aliases": ["Intention to treat", "Per protocol analysis"],
+        "utd": [["Overview", "intention to treat analysis randomised trials"]],
+        "summary": "",
+    },
+    {
+        "name": "Levels of evidence",
+        "aliases": ["Evidence hierarchy", "NHMRC levels of evidence"],
+        "utd": [["Overview", "levels of evidence grading clinical recommendations"]],
+        "summary": "",
+    },
+    {
+        "name": "HEEADSSS assessment",
+        "aliases": ["Adolescent psychosocial assessment"],
+        "utd": [["Overview", "heeadsss psychosocial interview adolescent"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric early warning score",
+        "aliases": ["PEWS", "Paediatric observation chart"],
+        "utd": [["Overview", "paediatric early warning score clinical deterioration children"]],
+        "summary": "",
+    },
+    {
+        "name": "Vaping",
+        "aliases": ["Electronic cigarettes", "Nicotine vaping", "E-cigarette use"],
+        "utd": [["Overview", "electronic cigarettes nicotine vaping health effects"]],
+        "summary": "",
+    },
+    {
+        "name": "Needle and syringe program",
+        "aliases": ["Needle exchange", "Needle syringe program"],
+        "utd": [["Overview", "needle and syringe program harm reduction"]],
+        "summary": "",
+    },
+    {
+        "name": "Social determinants of health",
+        "aliases": ["Social gradient in health", "Health inequity"],
+        "utd": [["Overview", "social determinants of health inequity"]],
+        "summary": "",
+    },
+    {
+        "name": "Concussion in sport",
+        "aliases": ["Sport related concussion", "Return to play"],
+        "utd": [["Overview", "sport related concussion assessment return to play"]],
+        "summary": "",
+    },
 ]
 
 
@@ -80450,6 +80666,737 @@ RICH_SUMMARIES = {
         "or acamprosate. Prednisolone is considered in severe "
         "hepatitis. Note: transplant assessment no longer universally "
         "requires six months of abstinence."
+    ),
+
+    "Palliative care": (
+        "Palliative care is active total care of a person with a "
+        "life-limiting illness, aimed at quality of life rather than "
+        "cure, and it runs alongside disease-directed treatment "
+        "rather than beginning when that stops. Indications: any "
+        "advanced progressive illness where a clinician would not be "
+        "surprised if the person died within twelve months. Heart "
+        "failure, COPD, dementia and end-stage kidney disease qualify "
+        "as readily as cancer. Clinical features: the recurring "
+        "symptom cluster is pain, breathlessness, nausea and "
+        "constipation, with fatigue and delirium late. Mx: treat "
+        "reversible causes first, then regular background dosing with "
+        "a breakthrough dose written for every symptom. Opioids cover "
+        "both pain and breathlessness. Haloperidol or metoclopramide "
+        "for nausea, and a stimulant laxative started with any "
+        "opioid. Anticipatory subcutaneous medicines are charted "
+        "before they are needed, and a resuscitation plan and advance "
+        "care directive documented while the person can still direct "
+        "them. Note: referral is triggered by need rather than "
+        "prognosis, and early specialist involvement improves symptom "
+        "burden and mood."
+    ),
+    "Prescribing in liver disease": (
+        "Liver disease alters drug handling through reduced "
+        "first-pass metabolism, low albumin, an expanded volume of "
+        "distribution in ascites and impaired clotting factor "
+        "synthesis, and unlike renal impairment there is no clearance "
+        "estimate to dose against. Ix: Child-Pugh class is the "
+        "practical guide, since MELD predicts mortality rather than "
+        "metabolic capacity. Mx: paracetamol stays the safest "
+        "analgesic, reduced to a maximum of 2 g daily in cirrhosis. "
+        "Opioids are started low and titrated slowly because they "
+        "precipitate encephalopathy. Oxazepam is preferred if a "
+        "benzodiazepine is unavoidable, being glucuronidated rather "
+        "than oxidised. Statins are safe in compensated disease and "
+        "withheld in decompensation. Cautions: NSAIDs precipitate "
+        "hepatorenal failure and variceal bleeding and are "
+        "contraindicated. Metformin, amiodarone and methotrexate all "
+        "warrant review at each decompensation. Note: the AMH carries "
+        "drug-by-drug hepatic advice, and eTG asks for a whole-chart "
+        "review at every decompensation rather than a single formula."
+    ),
+    "Bariatric surgery": (
+        "Bariatric surgery is the most effective durable treatment "
+        "for class II and III obesity, producing 25 to 30 percent "
+        "total weight loss and remission of type 2 diabetes in "
+        "roughly half of patients. Indications: BMI over 40, or over "
+        "35 with a weight-related comorbidity such as diabetes, "
+        "obstructive sleep apnoea or fatty liver disease, after a "
+        "supervised non-surgical attempt. Types: sleeve gastrectomy "
+        "is the most common Australian operation, Roux-en-Y gastric "
+        "bypass gives greater diabetes remission and adjustable "
+        "banding has largely fallen out of use. Complications: early "
+        "staple line or anastomotic leak presents as tachycardia and "
+        "pain before any peritonism. Late problems are internal "
+        "hernia, dumping syndrome, reflux after sleeve and "
+        "micronutrient deficiency. Mx: lifelong iron, vitamin B12, "
+        "folate, calcium and vitamin D supplementation with annual "
+        "bloods. Note: tachycardia over 120 in the first week after "
+        "bariatric surgery is a leak until proven otherwise, and "
+        "imaging normal enough to reassure is not proof."
+    ),
+    "Obesity pharmacotherapy": (
+        "Drug treatment for obesity is an adjunct to diet, activity "
+        "and behavioural change, indicated at BMI over 30 or over 27 "
+        "with a weight-related comorbidity. Types: GLP-1 receptor "
+        "agonists (semaglutide, liraglutide) give the largest "
+        "non-surgical weight loss at 10 to 15 percent, and dual "
+        "GIP/GLP-1 agonism with tirzepatide more again. Phentermine, "
+        "orlistat and naltrexone with bupropion remain lower-efficacy "
+        "alternatives. Adverse effects: nausea, vomiting and "
+        "constipation dominate early GLP-1 use and improve with "
+        "slower titration. Pancreatitis and gallstones are uncommon "
+        "but real, and gastroparesis matters before any anaesthetic. "
+        "Mx: titrate monthly, review at three months and stop if less "
+        "than 5 percent weight loss has been achieved. Weight regain "
+        "after cessation is the rule, so these are chronic therapies. "
+        "PBS: none of the weight-loss indications are subsidised in "
+        "Australia, so cost drives adherence more than efficacy does. "
+        "Note: muscle mass is lost alongside fat, which makes "
+        "resistance training and protein intake part of the "
+        "prescription rather than advice."
+    ),
+    "Infective endocarditis prophylaxis": (
+        "Antibiotic prophylaxis before procedures is now confined to "
+        "the small group at highest risk of an adverse outcome from "
+        "endocarditis, not everyone with a murmur. Indications: "
+        "prosthetic valve or prosthetic repair material, previous "
+        "infective endocarditis, unrepaired cyanotic congenital heart "
+        "disease or repair with residual defect, cardiac transplant "
+        "with valvulopathy, and in Australia rheumatic heart disease "
+        "in Aboriginal and Torres Strait Islander patients. "
+        "Procedures covered are dental work involving gingival or "
+        "periapical manipulation or oral mucosal perforation, and "
+        "selected respiratory tract, infected skin and "
+        "musculoskeletal procedures. Mx: amoxicillin 2 g orally one "
+        "hour before, or clindamycin 600 mg if hypersensitive to "
+        "penicillin, per eTG. Gastrointestinal and genitourinary "
+        "procedures no longer warrant prophylaxis on their own. Note: "
+        "daily oral health prevents more endocarditis than any single "
+        "antibiotic dose does, since bacteraemia from chewing is far "
+        "more frequent than from the dentist."
+    ),
+    "Deconditioning": (
+        "Deconditioning is the loss of muscle strength, aerobic "
+        "capacity and functional independence that follows "
+        "immobility, and it is fast enough to matter within a single "
+        "admission. Older inpatients spend most of their day in bed "
+        "and lose 1 to 5 percent of muscle strength per day of bed "
+        "rest. Risk factors: age over 75, baseline frailty, cognitive "
+        "impairment, an indwelling catheter or drip that tethers the "
+        "patient, and a ward culture of bed rest orders that are "
+        "never rescinded. Clinical features: new difficulty standing, "
+        "a widened base, falls, incontinence and a discharge "
+        "destination worse than the admission one. Mx: mobilise early "
+        "and daily, sit out for meals, review every tether each "
+        "morning, and involve physiotherapy from day one rather than "
+        "at discharge planning. Treat delirium, pain and constipation "
+        "as barriers to walking. Note: a third of the functional "
+        "decline an older person suffers around an admission is "
+        "caused by the admission rather than by the illness, and it "
+        "is the part that is preventable."
+    ),
+    "Bowel preparation": (
+        "Bowel preparation clears the colon before colonoscopy or "
+        "colorectal surgery, and the quality of the preparation sets "
+        "the adenoma detection rate, so an inadequate prep means a "
+        "repeat procedure rather than a reassuring result. Types: "
+        "polyethylene glycol is iso-osmotic and safest in renal or "
+        "cardiac disease, while picosulfate and magnesium citrate "
+        "preparations are lower volume and better tolerated. Split "
+        "dosing, with half taken on the morning of the procedure, is "
+        "superior to the whole dose the night before. Cautions: "
+        "hypovolaemia, hyponatraemia and acute kidney injury follow "
+        "in frail or diuretic-treated patients. Phosphate "
+        "preparations are avoided in renal impairment and heart "
+        "failure because of acute phosphate nephropathy. Mx: clear "
+        "fluids on the day, withhold iron for five days and "
+        "anticoagulation per procedural bleeding risk, and hold ACE "
+        "inhibitors, ARBs and diuretics on the day. Note: a poor prep "
+        "in a diabetic patient is usually a missed instruction about "
+        "hypoglycaemic agents rather than noncompliance."
+    ),
+    "Large volume paracentesis": (
+        "Large volume paracentesis is the drainage of more than 5 "
+        "litres of ascitic fluid in a single session, and it is "
+        "first-line treatment for tense or diuretic-refractory "
+        "ascites. Indications: tense ascites causing pain or "
+        "breathlessness, and ascites unresponsive to maximal "
+        "spironolactone and frusemide or where those are limited by "
+        "hyponatraemia or kidney injury. Mx: drain to dryness in one "
+        "sitting rather than over days, since a drain left in longer "
+        "adds infection without adding benefit. Give 6 to 8 g of "
+        "intravenous albumin per litre removed whenever more than 5 "
+        "litres comes off. Complications: post-paracentesis "
+        "circulatory dysfunction is the one albumin prevents, "
+        "presenting days later as renal impairment and hyponatraemia "
+        "with a high mortality. Bleeding is rare and a raised INR is "
+        "not a contraindication. Note: always send fluid for cell "
+        "count and culture at the same sitting, because spontaneous "
+        "bacterial peritonitis is often silent and a neutrophil count "
+        "above 250 changes management the same day."
+    ),
+    "Neck lump": (
+        "A neck lump in an adult is malignant until proven otherwise "
+        "if it persists beyond three weeks, and the single most "
+        "useful discriminator is age. Aetiology: in children and "
+        "young adults reactive lymphadenopathy dominates. Over 40 a "
+        "persistent firm lateral neck node is metastatic squamous "
+        "cell carcinoma from the upper aerodigestive tract until "
+        "excluded, and a so-called branchial cyst presenting de novo "
+        "in that age group is a cystic nodal metastasis. Midline "
+        "lumps that move on swallowing and tongue protrusion are "
+        "thyroglossal. Ix: ultrasound with fine needle aspiration "
+        "cytology is the first test for almost every persistent lump. "
+        "Cautions: never perform an open excisional biopsy of a "
+        "lateral neck node before ENT assessment, since it "
+        "compromises later neck dissection. Mx: full ENT examination "
+        "including flexible nasendoscopy, then CT neck and chest and "
+        "panendoscopy with biopsy of the primary. Note: ask about "
+        "smoking, alcohol and HPV risk, as oropharyngeal HPV disease "
+        "presents with a cystic node and a tiny primary."
+    ),
+    "Food allergy": (
+        "Food allergy is a reproducible immune-mediated reaction to a "
+        "food, distinct from intolerance, and IgE-mediated disease "
+        "carries the risk of anaphylaxis. Australia has among the "
+        "highest infant prevalence in the world at roughly 10 percent "
+        "at one year. Aetiology: egg, cow milk, peanut, tree nut, "
+        "sesame, soy, wheat, fish and shellfish account for most "
+        "disease. Delayed introduction and eczema in infancy raise "
+        "risk. Clinical features: urticaria, angioedema, vomiting and "
+        "wheeze within minutes to two hours of ingestion. Ix: history "
+        "drives the diagnosis. Skin prick testing and specific IgE "
+        "confirm sensitisation but do not prove clinical allergy, so "
+        "testing panels without a history generate false positives. "
+        "Oral food challenge remains the reference test. Mx: targeted "
+        "avoidance, a written action plan, and an adrenaline "
+        "autoinjector where anaphylaxis risk exists. Note: ASCIA "
+        "advises introducing common allergens in the first year "
+        "rather than delaying them, which reverses earlier advice."
+    ),
+    "Food intolerance": (
+        "Food intolerance is a non-immune adverse reaction to food, "
+        "dose-dependent and without risk of anaphylaxis, and "
+        "separating it from allergy avoids both unnecessary "
+        "autoinjectors and dangerously casual avoidance. Aetiology: "
+        "enzyme deficiency as in lactase non-persistence, "
+        "pharmacological reactions to vasoactive amines, caffeine or "
+        "sulphites, and osmotic or fermentative effects of poorly "
+        "absorbed FODMAP carbohydrates. Clinical features: bloating, "
+        "wind, abdominal pain and loose stool hours after a threshold "
+        "quantity, sometimes headache or flushing. Symptoms are "
+        "reproducible with dose but not with trace exposure, which is "
+        "the practical distinction from allergy. Ix: there is no "
+        "validated blood test. IgG food antibody panels and hair "
+        "analysis are not diagnostic and are specifically advised "
+        "against by ASCIA. Structured elimination and rechallenge, "
+        "dietitian supervised, is the method. Mx: identify the "
+        "threshold and eat below it rather than excluding the food "
+        "outright. Note: a patient who tolerates a small amount of a "
+        "food does not have IgE-mediated allergy to it."
+    ),
+    "Travellers diarrhoea": (
+        "Travellers diarrhoea affects a third of travellers to "
+        "low-income regions in the first two weeks and is usually "
+        "self-limiting over three to five days. Aetiology: "
+        "enterotoxigenic E. coli is the commonest cause, with "
+        "Campylobacter predominating in South and South East Asia, "
+        "then Shigella, Salmonella and norovirus. Giardia and "
+        "Cyclospora cause the persistent cases. Clinical features: "
+        "watery stool with cramps and low-grade fever. Blood, high "
+        "fever or persistence beyond a week points to invasive "
+        "bacterial or protozoal infection. Mx: oral rehydration is "
+        "the mainstay. Loperamide is reasonable for non-dysenteric "
+        "illness and is avoided with fever or blood. Azithromycin is "
+        "the preferred standby antibiotic given rising Campylobacter "
+        "fluoroquinolone resistance in Asia. Prevention: food and "
+        "water precautions, hand hygiene, and routine antibiotic "
+        "prophylaxis is not recommended. Note: persistent diarrhoea "
+        "after return is Giardia, post-infectious irritable bowel or "
+        "newly unmasked coeliac disease far more often than ongoing "
+        "bacterial infection."
+    ),
+    "Malaria prophylaxis": (
+        "Chemoprophylaxis reduces but does not eliminate malaria "
+        "risk, so it is layered on top of bite avoidance rather than "
+        "replacing it. Indications: travel to a transmission area, "
+        "with regimen chosen by destination resistance pattern, trip "
+        "length and the traveller's comorbidities. Types: atovaquone "
+        "with proguanil is taken daily, started one to two days "
+        "before and continued seven days after, and suits short "
+        "trips. Doxycycline is daily, cheap, covers rickettsial "
+        "disease and continues four weeks after leaving. Mefloquine "
+        "is weekly and useful for long stays but is avoided with any "
+        "psychiatric or seizure history. Cautions: doxycycline causes "
+        "photosensitivity and oesophagitis if taken lying down. "
+        "Primaquine and tafenoquine require G6PD testing before use. "
+        "Mx: any fever within a year of travel to an endemic area "
+        "needs thick and thin films or rapid antigen testing, "
+        "repeated over 48 hours before exclusion. Note: the commonest "
+        "reason prophylaxis fails is stopping it on the flight home "
+        "rather than resistance."
+    ),
+    "Spider bite": (
+        "Most Australian spider bites cause local pain only, and two "
+        "genera matter clinically. Types: redback (Latrodectus) bites "
+        "cause increasing local pain, sweating at the site, regional "
+        "pain radiating proximally and systemic features of "
+        "hypertension, nausea and malaise developing over hours. "
+        "Funnel web (Atrax and Hadronyche) bites cause immediate "
+        "severe pain, perioral tingling, fasciculation, salivation, "
+        "sweating, hypertension and pulmonary oedema within minutes. "
+        "White-tail bites do not cause necrotic arachnidism, which "
+        "was disproved by prospective study. Mx: funnel web bites "
+        "need pressure immobilisation bandaging, urgent transfer and "
+        "antivenom titrated to effect. Redback bites need no bandage "
+        "since venom absorption is slow. Treat with ice and oral "
+        "analgesia, and reserve antivenom for severe or persistent "
+        "pain after discussion with the Poisons Information Centre on "
+        "13 11 26. Note: pressure immobilisation helps funnel web and "
+        "harms redback assessment, so the first question is which "
+        "spider."
+    ),
+    "Marine envenomation": (
+        "Australian marine envenomations divide by the creature and "
+        "by the first aid that helps, which differs between jellyfish "
+        "and fish stings. Types: box jellyfish (Chironex) causes "
+        "immediate excruciating linear welts and can cause cardiac "
+        "arrest within minutes. Irukandji syndrome follows a trivial "
+        "sting with a 20 to 40 minute delay, then severe generalised "
+        "pain, hypertension, vomiting and a sense of impending doom. "
+        "Bluebottle stings are painful but benign. Stonefish and "
+        "stingray injuries are penetrating with severe pain. Mx: for "
+        "tropical jellyfish douse liberally with vinegar for 30 "
+        "seconds to inactivate undischarged nematocysts, then remove "
+        "tentacles. Box jellyfish antivenom and resuscitation for "
+        "collapse. Irukandji needs opioid analgesia, "
+        "antihypertensives and observation for cardiac failure. "
+        "Stonefish and stingray wounds respond to hot water immersion "
+        "at 45 degrees, and need imaging for retained barb and "
+        "tetanus review. Note: vinegar for jellyfish, hot water for "
+        "fish, and never the reverse."
+    ),
+    "Fitness to fly": (
+        "Cabin altitude is pressurised to 1,800 to 2,400 metres, "
+        "giving an inspired oxygen tension equivalent to 15 percent "
+        "at sea level, and trapped gas expands by about 30 percent. "
+        "Both facts generate the standard restrictions. Cautions: "
+        "recent pneumothorax requires two weeks after radiographic "
+        "resolution. Recent myocardial infarction requires a few days "
+        "if uncomplicated and longer if not. Major surgery, "
+        "particularly abdominal, thoracic and intraocular, needs one "
+        "to two weeks. Uncontrolled arrhythmia, decompensated heart "
+        "failure and unstable psychiatric illness preclude travel. "
+        "Ix: a resting saturation below 95 percent prompts a hypoxic "
+        "challenge test in chronic lung disease, and in-flight oxygen "
+        "is arranged with the airline in advance. Mx: venous "
+        "thromboembolism risk rises with flights over four hours, so "
+        "advise mobility and hydration, with graduated compression "
+        "for moderate risk and prophylactic anticoagulation only for "
+        "high risk. Note: pregnancy is usually permitted to 36 weeks "
+        "for single and 32 weeks for twin pregnancy, with airline "
+        "policies varying and a letter commonly required after 28 "
+        "weeks."
+    ),
+    "Workers compensation": (
+        "Workers compensation is a no-fault statutory scheme covering "
+        "injury arising out of or in the course of employment, and "
+        "the treating doctor's role is certification and capacity "
+        "rather than adjudication of liability. Mx: issue a "
+        "certificate of capacity describing what the worker can do "
+        "rather than what they cannot. Certify fit for suitable "
+        "duties wherever possible, since total incapacity "
+        "certificates are strongly associated with never returning. "
+        "Keep certificates short and review often. Develop a return "
+        "to work plan with the employer and rehabilitation provider, "
+        "with graded hours and task restrictions that are specific "
+        "and time-limited. Cautions: long certification periods, "
+        "passive treatment and unaddressed psychosocial factors "
+        "predict chronicity more than the injury does. Note: a worker "
+        "off for 20 days has roughly a 70 percent chance of "
+        "returning, at 45 days about 50 percent and at 70 days under "
+        "35 percent, so early graded return is itself the treatment "
+        "and the conversation with the employer is part of the "
+        "clinical care."
+    ),
+    "Medical negligence": (
+        "Negligence in Australian medical law requires four elements, "
+        "all of which must be made out. Criteria: a duty of care "
+        "owed, a breach of the standard expected of a reasonable "
+        "practitioner in that field, damage suffered, and causation "
+        "linking the breach to the damage. Peer professional opinion "
+        "provides a defence for treatment decisions under the civil "
+        "liability legislation, but not for failures to warn. Notes: "
+        "Rogers v Whitaker established that the duty to warn is "
+        "measured by what this patient would consider significant "
+        "rather than by professional practice, which is why material "
+        "risk is judged subjectively. Mx: the practical protections "
+        "are contemporaneous documentation, documented discussion of "
+        "material risks and alternatives, timely follow-up of "
+        "results, clear handover, and open disclosure after an "
+        "adverse event. Open disclosure is not an admission of "
+        "liability. Note: the most common allegations in Australian "
+        "practice are diagnostic delay and failure to follow up an "
+        "abnormal result, not operative error, and both are "
+        "documentation problems as much as clinical ones."
+    ),
+    "Enduring power of attorney": (
+        "An enduring power of attorney is a document by which a "
+        "competent adult appoints someone to make decisions for them "
+        "if they later lose capacity, and the enduring part means it "
+        "survives that loss where an ordinary power of attorney does "
+        "not. Types: financial attorney covers money and property. "
+        "Enduring guardian, called an enduring power of attorney for "
+        "personal matters in some states, covers health, "
+        "accommodation and lifestyle decisions. The terminology and "
+        "forms differ by state, which matters when a patient moves. "
+        "Indications: appointment is made while capacity is intact, "
+        "so raise it early in dementia, Parkinson disease, motor "
+        "neurone disease and before major surgery. Mx: confirm the "
+        "document exists and is activated, identify which decisions "
+        "it covers, and remember a substitute decision maker must "
+        "follow the person's known wishes rather than their own "
+        "preference. Note: where no appointment was made, the state "
+        "hierarchy of default decision makers applies, and a "
+        "guardianship tribunal appointment is the slow alternative."
+    ),
+    "Residential aged care": (
+        "Residential aged care provides supported accommodation with "
+        "personal and nursing care for people who can no longer live "
+        "safely at home, and entry requires an approval through an "
+        "aged care assessment. Indications: functional decline, carer "
+        "breakdown, unsafe wandering in dementia, or nursing needs "
+        "beyond a home care package. Respite placement is available "
+        "for short-term need. Mx: on admission reconcile medications "
+        "and deprescribe, document an advance care directive and "
+        "resuscitation plan, and record the substitute decision "
+        "maker. Review antipsychotics and benzodiazepines at every "
+        "visit given the regulated restrictive practice framework. "
+        "Anticipatory prescribing and a plan for after-hours "
+        "deterioration reduce avoidable transfers. Cautions: hospital "
+        "transfer from a facility often harms more than it helps in "
+        "advanced dementia, so the decision belongs in a conversation "
+        "held before the deterioration rather than at 2 am. Note: "
+        "funding, assessment and quality regulation all changed under "
+        "the Aged Care Act reforms, so check current pathways rather "
+        "than relying on remembered process."
+    ),
+    "Home care package": (
+        "A home care package funds coordinated services that keep an "
+        "older person at home, and it sits above the entry-level "
+        "Commonwealth Home Support Programme in intensity. Types: "
+        "four levels from basic through to high care needs, with the "
+        "funding following the person rather than the provider. "
+        "Services covered include personal care, nursing, allied "
+        "health, domestic assistance, transport, respite and "
+        "equipment. Indications: assessment through My Aged Care and "
+        "an aged care assessment determines eligibility and level. "
+        "Waiting times between approval and assignment are the "
+        "practical limitation, so refer at first evidence of decline "
+        "rather than at crisis. Mx: the general practitioner's "
+        "contribution is the referral, a GP management plan and team "
+        "care arrangement, medication review and documentation of the "
+        "functional deficits that justify the level. Note: an "
+        "unassigned package is not care, so ask specifically what "
+        "services are actually in place rather than what level was "
+        "approved."
+    ),
+    "Aged Care Assessment Team": (
+        "The aged care assessment is the gateway to all "
+        "government-subsidised aged care in Australia, and nothing "
+        "beyond entry-level support can be accessed without it. "
+        "Indications: approval is needed for a home care package, "
+        "residential respite, permanent residential care and "
+        "transition care. Referral goes through My Aged Care, by the "
+        "person, family or clinician. Mx: the assessment covers "
+        "medical history, function in activities of daily living, "
+        "cognition, mobility, continence, social supports and carer "
+        "capacity. The clinician's contribution is a current medical "
+        "summary, a cognitive screen and an honest description of "
+        "function on a bad day rather than a good one. Assessment can "
+        "be done in hospital, but a hospital assessment during acute "
+        "illness overestimates need and may direct someone to "
+        "residential care they would not need after rehabilitation. "
+        "Note: approval does not expire quickly but it does lapse, "
+        "and an old approval at the wrong level is a common reason "
+        "placement stalls at the point of crisis."
+    ),
+    "Delirium prevention": (
+        "Delirium is preventable in about a third of cases, and "
+        "multicomponent non-pharmacological prevention is the only "
+        "intervention with consistent evidence, outperforming every "
+        "drug studied for the purpose. Risk factors: age over 65, "
+        "dementia or cognitive impairment, sensory impairment, severe "
+        "illness, hip fracture and current infection. Mx: the bundle "
+        "is orientation and cognitive stimulation, early "
+        "mobilisation, sleep hygiene with a non-pharmacological "
+        "protocol, hydration and nutrition, and restoring glasses and "
+        "hearing aids. Remove tethers, avoid indwelling catheters, "
+        "treat pain adequately and review anticholinergic burden. "
+        "Cautions: antipsychotics do not prevent delirium and "
+        "benzodiazepines cause it, so neither belongs in a prevention "
+        "protocol. Sedatives given for sleep are a common iatrogenic "
+        "trigger. Note: a screen such as the 4AT on admission and "
+        "daily in at-risk patients finds the hypoactive cases, which "
+        "are the majority and the ones with worse outcomes, and are "
+        "routinely missed because they are quiet."
+    ),
+    "Continence assessment": (
+        "Incontinence is common, under-reported and frequently "
+        "reversible, so the assessment starts by asking rather than "
+        "waiting to be told. Types: stress incontinence leaks on "
+        "cough or exertion, urge incontinence follows sudden urgency, "
+        "overflow presents with dribbling and a palpable bladder, and "
+        "functional incontinence reflects mobility or cognition "
+        "rather than the bladder. Aetiology: reversible contributors "
+        "are delirium, infection, atrophic vaginitis, drugs including "
+        "diuretics and sedatives, excess fluid or caffeine, "
+        "constipation and restricted mobility. Ix: urinalysis, a "
+        "three-day bladder diary, post-void residual by bladder scan, "
+        "and examination for prolapse, pelvic floor tone and "
+        "prostate. Mx: treat the reversible causes first. Pelvic "
+        "floor muscle training is first-line for stress incontinence "
+        "and bladder retraining for urge, with anticholinergics or "
+        "mirabegron second-line and topical oestrogen where atrophy "
+        "contributes. Note: an anticholinergic for urge incontinence "
+        "in an older person trades wet for confused, which is why "
+        "mirabegron is preferred with cognitive impairment."
+    ),
+    "Respite care": (
+        "Respite care is planned or emergency substitute care that "
+        "gives a carer a break, and it is a treatment for carer "
+        "strain rather than a convenience. Types: in-home respite, "
+        "centre-based day respite, cottage respite and residential "
+        "respite, which in Australia is funded for up to 63 days per "
+        "financial year with extensions available. Emergency respite "
+        "is accessed through the Carer Gateway. Indications: carer "
+        "exhaustion, carer illness or surgery, escalating behavioural "
+        "symptoms in dementia, or a trial of residential care before "
+        "permanent placement. Mx: raise it before the crisis, since "
+        "carer breakdown is the commonest immediate trigger for "
+        "unplanned permanent placement. Requires an aged care "
+        "assessment approval for residential respite. Cautions: a "
+        "person with dementia may deteriorate in an unfamiliar "
+        "environment, so prepare the facility with a personal profile "
+        "and keep the stay short. Note: ask the carer directly about "
+        "their own health and sleep, because carers systematically "
+        "under-report strain in front of the person they care for."
+    ),
+    "Likelihood ratio": (
+        "A likelihood ratio expresses how much a test result shifts "
+        "the probability of disease, and unlike sensitivity and "
+        "specificity it applies directly to an individual patient's "
+        "pre-test probability. Definition: the positive likelihood "
+        "ratio is sensitivity divided by one minus specificity, and "
+        "the negative likelihood ratio is one minus sensitivity "
+        "divided by specificity. Notes: a positive ratio above 10 or "
+        "a negative ratio below 0.1 produces large and usually "
+        "decisive shifts. Ratios between 0.5 and 2 barely move the "
+        "probability and rarely justify the test. A ratio of 1 means "
+        "the result carries no information. Mx: apply it by "
+        "converting pre-test probability to odds, multiplying by the "
+        "likelihood ratio and converting back, or read it off a Fagan "
+        "nomogram. The rough bedside version is that ratios of 2, 5 "
+        "and 10 add about 15, 30 and 45 percentage points to "
+        "probability. Note: this is why a test is worth ordering only "
+        "when the result would change management, since a low ratio "
+        "applied to a low pre-test probability changes nothing."
+    ),
+    "Sensitivity and specificity": (
+        "Sensitivity and specificity describe a test's performance "
+        "against a reference standard, and both are properties of the "
+        "test rather than of the patient in front of you. Definition: "
+        "sensitivity is the proportion of people with disease who "
+        "test positive, and specificity the proportion without "
+        "disease who test negative. Both are independent of "
+        "prevalence, which predictive values are not. Notes: a highly "
+        "sensitive test, when negative, rules disease out, and a "
+        "highly specific test, when positive, rules it in. Positive "
+        "predictive value falls as prevalence falls, which is why a "
+        "good test applied to a low-risk population generates mostly "
+        "false positives. Mx: choose sensitivity for screening and "
+        "for conditions that are dangerous to miss, and specificity "
+        "for confirmation before committing to harmful treatment. "
+        "Moving the threshold trades one for the other, which the ROC "
+        "curve displays. Note: quoted sensitivities come from studies "
+        "in selected populations, so a test performs worse in general "
+        "practice than in the tertiary cohort that validated it."
+    ),
+    "Absolute risk reduction": (
+        "Absolute risk reduction is the arithmetic difference in "
+        "event rates between control and treatment groups, and it is "
+        "the number that determines whether a treatment is worth "
+        "giving. Definition: control event rate minus treatment event "
+        "rate, with the number needed to treat being its reciprocal. "
+        "Relative risk reduction expresses the same difference as a "
+        "proportion of the baseline risk and is therefore identical "
+        "whether the baseline risk is 40 percent or 0.4 percent. "
+        "Notes: a 30 percent relative reduction on a 2 percent "
+        "baseline is a 0.6 percent absolute reduction and a number "
+        "needed to treat of 167. The same relative figure on a 20 "
+        "percent baseline gives a number needed to treat of 17. Mx: "
+        "quote absolute figures and natural frequencies when "
+        "consenting, since relative figures systematically inflate "
+        "perceived benefit for patients and clinicians alike. Note: "
+        "the number needed to harm deserves the same treatment, and a "
+        "drug is only justified when the two numbers are considered "
+        "side by side over the same time horizon."
+    ),
+    "Intention to treat analysis": (
+        "Intention to treat analyses participants in the groups to "
+        "which they were randomised, regardless of what treatment "
+        "they actually received or whether they completed it. "
+        "Definition: randomised means analysed, so crossovers, "
+        "dropouts and non-adherers stay in their original arm. Notes: "
+        "this preserves the prognostic balance that randomisation "
+        "created, since dropping non-adherers reintroduces "
+        "confounding because adherence is itself associated with "
+        "outcome. It estimates the effect of offering a treatment in "
+        "practice, which is usually the clinically relevant question. "
+        "Per protocol analysis, restricted to adherent completers, "
+        "estimates efficacy under ideal use and is biased towards "
+        "exaggerating benefit. Cautions: intention to treat is "
+        "conservative for superiority trials but anti-conservative "
+        "for non-inferiority trials, where high dropout pushes arms "
+        "together and manufactures a false non-inferiority, so both "
+        "analyses are reported. Note: check how missing data were "
+        "handled, because an intention to treat label over a "
+        "complete-case analysis is not intention to treat at all."
+    ),
+    "Levels of evidence": (
+        "Levels of evidence rank study designs by their vulnerability "
+        "to bias, and they grade the design rather than the quality "
+        "of its execution. Classification: the NHMRC hierarchy places "
+        "systematic reviews of randomised trials at level I, "
+        "individual randomised trials at II, pseudorandomised and "
+        "comparative studies at III, and case series at IV. Expert "
+        "opinion sits outside the hierarchy. Notes: a well-conducted "
+        "cohort study can be more trustworthy than a small, unblinded "
+        "trial with heavy loss to follow-up, which is why GRADE rates "
+        "quality of evidence across risk of bias, inconsistency, "
+        "indirectness, imprecision and publication bias, and can "
+        "downgrade a trial or upgrade observational data with a large "
+        "effect. Mx: a recommendation's strength depends on evidence "
+        "quality plus the balance of benefits, harms, values and "
+        "cost. Note: for questions of harm, prognosis and rare "
+        "outcomes the randomised trial is often neither available nor "
+        "the right design, so a strict hierarchy misleads."
+    ),
+    "HEEADSSS assessment": (
+        "HEEADSSS is a structured psychosocial interview for "
+        "adolescents that moves from least to most sensitive "
+        "territory, and it is the core consultation skill in "
+        "adolescent medicine. Criteria: home, education and "
+        "employment, eating, activities, drugs, sexuality, suicide "
+        "and depression, and safety. Working in that order builds "
+        "enough rapport before the difficult questions to make the "
+        "answers usable. Mx: see the young person alone for part of "
+        "every consultation from about age 12, and explain "
+        "confidentiality and its limits before starting rather than "
+        "when a disclosure forces it. Limits are risk of serious harm "
+        "to self or others and mandatory reporting obligations. Ask "
+        "open, normalising questions and screen explicitly for "
+        "suicidality, since asking does not increase risk. Note: most "
+        "adolescent morbidity is behavioural rather than organic, so "
+        "the psychosocial interview is the examination in this age "
+        "group, and the presenting complaint is frequently a ticket "
+        "of entry for something else."
+    ),
+    "Paediatric early warning score": (
+        "Paediatric early warning scores aggregate age-specific "
+        "observations into a track and trigger system, because "
+        "children compensate well and then decompensate abruptly. "
+        "Criteria: respiratory rate and effort, oxygen requirement, "
+        "heart rate, capillary refill or blood pressure, and "
+        "conscious state, each scored against age-banded normal "
+        "ranges on a colour-coded chart. Mx: a score in the coloured "
+        "zone triggers a graded response, from increased observation "
+        "frequency through medical review to a rapid response call. "
+        "Australian states use standard paediatric observation charts "
+        "with an embedded escalation pathway. Cautions: tachycardia "
+        "and tachypnoea are the earliest signs and hypotension is a "
+        "late and pre-terminal one, so a normal blood pressure is "
+        "never reassurance in a child. Note: parental concern that "
+        "the child is not behaving normally is an independent "
+        "escalation criterion in its own right on most Australian "
+        "charts, and it outperforms several vital signs."
+    ),
+    "Vaping": (
+        "Vaping devices heat a liquid of propylene glycol, glycerine, "
+        "flavourings and usually nicotine into an aerosol, and "
+        "Australian regulation now treats nicotine vapes as "
+        "therapeutic goods rather than consumer products. Clinical "
+        "features: cough, throat irritation, wheeze and nicotine "
+        "dependence with rapid onset in adolescents. EVALI, a severe "
+        "acute lung injury linked to vitamin E acetate in illicit "
+        "cannabis vapes, presents as breathlessness with bilateral "
+        "infiltrates. Notes: adolescent vaping is associated with "
+        "subsequent smoking initiation, and flavoured disposable "
+        "products drove uptake. Mx: nicotine vapes are supplied "
+        "through pharmacies for smoking cessation in adults where "
+        "approved first-line therapy has failed, and are not for "
+        "people who have never smoked. Treat dependence as nicotine "
+        "dependence, with behavioural support and consideration of "
+        "replacement therapy or varenicline. Note: ask about vaping "
+        "separately from smoking in every adolescent history, since "
+        "young people frequently do not classify themselves as "
+        "smokers."
+    ),
+    "Needle and syringe program": (
+        "Needle and syringe programs supply sterile injecting "
+        "equipment and are among the most cost-effective public "
+        "health interventions ever evaluated in Australia, credited "
+        "with holding HIV prevalence among people who inject drugs "
+        "below 2 percent when comparable countries reached 20 percent "
+        "or higher. Indications: anyone injecting drugs, accessed "
+        "through fixed sites, pharmacies, outreach and vending "
+        "machines depending on jurisdiction. Mx: supply equipment "
+        "without requiring identification or treatment engagement, "
+        "provide safe disposal, and use the contact opportunistically "
+        "for hepatitis C testing and treatment, hepatitis B "
+        "vaccination, wound care, naloxone supply and referral. "
+        "Notes: the programs do not increase injecting frequency or "
+        "drug initiation, which has been examined repeatedly. Note: "
+        "hepatitis C is now curable with direct-acting antivirals "
+        "available on the PBS to any prescriber, so a person "
+        "collecting equipment is also a person who can be cured and "
+        "reinfection is not a reason to withhold treatment."
+    ),
+    "Social determinants of health": (
+        "The social determinants of health are the conditions in "
+        "which people are born, grow, live, work and age, and they "
+        "account for considerably more variation in health outcomes "
+        "than health care itself does. Types: income and its "
+        "security, education, employment conditions, housing, food "
+        "security, social inclusion and access to services. Racism "
+        "and discrimination act as determinants in their own right. "
+        "Notes: the relationship is graded rather than a threshold, "
+        "so each step down the socioeconomic ladder carries worse "
+        "health, which is why targeting only the poorest misses most "
+        "of the effect. In Australia the life expectancy gap for "
+        "Aboriginal and Torres Strait Islander people is the starkest "
+        "expression, and remoteness compounds it. Mx: clinically this "
+        "means asking about housing, food and finances as history, "
+        "referring to social work and financial counselling, and "
+        "writing prescriptions the person can actually afford. Note: "
+        "advice that assumes resources the patient does not have "
+        "reads as non-adherence in the notes."
+    ),
+    "Concussion in sport": (
+        "Sport related concussion is a traumatic brain injury induced "
+        "by biomechanical forces, with functional rather than "
+        "structural injury, so imaging is normal and does not exclude "
+        "it. Clinical features: headache, confusion, amnesia, "
+        "dizziness, balance disturbance, slowed responses and "
+        "emotional lability. Loss of consciousness occurs in fewer "
+        "than one in ten. Symptoms may evolve over hours. Mx: "
+        "immediate and permanent removal from play on suspicion, with "
+        "no same-day return at any level. Assess with a sideline "
+        "tool, screen for cervical spine injury, and arrange medical "
+        "review. Relative rest for 24 to 48 hours, then graded return "
+        "to learning or work before graded return to sport, advancing "
+        "a stage every 24 hours if symptom free. Australian community "
+        "guidance advises a minimum of 21 days before return to "
+        "contact for community and youth sport. Red flags: "
+        "deteriorating conscious state, repeated vomiting, seizure, "
+        "focal deficit or worsening headache need urgent imaging. "
+        "Note: if in doubt, sit them out."
     ),
 }
 
