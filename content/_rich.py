@@ -7132,7 +7132,7 @@ NEW_CONDITIONS = [
     },
     {
         "name": "Antenatal care schedule",
-        "aliases": ["antenatal care", "antenatal visits", "antenatal visit schedule", "schedule of antenatal visits", "pregnancy care schedule", "antenatal booking visit"],
+        "aliases": ["antenatal care", "antenatal visits", "antenatal visit schedule", "schedule of antenatal visits", "pregnancy care schedule", "antenatal booking visit", "Antenatal screening", "Antenatal screening tests", "Screening in pregnancy"],
         "utd": [["Overview", "prenatal care initial assessment"]],
         "summary": "",
     },
@@ -12979,6 +12979,60 @@ NEW_CONDITIONS = [
         "name": "Gastro-oesophageal reflux in infants",
         "aliases": ["infant reflux", "infant regurgitation", "posseting"],
         "utd": [["Overview", "infant gastroesophageal reflux management"]],
+        "summary": "",
+    },
+    {
+        "name": "First trimester drug risk",
+        "aliases": ["Medications with dysmorphogenic risk in the first trimester", "Dysmorphogenic drug risk", "Teratogenic medications", "First trimester teratogen exposure"],
+        "utd": [["Overview", "prenatal exposure to teratogens and drugs of concern"]],
+        "summary": "",
+    },
+    {
+        "name": "Genetic counselling",
+        "aliases": ["Prenatal counselling for inheritable genetic abnormalities", "Genetic counseling", "Clinical genetics referral"],
+        "utd": [["Overview", "genetic counseling family history assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Fertilisation",
+        "aliases": ["Fertilization", "Physiology of normal fertilisation", "Physiology of fertilisation"],
+        "utd": [["Overview", "fertilization and implantation"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervical dilatation",
+        "aliases": ["Cervical dilation", "Cervical dilatation in labour"],
+        "utd": [["Overview", "normal labor and delivery cervical dilation"]],
+        "summary": "",
+    },
+    {
+        "name": "Obstetric history",
+        "aliases": ["Antenatal history", "Obstetric history taking"],
+        "utd": [["Overview", "prenatal care initial assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Gynaecological history",
+        "aliases": ["Gynaecological history taking", "Gynecological history"],
+        "utd": [["Overview", "gynecologic history and physical examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Sexually transmitted infections",
+        "aliases": ["Sexually transmitted infection", "STIs", "Venereal disease"],
+        "utd": [["Overview", "screening for sexually transmitted infections"]],
+        "summary": "",
+    },
+    {
+        "name": "Support in labour",
+        "aliases": ["One-to-one care in labour", "Mobilisation in labour", "Hydration in labour", "Continuous support in labour", "Supportive care in labour"],
+        "utd": [["Overview", "continuous labor support"]],
+        "summary": "",
+    },
+    {
+        "name": "Maternal and perinatal health indicators",
+        "aliases": ["Perinatal health indicators", "Maternal health indicators"],
+        "utd": [["Overview", "maternal mortality and perinatal mortality definitions"]],
         "summary": "",
     },
 ]
@@ -75806,6 +75860,190 @@ RICH_SUMMARIES = {
         "crying or regurgitation in infants and raises rates of "
         "gastroenteritis and chest infection, so it is reserved for "
         "proven oesophagitis."
+    ),
+
+    "First trimester drug risk": (
+        "Harm from a drug taken in early pregnancy that changes how "
+        "the baby is formed, rather than how a formed baby functions. "
+        "Features: organogenesis runs from about day 17 to day 56 "
+        "after conception, roughly 5 to 10 weeks by dates, and is the "
+        "window in which a structural malformation can be produced. "
+        "Before day 17 exposure is all or nothing - the pregnancy "
+        "either miscarries or is unaffected - so a woman who took "
+        "something before her missed period can usually be reassured. "
+        "Causes: isotretinoin, dispensed under a pregnancy prevention "
+        "program, causes craniofacial, cardiac and central nervous "
+        "system defects; sodium valproate causes neural tube defects "
+        "and the largest neurodevelopmental effect of any "
+        "antiepileptic; methotrexate, mycophenolate, thalidomide and "
+        "warfarin are each characteristic. Mx: review medicines "
+        "before conception rather than at booking, swap to the "
+        "best-studied agent that controls the illness, and give "
+        "high-dose folic acid where an antiepileptic warrants it. "
+        "Note: an exposure already past is a counselling problem, not "
+        "a prescribing one - quantify it against the 3 to 5 percent "
+        "background rate of major malformation rather than stopping a "
+        "needed drug."
+    ),
+    "Genetic counselling": (
+        "A non-directive process helping a person understand a "
+        "genetic condition, how it is inherited, what testing can and "
+        "cannot answer, and what the options are. Indications: a "
+        "known genetic condition in the family, a child with a "
+        "congenital anomaly, intellectual disability or dysmorphism, "
+        "consanguinity, recurrent miscarriage, an abnormal antenatal "
+        "screening result, and before predictive testing for an "
+        "adult-onset condition such as Huntington disease or a "
+        "familial cancer syndrome. Features: a three-generation "
+        "pedigree comes first, since it often moves the risk estimate "
+        "more than any test does; the counsellor gives a recurrence "
+        "risk, explains which test would be informative, and works "
+        "through what a result would mean for relatives who have not "
+        "asked to know. Ix: targeted single-gene testing, gene "
+        "panels, chromosomal microarray for developmental delay, and "
+        "exome sequencing where a panel is uninformative. Mx: "
+        "referral to a public clinical genetics or familial cancer "
+        "service, which in Australia is the usual pathway. Note: "
+        "predictive testing for an untreatable adult-onset condition "
+        "is offered over more than one visit and never on the day it "
+        "is first raised."
+    ),
+    "Fertilisation": (
+        "Fusion of one sperm with a secondary oocyte in the ampulla "
+        "of the fallopian tube to form a diploid zygote. Mechanism: "
+        "of the hundreds of millions of sperm ejaculated only a few "
+        "hundred reach the ampulla, and in transit they capacitate, "
+        "shedding seminal glycoproteins and membrane cholesterol so "
+        "they become hyperactive and able to react. Binding to the "
+        "zona pellucida triggers the acrosome reaction, whose enzymes "
+        "digest a path through the zona to the oolemma. Membrane "
+        "fusion raises intracellular calcium and sets off the "
+        "cortical reaction, which hardens the zona as the block to "
+        "polyspermy; the oocyte then completes meiosis II and "
+        "extrudes the second polar body, and the two pronuclei fuse "
+        "at syngamy about a day later. Phases: cleavage to a morula "
+        "over days 3 to 4, blastocyst at day 5, implantation at about "
+        "day 6 to 7. Note: the oocyte is fertilisable for roughly 12 "
+        "to 24 hours while sperm survive up to 5 days in the female "
+        "tract, so the fertile window is the five days before "
+        "ovulation and the day of it."
+    ),
+    "Cervical dilatation": (
+        "Opening of the cervical os in labour, measured in "
+        "centimetres from closed to fully dilated at 10 cm; the other "
+        "half of cervical change is effacement, which has its own "
+        "entry. Examination: estimated digitally by spreading the "
+        "fingers across the cervical rim at vaginal examination, and "
+        "recorded with effacement, consistency, position, station, "
+        "caput and moulding. Phases: the latent phase is slow "
+        "dilatation alongside effacement, and the active phase of "
+        "faster dilatation is now taken from about 5 to 6 cm in "
+        "Australian and WHO practice rather than the older 3 to 4 cm. "
+        "Criteria: no single rate defines adequate progress. WHO no "
+        "longer treats 1 cm per hour as a minimum, since many normal "
+        "labours are slower and still progressing; Australian units "
+        "diagnose arrest only when there is no cervical change over 4 "
+        "hours at 6 cm or more with adequate contractions. Note: "
+        "dilatation alone is not labour - a multipara can sit at 2 to "
+        "3 cm for weeks, so the diagnosis needs progressive change on "
+        "serial examination, plotted against time."
+    ),
+    "Obstetric history": (
+        "The structured account of this pregnancy and every previous "
+        "one, taken at booking and updated at each visit. Pregnancy: "
+        "last menstrual period and cycle regularity, the estimated "
+        "date of birth and how it was set, since a first trimester "
+        "ultrasound overrides the dates when the two disagree; then "
+        "gestation now, singleton or multiple, placental site, "
+        "screening already done, fetal movements, and any bleeding, "
+        "pain, hypertension or infection. Hx: each previous pregnancy "
+        "in order, with gestation at birth, onset and mode of birth, "
+        "birthweight and sex, complications and outcome, including "
+        "miscarriage, termination and ectopic; then gynaecological, "
+        "medical, surgical, drug and allergy history. Gravidity and "
+        "parity carries the G and P shorthand. Screening: Australian "
+        "antenatal care asks every woman about alcohol, smoking, "
+        "mood, and domestic and family violence, the last of these in "
+        "private with no partner or relative in the room. Note: the "
+        "gestation and mode of every previous birth set the plan for "
+        "this one."
+    ),
+    "Gynaecological history": (
+        "History built around the menstrual cycle, fertility and the "
+        "cervical screening record, framed by the presenting "
+        "complaint. Hx: last menstrual period, cycle length and "
+        "regularity, duration and heaviness of bleeding, clots and "
+        "flooding, dysmenorrhoea, and intermenstrual or postcoital "
+        "bleeding; then pelvic pain, dyspareunia, discharge, prolapse "
+        "and urinary or bowel symptoms, and any postmenopausal "
+        "bleeding. Screening: the National Cervical Screening Program "
+        "tests for human papillomavirus five yearly from 25 to 74, "
+        "with self-collection available, so ask the date and result "
+        "of the last test rather than whether she has had a smear. "
+        "Note: contraception now and in the past, pregnancy "
+        "intention, and an obstetric and sexual history belong in "
+        "every gynaecological history; sexual history and "
+        "contraception each have their own entry. Key point: "
+        "postmenopausal bleeding is endometrial cancer until proven "
+        "otherwise and needs urgent ultrasound and referral."
+    ),
+    "Sexually transmitted infections": (
+        "Infections passed by sexual contact, most of them "
+        "asymptomatic in most of the people carrying them, which is "
+        "why testing is driven by risk rather than symptoms. "
+        "Aetiology: chlamydia is the commonest notified infection in "
+        "Australia and is silent in the majority; gonorrhoea is "
+        "rising and increasingly resistant; syphilis has resurged, "
+        "with congenital cases again being reported. Also "
+        "trichomonas, Mycoplasma genitalium, herpes simplex, human "
+        "papillomavirus, HIV and hepatitis B. Ix: anyone diagnosed "
+        "with one infection is tested for all of them, since "
+        "acquisition risk is shared and co-infection is common; "
+        "specimens and window periods are set out under sexually "
+        "transmitted infection testing. Mx: treat per eTG, treat "
+        "partners, and abstain until treatment is complete. Note: "
+        "chlamydia, gonorrhoea, syphilis, HIV and hepatitis B are "
+        "notifiable in every Australian jurisdiction, and contact "
+        "tracing is part of the treatment, not an optional extra."
+    ),
+    "Support in labour": (
+        "The non-pharmacological care around a labouring woman - who "
+        "is with her, how she moves, and what she eats and drinks. "
+        "Mx: continuous one-to-one support from a midwife, partner or "
+        "doula, present throughout rather than intermittently. "
+        "Cochrane evidence shows more spontaneous vaginal births, "
+        "less analgesia, shorter labour, fewer operative births and "
+        "better satisfaction, with no identified harm, and the effect "
+        "is largest when the supporter is not a member of hospital "
+        "staff. Features: upright and mobile positions in the first "
+        "stage shorten it and reduce epidural use, so a woman should "
+        "not be confined to bed unless continuous monitoring or an "
+        "epidural requires it. Note: eating and drinking are not "
+        "restricted in low-risk labour in current Australian "
+        "practice. The old nil by mouth rule came from aspiration "
+        "under general anaesthesia, and regional anaesthesia for "
+        "caesarean removed most of that risk. Pearls: water "
+        "immersion, heat packs, massage and TENS sit alongside the "
+        "pharmacological options under labour analgesia."
+    ),
+    "Maternal and perinatal health indicators": (
+        "The counting rules behind Australian maternity statistics, "
+        "each of which has its own entry. Criteria: the maternal "
+        "mortality ratio is deaths during pregnancy or within 42 days "
+        "of its end, per 100 000 women giving birth, split into "
+        "direct obstetric causes, indirect medical causes aggravated "
+        "by pregnancy, and incidental deaths that are excluded from "
+        "the ratio. A stillbirth in Australia is fetal death from 20 "
+        "completed weeks or 400 g where gestation is unknown. A "
+        "neonatal death is death of a liveborn baby within 28 days, "
+        "early within 7. Perinatal mortality combines stillbirths and "
+        "neonatal deaths. Note: the denominators differ, which is "
+        "what makes the rates confusable. Perinatal mortality is "
+        "expressed per 1000 births with stillbirths counted in the "
+        "denominator, while neonatal mortality uses live births "
+        "alone. Key point: these figures exist for state and national "
+        "committee review of preventable factors, not for comparing "
+        "individual clinicians."
     ),
 }
 
