@@ -5,6 +5,54 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.8.0] - 2026-09-14
+
+### Added
+
+- **Spelling an acronym out now opens the same popup as the acronym.**
+  272 of the 485 expansions in the acronym dictionary had never fired
+  once. The matcher was built from the keys alone, so "CRP" opened a
+  popup and "C-reactive protein" did not, on the same card, with the
+  same content sitting behind it. Expansions are matched
+  case-insensitively, unlike the keys - the dictionary stores Title
+  Case and cards are written in sentence case, so matching them the way
+  acronyms are matched would have closed the gap on paper and left it
+  open on every real card. A card that writes both forms gets both
+  underlined; a card that writes only the expansion does not get the
+  three-letter key marked as well. 40 expansions are left alone as
+  phrases that appear in ordinary clinical prose - "Emergency
+  Department", "Heart Rate", "Per Os" - and 11 more carry an editorial
+  parenthetical no card contains. Where a condition entry and an
+  expansion name the same thing, the condition's fuller summary still
+  wins.
+
+### Changed
+
+- **The content channel no longer has a practical size ceiling.** The
+  updater's backstop is 4 GiB, up from 32 MB, and from a flat 8 MB
+  before that. Both earlier figures were chosen against the library as
+  it stood at the time and shipped inside the client, where they would
+  eventually have switched content updates off with no visible cause.
+  The download is still bounded by the size the manifest declares,
+  still has to match the manifest's sha256, and still has to come from
+  a pinned host; none of that changes.
+- The publish script's 8 MB warning has been removed. It was measuring
+  a population that cannot receive content at all - the release-asset
+  host was only allowed in 2.6.3, and the 8 MB limit was replaced in
+  2.5.0, so no client has ever both accepted a download and stopped at
+  8 MB.
+
+### Content
+
+- 124 entries added, and 150 alias strings so that a card can use the
+  wording a curriculum uses. Measured against the Year 4 frameworks,
+  genuinely-missing items fell from 188 to 92 across Medicine,
+  Obstetrics and Gynaecology, Paediatrics and Psychiatry. Most of that
+  was wording rather than absence: the frameworks say "Cervical
+  screening" where the library said "Cervical screening test", "Fetal
+  death" where it said "Stillbirth", "Perineal laceration" where it
+  said "Perineal tear".
+
 ## [2.7.0] - 2026-09-09
 
 Everything here was found by using the add-on rather than by reading it.
