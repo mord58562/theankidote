@@ -13797,6 +13797,222 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "breast milk jaundice prolonged neonatal hyperbilirubinaemia"]],
         "summary": "",
     },
+    {
+        "name": "Corrected calcium",
+        "aliases": ["calcium correction", "albumin-corrected calcium", "adjusted calcium"],
+        "utd": [["Overview", "corrected calcium albumin hypocalcaemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Haptoglobin",
+        "aliases": ["haptoglobin level", "low haptoglobin"],
+        "utd": [["Overview", "haptoglobin haemolysis laboratory evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Free light chain assay",
+        "aliases": ["serum free light chains", "kappa lambda ratio", "free light chains"],
+        "utd": [["Overview", "serum free light chain assay myeloma amyloidosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Anti-CCP antibody",
+        "aliases": ["anti-cyclic citrullinated peptide antibody", "anti-CCP", "ACPA"],
+        "utd": [["Overview", "anti cyclic citrullinated peptide antibody rheumatoid arthritis"]],
+        "summary": "",
+    },
+    {
+        "name": "Creatinine clearance",
+        "aliases": ["Cockcroft-Gault equation", "Cockcroft-Gault", "creatinine clearance calculation"],
+        "utd": [["Overview", "creatinine clearance Cockcroft Gault drug dosing"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroid autoantibodies",
+        "aliases": ["thyroid peroxidase antibody", "anti-TPO antibody", "TSH receptor antibody", "thyroglobulin antibody"],
+        "utd": [["Overview", "thyroid autoantibodies peroxidase TSH receptor testing"]],
+        "summary": "",
+    },
+    {
+        "name": "C-peptide",
+        "aliases": ["C peptide", "serum C-peptide"],
+        "utd": [["Overview", "C peptide measurement hypoglycaemia diabetes classification"]],
+        "summary": "",
+    },
+    {
+        "name": "Hepatitis B serology",
+        "aliases": ["hepatitis B serology interpretation", "HBsAg", "anti-HBc", "anti-HBs", "hepatitis B markers"],
+        "utd": [["Overview", "hepatitis B serologic markers interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Urine anion gap",
+        "aliases": ["urinary anion gap"],
+        "utd": [["Overview", "urine anion gap normal anion gap metabolic acidosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Transtubular potassium gradient",
+        "aliases": ["TTKG", "transtubular potassium concentration gradient"],
+        "utd": [["Overview", "transtubular potassium gradient hyperkalaemia evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Free water deficit",
+        "aliases": ["water deficit calculation", "free water deficit calculation"],
+        "utd": [["Overview", "free water deficit hypernatraemia correction"]],
+        "summary": "",
+    },
+    {
+        "name": "Pseudohyponatraemia",
+        "aliases": ["factitious hyponatraemia", "spurious hyponatraemia"],
+        "utd": [["Overview", "pseudohyponatraemia hypertriglyceridaemia paraprotein"]],
+        "summary": "",
+    },
+    {
+        "name": "Water deprivation test",
+        "aliases": ["fluid deprivation test", "desmopressin test"],
+        "utd": [["Overview", "water deprivation test polyuria diabetes insipidus"]],
+        "summary": "",
+    },
+    {
+        "name": "Direct oral anticoagulant reversal",
+        "aliases": ["DOAC reversal", "apixaban reversal", "rivaroxaban reversal", "dabigatran reversal"],
+        "utd": [["Overview", "reversal of direct oral anticoagulants bleeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Steroid sick day rules",
+        "aliases": ["sick day rules for steroids", "stress dose steroids", "steroid stress dosing"],
+        "utd": [["Overview", "glucocorticoid stress dosing adrenal insufficiency illness"]],
+        "summary": "",
+    },
+    {
+        "name": "Corticosteroid tapering",
+        "aliases": ["steroid taper", "prednisolone taper", "weaning corticosteroids"],
+        "utd": [["Overview", "glucocorticoid withdrawal tapering adrenal suppression"]],
+        "summary": "",
+    },
+    {
+        "name": "Azathioprine monitoring",
+        "aliases": ["thiopurine monitoring", "thiopurine methyltransferase testing", "TPMT testing"],
+        "utd": [["Overview", "azathioprine monitoring thiopurine methyltransferase toxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Amiodarone monitoring",
+        "aliases": ["amiodarone toxicity monitoring", "amiodarone surveillance"],
+        "utd": [["Overview", "amiodarone adverse effects monitoring thyroid pulmonary"]],
+        "summary": "",
+    },
+    {
+        "name": "Gentamicin dosing",
+        "aliases": ["gentamicin dose", "aminoglycoside dosing", "once daily gentamicin"],
+        "utd": [["Overview", "gentamicin dosing monitoring nephrotoxicity ototoxicity"]],
+        "summary": "",
+    },
+    {
+        "name": "Vancomycin dosing",
+        "aliases": ["vancomycin dose", "vancomycin monitoring", "vancomycin levels"],
+        "utd": [["Overview", "vancomycin dosing therapeutic drug monitoring AUC"]],
+        "summary": "",
+    },
+    {
+        "name": "Allopurinol dosing",
+        "aliases": ["allopurinol titration", "urate lowering therapy dosing"],
+        "utd": [["Overview", "allopurinol dosing gout urate target hypersensitivity"]],
+        "summary": "",
+    },
+    {
+        "name": "Needle thoracostomy",
+        "aliases": ["needle decompression", "needle thoracocentesis", "chest decompression"],
+        "utd": [["Overview", "needle decompression tension pneumothorax technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Intraosseous access",
+        "aliases": ["intraosseous needle", "intraosseous cannulation", "IO access"],
+        "utd": [["Overview", "intraosseous vascular access resuscitation"]],
+        "summary": "",
+    },
+    {
+        "name": "Permissive hypotension",
+        "aliases": ["hypotensive resuscitation", "permissive hypotensive resuscitation"],
+        "utd": [["Overview", "permissive hypotension damage control resuscitation haemorrhage"]],
+        "summary": "",
+    },
+    {
+        "name": "Refractory anaphylaxis",
+        "aliases": ["adrenaline resistant anaphylaxis", "refractory anaphylactic shock"],
+        "utd": [["Overview", "refractory anaphylaxis adrenaline infusion management"]],
+        "summary": "",
+    },
+    {
+        "name": "Charlson comorbidity index",
+        "aliases": ["Charlson index", "Charlson score"],
+        "utd": [["Overview", "Charlson comorbidity index mortality prediction"]],
+        "summary": "",
+    },
+    {
+        "name": "Abbreviated Mental Test Score",
+        "aliases": ["abbreviated mental test", "AMTS", "AMT-10", "AMT4"],
+        "utd": [["Overview", "abbreviated mental test score cognitive screening older patients"]],
+        "summary": "",
+    },
+    {
+        "name": "AUDIT-C",
+        "aliases": ["alcohol use disorders identification test consumption", "AUDIT-C score", "alcohol screening questionnaire"],
+        "utd": [["Overview", "AUDIT C alcohol screening questionnaire primary care"]],
+        "summary": "",
+    },
+    {
+        "name": "ECOG performance status",
+        "aliases": ["ECOG status", "performance status", "Eastern Cooperative Oncology Group performance status"],
+        "utd": [["Overview", "ECOG performance status oncology prognosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulmonary Embolism Severity Index",
+        "aliases": ["PESI score", "simplified PESI", "pulmonary embolism severity index score"],
+        "utd": [["Overview", "pulmonary embolism severity index outpatient management"]],
+        "summary": "",
+    },
+    {
+        "name": "Hospital in the Home",
+        "aliases": ["hospital in the home program", "HITH", "home-based acute care"],
+        "utd": [["Overview", "hospital in the home outpatient parenteral antimicrobial therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Closing the Gap",
+        "aliases": ["Closing the Gap agreement", "Closing the Gap PBS Co-payment Programme"],
+        "utd": [["Overview", "Closing the Gap Aboriginal Torres Strait Islander health equity"]],
+        "summary": "",
+    },
+    {
+        "name": "Transition care",
+        "aliases": ["transition care programme", "transitional aged care"],
+        "utd": [["Overview", "transition care program older patients after hospitalisation"]],
+        "summary": "",
+    },
+    {
+        "name": "Leukostasis",
+        "aliases": ["hyperleukocytosis", "leucostasis", "symptomatic hyperleukocytosis"],
+        "utd": [["Overview", "leukostasis hyperleukocytosis acute leukaemia emergency"]],
+        "summary": "",
+    },
+    {
+        "name": "Hyperviscosity syndrome",
+        "aliases": ["serum hyperviscosity", "plasma hyperviscosity"],
+        "utd": [["Overview", "hyperviscosity syndrome Waldenstrom macroglobulinaemia plasmapheresis"]],
+        "summary": "",
+    },
+    {
+        "name": "Alcohol-related liver disease",
+        "aliases": ["alcoholic liver disease", "alcohol related liver disease", "alcoholic steatosis"],
+        "utd": [["Overview", "alcohol associated liver disease hepatitis cirrhosis"]],
+        "summary": "",
+    },
 ]
 
 
@@ -79482,6 +79698,758 @@ RICH_SUMMARIES = {
         "treatment thresholds. Note: pale stools with dark urine in a "
         "jaundiced baby is an urgent referral, because surgery before "
         "60 days changes the outcome in biliary atresia."
+    ),
+
+    "Corrected calcium": (
+        "Adjustment of total serum calcium for albumin concentration, "
+        "since about half of circulating calcium is protein-bound and "
+        "only the ionised fraction is physiologically active. Uses: "
+        "interpreting any calcium result alongside an abnormal "
+        "albumin, which covers most acutely unwell inpatients. The "
+        "usual formula adds 0.02 mmol/L to the measured calcium for "
+        "every 1 g/L that albumin sits below 40. Features: a "
+        "hypoalbuminaemic patient with cirrhosis, nephrotic syndrome "
+        "or sepsis can read normocalcaemic on total calcium while "
+        "genuinely hypocalcaemic, and the reverse holds in "
+        "dehydration. Ix: most Australian laboratories report the "
+        "corrected value automatically, so check whether the number "
+        "in front of you is already adjusted before adjusting it "
+        "again. Ionised calcium on a blood gas is the direct measure "
+        "and is preferred in critical illness, massive transfusion "
+        "and acid-base disturbance, where binding shifts "
+        "unpredictably. Note: correction is an estimate, not a "
+        "measurement. If the clinical picture and the corrected value "
+        "disagree, order an ionised calcium rather than repeating the "
+        "arithmetic."
+    ),
+    "Haptoglobin": (
+        "Plasma protein that binds free haemoglobin released from "
+        "lysed red cells and clears the complex through hepatic "
+        "receptors. Uses: confirming intravascular haemolysis, where "
+        "consumption outstrips synthesis and the level falls to "
+        "unrecordable. Features: a low haptoglobin with raised "
+        "lactate dehydrogenase, raised unconjugated bilirubin and a "
+        "high reticulocyte count is the classic haemolytic screen, "
+        "and the four together are far more useful than any one "
+        "alone. Cautions: haptoglobin is an acute phase reactant, so "
+        "sepsis or inflammation can lift it into the normal range and "
+        "mask haemolysis. It is also low in advanced liver disease "
+        "from failed synthesis without any haemolysis at all. Ix: "
+        "pair it with a blood film for schistocytes, a direct "
+        "antiglobulin test to separate immune from non-immune causes, "
+        "and urinary haemosiderin when intravascular haemolysis is "
+        "suspected but serum markers have normalised. Note: "
+        "extravascular haemolysis in the spleen drops haptoglobin far "
+        "less than intravascular, so a normal level does not exclude "
+        "it."
+    ),
+    "Free light chain assay": (
+        "Serum immunoassay measuring unbound kappa and lambda "
+        "immunoglobulin light chains and, more importantly, their "
+        "ratio. Uses: diagnosis and monitoring of plasma cell "
+        "dyscrasias, and the most sensitive test for light chain only "
+        "myeloma and AL amyloidosis, which produce no paraprotein "
+        "band on electrophoresis. Features: a skewed kappa to lambda "
+        "ratio indicates clonal production, whereas both chains "
+        "rising together with a preserved ratio is the expected "
+        "finding in renal impairment, since light chains are cleared "
+        "by the kidney. Ix: order alongside serum protein "
+        "electrophoresis and immunofixation rather than instead of "
+        "them. An involved to uninvolved ratio of 100 or more with an "
+        "involved chain above 100 mg/L is a myeloma defining event, "
+        "allowing treatment before end organ damage appears. Mx: the "
+        "ratio tracks response faster than paraprotein and is the "
+        "only monitoring option in light chain disease. Note: urine "
+        "Bence Jones protein has largely been replaced by this assay, "
+        "which is more sensitive and needs no timed collection."
+    ),
+    "Anti-CCP antibody": (
+        "Antibody against cyclic citrullinated peptides, the most "
+        "specific serological marker of rheumatoid arthritis. Uses: "
+        "diagnosis in early inflammatory arthritis and prognosis "
+        "thereafter. Features: specificity is around 95 per cent "
+        "against 70 per cent for rheumatoid factor, with similar "
+        "sensitivity, so a positive result in an undifferentiated "
+        "polyarthritis is close to diagnostic. It may precede "
+        "clinical synovitis by years. Antibody positive disease is "
+        "more erosive and more often extra-articular, which is why it "
+        "earns extra weight in the classification criteria. Ix: "
+        "request with rheumatoid factor, inflammatory markers and "
+        "hand and foot films at first presentation. Smoking and "
+        "shared epitope HLA-DRB1 alleles drive citrullination and the "
+        "antibody response. Mx: a positive result in early disease "
+        "justifies prompt rheumatology referral and early "
+        "conventional synthetic DMARD therapy, usually methotrexate, "
+        "rather than watchful waiting. Note: unlike rheumatoid factor "
+        "it is not raised by hepatitis C, Sjogren syndrome or ageing, "
+        "which is what makes it the more useful of the two."
+    ),
+    "Creatinine clearance": (
+        "Estimate of glomerular filtration from the Cockcroft-Gault "
+        "equation using age, weight, sex and serum creatinine, "
+        "reported in mL/min rather than normalised to body surface "
+        "area. Uses: drug dosing. Most Australian product information "
+        "and the AMH define renal dose adjustment against "
+        "Cockcroft-Gault, not eGFR, because that is what the "
+        "registration studies used. Features: eGFR from the CKD-EPI "
+        "equation is indexed to 1.73 square metres and is the right "
+        "tool for staging chronic kidney disease, but it misestimates "
+        "clearance at the extremes of body size, which is where "
+        "dosing errors happen. Cautions: the two diverge most in the "
+        "small elderly patient, where eGFR reads reassuringly higher "
+        "than true clearance, and in obesity, where substituting "
+        "actual body weight overestimates it. Mx: use Cockcroft-Gault "
+        "with ideal or adjusted body weight for the direct oral "
+        "anticoagulants, aminoglycosides, digoxin and renally cleared "
+        "antivirals. Note: neither equation is valid while creatinine "
+        "is moving, so both overstate function in acute kidney "
+        "injury."
+    ),
+    "Thyroid autoantibodies": (
+        "Antibodies against thyroid peroxidase, thyroglobulin and the "
+        "TSH receptor, used to assign a cause once thyroid function "
+        "is known to be abnormal. Uses: peroxidase antibodies "
+        "identify autoimmune thyroiditis and are positive in most "
+        "Hashimoto disease and a majority of Graves disease. TSH "
+        "receptor antibodies are specific for Graves and are the test "
+        "that separates it from thyroiditis when both present with "
+        "thyrotoxicosis. Features: in subclinical hypothyroidism a "
+        "positive peroxidase antibody roughly doubles the annual rate "
+        "of progression to overt disease and lowers the threshold for "
+        "treating. Ix: measure TSH receptor antibodies in pregnancy "
+        "with current or past Graves disease, since they cross the "
+        "placenta and can cause fetal or neonatal thyrotoxicosis "
+        "regardless of maternal thyroid status. Thyroglobulin "
+        "antibodies mainly matter because they interfere with the "
+        "thyroglobulin assay used in thyroid cancer follow-up. Note: "
+        "antibody testing answers why, never whether. Function tests "
+        "come first, and antibodies only when the result would change "
+        "management."
+    ),
+    "C-peptide": (
+        "Peptide cleaved from proinsulin in equimolar amounts with "
+        "insulin, so it measures endogenous secretion and is "
+        "unaffected by injected insulin. Uses: distinguishing type 1 "
+        "from type 2 diabetes in ambiguous adult presentations, and "
+        "the central test in investigating hypoglycaemia. Features: "
+        "in factitious hypoglycaemia from exogenous insulin, insulin "
+        "is high and C-peptide suppressed, the only combination that "
+        "gives it away. In insulinoma or sulfonylurea use both are "
+        "inappropriately high, separated by a sulfonylurea screen. "
+        "Ix: take the sample during documented hypoglycaemia with "
+        "paired insulin, beta-hydroxybutyrate and a sulfonylurea "
+        "screen, since values from a normoglycaemic patient are "
+        "uninterpretable. Mx: a low random C-peptide with a raised "
+        "glucose after some years of diabetes confirms insulin "
+        "dependence and settles whether oral agents can continue. "
+        "Note: C-peptide is renally cleared, so chronic kidney "
+        "disease raises it and blunts the contrast the test depends "
+        "on."
+    ),
+    "Hepatitis B serology": (
+        "Panel of surface antigen, surface antibody and core antibody "
+        "that assigns hepatitis B status, with e markers and viral "
+        "load added once infection is confirmed. Features: surface "
+        "antigen positive means current infection, acute or chronic "
+        "depending on whether it persists beyond six months. Surface "
+        "antibody alone is vaccine immunity. Surface antibody with "
+        "core antibody is resolved past infection, since core "
+        "antibody follows infection and never vaccination. Ix: "
+        "isolated core antibody is the awkward result and means "
+        "occult infection, resolving acute infection or a false "
+        "positive, resolved by hepatitis B DNA. e antigen positive "
+        "disease is high replication and high infectivity, and "
+        "seroconversion to e antibody marks a fall in both. Mx: "
+        "screen before immunosuppression, chemotherapy or rituximab. "
+        "Anyone core antibody positive can reactivate, which is "
+        "severe and preventable, so give antiviral prophylaxis rather "
+        "than monitoring alone. Note: Australian guidance recommends "
+        "screening people born in intermediate or high prevalence "
+        "countries and Aboriginal and Torres Strait Islander adults."
+    ),
+    "Urine anion gap": (
+        "Calculated as urinary sodium plus potassium minus chloride, "
+        "used to estimate unmeasured urinary ammonium when a normal "
+        "anion gap metabolic acidosis needs a cause. Uses: separating "
+        "renal from gastrointestinal bicarbonate loss at the bedside "
+        "from a urine electrolyte panel. Features: a negative gap "
+        "means ammonium excretion is high and the kidney is "
+        "responding appropriately, pointing to diarrhoea or another "
+        "gut loss. A positive gap means the kidney is failing to "
+        "excrete acid and indicates renal tubular acidosis. Ix: "
+        "interpret only in a hyperchloraemic acidosis with a normal "
+        "serum anion gap, and check urine pH alongside. A positive "
+        "gap with urine pH above 5.5 fits distal type 1 disease. "
+        "Cautions: the calculation fails when another unmeasured "
+        "anion is being excreted, so it is invalid in ketoacidosis, "
+        "toluene inhalation and high dose penicillin therapy. Note: "
+        "the urine osmolar gap measures ammonium more directly and is "
+        "the better test where the laboratory offers it."
+    ),
+    "Transtubular potassium gradient": (
+        "Calculation estimating potassium secretion in the cortical "
+        "collecting duct, correcting the urine to plasma potassium "
+        "ratio for water reabsorption using the urine to plasma "
+        "osmolality ratio. Uses: deciding whether the kidney is the "
+        "source of a potassium disturbance. Features: in "
+        "hyperkalaemia a value below 7 suggests impaired renal "
+        "excretion from hypoaldosteronism, potassium sparing "
+        "diuretics or tubular disease, where an appropriate kidney "
+        "should push it higher. In hypokalaemia a value above 3 "
+        "indicates renal wasting rather than gastrointestinal loss or "
+        "redistribution. Ix: valid only when urine osmolality exceeds "
+        "plasma and urine sodium is above 25 mmol/L, since below that "
+        "sodium delivery rather than aldosterone limits secretion. "
+        "Mx: a low value in hyperkalaemia directs you to renin and "
+        "aldosterone, a drug review and fludrocortisone where "
+        "indicated. Note: the underlying physiological assumptions "
+        "have been challenged and many nephrologists now prefer the "
+        "urine potassium to creatinine ratio, so treat this as a "
+        "teaching tool rather than a decisive number."
+    ),
+    "Free water deficit": (
+        "Estimate of the volume of electrolyte free water needed to "
+        "correct hypernatraemia, calculated as total body water "
+        "multiplied by the fraction by which measured sodium exceeds "
+        "the target. Uses: planning replacement in hypernatraemia, "
+        "most often in a dehydrated older patient with no independent "
+        "access to fluid, or in diabetes insipidus. Features: total "
+        "body water is taken as 0.6 of lean weight in men and 0.5 in "
+        "women, and less again in the elderly. The figure covers the "
+        "existing deficit only and must be added to maintenance and "
+        "to ongoing losses, which are frequently the larger number. "
+        "Mx: correct no faster than 10 mmol/L in 24 hours in chronic "
+        "hypernatraemia, since cerebral adaptation makes rapid "
+        "correction a cause of cerebral oedema and seizures. Use oral "
+        "or enteral water where the gut works, otherwise 5 per cent "
+        "dextrose. Ix: recheck sodium four to six hourly while "
+        "correcting. Note: hypernatraemia with hypovolaemia needs the "
+        "circulation restored with saline first. Free water follows "
+        "once perfusion is adequate."
+    ),
+    "Pseudohyponatraemia": (
+        "Spuriously low measured sodium caused by a large non-aqueous "
+        "fraction of plasma displacing water, in which the true "
+        "concentration in plasma water is normal. Aetiology: severe "
+        "hypertriglyceridaemia and paraproteinaemia from myeloma or "
+        "Waldenstrom disease. It is an artefact of indirect ion "
+        "selective electrode measurement, which dilutes the sample "
+        "and assumes a fixed water content. Features: measured serum "
+        "osmolality is normal, which is the giveaway, and the patient "
+        "has none of the neurological features a genuine sodium of "
+        "that level would produce. Ix: send a direct ion selective "
+        "electrode sodium, which is what a blood gas analyser uses "
+        "and needs no dilution, alongside serum osmolality and a "
+        "lipid profile. Mx: no sodium correction is needed. Treat the "
+        "triglycerides or the paraprotein. Note: distinguish this "
+        "from translocational hyponatraemia in hyperglycaemia or "
+        "mannitol, where osmolality is high and the sodium really is "
+        "low because water has shifted out of cells."
+    ),
+    "Water deprivation test": (
+        "Controlled fluid restriction with serial paired plasma and "
+        "urine osmolality, followed by desmopressin, used to "
+        "investigate polyuria once diabetes, hypercalcaemia and "
+        "diuretics are excluded. Features: a normal response "
+        "concentrates urine above 750 mOsm/kg with deprivation alone, "
+        "which indicates primary polydipsia. Failure to concentrate "
+        "that then responds to desmopressin with a rise of more than "
+        "half is cranial disease. Failure to concentrate with no "
+        "response is nephrogenic. Ix: requires supervision with "
+        "hourly weights, and is stopped if weight falls more than 3 "
+        "per cent or plasma osmolality exceeds 300 mOsm/kg, since "
+        "unsupervised deprivation in cranial disease is dangerous. "
+        "Mx: cranial disease is treated with desmopressin and needs "
+        "pituitary imaging. Nephrogenic causes are usually lithium, "
+        "hypercalcaemia or hypokalaemia and are addressed by removing "
+        "the cause. Note: copeptin measurement after hypertonic "
+        "saline or arginine stimulation is replacing this test where "
+        "available, being shorter and more reliable in partial forms."
+    ),
+    "Direct oral anticoagulant reversal": (
+        "Management of major bleeding or urgent surgery in a patient "
+        "taking apixaban, rivaroxaban or dabigatran. Mx: stop the "
+        "drug, apply local haemostasis and resuscitate. Activated "
+        "charcoal is worth giving if the last dose was within two to "
+        "four hours. Idarucizumab is the specific antidote for "
+        "dabigatran, a monoclonal antibody fragment giving immediate "
+        "and complete reversal. For the factor Xa inhibitors, "
+        "andexanet alfa is registered but access is restricted in "
+        "Australia, so prothrombin complex concentrate at 50 units "
+        "per kilogram remains the usual choice. Ix: a normal thrombin "
+        "time excludes clinically relevant dabigatran, and an anti-Xa "
+        "level calibrated for the specific agent quantifies apixaban "
+        "or rivaroxaban. Routine INR and APTT are unreliable and a "
+        "normal set does not exclude drug effect. Features: "
+        "dabigatran is dialysable and the others are not, being "
+        "highly protein bound. Note: the half-life is short, so time "
+        "is itself the reversal agent in a stable patient. Reserve "
+        "concentrates for critical site bleeding or haemodynamic "
+        "compromise."
+    ),
+    "Steroid sick day rules": (
+        "Instructions given to patients on long term glucocorticoids "
+        "or with adrenal insufficiency to increase their dose during "
+        "intercurrent illness, since the suppressed axis cannot mount "
+        "a stress response. Indications: anyone taking more than 5 mg "
+        "prednisolone daily for over three weeks, and everyone with "
+        "primary or secondary adrenal insufficiency. Mx: double the "
+        "usual oral dose for fever or an illness requiring bed rest, "
+        "and continue until 24 hours after recovery. For vomiting or "
+        "diarrhoea, oral dosing cannot be relied on and the patient "
+        "uses intramuscular hydrocortisone 100 mg and seeks care. "
+        "Major surgery or trauma needs parenteral hydrocortisone with "
+        "a taper. Features: adrenal crisis presents with hypotension, "
+        "vomiting, abdominal pain, hyponatraemia and hypoglycaemia, "
+        "and is frequently mistaken for the infection that triggered "
+        "it. Note: every such patient should carry a steroid "
+        "emergency card, keep a hydrocortisone ampoule at home and "
+        "have someone trained to give it. Failure to educate causes "
+        "more crises than failure to prescribe."
+    ),
+    "Corticosteroid tapering": (
+        "Gradual dose reduction after prolonged glucocorticoid "
+        "therapy, needed because exogenous steroid suppresses the "
+        "hypothalamic pituitary adrenal axis and abrupt cessation "
+        "precipitates adrenal insufficiency. Indications: courses "
+        "beyond three weeks, repeated courses, or any patient with "
+        "cushingoid features. Short bursts of up to two weeks, as in "
+        "asthma or gout, stop outright with no taper. Mx: reduce "
+        "quickly while the dose is supraphysiological, then slowly. A "
+        "common scheme drops by 5 to 10 mg weekly to 20 mg "
+        "prednisolone, then by 2.5 mg weekly to 10 mg, then by 1 mg "
+        "monthly. Features: two separate problems emerge on the way "
+        "down. Relapse of the disease being treated, and a steroid "
+        "withdrawal syndrome with lethargy, arthralgia and low mood "
+        "despite an intact axis. Ix: a morning cortisol below 100 "
+        "nmol/L once the dose reaches 5 mg prednisolone indicates "
+        "continued suppression and warrants endocrine input. Note: "
+        "the axis may take up to a year to recover, so sick day cover "
+        "is needed throughout the taper and for months after the last "
+        "dose."
+    ),
+    "Azathioprine monitoring": (
+        "Surveillance required for a thiopurine used in inflammatory "
+        "bowel disease, autoimmune hepatitis, vasculitis and as a "
+        "steroid sparing agent. Ix: check thiopurine "
+        "methyltransferase activity or genotype before starting, "
+        "since low activity predicts severe myelosuppression and "
+        "absent activity contraindicates the drug. Baseline full "
+        "blood count, liver function and a viral screen are standard. "
+        "Monitoring: full blood count and liver function weekly for "
+        "the first month, fortnightly to month three, then three "
+        "monthly indefinitely. Adverse effects: dose dependent "
+        "myelosuppression, hepatotoxicity, and an idiosyncratic "
+        "flu-like hypersensitivity in the first weeks that mandates "
+        "permanent cessation. Long term use raises the risk of "
+        "non-melanoma skin cancer and lymphoma, so annual skin checks "
+        "and sun protection matter particularly in Australia. "
+        "Interactions: allopurinol blocks thiopurine catabolism and "
+        "raises levels several fold, so the combination needs the "
+        "dose cut to a quarter or avoided. Note: thiopurine "
+        "metabolite levels distinguish non-adherence from underdosing "
+        "when a patient is not responding."
+    ),
+    "Amiodarone monitoring": (
+        "Baseline and ongoing surveillance for a drug with a "
+        "half-life near 50 days and toxicity in almost every organ. "
+        "Ix: before starting, check thyroid and liver function, "
+        "electrolytes, a chest radiograph, lung function including "
+        "diffusing capacity, and an ECG for QT interval. Monitoring: "
+        "thyroid and liver function six monthly, chest radiograph "
+        "annually, and ophthalmology review if visual symptoms "
+        "appear. Adverse effects: thyroid disease in around 15 per "
+        "cent, either hypothyroidism or one of two thyrotoxicosis "
+        "types that need opposite treatments. Pulmonary toxicity is "
+        "the feared one and presents as dry cough with progressive "
+        "breathlessness. Also corneal microdeposits in almost "
+        "everyone, slate grey photosensitive skin discolouration, "
+        "hepatitis, peripheral neuropathy and bradycardia. "
+        "Interactions: raises digoxin and warfarin levels, so both "
+        "need pre-emptive dose reduction. Note: the long half-life "
+        "means toxicity can appear months after starting and persists "
+        "for months after stopping, so the drug history must reach "
+        "back a year when these syndromes are considered."
+    ),
+    "Gentamicin dosing": (
+        "Aminoglycoside given by once daily extended interval dosing, "
+        "which exploits concentration dependent killing and a "
+        "post-antibiotic effect while reducing renal exposure. "
+        "Dosing: empirical therapy in Australia is 4 to 7 mg per "
+        "kilogram of ideal body weight, using adjusted body weight in "
+        "obesity, with the interval set by renal function. Two or "
+        "three doses cover most empirical indications while cultures "
+        "return. Monitoring: no level is needed for a single dose. "
+        "Beyond 48 hours, take a concentration at a fixed time after "
+        "the dose to estimate the area under the curve, with "
+        "creatinine every second day. Adverse effects: nephrotoxicity "
+        "is usually reversible non-oliguric acute tubular necrosis. "
+        "Ototoxicity is not reversible and affects vestibular "
+        "function more often than hearing, so ask about oscillopsia "
+        "and unsteadiness rather than relying on audiometry. "
+        "Cautions: avoid with other nephrotoxins where possible, and "
+        "in myasthenia gravis. Note: eTG restricts courses beyond 48 "
+        "hours to situations with no alternative, which is the single "
+        "most effective way to prevent toxicity."
+    ),
+    "Vancomycin dosing": (
+        "Glycopeptide for methicillin resistant staphylococci and "
+        "other resistant Gram positive infection, with efficacy that "
+        "tracks total exposure rather than peak concentration. "
+        "Dosing: a loading dose of 25 to 30 mg per kilogram of actual "
+        "body weight is given in severe infection, then maintenance "
+        "set by weight and renal function. Monitoring: Australian "
+        "guidance has moved from trough targeting to an area under "
+        "the curve to minimum inhibitory concentration ratio of 400 "
+        "to 600 in serious staphylococcal infection, since troughs "
+        "above 15 mg/L drove nephrotoxicity without improving "
+        "outcome. Where trough monitoring is still used, take it "
+        "immediately before the fourth dose. Adverse effects: "
+        "nephrotoxicity, rising steeply when combined with "
+        "piperacillin and tazobactam. The infusion related vancomycin "
+        "flushing reaction from histamine release is rate dependent "
+        "and is not allergy, so slow the infusion rather than "
+        "abandoning the drug. Note: oral vancomycin is not absorbed "
+        "and is used only for Clostridioides difficile colitis, where "
+        "it acts luminally and needs no level."
+    ),
+    "Allopurinol dosing": (
+        "Xanthine oxidase inhibitor used for urate lowering in gout, "
+        "started low and titrated to a target serum urate rather than "
+        "to a fixed dose. Indications: recurrent flares, tophi, urate "
+        "nephrolithiasis or radiographic erosion. Dosing: begin at 50 "
+        "to 100 mg daily, or 50 mg in chronic kidney disease, and "
+        "increase by 50 to 100 mg every two to four weeks until urate "
+        "falls below 0.36 mmol/L, or below 0.30 with tophi. Doses "
+        "above 300 mg are frequently required, and capping at 300 mg "
+        "is a common reason for failure. Cautions: starting or "
+        "changing the dose can precipitate a flare, so cover with "
+        "colchicine or low dose prednisolone for up to six months. Do "
+        "not stop established allopurinol during an acute attack. "
+        "Adverse effects: allopurinol hypersensitivity syndrome is "
+        "rare and can be fatal, with rash, eosinophilia, hepatitis "
+        "and renal failure. Risk rises with the HLA-B 5801 allele, "
+        "more prevalent in Han Chinese, Korean and Thai people, and "
+        "with starting at high dose. Note: avoid combining with "
+        "azathioprine."
+    ),
+    "Needle thoracostomy": (
+        "Emergency decompression of a tension pneumothorax by "
+        "inserting a wide bore cannula into the pleural space, buying "
+        "time until a definitive intercostal catheter is placed. "
+        "Indications: clinical tension pneumothorax with haemodynamic "
+        "compromise. The diagnosis is made at the bedside on "
+        "hypotension, absent breath sounds, tracheal deviation and "
+        "distended neck veins, and treatment must not wait for "
+        "imaging. Mx: current guidance favours the fifth intercostal "
+        "space in the anterior axillary line over the traditional "
+        "second space in the mid-clavicular line, because anterior "
+        "chest wall thickness means a standard cannula fails to reach "
+        "the pleura in a substantial minority of adults. Advance just "
+        "above the rib to avoid the neurovascular bundle. "
+        "Complications: lung laceration, vascular injury, and false "
+        "reassurance when the cannula kinks or blocks. Note: a hiss "
+        "of air is reassuring but its absence does not exclude the "
+        "diagnosis. Decompression is temporary by definition, so an "
+        "intercostal catheter must follow immediately, and finger "
+        "thoracostomy is more reliable in an intubated patient."
+    ),
+    "Intraosseous access": (
+        "Vascular access through the medullary cavity of a long bone, "
+        "used when peripheral intravenous access fails in a time "
+        "critical resuscitation. Indications: cardiac arrest, shock "
+        "or status epilepticus where two peripheral attempts or 90 "
+        "seconds have passed without success. Mx: preferred sites are "
+        "the proximal tibia, distal tibia and proximal humerus, with "
+        "the humerus giving the highest flow rates. Anything that can "
+        "be given intravenously can be given by this route at the "
+        "same dose, including blood, inotropes and contrast. Flow "
+        "needs a pressure bag or a syringe, and a conscious patient "
+        "needs lidocaine into the space before infusion because it is "
+        "severely painful. Contraindications: fracture in the target "
+        "bone, prosthesis, a previous attempt in the same bone, and "
+        "overlying infection. Complications: extravasation with "
+        "compartment syndrome is the main one and follows a displaced "
+        "needle. Osteomyelitis is rare. Note: marrow aspirate can be "
+        "sent for group and hold, glucose and electrolytes, but not "
+        "for a blood gas or a full blood count. Replace within 24 "
+        "hours."
+    ),
+    "Permissive hypotension": (
+        "Deliberate acceptance of a lower than normal blood pressure "
+        "during resuscitation of uncontrolled haemorrhage, until "
+        "surgical or radiological control is achieved. Indications: "
+        "penetrating torso trauma and ruptured abdominal aortic "
+        "aneurysm are where the evidence is strongest. Mx: target a "
+        "palpable radial pulse, a systolic around 80 to 90 mmHg or a "
+        "mean arterial pressure near 50, using blood products rather "
+        "than crystalloid. The rationale is that raising the pressure "
+        "dislodges early clot, dilutes clotting factors and worsens "
+        "the acidosis and hypothermia that complete the lethal triad. "
+        "Contraindications: traumatic brain injury, where cerebral "
+        "perfusion pressure must be protected and a higher target "
+        "applies, and spinal cord injury. Features: it is one "
+        "component of damage control resuscitation alongside balanced "
+        "product transfusion, tranexamic acid and early surgery. "
+        "Note: this is a bridge measured in minutes, not a management "
+        "plan. Prolonged hypotension trades one organ for another, so "
+        "it is defensible only when definitive control is genuinely "
+        "imminent."
+    ),
+    "Refractory anaphylaxis": (
+        "Anaphylaxis persisting after two appropriate doses of "
+        "intramuscular adrenaline, which occurs in a small minority "
+        "and carries much of the mortality. Mx: start an adrenaline "
+        "infusion rather than continuing intermittent boluses, give a "
+        "fluid bolus of 20 mL per kilogram since distributive and "
+        "hypovolaemic shock coexist, and call for airway and critical "
+        "care help early. Position the patient supine, as sitting a "
+        "hypovolaemic patient up has caused arrest. Features: "
+        "patients taking beta blockers may not respond to adrenaline, "
+        "and glucagon is the recognised rescue in that setting. "
+        "Persistent bronchospasm needs nebulised salbutamol and "
+        "sometimes magnesium. Upper airway oedema can progress to "
+        "obstruction and needs early intubation by the most "
+        "experienced operator available. Ix: serum tryptase within "
+        "one to two hours, with a later baseline sample, supports the "
+        "diagnosis retrospectively but never delays treatment. Note: "
+        "corticosteroids and antihistamines do not treat anaphylaxis "
+        "and do not prevent biphasic reactions. Adrenaline is the "
+        "only drug that alters outcome."
+    ),
+    "Charlson comorbidity index": (
+        "Weighted score of 19 comorbid conditions, developed to "
+        "predict one year mortality and now the most widely used "
+        "comorbidity adjustment in clinical research. Uses: risk "
+        "adjustment when comparing outcomes between groups, case mix "
+        "description, and at the bedside as a structured way of "
+        "framing prognosis. Features: each condition carries one to "
+        "six points, with myocardial infarction, heart failure, "
+        "diabetes and chronic lung disease weighted lowest, moderate "
+        "or severe liver disease and solid tumour higher, and "
+        "metastatic disease at six. An age adjusted version adds a "
+        "point per decade beyond 40. Mx: a higher score supports a "
+        "more conservative approach to burdensome intervention and "
+        "prompts advance care planning, particularly where the score "
+        "reflects organ failure rather than a list of stable "
+        "diagnoses. Note: it was derived in the 1980s in a medical "
+        "inpatient cohort and overstates the mortality of conditions "
+        "that have since become treatable. It describes populations "
+        "well and individuals poorly, so it belongs in a discussion "
+        "about prognosis rather than as the answer to one."
+    ),
+    "Abbreviated Mental Test Score": (
+        "Ten item bedside screen of cognition, scored out of ten, "
+        "designed for rapid use in older inpatients. Uses: case "
+        "finding for cognitive impairment on admission, and as the "
+        "cognitive limb of delirium screening. Features: items cover "
+        "age, time, a recall address, year, place, recognition of two "
+        "people, date of birth, a historical date, the head of state "
+        "and counting backwards from twenty. A score of 8 or above is "
+        "generally taken as normal, and below that warrants formal "
+        "assessment. Ix: an abnormal score says only that cognition "
+        "is impaired, never why, so it is followed by a delirium "
+        "screen, collateral history, medication review and the "
+        "standard confusion bloods. A four item version covering age, "
+        "date of birth, place and year is used where time is short. "
+        "Cautions: performance is confounded by deafness, dysphasia, "
+        "non-English speaking background and limited education, and "
+        "the head of state item dates badly. Note: it separates "
+        "neither delirium from dementia nor either from depression. "
+        "That distinction comes from the time course and the "
+        "collateral history."
+    ),
+    "AUDIT-C": (
+        "Three question version of the Alcohol Use Disorders "
+        "Identification Test, covering frequency of drinking, typical "
+        "quantity and frequency of heavy episodes. Uses: routine "
+        "screening for hazardous drinking in primary care and on "
+        "hospital admission, brief enough to ask of everyone rather "
+        "than of the people who look the part. Features: scored out "
+        "of 12, with 4 or more in men and 3 or more in women "
+        "indicating risky use. A maximum score on the quantity "
+        "question alone suggests likely dependence regardless of the "
+        "total. Mx: a positive screen leads to the full ten item "
+        "questionnaire, assessment of dependence and withdrawal risk, "
+        "and brief intervention, which has good evidence in hazardous "
+        "drinkers who are not dependent. Australian guidelines advise "
+        "no more than 10 standard drinks a week and no more than 4 on "
+        "any one day. Ix: pair with liver function, gamma glutamyl "
+        "transferase, mean cell volume and a withdrawal risk "
+        "assessment when admission is planned. Note: the score "
+        "measures consumption, not dependence. Ask separately about "
+        "tolerance, withdrawal, craving and loss of control."
+    ),
+    "ECOG performance status": (
+        "Five point scale from 0 to 4 describing functional capacity, "
+        "used to decide whether a patient can tolerate anticancer "
+        "treatment. Features: 0 is fully active, 1 restricted in "
+        "strenuous activity but ambulatory and able to do light work, "
+        "2 ambulatory and self-caring but unable to work and up more "
+        "than half the day, 3 confined to bed or chair for more than "
+        "half the waking day, and 4 completely disabled. Uses: trial "
+        "eligibility usually requires 0 to 1, most systemic therapy "
+        "is confined to 0 to 2, and 3 or 4 generally indicates best "
+        "supportive care. It is among the strongest independent "
+        "predictors of survival in advanced malignancy, frequently "
+        "outweighing tumour type. Mx: a fall in performance status "
+        "during treatment is a reason to reassess the plan rather "
+        "than to continue on schedule. Note: distinguish a poor "
+        "status caused by the cancer, which may improve with treating "
+        "it, from one caused by comorbidity or deconditioning, which "
+        "will not. The first may still justify therapy and the second "
+        "rarely does."
+    ),
+    "Pulmonary Embolism Severity Index": (
+        "Validated prognostic score estimating 30 day mortality after "
+        "confirmed pulmonary embolism, used to decide who needs "
+        "admission. Features: the full index uses 11 weighted "
+        "variables covering age, sex, cancer, heart failure, chronic "
+        "lung disease, pulse, systolic pressure, respiratory rate, "
+        "temperature, mental state and oxygen saturation, sorting "
+        "patients into five classes. Classes I and II are low risk, "
+        "with mortality around 1 per cent. The simplified version "
+        "scores six variables equally and a total of zero identifies "
+        "low risk. Mx: a low risk score with no right ventricular "
+        "dysfunction, a normal troponin and adequate social support "
+        "allows outpatient management on a direct oral anticoagulant, "
+        "which is now standard practice. Higher classes need "
+        "admission, and haemodynamic instability defines high risk "
+        "disease warranting consideration of thrombolysis. Note: the "
+        "score addresses prognosis, never diagnosis. It is applied "
+        "after imaging confirms the embolism, unlike the Wells score, "
+        "and a low score does not override clinical concern such as "
+        "severe pain or a large clot burden."
+    ),
+    "Hospital in the Home": (
+        "Acute care delivered in a patient's residence as a "
+        "substitute for an inpatient bed, funded and governed as an "
+        "admitted episode rather than as community nursing. "
+        "Indications: intravenous antimicrobials for cellulitis, "
+        "pyelonephritis, endocarditis and osteomyelitis, "
+        "anticoagulation, complex wound care, and increasingly early "
+        "supported discharge after exacerbations of heart failure or "
+        "chronic obstructive pulmonary disease. Features: patients "
+        "remain formally admitted under a treating unit, are counted "
+        "in bed occupancy, and can return to a physical bed at any "
+        "point. Selection requires clinical stability, a safe home, a "
+        "working telephone and consent. Mx: peripherally inserted "
+        "central catheters and elastomeric infusers allow long "
+        "courses without daily attendance. Outcomes match inpatient "
+        "care for selected conditions, with less delirium, hospital "
+        "acquired infection and deconditioning. Note: the constraint "
+        "is social far more often than medical. Homelessness, family "
+        "violence or no carer will exclude a patient whose illness is "
+        "entirely suitable, so ask about the home before promising "
+        "the pathway."
+    ),
+    "Closing the Gap": (
+        "Australian national agreement to reduce inequality in "
+        "health, education and life outcomes for Aboriginal and "
+        "Torres Strait Islander people, refreshed in 2020 with "
+        "socioeconomic targets and shared decision making with "
+        "community controlled organisations. Features: life "
+        "expectancy remains around eight years shorter, with "
+        "cardiovascular disease, diabetes, chronic kidney disease and "
+        "chronic respiratory disease carrying most of the excess "
+        "burden, much of it arising from social determinants rather "
+        "than from clinical care. Mx: the practical clinical arms are "
+        "the annual health assessment under Medicare item 715, the "
+        "PBS Co-payment Programme lowering or removing prescription "
+        "costs for eligible patients, and enhanced chronic disease "
+        "care planning. Aboriginal Community Controlled Health "
+        "Services provide comprehensive primary care with "
+        "substantially better engagement than mainstream services. "
+        "Note: identification drives eligibility, so every patient "
+        "should be asked the standard question about Aboriginal or "
+        "Torres Strait Islander origin, at every service and without "
+        "apology."
+    ),
+    "Transition care": (
+        "Time limited therapy focused program for older people after "
+        "a hospital admission, providing further recovery so that a "
+        "decision about long term care is not made at the point of "
+        "greatest frailty. Indications: an older inpatient assessed "
+        "by the Aged Care Assessment Team as needing more time and "
+        "therapy before going home or entering residential care. "
+        "Features: delivered in a residential setting or in the "
+        "person's own home for up to 12 weeks, extendable to 18 with "
+        "review, with low intensity therapy, nursing and case "
+        "management. It is Commonwealth funded with a means tested "
+        "contribution. Mx: entry is arranged before discharge, so the "
+        "assessment referral should be made early in the admission "
+        "rather than when the bed is needed. Around half of "
+        "participants avoid the residential care they were otherwise "
+        "headed for. Note: the common error is deciding on permanent "
+        "residential care during an acute admission, when function is "
+        "lowest and delirium may not have resolved. Recovery after a "
+        "hip fracture or a long admission continues for months, and "
+        "this program exists to let that happen."
+    ),
+    "Leukostasis": (
+        "Medical emergency in which a very high circulating blast "
+        "count raises blood viscosity and plugs the microcirculation, "
+        "causing tissue hypoxia. Aetiology: acute myeloid leukaemia "
+        "above roughly 100 times ten to the ninth per litre, and at "
+        "lower counts in monocytic subtypes because blasts are large "
+        "and poorly deformable. Chronic lymphocytic leukaemia rarely "
+        "causes it even at extreme counts, as lymphocytes are small. "
+        "Clinical features: dominated by lung and brain, with "
+        "dyspnoea and hypoxia, confusion, visual change, headache and "
+        "focal deficit. Fever is common and infection cannot be "
+        "excluded clinically. Ix: full blood count and film, "
+        "coagulation screen for disseminated intravascular "
+        "coagulation, and urate, potassium and phosphate for tumour "
+        "lysis. Arterial oxygen may read falsely low from leucocyte "
+        "consumption within the sample. Mx: urgent cytoreduction with "
+        "hydroxyurea or induction chemotherapy, aggressive hydration, "
+        "rasburicase, and haematology involvement immediately. Note: "
+        "avoid red cell transfusion before cytoreduction where "
+        "possible, since it raises viscosity further."
+    ),
+    "Hyperviscosity syndrome": (
+        "Syndrome arising when raised plasma viscosity impairs "
+        "microcirculatory flow, classically from a large circulating "
+        "paraprotein. Aetiology: Waldenstrom macroglobulinaemia is "
+        "the commonest cause, because IgM is a large pentamer that "
+        "stays intravascular. IgA and IgG myeloma cause it less "
+        "often, and polycythaemia and leukostasis produce the same "
+        "picture through cell mass rather than protein. Clinical "
+        "features: the triad is mucosal bleeding, visual disturbance "
+        "and neurological change ranging from headache and vertigo to "
+        "seizure and coma. Fundoscopy shows dilated segmented retinal "
+        "veins likened to sausages, with haemorrhages and "
+        "papilloedema, and is the most useful bedside test. Ix: serum "
+        "viscosity, protein electrophoresis with immunofixation, and "
+        "a full blood count and film showing rouleaux. Symptoms are "
+        "uncommon below a viscosity of 4 centipoise. Mx: urgent "
+        "plasmapheresis removes IgM efficiently and relieves symptoms "
+        "within hours, followed by treatment of the underlying clone. "
+        "Note: withhold red cell transfusion until viscosity is "
+        "reduced, as it can precipitate decompensation."
+    ),
+    "Alcohol-related liver disease": (
+        "Spectrum from steatosis through alcoholic hepatitis to "
+        "cirrhosis, driven by sustained intake and a leading cause of "
+        "liver-related death in Australia. Aetiology: risk rises "
+        "above roughly 40 g of alcohol daily in men and 20 g in "
+        "women, modified by sex, obesity, hepatitis C and PNPLA3 "
+        "genotype. Steatosis appears in most heavy drinkers and "
+        "reverses with abstinence, but a minority progress to "
+        "cirrhosis. Clinical features: often silent until "
+        "decompensation with ascites, encephalopathy or variceal "
+        "bleeding. Alcoholic hepatitis presents over weeks with "
+        "jaundice, tender hepatomegaly and fever. Ix: an AST to ALT "
+        "ratio above 2 with both under 300 is characteristic, with "
+        "raised gamma glutamyl transferase and macrocytosis. Exclude "
+        "viral, autoimmune and metabolic causes before attributing. A "
+        "Maddrey discriminant function above 32 marks severe "
+        "hepatitis. Mx: abstinence is the only intervention that "
+        "changes the trajectory at any stage, supported by withdrawal "
+        "management, thiamine and pharmacotherapy such as naltrexone "
+        "or acamprosate. Prednisolone is considered in severe "
+        "hepatitis. Note: transplant assessment no longer universally "
+        "requires six months of abstinence."
     ),
 }
 
