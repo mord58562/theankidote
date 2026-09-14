@@ -83,7 +83,7 @@ _ALLOWED_HOSTS = frozenset({
 })
 
 _TIMEOUT = 8          # seconds; a check that cannot finish is not worth having
-_MAX_BYTES = 32 << 20  # backstop against a forged manifest; see _library_limit
+_MAX_BYTES = 4 << 30   # 4 GiB; backstop only - see _library_limit
 _UA = "TheAnkiDote content updater"
 
 
@@ -164,6 +164,24 @@ def _library_limit(declared):
     content on its own and never needs revisiting. `_MAX_BYTES` stays
     as a backstop for a manifest that declares something absurd, which
     is the case the old constant was really there to catch.
+
+    That backstop was 32 MB and is now 4 GiB, which is to say there is
+    no practical ceiling on library size any more. The 32 MB figure was
+    a second copy of the same mistake as the 8 MB one before it: a
+    number chosen against the library of the day, sitting in code that
+    ships to users, waiting to switch the content channel off quietly
+    once content outgrew it. Raising it once it is nearly reached is
+    the same job again in a year.
+
+    Nothing is lost by raising it, because the backstop was never what
+    protects this path. Three things do, and all of them scale: the
+    manifest's own `bytes`, which bounds the read in every normal case
+    and is checked against the payload's actual length; the sha256,
+    which the payload has to match before it is kept; and the host
+    allowlist in `_ALLOWED_HOSTS`, which decides who gets to say any of
+    it in the first place. An attacker who can declare 4 GiB in the
+    manifest already controls the content host, and at that point the
+    download size is not the problem.
     """
     if isinstance(declared, int) and not isinstance(declared, bool):
         if 0 < declared <= _MAX_BYTES:

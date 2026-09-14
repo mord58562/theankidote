@@ -180,7 +180,16 @@ class UpdaterRefusesBadPayloads(unittest.TestCase):
                 f"content must never be executed")
 
     def test_download_is_size_capped(self):
-        self.assertLessEqual(_updater._MAX_BYTES, 32 << 20)
+        """There is still a cap, and the library still fits under it.
+
+        The cap is a backstop against a manifest declaring something
+        absurd, not a budget for the library, so it is deliberately far
+        above any plausible content size - twice it has been set near
+        the library of the day and twice it became the thing about to
+        switch the channel off. What matters is that it exists, that it
+        is finite, and that what we ship is under it.
+        """
+        self.assertLess(_updater._MAX_BYTES, 1 << 40)
         self.assertGreater(_updater._MAX_BYTES,
                            os.path.getsize(_library.BUNDLED))
 
