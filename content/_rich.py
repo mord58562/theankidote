@@ -14229,6 +14229,210 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "sport related concussion assessment return to play"]],
         "summary": "",
     },
+    {
+        "name": "Columbia Suicide Severity Rating Scale",
+        "aliases": ["C-SSRS", "Columbia protocol", "Columbia suicide scale"],
+        "utd": [["Overview", "Columbia suicide severity rating scale"]],
+        "summary": "",
+    },
+    {
+        "name": "Abnormal Involuntary Movement Scale",
+        "aliases": ["AIMS scale", "AIMS assessment"],
+        "utd": [["Overview", "abnormal involuntary movement scale tardive dyskinesia"]],
+        "summary": "",
+    },
+    {
+        "name": "Barnes Akathisia Rating Scale",
+        "aliases": ["Barnes akathisia scale", "BARS scale"],
+        "utd": [["Overview", "Barnes akathisia rating scale"]],
+        "summary": "",
+    },
+    {
+        "name": "Severity of Dependence Scale",
+        "aliases": ["SDS questionnaire", "severity of dependence questionnaire"],
+        "utd": [["Overview", "severity of dependence scale"]],
+        "summary": "",
+    },
+    {
+        "name": "Safety planning",
+        "aliases": ["safety plan", "suicide safety plan", "safety planning intervention"],
+        "utd": [["Overview", "safety planning intervention suicide prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Kimberley Indigenous Cognitive Assessment Tool",
+        "aliases": ["KICA-Cog", "Kimberley Indigenous Cognitive Assessment"],
+        "utd": [["Overview", "Kimberley Indigenous Cognitive Assessment dementia"]],
+        "summary": "",
+    },
+    {
+        "name": "Shoulder dystocia manoeuvres",
+        "aliases": ["shoulder dystocia drill", "HELPERR"],
+        "utd": [["Overview", "shoulder dystocia management manoeuvres"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervical cerclage",
+        "aliases": ["cervical suture", "McDonald suture", "rescue cerclage"],
+        "utd": [["Overview", "cervical cerclage cervical insufficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Biophysical profile",
+        "aliases": ["fetal biophysical profile", "modified biophysical profile"],
+        "utd": [["Overview", "fetal biophysical profile assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Group B streptococcus screening",
+        "aliases": ["GBS screening", "group B strep swab", "GBS prophylaxis"],
+        "utd": [["Overview", "group B streptococcus screening pregnancy prophylaxis"]],
+        "summary": "",
+    },
+    {
+        "name": "Magnesium sulfate for fetal neuroprotection",
+        "aliases": ["magnesium neuroprotection", "antenatal magnesium sulfate"],
+        "utd": [["Overview", "magnesium sulfate fetal neuroprotection preterm birth"]],
+        "summary": "",
+    },
+    {
+        "name": "Postpartum contraception",
+        "aliases": ["contraception after birth", "postnatal contraception"],
+        "utd": [["Overview", "contraception after childbirth postpartum"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric basic life support",
+        "aliases": ["paediatric BLS", "child basic life support", "infant CPR"],
+        "utd": [["Overview", "paediatric basic life support resuscitation child"]],
+        "summary": "",
+    },
+    {
+        "name": "Tanner staging",
+        "aliases": ["Tanner stages", "sexual maturity rating", "pubertal staging"],
+        "utd": [["Overview", "Tanner staging puberty sexual maturity rating"]],
+        "summary": "",
+    },
+    {
+        "name": "Introducing solids",
+        "aliases": ["starting solids", "weaning onto solids", "first foods"],
+        "utd": [["Overview", "introducing complementary foods infant"]],
+        "summary": "",
+    },
+    {
+        "name": "Aldosterone to renin ratio",
+        "aliases": ["aldosterone renin ratio", "ARR test", "plasma aldosterone renin ratio"],
+        "utd": [["Overview", "aldosterone to renin ratio primary aldosteronism"]],
+        "summary": "",
+    },
+    {
+        "name": "Plasma metanephrines",
+        "aliases": ["metanephrines", "plasma free metanephrines", "urinary metanephrines"],
+        "utd": [["Overview", "plasma free metanephrines phaeochromocytoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Hydrogen breath test",
+        "aliases": ["lactose breath test", "glucose breath test", "methane breath test"],
+        "utd": [["Overview", "hydrogen breath testing carbohydrate malabsorption"]],
+        "summary": "",
+    },
+    {
+        "name": "Urea breath test",
+        "aliases": ["C13 urea breath test", "urea breath testing", "H pylori breath test"],
+        "utd": [["Overview", "urea breath test helicobacter pylori"]],
+        "summary": "",
+    },
+    {
+        "name": "Faecal elastase",
+        "aliases": ["faecal elastase-1", "fecal elastase", "stool elastase"],
+        "utd": [["Overview", "faecal elastase exocrine pancreatic insufficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Oesophageal manometry",
+        "aliases": ["esophageal manometry", "high resolution manometry", "oesophageal motility study"],
+        "utd": [["Overview", "oesophageal manometry motility disorders"]],
+        "summary": "",
+    },
+    {
+        "name": "Tilt table test",
+        "aliases": ["head-up tilt test", "tilt testing", "head up tilt table"],
+        "utd": [["Overview", "head up tilt table testing syncope"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiopulmonary exercise testing",
+        "aliases": ["CPET", "cardiopulmonary exercise test", "metabolic exercise testing"],
+        "utd": [["Overview", "cardiopulmonary exercise testing interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Bronchial provocation testing",
+        "aliases": ["methacholine challenge", "mannitol challenge", "bronchial challenge test"],
+        "utd": [["Overview", "bronchial provocation testing airway hyperresponsiveness"]],
+        "summary": "",
+    },
+    {
+        "name": "Exhaled nitric oxide testing",
+        "aliases": ["FeNO", "FeNO testing", "exhaled nitric oxide"],
+        "utd": [["Overview", "fractional exhaled nitric oxide asthma"]],
+        "summary": "",
+    },
+    {
+        "name": "Epworth Sleepiness Scale",
+        "aliases": ["Epworth score", "ESS score", "Epworth questionnaire"],
+        "utd": [["Overview", "Epworth sleepiness scale daytime sleepiness"]],
+        "summary": "",
+    },
+    {
+        "name": "STOP-BANG questionnaire",
+        "aliases": ["STOP BANG", "STOP-Bang score"],
+        "utd": [["Overview", "STOP BANG questionnaire obstructive sleep apnoea screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Temporal artery biopsy",
+        "aliases": ["TAB biopsy", "temporal artery sampling"],
+        "utd": [["Overview", "temporal artery biopsy giant cell arteritis"]],
+        "summary": "",
+    },
+    {
+        "name": "ANCA testing",
+        "aliases": ["ANCA serology", "antineutrophil cytoplasmic antibody", "PR3 and MPO antibodies"],
+        "utd": [["Overview", "antineutrophil cytoplasmic antibody testing vasculitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Complement C3 and C4",
+        "aliases": ["serum complement", "C3 and C4 levels", "complement levels"],
+        "utd": [["Overview", "serum complement C3 C4 interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Synovial fluid analysis",
+        "aliases": ["joint aspirate analysis", "synovial fluid microscopy", "joint fluid analysis"],
+        "utd": [["Overview", "synovial fluid analysis septic arthritis crystals"]],
+        "summary": "",
+    },
+    {
+        "name": "Dermoscopy",
+        "aliases": ["dermatoscopy", "dermatoscope examination", "skin surface microscopy"],
+        "utd": [["Overview", "dermoscopy pigmented lesion assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Patch testing",
+        "aliases": ["patch test", "contact allergy testing", "skin patch testing"],
+        "utd": [["Overview", "patch testing allergic contact dermatitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Wood lamp examination",
+        "aliases": ["Wood's lamp", "Woods lamp examination", "ultraviolet lamp examination"],
+        "utd": [["Overview", "Wood lamp examination skin fluorescence"]],
+        "summary": "",
+    },
 ]
 
 
@@ -81397,6 +81601,649 @@ RICH_SUMMARIES = {
         "deteriorating conscious state, repeated vomiting, seizure, "
         "focal deficit or worsening headache need urgent imaging. "
         "Note: if in doubt, sit them out."
+    ),
+
+    "Columbia Suicide Severity Rating Scale": (
+        "Structured interview that rates suicidal ideation and "
+        "behaviour separately, now embedded in many Australian "
+        "hospital screening pathways. Uses: triage in emergency "
+        "departments, baseline assessment on mental health admission "
+        "and monitoring across a treatment episode. Features: "
+        "ideation is graded across five levels from a passive wish to "
+        "be dead through to active ideation with plan and intent. "
+        "Behaviour is recorded as actual, interrupted or aborted "
+        "attempts plus preparatory acts. Ideation at level 4 or 5, or "
+        "any behaviour in the last three months, flags high risk. Mx: "
+        "the scale prompts the conversation but does not replace "
+        "formulation. Pair it with a collaborative safety plan, means "
+        "restriction and a defined follow-up interval. Note: risk "
+        "categories predict poorly at the individual level. Treat a "
+        "positive screen as a reason to engage, not a number to file."
+    ),
+    "Abnormal Involuntary Movement Scale": (
+        "Twelve-item clinician-rated examination for drug-induced "
+        "abnormal movements, used mainly to detect and track tardive "
+        "dyskinesia on antipsychotics. Uses: baseline before starting "
+        "a dopamine blocker, then six-monthly on a first-generation "
+        "agent and twelve-monthly on a second-generation one. "
+        "Examination: seven body regions are rated 0 to 4 after a "
+        "standard sequence of activating manoeuvres including sitting "
+        "with hands unsupported, tongue protrusion, finger tapping "
+        "and walking. Three further items grade incapacity, patient "
+        "awareness and dental status. A score of 2 in two regions or "
+        "3 in any one region is the usual positive threshold. Mx: a "
+        "positive scale prompts review of the offending drug, a "
+        "switch to a lower-risk agent such as clozapine, and "
+        "consideration of a VMAT2 inhibitor. Note: the activating "
+        "manoeuvres unmask what quiet observation misses, so the "
+        "walking and tapping items are the ones most often skipped "
+        "and most often diagnostic."
+    ),
+    "Barnes Akathisia Rating Scale": (
+        "Four-item clinician instrument that separates the observable "
+        "restlessness of akathisia from the subjective distress that "
+        "drives its risk. Uses: monitoring anyone started on an "
+        "antipsychotic or metoclopramide, where akathisia is common "
+        "in the first weeks and is easily misread as agitation or "
+        "worsening psychosis. Features: objective restlessness, "
+        "awareness of restlessness and distress are each scored, then "
+        "a global clinical rating from 0 to 5 runs from absent "
+        "through questionable to severe. A global score of 2 or more "
+        "is treated as present akathisia. Mx: reduce the dose or "
+        "switch to a lower-potency agent first. Propranolol is the "
+        "usual addition where the drug must continue, with a short "
+        "benzodiazepine course as an alternative. Anticholinergics "
+        "are ineffective here, unlike in acute dystonia. Note: "
+        "akathisia carries a genuine suicide risk, and the mistake "
+        "that matters is increasing the antipsychotic because the "
+        "patient looks agitated."
+    ),
+    "Severity of Dependence Scale": (
+        "Five-item self-report measure of the psychological component "
+        "of dependence, asking about impaired control and "
+        "preoccupation rather than tolerance or withdrawal. Uses: "
+        "quantifying dependence on cannabis, benzodiazepines, "
+        "stimulants or opioids in Australian drug and alcohol "
+        "services, and tracking change through treatment. Features: "
+        "each item is scored 0 to 3 over the last year, giving a "
+        "total of 0 to 15. Cut-offs are substance specific, with 3 or "
+        "more usual for cannabis and 5 or more for benzodiazepines. "
+        "Mx: a positive score prompts a full substance history, "
+        "assessment of withdrawal risk and matching to treatment "
+        "intensity, which for cannabis is psychological therapy and "
+        "for benzodiazepines a structured taper. Screen for injecting "
+        "harms and comorbid mental illness. Note: it deliberately "
+        "ignores physical dependence, which is why a patient on "
+        "stable opioid therapy for pain can score zero while "
+        "genuinely tolerant."
+    ),
+    "Safety planning": (
+        "Brief collaborative intervention for a person at risk of "
+        "suicide, written with them rather than for them, and one of "
+        "the few interventions with evidence of fewer subsequent "
+        "attempts. Features: the plan names personal warning signs, "
+        "internal coping strategies, people and settings that "
+        "distract, people to call for help, professional and crisis "
+        "contacts, and the steps taken to make the environment safer. "
+        "It is written in the patient's own words and given to them "
+        "to keep. Mx: means restriction is the part that carries the "
+        "effect. Agree who will hold medications, secure firearms "
+        "through police, and limit access to other methods discussed. "
+        "Follow with a caring contact within a week. Note: this is "
+        "not a no-suicide contract, which has no evidence and offers "
+        "false reassurance. The plan is a sequence a person can "
+        "follow when thinking is narrowed, so it must be short, "
+        "concrete and on their phone."
+    ),
+    "Kimberley Indigenous Cognitive Assessment Tool": (
+        "Cognitive assessment developed and validated with Aboriginal "
+        "communities in the Kimberley, for use where instruments "
+        "built around literacy, clock faces and serial sevens "
+        "misclassify healthy older people. Uses: assessment of "
+        "suspected dementia in older Aboriginal and Torres Strait "
+        "Islander people, particularly in rural and remote settings. "
+        "Features: a cognitive section covering orientation, recall, "
+        "praxis and judgement using culturally familiar items, paired "
+        "with a separate informant section on functional change. "
+        "Versions exist for remote and urban use, and it can be "
+        "delivered with an interpreter or local health worker. Mx: a "
+        "positive result prompts the same workup as any dementia "
+        "presentation, with attention to the reversible contributors "
+        "that are more common here, including hearing loss, head "
+        "injury, alcohol and vascular disease. Note: dementia occurs "
+        "earlier and several times more often in Aboriginal and "
+        "Torres Strait Islander Australians, so the wrong instrument "
+        "delays a diagnosis that is already late."
+    ),
+    "Shoulder dystocia manoeuvres": (
+        "Obstetric emergency where the anterior shoulder impacts "
+        "behind the pubic symphysis after the head delivers, "
+        "recognised by the turtle-neck sign and failure of "
+        "restitution. Mx: call for help and start a drilled sequence. "
+        "Hyperflexing the maternal hips with suprapubic pressure "
+        "resolves most cases. If not, deliver the posterior arm or "
+        "use internal rotation with the Rubin and Woods screw "
+        "manoeuvres, then consider all fours. Last-resort options are "
+        "clavicular fracture, symphysiotomy and replacing the head "
+        "for caesarean. Fundal pressure is never used and worsens the "
+        "impaction. Complications: brachial plexus injury, fracture "
+        "and hypoxic injury for the baby, with postpartum haemorrhage "
+        "and third or fourth degree tear for the mother. Note: an "
+        "episiotomy does not relieve a bony impaction and is cut only "
+        "to make room for an internal manoeuvre. Document the times, "
+        "the order of manoeuvres and who was present."
+    ),
+    "Cervical cerclage": (
+        "Suture placed around the cervix to reduce preterm birth in "
+        "women with cervical insufficiency. Indications: "
+        "history-indicated for three or more previous mid-trimester "
+        "losses or preterm births, ultrasound-indicated for a cervix "
+        "under 25 mm before 24 weeks with a prior preterm birth, and "
+        "rescue placement for a dilated cervix with exposed "
+        "membranes. Mx: usually a transvaginal suture placed between "
+        "12 and 14 weeks for the history-indicated case, removed at "
+        "36 to 37 weeks or with labour. A transabdominal approach is "
+        "reserved for failed vaginal cerclage or an absent cervix. "
+        "Vaginal progesterone is the alternative for a short cervix "
+        "without prior preterm birth. Contraindications: active "
+        "infection, bleeding, established labour, ruptured membranes "
+        "and lethal fetal anomaly. Note: a suture left in during "
+        "labour tears the cervix, so removal must be planned and "
+        "flagged in the record."
+    ),
+    "Biophysical profile": (
+        "Ultrasound assessment of fetal wellbeing combining four "
+        "sonographic variables with the cardiotocograph, used where "
+        "growth restriction or reduced movements raise concern about "
+        "placental function. Features: fetal breathing, gross body "
+        "movement, tone and amniotic fluid volume each score 0 or 2 "
+        "over 30 minutes, with a reactive trace adding the fifth pair "
+        "for a total out of 10. Criteria: 8 or 10 is reassuring, 6 is "
+        "equivocal and prompts repeat testing, and 4 or less "
+        "indicates probable fetal hypoxia and usually delivery. "
+        "Oligohydramnios pulls the score down and carries weight "
+        "beyond its two points. Mx: interpret alongside gestation and "
+        "Doppler studies rather than alone. An abnormal profile at "
+        "term means delivery, while the same score at 27 weeks is "
+        "weighed against prematurity in a tertiary unit. Note: the "
+        "variables are lost in reverse order of development, so "
+        "breathing fails early and tone fails last."
+    ),
+    "Group B streptococcus screening": (
+        "Antenatal detection of maternal Streptococcus agalactiae "
+        "colonisation to prevent early-onset neonatal sepsis, which "
+        "carries high mortality and is largely preventable. "
+        "Screening: Australian units use either universal culture of "
+        "a low vaginal and rectal swab at 35 to 37 weeks or a "
+        "risk-factor approach, and practice varies by state. Risk "
+        "factors: a previously affected infant, group B streptococcal "
+        "bacteriuria this pregnancy, preterm labour, membrane rupture "
+        "beyond 18 hours and intrapartum fever. Mx: intrapartum "
+        "benzylpenicillin given at least four hours before birth, "
+        "with cefazolin for non-severe penicillin allergy and "
+        "clindamycin or vancomycin guided by susceptibility for "
+        "severe allergy. Treat bacteriuria when found and still cover "
+        "in labour. Note: a positive swab is not treated antenatally, "
+        "because colonisation returns. The antibiotic protects the "
+        "baby during passage, so timing matters more than the drug "
+        "chosen."
+    ),
+    "Magnesium sulfate for fetal neuroprotection": (
+        "Intravenous magnesium given to the mother before anticipated "
+        "very preterm birth to reduce cerebral palsy and gross motor "
+        "dysfunction in the child. Indications: expected birth within "
+        "24 hours before 30 weeks in Australian practice, whether "
+        "spontaneous, from ruptured membranes or planned for maternal "
+        "or fetal reasons. Mx: a 4 g loading dose over 20 to 30 "
+        "minutes followed by 1 g per hour until birth or for 24 "
+        "hours. Give it even when only an hour or two is available. "
+        "Monitoring: hourly respiratory rate, reflexes and urine "
+        "output, since toxicity appears first as loss of deep tendon "
+        "reflexes, then respiratory depression, then cardiac arrest. "
+        "Calcium gluconate is the antidote. Cautions: reduce or "
+        "withhold the infusion in renal impairment, where magnesium "
+        "accumulates. Note: this is a separate indication from "
+        "eclampsia prophylaxis, though the drug and monitoring are "
+        "the same. Do not withhold it because delivery seems "
+        "imminent."
+    ),
+    "Postpartum contraception": (
+        "Contraception started before or soon after discharge, "
+        "because ovulation can return from day 21 in a woman who is "
+        "not breastfeeding and short interpregnancy intervals carry "
+        "real risk. Mx: progestogen-only methods are safe "
+        "immediately, including the implant, the pill and the depot "
+        "injection, and can be given on the postnatal ward. An "
+        "intrauterine device can be placed within 48 hours of birth "
+        "or deferred beyond four weeks, since insertion between those "
+        "points raises expulsion and perforation risk. Combined "
+        "hormonal contraception waits until six weeks in "
+        "breastfeeding women and until 21 days in everyone because of "
+        "thrombosis risk. Cautions: lactational amenorrhoea is only "
+        "reliable while fully breastfeeding, amenorrhoeic and under "
+        "six months, and all three must hold. Note: the postnatal "
+        "visit is late for this conversation. Raise it antenatally, "
+        "because the implant placed before discharge is the method "
+        "that will actually be received."
+    ),
+    "Paediatric basic life support": (
+        "Resuscitation sequence for a child. Aetiology: it differs "
+        "from the adult algorithm because paediatric arrest is "
+        "usually hypoxic, from airway obstruction, drowning or "
+        "sepsis, rather than primarily cardiac. Mx: follow DRSABCD. "
+        "After danger, response and calling for help, open the airway "
+        "in a neutral position in an infant and a sniffing position "
+        "in a child, then give five rescue breaths before starting "
+        "compressions. Compress the lower half of the sternum to a "
+        "third of chest depth, using two thumbs in an infant and one "
+        "or two hands in a child, at 100 to 120 per minute. The ratio "
+        "is 30 to 2 for a single rescuer and 15 to 2 with two trained "
+        "rescuers. Attach a defibrillator with paediatric pads or an "
+        "attenuator under 8 years, shocking at 4 J per kg. Note: the "
+        "five initial breaths are the step most often dropped and the "
+        "one that matters most, because the arrest began with "
+        "hypoxia."
+    ),
+    "Tanner staging": (
+        "Five-stage description of secondary sexual development, "
+        "rating breast and pubic hair in girls and genital and pubic "
+        "hair in boys, used to judge whether puberty is early, late "
+        "or out of sequence. Features: stage 1 is prepubertal and "
+        "stage 5 adult. In girls the first change is breast budding "
+        "at a median of 11 years, with menarche typically around "
+        "stage 4 and about two years later. In boys the first change "
+        "is a testicular volume above 4 mL at a median of 11.5 years, "
+        "measured with an orchidometer, with the growth spurt later "
+        "than in girls. Criteria: puberty is precocious before 8 in "
+        "girls and 9 in boys, and delayed with no breast development "
+        "by 13 or no testicular enlargement by 14. Ix: pair staging "
+        "with height velocity, bone age and a growth chart before "
+        "requesting hormones. Note: pubic hair is adrenarche and "
+        "breast or testicular change is gonadarche. Pubic hair alone "
+        "points to an adrenal source rather than true puberty."
+    ),
+    "Introducing solids": (
+        "Transition from milk alone to family food. Indications: "
+        "recommended at around six months and not before four, once "
+        "the infant can sit with support, has lost the tongue thrust "
+        "reflex and shows interest in food. Mx: start with iron-rich "
+        "foods, since fetal iron stores are depleted by six months "
+        "and milk alone will not meet the requirement. Iron-fortified "
+        "cereal, pureed meat and legumes come first, then vegetables, "
+        "fruit and dairy, progressing to lumpy textures by eight "
+        "months and family foods by twelve. Milk remains the main "
+        "source of nutrition through the first year. Cow milk as a "
+        "drink and honey both wait until twelve months, honey because "
+        "of infant botulism. Note: allergenic foods including egg and "
+        "peanut are introduced in the first year, ideally by six to "
+        "eight months, and delaying them raises rather than lowers "
+        "allergy risk. Once introduced, an allergenic food must stay "
+        "in the diet regularly to maintain tolerance."
+    ),
+    "Aldosterone to renin ratio": (
+        "Screening test for primary aldosteronism, the commonest "
+        "secondary cause of hypertension and present in perhaps 5 to "
+        "10 per cent of hypertensive patients. Indications: resistant "
+        "hypertension, hypertension with spontaneous or "
+        "diuretic-induced hypokalaemia, an adrenal incidentaloma, or "
+        "hypertension presenting young or with a family history of "
+        "early stroke. Mx: correct hypokalaemia first and stop "
+        "spironolactone, eplerenone and amiloride for four weeks, "
+        "since these invalidate the result. Beta blockers and "
+        "clonidine raise the ratio falsely while ACE inhibitors and "
+        "dihydropyridines lower it, so verapamil, prazosin and "
+        "moxonidine are the substitute agents. Sample seated "
+        "mid-morning after two hours upright. Ix: a raised ratio with "
+        "a raised aldosterone needs confirmatory suppression testing, "
+        "then adrenal CT and adrenal vein sampling to separate a "
+        "unilateral adenoma from bilateral hyperplasia. Note: "
+        "normokalaemia is now the usual presentation, so waiting for "
+        "a low potassium misses most cases."
+    ),
+    "Plasma metanephrines": (
+        "First-line biochemical test for phaeochromocytoma and "
+        "paraganglioma, measuring metabolites that tumours secrete "
+        "continuously rather than the catecholamines they release in "
+        "bursts. Indications: paroxysmal headache with sweating and "
+        "palpitations, resistant or labile hypertension, an adrenal "
+        "incidentaloma, or a known susceptibility syndrome such as "
+        "multiple endocrine neoplasia type 2, von Hippel-Lindau or a "
+        "succinate dehydrogenase mutation. Mx: sample supine after 30 "
+        "minutes of rest, since seated sampling raises the false "
+        "positive rate substantially. Tricyclics, venlafaxine, "
+        "levodopa, sotalol, paracetamol and sympathomimetics all "
+        "interfere and are ceased where possible. Ix: a normal result "
+        "effectively excludes the diagnosis. A value more than three "
+        "times the upper limit is close to diagnostic and goes to CT "
+        "or MRI, then functional imaging. Note: never biopsy a "
+        "suspected phaeochromocytoma, and never start a beta blocker "
+        "before alpha blockade."
+    ),
+    "Hydrogen breath test": (
+        "Breath test measuring hydrogen and methane after an oral "
+        "sugar load, useful because these gases come only from "
+        "bacterial fermentation and not from human metabolism. "
+        "Indications: lactose or fructose malabsorption, and small "
+        "intestinal bacterial overgrowth, where lactulose or glucose "
+        "is the substrate. Mx: the patient fasts overnight after a "
+        "day of restricted fermentable carbohydrate, avoids smoking "
+        "and exercise on the day, and gives breath samples at "
+        "intervals over two to three hours. A rise of 20 parts per "
+        "million above baseline with symptoms indicates malabsorption "
+        "of the sugar tested, and an early rise suggests overgrowth. "
+        "Cautions: recent antibiotics, laxatives or colonoscopy "
+        "preparation invalidate the test, and some people are "
+        "non-hydrogen producers whose test reads falsely negative "
+        "unless methane is measured. Note: malabsorption on a breath "
+        "test is not the same as intolerance, which needs symptoms. "
+        "Many positives are managed by dietary trial without ever "
+        "testing."
+    ),
+    "Urea breath test": (
+        "Non-invasive test for active Helicobacter pylori infection, "
+        "detecting labelled carbon dioxide produced when the "
+        "organism's urease splits an ingested urea dose. Indications: "
+        "initial diagnosis in dyspepsia without alarm features under "
+        "the test-and-treat approach, and confirmation of eradication "
+        "after treatment, which is where it is most useful. Mx: stop "
+        "proton pump inhibitors for two weeks and antibiotics or "
+        "bismuth for four weeks beforehand, since both suppress the "
+        "organism and produce false negatives. Confirm eradication no "
+        "sooner than four weeks after finishing therapy. Ix: "
+        "sensitivity and specificity both exceed 95 per cent when "
+        "preparation is correct. Faecal antigen testing is the "
+        "alternative, and serology is not, because antibodies persist "
+        "after cure. Note: Australian eradication is a seven to "
+        "fourteen day course of a proton pump inhibitor with "
+        "amoxicillin and clarithromycin, and rising resistance makes "
+        "post-treatment confirmation routine rather than optional."
+    ),
+    "Faecal elastase": (
+        "Stool test for exocrine pancreatic insufficiency, measuring "
+        "a protease made only by the pancreas that passes through the "
+        "gut undegraded. Indications: steatorrhoea, weight loss or "
+        "fat-soluble vitamin deficiency in chronic pancreatitis, "
+        "cystic fibrosis, pancreatic cancer or after pancreatic "
+        "resection. Ix: a single formed stool sample suffices. Below "
+        "200 micrograms per gram suggests insufficiency and below 100 "
+        "makes it likely. Enzyme supplements need not be stopped, "
+        "since the assay is specific to human elastase. Cautions: a "
+        "watery stool dilutes the result and produces false "
+        "positives, so the test is uninterpretable in diarrhoea. It "
+        "is insensitive to mild insufficiency, so a normal result "
+        "against strong suspicion does not settle the question. Mx: "
+        "pancreatic enzyme replacement with every meal and snack, "
+        "titrated to symptoms, with acid suppression if the response "
+        "is poor. Note: a low result identifies the deficiency but "
+        "never its cause, so imaging still follows."
+    ),
+    "Oesophageal manometry": (
+        "Catheter study measuring pressure along the oesophagus and "
+        "its sphincters during swallows, the reference test for "
+        "oesophageal motility. Indications: dysphagia with a normal "
+        "endoscopy, suspected achalasia, chest pain of oesophageal "
+        "origin, and mandatory assessment before antireflux surgery. "
+        "Mx: a transnasal high-resolution catheter records ten "
+        "swallows, and the Chicago classification sorts the result by "
+        "the integrated relaxation pressure of the lower sphincter "
+        "first, then by the pattern of peristalsis. Achalasia shows "
+        "failed relaxation with absent peristalsis and is subtyped I "
+        "to III, which predicts treatment response. Other patterns "
+        "include distal spasm, hypercontractile oesophagus and "
+        "ineffective motility. Ix: pair with a barium swallow and "
+        "always exclude malignancy at the gastro-oesophageal junction "
+        "endoscopically, since pseudoachalasia mimics the picture. "
+        "Note: manometry before fundoplication exists to find the "
+        "patient whose peristalsis is too weak to tolerate a wrap."
+    ),
+    "Tilt table test": (
+        "Provocative test for vasovagal syncope, tilting the patient "
+        "head-up at 60 to 70 degrees for up to 45 minutes with "
+        "continuous heart rate and blood pressure monitoring. "
+        "Indications: recurrent unexplained syncope once history, "
+        "examination, ECG and structural assessment have not answered "
+        "the question, and separating reflex syncope from orthostatic "
+        "hypotension or a psychogenic cause. Features: a positive "
+        "test reproduces symptoms with hypotension, bradycardia or "
+        "both, and the response is classed as vasodepressor, "
+        "cardioinhibitory or mixed. Glyceryl trinitrate or "
+        "isoprenaline may be used to shorten the protocol. Mx: a "
+        "positive test rarely changes management, which is education, "
+        "salt and fluid loading, counterpressure manoeuvres and "
+        "trigger avoidance. Pacing is reserved for documented "
+        "asystolic reflex syncope in older patients. Note: "
+        "sensitivity and specificity are both moderate, so a negative "
+        "test does not exclude reflex syncope."
+    ),
+    "Cardiopulmonary exercise testing": (
+        "Integrated exercise test measuring expired gases, "
+        "ventilation and cardiac response on a treadmill or cycle, "
+        "separating cardiac from respiratory from deconditioning "
+        "causes of exertional limitation. Indications: unexplained "
+        "breathlessness, risk stratification before major surgery, "
+        "assessment for transplant or pulmonary hypertension, and "
+        "grading severity in heart failure. Features: peak oxygen "
+        "uptake is the headline number, with the anaerobic threshold, "
+        "the ventilatory equivalent for carbon dioxide and the oxygen "
+        "pulse defining the pattern. A cardiac limit shows a low peak "
+        "uptake with an early threshold, while a ventilatory limit "
+        "exhausts breathing reserve first. Mx: a peak uptake below 14 "
+        "mL per kg per minute marks poor prognosis in heart failure "
+        "and informs transplant listing, and a low anaerobic "
+        "threshold predicts postoperative complications. Note: its "
+        "strength is objectivity. It settles whether a patient "
+        "reporting severe limitation is truly limited, and where."
+    ),
+    "Bronchial provocation testing": (
+        "Controlled challenge that demonstrates airway "
+        "hyperresponsiveness, used when asthma is suspected but "
+        "spirometry is normal and bronchodilator reversibility "
+        "absent. Indications: diagnosing asthma in a patient with a "
+        "convincing history and normal lung function, occupational "
+        "asthma assessment, and clearance for occupations such as "
+        "diving or the defence force. Features: direct challenges use "
+        "methacholine or histamine and report the provoking dose "
+        "causing a 20 per cent fall in FEV1. Indirect challenges use "
+        "mannitol, hypertonic saline or exercise and reflect airway "
+        "inflammation more closely. Mx: withhold bronchodilators and "
+        "caffeine beforehand, and stop inhaled corticosteroids only "
+        "if the referrer intends to. Contraindications: an FEV1 below "
+        "about 60 per cent predicted, recent infarct or stroke, "
+        "uncontrolled hypertension and pregnancy. Note: a negative "
+        "direct challenge in an untreated symptomatic patient "
+        "effectively excludes asthma, which makes it a rule-out test."
+    ),
+    "Exhaled nitric oxide testing": (
+        "Point-of-care breath test measuring nitric oxide produced by "
+        "inflamed airway epithelium, a marker of type 2 airway "
+        "inflammation that responds to corticosteroids. Indications: "
+        "supporting an asthma diagnosis where spirometry is "
+        "equivocal, predicting steroid responsiveness, and monitoring "
+        "adherence in difficult asthma. Features: results are in "
+        "parts per billion, with values above about 50 in adults "
+        "suggesting eosinophilic inflammation and below 25 making it "
+        "unlikely. Values fall within days of starting or resuming "
+        "inhaled corticosteroids. Cautions: the number rises with "
+        "allergic rhinitis, atopy and nitrate-rich foods, and falls "
+        "with smoking, bronchoconstriction and steroid use, so it is "
+        "read against the clinical picture rather than as a "
+        "threshold. Mx: a high result in a patient reporting full "
+        "adherence and poor control usually means poor technique, "
+        "poor adherence or continuing allergen exposure before it "
+        "means treatment failure. Note: it measures one inflammatory "
+        "pathway, so neutrophilic asthma reads normal."
+    ),
+    "Epworth Sleepiness Scale": (
+        "Eight-item self-report measure of habitual daytime "
+        "sleepiness, asking how likely the person is to doze in "
+        "everyday situations rather than how tired they feel. Uses: "
+        "screening for obstructive sleep apnoea and narcolepsy, "
+        "quantifying sleepiness at baseline, and tracking the "
+        "response to continuous positive airway pressure. Criteria: "
+        "each item scores 0 to 3 for a total out of 24. Above 10 is "
+        "abnormal sleepiness and above 16 is severe, with a fall of 2 "
+        "or more after treatment considered meaningful. Cautions: it "
+        "measures propensity to sleep rather than fatigue, and a "
+        "patient with severe apnoea can score normally, so a low "
+        "score never excludes the diagnosis. Self-report is "
+        "unreliable where a licence or a job depends on the answer. "
+        "Mx: pair it with a validated screening questionnaire and a "
+        "sleep study rather than using it alone. Note: Australian "
+        "commercial drivers are assessed against fitness-to-drive "
+        "standards, where documented sleepiness at the wheel "
+        "outweighs an admitted score."
+    ),
+    "STOP-BANG questionnaire": (
+        "Eight-item screening tool for obstructive sleep apnoea, "
+        "widely used before surgery because undiagnosed apnoea "
+        "predicts perioperative respiratory complications. Criteria: "
+        "snoring, tiredness, observed apnoeas and blood pressure, "
+        "then body mass index above 35, age over 50, neck "
+        "circumference above 40 cm and male sex. Each yes scores one. "
+        "Two or fewer is low risk, 3 or 4 intermediate and 5 or more "
+        "high risk, with accuracy rising for moderate and severe "
+        "disease. Mx: a high score prompts a sleep study, and in the "
+        "perioperative setting prompts opioid-sparing analgesia, "
+        "careful sedation, postoperative saturation monitoring and "
+        "continuing home positive airway pressure. Note: sensitivity "
+        "is high and specificity low by design, so it over-refers "
+        "rather than misses. That trade-off is right before an "
+        "anaesthetic, but a positive score is a reason to investigate "
+        "rather than a diagnosis to act on."
+    ),
+    "Temporal artery biopsy": (
+        "Surgical sampling of the superficial temporal artery to "
+        "confirm giant cell arteritis, the diagnosis where delay "
+        "costs vision. Indications: suspected giant cell arteritis "
+        "over the age of 50 with new headache, jaw claudication, "
+        "scalp tenderness, visual symptoms or polymyalgia, alongside "
+        "a raised erythrocyte sedimentation rate and C-reactive "
+        "protein. Mx: never delay corticosteroids for the biopsy. "
+        "Start prednisolone at 40 to 60 mg daily, or pulsed "
+        "intravenous methylprednisolone where there is visual loss, "
+        "and arrange biopsy within two weeks, since the histological "
+        "changes persist that long. Take a segment of at least 1 to 2 "
+        "cm, because the arteritis is patchy and skip lesions cause "
+        "false negatives. Ix: temporal artery ultrasound showing a "
+        "halo sign is an increasingly used alternative or first step. "
+        "Note: a negative biopsy does not exclude the disease in a "
+        "convincing case, and treatment continues on clinical "
+        "grounds."
+    ),
+    "ANCA testing": (
+        "Serology for antineutrophil cytoplasmic antibodies, the "
+        "central test in small vessel vasculitis. Indications: "
+        "suspected granulomatosis with polyangiitis, microscopic "
+        "polyangiitis or eosinophilic granulomatosis with "
+        "polyangiitis, and any pulmonary-renal syndrome, rapidly "
+        "progressive glomerulonephritis or unexplained mononeuritis "
+        "multiplex. Features: immunofluorescence gives a cytoplasmic "
+        "or perinuclear pattern, and antigen-specific assays identify "
+        "proteinase 3 or myeloperoxidase, which is what guides "
+        "diagnosis. Proteinase 3 associates with granulomatosis with "
+        "polyangiitis and myeloperoxidase with microscopic "
+        "polyangiitis, and the antibody predicts relapse risk better "
+        "than the clinical label. Cautions: perinuclear staining "
+        "without a specific antigen occurs in inflammatory bowel "
+        "disease, autoimmune hepatitis, infective endocarditis and "
+        "with hydralazine or propylthiouracil. Note: the antibody "
+        "supports the diagnosis and biopsy confirms it. Do not delay "
+        "treatment in a patient losing renal function while awaiting "
+        "serology."
+    ),
+    "Complement C3 and C4": (
+        "Measurement of the two complement proteins most useful "
+        "clinically, where consumption by immune complexes lowers the "
+        "level and marks active disease. Indications: suspected or "
+        "active lupus, glomerulonephritis, cryoglobulinaemia, "
+        "recurrent infection with encapsulated organisms and "
+        "suspected hereditary angioedema. Features: low C3 with low "
+        "C4 suggests classical pathway activation as in lupus "
+        "nephritis or infective endocarditis. Low C4 with normal C3 "
+        "points to cryoglobulinaemia or hereditary angioedema, where "
+        "C4 stays low between attacks and is the screening test. Low "
+        "C3 with normal C4 suggests alternative pathway activation as "
+        "in post-streptococcal or C3 glomerulopathy. Mx: in lupus, "
+        "falling C3 and C4 with rising double-stranded DNA antibodies "
+        "often precede a clinical flare and prompt closer review. "
+        "Note: complement proteins are also acute phase reactants, so "
+        "an inflamed patient can read falsely normal while consuming "
+        "them. The trend within a patient beats any single value."
+    ),
+    "Synovial fluid analysis": (
+        "Aspiration and examination of joint fluid, the only test "
+        "that reliably separates septic arthritis from crystal "
+        "arthritis, which look identical at the bedside. Indications: "
+        "any acutely hot swollen joint, and a prosthetic joint with "
+        "unexplained pain. Aspirate before antibiotics wherever "
+        "possible. Ix: send cell count and differential, Gram stain "
+        "and culture, and polarised microscopy for crystals. A white "
+        "cell count above 50000 per microlitre with over 90 per cent "
+        "neutrophils suggests infection, 2000 to 50000 suggests "
+        "inflammatory disease and below 2000 a non-inflammatory "
+        "cause. Negatively birefringent needles are urate and weakly "
+        "positive rhomboids are calcium pyrophosphate. Mx: treat as "
+        "septic while cultures are pending if the picture is "
+        "convincing, since the Gram stain is negative in about half "
+        "of proven cases. Note: crystals and infection coexist, so "
+        "finding urate never excludes sepsis."
+    ),
+    "Dermoscopy": (
+        "Handheld examination of skin lesions under magnification and "
+        "polarised light, revealing subsurface pigment and vascular "
+        "patterns invisible to the naked eye. Uses: triage of "
+        "pigmented lesions, where it lifts melanoma sensitivity "
+        "substantially and reduces unnecessary excisions in trained "
+        "hands. It also helps in basal cell carcinoma, scabies, "
+        "alopecia and nail lesions. Features: benign naevi show "
+        "symmetrical organised patterns. Melanoma shows asymmetry of "
+        "structure and colour, an atypical network, irregular streaks "
+        "or dots, a blue-white veil and regression. Basal cell "
+        "carcinoma shows arborising vessels with no pigment network. "
+        "Mx: any lesion that is atypical, changing or does not fit a "
+        "recognised benign pattern is excised for diagnosis rather "
+        "than monitored. Note: in untrained hands dermoscopy performs "
+        "worse than naked eye examination, which argues for "
+        "structured training rather than for buying the device."
+    ),
+    "Patch testing": (
+        "Test for allergic contact dermatitis, a delayed type IV "
+        "hypersensitivity reaction, distinct from skin prick testing, "
+        "which detects immediate IgE responses. Indications: "
+        "dermatitis with a distribution suggesting contact, hand or "
+        "facial eczema not responding to treatment, occupational "
+        "dermatitis and suspected reactions to topical products or "
+        "metals. Mx: standardised allergen series are applied to the "
+        "back under occlusion for 48 hours, read at removal and again "
+        "at 96 hours, with a later read for corticosteroids and "
+        "metals. The patient adds their own products. Topical "
+        "steroids on the back and oral prednisolone above about 10 mg "
+        "suppress the reaction and are withheld beforehand. Features: "
+        "a positive reaction is palpable erythema with papules or "
+        "vesicles that persists or grows on the later read, while an "
+        "irritant reaction fades. Note: a positive patch test proves "
+        "sensitisation, not that this allergen caused this "
+        "dermatitis. Relevance is decided clinically against "
+        "exposure."
+    ),
+    "Wood lamp examination": (
+        "Bedside examination using filtered long-wave ultraviolet "
+        "light in a darkened room, where certain organisms and "
+        "pigments fluoresce characteristically. Uses: separating "
+        "hypopigmentation from depigmentation, screening for tinea "
+        "capitis, and confirming erythrasma or pseudomonal infection. "
+        "Features: vitiligo fluoresces bright chalky white with sharp "
+        "borders, while pityriasis versicolor shows pale yellow-gold. "
+        "Erythrasma gives coral-pink from the porphyrin produced by "
+        "Corynebacterium, and Pseudomonas gives green. Microsporum "
+        "species of tinea capitis fluoresce green, but Trichophyton, "
+        "which causes most Australian cases, does not. Mx: a negative "
+        "examination never excludes tinea, so scrapings for "
+        "microscopy and culture are still sent. Note: this is a "
+        "five-second test that most often changes the answer in a "
+        "pale patch, separating vitiligo from pityriasis alba or an "
+        "ash-leaf macule and setting the direction of the "
+        "consultation."
     ),
 }
 
