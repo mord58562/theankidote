@@ -14883,6 +14883,234 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "outbreak investigation epidemic curve case definition"]],
         "summary": "",
     },
+    {
+        "name": "Killip classification",
+        "aliases": ["Killip class", "Killip score"],
+        "utd": [["Overview", "Killip classification acute myocardial infarction prognosis"]],
+        "summary": "",
+    },
+    {
+        "name": "NYHA functional classification",
+        "aliases": ["NYHA class", "New York Heart Association classification"],
+        "utd": [["Overview", "New York Heart Association functional class heart failure"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiac axis deviation",
+        "aliases": ["Left axis deviation", "Right axis deviation", "Cardiac axis"],
+        "utd": [["Overview", "ECG cardiac axis deviation interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Pacemaker syndrome",
+        "aliases": ["Atrioventricular dyssynchrony"],
+        "utd": [["Overview", "pacemaker syndrome ventriculoatrial conduction"]],
+        "summary": "",
+    },
+    {
+        "name": "Lipoprotein(a)",
+        "aliases": ["Lp(a)", "Lipoprotein a"],
+        "utd": [["Overview", "lipoprotein a cardiovascular risk measurement"]],
+        "summary": "",
+    },
+    {
+        "name": "High output cardiac failure",
+        "aliases": ["High output heart failure", "High output state"],
+        "utd": [["Overview", "high output heart failure causes management"]],
+        "summary": "",
+    },
+    {
+        "name": "GOLD classification of COPD",
+        "aliases": ["GOLD stage", "GOLD grade", "GOLD group"],
+        "utd": [["Overview", "GOLD classification chronic obstructive pulmonary disease severity"]],
+        "summary": "",
+    },
+    {
+        "name": "mMRC dyspnoea scale",
+        "aliases": ["Modified Medical Research Council dyspnoea scale", "mMRC scale", "MRC dyspnoea scale"],
+        "utd": [["Overview", "modified Medical Research Council dyspnoea scale COPD"]],
+        "summary": "",
+    },
+    {
+        "name": "BODE index",
+        "aliases": ["BODE score"],
+        "utd": [["Overview", "BODE index COPD mortality prognosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Asthma-COPD overlap",
+        "aliases": ["Asthma COPD overlap syndrome", "Asthma and COPD overlap"],
+        "utd": [["Overview", "asthma COPD overlap diagnosis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Forrest classification",
+        "aliases": ["Forrest class", "Forrest grade"],
+        "utd": [["Overview", "Forrest classification bleeding peptic ulcer endoscopy"]],
+        "summary": "",
+    },
+    {
+        "name": "Atlanta classification of acute pancreatitis",
+        "aliases": ["Revised Atlanta classification", "Atlanta criteria"],
+        "utd": [["Overview", "revised Atlanta classification acute pancreatitis severity"]],
+        "summary": "",
+    },
+    {
+        "name": "Hinchey classification",
+        "aliases": ["Hinchey stage", "Hinchey grade"],
+        "utd": [["Overview", "Hinchey classification perforated diverticulitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Baveno criteria",
+        "aliases": ["Baveno VII", "Baveno consensus", "Baveno VI criteria"],
+        "utd": [["Overview", "Baveno consensus portal hypertension varices screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Maddrey discriminant function",
+        "aliases": ["Maddrey score", "Discriminant function"],
+        "utd": [["Overview", "Maddrey discriminant function alcoholic hepatitis corticosteroids"]],
+        "summary": "",
+    },
+    {
+        "name": "King's College criteria",
+        "aliases": ["Kings College criteria", "King's College Hospital criteria"],
+        "utd": [["Overview", "Kings College criteria acute liver failure transplantation"]],
+        "summary": "",
+    },
+    {
+        "name": "West Haven criteria",
+        "aliases": ["West Haven grade", "West Haven classification"],
+        "utd": [["Overview", "West Haven criteria hepatic encephalopathy grading"]],
+        "summary": "",
+    },
+    {
+        "name": "Truelove and Witts criteria",
+        "aliases": ["Truelove and Witts severity index", "Truelove Witts criteria"],
+        "utd": [["Overview", "Truelove and Witts criteria acute severe ulcerative colitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Montreal classification",
+        "aliases": ["Montreal classification of inflammatory bowel disease"],
+        "utd": [["Overview", "Montreal classification Crohn disease ulcerative colitis phenotype"]],
+        "summary": "",
+    },
+    {
+        "name": "KDIGO CKD staging",
+        "aliases": ["KDIGO classification", "CKD GFR category", "KDIGO staging"],
+        "utd": [["Overview", "KDIGO chronic kidney disease staging GFR albuminuria"]],
+        "summary": "",
+    },
+    {
+        "name": "Kidney failure risk equation",
+        "aliases": ["KFRE", "Kidney failure risk score"],
+        "utd": [["Overview", "kidney failure risk equation chronic kidney disease prediction"]],
+        "summary": "",
+    },
+    {
+        "name": "Magnesium replacement",
+        "aliases": ["Magnesium supplementation", "Magnesium replacement therapy"],
+        "utd": [["Overview", "magnesium replacement hypomagnesaemia treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "4Ts score",
+        "aliases": ["Four Ts score", "4T score"],
+        "utd": [["Overview", "4Ts score heparin induced thrombocytopenia probability"]],
+        "summary": "",
+    },
+    {
+        "name": "PLASMIC score",
+        "aliases": ["PLASMIC scoring system"],
+        "utd": [["Overview", "PLASMIC score thrombotic thrombocytopenic purpura ADAMTS13"]],
+        "summary": "",
+    },
+    {
+        "name": "Khorana score",
+        "aliases": ["Khorana risk score"],
+        "utd": [["Overview", "Khorana score cancer associated venous thromboembolism risk"]],
+        "summary": "",
+    },
+    {
+        "name": "ISTH DIC score",
+        "aliases": ["ISTH DIC scoring system", "DIC score"],
+        "utd": [["Overview", "ISTH disseminated intravascular coagulation score diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Hunt and Hess grade",
+        "aliases": ["Hunt and Hess scale", "Hunt Hess grade"],
+        "utd": [["Overview", "Hunt and Hess grade subarachnoid haemorrhage severity"]],
+        "summary": "",
+    },
+    {
+        "name": "Fisher grade",
+        "aliases": ["Fisher scale", "Modified Fisher scale"],
+        "utd": [["Overview", "Fisher grade subarachnoid haemorrhage vasospasm risk"]],
+        "summary": "",
+    },
+    {
+        "name": "Canadian CT head rule",
+        "aliases": ["Canadian CT head injury rule", "CCHR"],
+        "utd": [["Overview", "Canadian CT head rule minor head injury imaging"]],
+        "summary": "",
+    },
+    {
+        "name": "Romberg test",
+        "aliases": ["Romberg sign", "Rombergism"],
+        "utd": [["Overview", "Romberg test proprioception sensory ataxia"]],
+        "summary": "",
+    },
+    {
+        "name": "Upper motor neurone lesion",
+        "aliases": ["UMN lesion", "Upper motor neuron lesion", "Pyramidal weakness"],
+        "utd": [["Overview", "upper motor neurone lesion signs localisation"]],
+        "summary": "",
+    },
+    {
+        "name": "Lower motor neurone lesion",
+        "aliases": ["LMN lesion", "Lower motor neuron lesion"],
+        "utd": [["Overview", "lower motor neurone lesion signs localisation"]],
+        "summary": "",
+    },
+    {
+        "name": "Peripheral stigmata of infective endocarditis",
+        "aliases": ["Osler node", "Janeway lesion", "Roth spot", "Splinter haemorrhage"],
+        "utd": [["Overview", "peripheral stigmata infective endocarditis Osler Janeway Roth"]],
+        "summary": "",
+    },
+    {
+        "name": "Pleural plaques",
+        "aliases": ["Pleural plaque", "Calcified pleural plaques"],
+        "utd": [["Overview", "pleural plaques asbestos exposure imaging"]],
+        "summary": "",
+    },
+    {
+        "name": "FRAX fracture risk tool",
+        "aliases": ["FRAX score", "FRAX calculator"],
+        "utd": [["Overview", "FRAX fracture risk assessment osteoporosis"]],
+        "summary": "",
+    },
+    {
+        "name": "QT prolonging drugs",
+        "aliases": ["QT prolonging medications", "Drug induced QT prolongation"],
+        "utd": [["Overview", "drug induced QT prolongation torsades risk"]],
+        "summary": "",
+    },
+    {
+        "name": "Variable rate insulin infusion",
+        "aliases": ["VRIII", "Insulin sliding scale", "Variable rate intravenous insulin infusion"],
+        "utd": [["Overview", "variable rate intravenous insulin infusion inpatient"]],
+        "summary": "",
+    },
+    {
+        "name": "Immunisation in the immunocompromised",
+        "aliases": ["Vaccination in immunosuppression", "Live vaccine contraindications"],
+        "utd": [["Overview", "immunisation immunocompromised patients live vaccines"]],
+        "summary": "",
+    },
 ]
 
 
@@ -84146,6 +84374,759 @@ RICH_SUMMARIES = {
         "since notification releases the resources. Note: the case "
         "definition is deliberately broad at first and tightened "
         "later."
+    ),
+
+    "Killip classification": (
+        "Bedside classification of heart failure severity in acute "
+        "myocardial infarction, assigned on examination at first "
+        "presentation. Classification: I is no signs of failure. II "
+        "is crackles over less than half the lung fields or a third "
+        "heart sound or raised JVP. III is frank pulmonary oedema. IV "
+        "is cardiogenic shock with hypotension and peripheral "
+        "hypoperfusion. Clinical features: grading is by auscultation "
+        "and perfusion alone and needs no imaging or biochemistry, "
+        "which is why it survives at the bedside. Ix: no test defines "
+        "the class, though echocardiography and lactate refine the "
+        "class IV assessment. Mx: class drives urgency rather than "
+        "therapy. Class II to III prompts diuresis, oxygen and early "
+        "reperfusion. Class IV triggers intensive care referral, "
+        "inotropes and consideration of mechanical support. "
+        "Prognosis: mortality climbs steeply across classes and stays "
+        "a strong independent predictor after adjustment for "
+        "reperfusion. Note: the class is recorded once at "
+        "presentation and feeds the GRACE score, so a later "
+        "deterioration does not rewrite it."
+    ),
+    "NYHA functional classification": (
+        "Symptom based grading of functional limitation in chronic "
+        "heart failure, reassessed at every review because it moves "
+        "with treatment. Classification: I is no limitation with "
+        "ordinary activity. II is slight limitation, comfortable at "
+        "rest but ordinary activity causes symptoms. III is marked "
+        "limitation, with less than ordinary activity causing "
+        "symptoms. IV is symptoms at rest or on any activity. "
+        "Clinical features: the grade reflects what the patient "
+        "reports rather than ejection fraction, and the two correlate "
+        "poorly. Ix: not an investigation, though a six minute walk "
+        "test or cardiopulmonary exercise testing gives an objective "
+        "counterpart when the history is unclear. Mx: class drives "
+        "escalation. Class II to IV with reduced ejection fraction "
+        "warrants the four pillars of therapy, and persistent class "
+        "III to IV despite optimal therapy prompts device therapy or "
+        "advanced heart failure referral. Note: NYHA class is the "
+        "entry criterion in most heart failure trials and in PBS "
+        "authority wording, so document it explicitly rather than "
+        "describing exercise tolerance in prose."
+    ),
+    "Cardiac axis deviation": (
+        "The mean direction of ventricular depolarisation in the "
+        "frontal plane, read from leads I and aVF on a standard ECG. "
+        "A normal axis sits between minus 30 and plus 90 degrees. "
+        "Classification: left axis deviation is minus 30 to minus 90 "
+        "degrees, right axis deviation plus 90 to plus 180, and "
+        "extreme axis beyond minus 90. Aetiology: left axis deviation "
+        "follows left anterior fascicular block, inferior infarction "
+        "or a paced rhythm. Right axis deviation follows right "
+        "ventricular hypertrophy, pulmonary embolism or left "
+        "posterior fascicular block and is normal in tall thin young "
+        "people. Ix: check leads I and aVF first. Both positive is "
+        "normal, lead I positive with aVF negative suggests left "
+        "deviation, and the reverse suggests right deviation. Mx: the "
+        "axis is a clue rather than a diagnosis and directs attention "
+        "to the underlying chamber or conduction problem. Note: an "
+        "isolated axis shift on an otherwise normal ECG in a well "
+        "young patient rarely means anything, but a new shift with "
+        "symptoms deserves comparison with an old trace."
+    ),
+    "Pacemaker syndrome": (
+        "Symptomatic atrioventricular dyssynchrony after pacemaker "
+        "implantation, most often with single chamber ventricular "
+        "pacing. Aetiology: ventricular pacing without atrial "
+        "coordination allows retrograde ventriculoatrial conduction, "
+        "so the atria contract against closed valves. Cardiac output "
+        "falls and atrial pressure rises. Clinical features: fatigue, "
+        "dizziness, dyspnoea and neck pulsation appearing after "
+        "implantation, sometimes with hypotension during pacing. "
+        "Cannon a waves in the neck are the classic sign. Ix: ECG "
+        "showing ventricular pacing, and device interrogation for "
+        "ventriculoatrial conduction and the percentage of "
+        "ventricular pacing. Compare blood pressure during paced and "
+        "intrinsic rhythm. Mx: reprogramme to preserve "
+        "atrioventricular synchrony by lowering the pacing rate to "
+        "allow intrinsic conduction, or upgrade a single chamber "
+        "device to dual chamber pacing. Note: think of it in any "
+        "patient who feels worse after a pacemaker than before, "
+        "because the device is functioning normally and the problem "
+        "is physiological rather than technical."
+    ),
+    "Lipoprotein(a)": (
+        "A genetically determined LDL-like particle carrying "
+        "apolipoprotein(a), and an independent causal risk factor for "
+        "atherosclerotic disease and aortic stenosis. Aetiology: "
+        "levels are 80 to 90 per cent inherited, set by LPA gene "
+        "variation, and are largely unaffected by diet, exercise or "
+        "statins. Levels run higher in South Asian and African "
+        "ancestry. Clinical features: no symptoms of its own. It "
+        "surfaces as premature coronary disease, recurrent events "
+        "despite good LDL control, or a strong family history without "
+        "another explanation. Ix: measure once in a lifetime, ideally "
+        "in nmol/L. Above 125 nmol/L is raised and above 250 nmol/L "
+        "carries substantial excess risk. Repeat testing is "
+        "unnecessary because the value is stable. Mx: no approved "
+        "lowering therapy in Australia yet. Manage by intensifying "
+        "every modifiable risk factor, with aggressive LDL lowering, "
+        "blood pressure control and smoking cessation. Cascade "
+        "testing of first degree relatives is reasonable. Note: a "
+        "normal lipid panel does not exclude a high Lp(a), which is "
+        "why it is requested separately rather than inferred."
+    ),
+    "High output cardiac failure": (
+        "Heart failure with a cardiac index above normal, where the "
+        "failure is one of excessive demand rather than impaired "
+        "contractility. Aetiology: obesity is now the commonest cause "
+        "in Australia. Anaemia, thyrotoxicosis, arteriovenous "
+        "fistulae including dialysis access and cirrhosis account for "
+        "most of the rest, with thiamine deficiency and Paget disease "
+        "rarer. Clinical features: warm peripheries with a bounding "
+        "pulse and wide pulse pressure, a hyperdynamic apex and flow "
+        "murmurs, alongside ordinary congestion with oedema and "
+        "raised JVP. Ix: echocardiography shows a dilated "
+        "hyperdynamic ventricle with high measured cardiac output. "
+        "Send full blood count, thyroid function, liver function and "
+        "thiamine, and image a suspected fistula. Mx: treat the "
+        "cause, since diuresis alone only manages congestion. Banding "
+        "or ligation of a high flow dialysis fistula, correction of "
+        "anaemia and thyroid control each reverse the physiology. "
+        "Note: warm peripheries with congestion is the clue, because "
+        "low output failure presents cool and vasoconstricted."
+    ),
+    "GOLD classification of COPD": (
+        "The Global Initiative for Chronic Obstructive Lung Disease "
+        "framework, which grades airflow limitation and symptom "
+        "burden separately. Staging: after a post-bronchodilator "
+        "FEV1/FVC below 0.7 confirms obstruction, grades 1 to 4 rank "
+        "severity by FEV1 per cent predicted at cut points of 80, 50 "
+        "and 30. Classification: groups A, B and E combine symptom "
+        "score with exacerbation history. Group E covers two or more "
+        "moderate exacerbations or any hospitalisation in the past "
+        "year. Ix: post-bronchodilator spirometry is required, since "
+        "pre-bronchodilator values overstage and cannot be used. Mx: "
+        "group A takes a bronchodilator. Group B takes a long acting "
+        "beta agonist with a long acting antimuscarinic. Group E "
+        "takes the same dual therapy, adding an inhaled "
+        "corticosteroid when blood eosinophils are 300 cells per "
+        "microlitre or higher. Note: Australian practice follows "
+        "COPD-X, which frames severity similarly but sets its own "
+        "stepwise inhaler sequence."
+    ),
+    "mMRC dyspnoea scale": (
+        "A five point scale grading breathlessness by the activity "
+        "that provokes it, used to classify symptom burden in COPD. "
+        "Classification: grade 0 is breathless only on strenuous "
+        "exercise. Grade 1 is breathless hurrying on the level or "
+        "walking up a slight hill. Grade 2 means walking slower than "
+        "peers, or stopping for breath when walking at own pace. "
+        "Grade 3 is stopping after about 100 metres or a few minutes. "
+        "Grade 4 is too breathless to leave the house or breathless "
+        "on dressing. Clinical features: it measures disability "
+        "rather than physiology and correlates poorly with FEV1, "
+        "which is precisely why both are recorded. Ix: no testing "
+        "needed, though the CAT questionnaire gives a broader symptom "
+        "score and the two are often reported together. Mx: grade 2 "
+        "or above marks a high symptom burden, placing the patient in "
+        "GOLD group B or E and prompting dual bronchodilation and "
+        "pulmonary rehabilitation referral. Note: grade 2 is the "
+        "pivotal cut point, so anchor on it rather than memorising "
+        "all five descriptors."
+    ),
+    "BODE index": (
+        "A multidimensional prognostic index in COPD combining body "
+        "mass index, airflow obstruction, dyspnoea and exercise "
+        "capacity, which predicts mortality better than FEV1 alone. "
+        "Classification: points are assigned for a BMI at or below "
+        "21, FEV1 per cent predicted, mMRC dyspnoea grade and six "
+        "minute walk distance, giving a total of 0 to 10. Ix: "
+        "requires post-bronchodilator spirometry, a measured six "
+        "minute walk and a recorded dyspnoea grade, so it cannot be "
+        "scored from the notes alone. Mx: a high score prompts "
+        "pulmonary rehabilitation, review of oxygen and non-invasive "
+        "ventilation needs, advance care planning, and consideration "
+        "of referral for transplant or lung volume reduction. "
+        "Prognosis: mortality rises stepwise with quartile, and "
+        "scores of 7 to 10 carry roughly 80 per cent four year "
+        "mortality. Note: the modifiable components are dyspnoea and "
+        "walk distance, and pulmonary rehabilitation improves both, "
+        "so the index moves with good care rather than only tracking "
+        "decline."
+    ),
+    "Asthma-COPD overlap": (
+        "Persistent airflow limitation with features of both asthma "
+        "and COPD, recognised as a description rather than a single "
+        "disease. Aetiology: typically a smoker with long standing "
+        "asthma, or an atopic patient who has developed fixed "
+        "obstruction after years of poor control. Clinical features: "
+        "age over 40 with a smoking or biomass exposure history, plus "
+        "variable symptoms, atopy or a documented history of "
+        "childhood asthma. Persistent obstruction coexists with "
+        "significant bronchodilator reversibility. Ix: "
+        "post-bronchodilator spirometry showing a fixed FEV1/FVC "
+        "below 0.7 together with reversibility of 12 per cent and 200 "
+        "mL or more. Blood eosinophils and FeNO support the asthma "
+        "component. Mx: never treat as COPD alone. An inhaled "
+        "corticosteroid with a long acting bronchodilator is the "
+        "base, since bronchodilator monotherapy in an asthmatic "
+        "phenotype risks severe exacerbations. Note: the safety "
+        "asymmetry drives management, because missing the asthma "
+        "component is the dangerous error and overtreating it is not."
+    ),
+    "Forrest classification": (
+        "Endoscopic grading of a bleeding peptic ulcer that predicts "
+        "rebleeding risk and decides whether endoscopic therapy is "
+        "needed. Classification: Ia is spurting arterial bleeding and "
+        "Ib is oozing. IIa is a non-bleeding visible vessel, IIb an "
+        "adherent clot and IIc a flat pigmented spot. III is a clean "
+        "ulcer base. Ix: assigned at gastroscopy, ideally within 24 "
+        "hours of presentation and after resuscitation rather than "
+        "before. Mx: grades Ia, Ib and IIa need endoscopic "
+        "haemostasis using two modalities such as adrenaline "
+        "injection plus a clip or thermal therapy, followed by high "
+        "dose intravenous proton pump inhibitor. IIb clots are lifted "
+        "and treated if a vessel lies beneath. IIc and III need no "
+        "therapy and allow early feeding. Prognosis: untreated "
+        "rebleeding risk falls from over half in Ia to under 5 per "
+        "cent in III. Note: the grade decides disposition as much as "
+        "therapy, because a clean based ulcer can go home the same "
+        "day while a visible vessel earns admission."
+    ),
+    "Atlanta classification of acute pancreatitis": (
+        "The revised international framework defining acute "
+        "pancreatitis, its phases and its severity. Criteria: "
+        "diagnosis needs two of three, namely characteristic "
+        "epigastric pain radiating to the back, lipase or amylase at "
+        "least three times the upper limit of normal, or "
+        "characteristic imaging findings. Classification: mild "
+        "disease has no organ failure and no local complication. "
+        "Moderately severe has transient organ failure under 48 hours "
+        "or a local complication. Severe has persistent organ failure "
+        "beyond 48 hours. Ix: CT is unhelpful in the first 72 hours "
+        "and is reserved for suspected necrosis or for deterioration. "
+        "Collections are named by phase, as acute peripancreatic "
+        "fluid collection and pseudocyst in interstitial disease, or "
+        "acute necrotic collection and walled off necrosis after four "
+        "weeks. Mx: fluid resuscitation, analgesia and early enteral "
+        "feeding. Treat the cause, with urgent ERCP for cholangitis. "
+        "Note: persistent organ failure, not necrosis on imaging, is "
+        "what defines severe disease."
+    ),
+    "Hinchey classification": (
+        "Surgical staging of perforated diverticulitis by extent of "
+        "contamination, which determines whether the patient needs an "
+        "operation. Classification: I is a pericolic abscess or "
+        "phlegmon. II is a pelvic or retroperitoneal abscess. III is "
+        "generalised purulent peritonitis. IV is faeculent "
+        "peritonitis from free perforation. Ix: contrast CT of the "
+        "abdomen and pelvis is the staging investigation and "
+        "distinguishes an abscess amenable to drainage from free "
+        "perforation. Mx: stage I is managed with antibiotics alone, "
+        "and many small abscesses resolve without drainage. Stage II "
+        "is treated with percutaneous drainage plus antibiotics. "
+        "Stages III and IV need urgent laparotomy, with a Hartmann "
+        "procedure or primary anastomosis and washout depending on "
+        "stability. Note: a modified system splits stage I into "
+        "phlegmon and small abscess, but the clinically useful "
+        "division is whether the collection can be drained "
+        "radiologically or needs theatre."
+    ),
+    "Baveno criteria": (
+        "Consensus criteria for portal hypertension in compensated "
+        "advanced chronic liver disease, best known for allowing "
+        "screening endoscopy to be avoided in selected patients. "
+        "Criteria: liver stiffness below 15 kPa with a platelet count "
+        "above 150 excludes clinically significant portal "
+        "hypertension, while stiffness of 25 kPa or more rules it in. "
+        "The favourable rule of stiffness under 20 kPa with platelets "
+        "above 150 identifies patients who need no screening "
+        "gastroscopy. Ix: transient elastography plus platelet count, "
+        "repeated annually while the patient stays compensated. Mx: "
+        "patients who fail the rule proceed to gastroscopy for "
+        "varices. Those with high risk varices receive a "
+        "non-selective beta blocker such as carvedilol, now favoured "
+        "over band ligation as first line. Note: the criteria apply "
+        "only to compensated disease from viral, alcohol or metabolic "
+        "causes, so decompensation or an atypical aetiology sends the "
+        "patient straight to endoscopy."
+    ),
+    "Maddrey discriminant function": (
+        "A score used in severe alcohol-related hepatitis to decide "
+        "who benefits from corticosteroids. Criteria: calculated from "
+        "the prothrombin time prolongation and the serum bilirubin. A "
+        "value of 32 or more defines severe disease with high short "
+        "term mortality. Ix: needs only a prothrombin time with its "
+        "control value and a bilirubin, so it is scored on admission "
+        "bloods. Exclude sepsis, gastrointestinal bleeding and renal "
+        "failure before treating, since each contraindicates "
+        "steroids. Mx: a value of 32 or above without "
+        "contraindication justifies prednisolone 40 mg daily for 28 "
+        "days. Reassess at day 7 with the Lille score and stop "
+        "steroids if it exceeds 0.45, as the patient is a "
+        "non-responder. Nutrition, thiamine and withdrawal management "
+        "matter as much as the steroid. Prognosis: untreated severe "
+        "disease carries roughly 30 to 40 per cent one month "
+        "mortality. Note: MELD is increasingly used alongside it, "
+        "with a MELD above 20 marking equivalent severity."
+    ),
+    "King's College criteria": (
+        "Criteria identifying acute liver failure patients who will "
+        "not survive without transplantation, and so should be listed "
+        "urgently. Criteria: in paracetamol toxicity, an arterial pH "
+        "below 7.3 after resuscitation, or the combination of INR "
+        "above 6.5 with creatinine above 300 micromol/L and grade III "
+        "to IV encephalopathy. In non-paracetamol failure, an INR "
+        "above 6.5 alone, or three of five adverse features covering "
+        "age, aetiology, jaundice to encephalopathy interval, "
+        "bilirubin and INR. Ix: serial arterial pH, lactate, INR, "
+        "creatinine and encephalopathy grading, because the criteria "
+        "track a trajectory rather than a single reading. Mx: discuss "
+        "with the state liver transplant unit early rather than on "
+        "meeting criteria, continuing N-acetylcysteine, glucose and "
+        "intracranial pressure care meanwhile. Note: the criteria are "
+        "specific but insensitive, so a patient who does not meet "
+        "them may still deteriorate. Referral is driven by "
+        "encephalopathy and coagulopathy, not by waiting for a "
+        "threshold."
+    ),
+    "West Haven criteria": (
+        "Clinical grading of hepatic encephalopathy severity, used to "
+        "guide treatment intensity and airway decisions. "
+        "Classification: grade 1 is mild confusion with altered sleep "
+        "and shortened attention. Grade 2 is lethargy with "
+        "disorientation to time and obvious asterixis. Grade 3 is "
+        "somnolence with gross disorientation, but the patient "
+        "remains rousable. Grade 4 is coma unresponsive to pain. "
+        "Clinical features: covert encephalopathy sits below grade 1 "
+        "and is detectable only on psychometric testing, yet it "
+        "already impairs driving. Ix: the diagnosis is clinical and "
+        "ammonia adds little, though a normal ammonia makes it "
+        "unlikely. Hunt the precipitant with a septic screen, "
+        "electrolytes and a search for gastrointestinal bleeding or "
+        "constipation. Mx: lactulose titrated to two or three soft "
+        "stools daily, with rifaximin added for recurrence. Grade 3 "
+        "or 4 warrants intensive care review for airway protection. "
+        "Note: treat the precipitant rather than the ammonia, because "
+        "most episodes are driven by infection, bleeding, dehydration "
+        "or sedatives."
+    ),
+    "Truelove and Witts criteria": (
+        "Bedside criteria defining acute severe ulcerative colitis, "
+        "which is a medical emergency rather than a flare to manage "
+        "as an outpatient. Criteria: six or more bloody stools daily "
+        "plus any one systemic feature, namely a temperature above "
+        "37.8, pulse above 90, haemoglobin below 105 g/L or ESR above "
+        "30. Ix: bloods with CRP, stool culture and Clostridioides "
+        "difficile testing, plus an abdominal radiograph looking for "
+        "colonic dilatation beyond 5.5 cm. Flexible sigmoidoscopy "
+        "without bowel preparation grades severity and excludes "
+        "cytomegalovirus. Mx: admit for intravenous hydrocortisone "
+        "100 mg six hourly, thromboprophylaxis despite the bleeding, "
+        "and daily surgical review. Assess response on day 3, since "
+        "more than eight stools or a CRP above 45 predicts colectomy. "
+        "Rescue therapy is infliximab or ciclosporin. Note: "
+        "thromboprophylaxis is withheld far too often here, yet acute "
+        "severe colitis is strongly prothrombotic and rectal bleeding "
+        "is not a contraindication."
+    ),
+    "Montreal classification": (
+        "Standardised phenotyping of inflammatory bowel disease by "
+        "age, location and behaviour, which underpins trial reporting "
+        "and treatment decisions. Classification: Crohn disease is "
+        "coded by age at diagnosis, by location as ileal, colonic, "
+        "ileocolonic or upper gastrointestinal, and by behaviour as "
+        "non-stricturing, stricturing or penetrating. A modifier is "
+        "added for perianal disease. Ulcerative colitis is coded by "
+        "extent as proctitis, left sided or extensive. Ix: "
+        "ileocolonoscopy with biopsies defines location, while MR "
+        "enterography or capsule endoscopy identifies small bowel and "
+        "upper disease. Mx: phenotype drives intensity. Penetrating "
+        "or perianal Crohn disease and extensive early onset colitis "
+        "justify early biologic therapy, while limited proctitis is "
+        "managed topically. Note: behaviour progresses over time "
+        "while location is largely fixed, so a non-stricturing "
+        "patient may become stricturing and warrant reclassification "
+        "at review."
+    ),
+    "KDIGO CKD staging": (
+        "Two axis staging of chronic kidney disease by glomerular "
+        "filtration rate and albuminuria, which together predict risk "
+        "far better than creatinine alone. Staging: G1 is an eGFR "
+        "above 90, G2 is 60 to 89, G3a is 45 to 59, G3b is 30 to 44, "
+        "G4 is 15 to 29 and G5 is below 15. Albuminuria is graded A1 "
+        "below 3, A2 from 3 to 30 and A3 above 30 mg/mmol by urine "
+        "albumin creatinine ratio. Ix: two eGFR values at least three "
+        "months apart plus a first morning ratio are needed, since a "
+        "single abnormal result is not chronic kidney disease. Mx: "
+        "the combined grid sets review frequency and referral. "
+        "Australian guidance refers G4 and G5, any A3 with declining "
+        "function, or persistent haematuria with albuminuria. "
+        "Treatment is blood pressure control, an ACE inhibitor or ARB "
+        "where albuminuria is present, an SGLT2 inhibitor and lipid "
+        "management. Note: an eGFR of 55 with normal albuminuria is a "
+        "different risk from an eGFR of 55 with A3, so write the "
+        "stage with both letters."
+    ),
+    "Kidney failure risk equation": (
+        "A validated equation estimating the probability of kidney "
+        "failure needing replacement therapy within two and five "
+        "years in established chronic kidney disease. Criteria: the "
+        "four variable form uses age, sex, eGFR and urine albumin "
+        "creatinine ratio, and applies from stage G3a to G5. Ix: "
+        "needs a stable eGFR and a recent ratio rather than values "
+        "taken during acute illness, because acute kidney injury "
+        "inflates the estimate. Mx: a five year risk below 5 per cent "
+        "supports primary care management with routine review. Risk "
+        "above 10 to 15 per cent prompts nephrology referral, "
+        "vascular access planning and transplant work-up. It reframes "
+        "the conversation from a number to a probability the patient "
+        "can act on. Note: it predicts kidney failure, not death, and "
+        "many older patients with moderate risk die of cardiovascular "
+        "disease first, so pair it with an honest discussion of "
+        "competing risk rather than treating it as destiny."
+    ),
+    "Magnesium replacement": (
+        "Correction of hypomagnesaemia, worth pursuing because it "
+        "perpetuates refractory hypokalaemia and hypocalcaemia until "
+        "fixed. Aetiology: diuretics, proton pump inhibitors, alcohol "
+        "use, diarrhoea and refeeding are the common hospital causes. "
+        "Clinical features: often silent. Severe deficiency causes "
+        "tremor, tetany, weakness and arrhythmia, including torsades "
+        "de pointes and digoxin sensitivity. Ix: serum magnesium "
+        "underestimates total body stores because most is "
+        "intracellular, so treat on the clinical picture in a patient "
+        "with refractory potassium loss even when the level looks "
+        "borderline. Mx: oral magnesium aspartate for mild "
+        "asymptomatic deficiency, accepting that diarrhoea limits the "
+        "dose. Give intravenous magnesium sulfate for levels below "
+        "0.5 mmol/L or any symptoms, typically 10 mmol over one to "
+        "two hours, and more slowly in renal impairment. Recheck "
+        "after several hours. Note: potassium will not correct until "
+        "magnesium is replaced, because depletion opens renal "
+        "potassium channels and drives ongoing urinary loss."
+    ),
+    "4Ts score": (
+        "A pre-test probability score for heparin induced "
+        "thrombocytopenia that decides whether to stop heparin and "
+        "test, since assays are slow and over-requested. Criteria: up "
+        "to two points each for thrombocytopenia, its timing, "
+        "thrombosis and the absence of another cause. "
+        "Thrombocytopenia scores highest with a fall of more than 50 "
+        "per cent and a nadir above 20. Timing scores highest at day "
+        "5 to 10 after exposure. Classification: 0 to 3 is low "
+        "probability, 4 to 5 intermediate and 6 to 8 high. Ix: a low "
+        "score effectively excludes the diagnosis and needs no "
+        "immunoassay. Intermediate or high scores prompt an anti-PF4 "
+        "immunoassay, confirmed by a functional assay when positive. "
+        "Mx: with an intermediate or high score, stop all heparin "
+        "including flushes immediately and start a non-heparin "
+        "anticoagulant such as danaparoid, argatroban or "
+        "fondaparinux. Do not give platelets or start warfarin while "
+        "the count is low. Note: the paradox is thrombosis rather "
+        "than bleeding, so withholding anticoagulation because of a "
+        "low platelet count is the classic error."
+    ),
+    "PLASMIC score": (
+        "A seven point score estimating the likelihood of severe "
+        "ADAMTS13 deficiency in thrombotic microangiopathy, used "
+        "while the assay is pending. Criteria: one point each for a "
+        "platelet count below 30, evidence of haemolysis, no active "
+        "cancer, no transplant, MCV below 90, INR below 1.5 and "
+        "creatinine below about 177 micromol/L. Classification: 0 to "
+        "4 is low risk, 5 is intermediate and 6 to 7 is high risk for "
+        "thrombotic thrombocytopenic purpura. Ix: send ADAMTS13 "
+        "activity before plasma exchange, with a blood film for "
+        "schistocytes, LDH, haptoglobin, bilirubin and a direct "
+        "antiglobulin test to exclude immune haemolysis. Mx: a score "
+        "of 6 or 7 justifies starting plasma exchange immediately "
+        "without waiting for the assay, alongside corticosteroids and "
+        "caplacizumab where available. A low score points instead to "
+        "disseminated intravascular coagulation, sepsis or haemolytic "
+        "uraemic syndrome. Note: preserved renal function with "
+        "profound thrombocytopenia favours TTP, while the reverse "
+        "favours haemolytic uraemic syndrome."
+    ),
+    "Khorana score": (
+        "A score predicting venous thromboembolism risk in ambulatory "
+        "patients receiving chemotherapy, which identifies who to "
+        "offer thromboprophylaxis. Criteria: two points for very high "
+        "risk tumour sites such as stomach and pancreas, and one "
+        "point for high risk sites including lung, lymphoma, "
+        "gynaecological, bladder and testicular. One point each is "
+        "added for a platelet count of 350 or more, haemoglobin below "
+        "100 or use of an erythropoiesis stimulating agent, a white "
+        "cell count above 11, and a body mass index of 35 or more. "
+        "Classification: 0 is low risk, 1 to 2 intermediate and 3 or "
+        "more high risk. Ix: scored from pre-chemotherapy bloods and "
+        "the tumour type, so it needs nothing extra. Mx: a score of 2 "
+        "or more supports offering prophylactic apixaban, rivaroxaban "
+        "or low molecular weight heparin through chemotherapy, after "
+        "weighing bleeding risk. Note: it was derived in solid "
+        "tumours and performs poorly in myeloma and primary brain "
+        "tumours, which need their own assessment."
+    ),
+    "ISTH DIC score": (
+        "The International Society on Thrombosis and Haemostasis "
+        "score for overt disseminated intravascular coagulation, "
+        "which turns a pattern of results into a diagnosis. Criteria: "
+        "points are assigned for the platelet count, an elevated "
+        "fibrin marker such as D-dimer, a prolonged prothrombin time "
+        "and a low fibrinogen. A total of 5 or more is compatible "
+        "with overt disease, and the score is repeated daily because "
+        "this is a trajectory rather than a snapshot. Ix: serial full "
+        "blood count, coagulation profile, fibrinogen and D-dimer, "
+        "with a blood film for schistocytes. Score only in a patient "
+        "with a condition known to cause it, since the criteria "
+        "assume that context. Mx: treat the precipitant, most often "
+        "sepsis, an obstetric catastrophe, malignancy or trauma. Give "
+        "platelets and plasma only for bleeding or before procedures, "
+        "cryoprecipitate for fibrinogen below 1.5 g/L, and "
+        "prophylactic heparin in the thrombotic phenotype. Note: a "
+        "falling fibrinogen with a rising D-dimer is more informative "
+        "than any single value, because fibrinogen is an acute phase "
+        "reactant and may start high."
+    ),
+    "Hunt and Hess grade": (
+        "Clinical grading of aneurysmal subarachnoid haemorrhage "
+        "severity at presentation, which drives prognosis and the "
+        "urgency of intervention. Classification: grade 1 is "
+        "asymptomatic or mild headache. Grade 2 is severe headache "
+        "with neck stiffness but no deficit beyond a cranial nerve "
+        "palsy. Grade 3 is drowsiness or a mild focal deficit. Grade "
+        "4 is stupor with moderate to severe hemiparesis. Grade 5 is "
+        "deep coma with extensor posturing. Ix: non-contrast CT brain "
+        "first, with lumbar puncture for xanthochromia if imaging is "
+        "negative beyond 6 hours, then CT angiography to define the "
+        "aneurysm. Mx: every grade needs neurosurgical referral, "
+        "nimodipine, blood pressure control and early securing of the "
+        "aneurysm by coiling or clipping. Grades 4 and 5 need airway "
+        "protection and consideration of external ventricular "
+        "drainage for hydrocephalus. Prognosis: mortality rises "
+        "steeply from grade 3 onwards. Note: grade after "
+        "resuscitation, because hydrocephalus or a seizure can make a "
+        "salvageable patient look grade 5 on arrival."
+    ),
+    "Fisher grade": (
+        "Radiological grading of subarachnoid blood volume on the "
+        "initial CT, used to predict delayed cerebral ischaemia from "
+        "vasospasm. Classification: grade 1 is no blood detected. "
+        "Grade 2 is a diffuse thin layer under 1 mm. Grade 3 is "
+        "localised clot or a layer 1 mm or thicker, carrying the "
+        "highest vasospasm risk. Grade 4 is intracerebral or "
+        "intraventricular blood with diffuse or absent subarachnoid "
+        "blood. Ix: scored on non-contrast CT within 24 hours, since "
+        "blood is reabsorbed and later scans understage. Transcranial "
+        "Doppler and CT perfusion monitor for vasospasm afterwards. "
+        "Mx: high grades prompt nimodipine 60 mg six hourly for 21 "
+        "days, maintenance of euvolaemia and vigilance for delayed "
+        "ischaemia between days 4 and 14. Established vasospasm is "
+        "treated with induced hypertension and endovascular therapy. "
+        "Note: the modified scale performs better because it counts "
+        "intraventricular blood as added risk rather than as a "
+        "separate grade, so state which version you are using."
+    ),
+    "Canadian CT head rule": (
+        "A validated decision rule identifying which adults with "
+        "minor head injury need a CT brain, derived to reduce imaging "
+        "without missing surgical lesions. Criteria: high risk "
+        "features are a GCS below 15 at two hours, suspected open or "
+        "depressed skull fracture, any sign of basal skull fracture, "
+        "two or more episodes of vomiting, and age 65 or older. "
+        "Medium risk features are amnesia before impact of 30 minutes "
+        "or more, and a dangerous mechanism. Ix: any high risk "
+        "feature mandates CT. Medium risk features predict clinically "
+        "important injury and also warrant CT in most Australian "
+        "emergency departments. Mx: a patient meeting no criterion "
+        "can be discharged with written head injury advice and a "
+        "responsible adult, without imaging. Note: the rule applies "
+        "only to minor injury with witnessed loss of consciousness, "
+        "amnesia or disorientation. It excludes anticoagulated "
+        "patients, seizure, focal deficit and age under 16, and "
+        "anticoagulation alone is an indication to scan."
+    ),
+    "Romberg test": (
+        "A bedside test of proprioception that distinguishes sensory "
+        "ataxia from cerebellar ataxia. Ix: the patient stands with "
+        "feet together and arms by the side, steady with the eyes "
+        "open, then closes the eyes. Marked sway or falling after eye "
+        "closure is a positive test. Stand beside the patient ready "
+        "to catch them. Clinical features: a positive test means "
+        "balance depended on vision, so proprioceptive or vestibular "
+        "input has been lost. Cerebellar disease causes unsteadiness "
+        "with the eyes open as well, which is a negative Romberg "
+        "despite obvious ataxia. Aetiology: dorsal column disease "
+        "from vitamin B12 deficiency, tabes dorsalis, peripheral "
+        "neuropathy and vestibular loss. Mx: investigation follows "
+        "the pattern, with B12 and folate, HbA1c, syphilis serology, "
+        "and spinal imaging where a cord level is suspected. Note: "
+        "the test is often described as a test of cerebellar "
+        "function, which is exactly backwards. It is positive in "
+        "sensory ataxia and negative in cerebellar ataxia."
+    ),
+    "Upper motor neurone lesion": (
+        "Damage to the corticospinal tract anywhere from the motor "
+        "cortex to the anterior horn cell, producing a characteristic "
+        "pattern of weakness. Clinical features: increased tone with "
+        "spasticity and a clasp knife quality, hyperreflexia, clonus "
+        "and an extensor plantar response. Weakness is pyramidal, "
+        "affecting upper limb extensors and lower limb flexors, with "
+        "no wasting beyond disuse and no fasciculation. Aetiology: "
+        "stroke, multiple sclerosis, spinal cord compression, motor "
+        "neurone disease and cerebral palsy. Ix: localise first by "
+        "the pattern, since a cord lesion gives a sensory level with "
+        "bilateral signs while a cortical lesion gives facial "
+        "involvement and higher cortical signs. Image the suspected "
+        "level with MRI. Mx: treat the cause, then manage spasticity "
+        "with physiotherapy, baclofen or botulinum toxin, and prevent "
+        "contractures. Note: in the first hours to days after an "
+        "acute lesion the limb is flaccid and areflexic, so spinal "
+        "shock or an acute stroke can masquerade as a lower motor "
+        "neurone picture."
+    ),
+    "Lower motor neurone lesion": (
+        "Damage anywhere from the anterior horn cell through the "
+        "nerve root, plexus and peripheral nerve to the neuromuscular "
+        "junction. Clinical features: reduced tone, absent or reduced "
+        "reflexes, marked wasting and fasciculation, with weakness in "
+        "the distribution of the affected root or nerve rather than a "
+        "pyramidal pattern. The plantar response is flexor or absent. "
+        "Aetiology: peripheral neuropathy, radiculopathy from disc "
+        "disease, Guillain-Barre syndrome, poliomyelitis, and "
+        "anterior horn cell loss in motor neurone disease. Ix: nerve "
+        "conduction studies and electromyography separate axonal from "
+        "demyelinating disease and confirm denervation. Imaging "
+        "targets the root or plexus where the pattern suggests it. "
+        "Mx: directed at the cause, with immunotherapy for "
+        "inflammatory neuropathy and decompression for structural "
+        "root compression. Note: motor neurone disease is the classic "
+        "trap because it mixes both patterns, giving a wasted "
+        "fasciculating limb with brisk reflexes, and that combination "
+        "should prompt referral."
+    ),
+    "Peripheral stigmata of infective endocarditis": (
+        "The immune complex and embolic signs of subacute "
+        "endocarditis, uncommon now but heavily examined and useful "
+        "when present. Clinical features: Osler nodes are tender pulp "
+        "lesions on the fingers and are immune complex mediated. "
+        "Janeway lesions are painless haemorrhagic macules on the "
+        "palms and soles and are embolic. Roth spots are retinal "
+        "haemorrhages with a pale centre. Splinter haemorrhages run "
+        "longitudinally under the nail, and clubbing appears in long "
+        "standing disease. Ix: three sets of blood cultures from "
+        "separate sites before antibiotics, with transthoracic "
+        "echocardiography followed by transoesophageal imaging when "
+        "suspicion persists. Mx: these count as minor Duke criteria "
+        "under vascular and immunological phenomena, so they raise "
+        "probability rather than confirm the diagnosis. Treatment is "
+        "prolonged intravenous antibiotics guided by culture, with "
+        "surgical referral for heart failure, abscess or large "
+        "vegetations. Note: tender is Osler and painless is Janeway, "
+        "a distinction that reflects immune complex versus embolic "
+        "mechanism rather than being arbitrary."
+    ),
+    "Pleural plaques": (
+        "Discrete areas of hyalinised collagen on the parietal "
+        "pleura, the commonest marker of past asbestos exposure and "
+        "benign in themselves. Aetiology: asbestos fibres reaching "
+        "the pleura, typically 20 to 40 years earlier. In Australia "
+        "this means the building trades, power stations, shipyards "
+        "and home renovation of fibro cement. Clinical features: "
+        "asymptomatic with a normal examination. They do not cause "
+        "pain and rarely affect lung function unless extensive or "
+        "accompanied by diffuse pleural thickening. Ix: chest "
+        "radiograph shows holly leaf calcified plaques along the "
+        "diaphragm and lateral chest wall. CT is more sensitive and "
+        "separates plaques from diffuse pleural thickening, which "
+        "does impair function. Mx: no treatment is needed. Reassure, "
+        "counsel on smoking cessation, and document the exposure "
+        "history for compensation through the relevant state dust "
+        "diseases scheme. Note: plaques mark exposure rather than "
+        "disease and do not become mesothelioma, though the exposure "
+        "that caused them carries that risk independently."
+    ),
+    "FRAX fracture risk tool": (
+        "An online calculator estimating the ten year probability of "
+        "major osteoporotic fracture and of hip fracture, used to "
+        "decide who needs treatment. Criteria: inputs are age, sex, "
+        "weight, height, previous fracture, parental hip fracture, "
+        "smoking, glucocorticoid use, rheumatoid arthritis, secondary "
+        "osteoporosis and alcohol intake. Femoral neck bone density "
+        "is optional. Ix: it can be calculated without a DXA scan, "
+        "which makes it useful for triage in primary care, though "
+        "adding bone density improves accuracy. The Garvan calculator "
+        "is the Australian alternative and factors in falls. Mx: in "
+        "Australia treatment is generally PBS subsidised after a "
+        "minimal trauma fracture or with a T score of minus 2.5 or "
+        "below, so FRAX supplements rather than replaces those "
+        "criteria. It earns its place in osteopenia, where a high "
+        "calculated risk supports treating. Note: FRAX underestimates "
+        "risk after a recent fracture, with multiple vertebral "
+        "fractures and on high dose glucocorticoids, because it "
+        "counts each input once and ignores falls entirely."
+    ),
+    "QT prolonging drugs": (
+        "Medicines that delay ventricular repolarisation by blocking "
+        "the hERG potassium channel, creating a risk of torsades de "
+        "pointes. Aetiology: the common culprits in Australian "
+        "practice are antipsychotics such as haloperidol and "
+        "quetiapine, antidepressants including citalopram and "
+        "escitalopram, macrolides and quinolones, azole antifungals, "
+        "ondansetron, methadone and amiodarone. Risk factors: female "
+        "sex, older age, hypokalaemia, hypomagnesaemia, bradycardia, "
+        "structural heart disease and congenital long QT. Most events "
+        "involve two or more contributing factors rather than a "
+        "single drug. Ix: ECG with the QT corrected for rate. A QTc "
+        "above 500 ms, or a rise of more than 60 ms from baseline, is "
+        "the action threshold. Mx: stop or substitute the least "
+        "essential agent, correct potassium to above 4.0 mmol/L and "
+        "replace magnesium, then repeat the ECG. Treat torsades with "
+        "intravenous magnesium. Note: check a published QT drug "
+        "register rather than relying on memory, since risk "
+        "multiplies when agents are combined."
+    ),
+    "Variable rate insulin infusion": (
+        "A continuous intravenous insulin infusion titrated against "
+        "hourly glucose, used when subcutaneous insulin cannot be "
+        "relied upon. Indications: diabetic ketoacidosis and "
+        "hyperosmolar hyperglycaemic state, prolonged fasting or "
+        "major surgery, critical illness, and persistent "
+        "hyperglycaemia despite subcutaneous insulin. Mx: run a short "
+        "acting insulin at 50 units in 50 mL of sodium chloride 0.9 "
+        "per cent, titrated hourly to a target of 6 to 10 mmol/L. "
+        "Continue long acting basal insulin throughout, since "
+        "stopping it is the commonest cause of rebound ketosis. Add "
+        "glucose containing fluid once the glucose falls below 14 "
+        "mmol/L. Monitoring: hourly capillary glucose, with potassium "
+        "and ketones at least six hourly in ketoacidosis. Note: the "
+        "transition off the infusion causes the harm. Give "
+        "subcutaneous rapid acting insulin and overlap by 30 to 60 "
+        "minutes before stopping the pump, because intravenous "
+        "insulin has a half-life of only a few minutes."
+    ),
+    "Immunisation in the immunocompromised": (
+        "Vaccination in patients with impaired immunity, where live "
+        "vaccines may be unsafe and inactivated vaccines may work "
+        "less well. Classification: significant immunocompromise "
+        "includes haematological malignancy, solid organ or stem cell "
+        "transplant, corticosteroids at 20 mg prednisolone daily for "
+        "two weeks or more, biologic and other immunosuppressive "
+        "therapy, and advanced HIV. Mx: live vaccines including MMR, "
+        "varicella, zoster, yellow fever and BCG are contraindicated "
+        "in significant immunocompromise. Inactivated vaccines are "
+        "safe and indicated, with annual influenza, COVID-19 boosters "
+        "and pneumococcal vaccination funded under the Australian "
+        "National Immunisation Program. Vaccinate at least two weeks "
+        "before starting immunosuppression, or four weeks ahead for "
+        "live vaccines. The recombinant zoster vaccine is preferred "
+        "over the live product. Note: household contacts should be "
+        "fully vaccinated, and revaccination is required after stem "
+        "cell transplant because prior immunity is lost."
     ),
 }
 
