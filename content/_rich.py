@@ -14661,6 +14661,228 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "hyponatremia hyperglycemia sodium correction"]],
         "summary": "",
     },
+    {
+        "name": "Trauma-focused cognitive behavioural therapy",
+        "aliases": ["TF-CBT", "Trauma focused CBT"],
+        "utd": [["Overview", "trauma focused cognitive behavioral therapy PTSD"]],
+        "summary": "",
+    },
+    {
+        "name": "Prolonged exposure therapy",
+        "aliases": ["Imaginal exposure", "In vivo exposure"],
+        "utd": [["Overview", "prolonged exposure therapy PTSD"]],
+        "summary": "",
+    },
+    {
+        "name": "Group psychotherapy",
+        "aliases": ["Group therapy", "Therapeutic group"],
+        "utd": [["Overview", "group psychotherapy indications therapeutic factors"]],
+        "summary": "",
+    },
+    {
+        "name": "Assertive community treatment",
+        "aliases": ["Assertive outreach", "Intensive case management"],
+        "utd": [["Overview", "assertive community treatment severe mental illness"]],
+        "summary": "",
+    },
+    {
+        "name": "Relapse prevention",
+        "aliases": ["Relapse prevention plan", "Early warning signs of relapse"],
+        "utd": [["Overview", "relapse prevention plan mental illness substance use"]],
+        "summary": "",
+    },
+    {
+        "name": "Supported decision making",
+        "aliases": ["Supported decision-making", "Will and preferences"],
+        "utd": [["Overview", "supported decision making capacity disability"]],
+        "summary": "",
+    },
+    {
+        "name": "Contingency management",
+        "aliases": ["Incentive based treatment"],
+        "utd": [["Overview", "contingency management stimulant use disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Pharmacotherapy for alcohol use disorder",
+        "aliases": ["Anti-craving medication", "Alcohol pharmacotherapy"],
+        "utd": [["Overview", "naltrexone acamprosate disulfiram alcohol use disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Buprenorphine-naloxone",
+        "aliases": ["Buprenorphine naloxone", "Sublingual buprenorphine"],
+        "utd": [["Overview", "buprenorphine naloxone opioid dependence maintenance"]],
+        "summary": "",
+    },
+    {
+        "name": "Thiamine prophylaxis",
+        "aliases": ["Parenteral thiamine", "High dose thiamine"],
+        "utd": [["Overview", "thiamine prophylaxis Wernicke encephalopathy prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Smoking cessation pharmacotherapy",
+        "aliases": ["Quit smoking medication", "Nicotine dependence treatment"],
+        "utd": [["Overview", "smoking cessation pharmacotherapy varenicline nicotine replacement"]],
+        "summary": "",
+    },
+    {
+        "name": "Harm minimisation",
+        "aliases": ["Harm reduction", "Harm minimization"],
+        "utd": [["Overview", "harm minimisation drug policy needle syringe program"]],
+        "summary": "",
+    },
+    {
+        "name": "Iron deficiency in toddlers",
+        "aliases": ["Nutritional iron deficiency in children", "Toddler iron deficiency"],
+        "utd": [["Overview", "iron deficiency young children cow milk"]],
+        "summary": "",
+    },
+    {
+        "name": "Bedwetting alarm",
+        "aliases": ["Enuresis alarm"],
+        "utd": [["Overview", "enuresis alarm nocturnal bedwetting children"]],
+        "summary": "",
+    },
+    {
+        "name": "Adverse events following immunisation",
+        "aliases": ["AEFI", "Vaccine adverse event", "Vaccine reaction"],
+        "utd": [["Overview", "adverse events following immunisation reporting"]],
+        "summary": "",
+    },
+    {
+        "name": "Vision screening in children",
+        "aliases": ["Childhood vision screening", "Preschool vision screening"],
+        "utd": [["Overview", "vision screening children amblyopia red reflex"]],
+        "summary": "",
+    },
+    {
+        "name": "Anticipatory guidance",
+        "aliases": ["Well child advice"],
+        "utd": [["Overview", "anticipatory guidance well child visit"]],
+        "summary": "",
+    },
+    {
+        "name": "Parent management training",
+        "aliases": ["Behavioural parent training", "Parenting program"],
+        "utd": [["Overview", "parent management training oppositional defiant disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Ovulation induction",
+        "aliases": ["Induction of ovulation"],
+        "utd": [["Overview", "ovulation induction letrozole clomiphene anovulatory infertility"]],
+        "summary": "",
+    },
+    {
+        "name": "Endometrial biopsy",
+        "aliases": ["Pipelle biopsy", "Endometrial sampling"],
+        "utd": [["Overview", "endometrial biopsy pipelle postmenopausal bleeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Myomectomy",
+        "aliases": ["Fibroid removal", "Laparoscopic myomectomy"],
+        "utd": [["Overview", "myomectomy fibroids uterus preserving surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Endometrial ablation",
+        "aliases": ["Endometrial resection", "Ablation of the endometrium"],
+        "utd": [["Overview", "endometrial ablation heavy menstrual bleeding"]],
+        "summary": "",
+    },
+    {
+        "name": "Urodynamics",
+        "aliases": ["Urodynamic studies", "Cystometry"],
+        "utd": [["Overview", "urodynamic studies incontinence detrusor overactivity"]],
+        "summary": "",
+    },
+    {
+        "name": "Mid-urethral sling",
+        "aliases": ["Midurethral sling", "Tension-free vaginal tape", "Transobturator tape"],
+        "utd": [["Overview", "midurethral sling stress urinary incontinence mesh"]],
+        "summary": "",
+    },
+    {
+        "name": "Magnesium sulfate for neuroprotection",
+        "aliases": ["Fetal neuroprotection"],
+        "utd": [["Overview", "magnesium sulfate fetal neuroprotection preterm birth"]],
+        "summary": "",
+    },
+    {
+        "name": "Saline infusion sonohysterography",
+        "aliases": ["Sonohysterography", "Saline infusion sonogram"],
+        "utd": [["Overview", "saline infusion sonohysterography endometrial polyp"]],
+        "summary": "",
+    },
+    {
+        "name": "Bladder retraining",
+        "aliases": ["Bladder training", "Timed voiding"],
+        "utd": [["Overview", "bladder retraining overactive bladder urgency"]],
+        "summary": "",
+    },
+    {
+        "name": "Central line associated bloodstream infection",
+        "aliases": ["CLABSI", "Line sepsis", "Catheter related bloodstream infection"],
+        "utd": [["Overview", "central line associated bloodstream infection prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Sharps injury management",
+        "aliases": ["Needlestick injury", "Occupational exposure to blood"],
+        "utd": [["Overview", "needlestick injury occupational exposure post exposure prophylaxis"]],
+        "summary": "",
+    },
+    {
+        "name": "Venous thromboembolism risk assessment",
+        "aliases": ["VTE risk assessment", "Thromboprophylaxis assessment"],
+        "utd": [["Overview", "venous thromboembolism risk assessment hospital prophylaxis"]],
+        "summary": "",
+    },
+    {
+        "name": "Perioperative anticoagulation management",
+        "aliases": ["Bridging anticoagulation", "Anticoagulation around surgery"],
+        "utd": [["Overview", "perioperative anticoagulation bridging warfarin direct oral anticoagulant"]],
+        "summary": "",
+    },
+    {
+        "name": "Aseptic technique",
+        "aliases": ["Aseptic non-touch technique", "Sterile technique"],
+        "utd": [["Overview", "aseptic non touch technique key parts key sites"]],
+        "summary": "",
+    },
+    {
+        "name": "Direct acting antivirals for hepatitis C",
+        "aliases": ["Direct-acting antivirals", "Direct acting antiviral therapy"],
+        "utd": [["Overview", "direct acting antivirals hepatitis C sustained virological response"]],
+        "summary": "",
+    },
+    {
+        "name": "Treatment as prevention",
+        "aliases": ["Undetectable equals untransmittable", "Viral suppression as prevention"],
+        "utd": [["Overview", "HIV treatment as prevention undetectable untransmittable"]],
+        "summary": "",
+    },
+    {
+        "name": "Compression therapy",
+        "aliases": ["Graduated compression stockings", "Compression bandaging"],
+        "utd": [["Overview", "compression therapy venous leg ulcer ankle brachial index"]],
+        "summary": "",
+    },
+    {
+        "name": "Stoma care",
+        "aliases": ["Colostomy care", "Ileostomy care"],
+        "utd": [["Overview", "stoma care high output ileostomy peristomal skin"]],
+        "summary": "",
+    },
+    {
+        "name": "Outbreak investigation",
+        "aliases": ["Outbreak management", "Epidemic investigation"],
+        "utd": [["Overview", "outbreak investigation epidemic curve case definition"]],
+        "summary": "",
+    },
 ]
 
 
@@ -83191,6 +83413,739 @@ RICH_SUMMARIES = {
         "sodium that is high signals a large free water deficit, so "
         "watch it rise as glucose falls and slow the correction "
         "rather than celebrating the number."
+    ),
+
+    "Trauma-focused cognitive behavioural therapy": (
+        "Structured, time-limited therapy for post-traumatic stress "
+        "in children, adolescents and adults, combining trauma "
+        "processing with coping skills and, for young people, "
+        "parallel work with the caregiver. Indications: PTSD, "
+        "including complex presentations once safety and "
+        "stabilisation are in place. Features: components run in a "
+        "set sequence. Psychoeducation, parenting skills, relaxation "
+        "and affective regulation come first. The trauma narrative "
+        "and cognitive processing sit in the middle. In vivo mastery "
+        "of avoided reminders, conjoint child and caregiver sessions "
+        "and safety planning finish the course, usually over 12 to 16 "
+        "sessions. Note: the narrative is the active ingredient and "
+        "the part most often skipped, and avoidance in the therapist "
+        "mirrors avoidance in the patient. Australian notes: Phoenix "
+        "Australia guidelines make trauma-focused psychological "
+        "therapy first line for PTSD ahead of medication, with Better "
+        "Access rebates applying. Medication is added when therapy "
+        "alone fails or depression is severe."
+    ),
+    "Prolonged exposure therapy": (
+        "Manualised exposure therapy for PTSD in which the patient "
+        "repeatedly revisits the trauma memory and re-enters avoided "
+        "situations until the fear response settles. Indications: "
+        "PTSD and chronic post-traumatic avoidance. Features: eight "
+        "to fifteen sessions of about 90 minutes built on two kinds "
+        "of exposure. Imaginal exposure is retelling the memory aloud "
+        "in the present tense, recorded and listened to between "
+        "sessions. In vivo exposure is a graded hierarchy of avoided "
+        "but objectively safe situations. Breathing retraining and "
+        "psychoeducation about the maintaining role of avoidance "
+        "surround both. Distress ratings are taken through each "
+        "exposure and are expected to fall within and across "
+        "sessions. Cautions: active suicidality, current abuse, "
+        "intoxication and dissociation severe enough to block "
+        "emotional engagement need addressing first. Note: transient "
+        "worsening early in a course is common and is not a reason to "
+        "stop, and dropout is no higher than in other active "
+        "therapies."
+    ),
+    "Group psychotherapy": (
+        "Therapy delivered to several patients at once, where the "
+        "group itself and not only the therapist is the agent of "
+        "change. Types: psychoeducational and skills groups with a "
+        "set curriculum, interpersonal process groups working with "
+        "what happens between members in the room, and peer support "
+        "groups. Features: Yalom described the therapeutic factors, "
+        "of which instillation of hope, universality, altruism and "
+        "interpersonal learning are the ones patients most often "
+        "name. A group usually runs 8 to 12 members with explicit "
+        "rules on confidentiality, attendance and contact outside "
+        "sessions. Indications: depression, anxiety, personality "
+        "disorder, substance use and adjustment to chronic illness, "
+        "often as the skills arm of a larger programme. Cautions: "
+        "acute psychosis, severe paranoia and pronounced antisocial "
+        "traits rarely suit an open process group. Note: universality "
+        "does most of the early work. Hearing another member describe "
+        "your own experience removes the sense of being uniquely "
+        "defective faster than individual work usually can."
+    ),
+    "Assertive community treatment": (
+        "Intensive team-based model delivering care in the patient's "
+        "own environment for severe mental illness that repeatedly "
+        "fails standard outpatient follow-up. Indications: "
+        "schizophrenia and other psychoses with frequent relapse, "
+        "high hospital use, homelessness, comorbid substance use or "
+        "persistent disengagement. Features: a caseload shared across "
+        "the team rather than held individually, a staff to patient "
+        "ratio near one to ten, outreach into homes and public "
+        "spaces, and availability outside office hours. The team "
+        "spans psychiatry, nursing, social work, occupational "
+        "therapy, peer and vocational workers, and delivers "
+        "medication, physical health care and practical help directly "
+        "rather than by referral. There is no fixed time limit. Note: "
+        "it reduces admissions and improves housing stability and "
+        "engagement, with smaller effects on symptoms themselves. "
+        "Australian notes: delivered through community mental health "
+        "teams, with a community treatment order sometimes providing "
+        "the legal scaffolding where engagement fails without one."
+    ),
+    "Relapse prevention": (
+        "Structured planning that identifies the early signs of "
+        "returning illness and the actions that interrupt it, used "
+        "across mood disorders, psychosis and substance use. "
+        "Features: a written plan naming the personal relapse "
+        "signature, the high risk situations, the coping responses "
+        "and who to contact. In substance use, the Marlatt model "
+        "treats a lapse as a learning event and targets the "
+        "abstinence violation effect, the guilt that turns one drink "
+        "into a binge. Mx: continue medication, protect sleep and "
+        "routine, plan for cues rather than hope to avoid them, and "
+        "rehearse responses to craving. Involve family or carers with "
+        "consent so someone else can also see the signature. "
+        "Monitoring: review the plan at every routine appointment and "
+        "after any lapse. Note: the signature is idiosyncratic, "
+        "consistent for that person, and often precedes obvious "
+        "symptoms by weeks. Waking earlier, spending more or "
+        "withdrawing from contact can be a better alarm than any "
+        "rating scale."
+    ),
+    "Supported decision making": (
+        "Approach that helps a person make and communicate their own "
+        "decisions rather than replacing them with a substitute "
+        "decision maker. Features: the supporter provides information "
+        "in accessible form, helps weigh the options and communicates "
+        "the person's will and preferences. Capacity is presumed, is "
+        "specific to the decision and can fluctuate, so support is "
+        "adjusted rather than withdrawn. Indications: intellectual "
+        "disability, acquired brain injury, dementia and severe "
+        "mental illness, across health, financial and lifestyle "
+        "decisions. Note: it sits above substitute decision making in "
+        "the hierarchy set by the United Nations Convention on the "
+        "Rights of Persons with Disabilities, which Australia has "
+        "ratified. Only when support has genuinely failed does a "
+        "guardian or financial administrator take over. Australian "
+        "notes: state tribunals appoint substitute decision makers "
+        "and increasingly ask what support was tried first, and an "
+        "advance care directive records preferences while capacity is "
+        "intact."
+    ),
+    "Contingency management": (
+        "Behavioural treatment that gives tangible reinforcement for "
+        "an objectively verified target behaviour, most often a "
+        "negative urine drug screen. Indications: stimulant use "
+        "disorder, where it has the strongest evidence of any "
+        "psychosocial treatment, and as an adjunct in opioid, "
+        "cannabis and alcohol programmes or to improve treatment "
+        "attendance. Features: reinforcement must be immediate, "
+        "certain and escalating with consecutive successes, resetting "
+        "after a positive test. Vouchers, prize draws and privileges "
+        "such as take-home doses are all used. The target must be a "
+        "measurable behaviour rather than self-reported abstinence. "
+        "Note: effects are large while the programme runs and decay "
+        "once it stops, so it buys time for other treatments to take "
+        "hold. Australian notes: rarely funded here as a standalone "
+        "programme, though take-home dosing in opioid treatment is "
+        "contingency management in all but name. Objections are "
+        "usually about paying people to do what others do unpaid "
+        "rather than about efficacy."
+    ),
+    "Pharmacotherapy for alcohol use disorder": (
+        "Medication added to psychosocial treatment to reduce craving "
+        "and relapse once withdrawal is complete. Indications: "
+        "moderate to severe alcohol use disorder, particularly where "
+        "abstinence attempts fail despite counselling. Three agents "
+        "are PBS listed. Naltrexone 50 mg daily blocks "
+        "opioid-mediated reward, cuts heavy drinking days and suits a "
+        "patient aiming to reduce rather than stop, but is "
+        "contraindicated with any opioid including analgesia. "
+        "Acamprosate 666 mg three times daily modulates glutamate, "
+        "supports maintained abstinence and needs dose reduction in "
+        "renal impairment. Disulfiram produces an aversive "
+        "acetaldehyde reaction and works only with supervised dosing "
+        "and informed consent. Monitoring: liver function before and "
+        "during naltrexone, renal function for acamprosate. "
+        "Australian notes: eTG supports naltrexone or acamprosate "
+        "first line. Note: treat thiamine and withdrawal first, then "
+        "start within days rather than weeks, while motivation is "
+        "highest."
+    ),
+    "Buprenorphine-naloxone": (
+        "Combination sublingual treatment in which buprenorphine, a "
+        "partial mu agonist, provides the therapeutic effect and "
+        "naloxone deters injection. Indications: opioid dependence "
+        "maintenance, now often ahead of methadone because the "
+        "ceiling effect on respiratory depression makes overdose less "
+        "likely. Features: the film or tablet dissolves sublingually, "
+        "so swallowed naloxone has minimal bioavailability while "
+        "injection precipitates withdrawal. Start only once objective "
+        "withdrawal is established, generally 12 to 24 hours after a "
+        "short acting opioid, or precipitated withdrawal follows. "
+        "Maintenance is typically 8 to 24 mg daily. Cautions: use "
+        "buprenorphine alone or methadone in pregnancy, and remember "
+        "that benzodiazepines and alcohol restore the overdose risk. "
+        "Australian notes: prescribed under a state opioid treatment "
+        "authority with supervised dosing and take-home doses as "
+        "stability allows. Monthly depot buprenorphine is PBS listed "
+        "and removes daily attendance."
+    ),
+    "Thiamine prophylaxis": (
+        "Replacement given to prevent Wernicke encephalopathy in "
+        "anyone at risk of deficiency, on the reasoning that "
+        "treatment is cheap and the untreated disease is not. "
+        "Indications: alcohol use disorder, hyperemesis gravidarum, "
+        "bariatric surgery, prolonged vomiting, malnutrition and "
+        "refeeding. Mx: Australian practice gives parenteral thiamine "
+        "300 mg daily for three to five days to anyone at risk who is "
+        "unwell or admitted, then 100 mg orally daily. If Wernicke "
+        "encephalopathy is suspected, give 500 mg parenterally three "
+        "times daily. Oral absorption is limited and unreliable in "
+        "alcohol dependence, so oral alone does not prevent the "
+        "disease in a heavy drinker. Key point: give thiamine before "
+        "any glucose-containing fluid, since a glucose load consumes "
+        "the remaining thiamine and can precipitate the "
+        "encephalopathy. Note: anaphylaxis to parenteral thiamine is "
+        "rare and is not a reason to withhold it, and the classic "
+        "triad appears in a minority, so treat on risk rather than on "
+        "signs."
+    ),
+    "Smoking cessation pharmacotherapy": (
+        "Medication that roughly doubles quit rates when combined "
+        "with behavioural support, which is how it should always be "
+        "offered. Indications: any smoker willing to make an attempt, "
+        "and relief of withdrawal in hospital where smoking is not "
+        "possible. Features: nicotine replacement works best as a "
+        "patch for background craving plus a fast acting form such as "
+        "gum, lozenge or mouth spray for breakthrough urges. "
+        "Varenicline is a partial nicotinic agonist with the highest "
+        "single agent quit rate, started one to two weeks before the "
+        "quit date, and causes nausea and vivid dreams. Bupropion is "
+        "an alternative and lowers the seizure threshold. Cautions: "
+        "neuropsychiatric concerns about varenicline were not "
+        "confirmed by the EAGLES trial, though mood is still worth "
+        "reviewing. Australian notes: patches, varenicline and "
+        "bupropion are PBS listed with a quit attempt declaration, "
+        "and Quitline provides the behavioural arm free. Note: "
+        "combination nicotine replacement beats a patch alone."
+    ),
+    "Harm minimisation": (
+        "Australia's national drug policy framework since 1985, "
+        "resting on three equally weighted pillars rather than on "
+        "abstinence alone. Types: supply reduction through law "
+        "enforcement and regulation, demand reduction through "
+        "prevention and treatment, and harm reduction to lessen "
+        "damage in people who continue to use. Features: needle and "
+        "syringe programmes, opioid treatment, naloxone distribution, "
+        "supervised injecting and safer using advice all sit in the "
+        "harm reduction pillar. Note: needle and syringe programmes "
+        "are among the most cost-effective health interventions ever "
+        "evaluated in Australia, returning several dollars for each "
+        "dollar spent through averted HIV and hepatitis C infection, "
+        "and they do not increase injecting. Australian notes: "
+        "take-home naloxone is free and available without "
+        "prescription through participating pharmacies. Key point: "
+        "harm minimisation is not permissiveness. It accepts that "
+        "someone still using is still a patient, and keeps them alive "
+        "and in contact until they are ready for treatment."
+    ),
+    "Iron deficiency in toddlers": (
+        "The commonest nutritional deficiency in Australian children, "
+        "peaking between 6 months and 3 years when growth is fast and "
+        "the diet is narrow. Aetiology: excessive cow milk intake "
+        "displacing iron-rich food and causing occult gut blood loss, "
+        "prolonged breastfeeding without iron-rich solids, "
+        "prematurity with low stores, and coeliac disease. Clinical "
+        "features: often none. Pallor, irritability, poor appetite "
+        "and pica appear late, and effects on attention and "
+        "development can precede the anaemia. Ix: full blood count "
+        "and ferritin, remembering that ferritin rises with any "
+        "inflammation, so pair it with C-reactive protein. Add "
+        "coeliac serology when intake looks adequate. Mx: limit cow "
+        "milk to about 500 mL a day, add red meat, legumes and "
+        "iron-fortified cereal with a vitamin C source, and give "
+        "elemental iron 3 to 6 mg per kg daily for three months. "
+        "Recheck at one month for a haemoglobin rise. Note: the "
+        "toddler drinking a litre of milk a day is the classic story, "
+        "and the milk is both the cause and the reason the child is "
+        "not hungry for anything else."
+    ),
+    "Bedwetting alarm": (
+        "Moisture sensor that wakes the child as voiding begins, the "
+        "most effective single treatment for primary nocturnal "
+        "enuresis. Indications: children from about 6 to 7 years who "
+        "are motivated, with a family able to wake and respond "
+        "nightly. Features: a sensor in the underwear or a bed mat "
+        "triggers sound or vibration. The child gets up, finishes in "
+        "the toilet and helps reset the alarm. It works by "
+        "conditioning, not by punishment or fluid restriction. Give "
+        "it a full 6 to 8 weeks, and continue until 14 consecutive "
+        "dry nights before stopping. Mx: exclude constipation, "
+        "diabetes and urinary infection first, treat daytime symptoms "
+        "before night, and reserve desmopressin for camps and "
+        "sleepovers or for failure of an alarm. Note: about two "
+        "thirds respond and, unlike desmopressin, the benefit usually "
+        "persists after stopping. Key point: parents wake before the "
+        "child does for the first few weeks, which is why family "
+        "commitment predicts success better than any child factor."
+    ),
+    "Adverse events following immunisation": (
+        "Any untoward medical event after a vaccine, which is a "
+        "temporal association and not proof of causation, and that "
+        "distinction shapes every conversation about it. Types: "
+        "injection site reaction, fever, and rarely anaphylaxis, "
+        "syncope, febrile convulsion or hypotonic hyporesponsive "
+        "episode. Features: local reactions and fever peak within 48 "
+        "hours of an inactivated vaccine, while a measles-containing "
+        "vaccine causes fever and rash 5 to 12 days later as it "
+        "replicates. Anaphylaxis occurs within minutes, which is why "
+        "15 minutes of observation is standard. Mx: paracetamol for "
+        "comfort, a cold compress locally, and adrenaline for "
+        "anaphylaxis. Report to the state vaccine safety service, "
+        "which advises on revaccination. Note: syncope is far "
+        "commoner than anaphylaxis in adolescents and is "
+        "distinguished by rapid recovery when supine. Australian "
+        "notes: AusVaxSafety surveys participants by text after "
+        "vaccination, and a specialist immunisation clinic can give "
+        "later doses under observation rather than abandoning the "
+        "schedule."
+    ),
+    "Vision screening in children": (
+        "Detection of treatable visual impairment while the visual "
+        "cortex is still plastic, because amblyopia left untreated "
+        "past about 7 years is permanent. Screening: red reflex at "
+        "birth, eye examination at the 6 to 8 week check, ongoing "
+        "surveillance recorded in the personal health record, and a "
+        "formal acuity check around 4 years before school entry. "
+        "Features: the red reflex detects cataract and "
+        "retinoblastoma. Corneal light reflex and cover test detect "
+        "strabismus. Acuity is measured with a matching or picture "
+        "chart in preschoolers. Red flags: white pupil, absent or "
+        "asymmetric red reflex, constant strabismus at any age, any "
+        "squint after 4 months, nystagmus and parental concern, each "
+        "needing prompt ophthalmology referral. Mx: refractive "
+        "correction, patching or atropine penalisation of the better "
+        "eye, and surgery for cataract or persistent strabismus. "
+        "Note: an intermittent squint in a newborn is normal up to "
+        "about 3 months. A constant squint never is, and an "
+        "intermittent one after 4 months is not either."
+    ),
+    "Anticipatory guidance": (
+        "Age-specific advice given at well child visits before a "
+        "problem arises, aimed at the things that actually injure and "
+        "kill children. Features: each contact covers safe sleeping, "
+        "feeding and nutrition, immunisation, injury prevention, "
+        "development and behaviour, and parental wellbeing. Content "
+        "shifts with age. Infancy focuses on sleeping on the back, a "
+        "safe sleep surface and a smoke-free environment. Toddlerhood "
+        "covers poisons, pool fencing, car restraints and driveway "
+        "safety. School age covers road and water safety, screen use "
+        "and sleep. Adolescence covers risk taking, sexual health and "
+        "mental health. Ix: screen for parental mood at the same "
+        "visits, since maternal depression changes everything else "
+        "discussed. Australian notes: delivered through the state "
+        "personal health record, the blue book in New South Wales, at "
+        "the scheduled checks and at immunisation visits. Note: it is "
+        "the part of the consultation most easily lost to a busy "
+        "waiting room, and among the best evidenced in child health."
+    ),
+    "Parent management training": (
+        "Structured programme teaching parents behavioural principles "
+        "to manage disruptive child behaviour, and first line ahead "
+        "of any medication for oppositional and conduct problems. "
+        "Indications: oppositional defiant disorder, conduct "
+        "disorder, and the disruptive behaviour accompanying ADHD in "
+        "children under about 12. Features: parents rather than the "
+        "child are the direct focus. Core skills are child-directed "
+        "play to rebuild the relationship, labelled praise for wanted "
+        "behaviour, planned ignoring of attention-seeking behaviour, "
+        "consistent and immediate consequences, and clear instruction "
+        "giving. It is usually delivered in groups over 8 to 12 weeks "
+        "with homework and role play. Note: effects are moderate to "
+        "large and are maintained, and parental stress and harsh "
+        "discipline fall as well. Australian notes: Triple P and the "
+        "Incredible Years are the widely delivered programmes, often "
+        "free through child and family health services. Key point: in "
+        "ADHD, stimulants treat the inattention while behaviour at "
+        "home responds to the parenting work."
+    ),
+    "Ovulation induction": (
+        "Medical stimulation of follicle development in women who do "
+        "not ovulate, distinct from the superovulation used in "
+        "assisted reproduction. Indications: anovulatory infertility, "
+        "most often polycystic ovary syndrome, after tubal patency "
+        "and a normal semen analysis are confirmed. Mx: letrozole is "
+        "first line and gives higher live birth rates than clomifene "
+        "in polycystic ovary syndrome. Clomifene remains an "
+        "alternative, with gonadotrophins or laparoscopic ovarian "
+        "drilling when oral agents fail. Weight loss of 5 to 10 per "
+        "cent restores ovulation in many and improves response, and "
+        "metformin is an adjunct where there is insulin resistance. "
+        "Monitoring: mid-luteal progesterone confirms ovulation and "
+        "ultrasound tracking limits multiple follicles. "
+        "Complications: multiple pregnancy, ovarian hyperstimulation, "
+        "and an antioestrogenic effect of clomifene on endometrium "
+        "and cervical mucus. Note: work the couple up first, since "
+        "inducing ovulation into blocked tubes or a severe male "
+        "factor wastes cycles that matter at this age."
+    ),
+    "Endometrial biopsy": (
+        "Office sampling of endometrium through a fine suction "
+        "catheter, done without anaesthesia and taking a minute or "
+        "two. Indications: postmenopausal bleeding, abnormal uterine "
+        "bleeding over 45, persistent bleeding under 45 with risk "
+        "factors such as obesity, polycystic ovary syndrome, "
+        "tamoxifen or unopposed oestrogen, and a thickened "
+        "endometrium on ultrasound. Features: the catheter passes "
+        "through the cervix and suction is applied while withdrawing "
+        "and rotating it. Sensitivity for endometrial cancer is high "
+        "when tissue is obtained, but sampling is blind and misses "
+        "focal lesions such as polyps. Mx: hyperplasia without atypia "
+        "is treated with a progestogen, usually a levonorgestrel "
+        "intrauterine system, while atypical hyperplasia carries a "
+        "high risk of coexisting cancer and goes to hysterectomy. "
+        "Note: an insufficient or benign sample in a woman who keeps "
+        "bleeding does not close the question. Persistent bleeding "
+        "needs hysteroscopy and directed biopsy whatever the pipelle "
+        "showed."
+    ),
+    "Myomectomy": (
+        "Surgical removal of fibroids with conservation of the "
+        "uterus, chosen when fertility or the uterus itself is to be "
+        "preserved. Indications: symptomatic fibroids causing heavy "
+        "bleeding, pressure or pain, and submucosal fibroids "
+        "distorting the cavity in subfertility or recurrent "
+        "miscarriage. Features: route follows location. Hysteroscopic "
+        "resection for submucosal, laparoscopic for subserosal and "
+        "accessible intramural, and open surgery for large or "
+        "multiple fibroids. Mx: a gonadotrophin releasing hormone "
+        "agonist beforehand can shrink volume and correct anaemia. "
+        "Complications: bleeding that occasionally forces "
+        "hysterectomy, adhesions, recurrence in up to half within "
+        "five years, and a uterine scar that may prompt caesarean "
+        "delivery where the cavity was breached. Note: the submucosal "
+        "fibroid is the one most worth removing for fertility, and "
+        "subserosal fibroids rarely explain subfertility. Australian "
+        "notes: uterine artery embolisation is the alternative where "
+        "fertility is not being preserved, so the woman's pregnancy "
+        "plans drive the choice."
+    ),
+    "Endometrial ablation": (
+        "Destruction of the endometrium to reduce menstrual loss, "
+        "used for heavy bleeding when medical treatment has failed "
+        "and childbearing is complete. Indications: heavy menstrual "
+        "bleeding with a normal cavity and benign endometrial "
+        "sampling. Features: second generation devices use "
+        "radiofrequency or a thermal balloon and take minutes under "
+        "general or local anaesthesia. About half become amenorrhoeic "
+        "and most of the rest are satisfied. Contraindications: any "
+        "desire for future pregnancy, suspected malignancy or "
+        "atypical hyperplasia, active infection, and a markedly "
+        "enlarged or distorted cavity. Mx: reliable contraception is "
+        "essential afterwards, because pregnancy in an ablated uterus "
+        "carries a high risk of abnormal placentation and loss. Note: "
+        "a levonorgestrel intrauterine system reduces bleeding "
+        "comparably without surgery and is offered first in most "
+        "Australian practice. Ablation does not treat pain, so "
+        "persistent dysmenorrhoea or possible adenomyosis should move "
+        "the conversation elsewhere."
+    ),
+    "Urodynamics": (
+        "Pressure and flow studies that reproduce a patient's "
+        "symptoms and measure what the bladder is doing while they "
+        "occur. Indications: mixed or unclear incontinence, failed "
+        "conservative treatment, planned continence surgery, "
+        "suspected voiding dysfunction and neurogenic bladder. "
+        "Features: uroflowmetry and post-void residual come first. "
+        "Filling cystometry measures detrusor and abdominal pressure, "
+        "deriving detrusor pressure as the difference, and reproduces "
+        "urgency or leak. Detrusor overactivity appears as "
+        "involuntary contractions during filling, while urodynamic "
+        "stress incontinence is leak on coughing without a "
+        "contraction. A pressure flow study during voiding separates "
+        "obstruction from poor detrusor contractility. Note: it is "
+        "not needed before surgery for straightforward stress "
+        "incontinence with a clear history and a positive cough test. "
+        "Key point: a normal study does not disprove the symptom, "
+        "since an artificial fill in a clinic room cannot reproduce "
+        "every situation in which a patient leaks."
+    ),
+    "Mid-urethral sling": (
+        "Synthetic tape placed under the mid-urethra to restore "
+        "support during rises in abdominal pressure, the standard "
+        "operation for stress urinary incontinence. Types: retropubic "
+        "tape passed behind the pubic bone, and transobturator tape "
+        "passed laterally through the obturator foramen. Indications: "
+        "stress incontinence persisting after supervised pelvic floor "
+        "muscle training. Features: cure or major improvement in "
+        "about 80 per cent at five years, as day surgery with quick "
+        "recovery. Complications: bladder perforation and haematoma "
+        "with the retropubic route, groin pain with the "
+        "transobturator, and for both voiding difficulty, new urgency "
+        "and mesh exposure or chronic pain. Australian notes: mesh "
+        "has been the subject of a Senate inquiry and TGA action, and "
+        "use is restricted to credentialled surgeons in higher volume "
+        "units with consent documenting mesh-specific risk. Note: "
+        "autologous fascial sling and colposuspension are the "
+        "mesh-free alternatives and belong in the same conversation."
+    ),
+    "Magnesium sulfate for neuroprotection": (
+        "Intravenous magnesium given to the mother before very "
+        "preterm birth to reduce cerebral palsy in the infant. "
+        "Indications: anticipated birth before 30 weeks, whether "
+        "spontaneous or planned, given as close to birth as practical "
+        "and ideally at least four hours beforehand. Dose: 4 g "
+        "loading dose over 20 to 30 minutes, then 1 g per hour until "
+        "birth or for 24 hours. Monitoring: hourly respiratory rate, "
+        "deep tendon reflexes, urine output and conscious state. Loss "
+        "of reflexes precedes respiratory depression, and calcium "
+        "gluconate is the antidote. Cautions: reduce the dose in "
+        "renal impairment, and expect potentiation of neuromuscular "
+        "blockade. Note: the number needed to treat to prevent one "
+        "case of cerebral palsy is about 60. It neither delays birth "
+        "nor treats the mother's blood pressure. Key point: the same "
+        "drug at the same doses gives seizure prophylaxis in "
+        "pre-eclampsia, so one infusion can serve both indications "
+        "when they coincide."
+    ),
+    "Saline infusion sonohysterography": (
+        "Transvaginal ultrasound performed while sterile saline "
+        "distends the cavity, outlining lesions that a plain scan "
+        "flattens against the endometrium. Indications: abnormal "
+        "uterine bleeding with a thickened or unclear endometrium, "
+        "suspected polyp or submucosal fibroid, and assessment of the "
+        "cavity before fertility treatment. Features: a fine catheter "
+        "is passed through the cervix in the early follicular phase "
+        "and saline instilled during scanning. A polyp appears as a "
+        "focal echogenic mass, a submucosal fibroid as a hypoechoic "
+        "mass indenting the cavity, and adhesions as bridging bands. "
+        "It grades how far a fibroid projects into the cavity, which "
+        "decides whether hysteroscopic resection is feasible. "
+        "Contraindications: pregnancy and active pelvic infection. "
+        "Note: it is more accurate than transvaginal ultrasound alone "
+        "and better tolerated than diagnostic hysteroscopy, but it "
+        "cannot take tissue, so anything suspicious still goes on to "
+        "hysteroscopy and biopsy."
+    ),
+    "Bladder retraining": (
+        "Behavioural programme that progressively lengthens the "
+        "interval between voids to restore cortical control over an "
+        "overactive bladder. Indications: urgency, frequency and urge "
+        "incontinence, as first line treatment before any medication. "
+        "Features: a three day bladder diary sets the baseline. The "
+        "patient voids to a schedule, starting at the shortest "
+        "comfortable interval, and holds through urgency using "
+        "suppression techniques such as pelvic floor contraction, "
+        "distraction and staying still rather than rushing to the "
+        "toilet. The interval extends by 15 to 30 minutes a week "
+        "toward a target of three to four hours, over a course of at "
+        "least six weeks. Mx: combine with caffeine reduction, "
+        "sensible fluid intake and weight loss. Add an antimuscarinic "
+        "or mirabegron if symptoms persist, with mirabegron avoiding "
+        "the anticholinergic burden that matters in older patients. "
+        "Note: rushing to the toilet at the first urge trains the "
+        "bladder the wrong way."
+    ),
+    "Central line associated bloodstream infection": (
+        "Bacteraemia in a patient with a central venous catheter "
+        "where no other source explains it, and one of the most "
+        "preventable hospital-acquired infections. Aetiology: "
+        "coagulase negative staphylococci, Staphylococcus aureus, "
+        "enterococci and Candida, seeded from skin along the catheter "
+        "or from a contaminated hub. Risk factors: femoral site, "
+        "duration of dwell, parenteral nutrition and breaks in "
+        "aseptic technique. Clinical features: fever or rigors "
+        "without a source, sometimes on flushing the line. Exit site "
+        "inflammation appears in only a minority. Ix: paired blood "
+        "cultures from a peripheral vein and from the line before "
+        "antibiotics, using differential time to positivity. Mx: "
+        "remove the line for Staphylococcus aureus, Candida or severe "
+        "sepsis, and start vancomycin pending sensitivities. "
+        "Prevention: chlorhexidine skin preparation with full barrier "
+        "precautions at insertion. Choose a subclavian or jugular "
+        "rather than femoral site, and review daily whether the line "
+        "is still needed. Note: that last step removes more "
+        "infections than anything done at insertion."
+    ),
+    "Sharps injury management": (
+        "Percutaneous exposure to blood or body fluid, where what "
+        "happens in the first hour decides the outcome. Mx: wash the "
+        "site with soap and water without scrubbing, irrigate mucous "
+        "membranes with saline or water, and do not squeeze the "
+        "wound. Report immediately and attend the emergency "
+        "department or staff health service. Ix: risk assess the "
+        "source for HIV, hepatitis B and hepatitis C, testing the "
+        "source with consent. Take baseline serology from the exposed "
+        "person and confirm their hepatitis B immunity. Features: "
+        "transmission risk per percutaneous exposure runs near 0.3 "
+        "per cent for HIV and 1.8 per cent for hepatitis C, and up to "
+        "30 per cent for hepatitis B in a non-immune person, which is "
+        "why vaccination is the single most effective measure. Note: "
+        "HIV post-exposure prophylaxis works best started within "
+        "hours and is not offered beyond 72 hours. Hepatitis B "
+        "immunoglobulin and vaccine go to the non-immune. Follow-up: "
+        "hepatitis C serology at 3 and 6 months, since that infection "
+        "is now curable."
+    ),
+    "Venous thromboembolism risk assessment": (
+        "Structured scoring of thrombotic against bleeding risk "
+        "performed on every hospital admission, because most "
+        "hospital-acquired thrombosis is preventable. Risk factors: "
+        "immobility, surgery especially orthopaedic and cancer "
+        "surgery, active malignancy, previous venous thromboembolism, "
+        "thrombophilia, obesity and oestrogen therapy. Features: "
+        "Australian hospitals use a mandated admission tool, with the "
+        "Caprini and Padua scores behind most local versions. "
+        "Bleeding risk is scored alongside, covering active bleeding, "
+        "severe thrombocytopenia, recent neurosurgery and "
+        "coagulopathy. Mx: low molecular weight heparin such as "
+        "enoxaparin 40 mg daily is standard, reduced in renal "
+        "impairment, with unfractionated heparin preferred at very "
+        "low creatinine clearance. Mechanical prophylaxis suits those "
+        "in whom anticoagulation is contraindicated. Note: reassess "
+        "at least daily, since mobility and procedures change the "
+        "balance. Extended prophylaxis after hip or cancer surgery "
+        "continues for weeks beyond discharge rather than stopping at "
+        "the door."
+    ),
+    "Perioperative anticoagulation management": (
+        "Planned interruption and restart of anticoagulation around a "
+        "procedure, balancing surgical bleeding against thrombosis. "
+        "Features: many minor procedures need no interruption at all, "
+        "including dental extraction, cataract surgery and most skin "
+        "surgery. Warfarin is stopped 5 days before with an "
+        "international normalised ratio checked the day before. A "
+        "direct oral anticoagulant is stopped 1 to 2 days before "
+        "according to renal function and bleeding risk, and needs "
+        "neither measurement nor bridging. Mx: bridging with low "
+        "molecular weight heparin is reserved for high thrombotic "
+        "risk on warfarin, such as a mechanical mitral valve, venous "
+        "thromboembolism within 3 months or previous stroke with a "
+        "high risk score. Note: the BRIDGE trial showed that bridging "
+        "in atrial fibrillation increased bleeding without reducing "
+        "stroke. Key point: restart 24 hours after low bleeding risk "
+        "surgery and 48 to 72 hours after high risk, remembering a "
+        "direct oral anticoagulant is fully active within hours."
+    ),
+    "Aseptic technique": (
+        "Set of practices that keeps key parts and key sites free of "
+        "contamination during a clinical procedure. Types: standard "
+        "aseptic technique for short uncomplicated procedures such as "
+        "cannulation, and surgical aseptic technique with sterile "
+        "gloves, gown and drapes for longer or more invasive ones. "
+        "Features: identify the key parts, meaning the syringe tip, "
+        "needle and catheter hub, and the key site, meaning the "
+        "insertion point. Protect them with a non-touch approach, "
+        "hand hygiene before and after, and a prepared field. "
+        "Chlorhexidine 2 per cent in 70 per cent alcohol is the "
+        "standard skin preparation and must be allowed to dry to "
+        "work. Australian notes: the aseptic non-touch technique "
+        "framework is used and audited across Australian hospitals, "
+        "with the five moments for hand hygiene sitting inside it. "
+        "Key point: gloves are not a substitute for hand hygiene and "
+        "do not make a touched key part clean again. If you touch a "
+        "key part it is contaminated, whatever you are wearing."
+    ),
+    "Direct acting antivirals for hepatitis C": (
+        "Oral combination antivirals that cure chronic hepatitis C in "
+        "8 to 12 weeks, having replaced interferon entirely. "
+        "Indications: any person with chronic infection, whatever the "
+        "fibrosis stage, injecting status or previous treatment. "
+        "Features: pangenotypic regimens mean genotyping is no longer "
+        "required. Sofosbuvir with velpatasvir for 12 weeks, or "
+        "glecaprevir with pibrentasvir for 8 weeks, cure more than 95 "
+        "per cent. Ix: before treatment assess fibrosis by "
+        "elastography or a serum score, test for hepatitis B because "
+        "reactivation can occur, and identify cirrhosis, which "
+        "changes regimen and duration. Mx: confirm cure with a viral "
+        "load 12 weeks after finishing, which defines sustained "
+        "virological response. Australian notes: PBS listed for any "
+        "adult and prescribable in general practice with remote "
+        "specialist consultation, and reinfection is not a barrier to "
+        "retreatment. Note: cirrhosis still needs six-monthly liver "
+        "cancer surveillance after cure, because the risk falls "
+        "without disappearing."
+    ),
+    "Treatment as prevention": (
+        "Use of effective antiretroviral therapy to prevent onward "
+        "transmission of HIV as well as to treat the individual. "
+        "Features: sustained viral suppression below 200 copies per "
+        "mL means the virus is not sexually transmitted, the finding "
+        "behind the phrase undetectable equals untransmittable. The "
+        "PARTNER and Opposites Attract studies recorded no linked "
+        "transmissions across thousands of condomless acts in "
+        "serodifferent couples. Mx: start antiretroviral therapy at "
+        "diagnosis regardless of CD4 count, support adherence, and "
+        "confirm suppression with viral load at 3 monthly intervals "
+        "until stable. Note: suppression must be sustained for at "
+        "least 6 months before relying on it, and it does not prevent "
+        "other sexually transmitted infections or protect against "
+        "transmission through shared injecting equipment. Australian "
+        "notes: treatment as prevention sits alongside pre-exposure "
+        "prophylaxis and condoms in the national strategy, and is the "
+        "reason new diagnoses have fallen."
+    ),
+    "Compression therapy": (
+        "Graduated external pressure that reverses venous "
+        "hypertension, and the treatment that actually heals a venous "
+        "leg ulcer. Indications: venous leg ulceration, chronic "
+        "venous insufficiency, lymphoedema and prevention of "
+        "post-thrombotic syndrome. Features: pressure is highest at "
+        "the ankle and falls up the leg, aiding venous return and "
+        "reducing oedema. Multilayer bandaging delivers about 40 mmHg "
+        "at the ankle for an active ulcer, and stockings maintain "
+        "healing afterwards. Ix: measure the ankle brachial pressure "
+        "index before applying any compression. Contraindications: an "
+        "index below 0.8 indicates significant arterial disease and "
+        "full compression risks necrosis, below 0.5 it is "
+        "contraindicated outright, and uncontrolled heart failure is "
+        "a relative contraindication. Mx: compression with elevation "
+        "and walking heals most venous ulcers in 12 to 24 weeks, and "
+        "lifelong stockings prevent recurrence. Note: the commonest "
+        "reason a venous ulcer fails to heal is compression that was "
+        "never applied or was stopped early."
+    ),
+    "Stoma care": (
+        "Day to day management of a surgically formed bowel or "
+        "urinary opening, where complications are common and mostly "
+        "handled on the ward. Types: colostomy in the left iliac "
+        "fossa with formed output, ileostomy in the right iliac fossa "
+        "with a spout and liquid output, and urostomy. Features: a "
+        "well sited stoma sits on a flat surface away from scars and "
+        "the belt line and is marked before surgery by a stomal "
+        "therapist. Complications: peristomal skin excoriation from a "
+        "poorly fitting appliance, retraction or prolapse, and "
+        "parastomal hernia or stenosis. Mx: output above about 1500 "
+        "mL a day from an ileostomy causes sodium and magnesium loss "
+        "with dehydration, managed with oral rehydration solution, "
+        "loperamide and restriction of hypotonic fluids. Note: thirst "
+        "answered with water alone worsens sodium loss in a high "
+        "output stoma. Key point: a dusky or black stoma suggests "
+        "ischaemia and needs urgent surgical review, while a dark red "
+        "oedematous stoma in the first days is normal."
+    ),
+    "Outbreak investigation": (
+        "Systematic public health response to more cases of a disease "
+        "than expected for that place and time. Features: the steps "
+        "run in a set order. Confirm the outbreak and the diagnosis, "
+        "define a case by person, place and time, find cases actively "
+        "and describe them on an epidemic curve, then generate a "
+        "hypothesis and test it analytically. Types: the shape of the "
+        "epidemic curve separates a point source, a single tight peak "
+        "within one incubation period, from a continuing common "
+        "source or person to person spread with successive waves. Ix: "
+        "a retrospective cohort study suits a defined group such as a "
+        "wedding, while a case control study suits a community "
+        "outbreak. Mx: control measures begin as soon as the "
+        "hypothesis is plausible and do not wait for the analysis. "
+        "Australian notes: notify the local public health unit early, "
+        "since notification releases the resources. Note: the case "
+        "definition is deliberately broad at first and tightened "
+        "later."
     ),
 }
 
