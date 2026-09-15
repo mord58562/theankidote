@@ -15525,6 +15525,228 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "infection prophylaxis after solid organ transplantation"]],
         "summary": "",
     },
+    {
+        "name": "Renal replacement therapy modalities",
+        "aliases": ["dialysis modality choice", "choosing a dialysis modality", "RRT modality"],
+        "utd": [["Overview", "choosing a dialysis modality in chronic kidney disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Living kidney donation",
+        "aliases": ["living donor nephrectomy", "live kidney donor", "living donor transplant"],
+        "utd": [["Overview", "evaluation of the living kidney donor"]],
+        "summary": "",
+    },
+    {
+        "name": "Liver transplantation",
+        "aliases": ["orthotopic liver transplant", "hepatic transplantation", "liver transplant"],
+        "utd": [["Overview", "liver transplantation indications and evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Testosterone replacement therapy",
+        "aliases": ["androgen replacement therapy", "testosterone therapy", "testosterone replacement"],
+        "utd": [["Overview", "testosterone treatment of male hypogonadism"]],
+        "summary": "",
+    },
+    {
+        "name": "Diabetes preconception care",
+        "aliases": ["preconception diabetes care", "pregnancy planning in diabetes", "preconception care in diabetes"],
+        "utd": [["Overview", "pregestational diabetes preconception counselling"]],
+        "summary": "",
+    },
+    {
+        "name": "Cancer multidisciplinary team meeting",
+        "aliases": ["MDT meeting", "multidisciplinary team meeting", "tumour board"],
+        "utd": [["Overview", "multidisciplinary cancer care team meeting"]],
+        "summary": "",
+    },
+    {
+        "name": "Antiemetic prophylaxis for chemotherapy",
+        "aliases": ["chemotherapy induced nausea prophylaxis", "CINV prophylaxis", "antiemetics for chemotherapy"],
+        "utd": [["Overview", "prevention of chemotherapy induced nausea and vomiting"]],
+        "summary": "",
+    },
+    {
+        "name": "Oncological emergencies",
+        "aliases": ["cancer emergencies", "emergencies in oncology"],
+        "utd": [["Overview", "oncologic emergencies recognition and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Fertility preservation",
+        "aliases": ["oncofertility", "fertility preservation before cancer treatment", "egg freezing"],
+        "utd": [["Overview", "fertility preservation before gonadotoxic therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Lumbar puncture opening pressure",
+        "aliases": ["CSF opening pressure", "opening pressure"],
+        "utd": [["Overview", "cerebrospinal fluid opening pressure measurement"]],
+        "summary": "",
+    },
+    {
+        "name": "Video EEG monitoring",
+        "aliases": ["video telemetry", "EEG telemetry", "video electroencephalography"],
+        "utd": [["Overview", "video EEG monitoring for seizure classification"]],
+        "summary": "",
+    },
+    {
+        "name": "Stroke unit care",
+        "aliases": ["acute stroke unit", "organised stroke care"],
+        "utd": [["Overview", "organised inpatient stroke unit care"]],
+        "summary": "",
+    },
+    {
+        "name": "Disease-modifying antirheumatic drug monitoring",
+        "aliases": ["DMARD monitoring", "monitoring of disease modifying antirheumatic drugs"],
+        "utd": [["Overview", "monitoring conventional synthetic DMARD therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Intra-articular corticosteroid injection",
+        "aliases": ["joint injection", "intra-articular steroid injection", "corticosteroid joint injection"],
+        "utd": [["Overview", "intra-articular glucocorticoid injection technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Fracture liaison service",
+        "aliases": ["refracture prevention service", "osteoporosis refracture prevention", "secondary fracture prevention service"],
+        "utd": [["Overview", "fracture liaison service secondary fracture prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Continuous positive airway pressure",
+        "aliases": ["CPAP therapy", "positive airway pressure therapy"],
+        "utd": [["Overview", "continuous positive airway pressure therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Sleep hygiene",
+        "aliases": ["sleep hygiene advice", "sleep hygiene measures"],
+        "utd": [["Overview", "behavioural sleep hygiene advice for insomnia"]],
+        "summary": "",
+    },
+    {
+        "name": "Oral food challenge",
+        "aliases": ["food challenge", "supervised food challenge", "oral challenge for food allergy"],
+        "utd": [["Overview", "oral food challenge in food allergy diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Serum tryptase",
+        "aliases": ["mast cell tryptase", "tryptase level"],
+        "utd": [["Overview", "serum tryptase in anaphylaxis and mast cell disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Allergen-specific IgE testing",
+        "aliases": ["specific IgE testing", "RAST test", "serum specific IgE"],
+        "utd": [["Overview", "allergen specific IgE testing interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Immunoglobulin replacement therapy",
+        "aliases": ["immunoglobulin replacement", "subcutaneous immunoglobulin", "IgG replacement therapy"],
+        "utd": [["Overview", "immunoglobulin replacement in primary immunodeficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Cochlear implant",
+        "aliases": ["cochlear implantation", "cochlear implants"],
+        "utd": [["Overview", "cochlear implantation candidacy and outcomes"]],
+        "summary": "",
+    },
+    {
+        "name": "Hearing aid prescription",
+        "aliases": ["hearing aid fitting", "hearing aids"],
+        "utd": [["Overview", "hearing aid fitting and candidacy in adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Flexible nasendoscopy",
+        "aliases": ["nasendoscopy", "flexible laryngoscopy", "fibreoptic laryngoscopy"],
+        "utd": [["Overview", "flexible nasendoscopy indications and technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Intravitreal injection",
+        "aliases": ["anti-VEGF injection", "intravitreal anti-VEGF"],
+        "utd": [["Overview", "intravitreal anti VEGF injection indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Cataract surgery",
+        "aliases": ["phacoemulsification", "cataract extraction", "lens replacement surgery"],
+        "utd": [["Overview", "cataract surgery indications and outcomes"]],
+        "summary": "",
+    },
+    {
+        "name": "Transrectal ultrasound biopsy of prostate",
+        "aliases": ["prostate biopsy", "transperineal prostate biopsy", "TRUS biopsy"],
+        "utd": [["Overview", "prostate biopsy technique and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Urinary catheter care",
+        "aliases": ["indwelling catheter care", "catheter management", "urinary catheter management"],
+        "utd": [["Overview", "indwelling urinary catheter care and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Intermittent self-catheterisation",
+        "aliases": ["clean intermittent catheterisation", "self catheterisation", "intermittent catheterisation"],
+        "utd": [["Overview", "clean intermittent self catheterisation"]],
+        "summary": "",
+    },
+    {
+        "name": "Circumcision",
+        "aliases": ["male circumcision", "neonatal circumcision"],
+        "utd": [["Overview", "male circumcision indications and complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Cryotherapy for skin lesions",
+        "aliases": ["liquid nitrogen cryotherapy", "cryotherapy of skin", "freezing skin lesions"],
+        "utd": [["Overview", "cryotherapy for cutaneous lesions"]],
+        "summary": "",
+    },
+    {
+        "name": "Topical corticosteroid potency",
+        "aliases": ["steroid potency", "topical steroid potency", "topical steroid ladder"],
+        "utd": [["Overview", "topical corticosteroid potency classes and use"]],
+        "summary": "",
+    },
+    {
+        "name": "Phototherapy for skin disease",
+        "aliases": ["narrowband UVB", "UVB phototherapy", "PUVA therapy"],
+        "utd": [["Overview", "phototherapy for psoriasis and eczema"]],
+        "summary": "",
+    },
+    {
+        "name": "Paediatric pain assessment",
+        "aliases": ["FLACC scale", "pain assessment in children", "childhood pain assessment"],
+        "utd": [["Overview", "pain assessment tools in children"]],
+        "summary": "",
+    },
+    {
+        "name": "Fetal growth surveillance",
+        "aliases": ["serial growth scans", "fetal growth monitoring", "monitoring fetal growth"],
+        "utd": [["Overview", "detection of fetal growth restriction in pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Fertility assessment",
+        "aliases": ["infertility workup", "infertility investigation", "assessment of infertility"],
+        "utd": [["Overview", "evaluation of the infertile couple"]],
+        "summary": "",
+    },
+    {
+        "name": "Fitness for work assessment",
+        "aliases": ["return to work planning", "work capacity assessment"],
+        "utd": [["Overview", "assessing fitness for work and return to work planning"]],
+        "summary": "",
+    },
 ]
 
 
@@ -86902,6 +87124,770 @@ RICH_SUMMARIES = {
         "syphilis, toxoplasma, strongyloides and tuberculosis before "
         "transplant. Note: fever after transplant is an emergency and "
         "the usual inflammatory signs are blunted."
+    ),
+
+    "Renal replacement therapy modalities": (
+        "Renal replacement therapy substitutes for lost kidney "
+        "clearance in end-stage kidney disease, and modality choice "
+        "is a shared decision rather than a clinical default. Types: "
+        "facility haemodialysis three times weekly, home "
+        "haemodialysis, peritoneal dialysis (continuous ambulatory or "
+        "automated) and transplantation. Ix: eGFR trend, symptom "
+        "burden, residual urine output and suitability of vascular or "
+        "peritoneal access. Mx: begin modality education around eGFR "
+        "15 to 20 and plan access months ahead, because a tunnelled "
+        "line started urgently carries the worst infection and "
+        "survival profile. Peritoneal dialysis preserves residual "
+        "renal function and suits people wanting home therapy, while "
+        "haemodialysis suits those needing supervision or with "
+        "extensive abdominal surgery. Transplantation gives the best "
+        "survival and should be raised early so pre-emptive listing "
+        "is possible. Australian notes: ANZDATA reports unit-level "
+        "outcomes and home therapy uptake varies widely. Note: the "
+        "modality that fails is usually the one started without "
+        "access planning."
+    ),
+    "Living kidney donation": (
+        "Living donation gives a graft that lasts longer than a "
+        "deceased donor kidney and allows transplantation before "
+        "dialysis is ever needed. Ix: donor workup covers measured or "
+        "estimated GFR, blood group and tissue typing with "
+        "cross-match, blood pressure, glucose tolerance, urinalysis "
+        "for albuminuria and haematuria, renal tract imaging and "
+        "screening for transmissible infection and malignancy. Mx: "
+        "laparoscopic donor nephrectomy is standard and the donor "
+        "retains roughly 70 per cent of baseline GFR after "
+        "compensatory hypertrophy. Incompatible pairs can enter "
+        "paired exchange rather than abandon the donation. "
+        "Complications: perioperative risk is small but real, and "
+        "donors carry a modest long-term excess of hypertension, "
+        "albuminuria and end-stage kidney disease compared with "
+        "equally healthy non-donors. Follow-up: lifelong annual blood "
+        "pressure, eGFR and urine albumin. Australian notes: the "
+        "Australian Paired Kidney Exchange Program runs national "
+        "match rounds and donor income loss is reimbursed federally. "
+        "Note: donor safety sets the threshold, not recipient need."
+    ),
+    "Liver transplantation": (
+        "Replacement of a failing liver, the only definitive "
+        "treatment for decompensated cirrhosis and acute liver "
+        "failure. Indications: decompensation with ascites, variceal "
+        "bleeding or encephalopathy, hepatocellular carcinoma within "
+        "Milan criteria, acute liver failure meeting King's College "
+        "criteria, and selected metabolic disease. Ix: MELD or "
+        "MELD-Na drives allocation, supplemented by cardiac and "
+        "respiratory assessment, imaging for vascular anatomy and "
+        "tumour burden, viral serology and psychosocial evaluation. "
+        "Mx: immunosuppression usually combines a calcineurin "
+        "inhibitor with mycophenolate and a tapering corticosteroid. "
+        "Complications: early hepatic artery thrombosis, biliary "
+        "anastomotic stricture, acute cellular rejection and "
+        "opportunistic infection. Later come renal impairment from "
+        "calcineurin inhibitors, metabolic syndrome and skin "
+        "malignancy. Australian notes: active alcohol use requires "
+        "engagement with an addiction service rather than a fixed "
+        "abstinence interval in most units. Note: a sudden "
+        "transaminase spike in the first week is vascular until "
+        "Doppler says otherwise."
+    ),
+    "Testosterone replacement therapy": (
+        "Androgen replacement for men with proven pathological "
+        "hypogonadism, not for age-related symptoms with normal "
+        "levels. Ix: two fasting morning total testosterone levels on "
+        "separate days, with LH and FSH to separate primary "
+        "testicular failure from hypothalamic-pituitary causes. Add "
+        "prolactin, iron studies and pituitary imaging where "
+        "gonadotrophins are inappropriately low. SHBG or free "
+        "testosterone helps when obesity or liver disease distorts "
+        "the total. Mx: intramuscular testosterone undecanoate every "
+        "10 to 14 weeks, or daily transdermal gel where a shorter "
+        "half-life is preferred. Monitoring: testosterone level, "
+        "haematocrit, PSA and symptoms at 3, 6 and 12 months then "
+        "annually. Adverse effects: erythrocytosis, acne, sleep "
+        "apnoea worsening, and suppression of spermatogenesis, which "
+        "matters in men still wanting fertility. PBS: subsidised only "
+        "for established androgen deficiency confirmed on two low "
+        "morning levels with raised gonadotrophins or an "
+        "endocrinologist's assessment. Note: obesity lowers "
+        "testosterone and weight loss raises it, so treat the cause "
+        "first."
+    ),
+    "Diabetes preconception care": (
+        "Planned optimisation before conception in women with type 1 "
+        "or type 2 diabetes, because organogenesis is complete before "
+        "most pregnancies are confirmed. Risk: congenital "
+        "malformation and miscarriage rates rise steeply with "
+        "periconceptional HbA1c, and cardiac and neural tube defects "
+        "dominate. Mx: target HbA1c below 6.5 per cent where "
+        "achievable without problematic hypoglycaemia, and advise "
+        "reliable contraception until that target is met. High-dose "
+        "folic acid 5 mg daily is started at least one month before "
+        "conception. Review medicines and stop ACE inhibitors, "
+        "angiotensin receptor blockers and statins, switching "
+        "antihypertensives to labetalol, methyldopa or nifedipine. "
+        "Most oral agents are replaced by insulin, though metformin "
+        "is often continued. Ix: retinal screening, urine albumin and "
+        "creatinine ratio, thyroid function and blood pressure before "
+        "conception. Note: retinopathy can progress rapidly once "
+        "glycaemia is tightened in pregnancy, so document the retina "
+        "before the intensification, not after it."
+    ),
+    "Cancer multidisciplinary team meeting": (
+        "A structured meeting where surgeons, medical and radiation "
+        "oncologists, radiologists, pathologists and specialist "
+        "nurses agree a treatment plan for individual cancer "
+        "patients. Uses: consistent staging, evidence-based "
+        "sequencing of therapy, clinical trial identification and "
+        "fewer unplanned variations in care. Features: prospective "
+        "discussion before definitive treatment, review of imaging "
+        "and histology by subspecialists, a documented recommendation "
+        "entered in the record, and a named clinician who "
+        "communicates it to the patient. Notes: meeting discussion is "
+        "associated with more complete staging, higher rates of "
+        "adjuvant therapy and better adherence to guidelines, with "
+        "survival benefit clearest where care was previously "
+        "fragmented. Australian notes: Cancer Australia specifies "
+        "membership and quality criteria, and meeting discussion is "
+        "an accreditation requirement in most cancer services. Note: "
+        "the recommendation is advice to the treating team, not "
+        "consent, and it means nothing until someone sits with the "
+        "patient and explains the options including no treatment."
+    ),
+    "Antiemetic prophylaxis for chemotherapy": (
+        "Prevention is stratified by the emetogenic risk of the "
+        "regimen, because once anticipatory nausea is established it "
+        "responds poorly to anything. Classification: high risk "
+        "includes cisplatin and anthracycline with cyclophosphamide, "
+        "moderate includes carboplatin and oxaliplatin, and low or "
+        "minimal covers most monoclonal antibodies. Mx: high-risk "
+        "regimens get a 5-HT3 antagonist, dexamethasone and an NK1 "
+        "receptor antagonist such as aprepitant, with olanzapine "
+        "added for refractory cases. Moderate risk usually needs a "
+        "5-HT3 antagonist with dexamethasone. Low risk needs "
+        "dexamethasone or metoclopramide alone. Cover the delayed "
+        "phase beyond 24 hours, which cisplatin and cyclophosphamide "
+        "dominate. Adverse effects: constipation and headache with "
+        "5-HT3 antagonists, insomnia and hyperglycaemia with "
+        "dexamethasone, and sedation with olanzapine. Note: "
+        "breakthrough nausea on a correctly dosed regimen should "
+        "prompt a search for hypercalcaemia, bowel obstruction, "
+        "raised intracranial pressure or an opioid, not simply a "
+        "larger antiemetic dose."
+    ),
+    "Oncological emergencies": (
+        "Time-critical complications of malignancy or its treatment "
+        "where hours of delay cost function or life. Types: "
+        "neutropenic sepsis, malignant spinal cord compression, "
+        "superior vena cava obstruction, hypercalcaemia of "
+        "malignancy, tumour lysis syndrome and raised intracranial "
+        "pressure from brain metastases. Clinical features: new back "
+        "pain with any neurological sign in a cancer patient is cord "
+        "compression until imaged, facial and arm swelling with "
+        "distended neck veins suggests caval obstruction, and "
+        "confusion with polyuria points to hypercalcaemia. Ix: "
+        "whole-spine MRI within 24 hours for suspected compression, "
+        "CT with contrast for caval obstruction, and corrected "
+        "calcium with renal function and urate where lysis is "
+        "possible. Mx: dexamethasone 8 mg twice daily with urgent "
+        "radiotherapy or surgery for cord compression, intravenous "
+        "fluids then zoledronic acid for hypercalcaemia, and "
+        "allopurinol or rasburicase with hydration for tumour lysis. "
+        "Note: the diagnosis is usually made on the history taken in "
+        "triage, not on the scan that follows it."
+    ),
+    "Fertility preservation": (
+        "Storing gametes, embryos or gonadal tissue before treatment "
+        "that threatens future fertility. Indications: alkylating "
+        "chemotherapy, pelvic or total body irradiation, bilateral "
+        "gonadal surgery and gender-affirming hormone therapy. Risk: "
+        "gonadotoxicity depends on agent, cumulative dose and age, "
+        "with cyclophosphamide and busulfan the worst offenders and "
+        "ovarian reserve falling sharply over 35. Mx: post-pubertal "
+        "women undergo ovarian stimulation and vitrification of "
+        "oocytes or embryos, which takes about two weeks and can "
+        "start at any point in the cycle. Ovarian tissue "
+        "cryopreservation is the option where treatment cannot wait "
+        "or the patient is prepubertal. Post-pubertal men bank sperm, "
+        "which needs only a day. GnRH agonists give partial ovarian "
+        "protection but do not replace gamete storage. Australian "
+        "notes: referral pathways differ by state and storage periods "
+        "are governed by state assisted reproductive technology "
+        "legislation. Note: the referral is urgent and belongs in the "
+        "same conversation as the treatment plan, because the window "
+        "closes on the day chemotherapy starts."
+    ),
+    "Lumbar puncture opening pressure": (
+        "The cerebrospinal fluid pressure measured with a manometer "
+        "at lumbar puncture, and the single number that separates "
+        "several diagnoses the fluid analysis cannot. Ix: measure "
+        "with the patient in the lateral decubitus position, legs "
+        "relaxed and not curled, because sitting upright invalidates "
+        "the reading. Normal is 6 to 25 cmH2O in adults and up to 28 "
+        "in obese adults and children. Causes: idiopathic "
+        "intracranial hypertension, cerebral venous sinus thrombosis, "
+        "cryptococcal meningitis, space-occupying lesion and acute "
+        "bacterial meningitis. Low pressure suggests spontaneous "
+        "intracranial hypotension or a previous dural leak. Mx: in "
+        "idiopathic intracranial hypertension the diagnosis requires "
+        "pressure above 25 with normal constituents and normal "
+        "imaging, and therapeutic removal of fluid gives transient "
+        "relief. In cryptococcal disease repeated drainage to control "
+        "pressure improves survival more than any change of "
+        "antifungal. Note: an unmeasured opening pressure is a wasted "
+        "lumbar puncture, since it cannot be recovered afterwards."
+    ),
+    "Video EEG monitoring": (
+        "Simultaneous continuous EEG and video recording over days, "
+        "usually as an inpatient, to capture the events in question "
+        "rather than infer them. Indications: distinguishing "
+        "epileptic seizures from psychogenic non-epileptic and "
+        "syncopal events, classifying seizure type where treatment "
+        "differs, pre-surgical localisation of a seizure focus, and "
+        "quantifying event frequency when the history is unreliable. "
+        "Mx: antiseizure medication is often reduced on admission to "
+        "provoke events, so the unit needs rescue medication and "
+        "staff able to perform an ictal examination. The ictal test "
+        "of awareness, speech and limb power is what makes the "
+        "recording interpretable. Features: an event with no EEG "
+        "correlate and preserved rhythm during convulsive activity "
+        "supports a functional seizure, though frontal lobe seizures "
+        "can be scalp-negative. Note: a normal interictal EEG never "
+        "excludes epilepsy, and the value of telemetry lies entirely "
+        "in recording a typical event that the patient or family "
+        "confirms as typical."
+    ),
+    "Stroke unit care": (
+        "Geographically defined ward care by a coordinated "
+        "multidisciplinary team, and the intervention that benefits "
+        "the largest number of stroke patients regardless of subtype, "
+        "age or severity. Features: specialist nursing, early medical "
+        "review, protocolised monitoring of glucose, temperature and "
+        "swallowing, early mobilisation, and weekly goal-setting with "
+        "physiotherapy, occupational therapy, speech pathology and "
+        "social work. Prognosis: organised stroke unit care reduces "
+        "death and dependency with a number needed to treat around "
+        "20, sustained at five years, and it applies to far more "
+        "patients than thrombolysis or thrombectomy. Mx: swallow "
+        "screening before any oral intake, avoidance of routine blood "
+        "pressure lowering in the first 24 hours outside "
+        "thrombolysis, early antiplatelet once haemorrhage is "
+        "excluded, and prevention work started on the ward rather "
+        "than at discharge. Australian notes: the Stroke Foundation "
+        "Clinical Guidelines and the national audit set the "
+        "benchmarks units report against. Note: admitting to a "
+        "general ward with a stroke consult is not stroke unit care "
+        "and does not carry the benefit."
+    ),
+    "Disease-modifying antirheumatic drug monitoring": (
+        "Scheduled laboratory surveillance for the marrow, liver and "
+        "kidney toxicity of conventional synthetic disease-modifying "
+        "drugs, most of which is asymptomatic until it is severe. Mx: "
+        "methotrexate needs full blood count, liver function and "
+        "creatinine every 2 to 4 weeks while titrating, then every 3 "
+        "months, with folic acid on non-methotrexate days. "
+        "Leflunomide follows the same schedule and needs blood "
+        "pressure checks, and cholestyramine washout if toxicity or "
+        "pregnancy arises. Sulfasalazine needs counts monthly early "
+        "on, and azathioprine needs TPMT activity before the first "
+        "dose. Hydroxychloroquine needs no blood monitoring but "
+        "requires baseline and then annual retinal screening after "
+        "five years. Cautions: methotrexate is weekly and the "
+        "commonest serious error in general practice is a daily "
+        "prescription. Avoid it with trimethoprim. Note: a rising "
+        "mean cell volume or transaminases above three times the "
+        "upper limit means withhold and review, not reduce and hope."
+    ),
+    "Intra-articular corticosteroid injection": (
+        "Injection of a depot corticosteroid into a synovial joint "
+        "for inflammatory or degenerative pain not controlled by "
+        "other measures. Indications: monoarticular flare of "
+        "rheumatoid or psoriatic arthritis, crystal arthropathy where "
+        "systemic therapy is unsuitable, and symptomatic "
+        "osteoarthritis of the knee or base of thumb. "
+        "Contraindications: overlying cellulitis, suspected septic "
+        "arthritis, bacteraemia and prosthetic joints, which belong "
+        "to the surgical team. Mx: aseptic technique with skin "
+        "preparation, aspirate first and send fluid for cell count, "
+        "Gram stain, culture and crystals if there is any doubt about "
+        "sepsis. Triamcinolone or methylprednisolone is used, often "
+        "with local anaesthetic. Advise relative rest for 24 to 48 "
+        "hours. Adverse effects: post-injection flare in the first "
+        "day, cutaneous atrophy and depigmentation, transient "
+        "hyperglycaemia and rarely septic arthritis. Limit to about "
+        "three injections per joint per year. Note: a hot swollen "
+        "joint is septic until the aspirate says otherwise, and "
+        "steroid into an infected joint is a disaster."
+    ),
+    "Fracture liaison service": (
+        "A coordinator-led service that systematically identifies "
+        "people over 50 presenting with a minimal-trauma fracture, "
+        "investigates them for osteoporosis and starts treatment. "
+        "Risk: a minimal-trauma fracture roughly doubles the risk of "
+        "the next one and the risk is highest in the first two years, "
+        "yet most such patients leave hospital with the fracture "
+        "treated and the bone disease ignored. Mx: case finding from "
+        "radiology and emergency lists, bone density testing, "
+        "investigation for secondary causes with calcium, vitamin D, "
+        "renal and thyroid function and myeloma screen, then "
+        "initiation of an antiresorptive with a falls assessment. "
+        "Handover to the general practitioner with an explicit "
+        "monitoring plan is the step that determines whether "
+        "treatment persists. Australian notes: a minimal-trauma "
+        "fracture over 70 establishes PBS eligibility for "
+        "antiresorptive therapy without waiting for a density result. "
+        "Note: the vertebral fracture seen incidentally on a chest "
+        "radiograph counts as the index event, and reporting it is "
+        "the whole point."
+    ),
+    "Continuous positive airway pressure": (
+        "Constant positive pressure delivered through a mask that "
+        "splints the upper airway open and raises functional residual "
+        "capacity. Indications: moderate to severe obstructive sleep "
+        "apnoea, cardiogenic pulmonary oedema, and selected type 1 "
+        "respiratory failure where oxygenation rather than "
+        "ventilation is the problem. Contraindications: reduced "
+        "conscious state, vomiting, facial trauma, untreated "
+        "pneumothorax and haemodynamic instability. Mx: in sleep "
+        "apnoea, pressure is set by titration study or an "
+        "auto-adjusting device, and adherence above four hours a "
+        "night on most nights is what delivers benefit for sleepiness "
+        "and blood pressure. In acute pulmonary oedema it reduces "
+        "work of breathing and intubation rates alongside nitrates "
+        "and diuretics. Adverse effects: nasal congestion, dryness, "
+        "aerophagia, mask leak and claustrophobia, all of which drive "
+        "abandonment in the first month. Note: CPAP is one pressure "
+        "and does not ventilate, so hypercapnic failure in chronic "
+        "obstructive pulmonary disease needs bilevel support instead."
+    ),
+    "Sleep hygiene": (
+        "Behavioural and environmental advice that supports sleep, "
+        "and the component of insomnia management most often given "
+        "alone when it should be part of something larger. Mx: a "
+        "consistent wake time seven days a week, the bed reserved for "
+        "sleep and sex, and getting out of bed when awake beyond "
+        "about 20 minutes. Restrict caffeine after midday and avoid "
+        "alcohol as a sleep aid, since it fragments the second half "
+        "of the night. Keep the room dark, quiet and cool, and cut "
+        "bright screen light in the hour before bed. Limit daytime "
+        "naps to 20 minutes before mid-afternoon. Note: hygiene "
+        "advice alone has a small effect on chronic insomnia and is "
+        "not a substitute for cognitive behavioural therapy for "
+        "insomnia, which combines stimulus control and sleep "
+        "restriction and is first-line in every current guideline. "
+        "Australian notes: digital programs are widely used where "
+        "face to face therapy is unavailable, and hypnotics are "
+        "recommended only for short courses in acute situational "
+        "insomnia."
+    ),
+    "Oral food challenge": (
+        "Supervised graded ingestion of a suspected food under "
+        "medical observation, the reference standard for confirming "
+        "or excluding food allergy when testing and history disagree. "
+        "Indications: equivocal skin prick or specific IgE results, "
+        "assessing whether a childhood allergy has resolved, and "
+        "confirming tolerance of baked egg or milk. "
+        "Contraindications: recent anaphylaxis to that food with "
+        "supportive testing, uncontrolled asthma, acute illness and "
+        "pregnancy. Mx: performed in a facility with resuscitation "
+        "capability and intravenous access available. Doses are "
+        "escalated at 15 to 30 minute intervals to a full "
+        "age-appropriate serve, with observation for at least two "
+        "hours after the final dose. Stop at objective signs such as "
+        "urticaria, vomiting, wheeze or hypotension, and treat with "
+        "intramuscular adrenaline rather than antihistamine if the "
+        "reaction is systemic. Note: a passed challenge only counts "
+        "if the food then enters the diet regularly, because "
+        "avoidance resumed afterwards can allow sensitisation to "
+        "return."
+    ),
+    "Serum tryptase": (
+        "A mast cell protease whose serum level rises after mast cell "
+        "degranulation, used both to support a diagnosis of "
+        "anaphylaxis and to screen for mast cell disorders. Ix: in "
+        "suspected anaphylaxis take an acute sample ideally within 1 "
+        "to 3 hours of onset, a second a few hours later, and a "
+        "baseline at least 24 hours after full recovery. The "
+        "diagnosis is supported when the acute value exceeds 1.2 "
+        "times baseline plus 2 micrograms per litre. Causes: systemic "
+        "mastocytosis, hereditary alpha tryptasaemia, myeloid "
+        "neoplasms and chronic kidney disease. Mx: a persistently "
+        "raised baseline above 20 warrants haematology referral and "
+        "consideration of marrow biopsy with KIT D816V testing. Note: "
+        "a normal tryptase never excludes anaphylaxis, which remains "
+        "a clinical diagnosis. Food-triggered and purely cutaneous "
+        "reactions frequently fail to raise it, so a negative result "
+        "should never delay adrenaline or reverse an allergy "
+        "diagnosis made on a convincing history."
+    ),
+    "Allergen-specific IgE testing": (
+        "Serum measurement of IgE directed at a defined allergen, an "
+        "alternative to skin prick testing when antihistamines cannot "
+        "be stopped or the skin is unsuitable. Indications: suspected "
+        "IgE-mediated food, aeroallergen, venom or drug allergy where "
+        "the history already points somewhere specific. Ix: order "
+        "targeted allergens, never a panel, because a positive result "
+        "in the absence of a matching history means sensitisation "
+        "rather than allergy and generates needless avoidance. "
+        "Component-resolved testing refines risk, so Ara h 2 predicts "
+        "genuine peanut allergy far better than whole peanut IgE, and "
+        "Omega-5 gliadin identifies wheat-dependent exercise-induced "
+        "anaphylaxis. Higher values raise the probability of clinical "
+        "reaction but do not predict severity. Mx: interpret "
+        "alongside history, and use supervised oral challenge where "
+        "the two disagree. Note: total IgE is not an allergy test, "
+        "and a shotgun panel in a patient with no consistent history "
+        "is the commonest way a child ends up on an unnecessary "
+        "exclusion diet."
+    ),
+    "Immunoglobulin replacement therapy": (
+        "Regular infusion of pooled donor IgG to restore humoral "
+        "immunity in antibody deficiency, distinct from the far "
+        "higher doses used as immunomodulation. Indications: primary "
+        "antibody deficiencies such as common variable "
+        "immunodeficiency and X-linked agammaglobulinaemia, and "
+        "secondary hypogammaglobulinaemia with recurrent infection, "
+        "typically from chronic lymphocytic leukaemia, myeloma or "
+        "anti-CD20 therapy. Dose: about 0.4 to 0.6 g/kg every 3 to 4 "
+        "weeks intravenously, or weekly subcutaneous dosing which "
+        "gives steadier levels and can be given at home. Monitoring: "
+        "trough IgG titrated against infection frequency rather than "
+        "to a fixed number, with renal function and haemolysis "
+        "screening. Adverse effects: headache, fever and myalgia "
+        "during infusion, aseptic meningitis, thrombosis in those "
+        "with risk factors, and infusion site reactions "
+        "subcutaneously. Australian notes: supply is governed by the "
+        "National Blood Authority Criteria, which specify diagnosis, "
+        "dose and review requirements. Note: it replaces antibody, "
+        "not the rest of the immune system."
+    ),
+    "Cochlear implant": (
+        "An implanted device that bypasses damaged hair cells and "
+        "stimulates the cochlear nerve directly through an electrode "
+        "array in the scala tympani. Indications: severe to profound "
+        "bilateral sensorineural hearing loss with inadequate benefit "
+        "from optimally fitted hearing aids, in adults and in "
+        "children from around 6 to 12 months of age. Ix: audiometry "
+        "with aided speech discrimination scores, CT and MRI to "
+        "confirm a patent cochlea and present auditory nerve, and "
+        "vestibular and psychological assessment. Mx: surgery is day "
+        "case or overnight, with activation two to four weeks later "
+        "and then months of mapping and auditory rehabilitation. "
+        "Outcomes depend heavily on duration of deafness and, in "
+        "children, on implantation before the critical period for "
+        "language closes. Complications: device failure, facial nerve "
+        "injury, vestibular upset and a small lifelong meningitis "
+        "risk, so pneumococcal vaccination is required before "
+        "implantation. Note: prelingual deafness implanted late in "
+        "adulthood rarely gives useful open-set speech, which is why "
+        "paediatric screening pathways are urgent."
+    ),
+    "Hearing aid prescription": (
+        "Amplification fitted to an individual audiogram, the "
+        "first-line intervention for most sensorineural hearing loss. "
+        "Indications: any hearing loss causing communication "
+        "difficulty, typically once thresholds exceed about 30 dB in "
+        "the speech frequencies. Ix: pure tone and speech audiometry "
+        "with tympanometry, and an ear examination to exclude wax, "
+        "effusion and perforation before fitting. Asymmetric loss, "
+        "pulsatile tinnitus or sudden loss need referral rather than "
+        "an aid. Mx: behind-the-ear and receiver-in-canal devices "
+        "suit most losses, real-ear measurement verifies the "
+        "prescription is actually delivered at the eardrum, and "
+        "bilateral fitting helps localisation and speech in noise. "
+        "Counselling about realistic expectation and gradual "
+        "acclimatisation prevents the drawer drop-out that affects a "
+        "large minority. Australian notes: the Hearing Services "
+        "Program subsidises devices for pensioners, veterans and some "
+        "others, and Hearing Australia serves children and Aboriginal "
+        "and Torres Strait Islander adults. Note: untreated hearing "
+        "loss is a modifiable risk factor for dementia, social "
+        "isolation and falls."
+    ),
+    "Flexible nasendoscopy": (
+        "Passage of a flexible fibreoptic or chip-tip scope through "
+        "the nose to view the nasopharynx, hypopharynx and larynx in "
+        "the awake patient. Indications: persistent hoarseness beyond "
+        "three weeks, globus and dysphagia, stridor, unexplained neck "
+        "lump, suspected head and neck malignancy, epistaxis "
+        "assessment and vocal cord palsy after thyroid or thoracic "
+        "surgery. Mx: topical decongestant and local anaesthetic to "
+        "the nasal cavity, scope passed along the floor of the nose, "
+        "and the patient asked to phonate, sniff and swallow so cord "
+        "movement and pooling of secretions are assessed dynamically. "
+        "Features: pooling in the pyriform fossa suggests an "
+        "obstructing lesion, an immobile cord suggests recurrent "
+        "laryngeal nerve involvement, and any ulcerated or exophytic "
+        "lesion needs biopsy under anaesthesia. Complications: "
+        "epistaxis, vasovagal episode and rarely laryngospasm. Note: "
+        "in a patient with stridor, scoping is done where an airway "
+        "can be secured, because the examination can convert a "
+        "partial obstruction into a complete one."
+    ),
+    "Intravitreal injection": (
+        "Injection of drug directly into the vitreous cavity, the "
+        "delivery route that transformed treatment of retinal "
+        "vascular disease. Indications: neovascular age-related "
+        "macular degeneration, diabetic macular oedema, macular "
+        "oedema from retinal vein occlusion, and proliferative "
+        "diabetic retinopathy. Corticosteroid implants are used where "
+        "anti-VEGF response is poor. Mx: agents include ranibizumab, "
+        "aflibercept and bevacizumab, given monthly at first and then "
+        "on treat-and-extend regimens guided by optical coherence "
+        "tomography. Aseptic technique with povidone-iodine and a lid "
+        "speculum is what keeps endophthalmitis rates near 1 in 3000. "
+        "Complications: endophthalmitis, raised intraocular pressure, "
+        "retinal detachment, vitreous haemorrhage and cataract with "
+        "steroid implants. Australian notes: PBS subsidises "
+        "aflibercept and ranibizumab for defined retinal indications. "
+        "Note: any eye that becomes painful with falling vision in "
+        "the days after injection is endophthalmitis until proven "
+        "otherwise, and needs same-day ophthalmology review rather "
+        "than topical antibiotic."
+    ),
+    "Cataract surgery": (
+        "Removal of the opacified crystalline lens with implantation "
+        "of an intraocular lens, the most commonly performed elective "
+        "operation in older adults. Indications: visual impairment "
+        "interfering with daily function or driving, and less "
+        "commonly lens-induced glaucoma or the need to view the "
+        "retina. Decision rests on symptoms rather than a threshold "
+        "acuity. Ix: biometry to calculate lens power, refraction, "
+        "and examination of the macula and optic nerve, since "
+        "coexisting macular degeneration or glaucoma limits the gain "
+        "and must be discussed beforehand. Mx: phacoemulsification "
+        "through a small incision under topical or local anaesthesia "
+        "as a day procedure, with postoperative topical antibiotic "
+        "and corticosteroid. Anticoagulation is usually continued. "
+        "Complications: posterior capsule opacification treated later "
+        "with YAG laser, posterior capsule rupture, cystoid macular "
+        "oedema, retinal detachment and endophthalmitis. Note: "
+        "tamsulosin causes intraoperative floppy iris syndrome, so a "
+        "history of alpha blocker use must be disclosed to the "
+        "surgeon even if the drug was stopped years earlier."
+    ),
+    "Transrectal ultrasound biopsy of prostate": (
+        "Systematic sampling of the prostate for histological "
+        "diagnosis after an abnormal PSA, examination or MRI. Ix: "
+        "multiparametric MRI now precedes biopsy, with PI-RADS "
+        "scoring used to target lesions and to spare biopsy in "
+        "low-risk scans. Mx: transperineal biopsy has largely "
+        "replaced the transrectal route because it avoids traversing "
+        "rectal mucosa and carries a much lower sepsis rate, and it "
+        "samples the anterior gland better. Prophylactic antibiotics "
+        "are given for the transrectal approach. Twelve or more cores "
+        "are taken systematically with additional targeted cores. "
+        "Results are reported with Gleason grade group and core "
+        "involvement. Complications: haematuria and haematospermia "
+        "that persist for weeks and should be expected rather than "
+        "feared, rectal bleeding, urinary retention, and sepsis which "
+        "is the serious one. Note: any fever or rigor in the 48 hours "
+        "after biopsy is urosepsis until proven otherwise and needs "
+        "blood cultures and intravenous antibiotics, not a telephone "
+        "script."
+    ),
+    "Urinary catheter care": (
+        "Management of an indwelling urethral or suprapubic catheter, "
+        "where the main clinical work is removing it as early as "
+        "possible. Indications: acute retention, accurate output "
+        "measurement in critical illness, perioperative drainage, and "
+        "sacral wound care in incontinence. Convenience is not an "
+        "indication. Mx: aseptic insertion, a closed drainage system "
+        "kept below bladder level, and daily review of whether it is "
+        "still needed. Long-term catheters are changed every 6 to 12 "
+        "weeks. Trial of void follows retention once the precipitant "
+        "is treated. Complications: catheter-associated urinary tract "
+        "infection, blockage from encrustation, bypassing, bladder "
+        "spasm and urethral trauma. Bacteriuria is universal after a "
+        "few days and must not be treated without systemic features, "
+        "since treating it breeds resistance and does nothing. Note: "
+        "a catheter that will not drain in a patient with suprapubic "
+        "pain is blocked until flushed or replaced, and leaving it is "
+        "how a bladder ruptures or a kidney obstructs."
+    ),
+    "Intermittent self-catheterisation": (
+        "Periodic bladder emptying by the patient with a single-use "
+        "catheter, the preferred long-term option for incomplete "
+        "emptying because it avoids a permanent indwelling device. "
+        "Indications: neurogenic bladder in spinal cord injury, "
+        "multiple sclerosis and spina bifida, chronic retention with "
+        "high residual volumes, and after urogynaecological surgery. "
+        "Mx: taught by a continence nurse, usually four to six times "
+        "daily aiming to keep drained volumes under about 500 mL, "
+        "using clean rather than sterile technique. Hand hygiene and "
+        "regular timing matter more than sterility. Manual dexterity, "
+        "vision, cognition and access to the urethra determine "
+        "feasibility. Complications: urinary tract infection at a "
+        "much lower rate than indwelling catheters, urethral trauma "
+        "and false passage, and occasional stricture. Australian "
+        "notes: catheters are subsidised through the Continence Aids "
+        "Payment Scheme for eligible patients. Note: asymptomatic "
+        "bacteriuria in a catheterising patient is expected and is "
+        "not treated, so send urine only when there are systemic "
+        "symptoms."
+    ),
+    "Circumcision": (
+        "Surgical removal of the foreskin, performed for medical "
+        "indications, religious reasons or parental preference. "
+        "Indications: pathological phimosis including balanitis "
+        "xerotica obliterans, recurrent balanitis or posthitis, "
+        "recurrent urinary tract infection with an underlying "
+        "urological abnormality, and paraphimosis that recurs after "
+        "reduction. Physiological non-retraction in a young boy is "
+        "not an indication, since the foreskin separates naturally "
+        "and most are retractile by adolescence. Mx: neonatal "
+        "procedures use a device with local anaesthetic ring block, "
+        "while older children and adults need general anaesthesia. "
+        "Complications: bleeding, infection, meatal stenosis, "
+        "excessive or inadequate skin removal, and rarely glans "
+        "injury. Australian notes: neonatal circumcision is not "
+        "routinely performed in public hospitals and paediatric "
+        "colleges do not support it as a routine, while acknowledging "
+        "parental choice. Note: forced retraction of a young boy's "
+        "foreskin causes the scarring that later gets called "
+        "phimosis, so the advice to parents is to leave it alone."
+    ),
+    "Cryotherapy for skin lesions": (
+        "Destruction of tissue by controlled freezing, usually with "
+        "liquid nitrogen at minus 196 degrees, delivered by spray or "
+        "cotton tip. Indications: viral warts, seborrhoeic keratoses, "
+        "actinic keratoses and molluscum. Superficial basal cell "
+        "carcinoma and Bowen disease may be treated by experienced "
+        "clinicians with longer freeze times. Contraindications: "
+        "undiagnosed pigmented lesions, which must be biopsied rather "
+        "than frozen, and cold urticaria or cryoglobulinaemia. Mx: "
+        "freeze time is tailored to lesion type, with a short freeze "
+        "for actinic keratoses and longer double freeze-thaw cycles "
+        "for warts. Warn about blistering, which is expected, and "
+        "arrange repeat treatment every two to four weeks for "
+        "resistant warts. Complications: pain, blistering and "
+        "haemorrhagic blister, permanent hypopigmentation, which "
+        "matters greatly in darker skin, and nail dystrophy when "
+        "treating periungual warts. Note: freezing a melanoma because "
+        "it looked like a keratosis destroys the histology and the "
+        "staging, so if there is any doubt about pigment, biopsy it."
+    ),
+    "Topical corticosteroid potency": (
+        "Topical corticosteroids are classified by vasoconstrictor "
+        "potency, and choosing the right class for the site is more "
+        "important than choosing the drug. Classification: mild such "
+        "as hydrocortisone 1 per cent, moderate such as triamcinolone "
+        "0.02 per cent, potent such as mometasone or betamethasone "
+        "dipropionate 0.05 per cent, and very potent such as "
+        "betamethasone in optimised vehicle. Mx: face, genitals and "
+        "flexures take mild agents, the trunk and limbs take moderate "
+        "to potent, and palms and soles need potent or very potent. "
+        "Ointments are more potent than creams for the same drug, and "
+        "occlusion raises potency considerably. Prescribe adequate "
+        "quantities using fingertip units and treat until the skin is "
+        "clear rather than stopping early. Adverse effects: skin "
+        "atrophy, striae, telangiectasia and perioral dermatitis, "
+        "mostly from potent agents used on the face for long periods. "
+        "Note: undertreatment driven by steroid phobia is a far "
+        "commoner cause of uncontrolled eczema than steroid toxicity, "
+        "and should be named and addressed at the consultation."
+    ),
+    "Phototherapy for skin disease": (
+        "Controlled delivery of ultraviolet light in a cabinet to "
+        "suppress cutaneous inflammation, sitting between topical "
+        "therapy and systemic agents. Indications: plaque psoriasis "
+        "too extensive for topicals, atopic dermatitis, vitiligo, "
+        "cutaneous T-cell lymphoma and nodular prurigo. Types: "
+        "narrowband UVB at 311 nm is the usual first choice, while "
+        "psoralen plus UVA is reserved for resistant palmoplantar "
+        "disease. Mx: two or three sessions weekly for 20 to 30 "
+        "treatments, with doses escalated from a minimal erythema "
+        "dose or skin type. Eye protection is mandatory and "
+        "photosensitising drugs must be reviewed. Adverse effects: "
+        "erythema resembling sunburn, pruritus, reactivation of "
+        "herpes simplex, photoageing and a cumulative skin cancer "
+        "risk that is well established for PUVA and small for "
+        "narrowband UVB. Contraindications: photosensitive disorders, "
+        "previous melanoma and systemic lupus. Note: it is a hospital "
+        "or clinic treatment requiring repeated attendance, so the "
+        "practical barrier is travel rather than efficacy."
+    ),
+    "Paediatric pain assessment": (
+        "Age-appropriate measurement of pain in children, necessary "
+        "because self-report is unavailable in the youngest and pain "
+        "is systematically underestimated in them. Types: "
+        "observational scales for preverbal children such as FLACC, "
+        "which scores face, legs, activity, cry and consolability out "
+        "of 10, and the neonatal infant pain scale in newborns. Faces "
+        "scales suit children from about four years and numerical "
+        "rating from about eight. Mx: score at rest and on movement, "
+        "record it as a vital sign, and reassess after intervention "
+        "rather than only at admission. Involve parents, whose report "
+        "of behaviour change is often the most sensitive measure in a "
+        "child with disability or communication difficulty. "
+        "Non-pharmacological measures including sucrose in neonates, "
+        "distraction and topical anaesthetic before cannulation are "
+        "part of the response. Note: a quiet withdrawn child is not "
+        "necessarily comfortable, and stillness in a child who "
+        "normally plays is a sign of severe pain rather than of "
+        "adequate analgesia."
+    ),
+    "Fetal growth surveillance": (
+        "Systematic detection of the small or poorly grown fetus, "
+        "because undetected growth restriction is the strongest "
+        "modifiable contributor to stillbirth. Mx: risk assessment at "
+        "booking assigns women to serial ultrasound or to "
+        "symphysis-fundal height measurement plotted on a customised "
+        "chart from 24 weeks. Serial scans are indicated for previous "
+        "growth restriction or stillbirth, chronic hypertension, "
+        "pre-eclampsia, diabetes with vasculopathy, smoking, "
+        "antiphospholipid syndrome and a raised uterine artery "
+        "Doppler. Ix: estimated fetal weight and abdominal "
+        "circumference below the 10th centile define smallness, and "
+        "umbilical artery Doppler with cerebroplacental ratio "
+        "separates the constitutionally small from the placentally "
+        "compromised. Static growth across three weeks matters even "
+        "above the 10th centile. Mx: increased surveillance and "
+        "timing of birth by gestation and Doppler findings. "
+        "Australian notes: the Safer Baby Bundle makes growth "
+        "restriction detection a core element. Note: a single scan at "
+        "term detects far less than serial measurement."
+    ),
+    "Fertility assessment": (
+        "Assessment of a couple who have not conceived after 12 "
+        "months of regular unprotected intercourse, or 6 months if "
+        "the woman is over 35. Both partners are investigated "
+        "together from the start. Aetiology: ovulatory disorders, "
+        "tubal disease, endometriosis, uterine factors and male "
+        "factor, which contributes in about half of couples, with a "
+        "substantial unexplained group. Ix: semen analysis is the "
+        "first male test and is repeated if abnormal. In the woman "
+        "confirm ovulation with a mid-luteal progesterone, assess "
+        "ovarian reserve with anti-Mullerian hormone and antral "
+        "follicle count, and check rubella immunity, chlamydia and "
+        "thyroid function. Tubal patency is assessed by "
+        "hysterosalpingogram or HyCoSy, with laparoscopy where "
+        "endometriosis is suspected. Mx: address weight, smoking, "
+        "alcohol and cycle timing, start folic acid, then treat by "
+        "cause with ovulation induction, surgery or assisted "
+        "reproduction. Note: age of the female partner is the "
+        "strongest single predictor of success, so investigation "
+        "should run in parallel rather than sequentially."
+    ),
+    "Fitness for work assessment": (
+        "Judgement of what a worker can safely do, framed around "
+        "capacity rather than diagnosis, and written for an employer "
+        "who will never see the clinical detail. Mx: describe "
+        "functional limits such as lifting weight, standing duration "
+        "and driving, avoid naming the condition without consent, and "
+        "prefer suitable duties to complete incapacity wherever it is "
+        "safe. Prolonged absence is itself harmful, since the "
+        "probability of ever returning falls sharply after about "
+        "three months off, so early graded return is a clinical "
+        "intervention rather than an administrative one. Consider the "
+        "workplace, the availability of modified duties and any "
+        "psychosocial obstacles, which predict duration better than "
+        "the injury does. Australian notes: certificates of capacity "
+        "are issued under state workers compensation schemes, there "
+        "is a national clinical framework for treating compensable "
+        "injury, and safety-critical roles in aviation, rail and "
+        "mining have their own standards. Note: writing unfit for all "
+        "duties by default is the easy option and the one most likely "
+        "to harm the patient."
     ),
 }
 
