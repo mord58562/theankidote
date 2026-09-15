@@ -15339,6 +15339,192 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "B lines lung ultrasound interstitial syndrome"]],
         "summary": "",
     },
+    {
+        "name": "Coronary CT angiography",
+        "aliases": ["CTCA", "coronary computed tomography angiography"],
+        "utd": [["Overview", "coronary CT angiography stable chest pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Transcatheter aortic valve implantation",
+        "aliases": ["TAVI", "transcatheter aortic valve replacement", "TAVR", "percutaneous aortic valve replacement"],
+        "utd": [["Overview", "transcatheter aortic valve implantation severe aortic stenosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-thrombotic syndrome",
+        "aliases": ["postthrombotic syndrome", "post thrombotic syndrome", "PTS", "venous stress disorder"],
+        "utd": [["Overview", "post-thrombotic syndrome after deep vein thrombosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Pericardiocentesis",
+        "aliases": ["pericardial drainage", "pericardial tap", "pericardial aspiration"],
+        "utd": [["Overview", "pericardiocentesis cardiac tamponade technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Indwelling pleural catheter",
+        "aliases": ["IPC", "tunnelled pleural catheter", "PleurX catheter", "ambulatory pleural drainage"],
+        "utd": [["Overview", "indwelling pleural catheter malignant pleural effusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Solitary pulmonary nodule",
+        "aliases": ["pulmonary nodule", "lung nodule", "incidental lung nodule", "single pulmonary nodule"],
+        "utd": [["Overview", "solitary pulmonary nodule evaluation Fleischner"]],
+        "summary": "",
+    },
+    {
+        "name": "Variceal band ligation",
+        "aliases": ["oesophageal variceal banding", "endoscopic band ligation", "variceal banding", "EVL"],
+        "utd": [["Overview", "endoscopic variceal band ligation oesophageal varices"]],
+        "summary": "",
+    },
+    {
+        "name": "Ambulatory pH monitoring",
+        "aliases": ["24 hour pH monitoring", "oesophageal pH study", "pH impedance monitoring", "wireless pH capsule"],
+        "utd": [["Overview", "ambulatory oesophageal pH monitoring reflux testing"]],
+        "summary": "",
+    },
+    {
+        "name": "Coeliac serology",
+        "aliases": ["tissue transglutaminase antibody", "tTG IgA", "coeliac antibodies", "endomysial antibody", "celiac serology"],
+        "utd": [["Overview", "coeliac disease serologic testing tissue transglutaminase"]],
+        "summary": "",
+    },
+    {
+        "name": "Faecal microbiota transplantation",
+        "aliases": ["FMT", "faecal transplant", "stool transplant", "faecal microbiota transfer", "fecal microbiota transplantation"],
+        "utd": [["Overview", "faecal microbiota transplantation recurrent Clostridioides difficile"]],
+        "summary": "",
+    },
+    {
+        "name": "Recurrent Clostridioides difficile infection",
+        "aliases": ["recurrent C difficile", "relapsing Clostridioides difficile", "recurrent CDI", "C difficile recurrence"],
+        "utd": [["Overview", "recurrent Clostridioides difficile infection management"]],
+        "summary": "",
+    },
+    {
+        "name": "Raised alkaline phosphatase",
+        "aliases": ["elevated alkaline phosphatase", "high ALP", "raised ALP", "isolated alkaline phosphatase elevation"],
+        "utd": [["Overview", "approach to elevated alkaline phosphatase adult"]],
+        "summary": "",
+    },
+    {
+        "name": "Plasma exchange",
+        "aliases": ["plasmapheresis", "therapeutic plasma exchange", "TPE", "plasma filtration"],
+        "utd": [["Overview", "therapeutic plasma exchange indications complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroid fine needle aspiration",
+        "aliases": ["thyroid FNA", "thyroid nodule biopsy", "fine needle aspiration of thyroid", "thyroid fine needle biopsy"],
+        "utd": [["Overview", "thyroid nodule fine needle aspiration Bethesda"]],
+        "summary": "",
+    },
+    {
+        "name": "Radioactive iodine therapy",
+        "aliases": ["radioiodine", "I-131 therapy", "radioactive iodine ablation", "RAI therapy"],
+        "utd": [["Overview", "radioactive iodine therapy hyperthyroidism thyroid cancer"]],
+        "summary": "",
+    },
+    {
+        "name": "Fracture risk assessment",
+        "aliases": ["FRAX", "absolute fracture risk", "osteoporosis risk assessment"],
+        "utd": [["Overview", "fracture risk assessment FRAX Garvan osteoporosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Thrombolysis for ischaemic stroke",
+        "aliases": ["stroke thrombolysis", "intravenous thrombolysis stroke", "alteplase for stroke", "tenecteplase for stroke"],
+        "utd": [["Overview", "intravenous thrombolysis acute ischaemic stroke"]],
+        "summary": "",
+    },
+    {
+        "name": "Flow cytometry",
+        "aliases": ["immunophenotyping", "flow cytometric analysis", "FACS analysis"],
+        "utd": [["Overview", "flow cytometry immunophenotyping haematology"]],
+        "summary": "",
+    },
+    {
+        "name": "Therapeutic venesection",
+        "aliases": ["therapeutic phlebotomy", "venesection", "phlebotomy for haemochromatosis"],
+        "utd": [["Overview", "therapeutic phlebotomy haemochromatosis polycythaemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Thrombophilia screening",
+        "aliases": ["thrombophilia testing", "hypercoagulable workup", "clotting screen for thrombophilia", "inherited thrombophilia panel"],
+        "utd": [["Overview", "thrombophilia testing indications venous thromboembolism"]],
+        "summary": "",
+    },
+    {
+        "name": "Ferritin",
+        "aliases": ["serum ferritin", "ferritin level", "ferritin test"],
+        "utd": [["Overview", "serum ferritin interpretation iron deficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Antiphospholipid antibodies",
+        "aliases": ["lupus anticoagulant", "anticardiolipin antibody", "anti-beta-2 glycoprotein I", "antiphospholipid antibody testing"],
+        "utd": [["Overview", "antiphospholipid antibody testing interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Carbapenem-resistant Enterobacterales",
+        "aliases": ["CRE", "carbapenem resistant Enterobacteriaceae", "carbapenemase producing organism"],
+        "utd": [["Overview", "carbapenem-resistant Enterobacterales treatment infection control"]],
+        "summary": "",
+    },
+    {
+        "name": "MRSA decolonisation",
+        "aliases": ["staphylococcal decolonisation", "mupirocin decolonisation", "nasal decolonisation", "MRSA eradication"],
+        "utd": [["Overview", "MRSA decolonisation mupirocin chlorhexidine"]],
+        "summary": "",
+    },
+    {
+        "name": "Erythropoiesis stimulating agents",
+        "aliases": ["ESA", "erythropoietin therapy", "erythropoietin injections"],
+        "utd": [["Overview", "erythropoiesis stimulating agents anaemia chronic kidney disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Iron chelation therapy",
+        "aliases": ["iron chelator", "chelation for iron overload", "transfusional iron overload treatment"],
+        "utd": [["Overview", "iron chelation therapy transfusional iron overload"]],
+        "summary": "",
+    },
+    {
+        "name": "Jones criteria",
+        "aliases": ["revised Jones criteria", "acute rheumatic fever diagnostic criteria"],
+        "utd": [["Overview", "revised Jones criteria acute rheumatic fever diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Hepatitis B vaccine non-responder",
+        "aliases": ["hepatitis B vaccine failure", "non-response to hepatitis B vaccination", "anti-HBs negative after vaccination"],
+        "utd": [["Overview", "hepatitis B vaccine non-responder management revaccination"]],
+        "summary": "",
+    },
+    {
+        "name": "Travel vaccination",
+        "aliases": ["travel vaccines", "pre-travel immunisation", "travellers vaccination", "pre travel vaccination"],
+        "utd": [["Overview", "pre-travel vaccination advice adult traveller"]],
+        "summary": "",
+    },
+    {
+        "name": "Cryoglobulin testing",
+        "aliases": ["cryoglobulins", "cryoglobulin assay", "cryocrit"],
+        "utd": [["Overview", "cryoglobulin testing collection interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-transplant infection prophylaxis",
+        "aliases": ["transplant infection prophylaxis", "prophylaxis after solid organ transplant", "valganciclovir prophylaxis"],
+        "utd": [["Overview", "infection prophylaxis after solid organ transplantation"]],
+        "summary": "",
+    },
 ]
 
 
@@ -86096,6 +86282,626 @@ RICH_SUMMARIES = {
         "and pneumonitis also produce B-lines. Note: diffuse and "
         "bilateral means fluid, focal means a localised process such "
         "as pneumonia or contusion."
+    ),
+
+    "Coronary CT angiography": (
+        "Contrast CT of the coronary arteries, the first-line "
+        "anatomical test for stable chest pain in patients at low to "
+        "intermediate risk. Indications: new stable chest pain where "
+        "risk profile does not exclude disease, equivocal stress "
+        "testing, and assessment of anomalous coronaries. Its "
+        "strength is a negative predictive value near 99 percent, so "
+        "a normal study effectively excludes obstructive coronary "
+        "disease and ends the workup. Ix: heart rate is lowered to "
+        "about 60 bpm with oral or IV metoprolol, sublingual glyceryl "
+        "trinitrate dilates the vessels, and ECG gating times "
+        "acquisition to diastole. A calcium score is usually reported "
+        "alongside. Cautions: heavy calcification, stents and "
+        "arrhythmia degrade image quality, and iodinated contrast "
+        "needs an eGFR check. Mx: obstructive stenosis on CT is "
+        "followed by functional testing or invasive angiography "
+        "rather than automatic revascularisation. Note: use it to "
+        "rule disease out. A stenosis seen on CT still needs proof "
+        "that it limits flow."
+    ),
+    "Transcatheter aortic valve implantation": (
+        "Catheter delivery of a bioprosthetic aortic valve, usually "
+        "transfemoral, for severe symptomatic aortic stenosis. "
+        "Indications: severe aortic stenosis with symptoms where a "
+        "heart team judges surgical risk high or intermediate, and "
+        "increasingly in lower-risk older patients. Surgical "
+        "replacement is still preferred in younger patients because "
+        "prosthesis durability beyond ten years is less certain. Ix: "
+        "transthoracic echocardiography confirms severity (mean "
+        "gradient above 40 mmHg, valve area under 1.0 square cm), "
+        "gated CT sizes the annulus and iliofemoral access, and "
+        "coronary anatomy is assessed first. Complications: "
+        "conduction block needing a permanent pacemaker in 10 to 20 "
+        "percent, paravalvular regurgitation, stroke and vascular "
+        "access injury. Mx: antiplatelet therapy afterwards unless "
+        "anticoagulation is otherwise indicated, with endocarditis "
+        "prophylaxis advice. Note: breathlessness, syncope or angina "
+        "in severe aortic stenosis marks the point at which survival "
+        "without intervention is measured in a few years."
+    ),
+    "Post-thrombotic syndrome": (
+        "Chronic venous hypertension of the limb after deep vein "
+        "thrombosis, affecting 20 to 50 percent of patients within "
+        "two years. Aetiology: residual thrombus and valve damage "
+        "cause reflux and outflow obstruction, with risk highest "
+        "after iliofemoral DVT, recurrent ipsilateral DVT, obesity "
+        "and subtherapeutic early anticoagulation. Clinical features: "
+        "aching heaviness and swelling worse on standing, itch, "
+        "cramps, hyperpigmentation and lipodermatosclerosis, and in "
+        "severe cases venous ulceration at the gaiter area. Symptoms "
+        "are activity-related and improve with elevation. Ix: "
+        "clinical diagnosis using the Villalta score, with duplex "
+        "ultrasound to document reflux or obstruction and to exclude "
+        "acute recurrent DVT before attributing new swelling to the "
+        "syndrome. Mx: graduated compression stockings, exercise and "
+        "weight loss, skin care and ulcer management, with venous "
+        "stenting considered for proximal obstruction. Note: "
+        "prevention beats treatment, and adequate anticoagulation of "
+        "the index DVT is the main lever."
+    ),
+    "Pericardiocentesis": (
+        "Needle drainage of pericardial fluid, done urgently for "
+        "tamponade and electively to diagnose an undiagnosed "
+        "effusion. Indications: haemodynamic compromise with an "
+        "echocardiographically confirmed effusion, suspected purulent "
+        "pericarditis, and large effusions needing cytology or "
+        "culture. Clinical features: tamponade shows hypotension, "
+        "raised JVP, muffled heart sounds, pulsus paradoxus above 10 "
+        "mmHg and tachycardia. Ix: bedside echocardiography confirms "
+        "the effusion, diastolic right atrial and right ventricular "
+        "collapse and a plethoric inferior vena cava, and it guides "
+        "the safest window. Mx: subxiphoid or apical approach under "
+        "ultrasound guidance with a pigtail catheter left for ongoing "
+        "drainage, plus fluid for cell count, culture, cytology and "
+        "acid-fast testing. Give fluids while preparing and avoid "
+        "positive pressure ventilation, which can precipitate arrest. "
+        "Contraindications: aortic dissection with haemopericardium "
+        "and clotted post-surgical effusions need surgery, not a "
+        "needle. Note: tamponade is a clinical diagnosis. Do not wait "
+        "for electrical alternans."
+    ),
+    "Indwelling pleural catheter": (
+        "Tunnelled small-bore catheter left in the pleural space for "
+        "ambulatory drainage of recurrent effusion, usually "
+        "malignant. Indications: symptomatic recurrent malignant "
+        "pleural effusion, trapped lung where pleurodesis cannot "
+        "work, and patients who prefer to avoid admission. It is the "
+        "alternative to talc pleurodesis, with comparable "
+        "breathlessness relief and fewer hospital days. Mx: inserted "
+        "under local anaesthesia with ultrasound guidance, then "
+        "drained by the patient or a community nurse into vacuum "
+        "bottles every one to three days, tapering as output falls. "
+        "Spontaneous pleurodesis occurs in roughly half by six to "
+        "eight weeks and allows removal. Complications: infection "
+        "including empyema in about 5 percent (usually treated with "
+        "antibiotics while the catheter stays in), loculation, "
+        "blockage, and tumour seeding along the tract in "
+        "mesothelioma. Note: choose it when the lung will not "
+        "re-expand or admission is unwelcome, and choose talc when "
+        "the prognosis is long and the patient wants the catheter "
+        "gone."
+    ),
+    "Solitary pulmonary nodule": (
+        "A single rounded opacity up to 30 mm surrounded by aerated "
+        "lung, most often found incidentally on CT. Above 30 mm the "
+        "lesion is a mass and treated as malignant until proven "
+        "otherwise. Risk factors: age, smoking pack-years, prior "
+        "malignancy, upper lobe location, spiculation and size, "
+        "combined in the Brock model. Features: benign patterns "
+        "include central, laminated or popcorn calcification and "
+        "stable size over two years. Malignant patterns include "
+        "spiculated or lobulated margins, part-solid or ground-glass "
+        "components with a solid core, and growth. Ix: compare with "
+        "any prior imaging first, then follow Fleischner or local "
+        "respiratory guidance, with PET-CT useful above 8 to 10 mm "
+        "and sampling by CT-guided biopsy or bronchoscopy when "
+        "pretest probability is intermediate. Mx: surveillance CT, "
+        "biopsy or resection stratified by probability of malignancy "
+        "and fitness for surgery. Note: subsolid nodules grow slowly "
+        "and need longer follow-up than solid ones, so do not "
+        "discharge them at 12 months."
+    ),
+    "Variceal band ligation": (
+        "Endoscopic rubber band ligation of oesophageal varices, "
+        "first-line endoscopic treatment for variceal bleeding and "
+        "for secondary prevention in portal hypertension. "
+        "Indications: active or recently bled oesophageal varices, "
+        "and primary prevention in medium to large varices when a "
+        "non-selective beta blocker is not tolerated. Mx: resuscitate "
+        "with a restrictive transfusion target of about 70 g/L, give "
+        "terlipressin or octreotide with IV ceftriaxone, and band "
+        "within 12 hours. Repeat every two to four weeks until "
+        "obliteration, then surveillance endoscopy at three to six "
+        "months and annually. Carvedilol or propranolol continues for "
+        "secondary prevention. Complications: post-banding ulcer "
+        "bleeding, transient dysphagia and chest pain, and stricture. "
+        "Gastric fundal varices are treated with cyanoacrylate glue "
+        "or a shunt, not bands. Note: antibiotics and vasoactive "
+        "therapy matter as much as the banding, and failure to "
+        "control bleeding is an indication for early TIPS rather than "
+        "repeat endoscopy."
+    ),
+    "Ambulatory pH monitoring": (
+        "Twenty-four hour measurement of oesophageal acid exposure by "
+        "transnasal catheter or wireless capsule, the reference test "
+        "for objective reflux disease. Indications: refractory "
+        "symptoms despite proton pump inhibitor therapy, atypical or "
+        "extra-oesophageal symptoms, and mandatory confirmation of "
+        "pathological reflux before anti-reflux surgery. Ix: a "
+        "catheter sensor sits 5 cm above the manometrically located "
+        "lower oesophageal sphincter, or a capsule is clipped to the "
+        "mucosa for 48 to 96 hours. Acid exposure time above 6 "
+        "percent is abnormal and below 4 percent is normal. Impedance "
+        "added to pH detects non-acid and gas reflux and allows "
+        "symptom association indices. Testing is done off acid "
+        "suppression for seven days when the question is whether "
+        "reflux exists, and on therapy when the question is why "
+        "treatment is failing. Note: a normal study on maximal "
+        "therapy points to reflux hypersensitivity or functional "
+        "heartburn, and more acid suppression will not help."
+    ),
+    "Coeliac serology": (
+        "Antibody testing for coeliac disease, used to select "
+        "patients for confirmatory duodenal biopsy. Ix: tissue "
+        "transglutaminase IgA with a total IgA level is the "
+        "first-line test, since selective IgA deficiency is ten times "
+        "more common in coeliac disease and makes IgA-based testing "
+        "falsely negative. Deamidated gliadin peptide IgG or tTG IgG "
+        "is used when IgA is deficient, and endomysial antibody is "
+        "the more specific confirmatory test. The patient must be "
+        "eating gluten, about four slices of bread daily for six "
+        "weeks, or serology and histology both normalise. Genetics: "
+        "HLA-DQ2 and DQ8 typing has high negative predictive value "
+        "and is useful when a patient is already gluten free. Mx: in "
+        "Australian adult practice a positive result is confirmed by "
+        "gastroscopy with at least four duodenal and one bulb biopsy "
+        "before lifelong gluten exclusion. Note: a strongly positive "
+        "tTG with normal total IgA in a gluten-eating patient is "
+        "rarely a false positive."
+    ),
+    "Faecal microbiota transplantation": (
+        "Transfer of screened donor stool into the recipient gut to "
+        "restore microbial diversity, delivered by colonoscopy, "
+        "enema, nasoduodenal tube or oral capsules. Indications: "
+        "recurrent Clostridioides difficile infection after at least "
+        "two recurrences, where cure rates of 85 to 90 percent "
+        "clearly exceed repeat antibiotics. Use outside this "
+        "indication, including inflammatory bowel disease and "
+        "irritable bowel syndrome, remains investigational. Mx: "
+        "donors are screened for transmissible infection and for "
+        "conditions associated with dysbiosis, stool is processed and "
+        "frozen, and vancomycin is stopped 24 to 48 hours before "
+        "instillation. In Australia the product is regulated by the "
+        "TGA as a biological and supplied through accredited centres. "
+        "Adverse effects: transient bloating, cramping and altered "
+        "bowel habit, with rare transmission of pathogens including "
+        "reported fatal transmission of multidrug-resistant "
+        "organisms. Note: the evidence is strong for recurrent C. "
+        "difficile and thin for everything else."
+    ),
+    "Recurrent Clostridioides difficile infection": (
+        "Return of diarrhoea with a positive assay within eight weeks "
+        "of finishing treatment, following 20 to 25 percent of first "
+        "episodes and up to half of second episodes. Aetiology: "
+        "persistent spore carriage with failure of microbiome "
+        "recovery, driven by ongoing antibiotic exposure, proton pump "
+        "inhibitors, age over 65 and immunosuppression. Ix: test only "
+        "unformed stool, using a two-step algorithm of glutamate "
+        "dehydrogenase or nucleic acid amplification followed by "
+        "toxin enzyme immunoassay. Do not test for cure, since "
+        "shedding persists for weeks. Mx: first recurrence is treated "
+        "with oral vancomycin (tapered and pulsed if vancomycin was "
+        "used initially) or fidaxomicin, and later recurrences are "
+        "the main indication for faecal microbiota transplantation. "
+        "Stop the inciting antibiotic and unnecessary acid "
+        "suppression, and avoid loperamide during active colitis. "
+        "Note: a repeat positive test without symptoms is "
+        "colonisation, and treating it drives further recurrence."
+    ),
+    "Raised alkaline phosphatase": (
+        "A common incidental finding whose first job is to decide "
+        "whether the enzyme is hepatic or skeletal. Ix: "
+        "gamma-glutamyl transferase rises with hepatic ALP and is "
+        "normal in bone disease, and fractionated ALP or "
+        "5-nucleotidase settles the question when GGT is equivocal. "
+        "Causes: hepatic sources are biliary obstruction, primary "
+        "biliary cholangitis, infiltration by granuloma or tumour, "
+        "and drugs. Bone sources are Paget disease, osteomalacia, "
+        "healing fracture, metastases and physiological growth in "
+        "children. Placental ALP rises in the third trimester. Mx: "
+        "with a hepatic pattern, request liver ultrasound and an "
+        "antimitochondrial antibody, then MRCP if ducts are dilated "
+        "or the antibody is negative. With a bone pattern, check "
+        "calcium, phosphate, vitamin D, parathyroid hormone and renal "
+        "function, then image the symptomatic site. Note: an isolated "
+        "rise with normal GGT in an older adult should raise Paget "
+        "disease, and a transient rise after illness needs a repeat "
+        "rather than a scan."
+    ),
+    "Plasma exchange": (
+        "Extracorporeal removal of plasma with replacement by albumin "
+        "or fresh frozen plasma, used to clear pathogenic antibodies, "
+        "immune complexes or protein-bound toxins. Indications: "
+        "thrombotic thrombocytopenic purpura where it is life-saving "
+        "and urgent, anti-glomerular basement membrane disease, "
+        "severe ANCA vasculitis with pulmonary haemorrhage, "
+        "Guillain-Barre syndrome, myasthenic crisis and "
+        "hyperviscosity from paraproteinaemia. Mx: one plasma volume "
+        "is exchanged per session, typically five to seven sessions "
+        "on alternate days, through large-bore vascular access. "
+        "Albumin is the usual replacement, but fresh frozen plasma is "
+        "used in thrombotic thrombocytopenic purpura because it "
+        "supplies ADAMTS13. Adverse effects: citrate-induced "
+        "hypocalcaemia with perioral tingling, hypotension, "
+        "fibrinogen depletion with repeated albumin exchanges, "
+        "catheter infection and transfusion reactions. Note: drugs "
+        "and clotting factors are removed with the plasma, so give "
+        "rituximab and immunoglobulin after the session, not before."
+    ),
+    "Thyroid fine needle aspiration": (
+        "Ultrasound-guided needle sampling of a thyroid nodule, the "
+        "test that separates the 5 to 10 percent that are malignant "
+        "from the majority that are not. Indications: driven by "
+        "sonographic pattern and size rather than palpability, so "
+        "highly suspicious nodules are sampled above 10 mm, "
+        "intermediate above 15 mm, and low-suspicion or spongiform "
+        "nodules above 20 mm or not at all. Check TSH first, since a "
+        "suppressed TSH suggests an autonomous nodule that should "
+        "have scintigraphy instead. Classification: results are "
+        "reported by the Bethesda system, from non-diagnostic "
+        "(repeat) through benign (surveillance), atypia of "
+        "undetermined significance, follicular neoplasm, suspicious "
+        "and malignant. Mx: benign cytology is followed clinically, "
+        "indeterminate results go to molecular testing or diagnostic "
+        "hemithyroidectomy, and malignant cytology proceeds to "
+        "surgery. Note: cytology cannot distinguish follicular "
+        "adenoma from carcinoma, because the difference is capsular "
+        "invasion and that needs the whole specimen."
+    ),
+    "Radioactive iodine therapy": (
+        "Oral iodine-131 taken up by thyroid follicular cells, used "
+        "to ablate overactive or malignant thyroid tissue. "
+        "Indications: Graves disease and toxic nodular goitre, "
+        "particularly after relapse on antithyroid drugs, and "
+        "post-thyroidectomy ablation of remnant or metastatic "
+        "differentiated thyroid cancer. Contraindications: pregnancy "
+        "and breastfeeding are absolute, pregnancy must be excluded "
+        "and then avoided for six months. Active moderate to severe "
+        "thyroid eye disease can worsen, so prednisolone cover is "
+        "used when treatment proceeds. Mx: antithyroid drugs are "
+        "usually stopped a few days beforehand, a low-iodine diet is "
+        "advised for cancer dosing, and radiation-protection "
+        "precautions limit close contact and shared sleeping for days "
+        "to weeks depending on the activity given. Complications: "
+        "permanent hypothyroidism is expected rather than a "
+        "complication and needs lifelong thyroxine with TSH "
+        "monitoring, plus transient sialadenitis and taste "
+        "disturbance. Note: warn patients that the aim is "
+        "hypothyroidism, not a normal gland."
+    ),
+    "Fracture risk assessment": (
+        "Structured estimation of absolute fracture probability, "
+        "which decides who needs treatment rather than who has a low "
+        "density number. Indications: adults over 50 with a "
+        "minimal-trauma fracture, anyone over 70, and younger "
+        "patients with glucocorticoid use, early menopause, "
+        "hypogonadism, malabsorption, rheumatoid arthritis or high "
+        "alcohol intake. Ix: dual-energy X-ray absorptiometry of hip "
+        "and spine gives a T-score, and the Garvan calculator or FRAX "
+        "converts risk factors into five or ten year probability. "
+        "Check calcium, phosphate, renal function, vitamin D, liver "
+        "function and a paraprotein screen to exclude secondary "
+        "causes before attributing loss to age. Mx: in Australia a "
+        "minimal-trauma fracture after 50, or a T-score of minus 2.5 "
+        "or lower, attracts PBS-subsidised therapy with a "
+        "bisphosphonate or denosumab, alongside falls prevention, "
+        "resistance exercise and vitamin D. Note: a prior "
+        "minimal-trauma fracture outweighs any density result, and "
+        "treatment starts on that alone."
+    ),
+    "Thrombolysis for ischaemic stroke": (
+        "Intravenous fibrinolysis for acute ischaemic stroke, given "
+        "within 4.5 hours of known onset and in selected patients "
+        "with favourable perfusion imaging beyond that window or on "
+        "waking. Australian stroke units increasingly use "
+        "tenecteplase as a single bolus in place of an alteplase "
+        "infusion, particularly when thrombectomy will follow. Ix: "
+        "non-contrast CT excludes haemorrhage, CT angiography "
+        "identifies large vessel occlusion for thrombectomy, and CT "
+        "perfusion identifies salvageable penumbra in late or "
+        "unwitnessed presentations. Contraindications: intracranial "
+        "haemorrhage, recent major surgery or stroke, active "
+        "bleeding, platelets below 100, INR above 1.7 or therapeutic "
+        "anticoagulation, and blood pressure that cannot be brought "
+        "under 185/110. Mx: treat in the imaging suite where "
+        "possible, monitor neurology and blood pressure closely for "
+        "24 hours, and repeat imaging before starting antiplatelet "
+        "therapy. Note: every minute of delay costs neurones, and "
+        "door-to-needle under 60 minutes is the quality target."
+    ),
+    "Flow cytometry": (
+        "Laser-based analysis of single cells in suspension, labelled "
+        "with fluorescent antibodies to surface and intracellular "
+        "markers, reporting the immunophenotype of a population "
+        "within hours. Uses: diagnosis and classification of "
+        "leukaemia and lymphoma, detection of measurable residual "
+        "disease, CD4 counting in HIV, paroxysmal nocturnal "
+        "haemoglobinuria screening by loss of CD55 and CD59, and "
+        "lymphocyte subsets in immunodeficiency. Ix: suitable samples "
+        "are blood, bone marrow aspirate, cerebrospinal fluid and "
+        "fresh lymph node or fluid aspirate in transport medium. The "
+        "sample must be fresh and unfixed, so it tolerates neither "
+        "delay nor formalin. Features: clonality is inferred from "
+        "kappa or lambda light chain restriction in B cells, and "
+        "lineage from combinations such as CD19 and CD20 for B cells "
+        "or CD3 for T cells. Note: it phenotypes cells but does not "
+        "show architecture, so nodal lymphoma still needs an "
+        "excisional biopsy when flow is inconclusive."
+    ),
+    "Therapeutic venesection": (
+        "Scheduled removal of whole blood to reduce iron stores or "
+        "red cell mass. Indications: hereditary haemochromatosis with "
+        "a raised ferritin, polycythaemia vera, secondary "
+        "erythrocytosis with hyperviscosity symptoms, and porphyria "
+        "cutanea tarda. Mx: in haemochromatosis 400 to 500 mL is "
+        "taken weekly or fortnightly until ferritin falls to 50 to "
+        "100 micrograms/L, then maintenance every two to four months "
+        "guided by ferritin and transferrin saturation. In "
+        "polycythaemia vera the target is a haematocrit below 0.45, "
+        "combined with low-dose aspirin and cytoreduction such as "
+        "hydroxyurea in high-risk patients. Monitoring: check "
+        "haemoglobin before each procedure and ferritin every few "
+        "sessions during depletion, and watch for iatrogenic iron "
+        "deficiency. Note: venesection clears iron but does not "
+        "reverse established cirrhosis, so hepatocellular carcinoma "
+        "surveillance continues. In Australia patients with "
+        "haemochromatosis may donate through Lifeblood, which turns "
+        "treatment into a usable unit."
+    ),
+    "Thrombophilia screening": (
+        "Testing for inherited or acquired hypercoagulability, "
+        "requested far more often than it is useful. Indications: "
+        "results change management in few situations, mainly "
+        "antiphospholipid syndrome in unprovoked venous "
+        "thromboembolism or arterial events in the young, and "
+        "occasionally recurrent pregnancy loss. A clot provoked by "
+        "surgery or immobilisation almost never warrants testing. Ix: "
+        "the panel covers factor V Leiden, prothrombin G20210A, "
+        "protein C, protein S, antithrombin, and lupus anticoagulant "
+        "with anticardiolipin and anti-beta-2 glycoprotein I "
+        "antibodies. Timing matters, because acute thrombosis "
+        "consumes natural anticoagulants, warfarin lowers protein C "
+        "and S, direct oral anticoagulants falsely prolong lupus "
+        "anticoagulant assays, and pregnancy lowers protein S. Test "
+        "after anticoagulation is finished, ideally three months out. "
+        "Note: an unprovoked proximal clot usually earns extended "
+        "anticoagulation on clinical grounds alone, so ask what the "
+        "result would change before sending it."
+    ),
+    "Ferritin": (
+        "The intracellular iron storage protein, measured in serum as "
+        "the best single index of body iron and simultaneously an "
+        "acute phase reactant, so interpretation is two-sided. A low "
+        "value is specific for iron deficiency, while a normal or "
+        "high value does not exclude it. Causes: a high ferritin "
+        "arises in inflammation, infection, liver disease, alcohol, "
+        "malignancy, haemochromatosis, metabolic syndrome and "
+        "haemophagocytic lymphohistiocytosis, where levels above "
+        "10000 micrograms/L are characteristic. Ix: below 15 "
+        "micrograms/L confirms iron deficiency in a healthy adult, "
+        "below 30 is the practical Australian treatment threshold, "
+        "and up to 100 may still mean deficiency alongside "
+        "inflammation or chronic kidney disease. Pair it with "
+        "transferrin saturation and CRP when inflammation is "
+        "possible. Mx: iron deficiency in an adult is a finding that "
+        "needs a cause, which in men and postmenopausal women means "
+        "gastrointestinal investigation. Note: check transferrin "
+        "saturation before chasing a mildly raised ferritin with "
+        "genetic testing."
+    ),
+    "Antiphospholipid antibodies": (
+        "Autoantibodies directed at phospholipid-binding proteins "
+        "that cause thrombosis and pregnancy morbidity rather than "
+        "bleeding, despite prolonging clotting times in vitro. Ix: "
+        "the panel is lupus anticoagulant (a functional clotting "
+        "assay), anticardiolipin IgG and IgM, and anti-beta-2 "
+        "glycoprotein I IgG and IgM. Diagnosis requires a moderate or "
+        "high titre on two occasions at least 12 weeks apart, because "
+        "transient positivity follows infection and is common in "
+        "older adults. Direct oral anticoagulants and heparin "
+        "interfere with lupus anticoagulant testing, so timing and "
+        "drug history matter. Associations: primary, or secondary to "
+        "systemic lupus erythematosus, and triple positivity carries "
+        "the highest thrombotic risk. Mx: confirmed syndrome with "
+        "thrombosis is anticoagulated with warfarin rather than a "
+        "direct oral anticoagulant, which was inferior for arterial "
+        "events, and obstetric cases use aspirin with low molecular "
+        "weight heparin. Note: a positive antibody without a clinical "
+        "event is not the syndrome and is not a reason to "
+        "anticoagulate."
+    ),
+    "Carbapenem-resistant Enterobacterales": (
+        "Enterobacterales, chiefly Klebsiella pneumoniae and "
+        "Escherichia coli, resistant to carbapenems and among the "
+        "highest-priority resistant organisms in Australian "
+        "hospitals. Mechanism: carbapenemase production (KPC, NDM, "
+        "OXA-48 and IMP, the last predominating in Australia), or an "
+        "extended spectrum beta-lactamase or AmpC combined with porin "
+        "loss. Risk factors: prior carbapenem or broad-spectrum "
+        "exposure, overseas hospitalisation particularly in South and "
+        "Southeast Asia, prolonged admission and indwelling devices. "
+        "Ix: culture with carbapenemase detection by PCR or "
+        "immunochromatography, since the enzyme determines both "
+        "treatment and the infection control response. Mx: therapy "
+        "follows susceptibilities and usually needs newer agents such "
+        "as ceftazidime-avibactam or meropenem-vaborbactam, with "
+        "polymyxins or aminoglycosides as alternatives, in "
+        "consultation with infectious diseases. Contact precautions, "
+        "a single room and screening of contacts follow. Note: "
+        "colonisation is far commoner than infection, and a positive "
+        "screening swab alone is not a reason to treat."
+    ),
+    "MRSA decolonisation": (
+        "A short topical regimen to reduce Staphylococcus aureus "
+        "carriage before surgery or in recurrent infection. "
+        "Indications: preoperative decolonisation before cardiac, "
+        "orthopaedic implant and other high-risk surgery, recurrent "
+        "boils or abscesses in a known carrier, and outbreak control "
+        "in a ward or household. Routine decolonisation of every "
+        "colonised inpatient is not recommended. Mx: mupirocin 2 "
+        "percent ointment to both nostrils twice daily for five days "
+        "with chlorhexidine 2 to 4 percent body wash daily for five "
+        "days, plus hot washing of linen and towels and attention to "
+        "shared items. Household members may be treated concurrently "
+        "in recurrent furunculosis, and systemic antibiotics are "
+        "added only for active infection. Complications: mupirocin "
+        "resistance follows repeated or prolonged courses, so cycles "
+        "are limited and swabs are rechecked. Note: recolonisation "
+        "within months is common, and treating active lesions and "
+        "improving hygiene matter more than repeating the ointment."
+    ),
+    "Erythropoiesis stimulating agents": (
+        "Recombinant erythropoietin analogues that stimulate marrow "
+        "red cell production, used when the kidney no longer makes "
+        "enough erythropoietin. Indications: anaemia of chronic "
+        "kidney disease particularly on dialysis, selected "
+        "chemotherapy-induced anaemia, and myelodysplastic syndrome "
+        "with low endogenous erythropoietin. Mx: correct iron "
+        "deficiency first, since functional iron deficiency is the "
+        "commonest cause of apparent resistance, and target a "
+        "haemoglobin of about 100 to 115 g/L rather than "
+        "normalisation. Monitoring: haemoglobin fortnightly during "
+        "titration then monthly, with ferritin and transferrin "
+        "saturation. Adverse effects: hypertension, thrombosis "
+        "including vascular access clotting, and increased stroke and "
+        "mortality when haemoglobin is pushed above 130 g/L. Pure red "
+        "cell aplasia from anti-erythropoietin antibodies is rare. "
+        "Note: do not chase a normal haemoglobin. The trials that "
+        "tried it found harm, and the aim is symptom relief and "
+        "transfusion avoidance."
+    ),
+    "Iron chelation therapy": (
+        "Drug removal of excess iron in transfusion-dependent "
+        "anaemia, where each unit of red cells adds about 200 mg of "
+        "iron the body cannot excrete. Indications: thalassaemia "
+        "major, sickle cell disease and myelodysplastic syndrome "
+        "after roughly 20 units transfused or a ferritin persistently "
+        "above 1000 micrograms/L. Hereditary haemochromatosis is "
+        "treated by venesection instead. Mx: deferasirox orally once "
+        "daily is first-line in Australia, with deferoxamine by "
+        "subcutaneous infusion over 8 to 12 hours several nights a "
+        "week, and deferiprone where cardiac loading is the concern. "
+        "Monitoring: ferritin every one to three months, cardiac and "
+        "liver MRI annually for tissue iron, plus renal and liver "
+        "function and yearly audiometry and ophthalmology review. "
+        "Adverse effects: deferasirox causes renal impairment and "
+        "rare hepatic failure, deferoxamine causes infusion-site, "
+        "retinal and auditory toxicity, and deferiprone causes "
+        "agranulocytosis needing weekly neutrophil counts. Note: "
+        "cardiac iron drives mortality and does not track ferritin."
+    ),
+    "Jones criteria": (
+        "The diagnostic framework for acute rheumatic fever, revised "
+        "in 2015 with lower thresholds in high-incidence populations, "
+        "which includes Aboriginal and Torres Strait Islander "
+        "communities in northern and central Australia. Criteria: "
+        "diagnosis needs evidence of preceding group A streptococcal "
+        "infection plus two major, or one major and two minor, "
+        "manifestations. Major manifestations in high-risk settings "
+        "are carditis including subclinical disease, arthritis "
+        "ranging from polyarthritis to polyarthralgia, chorea, "
+        "erythema marginatum and subcutaneous nodules. Minor "
+        "manifestations are fever, raised ESR or CRP, prolonged PR "
+        "interval and monoarthralgia. Ix: throat swab, ASO and "
+        "anti-DNase B titres, inflammatory markers, ECG and "
+        "echocardiography in every suspected case, since carditis is "
+        "often silent. Mx: notify, admit, give benzathine penicillin, "
+        "treat arthritis with naproxen, and start secondary "
+        "prophylaxis immediately. Note: chorea and indolent carditis "
+        "stand alone and need no second manifestation."
+    ),
+    "Hepatitis B vaccine non-responder": (
+        "Failure to reach an anti-HBs titre of 10 IU/L or more one to "
+        "two months after a complete vaccine course, seen in 5 to 10 "
+        "percent of healthy adults. Risk factors: age over 40, "
+        "obesity, smoking, male sex, chronic kidney disease, "
+        "immunosuppression and coeliac disease, plus vaccine given "
+        "into the buttock or stored frozen. Ix: first exclude chronic "
+        "infection or prior exposure by testing HBsAg and anti-HBc, "
+        "because an apparent non-responder can be an undiagnosed "
+        "carrier. Mx: give a second complete three-dose course and "
+        "retest, which converts roughly half. Later options include a "
+        "double-dose or adjuvanted vaccine, or intradermal "
+        "administration in specialist settings. True non-responders "
+        "after two courses are counselled that they need hepatitis B "
+        "immunoglobulin within 72 hours of any significant exposure. "
+        "Note: healthcare workers and dialysis patients need "
+        "documented serology, not just a record of doses given."
+    ),
+    "Travel vaccination": (
+        "Pre-travel immunisation planned around destination, "
+        "itinerary, duration and host factors, ideally six to eight "
+        "weeks before departure. Indications: routine schedule "
+        "catch-up first, covering measles, "
+        "diphtheria-tetanus-pertussis, influenza and COVID-19, then "
+        "destination-specific hepatitis A, typhoid, cholera, rabies "
+        "pre-exposure, Japanese encephalitis, tick-borne encephalitis "
+        "and meningococcal ACWY. Yellow fever is the only vaccine "
+        "with certificate requirements under the International Health "
+        "Regulations and must be given at an approved Australian "
+        "centre. Cautions: live vaccines are avoided in pregnancy and "
+        "significant immunosuppression, and spacing rules apply "
+        "between live vaccines given on different days. Mx: pair "
+        "vaccines with malaria chemoprophylaxis, insect-bite "
+        "avoidance, traveller diarrhoea advice and a discussion of "
+        "insurance and prescription supply. Note: rabies exposure "
+        "from an unreported animal contact in Asia is the one problem "
+        "that cannot be repaired after the traveller comes home."
+    ),
+    "Cryoglobulin testing": (
+        "Detection of immunoglobulins that precipitate in the cold "
+        "and redissolve on warming, a test that fails more often from "
+        "handling than from biology. Ix: the sample must be collected "
+        "into a prewarmed tube, transported and centrifuged at body "
+        "temperature, and only then cooled, because cold "
+        "precipitation before separation gives a false negative. "
+        "Types: type I is monoclonal and associated with myeloma or "
+        "Waldenstrom macroglobulinaemia, while types II and III are "
+        "mixed with rheumatoid factor activity, most often driven by "
+        "hepatitis C and also by lupus, Sjogren syndrome and "
+        "lymphoproliferative disease. Clinical features: palpable "
+        "purpura on the lower limbs, arthralgia, peripheral "
+        "neuropathy and glomerulonephritis in mixed disease, and "
+        "hyperviscosity or digital ischaemia in type I. Mx: treat the "
+        "driver, with direct-acting antivirals curing hepatitis "
+        "C-related disease, plus rituximab and plasma exchange for "
+        "organ-threatening vasculitis. Note: a low C4 with "
+        "near-normal C3 is the classic complement signature."
+    ),
+    "Post-transplant infection prophylaxis": (
+        "Structured antimicrobial cover after solid organ "
+        "transplantation, timed to the predictable phases of risk. "
+        "Phases: the first month is dominated by surgical and "
+        "healthcare-associated infection, months one to six by "
+        "opportunistic pathogens under maximal immunosuppression, and "
+        "beyond six months by community-acquired infection with late "
+        "opportunists in those needing extra immunosuppression. Mx: "
+        "trimethoprim with sulfamethoxazole for at least six to "
+        "twelve months prevents Pneumocystis and also covers "
+        "Toxoplasma and Nocardia. Valganciclovir for three to six "
+        "months covers cytomegalovirus in mismatched or at-risk "
+        "recipients, or a pre-emptive viral load monitoring strategy "
+        "is used instead, and antifungal cover is targeted by organ "
+        "and risk. Screening: donor and recipient serology for "
+        "cytomegalovirus, Epstein-Barr virus, hepatitis viruses, HIV, "
+        "syphilis, toxoplasma, strongyloides and tuberculosis before "
+        "transplant. Note: fever after transplant is an emergency and "
+        "the usual inflammatory signs are blunted."
     ),
 }
 
