@@ -15111,6 +15111,234 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "immunisation immunocompromised patients live vaccines"]],
         "summary": "",
     },
+    {
+        "name": "Silhouette sign",
+        "aliases": ["loss of the heart border", "silhouette sign on chest X-ray"],
+        "utd": [["Overview", "silhouette sign chest radiograph interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Air bronchogram",
+        "aliases": ["air bronchograms", "air bronchogram sign"],
+        "utd": [["Overview", "air bronchogram alveolar consolidation"]],
+        "summary": "",
+    },
+    {
+        "name": "Hampton hump",
+        "aliases": ["Hamptons hump", "pulmonary infarct on chest X-ray"],
+        "utd": [["Overview", "Hampton hump pulmonary infarction radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Hyperdense middle cerebral artery sign",
+        "aliases": ["hyperdense MCA sign", "dense MCA sign"],
+        "utd": [["Overview", "hyperdense middle cerebral artery sign acute stroke CT"]],
+        "summary": "",
+    },
+    {
+        "name": "Insular ribbon sign",
+        "aliases": ["loss of the insular ribbon", "insular ribbon loss"],
+        "utd": [["Overview", "insular ribbon sign early ischaemic change CT"]],
+        "summary": "",
+    },
+    {
+        "name": "Tree-in-bud opacification",
+        "aliases": ["tree in bud", "tree-in-bud pattern"],
+        "utd": [["Overview", "tree in bud pattern high resolution CT chest"]],
+        "summary": "",
+    },
+    {
+        "name": "Honeycombing",
+        "aliases": ["honeycomb lung", "honeycomb change"],
+        "utd": [["Overview", "honeycombing usual interstitial pneumonia high resolution CT"]],
+        "summary": "",
+    },
+    {
+        "name": "Ground-glass opacity",
+        "aliases": ["ground glass opacification", "ground-glass opacities"],
+        "utd": [["Overview", "ground glass opacity chest CT differential"]],
+        "summary": "",
+    },
+    {
+        "name": "Steeple sign",
+        "aliases": ["steeple sign on neck X-ray", "subglottic narrowing on X-ray"],
+        "utd": [["Overview", "steeple sign croup subglottic narrowing radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Pneumoperitoneum",
+        "aliases": ["free gas under the diaphragm", "free intraperitoneal air"],
+        "utd": [["Overview", "pneumoperitoneum free intraperitoneal air imaging"]],
+        "summary": "",
+    },
+    {
+        "name": "Double bubble sign",
+        "aliases": ["double bubble", "double bubble appearance"],
+        "utd": [["Overview", "double bubble sign duodenal atresia"]],
+        "summary": "",
+    },
+    {
+        "name": "String sign of Kantor",
+        "aliases": ["string sign", "Kantor string sign"],
+        "utd": [["Overview", "string sign Crohn disease terminal ileum barium"]],
+        "summary": "",
+    },
+    {
+        "name": "Lead pipe colon",
+        "aliases": ["lead-pipe colon", "featureless colon"],
+        "utd": [["Overview", "lead pipe colon chronic ulcerative colitis imaging"]],
+        "summary": "",
+    },
+    {
+        "name": "Codman triangle",
+        "aliases": ["Codmans triangle", "periosteal cuff"],
+        "utd": [["Overview", "Codman triangle aggressive bone lesion periosteal reaction"]],
+        "summary": "",
+    },
+    {
+        "name": "Onion skin periosteal reaction",
+        "aliases": ["onion-skin periosteal reaction", "lamellated periosteal reaction"],
+        "utd": [["Overview", "lamellated onion skin periosteal reaction bone tumour"]],
+        "summary": "",
+    },
+    {
+        "name": "Sunburst periosteal reaction",
+        "aliases": ["sunburst appearance", "sun-ray spiculation"],
+        "utd": [["Overview", "sunburst periosteal reaction osteosarcoma radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Bamboo spine",
+        "aliases": ["bamboo spine on spinal X-ray", "syndesmophytes"],
+        "utd": [["Overview", "bamboo spine ankylosing spondylitis radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Boot-shaped heart",
+        "aliases": ["coeur en sabot", "boot shaped heart"],
+        "utd": [["Overview", "boot shaped heart tetralogy of Fallot chest radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Egg on a string sign",
+        "aliases": ["egg-on-a-string", "egg on side appearance"],
+        "utd": [["Overview", "egg on a string transposition of the great arteries radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Elbow fat pad sign",
+        "aliases": ["posterior fat pad sign", "sail sign on elbow X-ray"],
+        "utd": [["Overview", "elbow fat pad sign occult radial head fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Scotty dog sign",
+        "aliases": ["Scottie dog sign", "collar on the Scotty dog"],
+        "utd": [["Overview", "Scotty dog sign spondylolysis pars interarticularis defect"]],
+        "summary": "",
+    },
+    {
+        "name": "Empty delta sign",
+        "aliases": ["empty triangle sign", "delta sign on CT venogram"],
+        "utd": [["Overview", "empty delta sign cerebral venous sinus thrombosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Hounsfield unit",
+        "aliases": ["Hounsfield units", "CT attenuation value"],
+        "utd": [["Overview", "Hounsfield unit CT attenuation measurement"]],
+        "summary": "",
+    },
+    {
+        "name": "MRI safety screening",
+        "aliases": ["MRI contraindications", "MRI safety checklist"],
+        "utd": [["Overview", "MRI safety screening implanted device contraindication"]],
+        "summary": "",
+    },
+    {
+        "name": "Iodinated contrast reaction",
+        "aliases": ["contrast allergy", "contrast media reaction"],
+        "utd": [["Overview", "iodinated contrast media reaction prevention management"]],
+        "summary": "",
+    },
+    {
+        "name": "Radiation dose of common imaging",
+        "aliases": ["imaging radiation dose", "effective radiation dose"],
+        "utd": [["Overview", "effective radiation dose diagnostic imaging risk"]],
+        "summary": "",
+    },
+    {
+        "name": "Systematic chest X-ray interpretation",
+        "aliases": ["chest X-ray approach", "reading a chest X-ray"],
+        "utd": [["Overview", "systematic approach chest radiograph interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Deep sulcus sign",
+        "aliases": ["deep sulcus sign on supine chest X-ray", "abnormally deep costophrenic angle"],
+        "utd": [["Overview", "deep sulcus sign supine pneumothorax"]],
+        "summary": "",
+    },
+    {
+        "name": "Batwing opacification",
+        "aliases": ["bat wing pattern", "perihilar batwing shadowing"],
+        "utd": [["Overview", "batwing perihilar opacity pulmonary oedema"]],
+        "summary": "",
+    },
+    {
+        "name": "Miliary pattern on chest X-ray",
+        "aliases": ["miliary shadowing", "miliary mottling"],
+        "utd": [["Overview", "miliary nodules chest radiograph differential"]],
+        "summary": "",
+    },
+    {
+        "name": "Cannonball metastases",
+        "aliases": ["cannon ball metastases", "cannonball secondaries"],
+        "utd": [["Overview", "cannonball pulmonary metastases differential"]],
+        "summary": "",
+    },
+    {
+        "name": "Eggshell calcification",
+        "aliases": ["eggshell calcified lymph nodes", "egg shell calcification"],
+        "utd": [["Overview", "eggshell calcification hilar nodes silicosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Rugger jersey spine",
+        "aliases": ["rugger-jersey spine", "sandwich vertebrae"],
+        "utd": [["Overview", "rugger jersey spine renal osteodystrophy radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Pepperpot skull",
+        "aliases": ["pepper pot skull", "salt and pepper skull"],
+        "utd": [["Overview", "pepperpot skull hyperparathyroidism radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Looser zones",
+        "aliases": ["pseudofractures", "Milkman fractures"],
+        "utd": [["Overview", "Looser zones pseudofracture osteomalacia"]],
+        "summary": "",
+    },
+    {
+        "name": "Lines and tubes on chest X-ray",
+        "aliases": ["tube position check on chest X-ray", "line position on chest X-ray"],
+        "utd": [["Overview", "position of lines and tubes chest radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Sonographic Murphy sign",
+        "aliases": ["ultrasound Murphy sign", "sonographic Murphys sign"],
+        "utd": [["Overview", "sonographic Murphy sign acute cholecystitis ultrasound"]],
+        "summary": "",
+    },
+    {
+        "name": "Lung ultrasound B-lines",
+        "aliases": ["B-lines on lung ultrasound", "lung rockets"],
+        "utd": [["Overview", "B lines lung ultrasound interstitial syndrome"]],
+        "summary": "",
+    },
 ]
 
 
@@ -85127,6 +85355,747 @@ RICH_SUMMARIES = {
         "over the live product. Note: household contacts should be "
         "fully vaccinated, and revaccination is required after stem "
         "cell transplant because prior immunity is lost."
+    ),
+
+    "Silhouette sign": (
+        "Loss of a normal air-soft tissue interface on a chest X-ray, "
+        "used to localise consolidation to a lobe without a lateral "
+        "film. Mechanism: a border is only visible where aerated lung "
+        "abuts a soft tissue structure, so when the adjacent lung "
+        "fills with fluid the two densities merge and the line "
+        "disappears. Features: an effaced right heart border places "
+        "disease in the right middle lobe, an effaced left heart "
+        "border in the lingula and an effaced hemidiaphragm in a "
+        "lower lobe. A dense opacity that preserves the heart border "
+        "sits posteriorly, behind it. Ix: confirm on the lateral "
+        "projection, then treat the finding rather than the sign. CT "
+        "is reserved for a lobar opacity that fails to clear on a "
+        "repeat film at six weeks, which raises an obstructing "
+        "lesion. Mx: community-acquired pneumonia is treated on eTG "
+        "by severity, not by the radiographic pattern. Note: the sign "
+        "localises, it does not diagnose. Consolidation, collapse and "
+        "an effusion abutting the same structure all rub out the same "
+        "border."
+    ),
+    "Air bronchogram": (
+        "Branching lucent bronchi outlined by surrounding opacified "
+        "lung, the radiological signature of an alveolar filling "
+        "process. Mechanism: bronchi are normally invisible because "
+        "air sits inside and outside their walls. When alveoli fill "
+        "with pus, fluid, blood or cells while the airways stay "
+        "patent, the air column becomes visible against the opaque "
+        "background. Causes: pneumonia is much the commonest. "
+        "Pulmonary oedema, haemorrhage, adenocarcinoma in situ and "
+        "lymphoma give the same appearance. Features: the finding "
+        "places the disease inside the lung, so it argues against a "
+        "pleural collection, a chest wall mass or atelectasis from a "
+        "blocked bronchus. Ix: a non-resolving opacity with air "
+        "bronchograms on a repeat film needs CT and consideration of "
+        "bronchoscopy. Note: pus and water look identical. The "
+        "clinical picture decides whether the film shows pneumonia or "
+        "oedema, and the film cannot settle it alone."
+    ),
+    "Hampton hump": (
+        "A wedge-shaped, pleural-based peripheral opacity with its "
+        "convex edge pointing towards the hilum, representing "
+        "pulmonary infarction distal to an embolus. Mechanism: the "
+        "dual bronchial and pulmonary blood supply means most emboli "
+        "do not infarct lung. Infarction follows when a distal "
+        "occlusion meets impaired collateral flow, so the sign "
+        "favours small peripheral emboli over a central saddle. "
+        "Features: it appears 12 to 24 hours after the event, often "
+        "with pleuritic pain, a small effusion and haemoptysis. "
+        "Sensitivity is low, around 20 per cent. Ix: the chest X-ray "
+        "is done to find an alternative diagnosis, not to exclude "
+        "pulmonary embolism. CT pulmonary angiography is the test, "
+        "with a V/Q scan where contrast or radiation dose argues "
+        "against it. Mx: anticoagulate per eTG once imaging confirms. "
+        "Note: a normal chest X-ray in a breathless hypoxic patient "
+        "is itself the finding that should raise embolism."
+    ),
+    "Hyperdense middle cerebral artery sign": (
+        "Increased attenuation of the M1 segment on non-contrast CT, "
+        "representing acute thrombus inside the vessel before any "
+        "parenchymal change appears. Mechanism: fresh clot attenuates "
+        "at roughly 60 to 90 Hounsfield units against 40 for normal "
+        "flowing blood, so the artery stands out against the opposite "
+        "side. Features: it is the earliest CT finding in a "
+        "large-vessel occlusion, visible within minutes while the "
+        "brain still looks normal. A dense sylvian branch gives the "
+        "dot sign. Ix: compare with the contralateral vessel on the "
+        "same slice, since bilateral density means calcification or a "
+        "high haematocrit rather than clot. CT angiography confirms "
+        "the occlusion and is needed anyway to select for "
+        "thrombectomy. Mx: the finding does not delay thrombolysis "
+        "and predicts a poor response to it, so it strengthens the "
+        "case for endovascular clot retrieval within the window. "
+        "Note: absence of the sign excludes nothing."
+    ),
+    "Insular ribbon sign": (
+        "Loss of the normal grey-white differentiation of the insular "
+        "cortex on non-contrast CT, an early sign of middle cerebral "
+        "artery territory infarction. Mechanism: the insula sits at a "
+        "watershed between the MCA and the anterior and posterior "
+        "circulations and is poorly collateralised, so cytotoxic "
+        "oedema blurs its ribbon before it blurs elsewhere. Features: "
+        "the insular grey matter becomes isodense with the adjacent "
+        "white matter, often with obscuration of the lentiform "
+        "nucleus and sulcal effacement on the same side. Ix: it forms "
+        "part of the ASPECTS scoring used to quantify early ischaemic "
+        "change, where a low score predicts poor outcome and "
+        "haemorrhagic transformation. Windowing at a narrow stroke "
+        "setting makes it far easier to see. Mx: early ischaemic "
+        "change is not a contraindication to thrombolysis within the "
+        "time window, though established hypodense infarction is. "
+        "Note: subtle loss of this ribbon is the finding a "
+        "normal-looking scan most often hides."
+    ),
+    "Tree-in-bud opacification": (
+        "Centrilobular nodules joined by branching linear opacities "
+        "on high-resolution chest CT, resembling a budding twig and "
+        "indicating disease of the small airways. Mechanism: "
+        "bronchioles fill and dilate with mucus, pus or inflammatory "
+        "material, making structures that are normally invisible at "
+        "the lung periphery suddenly opaque. Causes: endobronchial "
+        "spread of tuberculosis is the classic cause. Non-tuberculous "
+        "mycobacteria, chronic aspiration, bronchiectasis with "
+        "infective exacerbation and diffuse panbronchiolitis produce "
+        "the same pattern. Features: the nodules spare the pleural "
+        "surface by a few millimetres, which distinguishes them from "
+        "perilymphatic nodules of sarcoidosis. Ix: sputum for "
+        "acid-fast bacilli and culture, with isolation while "
+        "tuberculosis remains possible. Australian practice notifies "
+        "confirmed tuberculosis to the state health department. Note: "
+        "the pattern is almost always infective or inflammatory, "
+        "rarely malignant."
+    ),
+    "Honeycombing": (
+        "Clustered subpleural cystic airspaces of similar diameter "
+        "with thick shared walls, stacked in layers, representing "
+        "established lung fibrosis. Mechanism: alveolar architecture "
+        "is destroyed and replaced by fibrotic walls surrounding "
+        "dilated airspaces, so the change is irreversible. Features: "
+        "a basal and subpleural distribution with traction "
+        "bronchiectasis and reticulation defines the usual "
+        "interstitial pneumonia pattern. An upper-zone or "
+        "peribronchovascular distribution suggests hypersensitivity "
+        "pneumonitis or sarcoidosis instead. Ix: high-resolution CT "
+        "is the test, and a definite UIP pattern on it makes lung "
+        "biopsy unnecessary. Serology and an occupational and drug "
+        "history look for a secondary cause before idiopathic "
+        "pulmonary fibrosis is accepted. Mx: antifibrotics "
+        "(pirfenidone or nintedanib) are PBS-listed for idiopathic "
+        "pulmonary fibrosis through specialist prescribing, alongside "
+        "oxygen assessment, pulmonary rehabilitation and early "
+        "transplant referral. Note: honeycombing means fibrosis, and "
+        "fibrosis does not respond to steroids."
+    ),
+    "Ground-glass opacity": (
+        "Hazy increased lung attenuation on CT that does not obscure "
+        "the underlying vessels or bronchial walls, in contrast to "
+        "consolidation which does. Mechanism: partial filling of "
+        "airspaces, interstitial thickening or increased capillary "
+        "blood volume, each of which raises density without "
+        "eliminating air. Causes: infection including viral "
+        "pneumonitis and pneumocystis, pulmonary oedema, haemorrhage "
+        "and hypersensitivity pneumonitis. A persistent focal patch "
+        "raises adenocarcinoma in situ. Features: superimposed septal "
+        "thickening gives the crazy-paving pattern. Sparing of some "
+        "secondary lobules gives mosaic attenuation, which points to "
+        "small airways disease. Ix: the differential is settled "
+        "clinically and by distribution, not by the finding itself. A "
+        "subsolid nodule needs interval CT surveillance rather than "
+        "immediate biopsy, since these lesions grow slowly. Note: "
+        "ground glass is a description, not a diagnosis, and the "
+        "commonest error is reporting it as an infection when the "
+        "patient is in fluid overload."
+    ),
+    "Steeple sign": (
+        "Tapered subglottic narrowing of the tracheal air column on a "
+        "frontal neck X-ray, giving a church-steeple outline, "
+        "described in croup. Mechanism: viral inflammation of the "
+        "subglottis, the narrowest part of a young child's airway, "
+        "where a millimetre of oedema sharply raises resistance. "
+        "Features: barking cough, inspiratory stridor and hoarseness "
+        "in a child of six months to three years, worse at night and "
+        "after crying. Ix: croup is a clinical diagnosis and imaging "
+        "is not indicated. The sign is neither sensitive nor "
+        "specific, and an X-ray is only considered when an inhaled "
+        "foreign body or bacterial tracheitis is the real question. "
+        "Mx: a single dose of oral dexamethasone 0.15 mg/kg for every "
+        "severity, with nebulised adrenaline added for stridor at "
+        "rest and a period of observation afterwards for rebound. "
+        "Note: distressing a child with stridor to obtain a film is "
+        "the mistake this sign encourages. Leave the child on the "
+        "parent and treat."
+    ),
+    "Pneumoperitoneum": (
+        "Free gas within the peritoneal cavity, in most settings "
+        "meaning a perforated hollow viscus until proved otherwise. "
+        "Causes: perforated peptic ulcer, perforated diverticulitis "
+        "and bowel perforation from obstruction or ischaemia. Recent "
+        "laparotomy or laparoscopy leaves gas that can persist for "
+        "several days and is not pathological. Features: sudden "
+        "severe abdominal pain with board-like rigidity, absent bowel "
+        "sounds and shock. Elderly and immunosuppressed patients can "
+        "perforate with remarkably few signs. Ix: an erect chest "
+        "X-ray detects as little as a few millilitres under the "
+        "hemidiaphragm and is the quickest test, though CT is far "
+        "more sensitive and identifies the site. A left lateral "
+        "decubitus film is the alternative when the patient cannot "
+        "sit up. Mx: resuscitate, nil by mouth, nasogastric "
+        "decompression, intravenous antibiotics covering enteric "
+        "organisms per eTG, and urgent surgical referral. Note: gas "
+        "under the diaphragm on a film taken for chest pain is the "
+        "abdomen speaking."
+    ),
+    "Double bubble sign": (
+        "Two gas-filled structures on an abdominal film of a neonate, "
+        "the stomach and a dilated proximal duodenum, with little or "
+        "no distal bowel gas. Mechanism: obstruction at the level of "
+        "the duodenum, most often atresia from failed recanalisation, "
+        "and less often stenosis, an annular pancreas or a duodenal "
+        "web. Associations: around a third of duodenal atresia occurs "
+        "with trisomy 21, and cardiac and other gastrointestinal "
+        "anomalies are common enough to be looked for routinely. "
+        "Polyhydramnios and an antenatal diagnosis are usual. "
+        "Features: bilious vomiting in the first day of life without "
+        "abdominal distension, since the obstruction is high. Ix: the "
+        "plain film is usually sufficient. Distal gas raises "
+        "malrotation with midgut volvulus, which needs an urgent "
+        "upper gastrointestinal contrast study. Mx: nasogastric "
+        "decompression, fluids and surgical repair after the anomaly "
+        "screen. Note: bilious vomiting in a newborn is a surgical "
+        "emergency until malrotation is excluded."
+    ),
+    "String sign of Kantor": (
+        "A thin ribbon of contrast passing through a severely "
+        "narrowed segment of terminal ileum, described on barium "
+        "follow-through in Crohn disease. Mechanism: transmural "
+        "inflammation with fibrosis and spasm narrows the lumen, so "
+        "only a string of contrast traverses it. Features: it "
+        "accompanies skip lesions, deep fissuring ulcers, "
+        "cobblestoning and fistulae, all of which separate Crohn from "
+        "ulcerative colitis. Ix: modern practice uses MR enterography "
+        "rather than barium, which also distinguishes an inflammatory "
+        "stricture that may respond to medical therapy from a "
+        "fibrotic one that will not. Faecal calprotectin and "
+        "ileocolonoscopy with biopsy remain the core assessment. Mx: "
+        "induce remission with corticosteroids or exclusive enteral "
+        "nutrition, then maintain with a thiopurine or a biologic "
+        "under PBS authority criteria. A fixed fibrotic stricture "
+        "needs surgery or endoscopic dilatation. Note: the narrowing "
+        "is the reason a patient with quiet inflammatory markers "
+        "still obstructs."
+    ),
+    "Lead pipe colon": (
+        "A shortened, rigid, tubular colon with loss of the normal "
+        "haustral markings, the radiological end point of "
+        "long-standing ulcerative colitis. Mechanism: repeated cycles "
+        "of mucosal inflammation and healing replace the muscularis "
+        "mucosae with fibrous tissue and shorten the bowel, removing "
+        "its normal folds. Features: chronic disease with "
+        "pseudopolyps, a narrowed lumen and backwash ileitis, in a "
+        "patient with years of relapsing bloody diarrhoea. Ix: "
+        "colonoscopy defines disease extent and, more importantly, "
+        "provides surveillance biopsies. Extensive colitis of eight "
+        "years or more warrants a chromoendoscopic surveillance "
+        "programme for dysplasia. Mx: maintenance with "
+        "aminosalicylates, thiopurines or biologics as severity "
+        "dictates, with colectomy for dysplasia, refractory disease "
+        "or a stricture that cannot be assessed. Note: a stricture in "
+        "ulcerative colitis is malignant until proved otherwise, "
+        "which is the opposite of the usual assumption in Crohn "
+        "disease."
+    ),
+    "Codman triangle": (
+        "A triangular cuff of new bone at the margin of a lesion "
+        "where raised periosteum has been lifted off the cortex "
+        "faster than it can lay down a shell. Mechanism: an "
+        "aggressive process outgrows the periosteal response, so "
+        "ossification is only visible at the edges where the "
+        "periosteum still meets bone. Causes: osteosarcoma is the "
+        "classic, with Ewing sarcoma, osteomyelitis and subperiosteal "
+        "haemorrhage producing the same appearance. The sign means "
+        "aggressive, not necessarily malignant. Features: night pain, "
+        "a palpable mass and pain unrelated to activity in an "
+        "adolescent or young adult, most often around the knee. Ix: "
+        "plain X-ray in two planes first, then MRI of the whole bone "
+        "for local staging and CT chest for metastases. Biopsy is "
+        "done at the sarcoma centre that will operate, since a badly "
+        "placed tract costs the limb. Mx: neoadjuvant chemotherapy "
+        "with limb-sparing resection at a specialist unit. Note: "
+        "never biopsy a suspected primary bone tumour locally."
+    ),
+    "Onion skin periosteal reaction": (
+        "Concentric layers of new bone laid parallel to the cortex, "
+        "like the leaves of an onion, indicating a process that "
+        "repeatedly lifts the periosteum. Mechanism: successive waves "
+        "of subperiosteal growth or inflammation each stimulate a "
+        "fresh lamella of bone, giving stacked layers rather than a "
+        "single shell. Causes: Ewing sarcoma is the classic "
+        "association. Osteomyelitis, osteosarcoma and Langerhans cell "
+        "histiocytosis all produce it. Features: Ewing sarcoma "
+        "presents in the diaphysis of a long bone or the pelvis in a "
+        "child or adolescent with pain, fever and raised inflammatory "
+        "markers, so it is repeatedly mistaken for infection. Ix: MRI "
+        "of the whole bone, CT chest, bone marrow assessment and "
+        "biopsy at the treating sarcoma unit. Mx: chemotherapy with "
+        "local control by surgery, radiotherapy or both, all at a "
+        "specialist centre. Note: a lamellated reaction is an "
+        "aggressive pattern, and the number of layers says nothing "
+        "about which aggressive cause it is."
+    ),
+    "Sunburst periosteal reaction": (
+        "Spicules of new bone radiating perpendicular to the cortex, "
+        "produced when tumour breaks through and grows along the "
+        "perpendicular fibres that anchor periosteum to bone. Causes: "
+        "osteosarcoma above all, with osteoblastic metastases and "
+        "occasionally a haemangioma of bone giving a similar look. "
+        "Features: osteosarcoma peaks in adolescence around the knee, "
+        "presenting with night pain and swelling. A second peak "
+        "occurs in older adults with Paget disease or previously "
+        "irradiated bone. Ix: plain films show a mixed lytic and "
+        "sclerotic metaphyseal lesion with cortical destruction, and "
+        "a Codman triangle often sits alongside. Staging needs MRI of "
+        "the whole bone and CT chest, since the lungs are the site of "
+        "spread. Mx: neoadjuvant chemotherapy, limb-sparing resection "
+        "and adjuvant chemotherapy, delivered at a sarcoma centre. "
+        "Note: persistent bone pain in a teenager that wakes them at "
+        "night earns an X-ray, not a course of physiotherapy."
+    ),
+    "Bamboo spine": (
+        "A continuous column of vertebral bodies fused by bridging "
+        "syndesmophytes with ossified spinal ligaments, the late "
+        "radiological picture of ankylosing spondylitis. Mechanism: "
+        "enthesitis at the annulus fibrosus heals by ossification, "
+        "and vertical bridges form across successive disc spaces, "
+        "squaring the vertebrae and fusing the segment. Features: "
+        "inflammatory back pain before 45 with morning stiffness over "
+        "30 minutes, improvement with exercise and not with rest, and "
+        "loss of lumbar flexion measured by the Schober test. Ix: "
+        "sacroiliitis is the earliest finding and MRI shows bone "
+        "marrow oedema before X-ray change. HLA-B27 supports the "
+        "diagnosis and does not make it. Mx: exercise and "
+        "physiotherapy underpin everything, with regular NSAIDs first "
+        "line and a TNF inhibitor or IL-17 inhibitor under PBS "
+        "authority for persistently active disease. Note: a fused "
+        "spine fractures like a long bone, so any new pain after "
+        "minor trauma needs CT, not reassurance."
+    ),
+    "Boot-shaped heart": (
+        "An upturned cardiac apex with a concave pulmonary artery "
+        "segment on a frontal chest X-ray, described in tetralogy of "
+        "Fallot. Mechanism: right ventricular hypertrophy lifts the "
+        "apex off the diaphragm while an underdeveloped right "
+        "ventricular outflow tract leaves a hollow where the "
+        "pulmonary artery should bulge. Features: tetralogy combines "
+        "a ventricular septal defect, outflow obstruction, an "
+        "overriding aorta and right ventricular hypertrophy. Children "
+        "present with a harsh ejection systolic murmur and "
+        "hypercyanotic spells relieved by squatting. Pulmonary "
+        "vascularity on the film is reduced. Ix: echocardiography "
+        "defines the anatomy. Pulse oximetry screening of newborns "
+        "detects many cases before discharge. Mx: a spell is treated "
+        "with knees to chest, oxygen, morphine and fluids, with "
+        "surgical repair in infancy. Note: the murmur comes from the "
+        "outflow obstruction, not the septal defect, so it grows "
+        "quieter as a spell worsens."
+    ),
+    "Egg on a string sign": (
+        "A narrow superior mediastinum with an oval cardiac "
+        "silhouette on a neonatal chest X-ray, described in "
+        "transposition of the great arteries. Mechanism: the aorta "
+        "sits directly anterior to the pulmonary artery rather than "
+        "beside it, so the vascular pedicle is thin in the frontal "
+        "plane, while right ventricular hypertrophy rounds the heart. "
+        "Features: profound cyanosis within hours of birth in an "
+        "otherwise well-looking baby, without respiratory distress "
+        "and unresponsive to oxygen. Survival depends on mixing "
+        "through a patent foramen ovale or duct. Ix: the hyperoxia "
+        "test fails to raise the arterial oxygen tension, and "
+        "echocardiography confirms. Mx: start a prostaglandin E1 "
+        "infusion to keep the duct open, with balloon atrial "
+        "septostomy if mixing is inadequate and an arterial switch "
+        "operation in the first weeks. Note: cyanosis that does not "
+        "improve on oxygen is cardiac until proved otherwise, and the "
+        "fix is to keep the duct open rather than to give more "
+        "oxygen."
+    ),
+    "Elbow fat pad sign": (
+        "Displacement of the elbow fat pads by a joint effusion on a "
+        "lateral radiograph, taken as evidence of an intra-articular "
+        "fracture even when no fracture line is visible. Mechanism: "
+        "haemarthrosis distends the capsule and pushes the fat pads "
+        "out of their fossae. Features: a visible posterior fat pad "
+        "is always abnormal. An anterior fat pad lifted into a "
+        "triangular sail shape is also abnormal, though a thin "
+        "anterior stripe is normal. In adults the usual culprit is a "
+        "radial head fracture, in children a supracondylar fracture. "
+        "Ix: the film must be a true lateral in 90 degrees of flexion "
+        "or the sign is unreliable. Where the finding is isolated, "
+        "treat as an occult fracture and re-image at ten days rather "
+        "than pursue CT immediately. Mx: a collar and cuff or "
+        "backslab with early mobilisation and orthopaedic follow-up. "
+        "Note: absence of a fracture line with a positive posterior "
+        "fat pad is a fracture you cannot see, not the absence of "
+        "one."
+    ),
+    "Scotty dog sign": (
+        "The outline formed by the posterior elements of a lumbar "
+        "vertebra on an oblique radiograph, where a lucency across "
+        "the dog's neck indicates a pars interarticularis defect. "
+        "Mechanism: repetitive lumbar hyperextension produces a "
+        "stress fracture of the pars, which is spondylolysis. "
+        "Bilateral defects allow the vertebral body to slip forward, "
+        "which is spondylolisthesis. Features: activity-related low "
+        "back pain in an adolescent athlete doing gymnastics, fast "
+        "bowling or diving, worse on extension and on single-leg "
+        "standing. A step may be palpable at L5 and S1. Ix: oblique "
+        "films are now largely replaced by CT for bony detail and MRI "
+        "for marrow oedema, which shows whether the defect is active "
+        "and likely to heal. Mx: activity modification and core "
+        "rehabilitation for most, with bracing or surgery for "
+        "persistent pain or a progressive slip. Note: back pain in a "
+        "young athlete is not mechanical until this has been "
+        "considered."
+    ),
+    "Empty delta sign": (
+        "A triangular filling defect in the superior sagittal sinus "
+        "surrounded by enhancing dura on contrast CT, indicating "
+        "cerebral venous sinus thrombosis. Mechanism: the clot does "
+        "not enhance while the dural walls do, leaving an unopacified "
+        "centre inside a bright rim. Risk factors: pregnancy and the "
+        "puerperium, the combined oral contraceptive pill, "
+        "thrombophilia, dehydration and local sepsis such as "
+        "mastoiditis. Features: new persistent headache, often with "
+        "papilloedema, seizures, focal deficits that cross arterial "
+        "territories, or isolated raised intracranial pressure. Ix: "
+        "CT or MR venography is the test, since a non-contrast CT is "
+        "normal in most cases. A raised D-dimer supports the "
+        "diagnosis and a normal one does not exclude it. Mx: "
+        "anticoagulate with heparin even in the presence of venous "
+        "haemorrhagic infarction, then oral anticoagulation, with "
+        "endovascular treatment reserved for deterioration. Note: "
+        "warfarin rather than a direct oral anticoagulant remains the "
+        "better-evidenced choice in pregnancy-associated disease."
+    ),
+    "Hounsfield unit": (
+        "The linear scale of X-ray attenuation used in CT, calibrated "
+        "so that water is 0 and air is minus 1000, allowing a region "
+        "of interest to be measured rather than eyeballed. Features: "
+        "fat sits around minus 100 to minus 50, simple fluid near 0 "
+        "to 15, soft tissue 30 to 60 and bone above 400. Acute "
+        "extravascular blood measures 50 to 70, which is why fresh "
+        "haemorrhage looks bright and then fades over days. Uses: an "
+        "adrenal nodule under 10 units is a lipid-rich adenoma and "
+        "needs no further work-up. A renal lesion that measures "
+        "simple fluid is a cyst, and one that enhances by more than "
+        "20 units is treated as a malignancy until proved otherwise. "
+        "Note: window level and width change only how the image "
+        "looks, not what it measures, so a lesion that appears dense "
+        "on one window is still the same number. Measure before "
+        "deciding."
+    ),
+    "MRI safety screening": (
+        "The pre-scan process that identifies ferromagnetic material "
+        "and implanted devices before a patient enters a permanently "
+        "energised magnetic field. Mechanism: the static field exerts "
+        "translational and rotational force on ferromagnetic objects, "
+        "radiofrequency energy heats conductive leads, and gradients "
+        "can induce currents that interfere with devices. "
+        "Contraindications: intraocular metallic foreign bodies, most "
+        "cochlear implants, some aneurysm clips and any retained "
+        "loose ferromagnetic fragment. Many modern pacemakers and "
+        "defibrillators are conditional and can be scanned under a "
+        "device protocol with cardiology involvement. Features: ask "
+        "specifically about metalwork, prior eye injury from grinding "
+        "or welding, and devices the patient may not think to mention "
+        "such as a neurostimulator or an infusion pump. Mx: orbital "
+        "X-ray where an intraocular fragment is possible, and check "
+        "the implant card against the manufacturer conditions. Note: "
+        "the danger is the projectile in the room, not the scan, so "
+        "the checklist covers the accompanying staff and family too."
+    ),
+    "Iodinated contrast reaction": (
+        "An adverse reaction to iodinated CT contrast, divided into "
+        "acute hypersensitivity-type reactions within an hour and "
+        "delayed reactions over the following days. Mechanism: most "
+        "acute reactions are non-IgE mediated direct mast cell "
+        "activation rather than true allergy, though "
+        "immunoglobulin-mediated anaphylaxis does occur. Features: "
+        "mild reactions give urticaria, flushing, nausea or a "
+        "metallic taste. Severe reactions give bronchospasm, "
+        "laryngeal oedema and hypotension. Delayed reactions are "
+        "usually a maculopapular rash at two to three days. Ix: a "
+        "documented severe reaction warrants immunology referral for "
+        "testing so a safe alternative agent can be identified. Mx: "
+        "treat anaphylaxis with intramuscular adrenaline 0.5 mg into "
+        "the anterolateral thigh, oxygen and fluids per eTG. Where "
+        "contrast is unavoidable after a prior reaction, use a "
+        "different agent with a radiologist involved. Note: shellfish "
+        "allergy does not predict contrast reaction, and iodine is "
+        "not an allergen. Documenting it as such denies patients "
+        "necessary imaging for years."
+    ),
+    "Radiation dose of common imaging": (
+        "The effective dose delivered by a diagnostic study, "
+        "expressed in millisieverts, used to weigh radiation risk "
+        "against diagnostic benefit when consenting and when choosing "
+        "a test. Features: a chest X-ray is about 0.02 mSv and a limb "
+        "film less again. CT of the head is around 2 mSv, CT of the "
+        "chest 7 mSv and CT of the abdomen and pelvis roughly 10 mSv. "
+        "Natural background exposure in Australia is close to 1.5 mSv "
+        "a year. Risk: excess lifetime cancer risk is estimated near "
+        "1 in 2000 per 10 mSv and is considerably higher in children, "
+        "whose tissues are more radiosensitive and who have more "
+        "years for a malignancy to declare. Mx: apply justification "
+        "and optimisation, prefer ultrasound or MRI where either "
+        "answers the question, and avoid repeating an adequate study "
+        "done elsewhere. Note: the dose that matters most is the one "
+        "from the scan that was never going to change management."
+    ),
+    "Systematic chest X-ray interpretation": (
+        "A fixed order for reading a chest film so that findings are "
+        "found rather than stumbled upon, and so the second "
+        "abnormality is not missed after the first is seen. Features: "
+        "confirm patient, date and projection first. A portable "
+        "anteroposterior film magnifies the heart, so cardiomegaly "
+        "cannot be called on it. Assess rotation by the clavicles "
+        "against the spinous process, inspiration by counting "
+        "posterior ribs to the diaphragm, and exposure by whether "
+        "vertebrae are visible behind the heart. Ix: then work "
+        "through airway, breathing, circulation, diaphragm and "
+        "everything else, finishing with the review areas that hide "
+        "disease. Those are the apices, behind the heart, the "
+        "costophrenic recesses, below the diaphragm and the bones. "
+        "Mx: compare with any previous film before reporting, since a "
+        "stable abnormality and a new one mean entirely different "
+        "things. Note: most missed findings on a chest X-ray were "
+        "visible. The search stopped at the first one."
+    ),
+    "Deep sulcus sign": (
+        "An abnormally deep and lucent costophrenic angle on a supine "
+        "chest film, indicating a pneumothorax that has collected "
+        "anteriorly and basally rather than at the apex. Mechanism: "
+        "air rises to the least dependent part of the pleural space. "
+        "In a supine patient that is anterior and inferior, so the "
+        "usual apical pleural line never forms. Features: look for a "
+        "deeper lucent sulcus on one side, a sharply outlined "
+        "hemidiaphragm and increased lucency over the upper abdomen. "
+        "The setting is typically the intensive care unit or a trauma "
+        "bay, where supine films are the only ones available. Ix: "
+        "ultrasound at the bedside outperforms the supine film, with "
+        "absent lung sliding and a lung point. CT is definitive but "
+        "means moving the patient. Mx: tension physiology is treated "
+        "immediately by decompression and a chest drain, without "
+        "waiting for imaging. Note: the pneumothorax missed on a "
+        "supine trauma film is the one that tensions after the "
+        "patient is ventilated."
+    ),
+    "Batwing opacification": (
+        "Bilateral perihilar airspace opacification that spares the "
+        "lung periphery, giving a butterfly outline, most often from "
+        "cardiogenic pulmonary oedema. Mechanism: better lymphatic "
+        "clearance at the periphery than centrally leaves fluid "
+        "concentrated around the hila. Causes: acute left ventricular "
+        "failure and fluid overload in renal failure predominate. "
+        "Pulmonary haemorrhage, pneumocystis pneumonia and alveolar "
+        "proteinosis reproduce the pattern without any fluid "
+        "overload. Features: supporting signs of cardiac failure are "
+        "upper lobe venous diversion, septal lines, peribronchial "
+        "cuffing, effusions and cardiomegaly on a departmental film. "
+        "Ix: bedside echocardiography and a natriuretic peptide "
+        "separate cardiac from non-cardiac causes, and a normal "
+        "natriuretic peptide in an untreated breathless patient "
+        "argues strongly against heart failure. Mx: sit the patient "
+        "up, give oxygen to target, intravenous furosemide and "
+        "consider non-invasive ventilation per eTG. Note: a butterfly "
+        "with a normal heart size deserves a second thought before "
+        "more diuretic."
+    ),
+    "Miliary pattern on chest X-ray": (
+        "Innumerable uniform nodules of one to three millimetres "
+        "spread evenly through both lungs, named for their "
+        "resemblance to millet seeds. Mechanism: haematogenous "
+        "dissemination seeds the whole pulmonary capillary bed at "
+        "once, so the nodules are the same size and evenly "
+        "distributed rather than clustered. Causes: miliary "
+        "tuberculosis is the one to exclude first. Haematogenous "
+        "metastases from thyroid, renal or melanoma primaries, "
+        "sarcoidosis, histoplasmosis and silicosis all produce it. "
+        "Features: miliary tuberculosis presents with weeks of fever, "
+        "weight loss and breathlessness, and around a third have "
+        "meningeal involvement, which changes treatment duration. Ix: "
+        "chest CT is far more sensitive than the film. Sputum, blood "
+        "and urine cultures with an interferon gamma release assay, "
+        "plus a lumbar puncture where there is any neurological "
+        "feature. Mx: standard quadruple antituberculous therapy, "
+        "notified to the state health department, with "
+        "corticosteroids for meningeal or pericardial disease. Note: "
+        "the film can lag the illness by weeks."
+    ),
+    "Cannonball metastases": (
+        "Multiple large, well-circumscribed round pulmonary "
+        "opacities, representing haematogenous metastatic deposits. "
+        "Mechanism: tumour emboli lodge in the pulmonary arterioles "
+        "and grow spherically with a pushing margin, producing sharp "
+        "borders rather than the spiculation of a primary lung "
+        "cancer. Causes: renal cell carcinoma, choriocarcinoma, "
+        "sarcoma, testicular germ cell tumours and endometrial "
+        "carcinoma are the classic primaries. Features: the patient "
+        "is often less symptomatic than the film suggests, and in a "
+        "young woman the finding should prompt a pregnancy test for "
+        "gestational trophoblastic disease, which is curable even "
+        "when widely metastatic. Ix: CT chest, abdomen and pelvis to "
+        "find the primary, with beta hCG, testicular examination and "
+        "ultrasound in men. Biopsy of the most accessible site gives "
+        "tissue. Mx: directed at the primary tumour, since "
+        "chemosensitivity varies enormously between these diagnoses. "
+        "Note: round lung lesions in a young person are not "
+        "automatically a death sentence. Two of the classic primaries "
+        "are curable."
+    ),
+    "Eggshell calcification": (
+        "A thin rim of calcification around the periphery of hilar or "
+        "mediastinal lymph nodes, strongly associated with "
+        "occupational dust exposure. Mechanism: chronic nodal "
+        "fibrosis calcifies at the capsule while the centre does not, "
+        "leaving a shell. Causes: silicosis above all, with coal "
+        "workers pneumoconiosis, sarcoidosis and post-irradiation "
+        "change less commonly. Features: silicosis follows exposure "
+        "to respirable crystalline silica, and Australia has seen an "
+        "epidemic among engineered stone benchtop workers severe "
+        "enough that the material was banned from 2024. Upper zone "
+        "nodularity and progressive massive fibrosis develop over "
+        "years. Ix: a detailed occupational history, chest CT rather "
+        "than plain film, and spirometry. Silicosis is a notifiable "
+        "dust disease with screening and compensation pathways in "
+        "each state. Mx: no treatment reverses it, so removal from "
+        "exposure, tuberculosis screening given the raised risk, "
+        "vaccination and transplant referral for advanced disease. "
+        "Note: ask what the patient does, and what they cut."
+    ),
+    "Rugger jersey spine": (
+        "Dense bands along the superior and inferior endplates of "
+        "vertebral bodies with a relatively lucent centre, resembling "
+        "the hoops of a rugby jersey. Mechanism: secondary "
+        "hyperparathyroidism in chronic kidney disease drives "
+        "osteosclerosis in the trabecular bone next to the endplates, "
+        "where turnover is highest. Causes: renal osteodystrophy is "
+        "the principal one. Osteopetrosis gives similar sandwich "
+        "vertebrae with sharper margins. Features: accompanying "
+        "findings are subperiosteal resorption on the radial side of "
+        "the middle phalanges, a pepperpot skull and brown tumours. "
+        "Patients have advanced kidney disease with bone pain and "
+        "fracture risk. Ix: calcium, phosphate, parathyroid hormone, "
+        "alkaline phosphatase and vitamin D define the mineral bone "
+        "disorder pattern. Mx: control phosphate with diet and "
+        "binders, replace vitamin D, and add a calcimimetic or "
+        "consider parathyroidectomy for refractory "
+        "hyperparathyroidism. Note: the striking film matters less "
+        "than the fracture and vascular calcification risk it "
+        "signals."
+    ),
+    "Pepperpot skull": (
+        "A granular, mottled loss of the normal skull vault "
+        "trabeculae, giving a speckled appearance, seen in "
+        "hyperparathyroidism. Mechanism: parathyroid hormone drives "
+        "osteoclastic resorption, which removes bone unevenly and "
+        "blurs the distinction between the diploe and the inner and "
+        "outer tables. Causes: primary hyperparathyroidism from a "
+        "parathyroid adenoma, and secondary hyperparathyroidism in "
+        "chronic kidney disease. Features: the full skeletal picture "
+        "includes subperiosteal resorption of the phalanges, brown "
+        "tumours and, rarely now, osteitis fibrosa cystica. Primary "
+        "disease more often presents as an incidental raised calcium "
+        "with stones, bone pain, abdominal symptoms and low mood. Ix: "
+        "paired calcium and parathyroid hormone, with a raised or "
+        "inappropriately normal hormone level confirming. Sestamibi "
+        "and ultrasound localise before surgery rather than diagnose. "
+        "Mx: parathyroidectomy for symptomatic disease, and for "
+        "asymptomatic disease meeting age, calcium, renal or bone "
+        "density criteria. Note: check the calcium before blaming the "
+        "skull film."
+    ),
+    "Looser zones": (
+        "Transverse lucent bands perpendicular to the cortex with "
+        "sclerotic margins, representing unmineralised osteoid rather "
+        "than a true fracture, and characteristic of osteomalacia. "
+        "Mechanism: defective mineralisation leaves osteoid laid down "
+        "at sites of stress or where a vessel crosses bone, so the "
+        "zones appear symmetrically at predictable places. Features: "
+        "they favour the medial femoral neck, the pubic rami, the "
+        "scapula and the ribs. Patients report proximal myopathy with "
+        "difficulty rising from a chair, bone pain and a waddling "
+        "gait. Ix: low vitamin D with low or low-normal calcium and "
+        "phosphate, raised alkaline phosphatase and raised "
+        "parathyroid hormone. Consider coeliac disease, other "
+        "malabsorption and anticonvulsants. Rarely, tumour-induced "
+        "osteomalacia causes isolated phosphate wasting. Mx: "
+        "colecalciferol replacement with calcium, correcting the "
+        "underlying cause, and biochemistry rechecked at three "
+        "months. Note: this is adult rickets, and the proximal "
+        "weakness is the clue that separates it from osteoporosis, "
+        "which does not cause it."
+    ),
+    "Lines and tubes on chest X-ray": (
+        "The check performed on every film taken after a line or tube "
+        "is placed, since a malpositioned device causes harm quickly "
+        "and is visible immediately. Features: an endotracheal tube "
+        "tip belongs about five centimetres above the carina with the "
+        "head in neutral, since flexion advances it and a right main "
+        "bronchus intubation collapses the left lung. A nasogastric "
+        "tube must pass down the midline, bisect the carina and have "
+        "its tip well below the left hemidiaphragm. A central line "
+        "tip sits at the cavoatrial junction. Ix: a nasogastric tube "
+        "in the bronchial tree is a never event, and pH testing of "
+        "the aspirate below 5.5 is the first-line check in Australian "
+        "hospitals with the X-ray used when pH is unobtainable. Mx: "
+        "look for a pneumothorax after any central line or "
+        "intercostal catheter insertion. Note: report the tube before "
+        "reporting the lungs. Feeding through a misplaced tube kills "
+        "faster than the pathology being imaged."
+    ),
+    "Sonographic Murphy sign": (
+        "Maximal tenderness elicited by pressing the ultrasound probe "
+        "directly over the visualised gallbladder, a more specific "
+        "version of the clinical sign because the target is seen "
+        "rather than guessed. Features: combined with gallstones it "
+        "has a high positive predictive value for acute "
+        "cholecystitis. Supporting findings are a gallbladder wall "
+        "over three millimetres, pericholecystic fluid and a stone "
+        "impacted in the neck. Ix: ultrasound is the first-line test. "
+        "Where it is equivocal and suspicion persists, a "
+        "hepatobiliary scintigraphy scan showing non-filling of the "
+        "gallbladder confirms cystic duct obstruction. Deranged liver "
+        "enzymes or a dilated common bile duct shift the question "
+        "towards choledocholithiasis and MRCP. Mx: admission, "
+        "analgesia, fluids and antibiotics per eTG, with laparoscopic "
+        "cholecystectomy on the same admission where feasible, which "
+        "outperforms delayed surgery. Note: the sign is unreliable in "
+        "the analgesed or obtunded patient, and a negative one does "
+        "not clear the gallbladder."
+    ),
+    "Lung ultrasound B-lines": (
+        "Vertical hyperechoic artefacts arising from the pleural "
+        "line, moving with respiration and extending to the bottom of "
+        "the screen, indicating interstitial fluid or thickening. "
+        "Mechanism: fluid-filled interlobular septa next to air "
+        "create a reverberation artefact, so thickened wet septa "
+        "generate the lines. Features: up to two per intercostal "
+        "space in the lower zones is normal. Three or more in two "
+        "zones on each side defines a positive interstitial pattern "
+        "and, in an acutely breathless patient, supports cardiogenic "
+        "pulmonary oedema over an exacerbation of chronic obstructive "
+        "pulmonary disease, which gives an A-line profile. Ix: "
+        "bedside lung ultrasound outperforms the chest X-ray for both "
+        "oedema and pneumothorax, and takes under two minutes. Mx: "
+        "interpret alongside the inferior vena cava, cardiac views "
+        "and the clinical picture rather than alone, since fibrosis "
+        "and pneumonitis also produce B-lines. Note: diffuse and "
+        "bilateral means fluid, focal means a localised process such "
+        "as pneumonia or contusion."
     ),
 }
 
