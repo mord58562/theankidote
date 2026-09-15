@@ -14433,6 +14433,234 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "Wood lamp examination skin fluorescence"]],
         "summary": "",
     },
+    {
+        "name": "Epsilon wave",
+        "aliases": ["epsilon waves", "epsilon potential"],
+        "utd": [["Overview", "arrhythmogenic right ventricular cardiomyopathy ECG"]],
+        "summary": "",
+    },
+    {
+        "name": "Delta wave",
+        "aliases": ["delta waves", "ventricular pre-excitation", "slurred QRS upstroke"],
+        "utd": [["Overview", "ventricular preexcitation delta wave accessory pathway"]],
+        "summary": "",
+    },
+    {
+        "name": "Ashman phenomenon",
+        "aliases": ["Ashman beat", "Ashman phenomena", "long-short aberrancy"],
+        "utd": [["Overview", "aberrant ventricular conduction Ashman phenomenon"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypokalaemia ECG changes",
+        "aliases": ["hypokalaemia on ECG", "U waves", "hypokalemia ECG changes"],
+        "utd": [["Overview", "electrocardiographic manifestations hypokalemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypercalcaemia ECG changes",
+        "aliases": ["hypercalcaemia on ECG", "hypercalcemia ECG changes"],
+        "utd": [["Overview", "electrocardiographic manifestations hypercalcemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Left anterior fascicular block",
+        "aliases": ["left anterior hemiblock", "LAFB"],
+        "utd": [["Overview", "left anterior fascicular block electrocardiogram"]],
+        "summary": "",
+    },
+    {
+        "name": "Trifascicular block",
+        "aliases": ["trifascicular disease", "trifascicular conduction block"],
+        "utd": [["Overview", "trifascicular block conduction system disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Poor R wave progression",
+        "aliases": ["poor R-wave progression", "PRWP", "loss of R wave progression"],
+        "utd": [["Overview", "poor R wave progression precordial leads"]],
+        "summary": "",
+    },
+    {
+        "name": "S1Q3T3 pattern",
+        "aliases": ["S1Q3T3", "McGinn-White sign", "S1 Q3 T3"],
+        "utd": [["Overview", "electrocardiogram findings acute pulmonary embolism"]],
+        "summary": "",
+    },
+    {
+        "name": "Low voltage QRS",
+        "aliases": ["low voltage ECG", "low QRS voltage", "small complexes"],
+        "utd": [["Overview", "low voltage electrocardiogram causes"]],
+        "summary": "",
+    },
+    {
+        "name": "QT interval correction",
+        "aliases": ["corrected QT", "QTc", "Bazett formula", "Fridericia formula"],
+        "utd": [["Overview", "QT interval measurement rate correction"]],
+        "summary": "",
+    },
+    {
+        "name": "Corrigan pulse",
+        "aliases": ["water hammer pulse", "collapsing pulse", "Corrigan sign"],
+        "utd": [["Overview", "physical examination aortic regurgitation peripheral signs"]],
+        "summary": "",
+    },
+    {
+        "name": "Austin Flint murmur",
+        "aliases": ["Austin-Flint murmur"],
+        "utd": [["Overview", "Austin Flint murmur aortic regurgitation"]],
+        "summary": "",
+    },
+    {
+        "name": "Graham Steell murmur",
+        "aliases": ["Graham-Steell murmur"],
+        "utd": [["Overview", "Graham Steell murmur pulmonary regurgitation"]],
+        "summary": "",
+    },
+    {
+        "name": "Carey Coombs murmur",
+        "aliases": ["Carey-Coombs murmur"],
+        "utd": [["Overview", "acute rheumatic fever carditis murmur"]],
+        "summary": "",
+    },
+    {
+        "name": "Cannon a waves",
+        "aliases": ["cannon a wave", "cannon waves"],
+        "utd": [["Overview", "jugular venous pulse cannon a wave atrioventricular dissociation"]],
+        "summary": "",
+    },
+    {
+        "name": "Jugular venous pressure waveform",
+        "aliases": ["JVP waveform", "JVP wave form", "venous pulse waveform"],
+        "utd": [["Overview", "jugular venous pulse waveform interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Hepatojugular reflux",
+        "aliases": ["abdominojugular reflux", "hepatojugular reflex", "abdominojugular test"],
+        "utd": [["Overview", "hepatojugular reflux abdominojugular test heart failure"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulsus alternans",
+        "aliases": ["alternating pulse"],
+        "utd": [["Overview", "pulsus alternans severe left ventricular dysfunction"]],
+        "summary": "",
+    },
+    {
+        "name": "Fixed splitting of the second heart sound",
+        "aliases": ["fixed split second heart sound", "fixed splitting"],
+        "utd": [["Overview", "atrial septal defect auscultation fixed splitting"]],
+        "summary": "",
+    },
+    {
+        "name": "Ewart sign",
+        "aliases": ["Ewart's sign", "Pins sign"],
+        "utd": [["Overview", "large pericardial effusion physical examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Slow rising pulse",
+        "aliases": ["pulsus parvus et tardus", "anacrotic pulse", "plateau pulse"],
+        "utd": [["Overview", "aortic stenosis physical examination carotid upstroke"]],
+        "summary": "",
+    },
+    {
+        "name": "Radio-femoral delay",
+        "aliases": ["radiofemoral delay", "radio femoral delay"],
+        "utd": [["Overview", "coarctation of the aorta physical examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Mentzer index",
+        "aliases": ["Mentzer ratio"],
+        "utd": [["Overview", "microcytosis thalassemia trait iron deficiency discrimination"]],
+        "summary": "",
+    },
+    {
+        "name": "Rouleaux formation",
+        "aliases": ["rouleaux", "red cell rouleaux"],
+        "utd": [["Overview", "rouleaux formation paraproteinemia blood smear"]],
+        "summary": "",
+    },
+    {
+        "name": "Howell-Jolly bodies",
+        "aliases": ["Howell Jolly bodies", "Howell-Jolly body"],
+        "utd": [["Overview", "Howell Jolly bodies hyposplenism blood smear"]],
+        "summary": "",
+    },
+    {
+        "name": "Heinz bodies",
+        "aliases": ["Heinz body", "Heinz body haemolysis"],
+        "utd": [["Overview", "Heinz bodies oxidative hemolysis G6PD deficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Basophilic stippling",
+        "aliases": ["punctate basophilia", "basophilic stippled cells"],
+        "utd": [["Overview", "basophilic stippling lead poisoning blood smear"]],
+        "summary": "",
+    },
+    {
+        "name": "Leukoerythroblastic film",
+        "aliases": ["leucoerythroblastic film", "leukoerythroblastic blood picture", "leucoerythroblastic anaemia"],
+        "utd": [["Overview", "leukoerythroblastic blood film marrow infiltration"]],
+        "summary": "",
+    },
+    {
+        "name": "Spherocytes",
+        "aliases": ["spherocyte", "microspherocytes"],
+        "utd": [["Overview", "spherocytes hereditary spherocytosis autoimmune hemolysis smear"]],
+        "summary": "",
+    },
+    {
+        "name": "Tear drop poikilocytes",
+        "aliases": ["teardrop cells", "dacrocytes", "tear drop cells"],
+        "utd": [["Overview", "teardrop cells dacrocytes myelofibrosis blood smear"]],
+        "summary": "",
+    },
+    {
+        "name": "Bite cells",
+        "aliases": ["degmacytes", "blister cells", "bite cell"],
+        "utd": [["Overview", "bite cells G6PD deficiency oxidative hemolysis smear"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypersegmented neutrophils",
+        "aliases": ["neutrophil hypersegmentation", "hypersegmented neutrophil"],
+        "utd": [["Overview", "hypersegmented neutrophils megaloblastic anemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Smudge cells",
+        "aliases": ["smear cells", "Gumprecht shadows", "basket cells"],
+        "utd": [["Overview", "smudge cells chronic lymphocytic leukemia blood smear"]],
+        "summary": "",
+    },
+    {
+        "name": "Auer rods",
+        "aliases": ["Auer rod", "Auer bodies"],
+        "utd": [["Overview", "Auer rods acute myeloid leukemia blast morphology"]],
+        "summary": "",
+    },
+    {
+        "name": "Pseudohyperkalaemia",
+        "aliases": ["spurious hyperkalaemia", "pseudohyperkalemia", "factitious hyperkalaemia"],
+        "utd": [["Overview", "pseudohyperkalemia spurious potassium elevation"]],
+        "summary": "",
+    },
+    {
+        "name": "Pseudothrombocytopenia",
+        "aliases": ["EDTA-dependent pseudothrombocytopenia", "platelet clumping artefact", "spurious thrombocytopenia"],
+        "utd": [["Overview", "pseudothrombocytopenia EDTA platelet clumping"]],
+        "summary": "",
+    },
+    {
+        "name": "Corrected sodium",
+        "aliases": ["sodium correction for hyperglycaemia", "adjusted sodium"],
+        "utd": [["Overview", "hyponatremia hyperglycemia sodium correction"]],
+        "summary": "",
+    },
 ]
 
 
@@ -82244,6 +82472,725 @@ RICH_SUMMARIES = {
         "pale patch, separating vitiligo from pityriasis alba or an "
         "ash-leaf macule and setting the direction of the "
         "consultation."
+    ),
+
+    "Epsilon wave": (
+        "A small positive deflection or notch at the end of the QRS "
+        "complex in V1 to V3, best seen with high right-sided "
+        "precordial lead placement. Mechanism: fibrofatty replacement "
+        "of right ventricular myocardium delays a pocket of "
+        "depolarisation until after the main QRS has finished. "
+        "Causes: arrhythmogenic right ventricular cardiomyopathy "
+        "classically, with sarcoidosis and right ventricular "
+        "infarction as mimics. Features: usually a young patient "
+        "worked up for syncope, palpitations or an out-of-hospital "
+        "arrest, with T wave inversion in V1 to V3 and a prolonged S "
+        "wave upstroke alongside it. Ix: 12-lead ECG with modified "
+        "precordial leads, signal-averaged ECG and Holter, then "
+        "cardiac MRI for fibrofatty infiltration and first-degree "
+        "relative screening. Mx: treat the underlying cardiomyopathy. "
+        "Withdraw from competitive endurance sport, beta blockade for "
+        "arrhythmia burden and an implantable defibrillator where "
+        "arrest risk is high. Note: specific but insensitive, "
+        "appearing in well under a third of confirmed cases, so "
+        "absence never excludes the diagnosis."
+    ),
+    "Delta wave": (
+        "A slurred, slow upstroke at the onset of the QRS complex, "
+        "the surface marker of ventricular pre-excitation down an "
+        "accessory pathway. Mechanism: an accessory bundle bypasses "
+        "the AV node and depolarises ventricular muscle early, fusing "
+        "with normal conduction to shorten the PR interval and widen "
+        "the QRS. Features: PR under 120 ms with a broad QRS and "
+        "secondary ST and T wave change. Pathway location sets delta "
+        "wave polarity, which can mimic inferior or posterior "
+        "infarction when negative. Associations: "
+        "Wolff-Parkinson-White syndrome once pre-excitation is joined "
+        "by tachyarrhythmia, and Ebstein anomaly for right-sided "
+        "pathways. Ix: 12-lead ECG, echocardiography for structural "
+        "disease and electrophysiology study where symptoms or "
+        "high-risk features exist. Mx: an asymptomatic finding needs "
+        "risk stratification rather than drugs. Catheter ablation is "
+        "definitive. Avoid AV nodal blockers in pre-excited atrial "
+        "fibrillation because they divert conduction down the "
+        "pathway. Note: intermittent loss of the delta wave on a "
+        "rhythm strip argues for a low-risk pathway."
+    ),
+    "Ashman phenomenon": (
+        "An aberrantly conducted supraventricular beat that follows a "
+        "long RR interval and then a short one, usually taking right "
+        "bundle branch block morphology. Mechanism: refractoriness "
+        "lengthens in proportion to the preceding cycle, so after a "
+        "long pause the right bundle is still refractory when an "
+        "early beat arrives and conduction detours down the left "
+        "bundle. Features: an isolated wide complex in atrial "
+        "fibrillation or after an atrial ectopic, with an rsR pattern "
+        "in V1 and no compensatory pause. Ddx: ventricular ectopy, "
+        "favoured instead by a leftward axis, a very broad QRS and "
+        "any fusion or capture beat. Ix: a full 12-lead rather than a "
+        "single rhythm lead, compared against the patient's known "
+        "bundle branch morphology. Mx: none needed. Recognition is "
+        "the point, because reading it as ventricular ectopy invites "
+        "antiarrhythmics or a device the patient does not need. Note: "
+        "a long-short sequence in atrial fibrillation with textbook "
+        "RBBB morphology is aberrancy until the strip says otherwise."
+    ),
+    "Hypokalaemia ECG changes": (
+        "The sequence of repolarisation changes that tracks a falling "
+        "serum potassium, appearing well before the patient feels "
+        "anything. Features: T wave flattening first, then ST "
+        "depression, a prominent U wave after the T, and finally "
+        "apparent QT prolongation as T and U fuse into a single broad "
+        "deflection. Causes: diuretics, gastrointestinal losses, "
+        "insulin or beta agonist shift and hyperaldosteronism. "
+        "Concurrent hypomagnesaemia is usual and makes repletion fail "
+        "if missed. Ix: urgent potassium and magnesium, plus calcium, "
+        "renal function and a venous gas. Look for digoxin, which "
+        "potentiates arrhythmia at any given potassium. Mx: replace "
+        "orally if mild and intravenously with cardiac monitoring if "
+        "under 2.5 mmol/L or symptomatic, correcting magnesium in "
+        "parallel as eTG directs. Note: what looks like a long QT in "
+        "hypokalaemia is usually a long QU, and either way the risk "
+        "is torsades, so treat the potassium rather than debate the "
+        "interval."
+    ),
+    "Hypercalcaemia ECG changes": (
+        "Shortening of ventricular repolarisation as ionised calcium "
+        "rises, the mirror image of the long QT seen in "
+        "hypocalcaemia. Features: a short QT interval driven almost "
+        "entirely by a short ST segment, so the T wave appears to sit "
+        "straight on the QRS. Osborn-like J waves, PR prolongation "
+        "and bradyarrhythmia appear at severe levels. Causes: primary "
+        "hyperparathyroidism and malignancy account for most, with "
+        "thiazides, lithium, granulomatous disease and immobility "
+        "behind the rest. Ix: corrected calcium or ionised calcium, "
+        "parathyroid hormone, renal function and phosphate. A "
+        "suppressed hormone level points at malignancy and triggers a "
+        "search for it. Mx: intravenous saline rehydration first, "
+        "then bisphosphonate for malignant hypercalcaemia, with "
+        "calcitonin where the level must fall quickly. Note: the ECG "
+        "is a crude gauge of severity, so never wait for it before "
+        "acting on a calcium above 3.0 mmol/L."
+    ),
+    "Left anterior fascicular block": (
+        "Conduction delay in the anterior fascicle of the left "
+        "bundle, the commonest intraventricular conduction "
+        "abnormality on a routine ECG. Criteria: left axis deviation "
+        "beyond minus 45 degrees with qR in aVL and rS in the "
+        "inferior leads, and a QRS still under 120 ms. Causes: "
+        "hypertensive heart disease, ischaemic heart disease and "
+        "age-related fibrosis, plus aortic valve disease and "
+        "infiltrative cardiomyopathy. Features: no symptoms of its "
+        "own. Its importance is the company it keeps and the axis "
+        "shift it imposes on any later tracing. Ix: baseline ECG for "
+        "comparison, echocardiography where it is new or paired with "
+        "other conduction disease, and assessment for ischaemia if it "
+        "appears acutely. Mx: none in isolation. Treat the underlying "
+        "cardiac disease and watch for progression when it sits "
+        "alongside right bundle branch block. Note: it cancels the "
+        "inferior Q waves of an old infarct and fakes them elsewhere, "
+        "so read old infarction cautiously once the axis has shifted."
+    ),
+    "Trifascicular block": (
+        "Conduction disease affecting all three main intraventricular "
+        "pathways, usually written for right bundle branch block plus "
+        "a fascicular block plus first-degree AV delay. Criteria: "
+        "RBBB with left anterior or posterior fascicular block and a "
+        "PR interval over 200 ms. True trifascicular block means "
+        "alternating bundle branch block or block below the His, "
+        "which is a different and far more ominous finding. Causes: "
+        "age-related conduction system fibrosis, ischaemic and "
+        "hypertensive heart disease, aortic stenosis with calcific "
+        "extension and infiltration. Features: often asymptomatic, "
+        "but syncope or presyncope raises the question of "
+        "intermittent complete block. Ix: 12-lead ECG, ambulatory "
+        "monitoring or an implantable loop recorder for unexplained "
+        "syncope, echocardiography and electrophysiology study where "
+        "symptoms persist. Mx: pacing for symptomatic bradycardia or "
+        "documented high-grade block. Note: the ECG pattern alone "
+        "rarely earns a pacemaker, but the same pattern with syncope "
+        "usually does."
+    ),
+    "Poor R wave progression": (
+        "Failure of the R wave to grow normally across the precordial "
+        "leads, conventionally an R under 3 mm in V3 or an absent "
+        "transition by V4. Causes: anterior myocardial infarction is "
+        "the one that matters, but left ventricular hypertrophy, "
+        "chronic obstructive pulmonary disease, left bundle branch "
+        "block and cardiomyopathy all do it. Technical causes are "
+        "commoner still. Features: no symptoms attach to the pattern "
+        "itself, which is why it is usually an incidental read on a "
+        "screening tracing. Ix: check lead placement and repeat "
+        "before interpreting, compare with any old ECG, and go to "
+        "echocardiography where an anterior scar or hypertrophy is "
+        "plausible. Mx: directed at the cause found. Nothing is "
+        "treated for the ECG pattern alone. Note: precordial leads "
+        "placed one interspace too high reproduce this exactly, so a "
+        "repeat tracing with careful electrode placement resolves "
+        "more of these than any imaging does."
+    ),
+    "S1Q3T3 pattern": (
+        "An S wave in lead I with a Q wave and inverted T wave in "
+        "lead III, the textbook but uncommon ECG signature of acute "
+        "pulmonary embolism. Mechanism: acute right ventricular "
+        "pressure overload rotates the heart and shifts the QRS axis "
+        "rightward while straining the right ventricular free wall. "
+        "Features: present in only around one in ten confirmed "
+        "emboli. Sinus tachycardia is far commoner, and anterior T "
+        "wave inversion in V1 to V4 carries more weight for right "
+        "heart strain. Ix: the ECG never rules embolism in or out. "
+        "Use a Wells or PERC assessment, then D-dimer or CT pulmonary "
+        "angiography as the pathway directs, with troponin and "
+        "echocardiography for risk stratification. Mx: "
+        "anticoagulation, with thrombolysis reserved for haemodynamic "
+        "instability. Note: the pattern also appears in any cause of "
+        "acute cor pulmonale, including pneumothorax and severe "
+        "asthma, so read it as right heart strain rather than as a "
+        "diagnosis."
+    ),
+    "Low voltage QRS": (
+        "QRS amplitude under 5 mm in every limb lead or under 10 mm "
+        "in every precordial lead. Mechanism: either something "
+        "insulating sits between heart and electrode, or there is "
+        "less viable myocardium generating the signal. Causes: "
+        "pericardial effusion, obesity, emphysema and pleural "
+        "effusion insulate. Infiltrative cardiomyopathy, extensive "
+        "infarction and myxoedema reduce the signal itself. Features: "
+        "the pattern is silent, so significance comes entirely from "
+        "context. New low voltage with tachycardia and hypotension "
+        "suggests tamponade. Ix: bedside echocardiography first when "
+        "the presentation is acute, then chest imaging, thyroid "
+        "function and a serum free light chain assay where "
+        "amyloidosis is plausible. Mx: treat the cause. "
+        "Pericardiocentesis for tamponade is the one that cannot "
+        "wait. Note: low voltage with paradoxically preserved or "
+        "increased wall thickness on echocardiography is the classic "
+        "pairing for cardiac amyloidosis."
+    ),
+    "QT interval correction": (
+        "Adjustment of the measured QT for heart rate, because QT "
+        "shortens as rate rises and raw values cannot be compared "
+        "across rates. Mechanism: Bazett divides QT by the square "
+        "root of the RR interval in seconds and is the most used. It "
+        "over-corrects above 100 beats per minute and under-corrects "
+        "in bradycardia, which Fridericia's cube root correction "
+        "handles better. Criteria: prolonged above 450 ms in men and "
+        "460 ms in women, with torsades risk climbing steeply beyond "
+        "500 ms. Ix: measure in lead II or V5 over several beats, "
+        "take the longest interval, and use the tangent method to "
+        "find where the T wave meets the baseline. Check potassium, "
+        "magnesium and calcium alongside. Mx: withdraw the offending "
+        "drug, correct electrolytes, and give magnesium sulphate for "
+        "torsades. Note: a wide QRS inflates the QT mechanically, so "
+        "bundle branch block needs a corrected value before the "
+        "number means anything."
+    ),
+    "Corrigan pulse": (
+        "A pulse that rises abruptly and collapses just as fast, felt "
+        "best with the patient's arm raised above the heart. "
+        "Mechanism: a large stroke volume ejected into an aorta that "
+        "then loses volume rapidly back through an incompetent valve, "
+        "producing a wide pulse pressure. Causes: chronic aortic "
+        "regurgitation classically. Also any high-output state, "
+        "including thyrotoxicosis, anaemia, pregnancy, fever and "
+        "arteriovenous fistula. Features: travels with the other "
+        "eponymous signs of aortic regurgitation, including head "
+        "nodding, nailbed pulsation and a femoral pistol shot. Ix: "
+        "blood pressure for a wide pulse pressure, then transthoracic "
+        "echocardiography to grade regurgitation and size the aortic "
+        "root. Mx: treat the cause. Chronic severe regurgitation is "
+        "followed with serial imaging and goes to valve surgery once "
+        "symptoms appear or the ventricle dilates. Note: a wide pulse "
+        "pressure in a febrile intravenous drug user should prompt a "
+        "hunt for endocarditis, not reassurance."
+    ),
+    "Austin Flint murmur": (
+        "A low-pitched mid to late diastolic rumble at the apex in "
+        "severe aortic regurgitation, in the absence of mitral "
+        "stenosis. Mechanism: the regurgitant jet strikes the "
+        "anterior mitral leaflet and partly closes it during "
+        "diastole, so flow across the mitral orifice becomes "
+        "functionally obstructed. Features: heard best with the bell "
+        "at the apex in the left lateral position, alongside the "
+        "early diastolic murmur and wide pulse pressure of aortic "
+        "regurgitation. Ddx: true mitral stenosis, distinguished by a "
+        "loud first heart sound, an opening snap and presystolic "
+        "accentuation, none of which appear here. Ix: transthoracic "
+        "echocardiography settles it by showing a normal mitral valve "
+        "with a regurgitant aortic jet directed at the leaflet. Mx: "
+        "the murmur needs nothing. Its presence marks the "
+        "regurgitation as severe and moves the patient up the "
+        "surgical queue. Note: no opening snap and a soft first heart "
+        "sound is the bedside pair that separates it from mitral "
+        "stenosis."
+    ),
+    "Graham Steell murmur": (
+        "A high-pitched early diastolic murmur of pulmonary "
+        "regurgitation arising from pulmonary hypertension rather "
+        "than from valve disease. Mechanism: a raised pulmonary "
+        "artery pressure dilates the valve annulus, so a structurally "
+        "normal valve no longer coapts. Features: decrescendo, heard "
+        "at the left sternal edge in the second and third spaces, "
+        "louder on inspiration, with a loud pulmonary component of "
+        "the second heart sound and a right ventricular heave "
+        "alongside it. Causes: mitral stenosis classically, plus any "
+        "cause of severe pulmonary hypertension including chronic "
+        "thromboembolic disease and Eisenmenger physiology. Ddx: "
+        "aortic regurgitation, which does not vary with respiration "
+        "and comes with a wide pulse pressure. Ix: transthoracic "
+        "echocardiography to estimate pulmonary pressures and find "
+        "the cause. Mx: directed at the pulmonary hypertension. Note: "
+        "an early diastolic murmur that gets louder on inspiration is "
+        "right-sided until proven otherwise."
+    ),
+    "Carey Coombs murmur": (
+        "A short mid-diastolic murmur at the apex in acute rheumatic "
+        "carditis, caused by active mitral valvulitis rather than by "
+        "established stenosis. Mechanism: inflamed, oedematous mitral "
+        "leaflets and a dilated annulus disturb diastolic inflow "
+        "across an otherwise unobstructed valve. Features: soft, "
+        "low-pitched and transient, appearing during the acute "
+        "illness and resolving as inflammation settles. It usually "
+        "accompanies the pansystolic murmur of mitral regurgitation. "
+        "Ix: streptococcal serology, inflammatory markers, ECG for PR "
+        "prolongation and echocardiography, which is now required for "
+        "diagnosis under the Australian rheumatic fever guideline. "
+        "Mx: benzathine penicillin, anti-inflammatory therapy for "
+        "arthritis and carditis, and enrolment in a secondary "
+        "prophylaxis register. Note: acute rheumatic fever remains a "
+        "live diagnosis in remote Aboriginal and Torres Strait "
+        "Islander communities, where Australia carries some of the "
+        "highest reported incidence in the world."
+    ),
+    "Cannon a waves": (
+        "Irregular, exaggerated jugular venous pulsations produced "
+        "when the right atrium contracts against a closed tricuspid "
+        "valve. Mechanism: atrial systole lands during ventricular "
+        "systole, so blood is driven backwards into the jugular veins "
+        "instead of forwards into the ventricle. Causes: irregular "
+        "cannon waves mark atrioventricular dissociation, meaning "
+        "complete heart block or ventricular tachycardia. Regular "
+        "cannon waves appear in junctional rhythm and AV nodal "
+        "re-entrant tachycardia, where atria and ventricles fire "
+        "together every beat. Features: seen as an intermittent "
+        "flicking in the neck, often with variable intensity of the "
+        "first heart sound. Ix: 12-lead ECG is the decisive test, "
+        "looking for dissociated P waves. Mx: treat the underlying "
+        "rhythm. Note: irregular cannon waves in a broad complex "
+        "tachycardia are a bedside argument for ventricular "
+        "tachycardia, which is the way to bet in any case."
+    ),
+    "Jugular venous pressure waveform": (
+        "The two-peak venous pulsation seen in the internal jugular "
+        "vein, read with the patient at 45 degrees and the head "
+        "turned slightly away. Features: the a wave is atrial "
+        "contraction, the c wave tricuspid bulging in early systole, "
+        "and the v wave atrial filling against a closed valve. The x "
+        "descent follows atrial relaxation and the y descent follows "
+        "tricuspid opening. Ix: giant a waves mean a stiff or "
+        "obstructed right ventricle, as in pulmonary hypertension or "
+        "tricuspid stenosis. Absent a waves mean atrial fibrillation. "
+        "Giant v waves with a brisk y descent mean tricuspid "
+        "regurgitation. A steep x descent with a blunted y suggests "
+        "tamponade, while both descents steep suggests constriction. "
+        "Mx: the waveform directs the echocardiogram rather than "
+        "replacing it. Note: venous pulsation is biphasic, varies "
+        "with posture and respiration, and is not palpable, which is "
+        "how it is told from the carotid."
+    ),
+    "Hepatojugular reflux": (
+        "A sustained rise in jugular venous pressure of more than 3 "
+        "cm during 10 to 15 seconds of firm pressure over the right "
+        "upper abdomen. Mechanism: the manoeuvre shifts splanchnic "
+        "venous blood into the right heart. A compliant right "
+        "ventricle absorbs it, while a failing or constrained one "
+        "cannot and the pressure backs up. Causes: right or left "
+        "heart failure, constrictive pericarditis, restrictive "
+        "cardiomyopathy and tricuspid regurgitation. Features: the "
+        "patient must keep breathing normally, since a Valsalva "
+        "response produces a false positive. The rise has to persist "
+        "through the pressure rather than spiking and settling. Ix: a "
+        "positive test supports a raised left atrial pressure and "
+        "points towards echocardiography and natriuretic peptide "
+        "testing. Mx: treat the underlying ventricular failure. Note: "
+        "useful when the jugular pulse is hard to see at rest, since "
+        "it can unmask a raised filling pressure that a resting "
+        "column conceals."
+    ),
+    "Pulsus alternans": (
+        "Regular alternation of strong and weak pulse beats at a "
+        "constant cycle length, a sign of severe left ventricular "
+        "systolic impairment. Mechanism: incomplete recovery of "
+        "contractile elements between beats means alternate "
+        "contractions eject a smaller stroke volume, with the weaker "
+        "beat having more filling time and so a stronger successor. "
+        "Features: best appreciated with a sphygmomanometer deflated "
+        "slowly, where Korotkoff sounds first appear at half the true "
+        "rate and then double. Causes: advanced heart failure of any "
+        "aetiology, and occasionally severe aortic stenosis or after "
+        "a long run of tachycardia. Ix: echocardiography for ejection "
+        "fraction, natriuretic peptide, ECG and the usual precipitant "
+        "screen. Mx: treat the decompensated heart failure on "
+        "guideline lines. Ddx: pulsus paradoxus, which varies with "
+        "respiration rather than beat to beat. Note: a poor "
+        "prognostic sign that usually means the ventricle is at the "
+        "end of its reserve."
+    ),
+    "Fixed splitting of the second heart sound": (
+        "A split second heart sound whose gap between aortic and "
+        "pulmonary components does not widen on inspiration, the "
+        "auscultatory hallmark of atrial septal defect. Mechanism: "
+        "the defect equalises atrial pressures, so the usual "
+        "inspiratory increase in right heart filling is offset by a "
+        "reciprocal fall in shunted flow and right ventricular "
+        "ejection time stays constant. Features: accompanied by a "
+        "pulmonary outflow systolic murmur from increased flow, a "
+        "right ventricular heave and sometimes a tricuspid diastolic "
+        "rumble. Ix: ECG showing right axis deviation with incomplete "
+        "right bundle branch block in secundum defects, then "
+        "transthoracic echocardiography with bubble study, and "
+        "transoesophageal imaging to define the rim before closure. "
+        "Mx: percutaneous device closure for a haemodynamically "
+        "significant secundum defect. Note: an adult with unexplained "
+        "right heart dilatation and a split second sound that never "
+        "moves deserves a bubble study."
+    ),
+    "Ewart sign": (
+        "Dullness to percussion with bronchial breathing and "
+        "increased vocal resonance below the angle of the left "
+        "scapula, produced by a large pericardial effusion. "
+        "Mechanism: the distended pericardial sac compresses the left "
+        "lower lobe, collapsing lung against a patent bronchus so "
+        "sound conducts as it does over consolidation. Features: "
+        "found in large effusions rather than small ones, and often "
+        "alongside muffled heart sounds, a raised jugular venous "
+        "pressure and hypotension if tamponade has developed. Ix: "
+        "bedside transthoracic echocardiography is the test, showing "
+        "effusion size, diastolic right chamber collapse and "
+        "respiratory variation across the valves. Chest radiography "
+        "shows a globular heart. Mx: urgent pericardiocentesis for "
+        "tamponade, otherwise investigate the cause, including "
+        "malignancy, tuberculosis, uraemia and autoimmune disease. "
+        "Note: a left basal area that sounds consolidated but clears "
+        "on drainage of the pericardium is the classic teaching case."
+    ),
+    "Slow rising pulse": (
+        "A carotid pulse of small volume that peaks late, the "
+        "peripheral signature of severe aortic stenosis. Mechanism: a "
+        "fixed valve orifice limits and delays ejection, so the "
+        "upstroke is prolonged and the pulse pressure narrow. "
+        "Features: assessed at the carotid rather than the radial, "
+        "and accompanied by a soft or absent aortic second sound, a "
+        "late-peaking ejection systolic murmur and a sustained apex "
+        "beat. Ix: transthoracic echocardiography for valve area, "
+        "mean gradient and ventricular function, with ECG and chest "
+        "radiography alongside. Low-flow low-gradient stenosis needs "
+        "dobutamine stress imaging to separate true severe disease "
+        "from pseudostenosis. Mx: valve replacement, surgically or by "
+        "transcatheter route, once symptoms or ventricular impairment "
+        "appear. Note: the bedside features that actually track "
+        "severity are the timing of the murmur peak, the second sound "
+        "and the upstroke, not the loudness of the murmur."
+    ),
+    "Radio-femoral delay": (
+        "A palpable lag between the radial and femoral pulses when "
+        "both are felt together, indicating obstruction in the aorta "
+        "between them. Mechanism: flow to the lower body arrives late "
+        "and damped through collateral or narrowed channels, so the "
+        "femoral upstroke trails the radial. Causes: coarctation of "
+        "the aorta principally, with aortic dissection and "
+        "large-vessel arteritis as the other reasons a pulse arrives "
+        "late. Features: hypertension in the upper limbs with a lower "
+        "blood pressure in the legs, weak or absent femoral pulses, "
+        "and sometimes a systolic murmur over the back. Ix: four-limb "
+        "blood pressure, then CT or MR angiography of the aorta. "
+        "Echocardiography also screens for the bicuspid aortic valve "
+        "that accompanies most cases. Mx: surgical or catheter-based "
+        "repair, with lifelong follow-up for recoarctation and "
+        "residual hypertension. Note: examine the femoral pulses in "
+        "every young hypertensive patient."
+    ),
+    "Mentzer index": (
+        "The mean cell volume divided by the red cell count, used to "
+        "separate the two common causes of microcytosis on a full "
+        "blood count. Criteria: a value under 13 favours beta "
+        "thalassaemia trait and a value over 13 favours iron "
+        "deficiency. Mechanism: thalassaemia trait produces many "
+        "small cells so the count stays high, while iron deficiency "
+        "produces fewer cells that are small and pale. Features: "
+        "useful as a first pass in a patient with microcytosis and no "
+        "obvious bleeding source, especially where family origin "
+        "raises the prior probability. Ix: it never stands alone. "
+        "Confirm with ferritin and iron studies, then haemoglobin "
+        "electrophoresis or HPLC once iron deficiency is excluded or "
+        "treated. Mx: directed at whichever diagnosis is confirmed, "
+        "with genetic counselling offered for a confirmed trait. "
+        "Note: the index misleads when both conditions coexist, which "
+        "is common, so a treated iron deficiency that leaves "
+        "persistent microcytosis still needs electrophoresis."
+    ),
+    "Rouleaux formation": (
+        "Red cells stacked like a run of coins on the blood film, "
+        "produced by a raised concentration of large plasma proteins. "
+        "Mechanism: fibrinogen and immunoglobulin reduce the surface "
+        "charge that normally keeps red cells apart, so they "
+        "aggregate face to face. Causes: paraproteinaemia from "
+        "myeloma or Waldenstrom macroglobulinaemia, plus chronic "
+        "inflammation, infection and pregnancy. Features: accompanies "
+        "a raised erythrocyte sedimentation rate and a widened gap "
+        "between total protein and albumin. Ix: serum protein "
+        "electrophoresis with immunofixation, serum free light "
+        "chains, urinary Bence Jones protein, calcium, renal function "
+        "and a skeletal survey where myeloma is suspected. Mx: "
+        "directed at the underlying cause, with plasma exchange "
+        "reserved for symptomatic hyperviscosity. Note: rouleaux on a "
+        "film reported alongside an unexplained anaemia, back pain or "
+        "renal impairment is a prompt to look for a paraprotein "
+        "rather than an incidental remark."
+    ),
+    "Howell-Jolly bodies": (
+        "Small round nuclear remnants inside circulating red cells, "
+        "normally plucked out by the spleen and so a marker of "
+        "splenic failure. Mechanism: the splenic red pulp pits "
+        "nuclear fragments from maturing red cells. Without that "
+        "filter the remnants stay in the cell and are seen on the "
+        "film. Causes: surgical splenectomy, coeliac disease, sickle "
+        "cell disease with autoinfarction, and inflammatory bowel "
+        "disease or amyloidosis with functional hyposplenism. "
+        "Features: reported with target cells, acanthocytes and a "
+        "raised platelet count in the same patient. Ix: the finding "
+        "itself prompts a search for the cause, including coeliac "
+        "serology where no splenectomy is known. Mx: hyposplenic "
+        "patients need pneumococcal, meningococcal and Haemophilus "
+        "influenzae type b vaccination, annual influenza vaccine and "
+        "a written plan for febrile illness, with antibiotic "
+        "prophylaxis as eTG advises. Note: an unexplained hyposplenic "
+        "film is coeliac disease until the serology says otherwise."
+    ),
+    "Heinz bodies": (
+        "Inclusions of denatured, precipitated haemoglobin stuck to "
+        "the red cell membrane, seen only with a supravital stain "
+        "such as methyl violet. Mechanism: oxidative stress "
+        "overwhelms the glutathione defences of the red cell, "
+        "haemoglobin unfolds and precipitates, and the spleen bites "
+        "out the inclusions to leave bite cells. Causes: "
+        "glucose-6-phosphate dehydrogenase deficiency exposed to fava "
+        "beans, dapsone, primaquine, nitrofurantoin or infection. "
+        "Also unstable haemoglobins and chlorate poisoning. Features: "
+        "acute intravascular haemolysis with jaundice, dark urine and "
+        "a falling haemoglobin a few days after exposure. Ix: film "
+        "with supravital stain, reticulocyte count, lactate "
+        "dehydrogenase, haptoglobin and a G6PD assay deferred until "
+        "after the acute episode. Mx: stop the trigger, hydrate and "
+        "transfuse if needed. Note: assay G6PD during haemolysis and "
+        "it reads falsely normal, because the deficient cells have "
+        "already been destroyed."
+    ),
+    "Basophilic stippling": (
+        "Fine blue granules scattered evenly through the red cell "
+        "cytoplasm on a routine stain, representing aggregated "
+        "ribosomal RNA. Mechanism: inhibition of pyrimidine 5 "
+        "nucleotidase leaves RNA undegraded in maturing cells, so it "
+        "persists after the nucleus has gone. Causes: lead poisoning "
+        "classically, plus thalassaemia, sideroblastic anaemia, "
+        "megaloblastic anaemia and arsenic exposure. Features: coarse "
+        "stippling points at lead or an inherited enzyme defect, "
+        "while fine stippling is a non-specific marker of accelerated "
+        "erythropoiesis. Ix: blood lead level where exposure is "
+        "plausible, iron studies, haemoglobin electrophoresis and a "
+        "marrow examination for ring sideroblasts if unexplained. Mx: "
+        "remove the exposure and use chelation for significant lead "
+        "burden, with notification to the state public health unit as "
+        "required. Note: stippling with microcytic anaemia and "
+        "abdominal pain in a renovator or a child in older housing "
+        "should put lead at the top of the list."
+    ),
+    "Leukoerythroblastic film": (
+        "A film carrying both immature granulocytes and nucleated red "
+        "cells, meaning the marrow is releasing cells it would "
+        "normally hold back. Mechanism: architectural disruption of "
+        "the marrow space, or extreme demand, breaches the barrier "
+        "that keeps precursors in. Causes: marrow infiltration by "
+        "metastatic carcinoma, myelofibrosis and haematological "
+        "malignancy, plus severe sepsis, major haemorrhage and severe "
+        "haemolysis. Features: often with anaemia, tear drop "
+        "poikilocytes if fibrosis is present, and a variable white "
+        "cell and platelet count. Ix: film review by a haematologist, "
+        "lactate dehydrogenase, reticulocyte count and imaging for an "
+        "occult primary. A marrow aspirate and trephine is usually "
+        "needed, since aspiration alone may yield a dry tap in "
+        "fibrosis. Mx: directed at the cause. Note: in a patient "
+        "without sepsis or bleeding to explain it, this film is an "
+        "infiltrated marrow until a trephine says otherwise."
+    ),
+    "Spherocytes": (
+        "Small, densely staining red cells that have lost their "
+        "central pallor because surface membrane has been lost while "
+        "volume has not. Mechanism: either an inherited defect of the "
+        "membrane skeleton, or splenic macrophages removing "
+        "antibody-coated membrane a piece at a time. Causes: "
+        "hereditary spherocytosis and warm autoimmune haemolytic "
+        "anaemia are the two to separate, with ABO haemolytic disease "
+        "of the newborn, burns and delayed transfusion reactions "
+        "behind them. Features: anaemia, jaundice, splenomegaly and "
+        "pigment gallstones, with a raised mean cell haemoglobin "
+        "concentration on the analyser. Ix: direct antiglobulin test "
+        "is the pivotal test, positive in autoimmune disease and "
+        "negative in the inherited form, which is then confirmed by "
+        "EMA binding flow cytometry. Mx: folate and transfusion "
+        "support, steroids for autoimmune disease and splenectomy for "
+        "selected inherited cases. Note: a positive direct "
+        "antiglobulin test moves the whole problem from haematology "
+        "of the membrane to immunology."
+    ),
+    "Tear drop poikilocytes": (
+        "Red cells drawn out into a single point, produced when cells "
+        "are squeezed through a distorted marrow or spleen. "
+        "Mechanism: physical deformation as cells traverse a fibrotic "
+        "marrow sinusoid or a congested splenic cord, with the "
+        "deformation becoming permanent. Causes: primary "
+        "myelofibrosis is the classic, with marrow infiltration by "
+        "malignancy, thalassaemia major and severe megaloblastic "
+        "anaemia also producing them. Features: usually reported "
+        "alongside a leukoerythroblastic picture, anaemia and massive "
+        "splenomegaly in myelofibrosis. Ix: film review, JAK2, CALR "
+        "and MPL mutation testing, and a marrow trephine, since "
+        "aspirate often gives a dry tap. Lactate dehydrogenase and "
+        "urate are typically high. Mx: supportive transfusion, JAK "
+        "inhibition for symptomatic splenomegaly, and allogeneic "
+        "transplant in fit younger patients. Note: teardrops with "
+        "nucleated red cells and a huge spleen is the triad that "
+        "names myelofibrosis at the bedside."
+    ),
+    "Bite cells": (
+        "Red cells with a semicircular defect in the margin, as "
+        "though a piece has been bitten out. Mechanism: splenic "
+        "macrophages extract precipitated haemoglobin inclusions from "
+        "the cell and the membrane reseals around the loss. Blister "
+        "cells are the same process caught earlier, with the "
+        "inclusion pushed to one pole. Causes: glucose-6-phosphate "
+        "dehydrogenase deficiency after oxidative challenge from fava "
+        "beans, primaquine, dapsone, nitrofurantoin or intercurrent "
+        "infection. Also unstable haemoglobins. Features: acute "
+        "haemolysis two to four days after exposure, with jaundice, "
+        "dark urine and a brisk reticulocytosis. Ix: film with "
+        "supravital stain for Heinz bodies, haemolysis screen and a "
+        "G6PD assay repeated once the episode has settled. Mx: "
+        "withdraw the trigger, hydrate and transfuse if severe. Note: "
+        "check G6PD status before starting primaquine, dapsone or "
+        "rasburicase, since the deficiency is common in patients of "
+        "African, Mediterranean and South-East Asian background."
+    ),
+    "Hypersegmented neutrophils": (
+        "Neutrophils with six or more nuclear lobes, or more than "
+        "five per cent of cells carrying five lobes, an early marker "
+        "of impaired DNA synthesis. Mechanism: defective thymidine "
+        "production slows nuclear maturation while cytoplasmic "
+        "development continues, so cells become large and "
+        "over-segmented. Causes: vitamin B12 and folate deficiency, "
+        "plus methotrexate, hydroxycarbamide, trimethoprim and "
+        "myelodysplasia. Features: often present before the mean cell "
+        "volume rises, alongside oval macrocytes, glossitis and, in "
+        "B12 deficiency, subacute combined degeneration of the cord. "
+        "Ix: serum B12 and folate, reticulocyte count, lactate "
+        "dehydrogenase and bilirubin for ineffective erythropoiesis, "
+        "then intrinsic factor antibodies where pernicious anaemia is "
+        "likely. Mx: replace the deficient vitamin, giving B12 first "
+        "when both are low. Note: treating folate alone in combined "
+        "deficiency can precipitate irreversible neurological damage."
+    ),
+    "Smudge cells": (
+        "Fragile lymphocytes ruptured during film preparation, "
+        "leaving flattened nuclear debris with no visible cytoplasm. "
+        "Mechanism: the neoplastic lymphocytes of chronic lymphocytic "
+        "leukaemia lack the cytoskeletal protein vimentin and are "
+        "mechanically fragile, so they disintegrate under the "
+        "spreader. Causes: chronic lymphocytic leukaemia "
+        "overwhelmingly. A few appear in viral lymphocytosis and in "
+        "any film made roughly. Features: a mature lymphocytosis of 5 "
+        "times ten to the ninth per litre or more, often incidental, "
+        "with lymphadenopathy and splenomegaly in advanced disease. "
+        "Ix: peripheral blood flow cytometry is diagnostic and marrow "
+        "examination is not routinely required. Add direct "
+        "antiglobulin test and immunoglobulin levels. Mx: early-stage "
+        "disease is observed. Treat for progressive cytopenias, bulky "
+        "nodes or systemic symptoms. Note: a higher proportion of "
+        "smudge cells has been associated with a more indolent "
+        "course, so they are informative rather than artefactual."
+    ),
+    "Auer rods": (
+        "Needle-shaped crystalline inclusions of fused azurophilic "
+        "granules inside a myeloid blast, seen on a stained film or "
+        "marrow aspirate. Mechanism: abnormal primary granules "
+        "aggregate into a rod within the blast cytoplasm, which is "
+        "why they appear in myeloid lineage disease and never in "
+        "lymphoid. Causes: acute myeloid leukaemia, and high-grade "
+        "myelodysplastic syndrome, where their presence alone "
+        "upgrades the disease category. Features: bundles of rods "
+        "packing the cytoplasm, described as faggot cells, are "
+        "characteristic of acute promyelocytic leukaemia. Ix: urgent "
+        "film review, flow cytometry, cytogenetics and molecular "
+        "testing for the PML-RARA fusion, with a coagulation screen "
+        "and fibrinogen in every case. Mx: urgent haematology "
+        "referral. Suspected promyelocytic leukaemia gets all-trans "
+        "retinoic acid before confirmation. Note: faggot cells with "
+        "bleeding and a low fibrinogen is a medical emergency, "
+        "because disseminated intravascular coagulation kills these "
+        "patients before the leukaemia does."
+    ),
+    "Pseudohyperkalaemia": (
+        "A raised measured potassium that does not reflect the "
+        "concentration circulating in the patient, caused by "
+        "potassium leaving cells after the sample is drawn. "
+        "Mechanism: haemolysis during venepuncture is the commonest "
+        "route. Marked leucocytosis or thrombocytosis releases "
+        "potassium during clotting, and prolonged tourniquet time or "
+        "fist clenching raises it at the point of collection. "
+        "Features: a high potassium with no ECG change and no "
+        "clinical explanation, often in a patient with normal renal "
+        "function. Ix: repeat urgently as a lithium-heparin plasma "
+        "sample, taken without a tourniquet and delivered promptly, "
+        "and request the haemolysis index. A 12-lead ECG is done in "
+        "parallel. Mx: none for the artefact itself, beyond "
+        "correcting the collection technique. Note: never withhold "
+        "treatment for a genuine hyperkalaemia while waiting for a "
+        "repeat. Treat first if the ECG is abnormal or the patient is "
+        "at risk, then confirm."
+    ),
+    "Pseudothrombocytopenia": (
+        "A falsely low automated platelet count caused by platelets "
+        "clumping in the sample tube rather than by any deficiency in "
+        "the patient. Mechanism: EDTA exposes a platelet membrane "
+        "glycoprotein epitope that naturally occurring antibodies "
+        "bind at room temperature, causing aggregation. The analyser "
+        "counts clumps as single large cells or ignores them. "
+        "Features: an isolated low platelet count in a patient with "
+        "no bruising, no petechiae and no bleeding, often found "
+        "incidentally and sometimes chased with an unnecessary marrow "
+        "biopsy. Ix: examine the film for clumps, which is "
+        "diagnostic, then repeat the count in a citrate or heparin "
+        "tube, or on a warmed fresh sample. Mx: no treatment. Flag "
+        "the phenomenon on the record so later counts are collected "
+        "correctly. Note: any unexpected isolated thrombocytopenia "
+        "deserves a film before it deserves a haematology referral."
+    ),
+    "Corrected sodium": (
+        "The sodium concentration a patient would have once the "
+        "osmotic effect of a high glucose is accounted for, used to "
+        "tell dilution from true sodium loss. Mechanism: glucose is "
+        "osmotically active and confined to extracellular fluid, so "
+        "it pulls water out of cells and dilutes the measured sodium. "
+        "This is translocational hyponatraemia with normal tonicity, "
+        "not water excess. Criteria: add roughly 2.4 mmol/L to the "
+        "measured sodium for every 5.5 mmol/L that glucose exceeds "
+        "5.5. Features: seen in diabetic ketoacidosis and "
+        "hyperosmolar hyperglycaemic state, where the measured value "
+        "can look alarmingly low. Ix: paired glucose and sodium, "
+        "serum osmolality, ketones and a venous gas. Mx: treat the "
+        "hyperglycaemia and the sodium follows. Note: a corrected "
+        "sodium that is high signals a large free water deficit, so "
+        "watch it rise as glucose falls and slow the correction "
+        "rather than celebrating the number."
     ),
 }
 
