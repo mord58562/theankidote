@@ -16329,6 +16329,228 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "asteroid hyalosis vitreous"]],
         "summary": "",
     },
+    {
+        "name": "Klebsiella pneumoniae",
+        "aliases": ["Klebsiella", "Klebsiella infection", "hypervirulent Klebsiella"],
+        "utd": [["Overview", "klebsiella pneumoniae infection treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Pseudomonas aeruginosa",
+        "aliases": ["Pseudomonas", "Pseudomonas infection", "pseudomonal infection"],
+        "utd": [["Overview", "pseudomonas aeruginosa infection treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Acinetobacter baumannii",
+        "aliases": ["Acinetobacter", "Acinetobacter infection"],
+        "utd": [["Overview", "acinetobacter baumannii infection treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Stenotrophomonas maltophilia",
+        "aliases": ["Stenotrophomonas", "Stenotrophomonas infection"],
+        "utd": [["Overview", "stenotrophomonas maltophilia infection treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Serratia marcescens",
+        "aliases": ["Serratia", "Serratia infection"],
+        "utd": [["Overview", "serratia marcescens infection treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Proteus mirabilis",
+        "aliases": ["Proteus", "Proteus infection"],
+        "utd": [["Overview", "proteus mirabilis urinary tract infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Enterococcus faecalis",
+        "aliases": ["Enterococcus", "enterococcal infection", "Enterococcus faecium"],
+        "utd": [["Overview", "enterococcal infection treatment vancomycin resistance"]],
+        "summary": "",
+    },
+    {
+        "name": "Moraxella catarrhalis",
+        "aliases": ["Moraxella", "Moraxella infection", "Branhamella catarrhalis"],
+        "utd": [["Overview", "moraxella catarrhalis infection treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Haemophilus influenzae type b",
+        "aliases": ["Hib", "Hib disease", "Haemophilus influenzae b"],
+        "utd": [["Overview", "haemophilus influenzae type b invasive disease vaccine"]],
+        "summary": "",
+    },
+    {
+        "name": "Pasteurella multocida infection",
+        "aliases": ["Pasteurella multocida", "Pasteurella", "cat bite infection"],
+        "utd": [["Overview", "pasteurella multocida animal bite infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Capnocytophaga canimorsus infection",
+        "aliases": ["Capnocytophaga", "Capnocytophaga canimorsus"],
+        "utd": [["Overview", "capnocytophaga canimorsus sepsis dog bite asplenia"]],
+        "summary": "",
+    },
+    {
+        "name": "Vibrio vulnificus infection",
+        "aliases": ["Vibrio vulnificus", "Vibrio wound infection"],
+        "utd": [["Overview", "vibrio vulnificus wound infection sepsis"]],
+        "summary": "",
+    },
+    {
+        "name": "Aeromonas infection",
+        "aliases": ["Aeromonas", "Aeromonas hydrophila"],
+        "utd": [["Overview", "aeromonas hydrophila wound infection treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Mycobacterium marinum infection",
+        "aliases": ["Mycobacterium marinum", "fish tank granuloma", "swimming pool granuloma"],
+        "utd": [["Overview", "mycobacterium marinum fish tank granuloma treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Ureaplasma urealyticum",
+        "aliases": ["Ureaplasma", "Ureaplasma infection"],
+        "utd": [["Overview", "ureaplasma urealyticum urethritis treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Whipple procedure",
+        "aliases": ["pancreaticoduodenectomy", "pancreatoduodenectomy", "Whipple operation"],
+        "utd": [["Overview", "pancreaticoduodenectomy indications complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Hartmann procedure",
+        "aliases": ["Hartmann's procedure", "Hartmanns procedure", "sigmoid resection with end colostomy"],
+        "utd": [["Overview", "hartmann procedure indications reversal"]],
+        "summary": "",
+    },
+    {
+        "name": "Nissen fundoplication",
+        "aliases": ["fundoplication", "laparoscopic fundoplication", "antireflux surgery"],
+        "utd": [["Overview", "nissen fundoplication indications complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Ileostomy",
+        "aliases": ["loop ileostomy", "end ileostomy", "ileostomy formation"],
+        "utd": [["Overview", "ileostomy formation output management"]],
+        "summary": "",
+    },
+    {
+        "name": "Colostomy",
+        "aliases": ["loop colostomy", "end colostomy", "colostomy formation"],
+        "utd": [["Overview", "colostomy formation indications complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Abdominoperineal resection",
+        "aliases": ["APR", "abdominoperineal excision", "abdominoperineal excision of rectum"],
+        "utd": [["Overview", "abdominoperineal resection rectal cancer"]],
+        "summary": "",
+    },
+    {
+        "name": "Anterior resection",
+        "aliases": ["low anterior resection", "high anterior resection", "sphincter-saving rectal resection"],
+        "utd": [["Overview", "anterior resection rectal cancer total mesorectal excision"]],
+        "summary": "",
+    },
+    {
+        "name": "Cholecystectomy",
+        "aliases": ["laparoscopic cholecystectomy", "open cholecystectomy", "gallbladder removal"],
+        "utd": [["Overview", "laparoscopic cholecystectomy indications bile duct injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Appendicectomy",
+        "aliases": ["appendectomy", "laparoscopic appendicectomy", "appendix removal"],
+        "utd": [["Overview", "appendicectomy appendicitis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroidectomy",
+        "aliases": ["total thyroidectomy", "hemithyroidectomy", "thyroid lobectomy"],
+        "utd": [["Overview", "thyroidectomy indications complications hypocalcaemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Parathyroidectomy",
+        "aliases": ["parathyroid surgery", "minimally invasive parathyroidectomy", "parathyroid adenoma excision"],
+        "utd": [["Overview", "parathyroidectomy primary hyperparathyroidism indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Inguinal hernia repair",
+        "aliases": ["herniorrhaphy", "Lichtenstein repair", "hernioplasty"],
+        "utd": [["Overview", "inguinal hernia repair mesh technique complications"]],
+        "summary": "",
+    },
+    {
+        "name": "Cervical spine clearance",
+        "aliases": ["c-spine clearance", "NEXUS criteria", "Canadian C-spine rule"],
+        "utd": [["Overview", "cervical spine clearance trauma imaging decision rules"]],
+        "summary": "",
+    },
+    {
+        "name": "Pelvic binder",
+        "aliases": ["pelvic splint", "pelvic circumferential compression device"],
+        "utd": [["Overview", "pelvic binder application unstable pelvic fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Penetrating abdominal trauma",
+        "aliases": ["abdominal stab wound", "abdominal gunshot wound"],
+        "utd": [["Overview", "penetrating abdominal trauma management laparotomy"]],
+        "summary": "",
+    },
+    {
+        "name": "Trauma secondary survey",
+        "aliases": ["secondary survey"],
+        "utd": [["Overview", "trauma secondary survey head to toe examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Trauma tertiary survey",
+        "aliases": ["tertiary survey"],
+        "utd": [["Overview", "trauma tertiary survey missed injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Arterial ulcer",
+        "aliases": ["ischaemic ulcer", "arterial leg ulcer"],
+        "utd": [["Overview", "arterial leg ulcer peripheral arterial disease management"]],
+        "summary": "",
+    },
+    {
+        "name": "Septal deviation",
+        "aliases": ["deviated nasal septum", "deviated septum", "nasal septal deviation"],
+        "utd": [["Overview", "deviated nasal septum septoplasty management"]],
+        "summary": "",
+    },
+    {
+        "name": "Colour vision deficiency",
+        "aliases": ["colour blindness", "red-green colour blindness", "daltonism"],
+        "utd": [["Overview", "colour vision deficiency testing inherited"]],
+        "summary": "",
+    },
+    {
+        "name": "Folic acid supplementation",
+        "aliases": ["periconceptional folic acid", "folate supplementation", "folic acid in pregnancy"],
+        "utd": [["Overview", "folic acid supplementation pregnancy neural tube defect"]],
+        "summary": "",
+    },
+    {
+        "name": "Obstructive sleep apnoea in children",
+        "aliases": ["paediatric obstructive sleep apnoea", "childhood obstructive sleep apnoea"],
+        "utd": [["Overview", "paediatric obstructive sleep apnoea adenotonsillectomy"]],
+        "summary": "",
+    },
 ]
 
 
@@ -90447,6 +90669,744 @@ RICH_SUMMARIES = {
         "Note: dramatic on examination and silent for the patient, so "
         "treat it as a barrier to viewing the retina rather than a "
         "disease."
+    ),
+
+    "Klebsiella pneumoniae": (
+        "Gram-negative enteric bacillus and a leading cause of "
+        "hospital-acquired pneumonia, urinary infection and line "
+        "sepsis. Aetiology: a gut and oropharyngeal coloniser that "
+        "turns invasive in diabetes, alcohol use disorder and after "
+        "instrumentation. Clinical features: lobar pneumonia with "
+        "thick blood-stained sputum and upper-lobe cavitation is the "
+        "textbook picture. Hypervirulent strains cause liver abscess "
+        "with metastatic endophthalmitis, reported mostly from "
+        "South-East Asia. Ix: blood and sputum culture. Mucoid "
+        "colonies with a positive string test suggest the "
+        "hypervirulent capsule, and susceptibility testing matters "
+        "more than identification. Mx: ceftriaxone for susceptible "
+        "isolates and meropenem for extended-spectrum beta-lactamase "
+        "producers, guided by eTG and the local antibiogram. "
+        "Carbapenemase-producing isolates are notifiable in most "
+        "Australian jurisdictions and need contact precautions. Note: "
+        "it is intrinsically ampicillin-resistant, so a report "
+        "calling an isolate ampicillin-sensitive is a laboratory "
+        "error rather than a treatment option."
+    ),
+    "Pseudomonas aeruginosa": (
+        "Non-fermenting Gram-negative rod that thrives in water and "
+        "on plastic, and the organism that defines antipseudomonal "
+        "cover. Aetiology: colonises ventilator circuits, urinary "
+        "catheters, burns and the bronchiectatic or cystic fibrosis "
+        "airway. Neutropenia and structural lung disease are the main "
+        "host risks. Clinical features: ventilator-associated "
+        "pneumonia, malignant otitis externa in the older person with "
+        "diabetes, burn wound sepsis and ecthyma gangrenosum in the "
+        "neutropenic patient. Ix: culture, which grows a green "
+        "pigmented colony with a grape-like odour. Susceptibilities "
+        "are essential because resistance emerges on treatment. Mx: "
+        "piperacillin-tazobactam, ceftazidime, cefepime or meropenem, "
+        "with an aminoglycoside added for severe sepsis per eTG. "
+        "Ciprofloxacin is the only reliable oral option. Note: no "
+        "cephalosporin below ceftazidime covers it, which is why "
+        "ceftriaxone is the wrong drug for a hospital-acquired "
+        "pneumonia with pseudomonal risk factors."
+    ),
+    "Acinetobacter baumannii": (
+        "Gram-negative coccobacillus notorious for surviving on dry "
+        "hospital surfaces for weeks and for acquiring carbapenem "
+        "resistance. Aetiology: an intensive care organism spread on "
+        "hands and equipment. Prolonged ventilation, broad-spectrum "
+        "antibiotics and open wounds are the risk factors, and "
+        "outbreaks follow military and disaster casualties. Clinical "
+        "features: ventilator-associated pneumonia, line-related "
+        "bacteraemia and wound infection. Community-acquired disease "
+        "is rare in Australia but described in tropical northern "
+        "regions. Ix: culture with full susceptibility testing, since "
+        "empirical prediction is unreliable. Molecular typing is used "
+        "to confirm an outbreak. Mx: guided entirely by "
+        "susceptibilities. Meropenem if susceptible, otherwise "
+        "polymyxin-based therapy with infectious diseases input. "
+        "Contact precautions and environmental cleaning matter as "
+        "much as the antibiotic. Note: an Acinetobacter in sputum is "
+        "more often colonisation than infection, so treat the "
+        "patient's trajectory rather than the culture report."
+    ),
+    "Stenotrophomonas maltophilia": (
+        "Gram-negative bacillus that emerges under carbapenem "
+        "pressure, because it is intrinsically resistant to them. "
+        "Aetiology: an opportunist of the ventilated, neutropenic or "
+        "cystic fibrosis patient, almost always after prolonged "
+        "broad-spectrum antibiotics and usually with a central line "
+        "or endotracheal tube in place. Clinical features: pneumonia "
+        "and line-associated bacteraemia. Haemorrhagic pneumonia and "
+        "metastatic skin lesions are described in the profoundly "
+        "neutropenic. Ix: culture from a normally sterile site, with "
+        "the caveat that respiratory isolates frequently represent "
+        "colonisation. Mx: trimethoprim-sulfamethoxazole is first "
+        "line per eTG, with line removal where the device is the "
+        "source. Alternatives are limited and warrant infectious "
+        "diseases advice. Note: an organism that appears while a "
+        "patient is already on meropenem should raise it immediately, "
+        "since the carbapenem is selecting for it rather than "
+        "treating it."
+    ),
+    "Serratia marcescens": (
+        "Gram-negative enteric bacillus recognised historically by "
+        "its red pigment and clinically by inducible resistance. "
+        "Aetiology: a hospital opportunist transmitted on hands and "
+        "through contaminated infusions. Neonatal units, intensive "
+        "care and indwelling devices account for most disease. "
+        "Clinical features: urinary infection, pneumonia, bacteraemia "
+        "and occasional endocarditis in people who inject drugs. "
+        "Neonatal unit outbreaks with meningitis are the classic "
+        "reported cluster. Ix: culture with susceptibility testing. "
+        "Any isolate from a neonatal unit should prompt a look for a "
+        "shared source. Mx: meropenem or cefepime for serious "
+        "infection per eTG, avoiding third-generation cephalosporins "
+        "as monotherapy. Remove the implicated device. Note: it "
+        "carries an inducible AmpC beta-lactamase, so an isolate "
+        "reported sensitive to ceftriaxone can become resistant "
+        "during treatment and the patient relapses on an apparently "
+        "correct drug."
+    ),
+    "Proteus mirabilis": (
+        "Gram-negative enteric bacillus and the classic "
+        "urease-producing urinary pathogen. Aetiology: ascends from "
+        "the perineum, and long-term catheters, neurogenic bladder "
+        "and urinary stasis are the main risks. Clinical features: "
+        "complicated urinary infection, encrusted catheters and "
+        "recurrent pyelonephritis. Stones and obstruction are the "
+        "complication that returns the patient. Ix: urine culture, "
+        "with the laboratory noting swarming growth on agar. Alkaline "
+        "urine with a pH above 7 and struvite crystals support it, "
+        "and imaging is indicated to look for staghorn calculi. Mx: "
+        "an agent guided by susceptibilities, commonly trimethoprim, "
+        "cefalexin or amoxicillin-clavulanate per eTG. Nitrofurantoin "
+        "is intrinsically ineffective. Stones need urological "
+        "clearance, because antibiotics alone will not sterilise "
+        "them. Note: urease splits urea to ammonia, which alkalinises "
+        "urine and precipitates struvite, so a staghorn calculus is a "
+        "clue to the organism before the culture returns."
+    ),
+    "Enterococcus faecalis": (
+        "Gram-positive coccus of the bowel flora, an organism of low "
+        "virulence that causes disease when barriers are breached. "
+        "Aetiology: abdominal surgery, urinary instrumentation, "
+        "prosthetic valves and prolonged cephalosporin exposure, "
+        "which selects for it because enterococci are intrinsically "
+        "cephalosporin-resistant. Clinical features: urinary "
+        "infection, intra-abdominal and biliary sepsis, line "
+        "infection and subacute endocarditis. Ix: culture with "
+        "speciation, since faecium is far more often "
+        "vancomycin-resistant than faecalis. Repeat blood cultures "
+        "and an echocardiogram where bacteraemia is sustained, as "
+        "enterococcal bacteraemia seeds valves. Mx: amoxicillin for "
+        "susceptible faecalis, vancomycin for resistant strains, and "
+        "linezolid or daptomycin for vancomycin-resistant isolates "
+        "per eTG. Endocarditis needs combination therapy for up to "
+        "six weeks. Note: enterococcal bacteraemia is never dismissed "
+        "as a contaminant, unlike a single coagulase-negative "
+        "staphylococcus."
+    ),
+    "Moraxella catarrhalis": (
+        "Gram-negative diplococcus of the upper airway and the third "
+        "respiratory pathogen after pneumococcus and Haemophilus. "
+        "Aetiology: colonises the nasopharynx of most infants and of "
+        "adults with chronic obstructive pulmonary disease. Smoking "
+        "and winter seasonality raise the risk. Clinical features: "
+        "otitis media and sinusitis in children, and infective "
+        "exacerbation of chronic obstructive pulmonary disease in "
+        "adults, with increased sputum purulence. Invasive disease is "
+        "uncommon. Ix: usually none, as treatment is empirical. "
+        "Sputum culture is reserved for treatment failure or severe "
+        "exacerbation. Mx: amoxicillin-clavulanate, doxycycline or "
+        "trimethoprim-sulfamethoxazole per eTG. Plain amoxicillin "
+        "fails. Note: nearly all isolates produce beta-lactamase, "
+        "which is why an exacerbation that does not settle on "
+        "amoxicillin settles once clavulanate is added."
+    ),
+    "Haemophilus influenzae type b": (
+        "Encapsulated Gram-negative coccobacillus that was the "
+        "leading cause of childhood bacterial meningitis and "
+        "epiglottitis before vaccination. Aetiology: the "
+        "polyribosylribitol phosphate capsule confers invasiveness. "
+        "Peak incidence was under five years, and unvaccinated "
+        "children and some Aboriginal and Torres Strait Islander "
+        "communities carry residual risk. Clinical features: "
+        "epiglottitis with drooling and stridor, meningitis, septic "
+        "arthritis and periorbital cellulitis. The unimmunised "
+        "toddler sitting forward and refusing to swallow is the "
+        "presentation to know. Ix: blood culture and, where safe, "
+        "cerebrospinal fluid. Do not examine the throat of a child "
+        "with suspected epiglottitis before the airway is secured. "
+        "Mx: secure the airway in theatre, then ceftriaxone per eTG. "
+        "Rifampicin clears carriage in unvaccinated household "
+        "contacts. Note: the conjugate vaccine on the National "
+        "Immunisation Program cut invasive disease by more than 95 "
+        "per cent, so a case is a prompt to check the immunisation "
+        "record."
+    ),
+    "Pasteurella multocida infection": (
+        "Gram-negative coccobacillus of the oral flora of cats and "
+        "dogs, and the organism behind the rapidly inflamed bite. "
+        "Aetiology: inoculated by a cat or dog bite or scratch. Cat "
+        "bites carry the highest risk because the narrow puncture "
+        "seals over a deep inoculum. Clinical features: cellulitis "
+        "within 12 to 24 hours of the bite, far faster than "
+        "staphylococcal or streptococcal wound infection. "
+        "Tenosynovitis, septic arthritis and osteomyelitis follow "
+        "bites over joints, particularly of the hand. Ix: wound swab "
+        "and culture before antibiotics. Imaging where a joint or "
+        "tendon sheath may be involved or a tooth fragment retained. "
+        "Mx: amoxicillin-clavulanate is first line per eTG, covering "
+        "Pasteurella and the anaerobes present in any bite. Irrigate, "
+        "do not primarily close a hand or puncture wound, and review "
+        "tetanus status. Note: flucloxacillin alone fails, because it "
+        "has no activity against this organism, and that is the usual "
+        "reason a bite cellulitis worsens on treatment."
+    ),
+    "Capnocytophaga canimorsus infection": (
+        "Fastidious Gram-negative rod from canine oral flora that "
+        "causes fulminant sepsis in the asplenic host. Aetiology: a "
+        "dog bite, scratch or even a lick on broken skin. Asplenia, "
+        "alcohol use disorder and glucocorticoid therapy are the "
+        "risks that turn a trivial exposure into overwhelming "
+        "disease. Clinical features: fever and rapid progression to "
+        "septic shock with purpura fulminans and symmetrical "
+        "peripheral gangrene, typically two to five days after the "
+        "bite. The wound itself may look unremarkable. Ix: blood "
+        "cultures, which are slow to flag and may need prolonged "
+        "incubation. Examine the film for Gram-negative rods within "
+        "neutrophils, which is a striking early clue. Mx: resuscitate "
+        "and give urgent benzylpenicillin or piperacillin-tazobactam "
+        "per eTG, with intensive care support. Prophylactic "
+        "amoxicillin-clavulanate after any dog bite in an asplenic "
+        "person. Note: an asplenic patient with a dog at home needs "
+        "written advice to start antibiotics immediately after any "
+        "bite rather than wait for symptoms."
+    ),
+    "Vibrio vulnificus infection": (
+        "Halophilic Gram-negative rod of warm coastal water that "
+        "causes necrotising soft tissue infection and primary sepsis. "
+        "Aetiology: seawater exposure of a wound, or ingestion of raw "
+        "oysters. Chronic liver disease and haemochromatosis are the "
+        "dominant risks, because the organism requires iron. Cases "
+        "cluster in the northern Australian summer. Clinical "
+        "features: wound infection with haemorrhagic bullae and "
+        "necrosis within a day of exposure. Ingested infection "
+        "produces septic shock with bullae on the legs and very high "
+        "mortality in cirrhosis. Ix: blood and tissue culture, "
+        "telling the laboratory about the marine exposure so "
+        "selective media are used. Lactate and imaging assess the "
+        "extent of necrosis. Mx: urgent surgical debridement plus "
+        "doxycycline with ceftriaxone per eTG. Resuscitate and "
+        "involve intensive care early. Note: a cirrhotic patient with "
+        "leg bullae after handling seafood is this diagnosis until "
+        "proven otherwise, and delay to theatre is the main "
+        "determinant of death."
+    ),
+    "Aeromonas infection": (
+        "Gram-negative rod of fresh and brackish water causing wound "
+        "infection, gastroenteritis and occasionally sepsis. "
+        "Aetiology: exposure of a wound to fresh water, mud or "
+        "leeches, and ingestion of contaminated water. "
+        "Immunosuppression and chronic liver disease predispose to "
+        "invasive disease. Clinical features: cellulitis developing "
+        "within 48 hours of a freshwater injury, sometimes with "
+        "necrotising fasciitis. Watery diarrhoea is the commoner "
+        "community presentation. Ix: wound or blood culture, flagging "
+        "the water exposure to the laboratory. Stool culture requires "
+        "specific request, since routine media may not identify it. "
+        "Mx: ciprofloxacin or trimethoprim-sulfamethoxazole per eTG, "
+        "with debridement of necrotic tissue. Gastroenteritis is "
+        "usually self-limiting and needs rehydration alone. Note: it "
+        "is intrinsically resistant to amoxicillin and to "
+        "first-generation cephalosporins, so a freshwater wound "
+        "infection is the setting where routine cellulitis cover is "
+        "the wrong choice."
+    ),
+    "Mycobacterium marinum infection": (
+        "Slow-growing atypical mycobacterium causing indolent skin "
+        "and tendon infection after aquatic exposure. Aetiology: "
+        "inoculation through a minor injury while cleaning a fish "
+        "tank, handling fish or swimming. It grows best at 30 "
+        "degrees, which is why disease stays in cool peripheral "
+        "tissue. Clinical features: a papule or nodule on the hand or "
+        "forearm weeks after exposure, spreading proximally in a "
+        "sporotrichoid line along lymphatics. Tenosynovitis and "
+        "septic arthritis follow deeper inoculation. Ix: skin biopsy "
+        "for histology and mycobacterial culture, asking for "
+        "incubation at 30 degrees. Culture at standard temperature "
+        "misses it, and the occupational or hobby history is the key "
+        "that opens the diagnosis. Mx: clarithromycin with ethambutol "
+        "or rifampicin for one to two months beyond resolution, per "
+        "eTG. Deep infection needs surgical debridement. Note: "
+        "treatment runs for months rather than days, so it is worth "
+        "naming the organism before committing the patient to a "
+        "course of flucloxacillin that cannot work."
+    ),
+    "Ureaplasma urealyticum": (
+        "Cell-wall-deficient organism of the genital tract, a "
+        "commensal in many and a pathogen in some. Aetiology: "
+        "sexually transmitted colonisation of the urethra and vagina. "
+        "Carriage rates rise with number of partners, which makes the "
+        "distinction between colonisation and infection the central "
+        "clinical problem. Clinical features: non-gonococcal "
+        "urethritis with dysuria and scant discharge, and a contested "
+        "role in chorioamnionitis, preterm birth and neonatal lung "
+        "disease. Most carriers are asymptomatic. Ix: nucleic acid "
+        "amplification testing, but only after chlamydia, gonorrhoea "
+        "and Mycoplasma genitalium have been excluded, since those "
+        "are the treatable causes that matter. Mx: doxycycline for "
+        "persistent symptomatic urethritis per eTG, with azithromycin "
+        "as an alternative. Beta-lactams are useless because there is "
+        "no cell wall. Note: a positive result in an asymptomatic "
+        "person is not an indication to treat, and routine testing "
+        "outside persistent urethritis generates more anxiety than "
+        "benefit."
+    ),
+    "Whipple procedure": (
+        "En bloc resection of the pancreatic head, duodenum, distal "
+        "bile duct and gallbladder, with reconstruction by three "
+        "anastomoses. Indications: resectable pancreatic head "
+        "adenocarcinoma, ampullary, distal cholangiocarcinoma and "
+        "duodenal tumours, plus selected neuroendocrine and "
+        "premalignant cystic lesions. Ix: pancreatic protocol "
+        "computed tomography to judge arterial and venous "
+        "involvement, staging for metastases, and biliary drainage "
+        "only where cholangitis or delay demands it. Nutrition and "
+        "fitness are assessed before booking. Complications: "
+        "pancreatic fistula is the defining risk and drives most "
+        "morbidity. Delayed gastric emptying is the commonest, and "
+        "post-pancreatectomy haemorrhage the most lethal. Long-term "
+        "exocrine insufficiency and new diabetes are usual. Mx: "
+        "enhanced recovery pathways, drain amylase on day one to "
+        "detect fistula, and pancreatic enzyme replacement on "
+        "discharge. Note: mortality falls sharply with hospital "
+        "volume, which is why the operation is centralised to "
+        "high-volume Australian units."
+    ),
+    "Hartmann procedure": (
+        "Sigmoid resection with closure of the rectal stump and "
+        "formation of an end colostomy, avoiding an anastomosis in a "
+        "hostile abdomen. Indications: perforated diverticulitis with "
+        "faecal peritonitis, obstructing or perforated left-sided "
+        "colorectal cancer, and sigmoid volvulus with gangrene. It is "
+        "the operation chosen when an anastomosis would probably "
+        "leak. Ix: computed tomography to confirm perforation and "
+        "staging where malignancy is suspected. Resuscitation, "
+        "lactate and cross-match precede theatre. Complications: "
+        "stoma retraction and parastomal hernia, pelvic collection "
+        "from the rectal stump, and wound infection. Mx: source "
+        "control at laparotomy, stoma education before discharge, and "
+        "histology to direct oncological follow-up. Reversal is "
+        "considered at around six months once the patient has "
+        "recovered. Note: a substantial minority of stomas are never "
+        "reversed, so the word temporary should be used carefully "
+        "when consenting a frail patient."
+    ),
+    "Nissen fundoplication": (
+        "Mobilisation of the gastric fundus and wrapping it 360 "
+        "degrees around the lower oesophagus, with hiatal repair, to "
+        "restore the antireflux barrier. Indications: "
+        "gastro-oesophageal reflux disease that responds to a proton "
+        "pump inhibitor but recurs on withdrawal, intolerance of "
+        "long-term therapy, large hiatus hernia and volume reflux "
+        "with aspiration. Ix: endoscopy to document oesophagitis and "
+        "exclude malignancy, oesophageal manometry to exclude "
+        "achalasia or failed peristalsis, and pH studies where "
+        "symptoms and endoscopy disagree. Complications: dysphagia in "
+        "the early weeks, gas bloat with inability to belch or vomit, "
+        "and wrap migration or breakdown with recurrent reflux. Mx: "
+        "laparoscopic approach as standard, graded diet for six "
+        "weeks, and dilatation for persistent dysphagia. A partial "
+        "wrap is chosen where motility is impaired. Note: the single "
+        "strongest predictor of a good result is that the symptoms "
+        "responded to acid suppression in the first place."
+    ),
+    "Ileostomy": (
+        "A stoma formed from ileum, either a loop defunctioning a "
+        "distal anastomosis or an end stoma after colectomy. "
+        "Indications: protection of a low colorectal or ileal pouch "
+        "anastomosis, emergency colectomy for acute severe colitis, "
+        "and faecal diversion for perineal sepsis. Clinical features: "
+        "spouted and sited in the right iliac fossa, with liquid "
+        "green to brown effluent of about 500 to 1000 mL a day. A "
+        "flush stoma leaks and excoriates skin, which is why spouting "
+        "matters. Complications: high output with dehydration and "
+        "acute kidney injury, hyponatraemia, peristomal dermatitis, "
+        "retraction and parastomal hernia. Mx: measure output daily. "
+        "For high output restrict hypotonic fluids, give oral "
+        "rehydration solution, loperamide before meals and a proton "
+        "pump inhibitor, with dietitian and stomal therapy input. "
+        "Note: a patient readmitted dehydrated within a fortnight of "
+        "discharge usually has a high-output stoma that was never "
+        "counted, not a new intra-abdominal problem."
+    ),
+    "Colostomy": (
+        "A stoma formed from colon, most often in the left iliac "
+        "fossa, producing formed stool at much lower volume than an "
+        "ileostomy. Indications: Hartmann procedure for perforated "
+        "diverticulitis or obstructing cancer, defunctioning for "
+        "obstructing rectal tumours and perineal or perianal sepsis, "
+        "and permanent diversion after abdominoperineal resection. "
+        "Clinical features: flush to the skin rather than spouted, "
+        "with effluent from one to three times daily, and often "
+        "manageable with a closed pouch. Complications: parastomal "
+        "hernia, prolapse, stenosis, retraction and ischaemia of the "
+        "stoma. Mx: preoperative siting by a stomal therapy nurse, "
+        "which measurably reduces leakage and readmission. Education, "
+        "appliance choice and community stomal therapy follow-up "
+        "before discharge, with supplies through the Stoma Appliance "
+        "Scheme. Note: a dusky stoma in the first days needs "
+        "assessment of the depth of ischaemia with a test tube and "
+        "light, because superficial discoloration is watched while "
+        "full-thickness necrosis returns to theatre."
+    ),
+    "Abdominoperineal resection": (
+        "Removal of the rectum, anal canal and sphincter complex "
+        "through combined abdominal and perineal approaches, leaving "
+        "a permanent end colostomy. Indications: low rectal cancer "
+        "involving the sphincter or levators, anal cancer persisting "
+        "after chemoradiotherapy, and rarely refractory perianal "
+        "Crohn disease. Ix: pelvic magnetic resonance imaging to "
+        "define the circumferential resection margin, computed "
+        "tomography for staging and endoscopy of the rest of the "
+        "colon. Neoadjuvant chemoradiotherapy is given for locally "
+        "advanced disease. Complications: perineal wound breakdown, "
+        "which is the characteristic problem and worse after "
+        "radiotherapy. Sexual and urinary dysfunction from pelvic "
+        "autonomic nerve injury, and perineal hernia. Mx: "
+        "preoperative stoma siting, prone perineal dissection with "
+        "flap reconstruction where the defect is large, and long-term "
+        "surveillance. Note: it is chosen when the tumour reaches the "
+        "sphincter, so the consent conversation is about a permanent "
+        "stoma from the outset rather than a possible one."
+    ),
+    "Anterior resection": (
+        "Resection of the rectosigmoid or rectum with colorectal or "
+        "coloanal anastomosis, preserving the sphincter. Indications: "
+        "upper and mid rectal cancer, and low rectal cancer where a "
+        "margin below the tumour can be achieved. Total mesorectal "
+        "excision is the oncological standard. Ix: pelvic magnetic "
+        "resonance imaging for the circumferential resection margin, "
+        "staging computed tomography and complete colonoscopy. "
+        "Neoadjuvant therapy for locally advanced tumours. "
+        "Complications: anastomotic leak, which peaks around day five "
+        "to seven and presents as tachycardia, ileus or a rising "
+        "C-reactive protein before peritonitis. Anastomotic stricture "
+        "and pelvic nerve injury also occur. Mx: a defunctioning loop "
+        "ileostomy for low anastomoses, enhanced recovery care, and "
+        "urgent computed tomography with water-soluble contrast if "
+        "leak is suspected. Note: low anterior resection syndrome, "
+        "with urgency, clustering and incontinence, affects most "
+        "patients after a low anastomosis and should be discussed "
+        "before surgery rather than after."
+    ),
+    "Cholecystectomy": (
+        "Removal of the gallbladder, almost always laparoscopically, "
+        "and one of the commonest general surgical operations in "
+        "Australia. Indications: symptomatic gallstones, acute "
+        "cholecystitis, biliary pancreatitis after recovery, and "
+        "gallstone-related common bile duct obstruction once the duct "
+        "is cleared. Ix: ultrasound for stones and duct calibre, "
+        "liver function tests, and magnetic resonance "
+        "cholangiopancreatography where duct stones are suspected. "
+        "Intraoperative cholangiography defines anatomy. "
+        "Complications: bile duct injury, which is uncommon but "
+        "life-changing, bile leak from the cystic duct stump, "
+        "retained stones and conversion to open surgery. Mx: early "
+        "operation within a week of admission for acute cholecystitis "
+        "reduces complications and length of stay. Achieve the "
+        "critical view of safety before dividing anything, and "
+        "convert or perform subtotal cholecystectomy where the "
+        "triangle is hostile. Note: persistent pain and deranged "
+        "liver tests days after discharge means bile leak or retained "
+        "stone until imaging says otherwise."
+    ),
+    "Appendicectomy": (
+        "Removal of the vermiform appendix, usually laparoscopic, and "
+        "the standard treatment for acute appendicitis. Indications: "
+        "acute appendicitis, appendiceal perforation, and incidental "
+        "resection of an appendiceal neoplasm found on imaging. Ix: "
+        "clinical diagnosis supported by inflammatory markers. "
+        "Ultrasound is first line in children and pregnancy, with "
+        "computed tomography in adults where the picture is unclear. "
+        "A negative appendicectomy rate near 10 per cent is accepted. "
+        "Complications: surgical site infection, intra-abdominal "
+        "collection after perforated appendicitis, ileus and stump "
+        "appendicitis. Mx: resuscitation, antibiotics per eTG and "
+        "prompt theatre. A phlegmon or walled-off abscess may be "
+        "managed with antibiotics and drainage, with interval surgery "
+        "considered. Send the specimen for histology in every case. "
+        "Note: an appendiceal neuroendocrine tumour or mucinous "
+        "neoplasm turns up in a small proportion of routine "
+        "specimens, which is why the histology report is always read "
+        "rather than assumed."
+    ),
+    "Thyroidectomy": (
+        "Removal of all or part of the thyroid gland, for malignancy, "
+        "compression or uncontrolled hyperthyroidism. Indications: "
+        "thyroid cancer, an indeterminate or large nodule, "
+        "retrosternal goitre with compressive symptoms, and Graves "
+        "disease where drugs and radioiodine are unsuitable. Ix: "
+        "ultrasound with fine needle aspiration and Bethesda "
+        "categorisation, thyroid function tests, and preoperative "
+        "laryngoscopy to document cord function. Render the "
+        "thyrotoxic patient euthyroid before theatre. Complications: "
+        "recurrent laryngeal nerve injury causing hoarseness, "
+        "hypoparathyroidism with hypocalcaemia, haematoma causing "
+        "airway compromise, and permanent hypothyroidism after total "
+        "resection. Mx: intraoperative nerve monitoring, parathyroid "
+        "preservation, and measurement of calcium and parathyroid "
+        "hormone after surgery. Thyroxine replacement and, in cancer, "
+        "thyroid-stimulating hormone suppression as indicated. Note: "
+        "an expanding neck haematoma is an airway emergency opened at "
+        "the bedside, not a problem taken back to theatre first."
+    ),
+    "Parathyroidectomy": (
+        "Excision of the overactive parathyroid tissue, the only "
+        "curative treatment for primary hyperparathyroidism. "
+        "Indications: symptomatic disease with stones, fractures or "
+        "neuromuscular symptoms, and asymptomatic disease with age "
+        "under 50, marked hypercalcaemia, reduced renal function or "
+        "osteoporosis. Ix: paired calcium and parathyroid hormone "
+        "with vitamin D and 24-hour urinary calcium, which also "
+        "excludes familial hypocalciuric hypercalcaemia. Sestamibi "
+        "scanning and ultrasound localise an adenoma before a "
+        "targeted approach. Complications: persistent or recurrent "
+        "hyperparathyroidism from missed multiglandular disease, "
+        "recurrent laryngeal nerve injury and transient "
+        "hypocalcaemia. Mx: intraoperative parathyroid hormone "
+        "monitoring, with a fall of more than half confirming cure. "
+        "Monitor calcium afterwards and replace calcium and "
+        "calcitriol for hungry bone syndrome. Note: localisation "
+        "studies guide the incision but do not make the diagnosis, "
+        "which is biochemical, so a negative scan is not a reason to "
+        "withhold surgery."
+    ),
+    "Inguinal hernia repair": (
+        "Reduction of the hernia sac and reinforcement of the "
+        "posterior inguinal wall, usually with mesh, by open or "
+        "laparoscopic approach. Indications: symptomatic inguinal "
+        "hernia, and any hernia that has incarcerated or "
+        "strangulated. Watchful waiting is reasonable for a minimally "
+        "symptomatic hernia in an older man. Ix: clinical diagnosis. "
+        "Ultrasound or computed tomography only where the examination "
+        "is equivocal or a recurrence needs mapping. Complications: "
+        "chronic groin pain from nerve entrapment, which is the "
+        "commonest long-term problem, recurrence, seroma, and "
+        "testicular ischaemia or atrophy. Mx: tension-free mesh "
+        "repair as standard, with laparoscopic repair favoured for "
+        "bilateral or recurrent hernias and for faster return to "
+        "work. Identify and protect the ilioinguinal, iliohypogastric "
+        "and genitofemoral branches. Note: a strangulated hernia is a "
+        "surgical emergency, and the tender irreducible lump with "
+        "obstruction goes to theatre rather than getting a repeat "
+        "attempt at reduction."
+    ),
+    "Cervical spine clearance": (
+        "The process of excluding a cervical spine injury so "
+        "immobilisation can be removed, using validated decision "
+        "rules rather than judgement alone. Criteria: the NEXUS rule "
+        "clears the alert patient with no midline tenderness, no "
+        "focal deficit, normal alertness, no intoxication and no "
+        "distracting injury. The Canadian C-spine rule adds age and "
+        "mechanism and asks whether the patient can rotate 45 degrees "
+        "each way. Ix: computed tomography is the test of choice "
+        "where imaging is indicated, since plain films miss injuries. "
+        "Magnetic resonance imaging is added for neurological deficit "
+        "or suspected ligamentous injury with a normal scan. Mx: "
+        "maintain a hard collar and manual in-line stabilisation "
+        "until cleared. The obtunded patient with a normal computed "
+        "tomography is cleared according to local protocol, usually "
+        "in consultation with the spinal service. Note: clearance is "
+        "clinical first, and the decision rules exist to spare scans "
+        "in the well patient rather than to justify one in the "
+        "unwell."
+    ),
+    "Pelvic binder": (
+        "A circumferential device applied at the level of the greater "
+        "trochanters to reduce and splint an unstable pelvic "
+        "fracture. Indications: haemodynamic instability with a "
+        "suggestive mechanism, and any suspected open-book or "
+        "vertical shear injury. Applied prehospital on mechanism "
+        "alone in NSW Ambulance practice rather than after imaging. "
+        "Mechanism: closes the pelvic ring, reduces volume and "
+        "tamponades venous bleeding while allowing clot to form. It "
+        "does not control arterial haemorrhage. Ix: pelvic radiograph "
+        "or computed tomography with the binder in place, accepting "
+        "that a reduced ring can hide the original displacement. "
+        "Complications: pressure injury if left beyond 24 hours, and "
+        "over-reduction of a lateral compression injury. Mx: apply at "
+        "trochanteric level, internally rotate and bind the legs, and "
+        "move to angiography or preperitoneal packing if instability "
+        "persists. Note: do not spring or repeatedly examine the "
+        "pelvis, since the manoeuvre disrupts clot and adds nothing "
+        "that imaging will not answer."
+    ),
+    "Penetrating abdominal trauma": (
+        "Injury breaching the peritoneum by stabbing, gunshot or "
+        "impalement, where the decision is whether to operate rather "
+        "than what is damaged. Clinical features: peritonitis, "
+        "evisceration, haemodynamic instability or an impaled object "
+        "are absolute indications for laparotomy. Gunshot wounds "
+        "crossing the peritoneum nearly always need exploration, "
+        "while stab wounds often do not. Ix: computed tomography with "
+        "contrast in the stable patient, and extended focused "
+        "assessment with sonography for trauma at the bedside. Local "
+        "wound exploration determines peritoneal breach in anterior "
+        "stab wounds. Mx: resuscitate with blood rather than "
+        "crystalloid, activate the massive transfusion protocol where "
+        "needed, give tranexamic acid within three hours and "
+        "antibiotics per eTG. Damage control laparotomy for the "
+        "unstable patient. Note: selective non-operative management "
+        "of the stable stab wound requires serial examination in a "
+        "monitored bed, so it is a decision to watch closely rather "
+        "than a decision to do nothing."
+    ),
+    "Trauma secondary survey": (
+        "The head-to-toe examination and history taken once the "
+        "primary survey is complete and life threats are controlled. "
+        "Indications: begun only after airway, breathing, "
+        "circulation, disability and exposure have been addressed and "
+        "the patient is responding to resuscitation. It restarts from "
+        "the beginning if the patient deteriorates. Examination: "
+        "scalp and face, pupils, neck, chest, abdomen, pelvis, "
+        "perineum and limbs, with log roll to inspect the back. "
+        "Neurological examination is documented in full, and the "
+        "history is taken as allergies, medications, past history, "
+        "last meal and events. Ix: targeted imaging and bloods "
+        "informed by the findings, including computed tomography of "
+        "regions identified as injured. Mx: splint fractures, dress "
+        "wounds, give analgesia, check tetanus status and document "
+        "every finding for the trauma record. Note: it is where the "
+        "injuries that do not kill in the first minutes are found, "
+        "and skipping it is how a missed fracture or occult wound "
+        "becomes a complaint."
+    ),
+    "Trauma tertiary survey": (
+        "A repeat full examination and review of all imaging within "
+        "24 hours of admission, designed to catch what the first two "
+        "surveys missed. Indications: every major trauma admission, "
+        "and specifically the patient who was intubated, intoxicated "
+        "or distracted by a painful injury when first assessed. "
+        "Examination: complete head-to-toe review once the patient "
+        "can cooperate, with formal reporting of all films and a "
+        "check that every abnormality has a plan. Ix: additional "
+        "imaging for newly localised pain, commonly hands, feet, and "
+        "the thoracolumbar spine, which are the classic sites of "
+        "missed injury. Mx: document findings, add the new injuries "
+        "to the problem list and involve the relevant specialty. "
+        "Missed injuries are recorded for the trauma registry and "
+        "quality review. Note: roughly one in ten major trauma "
+        "patients has an injury found only at this stage, which is "
+        "why it is a scheduled ward round item and not an optional "
+        "extra."
+    ),
+    "Arterial ulcer": (
+        "A skin ulcer caused by inadequate arterial perfusion, the "
+        "painful counterpart to the venous ulcer and a marker of "
+        "critical limb ischaemia. Aetiology: peripheral arterial "
+        "disease from atherosclerosis, with smoking, diabetes, "
+        "chronic kidney disease and hyperlipidaemia as the drivers. "
+        "Clinical features: a punched-out ulcer with a well-defined "
+        "border and pale necrotic base, over the toes, heel or "
+        "lateral malleolus. Pain is severe, worse at night and "
+        "relieved by hanging the leg out of bed. The limb is cool "
+        "with absent pulses and hair loss. Ix: ankle-brachial index, "
+        "remembering that calcified vessels in diabetes give falsely "
+        "high readings. Duplex ultrasound and angiography map the "
+        "lesion for revascularisation. Mx: urgent vascular referral, "
+        "revascularisation where feasible, and secondary prevention "
+        "with a statin, antiplatelet and smoking cessation. "
+        "Compression is contraindicated. Note: the distinction from a "
+        "venous ulcer is what decides whether compression heals the "
+        "leg or destroys it, so check perfusion before any bandage "
+        "goes on."
+    ),
+    "Septal deviation": (
+        "Displacement of the nasal septum from the midline, present "
+        "in most people and symptomatic in a minority. Aetiology: "
+        "developmental asymmetry of growth, or trauma, including "
+        "birth trauma and an old nasal fracture that was never "
+        "reduced. Clinical features: unilateral nasal obstruction, "
+        "often with alternating congestion from the nasal cycle, plus "
+        "snoring, crusting and recurrent epistaxis from the convex "
+        "side. Ix: anterior rhinoscopy after topical decongestion, "
+        "which distinguishes fixed structural narrowing from mucosal "
+        "swelling. Computed tomography only where sinus disease is "
+        "also suspected. Mx: treat coexisting rhinitis first with "
+        "intranasal corticosteroid, since mucosal disease is often "
+        "the reversible part. Septoplasty, sometimes with turbinate "
+        "reduction, for persistent obstruction. Note: a deviation "
+        "seen on imaging does not explain bilateral blockage, so look "
+        "for rhinitis, polyps or adenoids before attributing symptoms "
+        "to the septum."
+    ),
+    "Colour vision deficiency": (
+        "Reduced ability to discriminate colours, usually inherited "
+        "and occasionally acquired from disease of the optic nerve or "
+        "retina. Aetiology: X-linked recessive defects of the red and "
+        "green cone photopigments affect about 8 per cent of males "
+        "and under 1 per cent of females. Acquired loss follows optic "
+        "neuritis, glaucoma, macular disease and drugs such as "
+        "ethambutol. Clinical features: difficulty distinguishing "
+        "reds from greens, usually lifelong and noticed at school. "
+        "Acquired deficiency is often asymmetrical and progressive, "
+        "and a blue-yellow defect points to retinal rather than "
+        "inherited disease. Ix: Ishihara plates for red-green "
+        "screening, with more formal arrangement testing where "
+        "occupational certification matters. Test each eye "
+        "separately, since inherited disease is symmetrical. Mx: no "
+        "treatment for the inherited form. Counsel about occupations "
+        "with colour standards, including piloting and some rail and "
+        "electrical trades. Note: a monocular or recently acquired "
+        "change is a red flag for optic nerve disease and warrants "
+        "ophthalmology review rather than reassurance."
+    ),
+    "Folic acid supplementation": (
+        "Periconceptional folic acid, taken before conception and "
+        "through the first trimester, to reduce neural tube defects. "
+        "Indications: all women planning pregnancy. The standard "
+        "Australian dose is 400 to 500 micrograms daily from at least "
+        "one month before conception until the end of the first "
+        "trimester. Risk factors: a high dose of 5 mg daily is used "
+        "for a previous affected pregnancy, diabetes, obesity, "
+        "malabsorption and for women on antiepileptics such as sodium "
+        "valproate or carbamazepine, or on methotrexate or "
+        "sulfasalazine. Mx: advise supplementation at every "
+        "preconception and early antenatal visit, since the neural "
+        "tube closes by day 28 and is often shut before the pregnancy "
+        "is recognised. Dietary folate alone is insufficient. "
+        "Australian notes: mandatory folic acid fortification of "
+        "bread flour lowered defect rates at population level but "
+        "does not replace individual supplementation. Note: high-dose "
+        "folate can mask the anaemia of vitamin B12 deficiency while "
+        "neuropathy progresses, so check B12 where deficiency is "
+        "plausible."
+    ),
+    "Obstructive sleep apnoea in children": (
+        "Recurrent upper airway obstruction during sleep in a child, "
+        "driven by adenotonsillar hypertrophy rather than by obesity "
+        "in most cases. Aetiology: adenotonsillar hypertrophy is the "
+        "leading cause, with obesity, craniofacial anomalies, Down "
+        "syndrome and neuromuscular disease as the other "
+        "contributors. Peak age is two to eight years. Clinical "
+        "features: habitual snoring with witnessed pauses, mouth "
+        "breathing and restless sleep. Daytime consequences differ "
+        "from adults and appear as inattention, behavioural problems "
+        "and poor school performance rather than sleepiness. Growth "
+        "faltering and enuresis also occur. Ix: history and "
+        "examination of the tonsils. Polysomnography is the reference "
+        "test and is prioritised for children under two, those with "
+        "comorbidity, or where surgery is uncertain. Mx: "
+        "adenotonsillectomy is first line and usually curative. "
+        "Intranasal corticosteroid or montelukast for mild disease, "
+        "and weight management where relevant. Note: a snoring child "
+        "with behavioural difficulty may be misattributed to "
+        "attention deficit disorder, so ask about sleep before "
+        "treating the daytime behaviour."
     ),
 }
 
