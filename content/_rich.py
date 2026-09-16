@@ -15945,6 +15945,210 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "vitamin A deficiency xerophthalmia"]],
         "summary": "",
     },
+    {
+        "name": "Cytochrome P450 interactions",
+        "aliases": ["CYP450 interactions", "CYP interactions", "P450 drug interactions", "CYP3A4 interaction"],
+        "utd": [["Overview", "drug interactions cytochrome P450"]],
+        "summary": "",
+    },
+    {
+        "name": "Zero-order kinetics",
+        "aliases": ["saturation kinetics", "first-order kinetics", "saturable kinetics"],
+        "utd": [["Overview", "zero order kinetics drug elimination"]],
+        "summary": "",
+    },
+    {
+        "name": "Prodrug",
+        "aliases": ["prodrugs", "pro-drug", "inactive precursor drug"],
+        "utd": [["Overview", "prodrug activation metabolism"]],
+        "summary": "",
+    },
+    {
+        "name": "Pharmacogenomics",
+        "aliases": ["pharmacogenetics", "drug gene testing", "genotype guided prescribing"],
+        "utd": [["Overview", "pharmacogenomics drug metabolism testing"]],
+        "summary": "",
+    },
+    {
+        "name": "Loading dose",
+        "aliases": ["loading doses", "load dose", "stat loading dose"],
+        "utd": [["Overview", "loading dose pharmacokinetics"]],
+        "summary": "",
+    },
+    {
+        "name": "Protein binding displacement",
+        "aliases": ["albumin binding displacement", "displacement interaction", "plasma protein binding interaction", "free drug fraction"],
+        "utd": [["Overview", "protein binding displacement drug interaction"]],
+        "summary": "",
+    },
+    {
+        "name": "Beers criteria",
+        "aliases": ["Beers list", "potentially inappropriate medication list", "STOPP START criteria", "inappropriate prescribing in the elderly"],
+        "utd": [["Overview", "Beers criteria potentially inappropriate medications older adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug half-life",
+        "aliases": ["elimination half-life", "plasma half-life", "half life of a drug"],
+        "utd": [["Overview", "drug half life steady state"]],
+        "summary": "",
+    },
+    {
+        "name": "Antibiogram",
+        "aliases": ["cumulative antibiogram", "local susceptibility data", "cumulative susceptibility report"],
+        "utd": [["Overview", "antibiogram local antimicrobial susceptibility"]],
+        "summary": "",
+    },
+    {
+        "name": "Empirical antibiotic therapy",
+        "aliases": ["empiric antibiotics", "empirical antimicrobial therapy", "best guess antibiotics"],
+        "utd": [["Overview", "empirical antibiotic therapy choice sepsis"]],
+        "summary": "",
+    },
+    {
+        "name": "Antifungal therapy",
+        "aliases": ["antifungals", "antifungal agents", "systemic antifungal treatment"],
+        "utd": [["Overview", "antifungal therapy candidaemia aspergillosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Hypersensitivity reaction types",
+        "aliases": ["Gell and Coombs classification", "type I hypersensitivity", "type IV hypersensitivity", "delayed hypersensitivity reaction"],
+        "utd": [["Overview", "hypersensitivity reactions classification Gell Coombs"]],
+        "summary": "",
+    },
+    {
+        "name": "Complement pathway",
+        "aliases": ["complement system", "classical complement pathway", "alternative complement pathway", "complement cascade"],
+        "utd": [["Overview", "complement system pathways deficiency"]],
+        "summary": "",
+    },
+    {
+        "name": "Immunodeficiency screening",
+        "aliases": ["immune workup", "primary immunodeficiency screen", "recurrent infection workup", "immunodeficiency investigation"],
+        "utd": [["Overview", "immunodeficiency evaluation recurrent infection adult"]],
+        "summary": "",
+    },
+    {
+        "name": "X-linked inheritance",
+        "aliases": ["X-linked recessive", "X-linked dominant", "sex-linked inheritance", "X linked inheritance pattern"],
+        "utd": [["Overview", "X linked inheritance pattern genetics"]],
+        "summary": "",
+    },
+    {
+        "name": "Genetic anticipation",
+        "aliases": ["anticipation genetics", "repeat expansion anticipation", "worsening across generations"],
+        "utd": [["Overview", "genetic anticipation trinucleotide repeat expansion"]],
+        "summary": "",
+    },
+    {
+        "name": "Genomic imprinting",
+        "aliases": ["imprinting disorder", "uniparental disomy", "parent of origin effect"],
+        "utd": [["Overview", "genomic imprinting Prader-Willi Angelman"]],
+        "summary": "",
+    },
+    {
+        "name": "Penetrance",
+        "aliases": ["incomplete penetrance", "reduced penetrance", "variable expressivity", "age-related penetrance"],
+        "utd": [["Overview", "penetrance expressivity genetic variant"]],
+        "summary": "",
+    },
+    {
+        "name": "Chromosomal microarray",
+        "aliases": ["microarray testing", "array CGH", "copy number variant testing", "comparative genomic hybridisation"],
+        "utd": [["Overview", "chromosomal microarray copy number variant developmental delay"]],
+        "summary": "",
+    },
+    {
+        "name": "Variant of uncertain significance",
+        "aliases": ["VUS", "variant of unknown significance", "uncertain genetic variant"],
+        "utd": [["Overview", "variant of uncertain significance genetic testing interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Whole exome sequencing",
+        "aliases": ["exome sequencing", "WES", "clinical exome", "whole genome sequencing"],
+        "utd": [["Overview", "whole exome sequencing diagnostic yield"]],
+        "summary": "",
+    },
+    {
+        "name": "Oxygen dissociation curve",
+        "aliases": ["oxyhaemoglobin dissociation curve", "oxygen haemoglobin curve", "haemoglobin saturation curve"],
+        "utd": [["Overview", "oxyhemoglobin dissociation curve shift"]],
+        "summary": "",
+    },
+    {
+        "name": "Ventilation perfusion mismatch",
+        "aliases": ["V/Q mismatch", "VQ mismatch", "ventilation perfusion inequality", "V/Q scan mismatch"],
+        "utd": [["Overview", "ventilation perfusion mismatch hypoxaemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Dead space ventilation",
+        "aliases": ["physiological dead space", "anatomical dead space", "alveolar dead space", "wasted ventilation"],
+        "utd": [["Overview", "dead space ventilation physiology"]],
+        "summary": "",
+    },
+    {
+        "name": "Auto-PEEP",
+        "aliases": ["intrinsic PEEP", "breath stacking", "dynamic hyperinflation", "air trapping ventilation"],
+        "utd": [["Overview", "auto PEEP dynamic hyperinflation ventilation"]],
+        "summary": "",
+    },
+    {
+        "name": "Extubation criteria",
+        "aliases": ["cuff leak test", "readiness for extubation"],
+        "utd": [["Overview", "extubation readiness cuff leak test"]],
+        "summary": "",
+    },
+    {
+        "name": "Tidal volume",
+        "aliases": ["tidal volumes", "set tidal volume"],
+        "utd": [["Overview", "tidal volume lung protective ventilation"]],
+        "summary": "",
+    },
+    {
+        "name": "Starling forces",
+        "aliases": ["Starling equation", "Starling law of the capillary", "oncotic pressure gradient", "capillary filtration forces"],
+        "utd": [["Overview", "Starling forces capillary fluid exchange oedema"]],
+        "summary": "",
+    },
+    {
+        "name": "Capillary refill time",
+        "aliases": ["capillary refill", "delayed capillary refill", "refill time"],
+        "utd": [["Overview", "capillary refill time peripheral perfusion assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Mixed venous oxygen saturation",
+        "aliases": ["central venous oxygen saturation", "venous oxygen saturation", "SvO2 monitoring"],
+        "utd": [["Overview", "mixed venous oxygen saturation ScvO2 interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Acid-base compensation",
+        "aliases": ["expected compensation", "compensatory response acid base", "metabolic compensation"],
+        "utd": [["Overview", "acid base compensation expected formulas"]],
+        "summary": "",
+    },
+    {
+        "name": "Base excess",
+        "aliases": ["standard base excess", "base deficit", "negative base excess"],
+        "utd": [["Overview", "base excess base deficit interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Point of care ultrasound",
+        "aliases": ["POCUS", "bedside ultrasound", "point of care ultrasonography"],
+        "utd": [["Overview", "point of care ultrasound bedside clinician performed"]],
+        "summary": "",
+    },
+    {
+        "name": "Focused echocardiography",
+        "aliases": ["focused cardiac ultrasound", "bedside echocardiography", "focused echo", "echo in shock"],
+        "utd": [["Overview", "focused cardiac ultrasound shock assessment"]],
+        "summary": "",
+    },
 ]
 
 
@@ -88779,6 +88983,656 @@ RICH_SUMMARIES = {
         "malabsorption. Note: excess is harmful too. Retinol is "
         "teratogenic, so supplementation in pregnancy is capped and "
         "isotretinoin is contraindicated."
+    ),
+
+    "Cytochrome P450 interactions": (
+        "Most clinically important drug interactions run through the "
+        "hepatic cytochrome P450 enzymes, chiefly CYP3A4, CYP2D6 and "
+        "CYP2C9. Mechanism: an inhibitor blocks metabolism within "
+        "hours and pushes substrate levels up, while an inducer takes "
+        "days to weeks to increase enzyme synthesis and drops them. "
+        "Interactions: strong inhibitors include clarithromycin, "
+        "azole antifungals and ritonavir. Inducers include "
+        "rifampicin, carbamazepine, phenytoin and St John's wort. "
+        "Clinical features: toxicity appears when an inhibitor is "
+        "started and treatment failure when an inducer is, so a "
+        "stable warfarin INR that suddenly swings or a tacrolimus "
+        "level that halves points here first. Mx: check every new "
+        "script against the AMH or an interaction checker before "
+        "prescribing. Change the dose or choose a non-interacting "
+        "alternative rather than relying on monitoring alone. Allow "
+        "two to four weeks for induction to wear off after the "
+        "inducer is ceased. Note: the effect lands on the substrate, "
+        "so ask which drug is being metabolised rather than which one "
+        "is the culprit."
+    ),
+    "Zero-order kinetics": (
+        "Elimination that proceeds at a fixed amount per unit time "
+        "rather than a fixed fraction, because the metabolising "
+        "enzyme is saturated. Mechanism: at low concentrations "
+        "metabolism is first-order and half-life is constant, but "
+        "once the enzyme saturates a small rise in dose produces a "
+        "large and unpredictable rise in concentration. Drugs that "
+        "behave this way include ethanol, phenytoin, aspirin in "
+        "overdose and theophylline at the top of its range. Clinical "
+        "features: phenytoin is the ward example, where a rise from "
+        "300 mg to 400 mg daily can take a level from therapeutic to "
+        "toxic with nystagmus, ataxia and confusion. Mx: make small "
+        "increments near the top of the range (25 to 50 mg for "
+        "phenytoin), recheck the level after five to seven days and "
+        "treat the patient rather than the number. Note: a drug in "
+        "zero-order elimination has no true half-life, so the usual "
+        "five half-lives to steady state reasoning fails and toxicity "
+        "clears far more slowly than expected."
+    ),
+    "Prodrug": (
+        "An inactive or less active compound that requires metabolic "
+        "conversion to its active form. Mechanism: conversion is "
+        "usually hepatic and often enzyme-specific, so the parent "
+        "carries no effect until it is processed. Codeine needs "
+        "CYP2D6 to become morphine, clopidogrel needs CYP2C19, "
+        "enalapril becomes enalaprilat and valaciclovir becomes "
+        "aciclovir. Clinical features: a poor metaboliser gets no "
+        "analgesia from codeine and no platelet inhibition from "
+        "clopidogrel, while an ultra-rapid metaboliser converts "
+        "codeine so fast that respiratory depression follows, which "
+        "is why codeine is contraindicated in children after "
+        "tonsillectomy and while breastfeeding. Interactions: a "
+        "CYP2C19 inhibitor such as omeprazole blunts clopidogrel, so "
+        "pantoprazole is preferred when acid suppression is needed. "
+        "Mx: when a prodrug fails, consider metaboliser status before "
+        "assuming non-adherence and switch to an agent that needs no "
+        "activation. Note: the design usually buys absorption or "
+        "tissue targeting, and the price is a conversion step that "
+        "can fail."
+    ),
+    "Pharmacogenomics": (
+        "The use of inherited variation in drug-metabolising enzymes, "
+        "transporters and targets to predict response and toxicity. "
+        "Mechanism: most actionable variants sit in cytochrome P450 "
+        "genes and sort patients into poor, intermediate, normal and "
+        "ultra-rapid metaboliser phenotypes. Uses: HLA-B 5701 before "
+        "abacavir and HLA-B 1502 before carbamazepine in South-East "
+        "Asian ancestry prevent severe cutaneous reactions. DPYD "
+        "testing before fluoropyrimidines and TPMT or NUDT15 before "
+        "azathioprine prevent life-threatening myelosuppression. "
+        "CYP2C19 status predicts clopidogrel failure. Mx: act on a "
+        "positive result by choosing an alternative agent rather than "
+        "by dose-reducing into an unproven range, and record the "
+        "phenotype where future prescribers will see it. Note: "
+        "Australian practice tests selectively rather than routinely, "
+        "and the tests that are mandated are the ones where a single "
+        "dose can kill, so a positive HLA-B 5701 is an absolute "
+        "contraindication and not a caution."
+    ),
+    "Loading dose": (
+        "A larger first dose given to reach therapeutic concentration "
+        "quickly rather than waiting the four to five half-lives a "
+        "maintenance dose alone needs. Mechanism: the loading dose "
+        "fills the volume of distribution and depends on that volume "
+        "and the target concentration, not on clearance, so it is "
+        "unchanged in renal or hepatic impairment while the "
+        "maintenance dose is not. Indications: drugs with long "
+        "half-lives where delay costs outcome, including amiodarone, "
+        "digoxin and vancomycin. Mx: calculate from actual body "
+        "weight for water-soluble drugs and follow eTG or local "
+        "dosing, then set the maintenance dose by renal function. "
+        "Give a phenytoin load no faster than 50 mg per minute with "
+        "cardiac monitoring, because hypotension and bradycardia are "
+        "rate-related. Note: the commonest error is halving the load "
+        "in renal failure. Clearance is impaired and the volume of "
+        "distribution is not, so the load stays the same and the "
+        "maintenance dose comes down."
+    ),
+    "Protein binding displacement": (
+        "One drug displacing another from plasma albumin, raising the "
+        "free and therefore active fraction of the displaced drug. "
+        "Mechanism: only free drug is active, so displacement briefly "
+        "increases effect. Clearance of free drug usually rises in "
+        "parallel and a new steady state follows within days, which "
+        "is why most textbook displacement interactions turn out to "
+        "be clinically small. Clinical features: it matters for "
+        "highly bound drugs with a narrow therapeutic index, chiefly "
+        "warfarin, phenytoin and the sulfonylureas. Warfarin "
+        "displaced by aspirin or a sulfonamide bleeds partly through "
+        "displacement and mostly through the added antiplatelet or "
+        "metabolic effect. Ix: a phenytoin total level reads low in "
+        "hypoalbuminaemia while the free level is therapeutic, so "
+        "correct for albumin or measure free phenytoin before "
+        "increasing the dose. Note: displacement rarely acts alone. "
+        "When a highly bound drug misbehaves, look for the metabolic "
+        "interaction sitting behind it."
+    ),
+    "Beers criteria": (
+        "An explicit list of medicines that are potentially "
+        "inappropriate in older adults, used to prompt review rather "
+        "than to forbid prescribing. Uses: applied at admission, at "
+        "discharge and at every medication review in people aged 65 "
+        "and over. Classification: the list groups drugs to avoid in "
+        "most older people, drugs to avoid with particular conditions "
+        "and drugs that need caution. Clinical features: the repeat "
+        "offenders are benzodiazepines and Z-drugs, anticholinergics, "
+        "first-generation antihistamines and long-acting "
+        "sulfonylureas. Non-steroidal anti-inflammatories sit on the "
+        "list for bleeding and renal risk. Mx: pair the criteria with "
+        "an anticholinergic burden score and a structured "
+        "deprescribing plan, taper rather than stop benzodiazepines "
+        "and antidepressants abruptly, and book the review. Note: "
+        "Australian practice more often cites the STOPP/START tool, "
+        "which adds prescribing omissions the Beers list does not "
+        "cover, so the two are complementary rather than competing."
+    ),
+    "Drug half-life": (
+        "The time taken for plasma concentration to fall by half, "
+        "which sets both how long a drug takes to reach steady state "
+        "and how long it takes to clear. Mechanism: half-life depends "
+        "on volume of distribution and clearance together, so it "
+        "lengthens when clearance falls in renal or hepatic "
+        "impairment and when distribution is wide. About 50 per cent "
+        "of steady state is reached after one half-life and roughly "
+        "97 per cent after five. Mx: wait five half-lives before "
+        "judging efficacy or measuring a trough, and the same again "
+        "before assuming a ceased drug has gone. Dose interval "
+        "follows half-life, so a short half-life with a narrow "
+        "therapeutic index needs frequent dosing or a "
+        "modified-release form. Note: the traps are amiodarone at "
+        "roughly 50 days, which keeps interacting for months after it "
+        "is stopped, and saturable drugs that have no fixed half-life "
+        "at all."
+    ),
+    "Antibiogram": (
+        "A periodic summary of local isolate susceptibility, "
+        "published by the hospital or health district, showing the "
+        "percentage of each organism susceptible to each agent. Uses: "
+        "it guides empirical choice before cultures return and it is "
+        "the evidence behind local therapeutic guidelines. Clinical "
+        "features: a unit whose Escherichia coli is 85 per cent "
+        "susceptible to trimethoprim can use it empirically for "
+        "cystitis, while a unit at 60 per cent cannot. Rising "
+        "resistance appears here a year before it changes national "
+        "guidance. Ix: read it alongside the patient's own prior "
+        "isolates, because a previous multi-resistant organism "
+        "outweighs any population figure. Mx: choose empirical cover "
+        "the local figures support, then de-escalate on "
+        "susceptibilities at 48 to 72 hours. Note: it describes "
+        "isolates rather than patients, so it is skewed by who gets "
+        "cultured. Intensive care figures always look worse than the "
+        "wards and should not be applied to them."
+    ),
+    "Empirical antibiotic therapy": (
+        "Antibiotic started on the clinical syndrome and the likely "
+        "pathogens, before microbiology returns. Mechanism: cover is "
+        "chosen to span the organisms that most often cause that "
+        "syndrome at that site in that host, weighted by local "
+        "resistance and by the patient's own prior isolates. Mx: take "
+        "cultures first where that does not delay treatment, then "
+        "give the first dose within an hour for sepsis or suspected "
+        "meningitis. Follow eTG for syndrome-specific choice, use "
+        "actual body weight for aminoglycosides and check renal "
+        "function before the second dose. Review at 48 to 72 hours "
+        "and either narrow the agent, switch to oral or stop. "
+        "Monitoring: set a stop or review date at the moment of "
+        "prescribing, since an undated antibiotic runs until somebody "
+        "notices. Note: broad is not the same as better. The "
+        "commonest stewardship failure is not the wrong first choice "
+        "but the review that never happens, so the empirical agent "
+        "becomes the definitive one by default."
+    ),
+    "Antifungal therapy": (
+        "Treatment directed at yeasts and moulds, chosen by organism, "
+        "site and host immune state. Classification: azoles inhibit "
+        "ergosterol synthesis, echinocandins block cell wall glucan "
+        "synthesis and amphotericin B binds ergosterol directly. "
+        "Uses: fluconazole covers most Candida albicans and "
+        "cryptococcal maintenance. An echinocandin is first line for "
+        "candidaemia and for azole-resistant species. Voriconazole or "
+        "posaconazole covers Aspergillus, and liposomal amphotericin "
+        "covers mucormycosis. Adverse effects: azoles are potent CYP "
+        "inhibitors and prolong the QT interval. Voriconazole causes "
+        "visual disturbance and photosensitivity. Amphotericin causes "
+        "infusion reactions, hypokalaemia and renal impairment. Mx: "
+        "remove the line in candidaemia, arrange ophthalmology review "
+        "for endophthalmitis and repeat cultures to define the day "
+        "treatment truly starts. Note: an echinocandin penetrates "
+        "urine and cerebrospinal fluid poorly, so it is the wrong "
+        "choice for candiduria and for central nervous system "
+        "disease."
+    ),
+    "Hypersensitivity reaction types": (
+        "The Gell and Coombs classification of immune-mediated tissue "
+        "damage into four types, which predicts timing, testing and "
+        "treatment. Classification: type I is IgE-mediated and "
+        "immediate. Type II is antibody directed at a cell-surface "
+        "antigen. Type III is immune complex deposition and type IV "
+        "is delayed T-cell mediated injury. Clinical features: type I "
+        "gives urticaria, angioedema and anaphylaxis within an hour. "
+        "Type II gives haemolysis and immune thrombocytopenia. Type "
+        "III gives serum sickness and vasculitis at one to three "
+        "weeks, while type IV gives contact dermatitis and severe "
+        "cutaneous drug eruptions over days. Ix: type I is tested by "
+        "skin prick and specific IgE, with mast cell tryptase in "
+        "acute anaphylaxis, while type IV is tested by patch testing "
+        "or delayed intradermal reading. Mx: adrenaline for type I "
+        "anaphylaxis. Withdrawal of the trigger and corticosteroids "
+        "for the rest. Note: timing answers the type, so a rash on "
+        "day eight of an antibiotic is not IgE-mediated and does not "
+        "need adrenaline."
+    ),
+    "Complement pathway": (
+        "A cascade of plasma proteins that opsonises, recruits "
+        "neutrophils and lyses membranes, activated by three routes "
+        "that converge on C3. Mechanism: the classical route is "
+        "triggered by antibody-antigen complexes, the lectin route by "
+        "microbial sugars and the alternative route by spontaneous C3 "
+        "hydrolysis. All three generate C3b for opsonisation, C5a for "
+        "chemotaxis and the terminal membrane attack complex. "
+        "Clinical features: terminal pathway deficiency causes "
+        "recurrent Neisseria infection. Early classical deficiency "
+        "causes lupus-like disease. Regulator failure causes atypical "
+        "haemolytic uraemic syndrome or hereditary angioedema. Ix: "
+        "CH50 screens the classical and terminal pathways together "
+        "and AH50 screens the alternative, with low C3 and C4 in "
+        "active lupus or post-streptococcal glomerulonephritis. Mx: "
+        "vaccinate against meningococcus, pneumococcus and "
+        "Haemophilus in any terminal deficiency, including before "
+        "eculizumab is started. Note: a low C4 with a normal C3 "
+        "points to classical pathway activation."
+    ),
+    "Immunodeficiency screening": (
+        "Testing for an underlying immune defect in a patient with "
+        "recurrent, severe, persistent or unusual infections. "
+        "Aetiology: secondary causes are far commoner than primary "
+        "and include HIV, haematological malignancy, corticosteroids "
+        "and other immunosuppressants, protein loss and diabetes. Red "
+        "flags: two or more pneumonias or deep infections in a year, "
+        "failure to thrive, infection with an opportunistic organism "
+        "and a family history of early death. Ix: start with a full "
+        "blood count and film, immunoglobulins with electrophoresis, "
+        "HIV serology and complement CH50 where Neisseria infection "
+        "has recurred. Add lymphocyte subsets and specific antibody "
+        "responses before and after vaccine boosting. Mx: treat the "
+        "secondary cause. Immunoglobulin replacement is funded "
+        "through the national blood arrangements for proven antibody "
+        "deficiency, alongside antibiotic prophylaxis and avoidance "
+        "of live vaccines. Note: the pattern names the arm. "
+        "Encapsulated bacteria point to antibody or complement, while "
+        "viral and fungal infection points to T cells."
+    ),
+    "X-linked inheritance": (
+        "Inheritance of a gene carried on the X chromosome, which "
+        "produces a pedigree pattern no autosomal condition can "
+        "mimic. Genetics: in X-linked recessive disease males are "
+        "affected and females are usually carriers. An affected "
+        "father passes the allele to all daughters and to no sons, "
+        "and a carrier mother passes it to half of each. X-linked "
+        "dominant disease affects females more often and can be "
+        "lethal in males. Clinical features: haemophilia A and B, "
+        "Duchenne muscular dystrophy and glucose-6-phosphate "
+        "dehydrogenase deficiency are the recessive examples, while "
+        "fragile X and Rett syndrome are dominant. Ix: a pedigree "
+        "with no male-to-male transmission is the clue, confirmed by "
+        "targeted gene testing. Carrier females can be symptomatic "
+        "through skewed X inactivation, so a mildly raised creatine "
+        "kinase in a Duchenne carrier is expected. Mx: refer for "
+        "genetic counselling and offer carrier testing to female "
+        "relatives. Note: absence of father-to-son transmission is "
+        "the single most useful pedigree feature."
+    ),
+    "Genetic anticipation": (
+        "A disease presenting earlier and more severely in each "
+        "successive generation. Mechanism: an unstable trinucleotide "
+        "repeat expands during gametogenesis, so the repeat the child "
+        "carries exceeds the parent's and repeat length correlates "
+        "inversely with age at onset. Clinical features: myotonic "
+        "dystrophy, Huntington disease, fragile X syndrome and "
+        "Friedreich ataxia are the classic examples. The parent of "
+        "origin matters, with congenital myotonic dystrophy "
+        "transmitted maternally and juvenile Huntington disease "
+        "paternally. Ix: repeat-sizing by targeted testing rather "
+        "than sequencing, since an expansion is a change in length "
+        "and standard panels miss it. Mx: refer to clinical genetics "
+        "before testing, because predictive testing for an "
+        "untreatable adult-onset condition carries insurance, "
+        "employment and family implications that need counselling "
+        "first. Note: a family that looks like it has two different "
+        "diseases, one mild in a grandparent and one severe in a "
+        "child, usually has one disease with anticipation."
+    ),
+    "Genomic imprinting": (
+        "Expression of a gene from only one parental allele, the "
+        "other silenced by methylation, so the effect of a deletion "
+        "depends on which parent contributed it. Genetics: loss of "
+        "the same 15q11-13 region gives Prader-Willi syndrome when "
+        "the paternal copy is lost and Angelman syndrome when the "
+        "maternal copy is lost. The same result follows from "
+        "uniparental disomy, where both copies come from one parent. "
+        "Clinical features: Prader-Willi gives neonatal hypotonia and "
+        "poor feeding followed by hyperphagia, obesity and short "
+        "stature. Angelman gives severe intellectual disability, "
+        "ataxia and seizures with a happy demeanour. Ix: methylation "
+        "studies are first line because they detect deletion, "
+        "uniparental disomy and imprinting defects together. A "
+        "microarray alone misses uniparental disomy. Mx: refer to "
+        "clinical genetics, with growth hormone and a strictly "
+        "controlled food environment in Prader-Willi. Note: when a "
+        "phenotype depends on which parent a deletion came from, "
+        "imprinting is the mechanism."
+    ),
+    "Penetrance": (
+        "The proportion of people carrying a pathogenic variant who "
+        "show the phenotype, as distinct from expressivity, which is "
+        "how severely it shows. Genetics: complete penetrance means "
+        "every carrier is affected, as in Huntington disease above "
+        "the repeat threshold. Incomplete penetrance means some "
+        "carriers never manifest, as in BRCA1 where lifetime breast "
+        "cancer risk is high but not certain. Age-related penetrance "
+        "rises across the lifespan. Clinical features: an unaffected "
+        "obligate carrier sitting between two affected generations is "
+        "the pedigree signature, and it is why a skipped generation "
+        "does not exclude dominant inheritance. Mx: counsel carriers "
+        "in terms of risk rather than certainty, offer surveillance "
+        "matched to the age-specific risk and revisit the discussion "
+        "as estimates are revised. Note: penetrance is a population "
+        "figure applied to an individual, so it answers how many "
+        "carriers become affected and never when or how badly this "
+        "one will."
+    ),
+    "Chromosomal microarray": (
+        "A genome-wide test for submicroscopic gains and losses of "
+        "chromosomal material, now first line for unexplained "
+        "developmental delay, intellectual disability, autism and "
+        "multiple congenital anomalies. Mechanism: patient DNA is "
+        "compared against a reference to detect copy number variants "
+        "down to tens of kilobases, far below the limit a karyotype "
+        "can resolve. Ix: it detects deletions and duplications but "
+        "not balanced translocations, inversions, repeat expansions "
+        "or single-gene point mutations, so a normal result does not "
+        "exclude a genetic cause. Diagnostic yield is roughly 15 to "
+        "20 per cent in developmental delay. Mx: report through a "
+        "clinical genetics service, because variants of uncertain "
+        "significance are common and parental testing is often needed "
+        "to interpret them. Note: order a karyotype when a balanced "
+        "rearrangement or recurrent miscarriage is the question, and "
+        "a microarray when the question is unexplained delay or "
+        "dysmorphism."
+    ),
+    "Variant of uncertain significance": (
+        "A sequence change that cannot currently be classified as "
+        "pathogenic or benign, sitting in the middle of the five-tier "
+        "classification used by diagnostic laboratories. Mechanism: "
+        "classification weighs population frequency, computational "
+        "prediction, functional data and family segregation. When the "
+        "evidence is thin or conflicting the variant stays uncertain. "
+        "Clinical features: they are commonest in large multi-gene "
+        "panels and in people of non-European ancestry, because "
+        "reference databases under-represent them. Mx: manage the "
+        "patient on family history and phenotype rather than on the "
+        "variant. Do not offer risk-reducing surgery or cascade "
+        "testing of relatives on an uncertain result, and arrange "
+        "periodic reclassification, since most are eventually "
+        "downgraded to benign. Note: an uncertain variant is not a "
+        "weak positive. Treating it as one is the commonest harm that "
+        "comes out of expanded panel testing, and it is why results "
+        "belong with a genetics service."
+    ),
+    "Whole exome sequencing": (
+        "Sequencing of the roughly 2 per cent of the genome that "
+        "codes for protein, where about 85 per cent of known "
+        "disease-causing variants sit. Ix: it is used after a "
+        "microarray is normal in unexplained developmental delay, "
+        "intellectual disability or multiple anomalies, and as a "
+        "first test in a critically ill neonate where the answer "
+        "changes care. Trio sequencing of child and both parents "
+        "raises the yield and identifies de novo variants. Diagnostic "
+        "yield is roughly 30 to 40 per cent. Mx: consent before "
+        "testing must cover variants of uncertain significance, "
+        "secondary findings unrelated to the referral and "
+        "implications for relatives. Report through a genetics "
+        "service and reanalyse stored data after two to three years "
+        "when the first pass is negative. Note: exome sequencing "
+        "still misses repeat expansions, deep intronic variants, "
+        "methylation defects and most copy number change, so a normal "
+        "exome does not close the question."
+    ),
+    "Oxygen dissociation curve": (
+        "The sigmoid relationship between arterial oxygen tension and "
+        "haemoglobin saturation, whose shape explains why saturation "
+        "holds up until oxygen tension falls steeply. Mechanism: "
+        "cooperative binding gives the sigmoid shape. A right shift "
+        "unloads oxygen more readily in tissue and is produced by "
+        "acidosis, hypercapnia, fever and raised 2,3-DPG. A left "
+        "shift holds oxygen on and is produced by alkalosis, "
+        "hypothermia, stored blood and fetal haemoglobin. Clinical "
+        "features: the flat upper part means saturation of 95 per "
+        "cent and 100 per cent can hide a large difference in oxygen "
+        "tension, while the steep lower part means saturation below "
+        "90 per cent falls fast. Ix: read saturation alongside a "
+        "blood gas when anaemia, carbon monoxide or methaemoglobin is "
+        "possible, since the oximeter reads saturation of available "
+        "haemoglobin only. Note: the exercising muscle shifts its own "
+        "curve right, which is the point of the Bohr effect."
+    ),
+    "Ventilation perfusion mismatch": (
+        "Mismatch between alveolar ventilation and capillary "
+        "perfusion, and the commonest cause of hypoxaemia in clinical "
+        "practice. Mechanism: a low ratio is shunt-like, with "
+        "perfused but unventilated lung, as in consolidation, "
+        "collapse or pulmonary oedema. A high ratio is "
+        "dead-space-like, with ventilated but unperfused lung, as in "
+        "pulmonary embolism. Clinical features: hypoxaemia from "
+        "mismatch corrects substantially with supplemental oxygen, "
+        "whereas true shunt does not, which is the bedside "
+        "distinction. Carbon dioxide is usually normal or low, "
+        "because ventilation rises to compensate. Ix: an arterial "
+        "blood gas shows a widened alveolar-arterial gradient with "
+        "hypoxaemia. Chest imaging identifies the affected region. "
+        "Mx: treat the cause and recruit lung where it has collapsed, "
+        "with positioning, physiology and positive pressure where "
+        "needed. Note: an A-a gradient that widens with a normal "
+        "chest film should raise pulmonary embolism."
+    ),
+    "Dead space ventilation": (
+        "Ventilation that reaches airway or alveoli but takes no part "
+        "in gas exchange. Classification: anatomical dead space is "
+        "the conducting airway, at roughly 2 mL per kg or about 150 "
+        "mL in an adult. Alveolar dead space is ventilated but "
+        "unperfused alveoli, and the two together make physiological "
+        "dead space. Aetiology: alveolar dead space rises in "
+        "pulmonary embolism, in low cardiac output states and with "
+        "high positive end-expiratory pressure that overdistends "
+        "alveoli and compresses their capillaries. Clinical features: "
+        "a rising dead space fraction means more minute ventilation "
+        "is needed for the same carbon dioxide clearance, so the "
+        "patient breathes harder and tires. Ix: an end-tidal to "
+        "arterial carbon dioxide gap widens as dead space grows, "
+        "which is why end-tidal readings understate arterial values "
+        "in shock. Note: shallow rapid breathing wastes a larger "
+        "proportion of each breath on dead space, so tachypnoea can "
+        "raise minute ventilation and still drop alveolar "
+        "ventilation."
+    ),
+    "Auto-PEEP": (
+        "Air trapped at end-expiration because the next breath is "
+        "delivered before the last one has fully emptied, creating "
+        "alveolar pressure above the set end expiratory pressure. "
+        "Aetiology: obstructive disease with long expiratory time "
+        "constants, high respiratory rate, high tidal volume and "
+        "short expiratory time. Asthma and chronic obstructive "
+        "pulmonary disease are the usual settings. Clinical features: "
+        "rising airway pressures, hypotension from impaired venous "
+        "return, and ineffective triggering where the patient cannot "
+        "generate enough effort to overcome the trapped pressure. Ix: "
+        "expiratory flow that does not return to zero before the next "
+        "breath on the ventilator waveform. An expiratory hold "
+        "measures the level directly. Mx: disconnect the circuit and "
+        "let the chest empty when the patient is haemodynamically "
+        "compromised. Then reduce the rate, shorten inspiratory time "
+        "and treat the obstruction. Note: hypotension in a newly "
+        "ventilated asthmatic is auto-PEEP until the circuit has been "
+        "disconnected and the pressure has fallen."
+    ),
+    "Extubation criteria": (
+        "The bedside checks made before removing an endotracheal "
+        "tube, distinct from the ventilator weaning that precedes "
+        "them. Criteria: a passed spontaneous breathing trial, an "
+        "adequate cough, manageable secretions, a conscious state "
+        "sufficient to follow commands and a resolved indication for "
+        "intubation. Ix: a cuff leak test is done where laryngeal "
+        "oedema is likely, after prolonged or traumatic intubation. "
+        "Absence of a leak predicts stridor, not failure on its own. "
+        "Mx: extubate upright with suction, oxygen and reintubation "
+        "equipment ready, and consider high flow nasal oxygen or "
+        "non-invasive ventilation immediately afterwards in high-risk "
+        "patients. Corticosteroids given at least four hours "
+        "beforehand reduce post-extubation stridor where the cuff "
+        "leak is absent. Note: passing a breathing trial tests the "
+        "lungs and not the airway. The patient who breathes well but "
+        "cannot clear secretions or protect the airway will still "
+        "fail."
+    ),
+    "Tidal volume": (
+        "The volume of one breath, roughly 6 to 8 mL per kg in "
+        "spontaneous breathing, and the ventilator setting most "
+        "closely tied to ventilator-induced lung injury. Mechanism: "
+        "overdistension stretches alveoli and drives volutrauma with "
+        "inflammatory injury, so limiting volume limits harm even "
+        "when the lungs look compliant. Mx: set 6 mL per kg of "
+        "predicted body weight calculated from height and sex, never "
+        "actual weight, and keep plateau pressure under 30 cmH2O and "
+        "driving pressure under 15. Accept a higher carbon dioxide "
+        "and a pH down to about 7.20 rather than raising the volume. "
+        "Monitoring: recheck plateau and driving pressure after any "
+        "change and whenever compliance shifts. Note: the commonest "
+        "error is calculating from actual weight, which gives an "
+        "obese patient a dangerous volume. Lung size follows height, "
+        "not body mass."
+    ),
+    "Starling forces": (
+        "The balance of hydrostatic and oncotic pressures across the "
+        "capillary wall that determines net fluid movement between "
+        "plasma and interstitium. Mechanism: capillary hydrostatic "
+        "pressure pushes fluid out and plasma oncotic pressure holds "
+        "it in, modified by capillary permeability and by lymphatic "
+        "drainage of what does escape. Aetiology: oedema follows when "
+        "one term fails. Raised hydrostatic pressure in heart failure "
+        "and venous obstruction, low oncotic pressure in nephrotic "
+        "syndrome and liver disease, raised permeability in sepsis "
+        "and burns, and lymphatic failure in lymphoedema. Clinical "
+        "features: the distribution follows the mechanism, with "
+        "dependent pitting oedema in hydrostatic causes and "
+        "generalised oedema including periorbital swelling when "
+        "albumin is low. Mx: treat the term that failed rather than "
+        "giving diuretics reflexively. Note: albumin infusion rarely "
+        "fixes capillary leak, because the leaking wall lets albumin "
+        "out too."
+    ),
+    "Capillary refill time": (
+        "The time for colour to return to a nail bed or the skin "
+        "after five seconds of firm pressure, used as a bedside "
+        "marker of peripheral perfusion. Ix: press the distal phalanx "
+        "for five seconds and release. Normal is under two seconds in "
+        "a warm patient and under three seconds in adults generally. "
+        "Clinical features: prolongation reflects vasoconstriction "
+        "from hypovolaemia, shock or cold, and in children it is one "
+        "of the earliest signs of compensated shock alongside "
+        "tachycardia. Mx: treat a prolonged time as a perfusion "
+        "abnormality and reassess after fluid or inotrope, since "
+        "normalisation is a useful resuscitation target and there is "
+        "trial evidence for guiding septic shock resuscitation by "
+        "refill time rather than lactate. Note: ambient temperature, "
+        "age and vasoactive drugs all lengthen it, so a single "
+        "reading in a cold patient means little and the trend in a "
+        "warm one means a great deal."
+    ),
+    "Mixed venous oxygen saturation": (
+        "The oxygen saturation of blood returning to the heart, "
+        "measured from a pulmonary artery catheter or approximated "
+        "from a central line, which reflects the balance between "
+        "oxygen delivery and consumption. Mechanism: tissue extracts "
+        "more oxygen when delivery falls, so the venous saturation "
+        "drops. Normal is about 65 to 75 per cent from the pulmonary "
+        "artery and a little higher from a central line. Clinical "
+        "features: a low value points to low cardiac output, anaemia, "
+        "hypoxaemia or raised consumption from fever, shivering or "
+        "agitation. A high value suggests failed extraction, as in "
+        "sepsis, cyanide toxicity or a left to right shunt. Mx: use "
+        "the trend to direct whether to raise delivery or lower "
+        "demand. Note: a normal saturation does not exclude shock, "
+        "because regional beds can be profoundly underperfused while "
+        "the global average looks reassuring, so read it beside "
+        "lactate and refill time."
+    ),
+    "Acid-base compensation": (
+        "The predictable secondary response to a primary acid-base "
+        "disturbance, which never fully corrects the pH and never "
+        "overshoots it. Mechanism: the lungs compensate for metabolic "
+        "disorders within minutes to hours and the kidneys compensate "
+        "for respiratory disorders over two to five days, which is "
+        "why an acute respiratory disturbance shows less compensation "
+        "than a chronic one. Ix: in metabolic acidosis the expected "
+        "carbon dioxide is given by Winters formula, 1.5 times the "
+        "bicarbonate plus 8, with a margin of 2. In chronic "
+        "respiratory acidosis bicarbonate rises about 4 for every 10 "
+        "mmHg rise in carbon dioxide. Mx: when the measured value "
+        "sits outside the expected range, a second primary disorder "
+        "is present and should be named and treated. Note: "
+        "compensation that looks complete is not compensation. A "
+        "normal pH with abnormal components means two opposing "
+        "primary disorders."
+    ),
+    "Base excess": (
+        "The amount of acid or base needed to return a litre of blood "
+        "to a pH of 7.40 at a normal carbon dioxide, reported on "
+        "every blood gas as a measure of the metabolic component "
+        "alone. Mechanism: it is calculated after standardising "
+        "carbon dioxide, so it strips out the respiratory "
+        "contribution that makes bicarbonate hard to read in "
+        "isolation. Normal is minus 2 to plus 2. Clinical features: a "
+        "base deficit beyond minus 6 in trauma or sepsis signals "
+        "significant metabolic acidosis and correlates with "
+        "transfusion requirement and mortality, and it usually "
+        "reflects lactate. A positive base excess reflects metabolic "
+        "alkalosis from vomiting, diuretics or chronic carbon dioxide "
+        "retention. Mx: use serial values as a resuscitation trend "
+        "rather than a single number, and name the anion gap and the "
+        "lactate before treating. Note: base excess says how much "
+        "metabolic acid is present and never which acid it is."
+    ),
+    "Point of care ultrasound": (
+        "Ultrasound performed and interpreted by the treating "
+        "clinician to answer a focused yes or no question at the "
+        "bedside, rather than to produce a comprehensive report. "
+        "Uses: free fluid in trauma, pneumothorax and B-lines in "
+        "breathlessness, inferior vena cava assessment in shock, "
+        "hydronephrosis in renal failure, deep vein thrombosis "
+        "compression studies and guidance for vascular access, "
+        "drainage and regional anaesthesia. Clinical features: it "
+        "shortens time to diagnosis and reduces complications of "
+        "procedures, particularly central line insertion and pleural "
+        "drainage. Mx: use it to answer the question asked and "
+        "escalate to a formal study when the question broadens or the "
+        "images are inadequate. Document findings and save images. "
+        "Note: the limitation is the operator. Accreditation, "
+        "supervised scan numbers and knowing when a negative scan "
+        "does not exclude disease matter more than the machine."
+    ),
+    "Focused echocardiography": (
+        "A limited bedside echocardiogram answering a small set of "
+        "questions in the shocked or breathless patient, distinct "
+        "from a formal study. Uses: it looks for pericardial effusion "
+        "and tamponade, gross left ventricular function, right "
+        "ventricular dilatation suggesting pulmonary embolism, and "
+        "inferior vena cava size and collapsibility as a crude volume "
+        "estimate. Clinical features: it separates the four shock "
+        "states faster than any other bedside test, distinguishing an "
+        "empty ventricle from a failing one and from an obstructed "
+        "one. Mx: integrate the images with the clinical picture and "
+        "repeat after intervention, since the change matters more "
+        "than the single view. Refer for formal study when valve "
+        "disease, endocarditis or exact quantification is the "
+        "question. Note: a normal inferior vena cava does not settle "
+        "volume status, and a dilated right ventricle in a stable "
+        "patient is far more often chronic than acute."
     ),
 }
 
