@@ -16149,6 +16149,186 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "focused cardiac ultrasound shock assessment"]],
         "summary": "",
     },
+    {
+        "name": "Velamentous cord insertion",
+        "aliases": ["velamentous insertion", "velamentous umbilical cord", "velamentous insertion of cord"],
+        "utd": [["Overview", "velamentous cord insertion"]],
+        "summary": "",
+    },
+    {
+        "name": "Symphysis pubis dysfunction",
+        "aliases": ["pelvic girdle pain of pregnancy", "pubic symphysis dysfunction", "symphysis pubis diastasis"],
+        "utd": [["Overview", "pelvic girdle pain pregnancy"]],
+        "summary": "",
+    },
+    {
+        "name": "Sandifer syndrome",
+        "aliases": ["Sandifer's syndrome", "Sandifers syndrome"],
+        "utd": [["Overview", "Sandifer syndrome infant reflux dystonic posturing"]],
+        "summary": "",
+    },
+    {
+        "name": "Battledore placenta",
+        "aliases": ["marginal cord insertion", "battledore cord insertion"],
+        "utd": [["Overview", "marginal cord insertion placenta"]],
+        "summary": "",
+    },
+    {
+        "name": "Succenturiate lobe",
+        "aliases": ["succenturiate placenta", "accessory placental lobe", "accessory lobe of placenta"],
+        "utd": [["Overview", "succenturiate placental lobe"]],
+        "summary": "",
+    },
+    {
+        "name": "Circumvallate placenta",
+        "aliases": ["circumvallate placentation", "extrachorial placenta"],
+        "utd": [["Overview", "circumvallate placenta"]],
+        "summary": "",
+    },
+    {
+        "name": "Couvelaire uterus",
+        "aliases": ["uteroplacental apoplexy", "Couvelaire syndrome"],
+        "utd": [["Overview", "Couvelaire uterus placental abruption"]],
+        "summary": "",
+    },
+    {
+        "name": "Bandl's ring",
+        "aliases": ["Bandl ring", "pathological retraction ring"],
+        "utd": [["Overview", "Bandl ring obstructed labour uterine rupture"]],
+        "summary": "",
+    },
+    {
+        "name": "Lovset manoeuvre",
+        "aliases": ["Lovset's manoeuvre", "Lovset maneuver", "Lovsets manoeuvre"],
+        "utd": [["Overview", "Lovset manoeuvre breech extended arms"]],
+        "summary": "",
+    },
+    {
+        "name": "Mauriceau-Smellie-Veit manoeuvre",
+        "aliases": ["Mauriceau manoeuvre", "Mauriceau Smellie Veit manoeuvre", "Mauriceau-Smellie-Veit maneuver"],
+        "utd": [["Overview", "Mauriceau Smellie Veit manoeuvre after coming head breech"]],
+        "summary": "",
+    },
+    {
+        "name": "Mirror syndrome",
+        "aliases": ["Ballantyne syndrome", "triple oedema syndrome", "maternal hydrops"],
+        "utd": [["Overview", "mirror syndrome Ballantyne fetal hydrops"]],
+        "summary": "",
+    },
+    {
+        "name": "Sinusoidal fetal heart rate",
+        "aliases": ["sinusoidal CTG", "sinusoidal pattern CTG", "sinusoidal foetal heart rate"],
+        "utd": [["Overview", "sinusoidal fetal heart rate pattern"]],
+        "summary": "",
+    },
+    {
+        "name": "Vulval intraepithelial neoplasia",
+        "aliases": ["vulvar intraepithelial neoplasia", "differentiated VIN", "vulval dysplasia"],
+        "utd": [["Overview", "vulvar intraepithelial neoplasia"]],
+        "summary": "",
+    },
+    {
+        "name": "Harlequin colour change",
+        "aliases": ["harlequin color change", "harlequin sign of the newborn"],
+        "utd": [["Overview", "harlequin color change newborn"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal acne",
+        "aliases": ["neonatal cephalic pustulosis", "baby acne", "acne neonatorum"],
+        "utd": [["Overview", "neonatal cephalic pustulosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Caffey disease",
+        "aliases": ["infantile cortical hyperostosis", "Caffey's disease", "Caffey Silverman syndrome"],
+        "utd": [["Overview", "infantile cortical hyperostosis Caffey"]],
+        "summary": "",
+    },
+    {
+        "name": "Infantile haemangioma",
+        "aliases": ["infantile hemangioma", "strawberry naevus", "strawberry haemangioma", "capillary haemangioma of infancy"],
+        "utd": [["Overview", "infantile hemangioma propranolol"]],
+        "summary": "",
+    },
+    {
+        "name": "Nappy rash",
+        "aliases": ["napkin dermatitis", "diaper dermatitis", "nappy dermatitis", "diaper rash"],
+        "utd": [["Overview", "irritant diaper dermatitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Arsenic poisoning",
+        "aliases": ["arsenic toxicity", "arsenicosis"],
+        "utd": [["Overview", "arsenic poisoning chelation"]],
+        "summary": "",
+    },
+    {
+        "name": "Manganese toxicity",
+        "aliases": ["manganism", "manganese poisoning"],
+        "utd": [["Overview", "manganese neurotoxicity manganism"]],
+        "summary": "",
+    },
+    {
+        "name": "Cadmium toxicity",
+        "aliases": ["cadmium poisoning", "itai-itai disease"],
+        "utd": [["Overview", "cadmium toxicity renal tubular"]],
+        "summary": "",
+    },
+    {
+        "name": "Immersion foot",
+        "aliases": ["trench foot", "non-freezing cold injury"],
+        "utd": [["Overview", "trench foot non freezing cold injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Barotrauma of descent",
+        "aliases": ["middle ear squeeze", "ear squeeze", "mask squeeze", "diving squeeze"],
+        "utd": [["Overview", "middle ear barotrauma diving descent"]],
+        "summary": "",
+    },
+    {
+        "name": "Exploding head syndrome",
+        "aliases": ["episodic cranial sensory shock", "exploding head"],
+        "utd": [["Overview", "exploding head syndrome parasomnia"]],
+        "summary": "",
+    },
+    {
+        "name": "Non-24-hour sleep-wake rhythm disorder",
+        "aliases": ["non-24 sleep-wake disorder", "free-running circadian disorder", "hypernychthemeral syndrome"],
+        "utd": [["Overview", "non 24 hour sleep wake rhythm disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Confusional arousals",
+        "aliases": ["confusional arousal", "sleep drunkenness", "sleep inertia arousal"],
+        "utd": [["Overview", "confusional arousals disorder of arousal"]],
+        "summary": "",
+    },
+    {
+        "name": "Sleep-related eating disorder",
+        "aliases": ["sleep related eating disorder", "nocturnal sleep-related eating disorder"],
+        "utd": [["Overview", "sleep related eating disorder zolpidem"]],
+        "summary": "",
+    },
+    {
+        "name": "Delayed sleep-wake phase disorder",
+        "aliases": ["delayed sleep phase syndrome", "delayed sleep phase disorder", "delayed sleep-wake phase"],
+        "utd": [["Overview", "delayed sleep wake phase disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Advanced sleep-wake phase disorder",
+        "aliases": ["advanced sleep phase syndrome", "advanced sleep phase disorder", "advanced sleep-wake phase"],
+        "utd": [["Overview", "advanced sleep wake phase disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Asteroid hyalosis",
+        "aliases": ["Benson disease", "asteroid bodies"],
+        "utd": [["Overview", "asteroid hyalosis vitreous"]],
+        "summary": "",
+    },
 ]
 
 
@@ -89633,6 +89813,640 @@ RICH_SUMMARIES = {
         "question. Note: a normal inferior vena cava does not settle "
         "volume status, and a dilated right ventricle in a stable "
         "patient is far more often chronic than acute."
+    ),
+
+    "Velamentous cord insertion": (
+        "Velamentous cord insertion is an umbilical cord that inserts "
+        "into the membranes rather than the placental disc, leaving "
+        "unprotected vessels running between membranes and disc. It "
+        "occurs in about 1 percent of singletons and up to 15 percent "
+        "of monochorionic twins. Risk factors: multiple pregnancy, "
+        "placenta praevia and IVF conception. Complications: the "
+        "exposed vessels can tear in labour, and when they cross the "
+        "internal os the finding is vasa praevia with a risk of rapid "
+        "fetal exsanguination. Growth restriction and cord "
+        "compression are also more common. Ix: found on the second "
+        "trimester morphology scan, with colour Doppler over the "
+        "internal os the step that separates plain velamentous "
+        "insertion from vasa praevia. Mx: an isolated velamentous "
+        "insertion away from the os needs serial growth scans and no "
+        "change to the birth plan. Vasa praevia needs antenatal "
+        "corticosteroids and planned caesarean around 35 weeks. Note: "
+        "the cord insertion site is a routine line in the morphology "
+        "report, and reading it is what turns a catastrophic "
+        "intrapartum bleed into a booked operation."
+    ),
+    "Symphysis pubis dysfunction": (
+        "Symphysis pubis dysfunction is pregnancy-related pain at the "
+        "pubic symphysis and pelvic girdle from increased joint "
+        "laxity and altered load sharing. It affects roughly one in "
+        "five pregnancies and is a leading cause of antenatal sick "
+        "leave. Aetiology: relaxin and progesterone soften the pelvic "
+        "ligaments, the symphyseal gap widens from 4 to 9 mm and "
+        "asymmetric pelvic motion follows. Prior pelvic trauma, high "
+        "BMI and a previously affected pregnancy raise the risk. "
+        "Clinical features: pain over the pubis and sacroiliac "
+        "joints, worse on single-leg weight bearing, stairs and "
+        "turning in bed, often with a waddling gait and an audible "
+        "click. Ix: clinical. Imaging is reserved for suspected "
+        "fracture or postpartum symphyseal rupture. Mx: physiotherapy "
+        "led, with a pelvic support belt, activity modification and "
+        "advice to keep the knees together when turning. Paracetamol "
+        "is first line and NSAIDs are avoided after 20 weeks. Note: "
+        "vaginal birth stays appropriate, but record the pain-free "
+        "hip abduction range so nobody exceeds it in lithotomy."
+    ),
+    "Sandifer syndrome": (
+        "Sandifer syndrome is paroxysmal dystonic posturing of the "
+        "neck and trunk in an infant with gastro-oesophageal reflux, "
+        "and it is mistaken for seizures more often than any other "
+        "reflux presentation. Aetiology: the posture is thought to be "
+        "a learned vagally mediated response that shortens "
+        "oesophageal acid exposure, so it follows feeds rather than "
+        "preceding them. It is most common between 18 and 36 months "
+        "and in children with neurological impairment or hiatus "
+        "hernia. Clinical features: sudden torticollis, head tilt and "
+        "back arching lasting one to three minutes with the child "
+        "awake, aware and consolable throughout, alongside "
+        "irritability, feed refusal and poor weight gain. Ix: the "
+        "history usually suffices. A normal EEG during a typical "
+        "episode settles the seizure question, and pH-impedance study "
+        "or upper GI contrast confirms reflux when the diagnosis is "
+        "doubted. Mx: treat the reflux. Feed thickening, upright "
+        "positioning and a trial of a proton pump inhibitor, with "
+        "fundoplication only for refractory cases. Note: awake, alert "
+        "and posturing after a feed is reflux until proven otherwise, "
+        "not epilepsy."
+    ),
+    "Battledore placenta": (
+        "Battledore placenta is a cord that inserts at the placental "
+        "margin rather than centrally, within 2 cm of the disc edge. "
+        "It is found in about 7 percent of singleton and up to a "
+        "quarter of twin placentas. Aetiology: thought to reflect "
+        "trophotropism, where the placenta grows towards better "
+        "perfused decidua and leaves the original insertion site at "
+        "the periphery. It is more common in multiple pregnancy, in "
+        "smokers and after assisted conception. Clinical features: "
+        "none for the mother. The finding matters only through what "
+        "it predicts, with modest increases in fetal growth "
+        "restriction, preterm birth and intrapartum fetal heart rate "
+        "abnormality. Ix: reported on the second trimester morphology "
+        "scan. Colour Doppler distinguishes it from velamentous "
+        "insertion, where the vessels run unsupported through the "
+        "membranes. Mx: no intervention for an isolated marginal "
+        "insertion in a singleton, though some units add a third "
+        "trimester growth scan. Note: marginal insertion is the mild "
+        "cousin of velamentous insertion, and the report wording is "
+        "the only thing separating a benign finding from one that "
+        "needs a birth plan."
+    ),
+    "Succenturiate lobe": (
+        "A succenturiate lobe is an accessory placental lobe lying "
+        "separate from the main disc and joined to it by fetal "
+        "vessels running through the membranes. It occurs in about 1 "
+        "in 200 pregnancies. Risk factors: advanced maternal age, IVF "
+        "conception and implantation over a fibroid or a previous "
+        "surgical scar, all of which favour patchy decidual quality. "
+        "Complications: the connecting vessels may cross the internal "
+        "os as vasa praevia, the lobe may be retained after birth and "
+        "cause secondary postpartum haemorrhage or endometritis, and "
+        "the membranes may be incomplete on inspection. Ix: seen on "
+        "the morphology scan as a second echogenic mass with a "
+        "vascular bridge. Colour Doppler over the cervix is mandatory "
+        "to exclude vasa praevia. Mx: document it in the birth plan, "
+        "inspect the placenta and membranes carefully at delivery and "
+        "image early if bleeding persists. A retained lobe needs "
+        "evacuation. Note: a placenta that looks complete does not "
+        "exclude a retained lobe, and torn vessels running to nowhere "
+        "at the membrane edge are the clue."
+    ),
+    "Circumvallate placenta": (
+        "Circumvallate placenta is an extrachorial placenta whose "
+        "chorionic plate is smaller than the basal plate, so the "
+        "membranes insert inward from the edge and fold back as a "
+        "raised grey-white ring. It affects about 1 to 2 percent of "
+        "placentas. Aetiology: uncertain, with marginal haemorrhage "
+        "and chronic separation at the placental edge in early "
+        "pregnancy the leading explanation. Clinical features: "
+        "recurrent painless antepartum bleeding, oligohydramnios and "
+        "preterm prelabour rupture of membranes. Growth restriction, "
+        "abruption and preterm birth are all more common. Ix: most "
+        "are diagnosed only after delivery on placental examination. "
+        "Ultrasound may show a rolled-up placental edge or a "
+        "peripheral shelf, though the sign is neither sensitive nor "
+        "specific antenatally. Mx: no treatment alters the placenta. "
+        "Serial growth surveillance, education about bleeding and "
+        "reduced movements, and a low threshold for corticosteroids "
+        "if preterm birth threatens. Note: unexplained recurrent "
+        "small antepartum bleeds with a normal cervix and no praevia "
+        "should prompt a careful look at the placental edge."
+    ),
+    "Couvelaire uterus": (
+        "Couvelaire uterus is extravasation of blood from a concealed "
+        "placental abruption through the myometrium to the serosal "
+        "surface, giving a bruised bluish uterus at caesarean. "
+        "Aetiology: a severe retroplacental haemorrhage raises "
+        "intrauterine pressure, forcing blood between muscle fibres "
+        "and into the broad ligament and peritoneal surfaces. "
+        "Pre-eclampsia, trauma, cocaine use, smoking and previous "
+        "abruption are the usual antecedents. Clinical features: "
+        "constant abdominal pain, a woody hard tender uterus, fetal "
+        "distress or demise, and maternal shock out of proportion to "
+        "any visible bleeding. Ix: clinical and intraoperative. "
+        "Bloods must include coagulation studies and fibrinogen, "
+        "since disseminated intravascular coagulation complicates a "
+        "third of severe abruptions and a fibrinogen below 2 g per L "
+        "predicts major haemorrhage. Mx: resuscitate, activate the "
+        "massive transfusion protocol and deliver. The bruised uterus "
+        "itself usually contracts with oxytocics and is not by itself "
+        "an indication for hysterectomy. Note: the appearance is "
+        "dramatic, but the danger lies in the coagulopathy rather "
+        "than the bruising."
+    ),
+    "Bandl's ring": (
+        "Bandl's ring is a pathological retraction ring at the "
+        "junction of the thinned lower segment and the thickened "
+        "upper segment of an obstructed labouring uterus, and it is "
+        "the last warning before rupture. Aetiology: prolonged "
+        "obstructed labour from cephalopelvic disproportion, "
+        "malpresentation or a transverse lie. The upper segment "
+        "retracts with each contraction while the lower segment "
+        "stretches, and the junction rises. It is now rare where "
+        "labour is monitored with a partogram. Clinical features: a "
+        "visible or palpable oblique ridge across the abdomen rising "
+        "towards the umbilicus, a tonically contracted tender uterus, "
+        "maternal distress and an abnormal fetal heart rate. The "
+        "bladder is often oedematous and pushed high. Ix: a clinical "
+        "diagnosis, and waiting for imaging wastes the time you have. "
+        "Mx: stop oxytocin, give tocolysis if needed and proceed to "
+        "immediate caesarean. Prepare for haemorrhage and have blood "
+        "available. Note: a ring that rises means the lower segment "
+        "is thinning, so treat it as impending rupture rather than a "
+        "stage of labour."
+    ),
+    "Lovset manoeuvre": (
+        "The Lovset manoeuvre delivers extended or nuchal arms in an "
+        "assisted breech birth by rotating the fetal trunk so that "
+        "each posterior arm is brought anteriorly under the "
+        "symphysis. Indications: arms that do not deliver "
+        "spontaneously once the scapulae are visible, in a planned or "
+        "an undiagnosed vaginal breech birth. Mx: grasp the fetal "
+        "pelvis with thumbs over the sacrum and hands off the "
+        "abdomen, apply gentle downward traction, then rotate 180 "
+        "degrees keeping the back uppermost so the posterior shoulder "
+        "becomes anterior, and sweep that arm down across the chest. "
+        "Rotate back the other way for the second arm. The head then "
+        "follows by Mauriceau-Smellie-Veit or forceps. Complications: "
+        "humeral and clavicular fracture, brachial plexus injury, and "
+        "liver or adrenal trauma from a grip taken too high on the "
+        "trunk. Note: the back must stay uppermost throughout. "
+        "Rotating the wrong way extends the head and turns a solvable "
+        "problem into a trapped head."
+    ),
+    "Mauriceau-Smellie-Veit manoeuvre": (
+        "The Mauriceau-Smellie-Veit manoeuvre delivers the "
+        "after-coming head in a vaginal breech birth by flexing the "
+        "fetal head while applying traction at the shoulders. "
+        "Indications: a head that does not deliver once the arms are "
+        "free, and as the routine final step of an assisted breech "
+        "birth. Mx: rest the fetal body along the operator's forearm, "
+        "place the index and middle fingers of that hand over the "
+        "malar eminences to flex the head, and hook two fingers of "
+        "the other hand over the shoulders. Apply downward traction "
+        "until the suboccipital region appears under the symphysis, "
+        "then swing the body upwards over the maternal abdomen to "
+        "deliver the face and brow. An assistant gives suprapubic "
+        "pressure to aid flexion. Complications: mandibular and "
+        "facial injury from fingers placed in the mouth, cervical "
+        "spine injury from excessive traction, and failure when the "
+        "cervix is not fully dilated. Note: the fingers go on the "
+        "cheekbones and not in the mouth, and the pull comes from the "
+        "shoulder hook while the other hand only flexes."
+    ),
+    "Mirror syndrome": (
+        "Mirror syndrome is maternal oedema that mirrors fetal "
+        "hydrops, the mother becoming oedematous and hypertensive "
+        "alongside a hydropic fetus and a thickened placenta. It is "
+        "rare and easily mistaken for pre-eclampsia. Aetiology: any "
+        "cause of fetal hydrops can trigger it, including rhesus "
+        "alloimmunisation, parvovirus B19, twin-to-twin transfusion, "
+        "fetal arrhythmia and structural heart disease. Clinical "
+        "features: the triad of maternal oedema, placentomegaly and "
+        "fetal hydrops, with hypertension, proteinuria, headache and "
+        "breathlessness. Haemodilution with a low haematocrit "
+        "separates it from pre-eclampsia, where haemoconcentration is "
+        "the rule. Ix: ultrasound for hydrops and placental "
+        "thickness, plus full blood count, liver and renal function, "
+        "urate, and a hydrops work-up including maternal serology and "
+        "an antibody screen. Mx: treat the fetal cause where it is "
+        "treatable, such as intrauterine transfusion for anaemia. "
+        "Otherwise deliver, and the maternal features resolve within "
+        "days of birth. Note: a low haematocrit alongside "
+        "pre-eclamptic features is the clue that this is the mother "
+        "mirroring her fetus."
+    ),
+    "Sinusoidal fetal heart rate": (
+        "A sinusoidal fetal heart rate is a smooth regular undulating "
+        "CTG pattern of amplitude 5 to 15 bpm and frequency 3 to 5 "
+        "cycles per minute, lasting at least 20 minutes with absent "
+        "variability and no accelerations. It is a pathological "
+        "pattern that mandates urgent action. Aetiology: severe fetal "
+        "anaemia from rhesus alloimmunisation, fetomaternal "
+        "haemorrhage, parvovirus B19, vasa praevia or twin-to-twin "
+        "transfusion. Severe hypoxia and some fetal central nervous "
+        "system lesions also produce it. Ix: a Kleihauer test for "
+        "fetomaternal haemorrhage, a maternal antibody screen, and "
+        "middle cerebral artery peak systolic velocity, which rises "
+        "above 1.5 multiples of the median in fetal anaemia. Mx: call "
+        "for help, resuscitate in utero and deliver urgently unless a "
+        "reversible cause can be treated by intrauterine transfusion. "
+        "Note: the pseudosinusoidal pattern of thumb-sucking or "
+        "opioid effect is more jagged, shorter lived and keeps "
+        "variability between runs, so duration and regularity are "
+        "what separate them."
+    ),
+    "Vulval intraepithelial neoplasia": (
+        "Vulval intraepithelial neoplasia is a premalignant squamous "
+        "lesion of the vulval epithelium and the precursor of vulval "
+        "squamous cell carcinoma. Classification: a high-grade "
+        "squamous intraepithelial lesion driven by HPV 16, seen in "
+        "younger women who smoke or are immunosuppressed, and a "
+        "differentiated type that is HPV independent, arises on a "
+        "background of lichen sclerosus in older women and carries "
+        "the higher and faster cancer risk. Clinical features: "
+        "persistent pruritus and burning with raised white, red or "
+        "pigmented plaques that may be multifocal. Differentiated "
+        "lesions are subtler, usually unifocal and often ulcerated. "
+        "Ix: biopsy every persistent vulval lesion, including "
+        "anything treated as thrush that has not resolved. Colposcopy "
+        "is warranted because HPV-related disease is often "
+        "multizonal. Mx: wide local excision, imiquimod or laser "
+        "ablation for high-grade squamous lesions, and excision for "
+        "differentiated disease, with lifelong review. Note: a vulval "
+        "itch that has failed two courses of antifungal is a biopsy, "
+        "not a third prescription."
+    ),
+    "Harlequin colour change": (
+        "Harlequin colour change is a benign transient neonatal "
+        "finding in which one longitudinal half of the body flushes "
+        "red while the other stays pale, with a sharp midline "
+        "demarcation. It affects around 10 percent of newborns. "
+        "Aetiology: immaturity of the hypothalamic centre controlling "
+        "peripheral vascular tone, so gravity-dependent "
+        "vasodilatation goes unopposed when the baby lies on one "
+        "side. It is commonest in the first week, peaks around days 2 "
+        "to 5 and is more frequent in preterm infants. Clinical "
+        "features: episodes lasting 30 seconds to 20 minutes with the "
+        "dependent side red, reversing when the infant is turned. The "
+        "infant is well throughout, feeding and behaving normally. "
+        "Ix: none needed when the baby is otherwise well and the "
+        "change reverses with position. Mx: reassurance and "
+        "explanation to the parents, and nothing else. Note: alarming "
+        "to watch and harmless. What would change the picture is a "
+        "baby who is unwell, a change that does not reverse, or "
+        "asymmetry following a dermatome rather than the midline."
+    ),
+    "Neonatal acne": (
+        "Neonatal acne is an erythematous papulopustular eruption on "
+        "the face of an infant in the first weeks of life, now better "
+        "understood as neonatal cephalic pustulosis. It affects up to "
+        "20 percent of newborns. Aetiology: an inflammatory response "
+        "to Malassezia species colonising the skin, with maternal and "
+        "neonatal androgens stimulating sebaceous activity. True "
+        "comedones are absent, which is what separates it from "
+        "infantile acne. Clinical features: small pustules and "
+        "papules on the cheeks, forehead, chin and scalp, appearing "
+        "at 2 to 3 weeks and resolving by 3 months without scarring. "
+        "Ix: clinical. Consider a skin scraping only if the eruption "
+        "is atypical, pustular elsewhere, or the infant is unwell. "
+        "Mx: gentle cleansing with water and reassurance. Topical "
+        "ketoconazole 2 percent cream shortens the course in "
+        "persistent cases. Note: an eruption appearing after 6 weeks "
+        "and carrying true comedones is infantile acne, which can "
+        "scar and warrants treatment and a look for an androgen "
+        "source."
+    ),
+    "Caffey disease": (
+        "Caffey disease, or infantile cortical hyperostosis, is a "
+        "self-limiting inflammatory bone disorder of infancy "
+        "producing painful cortical thickening, most often of the "
+        "mandible. Genetics: autosomal dominant with variable "
+        "penetrance from a COL1A1 mutation in the familial form, "
+        "though sporadic cases are commoner. Onset is almost always "
+        "before 5 months. Clinical features: an irritable febrile "
+        "infant with hot tender swelling over the mandible, clavicle, "
+        "ulna or ribs, refusing feeds because the jaw hurts, with "
+        "soft tissue swelling preceding the bone changes. Ix: "
+        "radiographs show periosteal new bone and cortical thickening "
+        "without a fracture line or metaphyseal corner injury. "
+        "Inflammatory markers and alkaline phosphatase are raised. "
+        "Mx: supportive with paracetamol or ibuprofen, with "
+        "corticosteroids reserved for severe or prolonged disease. It "
+        "resolves over months with remodelling. Note: the "
+        "differential that matters is inflicted injury, and "
+        "distribution helps, since symmetrical periosteal reaction "
+        "centred on the mandible is not a pattern abuse produces."
+    ),
+    "Infantile haemangioma": (
+        "Infantile haemangioma is the commonest benign tumour of "
+        "infancy, a proliferating vascular lesion present in up to 5 "
+        "percent of infants, and it follows a predictable course of "
+        "rapid growth then slow involution. Risk factors: female sex, "
+        "prematurity, low birth weight, multiple pregnancy and "
+        "chorionic villus sampling. Clinical features: absent at "
+        "birth or a pale herald patch, then rapid growth from 2 weeks "
+        "to about 5 months, a plateau, and involution over years with "
+        "roughly half clear by age 5. Superficial lesions are bright "
+        "red and deep ones blue and rubbery. Ix: clinical. Image "
+        "lumbosacral lesions for spinal dysraphism, and consider "
+        "echocardiography and MRI for a large segmental facial "
+        "lesion, which may signal PHACE syndrome. Mx: most need only "
+        "observation and serial photographs. Oral propranolol is "
+        "first line where sight, airway, feeding or ulceration are "
+        "threatened, started with baseline heart rate and glucose "
+        "monitoring. Note: the growth window is short, so a lesion "
+        "near the eye or airway needs referral at weeks of age, not "
+        "months."
+    ),
+    "Nappy rash": (
+        "Nappy rash is irritant contact dermatitis of the skin under "
+        "a nappy, driven by moisture, friction, urine and faecal "
+        "enzymes raising skin pH. Most infants get it at some point "
+        "and it peaks between 9 and 12 months. Clinical features: "
+        "erythema over the convex surfaces of the buttocks, thighs "
+        "and pubis, with the skin folds characteristically spared. "
+        "Candidal infection does the opposite, involving the folds "
+        "with a beefy red scalloped edge and satellite pustules, and "
+        "follows antibiotics or a rash lasting beyond 3 days. "
+        "Differential: seborrhoeic dermatitis, psoriasis, zinc "
+        "deficiency and scabies for a rash that will not settle. Mx: "
+        "frequent nappy changes, nappy-free air time, a thick zinc or "
+        "petrolatum barrier at every change, and avoiding soap and "
+        "alcohol-containing wipes. Topical clotrimazole for candida "
+        "and brief hydrocortisone 1 percent for marked inflammation. "
+        "Note: folds spared means irritant and folds involved means "
+        "candida, and a rash unresponsive to both needs a different "
+        "diagnosis."
+    ),
+    "Arsenic poisoning": (
+        "Arsenic poisoning follows ingestion of contaminated "
+        "groundwater, occupational exposure in smelting and timber "
+        "treatment, or deliberate poisoning, and the acute and "
+        "chronic pictures look nothing alike. Clinical features: "
+        "acute ingestion causes severe vomiting, rice-water "
+        "diarrhoea, abdominal pain, hypotension and a garlic odour on "
+        "the breath, followed days later by a painful sensory-motor "
+        "peripheral neuropathy and a long QT with torsades. Chronic "
+        "exposure produces hyperpigmentation with raindrop "
+        "depigmentation, palmoplantar keratoses, Mees lines on the "
+        "nails, and later skin, bladder and lung cancers. Ix: 24-hour "
+        "urinary arsenic is the test of choice, avoiding seafood for "
+        "3 days beforehand because organic arsenic falsely elevates "
+        "it. Hair and nail levels reflect remote exposure. Mx: "
+        "resuscitate with fluids, correct electrolytes and magnesium, "
+        "and chelate severe acute poisoning with dimercaprol or "
+        "succimer after discussion with the Poisons Information "
+        "Centre on 13 11 26. Note: Mees lines take weeks to appear, "
+        "so they date an exposure rather than diagnose it."
+    ),
+    "Manganese toxicity": (
+        "Manganese toxicity is a parkinsonian syndrome from chronic "
+        "inhalational or parenteral exposure, historically in miners "
+        "and welders and now seen in long-term parenteral nutrition "
+        "and chronic liver disease. Aetiology: manganese is excreted "
+        "in bile, so cholestasis, cirrhosis and portosystemic "
+        "shunting all allow it to accumulate. Welding fume, dry cell "
+        "battery and ferroalloy work are the occupational sources. "
+        "Clinical features: an early phase of irritability, emotional "
+        "lability and headache, then bradykinesia, dystonia, a "
+        "characteristic cock-walk gait on the toes and a tendency to "
+        "fall backwards. Resting tremor is uncommon and the picture "
+        "is symmetrical, unlike idiopathic Parkinson disease. Ix: "
+        "whole blood manganese, and MRI showing symmetrical high T1 "
+        "signal in the globus pallidus without gadolinium. Mx: remove "
+        "the exposure and reduce manganese in parenteral nutrition. "
+        "Levodopa is usually ineffective because the lesion is "
+        "postsynaptic, and chelation adds little. Note: a "
+        "parkinsonian patient who does not respond to levodopa and "
+        "has bright pallidi on T1 has a metal problem."
+    ),
+    "Cadmium toxicity": (
+        "Cadmium toxicity results from inhalation in smelting, "
+        "battery manufacture and welding of plated metal, or from "
+        "ingestion of contaminated food, with tobacco smoke a "
+        "significant background source. Clinical features: acute "
+        "inhalation causes a delayed chemical pneumonitis with "
+        "dyspnoea, fever and pulmonary oedema hours after exposure, "
+        "easily mistaken for metal fume fever, which is milder and "
+        "self-limiting. Chronic exposure produces emphysema, anosmia, "
+        "yellow discolouration of the teeth and, above all, proximal "
+        "renal tubular damage. Renal: low molecular weight "
+        "proteinuria with urinary beta-2 microglobulin is the "
+        "earliest sign, followed by glycosuria, aminoaciduria, "
+        "hypercalciuria, osteomalacia and stones. The itai-itai "
+        "epidemic in Japan combined osteomalacia with tubulopathy. "
+        "Ix: urinary cadmium reflects body burden, blood cadmium "
+        "recent exposure, and urinary beta-2 microglobulin the "
+        "tubular injury. Mx: remove the exposure. Chelation is not "
+        "useful and the renal damage is irreversible. Note: cadmium "
+        "hits the proximal tubule, so screen exposed workers with "
+        "tubular proteins rather than creatinine."
+    ),
+    "Immersion foot": (
+        "Immersion foot, also called trench foot, is a non-freezing "
+        "cold injury from prolonged exposure of the feet to wet cold "
+        "above freezing, typically over 12 hours to days. Aetiology: "
+        "sustained cold-induced vasoconstriction causes tissue "
+        "hypoxia with endothelial and nerve injury but no ice crystal "
+        "formation, which is what separates it from frostbite. It is "
+        "seen in soldiers, hikers, fishermen and people sleeping "
+        "rough. Clinical features: an initial pale, cold, numb, "
+        "wrinkled foot with impalpable pulses, then a hyperaemic "
+        "phase on rewarming with intense burning pain, swelling and "
+        "blistering lasting days to weeks, and finally a "
+        "post-hyperaemic phase of persisting cold sensitivity and "
+        "neuropathic pain that can last years. Ix: clinical. Mx: "
+        "remove from the wet environment, dry and gently rewarm at "
+        "room temperature without direct heat or massage, elevate, "
+        "and give analgesia that covers neuropathic pain such as "
+        "amitriptyline. Debride only clearly demarcated tissue and "
+        "only late. Note: unlike frostbite there is no rapid "
+        "rewarming step, and the lasting problem is chronic pain "
+        "rather than tissue loss."
+    ),
+    "Barotrauma of descent": (
+        "Barotrauma of descent, or squeeze, is injury from failure to "
+        "equalise a gas-filled space against rising ambient pressure, "
+        "and it is the commonest diving injury. Aetiology: by Boyle's "
+        "law the volume change is greatest near the surface, so most "
+        "middle ear squeeze happens in the first few metres. "
+        "Eustachian tube dysfunction from an upper respiratory "
+        "infection or allergy is the usual reason equalisation fails. "
+        "Sites: middle ear most often, then sinus, mask and tooth, "
+        "and rarely the lung in breath-hold diving. Clinical "
+        "features: ear pain progressing to fullness, conductive "
+        "hearing loss and vertigo. Otoscopy grades the injury from "
+        "mild retraction through haemotympanum to perforation. Inner "
+        "ear barotrauma adds tinnitus and a hearing loss of cochlear "
+        "origin. Mx: stop diving, analgesia, a nasal decongestant, "
+        "and avoid Valsalva. Perforation needs dry ear precautions "
+        "and ENT review. Inner ear injury is an emergency and must be "
+        "told apart from decompression sickness before any "
+        "recompression. Note: pain on the way down is squeeze, and "
+        "symptoms starting on ascent or after surfacing are a "
+        "different problem."
+    ),
+    "Exploding head syndrome": (
+        "Exploding head syndrome is a benign sensory parasomnia in "
+        "which a person perceives a sudden loud noise or explosion "
+        "inside the head at the transition into or out of sleep, "
+        "without pain. Epidemiology: reported by up to 10 percent of "
+        "adults, commoner in women and under stress or sleep "
+        "deprivation. Aetiology: thought to be a brief delayed "
+        "shutdown of brainstem reticular neurons during the wake to "
+        "sleep transition, producing a burst of activity in auditory "
+        "pathways rather than any structural lesion. Clinical "
+        "features: a bang, gunshot, cymbal crash or electrical "
+        "discharge lasting under a second, often with a flash of "
+        "light and a jolt of fear and tachycardia, then immediate "
+        "full alertness. There is no headache, which is the point of "
+        "difference. Ix: none if typical. Investigate when there is "
+        "pain, focal neurology or a thunderclap character, where "
+        "subarachnoid haemorrhage and hypnic headache need excluding. "
+        "Mx: explanation and reassurance resolve the distress in "
+        "most, helped by sleep hygiene and stress reduction. Note: "
+        "painless is the discriminator, since a loud noise in the "
+        "head that hurts is a headache syndrome."
+    ),
+    "Non-24-hour sleep-wake rhythm disorder": (
+        "Non-24-hour sleep-wake rhythm disorder is a circadian "
+        "disorder in which the internal clock runs longer than 24 "
+        "hours and never entrains, so sleep timing drifts "
+        "progressively later each day. Epidemiology: affects more "
+        "than half of totally blind people and is rare but recognised "
+        "in sighted adults. Aetiology: absence of light input to the "
+        "suprachiasmatic nucleus in blindness, and in sighted people "
+        "an unusually long intrinsic period with weak zeitgeber "
+        "exposure, often starting after a period of social isolation. "
+        "Clinical features: weeks of normal sleep alternating with "
+        "weeks of insomnia at night and irresistible daytime "
+        "sleepiness, which is what distinguishes it from chronic "
+        "insomnia. Ix: a sleep diary and actigraphy over at least 14 "
+        "days showing a steadily drifting sleep onset. Salivary dim "
+        "light melatonin onset confirms the free-running period. Mx: "
+        "timed evening melatonin is first line, with tasimelteon "
+        "where available. Sighted patients add timed morning bright "
+        "light and a fixed social schedule. Note: a complaint that "
+        "cycles in and out of normal over weeks is a clock problem, "
+        "not insomnia."
+    ),
+    "Confusional arousals": (
+        "Confusional arousals are episodes of partial awakening from "
+        "deep non-REM sleep in which the person is disoriented and "
+        "behaves oddly but does not leave the bed. They are a "
+        "disorder of arousal alongside sleepwalking and sleep "
+        "terrors. Epidemiology: common in children, peaking under 5 "
+        "years, and persisting in about 4 percent of adults. "
+        "Aetiology: an incomplete transition out of slow wave sleep, "
+        "so motor systems wake while consciousness does not. Sleep "
+        "deprivation, fever, alcohol, sedatives, shift work and "
+        "untreated sleep apnoea all precipitate them. Clinical "
+        "features: episodes in the first third of the night with slow "
+        "mumbled speech, blunted responses, inconsolability and "
+        "sometimes resistance to comforting, lasting minutes, with "
+        "complete amnesia afterwards. Autonomic arousal is mild, "
+        "unlike sleep terrors. Ix: history alone if typical. "
+        "Polysomnography when there is injury, stereotypy or an adult "
+        "onset. Mx: reassure, protect sleep and remove triggers, and "
+        "treat any apnoea. Note: adult onset, stereotyped movements "
+        "or several events a night point to frontal lobe seizures "
+        "rather than a parasomnia."
+    ),
+    "Sleep-related eating disorder": (
+        "Sleep-related eating disorder is recurrent involuntary "
+        "eating during partial arousal from non-REM sleep, with "
+        "impaired awareness and little or no recall the next morning. "
+        "Epidemiology: prevalence around 1 percent, commoner in women "
+        "and in people with a history of sleepwalking. Aetiology: a "
+        "disorder of arousal, strongly associated with sedative "
+        "hypnotics, particularly zolpidem, and with restless legs "
+        "syndrome, obstructive sleep apnoea and restrictive daytime "
+        "dieting. Clinical features: nocturnal eating of odd "
+        "combinations or raw and frozen food, kitchen injuries and "
+        "burns, morning anorexia and unexplained weight gain. The "
+        "evidence is found in the morning rather than remembered. Ix: "
+        "history from a bed partner, with polysomnography when apnoea "
+        "or periodic limb movements are suspected. Mx: withdraw the "
+        "offending hypnotic, treat comorbid apnoea, check iron "
+        "studies and treat restless legs, and make the kitchen safe. "
+        "Topiramate has the best evidence where it persists. Note: "
+        "night eating syndrome differs in that the person is awake, "
+        "remembers eating and chooses ordinary food."
+    ),
+    "Delayed sleep-wake phase disorder": (
+        "Delayed sleep-wake phase disorder is a circadian rhythm "
+        "disorder in which the intrinsic clock is set several hours "
+        "late, so sleep onset and wake time are both delayed relative "
+        "to social requirements. Epidemiology: affects up to 16 "
+        "percent of adolescents and young adults, making it the "
+        "commonest circadian disorder. Aetiology: a long intrinsic "
+        "circadian period, increased sensitivity to evening light, "
+        "reduced morning light exposure and a strong genetic "
+        "component. Evening screen use perpetuates it. Clinical "
+        "features: inability to fall asleep before 2 to 6 am, extreme "
+        "difficulty waking for school or work, and morning sleepiness "
+        "and poor performance that clear by evening, with entirely "
+        "normal sleep when the timing is free, as on holidays. Ix: "
+        "sleep diary and actigraphy over 14 days. Mx: a fixed wake "
+        "time, morning bright light on waking, evening light "
+        "restriction, and low dose melatonin 0.5 to 1 mg taken 4 to 6 "
+        "hours before current sleep onset rather than at bedtime. "
+        "Note: normal sleep on holidays is the clue that separates "
+        "this from insomnia and from depression."
+    ),
+    "Advanced sleep-wake phase disorder": (
+        "Advanced sleep-wake phase disorder is a circadian rhythm "
+        "disorder in which the clock runs early, with sleep onset in "
+        "the early evening and spontaneous waking in the small hours. "
+        "It is the mirror image of the delayed phase disorder and far "
+        "less common. Epidemiology: about 1 percent of middle-aged "
+        "and older adults, rising with age as circadian amplitude "
+        "falls. Genetics: familial cases follow autosomal dominant "
+        "inheritance through PER2 and CSNK1D mutations that shorten "
+        "the intrinsic period. Clinical features: irresistible "
+        "sleepiness from 6 to 9 pm, waking at 2 to 5 am unable to "
+        "return to sleep, and normal sleep duration and quality when "
+        "timing is allowed to follow the clock. Patients usually "
+        "present complaining of early morning insomnia. Ix: sleep "
+        "diary and actigraphy over 14 days, showing a stable early "
+        "rhythm rather than a drifting or fragmented one. Mx: timed "
+        "bright light in the evening, scheduled later activity and "
+        "avoidance of early morning light. Melatonin has little role. "
+        "Note: early waking with early sleepiness and good sleep "
+        "quality is a clock set early, not the early waking of "
+        "depression."
+    ),
+    "Asteroid hyalosis": (
+        "Asteroid hyalosis is a degenerative condition in which "
+        "calcium-containing lipid bodies suspend in the vitreous, "
+        "producing striking yellow-white spheres that move with the "
+        "eye and settle back. It is almost always incidental and "
+        "harmless. Epidemiology: prevalence around 1 percent, rising "
+        "with age, unilateral in three quarters of cases and commoner "
+        "in men. Associations: age is the strongest. Diabetes has "
+        "been reported but the link is inconsistent, and the finding "
+        "does not signal systemic disease. Clinical features: usually "
+        "asymptomatic with well-preserved vision, which is the "
+        "paradox, since the view in is far worse than the view out. "
+        "Some patients notice floaters. Ix: dilated fundoscopy shows "
+        "the bodies suspended in the vitreous obscuring the retinal "
+        "view. B-scan ultrasound or optical coherence tomography "
+        "helps when the fundus cannot be examined. Mx: none. "
+        "Vitrectomy is reserved for the rare case where the clinician "
+        "cannot monitor retinal disease such as diabetic retinopathy. "
+        "Note: dramatic on examination and silent for the patient, so "
+        "treat it as a barrier to viewing the retina rather than a "
+        "disease."
     ),
 }
 
