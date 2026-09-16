@@ -15747,6 +15747,204 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "assessing fitness for work and return to work planning"]],
         "summary": "",
     },
+    {
+        "name": "Myeloma cast nephropathy",
+        "aliases": ["Cast nephropathy", "Myeloma kidney", "Light chain cast nephropathy"],
+        "utd": [["Overview", "myeloma cast nephropathy light chain"]],
+        "summary": "",
+    },
+    {
+        "name": "Reflux nephropathy",
+        "aliases": ["Chronic reflux nephropathy", "Reflux kidney disease"],
+        "utd": [["Overview", "reflux nephropathy renal scarring"]],
+        "summary": "",
+    },
+    {
+        "name": "Urinary alkalinisation",
+        "aliases": ["Urine alkalinisation", "Urinary alkalinization", "Alkaline diuresis"],
+        "utd": [["Overview", "urine alkalinisation salicylate poisoning"]],
+        "summary": "",
+    },
+    {
+        "name": "Intra-aortic balloon pump",
+        "aliases": ["Intraaortic balloon pump", "IABP", "Balloon counterpulsation", "Aortic counterpulsation"],
+        "utd": [["Overview", "intra-aortic balloon pump counterpulsation"]],
+        "summary": "",
+    },
+    {
+        "name": "Ventilator weaning",
+        "aliases": ["Weaning from mechanical ventilation", "Spontaneous breathing trial", "Extubation readiness"],
+        "utd": [["Overview", "weaning from mechanical ventilation spontaneous breathing trial"]],
+        "summary": "",
+    },
+    {
+        "name": "Delirium in intensive care",
+        "aliases": ["ICU delirium", "Intensive care delirium", "Critical illness delirium"],
+        "utd": [["Overview", "delirium in the intensive care unit CAM-ICU"]],
+        "summary": "",
+    },
+    {
+        "name": "Stress ulcer prophylaxis",
+        "aliases": ["Stress ulceration prophylaxis", "Gastric stress ulcer prophylaxis", "Stress-related mucosal disease prophylaxis"],
+        "utd": [["Overview", "stress ulcer prophylaxis critically ill"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug-induced hyponatraemia",
+        "aliases": ["Medication-induced hyponatraemia", "Thiazide-induced hyponatraemia", "Drug induced hyponatremia"],
+        "utd": [["Overview", "drug induced hyponatraemia thiazide SSRI"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug-induced pancreatitis",
+        "aliases": ["Medication-induced pancreatitis", "Drug induced acute pancreatitis"],
+        "utd": [["Overview", "drug induced acute pancreatitis medication"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug-induced interstitial lung disease",
+        "aliases": ["Drug-induced pneumonitis", "Medication-induced interstitial lung disease", "Amiodarone pneumonitis"],
+        "utd": [["Overview", "drug induced interstitial lung disease pneumonitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Drug-induced long QT",
+        "aliases": ["Acquired long QT", "Acquired QT prolongation"],
+        "utd": [["Overview", "drug induced QT prolongation torsades"]],
+        "summary": "",
+    },
+    {
+        "name": "Anticoagulation in atrial fibrillation",
+        "aliases": ["Stroke prevention in atrial fibrillation", "Anticoagulation for atrial fibrillation"],
+        "utd": [["Overview", "anticoagulation atrial fibrillation stroke prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "Left atrial appendage occlusion",
+        "aliases": ["Left atrial appendage closure", "LAA occlusion", "Watchman device"],
+        "utd": [["Overview", "left atrial appendage occlusion device"]],
+        "summary": "",
+    },
+    {
+        "name": "Catheter ablation",
+        "aliases": ["Cardiac ablation", "Pulmonary vein isolation", "Cryoablation"],
+        "utd": [["Overview", "catheter ablation atrial fibrillation supraventricular tachycardia"]],
+        "summary": "",
+    },
+    {
+        "name": "Loeys-Dietz syndrome",
+        "aliases": ["Loeys Dietz syndrome", "Loeys-Dietz aortic aneurysm syndrome"],
+        "utd": [["Overview", "Loeys-Dietz syndrome aortic aneurysm TGFBR"]],
+        "summary": "",
+    },
+    {
+        "name": "Subclavian steal syndrome",
+        "aliases": ["Subclavian steal", "Coronary-subclavian steal", "Vertebral artery steal"],
+        "utd": [["Overview", "subclavian steal syndrome vertebral artery"]],
+        "summary": "",
+    },
+    {
+        "name": "Superficial thrombophlebitis",
+        "aliases": ["Superficial vein thrombosis", "Superficial venous thrombosis", "Thrombophlebitis"],
+        "utd": [["Overview", "superficial vein thrombosis thrombophlebitis leg"]],
+        "summary": "",
+    },
+    {
+        "name": "Inferior vena cava filter",
+        "aliases": ["IVC filter", "Vena cava filter", "Caval filter"],
+        "utd": [["Overview", "inferior vena cava filter indications retrieval"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulmonary embolism risk stratification",
+        "aliases": ["Massive pulmonary embolism", "Submassive pulmonary embolism"],
+        "utd": [["Overview", "pulmonary embolism risk stratification PESI right ventricular"]],
+        "summary": "",
+    },
+    {
+        "name": "Pulmonary embolism thrombolysis",
+        "aliases": ["Thrombolysis for pulmonary embolism", "Systemic thrombolysis for pulmonary embolism"],
+        "utd": [["Overview", "thrombolysis for pulmonary embolism alteplase"]],
+        "summary": "",
+    },
+    {
+        "name": "Chronic thromboembolic pulmonary hypertension",
+        "aliases": ["CTEPH", "Chronic thromboembolic disease", "Chronic thromboembolic pulmonary disease"],
+        "utd": [["Overview", "chronic thromboembolic pulmonary hypertension endarterectomy"]],
+        "summary": "",
+    },
+    {
+        "name": "Transfusion-associated graft-versus-host disease",
+        "aliases": ["Transfusion associated graft versus host disease", "TA-GVHD", "Transfusion-associated GVHD"],
+        "utd": [["Overview", "transfusion associated graft versus host disease irradiated"]],
+        "summary": "",
+    },
+    {
+        "name": "Radiation therapy toxicity",
+        "aliases": ["Radiotherapy toxicity", "Radiation toxicity", "Radiation recall", "Radiotherapy side effects"],
+        "utd": [["Overview", "radiation therapy toxicity acute late effects"]],
+        "summary": "",
+    },
+    {
+        "name": "Leptomeningeal disease",
+        "aliases": ["Leptomeningeal carcinomatosis", "Neoplastic meningitis", "Carcinomatous meningitis", "Leptomeningeal metastases"],
+        "utd": [["Overview", "leptomeningeal carcinomatosis neoplastic meningitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Blast injury",
+        "aliases": ["Blast trauma", "Explosion injury", "Blast lung"],
+        "utd": [["Overview", "blast injury primary secondary tertiary quaternary"]],
+        "summary": "",
+    },
+    {
+        "name": "Alcoholic ketoacidosis",
+        "aliases": ["Alcohol ketoacidosis", "Alcohol-induced ketoacidosis"],
+        "utd": [["Overview", "alcoholic ketoacidosis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Non-tuberculous mycobacterial infection",
+        "aliases": ["Atypical mycobacterial infection", "Non tuberculous mycobacteria", "NTM infection"],
+        "utd": [["Overview", "nontuberculous mycobacterial lung disease"]],
+        "summary": "",
+    },
+    {
+        "name": "Hepatitis E",
+        "aliases": ["Hepatitis E virus", "HEV infection"],
+        "utd": [["Overview", "hepatitis E virus infection"]],
+        "summary": "",
+    },
+    {
+        "name": "Gastrointestinal stromal tumour",
+        "aliases": ["GIST", "GI stromal tumour", "Gastrointestinal stromal tumor"],
+        "utd": [["Overview", "gastrointestinal stromal tumour imatinib"]],
+        "summary": "",
+    },
+    {
+        "name": "Immune effector cell-associated neurotoxicity syndrome",
+        "aliases": ["ICANS", "CAR T-cell neurotoxicity", "CAR-T neurotoxicity"],
+        "utd": [["Overview", "immune effector cell associated neurotoxicity syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Checkpoint inhibitor pneumonitis",
+        "aliases": ["Immunotherapy pneumonitis", "Immune-related pneumonitis", "Immune checkpoint inhibitor pneumonitis"],
+        "utd": [["Overview", "checkpoint inhibitor pneumonitis immunotherapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Checkpoint inhibitor hypophysitis",
+        "aliases": ["Immunotherapy hypophysitis", "Ipilimumab hypophysitis", "Immune-related hypophysitis"],
+        "utd": [["Overview", "checkpoint inhibitor hypophysitis ipilimumab"]],
+        "summary": "",
+    },
+    {
+        "name": "Vitamin A deficiency",
+        "aliases": ["Retinol deficiency", "Hypovitaminosis A", "Xerophthalmia"],
+        "utd": [["Overview", "vitamin A deficiency xerophthalmia"]],
+        "summary": "",
+    },
 ]
 
 
@@ -87888,6 +88086,699 @@ RICH_SUMMARIES = {
         "mining have their own standards. Note: writing unfit for all "
         "duties by default is the easy option and the one most likely "
         "to harm the patient."
+    ),
+
+    "Myeloma cast nephropathy": (
+        "Acute kidney injury caused by monoclonal free light chains "
+        "precipitating with Tamm-Horsfall protein in the distal "
+        "tubule to form obstructing casts. It is the commonest renal "
+        "lesion in multiple myeloma and often the presenting problem. "
+        "Aetiology: a high circulating light chain burden, tipped "
+        "over by volume depletion, hypercalcaemia or nephrotoxins "
+        "such as NSAIDs and iodinated contrast. Clinical features: "
+        "subacute kidney injury with bland urine and a near-normal "
+        "dipstick, alongside anaemia, bone pain and hypercalcaemia. "
+        "Ix: serum free light chain assay with the kappa to lambda "
+        "ratio, serum and urine electrophoresis with immunofixation, "
+        "and marrow biopsy. Renal biopsy shows fractured casts with a "
+        "giant cell reaction when the picture is unclear. Mx: "
+        "generous isotonic fluid and withdrawal of nephrotoxins, then "
+        "urgent bortezomib-based anti-myeloma therapy, since it is "
+        "the fall in light chains that drives renal recovery. Note: "
+        "the dipstick detects albumin and not light chains, so a "
+        "quiet dipstick beside gross proteinuria on a protein to "
+        "creatinine ratio is the tell."
+    ),
+    "Reflux nephropathy": (
+        "Chronic renal scarring left by vesicoureteral reflux of "
+        "infected urine in early childhood, and a leading cause of "
+        "hypertension and chronic kidney disease in young adults. "
+        "Aetiology: a short intravesical ureteric tunnel permits "
+        "reflux, and reflux with urinary infection before the age of "
+        "five produces focal cortical scars at the renal poles. "
+        "Clinical features: silent until adolescence, then "
+        "proteinuria, hypertension, recurrent pyelonephritis or an "
+        "unexplained creatinine rise in a young adult. Pregnancy "
+        "often unmasks it. Ix: ultrasound showing small irregular "
+        "kidneys with cortical thinning, DMSA scanning for scars, and "
+        "a protein to creatinine ratio with blood pressure. Mx: blood "
+        "pressure control with an ACE inhibitor or sartan, prompt "
+        "treatment of infection and nephrology follow-up. Prophylaxis "
+        "and ureteric reimplantation belong to high-grade reflux in "
+        "children. Note: the scarring is complete by school age, so "
+        "adult care preserves what remains rather than preventing new "
+        "damage."
+    ),
+    "Urinary alkalinisation": (
+        "Deliberate raising of urine pH above 7.5 with intravenous "
+        "sodium bicarbonate, trapping weak acids in ionised form so "
+        "the tubule cannot reabsorb them. Indications: salicylate "
+        "poisoning above all, with moderate toxicity or a rising "
+        "level. Also phenobarbitone and methotrexate toxicity. Dose: "
+        "1 to 2 mmol/kg of sodium bicarbonate as a bolus, then an "
+        "infusion of 100 to 150 mmol in a litre of 5% dextrose "
+        "titrated to urine pH. Monitoring: hourly urine pH aiming at "
+        "7.5 to 8.5, arterial pH held below 7.55, and frequent "
+        "potassium levels. Cautions: hypokalaemia defeats the whole "
+        "manoeuvre because the tubule then exchanges potassium for "
+        "hydrogen, so replace potassium first. Fluid overload and "
+        "hypocalcaemia are the other hazards. Note: it is a "
+        "salicylate treatment before anything else. Altered conscious "
+        "state, acidaemia or a level that keeps climbing means "
+        "alkalinisation is not enough and haemodialysis is the "
+        "answer."
+    ),
+    "Intra-aortic balloon pump": (
+        "A percutaneous counterpulsation device sitting in the "
+        "descending aorta, inflating in diastole and deflating in "
+        "early systole. Mechanism: diastolic augmentation raises "
+        "coronary perfusion pressure while presystolic deflation cuts "
+        "left ventricular afterload and myocardial oxygen demand. "
+        "Indications: cardiogenic shock after myocardial infarction, "
+        "mechanical complications such as acute mitral regurgitation "
+        "or ventricular septal rupture, and refractory ischaemia as a "
+        "bridge to revascularisation. Contraindications: significant "
+        "aortic regurgitation, aortic dissection and severe "
+        "peripheral arterial disease. Complications: limb ischaemia, "
+        "thrombocytopenia, haemolysis and aortic injury. Monitoring: "
+        "distal pulses, platelet count and the arterial waveform for "
+        "correct timing. Note: IABP-SHOCK II found no mortality "
+        "benefit in infarct-related cardiogenic shock, so treat it as "
+        "a haemodynamic bridge rather than a therapy that saves lives "
+        "on its own."
+    ),
+    "Ventilator weaning": (
+        "The structured withdrawal of invasive mechanical ventilation "
+        "once the illness that caused respiratory failure has "
+        "improved. Readiness is assessed daily rather than when "
+        "someone thinks of it. Criteria: a resolving cause, "
+        "oxygenation on FiO2 of 0.4 or less with PEEP of 5 to 8, "
+        "haemodynamic stability, and an awake patient with an "
+        "effective cough. Mx: pair a daily sedation interruption with "
+        "a spontaneous breathing trial on pressure support of 5 to 8 "
+        "or a T-piece for 30 to 120 minutes. Success means "
+        "extubation. Failure means returning to rest settings and "
+        "trying again tomorrow rather than grinding on. Ix: the rapid "
+        "shallow breathing index, respiratory rate divided by tidal "
+        "volume in litres, predicts failure above 105. A cuff leak "
+        "test helps where laryngeal oedema is a concern. "
+        "Complications: reintubation within 48 hours carries high "
+        "mortality, and prophylactic non-invasive ventilation or high "
+        "flow nasal oxygen after extubation reduces it in high-risk "
+        "patients. Note: repeated weaning failure should send you "
+        "hunting for fluid overload, delirium, critical illness "
+        "weakness or an undrained collection."
+    ),
+    "Delirium in intensive care": (
+        "Acute fluctuating disturbance of attention and awareness in "
+        "the critically ill, reaching 80% of ventilated patients and "
+        "independently linked to longer stay, higher mortality and "
+        "lasting cognitive impairment. Aetiology: sepsis, hypoxia and "
+        "metabolic derangement, compounded by immobility, sleep "
+        "fragmentation and sedatives. Benzodiazepines are the most "
+        "modifiable contributor. Clinical features: the hypoactive "
+        "form is commonest and most often missed, so waiting for an "
+        "agitated patient to declare the diagnosis finds only a "
+        "minority. Ix: screen at least daily with CAM-ICU or ICDSC "
+        "against a sedation target on RASS, and exclude "
+        "hypoglycaemia, hypoxia, sepsis and drug withdrawal. Mx: the "
+        "ABCDEF bundle is the evidence base. Awakening and breathing "
+        "trials, propofol or dexmedetomidine in preference to "
+        "midazolam, early mobilisation and family presence. "
+        "Antipsychotics settle distressing agitation but do not "
+        "shorten delirium. Note: a quiet unresponsive patient who is "
+        "not sedated is delirious until proven otherwise."
+    ),
+    "Stress ulcer prophylaxis": (
+        "Acid suppression given to critically ill patients to prevent "
+        "clinically important upper gastrointestinal bleeding from "
+        "stress-related mucosal damage. Risk factors: mechanical "
+        "ventilation beyond 48 hours and coagulopathy are the two "
+        "strongest. Also shock, chronic liver disease and a recent "
+        "history of peptic ulcer or bleeding. Indications: ventilated "
+        "or coagulopathic patients, and those carrying several lesser "
+        "risk factors. Routine use in every admission is not "
+        "supported. Mx: pantoprazole 40 mg daily intravenously or an "
+        "H2 antagonist. Enteral nutrition is itself protective, so "
+        "prophylaxis can stop once feeding is established and the "
+        "patient is extubated. Adverse effects: a raised gastric pH "
+        "is associated with Clostridioides difficile infection and "
+        "possibly hospital-acquired pneumonia, which is why the "
+        "indication deserves a daily look. Note: the commonest error "
+        "is not starting it but never stopping it. Prophylactic acid "
+        "suppression begun legitimately in intensive care follows the "
+        "patient to the ward and then home as a prescription nobody "
+        "reviews."
+    ),
+    "Drug-induced hyponatraemia": (
+        "Low serum sodium caused by a prescribed medicine, among the "
+        "commonest reversible causes and the first thing to look for "
+        "on the drug chart. Aetiology: thiazides are the classic "
+        "offender, acting within weeks of starting and favouring "
+        "older women. SSRIs, carbamazepine, antipsychotics and "
+        "desmopressin act through inappropriate ADH release, while "
+        "MDMA combines ADH release with free water loading. Clinical "
+        "features: usually incidental and mild. Nausea, confusion, "
+        "unsteadiness and falls at moderate levels, seizures and coma "
+        "when severe or rapid. Ix: paired serum and urine osmolality "
+        "with a urine sodium, plus thyroid function and cortisol. "
+        "Thiazide hyponatraemia can be biochemically "
+        "indistinguishable from SIADH. Mx: stop the drug and restrict "
+        "free water, correcting by no more than 8 to 10 mmol/L in 24 "
+        "hours to avoid osmotic demyelination. Hypertonic saline is "
+        "for seizures or coma only. Note: ask whether the sodium fell "
+        "within a fortnight of a new prescription, because that "
+        "timing is close to diagnostic."
+    ),
+    "Drug-induced pancreatitis": (
+        "Acute pancreatitis attributable to a medicine, perhaps 2 to "
+        "5% of cases, and a diagnosis reached only once gallstones "
+        "and alcohol are excluded. Aetiology: azathioprine and "
+        "mercaptopurine, valproate, oestrogens acting through "
+        "hypertriglyceridaemia, and GLP-1 receptor agonists are the "
+        "drugs most often implicated. Also asparaginase, mesalazine "
+        "and thiazides. The mechanism is usually idiosyncratic rather "
+        "than dose-related. Clinical features: indistinguishable from "
+        "other causes, with epigastric pain boring to the back, "
+        "vomiting and a raised lipase. The clue lies in the timing, "
+        "not the presentation. Ix: lipase, ultrasound to exclude "
+        "gallstones, triglycerides and calcium, and a careful "
+        "medicines history covering recent starts and dose increases. "
+        "Mx: withdraw the suspect drug, give supportive fluids and "
+        "analgesia, and do not rechallenge. Report the reaction to "
+        "the TGA. Note: the diagnosis only firms up on resolution "
+        "after withdrawal, so record the suspicion plainly in the "
+        "discharge summary or the drug will be restarted by someone "
+        "who never knew."
+    ),
+    "Drug-induced interstitial lung disease": (
+        "Diffuse parenchymal lung injury caused by a medicine, "
+        "spanning subacute pneumonitis to established fibrosis, and a "
+        "diagnosis of exclusion. Aetiology: amiodarone, methotrexate, "
+        "nitrofurantoin, bleomycin and immune checkpoint inhibitors "
+        "are the familiar culprits, joined by several chemotherapy "
+        "agents and biologics. Amiodarone risk climbs with cumulative "
+        "dose and duration. Clinical features: progressive exertional "
+        "breathlessness and dry cough over weeks to months, with fine "
+        "crackles and sometimes fever. Exertional hypoxia precedes "
+        "any fall in resting saturation. Ix: high resolution CT and "
+        "lung function with gas transfer, plus bronchoalveolar lavage "
+        "largely to exclude infection. Compare against any baseline "
+        "film and spirometry. Mx: stop the drug and give "
+        "corticosteroids for significant or progressive disease. "
+        "Amiodarone pneumonitis needs a prolonged course because the "
+        "drug's half-life runs to months. Note: baseline imaging and "
+        "lung function before amiodarone or methotrexate exist "
+        "precisely so this can be recognised later, and they are "
+        "skipped more often than not."
+    ),
+    "Drug-induced long QT": (
+        "Acquired lengthening of the QT interval by a medicine "
+        "blocking the hERG potassium channel, predisposing to "
+        "torsades de pointes. It is far commoner than the inherited "
+        "syndromes and nearly always multifactorial. Aetiology: "
+        "sotalol and amiodarone, antipsychotics such as haloperidol "
+        "and quetiapine, methadone, macrolides, fluoroquinolones and "
+        "ondansetron. Risk multiplies with hypokalaemia, "
+        "hypomagnesaemia, bradycardia, female sex and older age. Ix: "
+        "an ECG with the QT corrected by Bazett or Fridericia. A QTc "
+        "above 500 ms, or a rise of more than 60 ms from baseline, is "
+        "the alarm threshold. Check potassium, magnesium and calcium. "
+        "Mx: stop or substitute the drug, lift potassium above 4.0 "
+        "and magnesium above 1.0 mmol/L, and treat bradycardia. "
+        "Torsades needs magnesium sulfate 2 g intravenously, then "
+        "overdrive pacing or isoprenaline for recurrence. Note: the "
+        "risk is additive, so the real danger is the patient on three "
+        "modest offenders with a low potassium rather than any single "
+        "agent."
+    ),
+    "Anticoagulation in atrial fibrillation": (
+        "Stroke prevention in atrial fibrillation, where the decision "
+        "follows estimated stroke risk rather than symptoms, rhythm "
+        "strategy, or whether the fibrillation is paroxysmal or "
+        "permanent. Risk: score with CHA2DS2-VA, which recent "
+        "Australian and European guidance adopted by dropping the sex "
+        "category. Anticoagulate at 2 or more, consider at 1, omit at "
+        "0. Mx: a direct oral anticoagulant is first line in "
+        "non-valvular disease. Apixaban, rivaroxaban and dabigatran "
+        "are PBS listed, with dose reductions for age, weight and "
+        "renal function. Warfarin to an INR of 2 to 3 is still "
+        "required for mechanical valves and moderate to severe mitral "
+        "stenosis. Aspirin is not an alternative. Cautions: HAS-BLED "
+        "identifies modifiable bleeding factors rather than reasons "
+        "to withhold. DOAC dosing follows creatinine clearance by "
+        "Cockcroft-Gault and not eGFR. Note: withholding "
+        "anticoagulation because the patient falls is rarely "
+        "justified, since the number of falls a year needed to "
+        "outweigh the stroke benefit is implausibly high."
+    ),
+    "Left atrial appendage occlusion": (
+        "Percutaneous implantation of a device sealing the left "
+        "atrial appendage, where most thrombus forms in non-valvular "
+        "atrial fibrillation, to lower stroke risk without lifelong "
+        "anticoagulation. Indications: atrial fibrillation with a "
+        "high stroke risk plus a firm contraindication to long-term "
+        "anticoagulation, typically recurrent major bleeding, "
+        "intracranial haemorrhage or an unfixable bleeding lesion. "
+        "Mx: transseptal delivery under transoesophageal or "
+        "intracardiac echo guidance. A short course of antithrombotic "
+        "therapy covers endothelialisation, then aspirin alone, with "
+        "imaging at 45 days for residual leak and device thrombus. "
+        "Complications: pericardial effusion and tamponade, device "
+        "embolisation, and device-related thrombus in a few per cent. "
+        "Note: this is for patients who cannot take anticoagulants, "
+        "not for those who would rather not. The trials showed "
+        "non-inferiority for stroke rather than superiority."
+    ),
+    "Catheter ablation": (
+        "Percutaneous destruction of arrhythmogenic tissue with "
+        "radiofrequency energy or cryotherapy, guided by "
+        "electroanatomic mapping. Indications: supraventricular "
+        "tachycardia from an accessory pathway or nodal re-entry, "
+        "where cure exceeds 95% and ablation is first line in the "
+        "young. Atrial flutter by a cavotricuspid isthmus line. "
+        "Atrial fibrillation by pulmonary vein isolation for "
+        "symptomatic disease, and earlier where the ejection fraction "
+        "is reduced. Mx: anticoagulation before and for at least two "
+        "months after atrial fibrillation ablation whatever the "
+        "rhythm outcome. Antiarrhythmics often continue through the "
+        "blanking period. Complications: vascular access injury, "
+        "tamponade, phrenic nerve palsy with cryoablation, stroke, "
+        "and rarely atrio-oesophageal fistula. Note: ablation for "
+        "atrial fibrillation is a symptom and quality of life "
+        "intervention. The stroke risk score still governs "
+        "anticoagulation afterwards, and a third of patients need a "
+        "repeat procedure."
+    ),
+    "Loeys-Dietz syndrome": (
+        "An autosomal dominant connective tissue disorder of TGF-beta "
+        "receptor signalling causing aggressive arterial aneurysm and "
+        "dissection, on a faster and less predictable timetable than "
+        "Marfan syndrome. Genetics: pathogenic variants in TGFBR1, "
+        "TGFBR2, SMAD3, TGFB2 or TGFB3. Roughly a quarter are "
+        "inherited and the rest arise de novo. Clinical features: the "
+        "classic triad is arterial tortuosity with aneurysm, "
+        "hypertelorism, and a bifid uvula or cleft palate. Also "
+        "translucent skin, easy bruising, pectus deformity and "
+        "scoliosis. Ectopia lentis is absent, which separates it from "
+        "Marfan syndrome. Ix: genetic testing, echocardiography, and "
+        "angiography by CT or MR from head to pelvis at diagnosis and "
+        "then serially, because aneurysms arise throughout the "
+        "arterial tree. Mx: beta blockade or a sartan such as "
+        "irbesartan to reduce aortic wall stress, avoidance of "
+        "contact and isometric sport, and elective root repair at "
+        "smaller diameters than in Marfan syndrome. Note: dissection "
+        "happens at aortic dimensions considered safe in other "
+        "conditions, so the usual thresholds simply do not apply."
+    ),
+    "Subclavian steal syndrome": (
+        "Retrograde vertebral artery flow caused by proximal "
+        "subclavian or innominate stenosis, so the exercising arm "
+        "draws blood away from the posterior cerebral circulation. "
+        "Aetiology: atherosclerosis proximal to the vertebral origin "
+        "is the usual cause and the left subclavian is most often "
+        "affected. Also Takayasu arteritis, radiation and "
+        "coronary-subclavian steal after internal mammary grafting. "
+        "Clinical features: arm claudication on exertion together "
+        "with posterior circulation symptoms such as dizziness, "
+        "diplopia, ataxia or drop attacks provoked by using the arm. "
+        "A blood pressure difference above 15 mmHg between arms and a "
+        "diminished radial pulse are the bedside findings. Ix: "
+        "bilateral arm pressures, duplex ultrasound showing reversed "
+        "vertebral flow, then CT or MR angiography to define the "
+        "lesion. Mx: most are asymptomatic and need only antiplatelet "
+        "and statin therapy with risk factor modification. "
+        "Symptomatic disease is treated by angioplasty and stenting, "
+        "with bypass held in reserve. Note: angina after bypass "
+        "grafting with the internal mammary artery should raise this, "
+        "because a graft can be stolen from as readily as a vertebral "
+        "artery."
+    ),
+    "Superficial thrombophlebitis": (
+        "Thrombosis with inflammation in a superficial vein, usually "
+        "of the leg. Long dismissed as trivial, it carries a genuine "
+        "risk of extension into the deep system. Aetiology: varicose "
+        "veins account for most cases, joined by intravenous "
+        "cannulation, thrombophilia, pregnancy and malignancy. "
+        "Migratory thrombophlebitis in previously normal veins should "
+        "prompt a search for occult cancer. Clinical features: a "
+        "tender erythematous cord along the vein with surrounding "
+        "warmth, lacking both the diffuse swelling of deep vein "
+        "thrombosis and the spreading margin of cellulitis. Ix: "
+        "whole-leg ultrasound to measure thrombus length and its "
+        "distance from the saphenofemoral or saphenopopliteal "
+        "junction, and to exclude concurrent deep vein thrombosis, "
+        "present in up to a quarter. Mx: segments 5 cm or longer, or "
+        "within 3 cm of a deep junction, warrant prophylactic-dose "
+        "fondaparinux or a DOAC for 45 days. Shorter segments need "
+        "compression, NSAIDs and a repeat scan in a week. Note: it is "
+        "not cellulitis and does not need antibiotics, a distinction "
+        "confused often enough to be worth making out loud."
+    ),
+    "Inferior vena cava filter": (
+        "A retrievable device placed in the infrarenal inferior vena "
+        "cava to trap embolising lower limb thrombus. It substitutes "
+        "for anticoagulation rather than adding to it. Indications: "
+        "acute proximal deep vein thrombosis or pulmonary embolism "
+        "with an absolute contraindication to anticoagulation, such "
+        "as active major bleeding or recent intracranial haemorrhage. "
+        "Also recurrent embolism despite therapeutic anticoagulation. "
+        "Mx: place a retrievable device, restart anticoagulation the "
+        "moment the contraindication resolves, and book retrieval at "
+        "the same sitting as insertion. Early retrieval succeeds far "
+        "more often than a late attempt. Complications: filter "
+        "thrombosis and caval occlusion, penetration of the caval "
+        "wall, migration, fracture with embolisation, and a roughly "
+        "doubled rate of recurrent deep vein thrombosis. Note: the "
+        "commonest failure is the filter nobody removes. Registry "
+        "retrieval rates sit well under half, leaving a permanent "
+        "foreign body in a patient whose indication lasted a "
+        "fortnight."
+    ),
+    "Pulmonary embolism risk stratification": (
+        "Sorting confirmed pulmonary embolism by early mortality "
+        "risk, which decides between reperfusion, inpatient "
+        "monitoring and discharge. Classification: high risk means "
+        "haemodynamic instability, that is cardiac arrest, "
+        "obstructive shock, or a systolic pressure under 90 mmHg for "
+        "15 minutes. Intermediate risk means stability with right "
+        "ventricular dysfunction or a raised troponin. Low risk means "
+        "neither. Ix: echocardiography or CT for a right to left "
+        "ventricular ratio above 1.0, with troponin and lactate. The "
+        "simplified PESI score uses age, malignancy, chronic "
+        "cardiopulmonary disease, pulse, systolic pressure and "
+        "saturation. Mx: high risk needs systemic thrombolysis or "
+        "embolectomy. Intermediate-high risk needs anticoagulation "
+        "with close watching and rescue thrombolysis on "
+        "deterioration. Low risk with a simplified PESI of zero can "
+        "often be managed at home on a DOAC. Note: the fatal error is "
+        "calling a normotensive patient low risk without looking at "
+        "the right ventricle, because intermediate-high risk patients "
+        "are normotensive right up until they are not."
+    ),
+    "Pulmonary embolism thrombolysis": (
+        "Systemic fibrinolysis to dissolve obstructing clot in "
+        "pulmonary embolism, reserved for the patient whose right "
+        "ventricle is failing now. Indications: high-risk embolism "
+        "with haemodynamic instability is the clear one. Also cardiac "
+        "arrest with a strong clinical suspicion, and rescue therapy "
+        "for intermediate-high risk patients deteriorating on "
+        "anticoagulation. Dose: alteplase 100 mg intravenously over 2 "
+        "hours, or 0.6 mg/kg over 15 minutes to a 50 mg maximum in "
+        "arrest. Unfractionated heparin is paused during the infusion "
+        "and restarted without a bolus once the APTT falls below "
+        "twice normal. Contraindications: previous intracranial "
+        "haemorrhage, ischaemic stroke within 6 months, intracranial "
+        "neoplasm, and recent major trauma or surgery. All become "
+        "relative when the patient is arresting. Complications: major "
+        "bleeding in around 10% and intracranial haemorrhage in 2 to "
+        "3%, both rising steeply with age. Note: PEITHO tested "
+        "routine thrombolysis in stable intermediate-risk embolism "
+        "and bought less decompensation at the price of more strokes, "
+        "so the default there stays anticoagulation with close "
+        "watching."
+    ),
+    "Chronic thromboembolic pulmonary hypertension": (
+        "Pulmonary hypertension from organised fibrotic thrombus "
+        "obstructing the pulmonary arteries after acute embolism, and "
+        "the only form that surgery can cure. Epidemiology: follows 2 "
+        "to 4% of acute pulmonary emboli, more often after unprovoked "
+        "or recurrent events, and is under-diagnosed because the "
+        "breathlessness gets blamed on deconditioning. Clinical "
+        "features: progressive exertional dyspnoea months to years "
+        "after an embolism, with an interval of apparent recovery in "
+        "between. Later a loud pulmonary second sound, raised jugular "
+        "venous pressure and right heart failure. Ix: "
+        "ventilation-perfusion scanning is the screening test and a "
+        "normal scan effectively excludes it, which CT pulmonary "
+        "angiography cannot do. Right heart catheterisation with "
+        "pulmonary angiography confirms it and judges operability. "
+        "Mx: lifelong anticoagulation for everyone, then pulmonary "
+        "endarterectomy at an experienced centre for accessible "
+        "disease. Balloon pulmonary angioplasty and riociguat for "
+        "inoperable or residual disease. Note: anyone still "
+        "breathless three months after a pulmonary embolism deserves "
+        "a perfusion scan rather than reassurance."
+    ),
+    "Transfusion-associated graft-versus-host disease": (
+        "A rare and near-uniformly fatal reaction in which viable "
+        "donor T lymphocytes within a cellular blood component "
+        "engraft and attack the recipient's tissues. Aetiology: it "
+        "happens when the recipient cannot reject donor lymphocytes, "
+        "so in severe T-cell immunodeficiency, after stem cell "
+        "transplant, with purine analogues such as fludarabine, and "
+        "in Hodgkin lymphoma. It also strikes immunocompetent "
+        "recipients of directed donations from blood relatives "
+        "sharing an HLA haplotype. Clinical features: fever, a "
+        "maculopapular rash spreading from the trunk, diarrhoea and "
+        "deranged liver enzymes around 8 to 10 days after "
+        "transfusion, followed by profound marrow aplasia. Ix: skin "
+        "biopsy, with donor-derived lymphocytes demonstrated by HLA "
+        "typing or chimerism studies. Mx: there is no effective "
+        "treatment and mortality exceeds 90%, so everything rests on "
+        "prevention. Irradiate cellular components for at-risk "
+        "recipients, and never transfuse unirradiated components from "
+        "a first-degree relative. Note: marrow failure is what "
+        "separates it from transplant graft-versus-host disease, "
+        "where the graft is the marrow and is therefore spared."
+    ),
+    "Radiation therapy toxicity": (
+        "Injury to normal tissue inside the treatment field, split "
+        "into acute effects during and just after treatment and late "
+        "effects surfacing months to years later. Types: acute "
+        "toxicity reflects damage to rapidly dividing cells, giving "
+        "dermatitis, mucositis, oesophagitis or cystitis depending on "
+        "site, and it resolves. Late toxicity reflects fibrosis and "
+        "vascular damage, giving strictures, lymphoedema, xerostomia, "
+        "infertility and second malignancies, and it does not. Risk "
+        "factors: total dose, fraction size, volume irradiated, "
+        "concurrent chemotherapy, smoking and connective tissue "
+        "disease. Mx: site-specific supportive care. Simple "
+        "emollients rather than occlusive dressings for skin, saline "
+        "mouthwashes and analgesia for mucositis, and corticosteroids "
+        "for radiation pneumonitis. Late fibrosis needs specialist "
+        "input and is largely irreversible. Note: radiation recall is "
+        "the distinctive trap, where a chemotherapy agent given weeks "
+        "or months later provokes inflammation confined exactly to "
+        "the old treatment field."
+    ),
+    "Leptomeningeal disease": (
+        "Spread of malignant cells through the subarachnoid space and "
+        "cerebrospinal fluid, also called neoplastic meningitis, with "
+        "a median survival of weeks to a few months untreated. "
+        "Aetiology: breast cancer, lung cancer and melanoma among "
+        "solid tumours. Also acute leukaemia and aggressive lymphoma, "
+        "where it is commoner and more treatable. Clinical features: "
+        "multifocal neurology at several levels at once is the "
+        "signature. Headache, cranial nerve palsies, radicular pain, "
+        "cauda equina symptoms and communicating hydrocephalus, "
+        "usually with strikingly few meningeal signs. Ix: "
+        "gadolinium-enhanced MRI of the whole neuraxis before lumbar "
+        "puncture, then cerebrospinal fluid cytology. A single "
+        "cytology is positive in only half, so repeat sampling of "
+        "adequate volume is standard. Mx: intrathecal methotrexate or "
+        "cytarabine by reservoir, craniospinal or focal radiotherapy "
+        "for bulky and symptomatic sites, and targeted systemic "
+        "therapy where the tumour carries an actionable mutation. "
+        "Note: a cranial nerve palsy alongside back pain in a known "
+        "cancer patient should trigger neuraxis imaging, not a series "
+        "of unconnected explanations."
+    ),
+    "Blast injury": (
+        "Trauma from an explosion, conventionally divided into four "
+        "mechanisms that usually coexist in the one patient. "
+        "Classification: primary injury comes from the pressure wave "
+        "striking gas-containing organs. Secondary from fragments the "
+        "blast propels. Tertiary from the body being thrown against "
+        "surfaces. Quaternary covers burns, inhalational injury, "
+        "crush and toxic exposure. Clinical features: tympanic "
+        "membrane rupture is the commonest primary injury, while "
+        "blast lung with hypoxia and bilateral infiltrates kills most "
+        "of those who reach hospital alive. Bowel perforation may "
+        "declare itself late, and penetrating fragment wounds are the "
+        "commonest injury overall. Ix: chest imaging, extended "
+        "focused sonography, CT for penetrating and head injury, and "
+        "serial abdominal examination for delayed perforation. Mx: "
+        "standard trauma resuscitation, with care over positive "
+        "pressure ventilation in blast lung given the risk of air "
+        "embolism and pneumothorax. Tetanus cover and wound "
+        "exploration for fragments. Note: an intact tympanic membrane "
+        "does not exclude significant primary blast injury, a rule of "
+        "thumb once taught that has not held up."
+    ),
+    "Alcoholic ketoacidosis": (
+        "A high anion gap metabolic acidosis in a person with chronic "
+        "alcohol use, following a binge and then several days of poor "
+        "intake and vomiting. Glucose is normal or low, which is the "
+        "point of difference from diabetic ketoacidosis. Aetiology: "
+        "starvation and alcohol metabolism deplete glycogen and raise "
+        "the NADH to NAD ratio, driving lipolysis and ketogenesis "
+        "while suppressing gluconeogenesis. The same redox shift "
+        "pushes acetoacetate towards beta-hydroxybutyrate. Clinical "
+        "features: vomiting, abdominal pain, tachypnoea and "
+        "dehydration, with a patient who is usually alert. Ix: a "
+        "venous gas showing high anion gap acidosis, ketones, and a "
+        "normal or low glucose. The picture is often mixed with a "
+        "vomiting-induced alkalosis. Point-of-care ketone strips "
+        "measure acetoacetate and may read falsely low. Mx: "
+        "intravenous dextrose in saline, with thiamine given before "
+        "the glucose, plus potassium, magnesium and phosphate "
+        "replacement. Bicarbonate is rarely needed. Note: check an "
+        "osmolar gap and a salicylate level, because toxic alcohol "
+        "ingestion presents the same way in the same population and "
+        "is missed by settling for the obvious answer."
+    ),
+    "Non-tuberculous mycobacterial infection": (
+        "Disease caused by environmental mycobacteria other than "
+        "tuberculosis, acquired from soil and water rather than from "
+        "other people, so isolation and contact tracing do not apply. "
+        "Aetiology: Mycobacterium avium complex is commonest, "
+        "followed by M. abscessus, M. kansasii and M. marinum. Risk "
+        "rests on structural lung disease such as bronchiectasis, on "
+        "immunosuppression, and on the slender older woman phenotype "
+        "with nodular bronchiectasis. Clinical features: chronic "
+        "productive cough with weight loss in lung disease, cervical "
+        "lymphadenitis in young children, and indolent skin or tendon "
+        "infection after water exposure with M. marinum. Ix: two "
+        "separate positive sputum cultures or one positive bronchial "
+        "wash, alongside compatible symptoms and CT showing nodules "
+        "with bronchiectasis. A single isolate often means "
+        "colonisation. Mx: prolonged multidrug therapy by species and "
+        "susceptibility, typically a macrolide with ethambutol and "
+        "rifampicin continued for 12 months past culture conversion. "
+        "Note: growing the organism is not the same as needing to "
+        "treat it, and the decision rests on symptoms, radiology and "
+        "microbiology together."
+    ),
+    "Hepatitis E": (
+        "An RNA virus causing acute hepatitis, usually self-limiting, "
+        "but notable for severe disease in pregnancy and for chronic "
+        "infection in the immunosuppressed. Aetiology: genotypes 1 "
+        "and 2 spread by the faecal-oral route in contaminated water "
+        "across South Asia and Africa. Genotypes 3 and 4 are zoonotic "
+        "from undercooked pork, game and shellfish and account for "
+        "most cases acquired in Australia and Europe. Clinical "
+        "features: an incubation of 2 to 6 weeks, then jaundice, "
+        "nausea and right upper quadrant discomfort that settles. "
+        "Fulminant liver failure carries a mortality up to 25% in the "
+        "third trimester with genotype 1. Guillain-Barre syndrome and "
+        "neuralgic amyotrophy are recognised extrahepatic features. "
+        "Ix: hepatitis E IgM and IgG serology, with HEV RNA in blood "
+        "or stool needed in the immunosuppressed because serology is "
+        "unreliable in them. Mx: supportive care for acute infection. "
+        "Chronic infection after transplant is treated by reducing "
+        "immunosuppression and then ribavirin. Note: consider it in a "
+        "returning traveller with hepatitis and negative A, B and C "
+        "serology, and in unexplained transaminitis after transplant."
+    ),
+    "Gastrointestinal stromal tumour": (
+        "The commonest mesenchymal tumour of the gastrointestinal "
+        "tract, arising from the interstitial cells of Cajal, and the "
+        "model disease for targeted therapy in solid tumours. "
+        "Aetiology: activating mutations in KIT in around 80% or "
+        "PDGFRA in 5 to 10%. The remainder are wild type, including "
+        "succinate dehydrogenase deficient tumours in young patients. "
+        "Clinical features: stomach in 60% and small bowel in 30%. "
+        "Often found incidentally, otherwise through gastrointestinal "
+        "bleeding, a palpable mass or vague discomfort. Nodal spread "
+        "is rare and metastasis goes to liver and peritoneum. Ix: CT "
+        "for staging, endoscopic ultrasound with biopsy for gastric "
+        "lesions, and immunohistochemistry positive for CD117 and "
+        "DOG1. Mitotic rate, size and site set the recurrence risk. "
+        "Mx: complete resection without lymphadenectomy for localised "
+        "disease, with three years of adjuvant imatinib for high-risk "
+        "tumours. Imatinib is also first line in advanced disease, "
+        "followed by sunitinib. Note: do not biopsy a resectable "
+        "gastric lesion percutaneously, because rupture seeds the "
+        "peritoneum and turns a curable tumour into an incurable one."
+    ),
+    "Immune effector cell-associated neurotoxicity syndrome": (
+        "Neurotoxicity following CAR T-cell therapy and other T-cell "
+        "engaging agents, arising from endothelial activation and "
+        "blood-brain barrier disruption, usually after or overlapping "
+        "with cytokine release syndrome. Clinical features: it opens "
+        "with tremor, dysgraphia and expressive dysphasia, then moves "
+        "through confusion and somnolence to seizures and, when "
+        "severe, cerebral oedema. Onset is typically 4 to 10 days "
+        "after infusion, later than cytokine release syndrome. Ix: "
+        "grade with the ICE assessment covering orientation, naming, "
+        "command following, writing and attention, combined with "
+        "conscious level and motor findings. MRI and EEG for severe "
+        "or atypical cases, and lumbar puncture to exclude infection. "
+        "Mx: dexamethasone or high-dose methylprednisolone is first "
+        "line, because tocilizumab does not cross the blood-brain "
+        "barrier and treats the cytokine syndrome alone. Add "
+        "levetiracetam prophylaxis, airway protection and neurology "
+        "input at grade 3. Note: have the patient write the same "
+        "sentence daily through the risk window. Deteriorating "
+        "handwriting is the earliest sign and shows up before "
+        "anything else looks wrong."
+    ),
+    "Checkpoint inhibitor pneumonitis": (
+        "Immune-mediated inflammation of the lung parenchyma caused "
+        "by PD-1, PD-L1 or CTLA-4 blockade. Uncommon at around 3 to "
+        "5%, it accounts for a disproportionate share of "
+        "treatment-related deaths. Risk factors: PD-1 agents more "
+        "than CTLA-4, combination therapy, pre-existing interstitial "
+        "lung disease or COPD, prior thoracic radiotherapy, and lung "
+        "cancer as the underlying tumour. Clinical features: new or "
+        "worsening dyspnoea with a dry cough over days to weeks, "
+        "exertional hypoxia, and few findings on auscultation. A "
+        "third are asymptomatic and picked up on staging CT. Ix: high "
+        "resolution CT showing organising pneumonia, ground glass or "
+        "non-specific interstitial patterns. Exclude infection and "
+        "progressive malignancy with cultures and often bronchoscopic "
+        "lavage. Mx: grade 1 means withholding the drug and repeating "
+        "imaging in 3 weeks. Grade 2 and above means stopping it and "
+        "giving prednisolone 1 to 2 mg/kg tapered over at least 6 "
+        "weeks, adding infliximab or mycophenolate if there is no "
+        "improvement in 48 hours. Note: it mimics infection and "
+        "lymphangitis carcinomatosis precisely, so the diagnosis "
+        "turns on pausing to consider it in anyone on immunotherapy "
+        "who becomes breathless."
+    ),
+    "Checkpoint inhibitor hypophysitis": (
+        "Immune-mediated inflammation of the pituitary caused by "
+        "checkpoint blockade, far commoner with CTLA-4 agents than "
+        "with PD-1 agents, and one of the few immune-related events "
+        "that does not resolve. Clinical features: insidious headache "
+        "and fatigue around 6 to 12 weeks in, then hormone "
+        "deficiency. Central hypothyroidism, secondary adrenal "
+        "insufficiency and hypogonadism are typical, while diabetes "
+        "insipidus is rare, in contrast to other causes of "
+        "hypophysitis. The presentation can be adrenal crisis. Ix: "
+        "pair each pituitary hormone with its target gland, so TSH "
+        "with free T4, an 8 am cortisol with ACTH, and testosterone "
+        "or oestradiol with LH and FSH. Pituitary MRI shows "
+        "enlargement and stalk thickening, later giving way to an "
+        "empty sella. Mx: hydrocortisone replacement before "
+        "thyroxine, since thyroxine first can precipitate adrenal "
+        "crisis. High-dose steroids only for mass effect or visual "
+        "compromise, and immunotherapy usually continues on "
+        "replacement. Note: a low TSH with a low free T4 is central "
+        "hypothyroidism, and reading that low TSH as thyrotoxicosis "
+        "inverts the management."
+    ),
+    "Vitamin A deficiency": (
+        "Deficiency of retinol, the leading preventable cause of "
+        "childhood blindness worldwide and rare in Australia outside "
+        "malabsorption and severely restricted diets. Aetiology: "
+        "inadequate intake in low-income settings. In Australia, fat "
+        "malabsorption from cystic fibrosis, coeliac disease, "
+        "cholestatic liver disease, pancreatic insufficiency or "
+        "bariatric surgery, and occasionally extreme dietary "
+        "restriction. Clinical features: night blindness comes first, "
+        "then conjunctival xerosis with Bitot spots, corneal xerosis, "
+        "and keratomalacia with irreversible corneal melting. Also "
+        "follicular hyperkeratosis, growth failure, and severe "
+        "measles or diarrhoeal illness from impaired immunity. Ix: "
+        "serum retinol below 0.70 micromol/L indicates deficiency, "
+        "read alongside CRP because inflammation lowers it. Check the "
+        "other fat-soluble vitamins. Mx: high-dose oral retinol on an "
+        "age-based schedule, with treatment of the underlying "
+        "malabsorption. Note: excess is harmful too. Retinol is "
+        "teratogenic, so supplementation in pregnancy is capped and "
+        "isotretinoin is contraindicated."
     ),
 }
 
