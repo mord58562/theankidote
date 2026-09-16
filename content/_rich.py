@@ -16551,6 +16551,222 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "paediatric obstructive sleep apnoea adenotonsillectomy"]],
         "summary": "",
     },
+    {
+        "name": "Murphy sign",
+        "aliases": ["Murphy's sign", "Murphys sign", "inspiratory arrest sign"],
+        "utd": [["Overview", "murphy sign acute cholecystitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Rovsing sign",
+        "aliases": ["Rovsing's sign", "Rovsings sign"],
+        "utd": [["Overview", "rovsing sign appendicitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Psoas sign",
+        "aliases": ["iliopsoas sign", "psoas stretch sign"],
+        "utd": [["Overview", "psoas sign retrocaecal appendicitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Obturator sign",
+        "aliases": ["obturator test"],
+        "utd": [["Overview", "obturator sign pelvic appendicitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Grey Turner sign",
+        "aliases": ["Grey-Turner sign", "flank bruising", "flank ecchymosis"],
+        "utd": [["Overview", "grey turner sign retroperitoneal haemorrhage"]],
+        "summary": "",
+    },
+    {
+        "name": "Cullen sign",
+        "aliases": ["periumbilical bruising", "periumbilical ecchymosis"],
+        "utd": [["Overview", "cullen sign periumbilical ecchymosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Battle sign",
+        "aliases": ["Battle's sign", "mastoid ecchymosis", "Battles sign"],
+        "utd": [["Overview", "battle sign basilar skull fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Kernig sign",
+        "aliases": ["Kernig's sign", "Kernigs sign"],
+        "utd": [["Overview", "kernig sign meningeal irritation"]],
+        "summary": "",
+    },
+    {
+        "name": "Brudzinski sign",
+        "aliases": ["Brudzinski's sign", "Brudzinskis sign"],
+        "utd": [["Overview", "brudzinski sign meningitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Babinski sign",
+        "aliases": ["Babinski reflex", "extensor plantar response", "upgoing plantar", "plantar reflex"],
+        "utd": [["Overview", "babinski sign upper motor neurone lesion"]],
+        "summary": "",
+    },
+    {
+        "name": "Hoffmann sign",
+        "aliases": ["Hoffman sign", "Hoffmann's reflex", "finger flexor reflex"],
+        "utd": [["Overview", "hoffmann sign cervical myelopathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Lhermitte phenomenon",
+        "aliases": ["Lhermitte sign", "Lhermitte's sign", "barber chair sign"],
+        "utd": [["Overview", "lhermitte sign cervical cord"]],
+        "summary": "",
+    },
+    {
+        "name": "Uhthoff phenomenon",
+        "aliases": ["Uhthoff's phenomenon", "heat sensitivity in multiple sclerosis"],
+        "utd": [["Overview", "uhthoff phenomenon multiple sclerosis heat"]],
+        "summary": "",
+    },
+    {
+        "name": "Tinel sign",
+        "aliases": ["Tinel's sign", "Tinels sign", "nerve percussion test"],
+        "utd": [["Overview", "tinel sign nerve compression"]],
+        "summary": "",
+    },
+    {
+        "name": "Phalen test",
+        "aliases": ["Phalen's test", "Phalen manoeuvre", "reverse Phalen test"],
+        "utd": [["Overview", "phalen test carpal tunnel syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Froment sign",
+        "aliases": ["Froment's sign", "Fromen sign", "paper grip test"],
+        "utd": [["Overview", "froment sign ulnar nerve palsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Finkelstein test",
+        "aliases": ["Finkelstein's test", "Eichhoff test"],
+        "utd": [["Overview", "finkelstein test de quervain tenosynovitis"]],
+        "summary": "",
+    },
+    {
+        "name": "McMurray test",
+        "aliases": ["McMurray's test", "McMurrays test"],
+        "utd": [["Overview", "mcmurray test meniscal tear"]],
+        "summary": "",
+    },
+    {
+        "name": "Lachman test",
+        "aliases": ["Lachman's test", "anterior drawer test"],
+        "utd": [["Overview", "lachman test anterior cruciate ligament rupture"]],
+        "summary": "",
+    },
+    {
+        "name": "Trendelenburg sign",
+        "aliases": ["Trendelenburg gait", "Trendelenburg test", "hip abductor weakness"],
+        "utd": [["Overview", "trendelenburg sign hip abductor weakness"]],
+        "summary": "",
+    },
+    {
+        "name": "Pemberton sign",
+        "aliases": ["Pemberton's sign", "Pembertons sign"],
+        "utd": [["Overview", "pemberton sign retrosternal goitre"]],
+        "summary": "",
+    },
+    {
+        "name": "Levine sign",
+        "aliases": ["clenched fist sign"],
+        "utd": [["Overview", "levine sign ischaemic chest pain"]],
+        "summary": "",
+    },
+    {
+        "name": "Hamman sign",
+        "aliases": ["Hamman's crunch", "mediastinal crunch"],
+        "utd": [["Overview", "hamman sign pneumomediastinum"]],
+        "summary": "",
+    },
+    {
+        "name": "Allen test",
+        "aliases": ["modified Allen test", "Allen's test"],
+        "utd": [["Overview", "allen test ulnar collateral circulation"]],
+        "summary": "",
+    },
+    {
+        "name": "Buerger test",
+        "aliases": ["Buerger's test", "elevation pallor", "dependent rubor"],
+        "utd": [["Overview", "buerger test chronic limb ischaemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Nikolsky sign",
+        "aliases": ["Nikolsky's sign", "Nikolskiy sign", "epidermal shearing"],
+        "utd": [["Overview", "nikolsky sign toxic epidermal necrolysis pemphigus"]],
+        "summary": "",
+    },
+    {
+        "name": "Koebner phenomenon",
+        "aliases": ["Koebner response", "Kobner phenomenon", "isomorphic response"],
+        "utd": [["Overview", "koebner phenomenon psoriasis lichen planus"]],
+        "summary": "",
+    },
+    {
+        "name": "Gottron papules",
+        "aliases": ["Gottron sign", "Gottron's papules"],
+        "utd": [["Overview", "gottron papules dermatomyositis"]],
+        "summary": "",
+    },
+    {
+        "name": "Heliotrope rash",
+        "aliases": ["heliotrope eruption", "violaceous eyelid rash"],
+        "utd": [["Overview", "heliotrope rash dermatomyositis"]],
+        "summary": "",
+    },
+    {
+        "name": "Malar rash",
+        "aliases": ["butterfly rash", "malar erythema"],
+        "utd": [["Overview", "malar rash systemic lupus erythematosus"]],
+        "summary": "",
+    },
+    {
+        "name": "Rinne test",
+        "aliases": ["Rinne's test", "tuning fork test"],
+        "utd": [["Overview", "rinne test conductive hearing loss"]],
+        "summary": "",
+    },
+    {
+        "name": "Weber test",
+        "aliases": ["Weber's test", "tuning fork lateralisation"],
+        "utd": [["Overview", "weber test hearing loss lateralisation"]],
+        "summary": "",
+    },
+    {
+        "name": "Cushing reflex",
+        "aliases": ["Cushing triad", "Cushing response"],
+        "utd": [["Overview", "cushing reflex raised intracranial pressure"]],
+        "summary": "",
+    },
+    {
+        "name": "Ventricular ectopy",
+        "aliases": ["premature ventricular complex", "ventricular extrasystole", "ventricular bigeminy", "ventricular ectopic beats"],
+        "utd": [["Overview", "premature ventricular complexes management"]],
+        "summary": "",
+    },
+    {
+        "name": "4AT",
+        "aliases": ["4AT test", "four AT", "4A test"],
+        "utd": [["Overview", "4at delirium screening tool"]],
+        "summary": "",
+    },
+    {
+        "name": "Timed Up and Go test",
+        "aliases": ["Timed Up and Go", "TUG test"],
+        "utd": [["Overview", "timed up and go test falls risk mobility"]],
+        "summary": "",
+    },
 ]
 
 
@@ -91407,6 +91623,756 @@ RICH_SUMMARIES = {
         "with behavioural difficulty may be misattributed to "
         "attention deficit disorder, so ask about sleep before "
         "treating the daytime behaviour."
+    ),
+
+    "Murphy sign": (
+        "Inspiratory arrest on deep palpation of the right upper "
+        "quadrant, the classic bedside pointer to acute "
+        "cholecystitis. Mechanism: the inflamed gallbladder descends "
+        "onto the examining hand at end inspiration and the patient "
+        "catches their breath. Examination: fingers under the right "
+        "costal margin at the mid-clavicular line, then ask for a "
+        "deep breath. It counts as positive only if the same "
+        "manoeuvre on the left side is painless. Features: "
+        "sensitivity around 65 per cent and specificity around 85 per "
+        "cent, but both fall sharply over age 70, where cholecystitis "
+        "is often quiet. Ix: ultrasound first line. The sonographic "
+        "Murphy sign, maximal tenderness directly under the probe "
+        "over the gallbladder, outperforms the clinical version and "
+        "is read alongside wall thickening above 3 mm, stones and "
+        "pericholecystic fluid. Mx: admission, fasting, analgesia and "
+        "intravenous antibiotics per eTG, with laparoscopic "
+        "cholecystectomy on the index admission where the service "
+        "allows. Note: a negative sign in an elderly or diabetic "
+        "patient does not exclude cholecystitis."
+    ),
+    "Rovsing sign": (
+        "Pain felt in the right iliac fossa when the left iliac fossa "
+        "is palpated, a referred-tenderness sign of appendicitis. "
+        "Mechanism: pressure on the descending colon displaces gas "
+        "retrogradely and distends the caecum, stretching an inflamed "
+        "appendix and its overlying parietal peritoneum. Examination: "
+        "press steadily in the left iliac fossa and ask where the "
+        "patient feels it. Only right-sided pain counts. Features: "
+        "specificity is reasonable but sensitivity is poor, so it "
+        "supports a diagnosis and never excludes one. It sits "
+        "alongside percussion tenderness and guarding, which are more "
+        "reliable than rebound. Ix: bloods with white cell count and "
+        "CRP, urine and beta hCG in anyone of childbearing age. "
+        "Ultrasound first in children and pregnancy, CT in adults "
+        "where the picture is unclear. Mx: analgesia, fluids and "
+        "surgical referral. Laparoscopic appendicectomy remains "
+        "standard, with antibiotic-first management reserved for "
+        "selected uncomplicated cases. Note: a positive Rovsing sign "
+        "is a nudge toward theatre, not a substitute for serial "
+        "examination."
+    ),
+    "Psoas sign": (
+        "Right iliac fossa pain reproduced by passive extension of "
+        "the right hip, pointing to irritation of the iliopsoas "
+        "muscle behind the caecum. Mechanism: a retrocaecal appendix, "
+        "a psoas abscess or retroperitoneal blood lies directly on "
+        "the muscle, so stretching it hurts. Examination: roll the "
+        "patient onto the left side and extend the right hip, or ask "
+        "for active hip flexion against resistance. Associations: "
+        "retrocaecal appendicitis is the common cause. Also consider "
+        "psoas abscess, which in Australia is often staphylococcal or "
+        "a complication of spinal infection, and a leaking "
+        "retroperitoneal haematoma. Features: patients frequently lie "
+        "with the hip flexed for comfort, which is the same sign "
+        "taken from the history. Ix: as for appendicitis, with CT the "
+        "better test when a retrocaecal position or an abscess is "
+        "suspected. Mx: source-directed. Appendicectomy for "
+        "appendicitis, drainage plus antibiotics for an abscess. "
+        "Note: a positive psoas sign with a bland abdomen and a "
+        "normal appendix on imaging should send you looking behind "
+        "the peritoneum."
+    ),
+    "Obturator sign": (
+        "Hypogastric pain on passive internal rotation of the flexed "
+        "right hip, indicating irritation of the obturator internus "
+        "muscle in the pelvis. Mechanism: a pelvic appendix or pelvic "
+        "collection rests on the muscle, so rotating it stretches "
+        "inflamed tissue. Examination: flex the right hip and knee to "
+        "90 degrees, then rotate the hip internally while steadying "
+        "the ankle. Associations: pelvic appendicitis, tubo-ovarian "
+        "abscess and any pelvic collection. In women it overlaps "
+        "heavily with gynaecological causes, which is the point of "
+        "eliciting it. Features: sensitivity is low and the sign is "
+        "often absent in proven appendicitis, so it adds specificity "
+        "rather than screening value. Ix: beta hCG, bloods and urine "
+        "in everyone. Transvaginal ultrasound where a gynaecological "
+        "cause is plausible, CT otherwise. Mx: directed at the cause, "
+        "with surgical or gynaecological referral and antibiotics per "
+        "eTG for a collection. Note: a pelvic appendix can give an "
+        "unremarkable abdomen with a tender rectal or vaginal "
+        "examination, and the obturator sign is one of the few "
+        "bedside clues that it is there."
+    ),
+    "Grey Turner sign": (
+        "Bruising of the flanks from tracking of retroperitoneal "
+        "blood into the subcutaneous tissue. Aetiology: severe "
+        "necrotising pancreatitis is the best known cause, but any "
+        "retroperitoneal bleed does it, including a ruptured "
+        "abdominal aortic aneurysm, a bleeding renal tumour, "
+        "anticoagulant-related psoas haematoma and blunt trauma. "
+        "Features: it takes 24 to 72 hours to appear, so it is a late "
+        "sign and never an early triage tool. Present in fewer than 3 "
+        "per cent of pancreatitis presentations, but when present it "
+        "marks a severe course with mortality historically around 37 "
+        "per cent. Cullen sign, periumbilical bruising, has the same "
+        "significance. Ix: lipase, full blood count, coagulation "
+        "profile and group and hold. Contrast CT defines necrosis or "
+        "the bleeding source. Mx: resuscitation first, reverse "
+        "anticoagulation, then treat the cause. Severe pancreatitis "
+        "needs high dependency care, aggressive fluids and early "
+        "enteral feeding rather than prophylactic antibiotics. Note: "
+        "flank bruising without trauma is a vascular emergency until "
+        "proven otherwise."
+    ),
+    "Cullen sign": (
+        "Bruising around the umbilicus caused by blood tracking along "
+        "the falciform ligament into the periumbilical subcutaneous "
+        "tissue. Aetiology: originally described in ruptured ectopic "
+        "pregnancy, now most often seen in severe haemorrhagic "
+        "pancreatitis. Other causes are blunt abdominal trauma, "
+        "ruptured abdominal aortic aneurysm, rectus sheath haematoma "
+        "and bleeding on anticoagulation. Features: appears 24 to 72 "
+        "hours after the bleed begins and is therefore a marker of "
+        "severity rather than an early clue. It carries the same "
+        "weight as Grey Turner sign in the flanks and the two often "
+        "appear together. Ix: urgent beta hCG in any woman of "
+        "reproductive age, lipase, full blood count and coagulation "
+        "profile, with CT or bedside ultrasound depending on "
+        "stability. Mx: resuscitate, reverse anticoagulation, and "
+        "manage the underlying source. Ruptured ectopic goes straight "
+        "to theatre. Note: in a shocked woman of reproductive age, a "
+        "positive Cullen sign should prompt a pregnancy test before "
+        "an imaging request."
+    ),
+    "Battle sign": (
+        "Bruising over the mastoid process behind the ear, a surface "
+        "marker of basal skull fracture. Mechanism: blood from a "
+        "fracture of the petrous temporal bone tracks subcutaneously "
+        "behind the pinna. Features: it takes hours to days to "
+        "develop, so its absence early after a head injury means "
+        "nothing. The companion signs are periorbital bruising "
+        "without direct orbital trauma, haemotympanum, and clear "
+        "rhinorrhoea or otorrhoea suggesting a cerebrospinal fluid "
+        "leak. Ix: non-contrast CT head and cervical spine. Any of "
+        "these signs satisfies the Canadian CT head rule and mandates "
+        "imaging regardless of Glasgow Coma Scale score. Mx: "
+        "neurosurgical discussion, avoid nasogastric tubes and nasal "
+        "airways because of the risk of intracranial passage, and "
+        "observe for meningitis. Prophylactic antibiotics are not "
+        "routinely recommended for a cerebrospinal fluid leak. Note: "
+        "Battle sign is not a diagnosis. It is an instruction to "
+        "image the head and to keep tubes out of the nose."
+    ),
+    "Kernig sign": (
+        "Pain and resistance when the knee is extended with the hip "
+        "flexed to 90 degrees, a sign of meningeal irritation. "
+        "Mechanism: the manoeuvre puts traction on inflamed "
+        "lumbosacral nerve roots and meninges. Examination: supine "
+        "patient, flex hip and knee to a right angle, then straighten "
+        "the knee. Involuntary resistance or pain in the back and "
+        "hamstrings is positive. Features: specificity is high but "
+        "sensitivity is only around 5 to 30 per cent in bacterial "
+        "meningitis, so a negative sign is close to useless. Neck "
+        "stiffness, fever and altered mental state together are more "
+        "discriminating. Ix: blood cultures then lumbar puncture, "
+        "with CT first only if there are focal signs, seizures, "
+        "immunosuppression or reduced consciousness. Send cell count, "
+        "protein, glucose, Gram stain, culture and meningococcal PCR. "
+        "Mx: do not delay antibiotics for the tap. Empirical "
+        "ceftriaxone with benzylpenicillin for listeria cover in the "
+        "elderly and immunosuppressed per eTG, plus dexamethasone. "
+        "Note: suspicion beats the sign. Treat first, confirm after."
+    ),
+    "Brudzinski sign": (
+        "Involuntary flexion of the hips and knees when the neck is "
+        "passively flexed, indicating meningeal irritation. "
+        "Mechanism: neck flexion drags on inflamed meninges and the "
+        "patient reflexly flexes the legs to unload them. "
+        "Examination: supine and flat, one hand behind the occiput, "
+        "flex the chin toward the chest and watch the legs. Features: "
+        "like Kernig sign it is specific but insensitive, missing "
+        "most cases of proven bacterial meningitis. Both signs are "
+        "least reliable in the very young, the very old and the "
+        "immunosuppressed, who are exactly the groups at highest "
+        "risk. Ix: blood cultures, full blood count and CRP, then "
+        "lumbar puncture. Imaging before the tap only for focal "
+        "deficit, seizure, immunosuppression or significantly reduced "
+        "consciousness. Mx: empirical intravenous ceftriaxone plus "
+        "dexamethasone per eTG, with benzylpenicillin added where "
+        "listeria is a concern. Notify the public health unit and "
+        "arrange clearance for close contacts if meningococcus is "
+        "confirmed. Note: absent meningism does not rule out "
+        "meningitis in an unwell febrile patient."
+    ),
+    "Babinski sign": (
+        "Extension of the great toe with fanning of the other toes on "
+        "stroking the lateral sole, the bedside marker of an upper "
+        "motor neurone lesion. Mechanism: loss of corticospinal "
+        "inhibition releases a primitive flexion withdrawal reflex "
+        "that is normal in infants and disappears by around 12 "
+        "months. Examination: a blunt point along the lateral plantar "
+        "surface from heel to little toe, then medially across the "
+        "ball. Watch the first movement of the hallux only. Features: "
+        "sits with the rest of the upper motor neurone pattern, "
+        "namely spasticity, hyperreflexia, clonus and pyramidal "
+        "weakness. Withdrawal from a ticklish foot is the usual false "
+        "positive. Ix: localise clinically first, then image. MRI "
+        "brain for suspected stroke or demyelination, MRI spine when "
+        "there is a sensory level or bladder involvement. Mx: depends "
+        "entirely on the cause, from stroke pathways to urgent "
+        "decompression for cord compression. Note: a new unilateral "
+        "extensor plantar in a patient with back pain and urinary "
+        "symptoms is a cord until imaging says otherwise."
+    ),
+    "Hoffmann sign": (
+        "Reflex flexion of the thumb and index finger when the nail "
+        "of the middle finger is flicked downward, an upper limb "
+        "equivalent of the extensor plantar response. Mechanism: "
+        "corticospinal disinhibition above the cervical cord segments "
+        "exaggerates the finger flexor reflex. Examination: support "
+        "the middle phalanx, flick the distal phalanx sharply, and "
+        "watch the thumb. Features: most useful for cervical "
+        "myelopathy, where it appears alongside brisk upper limb "
+        "reflexes, clumsiness of fine hand movement, a broad-based "
+        "gait and urinary urgency. It can be symmetrically present in "
+        "healthy hyperreflexic people, so an asymmetric sign matters "
+        "far more than a bilateral one. Ix: MRI cervical spine is the "
+        "test, looking for cord compression and signal change. Mx: "
+        "surgical referral for progressive myelopathy, since "
+        "decompression halts decline more reliably than it reverses "
+        "it. Note: clumsy hands and a positive Hoffmann sign in an "
+        "older patient is cervical myelopathy until the MRI "
+        "disagrees."
+    ),
+    "Lhermitte phenomenon": (
+        "A transient electric shock sensation running down the spine "
+        "and into the limbs on neck flexion. Mechanism: demyelinated "
+        "or mechanically irritated dorsal column axons in the "
+        "cervical cord fire ectopically when stretched. Aetiology: "
+        "multiple sclerosis is the best known cause, but it also "
+        "follows cervical spondylotic myelopathy, subacute combined "
+        "degeneration from vitamin B12 deficiency, radiation "
+        "myelopathy and cisplatin neurotoxicity. Features: brief, "
+        "stereotyped and reproducible with movement rather than "
+        "constant. It is a symptom the patient reports more often "
+        "than a sign you elicit. Ix: MRI cervical spine with "
+        "contrast, plus B12 and copper studies. Add oligoclonal bands "
+        "and visual evoked potentials where demyelination is "
+        "suspected. Mx: treat the cause. Symptomatic relief for the "
+        "shocks uses carbamazepine, gabapentin or pregabalin, with "
+        "pregabalin PBS listed only for neuropathic pain. Note: new "
+        "Lhermitte phenomenon in someone previously irradiated to the "
+        "neck should raise radiation myelopathy rather than "
+        "recurrence."
+    ),
+    "Uhthoff phenomenon": (
+        "Transient worsening of neurological symptoms with a rise in "
+        "core body temperature, most often blurred vision in multiple "
+        "sclerosis. Mechanism: conduction through partially "
+        "demyelinated axons has almost no safety margin, and a small "
+        "temperature rise is enough to block it. Nothing new is "
+        "happening to the lesion. Triggers: exercise, hot showers, "
+        "fever, hot weather and hot meals. Features: symptoms return "
+        "within minutes to an hour of cooling, which is what "
+        "separates this from a true relapse. A relapse lasts more "
+        "than 24 hours and does not resolve on cooling. Ix: none "
+        "needed when the history is clear. Look for infection when a "
+        "fever is driving it, since urinary infection is a frequent "
+        "trigger in this group. Mx: reassurance and avoidance. "
+        "Cooling strategies, air conditioning, pre-cooling before "
+        "exercise and prompt treatment of fever. Steroids are not "
+        "indicated. Note: labelling a heat-related fluctuation as a "
+        "relapse leads to unnecessary steroids and to a falsely "
+        "escalated disease-modifying therapy decision."
+    ),
+    "Tinel sign": (
+        "Tingling or electric paraesthesia in a nerve's distribution "
+        "when the nerve is percussed at a site of compression or "
+        "regeneration. Mechanism: mechanically sensitive regenerating "
+        "or demyelinated axons discharge when tapped. Examination: "
+        "tap firmly over the nerve four to six times and ask where "
+        "the tingling goes. Positive only if the paraesthesia is felt "
+        "distally in that nerve's territory. Uses: carpal tunnel "
+        "syndrome at the wrist, cubital tunnel at the elbow, tarsal "
+        "tunnel behind the medial malleolus, and tracking axonal "
+        "regrowth after nerve repair, where the point of maximum "
+        "response advances distally over weeks. Features: sensitivity "
+        "around 50 per cent for carpal tunnel, so it is weaker than "
+        "the history of nocturnal symptoms relieved by shaking the "
+        "hand. Ix: nerve conduction studies confirm and grade. "
+        "Ultrasound shows nerve swelling and any structural cause. "
+        "Mx: splinting and activity modification first, "
+        "corticosteroid injection second, decompression for severe or "
+        "refractory disease. Note: an advancing Tinel sign after "
+        "nerve repair is good news, not a complication."
+    ),
+    "Phalen test": (
+        "Reproduction of median nerve paraesthesia by holding the "
+        "wrists in full flexion for 60 seconds, a provocation test "
+        "for carpal tunnel syndrome. Mechanism: wrist flexion raises "
+        "carpal tunnel pressure and provokes conduction block in an "
+        "already compressed median nerve. Examination: backs of the "
+        "hands pressed together with elbows out, or the wrist "
+        "passively flexed. Positive when tingling appears in the "
+        "thumb, index, middle and radial half of the ring finger. "
+        "Features: sensitivity around 68 per cent and specificity "
+        "around 73 per cent, a little better than Tinel sign but "
+        "still not diagnostic alone. The carpal compression test and "
+        "a hand diagram drawn by the patient perform comparably. Ix: "
+        "nerve conduction studies for confirmation, grading and "
+        "surgical planning. Consider thyroid function, glucose and "
+        "pregnancy as contributors. Mx: nocturnal neutral wrist "
+        "splints, treat the contributing condition, then "
+        "corticosteroid injection. Surgical release for thenar "
+        "wasting, persistent sensory loss or failed conservative "
+        "care. Note: thenar wasting means the window for conservative "
+        "management has closed."
+    ),
+    "Froment sign": (
+        "Compensatory thumb interphalangeal flexion when a patient "
+        "grips paper between thumb and index finger, indicating "
+        "adductor pollicis weakness from ulnar nerve palsy. "
+        "Mechanism: adductor pollicis and the first dorsal "
+        "interosseous are ulnar innervated. With them weak, the "
+        "patient recruits flexor pollicis longus, which is median "
+        "innervated, and the thumb tip buckles. Examination: pull the "
+        "paper away and watch the thumb. Features: part of the ulnar "
+        "picture with clawing of the ring and little fingers, first "
+        "dorsal interosseous wasting and sensory loss over the little "
+        "finger. Clawing is more marked in distal lesions at the "
+        "wrist than at the elbow, the ulnar paradox. Ix: nerve "
+        "conduction studies to localise the block, typically the "
+        "cubital tunnel. Imaging if a mass or prior fracture is "
+        "suspected. Mx: elbow extension splinting at night and "
+        "avoiding prolonged flexion or leaning on the elbow, with "
+        "decompression or transposition for progressive weakness or "
+        "wasting. Note: test the little finger sensation to separate "
+        "an elbow lesion from a C8 root problem."
+    ),
+    "Finkelstein test": (
+        "Sharp pain over the radial styloid when the thumb is held in "
+        "the fist and the wrist deviated toward the ulnar side, the "
+        "provocation test for de Quervain tenosynovitis. Mechanism: "
+        "the manoeuvre loads a thickened, inflamed first dorsal "
+        "compartment containing abductor pollicis longus and extensor "
+        "pollicis brevis. Epidemiology: commonest in new parents "
+        "lifting an infant and in the postpartum period, and in "
+        "repetitive thumb use. Features: tenderness and sometimes a "
+        "palpable thickening 1 to 2 cm proximal to the radial "
+        "styloid. The differential is thumb carpometacarpal "
+        "osteoarthritis, which hurts at the joint and grinds on axial "
+        "loading. Ix: clinical. Ultrasound confirms tendon sheath "
+        "thickening and guides injection where the diagnosis is "
+        "uncertain. Mx: relative rest, a thumb spica splint and "
+        "topical or oral anti-inflammatories, then corticosteroid "
+        "injection into the sheath, which is effective in most cases. "
+        "Surgical release for the minority who fail. Note: a separate "
+        "subcompartment for extensor pollicis brevis explains many "
+        "injection failures."
+    ),
+    "McMurray test": (
+        "A rotational provocation test for meniscal tears, positive "
+        "when a painful click is produced as the flexed knee is "
+        "extended under rotation. Examination: supine, knee fully "
+        "flexed. External rotation with a valgus force then extension "
+        "tests the medial meniscus, internal rotation with varus "
+        "tests the lateral. A palpable or audible thud with pain is "
+        "positive. Features: specificity is reasonable and "
+        "sensitivity poor, roughly 60 per cent, so it is best "
+        "combined with joint line tenderness and the Thessaly test. "
+        "Locking, an inability to fully extend, and a delayed "
+        "effusion over hours all point to meniscus rather than "
+        "ligament. Ix: plain films first in an acute injury to "
+        "exclude fracture under the Ottawa knee rules. MRI is the "
+        "definitive test but is often unnecessary when management "
+        "will be conservative. Mx: analgesia, physiotherapy and load "
+        "modification. Arthroscopic surgery is reserved for true "
+        "mechanical locking or failed rehabilitation, since "
+        "meniscectomy for degenerate tears performs no better than "
+        "exercise. Note: a degenerate tear on MRI in an older knee is "
+        "often an incidental finding."
+    ),
+    "Lachman test": (
+        "Anterior translation of the tibia on the femur with the knee "
+        "flexed to 20 to 30 degrees, the most reliable bedside test "
+        "for anterior cruciate ligament rupture. Examination: "
+        "stabilise the femur with one hand and pull the proximal "
+        "tibia forward with the other. Judge both the amount of "
+        "translation and the quality of the endpoint. A soft or "
+        "absent endpoint is positive even when the excursion looks "
+        "modest. Features: sensitivity around 85 per cent, clearly "
+        "better than the anterior drawer, which is limited by "
+        "hamstring guarding in an acute knee. The pivot shift is the "
+        "most specific but usually needs anaesthesia. The history is "
+        "an audible pop, immediate swelling from haemarthrosis and "
+        "giving way. Ix: radiographs to exclude a Segond fracture or "
+        "tibial spine avulsion, then MRI to confirm and to look for "
+        "meniscal and chondral injury. Mx: rehabilitation for "
+        "everyone, with reconstruction for instability or return to "
+        "pivoting sport. Note: rapid effusion within two hours means "
+        "haemarthrosis and a significant structural injury."
+    ),
+    "Trendelenburg sign": (
+        "Pelvic drop on the unsupported side during single leg "
+        "stance, indicating weakness of the hip abductors on the "
+        "weight-bearing side. Mechanism: gluteus medius and minimus, "
+        "supplied by the superior gluteal nerve, normally hold the "
+        "pelvis level in stance. Examination: stand behind the "
+        "patient, hands on the iliac crests, and ask them to lift one "
+        "foot. The sign is named for the stance leg, not the lifted "
+        "one. Aetiology: gluteal tendinopathy or tear, hip "
+        "osteoarthritis, developmental dysplasia, superior gluteal "
+        "nerve injury after hip surgery or intramuscular injection, "
+        "and proximal myopathy. Features: a compensated version is "
+        "the waddling gait, where the trunk lurches over the stance "
+        "leg. Ix: radiographs of the pelvis first. Ultrasound or MRI "
+        "for gluteal tendon pathology, and creatine kinase where a "
+        "myopathy is suspected. Mx: targeted abductor strengthening "
+        "is first line and works for most gluteal tendinopathy. "
+        "Corticosteroid injection gives short-term relief only. Note: "
+        "a bilateral sign produces a waddle and should prompt a look "
+        "for proximal myopathy rather than local hip disease."
+    ),
+    "Pemberton sign": (
+        "Facial plethora, distended neck veins and sometimes stridor "
+        "when the patient raises both arms beside the head for a "
+        "minute, indicating thoracic inlet obstruction. Mechanism: "
+        "elevating the arms pulls a retrosternal goitre or "
+        "mediastinal mass up into the narrow thoracic inlet and "
+        "compresses the great veins. Aetiology: most often a large "
+        "multinodular retrosternal goitre. Also lymphoma, thymic "
+        "masses and other mediastinal tumours, which overlaps with "
+        "superior vena cava obstruction. Features: look for a goitre "
+        "that has no palpable lower border, positional dyspnoea, "
+        "dysphagia and a hoarse voice suggesting recurrent laryngeal "
+        "involvement. Ix: thyroid function tests and CT neck and "
+        "chest to define the retrosternal extent and tracheal "
+        "narrowing. Flow volume loops show the extrathoracic "
+        "obstruction pattern. Mx: surgical referral for thyroidectomy "
+        "where there is compression, since radioiodine shrinks slowly "
+        "and can transiently swell the gland. Note: a positive sign "
+        "is a compressive diagnosis and needs imaging before any "
+        "radioiodine decision."
+    ),
+    "Levine sign": (
+        "The patient describing chest pain by placing a clenched fist "
+        "over the sternum, historically taught as a pointer to "
+        "ischaemic cardiac pain. Features: alongside it are the flat "
+        "palm over the sternum and the pointing finger, the last of "
+        "which argues against ischaemia. The evidence is weaker than "
+        "the teaching suggests. Studies show poor discrimination "
+        "between cardiac and non-cardiac chest pain, so it should "
+        "never change a disposition decision. Better predictors are "
+        "the character, radiation to the jaw or arm, exertional "
+        "onset, associated sweating and nausea, and the risk factor "
+        "profile. Ix: ECG within 10 minutes of presentation and "
+        "serial high sensitivity troponin. Chest radiograph, and "
+        "consider dissection and pulmonary embolism explicitly rather "
+        "than by exclusion. Mx: follow an accelerated chest pain "
+        "pathway. Aspirin and antiplatelet loading, reperfusion for "
+        "ST elevation, and risk stratified inpatient care for non ST "
+        "elevation acute coronary syndrome. Note: no gesture is "
+        "sensitive or specific enough to send a chest pain patient "
+        "home."
+    ),
+    "Hamman sign": (
+        "A crunching or crackling sound synchronous with the "
+        "heartbeat, heard best over the precordium in the left "
+        "lateral position, indicating air in the mediastinum. "
+        "Aetiology: spontaneous pneumomediastinum in young people "
+        "after vomiting, coughing, asthma or drug inhalation. More "
+        "dangerously, oesophageal rupture after forceful vomiting, "
+        "which is Boerhaave syndrome, and barotrauma in ventilated "
+        "patients. Features: chest pain radiating to the back or "
+        "neck, subcutaneous emphysema in the neck, and dyspnoea. In "
+        "Boerhaave syndrome the patient is far sicker and can be "
+        "septic within hours. Ix: chest radiograph may show "
+        "mediastinal air or a left pleural effusion. CT chest with "
+        "oral contrast is the test when perforation is possible, "
+        "since a missed rupture is rapidly fatal. Mx: benign "
+        "pneumomediastinum needs only observation, analgesia and "
+        "rest. Suspected oesophageal rupture needs resuscitation, "
+        "broad spectrum antibiotics, nil by mouth and urgent surgical "
+        "referral. Note: vomiting then chest pain with a crunch is "
+        "Boerhaave syndrome until a CT says otherwise."
+    ),
+    "Allen test": (
+        "A bedside assessment of collateral hand perfusion through "
+        "the ulnar artery, performed before radial artery cannulation "
+        "or harvest. Examination: the patient clenches the fist while "
+        "both radial and ulnar arteries are compressed, then opens "
+        "the hand, which is pale. Ulnar pressure is released and the "
+        "time to return of colour across the palm is timed. Under 5 "
+        "to 7 seconds is usually taken as adequate. Features: widely "
+        "taught but poorly evidenced. It does not reliably predict "
+        "hand ischaemia after radial artery use, and a failed test "
+        "has not been shown to identify the patients who go on to "
+        "have trouble. Serious ischaemic complications after radial "
+        "lines are rare regardless of the result. Ix: where the "
+        "stakes are high, such as before radial artery harvest for "
+        "coronary grafting, Doppler or plethysmography is more "
+        "informative. Mx: choose an alternative site if the test is "
+        "clearly abnormal and an alternative exists. Note: treat it "
+        "as one input, not a gate. The literature does not support "
+        "refusing a needed arterial line on the test alone."
+    ),
+    "Buerger test": (
+        "A bedside test of arterial perfusion in which the supine leg "
+        "is elevated and then hung dependent, looking for pallor on "
+        "elevation and a dusky red flush on dependency. Mechanism: "
+        "with a fixed arterial stenosis, perfusion pressure cannot "
+        "overcome gravity, so the foot blanches. On dependency "
+        "reactive hyperaemia in a maximally dilated bed gives the "
+        "deep red colour. Examination: the angle at which pallor "
+        "appears is Buerger angle. Below 20 degrees indicates severe "
+        "ischaemia. Features: this is a test for chronic limb "
+        "threatening ischaemia rather than claudication, and sits "
+        "with rest pain, tissue loss and absent pulses. Despite the "
+        "name it is not specific to thromboangiitis obliterans. Ix: "
+        "ankle brachial index, toe pressures where calcification "
+        "makes the index unreliable in diabetes and chronic kidney "
+        "disease, then duplex or CT angiography. Mx: urgent vascular "
+        "referral for revascularisation, plus antiplatelet, statin, "
+        "smoking cessation and foot care. Note: dependent rubor is "
+        "often mistaken for cellulitis, and elevating the leg settles "
+        "one and not the other."
+    ),
+    "Nikolsky sign": (
+        "Shearing of the epidermis from the dermis when lateral "
+        "pressure is applied to apparently normal skin, indicating "
+        "loss of keratinocyte adhesion. Mechanism: autoantibodies "
+        "against desmogleins in pemphigus vulgaris, keratinocyte "
+        "apoptosis in toxic epidermal necrolysis, and exfoliative "
+        "toxin cleavage of desmoglein 1 in staphylococcal scalded "
+        "skin syndrome. Aetiology: the drug-induced group matters "
+        "most in hospital, with allopurinol, lamotrigine, "
+        "carbamazepine, sulfonamides and nevirapine the usual "
+        "culprits. Features: a positive sign with mucosal involvement "
+        "and a tender dusky rash points to Stevens-Johnson syndrome "
+        "or toxic epidermal necrolysis, graded by the percentage of "
+        "body surface detached. Bullous pemphigoid is negative, "
+        "because the split is subepidermal. Ix: skin biopsy including "
+        "perilesional tissue for direct immunofluorescence, with "
+        "bloods for the SCORTEN prognostic score. Mx: stop the drug "
+        "immediately, transfer to a burns or high dependency unit, "
+        "and give meticulous fluid, wound and eye care. Note: it is a "
+        "burn without the fire, and the first intervention is ceasing "
+        "the culprit."
+    ),
+    "Koebner phenomenon": (
+        "Appearance of a skin disease's typical lesions in a line at "
+        "a site of trauma such as a scratch, scar or sunburn. "
+        "Mechanism: local injury releases cytokines and neuropeptides "
+        "that recruit the same inflammatory process already primed in "
+        "the skin. Associations: the reliable three are psoriasis, "
+        "lichen planus and vitiligo. It is also described in juvenile "
+        "idiopathic arthritis rashes and in molluscum and viral "
+        "warts, where autoinoculation produces a similar linear "
+        "pattern. Features: takes 10 to 20 days to develop and "
+        "indicates active disease, so it tends to appear during "
+        "flares rather than in stable phases. The linear arrangement "
+        "is the clue that separates it from a coincidental rash. Ix: "
+        "usually clinical. Biopsy only where the diagnosis is "
+        "uncertain. Mx: treat the underlying condition and counsel "
+        "the patient to avoid scratching, tattoos and elective skin "
+        "procedures during active disease. Note: warning a patient "
+        "with active psoriasis about a planned tattoo or surgical "
+        "incision is a practical use of the sign."
+    ),
+    "Gottron papules": (
+        "Violaceous flat-topped papules over the extensor surfaces of "
+        "the metacarpophalangeal and interphalangeal joints, a "
+        "specific sign of dermatomyositis. Features: the papular form "
+        "over the knuckles is Gottron papules, while flat "
+        "erythematous patches over elbows and knees are Gottron sign. "
+        "Distribution over the knuckles rather than between them "
+        "separates dermatomyositis from lupus, which spares the "
+        "joints and hits the phalanges. Associations: heliotrope "
+        "rash, shawl and V signs, mechanic's hands, nailfold "
+        "capillary changes and proximal muscle weakness. A "
+        "substantial minority of adults have an underlying "
+        "malignancy, so age-appropriate cancer screening is part of "
+        "the workup. Ix: creatine kinase, myositis-specific "
+        "antibodies including anti-Jo-1, anti-Mi-2 and anti-TIF1 "
+        "gamma, MRI of proximal muscle and often biopsy. Mx: high "
+        "dose corticosteroids with early methotrexate or azathioprine "
+        "as a steroid sparing agent, plus photoprotection and "
+        "physiotherapy. Note: anti-TIF1 gamma positivity carries the "
+        "strongest cancer association and should drive the search."
+    ),
+    "Heliotrope rash": (
+        "A violaceous or lilac discolouration of the upper eyelids, "
+        "often with periorbital oedema, and one of the most specific "
+        "cutaneous signs of dermatomyositis. Features: it is easily "
+        "missed in darker skin, where it reads as subtle swelling or "
+        "hyperpigmentation rather than a purple hue. It usually "
+        "coexists with Gottron papules, a photodistributed shawl sign "
+        "across the upper back and a V sign over the anterior chest. "
+        "Skin disease may precede weakness by months, and in "
+        "amyopathic dermatomyositis muscle involvement never appears. "
+        "Ix: creatine kinase, aldolase and myositis-specific "
+        "antibodies, MRI of the thighs to guide biopsy, and pulmonary "
+        "function tests with high resolution CT because anti-MDA5 "
+        "disease carries a risk of rapidly progressive interstitial "
+        "lung disease. Age-appropriate malignancy screening applies "
+        "to adults. Mx: corticosteroids with a steroid sparing agent, "
+        "hydroxychloroquine for skin disease, and strict "
+        "photoprotection. Note: periorbital swelling attributed to "
+        "allergy in an adult with new proximal weakness is the "
+        "classic missed presentation."
+    ),
+    "Malar rash": (
+        "Fixed erythema across the cheeks and bridge of the nose that "
+        "spares the nasolabial folds, the best known cutaneous "
+        "feature of systemic lupus erythematosus. Features: "
+        "photosensitive, may be raised, and typically flares with sun "
+        "exposure and with disease activity elsewhere. Sparing of the "
+        "nasolabial folds is the discriminator. Differential: "
+        "rosacea, which has papules, pustules and flushing and "
+        "involves the folds. Seborrhoeic dermatitis, which is scaly "
+        "and sits in the folds. Dermatomyositis, which is more "
+        "violaceous and involves the eyelids. Ix: antinuclear "
+        "antibody as the screening test, then anti-double stranded "
+        "DNA and anti-Smith, which are specific. Complement C3 and C4 "
+        "fall with activity. Full blood count, creatinine and "
+        "urinalysis for casts and protein are mandatory to catch "
+        "lupus nephritis early. Mx: sun protection, "
+        "hydroxychloroquine for almost everyone, topical "
+        "corticosteroids or calcineurin inhibitors for the rash, and "
+        "systemic immunosuppression for organ involvement. Note: the "
+        "rash is the visible part. The urinalysis is the part that "
+        "changes the prognosis."
+    ),
+    "Rinne test": (
+        "A tuning fork comparison of air conduction with bone "
+        "conduction in one ear, used with the Weber test to separate "
+        "conductive from sensorineural hearing loss. Examination: a "
+        "512 Hz fork on the mastoid, then beside the ear canal. Air "
+        "conduction louder is a positive Rinne and is normal. Bone "
+        "louder than air is a negative Rinne and indicates conductive "
+        "loss in that ear of roughly 25 dB or more. Features: a false "
+        "negative occurs in severe unilateral sensorineural loss, "
+        "where the sound is heard by the opposite cochlea through the "
+        "skull. Masking the other ear resolves it. In pure "
+        "sensorineural loss the Rinne stays positive because both "
+        "routes are reduced equally. Ix: otoscopy first, then formal "
+        "audiometry with tympanometry. MRI internal auditory meatus "
+        "for asymmetric sensorineural loss to exclude a vestibular "
+        "schwannoma. Mx: directed at the cause, from wax removal and "
+        "grommets to hearing aids. Note: a 512 Hz fork is the right "
+        "one. Lower pitches are felt as vibration and give unreliable "
+        "results."
+    ),
+    "Weber test": (
+        "A tuning fork placed on the vertex or forehead to see "
+        "whether sound lateralises, interpreted together with the "
+        "Rinne test. Examination: a 512 Hz fork struck and placed "
+        "midline, then ask which ear hears it louder. Criteria: "
+        "normal hearing gives no lateralisation. Sound lateralises "
+        "toward a conductive loss, because that ear is shielded from "
+        "ambient noise and transmits bone-conducted sound more "
+        "efficiently. It lateralises away from a sensorineural loss, "
+        "toward the better cochlea. Features: the pair of tests "
+        "localises but never quantifies, and both are unreliable in "
+        "symmetrical bilateral disease. Sudden unilateral "
+        "sensorineural loss is the emergency in this group, and Weber "
+        "lateralising away from the affected ear is the bedside clue. "
+        "Ix: urgent audiometry, ideally within 24 to 48 hours for "
+        "sudden loss, then MRI for asymmetry. Mx: sudden "
+        "sensorineural hearing loss is treated with high dose oral "
+        "corticosteroids started as early as possible, with "
+        "intratympanic steroids as salvage. Note: sudden unilateral "
+        "loss is an emergency, not an audiology referral for next "
+        "month."
+    ),
+    "Cushing reflex": (
+        "The triad of hypertension, bradycardia and irregular "
+        "respiration that signals dangerously raised intracranial "
+        "pressure. Mechanism: falling cerebral perfusion pressure "
+        "triggers a sympathetic surge to raise mean arterial "
+        "pressure, and the resulting baroreceptor response slows the "
+        "heart. Brainstem distortion disorganises the respiratory "
+        "pattern. Features: it is a late and pre-terminal sign, often "
+        "accompanying impending herniation with a dilating pupil, a "
+        "falling Glasgow Coma Scale score and extensor posturing. "
+        "Widened pulse pressure is part of the hypertensive "
+        "component. Ix: urgent non-contrast CT head, but do not delay "
+        "treatment to obtain it. Bloods, coagulation profile and "
+        "reversal agents in anticoagulated patients. Mx: head up 30 "
+        "degrees, midline neck, analgesia and sedation, and "
+        "normocapnia with oxygenation. Hypertonic saline or mannitol "
+        "as an osmotic bridge, urgent neurosurgical referral for "
+        "decompression or drainage, and treat seizures and fever. "
+        "Note: bradycardia with hypertension in a head injury is not "
+        "a well-controlled patient. It is a herniating one."
+    ),
+    "Ventricular ectopy": (
+        "Early wide complex beats arising below the atrioventricular "
+        "node, occurring in most people and usually benign. Features: "
+        "wide QRS with a discordant T wave, no preceding P wave, and "
+        "a full compensatory pause. Bigeminy is every second beat "
+        "ectopic and trigeminy every third. Patients describe skipped "
+        "beats or a thud rather than a racing heart, and symptoms "
+        "correlate poorly with burden. Aetiology: normal hearts, "
+        "caffeine, alcohol, stimulants, hypokalaemia and "
+        "hypomagnesaemia, hyperthyroidism, and structural disease "
+        "including ischaemia and cardiomyopathy. Ix: 12 lead ECG, "
+        "electrolytes and thyroid function, and a Holter monitor to "
+        "quantify the daily burden. Echocardiography where the burden "
+        "is high, the morphology varies or there is a family history "
+        "of sudden death. A burden above 10 to 15 per cent can itself "
+        "cause a reversible cardiomyopathy. Mx: remove triggers and "
+        "correct electrolytes. Beta blockers for symptoms, with "
+        "catheter ablation for a high burden or ectopy-induced "
+        "cardiomyopathy. Note: multiple morphologies or "
+        "exercise-induced ectopy deserves a structural workup."
+    ),
+    "4AT": (
+        "A four-item bedside screening tool for delirium that needs "
+        "no special training and takes about two minutes. It scores "
+        "alertness, orientation on the Abbreviated Mental Test 4, "
+        "attention by reciting the months backwards, and whether "
+        "there is acute change or a fluctuating course. Criteria: a "
+        "total of 4 or more suggests delirium with possible cognitive "
+        "impairment. A score of 1 to 3 suggests cognitive impairment "
+        "without delirium and 0 makes delirium unlikely. Features: "
+        "sensitivity and specificity are both around 88 per cent "
+        "against reference assessment. Unlike the Confusion "
+        "Assessment Method it can be completed in drowsy or "
+        "untestable patients, who score highly by design rather than "
+        "being excluded. Ix: a positive screen triggers a search for "
+        "the precipitant, commonly infection, urinary retention and "
+        "culprit medicines. Mx: treat the cause, reorientate and "
+        "mobilise, and stop deliriogenic drugs. Antipsychotics only "
+        "for severe distress or risk. Note: screen on admission and "
+        "again whenever nursing staff say the patient is not "
+        "themselves."
+    ),
+    "Timed Up and Go test": (
+        "A timed mobility test in which the patient rises from a "
+        "standard chair, walks three metres, turns, returns and sits "
+        "down, using their usual walking aid. Criteria: under 10 "
+        "seconds is normal, and 12 to 15 seconds or more is commonly "
+        "used as the cut-off suggesting impaired mobility and "
+        "increased falls risk. Interpretation should always consider "
+        "the pattern as well as the time. Features: a quick screen "
+        "rather than a diagnostic test, with modest predictive value "
+        "for falls on its own. Watching how the patient performs is "
+        "often more informative than the number, since unsteadiness "
+        "on turning, needing the arms to rise and a shuffling turn "
+        "each point at different problems. Ix: pair it with a falls "
+        "assessment covering postural blood pressure, vision, feet "
+        "and footwear, cognition, vitamin D and a full medication "
+        "review. Mx: strength and balance programmes, occupational "
+        "therapy home assessment, deprescribing sedatives and "
+        "antihypertensives where appropriate. Note: the test opens "
+        "the conversation about falls, it does not close it."
     ),
 }
 
