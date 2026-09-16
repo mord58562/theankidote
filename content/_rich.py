@@ -16767,6 +16767,162 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "timed up and go test falls risk mobility"]],
         "summary": "",
     },
+    {
+        "name": "Strong ion difference",
+        "aliases": ["Stewart approach", "physicochemical approach to acid-base", "strong ion gap", "Stewart acid-base"],
+        "utd": [["Overview", "strong ion difference Stewart physicochemical acid base"]],
+        "summary": "",
+    },
+    {
+        "name": "Los Angeles classification",
+        "aliases": ["LA classification", "Los Angeles grading", "LA grade A", "LA grade D"],
+        "utd": [["Overview", "Los Angeles classification erosive reflux oesophagitis grading"]],
+        "summary": "",
+    },
+    {
+        "name": "Insulin tolerance test",
+        "aliases": ["insulin stress test", "insulin hypoglycaemia test", "ITT pituitary"],
+        "utd": [["Overview", "insulin tolerance test growth hormone cortisol pituitary"]],
+        "summary": "",
+    },
+    {
+        "name": "Target oxygen saturation",
+        "aliases": ["oxygen therapy targets", "oxygen saturation target", "target SpO2", "oxygen titration targets"],
+        "utd": [["Overview", "target oxygen saturation range acutely unwell adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-obstructive diuresis",
+        "aliases": ["postobstructive diuresis", "diuresis after relief of obstruction", "post obstructive polyuria"],
+        "utd": [["Overview", "post obstructive diuresis after relief of urinary obstruction"]],
+        "summary": "",
+    },
+    {
+        "name": "Lung volume reduction surgery",
+        "aliases": ["lung volume reduction", "endobronchial valve placement", "bronchoscopic lung volume reduction"],
+        "utd": [["Overview", "lung volume reduction surgery endobronchial valves emphysema"]],
+        "summary": "",
+    },
+    {
+        "name": "Fractional flow reserve",
+        "aliases": ["FFR coronary", "pressure wire study", "instantaneous wave-free ratio", "coronary physiology assessment"],
+        "utd": [["Overview", "fractional flow reserve coronary pressure wire intermediate stenosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Myocardial perfusion imaging",
+        "aliases": ["myocardial perfusion scan", "nuclear stress test", "sestamibi scan", "perfusion scintigraphy heart"],
+        "utd": [["Overview", "myocardial perfusion imaging SPECT stress ischaemia viability"]],
+        "summary": "",
+    },
+    {
+        "name": "Visual evoked potentials",
+        "aliases": ["visual evoked response", "pattern reversal VEP", "P100 latency"],
+        "utd": [["Overview", "visual evoked potentials optic neuritis demyelination P100"]],
+        "summary": "",
+    },
+    {
+        "name": "Cerebrospinal fluid oligoclonal bands",
+        "aliases": ["oligoclonal bands", "CSF oligoclonal bands", "intrathecal IgG synthesis", "CSF IgG index"],
+        "utd": [["Overview", "cerebrospinal fluid oligoclonal bands multiple sclerosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Source control",
+        "aliases": ["infection source control", "drainage of infective focus", "surgical source control"],
+        "utd": [["Overview", "source control sepsis drainage debridement device removal"]],
+        "summary": "",
+    },
+    {
+        "name": "Inappropriate sinus tachycardia",
+        "aliases": ["IST sinus tachycardia", "sinus tachycardia without cause", "non-paroxysmal sinus tachycardia"],
+        "utd": [["Overview", "inappropriate sinus tachycardia ivabradine diagnosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Pleural manometry",
+        "aliases": ["pleural pressure measurement", "manometry during thoracentesis", "unexpandable lung assessment"],
+        "utd": [["Overview", "pleural manometry pressure during therapeutic thoracentesis"]],
+        "summary": "",
+    },
+    {
+        "name": "Medical thoracoscopy",
+        "aliases": ["pleuroscopy", "local anaesthetic thoracoscopy", "physician-led thoracoscopy"],
+        "utd": [["Overview", "medical thoracoscopy pleuroscopy undiagnosed pleural effusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Cough variant asthma",
+        "aliases": ["cough-variant asthma", "asthmatic cough", "chronic cough due to asthma"],
+        "utd": [["Overview", "cough variant asthma chronic cough inhaled corticosteroid"]],
+        "summary": "",
+    },
+    {
+        "name": "Ammonia testing",
+        "aliases": ["serum ammonia", "plasma ammonia", "ammonia level"],
+        "utd": [["Overview", "serum ammonia hepatic encephalopathy interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Liver synthetic function",
+        "aliases": ["hepatic synthetic function", "synthetic liver function", "liver synthetic markers"],
+        "utd": [["Overview", "liver synthetic function albumin INR bilirubin interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Bence Jones protein",
+        "aliases": ["urinary free light chains", "Bence-Jones proteinuria", "urine light chains"],
+        "utd": [["Overview", "Bence Jones protein urine free light chains myeloma"]],
+        "summary": "",
+    },
+    {
+        "name": "Basal bolus insulin regimen",
+        "aliases": ["basal-bolus insulin", "multiple daily injections", "basal bolus regimen", "multiple daily injection regimen"],
+        "utd": [["Overview", "basal bolus insulin regimen dosing titration"]],
+        "summary": "",
+    },
+    {
+        "name": "Inpatient glycaemic targets",
+        "aliases": ["hospital glucose targets", "glycaemic targets in hospital", "inpatient glucose control"],
+        "utd": [["Overview", "inpatient glycaemic targets hospital glucose control"]],
+        "summary": "",
+    },
+    {
+        "name": "Thyroid function test interpretation",
+        "aliases": ["interpreting thyroid function tests", "TSH and free T4 pattern", "thyroid test interpretation"],
+        "utd": [["Overview", "thyroid function test interpretation TSH free T4 patterns"]],
+        "summary": "",
+    },
+    {
+        "name": "Calcium sensing receptor",
+        "aliases": ["CaSR", "calcium-sensing receptor", "calcimimetic target"],
+        "utd": [["Overview", "calcium sensing receptor parathyroid hormone set point"]],
+        "summary": "",
+    },
+    {
+        "name": "Venous access devices",
+        "aliases": ["vascular access device", "central venous access device", "implanted port", "tunnelled central line"],
+        "utd": [["Overview", "venous access device selection PICC port midline"]],
+        "summary": "",
+    },
+    {
+        "name": "Antibiotic pharmacodynamics",
+        "aliases": ["time-dependent killing", "concentration-dependent killing", "antimicrobial pharmacodynamics", "post-antibiotic effect"],
+        "utd": [["Overview", "antibiotic pharmacodynamics time dependent concentration dependent killing"]],
+        "summary": "",
+    },
+    {
+        "name": "Travel history taking",
+        "aliases": ["travel history", "returned traveller history", "exposure history in fever"],
+        "utd": [["Overview", "travel history returned traveller fever incubation period"]],
+        "summary": "",
+    },
+    {
+        "name": "Clinical reasoning",
+        "aliases": ["diagnostic reasoning", "illness scripts", "dual process reasoning", "cognitive bias in diagnosis"],
+        "utd": [["Overview", "clinical reasoning dual process illness scripts diagnostic error"]],
+        "summary": "",
+    },
 ]
 
 
@@ -92373,6 +92529,526 @@ RICH_SUMMARIES = {
         "therapy home assessment, deprescribing sedatives and "
         "antihypertensives where appropriate. Note: the test opens "
         "the conversation about falls, it does not close it."
+    ),
+
+    "Strong ion difference": (
+        "The strong ion difference is the Stewart or physicochemical "
+        "approach to acid-base, which treats pH as set by three "
+        "independent variables rather than by bicarbonate. "
+        "Definition: the sum of strong cations minus strong anions, "
+        "normally about 40 mmol/L. The three independent determinants "
+        "of pH are the strong ion difference, the total weak acid "
+        "concentration (mostly albumin and phosphate) and PCO2. "
+        "Features: a fall in the difference acidifies, which is how "
+        "large volume 0.9% sodium chloride produces a hyperchloraemic "
+        "acidosis without adding any acid. A low albumin alkalinises, "
+        "so a critically ill patient with albumin 15 can show a "
+        "normal pH while hiding a substantial unmeasured anion load. "
+        "Ix: calculate the strong ion gap, or use an "
+        "albumin-corrected anion gap, which recovers most of the same "
+        "information at the bedside. Note: Stewart and the "
+        "traditional base excess approach nearly always agree on the "
+        "diagnosis, and the value of this model is explaining why the "
+        "fluid you chose changed the pH."
+    ),
+    "Los Angeles classification": (
+        "The Los Angeles classification grades the severity of "
+        "erosive reflux oesophagitis at endoscopy and is the grading "
+        "used in Australian endoscopy reporting. Grading: A is one or "
+        "more mucosal breaks up to 5 mm, B is a break longer than 5 "
+        "mm that does not bridge two mucosal folds, C is a break "
+        "continuous between two or more folds involving less than 75% "
+        "of the circumference, and D is a break involving 75% or "
+        "more. Features: grades C and D confirm gastro-oesophageal "
+        "reflux disease without further testing and predict relapse "
+        "off therapy. Grades A and B are common enough in "
+        "asymptomatic people to be weak evidence on their own. Mx: C "
+        "and D warrant a full dose proton pump inhibitor for eight "
+        "weeks, then repeat endoscopy to confirm healing and to look "
+        "for underlying Barrett mucosa that the inflammation was "
+        "hiding. Note: the grading describes breaks in the mucosa, so "
+        "a normal looking oesophagus does not exclude reflux disease; "
+        "that is non-erosive reflux, diagnosed on pH studies."
+    ),
+    "Insulin tolerance test": (
+        "The insulin tolerance test provokes hypoglycaemia to test "
+        "the integrity of the hypothalamic pituitary adrenal and "
+        "growth hormone axes, and it remains the reference test for "
+        "both. Indications: suspected adrenal insufficiency of "
+        "pituitary origin, and suspected adult growth hormone "
+        "deficiency where the result will change management. "
+        "Features: soluble insulin is given intravenously to drive "
+        "glucose below 2.2 mmol/L with symptomatic neuroglycopenia, "
+        "because the stress of that hypoglycaemia is the stimulus "
+        "being tested. Cortisol and growth hormone are sampled over "
+        "two hours. Contraindications: ischaemic heart disease, "
+        "epilepsy, untreated hypothyroidism and an unexplained low "
+        "morning cortisol, and it is avoided in older adults. Ix: the "
+        "short synacthen test is the practical alternative, but it "
+        "tests the adrenal response and can be falsely normal in "
+        "pituitary failure of recent onset. Note: this is a "
+        "supervised test with intravenous glucose drawn up at the "
+        "bedside, never an outpatient investigation."
+    ),
+    "Target oxygen saturation": (
+        "Oxygen is a drug with a target range, and both hypoxaemia "
+        "and liberal oxygen cause measurable harm. Targets: 92 to 96% "
+        "for most acutely unwell adults, and 88 to 92% for anyone at "
+        "risk of hypercapnic respiratory failure, which means COPD, "
+        "obesity hypoventilation, neuromuscular disease and chest "
+        "wall disease. Features: liberal oxygen after myocardial "
+        "infarction, stroke and cardiac arrest increases mortality, "
+        "which is why routine oxygen for a normoxaemic patient with "
+        "chest pain was abandoned. In the at-risk group a high FiO2 "
+        "worsens carbon dioxide retention mainly through loss of "
+        "hypoxic pulmonary vasoconstriction and the Haldane effect, "
+        "not simply by suppressing respiratory drive. Mx: prescribe "
+        "oxygen on the medication chart with a written target range, "
+        "titrate down as the patient improves, and take a blood gas "
+        "in anyone retaining. Note: a saturation of 100% on "
+        "supplemental oxygen is not reassurance, it is an untitrated "
+        "prescription hiding the trend you needed to see."
+    ),
+    "Post-obstructive diuresis": (
+        "Post-obstructive diuresis is the large urine output that "
+        "follows relief of bilateral urinary tract obstruction, "
+        "defined as more than 200 mL an hour for two consecutive "
+        "hours or over 3 L in 24 hours. Aetiology: a physiological "
+        "component from retained urea, sodium and water driving an "
+        "osmotic diuresis, plus a pathological component from tubular "
+        "injury with impaired concentrating ability and sodium "
+        "wasting. Features: it follows catheterisation for chronic "
+        "retention or nephrostomy for bilateral obstruction, and most "
+        "cases settle within 48 hours. The danger is hypovolaemia "
+        "with hypokalaemia, hyponatraemia and hypomagnesaemia. Ix: "
+        "hourly urine output, daily weights and electrolytes at least "
+        "twice daily until output falls. Mx: replace roughly half to "
+        "three-quarters of the previous hour's output with a balanced "
+        "crystalloid rather than matching it millilitre for "
+        "millilitre, because full replacement perpetuates the "
+        "diuresis. Note: clamping the catheter to decompress slowly "
+        "does not prevent this and risks the injury it was meant to "
+        "avoid."
+    ),
+    "Lung volume reduction surgery": (
+        "Lung volume reduction removes or collapses the most "
+        "emphysematous lung so that the remaining lung and the "
+        "diaphragm work at a more favourable mechanical position. "
+        "Indications: severe upper lobe predominant emphysema with "
+        "hyperinflation, poor exercise capacity after pulmonary "
+        "rehabilitation, FEV1 and gas transfer above 20% predicted, "
+        "and no significant pulmonary hypertension. Features: the "
+        "National Emphysema Treatment Trial found a survival benefit "
+        "confined to upper lobe disease with low post-rehabilitation "
+        "exercise capacity, and excess mortality where FEV1 was very "
+        "low with diffusely distributed disease. Bronchoscopic valve "
+        "placement achieves similar physiology without thoracotomy "
+        "when the fissure is intact and there is no collateral "
+        "ventilation. Ix: high resolution CT for lobe distribution "
+        "and fissure integrity, lung function with gas transfer, and "
+        "a perfusion scan. Mx: optimise smoking cessation, inhaled "
+        "therapy and rehabilitation first, then refer to a specialist "
+        "service. Note: persistent air leak is the commonest "
+        "complication and the reason length of stay is counted in "
+        "weeks."
+    ),
+    "Fractional flow reserve": (
+        "Fractional flow reserve measures whether a coronary stenosis "
+        "actually limits flow, by comparing pressure distal to the "
+        "lesion with aortic pressure during maximal hyperaemia. "
+        "Definition: the ratio of distal to proximal pressure at "
+        "maximal vasodilatation induced by adenosine, where 1.0 is "
+        "normal and 0.80 or below indicates a flow-limiting lesion. "
+        "Indications: intermediate stenoses of 40 to 70% on "
+        "angiography, multivessel disease where the culprit lesion is "
+        "unclear, and any lesion where the angiographic appearance "
+        "and the clinical story disagree. Features: deferring "
+        "intervention above 0.80 is safe and gives better outcomes "
+        "than stenting everything that looks tight, which is the "
+        "result that changed practice. Resting indices measured "
+        "without adenosine reach similar decisions with less patient "
+        "discomfort. Note: an angiogram grades a shadow rather than a "
+        "physiology, and the eye consistently overcalls lesions in "
+        "the intermediate range that turn out not to limit flow at "
+        "all."
+    ),
+    "Myocardial perfusion imaging": (
+        "Myocardial perfusion imaging compares tracer uptake at "
+        "stress and at rest to separate reversible ischaemia from "
+        "fixed scar. Indications: chest pain with intermediate "
+        "pretest probability, an ECG that cannot be interpreted on "
+        "exercise testing (left bundle branch block, paced rhythm, "
+        "digoxin effect), and assessment of viability before "
+        "revascularisation. Features: stress is by exercise where "
+        "possible or pharmacological with a vasodilator or "
+        "dobutamine. A defect at stress that fills in at rest is "
+        "ischaemia, a defect at both is infarct, and reduced "
+        "perfusion with preserved metabolism on PET is hibernating "
+        "myocardium worth revascularising. Ix: technetium sestamibi "
+        "SPECT is the Australian standard, with PET giving better "
+        "resolution and lower radiation where available. Note: "
+        "balanced three vessel disease can look deceptively normal "
+        "because every territory is equally underperfused, so "
+        "transient ischaemic dilatation and a fall in ejection "
+        "fraction with stress are the clues not to miss."
+    ),
+    "Visual evoked potentials": (
+        "Visual evoked potentials record the occipital cortical "
+        "response to a patterned visual stimulus and measure "
+        "conduction along the anterior visual pathway. Indications: "
+        "suspected optic neuritis where the history is old or the "
+        "examination has normalised, and evidence of a second lesion "
+        "site in suspected multiple sclerosis. Features: "
+        "demyelination delays the P100 latency with a relatively "
+        "preserved waveform, while ischaemic and compressive lesions "
+        "reduce amplitude with less delay. A delayed P100 persists "
+        "for years after a clinically recovered optic neuritis, which "
+        "is what makes the test useful retrospectively. Ix: interpret "
+        "alongside optical coherence tomography showing retinal nerve "
+        "fibre layer thinning, and MRI of the brain and orbits. Note: "
+        "a normal study does not exclude multiple sclerosis, but a "
+        "delayed P100 in someone presenting with a brainstem or "
+        "spinal syndrome supplies clinically silent evidence of a "
+        "second site that imaging can miss."
+    ),
+    "Cerebrospinal fluid oligoclonal bands": (
+        "Oligoclonal bands are discrete immunoglobulin G bands on "
+        "cerebrospinal fluid isoelectric focusing that are absent "
+        "from a paired serum sample, and they indicate antibody "
+        "production within the central nervous system. Ix: "
+        "cerebrospinal fluid and serum must be run together on the "
+        "same gel, because bands present in both reflect a systemic "
+        "gammopathy crossing a leaky barrier rather than intrathecal "
+        "synthesis. Report the IgG index alongside. Features: bands "
+        "are found in about 90% of multiple sclerosis, and under the "
+        "McDonald criteria their presence can substitute for "
+        "dissemination in time after a single clinical attack. They "
+        "are not specific, appearing in neurosarcoidosis, "
+        "neurosyphilis and chronic meningitis. Note: a negative "
+        "result in someone who otherwise looks typical should prompt "
+        "a search for the mimics, particularly neuromyelitis optica "
+        "spectrum disorder and MOG antibody disease, which are "
+        "usually band negative and are treated quite differently."
+    ),
+    "Source control": (
+        "Source control means the physical removal, drainage or "
+        "diversion of an infective focus, and it determines outcome "
+        "in sepsis more than the choice of antibiotic does. "
+        "Indications: abscess, empyema, an obstructed and infected "
+        "urinary or biliary tract, necrotising soft tissue infection, "
+        "infected prosthetic material and perforated viscus. "
+        "Features: antibiotics cannot sterilise an undrained "
+        "collection or a device biofilm, so a patient who fails to "
+        "improve on appropriate therapy has an undrained focus until "
+        "proven otherwise. Ix: CT with contrast is the usual survey "
+        "for an occult focus, and repeat imaging beats repeat blood "
+        "cultures when fever persists. Mx: achieve it within six to "
+        "twelve hours of recognition, choosing the least invasive "
+        "effective option, which is often radiologically guided "
+        "drainage rather than laparotomy in an unstable patient. "
+        "Remove infected lines and prosthetic material where "
+        "feasible. Note: escalating the antibiotic is the reflex, and "
+        "it is the wrong move when the real problem is a collection "
+        "nobody has drained."
+    ),
+    "Inappropriate sinus tachycardia": (
+        "Inappropriate sinus tachycardia is a persistent resting "
+        "sinus rate above 100, or a disproportionate rise on minimal "
+        "exertion, with no identifiable physiological cause. "
+        "Epidemiology: typically young women, often health workers, "
+        "and frequently dating from a viral illness. Features: "
+        "palpitations, exercise intolerance, lightheadedness and "
+        "chest discomfort, with P wave morphology identical to normal "
+        "sinus rhythm, which is what distinguishes it from atrial "
+        "tachycardia. Ix: ambulatory monitoring showing a mean "
+        "24-hour rate above 90, thyroid function and full blood "
+        "count, and an active stand or tilt test to separate it from "
+        "postural orthostatic tachycardia syndrome where the rate "
+        "rises only upright. Mx: treat the mimics first, then graded "
+        "exercise training with adequate salt and fluid. Ivabradine "
+        "slows the rate without lowering blood pressure and "
+        "outperforms beta blockers for symptoms. Note: this is a "
+        "diagnosis of exclusion and the exclusions are the point, "
+        "since anaemia, thyrotoxicosis, phaeochromocytoma and anxiety "
+        "all present this way."
+    ),
+    "Pleural manometry": (
+        "Pleural manometry measures pleural pressure during "
+        "therapeutic drainage and guides how much fluid can safely be "
+        "removed in one sitting. Features: normal pleural pressure is "
+        "slightly negative and falls as fluid is drained. A steep "
+        "fall indicates unexpandable lung from visceral pleural "
+        "thickening or endobronchial obstruction, and pressures below "
+        "-20 cmH2O predict re-expansion pulmonary oedema and chest "
+        "discomfort. Indications: large effusions where more than 1.5 "
+        "L is planned, suspected trapped lung, and recurrent "
+        "effusions being assessed for pleurodesis. Mx: stop draining "
+        "at the onset of chest pain, at a pressure below -20 cmH2O, "
+        "or at 1.5 L when no manometer is in use. A markedly negative "
+        "pressure with incomplete re-expansion means pleurodesis will "
+        "fail and an indwelling pleural catheter is the better "
+        "option. Note: chest pain during drainage is the bedside "
+        "surrogate for the manometer, so stopping when the patient "
+        "reports discomfort is not a courtesy, it is the safety "
+        "limit."
+    ),
+    "Medical thoracoscopy": (
+        "Medical thoracoscopy is pleural inspection and biopsy "
+        "performed by a respiratory physician under local anaesthesia "
+        "with sedation, through a single port with the patient "
+        "breathing spontaneously. Indications: an exudative pleural "
+        "effusion still undiagnosed after two aspirations, suspected "
+        "mesothelioma or pleural metastasis, and therapeutic drainage "
+        "with talc poudrage in the same sitting. Features: diagnostic "
+        "yield for malignancy is around 90%, well above blind pleural "
+        "biopsy or cytology alone, because the operator sees and "
+        "samples the abnormal pleura directly. It also confirms that "
+        "the lung re-expands before pleurodesis is attempted. Ix: it "
+        "needs a pleural space with sufficient fluid or an inducible "
+        "pneumothorax, so ultrasound and CT come first. Mx: talc "
+        "poudrage at thoracoscopy achieves higher pleurodesis success "
+        "than bedside slurry. Note: this is not video-assisted "
+        "thoracoscopic surgery, which requires general anaesthesia "
+        "and single lung ventilation, yet it reaches most of the same "
+        "diagnoses without either."
+    ),
+    "Cough variant asthma": (
+        "Cough variant asthma presents with chronic dry cough as the "
+        "only symptom, without wheeze or breathlessness, and accounts "
+        "for a substantial share of cough lasting beyond eight weeks. "
+        "Features: the cough is typically nocturnal or provoked by "
+        "cold air, exercise, dust or laughing, while examination and "
+        "chest radiograph are normal. Ix: spirometry is often normal, "
+        "so the useful tests are bronchodilator reversibility, "
+        "bronchial provocation with mannitol or methacholine, and "
+        "exhaled nitric oxide as a marker of eosinophilic airway "
+        "inflammation. Mx: an inhaled corticosteroid for at least "
+        "eight weeks, with the response itself confirming the "
+        "diagnosis, then step down to the lowest dose that holds the "
+        "cough. Ddx: the other two common causes of chronic cough are "
+        "upper airway cough syndrome and reflux, and cough from an "
+        "angiotensin converting enzyme inhibitor is excluded by "
+        "stopping the drug. Note: roughly a third progress to "
+        "classical asthma, and early treatment appears to reduce "
+        "that, so it is not a trivial label."
+    ),
+    "Ammonia testing": (
+        "Serum ammonia is often ordered in the confused patient with "
+        "liver disease, and it answers a narrower question than most "
+        "people expect. Features: the correlation between ammonia "
+        "level and the grade of hepatic encephalopathy is poor, so "
+        "the diagnosis stays clinical, made by excluding other causes "
+        "of altered mental state in someone with known liver disease. "
+        "Ix: a normal ammonia in an encephalopathic patient argues "
+        "against hepatic encephalopathy and should redirect the "
+        "workup. A level above 200 micromol/L in acute liver failure "
+        "predicts cerebral oedema and intracranial hypertension, "
+        "which is where the number genuinely changes management. "
+        "Sampling matters because free-flowing venous blood without a "
+        "tourniquet, on ice and to the laboratory immediately, is the "
+        "only way to avoid a spuriously high result. Mx: treat the "
+        "precipitant, give lactulose titrated to two or three soft "
+        "stools daily, and add rifaximin for recurrence. Note: a high "
+        "ammonia without liver disease points to a urea cycle "
+        "disorder or to valproate toxicity."
+    ),
+    "Liver synthetic function": (
+        "Liver synthetic function refers to the tests that measure "
+        "what the liver is still making, as distinct from the "
+        "transaminases that measure hepatocyte injury. Features: the "
+        "synthetic markers are INR or prothrombin time, albumin and "
+        "bilirubin, and those are the three that appear in the "
+        "Child-Pugh and MELD scores because they predict outcome. "
+        "Transaminases can be dramatically raised with entirely "
+        "preserved synthesis, and a cirrhotic liver can show "
+        "near-normal transaminases while synthesis fails. Ix: INR "
+        "reflects factor VII, with a half-life near six hours, so it "
+        "moves first in acute liver failure. Albumin has a half-life "
+        "close to 20 days, so it reports chronic disease and is also "
+        "lowered by sepsis, nephrotic syndrome and malnutrition. "
+        "Note: a rising INR in acute hepatitis is the finding that "
+        "converts an outpatient problem into a transplant unit "
+        "referral, and it should be rechecked rather than explained "
+        "away as vitamin K deficiency without a trial of replacement."
+    ),
+    "Bence Jones protein": (
+        "Bence Jones protein is free monoclonal immunoglobulin light "
+        "chain in the urine, and it is the classical marker of a "
+        "plasma cell dyscrasia. Features: light chains pass the "
+        "glomerulus freely and are missed by the urine dipstick, "
+        "which detects albumin only, so a negative dipstick alongside "
+        "heavy protein on a protein creatinine ratio is the pattern "
+        "that should raise suspicion. Ix: urine protein "
+        "electrophoresis with immunofixation on a concentrated sample "
+        "confirms and types it, but the serum free light chain assay "
+        "with the kappa to lambda ratio has largely replaced it, "
+        "being more sensitive and needing no urine collection. Serum "
+        "free light chains are also the only measurable disease in "
+        "light chain and non-secretory myeloma. Mx: the finding "
+        "demands a myeloma screen with electrophoresis, calcium, "
+        "renal function, full blood count and whole body imaging. "
+        "Note: filtered light chains are directly nephrotoxic through "
+        "cast nephropathy, and renal impairment from myeloma is an "
+        "emergency where urgent treatment preserves function."
+    ),
+    "Basal bolus insulin regimen": (
+        "A basal bolus regimen mimics physiological insulin secretion "
+        "with a long acting background insulin plus rapid acting "
+        "insulin at each meal, and it is the default for type 1 "
+        "diabetes and for most insulin-treated inpatients. Dosing: a "
+        "common start is 0.5 units/kg a day in total, half as basal "
+        "and half divided across meals, then adjusted every two or "
+        "three days on patterns rather than on single readings. "
+        "Features: basal insulin controls fasting glucose and is "
+        "titrated on the morning reading, while each bolus controls "
+        "the postprandial rise and is titrated on the reading before "
+        "the next meal. Correction doses use an insulin sensitivity "
+        "factor estimated as 100 divided by the total daily dose. Mx: "
+        "in hospital continue basal insulin even when the patient is "
+        "fasting, because withholding it in type 1 diabetes "
+        "precipitates ketoacidosis. Note: overnight hypoglycaemia "
+        "with high morning readings is over-basalisation, and the "
+        "answer is less basal insulin rather than more."
+    ),
+    "Inpatient glycaemic targets": (
+        "Glucose targets in hospital are looser than outpatient "
+        "targets, because the harm from hypoglycaemia in an unwell "
+        "inpatient outweighs any benefit from tight control over a "
+        "short admission. Targets: 5 to 10 mmol/L for most ward and "
+        "critically ill patients, accepting up to 12 in the frail or "
+        "those receiving end of life care. Features: targeting below "
+        "6 in critically ill patients increased mortality in the "
+        "NICE-SUGAR trial, which is the study that ended intensive "
+        "insulin therapy in intensive care. Above 10, hyperglycaemia "
+        "impairs wound healing, promotes infection and causes an "
+        "osmotic diuresis. Mx: use a basal bolus regimen rather than "
+        "a sliding scale alone, check glucose before meals and at "
+        "bedtime, and keep a written hypoglycaemia protocol on the "
+        "ward. Steroid-induced hyperglycaemia peaks in the afternoon "
+        "and is best matched by morning intermediate acting insulin. "
+        "Note: discharging a patient without a plan for insulin "
+        "started in hospital reliably produces a readmission."
+    ),
+    "Thyroid function test interpretation": (
+        "Thyroid function tests are read as a pattern of TSH and free "
+        "T4 rather than as two separate numbers, since TSH responds "
+        "logarithmically and moves first. Features: a low TSH with "
+        "high free T4 is primary hyperthyroidism and a high TSH with "
+        "low free T4 is primary hypothyroidism. Low TSH with normal "
+        "free T4 and free T3 is subclinical hyperthyroidism, and high "
+        "TSH with normal free T4 is subclinical hypothyroidism. "
+        "Discordant results, such as a low TSH with a low free T4, "
+        "point to pituitary disease, recently treated thyrotoxicosis "
+        "or non-thyroidal illness. Ix: repeat before acting, check "
+        "thyroid peroxidase antibodies when hypothyroid, and add free "
+        "T3 when hyperthyroid to catch T3 toxicosis. Biotin "
+        "supplements produce spurious results in both directions on "
+        "immunoassays and should be stopped for two days first. Note: "
+        "TSH takes six weeks to re-equilibrate after a dose change, "
+        "so retesting at four weeks generates dose changes that chase "
+        "a number still moving."
+    ),
+    "Calcium sensing receptor": (
+        "The calcium sensing receptor is a G protein coupled receptor "
+        "on parathyroid chief cells and the thick ascending limb that "
+        "lets those tissues read extracellular ionised calcium "
+        "directly. Mechanism: activation by a rise in calcium "
+        "suppresses parathyroid hormone release and increases renal "
+        "calcium excretion, so the receptor sets the calcium set "
+        "point the whole system regulates around. Features: "
+        "inactivating mutations raise that set point, producing "
+        "familial hypocalciuric hypercalcaemia with mild "
+        "hypercalcaemia, a non-suppressed parathyroid hormone and a "
+        "low urinary calcium creatinine clearance ratio. Activating "
+        "mutations cause autosomal dominant hypocalcaemia, where "
+        "treating with calcitriol provokes nephrocalcinosis. Mx: "
+        "cinacalcet is a calcimimetic that sensitises the receptor "
+        "and is used in parathyroid carcinoma and refractory "
+        "secondary hyperparathyroidism. Note: this receptor explains "
+        "why lithium causes hypercalcaemia, and why hypercalcaemia "
+        "produces a polyuria that is nephrogenic rather than osmotic."
+    ),
+    "Venous access devices": (
+        "Vascular access devices differ in dwell time, thrombosis "
+        "risk and infection risk, and choosing the wrong one is a "
+        "common cause of avoidable line sepsis. Types: peripheral "
+        "cannula for days, midline for one to four weeks with "
+        "non-irritant infusions only, peripherally inserted central "
+        "catheter for weeks to months, and tunnelled catheter or "
+        "implanted port for months to years. Features: vesicant "
+        "chemotherapy, parenteral nutrition, vasopressors and any "
+        "solution outside a pH of 5 to 9 need central delivery. Ports "
+        "carry the lowest infection rate and suit intermittent "
+        "long-term access, while a peripherally inserted central "
+        "catheter carries the highest thrombosis risk of the central "
+        "options. Mx: confirm tip position at the cavoatrial junction "
+        "before use, apply a chlorhexidine-impregnated dressing, and "
+        "remove the device the day it is no longer needed. Note: the "
+        "choice follows how long access is needed and what is being "
+        "infused, and a line left in because nobody reviewed it is "
+        "the largest modifiable risk."
+    ),
+    "Antibiotic pharmacodynamics": (
+        "Antibiotic pharmacodynamics describes the relationship "
+        "between drug exposure and bacterial killing, and it "
+        "determines how a drug should be dosed rather than simply how "
+        "much is given. Types: time-dependent agents kill best when "
+        "the free concentration stays above the minimum inhibitory "
+        "concentration for a large fraction of the dosing interval, "
+        "which covers the beta-lactams. Concentration-dependent "
+        "agents kill in proportion to peak concentration, which "
+        "covers the aminoglycosides. Features: this is why extended "
+        "or continuous infusion of piperacillin-tazobactam is used in "
+        "severe sepsis, and why gentamicin is given as a single large "
+        "daily dose that maximises the peak while letting the trough "
+        "fall low enough to limit nephrotoxicity. Vancomycin is "
+        "exposure-dependent and dosed to an area under the curve "
+        "target. Mx: follow eTG and the Australian Medicines Handbook "
+        "for local dosing, with therapeutic drug monitoring for "
+        "aminoglycosides and vancomycin. Note: the post-antibiotic "
+        "effect is what allows an aminoglycoside trough to fall to "
+        "undetectable without losing efficacy."
+    ),
+    "Travel history taking": (
+        "A travel history converts an undifferentiated fever into a "
+        "shortlist, and the single most useful variable is the "
+        "incubation period. Hx: where exactly and when they returned, "
+        "rural or urban, accommodation, freshwater exposure, animal "
+        "and insect bites, sexual contacts, food and water, and what "
+        "prophylaxis or vaccination was taken. Features: fever within "
+        "21 days of leaving a malarious area is malaria until "
+        "excluded, whatever else is going on. Under 10 days suggests "
+        "dengue, rickettsial infection, leptospirosis or bacterial "
+        "enteritis. Beyond a month suggests typhoid, tuberculosis, "
+        "viral hepatitis or amoebic liver abscess. Ix: thick and thin "
+        "films or a rapid antigen test repeated three times over 48 "
+        "hours for malaria, blood cultures, full blood count looking "
+        "for eosinophilia, and serology guided by exposure. Note: "
+        "eosinophilia in a returned traveller points at helminths, "
+        "and strongyloides matters most because later "
+        "immunosuppression can turn a silent infection into fatal "
+        "hyperinfection."
+    ),
+    "Clinical reasoning": (
+        "Clinical reasoning describes how clinicians move from "
+        "presentation to diagnosis, and it runs in two modes that "
+        "fail in characteristic ways. Types: type 1 is fast pattern "
+        "recognition, efficient and correct most of the time, and "
+        "type 2 is slow analytical reasoning called on when the "
+        "pattern does not fit. Features: illness scripts are the "
+        "stored patterns experts match against, and expertise is "
+        "largely a matter of holding more scripts rather than of "
+        "reasoning more carefully. Anchoring, availability, "
+        "diagnostic momentum and premature closure produce most "
+        "diagnostic error, with premature closure the commonest "
+        "single contributor. Mx: the strategies that help are a "
+        "deliberate diagnostic timeout, naming the worst case that "
+        "must be excluded, and asking what else this could be before "
+        "committing. Note: biases are not corrected by knowing their "
+        "names, so the reliable safeguards are structural, meaning "
+        "handover checks, follow-up of pending results and a low "
+        "threshold for revisiting a diagnosis that is not behaving as "
+        "expected."
     ),
 }
 
