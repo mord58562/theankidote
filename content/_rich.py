@@ -17775,6 +17775,228 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "wound debridement chronic ulcer management"]],
         "summary": "",
     },
+    {
+        "name": "Weber ankle fracture classification",
+        "aliases": ["Danis-Weber classification", "Weber classification of ankle fracture"],
+        "utd": [["Overview", "Danis Weber classification distal fibular fracture"]],
+        "summary": "",
+    },
+    {
+        "name": "Supracondylar humeral fracture",
+        "aliases": ["Supracondylar fracture of the humerus", "Gartland fracture"],
+        "utd": [["Overview", "supracondylar humerus fracture children"]],
+        "summary": "",
+    },
+    {
+        "name": "Hamstring strain",
+        "aliases": ["Hamstring tear", "Hamstring injury", "Pulled hamstring"],
+        "utd": [["Overview", "hamstring muscle strain injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Exercise-induced bronchoconstriction",
+        "aliases": ["Exercise-induced asthma", "Exercise induced bronchoconstriction", "Exercise-induced bronchospasm"],
+        "utd": [["Overview", "exercise induced bronchoconstriction diagnosis treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Brachial plexus block",
+        "aliases": ["Brachial plexus blockade", "Upper limb regional block"],
+        "utd": [["Overview", "brachial plexus block ultrasound guided upper limb"]],
+        "summary": "",
+    },
+    {
+        "name": "Duty to warn",
+        "aliases": ["Duty to protect", "Warning a third party"],
+        "utd": [["Overview", "duty to warn confidentiality third party risk"]],
+        "summary": "",
+    },
+    {
+        "name": "Fitness to stand trial",
+        "aliases": ["Fitness to plead", "Competence to stand trial", "Unfit to be tried"],
+        "utd": [["Overview", "fitness to stand trial Presser criteria"]],
+        "summary": "",
+    },
+    {
+        "name": "Mental impairment defence",
+        "aliases": ["Insanity defence", "Defence of mental illness", "Not criminally responsible"],
+        "utd": [["Overview", "mental impairment defence criminal responsibility McNaghten"]],
+        "summary": "",
+    },
+    {
+        "name": "Psilocybin-assisted therapy",
+        "aliases": ["Psilocybin therapy", "Psychedelic-assisted therapy", "Psilocybin assisted psychotherapy"],
+        "utd": [["Overview", "psilocybin assisted therapy treatment resistant depression"]],
+        "summary": "",
+    },
+    {
+        "name": "Authorised prescriber scheme",
+        "aliases": ["Authorised Prescriber", "TGA Authorised Prescriber", "Authorised prescriber pathway"],
+        "utd": [["Overview", "TGA authorised prescriber unapproved therapeutic goods"]],
+        "summary": "",
+    },
+    {
+        "name": "Residential Medication Management Review",
+        "aliases": ["RMMR", "Residential medication review"],
+        "utd": [["Overview", "residential medication management review aged care pharmacist"]],
+        "summary": "",
+    },
+    {
+        "name": "Closing the Gap PBS co-payment",
+        "aliases": ["Closing the Gap script", "Closing the Gap prescription", "Closing the Gap PBS copayment"],
+        "utd": [["Overview", "Closing the Gap PBS co-payment measure eligibility"]],
+        "summary": "",
+    },
+    {
+        "name": "Section 100 prescribing",
+        "aliases": ["Section 100 PBS", "Highly Specialised Drugs Program", "s100 prescribing"],
+        "utd": [["Overview", "section 100 highly specialised drugs program PBS"]],
+        "summary": "",
+    },
+    {
+        "name": "Department of Veterans Affairs gold card",
+        "aliases": ["DVA gold card", "Veteran gold card", "Repatriation Health Card"],
+        "utd": [["Overview", "Department of Veterans Affairs gold card entitlements"]],
+        "summary": "",
+    },
+    {
+        "name": "Symphysiotomy",
+        "aliases": ["Pubic symphysiotomy"],
+        "utd": [["Overview", "symphysiotomy obstructed labour technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Internal podalic version",
+        "aliases": ["Podalic version", "Internal version"],
+        "utd": [["Overview", "internal podalic version second twin breech extraction"]],
+        "summary": "",
+    },
+    {
+        "name": "Kielland forceps",
+        "aliases": ["Kiellands forceps", "Rotational forceps"],
+        "utd": [["Overview", "Kielland rotational forceps malposition delivery"]],
+        "summary": "",
+    },
+    {
+        "name": "Ages and Stages Questionnaire",
+        "aliases": ["ASQ-3", "Ages and Stages Questionnaire 3"],
+        "utd": [["Overview", "Ages and Stages Questionnaire developmental screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Griffiths developmental assessment",
+        "aliases": ["Griffiths Scales", "Griffiths Mental Development Scales"],
+        "utd": [["Overview", "Griffiths scales of child development assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Mid-parental height",
+        "aliases": ["Target height", "Mid parental height", "Predicted adult height"],
+        "utd": [["Overview", "mid parental height target height calculation short stature"]],
+        "summary": "",
+    },
+    {
+        "name": "Bone age",
+        "aliases": ["Skeletal age", "Bone age assessment", "Greulich and Pyle"],
+        "utd": [["Overview", "bone age assessment skeletal maturity hand radiograph"]],
+        "summary": "",
+    },
+    {
+        "name": "Premature adrenarche",
+        "aliases": ["Precocious adrenarche", "Premature pubarche", "Early adrenarche"],
+        "utd": [["Overview", "premature adrenarche pubarche evaluation children"]],
+        "summary": "",
+    },
+    {
+        "name": "Sexual assault forensic examination",
+        "aliases": ["Forensic sexual assault examination", "Sexual assault medical examination"],
+        "utd": [["Overview", "sexual assault forensic medical examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Puberty suppression",
+        "aliases": ["Puberty blockers", "GnRH analogue for puberty suppression"],
+        "utd": [["Overview", "puberty suppression gonadotrophin releasing hormone analogue adolescent"]],
+        "summary": "",
+    },
+    {
+        "name": "Transgender health care",
+        "aliases": ["Trans health care", "Gender diverse health care"],
+        "utd": [["Overview", "transgender health care primary care screening"]],
+        "summary": "",
+    },
+    {
+        "name": "Latent tuberculosis screening",
+        "aliases": ["Latent TB screening", "Tuberculosis contact screening"],
+        "utd": [["Overview", "latent tuberculosis infection screening interferon gamma release assay"]],
+        "summary": "",
+    },
+    {
+        "name": "Interhospital transfer",
+        "aliases": ["Inter-hospital transfer", "Patient transfer between hospitals"],
+        "utd": [["Overview", "interhospital transfer critically ill patient retrieval"]],
+        "summary": "",
+    },
+    {
+        "name": "Fitness to be interviewed",
+        "aliases": ["Fitness for police interview", "Fitness to be detained"],
+        "utd": [["Overview", "fitness to be interviewed police custody assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Custodial health assessment",
+        "aliases": ["Prison health assessment", "Health assessment in custody"],
+        "utd": [["Overview", "reception health screening custody prison"]],
+        "summary": "",
+    },
+    {
+        "name": "Confidentiality in adolescent care",
+        "aliases": ["Adolescent confidentiality", "Teen confidentiality"],
+        "utd": [["Overview", "adolescent confidentiality consent primary care"]],
+        "summary": "",
+    },
+    {
+        "name": "Intellectual disability health assessment",
+        "aliases": ["Annual health review intellectual disability", "Health assessment in intellectual disability"],
+        "utd": [["Overview", "intellectual disability annual health assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Behaviour support plan",
+        "aliases": ["Positive behaviour support plan", "Behaviour support planning"],
+        "utd": [["Overview", "positive behaviour support plan restrictive practice disability"]],
+        "summary": "",
+    },
+    {
+        "name": "Sport concussion assessment",
+        "aliases": ["Sport Concussion Assessment Tool", "SCAT"],
+        "utd": [["Overview", "sport concussion assessment tool sideline evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Return to play protocol",
+        "aliases": ["Graduated return to play", "Return to sport protocol"],
+        "utd": [["Overview", "graduated return to play concussion stages"]],
+        "summary": "",
+    },
+    {
+        "name": "Sentinel lymph node biopsy",
+        "aliases": ["Sentinel node biopsy", "SLNB"],
+        "utd": [["Overview", "sentinel lymph node biopsy breast cancer melanoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Video head impulse test",
+        "aliases": ["vHIT", "Head impulse testing"],
+        "utd": [["Overview", "video head impulse test vestibulo ocular reflex gain"]],
+        "summary": "",
+    },
+    {
+        "name": "Independent medical examination",
+        "aliases": ["IME", "Medicolegal examination"],
+        "utd": [["Overview", "independent medical examination medicolegal report"]],
+        "summary": "",
+    },
 ]
 
 
@@ -96738,6 +96960,783 @@ RICH_SUMMARIES = {
         "diabetic foot ulcer usually needs debriding at every "
         "dressing change, and callus left at the wound edge is a "
         "pressure problem masquerading as a healing one."
+    ),
+
+    "Weber ankle fracture classification": (
+        "Anatomical classification of distal fibular fractures by the "
+        "level of the fracture relative to the ankle syndesmosis, "
+        "used to predict syndesmotic instability and the need for "
+        "fixation. Types: Weber A lies below the syndesmosis and is "
+        "usually stable. Weber B is at the syndesmosis from an "
+        "external rotation injury and may be stable or unstable. "
+        "Weber C is above the syndesmosis with syndesmotic disruption "
+        "and is always unstable. Ix: ankle radiographs including a "
+        "mortise view, assessing medial clear space and tibiofibular "
+        "overlap. A high fibular fracture with medial tenderness "
+        "suggests a Maisonneuve injury, so image the whole leg. "
+        "Weight-bearing or gravity stress views clarify a borderline "
+        "Weber B. Mx: Weber A and stable B in a walking boot or "
+        "below-knee cast with early weight bearing. Unstable B and "
+        "all C need open reduction and internal fixation, often with "
+        "a syndesmotic screw or suture button. Look for an associated "
+        "medial or posterior malleolar fracture, which changes "
+        "stability. Note: the level of the fibular fracture, not how "
+        "displaced it looks, is what predicts instability."
+    ),
+    "Supracondylar humeral fracture": (
+        "The commonest elbow fracture in children, typically from a "
+        "fall on an outstretched hand at 5 to 7 years, with "
+        "extension-type injuries making up over 95 per cent. "
+        "Classification: Gartland I is undisplaced, II is displaced "
+        "with an intact posterior cortex acting as a hinge, and III "
+        "is completely displaced. Clinical features: a swollen elbow "
+        "held still, with an S-shaped deformity when displaced. "
+        "Document the radial pulse, capillary refill and the radial, "
+        "median and anterior interosseous nerves before and after any "
+        "manipulation. Ix: AP and lateral elbow radiographs. On the "
+        "lateral the anterior humeral line should cross the middle "
+        "third of the capitellum, and loss of this is the clue to a "
+        "subtle Gartland II. Mx: Gartland I in an above-elbow "
+        "backslab at 90 degrees for three weeks. II and III need "
+        "closed reduction and percutaneous K-wire fixation. A "
+        "pulseless white hand is a surgical emergency needing "
+        "immediate reduction rather than observation. Note: the "
+        "anterior humeral line and a careful nerve chart are what "
+        "stop a Gartland II being sent home as a sprain."
+    ),
+    "Hamstring strain": (
+        "Acute strain of the posterior thigh muscles, the commonest "
+        "injury in sprinting and kicking sports and one with a high "
+        "recurrence rate. Aetiology: eccentric overload during the "
+        "terminal swing phase of running. Previous hamstring injury, "
+        "increasing age and poor eccentric strength are the main risk "
+        "factors, and the long head of biceps femoris is involved in "
+        "most sprinting injuries. Clinical features: sudden posterior "
+        "thigh pain, often with a palpable defect and bruising "
+        "tracking distally. Pain on resisted knee flexion with a "
+        "restricted straight leg raise. Ix: a clinical diagnosis. MRI "
+        "grades and locates the injury, which guides return to play "
+        "in elite settings. Consider radiographs in an adolescent for "
+        "an ischial tuberosity avulsion. Mx: relative rest, ice and "
+        "compression early, then progressive eccentric loading such "
+        "as the Nordic hamstring exercise, with a graded running "
+        "programme. Proximal free tendon injuries and complete "
+        "avulsions with retraction warrant surgical referral. Note: "
+        "proximity to the ischial tuberosity, not the size of the "
+        "bruise, is what predicts a long recovery."
+    ),
+    "Exercise-induced bronchoconstriction": (
+        "Transient airway narrowing triggered by exercise, present in "
+        "most people with asthma and in around 10 per cent of those "
+        "without. Mechanism: high minute ventilation dries and cools "
+        "the airway, causing osmotic mediator release from mast cells "
+        "and smooth muscle contraction. Triggers: cold dry air, "
+        "chlorinated pools and high pollen or pollution loads. "
+        "Clinical features: cough, chest tightness and wheeze peaking "
+        "5 to 15 minutes after stopping exercise and settling within "
+        "an hour. Symptoms during rather than after exertion suggest "
+        "an alternative such as laryngeal obstruction or simple "
+        "deconditioning. Ix: spirometry with an exercise or eucapnic "
+        "voluntary hyperventilation challenge, with a fall in FEV1 of "
+        "at least 10 per cent confirming it. Mannitol challenge is a "
+        "practical alternative. Mx: a short-acting beta agonist 10 to "
+        "15 minutes before exercise, with a proper warm-up routine. "
+        "Daily reliance on a pre-exercise reliever means the "
+        "underlying asthma is uncontrolled and needs an inhaled "
+        "corticosteroid, per eTG. Note: symptoms that peak after "
+        "exercise stops rather than during it are the signature."
+    ),
+    "Brachial plexus block": (
+        "Regional anaesthesia of the upper limb by depositing local "
+        "anaesthetic around the brachial plexus, now almost always "
+        "ultrasound guided. Types: interscalene for shoulder surgery, "
+        "supraclavicular and infraclavicular for elbow and forearm, "
+        "and axillary for the hand. The approach follows the "
+        "dermatomes needed and which structures sit in the needle "
+        "path. Onset takes 10 to 30 minutes with dense motor as well "
+        "as sensory block. Complications: phrenic nerve palsy is near "
+        "universal with an interscalene block and rules it out in "
+        "significant respiratory disease. Horner syndrome, recurrent "
+        "laryngeal palsy, pneumothorax with supraclavicular "
+        "approaches, vascular puncture and local anaesthetic systemic "
+        "toxicity are the others to counsel and watch for. Mx: "
+        "document a pre-block neurological examination, aspirate and "
+        "inject in small increments under continuous ultrasound "
+        "vision, stay within maximum weight-based doses and keep "
+        "intralipid immediately available. Note: an interscalene "
+        "block buys excellent shoulder analgesia at the cost of one "
+        "hemidiaphragm, so ask about respiratory reserve first."
+    ),
+    "Duty to warn": (
+        "The clinician's obligation to breach confidentiality to "
+        "prevent serious harm to an identifiable third party, raised "
+        "most often in psychiatry, infectious disease and fitness to "
+        "drive. Criteria: a serious and imminent risk, an "
+        "identifiable person or class at risk, and disclosure limited "
+        "to what is needed to avert that harm. Australian law frames "
+        "this as a permitted disclosure in the public interest rather "
+        "than the stricter positive duty created by Tarasoff in the "
+        "United States, and privacy legislation permits disclosure "
+        "where a serious threat to life, health or safety exists. Mx: "
+        "try to manage the risk inside the therapeutic relationship "
+        "first, seek the patient's consent to disclose, and consult a "
+        "senior colleague and your indemnity insurer before acting. "
+        "Disclose the minimum to the police or the person at risk, "
+        "and document the threshold applied and what was said. "
+        "Notifiable conditions and mandatory reporting of child risk "
+        "are separate statutory duties. Note: the decision is judged "
+        "on what was reasonable with the information available at the "
+        "time, which is why the reasoning goes in the notes that day."
+    ),
+    "Fitness to stand trial": (
+        "A legal determination that an accused person can participate "
+        "meaningfully in their own trial, decided by the court on "
+        "psychiatric evidence rather than by the clinician. Criteria: "
+        "the Presser criteria in Australian law require the accused "
+        "to understand the charge and the nature of the proceedings, "
+        "to plead, to follow the evidence, to instruct counsel and to "
+        "make a defence. Fitness concerns present ability, not the "
+        "mental state at the time of the offence, which is the "
+        "separate question of criminal responsibility. Aetiology: "
+        "intellectual disability, acquired brain injury, dementia and "
+        "active psychosis are the usual bases, and unfitness may be "
+        "temporary. Mx: the psychiatrist gives an opinion on each "
+        "criterion with the evidence for it, stopping short of the "
+        "ultimate legal conclusion. A person found unfit may face a "
+        "special hearing, and disposition can include a forensic "
+        "order with treatment aimed at restoring fitness. Note: this "
+        "is a present-tense functional test against defined criteria, "
+        "so a report that simply names a diagnosis is of no use to "
+        "the court."
+    ),
+    "Mental impairment defence": (
+        "A complete defence that the accused was not criminally "
+        "responsible for an act because of mental impairment at the "
+        "time, distinct from the present-tense question of fitness to "
+        "stand trial. Criteria: derived from the M'Naghten rules and "
+        "codified differently across Australian jurisdictions, "
+        "requiring a disease of the mind such that the accused did "
+        "not know the nature and quality of the act or did not know "
+        "it was wrong, and in some states could not control it. The "
+        "threshold is legal rather than diagnostic. Clinical "
+        "features: command hallucinations and florid delusional "
+        "belief driving the act are the usual settings. Substance "
+        "intoxication alone generally does not qualify. Mx: a "
+        "successful defence leads not to release but to a special "
+        "verdict and usually a forensic order with indefinite "
+        "supervised treatment. The useful report links the specific "
+        "symptoms to the specific act rather than describing the "
+        "illness in general. Note: the question is never whether the "
+        "person was unwell, but whether the illness removed knowledge "
+        "or control of that particular act."
+    ),
+    "Psilocybin-assisted therapy": (
+        "Supervised administration of psilocybin within a structured "
+        "course of preparation, dosing and integration psychotherapy, "
+        "authorised in Australia since July 2023 for "
+        "treatment-resistant depression under the Therapeutic Goods "
+        "Administration Authorised Prescriber scheme. Indications: "
+        "treatment-resistant depression, with MDMA separately "
+        "authorised for post-traumatic stress disorder. Prescribing "
+        "is restricted to psychiatrists approved by both a human "
+        "research ethics committee and the TGA, and it is not PBS "
+        "subsidised, so the cost to the patient is substantial. "
+        "Mechanism: serotonin 2A receptor agonism with increased "
+        "neuroplasticity and reduced default mode network "
+        "connectivity, though the drug effect is hard to separate "
+        "from the psychological work around it. Contraindications: "
+        "personal or family history of psychosis or bipolar disorder, "
+        "and significant or uncontrolled cardiovascular disease. "
+        "Adverse effects: transient anxiety, hypertension and nausea "
+        "during dosing, and rarely prolonged distress, with two "
+        "trained therapists monitoring the whole session. Note: the "
+        "authorisation is narrow and psychiatrist-only, so the honest "
+        "answer to a patient asking is that access remains very "
+        "limited."
+    ),
+    "Authorised prescriber scheme": (
+        "A Therapeutic Goods Administration pathway allowing a named "
+        "specialist to prescribe a specified unapproved medicine to a "
+        "class of patients in their care, without a separate "
+        "application for each person. Indications: use of a medicine "
+        "not on the Australian Register of Therapeutic Goods where an "
+        "approved alternative is unsuitable, commonly in oncology, "
+        "rare disease and the psilocybin and MDMA authorisations. "
+        "Criteria: approval requires endorsement by a human research "
+        "ethics committee or a specialist college, relevant "
+        "expertise, and six-monthly reporting of patient numbers to "
+        "the TGA. The patient consents in the knowledge that the "
+        "product is unapproved. The alternatives are the Special "
+        "Access Scheme, which is per patient, and a clinical trial. "
+        "Mx: confirm the authorisation covers the exact indication "
+        "and patient class, document consent, arrange supply and "
+        "pharmacovigilance, and remember the medicine is usually not "
+        "PBS subsidised. Note: Authorised Prescriber covers a class "
+        "of patients while the Special Access Scheme covers one, and "
+        "that distinction decides which form you complete."
+    ),
+    "Residential Medication Management Review": (
+        "A Medicare-funded collaborative medication review for a "
+        "permanent resident of an aged care facility, initiated by "
+        "the general practitioner and conducted by an accredited "
+        "pharmacist. Indications: a new admission, a significant "
+        "change in condition or medicines, suspected adverse effects, "
+        "polypharmacy, or high-risk medicines such as anticoagulants, "
+        "opioids and antipsychotics. Mx: the general practitioner "
+        "refers, the pharmacist reviews the chart and speaks with the "
+        "resident, staff and family, then provides a written report. "
+        "The general practitioner discusses the findings, agrees a "
+        "medication management plan and documents it, which is what "
+        "attracts the item number. A Home Medicines Review is the "
+        "community equivalent and the two cannot be claimed together. "
+        "Targets: deprescribing anticholinergics and benzodiazepines, "
+        "reviewing antipsychotic use against the reporting "
+        "requirements for chemical restraint, checking renal dosing "
+        "and simplifying regimens. Note: the report is not the "
+        "intervention, and nothing changes until the general "
+        "practitioner acts on it and records the plan."
+    ),
+    "Closing the Gap PBS co-payment": (
+        "A Pharmaceutical Benefits Scheme measure reducing or "
+        "removing the patient co-payment for Aboriginal and Torres "
+        "Strait Islander patients who have, or are at risk of, "
+        "chronic disease. Criteria: the patient identifies as "
+        "Aboriginal or Torres Strait Islander and the prescriber "
+        "assesses them as having an existing chronic condition or "
+        "being at risk of one. There is no age limit, and "
+        "registration is a one-off annotation rather than an annual "
+        "renewal. Mx: register the patient, then annotate each "
+        "eligible prescription so the pharmacy dispenses at the "
+        "concessional rate, or free for a concession card holder. "
+        "General co-payment patients pay the concessional amount and "
+        "concessional patients pay nothing. The measure covers PBS "
+        "medicines only, not private prescriptions or "
+        "over-the-counter items. Note: the barrier in practice is "
+        "rarely eligibility. It is the prescriber forgetting to "
+        "annotate, so the check belongs in every repeat rather than "
+        "in the first consultation only."
+    ),
+    "Section 100 prescribing": (
+        "Supply of Pharmaceutical Benefits Scheme medicines outside "
+        "the ordinary community pharmacy route under section 100 of "
+        "the National Health Act, covering the Highly Specialised "
+        "Drugs Program and remote Aboriginal health service supply. "
+        "Indications: medicines needing specialist oversight and "
+        "hospital dispensing, such as antiretrovirals, biologics for "
+        "inflammatory disease, clozapine and growth hormone. "
+        "Criteria: prescribing is restricted to a specialist or an "
+        "affiliated practitioner working with one, and supply runs "
+        "through a participating hospital pharmacy. A separate "
+        "section 100 arrangement lets remote Aboriginal and Torres "
+        "Strait Islander health services supply PBS medicines to "
+        "clients with no script fee or co-payment. Mx: work out which "
+        "stream applies, check the patient against the restriction "
+        "wording, and arrange hospital dispensing rather than sending "
+        "a community script that cannot be filled. Note: a section "
+        "100 script presented at a community pharmacy is a wasted "
+        "trip, so tell the patient where it has to be dispensed."
+    ),
+    "Department of Veterans Affairs gold card": (
+        "A Department of Veterans Affairs health card entitling the "
+        "holder to funded treatment for all clinically necessary "
+        "conditions, whether or not related to service. Criteria: "
+        "issued to veterans with high levels of accepted disability, "
+        "former prisoners of war, and certain war widows and "
+        "widowers. The white card by contrast covers only accepted "
+        "service-related conditions, plus mental health and cancer "
+        "treatment for eligible veterans. Mx: bill DVA rather than "
+        "Medicare, using DVA fee schedules, which do not require a "
+        "patient co-payment. Prescriptions are supplied under the "
+        "Repatriation PBS, which lists some items unavailable on the "
+        "general PBS, and DVA funds community nursing, rehabilitation "
+        "appliances and the Veterans Home Care programme on referral. "
+        "Mental health treatment is available to most veterans "
+        "regardless of card colour under non-liability health care. "
+        "Note: gold means everything and white means only what is "
+        "accepted, so asking which card the patient holds changes "
+        "what you can arrange that afternoon."
+    ),
+    "Symphysiotomy": (
+        "Surgical division of the fibrous pubic symphysis to enlarge "
+        "the pelvic outlet, now of historical interest in high-income "
+        "settings but retained as a last resort where caesarean "
+        "section is unavailable. Indications: obstructed labour with "
+        "a live fetus and no access to operative delivery, and rarely "
+        "intractable shoulder dystocia or a trapped breech head after "
+        "every standard manoeuvre has failed. Mx: local anaesthetic "
+        "infiltration, displacement of the urethra with a catheter "
+        "and finger, then division of the symphysis with a scalpel "
+        "while assistants limit thigh abduction to under 45 degrees. "
+        "Delivery usually follows by vacuum. The pelvis is then "
+        "supported with strapping, with early mobilisation and "
+        "analgesia. Complications: urethral and bladder injury, "
+        "pelvic instability and lasting pain, infection and stress "
+        "incontinence. The historical Irish experience is a reminder "
+        "that it was performed for decades without consent. Note: "
+        "this belongs to the setting with no theatre rather than "
+        "being an alternative to one, and consent and documentation "
+        "matter as much as the technique."
+    ),
+    "Internal podalic version": (
+        "An obstetric manoeuvre in which a hand is passed into the "
+        "uterus to grasp a fetal foot and convert a transverse or "
+        "oblique lie into a breech for immediate vaginal delivery. "
+        "Indications: essentially confined to the second twin after "
+        "delivery of the first, where the cervix is fully dilated and "
+        "the membranes are intact or newly ruptured. It is not used "
+        "for a singleton, where caesarean section is the answer. "
+        "Criteria: full dilatation, adequate anaesthesia and uterine "
+        "relaxation, a skilled operator and immediate access to "
+        "theatre, with ultrasound in the room to confirm the lie and "
+        "locate the feet. Mx: under tocolysis or regional "
+        "anaesthesia, identify a foot by its heel and short toes, "
+        "bring it down while an assistant supports the fundus, then "
+        "deliver as a breech extraction. Complications: cord "
+        "prolapse, uterine rupture, fetal injury and abruption. Note: "
+        "a foot is told from a hand by the heel, and grasping a hand "
+        "and pulling on it is how this manoeuvre goes wrong."
+    ),
+    "Kielland forceps": (
+        "Rotational obstetric forceps with a sliding lock and minimal "
+        "pelvic curve, designed to correct a malpositioned fetal head "
+        "in the mid or low pelvis before traction is applied. "
+        "Indications: persistent occipito-transverse or "
+        "occipito-posterior position at or below the ischial spines, "
+        "where rotation is needed and manual or vacuum rotation has "
+        "failed or is unsuitable. Criteria: full dilatation, a senior "
+        "operator specifically trained in their use, adequate "
+        "analgesia, an empty bladder, position confirmed by "
+        "ultrasound if uncertain, and theatre immediately available. "
+        "Mx: the anterior blade is applied by the wandering or direct "
+        "method, the lock slid to correct asynclitism, the head "
+        "rotated to occipito-anterior between contractions, then "
+        "traction applied along the pelvic curve. Abandon after three "
+        "unsuccessful pulls or any rotation that does not come "
+        "easily. Complications: maternal third and fourth degree "
+        "tears, cervical trauma, and fetal facial or brachial plexus "
+        "injury. Note: few units still use these, and the safety of a "
+        "rotational delivery rests almost entirely on the experience "
+        "of the operator."
+    ),
+    "Ages and Stages Questionnaire": (
+        "A parent-completed developmental screening questionnaire "
+        "covering communication, gross motor, fine motor, problem "
+        "solving and personal-social domains, in age-specific forms "
+        "from 1 month to five and a half years. Uses: population "
+        "developmental screening in primary care and child health "
+        "nursing, and a structured way to turn vague parental concern "
+        "into scored domains. It screens rather than diagnoses. "
+        "Criteria: each domain is scored against a cut-off two "
+        "standard deviations below the mean, with a monitoring zone "
+        "between. Sensitivity and specificity sit around 85 per cent, "
+        "so the result always accompanies clinical judgement rather "
+        "than replacing it. Mx: a below-cut-off domain prompts "
+        "hearing and vision checks and referral for formal "
+        "developmental assessment. A monitoring-zone result prompts "
+        "targeted advice and a repeat in a few months. A "
+        "social-emotional companion form covers behaviour concerns. "
+        "Note: a normal questionnaire in a child whose parent remains "
+        "worried does not close the question, because the parent is "
+        "usually right."
+    ),
+    "Griffiths developmental assessment": (
+        "A clinician-administered developmental assessment for "
+        "children from birth to six years, giving subscale and "
+        "general development quotients across learning, language, eye "
+        "and hand coordination, personal-social-emotional and gross "
+        "motor domains. Indications: formal assessment after failed "
+        "screening, characterising the profile of a known "
+        "developmental disorder, and baseline measurement before "
+        "intervention or in follow-up of preterm and other high-risk "
+        "infants. Criteria: administered by a trained clinician, "
+        "usually a developmental paediatrician or psychologist, over "
+        "about an hour with the parent present. Scores are quotients "
+        "with a mean of 100, and the shape of the profile across "
+        "subscales carries more information than the overall number. "
+        "Mx: use the profile to direct therapy, support disability "
+        "and educational funding applications, and set a baseline for "
+        "repeat testing. Pair it with hearing and vision assessment, "
+        "since an uncorrected deficit depresses every domain. Note: "
+        "the value lies in the pattern, because a flat global delay "
+        "and an isolated language deficit lead to entirely different "
+        "next steps."
+    ),
+    "Mid-parental height": (
+        "A simple estimate of a child's genetic height potential from "
+        "parental heights, used to judge whether a measured height or "
+        "growth trajectory suits the family. Criteria: for a boy, add "
+        "13 cm to the mother's height and average with the father's. "
+        "For a girl, subtract 13 cm from the father's height and "
+        "average with the mother's. The result carries a range of "
+        "roughly 8 to 10 cm either side, about two centile bands. Ix: "
+        "measure both parents rather than accepting reported heights, "
+        "plot the child's serial heights and the target range on the "
+        "same chart, and calculate height velocity over at least six "
+        "months. Diagnosis: a child tracking along a low centile but "
+        "within the target range is likely familial short stature. "
+        "Crossing centiles downwards, or sitting well below the "
+        "target range, calls for investigation of growth hormone "
+        "deficiency, hypothyroidism, coeliac disease, chronic disease "
+        "or Turner syndrome. Note: the diagnostic information is in "
+        "the velocity and the comparison with the target range rather "
+        "than in the centile itself."
+    ),
+    "Bone age": (
+        "Radiographic estimate of skeletal maturity from the "
+        "ossification centres of the non-dominant hand and wrist, "
+        "compared with reference standards by the Greulich and Pyle "
+        "atlas or the Tanner-Whitehouse scoring method. Indications: "
+        "short or tall stature, precocious or delayed puberty, and "
+        "prediction of adult height before considering "
+        "growth-modifying treatment. Diagnosis: a bone age delayed "
+        "relative to chronological age with normal growth velocity "
+        "suggests constitutional delay of growth and puberty, and "
+        "predicts a better final height because growth continues for "
+        "longer. Marked delay also occurs in hypothyroidism and "
+        "growth hormone deficiency. An advanced bone age points to "
+        "precocious puberty, congenital adrenal hyperplasia or "
+        "obesity, and compresses the remaining growth. Ix: a single "
+        "left hand and wrist radiograph, read alongside height "
+        "velocity, pubertal stage and mid-parental height. Agreement "
+        "between readers is modest, so treat the result as a band "
+        "rather than a number. Note: bone age alone answers nothing, "
+        "and its meaning comes from the company it keeps."
+    ),
+    "Premature adrenarche": (
+        "Early activation of adrenal androgen production causing "
+        "pubic or axillary hair, adult body odour and mild acne "
+        "before 8 years in girls or 9 in boys, without true gonadal "
+        "puberty. Aetiology: an exaggeration of normal adrenal "
+        "maturation, commoner in girls, in children born small for "
+        "gestational age and with higher body mass index. It is "
+        "usually benign and isolated. Clinical features: pubic or "
+        "axillary hair with no breast development and prepubertal "
+        "testes, a modest growth spurt and mildly advanced bone age. "
+        "Rapid progression, clitoromegaly or penile growth, or a "
+        "height velocity crossing centiles suggests something else. "
+        "Ix: bone age, testosterone, DHEAS and "
+        "17-hydroxyprogesterone. Consider a synacthen test for "
+        "non-classical congenital adrenal hyperplasia, and imaging "
+        "for an adrenal or gonadal tumour when androgens are high. "
+        "Mx: reassure and observe with six-monthly growth and "
+        "pubertal staging once investigations are normal. Note: hair "
+        "without breast development or testicular enlargement is "
+        "adrenarche, and it becomes a problem only when it is "
+        "virilising or fast."
+    ),
+    "Sexual assault forensic examination": (
+        "Combined medical care and forensic evidence collection after "
+        "sexual assault, delivered in Australia through specialist "
+        "services such as the NSW Health sexual assault services, "
+        "with medical needs always taking precedence over forensic "
+        "ones. Indications: any disclosure of recent assault, with "
+        "forensic sampling generally worthwhile up to 7 days in "
+        "adults and a shorter window in children. Examination "
+        "proceeds only with specific informed consent, and a person "
+        "may accept care while declining forensic collection or "
+        "police involvement. Mx: treat injuries first, then offer "
+        "emergency contraception, sexually transmitted infection "
+        "testing with presumptive treatment, HIV post-exposure "
+        "prophylaxis within 72 hours and hepatitis B vaccination. "
+        "Forensic work covers a documented history, whole-body and "
+        "genital examination, photography, swabs and clothing, with "
+        "an unbroken chain of custody. Offer counselling and "
+        "follow-up serology. Mandatory reporting applies for children "
+        "and in some jurisdictions more widely. Note: consent is "
+        "granular and revocable at every step, and a person who "
+        "declines the forensic examination still needs all of the "
+        "medical care."
+    ),
+    "Puberty suppression": (
+        "Use of a gonadotrophin-releasing hormone analogue to pause "
+        "endogenous puberty in a transgender or gender diverse "
+        "adolescent, creating time for assessment before partly "
+        "irreversible secondary sexual characteristics develop. "
+        "Indications: Tanner stage 2 or beyond with persistent, "
+        "consistent and well-documented gender incongruence, capacity "
+        "to consent, and assessment through a multidisciplinary "
+        "gender service. The Australian Standards of Care guide "
+        "practice, and since a 2017 Family Court ruling stage 2 "
+        "treatment no longer needs court authorisation where there is "
+        "agreement between the adolescent, parents and treating team. "
+        "Mechanism: continuous agonism downregulates the pituitary, "
+        "suppressing gonadotrophins and sex steroids, with effects "
+        "largely reversible on stopping. Adverse effects: reduced "
+        "bone mineral density accrual, so monitor vitamin D, calcium "
+        "intake, weight-bearing exercise and bone density. Hot "
+        "flushes and mood change are common. Fertility preservation "
+        "is discussed before gonadal function is suppressed. Note: "
+        "this buys time rather than making the decision, and the "
+        "fertility conversation belongs before the first injection."
+    ),
+    "Transgender health care": (
+        "The general and gender-specific health care of transgender "
+        "and gender diverse people, most of which is ordinary primary "
+        "care delivered without assumption. Mx: use the person's name "
+        "and pronouns, record them in the file, and ask which words "
+        "they use for their own body before examining. The high "
+        "mental health burden is driven largely by discrimination and "
+        "poor access rather than by gender identity itself. "
+        "Screening: screen by the anatomy present rather than by the "
+        "sex recorded. A trans man with a cervix still needs cervical "
+        "screening, a trans woman on oestrogen needs breast "
+        "awareness, and prostate tissue remains after vaginoplasty. "
+        "Cardiovascular and bone risk shift with hormone therapy, and "
+        "reference ranges for haemoglobin and creatinine move with "
+        "it. Multidisciplinary gender services coordinate hormone "
+        "therapy, speech work and surgical referral, though waiting "
+        "lists are long and many patients rely on informed-consent "
+        "primary care. Note: screen the organs the person has rather "
+        "than the sex on the record, and remember most consultations "
+        "are for something unrelated to gender."
+    ),
+    "Latent tuberculosis screening": (
+        "Testing for immune evidence of prior infection with "
+        "Mycobacterium tuberculosis in the absence of active disease, "
+        "to identify people who would benefit from preventive "
+        "treatment. Indications: close contacts of an infectious "
+        "case, migrants from high-incidence countries, people with "
+        "HIV, and anyone starting a tumour necrosis factor inhibitor, "
+        "other biologic, dialysis or transplantation. Ix: an "
+        "interferon gamma release assay is preferred in anyone BCG "
+        "vaccinated because prior vaccination does not affect it, "
+        "while a tuberculin skin test remains useful in young "
+        "children. Both indicate infection and neither separates "
+        "latent from active disease, so a positive result always "
+        "leads to symptom review and a chest radiograph before "
+        "treatment. Mx: once active disease is excluded, offer "
+        "isoniazid for 6 to 9 months with pyridoxine, or a shorter "
+        "rifampicin-based regimen, with baseline and monitored liver "
+        "function. Involve the state tuberculosis service. Note: the "
+        "test cannot tell latent from active disease, so the chest "
+        "radiograph comes before any preventive regimen is started."
+    ),
+    "Interhospital transfer": (
+        "Movement of a patient between facilities for a level of care "
+        "the referring hospital cannot provide, a period of "
+        "measurably increased risk that depends on preparation far "
+        "more than on speed. Indications: need for a specialty "
+        "service, intensive care, an interventional or surgical "
+        "capability, or repatriation closer to home. Criteria: "
+        "accepting consultant and bed confirmed, mode chosen by "
+        "urgency and distance across road, rotary and fixed wing "
+        "options, and an escort whose skills match the worst "
+        "plausible deterioration en route. Mx: stabilise before "
+        "departure rather than in transit. Secure a threatened "
+        "airway, site reliable vascular access, place a urinary "
+        "catheter and gastric tube for long transfers, check oxygen "
+        "and battery reserves, and draw up infusions for double the "
+        "expected journey time. Hand over with a structured tool, "
+        "sending documentation, imaging and results with the patient. "
+        "Complications: loss of airway, hypotension, hypothermia and "
+        "equipment failure. Note: an ambulance or aircraft is a poor "
+        "place to intervene, so whatever you are planning to do at "
+        "the far end should usually be done before the doors close."
+    ),
+    "Fitness to be interviewed": (
+        "An assessment of whether a person in police custody can "
+        "safely undergo interview and whether their answers could be "
+        "relied upon, requested from a forensic medical officer or "
+        "emergency clinician. Criteria: the person must understand "
+        "the caution and the questions, respond rationally, and be at "
+        "no significant risk of harm from the process. Intoxication, "
+        "withdrawal, head injury, acute psychosis, intellectual "
+        "disability, uncontrolled pain and sleep deprivation are the "
+        "usual reasons for unfitness. Ix: physical and mental state "
+        "examination with observations and blood glucose, a specific "
+        "assessment of orientation and comprehension, and review of "
+        "the custody record and medication history. Mx: give a clear "
+        "opinion on fitness for interview and fitness for detention "
+        "separately, set a review time where intoxication is the "
+        "issue, and recommend a support person or interpreter where "
+        "comprehension is marginal. Document any injury and its "
+        "stated mechanism. Note: these are two separate questions, "
+        "and a person can be perfectly safe to hold in a cell while "
+        "quite unable to give a reliable account."
+    ),
+    "Custodial health assessment": (
+        "Structured health screening on reception into police or "
+        "correctional custody, aimed squarely at the problems that "
+        "harm people in their first days inside. Indications: every "
+        "reception, within hours in police custody and usually within "
+        "24 hours in correctional settings. Ix: screen for withdrawal "
+        "risk from alcohol, opioids and benzodiazepines, suicidal "
+        "ideation and self-harm history, current medicines including "
+        "opioid agonist treatment, chronic disease, head injury, "
+        "pregnancy and blood-borne virus risk. Aboriginal and Torres "
+        "Strait Islander people are grossly over-represented in "
+        "custody and in deaths in custody, so cultural safety and "
+        "Aboriginal health worker involvement are part of the "
+        "assessment rather than an optional addition. Mx: continue "
+        "existing medicines without interruption, particularly opioid "
+        "agonist treatment and antiepileptics, start withdrawal "
+        "scales and treatment, refer for mental health review and set "
+        "an observation level. Note: the two things that most often "
+        "go wrong are a missed withdrawal and an interrupted "
+        "prescription, and both are prevented at reception rather "
+        "than later."
+    ),
+    "Confidentiality in adolescent care": (
+        "The undertaking that a young person's disclosures stay "
+        "private, which is the practical precondition for honest "
+        "history taking in adolescence. Criteria: explain the limits "
+        "at the start of the consultation rather than once a "
+        "disclosure has been made. Confidentiality is broken only for "
+        "a serious risk of harm to the young person or someone else, "
+        "and for mandatory reporting obligations. Mx: offer part of "
+        "the consultation without a parent present from early "
+        "adolescence onwards, and say plainly what you would and "
+        "would not pass on. A young person may hold their own "
+        "Medicare card from 15 years, and the visibility of claims "
+        "history to a parent genuinely matters for private care, as "
+        "do the My Health Record access settings a young person can "
+        "control. Note: a young person who fears the conversation "
+        "will be reported home simply does not disclose, so stating "
+        "the limits explicitly buys more information than a vague "
+        "promise of secrecy."
+    ),
+    "Intellectual disability health assessment": (
+        "A structured annual health review for a person with "
+        "intellectual disability, designed to find the treatable "
+        "problems that go undetected because the person cannot easily "
+        "report them. Indications: everyone with intellectual "
+        "disability, annually, supported by a Medicare item number. "
+        "Ix: review vision and hearing, dental health, swallowing, "
+        "constipation, reflux, epilepsy control, medication burden "
+        "including psychotropics given for behaviour, weight, "
+        "continence, menstrual health, immunisations, and screening "
+        "appropriate to age and anatomy. Consider osteoporosis risk "
+        "from anticonvulsants and immobility. Mx: use a structured "
+        "tool such as the Comprehensive Health Assessment Program, "
+        "involve the person's supporters and communication aids, book "
+        "a longer appointment, and desensitise to examination across "
+        "several visits rather than forcing it. Note: changed or "
+        "distressed behaviour is a presenting symptom of pain or "
+        "illness, so constipation, toothache, reflux and otitis are "
+        "excluded before any psychotropic is considered."
+    ),
+    "Behaviour support plan": (
+        "A written plan setting out the strategies used to reduce "
+        "behaviours of concern in a person with disability, and the "
+        "instrument that regulates any restrictive practice under the "
+        "National Disability Insurance Scheme. Criteria: prepared by "
+        "a registered behaviour support practitioner after a "
+        "functional behaviour assessment identifying what the "
+        "behaviour communicates and what maintains it. Any "
+        "restrictive practice, whether chemical, physical, mechanical "
+        "or environmental restraint or seclusion, must be authorised, "
+        "documented in the plan and reported to the NDIS Quality and "
+        "Safeguards Commission. Mx: the plan prioritises changing the "
+        "environment, teaching functional communication and meeting "
+        "unmet needs over consequence-based strategies. Medical "
+        "review for pain, constipation, dental disease and epilepsy "
+        "runs alongside, because untreated illness drives behaviour. "
+        "Restrictive practices must be the least restrictive option, "
+        "time-limited and reviewed. Note: a plan whose only strategy "
+        "is a psychotropic medicine is a restrictive practice with "
+        "paperwork attached rather than behaviour support."
+    ),
+    "Sport concussion assessment": (
+        "Sideline and serial evaluation of suspected concussion in "
+        "sport, structured around the Sport Concussion Assessment "
+        "Tool and the Australian Institute of Sport and national code "
+        "guidelines. Red flags: neck pain, repeated vomiting, "
+        "seizure, deteriorating consciousness, double vision, "
+        "weakness or tingling, and increasing confusion all mandate "
+        "immediate transfer for imaging rather than further sideline "
+        "testing. Ix: the assessment covers a symptom score, "
+        "orientation and immediate memory, cervical spine and "
+        "neurological examination, balance testing and delayed "
+        "recall. It supports clinical judgement and never overrides "
+        "it, and a baseline is helpful though not required. Mx: any "
+        "athlete with suspected concussion is removed immediately and "
+        "does not return to play that day, whatever the score. "
+        "Observe for deterioration, give written advice to the "
+        "athlete and a support person, and arrange medical review "
+        "before any return-to-play progression. Note: if in doubt, "
+        "sit them out. No sideline test is sensitive enough to clear "
+        "a player in the minute after the collision."
+    ),
+    "Return to play protocol": (
+        "The staged reintroduction of activity after concussion, each "
+        "step separated by at least 24 hours and advanced only while "
+        "symptom free. Stages: relative rest for 24 to 48 hours, then "
+        "light aerobic exercise, sport-specific exercise without "
+        "contact, non-contact training drills, full contact practice "
+        "after medical clearance, and finally competition. Criteria: "
+        "symptoms returning at any stage mean dropping back one stage "
+        "after a further 24 hours of rest. Australian codes now "
+        "specify minimum stand-down periods, with community adult "
+        "players typically requiring at least 21 days before "
+        "returning to competition and longer for children and "
+        "adolescents. Mx: written clearance by a medical practitioner "
+        "before contact resumes, return to school and work ahead of "
+        "return to sport, and specialist referral for symptoms "
+        "persisting beyond four weeks or for repeated concussions. "
+        "Note: the graduated protocol is a floor rather than a "
+        "target, and children, adolescents and anyone with previous "
+        "concussions go slower than the minimum."
+    ),
+    "Sentinel lymph node biopsy": (
+        "Selective removal of the first draining lymph node or nodes "
+        "to stage a cancer without the morbidity of full nodal "
+        "dissection, standard practice in breast cancer and melanoma. "
+        "Indications: clinically and radiologically node-negative "
+        "invasive breast cancer, and melanoma with a Breslow "
+        "thickness above about 0.8 mm or with other adverse features. "
+        "It is not indicated where nodes are already known to be "
+        "involved, which calls for dissection or systemic therapy "
+        "instead. Mx: the node is localised by peritumoural "
+        "radioisotope, blue dye, both, or a magnetic tracer, then "
+        "identified intraoperatively by counts, colour or palpation "
+        "and sent for histology. A positive node no longer "
+        "automatically means axillary clearance in breast cancer, "
+        "with radiotherapy and systemic therapy often preferred. "
+        "Complications: seroma, sensory disturbance, lymphoedema in a "
+        "small minority and anaphylaxis to blue dye. Note: this "
+        "answers a staging question, so it belongs before the nodes "
+        "are clinically involved rather than after."
+    ),
+    "Video head impulse test": (
+        "Goggle-based recording of eye movement during small rapid "
+        "head turns, quantifying the vestibulo-ocular reflex for each "
+        "semicircular canal. Uses: separating a peripheral from a "
+        "central cause of acute vertigo, quantifying vestibular loss "
+        "in vestibular neuritis and Meniere disease, and monitoring "
+        "recovery or gentamicin ototoxicity. Criteria: the test "
+        "measures gain, the ratio of eye to head velocity, and "
+        "detects corrective saccades. Reduced gain with catch-up "
+        "saccades on one side indicates peripheral vestibular "
+        "hypofunction, while a normal result in a patient with acute "
+        "vertigo and nystagmus raises concern for a central lesion. "
+        "Ix: it provides the head impulse component of the HINTS "
+        "examination alongside nystagmus direction and test of skew, "
+        "which together outperform early MRI for detecting stroke in "
+        "acute vestibular syndrome. Note: a normal test in someone "
+        "who is obviously and acutely vertiginous is the worrying "
+        "result, because it points away from the labyrinth and "
+        "towards the brainstem."
+    ),
+    "Independent medical examination": (
+        "A one-off assessment of a claimant by a practitioner who is "
+        "not their treating doctor, requested by an insurer, "
+        "employer, court or compensation scheme to answer specific "
+        "questions. Uses: diagnosis and causation, work capacity, "
+        "reasonableness of treatment, permanent impairment and "
+        "prognosis in workers compensation, motor accident, income "
+        "protection and personal injury matters. Criteria: there is "
+        "no therapeutic relationship and no duty of ongoing care, and "
+        "the examinee is told this at the outset along with who will "
+        "receive the report. Consent covers both the examination and "
+        "the disclosure. Mx: take a full history, examine, review the "
+        "supplied documents, then answer each referral question "
+        "explicitly with the reasoning and the evidence relied upon. "
+        "Separate findings from opinion, note inconsistency factually "
+        "rather than pejoratively, and stay within your expertise. "
+        "Urgent untreated pathology found incidentally is "
+        "communicated to the treating doctor. Note: the duty runs to "
+        "the referrer and the court rather than to the examinee, and "
+        "saying so plainly at the start is part of valid consent."
     ),
 }
 
