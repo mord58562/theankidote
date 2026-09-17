@@ -17133,6 +17133,210 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "ataxia telangiectasia ATM radiosensitivity malignancy surveillance"]],
         "summary": "",
     },
+    {
+        "name": "Blood transfusion",
+        "aliases": ["red cell transfusion", "packed red blood cells", "red blood cell transfusion", "transfusion"],
+        "utd": [["Overview", "red blood cell transfusion indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Platelet transfusion",
+        "aliases": ["platelet infusion", "pooled platelets", "apheresis platelets", "platelet concentrate"],
+        "utd": [["Overview", "platelet transfusion thresholds"]],
+        "summary": "",
+    },
+    {
+        "name": "Haemoglobin electrophoresis",
+        "aliases": ["hemoglobin electrophoresis", "haemoglobinopathy screen", "Hb electrophoresis", "haemoglobin HPLC"],
+        "utd": [["Overview", "haemoglobin electrophoresis thalassaemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Hepatobiliary iminodiacetic acid scan",
+        "aliases": ["HIDA scan", "cholescintigraphy", "biliary scintigraphy", "hepatobiliary scintigraphy"],
+        "utd": [["Overview", "hepatobiliary iminodiacetic acid scan cholecystitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Serum lactate",
+        "aliases": ["blood lactate", "lactate clearance", "venous lactate", "arterial lactate"],
+        "utd": [["Overview", "serum lactate sepsis prognosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Sodium bicarbonate therapy",
+        "aliases": ["intravenous sodium bicarbonate", "bicarbonate infusion", "sodium bicarb"],
+        "utd": [["Overview", "sodium bicarbonate therapy indications"]],
+        "summary": "",
+    },
+    {
+        "name": "Phosphate replacement",
+        "aliases": ["phosphate replacement therapy", "intravenous phosphate", "potassium dihydrogen phosphate", "phosphate supplementation"],
+        "utd": [["Overview", "phosphate replacement hypophosphataemia"]],
+        "summary": "",
+    },
+    {
+        "name": "Overcorrection of hyponatraemia",
+        "aliases": ["rapid correction of hyponatraemia", "sodium overcorrection", "hyponatraemia correction rate"],
+        "utd": [["Overview", "overcorrection of hyponatraemia osmotic demyelination"]],
+        "summary": "",
+    },
+    {
+        "name": "Confusion Assessment Method",
+        "aliases": ["CAM-ICU", "confusion assessment method for the ICU", "4AT delirium tool"],
+        "utd": [["Overview", "confusion assessment method delirium"]],
+        "summary": "",
+    },
+    {
+        "name": "Waterlow score",
+        "aliases": ["Waterlow scale", "Waterlow pressure ulcer risk score", "pressure injury risk score"],
+        "utd": [["Overview", "Waterlow score pressure injury risk"]],
+        "summary": "",
+    },
+    {
+        "name": "Focused assessment with sonography for trauma",
+        "aliases": ["FAST scan", "eFAST", "extended FAST scan", "trauma ultrasound"],
+        "utd": [["Overview", "focused assessment with sonography for trauma"]],
+        "summary": "",
+    },
+    {
+        "name": "Inotrope selection",
+        "aliases": ["inotropes", "inotropic support", "choice of inotrope"],
+        "utd": [["Overview", "inotrope selection cardiogenic shock"]],
+        "summary": "",
+    },
+    {
+        "name": "Personal protective equipment",
+        "aliases": ["PPE", "donning and doffing", "P2 respirator", "N95 respirator"],
+        "utd": [["Overview", "personal protective equipment transmission precautions"]],
+        "summary": "",
+    },
+    {
+        "name": "Surgical safety checklist",
+        "aliases": ["WHO surgical safety checklist", "theatre checklist", "surgical time out"],
+        "utd": [["Overview", "WHO surgical safety checklist"]],
+        "summary": "",
+    },
+    {
+        "name": "Patient identification",
+        "aliases": ["patient ID check", "three point identification", "identification band", "wrong patient error"],
+        "utd": [["Overview", "patient identification wrong patient error"]],
+        "summary": "",
+    },
+    {
+        "name": "Tourniquet use",
+        "aliases": ["arterial tourniquet", "limb tourniquet", "combat application tourniquet"],
+        "utd": [["Overview", "prehospital tourniquet haemorrhage control"]],
+        "summary": "",
+    },
+    {
+        "name": "Disaster triage",
+        "aliases": ["mass casualty triage", "triage sieve", "triage sieve and sort", "major incident triage"],
+        "utd": [["Overview", "mass casualty disaster triage sieve"]],
+        "summary": "",
+    },
+    {
+        "name": "Anaphylaxis action plan",
+        "aliases": ["ASCIA action plan", "action plan for anaphylaxis", "ASCIA anaphylaxis plan"],
+        "utd": [["Overview", "ASCIA action plan for anaphylaxis"]],
+        "summary": "",
+    },
+    {
+        "name": "Adrenaline autoinjector",
+        "aliases": ["adrenaline auto-injector", "epinephrine autoinjector", "adrenaline pen"],
+        "utd": [["Overview", "adrenaline autoinjector prescribing anaphylaxis"]],
+        "summary": "",
+    },
+    {
+        "name": "Cold chain management",
+        "aliases": ["vaccine cold chain", "cold chain breach", "vaccine storage"],
+        "utd": [["Overview", "vaccine cold chain management breach"]],
+        "summary": "",
+    },
+    {
+        "name": "Prescribing errors",
+        "aliases": ["prescribing error", "medication error", "medication errors"],
+        "utd": [["Overview", "prescribing errors junior doctors prevention"]],
+        "summary": "",
+    },
+    {
+        "name": "High risk medicines",
+        "aliases": ["high-risk medicines", "APINCHS", "high risk medications"],
+        "utd": [["Overview", "high risk medicines APINCHS double check"]],
+        "summary": "",
+    },
+    {
+        "name": "Look alike sound alike medicines",
+        "aliases": ["look-alike sound-alike medicines", "LASA medicines", "tall man lettering"],
+        "utd": [["Overview", "look alike sound alike medicines tall man lettering"]],
+        "summary": "",
+    },
+    {
+        "name": "Real time prescription monitoring",
+        "aliases": ["real-time prescription monitoring", "SafeScript", "prescription shopping"],
+        "utd": [["Overview", "real time prescription monitoring opioids Australia"]],
+        "summary": "",
+    },
+    {
+        "name": "Dose administration aid",
+        "aliases": ["Webster pack", "dosette box", "blister pack medication", "medication pack"],
+        "utd": [["Overview", "dose administration aid adherence"]],
+        "summary": "",
+    },
+    {
+        "name": "PBS authority prescription",
+        "aliases": ["authority prescription", "streamlined authority", "PBS authority", "PBS restriction"],
+        "utd": [["Overview", "PBS authority prescription streamlined"]],
+        "summary": "",
+    },
+    {
+        "name": "Mental health treatment plan",
+        "aliases": ["GP mental health treatment plan", "mental health care plan", "Better Access initiative"],
+        "utd": [["Overview", "GP mental health treatment plan Better Access"]],
+        "summary": "",
+    },
+    {
+        "name": "Aboriginal health worker",
+        "aliases": ["Aboriginal health practitioner", "Aboriginal liaison officer", "Aboriginal and Torres Strait Islander health worker"],
+        "utd": [["Overview", "Aboriginal health worker role primary care"]],
+        "summary": "",
+    },
+    {
+        "name": "Rural generalist practice",
+        "aliases": ["rural generalist", "rural generalist pathway", "rural generalist medicine"],
+        "utd": [["Overview", "rural generalist pathway advanced skills"]],
+        "summary": "",
+    },
+    {
+        "name": "Clinical audit",
+        "aliases": ["audit cycle", "clinical audit cycle", "criterion-based audit"],
+        "utd": [["Overview", "clinical audit cycle quality improvement"]],
+        "summary": "",
+    },
+    {
+        "name": "Quality improvement cycle",
+        "aliases": ["PDSA cycle", "plan do study act", "continuous quality improvement"],
+        "utd": [["Overview", "plan do study act quality improvement"]],
+        "summary": "",
+    },
+    {
+        "name": "Incidence and prevalence",
+        "aliases": ["incidence rate", "point prevalence", "period prevalence", "prevalence"],
+        "utd": [["Overview", "incidence versus prevalence epidemiology"]],
+        "summary": "",
+    },
+    {
+        "name": "Quality adjusted life year",
+        "aliases": ["QALY", "QALYs", "quality-adjusted life year"],
+        "utd": [["Overview", "quality adjusted life year cost utility analysis"]],
+        "summary": "",
+    },
+    {
+        "name": "Sentinel event",
+        "aliases": ["sentinel events", "never event", "never events"],
+        "utd": [["Overview", "sentinel events reporting Australia"]],
+        "summary": "",
+    },
 ]
 
 
@@ -94033,6 +94237,637 @@ RICH_SUMMARIES = {
         "lymphoma and leukaemia. Note: avoid diagnostic ionising "
         "radiation wherever possible, since these patients are "
         "genuinely radiosensitive."
+    ),
+
+    "Blood transfusion": (
+        "Transfusion of allogeneic red cells to treat symptomatic "
+        "anaemia or significant blood loss, not to chase a number. "
+        "Indications: haemoglobin under 70 g/L in a stable inpatient, "
+        "under 80 g/L with acute coronary syndrome, or active "
+        "bleeding with haemodynamic compromise. Ix: group and hold "
+        "plus crossmatch, with a full set of observations before the "
+        "unit is started. Mx: one unit at a time in the stable "
+        "patient, then reassess clinically and recheck the "
+        "haemoglobin. Each unit raises haemoglobin by about 10 g/L "
+        "and runs over 2 to 4 hours through a 170 micron filter with "
+        "normal saline only. Positive patient identification at the "
+        "bedside by two staff is the single step that prevents "
+        "ABO-incompatible transfusion. Monitoring: observations "
+        "before, 15 minutes after starting and at completion. Stop "
+        "for fever, rigors, hypotension or new respiratory distress "
+        "and keep the line open. Note: the National Blood Authority "
+        "patient blood management guidelines put iron replacement and "
+        "treating the cause ahead of reflex transfusion in the "
+        "non-bleeding patient."
+    ),
+    "Platelet transfusion": (
+        "Pooled or apheresis platelets given to prevent or stop "
+        "bleeding in thrombocytopenia or platelet dysfunction. One "
+        "adult dose typically raises the count by 20 to 40 x10^9/L. "
+        "Indications: prophylaxis below 10 x10^9/L in stable marrow "
+        "failure, or below 20 with sepsis or fever. A threshold of 50 "
+        "covers most procedures and active bleeding, and 100 is used "
+        "for neurosurgery or ocular surgery. Mx: transfuse over 30 "
+        "minutes, ABO-compatible where possible, and recheck the "
+        "count 10 to 60 minutes later to detect refractoriness. "
+        "Contraindications: withhold in thrombotic thrombocytopenic "
+        "purpura and heparin-induced thrombocytopenia unless bleeding "
+        "is life-threatening, because platelets feed the thrombotic "
+        "process. Note: platelets are stored at room temperature, "
+        "which makes bacterial contamination the highest-risk "
+        "transfusion infection and a fever during a platelet unit "
+        "worth taking seriously."
+    ),
+    "Haemoglobin electrophoresis": (
+        "A separation technique identifying and quantifying "
+        "haemoglobin variants, and the confirmatory test for "
+        "thalassaemia and sickle cell disease. Most Australian "
+        "laboratories now run high performance liquid chromatography "
+        "and report it under the same name. Indications: microcytosis "
+        "with normal iron studies, a positive antenatal "
+        "haemoglobinopathy screen, unexplained haemolysis, or partner "
+        "screening when one parent carries a trait. Ix: interpret "
+        "alongside a full blood count, film and iron studies, since "
+        "iron deficiency lowers HbA2 and can mask beta thalassaemia "
+        "trait. Features: HbA2 above 3.5 per cent indicates beta "
+        "thalassaemia trait, HbS with HbA suggests sickle trait, and "
+        "a normal pattern with persistent microcytosis points to "
+        "alpha thalassaemia needing DNA studies. Note: the test "
+        "cannot exclude alpha thalassaemia, which is the trap in "
+        "antenatal screening for couples of South-East Asian "
+        "background."
+    ),
+    "Hepatobiliary iminodiacetic acid scan": (
+        "A nuclear medicine study in which technetium-labelled "
+        "iminodiacetic acid is taken up by hepatocytes and excreted "
+        "into bile, imaging gallbladder filling and biliary drainage "
+        "in real time. Indications: suspected acute cholecystitis "
+        "when ultrasound is equivocal, suspected biliary leak after "
+        "cholecystectomy, and biliary atresia in the jaundiced "
+        "infant. Features: non-visualisation of the gallbladder at 60 "
+        "minutes is the positive finding in acute cholecystitis, with "
+        "sensitivity above 95 per cent. Tracer outside the biliary "
+        "tree confirms a leak. Ix: ultrasound stays the first test "
+        "because it is faster and shows stones, which this scan "
+        "cannot. Mx: cholecystokinin can be given to calculate a "
+        "gallbladder ejection fraction, with under 35 per cent "
+        "supporting biliary dyskinesia. Note: fasting for at least "
+        "four hours is required, since a recently fed gallbladder is "
+        "already contracted and reads as a false positive."
+    ),
+    "Serum lactate": (
+        "A marker of anaerobic metabolism and impaired tissue oxygen "
+        "delivery, and one of the few bedside numbers that both "
+        "stratifies risk and tracks response. Aetiology: a type A "
+        "rise comes from hypoperfusion in shock, sepsis or ischaemia. "
+        "A type B rise comes from metformin, alcohol, thiamine "
+        "deficiency, seizures, salbutamol or malignancy without overt "
+        "hypoperfusion. Ix: venous and arterial values agree closely "
+        "enough for screening, so a venous gas is acceptable. Send it "
+        "on a gas rather than a tube, because cells keep producing "
+        "lactate in a delayed specimen and falsely raise the result. "
+        "Mx: above 2 mmol/L flags risk and above 4 mmol/L marks a "
+        "septic patient needing aggressive resuscitation under the "
+        "Sepsis Kills pathway. Repeat at 2 to 4 hours, since failure "
+        "to clear predicts mortality better than the first value. "
+        "Note: a normal lactate does not exclude sepsis, and a raised "
+        "one in a well-looking asthmatic on salbutamol is usually the "
+        "drug."
+    ),
+    "Sodium bicarbonate therapy": (
+        "Intravenous alkali given to raise serum or urine pH, useful "
+        "in a narrow set of situations and harmful when used to chase "
+        "a number on a gas. Indications: hyperkalaemia with ECG "
+        "changes, sodium channel blocker toxicity such as tricyclic "
+        "overdose, and salicylate toxicity where alkaline urine "
+        "speeds excretion. Severe metabolic acidosis with pH under "
+        "7.1 is a relative indication while the cause is treated. "
+        "Dose: 1 mmol/kg of 8.4 per cent solution as a bolus in the "
+        "arrest or toxicology setting, or 150 mmol in a litre of 5 "
+        "per cent glucose as an infusion. Monitoring: recheck the "
+        "gas, potassium and ionised calcium, because alkalinisation "
+        "drives both potassium and calcium down. Complications: "
+        "hypernatraemia, volume overload and hypokalaemia. Note: it "
+        "has no place in diabetic ketoacidosis or in lactic acidosis "
+        "from shock, where treating the cause corrects the pH and "
+        "bicarbonate only adds sodium."
+    ),
+    "Phosphate replacement": (
+        "Correction of hypophosphataemia, which starves cells of ATP "
+        "and shows up as weakness, failure to wean from ventilation, "
+        "haemolysis and arrhythmia. Aetiology: refeeding, treatment "
+        "of diabetic ketoacidosis, alcohol use disorder, renal "
+        "tubular loss and continuous renal replacement therapy. Mx: "
+        "oral replacement suits mild depletion above 0.6 mmol/L, "
+        "using effervescent phosphate that reliably causes diarrhoea "
+        "at higher doses. Dose: intravenous potassium dihydrogen "
+        "phosphate for levels under 0.3 mmol/L or a symptomatic "
+        "patient, typically 20 to 40 mmol over 6 to 12 hours through "
+        "a large vein. Monitoring: recheck phosphate, calcium, "
+        "magnesium and potassium 6 to 12 hours after the infusion. "
+        "Complications: hypocalcaemia and metastatic calcification if "
+        "infused quickly, and hyperkalaemia from the potassium salt "
+        "in renal impairment, where sodium glycerophosphate is "
+        "preferred. Note: in refeeding syndrome give thiamine first "
+        "and replace alongside feeding rather than delaying "
+        "nutrition."
+    ),
+    "Overcorrection of hyponatraemia": (
+        "Raising serum sodium faster than the brain can readapt, "
+        "which strips myelin from pontine and extrapontine neurons "
+        "days later. Risk factors: chronic hyponatraemia, sodium "
+        "under 120 mmol/L, alcohol use disorder, malnutrition, "
+        "hypokalaemia and liver disease. Mx: the ceiling is 8 mmol/L "
+        "in any 24 hours and 6 mmol/L in the high-risk patient, with "
+        "sodium checked every 2 to 4 hours during active correction. "
+        "The usual culprit is autocorrection. Once the stimulus is "
+        "removed, as when hypovolaemia is filled or desmopressin "
+        "stopped, a brisk aquaresis can lift sodium 15 mmol/L "
+        "overnight. If the ceiling is breached, relower with 5 per "
+        "cent glucose and desmopressin 1 to 2 micrograms. Clinical "
+        "features: demyelination presents 2 to 6 days later with "
+        "dysarthria, quadriparesis and a locked-in state, often after "
+        "the patient appeared to improve. Note: a hyponatraemic "
+        "patient who wakes up and then deteriorates has been "
+        "corrected too fast until proven otherwise."
+    ),
+    "Confusion Assessment Method": (
+        "A structured bedside instrument for diagnosing delirium in "
+        "under five minutes, built so that non-psychiatrists can "
+        "apply the diagnostic criteria reliably. Criteria: delirium "
+        "requires acute onset with a fluctuating course and "
+        "inattention, plus either disorganised thinking or an altered "
+        "level of consciousness. Clinical features: inattention is "
+        "tested with serial sevens, months backwards or digit span, "
+        "and is the feature most often missed when clinicians rely on "
+        "global impression. Ix: pair a positive result with a cause "
+        "search rather than treating it as an endpoint, since "
+        "delirium is a symptom of sepsis, hypoxia, drugs, urinary "
+        "retention or pain until proven otherwise. Mx: CAM-ICU is the "
+        "intubated-patient version using non-verbal responses, and "
+        "the 4AT is a briefer alternative widely used in Australian "
+        "hospitals. Note: sensitivity is high in trained hands and "
+        "poor in untrained ones, and hypoactive delirium, the "
+        "commonest and most lethal subtype, is exactly what an "
+        "unstructured assessment misses."
+    ),
+    "Waterlow score": (
+        "A pressure injury risk assessment tool scoring build, "
+        "continence, skin type, mobility and age, with extra points "
+        "for malnutrition, neurological deficit and major surgery. "
+        "Criteria: 10 or more is at risk, 15 or more is high risk and "
+        "20 or more is very high risk, with higher totals triggering "
+        "a pressure-relieving mattress and documented repositioning. "
+        "Ix: score on admission, after any change in condition and at "
+        "set intervals, since a single admission score decays quickly "
+        "in value. Mx: the score is only the trigger. Prevention "
+        "rests on repositioning, skin inspection at every reposition, "
+        "moisture management, nutrition review and offloading the "
+        "heels. Note: the Braden scale is the alternative in wide use "
+        "and runs the other way, with a low score meaning high risk. "
+        "Mixing the two up at handover reverses the message entirely."
+    ),
+    "Focused assessment with sonography for trauma": (
+        "A focused bedside ultrasound looking for free fluid in the "
+        "trauma patient, answering one question: is there blood in a "
+        "cavity that needs theatre. Features: four standard views "
+        "cover the hepatorenal recess, the splenorenal recess, the "
+        "pelvis and the pericardium. The extended version adds "
+        "anterior chest views for pneumothorax. Ix: it detects as "
+        "little as 200 mL of free fluid and takes under five minutes, "
+        "so it belongs inside the circulation step of the primary "
+        "survey rather than after it. Mx: a positive scan in an "
+        "unstable patient means laparotomy without CT. A negative "
+        "scan in an unstable patient sends you looking at the chest, "
+        "pelvis or floor instead. Note: it cannot exclude solid organ "
+        "injury, retroperitoneal bleeding or hollow viscus "
+        "perforation, so a stable patient with a concerning mechanism "
+        "still gets a CT. Repeat when the picture changes, because "
+        "early blood volumes sit below the detection threshold."
+    ),
+    "Inotrope selection": (
+        "Choosing an agent to raise cardiac contractility, distinct "
+        "from a vasopressor, which raises systemic vascular "
+        "resistance. The choice follows the haemodynamic problem "
+        "rather than the diagnosis. Uses: dobutamine is first line in "
+        "cardiogenic shock and low-output states, lifting "
+        "contractility and rate while dropping afterload through a "
+        "beta-2 effect. Milrinone bypasses the beta receptor as a "
+        "phosphodiesterase-3 inhibitor, which suits established beta "
+        "blockade and pulmonary hypertension. Adrenaline covers both "
+        "roles when shock is mixed. Mx: start low, titrate against "
+        "perfusion markers rather than blood pressure alone, and give "
+        "centrally where possible. Adverse effects: tachyarrhythmia, "
+        "rising myocardial oxygen demand and hypotension, which is "
+        "the pitfall with milrinone given its long half-life and "
+        "renal clearance. Note: an inotrope in an underfilled patient "
+        "makes things worse. Fill first, then decide whether the pump "
+        "or the pipes are the problem."
+    ),
+    "Personal protective equipment": (
+        "Barriers worn to interrupt transmission between patient and "
+        "healthcare worker, chosen by transmission route rather than "
+        "by anxiety level. Types: standard precautions use gloves and "
+        "an apron for contact with body fluids. Contact precautions "
+        "add a gown, droplet precautions add a surgical mask and eye "
+        "protection, and airborne precautions require a fit-tested P2 "
+        "or N95 respirator. Mx: sequence matters more than the items. "
+        "Don gown, then mask, then eye protection, then gloves. Doff "
+        "gloves and gown together first, clean hands, then remove eye "
+        "protection and the mask last on leaving the room. Note: "
+        "contamination happens during removal rather than during use, "
+        "which is why doffing is the step that gets audited. A fit "
+        "test is not a fit check. The test is a formal periodic "
+        "process and the check is done every time the respirator goes "
+        "on. Facial hair defeats both."
+    ),
+    "Surgical safety checklist": (
+        "A three-stage verbal checklist run by the theatre team, "
+        "credited with cutting surgical mortality and complications "
+        "by around a third in the original multi-country study. "
+        "Types: sign in before induction confirms identity, site, "
+        "procedure, consent, allergies and airway risk. Time out "
+        "before incision confirms team introductions, the procedure, "
+        "antibiotic prophylaxis and imaging. Sign out before the "
+        "patient leaves confirms counts, specimen labelling and "
+        "equipment problems. Mx: the checklist is spoken aloud with "
+        "the team stopped and listening, since a silently ticked form "
+        "loses the entire effect. Note: the measurable benefit comes "
+        "from the team speaking to each other rather than from the "
+        "paperwork, and the items most often missed are antibiotic "
+        "timing and specimen labelling. In Australia it sits inside "
+        "the National Safety and Quality Health Service Standards, so "
+        "compliance is an accreditation matter as well as a clinical "
+        "one."
+    ),
+    "Patient identification": (
+        "Confirming that the right patient receives the right "
+        "intervention, and the failure point behind wrong-patient, "
+        "wrong-site and wrong-procedure events. Mx: use at least "
+        "three approved identifiers, usually full name, date of birth "
+        "and medical record number, checked against the wristband and "
+        "against what the patient says rather than a yes or no "
+        "question. Bed number, room and the chart at the end of the "
+        "bed are never identifiers. Risk factors: shared surnames, "
+        "unconscious or non-English-speaking patients, transfers "
+        "between units, verbal orders, and two patients of the same "
+        "name on one ward. Ix: blood sampling and transfusion require "
+        "identification at the bedside at the moment of collection, "
+        "with tubes labelled there and never in advance. Note: an "
+        "open question, so the patient states their own name and date "
+        "of birth, catches what a closed question misses. An unwell "
+        "or hearing-impaired patient will agree to almost anything."
+    ),
+    "Tourniquet use": (
+        "A circumferential device applied proximal to a limb wound to "
+        "stop exsanguinating arterial bleeding, rehabilitated from "
+        "military practice after evidence that early application "
+        "saves lives without costing limbs. Indications: catastrophic "
+        "limb haemorrhage not controlled by direct pressure, "
+        "traumatic amputation, or multiple casualties where pressure "
+        "cannot be maintained. Mx: apply 5 to 7 cm proximal to the "
+        "wound over a single bone where possible, tighten until "
+        "bleeding stops and the distal pulse disappears, then record "
+        "the time on the device. A tourniquet that is too loose "
+        "occludes veins only and worsens the bleeding. Complications: "
+        "nerve injury, compartment syndrome and, after prolonged "
+        "application, reperfusion injury with hyperkalaemia and "
+        "rhabdomyolysis. Note: two hours is a widely accepted safe "
+        "window, and releasing a tourniquet in the field is not the "
+        "first responder's job. It comes off in a resourced "
+        "environment with a surgical team present."
+    ),
+    "Disaster triage": (
+        "Sorting casualties when demand overwhelms resources, "
+        "switching from doing everything for one patient to doing the "
+        "most good for the most people. Types: the sieve is a rapid "
+        "primary sort at the scene using walking ability, respiratory "
+        "rate and perfusion, assigning immediate, urgent, delayed or "
+        "deceased categories. The sort is a secondary physiological "
+        "reassessment at the casualty clearing point. Mx: casualties "
+        "who can walk are directed away first, which clears the "
+        "field. An unresponsive casualty who is not breathing after a "
+        "simple airway manoeuvre is categorised as deceased rather "
+        "than resuscitated, and that is the hardest cultural shift "
+        "for clinicians trained in single-patient care. Note: "
+        "categories are dynamic and every casualty is re-triaged at "
+        "each stage of the chain. Over-triage floods the receiving "
+        "hospital and does as much damage as under-triage, because it "
+        "consumes the theatre and imaging capacity the critically "
+        "injured need."
+    ),
+    "Anaphylaxis action plan": (
+        "A one-page personalised document telling the patient, family "
+        "or school exactly what to do when an allergic reaction "
+        "starts, issued in Australia on the ASCIA template. Types: "
+        "the orange plan is for people prescribed an adrenaline "
+        "device and names that device. The green plan covers allergic "
+        "reactions in people without one. Features: it lists the "
+        "confirmed allergens, pictures the device, and sets out the "
+        "sequence of laying the person flat, giving adrenaline, "
+        "calling an ambulance and giving a second dose after five "
+        "minutes without improvement. Mx: issue at diagnosis, review "
+        "annually and after any reaction, and update it whenever the "
+        "device or weight band changes. Copies go to the patient, the "
+        "school or childcare service and the general practitioner. "
+        "Note: antihistamines have no place as the first action, and "
+        "a plan that opens with one is wrong. Adrenaline first, every "
+        "time."
+    ),
+    "Adrenaline autoinjector": (
+        "A single-use spring-loaded device delivering intramuscular "
+        "adrenaline into the anterolateral thigh, and the first-line "
+        "treatment for anaphylaxis outside hospital. Dose: 150 "
+        "micrograms for 7.5 to 20 kg, 300 micrograms above 20 kg, and "
+        "a 500 microgram device for larger adults. Two are prescribed "
+        "so a second dose can follow after five minutes without "
+        "response. Mx: hold against the outer thigh, through clothing "
+        "if necessary, then lay the person flat with the legs raised "
+        "and call an ambulance. Sitting or standing a hypotensive "
+        "patient up has caused deaths. Adverse effects: tremor, "
+        "palpitations, pallor and anxiety, all expected and none a "
+        "reason to withhold the drug. Note: the devices are "
+        "PBS-subsidised in Australia for a confirmed anaphylaxis "
+        "diagnosis, expire within 12 to 18 months, and must not be "
+        "stored in a car or a fridge. A cloudy or discoloured "
+        "solution means replace it."
+    ),
+    "Cold chain management": (
+        "Keeping vaccines between 2 and 8 degrees Celsius from "
+        "manufacture to administration, since both freezing and heat "
+        "destroy potency irreversibly and without any visible sign. "
+        "Mx: store in a purpose-built vaccine refrigerator, never a "
+        "domestic or bar fridge, with a data logger downloaded weekly "
+        "and twice-daily minimum and maximum readings recorded. "
+        "Australian practice follows the Strive for 5 guidance. "
+        "Features: a breach is any reading outside 2 to 8 degrees. "
+        "Isolate the stock, label it do not use, keep it refrigerated "
+        "and telephone the state immunisation service for advice on "
+        "viability rather than discarding or administering it. "
+        "Complications: a heat-damaged vaccine leaves the recipient "
+        "unprotected with no sign of failure, and a whole cohort may "
+        "need recall and revaccination. Note: frozen is worse than "
+        "warm for adsorbed vaccines such as diphtheria, tetanus and "
+        "hepatitis B, where freezing separates the adjuvant "
+        "permanently."
+    ),
+    "Prescribing errors": (
+        "Errors in the decision to prescribe or in the writing of the "
+        "prescription, the commonest preventable cause of hospital "
+        "harm and most frequent among junior doctors working outside "
+        "familiar territory. Types: wrong drug or dose, omission of a "
+        "regular medicine on admission, and failure to adjust for "
+        "renal function. Prescribing despite a documented allergy is "
+        "the one that reaches a coroner. Risk factors: interruptions, "
+        "verbal orders, unfamiliar patients, transitions of care and "
+        "prescribing by trade name. Mx: write generic names in full, "
+        "avoid error-prone abbreviations such as U for units, never "
+        "use a trailing zero and always use a leading zero below 1. "
+        "Reconcile medicines within 24 hours of admission and again "
+        "at discharge. Note: about half of prescribing errors are "
+        "intercepted by pharmacists, which makes pharmacist review a "
+        "safety net rather than a clerical step. The errors that "
+        "reach the patient are disproportionately those written after "
+        "hours."
+    ),
+    "High risk medicines": (
+        "Drugs that cause disproportionate harm when used in error, "
+        "which is not the same as the drugs used most often, and the "
+        "group that attracts mandatory double-checking. "
+        "Classification: Australian practice uses the APINCHS list, "
+        "covering antimicrobials, potassium and other electrolytes, "
+        "insulin, narcotics and sedatives, chemotherapy, heparin and "
+        "anticoagulants, and systems such as infusion pumps. Mx: "
+        "independent double-check before administration, standardised "
+        "concentrations, removal of concentrated potassium from ward "
+        "stock, and insulin prescribed on a dedicated chart with "
+        "units written in full. Risk factors: a narrow therapeutic "
+        "index, look-alike packaging, complex dose calculation and "
+        "weight-based paediatric dosing. Note: concentrated potassium "
+        "chloride killed patients often enough that it was removed "
+        "from general wards entirely, and that is the model. Design "
+        "the error out rather than asking staff to be more careful."
+    ),
+    "Look alike sound alike medicines": (
+        "Drug pairs confusable by name or packaging, and a recurring "
+        "source of selection error in dispensing and administration. "
+        "Features: Australian examples include hydralazine and "
+        "hydroxyzine, clonazepam and clobazam, and metoprolol and "
+        "metoclopramide. Similar packaging within one manufacturer's "
+        "range compounds the problem. Risk factors: verbal or "
+        "telephone orders, handwritten prescriptions, alphabetical "
+        "shelf storage and abbreviated names. Mx: tall man lettering "
+        "breaks up the shared portion, as in clonazePAM against "
+        "cloBAZam, and is used on labels and in electronic "
+        "prescribing. Separate storage, barcode scanning and "
+        "prescribing by full generic name all reduce selection error. "
+        "Note: writing the indication on the prescription is the "
+        "cheapest safeguard available. A pharmacist reading "
+        "metoclopramide for nausea will stop at a request written for "
+        "hypertension, whereas a name on its own gives them nothing "
+        "to check against."
+    ),
+    "Real time prescription monitoring": (
+        "A live database showing prescribers and pharmacists a "
+        "patient's recent supply of monitored medicines at the point "
+        "of prescribing or dispensing. Uses: it covers opioids, "
+        "benzodiazepines, zolpidem and zopiclone, quetiapine and "
+        "codeine-containing products, flagging concurrent "
+        "prescribers, overlapping supply and high total oral morphine "
+        "equivalent doses. Mx: Victoria runs SafeScript and New South "
+        "Wales runs SafeScript NSW, with equivalents in other "
+        "jurisdictions and mandatory consultation in some before a "
+        "monitored medicine is prescribed. An alert prompts a "
+        "conversation, not an automatic refusal. Note: the system "
+        "surfaces two different patients. One is diverting or "
+        "doctor-shopping. The other has an untreated dependence or a "
+        "pain problem that has outgrown a single prescriber. Abrupt "
+        "cessation in the second group drives people to illicit "
+        "supply, so the response is a tapering plan or opioid "
+        "substitution rather than a closed door."
+    ),
+    "Dose administration aid": (
+        "A repackaged medicine organiser, blister-packed by day and "
+        "dose time, supplied by a pharmacist to support adherence in "
+        "people managing multiple medicines. Uses: cognitive "
+        "impairment, complex regimens, poor dexterity, and "
+        "supervision by family or community care staff. Mx: the "
+        "pharmacist needs a current and complete medicine list, so "
+        "every change must be communicated or the pack carries the "
+        "old regimen for up to a week. Not everything can be packed. "
+        "Inhalers, liquids, cytotoxics, some sublingual tablets and "
+        "medicines needing titration such as warfarin stay outside "
+        "the pack, and those are the ones most often missed. Note: "
+        "the aid solves forgetting, not misunderstanding. It also "
+        "removes the patient's contact with the tablets themselves, "
+        "so someone who no longer recognises their medicines cannot "
+        "report a change. Review the need at every medication review, "
+        "since a pack can mask deteriorating capacity."
+    ),
+    "PBS authority prescription": (
+        "A prescribing restriction under the Pharmaceutical Benefits "
+        "Scheme requiring the prescriber to confirm that the patient "
+        "meets defined clinical criteria before the subsidy applies. "
+        "Types: a streamlined authority uses a four-digit code "
+        "written on the prescription with no phone call. Telephone or "
+        "online authority needs approval from Services Australia "
+        "before supply. Written authority applies to a small group "
+        "requiring documentary support. Mx: check the criteria in the "
+        "Schedule rather than assuming, since restrictions commonly "
+        "specify disease severity, failure of prior therapy or a "
+        "required combination. Record the indication in the notes, "
+        "because an authority is auditable. Note: an authority "
+        "decides who pays, not whether the drug may be used. A "
+        "patient who fails the criteria can still be prescribed the "
+        "medicine privately, at a price that is usually the real "
+        "barrier, and saying so plainly is better than implying the "
+        "drug is unavailable."
+    ),
+    "Mental health treatment plan": (
+        "A structured Australian general practice plan under the "
+        "Better Access initiative that gives a patient "
+        "Medicare-rebated sessions with a psychologist, mental health "
+        "social worker or occupational therapist. Features: it "
+        "records the presenting problem, a mental state examination, "
+        "a risk assessment, relevant history, an outcome measure such "
+        "as the K10, the patient's goals and the referral "
+        "arrangements. Mx: the general practitioner prepares the "
+        "plan, refers for an initial course of sessions, then reviews "
+        "before further sessions are claimed. The plan is revisited "
+        "rather than rewritten each time. Note: it is not "
+        "diagnosis-restricted and needs no psychiatric diagnosis, "
+        "only an assessed mental disorder, which includes adjustment "
+        "disorder and mixed anxiety and depression. The common "
+        "failure is treating it as paperwork attached to a referral "
+        "letter. The value sits in the risk assessment and the "
+        "outcome measure, which give the next reviewer something to "
+        "compare against."
+    ),
+    "Aboriginal health worker": (
+        "A qualified member of the clinical team who delivers direct "
+        "care and bridges the cultural gap between Aboriginal and "
+        "Torres Strait Islander patients and the health service. "
+        "Uses: clinical work including health assessments, chronic "
+        "disease care, immunisation and medication support, alongside "
+        "advocacy, transport coordination, family liaison and "
+        "interpreting cultural context for the treating team. Mx: "
+        "involve them early rather than at the point of conflict or "
+        "discharge, and include them in ward rounds and family "
+        "meetings as clinicians rather than escorts. Note: the role "
+        "carries a recognised qualification, and in some "
+        "jurisdictions registration as an Aboriginal and Torres "
+        "Strait Islander Health Practitioner with scope to administer "
+        "medicines. Their availability shapes whether a patient takes "
+        "discharge against advice. A service without the role records "
+        "the leaving and not the reason, and the same patient comes "
+        "back sicker."
+    ),
+    "Rural generalist practice": (
+        "A defined career pathway in which a doctor practises general "
+        "practice alongside an advanced skill and provides "
+        "hospital-based care in a rural community. Features: advanced "
+        "skills include obstetrics, anaesthetics, emergency medicine, "
+        "mental health and paediatrics, delivered under the National "
+        "Rural Generalist Pathway with training through ACRRM or the "
+        "RACGP rural pathway. Mx: the practical reality is one "
+        "clinician covering clinic, inpatients, the emergency "
+        "department and retrieval decisions, so the core competencies "
+        "are resuscitation and stabilisation, teleconsultation with a "
+        "referral centre, and knowing the transfer threshold before "
+        "the patient deteriorates. Note: rural and remote Australians "
+        "die younger and carry higher rates of injury and chronic "
+        "disease, and the shortfall is workforce rather than "
+        "knowledge. The skill that matters most is judging what can "
+        "be safely managed locally, because transferring everything "
+        "harms a community as much as transferring nothing."
+    ),
+    "Clinical audit": (
+        "A quality improvement method that measures practice against "
+        "an explicit standard, changes practice, then measures again. "
+        "Features: it differs from research in asking whether we are "
+        "doing what is already known to work, rather than whether "
+        "something works, and so does not usually need ethics "
+        "approval. Mx: the cycle is to choose a topic with a clear "
+        "standard, define criteria and a target, collect data on a "
+        "defined sample, compare against the standard, implement "
+        "change, then re-audit to close the loop. Note: most audits "
+        "fail at the last step. An audit without a re-audit measures "
+        "a problem and changes nothing, and it is the most commonly "
+        "wasted effort of a junior doctor's term. Pick something "
+        "small enough to re-audit within the rotation, and agree the "
+        "change with the people who have to make it before collecting "
+        "a single data point."
+    ),
+    "Quality improvement cycle": (
+        "An iterative method for testing changes on a small scale "
+        "before spreading them, usually taught as the "
+        "plan-do-study-act cycle. Features: plan the change and "
+        "predict its effect, do it on a deliberately small scale such "
+        "as one clinician for one day, study the result against the "
+        "prediction, then act by adopting, adapting or abandoning it. "
+        "Mx: pair it with a measurable aim, a small set of measures "
+        "and a driver diagram linking each change to the outcome. Run "
+        "charts show whether variation is signal or noise, which "
+        "stops a team reacting to a single bad month. Note: the small "
+        "scale is the point rather than a limitation. Testing a new "
+        "form on one ward round is cheap to abandon and generates the "
+        "local evidence that persuades a department, whereas an "
+        "untested hospital-wide rollout fails once and cannot be "
+        "attempted again for years."
+    ),
+    "Incidence and prevalence": (
+        "Two measures of disease frequency that answer different "
+        "questions and are routinely confused. Definition: incidence "
+        "counts new cases arising in a population over a period and "
+        "measures risk. Prevalence counts all existing cases at a "
+        "point or across an interval and measures burden. Features: "
+        "prevalence approximates incidence multiplied by average "
+        "duration, so a disease can rise in prevalence while its "
+        "incidence falls, which is exactly what effective treatment "
+        "does. HIV is the standard example. Ix: incidence is the "
+        "measure for aetiological studies and for judging whether a "
+        "prevention programme works. Prevalence is the measure for "
+        "planning services, beds and workforce. Note: a screening "
+        "programme that detects indolent disease raises prevalence "
+        "without touching incidence or mortality, which is how "
+        "overdiagnosis shows up in routine statistics and why "
+        "prevalence alone never demonstrates benefit."
+    ),
+    "Quality adjusted life year": (
+        "A composite outcome combining length of life with quality of "
+        "life, used to compare interventions across unrelated "
+        "conditions on a single scale. Definition: one QALY is one "
+        "year in full health. A year lived at a utility of 0.5 counts "
+        "as half a QALY, and utilities are derived from instruments "
+        "such as the EQ-5D. Uses: cost-utility analysis divides the "
+        "extra cost of an intervention by the extra QALYs gained, "
+        "producing an incremental cost-effectiveness ratio. In "
+        "Australia the Pharmaceutical Benefits Advisory Committee "
+        "weighs this when recommending a medicine for PBS listing, "
+        "although no fixed threshold is published. Note: the method "
+        "makes explicit the trade-offs that would otherwise be made "
+        "invisibly, and it is criticised for systematically "
+        "undervaluing treatment in people with disability or advanced "
+        "age, whose baseline utility is lower before any treatment "
+        "begins."
+    ),
+    "Sentinel event": (
+        "A patient safety incident causing death or serious harm that "
+        "should never occur, reported nationally and triggering "
+        "mandatory investigation. Types: the Australian list includes "
+        "wrong-site or wrong-patient surgery, a retained instrument, "
+        "haemolytic reaction from an ABO-incompatible transfusion, "
+        "medication error causing death, suicide of an admitted "
+        "patient and unexpected death of a full-term baby. Mx: report "
+        "through the incident system, notify the state health "
+        "department, and run a structured analysis with an action "
+        "plan and named owners. Open disclosure to the patient or "
+        "family runs alongside and is never delayed until the "
+        "investigation finishes. Note: these events are almost always "
+        "the end of a chain of ordinary system failures rather than "
+        "one person's mistake, which is why a review that names an "
+        "individual and recommends more care has failed to do its "
+        "job."
     ),
 }
 
