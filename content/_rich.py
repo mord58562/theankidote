@@ -17559,6 +17559,222 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "radiation pneumonitis diagnosis corticosteroids"]],
         "summary": "",
     },
+    {
+        "name": "Fundoscopy",
+        "aliases": ["Ophthalmoscopy", "Direct ophthalmoscopy", "Fundoscopic examination", "Funduscopy", "Fundus examination"],
+        "utd": [["Overview", "direct ophthalmoscopy fundus examination technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Tonometry",
+        "aliases": ["Intraocular pressure measurement", "Applanation tonometry", "Goldmann applanation tonometry", "Eye pressure test", "Rebound tonometry"],
+        "utd": [["Overview", "tonometry intraocular pressure measurement"]],
+        "summary": "",
+    },
+    {
+        "name": "Fluorescein staining of the cornea",
+        "aliases": ["Fluorescein staining", "Corneal fluorescein", "Fluorescein eye drops", "Fluorescein examination of the eye"],
+        "utd": [["Overview", "fluorescein staining corneal abrasion examination"]],
+        "summary": "",
+    },
+    {
+        "name": "Visual acuity testing",
+        "aliases": ["Snellen chart testing", "Visual acuity assessment", "Best corrected visual acuity", "Eye chart testing", "Pinhole testing"],
+        "utd": [["Overview", "visual acuity testing snellen chart pinhole"]],
+        "summary": "",
+    },
+    {
+        "name": "Gonioscopy",
+        "aliases": ["Anterior chamber angle assessment", "Gonioscopy lens", "Angle examination of the eye"],
+        "utd": [["Overview", "gonioscopy anterior chamber angle glaucoma"]],
+        "summary": "",
+    },
+    {
+        "name": "Amsler grid",
+        "aliases": ["Amsler chart", "Amsler grid testing", "Central visual field grid"],
+        "utd": [["Overview", "amsler grid macular degeneration monitoring"]],
+        "summary": "",
+    },
+    {
+        "name": "Ishihara test",
+        "aliases": ["Ishihara plates", "Colour vision testing", "Colour blindness testing", "Red-green colour vision test"],
+        "utd": [["Overview", "ishihara colour vision testing optic neuropathy"]],
+        "summary": "",
+    },
+    {
+        "name": "Schirmer test",
+        "aliases": ["Schirmer tear test", "Tear production test", "Tear film testing"],
+        "utd": [["Overview", "schirmer test dry eye tear production"]],
+        "summary": "",
+    },
+    {
+        "name": "Trabeculectomy",
+        "aliases": ["Glaucoma drainage surgery", "Glaucoma filtration surgery", "Filtering bleb surgery"],
+        "utd": [["Overview", "trabeculectomy glaucoma filtration surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Laser photocoagulation",
+        "aliases": ["Retinal laser", "Panretinal photocoagulation", "Focal retinal laser", "Retinal laser treatment"],
+        "utd": [["Overview", "panretinal photocoagulation diabetic retinopathy laser"]],
+        "summary": "",
+    },
+    {
+        "name": "Nasal packing",
+        "aliases": ["Anterior nasal packing", "Posterior nasal packing", "Nasal tampon", "Nasal tamponade", "Nose packing"],
+        "utd": [["Overview", "nasal packing epistaxis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Grommet insertion",
+        "aliases": ["Tympanostomy tube", "Tympanostomy tube insertion", "Ventilation tube insertion", "Grommets", "Ear tubes"],
+        "utd": [["Overview", "tympanostomy tube grommet otitis media effusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Myringotomy",
+        "aliases": ["Eardrum incision", "Myringotomy and aspiration", "Incision of the tympanic membrane"],
+        "utd": [["Overview", "myringotomy tympanic membrane incision drainage"]],
+        "summary": "",
+    },
+    {
+        "name": "Tonsillectomy",
+        "aliases": ["Tonsil removal", "Removal of the tonsils", "Adenotonsillectomy"],
+        "utd": [["Overview", "tonsillectomy indications complications children"]],
+        "summary": "",
+    },
+    {
+        "name": "Adenoidectomy",
+        "aliases": ["Adenoid removal", "Removal of the adenoids", "Adenoid surgery"],
+        "utd": [["Overview", "adenoidectomy indications children nasal obstruction"]],
+        "summary": "",
+    },
+    {
+        "name": "Septoplasty",
+        "aliases": ["Nasal septal surgery", "Deviated septum surgery", "Submucous resection of the septum", "Septal correction"],
+        "utd": [["Overview", "septoplasty deviated nasal septum surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Caloric testing",
+        "aliases": ["Caloric test", "Bithermal caloric testing", "Vestibular caloric testing", "Caloric stimulation of the ear"],
+        "utd": [["Overview", "caloric testing vestibular function canal paresis"]],
+        "summary": "",
+    },
+    {
+        "name": "Vestibular rehabilitation",
+        "aliases": ["Vestibular physiotherapy", "Balance retraining", "Gaze stabilisation exercises", "Vestibular rehab"],
+        "utd": [["Overview", "vestibular rehabilitation exercises dizziness"]],
+        "summary": "",
+    },
+    {
+        "name": "Pelvic organ prolapse quantification",
+        "aliases": ["POP-Q", "POP-Q staging", "Prolapse staging system", "Quantification of prolapse"],
+        "utd": [["Overview", "pelvic organ prolapse quantification POPQ staging"]],
+        "summary": "",
+    },
+    {
+        "name": "Sacrospinous fixation",
+        "aliases": ["Sacrospinous ligament fixation", "Sacrospinous colpopexy", "Vaginal vault suspension"],
+        "utd": [["Overview", "sacrospinous ligament fixation apical prolapse surgery"]],
+        "summary": "",
+    },
+    {
+        "name": "Female genital mutilation",
+        "aliases": ["Female genital cutting", "Female circumcision", "Infibulation", "Deinfibulation"],
+        "utd": [["Overview", "female genital mutilation types complications care"]],
+        "summary": "",
+    },
+    {
+        "name": "Cardiotocography classification",
+        "aliases": ["CTG classification", "CTG interpretation", "Fetal heart rate classification", "Intrapartum fetal monitoring categories"],
+        "utd": [["Overview", "intrapartum cardiotocography classification RANZCOG"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal phototherapy",
+        "aliases": ["Phototherapy for neonatal jaundice", "Newborn phototherapy", "Blue light therapy for jaundice"],
+        "utd": [["Overview", "neonatal phototherapy hyperbilirubinaemia thresholds"]],
+        "summary": "",
+    },
+    {
+        "name": "Exchange transfusion",
+        "aliases": ["Neonatal exchange transfusion", "Double volume exchange transfusion", "Blood exchange transfusion"],
+        "utd": [["Overview", "neonatal exchange transfusion hyperbilirubinaemia"]],
+        "summary": "",
+    },
+    {
+        "name": "High flow nasal cannula oxygen",
+        "aliases": ["High flow nasal prongs", "Humidified high flow oxygen", "Nasal high flow therapy", "High flow oxygen therapy"],
+        "utd": [["Overview", "high flow nasal cannula oxygen therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Spacer device technique",
+        "aliases": ["Inhaler spacer", "Valved holding chamber", "Spacer device", "Puffer and spacer"],
+        "utd": [["Overview", "spacer valved holding chamber inhaler technique"]],
+        "summary": "",
+    },
+    {
+        "name": "Vitamin E deficiency",
+        "aliases": ["Alpha-tocopherol deficiency", "Tocopherol deficiency", "Low vitamin E"],
+        "utd": [["Overview", "vitamin E deficiency ataxia malabsorption"]],
+        "summary": "",
+    },
+    {
+        "name": "Vitamin K deficiency",
+        "aliases": ["Hypovitaminosis K", "Low vitamin K", "Acquired vitamin K deficiency"],
+        "utd": [["Overview", "vitamin K deficiency coagulopathy adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Subjective Global Assessment",
+        "aliases": ["Subjective global assessment of nutrition", "Global nutritional assessment", "SGA nutritional rating"],
+        "utd": [["Overview", "subjective global assessment nutrition malnutrition"]],
+        "summary": "",
+    },
+    {
+        "name": "Yellow fever vaccination",
+        "aliases": ["Yellow fever vaccine", "Yellow fever immunisation", "Yellow fever certificate", "17D vaccine"],
+        "utd": [["Overview", "yellow fever vaccine travel contraindications"]],
+        "summary": "",
+    },
+    {
+        "name": "Rabies post-exposure prophylaxis",
+        "aliases": ["Rabies PEP", "Lyssavirus post-exposure prophylaxis", "Bat bite prophylaxis", "Rabies vaccine after exposure"],
+        "utd": [["Overview", "rabies post exposure prophylaxis lyssavirus bat"]],
+        "summary": "",
+    },
+    {
+        "name": "Leishmaniasis",
+        "aliases": ["Leishmania infection", "Leishmaniases", "Sandfly-borne protozoal infection"],
+        "utd": [["Overview", "leishmaniasis cutaneous visceral diagnosis treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Mandibular advancement splint",
+        "aliases": ["Mandibular advancement device", "Oral appliance therapy for sleep apnoea", "Snoring splint", "Dental sleep appliance"],
+        "utd": [["Overview", "mandibular advancement device obstructive sleep apnoea"]],
+        "summary": "",
+    },
+    {
+        "name": "Nasal corticosteroid technique",
+        "aliases": ["Nasal spray technique", "Intranasal steroid technique", "Nasal spray administration"],
+        "utd": [["Overview", "intranasal corticosteroid spray technique rhinitis"]],
+        "summary": "",
+    },
+    {
+        "name": "Sputum induction",
+        "aliases": ["Induced sputum", "Hypertonic saline sputum induction", "Sputum induction test"],
+        "utd": [["Overview", "sputum induction hypertonic saline tuberculosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Wound debridement",
+        "aliases": ["Sharp debridement", "Debridement of a wound", "Wound bed preparation", "Removal of necrotic tissue"],
+        "utd": [["Overview", "wound debridement chronic ulcer management"]],
+        "summary": "",
+    },
 ]
 
 
@@ -95830,6 +96046,698 @@ RICH_SUMMARIES = {
         "cover in prolonged courses. Note: fibrosis in the same "
         "distribution follows months later and does not respond to "
         "steroids, so treat the pneumonitis phase promptly."
+    ),
+
+    "Fundoscopy": (
+        "Direct examination of the retina and optic disc through the "
+        "pupil. It is the only place in the body where small vessels "
+        "and myelinated nerve are seen directly. Indications: "
+        "unexplained headache and visual loss as well as diabetes, "
+        "hypertension and suspected raised intracranial pressure. "
+        "Examination: darkened room and right eye to right eye. Find "
+        "the red reflex at arm's length, then follow a vessel back to "
+        "the disc. Dilate with tropicamide 0.5% unless pupil "
+        "responses are needed for neurological observation or the "
+        "anterior chamber is shallow. Features: assess disc colour "
+        "and margins and the cup to disc ratio, then the four "
+        "vascular arcades, leaving the light-sensitive macula until "
+        "last. Ix: non-mydriatic retinal photography has largely "
+        "replaced bedside fundoscopy for diabetic retinopathy "
+        "screening in Australian general practice. Note: papilloedema "
+        "is bilateral disc swelling with acuity preserved early, "
+        "whereas optic neuritis is usually unilateral with pain on "
+        "eye movement and early loss of colour vision."
+    ),
+    "Tonometry": (
+        "Measurement of intraocular pressure, the only modifiable "
+        "risk factor in glaucoma and a required observation in any "
+        "red or painful eye. Normal is 10 to 21 mmHg, although "
+        "pressure varies through the day and thin corneas read "
+        "falsely low. Indications: glaucoma screening and monitoring, "
+        "suspected acute angle closure and ocular trauma. Uses: "
+        "Goldmann applanation after topical anaesthetic and "
+        "fluorescein remains the reference method, with rebound and "
+        "non-contact devices used where a slit lamp is not available. "
+        "Cautions: avoid contact tonometry in suspected globe "
+        "rupture, active infective keratitis or an unassessed corneal "
+        "abrasion. Mx: pressure above 40 mmHg with a fixed "
+        "mid-dilated pupil and a hazy cornea is acute angle closure "
+        "and needs same-day ophthalmology, acetazolamide and topical "
+        "pressure-lowering drops. Note: a single normal reading does "
+        "not exclude glaucoma, since normal-tension disease accounts "
+        "for a substantial share of Australian cases."
+    ),
+    "Fluorescein staining of the cornea": (
+        "Application of fluorescein dye to the tear film so that "
+        "epithelial defects fluoresce green under cobalt blue light. "
+        "It turns a painful red eye from a guess into a visible "
+        "diagnosis at the bedside. Indications: ocular trauma and "
+        "foreign body as well as suspected abrasion, ulcer or herpes "
+        "simplex keratitis. Examination: instil topical anaesthetic "
+        "then a fluorescein strip moistened with saline, ask the "
+        "patient to blink and examine with a slit lamp or blue light. "
+        "Evert the upper lid if a subtarsal foreign body is possible. "
+        "Features: an abrasion stains as a discrete defect, a "
+        "dendritic branching pattern suggests herpes simplex and a "
+        "white stromal infiltrate beneath the stain suggests "
+        "bacterial ulcer. Mx: abrasions heal with lubricant and oral "
+        "analgesia and do not need patching. Contact lens wearers "
+        "need pseudomonal cover and next-day review. Note: never send "
+        "a patient home with topical anaesthetic, since repeated use "
+        "delays healing and masks a worsening ulcer."
+    ),
+    "Visual acuity testing": (
+        "The vital sign of the eye, recorded before any other "
+        "examination and before drops are instilled. Uses: every "
+        "ocular presentation, plus driving and occupational "
+        "assessment and medicolegal documentation. Examination: test "
+        "each eye separately at 6 metres with the patient's usual "
+        "distance glasses, recording the smallest line read as 6/N. A "
+        "pinhole corrects refractive error, so improvement with "
+        "pinhole points to an optical rather than a retinal or neural "
+        "cause. If the top line is not seen, step down through "
+        "counting fingers, hand movements and light perception. "
+        "Features: sudden painless loss suggests vascular occlusion "
+        "or retinal detachment, while gradual loss suggests cataract, "
+        "macular degeneration or glaucoma. Note: acuity of 6/12 in "
+        "the better eye is the usual threshold for an unconditional "
+        "Australian private driving licence, so the number recorded "
+        "carries consequences beyond the consultation."
+    ),
+    "Gonioscopy": (
+        "Examination of the anterior chamber angle with a mirrored "
+        "contact lens at the slit lamp, the only way to see whether "
+        "the drainage angle is open or closed. Indications: every new "
+        "glaucoma diagnosis and any suspected angle closure, plus "
+        "assessment before dilating a shallow anterior chamber. "
+        "Features: the examiner identifies Schwalbe line and the "
+        "trabecular meshwork and scleral spur. Seeing the meshwork "
+        "means an open angle. Iris apposition hiding those landmarks "
+        "means an occludable angle. Ix: anterior segment optical "
+        "coherence tomography and the Van Herick slit-lamp estimate "
+        "are useful adjuncts but do not replace direct viewing. Mx: "
+        "an occludable angle is treated with laser peripheral "
+        "iridotomy before it converts to an acute attack. Open-angle "
+        "disease is managed medically with a topical prostaglandin "
+        "analogue first line. Note: open and closed angle disease can "
+        "look identical on pressure and disc appearance, so the angle "
+        "view is what separates a laser problem from a drops problem."
+    ),
+    "Amsler grid": (
+        "A squared grid with a central fixation dot, held at reading "
+        "distance with reading glasses on and one eye covered, "
+        "testing the central 10 degrees of visual field. Uses: home "
+        "monitoring of age-related macular degeneration and detection "
+        "of conversion from dry to wet disease. Features: distorted "
+        "or wavy lines are metamorphopsia and suggest macular oedema "
+        "or subretinal fluid. A missing patch is a central scotoma. "
+        "Peripheral field loss is not detected by this test. Ix: any "
+        "new distortion warrants optical coherence tomography and "
+        "retinal examination, since neovascular disease is treatable "
+        "and time-critical. Mx: intravitreal anti-vascular "
+        "endothelial growth factor injection is the standard "
+        "treatment for wet macular degeneration in Australia and "
+        "works best when started early. Note: the grid monitors "
+        "people who already have a diagnosis, and a normal result "
+        "never excludes macular disease, so persistent symptoms still "
+        "need examination."
+    ),
+    "Ishihara test": (
+        "Pseudoisochromatic plates that screen for red-green colour "
+        "deficiency and, at the bedside, a sensitive marker of optic "
+        "nerve dysfunction. Uses: suspected optic neuritis or "
+        "compressive optic neuropathy, plus occupational screening "
+        "for pilots, electricians and rail workers. Examination: test "
+        "each eye separately under good natural light at reading "
+        "distance, allowing a few seconds per plate and recording the "
+        "number read correctly. Features: congenital deficiency is "
+        "symmetrical and lifelong and affects both eyes equally. "
+        "Asymmetry between the eyes is acquired until proven "
+        "otherwise and points to the optic nerve. Red desaturation, "
+        "tested by asking whether a red object looks washed out on "
+        "one side, is the quick alternative. Note: inherited "
+        "red-green deficiency is X-linked recessive and common in "
+        "men, so a positive screen is usually congenital and it is "
+        "the difference between the two eyes that carries clinical "
+        "weight."
+    ),
+    "Schirmer test": (
+        "A strip of filter paper hooked over the lower lid margin for "
+        "five minutes to measure aqueous tear production. "
+        "Indications: dry eye symptoms that do not settle with "
+        "lubricants and suspected Sjogren syndrome, particularly when "
+        "dry mouth or arthritis is also present. Features: wetting of "
+        "10 mm or more is normal and 5 mm or less is a strong marker "
+        "of aqueous deficiency. The test can be done with or without "
+        "topical anaesthetic, which separates basal from reflex "
+        "tearing. Ix: pair it with tear break-up time and ocular "
+        "surface staining, then anti-Ro and anti-La antibodies if "
+        "autoimmune disease is suspected. Mx: preservative-free "
+        "lubricants and lid hygiene first, with topical ciclosporin "
+        "or punctal plugs for refractory disease. Note: symptoms "
+        "correlate poorly with the number, so a normal result in a "
+        "symptomatic patient usually means evaporative dry eye from "
+        "meibomian gland dysfunction rather than no disease at all."
+    ),
+    "Trabeculectomy": (
+        "Creation of a guarded fistula from the anterior chamber to "
+        "the subconjunctival space, forming a filtering bleb that "
+        "lowers intraocular pressure when drops and laser have "
+        "failed. Indications: progressive glaucomatous field loss "
+        "despite maximal tolerated medical therapy, or pressure that "
+        "cannot be brought to target. Mx: an antimetabolite such as "
+        "mitomycin C is applied during surgery to limit scarring, and "
+        "aftercare involves intensive topical steroid with repeated "
+        "bleb assessment over months. Minimally invasive glaucoma "
+        "surgery is an alternative in milder disease. Complications: "
+        "early hypotony with a shallow anterior chamber, late bleb "
+        "leak and bleb-related endophthalmitis years afterwards. "
+        "Cataract progression is common. Note: any patient with a "
+        "bleb who presents with a red painful eye and reduced vision "
+        "needs same-day ophthalmology, because bleb-related "
+        "endophthalmitis threatens sight and can occur long after "
+        "otherwise successful surgery."
+    ),
+    "Laser photocoagulation": (
+        "Thermal laser burns applied to the retina to destroy "
+        "ischaemic tissue or seal leaking vessels. Indications: "
+        "proliferative diabetic retinopathy and ischaemic retinal "
+        "vein occlusion, plus retinal tears and selected cases of "
+        "macular oedema. Uses: panretinal treatment sacrifices "
+        "peripheral retina to reduce the ischaemic drive for new "
+        "vessels, while focal or grid treatment targets leaking "
+        "microaneurysms near the macula. Adverse effects: reduced "
+        "peripheral and night vision, transient macular oedema and "
+        "rarely a paracentral scotoma when a burn sits too close to "
+        "fixation. Mx: intravitreal anti-vascular endothelial growth "
+        "factor therapy has replaced laser as first line for diabetic "
+        "macular oedema, while panretinal laser remains the durable "
+        "treatment for proliferative disease. Note: the treatment "
+        "preserves central vision rather than restoring it, which is "
+        "worth saying plainly before the first session so that "
+        "expectations match the outcome."
+    ),
+    "Nasal packing": (
+        "Mechanical tamponade of the nasal cavity for bleeding that "
+        "has not stopped after ten minutes of firm pressure over the "
+        "cartilaginous nose and a topical vasoconstrictor. "
+        "Indications: continued bleeding after first aid and cautery, "
+        "or a posterior bleed that cannot be seen on anterior "
+        "rhinoscopy. Mx: insert a lubricated nasal tampon straight "
+        "back along the floor of the nose rather than upwards, then "
+        "expand it and inspect the throat for ongoing bleeding. "
+        "Bilateral packing is often needed. A posterior bleed "
+        "requires a balloon device and admission. Complications: "
+        "septal pressure necrosis, toxic shock syndrome with "
+        "prolonged packing and vagal bradycardia or hypoxia during "
+        "insertion in older patients. Note: packing stops the "
+        "bleeding without treating the cause, so anticoagulant review "
+        "and blood pressure control matter, and a unilateral bleed "
+        "with an obstructing mass needs ENT referral to exclude "
+        "tumour."
+    ),
+    "Grommet insertion": (
+        "Placement of a small ventilation tube through the tympanic "
+        "membrane to drain middle ear effusion and equalise pressure, "
+        "the most common paediatric operation in Australia. "
+        "Indications: otitis media with effusion persisting beyond "
+        "three months with documented hearing loss or speech delay, "
+        "and recurrent acute otitis media. Mx: day surgery under "
+        "general anaesthetic with myringotomy and tube placement. "
+        "Tubes extrude spontaneously over six to eighteen months. "
+        "Water precautions are no longer routinely required for "
+        "ordinary swimming. Complications: otorrhoea through the "
+        "tube, tympanosclerosis and a small rate of persistent "
+        "perforation after extrusion. Note: the threshold is lower "
+        "and the urgency greater in Aboriginal and Torres Strait "
+        "Islander children, among whom chronic suppurative otitis "
+        "media is far more common and early conductive hearing loss "
+        "carries lasting educational cost."
+    ),
+    "Myringotomy": (
+        "A small incision in the tympanic membrane to release middle "
+        "ear fluid or pus, performed alone or as the first step of "
+        "grommet insertion. Indications: effusion needing drainage "
+        "and culture, severe otitis media with intractable pain or a "
+        "suspected intratemporal complication, and barotrauma that "
+        "has not settled. Mx: a radial incision in the anteroinferior "
+        "quadrant under microscopic vision, avoiding the "
+        "posterosuperior quadrant where the ossicles and chorda "
+        "tympani lie. Fluid is sent for culture when the child is "
+        "unwell or immunocompromised. The incision heals within days "
+        "unless a tube is placed. Complications: persistent "
+        "perforation, ossicular injury from a misplaced incision and "
+        "transient taste disturbance. Note: most acute otitis media "
+        "in a well child settles without drainage, so this is "
+        "reserved for the child who is not improving on antibiotics "
+        "or who has a complication brewing behind the drum."
+    ),
+    "Tonsillectomy": (
+        "Removal of the palatine tonsils, most often for recurrent "
+        "tonsillitis or for obstructive sleep-disordered breathing in "
+        "children. Indications: seven documented episodes in one "
+        "year, five a year for two years or three a year for three "
+        "years, plus obstructive sleep apnoea and suspected "
+        "malignancy. Mx: day surgery in most children using cold "
+        "steel or coblation technique. Recovery takes ten to fourteen "
+        "days with significant throat pain and referred otalgia. "
+        "Regular simple analgesia works better than as-needed dosing, "
+        "and codeine is contraindicated in children after this "
+        "operation. Complications: primary haemorrhage within 24 "
+        "hours and secondary haemorrhage at five to ten days as "
+        "slough separates. Dehydration from poor oral intake is "
+        "common. Note: any bleeding afterwards is an emergency until "
+        "proven otherwise, because a small herald bleed can precede a "
+        "large one and children compensate until they suddenly do "
+        "not."
+    ),
+    "Adenoidectomy": (
+        "Removal of the nasopharyngeal adenoid pad, usually in a "
+        "child with nasal obstruction, chronic mouth breathing or "
+        "middle ear disease. Indications: obstructive "
+        "sleep-disordered breathing with adenoidal hypertrophy, "
+        "persistent otitis media with effusion and chronic "
+        "adenoiditis unresponsive to medical therapy. Mx: day-case "
+        "general anaesthetic with curettage or suction diathermy "
+        "through the mouth. Recovery is quicker and less painful than "
+        "tonsil surgery, with most children eating normally within a "
+        "few days. Complications: primary bleeding, velopharyngeal "
+        "insufficiency causing hypernasal speech and rarely "
+        "nasopharyngeal stenosis. A child with a submucous cleft "
+        "palate is at particular risk and needs assessment first. "
+        "Note: adenoidal tissue is physiologically large in early "
+        "childhood and regresses after about age seven, so surgery is "
+        "aimed at the child whose obstruction or ear disease will not "
+        "wait for that to happen."
+    ),
+    "Septoplasty": (
+        "Surgical straightening of a deviated nasal septum to relieve "
+        "fixed nasal obstruction. Indications: symptomatic "
+        "obstruction attributable to the septum on examination, "
+        "recurrent bleeding from a deviated spur and access for sinus "
+        "surgery. Mx: an endonasal incision with elevation of "
+        "mucoperichondrial flaps and removal or reshaping of deviated "
+        "cartilage and bone, preserving a dorsal and caudal strut so "
+        "the nose does not collapse. Splints or quilting sutures have "
+        "replaced routine packing in most units. Complications: "
+        "septal haematoma needing urgent drainage, persistent "
+        "obstruction and septal perforation. Saddle nose deformity "
+        "follows removal of too much support. Note: obstruction that "
+        "swaps from side to side and changes with posture is the "
+        "normal nasal cycle amplified by turbinate hypertrophy or "
+        "rhinitis, which does not improve with septal surgery, so a "
+        "trial of intranasal corticosteroid comes first."
+    ),
+    "Caloric testing": (
+        "Irrigation of each ear with warm and cool water or air to "
+        "stimulate the horizontal semicircular canal and compare the "
+        "two sides, the only vestibular test that assesses each "
+        "labyrinth separately. Indications: unexplained vertigo with "
+        "suspected unilateral vestibular loss, assessment before "
+        "vestibular schwannoma treatment and suspected bilateral "
+        "vestibulopathy. Features: cold water produces nystagmus "
+        "beating away from the irrigated ear and warm water towards "
+        "it. A canal paresis above 20 to 25 per cent indicates "
+        "peripheral hypofunction on that side. Ix: video head impulse "
+        "testing has largely replaced it in acute assessment because "
+        "it is quicker and tests higher frequencies, while calorics "
+        "remain better at detecting low-frequency and bilateral loss. "
+        "Note: the same stimulus in a comatose patient tests "
+        "brainstem integrity rather than dizziness, and absent "
+        "responses to cold water with an intact drum point to severe "
+        "brainstem dysfunction."
+    ),
+    "Vestibular rehabilitation": (
+        "A graded exercise programme that drives central compensation "
+        "after vestibular injury, combining gaze stabilisation, "
+        "habituation and balance retraining. Indications: unilateral "
+        "vestibular hypofunction after vestibular neuritis, "
+        "persistent postural perceptual dizziness and bilateral "
+        "vestibulopathy, plus falls prevention in older adults with "
+        "dizziness. Mx: gaze stabilisation begins with head movement "
+        "while fixating a target and progresses in speed and "
+        "complexity. Habituation deliberately provokes symptoms in a "
+        "controlled way so the brain adapts. Supervised programmes "
+        "outperform a handout. Cautions: it does not treat benign "
+        "paroxysmal positional vertigo, which needs a repositioning "
+        "manoeuvre first. Vestibular sedatives such as "
+        "prochlorperazine blunt compensation and should be stopped "
+        "early. Note: the aim is adaptation rather than restoration "
+        "of lost function, so improvement with activity rather than "
+        "rest is the expected pattern and avoidance is what prolongs "
+        "recovery."
+    ),
+    "Pelvic organ prolapse quantification": (
+        "A reproducible staging system for pelvic organ prolapse that "
+        "measures defined points on the vaginal wall relative to the "
+        "hymen during Valsalva. Uses: standardised description before "
+        "and after prolapse surgery and in research, replacing vague "
+        "terms such as first and second degree. Features: anterior, "
+        "posterior and apical points are recorded in centimetres, "
+        "with negative values above the hymen and positive values "
+        "below. Stage 0 is no prolapse and stage 4 is complete "
+        "eversion, with the leading edge at the hymen defining stage "
+        "2. Examination: examine with the bladder empty in the left "
+        "lateral or semi-recumbent position and ask for a sustained "
+        "Valsalva, since prolapse is routinely understaged in a "
+        "supine relaxed patient. Mx: stage and symptoms together "
+        "guide treatment, from pelvic floor physiotherapy and a "
+        "pessary through to reconstructive surgery. Note: symptoms "
+        "correlate poorly with stage, so a bothersome stage 2 "
+        "justifies treatment while an asymptomatic stage 3 may not."
+    ),
+    "Sacrospinous fixation": (
+        "A native tissue vaginal operation that suspends the vaginal "
+        "apex to the sacrospinous ligament, used for uterine descent "
+        "and for vault prolapse after hysterectomy. Indications: "
+        "symptomatic apical prolapse where the apex is the leading "
+        "compartment, particularly when a vaginal rather than "
+        "abdominal approach is preferred. Mx: performed through a "
+        "posterior vaginal incision with sutures placed two "
+        "finger-breadths medial to the ischial spine to avoid the "
+        "pudendal neurovascular bundle. It is often combined with "
+        "anterior or posterior repair. Complications: buttock pain on "
+        "the fixated side that usually settles within six weeks, "
+        "haemorrhage from pudendal or inferior gluteal vessels and "
+        "later anterior compartment prolapse from the altered vaginal "
+        "axis. Note: transvaginal mesh for prolapse was withdrawn in "
+        "Australia in 2017, which is why native tissue apical "
+        "procedures and abdominal sacrocolpopexy carry the workload "
+        "today."
+    ),
+    "Female genital mutilation": (
+        "Partial or total removal of the external female genitalia "
+        "for non-medical reasons, classified by the World Health "
+        "Organization into four types ranging from clitoral removal "
+        "to infibulation. It is unlawful in every Australian "
+        "jurisdiction, including taking a child overseas for the "
+        "procedure. Clinical features: recurrent urinary infection, "
+        "dyspareunia or apareunia, menstrual outflow obstruction and "
+        "chronic pelvic pain. Post-traumatic symptoms are common. Mx: "
+        "care is led by specialist services with a trained "
+        "interpreter and no assumptions about the woman's own views. "
+        "Deinfibulation can be offered antenatally or in labour and "
+        "is preferable to emergency division at delivery. "
+        "Reinfibulation after birth is unlawful. Note: mandatory "
+        "reporting applies where a child is at risk, and the "
+        "conversation goes better when it is asked about routinely in "
+        "antenatal care rather than met with visible surprise at "
+        "examination."
+    ),
+    "Cardiotocography classification": (
+        "The structured reading of an intrapartum cardiotocograph as "
+        "normal, abnormal or requiring urgent action, following the "
+        "RANZCOG intrapartum fetal surveillance framework. Features: "
+        "assess the baseline rate and variability alongside "
+        "accelerations and decelerations against the clinical "
+        "picture. Normal baseline is 110 to 160 beats per minute with "
+        "variability of 6 to 25. Reduced variability beyond 90 "
+        "minutes, complicated variable or late decelerations and a "
+        "rising baseline are the features that matter. Mx: "
+        "classification drives action rather than a label. Change "
+        "position, correct hypotension and dehydration, stop oxytocin "
+        "and consider tocolysis, then escalate to fetal scalp "
+        "sampling or delivery if the pattern persists. Note: a normal "
+        "trace is reassuring about oxygenation now and says little "
+        "about the next hour, and a bradycardia below 100 beats per "
+        "minute for more than three minutes is an emergency that "
+        "should not wait for classification."
+    ),
+    "Neonatal phototherapy": (
+        "Blue-green light at 460 to 490 nm that converts unconjugated "
+        "bilirubin in the skin into water-soluble isomers excreted "
+        "without hepatic conjugation. Indications: unconjugated "
+        "hyperbilirubinaemia above the treatment line on an "
+        "age-specific chart plotted in hours of life, with lower "
+        "thresholds for prematurity, haemolysis or sepsis. Mx: "
+        "maximise exposed skin surface and keep the light close, with "
+        "eye protection and attention to temperature and fluid "
+        "balance. Feeding continues and breaks are kept short. Repeat "
+        "serum bilirubin four to six hours after starting to confirm "
+        "a fall. Complications: insensible water loss, temperature "
+        "instability, loose stools and transient rash. Bronze baby "
+        "syndrome occurs when there is a conjugated component. Note: "
+        "light does nothing for conjugated hyperbilirubinaemia, so a "
+        "raised conjugated fraction or pale stools means biliary "
+        "atresia must be excluded urgently rather than the baby "
+        "simply placed under lights."
+    ),
+    "Exchange transfusion": (
+        "Removal of the infant's blood in small aliquots with "
+        "simultaneous replacement by donor blood, lowering bilirubin "
+        "and removing antibody-coated red cells. A double volume "
+        "exchange replaces about 85 per cent of the circulating red "
+        "cell mass. Indications: severe hyperbilirubinaemia above the "
+        "exchange line or still rising on intensive phototherapy, "
+        "signs of acute bilirubin encephalopathy and severe "
+        "haemolytic disease of the newborn with anaemia. Mx: "
+        "performed in a neonatal intensive care unit through "
+        "umbilical catheters with continuous monitoring, using "
+        "irradiated and cytomegalovirus-safe blood cross-matched "
+        "against mother and baby. Immunoglobulin may reduce the need "
+        "for it in isoimmune disease. Complications: thrombocytopenia "
+        "and coagulopathy, hypocalcaemia and hypoglycaemia, "
+        "arrhythmia and catheter-related thrombosis. Note: it is now "
+        "uncommon because anti-D prophylaxis and early phototherapy "
+        "prevent most cases, which means few clinicians have done one "
+        "and the written protocol matters more than recall."
+    ),
+    "High flow nasal cannula oxygen": (
+        "Heated and humidified oxygen delivered at flows above the "
+        "patient's inspiratory demand, washing out nasopharyngeal "
+        "dead space and providing a small and variable positive "
+        "airway pressure. Indications: bronchiolitis and other "
+        "paediatric respiratory distress, type 1 respiratory failure "
+        "in adults and preoxygenation or post-extubation support. Mx: "
+        "paediatric flow is set around 2 L/kg/min and titrated to "
+        "work of breathing rather than saturations alone. Adults "
+        "commonly start at 40 to 60 L/min with the inspired oxygen "
+        "fraction adjusted to target. Escalation criteria should be "
+        "agreed when it is started. Cautions: it does not substitute "
+        "for non-invasive ventilation in hypercapnic failure, and the "
+        "comfort it provides can mask deterioration, so respiratory "
+        "rate and effort must be tracked. Note: failure to improve "
+        "within one to two hours predicts intubation, and the main "
+        "hazard of this therapy is that it delays that decision in a "
+        "patient who is quietly tiring."
+    ),
+    "Spacer device technique": (
+        "A valved holding chamber placed between a metered dose "
+        "inhaler and the mouth that slows the aerosol plume, removes "
+        "the need to coordinate actuation with inspiration and "
+        "increases lung deposition while reducing oropharyngeal "
+        "deposition. Uses: all children and most adults using a "
+        "pressurised metered dose inhaler, including acute asthma "
+        "where a spacer matches a nebuliser for salbutamol delivery "
+        "without generating aerosol. Mx: shake the inhaler and "
+        "actuate one puff at a time into the chamber, then take four "
+        "to six tidal breaths or one slow deep breath and hold. "
+        "Repeat puffs separately rather than firing several at once. "
+        "Wash monthly in detergent and drip dry to reduce static. "
+        "Note: a spacer plus correct technique often outperforms a "
+        "change of drug, so checking the device at every asthma "
+        "review is higher yield than escalating therapy, and burst "
+        "therapy through a spacer is standard Australian emergency "
+        "practice."
+    ),
+    "Vitamin E deficiency": (
+        "Deficiency of the main lipid-soluble antioxidant, presenting "
+        "as a spinocerebellar syndrome because the posterior columns "
+        "and cerebellum are most vulnerable to oxidative damage. "
+        "Aetiology: chronic fat malabsorption from cystic fibrosis, "
+        "cholestatic liver disease or short bowel, "
+        "abetalipoproteinaemia and the recessive disorder ataxia with "
+        "isolated vitamin E deficiency. Clinical features: "
+        "progressive ataxia with loss of proprioception and vibration "
+        "sense, areflexia, ophthalmoplegia and pigmentary "
+        "retinopathy. Haemolysis occurs in preterm infants. Ix: serum "
+        "alpha-tocopherol interpreted against serum lipids, since a "
+        "low level with low lipids may be proportionate rather than "
+        "deficient. Mx: high-dose oral tocopherol, using "
+        "water-miscible preparations when bile salts are lacking, "
+        "alongside treatment of the underlying malabsorption. Note: "
+        "the picture mimics Friedreich ataxia and is one of the few "
+        "treatable causes of a progressive spinocerebellar syndrome, "
+        "so it is worth measuring before settling on a genetic "
+        "diagnosis."
+    ),
+    "Vitamin K deficiency": (
+        "Deficiency of the fat-soluble cofactor needed for "
+        "gamma-carboxylation of factors II, VII, IX and X and of "
+        "proteins C and S, producing a coagulopathy that corrects "
+        "with replacement. Aetiology: fat malabsorption from "
+        "cholestasis or coeliac disease, prolonged broad-spectrum "
+        "antibiotics with poor intake, warfarin and rodenticide "
+        "exposure. Newborn stores are inadequate without prophylaxis. "
+        "Clinical features: bruising and mucosal bleeding with a "
+        "prothrombin time prolonged out of proportion to the "
+        "activated partial thromboplastin time, because factor VII "
+        "has the shortest half-life. Ix: prothrombin time or "
+        "international normalised ratio that corrects after "
+        "parenteral vitamin K or on a mixing study. Liver function "
+        "tests separate deficiency from hepatic synthetic failure. "
+        "Mx: oral or intravenous phytomenadione according to urgency, "
+        "with prothrombin complex concentrate added for major "
+        "bleeding. Note: liver disease gives the same pattern but "
+        "does not correct with vitamin K, and that response is what "
+        "separates the two at the bedside."
+    ),
+    "Subjective Global Assessment": (
+        "A validated bedside nutritional assessment combining history "
+        "and physical examination into a single rating of A for well "
+        "nourished, B for moderately malnourished and C for severely "
+        "malnourished. Uses: inpatient and dialysis populations, "
+        "preoperative risk stratification and dietitian assessment "
+        "where biochemistry is unreliable. Features: the history "
+        "covers weight change over six months, dietary intake, "
+        "gastrointestinal symptoms lasting beyond two weeks and "
+        "functional capacity. Examination looks for loss of "
+        "subcutaneous fat and muscle wasting at the temples and "
+        "shoulders, plus oedema. Ix: albumin marks inflammation "
+        "rather than nutrition and should not be used to diagnose "
+        "malnutrition. Mx: a rating of B or C triggers dietitian "
+        "referral and an oral nutrition support plan, with enteral "
+        "feeding considered if intake stays inadequate. Note: the "
+        "tool needs no laboratory test, which is exactly why it stays "
+        "useful in an acutely unwell patient whose bloods reflect the "
+        "illness rather than the diet."
+    ),
+    "Yellow fever vaccination": (
+        "A single dose of live attenuated 17D vaccine giving "
+        "long-lasting protection and the only vaccine required under "
+        "the International Health Regulations. Indications: travel to "
+        "or through endemic parts of sub-Saharan Africa and tropical "
+        "South America, and entry requirements of countries demanding "
+        "a certificate. Mx: given at least ten days before travel at "
+        "an approved Australian yellow fever vaccination centre, "
+        "which issues an international certificate now valid for "
+        "life. Contraindications: age under nine months, thymus "
+        "disorder or thymectomy, symptomatic immunodeficiency and "
+        "anaphylaxis to egg. Pregnancy and breastfeeding are relative "
+        "contraindications. Adverse effects: viscerotropic and "
+        "neurotropic disease are rare but serious and are commoner at "
+        "first dose and older age. Note: when travel is unavoidable "
+        "and vaccination is contraindicated, a medical waiver letter "
+        "is issued instead, and the traveller then depends entirely "
+        "on mosquito avoidance."
+    ),
+    "Rabies post-exposure prophylaxis": (
+        "Urgent wound care, vaccine and where indicated "
+        "immunoglobulin after possible exposure to rabies virus or "
+        "Australian bat lyssavirus. Any bat contact in Australia "
+        "counts as a potential exposure. Indications: bite, scratch "
+        "or mucosal contact with a bat anywhere in the world, or with "
+        "a mammal in a rabies-endemic country. Mx: wash the wound "
+        "immediately with soap and water for fifteen minutes and "
+        "apply a virucidal agent such as povidone-iodine. Give "
+        "vaccine as a four-dose course over two weeks, with human "
+        "rabies immunoglobulin infiltrated into and around the wound "
+        "for anyone not previously vaccinated. Previously vaccinated "
+        "people need two doses and no immunoglobulin. Discuss every "
+        "case with the public health unit that supplies the products. "
+        "Note: there is no effective treatment once symptoms begin "
+        "and incubation can exceed a year, so a late presentation "
+        "after a remembered bat scratch is a reason to start rather "
+        "than to stand down."
+    ),
+    "Leishmaniasis": (
+        "A group of sandfly-borne protozoal infections caused by "
+        "Leishmania species. They are endemic across South Asia, the "
+        "Middle East, East Africa and Latin America and are seen in "
+        "Australia in returned travellers and migrants. Types: "
+        "cutaneous disease causes a slowly enlarging painless ulcer "
+        "with a raised border at the bite site. Mucocutaneous disease "
+        "destroys nasal and oral mucosa months to years later. "
+        "Visceral disease causes fever, splenomegaly, pancytopenia "
+        "and wasting. Ix: aspirate or biopsy from the lesion margin, "
+        "spleen or bone marrow looking for amastigotes, with "
+        "polymerase chain reaction the most sensitive test and "
+        "serology useful in visceral disease. Mx: species and "
+        "syndrome determine therapy, from topical or intralesional "
+        "treatment of simple cutaneous lesions to liposomal "
+        "amphotericin B for visceral disease. Note: visceral disease "
+        "is fatal untreated and reactivates in the immunosuppressed, "
+        "so a febrile traveller with splenomegaly and pancytopenia "
+        "needs it considered alongside malaria and enteric fever."
+    ),
+    "Mandibular advancement splint": (
+        "A custom dental device that holds the mandible forward "
+        "during sleep, enlarging the retroglossal airway and reducing "
+        "pharyngeal collapsibility. Indications: mild to moderate "
+        "obstructive sleep apnoea, snoring without significant apnoea "
+        "and more severe disease in patients who cannot tolerate "
+        "positive airway pressure. Mx: fitted by a dentist "
+        "experienced in sleep medicine after dental assessment, then "
+        "titrated forward over several weeks and checked with a "
+        "follow-up sleep study. Devices bought over the counter are "
+        "poorly retained and are not equivalent. Contraindications: "
+        "inadequate dentition, active periodontal disease and "
+        "significant temporomandibular joint disorder. Adverse "
+        "effects: jaw and tooth discomfort, excess salivation or dry "
+        "mouth and occlusal change over years that needs dental "
+        "monitoring. Note: airway pressure lowers the apnoea index "
+        "further, yet a splint worn every night can outperform a "
+        "machine left in the cupboard, so adherence rather than "
+        "efficacy usually decides."
+    ),
+    "Nasal corticosteroid technique": (
+        "The application method that decides whether an intranasal "
+        "corticosteroid works, since most reported failures are "
+        "technique failures rather than drug failures. Indications: "
+        "allergic and non-allergic rhinitis and nasal polyposis, "
+        "where regular use matters more than dose. Mx: blow the nose "
+        "first, then tilt the head slightly forward and aim the "
+        "nozzle outwards towards the ear on the same side rather than "
+        "at the septum. Using the opposite hand for each nostril "
+        "makes that angle natural. Sniff gently, because a hard sniff "
+        "carries the drug past the mucosa into the throat. Adverse "
+        "effects: epistaxis and crusting, almost always from "
+        "repeatedly spraying the septum, and rarely septal "
+        "perforation. Systemic absorption is minimal with modern "
+        "agents. Note: benefit builds over one to two weeks, so a "
+        "patient who tried a spray for three days and stopped has not "
+        "had a trial, and reviewing technique usually beats changing "
+        "product."
+    ),
+    "Sputum induction": (
+        "Nebulised hypertonic saline used to provoke a deep airway "
+        "sample when a patient cannot expectorate spontaneously. "
+        "Indications: suspected pulmonary tuberculosis with a dry "
+        "cough, investigation of pneumocystis pneumonia in the "
+        "immunocompromised and airway inflammometry using a sputum "
+        "eosinophil count. Mx: performed in a negative-pressure room "
+        "with airborne precautions whenever tuberculosis is possible, "
+        "because the procedure generates aerosol. Pretreat with "
+        "salbutamol, nebulise saline in escalating concentrations and "
+        "check spirometry between cycles. Cautions: it can "
+        "precipitate bronchoconstriction, so it is avoided in "
+        "unstable asthma or when the forced expiratory volume is very "
+        "low. Ix: samples go for acid-fast bacilli smear and culture, "
+        "nucleic acid amplification testing and cytology as "
+        "indicated. Note: an induced sample is far more useful than a "
+        "mouthful of saliva, so labelling the specimen as induced "
+        "tells the laboratory to treat it as a lower respiratory "
+        "sample rather than reject it."
+    ),
+    "Wound debridement": (
+        "Removal of devitalised tissue, slough and biofilm from a "
+        "wound so that healing can progress and infection is "
+        "controlled. Indications: necrotic or sloughy tissue in a "
+        "chronic wound, suspected deep infection and any wound that "
+        "has stalled despite good moisture balance. Types: sharp "
+        "debridement with scalpel or curette is quickest and is the "
+        "standard for the diabetic foot ulcer. Autolytic debridement "
+        "under a hydrogel is slower and painless. Enzymatic, "
+        "mechanical and larval methods fill specific niches. "
+        "Cautions: do not debride dry stable eschar on an ischaemic "
+        "heel until perfusion has been assessed, since removing that "
+        "cover turns a stable wound into an open one. Mx: pair "
+        "debridement with offloading, infection control and vascular "
+        "assessment, because repeated debridement without addressing "
+        "pressure or perfusion simply repeats itself. Note: a "
+        "diabetic foot ulcer usually needs debriding at every "
+        "dressing change, and callus left at the wound edge is a "
+        "pressure problem masquerading as a healing one."
     ),
 }
 
