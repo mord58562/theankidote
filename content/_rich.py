@@ -17337,6 +17337,228 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "sentinel events reporting Australia"]],
         "summary": "",
     },
+    {
+        "name": "Spasticity management",
+        "aliases": ["management of spasticity", "velocity-dependent hypertonia"],
+        "utd": [["Overview", "spasticity treatment adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Modified Ashworth Scale",
+        "aliases": ["Ashworth scale", "Ashworth score", "modified Ashworth score"],
+        "utd": [["Overview", "modified Ashworth scale spasticity grading"]],
+        "summary": "",
+    },
+    {
+        "name": "Serial casting",
+        "aliases": ["serial casts", "inhibitive casting"],
+        "utd": [["Overview", "serial casting contracture spasticity"]],
+        "summary": "",
+    },
+    {
+        "name": "Contracture prevention",
+        "aliases": ["preventing contractures", "contracture prophylaxis"],
+        "utd": [["Overview", "contracture prevention immobility positioning"]],
+        "summary": "",
+    },
+    {
+        "name": "Heterotopic ossification",
+        "aliases": ["neurogenic heterotopic ossification", "ectopic bone formation"],
+        "utd": [["Overview", "heterotopic ossification after neurological injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Neurogenic bowel",
+        "aliases": ["neurogenic bowel dysfunction", "bowel management programme", "bowel care programme"],
+        "utd": [["Overview", "neurogenic bowel spinal cord injury management"]],
+        "summary": "",
+    },
+    {
+        "name": "ASIA impairment scale",
+        "aliases": ["American Spinal Injury Association impairment scale", "ASIA grade", "International Standards for Neurological Classification of Spinal Cord Injury"],
+        "utd": [["Overview", "ASIA impairment scale spinal cord injury classification"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-traumatic amnesia",
+        "aliases": ["PTA after head injury", "post traumatic amnesia duration"],
+        "utd": [["Overview", "post-traumatic amnesia traumatic brain injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Westmead PTA Scale",
+        "aliases": ["Westmead Post Traumatic Amnesia Scale", "Westmead scale"],
+        "utd": [["Overview", "Westmead post traumatic amnesia scale"]],
+        "summary": "",
+    },
+    {
+        "name": "Glasgow Outcome Scale",
+        "aliases": ["Glasgow Outcome Scale Extended", "extended Glasgow Outcome Scale"],
+        "utd": [["Overview", "Glasgow Outcome Scale extended brain injury"]],
+        "summary": "",
+    },
+    {
+        "name": "Disorders of consciousness",
+        "aliases": ["prolonged disorder of consciousness", "coma recovery"],
+        "utd": [["Overview", "disorders of consciousness vegetative minimally conscious"]],
+        "summary": "",
+    },
+    {
+        "name": "Minimally conscious state",
+        "aliases": ["minimally responsive state", "MCS plus", "MCS minus"],
+        "utd": [["Overview", "minimally conscious state diagnosis prognosis"]],
+        "summary": "",
+    },
+    {
+        "name": "Persistent vegetative state",
+        "aliases": ["unresponsive wakefulness syndrome", "vegetative state", "permanent vegetative state"],
+        "utd": [["Overview", "vegetative state unresponsive wakefulness syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Constraint-induced movement therapy",
+        "aliases": ["forced use therapy", "modified constraint induced movement therapy"],
+        "utd": [["Overview", "constraint induced movement therapy stroke upper limb"]],
+        "summary": "",
+    },
+    {
+        "name": "Apraxia of speech",
+        "aliases": ["verbal apraxia", "articulatory apraxia"],
+        "utd": [["Overview", "apraxia of speech diagnosis treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Modified barium swallow",
+        "aliases": ["videofluoroscopic swallow study", "videofluoroscopy swallow"],
+        "utd": [["Overview", "videofluoroscopic swallow study dysphagia"]],
+        "summary": "",
+    },
+    {
+        "name": "Early mobilisation in ICU",
+        "aliases": ["early mobilisation critical illness", "early rehabilitation in intensive care"],
+        "utd": [["Overview", "early mobilisation critically ill patients"]],
+        "summary": "",
+    },
+    {
+        "name": "Functional Independence Measure",
+        "aliases": ["FIM score", "functional independence measure score"],
+        "utd": [["Overview", "functional independence measure rehabilitation outcome"]],
+        "summary": "",
+    },
+    {
+        "name": "Berg Balance Scale",
+        "aliases": ["Berg balance test", "Berg balance score"],
+        "utd": [["Overview", "Berg Balance Scale falls risk assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Borg scale",
+        "aliases": ["rating of perceived exertion", "Borg rating of perceived exertion", "perceived exertion scale"],
+        "utd": [["Overview", "Borg rating of perceived exertion exercise"]],
+        "summary": "",
+    },
+    {
+        "name": "Functional capacity evaluation",
+        "aliases": ["functional capacity assessment", "work capacity evaluation"],
+        "utd": [["Overview", "functional capacity evaluation return to work"]],
+        "summary": "",
+    },
+    {
+        "name": "Activities of daily living assessment",
+        "aliases": ["ADL assessment", "instrumental activities of daily living", "basic activities of daily living"],
+        "utd": [["Overview", "activities of daily living assessment older adults"]],
+        "summary": "",
+    },
+    {
+        "name": "Prosthetic rehabilitation",
+        "aliases": ["prosthetic limb rehabilitation", "prosthetic fitting", "amputee rehabilitation"],
+        "utd": [["Overview", "prosthetic rehabilitation lower limb amputation"]],
+        "summary": "",
+    },
+    {
+        "name": "Amputation level selection",
+        "aliases": ["choosing amputation level", "level of amputation"],
+        "utd": [["Overview", "amputation level selection healing lower limb"]],
+        "summary": "",
+    },
+    {
+        "name": "Ankle foot orthosis",
+        "aliases": ["AFO brace", "ankle-foot orthosis", "foot drop splint"],
+        "utd": [["Overview", "ankle foot orthosis foot drop prescription"]],
+        "summary": "",
+    },
+    {
+        "name": "Wheelchair prescription",
+        "aliases": ["wheelchair assessment", "prescribing a wheelchair"],
+        "utd": [["Overview", "wheelchair prescription seating assessment"]],
+        "summary": "",
+    },
+    {
+        "name": "Gait analysis",
+        "aliases": ["observational gait analysis", "gait assessment"],
+        "utd": [["Overview", "gait analysis observational instrumented"]],
+        "summary": "",
+    },
+    {
+        "name": "Exercise prescription",
+        "aliases": ["prescribing exercise", "FITT principle"],
+        "utd": [["Overview", "exercise prescription chronic disease guidelines"]],
+        "summary": "",
+    },
+    {
+        "name": "Vocational rehabilitation",
+        "aliases": ["return to work programme", "work rehabilitation"],
+        "utd": [["Overview", "vocational rehabilitation return to work injury"]],
+        "summary": "",
+    },
+    {
+        "name": "NDIS eligibility",
+        "aliases": ["NDIS access request", "NDIS access criteria"],
+        "utd": [["Overview", "National Disability Insurance Scheme eligibility access"]],
+        "summary": "",
+    },
+    {
+        "name": "Oral leukoplakia",
+        "aliases": ["leukoplakia of the mouth", "oral white patch"],
+        "utd": [["Overview", "oral leukoplakia potentially malignant disorder"]],
+        "summary": "",
+    },
+    {
+        "name": "Oral erythroplakia",
+        "aliases": ["erythroplakia", "oral red patch", "speckled leukoplakia"],
+        "utd": [["Overview", "oral erythroplakia malignant potential biopsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Periodontitis",
+        "aliases": ["periodontal disease", "gum disease", "chronic periodontitis"],
+        "utd": [["Overview", "periodontitis diagnosis management"]],
+        "summary": "",
+    },
+    {
+        "name": "Pericoronitis",
+        "aliases": ["operculitis", "infected wisdom tooth"],
+        "utd": [["Overview", "pericoronitis third molar management"]],
+        "summary": "",
+    },
+    {
+        "name": "Dental trauma",
+        "aliases": ["avulsed tooth", "tooth avulsion", "dental injury", "knocked out tooth"],
+        "utd": [["Overview", "dental trauma avulsed tooth replantation"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute radiation syndrome",
+        "aliases": ["radiation sickness", "whole body radiation exposure"],
+        "utd": [["Overview", "acute radiation syndrome management triage"]],
+        "summary": "",
+    },
+    {
+        "name": "Radiation pneumonitis",
+        "aliases": ["radiation induced lung injury", "radiation lung toxicity"],
+        "utd": [["Overview", "radiation pneumonitis diagnosis corticosteroids"]],
+        "summary": "",
+    },
 ]
 
 
@@ -94868,6 +95090,746 @@ RICH_SUMMARIES = {
         "one person's mistake, which is why a review that names an "
         "individual and recommends more care has failed to do its "
         "job."
+    ),
+
+    "Spasticity management": (
+        "Spasticity is velocity-dependent resistance to passive "
+        "stretch from an upper motor neurone lesion, distinct from "
+        "rigidity and from fixed contracture. Aetiology: stroke, "
+        "traumatic brain and spinal cord injury, multiple sclerosis "
+        "and cerebral palsy. Clinical features: a catch on rapid "
+        "stretch with clasp-knife release, hyperreflexia and clonus, "
+        "typically a flexed upper limb with an extended lower limb. "
+        "Ix: clinical, graded on the Modified Ashworth Scale, with "
+        "goals agreed before any intervention. Mx: treat noxious "
+        "triggers first, since pain, pressure injury, constipation "
+        "and urinary infection all drive tone. Then stretch, "
+        "positioning and serial casting. Oral baclofen, tizanidine or "
+        "dantrolene for generalised spasticity. Focal spasticity "
+        "responds to botulinum toxin type A, PBS-subsidised in "
+        "Australia for post-stroke upper and lower limb. Intrathecal "
+        "baclofen or selective dorsal rhizotomy where refractory. "
+        "Note: spasticity that lets a patient stand or transfer "
+        "should be left alone. Treat only what limits function, "
+        "hygiene or comfort."
+    ),
+    "Modified Ashworth Scale": (
+        "The Modified Ashworth Scale grades resistance to passive "
+        "movement across a joint and is the bedside measure of "
+        "spasticity in stroke, spinal cord injury and cerebral palsy. "
+        "Criteria: 0 is no increase in tone. 1 is a slight increase "
+        "with a catch and release at end range. 1+ is a slight "
+        "increase through less than half the range. 2 is a marked "
+        "increase through most of the range with the limb still "
+        "moving easily. 3 is a considerable increase making passive "
+        "movement difficult. 4 is a limb rigid in flexion or "
+        "extension. Ix: move the limb at moderate speed and test each "
+        "joint separately. Record the position used and the "
+        "repetition number, because tone falls with repeated passive "
+        "movement. Mx: use it to set a baseline before botulinum "
+        "toxin or serial casting and to measure the response, not to "
+        "decide whether treatment is warranted. Note: it cannot "
+        "separate neural hypertonia from fixed shortening. A joint "
+        "that will not move under anaesthesia is a contracture, "
+        "whatever the score says."
+    ),
+    "Serial casting": (
+        "Serial casting applies successive circumferential casts at "
+        "progressively greater joint angle to lengthen a shortened "
+        "muscle-tendon unit in spasticity or early contracture. "
+        "Indications: equinus ankle after brain injury or in cerebral "
+        "palsy, elbow and wrist flexion deformity, and loss of "
+        "passive range limiting hygiene, seating or orthotic fitting. "
+        "Mx: apply at maximal comfortable stretch and change every 3 "
+        "to 7 days, usually over 2 to 4 cycles, then hold the gain "
+        "with an orthosis or night splint. Botulinum toxin injected "
+        "before the first cast gains more range than either alone. "
+        "Cautions: insensate skin, poor vascular supply, uncontrolled "
+        "oedema and fracture are relative contraindications. "
+        "Complications: pressure injury under the cast is the major "
+        "risk, so inspect heel, malleoli and tendon prominences at "
+        "every change and remove immediately for unexplained pain or "
+        "restlessness. Note: casting gains range but does not hold "
+        "it. Without a follow-on orthosis and a stretch programme the "
+        "joint returns to where it started within weeks."
+    ),
+    "Contracture prevention": (
+        "A contracture is fixed shortening of muscle, tendon, capsule "
+        "or skin that limits passive range, and in an immobile "
+        "patient it develops within weeks. Risk factors: spasticity, "
+        "prolonged bed rest, sedated intensive care patients, burns, "
+        "and any limb habitually held short. Clinical features: a "
+        "firm end-feel on passive movement that does not change with "
+        "speed, unlike spasticity, and loss of range that persists "
+        "under anaesthesia. Mx: position the joint at length rather "
+        "than in comfort and move it through full available range "
+        "daily, actively where possible. Splint or serially cast "
+        "joints already losing range and treat the spasticity driving "
+        "the posture. Prevention: the highest-yield measures are "
+        "early mobilisation, sitting out of bed and a written "
+        "positioning plan handed over each shift. Note: prevention is "
+        "cheap and reversal is not. Once fixed, the options narrow to "
+        "casting, botulinum toxin or surgical release, and none of "
+        "them restores what daily range would have kept."
+    ),
+    "Heterotopic ossification": (
+        "Heterotopic ossification is formation of mature lamellar "
+        "bone in soft tissue where bone does not belong, typically "
+        "around large joints after neurological or orthopaedic "
+        "injury. Aetiology: traumatic brain injury, spinal cord "
+        "injury, burns, hip arthroplasty and acetabular fracture. "
+        "Risk rises with prolonged coma, spasticity and long "
+        "ventilation. Clinical features: a warm swollen joint with "
+        "progressive loss of range, low-grade fever and raised "
+        "inflammatory markers, appearing 3 to 12 weeks after injury. "
+        "Hip is the commonest site, then elbow, shoulder and knee. "
+        "Ddx: deep vein thrombosis, septic arthritis and cellulitis. "
+        "Ix: alkaline phosphatase rises early but is not specific. "
+        "Triple-phase bone scan turns positive well before the plain "
+        "film, which shows bone only after several weeks. Mx: "
+        "maintain range with gentle passive movement, indomethacin or "
+        "another NSAID as prophylaxis after hip surgery, and "
+        "bisphosphonate in selected cases. Resect once mature, "
+        "generally after 12 to 18 months. Note: a hot stiff hip weeks "
+        "after a head injury is this until imaging says otherwise."
+    ),
+    "Neurogenic bowel": (
+        "Neurogenic bowel is loss of normal colonic transit and "
+        "continence after a lesion of the spinal cord, conus or cauda "
+        "equina, and it ranks among the strongest determinants of "
+        "quality of life after spinal injury. Types: an upper motor "
+        "neurone or reflexic bowel above the conus retains reflex "
+        "defaecation with a spastic anal sphincter. A lower motor "
+        "neurone or areflexic bowel from a conus or cauda lesion has "
+        "a flaccid sphincter with passive leakage. Clinical features: "
+        "constipation, prolonged evacuation time, faecal incontinence "
+        "and abdominal distension. Rectal loading can trigger "
+        "autonomic dysreflexia in lesions above T6. Mx: a fixed "
+        "routine at the same time each day or alternate day, adequate "
+        "fibre and fluid, and an oral aperient such as macrogol. "
+        "Reflexic bowel uses a suppository or digital rectal "
+        "stimulation, while areflexic bowel relies on manual "
+        "evacuation. Escalate to transanal irrigation, then antegrade "
+        "continence enema or colostomy. Note: a routine kept reliably "
+        "matters more than the choice of any single agent."
+    ),
+    "ASIA impairment scale": (
+        "The ASIA impairment scale grades completeness of spinal cord "
+        "injury from the International Standards examination, and it "
+        "is the common language of spinal injury prognosis. Criteria: "
+        "A is complete, with no motor or sensory function at S4 to "
+        "S5. B is sensory incomplete. C is motor incomplete with most "
+        "key muscles below the level weaker than grade 3. D is motor "
+        "incomplete with at least half at grade 3 or better. E is "
+        "normal. Ix: test 10 key myotomes and 28 dermatomes each side "
+        "for light touch and pin prick, then deep anal pressure and "
+        "voluntary anal contraction, which settle complete versus "
+        "incomplete. Record the neurological level, the motor and "
+        "sensory levels and any zone of partial preservation. Mx: "
+        "repeat at 72 hours and again at 1 month. The grade at 72 "
+        "hours predicts walking recovery far better than the grade on "
+        "arrival, when spinal shock still clouds the picture. Note: "
+        "sacral sparing is the whole question. Without perianal "
+        "sensation or anal contraction the injury is complete."
+    ),
+    "Post-traumatic amnesia": (
+        "Post-traumatic amnesia is the period after traumatic brain "
+        "injury in which the patient cannot lay down continuous "
+        "day-to-day memory, and its duration is the single best "
+        "predictor of functional outcome. Clinical features: "
+        "disorientation, confusion and poor new learning, often with "
+        "agitation, disinhibition or a disturbed sleep-wake cycle. "
+        "Islands of memory occur but recall is not continuous. Ix: "
+        "measure prospectively and daily with a standard tool such as "
+        "the Westmead scale, rather than asking the patient to "
+        "estimate it afterwards. Grading: under 1 hour is mild, 1 to "
+        "24 hours moderate, 1 to 7 days severe, and beyond 7 days "
+        "very severe. Mx: reduce stimulation, keep one consistent "
+        "environment and familiar staff, reorientate briefly and "
+        "defer formal cognitive therapy until the patient emerges. "
+        "Avoid benzodiazepines and antipsychotics where possible, "
+        "since both prolong it. Note: do not discuss prognosis or "
+        "take consent for major decisions while a patient is still in "
+        "it. Nothing said will be retained."
+    ),
+    "Westmead PTA Scale": (
+        "The Westmead Post Traumatic Amnesia Scale is the Australian "
+        "bedside tool for measuring the duration of post-traumatic "
+        "amnesia after traumatic brain injury, developed at Westmead "
+        "Hospital and standard across NSW brain injury units. "
+        "Criteria: 12 items. Seven test orientation and five test new "
+        "learning, using three picture cards plus the examiner's face "
+        "and name. Ix: begin once the patient follows commands and "
+        "scores 15 on the Glasgow Coma Scale, then administer once "
+        "daily at the same time by the same method. Post-traumatic "
+        "amnesia has ended on the third consecutive day of a perfect "
+        "score of 12, and the recorded end date is the first of those "
+        "three days. Mx: the total duration drives rehabilitation "
+        "planning, return-to-work and driving advice, and the "
+        "conversation with family about expected recovery. Note: a "
+        "single score of 12 means nothing on its own. Three "
+        "consecutive perfect days is the rule, and one imperfect day "
+        "restarts the count."
+    ),
+    "Glasgow Outcome Scale": (
+        "The Glasgow Outcome Scale grades global functional outcome "
+        "after traumatic and other acquired brain injury, and is the "
+        "usual primary endpoint in head injury trials. Criteria: 1 is "
+        "death. 2 is vegetative state. 3 is severe disability, "
+        "conscious but dependent for daily support. 4 is moderate "
+        "disability, independent but unable to resume all previous "
+        "activity. 5 is good recovery, back to work or school though "
+        "minor deficits may persist. Types: the Extended version "
+        "splits grades 3 to 5 into lower and upper bands, giving 8 "
+        "categories and much better sensitivity to change. Ix: assign "
+        "by structured interview at a fixed time point, usually 6 "
+        "months, rather than from the chart or from an impression at "
+        "discharge. Mx: use it for prognostic discussion, service "
+        "planning and trial reporting, not to guide an individual "
+        "treatment decision. Note: the unextended scale is too coarse "
+        "for rehabilitation, where a patient can gain a year of "
+        "independent living without moving a single grade."
+    ),
+    "Disorders of consciousness": (
+        "Disorders of consciousness are states of impaired arousal or "
+        "awareness persisting after coma, spanning the unresponsive "
+        "wakefulness syndrome, the minimally conscious state and "
+        "emergence from it. Aetiology: traumatic brain injury, "
+        "hypoxic-ischaemic injury after cardiac arrest, and severe "
+        "stroke or intracranial haemorrhage. Clinical features: coma "
+        "has closed eyes and no sleep-wake cycles. The unresponsive "
+        "wakefulness syndrome has eye opening and reflexive movement "
+        "with no reproducible response to command. The minimally "
+        "conscious state shows inconsistent but reproducible visual "
+        "pursuit, command following or purposeful movement. Ix: "
+        "repeated structured assessment with a tool such as the Coma "
+        "Recovery Scale Revised, since single examinations "
+        "misclassify a large minority. Exclude sedation, seizures, "
+        "hydrocephalus and untreated pain as reversible contributors. "
+        "Mx: prevent contracture and pressure injury, treat "
+        "spasticity, and trial amantadine, which accelerates recovery "
+        "after traumatic injury. Note: aetiology and elapsed time "
+        "drive prognosis, and traumatic injury recovers later and "
+        "further than hypoxic injury."
+    ),
+    "Minimally conscious state": (
+        "The minimally conscious state is a disorder of consciousness "
+        "with inconsistent but clearly reproducible evidence of "
+        "awareness, which is what separates it from the unresponsive "
+        "wakefulness syndrome. Clinical features: visual pursuit or "
+        "sustained fixation, following simple commands, gestural or "
+        "verbal yes and no however inaccurate, and purposeful rather "
+        "than reflexive movement such as reaching for an object. "
+        "Types: the minus category shows only non-reflexive "
+        "behaviour. The plus category shows command following, "
+        "intelligible speech or gestural communication and carries a "
+        "better outcome. Ix: serial structured assessment with the "
+        "Coma Recovery Scale Revised across several days and times of "
+        "day, because fatigue, sedation and unrecognised seizures "
+        "suppress responses. Emergence is marked by reliable "
+        "functional object use or consistent communication. Mx: "
+        "amantadine after traumatic injury, aggressive treatment of "
+        "spasticity, contracture and pain, and family education on "
+        "how this differs from the vegetative state. Note: the "
+        "distinction is not academic, because misclassification "
+        "changes end-of-life decisions."
+    ),
+    "Persistent vegetative state": (
+        "The vegetative state, increasingly called the unresponsive "
+        "wakefulness syndrome, is wakefulness without any awareness "
+        "of self or environment after severe brain injury. Clinical "
+        "features: spontaneous eye opening with sleep-wake cycles, "
+        "preserved brainstem and autonomic function, and reflexive "
+        "movement or grimacing with no reproducible response to "
+        "command. There is no visual pursuit and no functional "
+        "communication. Aetiology: hypoxic-ischaemic injury after "
+        "cardiac arrest, traumatic brain injury, and end-stage "
+        "neurodegenerative disease. Ix: repeated structured "
+        "assessment over days, with sedation, seizures, hydrocephalus "
+        "and locked-in syndrome excluded. Prognosis: recovery remains "
+        "possible up to 12 months after traumatic injury and is rare "
+        "beyond 3 months after hypoxic injury, which is why "
+        "persistent and permanent are kept separate. Mx: nursing "
+        "care, contracture and pressure injury prevention, and early "
+        "discussion of an advance care directive and substitute "
+        "decision maker. Note: reflexive grimacing and roving eye "
+        "movements distress families and signify nothing. Say so "
+        "plainly and early."
+    ),
+    "Constraint-induced movement therapy": (
+        "Constraint-induced movement therapy treats learned non-use "
+        "of a hemiparetic upper limb by restraining the unaffected "
+        "arm and forcing intensive task practice with the affected "
+        "one. Indications: stroke or traumatic brain injury with at "
+        "least 10 degrees of active wrist extension and 10 degrees of "
+        "finger extension, adequate sitting balance, and enough "
+        "cognition to follow the programme. Mx: a mitt on the "
+        "stronger hand for most waking hours, combined with several "
+        "hours a day of shaped, graded task practice over 2 to 3 "
+        "weeks, plus a transfer package that moves the gains into "
+        "real home tasks. Modified protocols with shorter daily "
+        "sessions suit outpatient and Australian community "
+        "rehabilitation services. Cautions: poor sitting balance, "
+        "severe neglect, shoulder pain and low motivation predict "
+        "failure and falls. Note: the restraint is not the active "
+        "ingredient. Practice intensity and the transfer package are, "
+        "and a mitt without structured practice achieves nothing at "
+        "all."
+    ),
+    "Apraxia of speech": (
+        "Apraxia of speech is impaired motor planning and programming "
+        "of the articulators with intact strength and intact "
+        "language, which separates it from dysarthria and from "
+        "aphasia. Aetiology: left frontal stroke involving the insula "
+        "or Broca area, traumatic brain injury, and a progressive "
+        "form seen in primary progressive aphasia and corticobasal "
+        "degeneration. Clinical features: inconsistent articulatory "
+        "errors, groping trial-and-error movement of the lips and "
+        "tongue, and slow effortful speech with equalised stress. "
+        "Errors worsen with longer or less familiar words, while "
+        "automatic speech such as counting is often preserved. Ix: "
+        "bedside comparison of automatic with volitional speech, with "
+        "formal assessment by a speech pathologist. Cranial nerve "
+        "examination is normal, which is the point. Mx: articulatory "
+        "kinematic therapy with repeated practice and feedback, rate "
+        "and rhythm control, and augmentative communication where "
+        "severe. Note: if the error changes on each attempt it is "
+        "apraxia, and if it is identical every time it is dysarthria."
+    ),
+    "Modified barium swallow": (
+        "The modified barium swallow, or videofluoroscopic swallow "
+        "study, is fluoroscopic assessment of the oral and pharyngeal "
+        "phases of swallowing, performed jointly by a speech "
+        "pathologist and radiographer. Indications: suspected "
+        "aspiration after stroke, brain injury or head and neck "
+        "cancer, unexplained recurrent pneumonia, and deciding "
+        "whether oral intake is safe. Ix: the patient is imaged in "
+        "lateral and anteroposterior view while swallowing barium of "
+        "graded consistency from thin fluid through puree to solid. "
+        "It shows pharyngeal residue, penetration above the vocal "
+        "cords and frank aspiration below, and crucially whether "
+        "aspiration is silent. Mx: findings guide diet texture and "
+        "fluid thickening, compensatory posture such as a chin tuck, "
+        "and swallow manoeuvres, and they inform decisions about "
+        "enteral feeding. Note: this is not a barium swallow, which "
+        "images the oesophagus for structural disease. Ordering the "
+        "wrong one burns a fluoroscopy slot and answers a question "
+        "nobody asked."
+    ),
+    "Early mobilisation in ICU": (
+        "Early mobilisation is progressive active exercise and "
+        "getting critically ill patients out of bed within the first "
+        "days of intensive care, including while intubated. "
+        "Indications: haemodynamic stability on stable ventilator "
+        "settings, without active bleeding, raised intracranial "
+        "pressure or an unstable fracture. Mx: escalate through "
+        "passive range of movement, active exercise in bed, sitting "
+        "over the edge, standing, transfer to a chair and then "
+        "walking with support. Cycle ergometry and electrical muscle "
+        "stimulation suit patients unable to participate. Pair it "
+        "with daily sedation interruption, since deep sedation is the "
+        "main barrier. Complications: adverse events are uncommon and "
+        "mostly transient desaturation, hypotension or line "
+        "dislodgement, so a defined safety checklist and a "
+        "physiotherapist present make it workable. Note: it cuts "
+        "delirium, ventilator days and length of stay. The benefit "
+        "lies in preventing intensive care acquired weakness rather "
+        "than reversing it once established."
+    ),
+    "Functional Independence Measure": (
+        "The Functional Independence Measure scores burden of care "
+        "across 18 activities and is the routine outcome measure in "
+        "Australian inpatient rehabilitation, feeding the AN-SNAP "
+        "casemix classification. Criteria: 13 motor items cover "
+        "self-care, sphincter control, transfers and locomotion. Five "
+        "cognitive items cover comprehension, expression, social "
+        "interaction, problem solving and memory. Each scores 1 for "
+        "total assistance up to 7 for complete independence, giving a "
+        "total from 18 to 126. Ix: score what the patient actually "
+        "does rather than what they could do, drawn from observation "
+        "across 24 hours by the treating team rather than by one "
+        "assessor at one moment. Mx: admission and discharge scores "
+        "give change and efficiency, which drive funding, "
+        "benchmarking and length-of-stay prediction. Note: it "
+        "saturates. A patient scoring 7 on every item may still be "
+        "unable to return to work or manage money, so never read a "
+        "maximum score as full recovery."
+    ),
+    "Berg Balance Scale": (
+        "The Berg Balance Scale is a 14-item performance measure of "
+        "static and dynamic sitting and standing balance, used widely "
+        "in stroke rehabilitation and in falls assessment of older "
+        "people. Criteria: items include sit to stand, standing "
+        "unsupported, transfers, turning through 360 degrees, forward "
+        "reach, retrieving an object from the floor and single-leg "
+        "stance. Each scores 0 to 4 for a maximum of 56. Ix: it takes "
+        "15 to 20 minutes and needs a chair, ruler, step and "
+        "stopwatch, and the patient must be safe to attempt standing. "
+        "A score below 45 is commonly cited as marking increased "
+        "falls risk. Mx: serial scores target balance training and "
+        "inform the choice of gait aid and the level of supervision "
+        "at discharge. Note: it has a ceiling effect in "
+        "community-dwelling older people, where a maximum score does "
+        "not exclude falls risk. Pair it with a Timed Up and Go and a "
+        "measured gait speed."
+    ),
+    "Borg scale": (
+        "The Borg scale rates perceived exertion during exercise and "
+        "is the standard way of prescribing and monitoring intensity "
+        "when heart rate is unreliable. Types: the original scale "
+        "runs 6 to 20, chosen so the value roughly matches heart rate "
+        "divided by 10 in healthy adults. The modified category-ratio "
+        "scale runs 0 to 10 and is used for breathlessness in "
+        "pulmonary rehabilitation. Indications: exercise prescription "
+        "in cardiac and pulmonary rehabilitation, and any patient on "
+        "a beta blocker, in atrial fibrillation or paced, where a "
+        "target heart rate is meaningless. Mx: moderate intensity "
+        "corresponds to 12 to 14 on the 6 to 20 scale or 3 to 4 on "
+        "the 0 to 10 scale. Teach the anchors before the first "
+        "session and ask at a fixed point in each bout. Note: it is a "
+        "symptom rating rather than a physiological measurement. It "
+        "works because it tracks the effort a patient can sustain, "
+        "which is what decides whether they keep exercising at all."
+    ),
+    "Functional capacity evaluation": (
+        "A functional capacity evaluation is a structured, observed "
+        "assessment of physical ability to perform work tasks, used "
+        "in compensation, insurance and return-to-work decisions. "
+        "Indications: disputed work capacity after injury, planning a "
+        "graded return to work, and medicolegal assessment of "
+        "permanent impairment. Ix: a standardised battery run over "
+        "several hours or two days covers lifting, carrying, pushing, "
+        "sustained posture and tolerance, with heart rate and "
+        "observed effort recorded throughout. Consistency of effort "
+        "is judged from performance across repeated and distractor "
+        "tasks rather than from any single measure. Mx: the report "
+        "states safe tolerances and matches them to the actual job "
+        "demands, which then informs restrictions written on a "
+        "certificate of capacity. Note: it measures what happened on "
+        "one day under observation and predicts sustained work "
+        "capacity only moderately well. Treat a low result as the "
+        "starting point for graded upgrading, not as a verdict on the "
+        "worker."
+    ),
+    "Activities of daily living assessment": (
+        "Assessment of activities of daily living establishes what a "
+        "person can actually do, and it is the foundation of "
+        "discharge planning and aged care decisions. Types: basic "
+        "activities are feeding, dressing, bathing, toileting, "
+        "transfers and continence. Instrumental activities are "
+        "shopping, cooking, cleaning, transport, finances and "
+        "medication management, and these fail first in cognitive "
+        "decline. Ix: direct observation in a kitchen or bathroom "
+        "assessment by an occupational therapist beats self-report "
+        "and family report, which tend to err in opposite directions. "
+        "Standardised tools include the Barthel Index and the Lawton "
+        "scale. Mx: findings drive equipment and home modification, "
+        "the package of care and any residential care application, "
+        "and in Australia the referral to My Aged Care and an Aged "
+        "Care Assessment Team. Note: a patient who walks the ward "
+        "safely may still be unsafe at home. Assess in the "
+        "environment they are returning to, or arrange a home visit "
+        "before discharge."
+    ),
+    "Prosthetic rehabilitation": (
+        "Prosthetic rehabilitation is the process of fitting, "
+        "training and following up a limb prosthesis after "
+        "amputation, and the outcome depends far more on the residual "
+        "limb and the patient than on the componentry. Ix: assess "
+        "wound healing, residual limb shape and contracture, "
+        "cardiovascular fitness and cognition, and the state of the "
+        "contralateral limb, which carries the remaining risk. Mx: "
+        "early compression with a shrinker or rigid dressing controls "
+        "oedema and shapes the limb. A preparatory prosthesis follows "
+        "once the wound is healed, usually at 4 to 8 weeks, then a "
+        "definitive socket once limb volume is stable at around 6 "
+        "months. Gait training progresses from parallel bars to "
+        "community walking. Complications: socket-related skin "
+        "breakdown, phantom and residual limb pain, and falls. Note: "
+        "the best single predictor of walking with a prosthesis is "
+        "walking before the amputation. A patient with vascular "
+        "disease who was not mobile beforehand rarely becomes a "
+        "prosthetic user."
+    ),
+    "Amputation level selection": (
+        "Choosing the amputation level balances healing potential "
+        "against future function, since every joint preserved lowers "
+        "the energy cost of walking. Aetiology: peripheral arterial "
+        "disease and diabetes account for most lower limb amputation "
+        "in Australia, with trauma, malignancy and infection making "
+        "up the remainder. Ix: palpable pulses, ankle-brachial index, "
+        "toe pressure and transcutaneous oxygen predict healing, with "
+        "a toe pressure above 30 mmHg favourable. Nutrition and "
+        "albumin matter as much as perfusion. Mx: preserve the knee "
+        "wherever the wound will heal, because energy cost rises "
+        "roughly 25 per cent above baseline for transtibial walking "
+        "and roughly 65 per cent for transfemoral. A through-knee or "
+        "transfemoral level is the right choice when the tibial wound "
+        "will not heal or the knee is already fixed in flexion. Note: "
+        "a failed distal amputation needing revision costs more "
+        "function than a primary amputation one level higher. Decide "
+        "jointly with the vascular surgeon, rehabilitation physician "
+        "and patient."
+    ),
+    "Ankle foot orthosis": (
+        "An ankle foot orthosis controls ankle and subtalar position "
+        "to correct foot drop, stabilise the ankle in stance and "
+        "influence the knee through ground reaction force. "
+        "Indications: foot drop from common peroneal or sciatic nerve "
+        "palsy, stroke and other upper motor neurone lesions, "
+        "peripheral neuropathy, and ankle instability. Types: a "
+        "flexible posterior leaf spring clears the foot in swing and "
+        "suits isolated foot drop. A solid or ground reaction design "
+        "resists dorsiflexion and controls knee buckling. A hinged "
+        "design allows dorsiflexion for stairs and sit to stand. Ix: "
+        "check passive dorsiflexion to neutral, spasticity, sensation "
+        "and skin before casting, since fixed equinus needs serial "
+        "casting or botulinum toxin first. Mx: prescribe with the "
+        "shoe it will be worn in, review the fit at 2 weeks and "
+        "inspect skin daily in an insensate foot. Note: the commonest "
+        "reason one ends up in a cupboard is that it does not fit any "
+        "shoe the patient owns."
+    ),
+    "Wheelchair prescription": (
+        "Wheelchair prescription matches the chair and seating to the "
+        "user, the task and the environment. A poorly matched chair "
+        "causes pressure injury, postural deformity and shoulder "
+        "overuse. Ix: assess sitting balance and fixed deformity, "
+        "transfer method and propulsion ability, skin and pressure "
+        "risk, and cognition and vision. Then measure the home "
+        "doorways, ramps and the vehicle it must travel in. Types: a "
+        "manual chair suits users with adequate upper limb function. "
+        "A power chair suits limited endurance or bilateral weakness. "
+        "A tilt-in-space or reclining chair suits users who cannot "
+        "reposition themselves. Mx: seat width, depth and back height "
+        "are measured rather than estimated, and a "
+        "pressure-redistributing cushion is specified separately from "
+        "the chair itself. Funding in Australia runs through the NDIS "
+        "under 65 and through state equipment schemes or aged care "
+        "packages beyond. Note: prescribe for the home, not the ward "
+        "corridor, and measure the doorways before anything is "
+        "ordered."
+    ),
+    "Gait analysis": (
+        "Gait analysis is the systematic description of walking, "
+        "ranging from structured observation at the bedside to "
+        "instrumented laboratory measurement. Types: observational "
+        "analysis, timed measures such as the 10 metre walk and the "
+        "Timed Up and Go, and three-dimensional kinematic and kinetic "
+        "analysis with force plates and electromyography. Criteria: "
+        "the cycle divides into stance at roughly 60 per cent and "
+        "swing at roughly 40 per cent, with double support at each "
+        "transition. Clinical features: named patterns include "
+        "hemiplegic circumduction, the high-stepping gait of foot "
+        "drop, and a Trendelenburg lurch from hip abductor weakness. "
+        "Antalgic gait shortens stance on the painful side. Mx: "
+        "findings guide orthotic prescription, botulinum toxin "
+        "targeting and surgical planning in cerebral palsy, where "
+        "instrumented analysis changes the operative plan in a "
+        "substantial minority of children. Note: watch the patient "
+        "walk without an aid if it is safe, then with it. Much of "
+        "what looks like weakness is the aid."
+    ),
+    "Exercise prescription": (
+        "Exercise prescription specifies frequency, intensity, time, "
+        "type and progression for a therapeutic goal, in the same way "
+        "a drug is prescribed. Indications: cardiac and pulmonary "
+        "rehabilitation, type 2 diabetes, osteoarthritis, depression, "
+        "falls prevention and sarcopenia. Mx: Australian guidelines "
+        "advise 150 to 300 minutes of moderate or 75 to 150 minutes "
+        "of vigorous aerobic activity each week, plus muscle "
+        "strengthening on 2 days. Set intensity by heart rate "
+        "reserve, or by the Borg scale where beta blockade, pacing or "
+        "atrial fibrillation make heart rate meaningless. Strength "
+        "work uses 8 to 12 repetitions at a load that is genuinely "
+        "hard by the last few. Cautions: screen for unstable angina, "
+        "decompensated heart failure, uncontrolled arrhythmia and "
+        "severe aortic stenosis before starting. Note: adherence "
+        "rather than the exact protocol decides the outcome. A modest "
+        "programme the patient keeps doing beats an optimal one "
+        "abandoned in a fortnight."
+    ),
+    "Vocational rehabilitation": (
+        "Vocational rehabilitation is the coordinated process of "
+        "returning an injured or ill person to work, where work "
+        "itself is the intervention rather than a reward for having "
+        "recovered. Indications: musculoskeletal injury, acquired "
+        "brain injury, mental illness and chronic disease in which "
+        "capacity is reduced but not absent. Mx: early contact with "
+        "the workplace, a graded plan with defined hours and duties, "
+        "workplace assessment and modification, and a nominated "
+        "return-to-work coordinator. Suitable duties written on a "
+        "certificate of capacity should be specific, because a "
+        "blanket unfit certificate itself predicts prolonged absence. "
+        "Risk factors: yellow flags of fear-avoidance and low "
+        "recovery expectation, and blue flags of workplace conflict "
+        "and poor supervisor support, predict failure better than the "
+        "injury does. Note: the chance of ever returning falls "
+        "steeply with time away. Roughly half return after 6 months "
+        "off and very few after 12, so the first weeks are where the "
+        "work is done."
+    ),
+    "NDIS eligibility": (
+        "The National Disability Insurance Scheme funds reasonable "
+        "and necessary supports for Australians with permanent and "
+        "significant disability, and clinicians are regularly asked "
+        "to supply the supporting evidence. Criteria: aged under 65 "
+        "at application, Australian citizen or permanent or protected "
+        "special category visa holder, and either a permanent "
+        "impairment substantially reducing functional capacity in one "
+        "of six domains or a need for early intervention to reduce "
+        "future support needs. Ix: evidence must establish diagnosis, "
+        "permanence and functional impact. Functional reports from "
+        "occupational therapy, physiotherapy, speech pathology or "
+        "psychology carry far more weight than a diagnosis alone, and "
+        "some conditions appear on a list that confirms access "
+        "without further assessment. Mx: after access a planning "
+        "meeting sets goals and funds core, capacity building and "
+        "capital supports. Note: the scheme funds disability supports "
+        "and not usual medical treatment, so write reports about "
+        "function rather than about the diagnosis."
+    ),
+    "Oral leukoplakia": (
+        "Leukoplakia is a white patch of oral mucosa that cannot be "
+        "rubbed off and cannot be attributed to any other condition, "
+        "and it is a potentially malignant disorder. Aetiology: "
+        "tobacco smoking and smokeless tobacco, areca nut and betel "
+        "quid, alcohol, and chronic friction. A proportion remain "
+        "idiopathic. Clinical features: homogeneous lesions are "
+        "uniformly white, thin and relatively low risk. "
+        "Non-homogeneous lesions are nodular, verrucous or speckled "
+        "with red areas and carry much higher malignant potential. "
+        "Floor of mouth, ventral tongue and soft palate are the "
+        "high-risk sites. Ix: remove the presumed cause and review at "
+        "2 to 4 weeks first, since frictional keratosis and candidal "
+        "lesions resolve. Biopsy anything persistent, targeting the "
+        "red or nodular area, and grade the dysplasia. Mx: cessation "
+        "of tobacco, areca nut and alcohol, excision or laser "
+        "ablation where dysplastic, and lifelong surveillance because "
+        "recurrence and new lesions are common. Note: any red "
+        "component sharply raises the risk of transformation."
+    ),
+    "Oral erythroplakia": (
+        "Erythroplakia is a red velvety patch of oral mucosa that "
+        "cannot be attributed to any other condition, and it carries "
+        "the highest malignant potential of any oral mucosal lesion. "
+        "Aetiology: tobacco and alcohol, with areca nut use in some "
+        "populations. Clinical features: a well-demarcated flat or "
+        "slightly depressed red lesion with a velvety surface, "
+        "usually painless, most often on the floor of mouth, ventral "
+        "tongue or soft palate. A speckled lesion mixing red and "
+        "white areas behaves in the same way. Ddx: erythematous "
+        "candidiasis, denture stomatitis, oral lichen planus and "
+        "trauma, all of which settle within about 2 weeks once the "
+        "cause is removed. Ix: biopsy every lesion that persists, "
+        "because more than half already show severe dysplasia or "
+        "carcinoma at first biopsy. Mx: complete excision with "
+        "margins, cessation advice, and close lifelong surveillance. "
+        "Note: unlike leukoplakia, this is treated as malignant until "
+        "histology says otherwise, so do not watch and wait."
+    ),
+    "Periodontitis": (
+        "Periodontitis is chronic inflammatory destruction of the "
+        "periodontal ligament and alveolar bone driven by subgingival "
+        "plaque biofilm, and it is the leading cause of tooth loss in "
+        "adults. Aetiology: the biofilm is necessary but the host "
+        "response decides severity. Smoking, poorly controlled "
+        "diabetes, genetic susceptibility and immunosuppression are "
+        "the major risk factors. Clinical features: bleeding on "
+        "probing, pocketing beyond 3 mm, gingival recession, and "
+        "drifting or mobility of teeth, usually painless until "
+        "advanced. Gingivitis differs in having no attachment or bone "
+        "loss and being fully reversible. Ix: full-mouth probing "
+        "depths, bleeding on probing and clinical attachment level, "
+        "with bitewing and periapical radiographs to show bone loss. "
+        "Mx: oral hygiene instruction, smoking cessation and "
+        "glycaemic control, plus non-surgical debridement by scaling "
+        "and root planing. Surgery or extraction for sites that do "
+        "not respond. Note: it is bidirectionally linked with "
+        "diabetes, and treating it produces a small but real fall in "
+        "HbA1c."
+    ),
+    "Pericoronitis": (
+        "Pericoronitis is infection and inflammation of the soft "
+        "tissue overlying a partially erupted tooth, almost always a "
+        "lower third molar, and it presents commonly to emergency and "
+        "general practice. Aetiology: food and plaque trapped under "
+        "the operculum, often with trauma from the opposing upper "
+        "molar. It peaks in the late teens and twenties as the third "
+        "molar erupts. Clinical features: localised pain and swelling "
+        "behind the last molar, foul taste, an erythematous operculum "
+        "that may be ulcerated, and trismus. Fever and cervical "
+        "lymphadenopathy indicate spread. Red flags: trismus beyond "
+        "about 20 mm, dysphagia, floor of mouth swelling or any "
+        "airway symptom means spreading infection and needs urgent "
+        "assessment. Ix: clinical, with an orthopantomogram to show "
+        "tooth position. Mx: irrigation under the operculum, "
+        "analgesia and chlorhexidine rinses. Add amoxicillin or "
+        "metronidazole per eTG only for systemic or spreading "
+        "infection, then definitive extraction or operculectomy. "
+        "Note: antibiotics alone do not fix it, and it recurs until "
+        "the tooth is dealt with."
+    ),
+    "Dental trauma": (
+        "Dental trauma covers injury to teeth and supporting "
+        "structures, most often the upper central incisors in "
+        "children and in sport, and time to treatment determines the "
+        "outcome. Types: crown fracture with or without pulp "
+        "exposure, root fracture, luxation with displacement, "
+        "intrusion, and avulsion where the tooth leaves the socket. "
+        "Mx: an avulsed permanent tooth should be replanted at the "
+        "scene within 15 minutes, held by the crown and never the "
+        "root, rinsed briefly in saline or milk if dirty, then "
+        "splinted and reviewed for root canal treatment. If "
+        "replanting is not possible, store it in milk, saline or the "
+        "patient's own saliva and never in water. Never replant an "
+        "avulsed primary tooth, because of damage to the permanent "
+        "successor. Cover exposed dentine and pulp the same day. "
+        "Complications: pulp necrosis, ankylosis and external root "
+        "resorption. Note: tetanus status and an unaccounted-for "
+        "fragment are the two things routinely missed. Chest "
+        "radiograph if a tooth cannot be found."
+    ),
+    "Acute radiation syndrome": (
+        "Acute radiation syndrome follows whole-body or significant "
+        "partial-body exposure to penetrating ionising radiation "
+        "above roughly 1 Gy delivered over a short period. Phases: a "
+        "prodrome of nausea and vomiting within hours, a latent "
+        "period of days to weeks, a manifest illness phase, then "
+        "recovery or death. Types: the haematopoietic syndrome at "
+        "about 1 to 6 Gy causes pancytopenia and infection. The "
+        "gastrointestinal syndrome above about 6 Gy causes mucosal "
+        "loss, diarrhoea and fluid shift. The neurovascular syndrome "
+        "above about 20 Gy is rapidly fatal. Ix: time from exposure "
+        "to first vomiting is the best early triage marker, and "
+        "serial lymphocyte counts every 6 hours across the first 2 "
+        "days estimate dose. A cytogenetic dicentric assay gives the "
+        "formal dose. Mx: decontaminate, treat trauma first, then "
+        "reverse isolation, early granulocyte colony stimulating "
+        "factor, transfusion support and antimicrobials. Note: an "
+        "irradiated patient is not radioactive unless contaminated. "
+        "Resuscitate first and decontaminate second."
+    ),
+    "Radiation pneumonitis": (
+        "Radiation pneumonitis is subacute inflammatory lung injury "
+        "within the irradiated field, typically 4 to 12 weeks after "
+        "thoracic radiotherapy for lung, breast, oesophageal or "
+        "lymphoma treatment. Risk factors: larger irradiated volume "
+        "and mean lung dose, pre-existing interstitial lung disease, "
+        "poor baseline lung function, and concurrent chemotherapy or "
+        "an immune checkpoint inhibitor. Clinical features: dry "
+        "cough, exertional breathlessness and low-grade fever, with "
+        "crackles over the treated field. Severity ranges from "
+        "radiological change alone through to respiratory failure. "
+        "Ix: CT shows ground-glass change and consolidation that "
+        "classically follows the treatment field rather than "
+        "anatomical boundaries. Exclude infection, pulmonary "
+        "embolism, lymphangitis carcinomatosa and progressive tumour. "
+        "Mx: observe mild cases. Give prednisolone for symptomatic "
+        "disease and taper over 6 to 12 weeks, with Pneumocystis "
+        "cover in prolonged courses. Note: fibrosis in the same "
+        "distribution follows months later and does not respond to "
+        "steroids, so treat the pneumonitis phase promptly."
     ),
 }
 
