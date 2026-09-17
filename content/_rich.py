@@ -16923,6 +16923,216 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "clinical reasoning dual process illness scripts diagnostic error"]],
         "summary": "",
     },
+    {
+        "name": "Weber syndrome",
+        "aliases": ["Medial midbrain syndrome", "superior alternating hemiplegia"],
+        "utd": [["Overview", "Weber syndrome midbrain infarction oculomotor palsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Benedikt syndrome",
+        "aliases": ["paramedian midbrain tegmentum syndrome"],
+        "utd": [["Overview", "Benedikt syndrome midbrain red nucleus infarction"]],
+        "summary": "",
+    },
+    {
+        "name": "Millard-Gubler syndrome",
+        "aliases": ["Millard Gubler syndrome", "ventral pons stroke syndrome"],
+        "utd": [["Overview", "Millard Gubler syndrome ventral pons infarction facial abducens"]],
+        "summary": "",
+    },
+    {
+        "name": "Parinaud syndrome",
+        "aliases": ["dorsal midbrain syndrome", "pretectal syndrome", "Sylvian aqueduct syndrome"],
+        "utd": [["Overview", "Parinaud dorsal midbrain syndrome upgaze palsy pineal"]],
+        "summary": "",
+    },
+    {
+        "name": "One and a half syndrome",
+        "aliases": ["one-and-a-half syndrome", "paralytic pontine exotropia"],
+        "utd": [["Overview", "one and a half syndrome pontine gaze palsy internuclear ophthalmoplegia"]],
+        "summary": "",
+    },
+    {
+        "name": "Kluver-Bucy syndrome",
+        "aliases": ["Kluver Bucy syndrome", "bitemporal amnesic syndrome"],
+        "utd": [["Overview", "Kluver Bucy syndrome bilateral temporal lobe amygdala"]],
+        "summary": "",
+    },
+    {
+        "name": "Tabes dorsalis",
+        "aliases": ["locomotor ataxia", "syphilitic myelopathy"],
+        "utd": [["Overview", "tabes dorsalis neurosyphilis dorsal column degeneration"]],
+        "summary": "",
+    },
+    {
+        "name": "Landau-Kleffner syndrome",
+        "aliases": ["acquired epileptic aphasia", "Landau Kleffner syndrome"],
+        "utd": [["Overview", "Landau Kleffner syndrome acquired epileptic aphasia children"]],
+        "summary": "",
+    },
+    {
+        "name": "Panayiotopoulos syndrome",
+        "aliases": ["early onset benign childhood occipital epilepsy", "benign childhood epilepsy with occipital paroxysms"],
+        "utd": [["Overview", "Panayiotopoulos syndrome childhood autonomic epilepsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Ohtahara syndrome",
+        "aliases": ["early infantile epileptic encephalopathy", "early infantile developmental and epileptic encephalopathy"],
+        "utd": [["Overview", "Ohtahara syndrome early infantile epileptic encephalopathy suppression burst"]],
+        "summary": "",
+    },
+    {
+        "name": "Rasmussen encephalitis",
+        "aliases": ["Rasmussen syndrome", "chronic focal encephalitis"],
+        "utd": [["Overview", "Rasmussen encephalitis hemispherectomy epilepsia partialis continua"]],
+        "summary": "",
+    },
+    {
+        "name": "Vein of Galen malformation",
+        "aliases": ["vein of Galen aneurysmal malformation", "Galenic arteriovenous malformation"],
+        "utd": [["Overview", "vein of Galen aneurysmal malformation neonate cardiac failure"]],
+        "summary": "",
+    },
+    {
+        "name": "Periventricular leukomalacia",
+        "aliases": ["periventricular white matter injury", "cystic periventricular leukomalacia"],
+        "utd": [["Overview", "periventricular leukomalacia preterm white matter injury cerebral palsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Urea cycle disorder",
+        "aliases": ["urea cycle defect", "urea cycle enzyme deficiency"],
+        "utd": [["Overview", "urea cycle disorders hyperammonaemia neonate management"]],
+        "summary": "",
+    },
+    {
+        "name": "Glycogen storage disease type 1",
+        "aliases": ["von Gierke disease", "glucose-6-phosphatase deficiency", "GSD type I"],
+        "utd": [["Overview", "glycogen storage disease type I von Gierke management"]],
+        "summary": "",
+    },
+    {
+        "name": "Krabbe disease",
+        "aliases": ["globoid cell leukodystrophy", "galactocerebrosidase deficiency"],
+        "utd": [["Overview", "Krabbe disease globoid cell leukodystrophy transplant"]],
+        "summary": "",
+    },
+    {
+        "name": "Metachromatic leukodystrophy",
+        "aliases": ["arylsulfatase A deficiency", "sulfatide lipidosis"],
+        "utd": [["Overview", "metachromatic leukodystrophy arylsulfatase A gene therapy"]],
+        "summary": "",
+    },
+    {
+        "name": "Zellweger syndrome",
+        "aliases": ["cerebrohepatorenal syndrome", "peroxisome biogenesis disorder"],
+        "utd": [["Overview", "Zellweger spectrum disorder peroxisome biogenesis very long chain fatty acids"]],
+        "summary": "",
+    },
+    {
+        "name": "Canavan disease",
+        "aliases": ["aspartoacylase deficiency", "spongy degeneration of the brain"],
+        "utd": [["Overview", "Canavan disease aspartoacylase N acetylaspartic aciduria"]],
+        "summary": "",
+    },
+    {
+        "name": "Alexander disease",
+        "aliases": ["GFAP astrocytopathy", "fibrinoid leukodystrophy"],
+        "utd": [["Overview", "Alexander disease GFAP Rosenthal fibres leukodystrophy"]],
+        "summary": "",
+    },
+    {
+        "name": "Menkes disease",
+        "aliases": ["kinky hair disease", "ATP7A deficiency", "steely hair syndrome"],
+        "utd": [["Overview", "Menkes disease copper ATP7A copper histidine treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Sotos syndrome",
+        "aliases": ["cerebral gigantism", "NSD1 related overgrowth"],
+        "utd": [["Overview", "Sotos syndrome NSD1 cerebral gigantism overgrowth"]],
+        "summary": "",
+    },
+    {
+        "name": "Russell-Silver syndrome",
+        "aliases": ["Silver-Russell syndrome", "Russell Silver syndrome"],
+        "utd": [["Overview", "Silver Russell syndrome growth restriction 11p15 imprinting"]],
+        "summary": "",
+    },
+    {
+        "name": "Smith-Lemli-Opitz syndrome",
+        "aliases": ["SLO syndrome", "7-dehydrocholesterol reductase deficiency", "Smith Lemli Opitz syndrome"],
+        "utd": [["Overview", "Smith Lemli Opitz syndrome DHCR7 cholesterol synthesis"]],
+        "summary": "",
+    },
+    {
+        "name": "Goldenhar syndrome",
+        "aliases": ["oculo-auriculo-vertebral spectrum", "hemifacial microsomia", "craniofacial microsomia"],
+        "utd": [["Overview", "Goldenhar syndrome oculoauriculovertebral spectrum hemifacial microsomia"]],
+        "summary": "",
+    },
+    {
+        "name": "Apert syndrome",
+        "aliases": ["acrocephalosyndactyly", "FGFR2 acrocephalosyndactyly"],
+        "utd": [["Overview", "Apert syndrome FGFR2 craniosynostosis syndactyly"]],
+        "summary": "",
+    },
+    {
+        "name": "Crouzon syndrome",
+        "aliases": ["craniofacial dysostosis", "Crouzon disease"],
+        "utd": [["Overview", "Crouzon syndrome FGFR2 craniosynostosis midface hypoplasia"]],
+        "summary": "",
+    },
+    {
+        "name": "Bardet-Biedl syndrome",
+        "aliases": ["Bardet Biedl syndrome", "Laurence-Moon-Biedl syndrome"],
+        "utd": [["Overview", "Bardet Biedl syndrome ciliopathy retinal dystrophy polydactyly"]],
+        "summary": "",
+    },
+    {
+        "name": "Holt-Oram syndrome",
+        "aliases": ["heart-hand syndrome", "Holt Oram syndrome", "atriodigital dysplasia"],
+        "utd": [["Overview", "Holt Oram syndrome TBX5 heart hand radial ray"]],
+        "summary": "",
+    },
+    {
+        "name": "Neonatal alloimmune thrombocytopenia",
+        "aliases": ["fetal and neonatal alloimmune thrombocytopenia", "FNAIT", "foetal alloimmune thrombocytopenia"],
+        "utd": [["Overview", "fetal neonatal alloimmune thrombocytopenia HPA-1a management"]],
+        "summary": "",
+    },
+    {
+        "name": "Vitamin K deficiency bleeding of the newborn",
+        "aliases": ["haemorrhagic disease of the newborn", "late vitamin K deficiency bleeding"],
+        "utd": [["Overview", "vitamin K deficiency bleeding newborn prophylaxis"]],
+        "summary": "",
+    },
+    {
+        "name": "Hyper IgE syndrome",
+        "aliases": ["Job syndrome", "hyperimmunoglobulin E syndrome", "STAT3 deficiency"],
+        "utd": [["Overview", "hyper IgE syndrome Job syndrome STAT3 management"]],
+        "summary": "",
+    },
+    {
+        "name": "Leukocyte adhesion deficiency",
+        "aliases": ["LAD type 1", "CD18 deficiency"],
+        "utd": [["Overview", "leukocyte adhesion deficiency CD18 delayed cord separation"]],
+        "summary": "",
+    },
+    {
+        "name": "Incontinentia pigmenti",
+        "aliases": ["Bloch-Sulzberger syndrome", "IKBKG deficiency"],
+        "utd": [["Overview", "incontinentia pigmenti IKBKG Blaschko lines neonate"]],
+        "summary": "",
+    },
+    {
+        "name": "Ataxia telangiectasia",
+        "aliases": ["Louis-Bar syndrome", "ATM deficiency"],
+        "utd": [["Overview", "ataxia telangiectasia ATM radiosensitivity malignancy surveillance"]],
+        "summary": "",
+    },
 ]
 
 
@@ -93049,6 +93259,780 @@ RICH_SUMMARIES = {
         "handover checks, follow-up of pending results and a low "
         "threshold for revisiting a diagnosis that is not behaving as "
         "expected."
+    ),
+
+    "Weber syndrome": (
+        "Weber syndrome is a midbrain stroke producing an ipsilateral "
+        "third nerve palsy with contralateral hemiplegia. Aetiology: "
+        "occlusion of paramedian perforators from the posterior "
+        "cerebral artery or the top of the basilar, infarcting the "
+        "cerebral peduncle together with the oculomotor fascicles "
+        "running through it. A midbrain tumour, abscess or "
+        "demyelinating plaque in the same territory does the same "
+        "thing more slowly. Clinical features: the eye on the side of "
+        "the lesion sits down and out with ptosis and a dilated "
+        "unreactive pupil, while the opposite arm, leg and lower face "
+        "are weak with upper motor neurone signs. The sides differ "
+        "because the nerve is struck before it leaves the brainstem "
+        "and the corticospinal tract before it decussates. Ix: "
+        "non-contrast CT then CT angiography on the acute stroke "
+        "pathway, with diffusion weighted MRI far more sensitive for "
+        "a small midbrain infarct. Mx: thrombolysis or thrombectomy "
+        "where criteria are met, then antiplatelet, statin and risk "
+        "factor control. Note: a third nerve palsy with crossed "
+        "hemiplegia localises to the midbrain rather than the "
+        "cavernous sinus."
+    ),
+    "Benedikt syndrome": (
+        "Benedikt syndrome is a midbrain tegmental stroke giving an "
+        "ipsilateral third nerve palsy with contralateral involuntary "
+        "movements. Aetiology: infarction of paramedian midbrain "
+        "branches of the posterior cerebral artery, taking in the red "
+        "nucleus and adjacent oculomotor fascicles. Haemorrhage, "
+        "tuberculoma and demyelination account for most of the rest. "
+        "Clinical features: ptosis with a down and out dilated eye on "
+        "one side, and on the other side a coarse rubral tremor, "
+        "choreoathetosis or ataxia rather than the dense weakness of "
+        "Weber syndrome. Corticospinal fibres may be brushed, so mild "
+        "contralateral pyramidal signs can coexist. Ix: diffusion "
+        "weighted MRI is the test that shows the lesion, with vessel "
+        "imaging and the usual embolic source workup of echo and "
+        "prolonged rhythm monitoring. Mx: acute reperfusion where "
+        "eligible, then secondary prevention. The movement disorder "
+        "is treated symptomatically and often persists. Note: Weber "
+        "is peduncle and weakness, Benedikt is tegmentum and tremor, "
+        "from arteries a millimetre apart."
+    ),
+    "Millard-Gubler syndrome": (
+        "Millard-Gubler syndrome is a ventral pontine lesion "
+        "producing ipsilateral sixth and seventh nerve palsies with "
+        "contralateral hemiplegia. Aetiology: infarction in short "
+        "circumferential or paramedian branches of the basilar artery "
+        "is the usual cause, with pontine haemorrhage, glioma and "
+        "demyelination behind it. Clinical features: the eye on the "
+        "affected side will not abduct and the whole of that half of "
+        "the face is weak, including the forehead, which marks the "
+        "palsy as lower motor neurone and separates it from a "
+        "hemispheric stroke. The opposite arm and leg are weak with "
+        "pyramidal signs, and horizontal diplopia worsens on gaze "
+        "towards the lesion. Ix: diffusion weighted MRI of the "
+        "posterior fossa, since CT is poor through the petrous bone, "
+        "plus angiography of the basilar system. Mx: the standard "
+        "acute stroke pathway, then secondary prevention and early "
+        "eye patching or prisms for diplopia. Note: a facial palsy "
+        "that spares the forehead is hemispheric, one that takes it "
+        "with an abducens palsy is pontine."
+    ),
+    "Parinaud syndrome": (
+        "Parinaud syndrome is a dorsal midbrain lesion causing a "
+        "supranuclear upgaze palsy with pupillary and lid signs. "
+        "Aetiology: a pineal region tumour compressing the pretectum "
+        "is the classic cause in a young person, and obstructive "
+        "hydrocephalus with a dilated third ventricle or a shunt "
+        "malfunction is the common cause in a child. Midbrain "
+        "infarction, haemorrhage and demyelination do it in older "
+        "patients. Clinical features: the eyes will not look up "
+        "voluntarily, the pupils are large and show light near "
+        "dissociation, and convergence retraction nystagmus appears "
+        "on attempted upgaze. Lid retraction gives the Collier sign "
+        "and a staring appearance. Ix: urgent MRI brain with contrast "
+        "to see the pineal region, with serum and cerebrospinal fluid "
+        "alpha fetoprotein and beta human chorionic gonadotropin for "
+        "a germ cell tumour. Mx: relieve hydrocephalus, then treat "
+        "the lesion, since germinoma is radiosensitive and often "
+        "curable. Note: a child with headache, upgaze palsy and a big "
+        "head has hydrocephalus until imaging says otherwise."
+    ),
+    "One and a half syndrome": (
+        "One and a half syndrome is a pontine lesion that abolishes "
+        "horizontal gaze to one side and leaves only abduction of the "
+        "opposite eye. Aetiology: a single lesion damages the "
+        "abducens nucleus or the paramedian pontine reticular "
+        "formation and the adjacent medial longitudinal fasciculus on "
+        "the same side. Multiple sclerosis in a young patient and "
+        "pontine infarct or haemorrhage in an older one account for "
+        "nearly all cases. Clinical features: neither eye moves "
+        "towards the lesion, and on gaze away from the lesion the "
+        "ipsilateral eye fails to adduct while the contralateral eye "
+        "abducts with nystagmus. The one preserved movement gives the "
+        "syndrome its name. Convergence is spared because it does not "
+        "use these pathways. Ix: MRI brain with diffusion and fluid "
+        "attenuated inversion recovery sequences, then vessel imaging "
+        "or cerebrospinal fluid oligoclonal bands depending on age. "
+        "Mx: treat the underlying stroke or demyelination, with "
+        "patching or prisms for diplopia. Note: add a facial palsy "
+        "and it becomes the eight and a half syndrome."
+    ),
+    "Kluver-Bucy syndrome": (
+        "Kluver-Bucy syndrome is a behavioural syndrome following "
+        "bilateral damage to the anterior temporal lobes and "
+        "amygdalae. Aetiology: herpes simplex encephalitis is the "
+        "commonest acquired cause, with traumatic brain injury, "
+        "bilateral temporal lobe surgery, frontotemporal dementia and "
+        "late Alzheimer disease behind it. Clinical features: "
+        "placidity with loss of fear and anger, hyperorality with "
+        "mouthing or eating of inedible objects, hypersexuality that "
+        "is usually indiscriminate rather than directed, and visual "
+        "agnosia so that familiar objects and faces are not "
+        "recognised. Hypermetamorphosis, an irresistible pull to "
+        "touch and examine everything in view, completes the picture, "
+        "and dense anterograde amnesia is usual. The full syndrome is "
+        "rare in humans and partial forms are the rule. Ix: MRI brain "
+        "showing bitemporal signal change, with cerebrospinal fluid "
+        "herpes simplex polymerase chain reaction and "
+        "electroencephalography when encephalitis is possible. Mx: "
+        "treat the cause, then behavioural management and carer "
+        "support. Note: a patient eating objects after encephalitis "
+        "is describing their temporal lobes."
+    ),
+    "Tabes dorsalis": (
+        "Tabes dorsalis is a late form of neurosyphilis in which the "
+        "dorsal columns and dorsal roots degenerate, typically 15 to "
+        "25 years after untreated infection. Aetiology: Treponema "
+        "pallidum, with risk highest in untreated or partly treated "
+        "infection and in people living with advanced human "
+        "immunodeficiency virus, where the latency is shorter. "
+        "Clinical features: lightning pains in the legs, sensory "
+        "ataxia with a high stepping stamping gait and a positive "
+        "Romberg sign, and areflexia with loss of vibration and joint "
+        "position sense. Argyll Robertson pupils accommodate but do "
+        "not react to light. Painless Charcot joints, trophic foot "
+        "ulcers and visceral crises of abdominal pain and vomiting "
+        "follow. Ix: serum treponemal serology, then lumbar puncture "
+        "for cerebrospinal fluid cell count, protein and Venereal "
+        "Disease Research Laboratory testing. Screen for human "
+        "immunodeficiency virus. Mx: intravenous benzylpenicillin for "
+        "15 days per eTG, with repeat cerebrospinal fluid testing and "
+        "partner notification. Note: the deficits already established "
+        "rarely reverse, so treatment halts rather than repairs."
+    ),
+    "Landau-Kleffner syndrome": (
+        "Landau-Kleffner syndrome is an acquired aphasia in a "
+        "previously normal child, driven by epileptiform activity in "
+        "the temporal language cortex. Aetiology: mostly unexplained, "
+        "with GRIN2A variants in a minority and no structural lesion "
+        "in the rest. Onset is between three and eight years. "
+        "Clinical features: regression of language beginning as "
+        "verbal auditory agnosia, so the child stops responding to "
+        "speech and is often first investigated for deafness, "
+        "followed by loss of expressive speech. Behavioural "
+        "disturbance and hyperactivity are common, and about seven in "
+        "ten have clinical seizures, usually infrequent nocturnal "
+        "focal or generalised events. Ix: sleep "
+        "electroencephalography is the key test and shows marked "
+        "activation of centrotemporal spikes, often electrical status "
+        "epilepticus in slow wave sleep. Audiometry is normal and MRI "
+        "is normal. Mx: antiseizure medication plus corticosteroids "
+        "or intravenous immunoglobulin aimed at the sleep discharges, "
+        "with intensive speech therapy. Note: seizures remit by "
+        "adolescence but language often does not recover fully, so "
+        "treat the electroencephalogram and not only the fits."
+    ),
+    "Panayiotopoulos syndrome": (
+        "Panayiotopoulos syndrome is a self limited childhood "
+        "epilepsy whose seizures are predominantly autonomic. "
+        "Aetiology: an age related genetic epilepsy with no "
+        "structural cause, presenting between three and six years and "
+        "remitting within two to three years of onset. Clinical "
+        "features: seizures usually arise from sleep and begin with "
+        "pallor, nausea and repeated vomiting, followed by tonic eye "
+        "deviation, altered responsiveness and often a hemiclonic or "
+        "generalised convulsion. They are characteristically long, a "
+        "third lasting beyond 30 minutes as autonomic status "
+        "epilepticus, which is why the first presentation is so often "
+        "to an emergency department as a suspected encephalitis or "
+        "gastroenteritis with collapse. Ix: electroencephalography "
+        "shows multifocal high amplitude spikes, occipital in many "
+        "but not all, with a normal MRI where imaging is done. Mx: "
+        "most children need no regular antiseizure medication given "
+        "the low seizure count. Parents are given a benzodiazepine "
+        "rescue plan and reassurance about prognosis. Note: vomiting "
+        "then eye deviation in a sleeping preschooler is a seizure, "
+        "not a bug."
+    ),
+    "Ohtahara syndrome": (
+        "Ohtahara syndrome is the earliest of the developmental and "
+        "epileptic encephalopathies, beginning in the first weeks of "
+        "life. Aetiology: structural brain malformations such as "
+        "hemimegalencephaly and cortical dysplasia account for many "
+        "cases, and single gene variants including STXBP1, KCNQ2, ARX "
+        "and SCN2A for most of the remainder. Metabolic causes are "
+        "found occasionally and are the ones worth chasing. Clinical "
+        "features: frequent tonic spasms in clusters, awake and "
+        "asleep, with profound developmental impairment from the "
+        "outset and often focal seizures as well. Ix: "
+        "electroencephalography shows a suppression burst pattern "
+        "that persists in both sleep and wakefulness, which "
+        "distinguishes it from early myoclonic encephalopathy. MRI "
+        "brain, epilepsy gene panel and metabolic screening including "
+        "a trial of pyridoxine follow. Mx: antiseizure medication "
+        "rarely controls the spasms. Epilepsy surgery helps where a "
+        "focal lesion is found, and ketogenic diet is used when it is "
+        "not. Prognosis: most evolve into West syndrome then "
+        "Lennox-Gastaut syndrome, and mortality in infancy is high. "
+        "Note: suppression burst in a neonate names the syndrome."
+    ),
+    "Rasmussen encephalitis": (
+        "Rasmussen encephalitis is a progressive inflammatory disease "
+        "of one cerebral hemisphere causing intractable focal "
+        "epilepsy and hemispheric decline. Aetiology: a T cell "
+        "mediated attack on cortex, with no proven infectious "
+        "trigger. Onset is usually between two and ten years, though "
+        "adolescent and adult cases occur. Clinical features: drug "
+        "resistant focal motor seizures, frequently epilepsia "
+        "partialis continua, with progressive hemiparesis, hemianopia "
+        "and cognitive decline over months. Aphasia develops when the "
+        "dominant hemisphere is involved. Ix: MRI shows unilateral "
+        "cortical atrophy with insular and perisylvian signal change "
+        "that progresses on serial scans. Electroencephalography "
+        "shows unilateral slowing with multifocal discharges. Brain "
+        "biopsy is confirmatory but not always required. Mx: "
+        "antiseizure drugs rarely control the seizures. Immunotherapy "
+        "with corticosteroids, intravenous immunoglobulin or "
+        "tacrolimus slows but does not stop progression, and "
+        "functional hemispherotomy remains the only durable "
+        "treatment. Note: surgery trades a hemianopia and a "
+        "hemiparesis the child is developing anyway for seizure "
+        "freedom, so timing is the whole discussion."
+    ),
+    "Vein of Galen malformation": (
+        "A vein of Galen malformation is a high flow arteriovenous "
+        "shunt into the embryonic median prosencephalic vein, "
+        "presenting most often in the newborn. Aetiology: failure of "
+        "regression of the median prosencephalic vein of Markowski at "
+        "around six to eleven weeks gestation, with choroidal or "
+        "mural arterial feeders draining directly into it. Clinical "
+        "features: a neonate with high output cardiac failure, "
+        "tachypnoea and hepatomegaly, a loud cranial bruit over the "
+        "fontanelle and prominent scalp veins. Older infants present "
+        "instead with macrocephaly and hydrocephalus from venous "
+        "hypertension, and children with developmental delay or "
+        "haemorrhage. Ix: antenatal ultrasound with Doppler often "
+        "detects it, and after birth cranial ultrasound with Doppler "
+        "is the quickest bedside test, followed by MRI and magnetic "
+        "resonance angiography. Mx: stabilise the cardiac failure, "
+        "then staged endovascular embolisation at a quaternary "
+        "centre. Surgery has no role and shunting alone worsens "
+        "outcome. Note: a newborn in cardiac failure with a normal "
+        "heart needs a stethoscope on the head."
+    ),
+    "Periventricular leukomalacia": (
+        "Periventricular leukomalacia is necrosis of white matter "
+        "dorsal and lateral to the lateral ventricles, the "
+        "characteristic brain injury of prematurity. Aetiology: "
+        "pre-oligodendrocytes in the periventricular arterial "
+        "watershed are highly vulnerable to ischaemia and to "
+        "inflammatory injury. Risk rises with extreme prematurity, "
+        "hypotension, chorioamnionitis, sepsis and hypocapnia from "
+        "over ventilation. Clinical features: usually silent in the "
+        "neonatal period and found on screening imaging. The "
+        "corticospinal fibres to the legs run nearest the ventricle, "
+        "so the later picture is spastic diplegia with legs affected "
+        "more than arms, often with visual perceptual difficulty and "
+        "squint. Ix: serial cranial ultrasound at one week and again "
+        "at four to six weeks detects the cystic form, and term "
+        "equivalent MRI is more sensitive for diffuse non-cystic "
+        "injury. Mx: prevention through antenatal corticosteroids and "
+        "magnesium sulfate for neuroprotection, careful blood "
+        "pressure and carbon dioxide control. Then early referral to "
+        "paediatric rehabilitation. Note: legs worse than arms in an "
+        "ex-preterm child points to the periventricular watershed."
+    ),
+    "Urea cycle disorder": (
+        "Urea cycle disorders are inherited defects of ammonia "
+        "detoxification that present with hyperammonaemic "
+        "encephalopathy. Aetiology: deficiency of any of six enzymes "
+        "or two transporters. Ornithine transcarbamylase deficiency "
+        "is the commonest and is X linked, so affected boys present "
+        "catastrophically and carrier girls more mildly. The rest are "
+        "autosomal recessive. Clinical features: a well newborn who "
+        "at 24 to 72 hours becomes lethargic and vomits, then "
+        "develops hyperventilation, seizures and coma. Later "
+        "presentations are triggered by illness, fasting, a protein "
+        "load or the postpartum period, with cyclical vomiting, "
+        "confusion or psychiatric symptoms. Ix: plasma ammonia is the "
+        "test that must not be delayed, with a respiratory alkalosis "
+        "and a normal anion gap distinguishing it from organic "
+        "acidaemia. Plasma amino acids, urinary orotic acid and gene "
+        "testing follow. Mx: stop protein, give high dose intravenous "
+        "glucose to halt catabolism, and start sodium benzoate with "
+        "sodium phenylbutyrate and arginine. Haemodialysis if ammonia "
+        "stays high. Note: measure ammonia in any encephalopathic "
+        "neonate, since hours of delay cost cortex."
+    ),
+    "Glycogen storage disease type 1": (
+        "Glycogen storage disease type 1 is a defect of the final "
+        "step of glycogenolysis and gluconeogenesis, so glucose "
+        "cannot be released from the liver. Aetiology: autosomal "
+        "recessive loss of glucose 6 phosphatase in type 1a or of its "
+        "transporter in type 1b, which adds neutropenia and "
+        "inflammatory bowel disease. Clinical features: an infant "
+        "with a doll like face and protuberant abdomen from massive "
+        "hepatomegaly, presenting with hypoglycaemic seizures once "
+        "night feeds or intercurrent illness lengthen the fast. "
+        "Growth is poor and there is no splenomegaly, which helps "
+        "separate it from storage disorders that enlarge both. Ix: "
+        "fasting hypoglycaemia with raised lactate, triglycerides and "
+        "urate, and ketones that are inappropriately low. Confirm on "
+        "gene testing rather than biopsy. Mx: prevent fasting with "
+        "frequent feeds and uncooked cornstarch overnight, restrict "
+        "fructose and galactose, and allopurinol or a lipid lowering "
+        "agent as needed. Granulocyte colony stimulating factor for "
+        "type 1b. Note: hepatic adenomas and renal disease are the "
+        "long term threats, so surveillance continues into adult "
+        "life."
+    ),
+    "Krabbe disease": (
+        "Krabbe disease is a lysosomal leukodystrophy in which "
+        "psychosine accumulates and destroys myelinating cells. "
+        "Aetiology: autosomal recessive deficiency of "
+        "galactocerebrosidase from GALC variants. Clinical features: "
+        "the infantile form, which is about ninety per cent of cases, "
+        "begins at three to six months with extreme irritability, "
+        "crying and feeding difficulty, then stiffness with "
+        "opisthotonic posturing, loss of milestones, optic atrophy "
+        "and deafness, progressing to a decerebrate state. Later "
+        "onset forms present in childhood or adulthood with spastic "
+        "paraparesis, ataxia or visual loss and evolve far more "
+        "slowly. Ix: low galactocerebrosidase activity in leukocytes "
+        "with confirmatory GALC testing. MRI shows symmetrical "
+        "periventricular and cerebellar white matter change, and "
+        "nerve conduction studies show a demyelinating neuropathy, "
+        "unusual among leukodystrophies. Mx: haematopoietic stem cell "
+        "transplantation alters the course only if done before "
+        "symptoms appear, which is the argument for newborn "
+        "screening. Otherwise care is supportive, with baclofen for "
+        "spasticity and early palliative involvement. Note: an "
+        "inconsolable stiff infant losing skills warrants a "
+        "leukodystrophy screen."
+    ),
+    "Metachromatic leukodystrophy": (
+        "Metachromatic leukodystrophy is a lysosomal disorder in "
+        "which sulfatide accumulates and demyelinates central and "
+        "peripheral nerve. Aetiology: autosomal recessive deficiency "
+        "of arylsulfatase A, rarely of its activator saposin B. "
+        "Clinical features: the late infantile form begins between "
+        "one and two years with gait regression in a child who had "
+        "been walking, then spasticity, dysarthria and loss of "
+        "speech, with absent reflexes reflecting the coexisting "
+        "neuropathy. The juvenile form starts with declining school "
+        "performance and behavioural change that is often mistaken "
+        "for a psychiatric disorder, and the adult form with "
+        "psychosis or dementia. Ix: low arylsulfatase A activity with "
+        "raised urinary sulfatide, since pseudodeficiency alleles "
+        "make the enzyme result alone unreliable. MRI shows confluent "
+        "periventricular demyelination with a tigroid pattern. Mx: "
+        "presymptomatic haematopoietic stem cell transplantation, and "
+        "autologous gene therapy is now approved for early forms in "
+        "some jurisdictions. Symptomatic care covers spasticity, "
+        "seizures, secretions and feeding. Note: an older child "
+        "losing school skills with absent ankle jerks is not simply "
+        "struggling."
+    ),
+    "Zellweger syndrome": (
+        "Zellweger syndrome is the severe end of the peroxisome "
+        "biogenesis disorders, presenting in the newborn period. "
+        "Aetiology: autosomal recessive variants in PEX genes prevent "
+        "assembly of peroxisomes, so very long chain fatty acids "
+        "accumulate and plasmalogen and bile acid synthesis fail. "
+        "Clinical features: a profoundly hypotonic newborn with a "
+        "high forehead, flat facial profile, wide fontanelles and "
+        "wide sutures, who feeds poorly and seizes. Hepatomegaly with "
+        "cholestasis, renal cortical cysts, chondrodysplasia punctata "
+        "at the patella and sensorineural deafness with retinopathy "
+        "complete the picture, and milder spectrum forms present "
+        "later with deafness, retinal dystrophy and ataxia. Ix: "
+        "plasma very long chain fatty acids are the screening test, "
+        "with raised phytanic acid, low plasmalogens and confirmatory "
+        "PEX gene testing. Mx: no disease modifying treatment exists "
+        "for the severe form. Care is supportive with feeding "
+        "support, seizure control, vitamin K and fat soluble vitamin "
+        "supplementation, and genetic counselling with prenatal "
+        "testing offered. Note: a floppy dysmorphic newborn with "
+        "hepatic and renal findings needs a peroxisomal screen."
+    ),
+    "Canavan disease": (
+        "Canavan disease is a leukodystrophy in which N "
+        "acetylaspartate builds up and the white matter becomes "
+        "spongy and oedematous. Aetiology: autosomal recessive ASPA "
+        "variants causing aspartoacylase deficiency, with a carrier "
+        "frequency high enough in Ashkenazi Jewish populations to "
+        "justify preconception screening. Clinical features: a young "
+        "infant who at three to six months is markedly hypotonic with "
+        "poor head control, then develops macrocephaly, visual "
+        "inattention with optic atrophy, seizures and later "
+        "spasticity. The combination of a big head with a floppy "
+        "infant who is losing skills is the pattern that separates it "
+        "from most other leukodystrophies. Ix: raised N "
+        "acetylaspartate in urine is close to diagnostic, mirrored by "
+        "a tall N acetylaspartate peak on magnetic resonance "
+        "spectroscopy. MRI shows diffuse symmetrical white matter "
+        "change involving subcortical U fibres early. Confirm with "
+        "ASPA gene testing. Mx: supportive, covering feeding, "
+        "seizures, spasticity and postural care, with genetic "
+        "counselling for the family. Note: macrocephaly plus "
+        "regression narrows the list to Canavan, Alexander and "
+        "Tay-Sachs disease."
+    ),
+    "Alexander disease": (
+        "Alexander disease is a leukodystrophy caused by a primary "
+        "disorder of astrocytes rather than of myelin. Aetiology: "
+        "almost always a de novo dominant missense variant in GFAP, "
+        "so there is usually no family history. Mutant glial "
+        "fibrillary acidic protein aggregates into Rosenthal fibres. "
+        "Clinical features: the infantile form begins in the first "
+        "two years with macrocephaly, developmental delay or "
+        "regression, seizures and spasticity. The juvenile form "
+        "presents with bulbar symptoms, and the adult form resembles "
+        "multiple sclerosis or presents with palatal myoclonus, "
+        "ataxia and autonomic disturbance. Ix: MRI is close to "
+        "diagnostic in the infantile form, with frontal predominant "
+        "white matter change, a periventricular rim, basal ganglia "
+        "involvement and contrast enhancement of the ventricular "
+        "lining and brainstem. GFAP sequencing confirms. Mx: "
+        "supportive only, with seizure control, feeding and "
+        "respiratory support and rehabilitation, and testing of "
+        "parents for mosaicism before counselling about recurrence. "
+        "Note: frontal white matter disease with brainstem atrophy in "
+        "a macrocephalic infant should prompt GFAP testing before "
+        "brain biopsy."
+    ),
+    "Menkes disease": (
+        "Menkes disease is an X linked disorder of copper transport "
+        "in which copper is trapped in gut and kidney and cannot "
+        "reach the brain. Aetiology: loss of function ATP7A variants, "
+        "so cuproenzymes including lysyl oxidase, dopamine beta "
+        "hydroxylase and cytochrome c oxidase all fail. Affected boys "
+        "present in infancy and carrier mothers are usually well. "
+        "Clinical features: a boy normal at birth who at two to three "
+        "months develops hypotonia, seizures and developmental "
+        "regression. The hair is sparse, depigmented and twisted, "
+        "described as kinky or steely, and there is a pale doughy "
+        "skin with a cherubic face. Lysyl oxidase failure gives "
+        "tortuous cerebral vessels, bladder diverticula and "
+        "metaphyseal spurring that can be mistaken for inflicted "
+        "injury. Ix: low serum copper and caeruloplasmin, though both "
+        "are low in normal neonates. Plasma catecholamine ratios are "
+        "the earliest reliable test and ATP7A sequencing confirms. "
+        "Mx: subcutaneous copper histidine started within the first "
+        "weeks preserves some neurological function. Otherwise care "
+        "is supportive with seizure control and feeding support. "
+        "Note: occipital horn syndrome is the mild allelic form."
+    ),
+    "Sotos syndrome": (
+        "Sotos syndrome is an overgrowth disorder with a "
+        "characteristic face and learning difficulty. Aetiology: "
+        "haploinsufficiency of NSD1 on chromosome 5q35, from a point "
+        "variant or microdeletion, almost always de novo. Clinical "
+        "features: a long narrow face with a prominent forehead, "
+        "frontal balding, downslanting palpebral fissures and a "
+        "pointed chin, with macrocephaly that persists into adult "
+        "life. Growth and bone age run ahead through childhood while "
+        "final adult height is often within the normal range, so the "
+        "overgrowth is childhood predominant. Hypotonia, feeding "
+        "difficulty and delayed motor milestones give way to learning "
+        "difficulty of variable degree, and scoliosis, seizures, "
+        "cardiac and renal anomalies occur. Ix: molecular testing of "
+        "NSD1 confirms the clinical diagnosis. Baseline "
+        "echocardiography, renal ultrasound and a formal "
+        "developmental assessment follow. Mx: no specific therapy. "
+        "Care is developmental and educational support, scoliosis "
+        "surveillance and management of seizures, with genetic "
+        "counselling noting the low recurrence risk of a de novo "
+        "variant. Note: a big child with a big head and delay is "
+        "Sotos until NSD1 says otherwise."
+    ),
+    "Russell-Silver syndrome": (
+        "Russell-Silver syndrome is an imprinting disorder causing "
+        "severe prenatal and postnatal growth restriction with "
+        "relative sparing of the head. Aetiology: loss of methylation "
+        "at the 11p15 imprinting centre in around half of cases and "
+        "maternal uniparental disomy of chromosome 7 in about a "
+        "tenth, with the remainder unexplained. Clinical features: a "
+        "small for gestational age infant who fails to catch up, with "
+        "a triangular face, broad forehead, relative macrocephaly and "
+        "downturned mouth corners. Body asymmetry with limb length "
+        "discrepancy, fifth finger clinodactyly, feeding difficulty "
+        "with profound poor appetite and fasting hypoglycaemia are "
+        "characteristic. Puberty may be early and adult height is "
+        "reduced. Ix: the Netchine-Harbison clinical scoring system "
+        "guides testing, then methylation studies of 11p15 and "
+        "chromosome 7 uniparental disomy testing. Mx: "
+        "multidisciplinary care with dietetic input and often "
+        "gastrostomy feeding, avoidance of fasting, growth hormone "
+        "which is effective on final height, and orthopaedic review "
+        "for leg length. Note: a triangular face on a persistently "
+        "tiny child with a normal sized head is the pattern."
+    ),
+    "Smith-Lemli-Opitz syndrome": (
+        "Smith-Lemli-Opitz syndrome is a disorder of cholesterol "
+        "synthesis producing a recognisable malformation syndrome. "
+        "Aetiology: autosomal recessive DHCR7 variants block the "
+        "final step of cholesterol synthesis, so 7-dehydrocholesterol "
+        "accumulates and cholesterol is low. Cholesterol is needed "
+        "for sonic hedgehog signalling, which explains the midline "
+        "defects. Clinical features: microcephaly with a small "
+        "upturned nose, ptosis and micrognathia, second to third toe "
+        "syndactyly which is present in almost every case and is the "
+        "single most useful sign, and postaxial polydactyly. Cleft "
+        "palate, congenital heart disease, pyloric stenosis and "
+        "Hirschsprung disease occur, and genotypic males may have "
+        "hypospadias or fully female external genitalia. Feeding "
+        "difficulty, photosensitivity and autistic behaviour follow. "
+        "Ix: raised plasma 7-dehydrocholesterol is diagnostic, with "
+        "DHCR7 sequencing to confirm and guide counselling. Mx: "
+        "dietary cholesterol supplementation is standard though "
+        "evidence on outcome is limited, with sun protection, feeding "
+        "support and management of the structural anomalies. Note: "
+        "check the toes of any microcephalic infant with ambiguous "
+        "genitalia."
+    ),
+    "Goldenhar syndrome": (
+        "Goldenhar syndrome is a congenital condition of asymmetric "
+        "underdevelopment of the structures derived from the first "
+        "and second branchial arches. Aetiology: disrupted blood "
+        "supply to the branchial arches in early embryogenesis is the "
+        "leading model, mostly sporadic, with vascular disruption, "
+        "maternal diabetes and vasoactive drug exposure implicated. "
+        "Clinical features: asymmetry of the face with a small "
+        "mandible, maxilla and ear on the affected side, preauricular "
+        "skin tags and pits, and microtia or anotia with conductive "
+        "hearing loss. Epibulbar dermoids and upper lid colobomas are "
+        "the ocular markers, and vertebral anomalies including "
+        "hemivertebrae and fusion complete the triad. Cardiac, renal "
+        "and central nervous system anomalies occur in a substantial "
+        "minority. Ix: audiology and ophthalmology assessment, spinal "
+        "and renal imaging, echocardiography, and computed tomography "
+        "of the temporal bones when reconstruction is planned. Mx: "
+        "staged multidisciplinary care with early hearing "
+        "habilitation, airway and feeding support, then mandibular "
+        "distraction and ear reconstruction. Note: ear tags mandate a "
+        "hearing test and a renal ultrasound."
+    ),
+    "Apert syndrome": (
+        "Apert syndrome is a craniosynostosis syndrome combining "
+        "fused cranial sutures with symmetrical complex syndactyly of "
+        "hands and feet. Aetiology: dominant gain of function FGFR2 "
+        "variants, nearly always de novo and associated with advanced "
+        "paternal age. Clinical features: bicoronal synostosis "
+        "producing a tall short skull with a flat occiput and high "
+        "full forehead, midface hypoplasia with proptosis, "
+        "hypertelorism and a beaked nose. The hands show fusion of "
+        "the second to fourth digits into a mitten, often with a "
+        "single common nail, and the feet are similarly fused, which "
+        "is the feature that separates Apert from Crouzon syndrome. "
+        "Cleft palate, acne, hyperhidrosis and intellectual "
+        "disability of variable degree are common. Ix: computed "
+        "tomography of the skull with three dimensional "
+        "reconstruction, hand and foot radiographs, FGFR2 sequencing, "
+        "sleep study for obstructive apnoea and ophthalmology review "
+        "for corneal exposure. Mx: cranial vault expansion in infancy "
+        "for raised intracranial pressure, then midface advancement "
+        "and staged separation of the digits. Note: mitten hands with "
+        "a turribrachycephalic skull is the pattern."
+    ),
+    "Crouzon syndrome": (
+        "Crouzon syndrome is craniosynostosis with midface hypoplasia "
+        "and normal hands and feet. Aetiology: autosomal dominant "
+        "FGFR2 variants with high penetrance and variable expression, "
+        "so a parent is often affected. A distinct FGFR3 variant "
+        "produces Crouzon syndrome with acanthosis nigricans. "
+        "Clinical features: bicoronal synostosis giving a short broad "
+        "skull, a hypoplastic midface with a relative mandibular "
+        "prognathism, and shallow orbits producing proptosis, "
+        "hypertelorism and exotropia. Corneal exposure and even globe "
+        "subluxation are the pressing ophthalmic risks. Hearing loss, "
+        "obstructive sleep apnoea from the small midface and raised "
+        "intracranial pressure from a restricted vault are common, "
+        "while intellect is usually normal. Ix: computed tomography "
+        "of the skull, ophthalmology assessment with fundoscopy for "
+        "papilloedema, audiology, polysomnography and FGFR gene "
+        "testing. Mx: vault expansion for raised pressure, then "
+        "midface advancement in childhood, with lubrication and "
+        "tarsorrhaphy for exposure keratopathy. Note: same gene and "
+        "skull as Apert syndrome but with ordinary hands, and usually "
+        "an affected parent."
+    ),
+    "Bardet-Biedl syndrome": (
+        "Bardet-Biedl syndrome is a ciliopathy combining retinal "
+        "dystrophy, obesity, polydactyly, renal anomalies and "
+        "learning difficulty. Aetiology: mostly autosomal recessive "
+        "variants in over twenty BBS genes encoding proteins of the "
+        "primary cilium, with BBS1 and BBS10 the commonest. Clinical "
+        "features: postaxial polydactyly is present at birth and is "
+        "often the first clue, followed by early onset obesity with "
+        "hyperphagia. Rod cone dystrophy begins as night blindness in "
+        "mid childhood and progresses to legal blindness by early "
+        "adulthood, and is the feature that most often makes the "
+        "diagnosis. Renal structural anomalies with progressive "
+        "impairment, hypogonadism and genital anomalies, and learning "
+        "difficulty complete the picture. Ix: electroretinography and "
+        "formal ophthalmology assessment, renal ultrasound with "
+        "function, and a ciliopathy gene panel. Mx: multidisciplinary "
+        "care with low vision services, weight management in which "
+        "setmelanotide is now licensed for BBS related obesity, renal "
+        "surveillance and endocrine review. Note: count the digits on "
+        "any child referred with obesity and failing vision."
+    ),
+    "Holt-Oram syndrome": (
+        "Holt-Oram syndrome is a dominantly inherited association of "
+        "upper limb radial ray defects with congenital heart disease. "
+        "Aetiology: loss of function variants in TBX5, a "
+        "transcription factor directing both forelimb and cardiac "
+        "septal development, with about forty per cent of cases de "
+        "novo. Penetrance is complete though expression varies widely "
+        "within a family. Clinical features: upper limb anomalies are "
+        "always present and always involve the radial side, ranging "
+        "from a triphalangeal or absent thumb through a hypoplastic "
+        "radius to phocomelia, and are frequently asymmetric with the "
+        "left worse. Cardiac disease affects about three quarters, "
+        "most often a secundum atrial septal defect or a muscular "
+        "ventricular septal defect, and progressive atrioventricular "
+        "conduction disease occurs even when the heart is "
+        "structurally normal. Ix: upper limb radiographs, "
+        "echocardiography, electrocardiography with periodic Holter "
+        "monitoring, and TBX5 testing. Mx: cardiac repair as "
+        "indicated, lifelong rhythm surveillance with pacing when "
+        "block develops, and hand surgery for thumb function. Note: "
+        "examine the thumbs of every child with an atrial septal "
+        "defect."
+    ),
+    "Neonatal alloimmune thrombocytopenia": (
+        "Neonatal alloimmune thrombocytopenia is the platelet "
+        "equivalent of haemolytic disease of the newborn, in which "
+        "maternal antibodies destroy fetal platelets. Aetiology: the "
+        "mother lacks a human platelet antigen the fetus has "
+        "inherited from the father and forms an immunoglobulin G "
+        "antibody that crosses the placenta. Antibody to HPA-1a "
+        "causes about eighty per cent of severe cases in European "
+        "populations. Unlike rhesus disease it frequently affects the "
+        "first pregnancy. Clinical features: an otherwise well term "
+        "newborn with widespread petechiae, purpura or bleeding "
+        "within hours of birth, and a platelet count often below 20. "
+        "Intracranial haemorrhage occurs in up to a fifth of severe "
+        "cases and may be antenatal. Ix: neonatal full blood count "
+        "and film, maternal and paternal platelet antigen typing with "
+        "maternal antiplatelet antibody testing, and cranial "
+        "ultrasound. Mx: transfuse HPA compatible or random donor "
+        "platelets without delay, with intravenous immunoglobulin. In "
+        "subsequent pregnancies maternal immunoglobulin from the "
+        "second trimester is the mainstay. Note: a well baby with a "
+        "low platelet count and a normal mother is alloimmune until "
+        "proven otherwise."
+    ),
+    "Vitamin K deficiency bleeding of the newborn": (
+        "Vitamin K deficiency bleeding is haemorrhage in the first "
+        "weeks of life from deficiency of the vitamin K dependent "
+        "clotting factors. Aetiology: newborns start with low stores "
+        "because placental transfer is poor, breast milk is low in "
+        "vitamin K and the gut is not yet colonised. Early disease "
+        "within 24 hours follows maternal enzyme inducing drugs such "
+        "as phenytoin, carbamazepine, rifampicin or warfarin. Late "
+        "disease at two to twelve weeks occurs in exclusively "
+        "breastfed infants who missed prophylaxis, or in those with "
+        "undiagnosed cholestasis or cystic fibrosis causing "
+        "malabsorption. Clinical features: bruising, umbilical, "
+        "gastrointestinal or puncture site bleeding, and in the late "
+        "form intracranial haemorrhage as the presenting event in "
+        "around half. Ix: prolonged prothrombin time with a normal "
+        "platelet count and fibrinogen, correcting after vitamin K. "
+        "Image the head if neurologically unwell, and check the "
+        "conjugated bilirubin. Mx: intravenous vitamin K with fresh "
+        "frozen plasma or prothrombin complex for active bleeding. "
+        "Prophylaxis is intramuscular phytomenadione at birth per the "
+        "Australian national guidance. Note: pale stools in a "
+        "bleeding infant point to cholestasis underneath."
+    ),
+    "Hyper IgE syndrome": (
+        "Hyper immunoglobulin E syndrome is a primary "
+        "immunodeficiency of recurrent staphylococcal infection with "
+        "eczema and a very high immunoglobulin E. Aetiology: dominant "
+        "negative STAT3 variants cause the classic multisystem form "
+        "through impaired T helper 17 development. Autosomal "
+        "recessive forms, notably DOCK8 deficiency, give severe viral "
+        "skin infection and allergy without the connective tissue "
+        "features. Clinical features: a newborn rash evolving into "
+        "eczema, then recurrent cold abscesses that are strikingly "
+        "non inflamed, and recurrent staphylococcal pneumonia that "
+        "heals with pneumatocoeles which later become colonised with "
+        "aspergillus or pseudomonas. Chronic mucocutaneous "
+        "candidiasis is usual. The connective tissue features are the "
+        "giveaway, with a coarse face, retained primary teeth, "
+        "hyperextensible joints, scoliosis and minimal trauma "
+        "fractures. Ix: very high serum immunoglobulin E with "
+        "eosinophilia, a clinical score to guide testing, then STAT3 "
+        "or panel sequencing. Mx: lifelong antistaphylococcal "
+        "prophylaxis, antifungal cover, aggressive skin care and "
+        "surveillance imaging of the lungs. Note: an abscess without "
+        "heat or redness is the clue worth chasing."
+    ),
+    "Leukocyte adhesion deficiency": (
+        "Leukocyte adhesion deficiency is a primary immunodeficiency "
+        "in which neutrophils cannot leave the circulation to reach "
+        "infected tissue. Aetiology: autosomal recessive ITGB2 "
+        "variants in type 1 remove the CD18 beta 2 integrin subunit, "
+        "so firm adhesion and transmigration fail. Type 2 affects "
+        "fucosylated selectin ligands and type 3 the intracellular "
+        "activation of integrins, adding a bleeding tendency. "
+        "Clinical features: delayed separation of the umbilical cord "
+        "beyond three weeks, often with omphalitis, is the classic "
+        "first sign. Then come recurrent bacterial and fungal "
+        "infections of skin, mouth and perirectal tissue that "
+        "characteristically produce no pus, with necrotic ulcers that "
+        "heal slowly leaving thin dysplastic scars, and severe "
+        "periodontitis with early tooth loss. Ix: a persistently high "
+        "neutrophil count between infections, which is the paradox "
+        "worth noticing, then flow cytometry for CD18 and CD11b "
+        "expression and gene confirmation. Mx: prompt antimicrobials, "
+        "prophylaxis, and haematopoietic stem cell transplantation as "
+        "the only cure for severe forms. Note: infection without pus "
+        "and a neutrophilia is the signature."
+    ),
+    "Incontinentia pigmenti": (
+        "Incontinentia pigmenti is an X linked dominant ectodermal "
+        "disorder whose skin lesions follow the lines of Blaschko in "
+        "four stages. Aetiology: loss of function variants in IKBKG, "
+        "also called NEMO, which is required for nuclear factor kappa "
+        "B signalling. The condition is usually lethal in males, so "
+        "affected infants are almost always girls, and skewed X "
+        "inactivation explains the swirled distribution. Clinical "
+        "features: stage one is a vesicular eruption in linear arrays "
+        "in the first weeks, mistaken for herpes or impetigo. Stage "
+        "two is warty, stage three the whorled hyperpigmentation that "
+        "gives the name, and stage four is atrophic hypopigmented "
+        "streaks in adult life. Dental anomalies with conical or "
+        "missing teeth, alopecia and ridged nails are usual, and the "
+        "serious associations are retinal vascular occlusion leading "
+        "to detachment and neonatal seizures with stroke like "
+        "infarcts. Ix: skin biopsy with an eosinophilic infiltrate, "
+        "peripheral eosinophilia, IKBKG testing, urgent retinal "
+        "examination and MRI brain if seizing. Mx: skin care, with "
+        "lifelong ophthalmology surveillance and laser for retinal "
+        "neovascularisation. Note: a blistering newborn in streaks "
+        "needs an eye examination that week."
+    ),
+    "Ataxia telangiectasia": (
+        "Ataxia telangiectasia is a recessive disorder of DNA double "
+        "strand break repair combining progressive cerebellar ataxia, "
+        "oculocutaneous telangiectasia, immunodeficiency and cancer "
+        "risk. Aetiology: biallelic ATM variants disable the kinase "
+        "that signals double strand breaks, so cells cannot arrest "
+        "the cycle to repair them. Clinical features: truncal ataxia "
+        "appears as the child begins to walk and progresses to "
+        "wheelchair dependence by the early teens, with oculomotor "
+        "apraxia, dysarthria and later dystonia and choreoathetosis. "
+        "Conjunctival telangiectasia appears at around five years, "
+        "after the ataxia rather than with it. Recurrent "
+        "sinopulmonary infection reflects low immunoglobulin A and "
+        "immunoglobulin G subclasses, and bronchiectasis follows. Ix: "
+        "raised serum alpha fetoprotein is a simple and highly "
+        "suggestive screen, with immunoglobulins, lymphocyte subsets "
+        "and ATM gene testing. Mx: no disease modifying treatment. "
+        "Care is supportive with physiotherapy, immunoglobulin "
+        "replacement where indicated, and lifelong surveillance for "
+        "lymphoma and leukaemia. Note: avoid diagnostic ionising "
+        "radiation wherever possible, since these patients are "
+        "genuinely radiosensitive."
     ),
 }
 
