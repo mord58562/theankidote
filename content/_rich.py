@@ -17997,6 +17997,204 @@ NEW_CONDITIONS = [
         "utd": [["Overview", "independent medical examination medicolegal report"]],
         "summary": "",
     },
+    {
+        "name": "Cryoprecipitate",
+        "aliases": ["Cryoprecipitate transfusion", "Cryo", "Fibrinogen replacement"],
+        "utd": [["Overview", "cryoprecipitate transfusion fibrinogen replacement"]],
+        "summary": "",
+    },
+    {
+        "name": "Intraoperative cell salvage",
+        "aliases": ["Cell salvage", "Cell saver", "Autologous blood salvage"],
+        "utd": [["Overview", "intraoperative cell salvage autologous transfusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Blood transfusion consent",
+        "aliases": ["Consent for blood transfusion", "Transfusion consent"],
+        "utd": [["Overview", "informed consent for blood transfusion"]],
+        "summary": "",
+    },
+    {
+        "name": "Smouldering myeloma",
+        "aliases": ["Smouldering multiple myeloma", "Asymptomatic myeloma"],
+        "utd": [["Overview", "smouldering multiple myeloma management"]],
+        "summary": "",
+    },
+    {
+        "name": "Methotrexate toxicity",
+        "aliases": ["Methotrexate overdose", "Methotrexate poisoning"],
+        "utd": [["Overview", "methotrexate toxicity folinic acid rescue"]],
+        "summary": "",
+    },
+    {
+        "name": "Lung volumes",
+        "aliases": ["Static lung volumes", "Body plethysmography", "Plethysmography lung volumes"],
+        "utd": [["Overview", "lung volume measurement plethysmography interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Eosinophilic pneumonia",
+        "aliases": ["Acute eosinophilic pneumonia", "Chronic eosinophilic pneumonia"],
+        "utd": [["Overview", "acute and chronic eosinophilic pneumonia"]],
+        "summary": "",
+    },
+    {
+        "name": "Acute interstitial pneumonia",
+        "aliases": ["Hamman-Rich syndrome", "Idiopathic diffuse alveolar damage"],
+        "utd": [["Overview", "acute interstitial pneumonia Hamman Rich syndrome"]],
+        "summary": "",
+    },
+    {
+        "name": "Serum sickness",
+        "aliases": ["Serum sickness-like reaction", "Serum sickness like reaction"],
+        "utd": [["Overview", "serum sickness and serum sickness like reaction"]],
+        "summary": "",
+    },
+    {
+        "name": "Vaccine allergy assessment",
+        "aliases": ["Vaccine allergy", "Adverse event following immunisation", "Allergic reaction to vaccine"],
+        "utd": [["Overview", "allergic reactions to vaccines assessment revaccination"]],
+        "summary": "",
+    },
+    {
+        "name": "Calcineurin inhibitor toxicity",
+        "aliases": ["Tacrolimus toxicity", "Ciclosporin toxicity", "Calcineurin inhibitor nephrotoxicity"],
+        "utd": [["Overview", "calcineurin inhibitor nephrotoxicity tacrolimus ciclosporin"]],
+        "summary": "",
+    },
+    {
+        "name": "Post-transplant lymphoproliferative disorder",
+        "aliases": ["PTLD", "Post transplant lymphoproliferative disease"],
+        "utd": [["Overview", "post transplant lymphoproliferative disorder management"]],
+        "summary": "",
+    },
+    {
+        "name": "Hepatitis D",
+        "aliases": ["Hepatitis D virus", "Delta hepatitis", "Hepatitis delta"],
+        "utd": [["Overview", "hepatitis D virus infection diagnosis treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Pancreatic cystic neoplasm",
+        "aliases": ["Pancreatic cyst", "Intraductal papillary mucinous neoplasm", "Mucinous cystic neoplasm", "Serous cystadenoma"],
+        "utd": [["Overview", "pancreatic cystic lesions surveillance management"]],
+        "summary": "",
+    },
+    {
+        "name": "Colonoscopy surveillance interval",
+        "aliases": ["Surveillance colonoscopy", "Post-polypectomy surveillance"],
+        "utd": [["Overview", "colonoscopy surveillance intervals after polypectomy"]],
+        "summary": "",
+    },
+    {
+        "name": "Obscure gastrointestinal bleeding",
+        "aliases": ["Small bowel bleeding", "Obscure GI bleeding", "Occult gastrointestinal bleeding"],
+        "utd": [["Overview", "obscure small bowel gastrointestinal bleeding evaluation"]],
+        "summary": "",
+    },
+    {
+        "name": "Pleural fluid analysis",
+        "aliases": ["Pleural fluid interpretation", "Pleural tap analysis"],
+        "utd": [["Overview", "pleural fluid analysis exudate transudate interpretation"]],
+        "summary": "",
+    },
+    {
+        "name": "Paraneoplastic neurological syndrome",
+        "aliases": ["Paraneoplastic neurological disorder", "Paraneoplastic encephalomyelitis"],
+        "utd": [["Overview", "paraneoplastic neurological syndromes antibodies"]],
+        "summary": "",
+    },
+    {
+        "name": "Small fibre neuropathy",
+        "aliases": ["Small-fibre neuropathy", "Small fiber neuropathy"],
+        "utd": [["Overview", "small fibre neuropathy diagnosis skin biopsy"]],
+        "summary": "",
+    },
+    {
+        "name": "Dystonia",
+        "aliases": ["Dystonic disorder", "Generalised dystonia", "Segmental dystonia"],
+        "utd": [["Overview", "dystonia classification and management"]],
+        "summary": "",
+    },
+    {
+        "name": "Antiseizure medication monitoring",
+        "aliases": ["Antiepileptic drug monitoring", "Anticonvulsant level monitoring"],
+        "utd": [["Overview", "therapeutic drug monitoring antiseizure medications"]],
+        "summary": "",
+    },
+    {
+        "name": "Sudden unexpected death in epilepsy",
+        "aliases": ["SUDEP", "Sudden death in epilepsy"],
+        "utd": [["Overview", "sudden unexpected death in epilepsy risk counselling"]],
+        "summary": "",
+    },
+    {
+        "name": "Epilepsy in pregnancy",
+        "aliases": ["Antiseizure medication in pregnancy", "Seizures in pregnancy management"],
+        "utd": [["Overview", "management of epilepsy in pregnancy antiseizure medication"]],
+        "summary": "",
+    },
+    {
+        "name": "Paralytic shellfish poisoning",
+        "aliases": ["Saxitoxin poisoning", "Shellfish toxin poisoning"],
+        "utd": [["Overview", "paralytic shellfish poisoning saxitoxin"]],
+        "summary": "",
+    },
+    {
+        "name": "Circadian rhythm sleep-wake disorder",
+        "aliases": ["Circadian rhythm disorder", "Circadian rhythm sleep disorder"],
+        "utd": [["Overview", "circadian rhythm sleep wake disorders management"]],
+        "summary": "",
+    },
+    {
+        "name": "Withdrawal of life-sustaining treatment",
+        "aliases": ["Withdrawing life-sustaining treatment", "Withholding life-sustaining treatment", "Withdrawal of active treatment"],
+        "utd": [["Overview", "withdrawing and withholding life sustaining treatment"]],
+        "summary": "",
+    },
+    {
+        "name": "Morbidity and mortality meeting",
+        "aliases": ["Mortality and morbidity meeting", "Morbidity and mortality review"],
+        "utd": [["Overview", "morbidity and mortality conference quality improvement"]],
+        "summary": "",
+    },
+    {
+        "name": "Bronchodilator reversibility testing",
+        "aliases": ["Reversibility testing", "Post-bronchodilator spirometry"],
+        "utd": [["Overview", "bronchodilator reversibility testing spirometry"]],
+        "summary": "",
+    },
+    {
+        "name": "Driving pressure",
+        "aliases": ["Ventilator driving pressure", "Delta P ventilation"],
+        "utd": [["Overview", "driving pressure mechanical ventilation lung protection"]],
+        "summary": "",
+    },
+    {
+        "name": "Extubation failure",
+        "aliases": ["Reintubation", "Failed extubation"],
+        "utd": [["Overview", "extubation failure reintubation risk factors"]],
+        "summary": "",
+    },
+    {
+        "name": "Corticosteroids in septic shock",
+        "aliases": ["Hydrocortisone in septic shock", "Steroids in septic shock"],
+        "utd": [["Overview", "corticosteroids hydrocortisone septic shock"]],
+        "summary": "",
+    },
+    {
+        "name": "Glycaemic control in critical illness",
+        "aliases": ["Stress hyperglycaemia", "Insulin infusion in intensive care"],
+        "utd": [["Overview", "glycaemic control critically ill patients insulin"]],
+        "summary": "",
+    },
+    {
+        "name": "Nutrition in critical illness",
+        "aliases": ["Enteral nutrition in intensive care", "ICU nutrition"],
+        "utd": [["Overview", "nutrition support in critically ill patients"]],
+        "summary": "",
+    },
 ]
 
 
@@ -97737,6 +97935,661 @@ RICH_SUMMARIES = {
         "communicated to the treating doctor. Note: the duty runs to "
         "the referrer and the court rather than to the examinee, and "
         "saying so plainly at the start is part of valid consent."
+    ),
+
+    "Cryoprecipitate": (
+        "Cryoprecipitate is the cold-insoluble fraction left when "
+        "fresh frozen plasma is thawed slowly, concentrating "
+        "fibrinogen into a small volume. Features: each unit supplies "
+        "fibrinogen along with factor VIII, von Willebrand factor and "
+        "factor XIII. Indications: fibrinogen below 1.5 g/L in major "
+        "haemorrhage or below 2 g/L in obstetric bleeding, "
+        "disseminated intravascular coagulation and cardiac surgery. "
+        "Dose: a pooled adult dose supplies roughly 3 to 4 g of "
+        "fibrinogen and raises the level by about 1 g/L. Mx: thaw and "
+        "give promptly through a standard filter. ABO compatible "
+        "product is preferred but not essential. Recheck fibrinogen "
+        "after each dose rather than giving fixed repeat courses. "
+        "Adverse effects: allergic and febrile reactions, "
+        "transfusion-associated circulatory overload and rare "
+        "transfusion-related acute lung injury. Australian notes: "
+        "Lifeblood supplies pooled cryoprecipitate, and fibrinogen "
+        "concentrate is the alternative where funded. Note: this is "
+        "the fibrinogen product. Reach for it when fibrinogen is low, "
+        "not as a routine partner to every unit of red cells."
+    ),
+    "Intraoperative cell salvage": (
+        "Intraoperative cell salvage collects blood lost during "
+        "surgery, washes it and returns the patient's own red cells. "
+        "Indications: procedures with expected loss above 500 mL or "
+        "20% of blood volume, including cardiac, vascular, major "
+        "orthopaedic and obstetric surgery. It also suits patients "
+        "who decline allogeneic blood. Mx: blood is aspirated with "
+        "anticoagulant, centrifuged and washed, then reinfused as "
+        "washed red cells in saline. Washing removes plasma, "
+        "platelets and clotting factors, so large volumes still need "
+        "fresh frozen plasma and platelets. A leucodepletion filter "
+        "is used in obstetrics and cancer surgery. Contraindications: "
+        "relative only, chiefly frank bowel contamination or topical "
+        "agents in the field. Complications: dilutional coagulopathy, "
+        "salvaged blood syndrome and rare air embolism. Australian "
+        "notes: it is standard in cardiac and obstetric units, and "
+        "often acceptable to Jehovah's Witness patients when the "
+        "circuit stays continuous. Note: salvaged red cells carry no "
+        "plasma and no platelets, so monitor coagulation."
+    ),
+    "Blood transfusion consent": (
+        "Consent for blood transfusion is a specific process, "
+        "separate from consent for the procedure that makes "
+        "transfusion likely. Features: the discussion covers the "
+        "indication, the expected benefit, the material risks and the "
+        "alternatives, and it is documented. Risk: acute reactions "
+        "are the common problem, while transmission of hepatitis B, "
+        "hepatitis C and HIV is now well under one per million units "
+        "in Australia. Mx: name the alternatives, which include iron "
+        "therapy, tranexamic acid, cell salvage and simply accepting "
+        "a lower haemoglobin. Record refusal of specific components "
+        "where a patient declines. In an emergency where the patient "
+        "cannot consent, transfuse under the doctrine of necessity "
+        "and document why. Australian notes: the National Blood "
+        "Authority patient blood management guidelines and state "
+        "consent forms frame this. A competent adult's advance "
+        "refusal binds even when death follows. Note: consent belongs "
+        "to the transfusion, not to the operation."
+    ),
+    "Smouldering myeloma": (
+        "Smouldering myeloma is an asymptomatic plasma cell disorder "
+        "sitting between monoclonal gammopathy of undetermined "
+        "significance and multiple myeloma. Criteria: serum "
+        "paraprotein at or above 30 g/L or clonal plasma cells 10 to "
+        "60% of marrow, with no myeloma-defining event. Clinical "
+        "features: no hypercalcaemia, renal impairment, anaemia or "
+        "bone lesions, which is exactly what separates it from "
+        "myeloma. Ix: serum protein electrophoresis with "
+        "immunofixation, serum free light chains, marrow biopsy and "
+        "whole-body low-dose CT or MRI. Mx: observation with review "
+        "every three to six months for most, since treatment does not "
+        "clearly help low-risk disease. High-risk disease is defined "
+        "by paraprotein above 20 g/L with plasma cells above 20% and "
+        "a free light chain ratio above 20. That group progresses at "
+        "roughly 50% in two years and belongs in a trial or on early "
+        "lenalidomide. Note: progression runs about 10% a year for "
+        "the first five years, far above the 1% a year of MGUS."
+    ),
+    "Methotrexate toxicity": (
+        "Methotrexate toxicity usually follows a dosing error, "
+        "classically a weekly dose taken daily, or accumulation as "
+        "renal function falls. Aetiology: folate antagonism hits "
+        "rapidly dividing tissue. Risk rises with renal impairment, "
+        "hypoalbuminaemia and interacting drugs such as trimethoprim, "
+        "anti-inflammatories and proton pump inhibitors. Clinical "
+        "features: mucositis and diarrhoea early, then pancytopenia "
+        "at one to two weeks. Hepatitis and a pneumonitis that can "
+        "appear at any dose complete the picture. Ix: full blood "
+        "count, urea and electrolytes, liver function tests and a "
+        "methotrexate level where high-dose therapy was given. Mx: "
+        "stop the drug and give folinic acid rescue. Hydrate and "
+        "alkalinise the urine after high-dose therapy, and add "
+        "granulocyte colony-stimulating factor for severe "
+        "neutropenia. Glucarpidase is available for sustained high "
+        "levels with renal failure. Note: folinic acid, not folic "
+        "acid, is the antidote. Ask how often the tablets were "
+        "actually taken before anything else."
+    ),
+    "Lung volumes": (
+        "Lung volumes are the static compartments measured by body "
+        "plethysmography or gas dilution, adding what spirometry "
+        "cannot give. Features: total lung capacity is the volume at "
+        "full inspiration, residual volume what remains after full "
+        "expiration, and functional residual capacity the resting "
+        "end-expiratory volume. Ix: plethysmography measures all gas "
+        "in the chest and is preferred in airflow obstruction. Helium "
+        "dilution and nitrogen washout miss trapped gas behind closed "
+        "airways and read falsely low. Key point: a total lung "
+        "capacity below 80% predicted defines restriction and "
+        "confirms what a low forced vital capacity only suggests. A "
+        "raised residual volume and a raised ratio of residual volume "
+        "to total lung capacity indicate gas trapping in emphysema "
+        "and asthma. Note: spirometry cannot diagnose restriction on "
+        "its own. A low forced vital capacity with a preserved ratio "
+        "needs lung volumes before restriction is called."
+    ),
+    "Eosinophilic pneumonia": (
+        "Eosinophilic pneumonia is lung infiltration by eosinophils, "
+        "presenting either as an acute febrile illness or as a "
+        "chronic steroid-responsive one. Aetiology: idiopathic in "
+        "most. Otherwise drugs such as daptomycin and "
+        "anti-inflammatories, parasites including Strongyloides, or "
+        "fungal sensitisation. Acute disease is strongly linked to "
+        "recent-onset cigarette or vaping exposure. Clinical "
+        "features: acute disease gives fever, cough and hypoxaemic "
+        "respiratory failure over days, typically without blood "
+        "eosinophilia. Chronic disease gives weeks of cough, wheeze "
+        "and weight loss, usually in an asthmatic woman, with blood "
+        "eosinophilia. Ix: chest CT shows peripheral consolidation, "
+        "the photographic negative of pulmonary oedema, in chronic "
+        "disease. Bronchoalveolar lavage eosinophils above 25% "
+        "confirms it. Mx: stop the drug or smoking trigger and give "
+        "prednisolone, which acts within 48 hours. Treat "
+        "Strongyloides first. Chronic disease relapses in half on "
+        "weaning. Note: a rapid steroid response is almost "
+        "diagnostic."
+    ),
+    "Acute interstitial pneumonia": (
+        "Acute interstitial pneumonia is a fulminant idiopathic "
+        "interstitial pneumonia that behaves like acute respiratory "
+        "distress syndrome without a cause, historically called "
+        "Hamman-Rich syndrome. Aetiology: unknown by definition, so "
+        "it is a diagnosis of exclusion once infection, drugs, "
+        "connective tissue disease and cardiac failure are ruled out. "
+        "Clinical features: a prodrome of fever, myalgia and cough "
+        "over one to two weeks, then rapid progression to hypoxaemic "
+        "respiratory failure within days. Ix: chest CT shows "
+        "bilateral ground-glass with consolidation and traction "
+        "bronchiectasis. Bronchoalveolar lavage and often surgical "
+        "biopsy exclude alternatives, and histology shows diffuse "
+        "alveolar damage. Mx: lung-protective ventilation as for "
+        "acute respiratory distress syndrome, with broad "
+        "antimicrobial cover until cultures return. High-dose "
+        "corticosteroids are usually given although the evidence is "
+        "weak. Prognosis: mortality above 50%, and survivors may be "
+        "left with fibrosis. Note: search hard for a treatable cause "
+        "of diffuse alveolar damage before accepting this label."
+    ),
+    "Serum sickness": (
+        "Serum sickness is a type III hypersensitivity reaction in "
+        "which antigen-antibody complexes deposit in vessels, joints "
+        "and kidney one to three weeks after exposure. Aetiology: "
+        "classically heterologous antitoxin and antivenom, now more "
+        "often monoclonal antibodies such as rituximab and "
+        "infliximab. A serum sickness-like reaction follows cefaclor, "
+        "penicillins and sulfonamides in children without true immune "
+        "complexes. Clinical features: fever, an urticarial or "
+        "serpiginous rash often bordering the palms and soles, "
+        "polyarthralgia and lymphadenopathy. The delayed onset is "
+        "what distinguishes it from anaphylaxis. Ix: clinical. Low C3 "
+        "and C4 with a raised erythrocyte sedimentation rate supports "
+        "it, and urinalysis may show proteinuria. Mx: stop the "
+        "trigger. Antihistamines and anti-inflammatories for mild "
+        "disease, prednisolone for severe. It settles over one to two "
+        "weeks once the antigen clears. Note: fever, rash and joint "
+        "pain appearing one to three weeks after a new biological "
+        "agent is the pattern."
+    ),
+    "Vaccine allergy assessment": (
+        "Vaccine allergy assessment decides whether a reaction after "
+        "immunisation truly contraindicates the next dose, which it "
+        "rarely does. Aetiology: true immediate reactions are usually "
+        "to an excipient rather than the antigen, chiefly gelatin, "
+        "egg protein in yellow fever vaccine and polyethylene glycol "
+        "in mRNA vaccines. Anaphylaxis runs at about one per million "
+        "doses. Clinical features: separate anaphylaxis from a "
+        "vasovagal faint, which is far commoner, and from an "
+        "immunisation stress-related response. Local swelling, fever "
+        "and a large delayed local reaction are expected effects "
+        "rather than allergy. Ix: refer to a specialist immunisation "
+        "clinic for skin testing to the vaccine and its excipients, "
+        "with serology to check whether the patient is already "
+        "protected. Mx: most patients can be revaccinated under "
+        "observation. Where protection is documented the dose may be "
+        "omitted. Australian notes: report to the state adverse "
+        "events service and check the Australian Immunisation "
+        "Handbook. Note: a faint is not an allergy."
+    ),
+    "Calcineurin inhibitor toxicity": (
+        "Calcineurin inhibitor toxicity is the dose-limiting problem "
+        "of ciclosporin and tacrolimus after solid organ and stem "
+        "cell transplantation. Mechanism: calcineurin blockade causes "
+        "afferent arteriolar vasoconstriction acutely and striped "
+        "interstitial fibrosis over years. Clinical features: acute "
+        "toxicity gives a rising creatinine that mimics rejection, "
+        "with hypertension, hyperkalaemia and hypomagnesaemia. "
+        "Tacrolimus causes more diabetes, tremor and neurotoxicity, "
+        "while ciclosporin causes more gum hypertrophy and hirsutism. "
+        "Ix: trough level, urea and electrolytes, magnesium and "
+        "glucose. A graft biopsy is what separates toxicity from "
+        "rejection, since a high level alone does not prove it. "
+        "Interactions: azoles, macrolides and diltiazem raise levels "
+        "sharply, while rifampicin and phenytoin drop them. Mx: dose "
+        "reduction guided by levels, magnesium replacement and blood "
+        "pressure control. Note: a rising creatinine on tacrolimus is "
+        "rejection until a biopsy says otherwise. Do not simply cut "
+        "the dose."
+    ),
+    "Post-transplant lymphoproliferative disorder": (
+        "Post-transplant lymphoproliferative disorder is a spectrum "
+        "of lymphoid proliferations driven by immunosuppression, "
+        "ranging from polyclonal hyperplasia to aggressive lymphoma. "
+        "Aetiology: Epstein-Barr virus drives most early cases, "
+        "especially where a seronegative recipient receives a "
+        "seropositive graft. Risk tracks the depth of T-cell "
+        "suppression, so antithymocyte globulin and high tacrolimus "
+        "exposure matter more than which organ was grafted. Clinical "
+        "features: fever, weight loss and lymphadenopathy, often with "
+        "a mass in the graft, gut or central nervous system. Early "
+        "disease can look like glandular fever. Ix: Epstein-Barr "
+        "virus DNA load, CT or PET, and tissue biopsy which is "
+        "required for the diagnosis. Mx: reduce immunosuppression "
+        "first, which alone can produce remission in early disease. "
+        "Add rituximab for CD20-positive disease and chemotherapy for "
+        "aggressive or unresponsive lymphoma. Note: it peaks in the "
+        "first year, the seronegative recipient is highest risk, and "
+        "reducing immunosuppression is the first treatment."
+    ),
+    "Hepatitis D": (
+        "Hepatitis D is caused by a defective RNA virus that needs "
+        "hepatitis B surface antigen to assemble, so it only infects "
+        "people who already carry hepatitis B. Aetiology: spread is "
+        "parenteral and sexual. Coinfection means simultaneous "
+        "acquisition with hepatitis B, superinfection means "
+        "acquisition on top of chronic hepatitis B, and "
+        "superinfection is the dangerous one. Clinical features: "
+        "coinfection usually resolves with the hepatitis B but "
+        "carries a higher rate of fulminant hepatitis. Superinfection "
+        "causes a flare in a stable carrier and progresses to "
+        "cirrhosis in most within a decade. Ix: test every hepatitis "
+        "B surface antigen positive patient once for hepatitis D "
+        "antibody, then hepatitis D RNA if reactive. Mx: pegylated "
+        "interferon alfa for 48 weeks clears RNA in a minority, and "
+        "bulevirtide is the newer entry inhibitor. Nucleoside "
+        "analogues for hepatitis B do not treat hepatitis D. Note: it "
+        "is the most aggressive chronic viral hepatitis, and "
+        "hepatitis B vaccination prevents it entirely."
+    ),
+    "Pancreatic cystic neoplasm": (
+        "Pancreatic cystic neoplasms are increasingly found "
+        "incidentally on cross-sectional imaging, and the task is "
+        "separating the ones that will become cancer from the ones "
+        "that will not. Types: intraductal papillary mucinous "
+        "neoplasm, mucinous cystic neoplasm, serous cystadenoma and "
+        "pseudocyst. The first two are mucinous and premalignant, the "
+        "last two are not. Clinical features: usually none. "
+        "Concerning lesions cause jaundice, weight loss, new diabetes "
+        "or pancreatitis. Ix: MRI with magnetic resonance "
+        "cholangiopancreatography, and endoscopic ultrasound with "
+        "fluid aspiration where the result would change management. "
+        "Cyst fluid carcinoembryonic antigen is high in mucinous "
+        "cysts and amylase is high in pseudocysts. Mx: surgical "
+        "referral for a cyst above 3 cm or one with a mural nodule, a "
+        "dilated main duct or positive cytology. The rest enter "
+        "surveillance. Note: a serous cystadenoma with a central scar "
+        "can be left alone, while a main duct intraductal papillary "
+        "mucinous neoplasm should come out."
+    ),
+    "Colonoscopy surveillance interval": (
+        "Colonoscopy surveillance intervals set when a patient with "
+        "previous polyps or cancer comes back, and they are decided "
+        "by the findings at the last complete, well-prepared "
+        "colonoscopy. Features: quality comes first. An incomplete or "
+        "poorly prepared procedure is repeated rather than "
+        "surveilled. Mx: one or two small tubular adenomas return at "
+        "five to ten years. Three or four adenomas or any adenoma at "
+        "or above 10 mm return at three years. Five or more adenomas "
+        "or piecemeal resection of a large lesion return sooner. "
+        "Sessile serrated lesions follow parallel rules. After "
+        "colorectal cancer resection colonoscopy is at one year and "
+        "then three yearly. Australian notes: Cancer Council "
+        "Australia clinical practice guidelines set these intervals, "
+        "and the National Bowel Cancer Screening Program does not "
+        "cover surveillance patients. Note: surveillance is not "
+        "screening. The interval follows the pathology, and "
+        "shortening it for reassurance adds risk without adding "
+        "yield."
+    ),
+    "Obscure gastrointestinal bleeding": (
+        "Obscure gastrointestinal bleeding is bleeding that persists "
+        "or recurs after a normal gastroscopy and colonoscopy, and "
+        "most of it comes from the small bowel. Aetiology: "
+        "angioectasia in older patients. Meckel diverticulum, Crohn "
+        "disease or a small bowel tumour in the young. "
+        "Anti-inflammatory ulceration and Dieulafoy lesions also "
+        "appear. Types: overt bleeding is visible, while occult "
+        "bleeding shows only as iron deficiency anaemia with a "
+        "positive faecal occult blood test. Ix: repeat the "
+        "gastroscopy and colonoscopy first, since a missed lesion "
+        "within reach explains about a quarter. Then capsule "
+        "endoscopy, with CT angiography or a red cell scan if "
+        "bleeding is brisk. Device-assisted enteroscopy allows "
+        "treatment. Mx: argon plasma coagulation for angioectasia, "
+        "with iron replacement and transfusion as needed. "
+        "Somatostatin analogues or thalidomide are used for "
+        "refractory angioectasia. Stop antiplatelets and "
+        "anticoagulants where possible. Note: look again before "
+        "looking further."
+    ),
+    "Pleural fluid analysis": (
+        "Pleural fluid analysis classifies an effusion as transudate "
+        "or exudate and then looks for the specific cause. Ix: send "
+        "protein and lactate dehydrogenase with paired serum. Add pH "
+        "in a blood gas syringe, glucose, cell count, microscopy and "
+        "cytology. Features: Light criteria call an effusion "
+        "exudative if pleural to serum protein exceeds 0.5 or pleural "
+        "to serum lactate dehydrogenase exceeds 0.6. Transudates are "
+        "heart failure, cirrhosis and nephrotic syndrome. Dx: a pH "
+        "below 7.2 in an infected effusion means a drain is needed. "
+        "Lymphocyte predominance suggests tuberculosis or malignancy, "
+        "neutrophils suggest a parapneumonic effusion, and milky "
+        "fluid with triglycerides above 1.24 mmol/L is chylothorax. "
+        "Note: cytology is positive in only about 60% of malignant "
+        "effusions, so one negative sample does not exclude cancer. "
+        "Send a second, and think about thoracoscopy."
+    ),
+    "Paraneoplastic neurological syndrome": (
+        "Paraneoplastic neurological syndromes are immune-mediated "
+        "nervous system disorders triggered by a tumour expressing "
+        "neuronal antigens, not by metastasis or by treatment. "
+        "Aetiology: small cell lung cancer, ovarian and breast "
+        "cancer, thymoma and testicular germ cell tumours account for "
+        "most. The neurological illness usually precedes the cancer "
+        "diagnosis by months. Clinical features: limbic encephalitis "
+        "with subacute memory loss and seizures, cerebellar "
+        "degeneration with rapid ataxia, and sensory neuronopathy. "
+        "Lambert-Eaton myasthenic syndrome is the best-recognised of "
+        "the group. Ix: serum and cerebrospinal fluid antibodies, "
+        "notably anti-Hu, anti-Yo and anti-Ma2. MRI shows medial "
+        "temporal change in limbic encephalitis, and CT with PET "
+        "hunts the tumour. Mx: treat the tumour, which is the single "
+        "most effective step, alongside steroids, immunoglobulin or "
+        "plasma exchange. Note: cell-surface antibody syndromes "
+        "respond well, while intracellular antibody syndromes such as "
+        "anti-Hu and anti-Yo respond poorly."
+    ),
+    "Small fibre neuropathy": (
+        "Small fibre neuropathy damages thinly myelinated A-delta and "
+        "unmyelinated C fibres, producing pain and autonomic symptoms "
+        "with a normal neurological examination. Aetiology: diabetes "
+        "and impaired glucose tolerance lead, followed by alcohol, "
+        "vitamin B12 deficiency and Sjogren syndrome. Amyloidosis and "
+        "Fabry disease are the rare causes not to miss, and a third "
+        "remain idiopathic. Clinical features: burning feet worse at "
+        "night, allodynia and a stocking distribution beginning "
+        "distally. Reflexes, power and vibration are preserved, which "
+        "is the diagnostic clue. Autonomic features include dry eyes, "
+        "altered sweating and orthostatic dizziness. Ix: nerve "
+        "conduction studies are normal by definition. Skin biopsy "
+        "showing reduced intraepidermal nerve fibre density confirms "
+        "it, and quantitative sensory testing supports it. Screen for "
+        "diabetes with an oral glucose tolerance test. Mx: treat the "
+        "cause, then use amitriptyline, duloxetine or pregabalin. "
+        "Note: normal nerve conduction studies do not exclude "
+        "neuropathy."
+    ),
+    "Dystonia": (
+        "Dystonia is sustained or intermittent muscle contraction "
+        "causing twisting postures and repetitive movements, often "
+        "with a tremulous component. Classification: by age at onset, "
+        "body distribution and cause. Focal dystonia affects one "
+        "region, segmental two adjacent regions, and generalised "
+        "involves the trunk. Aetiology: idiopathic and genetic forms "
+        "such as DYT1 in the young. Secondary causes include "
+        "dopamine-blocking drugs, Wilson disease, cerebral palsy and "
+        "stroke. Clinical features: cervical dystonia is the "
+        "commonest focal form, followed by blepharospasm and writer's "
+        "cramp. A sensory trick such as touching the chin, which "
+        "eases the posture, is characteristic. Ix: MRI brain, with "
+        "caeruloplasmin and copper studies in anyone under 50. "
+        "Genetic testing where onset is early or there is a family "
+        "history. Mx: botulinum toxin is first line for focal "
+        "disease. Trihexyphenidyl or clonazepam for generalised "
+        "disease, with deep brain stimulation when refractory. Note: "
+        "always trial levodopa in childhood onset to catch "
+        "dopa-responsive dystonia."
+    ),
+    "Antiseizure medication monitoring": (
+        "Antiseizure medication monitoring is mostly clinical, since "
+        "seizure control and tolerability matter more than a number. "
+        "Indications: levels help for phenytoin because of its "
+        "saturable kinetics, for suspected toxicity, for suspected "
+        "non-adherence, and in pregnancy where levels fall. Routine "
+        "levels for most other agents add little. Monitoring: sodium "
+        "valproate needs liver function tests and a full blood count "
+        "early. Carbamazepine causes hyponatraemia and autoinduction "
+        "that lowers its own level over weeks. Lamotrigine levels "
+        "fall with oestrogen-containing contraception and in "
+        "pregnancy. A phenytoin total level must be corrected for "
+        "albumin, or the free level measured, since a low albumin "
+        "makes a therapeutic total read as subtherapeutic. Adverse "
+        "effects: nystagmus and ataxia at high phenytoin levels, "
+        "tremor with valproate, and rash with lamotrigine if titrated "
+        "too fast. Note: treat the patient rather than the level, "
+        "except with phenytoin where small dose changes move levels "
+        "unpredictably."
+    ),
+    "Sudden unexpected death in epilepsy": (
+        "Sudden unexpected death in epilepsy is the sudden, "
+        "non-traumatic death of a person with epilepsy in whom "
+        "autopsy finds no other cause. It is the leading cause of "
+        "epilepsy-related death in young adults. Epidemiology: about "
+        "1 per 1000 adults with epilepsy each year, rising towards 1 "
+        "in 150 with frequent generalised tonic-clonic seizures. "
+        "Aetiology: most cases follow an unwitnessed nocturnal "
+        "convulsion, with postictal central apnoea, arrhythmia and "
+        "impaired arousal implicated. Risk factors: frequent "
+        "generalised tonic-clonic seizures, nocturnal seizures and "
+        "sleeping alone. Poor adherence and polytherapy for "
+        "refractory epilepsy add further. Mx: optimise seizure "
+        "control, since freedom from convulsive seizures largely "
+        "removes the risk. Address adherence, consider nocturnal "
+        "supervision, and refer refractory patients for epilepsy "
+        "surgery assessment. Note: discuss it openly. Guidance is "
+        "that patients and families should be told, because the main "
+        "modifiable factor is taking the medication."
+    ),
+    "Epilepsy in pregnancy": (
+        "Epilepsy in pregnancy balances seizure control against "
+        "teratogenic risk, and most women with epilepsy have "
+        "uncomplicated pregnancies. Mx: plan before conception. Aim "
+        "for monotherapy at the lowest effective dose and give folic "
+        "acid 5 mg daily from before conception. Do not stop "
+        "medication because a woman is pregnant, since a generalised "
+        "tonic-clonic seizure risks the fetus more than most drugs "
+        "do. Adverse effects: sodium valproate carries the highest "
+        "risk, with major malformation in about 10% and "
+        "neurodevelopmental impairment in up to 40%, so it is avoided "
+        "in anyone who could become pregnant. Carbamazepine and "
+        "topiramate carry intermediate risk, while lamotrigine and "
+        "levetiracetam are preferred. Monitoring: lamotrigine and "
+        "levetiracetam levels fall substantially through pregnancy "
+        "and often need dose increases, then reduction after "
+        "delivery. Australian notes: valproate has pregnancy "
+        "prevention requirements, and vitamin K for the newborn is "
+        "routine. Note: breastfeeding is encouraged on standard "
+        "agents."
+    ),
+    "Paralytic shellfish poisoning": (
+        "Paralytic shellfish poisoning follows eating bivalve "
+        "molluscs that have concentrated saxitoxins from a harmful "
+        "algal bloom. Aetiology: saxitoxin blocks voltage-gated "
+        "sodium channels and halts nerve conduction. The toxin is "
+        "heat-stable, so cooking does not help, and affected "
+        "shellfish look and taste normal. Clinical features: perioral "
+        "and limb paraesthesia within 30 minutes, then ataxia, "
+        "dysarthria and a floating sensation. Severe poisoning "
+        "progresses to flaccid paralysis and respiratory failure "
+        "within hours, with the patient fully awake throughout. Ix: "
+        "clinical, based on the meal history. Public health "
+        "laboratories can assay toxin in leftover shellfish. Mx: "
+        "there is no antidote. Supportive care with airway protection "
+        "and ventilation is the treatment, and those who survive the "
+        "first 12 hours generally recover fully. Notify public health "
+        "so the harvest area can be closed. Australian notes: "
+        "commercial harvest areas are monitored, so recreational "
+        "gathering during a bloom is the usual source. Note: "
+        "paraesthesia after shellfish with a clear mind and a failing "
+        "diaphragm."
+    ),
+    "Circadian rhythm sleep-wake disorder": (
+        "Circadian rhythm sleep-wake disorders arise when the "
+        "internal clock is misaligned with the required sleep "
+        "schedule, rather than from an inability to sleep. Types: "
+        "delayed and advanced sleep-wake phase disorders, irregular "
+        "and non-24-hour rhythms, plus shift work and jet lag "
+        "disorders. Aetiology: the suprachiasmatic nucleus is "
+        "entrained by light, so blindness, evening light exposure and "
+        "rotating shifts are the usual drivers. Delayed phase is "
+        "commonest in adolescents. Clinical features: sleep is normal "
+        "in quality and duration when the patient keeps their own "
+        "timing, but insomnia and daytime sleepiness appear once "
+        "society dictates the hours. Ix: a two-week sleep diary with "
+        "actigraphy, which is what separates these from insomnia. Dim "
+        "light melatonin onset is used in research settings. Mx: "
+        "timed bright light and timed low-dose melatonin, with light "
+        "in the morning and melatonin in the evening for delayed "
+        "phase. Scheduled napping helps shift workers. Note: the "
+        "clock is misaligned, not broken."
+    ),
+    "Withdrawal of life-sustaining treatment": (
+        "Withdrawal of life-sustaining treatment is the decision to "
+        "stop interventions that are no longer achieving the "
+        "patient's goals, allowing the underlying disease to cause "
+        "death. Features: withholding and withdrawing are ethically "
+        "and legally equivalent, which means a trial of treatment can "
+        "always be stopped. The intention is to remove a burden "
+        "rather than to cause death, and that is what separates it "
+        "from voluntary assisted dying. Mx: establish the prognosis, "
+        "then the patient's wishes from their own voice, an advance "
+        "care directive or the substitute decision maker. Document "
+        "the discussion and the plan. Anticipate symptoms with "
+        "opioids and midazolam titrated to distress, and continue "
+        "comfort measures, mouth care and family support. Australian "
+        "notes: substitute decision-making hierarchies differ by "
+        "state, and clinicians are not obliged to provide treatment "
+        "that is futile. Note: doses given to relieve breathlessness "
+        "or agitation are proportionate treatment, and fear of "
+        "hastening death is the commonest reason symptoms go "
+        "undertreated."
+    ),
+    "Morbidity and mortality meeting": (
+        "A morbidity and mortality meeting is a structured "
+        "departmental review of adverse outcomes, held to improve "
+        "systems rather than to judge individuals. Features: cases "
+        "are selected by death, unplanned return to theatre, "
+        "readmission or a recognised complication. The discussion "
+        "moves from what happened to why, using a systems framework "
+        "rather than a search for blame. Mx: present the timeline "
+        "first, then identify contributing factors across people, "
+        "equipment, environment and process. Agree actions with an "
+        "owner and a date, and close the loop by reporting back at "
+        "the next meeting. Australian notes: quality assurance "
+        "activities can be declared under Commonwealth qualified "
+        "privilege, which protects the discussion from disclosure and "
+        "encourages candour. Colleges require participation for "
+        "continuing professional development. Note: a meeting that "
+        "names a doctor and moves on has failed. The output is a "
+        "change to the system and a follow-up item, not a verdict."
+    ),
+    "Bronchodilator reversibility testing": (
+        "Bronchodilator reversibility testing repeats spirometry "
+        "after a short-acting beta-2 agonist to see whether airflow "
+        "obstruction improves. Indications: suspected asthma, and "
+        "separating asthma from chronic obstructive pulmonary disease "
+        "where the history is ambiguous. Ix: baseline spirometry, "
+        "then 400 micrograms of salbutamol by spacer, with repeat "
+        "spirometry after 10 to 15 minutes. Withhold short-acting "
+        "bronchodilators for four hours and long-acting agents for "
+        "longer beforehand. Criteria: a rise of more than 12% and "
+        "more than 200 mL in forced expiratory volume in one second "
+        "or forced vital capacity is significant. Current "
+        "international guidance also accepts a rise above 10% of the "
+        "predicted value. Mx: reversibility supports asthma, but its "
+        "absence does not exclude it, since obstruction can be fixed "
+        "on the day. Note: normal spirometry with a good history does "
+        "not exclude asthma. Consider peak flow variability or "
+        "bronchial provocation testing instead of repeating the same "
+        "test."
+    ),
+    "Driving pressure": (
+        "Driving pressure is plateau pressure minus positive "
+        "end-expiratory pressure, and it represents tidal volume "
+        "normalised to the compliance of the aerated lung. Features: "
+        "it is measured with an inspiratory hold in a passive "
+        "patient, and a value at or below 15 cmH2O is the usual "
+        "target. Key point: in reanalyses of acute respiratory "
+        "distress syndrome trials, driving pressure was the "
+        "ventilator variable most strongly associated with survival, "
+        "ahead of tidal volume or plateau pressure alone. Mx: lower "
+        "it by reducing tidal volume, or by adjusting positive "
+        "end-expiratory pressure where that recruits lung and "
+        "improves compliance. If raising positive end-expiratory "
+        "pressure raises driving pressure, the lung is being "
+        "overdistended rather than recruited. Note: 6 mL/kg of "
+        "predicted body weight assumes a normal-sized aerated lung. "
+        "Driving pressure measures what is actually left to "
+        "ventilate, which is why it tracks outcome so closely."
+    ),
+    "Extubation failure": (
+        "Extubation failure is the need for reintubation within 48 to "
+        "72 hours of a planned extubation, and it carries a mortality "
+        "several times that of a successful one. Risk factors: age, a "
+        "positive fluid balance, weak cough, copious secretions and "
+        "prolonged ventilation. Features: failure usually comes from "
+        "airway obstruction, secretion clearance or cardiac "
+        "decompensation, rather than from the illness that led to "
+        "ventilation. Ix: a spontaneous breathing trial assesses the "
+        "respiratory pump but says nothing about the airway. A cuff "
+        "leak test screens for laryngeal oedema in those at risk. Mx: "
+        "plan for failure before removing the tube. Prophylactic "
+        "non-invasive ventilation or high flow nasal oxygen reduces "
+        "reintubation in high-risk patients, and dexamethasone before "
+        "extubation reduces post-extubation stridor where the cuff "
+        "leak is absent. Note: passing a breathing trial is not the "
+        "same as being able to protect an airway. Assess cough and "
+        "secretions separately."
+    ),
+    "Corticosteroids in septic shock": (
+        "Corticosteroids in septic shock are an adjunct for patients "
+        "who remain hypotensive despite fluids and vasopressors. "
+        "Mechanism: critical illness related corticosteroid "
+        "insufficiency reduces vascular responsiveness to "
+        "catecholamines, and hydrocortisone restores it. Indications: "
+        "an ongoing vasopressor requirement, typically noradrenaline "
+        "above about 0.25 micrograms per kilogram per minute for "
+        "several hours. Dose: hydrocortisone 200 mg daily, given as "
+        "50 mg six hourly or by infusion, for five to seven days. "
+        "Fludrocortisone was added in some trials. Mx: trials "
+        "consistently show faster shock reversal and shorter "
+        "intensive care stay. The mortality effect is inconsistent, "
+        "positive in APROCCHSS and neutral in ADRENAL. Adverse "
+        "effects: hyperglycaemia, hypernatraemia and muscle weakness. "
+        "Note: do not use a short synacthen test to select patients. "
+        "The decision rests on vasopressor dependence rather than on "
+        "a cortisol level."
+    ),
+    "Glycaemic control in critical illness": (
+        "Glycaemic control in critical illness targets moderate "
+        "rather than tight blood glucose, because the harm of "
+        "hypoglycaemia outweighs the benefit of normal numbers. "
+        "Aetiology: stress hyperglycaemia follows counter-regulatory "
+        "hormones and insulin resistance, and it occurs in patients "
+        "with and without diabetes. Features: the NICE-SUGAR trial "
+        "found higher mortality with a target of 4.5 to 6.0 mmol/L "
+        "than with a target at or below 10 mmol/L, driven by severe "
+        "hypoglycaemia. Mx: aim for roughly 6 to 10 mmol/L using an "
+        "intravenous insulin infusion with hourly glucose monitoring "
+        "until stable. Use a standard protocol, watch for "
+        "hypoglycaemia when feeds are interrupted, and replace "
+        "potassium. Note: glucose variability and hypoglycaemia "
+        "predict death better than the mean glucose does. A steady 9 "
+        "is safer than a volatile 6, and a capillary reading is "
+        "unreliable in shock."
+    ),
+    "Nutrition in critical illness": (
+        "Nutrition in critical illness aims to limit the catabolism "
+        "of prolonged illness without causing harm through "
+        "overfeeding. Mx: start enteral feeding within 24 to 48 hours "
+        "where the gut works, since it maintains mucosal integrity "
+        "and is safer and cheaper than the alternative. Begin at a "
+        "trophic rate and build over days. Parenteral nutrition is "
+        "reserved for a non-functioning gut or persistent failure of "
+        "enteral feeding. Features: energy of roughly 25 kcal per "
+        "kilogram per day with protein of 1.2 to 2.0 g per kilogram "
+        "per day is usual, with lower energy in the first week. "
+        "Complications: refeeding syndrome in the malnourished, "
+        "aspiration, diarrhoea and overfeeding with hyperglycaemia. "
+        "Monitoring: phosphate, magnesium and potassium daily in the "
+        "first days. Note: early full-calorie feeding does not "
+        "improve outcomes and may harm. Protein matters more than "
+        "calories in the acute phase."
     ),
 }
 
