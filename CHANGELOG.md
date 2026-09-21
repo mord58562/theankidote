@@ -5,6 +5,20 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.8.2] - 2026-09-21
+
+### Changed
+
+- **The bundled term library is current again.** The add-on ships with
+  `data/library.json` so a new install is useful before its first
+  library update lands. That copy had been frozen at content
+  `14.09.2026.2` since the 2.8.1 build, while the published library had
+  moved on to `21.09.2026`. A fresh install was therefore missing 841
+  entries for its first two launches: one to download the update in the
+  background, and one to build the matcher from it at import. The
+  bundled copy is now the published one. Existing installs were already
+  receiving this content over the library channel and see no change.
+
 ## [2.8.1] - 2026-09-14
 
 ### Fixed
