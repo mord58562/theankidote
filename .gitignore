@@ -31,3 +31,11 @@ theankidote-publishing-instructions.txt
 # Review tooling, never part of a release
 .ruff_cache/
 .pytest_cache/
+
+# Internal working material. This repo is public; keep it out.
+.remote-agent-context.md
+MIGRATION.md
+audit/
+docs/CHECKPOINT-*.md
+docs/HANDOVER-*.md
+docs/priority-gaps-*.md

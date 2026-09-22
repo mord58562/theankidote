@@ -301,6 +301,11 @@ at 2.2.
 
 ---
 
+## Changelog
+
+Every release is in [CHANGELOG.md](CHANGELOG.md). The current version's
+notes are also in WHATS-NEW-2.8.0.md, which ships inside the add-on.
+
 ## Licence
 
 GPL-3.0-or-later. See [LICENSE](LICENSE).
