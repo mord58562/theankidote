@@ -301,6 +301,23 @@ def _acronym_to_condition(expansion: str):
     return lookup.get(_normalise_for_lookup(expansion))
 
 
+def _acronym_heading(acronym: str, *names: str) -> str:
+    """The popup heading for an acronym: "MI - Myocardial infarction".
+
+    The first of `names` that is not the acronym itself is what follows
+    the dash. When every candidate IS the acronym - a condition whose
+    primary name is "COPD" or "HIV", a lab key "ferritin" expanding to
+    "Ferritin" - the heading is that name alone. Written blindly as
+    "{acronym} - {name}", 195 popups across a 6,088-note collection were
+    headed "HIV - HIV", "COPD - COPD" or "ferritin - Ferritin".
+    """
+    key = (acronym or "").strip().lower()
+    for n in names:
+        if n and n.strip().lower() != key:
+            return f"{acronym} - {n}"
+    return next((n for n in names if n), acronym)
+
+
 def _acronym_terms(card) -> list:
     """Resolve medical acronyms in card text → highlight terms.
     Acronym matches are case-sensitive to avoid false positives like 'pe' in
@@ -324,7 +341,8 @@ def _acronym_terms(card) -> list:
         if cond is not None:
             out.append({
                 "title":      it["acronym"],
-                "_article":   f'{it["acronym"]} - {cond["name"]}',
+                "_article":   _acronym_heading(it["acronym"], cond["name"],
+                                               it["expansion"]),
                 "_expansion": it["expansion"],
                 "url":        _conditions._url_for(cond),
                 "summary":    (cond.get("summary", "") or "").strip(),
@@ -352,7 +370,7 @@ def _acronym_terms(card) -> list:
             continue
         out.append({
             "title":      it["acronym"],
-            "_article":   f'{it["acronym"]} - {it["expansion"]}',
+            "_article":   _acronym_heading(it["acronym"], it["expansion"]),
             "_expansion": it["expansion"],       # used by _upgrade_acronym_urls
             "url":        _term_search_url(it["expansion"]),
             "summary":    it["description"],
@@ -674,8 +692,15 @@ def _forms(t: dict) -> list:
     it appears in prose. Case-sensitive terms are exempt - their casing
     is the discrimination - and so are user-defined ones.
     """
-    forms = [t["title"]]
     short_ok = bool(t.get("case_sensitive") or t.get("user_defined"))
+    # The title obeys the same rule as a surface. It used to be exempt
+    # here and filtered by `_inject_highlights` instead - and that filter
+    # dropped the whole TERM, long surfaces included. The condition
+    # titled "HIV" therefore never underlined "human immunodeficiency
+    # virus", and "4AT" never underlined "4AT test", although both
+    # resolved and reached the sidebar.
+    title = t["title"]
+    forms = [title] if (len(title) >= 4 or short_ok) else []
     for extra in t.get("_surfaces") or ():
         if not extra or extra in forms:
             continue
@@ -759,6 +784,27 @@ def _build_pattern(terms: list):
         title = t["title"]
         rec = _record(t, title)
         for form in _forms(t):
+            # Keyed on the form `_open_span` will ask for, not on the
+            # form as written. `_open_span` normalises the matched text
+            # with `normalise_separators`, which folds the typographic
+            # apostrophe and the exotic spaces an editor emits - so a
+            # key stored unfolded is a key it can never ask for.
+            #
+            # A surface form comes out of `surface_form`, which slices
+            # the card verbatim, so a card written "Addison’s disease"
+            # put U+2019 straight into `alts` AND into the lookup. The
+            # term resolved, the pattern matched it, `_open_span` folded
+            # the match to an ASCII apostrophe, missed, and returned the
+            # word unmarked. 29 matches across a 6,088-note collection
+            # underlined nothing, silently - the same failure the
+            # matcher's own apostrophe folding was added to fix, left
+            # behind on the highlighting half.
+            #
+            # `alts` and the dedupe sets still carry the form verbatim,
+            # because the regex has to match the spelling the card used:
+            # a card carrying both apostrophes needs both alternatives,
+            # and both now resolve to the one record.
+            norm = _matcher.normalise_separators(form)
             if sensitive:
                 if form in seen_sens:
                     continue
@@ -766,14 +812,14 @@ def _build_pattern(terms: list):
                 # First writer wins: `terms` arrives in precedence
                 # order, so an earlier database keeps a name a later one
                 # also claims. See `_on_card_will_show`.
-                lookup.setdefault(form, rec)
-                sens_titles.add(form)
+                lookup.setdefault(norm, rec)
+                sens_titles.add(norm)
             else:
                 key = form.lower()
                 if key in seen_ins:
                     continue
                 seen_ins.add(key)
-                lookup.setdefault(key, rec)
+                lookup.setdefault(norm.lower(), rec)
             alts.append((form, sensitive))
 
     if not alts:
@@ -912,10 +958,10 @@ def _inject_highlights(html: str, results: list, color: str,
     # exempt too: the user typed this one in deliberately, so silently
     # dropping it because it happens to be short is worse than the
     # noise the filter exists to prevent.
-    terms = [r for r in results
-             if r.get("title")
-             and (len(r["title"]) >= 4 or r.get("case_sensitive")
-                  or r.get("user_defined"))]
+    #
+    # Judged per spelling by `_forms`, not on the title: a short title
+    # can carry a long surface, and that one is worth marking.
+    terms = [r for r in results if r.get("title") and _forms(r)]
     if not terms:
         return html
 
@@ -1253,6 +1299,61 @@ def _rank_results(card, items: list) -> list:
     return items
 
 
+_short_exact: set = None
+
+
+def _short_exact_forms() -> set:
+    """Every library spelling under four characters, cased as published.
+
+    A three-letter abbreviation is discriminated by its casing and by
+    nothing else. The library's "PTS" is post-thrombotic syndrome; a
+    card's "pts" is patients. "HRS" is hepatorenal syndrome and "hrs"
+    is hours. "APR" is abdominoperineal resection and "Apr" is April.
+    "HCL" is hairy cell leukaemia and "HCl" is hydrochloric acid.
+
+    `_forms` and `_inject_highlights` already refuse to underline a
+    case-insensitively matched form this short, and say why: marking
+    them "would light up 'did' wherever it appears in prose". But that
+    rule lives on the highlighting path only. `_local_results_for_card`
+    reads `resolve()` directly, so the reference dock kept offering the
+    articles the highlighter had already judged unsafe to mark.
+
+    Measured over a 6,088-note collection: 112 cards were handed at
+    least one article about something they never mentioned, led by
+    Abdominoperineal resection, Rheumatic heart disease and
+    Post-thrombotic syndrome. The 417 condition forms shorter than four
+    characters are almost all aliases - only two are a primary name -
+    so requiring the card to have written one the way the library
+    publishes it costs nothing a reader would miss.
+    """
+    global _short_exact
+    if _short_exact is None:
+        forms = {n for n in getattr(_conditions, "_NAMES", ()) if len(n) < 4}
+        for d in getattr(_drugs, "_DRUGS", ()):
+            names = [d.get("generic")] + list(d.get("aliases") or [])
+            forms.update(n for n in names if isinstance(n, str) and len(n) < 4)
+        _short_exact = forms
+    return _short_exact
+
+
+def _spelled_as_published(t: dict) -> bool:
+    """False when the only thing that matched was a short abbreviation
+    the card wrote in a casing the library does not use.
+
+    Case-sensitive terms - brands and acronyms - are exempt: their
+    casing was already the match. So are user-defined terms, for the
+    reason `_inject_highlights` gives. An entry with no recorded
+    surface is kept rather than guessed at.
+    """
+    if t.get("case_sensitive") or t.get("user_defined"):
+        return True
+    surfaces = t.get("_surfaces") or ()
+    if not surfaces:
+        return True
+    short = _short_exact_forms()
+    return any(len(s) >= 4 or s in short for s in surfaces)
+
+
 def _local_results_for_card(card) -> list:
     """Build the sidebar's article list from the local databases.
 
@@ -1274,6 +1375,8 @@ def _local_results_for_card(card) -> list:
     # window.
     conds = _condition_terms(card)
     for t in conds:
+        if not _spelled_as_published(t):
+            continue
         key = t["url"]
         if key and key not in seen:
             seen.add(key)
@@ -1286,6 +1389,8 @@ def _local_results_for_card(card) -> list:
             })
     drugs = _drug_terms(card)
     for t in drugs:
+        if not _spelled_as_published(t):
+            continue
         key = t["url"]
         if key and key not in seen:
             seen.add(key)
@@ -1299,8 +1404,12 @@ def _local_results_for_card(card) -> list:
                 "summary": t.get("summary", ""),
             })
     _rank_results(card, results)
+    # `None` means unset; `0` is a real setting. config.md documents
+    # "`0` removes the cap", but `int(... or 8)` turned 0 back into 8
+    # before the `cap > 0` test below, so that branch could never skip.
+    raw = _config.get("maxResults")
     try:
-        cap = int(_config.get("maxResults") or 8)
+        cap = 8 if raw is None or isinstance(raw, bool) else int(raw)
     except Exception:
         cap = 8
     if cap > 0:

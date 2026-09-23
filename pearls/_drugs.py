@@ -173,9 +173,23 @@ for _d in _DRUGS:
 # than to whichever single component was listed first. Each of these is
 # sold only as the combination, so a popup headed with one component
 # describes something the patient is not taking.
+#
+# The same override also settles a contested brand where first-wins
+# lands on the wrong product outright. `Injectafer` is ferric
+# carboxymaltose, but the base vocabulary also lists it under
+# artesunate, which sits earlier - so a card about IV iron opened an
+# antimalarial monograph headed "Injectafer is a brand name for
+# artesunate". Efudix is the topical cream, not systemic 5-FU; Vemlidy
+# and Reandron are the specific ester or prodrug entry, not the parent;
+# Paxlovid's own entry is nirmatrelvir, not the HIV booster.
 _COMBINATION_BRANDS = {
     "Entresto": "sacubitril/valsartan",
     "Buscopan": "hyoscine butylbromide",
+    "Injectafer": "ferric carboxymaltose",
+    "Efudix": "fluorouracil topical",
+    "Vemlidy": "tenofovir alafenamide",
+    "Reandron": "testosterone undecanoate",
+    "Paxlovid": "nirmatrelvir",
 }
 for _b, _want in _COMBINATION_BRANDS.items():
     _pref = _GENERIC_LOOKUP.get(_want.lower())

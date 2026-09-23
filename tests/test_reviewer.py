@@ -478,6 +478,119 @@ class WhatGetsUnderlined(unittest.TestCase):
             "oesophageal varices")
 
 
+class TypographicApostrophe(unittest.TestCase):
+    """A card written with U+2019 resolved, matched and marked nothing.
+
+    `_build_pattern` keyed the lookup on the surface form as written,
+    and `_open_span` looks it up after `normalise_separators` folds the
+    apostrophe to ASCII - so the key it asked for was never stored.
+    29 matches over a 6,088-note collection were dropped this way.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rv = _load_reviewer()
+
+    def test_a_curly_apostrophe_is_underlined(self):
+        out = self.rv.highlight_text(
+            "A patient with Addison’s disease is hypotensive.",
+            with_css=False)
+        self.assertIn('class="sp-mark"', out,
+                      "resolved but not underlined: lookup key mismatch")
+
+    def test_both_apostrophes_on_one_card_are_both_underlined(self):
+        out = self.rv.highlight_text(
+            "Addison’s disease, also written Addison's disease.",
+            with_css=False)
+        self.assertEqual(out.count('class="sp-mark"'), 2)
+
+
+class AShortTitleDoesNotHideALongSpelling(unittest.TestCase):
+    """The condition titled "HIV" never underlined "human
+    immunodeficiency virus": the under-four-characters rule was applied
+    to the title and dropped the whole term, long surfaces included."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rv = _load_reviewer()
+
+    def test_the_long_alias_is_underlined(self):
+        out = self.rv.highlight_text(
+            "Infected with human immunodeficiency virus.", with_css=False)
+        self.assertIn('class="sp-mark"', out)
+
+    def test_the_short_title_in_lower_case_still_is_not(self):
+        out = self.rv.highlight_text("hiv and 4at in prose.", with_css=False)
+        self.assertNotIn('class="sp-mark"', out)
+
+
+class AcronymHeadingDoesNotRepeatItself(unittest.TestCase):
+    """A condition named by its own acronym headed "COPD - COPD"."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rv = _load_reviewer()
+
+    def test_no_heading_is_the_acronym_twice(self):
+        for text in ("COPD is common.", "HIV on ART.", "Low ferritin.",
+                     "MI yesterday."):
+            out = self.rv.highlight_text(text, with_css=False)
+            for t in re.findall(r'data-sp-title="([^"]*)"', out):
+                a, _, b = t.partition(" - ")
+                self.assertFalse(b and a.lower() == b.lower(),
+                                 f"{text!r} is headed {t!r}")
+
+    def test_the_ordinary_heading_is_unchanged(self):
+        out = self.rv.highlight_text("MI yesterday.", with_css=False)
+        self.assertIn('data-sp-title="MI - Myocardial infarction"', out)
+
+
+class SidebarOffersOnlyWhatTheCardSaid(unittest.TestCase):
+    """A short alias matched in a casing the library does not publish.
+
+    The highlighter refuses to underline a case-insensitive form under
+    four characters; the sidebar read `resolve()` directly and offered
+    the article anyway - "Apr" as Abdominoperineal resection, "pts" as
+    Post-thrombotic syndrome.
+    """
+
+    class _Note:
+        def __init__(self, f):
+            self._f = f
+
+        def values(self):
+            return self._f
+
+    class _Card:
+        def __init__(self, f):
+            self._f = f
+            self.id = 1
+
+        def note(self):
+            return SidebarOffersOnlyWhatTheCardSaid._Note(self._f)
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rv = _load_reviewer()
+        from theankidote.pearls import _conditions
+        names = set(_conditions._NAMES)
+        if not {"PTS", "APR"} <= names:
+            raise unittest.SkipTest("fixture aliases PTS/APR are gone")
+
+    def _titles(self, text):
+        return [r["title"] for r in
+                self.rv._local_results_for_card(self._Card([text]))]
+
+    def test_ordinary_words_do_not_become_articles(self):
+        got = self._titles("Review pts on the ward in Apr.")
+        self.assertNotIn("Post-thrombotic syndrome", got)
+        self.assertNotIn("Abdominoperineal resection", got)
+
+    def test_the_published_casing_still_does(self):
+        self.assertIn("Post-thrombotic syndrome",
+                      self._titles("PTS develops after a proximal DVT."))
+
+
 class MarkerJsReadsThoseAttributes(unittest.TestCase):
     """The other half of the same contract, checked against the file
     rather than against a memory of it."""

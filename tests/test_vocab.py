@@ -278,7 +278,8 @@ class EntriesAreWellFormed(unittest.TestCase):
             "moa", "pk", "pd", "definition", "epidemiology", "aetiology",
             "etiology", "causes", "mechanism", "mechanisms", "risk factors", "risk", "pathophysiology",
             "pathology", "classification", "types", "subtypes", "variants",
-            "staging", "stages", "phases", "clinical features", "features",
+            "staging", "grading", "stages", "phases", "sites",
+            "clinical features", "features",
             "presentation", "signs", "symptoms", "examination", "triggers",
             "associations", "genetics", "investigations", "workup",
             "diagnosis", "criteria", "screening", "differential",
@@ -1150,6 +1151,25 @@ class PhraseEdgesThatArePunctuation(unittest.TestCase):
             self.assertTrue(
                 m.find(name + " was documented on the chart"),
                 f"{name!r} matches only at the end of a text")
+
+
+class ContestedBrandsOpenTheRightDrug(unittest.TestCase):
+    """A brand listed under two generics resolves to the first one.
+
+    `Injectafer` is ferric carboxymaltose; the base vocabulary also
+    lists it under artesunate, which sits earlier, so an IV iron card
+    opened an antimalarial monograph. `_COMBINATION_BRANDS` pins it.
+    """
+
+    def test_every_pinned_brand_resolves_to_its_target(self):
+        for brand, want in _drugs._COMBINATION_BRANDS.items():
+            self.assertIn(want.lower(), _drugs._GENERIC_LOOKUP,
+                          f"{brand}: target {want!r} is not a drug")
+            self.assertEqual(_drugs._BRAND_LOOKUP[brand]["generic"], want)
+
+    def test_injectafer_is_iron(self):
+        self.assertEqual(_drugs._BRAND_LOOKUP["Injectafer"]["generic"],
+                         "ferric carboxymaltose")
 
 
 if __name__ == "__main__":
