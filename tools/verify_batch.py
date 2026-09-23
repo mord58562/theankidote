@@ -35,6 +35,12 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+
+# One implementation of the alias-swallowing rule, shared with the
+# build. Two copies would drift, and the drift is silent in the
+# direction that matters: a rule that stops firing still prints nothing.
+from build_library import swallowing_aliases         # noqa: E402
 
 BANNED_CHARS = [("—", "em-dash"), ("–", "en-dash"),
                 ("**", "markdown bold"), (" ", "non-breaking space")]
@@ -66,7 +72,28 @@ US_SPELLINGS = [
 
 MAX_CHARS = 1200
 MAX_PX = 900
-LABEL_RE = re.compile(r"(?:^|(?<=[.!?]) )([A-Z][A-Za-z0-9 /-]{1,30}):")
+
+# Mirrors `_SECTION_RE` in web/marker.js, which is what actually decides
+# whether a label becomes a heading or falls into the body text. The old
+# pattern differed from it in three ways and every one of them was a
+# silent wrong answer:
+#
+#   * it opened only on `. `, and the renderer opens on `;` too. So an
+#     unknown label written after a semicolon - "...rods; Microbiology:
+#     gram negatives" - was never looked at, verified clean, and then
+#     rendered as prose. 7 such occurrences are in the shipped library.
+#   * it did not require whitespace after the colon, and the renderer
+#     does. "Female:male 3:1" after a full stop was therefore read as a
+#     section label named "Female" and FAILED the batch, although the
+#     renderer never sections it. Ten shipped entries write that ratio.
+#   * it had no room for the qualifier the renderer allows, so
+#     "Sx (tetrad):" counted as no section at all.
+#
+# Digits stay in the class although no known label carries one: "Type
+# 2:" is exactly the heading an author reaches for and exactly the one
+# that renders as body text, so it has to be visible here to be refused.
+LABEL_RE = re.compile(
+    r"(?:^|[;.]\s+)([A-Z][A-Za-z0-9 /-]{1,30})(?:\s*\([^()]{1,24}\))?:\s")
 
 
 def known_labels():
@@ -202,6 +229,27 @@ def main() -> int:
                             f'{owner[t]} vs {e["name"]}')
             owner[t] = e["name"]
 
+    # An alias must not be this entry's own name joined to the name of
+    # an entry the library already answers. `build_library.py` refuses
+    # these - but only on the next build, which is to say after the
+    # batch is already inside the 3.5 MB file, and unpicking it out of
+    # there is the cost this script exists to avoid. Same rule, run
+    # before the merge instead of after it, and against the batch's own
+    # names as well so two entries in one batch cannot do it to each
+    # other.
+    lib = json.loads((ROOT / "data" / "library.json")
+                     .read_text(encoding="utf-8"))
+    primaries = {str(c["name"]).lower(): c["name"]
+                 for c in lib.get("conditions", [])
+                 + lib.get("new_conditions", [])}
+    for e in entries:
+        primaries.setdefault(str(e["name"]).lower(), e["name"])
+    for name, alias, victim in swallowing_aliases(entries, primaries):
+        fail.append(f'{name}: alias "{alias}" is this entry\'s own name '
+                    f'joined to "{victim}", so the matcher eats that '
+                    f'entry instead of resolving it - drop the alias, '
+                    f'the primary name already matches its first half')
+
     known = known_labels()
     for e in entries:
         labels = [l.strip() for l in LABEL_RE.findall(e["summary"])]
@@ -241,8 +289,6 @@ def main() -> int:
             warn.append("AnkiConnect unreachable, so short all-caps "
                         "aliases were NOT checked against the collection")
         else:
-            lib = json.loads((ROOT / "data" / "library.json")
-                             .read_text(encoding="utf-8"))
             acronyms = set(lib["acronyms"])
             for e in entries:
                 for a in e["aliases"]:

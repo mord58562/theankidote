@@ -31,6 +31,9 @@ import sys
 import textwrap
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from verify_batch import BANNED_CHARS                # noqa: E402
+
 RICH = ROOT / "content" / "_rich.py"
 
 # The close of NEW_CONDITIONS, which is also the open of RICH_SUMMARIES.
@@ -103,8 +106,15 @@ def main() -> int:
                 or f'\n    {json.dumps(n, ensure_ascii=False)}: (' in t:
             print(f"SKIP already in the file: {n}")
             continue
-        if "—" in json.dumps(e, ensure_ascii=False):
-            print(f"SKIP em-dash present: {n}")
+        # The em-dash was the only character guarded here, and the other
+        # three in `verify_batch.BANNED_CHARS` are just as unshippable
+        # and just as invisible in a diff of a 3.5 MB file. Sharing the
+        # list rather than restating it, because a second copy is how
+        # one of them quietly stops being checked.
+        blob = json.dumps(e, ensure_ascii=False)
+        banned = [label for ch, label in BANNED_CHARS if ch in blob]
+        if banned:
+            print(f"SKIP {', '.join(banned)} present: {n}")
             continue
         seen.add(n)
         kept.append(e)
@@ -120,7 +130,19 @@ def main() -> int:
                   "\n" + "".join(stub(e) for e in kept).rstrip("\n") + NC_ANCHOR,
                   1)
 
-    m = RS_ANCHOR.search(t)
+    # Search from the RICH_SUMMARIES opening, not from byte zero. The
+    # pattern matches the close of DRUG_SUMMARIES too - there are two
+    # matches in the file as it stands - and the first one is the right
+    # one only because RICH_SUMMARIES happens to be written above it.
+    # Move either table and this would append condition summaries to the
+    # drug dictionary with nothing to say so. NEW_CONDITIONS gets an
+    # anchor-is-unique guard; this had neither that nor a starting
+    # point.
+    rs_open = t.find("\nRICH_SUMMARIES = {")
+    if rs_open < 0:
+        raise SystemExit("RICH_SUMMARIES not found in the file; "
+                         "aborting, nothing written")
+    m = RS_ANCHOR.search(t, rs_open)
     if m is None:
         raise SystemExit("could not find the close of RICH_SUMMARIES; "
                          "aborting, nothing written")

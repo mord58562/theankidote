@@ -58,6 +58,45 @@ sys.path.insert(0, str(ROOT / "content"))
 # changes shape or meaning; do not bump to add one.
 SCHEMA = 1
 
+# The joins that make an alias relational rather than a second name.
+CONNECTIVE_RE = re.compile(
+    r"\s+(?:of|in|with|for|after|versus|vs|during)\s+")
+
+
+def swallowing_aliases(entries, primaries) -> list:
+    """Aliases that are this entry's own name joined to another name.
+
+    See the long note at the call site for why these are harmful. What
+    matters here is WHERE the join is looked for: the first version
+    asked `re.fullmatch(r"(.+?)" + connective + r"(.+)")` and read the
+    two groups, which splits at the FIRST connective in the alias and
+    nowhere else. Any entry whose own name contains one of these words
+    - and 230 of the shipped condition names do, from "Coarctation of
+    aorta" to "Granulomatosis with polyangiitis" - therefore had a left
+    half that could never equal its own name, so the check silently
+    passed every alias it owned. "Shortness of breath" carrying
+    "shortness of breath in asthma" splits as "shortness" / "breath in
+    asthma", matches nothing, and ships an alias that eats Asthma.
+
+    So every join is tried, not just the leftmost.
+    """
+    out = []
+    for e in entries:
+        own = str(e.get("name", "")).strip().lower()
+        if not own:
+            continue
+        for a in (e.get("aliases") or []):
+            if not isinstance(a, str):
+                continue
+            low = a.strip().lower()
+            for m in CONNECTIVE_RE.finditer(low):
+                left = low[:m.start()].strip()
+                right = low[m.end():].strip()
+                if left == own and right in primaries and right != own:
+                    out.append((e["name"], a, primaries[right]))
+                    break
+    return out
+
 
 def collect() -> dict:
     import _rich                                        # content/_rich.py
@@ -380,11 +419,15 @@ def collect() -> dict:
                     f"acronym {key!r} has {len(bucket)} senses but "
                     f"{starved} carry no context keywords")
 
-    blocklist = sorted({
-        t.strip() for t in getattr(_blocklist, "BLOCKLIST", []) if t.strip()})
-    bad = [t for t in blocklist if not isinstance(t, str)]
+    # The type check has to come FIRST. It used to read the stripped
+    # list, which cannot hold a non-string: `t.strip()` on an int raises
+    # `AttributeError` inside the comprehension above, so the friendly
+    # message below was unreachable and the guard had never once run.
+    raw_blocklist = list(getattr(_blocklist, "BLOCKLIST", []))
+    bad = [t for t in raw_blocklist if not isinstance(t, str)]
     if bad:
         raise SystemExit(f"BLOCKLIST holds non-strings: {bad[:3]}")
+    blocklist = sorted({t.strip() for t in raw_blocklist if t.strip()})
 
     # An alias must not be this entry's own name joined to another
     # entry's name by a connective.
@@ -409,20 +452,10 @@ def collect() -> dict:
     # adds no surface the primary name did not already match - it can
     # only take words away from a neighbour. Nothing is lost by refusing
     # it: "Ranson criteria" still matches on its own.
-    connective = r"(?:\s+(?:of|in|with|for|after|versus|vs|during)\s+)"
     primaries = {}
     for e in conditions + new_conditions:
         primaries[e["name"].lower()] = e["name"]
-    swallowing = []
-    for e in conditions + new_conditions:
-        own = e["name"].lower()
-        for a in (e.get("aliases") or []):
-            m = re.fullmatch(r"(.+?)" + connective + r"(.+)", a.lower().strip())
-            if not m:
-                continue
-            left, right = m.group(1).strip(), m.group(2).strip()
-            if left == own and right in primaries and right != own:
-                swallowing.append((e["name"], a, primaries[right]))
+    swallowing = swallowing_aliases(conditions + new_conditions, primaries)
     if swallowing:
         lines = "\n".join(f"  {n!r} alias {a!r} swallows {v!r}"
                           for n, a, v in swallowing)
