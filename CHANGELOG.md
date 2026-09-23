@@ -5,6 +5,44 @@ All notable changes to The AnkiDote.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.8.3] - 2026-09-23
+
+### Fixed
+
+- **Five brand names opened the wrong drug.** The first generic listing a
+  brand won, so "Injectafer" (IV iron) opened artesunate, Efudix opened
+  systemic fluorouracil rather than the cream, Paxlovid opened ritonavir,
+  Vemlidy opened parent tenofovir and Reandron parent testosterone. All
+  five are pinned in `_COMBINATION_BRANDS`.
+- **Terms typed with a curly apostrophe were found but not underlined.**
+  `_build_pattern` keyed the lookup unfolded and `_open_span` looked it up
+  folded. 29 matches on a 6,088-note collection were lost.
+- **Long spellings of short-titled conditions were never underlined.**
+  The under-four-character rule dropped the whole term, so "human
+  immunodeficiency virus" (HIV) and "4AT test" appeared in the sidebar
+  but not on the card. The rule now applies per spelling.
+- Short aliases in a casing the library never uses ("Apr", "pts", "hrs",
+  "RhD") no longer offer unrelated sidebar articles.
+- Popup headings no longer repeat an acronym ("COPD - COPD"); they show
+  the expansion.
+- `maxResults: 0` lifts the sidebar cap, as `config.md` says it does.
+- Upgrading from AnkiPearls or AnkiDate discarded the old settings,
+  because Anki merges defaults into `getConfig` and the legacy check
+  could never pass. They are now carried over.
+- The chat shortcut could not be cleared; the default was restored
+  before the empty-string check.
+- The chat dock kept the old theme if the theme changed before it was
+  first opened.
+- The AMBOSS toolbar offset never applied: `allAddons()` returns folder
+  ids, not names.
+- The composer's generic fallback was unreachable.
+- UpToDate certificate and download failures are logged rather than
+  swallowed.
+- If `_setup` raised, the library update check never ran.
+- The updater reads in chunks when no length is known, sweeps stale
+  `.part` files, and no longer reports a non-object manifest as an
+  unreachable server.
+
 ## [2.8.2] - 2026-09-21
 
 ### Changed
