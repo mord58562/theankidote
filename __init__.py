@@ -84,13 +84,26 @@ def _migrate_legacy_keys() -> None:
         _log.error("legacy migration: getConfig", exc)
         return
     changed = False
+    # `new not in cfg` was never true, so nothing was ever carried
+    # forward and every legacy key took the delete branch instead.
+    # Anki's `getConfig` is `addonConfigDefaults(addon)` updated with the
+    # user's stored overrides, so every key that appears in config.json -
+    # which is all four of these - is present in `cfg` unconditionally.
+    # The test has to be "has the reader chosen a value for the new key",
+    # and the only evidence of that available here is whether it still
+    # equals the packaged default.
+    #
+    # What it cost: an AnkiPearls/AnkiDate user upgrading lost their
+    # highlight colour and, worse, their institution's UpToDate entry
+    # URL - after which UTD stops authenticating and there is nothing on
+    # screen to say why.
     for old, new in _LEGACY_KEY_MAP.items():
-        if old in cfg and new not in cfg:
-            cfg[new] = cfg.pop(old)
-            changed = True
-        elif old in cfg:
-            del cfg[old]
-            changed = True
+        if old not in cfg:
+            continue
+        if cfg.get(new) == _config._DEFAULTS.get(new):
+            cfg[new] = cfg[old]
+        del cfg[old]
+        changed = True
     if changed:
         try:
             mw.addonManager.writeConfig(__name__, cfg)
@@ -385,10 +398,30 @@ def _amboss_installed() -> bool:
     global _amboss_present_cache
     if _amboss_present_cache is None:
         try:
-            _amboss_present_cache = any(
-                "amboss" in str(a).lower()
-                for a in mw.addonManager.allAddons()
-            )
+            # `allAddons()` is `os.listdir(addonsFolder())` filtered to
+            # directories holding an `__init__.py`, so what it yields is
+            # folder names - and an AnkiWeb install's folder is its
+            # numeric id. Matching "amboss" against that string could
+            # never be true for anyone who installed AMBOSS the normal
+            # way, so the 28px offset this gates - the whole reason the
+            # function exists, keeping the crown off AMBOSS's own
+            # toolbar control - has never once applied. The add-on's
+            # human name lives in its meta.json and is what
+            # `addonName()` returns; the folder name is still checked
+            # first for a hand-placed directory. Two lines below,
+            # `_is_addon_installed` already matches by numeric id.
+            mgr = mw.addonManager
+            _amboss_present_cache = False
+            for entry in mgr.allAddons():
+                if "amboss" in str(entry).lower():
+                    _amboss_present_cache = True
+                    break
+                try:
+                    if "amboss" in str(mgr.addonName(entry)).lower():
+                        _amboss_present_cache = True
+                        break
+                except Exception:
+                    continue        # unreadable meta.json is not AMBOSS
         except Exception as exc:
             _log.error("amboss detection", exc)
             _amboss_present_cache = False
@@ -2724,10 +2757,36 @@ def _notify_if_new_library() -> None:
 
 
 def _setup_and_check(*args, **kwargs):
-    _setup(*args, **kwargs)
+    """Build the UI, then start the content check - in that order, but
+    not conditional on it.
+
+    `_setup` was called bare, so anything it raised took the three
+    library calls down with it and never came back: the content channel
+    is what corrects a wrong dose without an add-on release, and a
+    failure in an unrelated dock, panel or Qt widget switched it off
+    silently and permanently for that install. Nothing in `_setup`
+    is a precondition for checking for content - the check runs on its
+    own thread, reads config and writes a file - so the dependency was
+    incidental and is removed. Measured against the real source of
+    these functions: with `_setup` raising, `check_in_background` was
+    never reached.
+
+    The exception is re-raised at the end rather than swallowed. Anki
+    logs it and the user is told the add-on failed to load, which is
+    true and worth saying; what changes is that the content channel is
+    no longer part of the casualty list.
+    """
+    failure = None
+    try:
+        _setup(*args, **kwargs)
+    except Exception as exc:                            # noqa: BLE001
+        failure = exc
+        _log.error("setup", exc)
     _migrate_library_auto_update()
     _notify_if_new_library()
     _check_for_library_update()
+    if failure is not None:
+        raise failure
 
 
 gui_hooks.main_window_did_init.append(_setup_and_check)

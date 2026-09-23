@@ -282,8 +282,17 @@ class UpToDatePage(QWebEnginePage):
             if any(host == d.lstrip(".") or host.endswith(d) for d in trusted):
                 _log.diag(f"uptodate: accepting certificate error for {host}")
                 error.acceptCertificate()
-        except Exception:
-            pass
+            else:
+                # The negative path was the silent one, and it is the
+                # one that ends in a blank dock: Qt 6.5+ rejects a
+                # certificate error that is neither accepted nor
+                # deferred. `load_url` below already records that a UTD
+                # report could not be investigated because nothing here
+                # wrote a line; this was the same hole.
+                _log.diag(f"uptodate: refusing certificate error for "
+                          f"{host!r} - not in {trusted}")
+        except Exception as exc:                        # noqa: BLE001
+            _log.diag(f"uptodate: certificate handler failed: {exc}")
 
     def createWindow(self, _type):
         return _PopupShunt(self.profile(), parent=self)
@@ -489,8 +498,19 @@ class UpToDateBrowser(QWidget):
                 download.setDownloadDirectory(directory)
                 download.setDownloadFileName(name)
                 download.accept()
-            except Exception:
-                pass
+            except Exception as exc:                    # noqa: BLE001
+                # A request that is neither accepted nor cancelled is
+                # cancelled by QtWebEngine when it goes out of scope, so
+                # every failure here reached the reader as: dialog
+                # appears, location chosen, Save pressed, no file, no
+                # message, nothing in the log. `diag`, not `error` -
+                # Anki routes this add-on's stderr into its crash
+                # reporter, and a refused download is not a crash.
+                _log.diag(f"utd download failed for {save_path!r}: {exc}")
+                try:
+                    download.cancel()
+                except Exception:
+                    pass
         else:
             try:
                 download.cancel()

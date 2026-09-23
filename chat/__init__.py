@@ -1202,6 +1202,28 @@ def _build_dock_lazily():
     global _dock, _browser
     if _dock is not None:
         return
+    # Rebind the palette before the widget is born, not after.
+    #
+    # This dock is the only one of the three built lazily, and
+    # `_on_theme_change` in the package root re-themes a dock by calling
+    # `apply_theme` on the module's `_browser`. Until the user first
+    # clicks the toolbar button that name is None, so every theme switch
+    # before the first open reached the other two docks and skipped this
+    # one - `_rebind_theme` was simply never called on this path. The
+    # module constants below were then still whichever palette was
+    # current at import, and `ChatBrowser.__init__` bakes them into its
+    # header and button stylesheets, so the dock opened dark inside a
+    # light Anki and stayed that way for the rest of the session.
+    #
+    # `_theme` itself is kept current by `_on_theme_change`, so reading
+    # it here is enough. Deliberately NOT `_theme.refresh()`: that
+    # returns "did the mode change" and `_on_theme_change` short-circuits
+    # on it, so refreshing from here would make the next real theme
+    # switch a no-op for the pearls and UpToDate docks.
+    try:
+        _rebind_theme()
+    except Exception as exc:                            # noqa: BLE001
+        _log.error("chat theme rebind before build", exc)
     _browser = ChatBrowser()
     _dock = QDockWidget()
     _dock.setObjectName("TheAnkiDote_dock_chat")
@@ -1399,7 +1421,17 @@ def rebind_shortcut() -> None:
     except Exception:
         pass
     _shortcut_holder = None
-    seq = _config.get("shortcutToggleChat") or "Ctrl+Shift+A"
+    # `is None`, not `or`. The Shortcuts tab says "Leave a field empty to
+    # turn it off" and stores "" for a cleared field, and the other two
+    # rebinders honour that - but `or "Ctrl+Shift+A"` had already put the
+    # default back before `if not seq` ran, so that guard could never
+    # fire and this was the one binding a user could not switch off.
+    # Clearing it to resolve a clash with another add-on appeared to
+    # work, saved "", and re-bound Ctrl+Shift+A as an ApplicationShortcut
+    # anyway, with no route out from the interface.
+    seq = _config.get("shortcutToggleChat")
+    if seq is None:
+        seq = "Ctrl+Shift+A"
     if not seq:
         return
     _shortcut_holder = _dock_layout.make_shortcut(seq, toggle_dock, "shortcutToggleChat")

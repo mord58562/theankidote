@@ -142,9 +142,19 @@ def _focus_js(selectors: list) -> str:
              (el.contains && el.contains(document.activeElement));
     }
 
+    // A hint that matches but will not take the caret must fall through
+    // to the next hint and then to the scan below, not end the search.
+    // It used to `return placeCaret(hit) ? 1 : 0`, so a provider that
+    // kept the selector on a restructured wrapper - the usual outcome of
+    // a redesign, far more likely than the selector ceasing to match -
+    // took the whole script down to 0 while the scored scan sitting
+    // underneath it would have found the real composer. The retry ladder
+    // then re-ran the same script against the same DOM five times and
+    // reported failure. This is the degrade-to-generic path the module
+    // docstring promises, and it was unreachable.
     for (var i = 0; i < HINTS.length; i++) {
       var hit = document.querySelector(HINTS[i]);
-      if (hit && visible(hit)) { return placeCaret(hit) ? 1 : 0; }
+      if (hit && visible(hit) && placeCaret(hit)) return 1;
     }
 
     var cands = document.querySelectorAll(

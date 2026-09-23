@@ -1229,5 +1229,161 @@ class InjectedStylesheetColourIsNotACodePath(unittest.TestCase):
             bad, "these fill a JS template without encoding: " + str(bad))
 
 
+class ContentChannelSurvivesItsOwnEdgeCases(unittest.TestCase):
+    """Four ways the channel switched itself off without saying so.
+
+    Each was reproduced with running code against a local fixture
+    before it was changed; none of them corrupted `user_files/`, and
+    all four ended with the same user-visible symptom - content that
+    stops arriving and nothing in the interface that says why.
+    """
+
+    def test_fetch_reads_in_bounded_pieces(self):
+        """One `read(limit + 1)` hands 4 GiB to the socket.
+
+        `_library_limit` falls back to `_MAX_BYTES` whenever the
+        manifest omits or mis-declares `bytes`, and `http.client` only
+        clamps that number when the response carries a Content-Length.
+        Without one it reaches `recv_into` and raises `OSError: [Errno
+        22]`, which the caller reports as "the download did not
+        finish" - for every launch, until the manifest is corrected.
+        """
+        src = (ROOT / "pearls" / "_updater.py").read_text(encoding="utf-8")
+        self.assertNotIn("body = resp.read(limit + 1)", src,
+                         "the single unbounded read is back")
+        self.assertIn("_READ_CHUNK", src)
+
+        asked = []
+
+        class Resp:
+            url = "https://raw.githubusercontent.com/x/library.json"
+
+            def __init__(self):
+                self.left = 9_000_000
+
+            def read(self, amt):
+                asked.append(amt)
+                if amt > (8 << 20):
+                    raise OSError(22, "Invalid argument")
+                n = min(amt, self.left)
+                self.left -= n
+                return b"x" * n
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *a):
+                return False
+
+        import urllib.request
+        real = urllib.request.urlopen
+        urllib.request.urlopen = lambda req, timeout=None: Resp()
+        try:
+            body = _updater._fetch(Resp.url, _updater._MAX_BYTES, "library url")
+        finally:
+            urllib.request.urlopen = real
+        self.assertEqual(len(body), 9_000_000)
+        self.assertLessEqual(max(asked), 8 << 20,
+                             "a single read asked the socket for too much")
+
+    def test_a_manifest_that_is_not_an_object_says_so(self):
+        """`[1,2,3]` reached `manifest.get` and raised AttributeError.
+
+        That escaped `_check` and came back out of `check` as "Could
+        not reach the content server", which is the one explanation
+        that is certainly wrong: the server answered.
+        """
+        for body in (b"[1,2,3]", b"null", b'"a string"'):
+            real = _updater._fetch
+            _updater._fetch = lambda url, limit, what: body
+            try:
+                result = _updater.check("https://raw.githubusercontent.com/x")
+            finally:
+                _updater._fetch = real
+            self.assertIn("incomplete reply", result,
+                          f"{body!r} gave {result!r}")
+            self.assertNotIn("Could not reach", result)
+
+    def test_version_compare_survives_a_missing_local_version(self):
+        """`remote > local` is a TypeError the moment `local` is None.
+
+        One parser, one comparison: `_newer` defers to
+        `_library._version_newer`, which coerces the missing side.
+        """
+        self.assertTrue(_updater._newer("22.09.2026", None))
+        self.assertTrue(_updater._newer("22.09.2026", ""))
+        self.assertFalse(_updater._newer(None, "22.09.2026"))
+        # and the ordering it is actually there for still holds
+        self.assertTrue(_updater._newer("01.10.2026", "30.09.2026"))
+        self.assertFalse(_updater._newer("30.09.2026", "01.10.2026"))
+        self.assertTrue(_updater._newer("28.08.2026", "2026.08.18"))
+
+    def test_abandoned_temp_files_are_swept(self):
+        """A unique temp name fixed a race and opened a leak.
+
+        Nothing reuses a name that carries a pid and a thread id, so a
+        writer killed between `os.open` and `os.replace` leaves its
+        temp file in `user_files/` permanently, at the size of the
+        library. Only files that cannot belong to a live writer are
+        removed: ours is excluded, anything touched in the last hour is
+        excluded, and so is anything that is not a sibling of the file
+        being written.
+        """
+        import time
+        with tempfile.TemporaryDirectory() as d:
+            target = os.path.join(d, "user_files", "library.json")
+            _updater._write_atomically(target, b'{"v":0}')
+            uf = os.path.dirname(target)
+            stale = os.path.join(uf, "library.json.999.deadbeef.part")
+            fresh = os.path.join(uf, "library.json.1000.cafe.part")
+            alien = os.path.join(uf, "notes.json.1.2.part")
+            for p in (stale, fresh, alien):
+                pathlib.Path(p).write_bytes(b"Z" * 64)
+            old = time.time() - 2 * _updater._PART_STALE_SECONDS
+            os.utime(stale, (old, old))
+            os.utime(alien, (old, old))
+
+            _updater._write_atomically(target, b'{"v":1}')
+
+            self.assertFalse(os.path.exists(stale),
+                             "the abandoned temp file was not removed")
+            self.assertTrue(os.path.exists(fresh),
+                            "a temp file a live writer could own was removed")
+            self.assertTrue(os.path.exists(alien),
+                            "a temp file belonging to something else was removed")
+            self.assertEqual(pathlib.Path(target).read_bytes(), b'{"v":1}')
+
+    def test_a_failing_setup_does_not_take_the_content_check_with_it(self):
+        """`_setup_and_check` called `_setup` bare.
+
+        Anything `_setup` raised - a dock, a panel, a Qt widget -
+        skipped the three library calls after it, so a UI failure
+        turned the content channel off for that install, silently and
+        for good. Nothing in `_setup` is a precondition for the check.
+        """
+        src = (ROOT / "__init__.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        fn = next(n for n in tree.body
+                  if isinstance(n, ast.FunctionDef)
+                  and n.name == "_setup_and_check")
+        body = ast.unparse(fn)
+        self.assertIn("_check_for_library_update()", body)
+        setup_call = next(n for n in ast.walk(fn)
+                          if isinstance(n, ast.Call)
+                          and isinstance(n.func, ast.Name)
+                          and n.func.id == "_setup")
+        guarded = any(setup_call in ast.walk(h)
+                      for t in ast.walk(fn) if isinstance(t, ast.Try)
+                      for h in [t])
+        self.assertTrue(guarded,
+                        "_setup() is called outside a try, so anything it "
+                        "raises skips the content update check")
+        # And the check is still reached after the guard, not before it.
+        stmts = [ast.unparse(s) for s in fn.body]
+        self.assertTrue(any("_check_for_library_update()" == s for s in stmts),
+                        "the content check is no longer a statement of "
+                        "_setup_and_check")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

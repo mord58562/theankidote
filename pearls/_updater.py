@@ -42,6 +42,7 @@ import hashlib
 import json
 import os
 import threading
+import time
 import urllib.parse
 import urllib.request
 
@@ -84,6 +85,7 @@ _ALLOWED_HOSTS = frozenset({
 
 _TIMEOUT = 8          # seconds; a check that cannot finish is not worth having
 _MAX_BYTES = 4 << 30   # 4 GiB; backstop only - see _library_limit
+_READ_CHUNK = 1 << 20  # how much of a response to ask the socket for at once
 _UA = "TheAnkiDote content updater"
 
 
@@ -142,7 +144,27 @@ def _fetch(url: str, limit: int = _MAX_BYTES, what: str = "url") -> bytes:
         # the allowlist, on the way.
         final = getattr(resp, "url", None) or url
         _require_https(final, f"{what} after redirect")
-        body = resp.read(limit + 1)
+        # Read in bounded pieces rather than as one `read(limit + 1)`.
+        # `limit` is normally the manifest's own `bytes`, but it falls
+        # back to `_MAX_BYTES` - 4 GiB - whenever the manifest omits or
+        # mis-declares it, and `http.client` only clamps that number to
+        # the body size when the response carries a Content-Length.
+        # Without one it hands 4294967297 straight to the socket, which
+        # raises `OSError: [Errno 22] Invalid argument` and turns a
+        # perfectly good 9 MB download into "the download did not
+        # finish", permanently, for as long as the manifest stays that
+        # way. Measured: a 9-byte body over a connection-close response
+        # raised EINVAL on `read(_MAX_BYTES + 1)` and read correctly in
+        # chunks. One byte past `limit` is still read, so the ceiling
+        # below fires exactly as before.
+        chunks, remaining = [], limit + 1
+        while remaining > 0:
+            chunk = resp.read(min(remaining, _READ_CHUNK))
+            if not chunk:
+                break
+            chunks.append(chunk)
+            remaining -= len(chunk)
+        body = b"".join(chunks)
     if len(body) > limit:
         raise ValueError(f"response larger than {limit} bytes")
     return body
@@ -203,13 +225,16 @@ def _newer(remote: str, local: str) -> bool:
     Anything unparseable falls back to string compare and, if that is
     also not-greater, is treated as not-newer: refusing an update we do
     not understand is recoverable, applying one we misread is not.
+
+    One implementation, in `_library`, because two of them drifted:
+    this one ended its string-compare fallback with `remote > local`,
+    which is a `TypeError` the moment `local` is not a string, and the
+    exception surfaces as "Could not reach the content server" - the
+    one message that is certainly wrong, because the server answered.
+    `_library._version_newer` already coerces a missing local version
+    to `""`, so it is the one that stays.
     """
-    if not (bool(remote) and isinstance(remote, str)):
-        return False
-    r, l = _parse_version(remote), _parse_version(local)
-    if r is not None and l is not None:
-        return r > l
-    return remote > local
+    return _library._version_newer(remote, local)
 
 
 # `_parse_version` moved to `pearls/_library`, which needs it too and
@@ -273,6 +298,54 @@ def _write_atomically(path: str, body: bytes) -> None:
             pass
         raise
     os.replace(tmp, path)
+    _sweep_stale_parts(path, keep=tmp)
+
+
+# How old an abandoned temp file has to be before it is assumed dead.
+# A library download is single-digit megabytes and writes in well under
+# a second; an hour is several orders of magnitude of headroom, so no
+# live writer's file is ever inside it.
+_PART_STALE_SECONDS = 3600
+
+
+def _sweep_stale_parts(path: str, keep: str = "") -> None:
+    """Remove abandoned `.part` files left beside `path`.
+
+    Giving each writer a unique temp name closed the race where two
+    checks renamed each other's half-written file, and opened a leak:
+    the name is unique, so nothing ever reuses it, and a writer that
+    dies between `os.open` and `os.replace` leaves its temp file in
+    `user_files/` for good. Anki being force-quit during a download is
+    an ordinary event, and each corpse is the size of the library.
+    Measured: a `SIGKILL` mid-write left `library.json` correctly
+    untouched and a 700 MB `.part` file that no later successful write
+    ever removed.
+
+    Only files that are demonstrably not in use are touched - our own
+    name is excluded, and so is anything modified within the last hour,
+    which a concurrent download cannot be. Failure here is not worth
+    reporting: the library was written, and a stray temp file is
+    cosmetic.
+    """
+    try:
+        directory = os.path.dirname(path) or "."
+        prefix = os.path.basename(path) + "."
+        cutoff = time.time() - _PART_STALE_SECONDS
+        for name in os.listdir(directory):
+            if not (name.startswith(prefix) and name.endswith(".part")):
+                continue
+            victim = os.path.join(directory, name)
+            if victim == keep:
+                continue
+            try:
+                if os.stat(victim).st_mtime > cutoff:
+                    continue
+                os.unlink(victim)
+                log(f"updater: removed abandoned temp file {name}")
+            except OSError:
+                pass
+    except Exception as exc:                            # noqa: BLE001
+        log(f"updater: could not sweep temp files ({exc})")
 
 
 def check(manifest_url: str = None) -> str:
@@ -307,6 +380,19 @@ def _check(manifest_url: str) -> str:
         return ("Could not check for new terms - no connection to the "
                 "update server. Your terms still work; it will try "
                 "again next time Anki starts.")
+
+    # A manifest that parses as JSON but is not an object reached
+    # `manifest.get` and raised `AttributeError`, which escaped `_check`
+    # entirely and came back out of `check` as "Could not reach the
+    # content server. Usually that means no connection." That is the one
+    # thing it is not: the server answered, with something that is not a
+    # manifest. Measured with bodies of `[1,2,3]` and `null`, both of
+    # which a misconfigured host or a proxy will serve.
+    if not isinstance(manifest, dict):
+        log(f"updater: manifest is {type(manifest).__name__}, not an "
+            f"object; ignoring")
+        return ("The update server sent an incomplete reply, so nothing "
+                "was downloaded. Your terms are unchanged.")
 
     if manifest.get("schema") != _library.SCHEMA:
         log(f"updater: remote content is schema "
